@@ -1,11 +1,7 @@
 import React from 'react';
-import {useThemeContext} from '@crema/context/ThemeContextProvider';
-import {alpha, Box} from '@mui/material';
-import {ReactComponent as Logo} from '../../../../../assets/icon/logo.svg';
-import {ReactComponent as LogoText} from '../../../../../assets/icon/logo_text.svg';
+import {Box} from '@mui/material';
 
 const AppLogo = () => {
-  const {theme} = useThemeContext();
 
   return (
     <Box
@@ -23,7 +19,7 @@ const AppLogo = () => {
       }}
       className='app-logo'
     >
-      <Logo fill={theme.palette.primary.main} />
+        <img src={'/assets/icon/logo.svg'} alt='logo' />
       <Box
         sx={{
           mt: 1,
@@ -33,7 +29,7 @@ const AppLogo = () => {
           },
         }}
       >
-        <LogoText fill={alpha(theme.palette.text.primary, 0.8)} />
+          <img src={'/assets/icon/logo_text.svg'} alt='logo_text' />
       </Box>
     </Box>
   );

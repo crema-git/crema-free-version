@@ -15,6 +15,7 @@ const AppSidebar = ({
   position,
   isNavCollapsed,
   variant,
+                      routesConfig
 }) => {
   const {footer, footerType} = useLayoutContext();
 
@@ -46,7 +47,7 @@ const AppSidebar = ({
                 mt: 0.5,
               }}
             >
-              <VerticalNav />
+               <VerticalNav routesConfig={routesConfig} />
             </AppScrollbar>
           </MainSidebar>
         </Drawer>
@@ -71,7 +72,7 @@ const AppSidebar = ({
               },
             }}
           >
-            <VerticalNav />
+            <VerticalNav routesConfig={routesConfig} />
           </AppScrollbar>
         </MainSidebar>
       </Hidden>

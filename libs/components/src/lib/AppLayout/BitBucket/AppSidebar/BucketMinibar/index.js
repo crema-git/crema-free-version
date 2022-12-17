@@ -4,14 +4,11 @@ import Box from '@mui/material/Box';
 import IconButton from '@mui/material/IconButton';
 import SearchIcon from '@mui/icons-material/Search';
 import AppLngSwitcher from '../../../../AppLngSwitcher';
-import {useThemeContext} from '@crema/context/ThemeContextProvider';
 import AppMessages from '../../../../AppMessages';
 import AppNotifications from '../../../../AppNotifications';
 import UserInfo from '../UserInfo';
-import {ReactComponent as Logo} from '../../../../../../assets/icon/logo.svg';
 
 const BucketMinibar = () => {
-  const {theme} = useThemeContext();
 
   return (
     <BucketMinibarWrapper>
@@ -31,7 +28,7 @@ const BucketMinibar = () => {
           }}
           aria-label='show 17 new notifications'
         >
-          <Logo fill={theme.palette.primary.main} />
+            <img src={'/assets/icon/logo.svg'} alt='logo' />
         </IconButton>
 
         <IconButton

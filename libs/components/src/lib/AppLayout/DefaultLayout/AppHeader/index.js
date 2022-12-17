@@ -1,9 +1,7 @@
 import React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
-import AppLngSwitcher from '@crema/components/AppLngSwitcher';
 import Box from '@mui/material/Box';
-import AppSearchBar from '@crema/components/AppSearchBar';
 import Hidden from '@mui/material/Hidden';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
@@ -16,6 +14,8 @@ import AppTooltip from '../../../AppTooltip';
 import {alpha} from '@mui/material/styles';
 import AppLogo from '../../components/AppLogo';
 import PropTypes from 'prop-types';
+import AppLngSwitcher from '@crema/components/AppLngSwitcher';
+import AppSearchBar from '@crema/components/AppSearchBar';
 
 const AppHeader = ({toggleNavCollapsed}) => {
   const [anchorEl, setAnchorEl] = React.useState(null);

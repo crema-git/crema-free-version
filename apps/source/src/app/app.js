@@ -8,6 +8,8 @@ import {BrowserRouter} from 'react-router-dom';
 import FirebaseAuthProvider from '@crema/services/auth/FirebaseAuthProvider';
 import AuthRoutes from "@crema/components/AuthRoutes";
 import AppLayout from "../core/AppLayout";
+import '@crema/mockapi';
+import '../assets/styles/maps.css';
 
 const App = () => (
         <AppContextProvider>

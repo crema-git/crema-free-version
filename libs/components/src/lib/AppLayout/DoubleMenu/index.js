@@ -12,8 +12,9 @@ import routesConfig from '../../../../pages/routesConfig';
 import {useLayoutContext} from "@crema/context/LayoutContextProvider";
 import {useThemeContext} from '@crema/context/ThemeContextProvider';
 import {useLocation} from 'react-router-dom';
+import PropsTypes from "prop-types";
 
-const DefaultLayout = () => {
+const DoubleMenu = ({routes,routesConfig}) => {
   const {pathname} = useLocation();
   const [isNavCollapsed, setNavCollapsed] = useState(false);
   const [sidebarMenuState, setSidebarMenuState] = useState(2);
@@ -79,7 +80,7 @@ const DefaultLayout = () => {
           />
         </Box>
         <Box className={classes.mainContainer}>
-          <AppContentView />
+          <AppContentView  routes={routes} />
           <AppFixedFooter />
         </Box>
       </Box>
@@ -87,4 +88,9 @@ const DefaultLayout = () => {
   );
 };
 
-export default DefaultLayout;
+export default DoubleMenu;
+DoubleMenu.propsTypes = {
+  routes: PropsTypes.object.isRequired,
+  routesConfig: PropsTypes.array.isRequired,
+};
+

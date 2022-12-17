@@ -1,84 +1,84 @@
-// import React from 'react';
-// import {RoutePermittedRole} from '../../../shared/constants/AppConst';
-//
-// const AutoComplete = React.lazy(() => import('../../../app/muiComponents/inputs/AutoComplete'));
-// const Buttons = React.lazy(() => import('../../../app/muiComponents/inputs/Buttons'));
-// const ButtonGroup = React.lazy(() => import('../../../app/muiComponents/inputs/ButtonGroup'));
-// const Checkboxes = React.lazy(() => import('../../../app/muiComponents/inputs/Checkboxes'));
-// const FloatingActionButton = React.lazy(() => import('../../../app/muiComponents/inputs/FloatingActionButton'));
-// const Radio = React.lazy(() => import('../../../app/muiComponents/inputs/Radio'));
-// const Rating = React.lazy(() => import('../../../app/muiComponents/inputs/Rating'));
-// const Selects = React.lazy(() => import('../../../app/muiComponents/inputs/Selects'));
-// const Slider = React.lazy(() => import('../../../app/muiComponents/inputs/Slider'));
-// const Switches = React.lazy(() => import('../../../app/muiComponents/inputs/Switches'));
-// const TextField = React.lazy(() => import('../../../app/muiComponents/inputs/TextField'));
-// const TransferList = React.lazy(() => import('../../../app/muiComponents/inputs/TransferList'));
-// const ToggleButtons = React.lazy(() => import('../../../app/muiComponents/inputs/ToggleButtons'));
-//
-// export const inputsConfigs = [
-//   {
-//     permittedRole: RoutePermittedRole.User,
-//     path: '/mui/inputs/autocomplete',
-//     element: <AutoComplete />,
-//   },
-//   {
-//     permittedRole: RoutePermittedRole.User,
-//     path: '/mui/inputs/buttons',
-//     element: <Buttons />,
-//   },
-//   {
-//     permittedRole: RoutePermittedRole.User,
-//     path: '/mui/inputs/button-group',
-//     element: <ButtonGroup />,
-//   },
-//   {
-//     permittedRole: RoutePermittedRole.User,
-//     path: '/mui/inputs/checkboxes',
-//     element: <Checkboxes />,
-//   },
-//   {
-//     permittedRole: RoutePermittedRole.User,
-//     path: '/mui/inputs/floating-action-button',
-//     element: <FloatingActionButton />,
-//   },
-//   {
-//     permittedRole: RoutePermittedRole.User,
-//     path: '/mui/inputs/radios',
-//     element: <Radio />,
-//   },
-//   {
-//     permittedRole: RoutePermittedRole.User,
-//     path: '/mui/inputs/rating',
-//     element: <Rating />,
-//   },
-//   {
-//     permittedRole: RoutePermittedRole.User,
-//     path: '/mui/inputs/selects',
-//     element: <Selects />,
-//   },
-//   {
-//     permittedRole: RoutePermittedRole.User,
-//     path: '/mui/inputs/slider',
-//     element: <Slider />,
-//   },
-//   {
-//     permittedRole: RoutePermittedRole.User,
-//     path: '/mui/inputs/switches',
-//     element: <Switches />,
-//   },
-//   {
-//     permittedRole: RoutePermittedRole.User,
-//     path: '/mui/inputs/text-fields',
-//     element: <TextField />,
-//   },
-//   {
-//     permittedRole: RoutePermittedRole.User,
-//     path: '/mui/inputs/transfer-list',
-//     element: <TransferList />,
-//   },
-//   {
-//     permittedRole: RoutePermittedRole.User,
-//     path: '/mui/inputs/toggle-buttons',
-//     element: <ToggleButtons />,
-//   },
-// ];
+import React from 'react';
+import {RoutePermittedRole} from "@crema/constants/AppConst";
+
+import AutoComplete   from "../../../app/muiComponents/inputs/AutoComplete"
+import Buttons   from "../../../app/muiComponents/inputs/Buttons"
+import ButtonGroup   from "../../../app/muiComponents/inputs/ButtonGroup"
+import Checkboxes   from "../../../app/muiComponents/inputs/Checkboxes"
+import FloatingActionButton   from "../../../app/muiComponents/inputs/FloatingActionButton"
+import Radio   from "../../../app/muiComponents/inputs/Radio"
+import Rating   from "../../../app/muiComponents/inputs/Rating"
+import Selects   from "../../../app/muiComponents/inputs/Selects"
+import Slider   from "../../../app/muiComponents/inputs/Slider"
+import Switches   from "../../../app/muiComponents/inputs/Switches"
+import TextField   from "../../../app/muiComponents/inputs/TextField"
+import TransferList   from "../../../app/muiComponents/inputs/TransferList"
+import ToggleButtons   from "../../../app/muiComponents/inputs/ToggleButtons"
+
+export const inputsConfigs = [
+  {
+    permittedRole: RoutePermittedRole.User,
+    path: '/mui/inputs/autocomplete',
+    element: <AutoComplete />,
+  },
+  {
+    permittedRole: RoutePermittedRole.User,
+    path: '/mui/inputs/buttons',
+    element: <Buttons />,
+  },
+  {
+    permittedRole: RoutePermittedRole.User,
+    path: '/mui/inputs/button-group',
+    element: <ButtonGroup />,
+  },
+  {
+    permittedRole: RoutePermittedRole.User,
+    path: '/mui/inputs/checkboxes',
+    element: <Checkboxes />,
+  },
+  {
+    permittedRole: RoutePermittedRole.User,
+    path: '/mui/inputs/floating-action-button',
+    element: <FloatingActionButton />,
+  },
+  {
+    permittedRole: RoutePermittedRole.User,
+    path: '/mui/inputs/radios',
+    element: <Radio />,
+  },
+  {
+    permittedRole: RoutePermittedRole.User,
+    path: '/mui/inputs/rating',
+    element: <Rating />,
+  },
+  {
+    permittedRole: RoutePermittedRole.User,
+    path: '/mui/inputs/selects',
+    element: <Selects />,
+  },
+  {
+    permittedRole: RoutePermittedRole.User,
+    path: '/mui/inputs/slider',
+    element: <Slider />,
+  },
+  {
+    permittedRole: RoutePermittedRole.User,
+    path: '/mui/inputs/switches',
+    element: <Switches />,
+  },
+  {
+    permittedRole: RoutePermittedRole.User,
+    path: '/mui/inputs/text-fields',
+    element: <TextField />,
+  },
+  {
+    permittedRole: RoutePermittedRole.User,
+    path: '/mui/inputs/transfer-list',
+    element: <TransferList />,
+  },
+  {
+    permittedRole: RoutePermittedRole.User,
+    path: '/mui/inputs/toggle-buttons',
+    element: <ToggleButtons />,
+  },
+];

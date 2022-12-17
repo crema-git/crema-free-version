@@ -1,3 +1,4 @@
 
 import OrderSummary from '../OrderSummary';
-export { OrderSummary };
+import CartTable from './CartTable';
+export { OrderSummary ,CartTable};

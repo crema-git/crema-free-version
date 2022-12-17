@@ -16,7 +16,7 @@ import {Typography} from '@mui/material';
 import {Fonts} from '@crema/constants/AppEnums';
 
 const AppSidebar = (props) => {
-  const {isCollapsed, setCollapsed, isNavCollapsed, toggleNavCollapsed} = props;
+  const {isCollapsed, setCollapsed, routesConfig,isNavCollapsed, toggleNavCollapsed} = props;
 
   const sideBarComponent = () => {
     return (
@@ -29,7 +29,7 @@ const AppSidebar = (props) => {
             {isCollapsed ? <NavigateNextIcon /> : <NavigateBeforeIcon />}
           </Box>
           <BucketMinibar />
-          <AppSidebarContainer className='app-sidebar-container'>
+          <AppSidebarContainer   className='app-sidebar-container'>
             <MainSidebar>
               <Box
                 sx={{
@@ -54,7 +54,7 @@ const AppSidebar = (props) => {
                 }}
                 scrollToTop={false}
               >
-                <VerticalNav />
+                 <VerticalNav routesConfig={props.routesConfig} />
               </AppScrollbar>
             </MainSidebar>
           </AppSidebarContainer>
@@ -96,4 +96,5 @@ AppSidebar.propTypes = {
   setCollapsed: PropTypes.func,
   toggleNavCollapsed: PropTypes.func,
   isNavCollapsed: PropTypes.bool,
+  routesConfig: PropTypes.array,
 };

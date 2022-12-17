@@ -9,8 +9,8 @@ import {extraPagesConfigs} from './ExtraPagesRoutes';
 import {ecommerceConfig} from './EcommerceRoutes';
 import {userListConfig} from './UserListRoutes';
 import {userPagesConfig} from './UserPagesRoutes';
-// import {muiComponentConfigs} from './MUIComponents';
-// import {thirdPartyConfigs} from './ThirdPartyRoutes';
+import {muiComponentConfigs} from './MUIComponents';
+import {thirdPartyConfigs} from './ThirdPartyRoutes';
 import {appsConfig} from './AppsRoutes';
 import {accountPagesConfigs} from './AccountRoutes';
 import {initialUrl} from "@crema/constants/AppConst";
@@ -22,10 +22,10 @@ const authorizedStructure = {
     ...dashBoardConfigs,
     ...accountPagesConfigs,
     ...appsConfig,
-    // ...thirdPartyConfigs,
+    ...thirdPartyConfigs,
     ...extraPagesConfigs,
     ...ecommerceConfig,
-    // ...muiComponentConfigs,
+    ...muiComponentConfigs,
     ...userPagesConfig,
     ...userListConfig,
   ],

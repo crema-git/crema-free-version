@@ -4,7 +4,19 @@ import AppGridContainer from '@crema/components/AppGridContainer';
 import AppInfoView from '@crema/components/AppInfoView';
 import AppAnimate from '@crema/components/AppAnimate';
 import {useGetDataApi} from '@crema/utility/APIHooks';
-import {TotalRevenue, QuickStats, Statistics, MonthlyEarning, Deals, SocialMediaAdvertise, TodayTasks, GoalProgress, WebTraffic, Reviews, TicketSupport} from '@crema/modules/dashboards/CRM';
+import {
+  Deals,
+  GoalProgress,
+  MonthlyEarning,
+  QuickStats,
+  Reviews,
+  SocialMediaAdvertise,
+  Statistics,
+  TicketSupport,
+  TodayTasks,
+  TotalRevenue,
+  WebTraffic
+} from '@crema/modules/dashboards/CRM';
 
 const CRM = () => {
   const [{apiData: crmData}] = useGetDataApi('/dashboard/crm');

@@ -34,4 +34,5 @@ export default AppContentView;
 
 AppContentView.propTypes = {
   sxStyle: PropTypes.object,
+  routes: PropTypes.object.isRequired,
 };

@@ -1,4 +1,4 @@
-import {mock} from "@crema/services/axios";
+import mock from '../MockConfig';
 import analytics from '../../fakedb/dashboard/analytics';
 import ecommerce from '../../fakedb/dashboard/ecommerce';
 import crm from '../../fakedb/dashboard/crm';

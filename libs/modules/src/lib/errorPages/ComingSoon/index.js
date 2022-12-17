@@ -11,8 +11,6 @@ import IntlMessages from '@crema/utility/IntlMessages';
 import AppTextField from '@crema/components/AppTextField';
 
 import {styled} from '@mui/material/styles';
-import {ReactComponent as Logo} from '../../../assets/icon/comingsoon.svg';
-import {useTheme} from '@mui/material';
 import AppInfoView from '@crema/components/AppInfoView';
 import AppAnimate from '@crema/components/AppAnimate';
 
@@ -43,7 +41,6 @@ const validationSchema = yup.object({
 });
 
 const ComingSoon = () => {
-  const theme = useTheme();
   const infoViewActionsContext = useInfoViewActionsContext();
 
   return (
@@ -71,7 +68,7 @@ const ComingSoon = () => {
               },
             }}
           >
-            <Logo fill={theme.palette.primary.main} />
+              <img src={'/assets/icon/comingsoon.svg'} alt='comingsoon' />
           </Box>
 
           <Box

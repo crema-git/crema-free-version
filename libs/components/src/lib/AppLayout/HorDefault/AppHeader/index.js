@@ -20,8 +20,9 @@ import AppLogo from '../../components/AppLogo';
 import UserInfo from '../../components/UserInfo';
 import HeaderNavWrapper from './HeaderNavWrapper';
 import HorizontalNav from '../../components/HorizontalNav';
+import PropsTypes from "prop-types";
 
-const AppHeader = ({toggleNavCollapsed}) => {
+const AppHeader = ({toggleNavCollapsed,routesConfig}) => {
   const [anchorEl, setAnchorEl] = React.useState(null);
 
   const handleClick = (event) => {
@@ -245,7 +246,7 @@ const AppHeader = ({toggleNavCollapsed}) => {
                 px: 5,
               }}
             >
-              <HorizontalNav />
+            <HorizontalNav routesConfig={routesConfig} />
             </Box>
           </HeaderNavWrapper>
         </Hidden>
@@ -257,4 +258,5 @@ export default AppHeader;
 
 AppHeader.propTypes = {
   toggleNavCollapsed: PropTypes.func,
+  routesConfig: PropsTypes.array.isRequired,
 };

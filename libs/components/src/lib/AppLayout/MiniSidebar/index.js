@@ -11,8 +11,9 @@ import {LayoutType} from '@crema/constants/AppEnums';
 import MiniSidebarContainer from './MiniSidebarContainer';
 import AppContentView from '../../AppContentView';
 import {useLocation} from 'react-router-dom';
+import PropsTypes from "prop-types";
 
-const MiniSidebar = () => {
+const MiniSidebar = ({routes,routesConfig}) => {
   const {pathname} = useLocation();
   const [isCollapsed, setCollapsed] = useState(true);
   const [isNavCollapsed, setNavCollapsed] = useState(false);
@@ -40,7 +41,8 @@ const MiniSidebar = () => {
           appMainFixedHeader: headerType === 'fixed',
         })}
       >
-        <AppSidebar
+        <AppSidebar 
+          routesConfig={routesConfig}
           isNavCollapsed={isNavCollapsed}
           toggleNavCollapsed={toggleNavCollapsed}
         />
@@ -50,7 +52,7 @@ const MiniSidebar = () => {
             isCollapsed={isCollapsed}
             toggleNavCollapsed={toggleNavCollapsed}
           />
-          <AppContentView />
+          <AppContentView  routes={routes} />
           <AppFixedFooter />
         </Box>
         <AppThemeSetting />
@@ -60,3 +62,8 @@ const MiniSidebar = () => {
 };
 
 export default MiniSidebar;
+MiniSidebar.propsTypes = {
+  routes: PropsTypes.object.isRequired,
+  routesConfig: PropsTypes.array.isRequired,
+};
+

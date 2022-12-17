@@ -34,7 +34,7 @@ const AppSidebar = (props) => {
               }}
               scrollToTop={false}
             >
-              <VerticalNav />
+               <VerticalNav routesConfig={props.routesConfig} />
             </AppScrollbar>
           </MainSidebar>
         </StandardSidebarWrapper>
@@ -52,6 +52,7 @@ AppSidebar.defaultProps = {
 AppSidebar.propTypes = {
   position: PropTypes.string,
   variant: PropTypes.string,
+  routesConfig: PropTypes.array,
   toggleNavCollapsed: PropTypes.func,
   isNavCollapsed: PropTypes.bool,
 };

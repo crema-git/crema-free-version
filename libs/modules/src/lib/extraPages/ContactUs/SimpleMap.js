@@ -1,7 +1,7 @@
 import React from 'react';
 import {GoogleMap, withGoogleMap} from 'react-google-maps';
 import PropTypes from 'prop-types';
-// import 'shared/vendors/maps.css';
+// 
 
 /*
  * Sample From: https://developers.google.com/maps/documentation/javascript/examples/map-simple

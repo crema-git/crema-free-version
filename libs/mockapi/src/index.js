@@ -1,11 +1,6 @@
-export * from './lib/dashboard';
-export * from './lib/contact';
-export * from './lib/todo';
-export * from './lib/mail';
-export * from './lib/ecommerce';
-export * from './lib/scrumboard';
-export * from './lib/chat';
-export * from './lib/wall';
-export * from './lib/userList';
+import mock from './lib/MockConfig';
+import './lib/index';
+
 export * from './fakedb/account';
 export * from './fakedb/account/countries';
+mock.onAny().passThrough();

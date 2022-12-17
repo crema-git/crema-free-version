@@ -11,8 +11,9 @@ import {useLayoutContext} from "@crema/context/LayoutContextProvider";
 import {LayoutType} from '@crema/constants/AppEnums';
 import UserHeaderContainer from './UserHeaderContainer';
 import {useLocation} from 'react-router-dom';
+import PropsTypes from "prop-types";
 
-const UserHeader = () => {
+const UserHeader = ({routes,routesConfig}) => {
   const {pathname} = useLocation();
   const {footer, layoutType, footerType} = useLayoutContext();
   const [isNavCollapsed, setNavCollapsed] = useState(false);
@@ -39,11 +40,12 @@ const UserHeader = () => {
       >
         <AppHeader toggleNavCollapsed={toggleNavCollapsed} />
         <Box className='mainContent'>
-          <AppSidebar
+          <AppSidebar 
+          routesConfig={routesConfig}
             isNavCollapsed={isNavCollapsed}
             toggleNavCollapsed={toggleNavCollapsed}
           />
-          <AppContentView />
+          <AppContentView  routes={routes} />
           <AppFixedFooter />
         </Box>
         <AppThemeSetting />
@@ -53,3 +55,8 @@ const UserHeader = () => {
 };
 
 export default UserHeader;
+UserHeader.propsTypes = {
+  routes: PropsTypes.object.isRequired,
+  routesConfig: PropsTypes.array.isRequired,
+};
+

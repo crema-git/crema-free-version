@@ -11,7 +11,14 @@ import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone';
 import {accountData} from '@crema/mockapi';
 import AppAnimate from '@crema/components/AppAnimate';
 import {Fonts} from '@crema/constants/AppEnums'
-import {ChangePassword, Information, Notification, PersonalInfo, Social} from "@crema/modules/MyProfile";
+import {
+    AccountTabsWrapper,
+    ChangePassword,
+    Information,
+    Notification,
+    PersonalInfo,
+    Social
+} from "@crema/modules/MyProfile";
 
 function a11yProps(index) {
     return {

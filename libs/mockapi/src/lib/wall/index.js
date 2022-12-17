@@ -1,4 +1,4 @@
-import {mock} from "@crema/services/axios";
+import mock from '../MockConfig';
 import {postsList, wallData} from '../../fakedb/apps/wall';
 
 let posts = postsList;

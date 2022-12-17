@@ -8,7 +8,7 @@ import {Fonts} from '@crema/constants/AppEnums'
 import AppAnimate from '@crema/components/AppAnimate';
 import AppGridContainer from '@crema/components/AppGridContainer';
 import {useGetDataApi} from '@crema/utility/APIHooks';
-import {OrderSummary} from '@crema/modules/ecommerce/Carts';
+import {OrderSummary,CartTable} from '@crema/modules/ecommerce/Carts';
 
 const Carts = () => {
   const navigate = useNavigate();

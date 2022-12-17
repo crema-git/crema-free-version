@@ -1,4 +1,4 @@
-import {mock} from "@crema/services/axios";
+import mock from '../MockConfig';
 import folderList from '../../fakedb/apps/mail/folderList';
 import labelList from '../../fakedb/apps/mail/labelList';
 import connectionList from '../../fakedb/apps/mail/connectionList';

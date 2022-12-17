@@ -1,6 +1,6 @@
 import {useEffect, useState} from 'react';
 import _ from 'lodash';
-import {useInfoViewActionsContext} from '../../../context/src/lib/AppContextProvider/InfoViewContextProvider';
+import {useInfoViewActionsContext} from '@crema/context/InfoViewContextProvider';
 import {isRequestSuccessful, sanitizeData} from "@crema/helpers";
 import jwtAxios from "@crema/services/axios";
 
@@ -65,9 +65,11 @@ export const useGetDataApi = (
           ...trimObjectValues(queryParams),
         };
       }
+      console.log('API Called',initialUrl, params);
       jwtAxios
         .get(initialUrl, {params: params})
         .then((data) => {
+          console.log('API Success',initialUrl, data);
           isResponsePending = false;
           if (isRequestSuccessful(data.status)) {
             console.log(initialUrl, data.data);
@@ -87,6 +89,7 @@ export const useGetDataApi = (
           }
         })
         .catch((error) => {
+          console.log('API Failed',initialUrl, error);
           if (error.response.data.message) {
             console.log(initialUrl, error.response.data.message);
             if (callbackFun) callbackFun(error.response.data);

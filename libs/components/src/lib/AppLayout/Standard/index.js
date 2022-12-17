@@ -11,8 +11,9 @@ import {LayoutType} from '@crema/constants/AppEnums';
 import StandardContainer from './StandardContainer';
 import AppContentView from '../../AppContentView';
 import {useLocation} from 'react-router-dom';
+import PropsTypes from "prop-types";
 
-const Standard = () => {
+const Standard = ({routes,routesConfig}) => {
   const {pathname} = useLocation();
   const {footer, layoutType, footerType} = useLayoutContext();
   const [isNavCollapsed, setNavCollapsed] = useState(false);
@@ -39,11 +40,12 @@ const Standard = () => {
       >
         <AppHeader toggleNavCollapsed={toggleNavCollapsed} />
         <Box className='mainContent'>
-          <AppSidebar
+          <AppSidebar 
+          routesConfig={routesConfig}
             isNavCollapsed={isNavCollapsed}
             toggleNavCollapsed={toggleNavCollapsed}
           />
-          <AppContentView />
+          <AppContentView  routes={routes} />
           <AppFixedFooter />
         </Box>
         <AppThemeSetting />
@@ -53,3 +55,8 @@ const Standard = () => {
 };
 
 export default Standard;
+Standard.propsTypes = {
+  routes: PropsTypes.object.isRequired,
+  routesConfig: PropsTypes.array.isRequired,
+};
+

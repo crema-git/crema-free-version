@@ -11,8 +11,9 @@ import MainContent from './MainContent';
 import {LayoutType} from '@crema/constants/AppEnums';
 import HorDarkContainer from './HorDarkContainer';
 import {useLocation} from 'react-router-dom';
+import PropsTypes from "prop-types";
 
-const HorDarkLayout = () => {
+const HorDarkLayout = ({routes,routesConfig}) => {
   const {footer, layoutType, footerType} = useLayoutContext();
   const {pathname} = useLocation();
   const [isNavCollapsed, setNavCollapsed] = useState(false);
@@ -37,14 +38,15 @@ const HorDarkLayout = () => {
           appMainFixedFooter: footer && footerType === 'fixed',
         })}
       >
-        <AppSidebar
+        <AppSidebar 
+          routesConfig={routesConfig}
           isNavCollapsed={isNavCollapsed}
           toggleNavCollapsed={toggleNavCollapsed}
         />
 
         <MainContent>
-          <AppHeader toggleNavCollapsed={toggleNavCollapsed} />
-          <AppContentView />
+          <AppHeader toggleNavCollapsed={toggleNavCollapsed} routesConfig={routesConfig}/>
+          <AppContentView  routes={routes} />
           <AppFixedFooter />
         </MainContent>
         <AppThemeSetting />
@@ -54,3 +56,9 @@ const HorDarkLayout = () => {
 };
 
 export default HorDarkLayout;
+HorDarkLayout.propsTypes = {
+  routes: PropsTypes.object.isRequired,
+  routesConfig: PropsTypes.array.isRequired,
+};
+
+

@@ -39,7 +39,7 @@ const AppSidebar = (props) => {
                 }}
                 scrollToTop={false}
               >
-                <VerticalNav />
+                 <VerticalNav routesConfig={props.routesConfig} />
               </AppScrollbar>
             </MainSidebar>
           </SidebarWrapper>
@@ -62,7 +62,7 @@ const AppSidebar = (props) => {
               }}
               scrollToTop={false}
             >
-              <VerticalNav />
+               <VerticalNav routesConfig={props.routesConfig} />
             </AppScrollbar>
           </MainSidebar>
         </SidebarWrapper>

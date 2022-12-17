@@ -11,8 +11,9 @@ import {useLayoutContext} from "@crema/context/LayoutContextProvider";
 import BitBucketContainer from './BitBucketContainer';
 import AppContentView from '../../AppContentView';
 import {useLocation} from 'react-router-dom';
+import PropsTypes from "prop-types";
 
-const BitBucket = () => {
+const BitBucket = ({routes,routesConfig}) => {
   const {pathname} = useLocation();
   const [isCollapsed, setCollapsed] = useState(false);
   const [isNavCollapsed, setNavCollapsed] = useState(false);
@@ -40,14 +41,15 @@ const BitBucket = () => {
         <Hidden lgUp>
           <AppHeader toggleNavCollapsed={toggleNavCollapsed} />
         </Hidden>
-        <AppSidebar
+        <AppSidebar 
+          routesConfig={routesConfig}
           isCollapsed={isCollapsed}
           setCollapsed={setCollapsed}
           isNavCollapsed={isNavCollapsed}
           toggleNavCollapsed={toggleNavCollapsed}
         />
         <Box className='mainContent'>
-          <AppContentView />
+          <AppContentView  routes={routes} />
         </Box>
         <AppThemeSetting />
       </BitBucketWrapper>
@@ -56,3 +58,8 @@ const BitBucket = () => {
 };
 
 export default BitBucket;
+BitBucket.propsTypes = {
+  routes: PropsTypes.object.isRequired,
+  routesConfig: PropsTypes.array.isRequired,
+};
+

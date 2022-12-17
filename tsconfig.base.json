@@ -349,14 +349,47 @@
         "libs/modules/src/lib/extraPages/Pricing/index.js"
       ],
       "@crema/modules/userList/Flat": [
-        "apps/source/src/app/userList/Flat/index.js"
+        "libs/modules/src/lib/userList/Flat/index.js"
       ],
       "@crema/modules/userList/Modern": [
-        "apps/source/src/app/userList/Modern/index.js"
+        "libs/modules/src/lib/userList/Modern/index.js"
       ],
       "@crema/modules/userList/Standard": [
-        "apps/source/src/app/userList/Standard/index.js"
+        "libs/modules/src/lib/userList/Standard/index.js"
       ],
+
+      //MUI Components
+      "@crema/modules/components/dataDisplay": [
+        "libs/modules/src/lib/muiComponents/dataDisplay/index.js"
+      ],
+      "@crema/modules/components/datagrid": [
+        "libs/modules/src/lib/muiComponents/datagrid/index.js"
+      ],
+      "@crema/modules/components/feedBack": [
+        "libs/modules/src/lib/muiComponents/feedback/index.js"
+      ],
+      "@crema/modules/components/inputs": [
+        "libs/modules/src/lib/muiComponents/inputs/index.js"
+      ],
+      "@crema/modules/components/lab": [
+        "libs/modules/src/lib/muiComponents/lab/index.js"
+      ],
+      "@crema/modules/components/layout": [
+        "libs/modules/src/lib/muiComponents/layout/index.js"
+      ],
+      "@crema/modules/components/navigation": [
+        "libs/modules/src/lib/muiComponents/navigation/index.js"
+      ],
+      "@crema/modules/components/surfaces": [
+        "libs/modules/src/lib/muiComponents/surfaces/index.js"
+      ],
+      "@crema/modules/components/utils": [
+        "libs/modules/src/lib/muiComponents/utils/index.js"
+      ],
+      "@crema/modules/thirdParty": [
+        "libs/modules/src/lib/thirdParty/index.js"
+      ],
+
       "@crema/redux": ["libs/redux/src/index.js"],
       "@crema/services": ["libs/services/src/index.js"],
       "@crema/services/auth": ["libs/services/auth/src/index.js"],
@@ -373,6 +406,7 @@
         "libs/services/auth/src/lib/jwt-auth/JWTAuthProvider.js"
       ],
       "@crema/services/axios": ["libs/services/axios/src/index.js"],
+
       "@crema/services/localization": [
         "libs/services/localization/src/index.js"
       ],

@@ -3,7 +3,7 @@ import AppInfoView from '@crema/components/AppInfoView';
 import Box from '@mui/material/Box';
 import AppList from '@crema/components/AppList';
 import {useGetDataApi} from '@crema/utility/APIHooks';
-import ListItem from "@crema/modules/userList/Standard";
+import {ListItem} from "@crema/modules/userList/Standard";
 
 const Standard = () => {
   const [{apiData: usersList}] = useGetDataApi('/api/user/list', []);

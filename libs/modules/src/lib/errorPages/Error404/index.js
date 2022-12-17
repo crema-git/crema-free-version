@@ -7,12 +7,10 @@ import {grey} from '@mui/material/colors';
 import {Fonts} from '@crema/constants/AppEnums'
 import {initialUrl} from "@crema/constants/AppConst";
 import IntlMessages from '@crema/utility/IntlMessages';
-import {ReactComponent as Logo} from '../../../assets/icon/404.svg';
 import {useTheme} from '@mui/material';
 import AppAnimate from '@crema/components/AppAnimate';
 
 const Error404 = () => {
-  const theme = useTheme();
   const navigate = useNavigate();
 
   const onGoBackToHome = () => {
@@ -43,7 +41,7 @@ const Error404 = () => {
             },
           }}
         >
-          <Logo fill={theme.palette.primary.main} />
+            <img src={'/assets/icon/404.svg'} alt='404' />
         </Box>
         <Box
           sx={{

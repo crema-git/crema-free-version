@@ -11,8 +11,9 @@ import {LayoutType} from '@crema/constants/AppEnums';
 import AppSidebar from './AppSidebar';
 import DrawerLayoutContainer from './DrawerLayoutContainer';
 import {useLocation} from 'react-router-dom';
+import PropsTypes from "prop-types";
 
-const DrawerLayout = () => {
+const DrawerLayout = ({routes,routesConfig}) => {
   const {pathname} = useLocation();
   const [isNavCollapsed, setNavCollapsed] = useState(false);
   const {footer, layoutType, headerType, footerType} = useLayoutContext();
@@ -38,14 +39,15 @@ const DrawerLayout = () => {
           appMainFixedHeader: headerType === 'fixed',
         })}
       >
-        <AppSidebar
+        <AppSidebar 
+          routesConfig={routesConfig}
           isNavCollapsed={isNavCollapsed}
           toggleNavCollapsed={toggleNavCollapsed}
         />
 
         <MainContent>
           <AppHeader toggleNavCollapsed={toggleNavCollapsed} />
-          <AppContentView />
+          <AppContentView  routes={routes} />
           <AppFixedFooter />
         </MainContent>
         <AppThemeSetting />
@@ -55,3 +57,8 @@ const DrawerLayout = () => {
 };
 
 export default DrawerLayout;
+DrawerLayout.propsTypes = {
+  routes: PropsTypes.object.isRequired,
+  routesConfig: PropsTypes.array.isRequired,
+};
+

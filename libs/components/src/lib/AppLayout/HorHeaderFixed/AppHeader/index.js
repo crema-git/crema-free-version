@@ -19,8 +19,9 @@ import AppLogo from '../../components/AppLogo';
 import UserInfo from '../../components/UserInfo';
 import HorizontalNav from '../../components/HorizontalNav';
 import {useSidebarContext} from "@crema/context/SidebarContextProvider";
+import PropsTypes from "prop-types";
 
-const AppHeader = ({toggleNavCollapsed}) => {
+const AppHeader = ({toggleNavCollapsed,routesConfig}) => {
   const [anchorEl, setAnchorEl] = React.useState(null);
 
   const handleClick = (event) => {
@@ -130,7 +131,7 @@ const AppHeader = ({toggleNavCollapsed}) => {
                   },
                 }}
               >
-                <HorizontalNav />
+              <HorizontalNav routesConfig={routesConfig} />
               </Box>
             </Hidden>
 
@@ -275,4 +276,5 @@ export default AppHeader;
 
 AppHeader.propTypes = {
   toggleNavCollapsed: PropTypes.func,
+  routesConfig: PropsTypes.array.isRequired,
 };

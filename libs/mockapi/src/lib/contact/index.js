@@ -1,5 +1,5 @@
 import contactData from '../../fakedb/apps/contact/contactList';
-import {mock} from "@crema/services/axios";
+import mock from '../MockConfig';
 import folderList from '../../fakedb/apps/contact/folderList';
 import labelList from '../../fakedb/apps/contact/labelList';
 

@@ -11,8 +11,9 @@ import MainContent from './MainContent';
 import {LayoutType} from '@crema/constants/AppEnums';
 import HorHeaderFixedContainer from './HorHeaderFixedContainer';
 import {useLocation} from 'react-router-dom';
+import PropsTypes from "prop-types";
 
-const HorHeaderFixed = () => {
+const HorHeaderFixed = ({routes,routesConfig}) => {
   const {pathname} = useLocation();
   const {footer, layoutType, footerType} = useLayoutContext();
   const [isNavCollapsed, setNavCollapsed] = useState(false);
@@ -37,14 +38,15 @@ const HorHeaderFixed = () => {
           appMainFixedFooter: footer && footerType === 'fixed',
         })}
       >
-        <AppSidebar
+        <AppSidebar 
+          routesConfig={routesConfig}
           isNavCollapsed={isNavCollapsed}
           toggleNavCollapsed={toggleNavCollapsed}
         />
 
         <MainContent>
-          <AppHeader toggleNavCollapsed={toggleNavCollapsed} />
-          <AppContentView />
+          <AppHeader toggleNavCollapsed={toggleNavCollapsed} routesConfig={routesConfig} />
+          <AppContentView  routes={routes} />
           <AppFixedFooter />
         </MainContent>
         <AppThemeSetting />
@@ -54,3 +56,9 @@ const HorHeaderFixed = () => {
 };
 
 export default HorHeaderFixed;
+HorHeaderFixed.propsTypes = {
+  routes: PropsTypes.object.isRequired,
+  routesConfig: PropsTypes.array.isRequired,
+};
+
+

@@ -22,7 +22,7 @@ import HeaderNavWrapper from './HeaderNavWrapper';
 import HorizontalNav from '../../components/HorizontalNav';
 import {useSidebarContext} from "@crema/context/SidebarContextProvider";
 
-const AppHeader = ({toggleNavCollapsed}) => {
+const AppHeader = ({toggleNavCollapsed,routesConfig}) => {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const {sidebarBgColor, sidebarTextColor} = useSidebarContext();
 
@@ -35,8 +35,7 @@ const AppHeader = ({toggleNavCollapsed}) => {
   };
 
   return (
-    <>
-      <AppBar
+    <AppBar
         position='relative'
         color='inherit'
         sx={{
@@ -247,15 +246,15 @@ const AppHeader = ({toggleNavCollapsed}) => {
                 px: 5,
               }}
             >
-              <HorizontalNav />
+            <HorizontalNav routesConfig={routesConfig} />
             </Box>
           </HeaderNavWrapper>
         </Hidden>
       </AppBar>
-    </>
   );
 };
 export default AppHeader;
 AppHeader.propTypes = {
   toggleNavCollapsed: PropTypes.func,
+  routesConfig: PropTypes.array,
 };

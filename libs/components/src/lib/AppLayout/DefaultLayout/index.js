@@ -11,8 +11,9 @@ import {LayoutType} from '@crema/constants/AppEnums';
 import AppSidebar from './AppSidebar';
 import DefaultLayoutContainer from './DefaultLayoutContainer';
 import {useLocation} from 'react-router-dom';
+import PropsTypes from "prop-types";
 
-const DefaultLayout = ({routes}) => {
+const DefaultLayout = ({routes,routesConfig}) => {
   const {footer, layoutType, headerType, footerType} = useLayoutContext();
   const {pathname} = useLocation();
   const [isNavCollapsed, setNavCollapsed] = useState(false);
@@ -38,7 +39,8 @@ const DefaultLayout = ({routes}) => {
           appMainFixedHeader: headerType === 'fixed',
         })}
       >
-        <AppSidebar
+        <AppSidebar 
+          routesConfig={routesConfig}
           isNavCollapsed={isNavCollapsed}
           toggleNavCollapsed={toggleNavCollapsed}
         />
@@ -55,3 +57,7 @@ const DefaultLayout = ({routes}) => {
 };
 
 export default DefaultLayout;
+DefaultLayout.propsTypes = {
+    routes: PropsTypes.object.isRequired,
+  routesConfig: PropsTypes.array.isRequired,
+};

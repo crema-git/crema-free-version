@@ -1,5 +1,5 @@
 
-import {mock} from "@crema/services/axios";
+import mock from '../MockConfig';
 import connectionList from "../../fakedb/apps/chat/connectionList";
 import chatList from "../../fakedb/apps/chat/chatList";
 

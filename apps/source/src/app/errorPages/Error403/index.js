@@ -7,7 +7,6 @@ import {grey} from '@mui/material/colors';
 import {Fonts} from '@crema/constants/AppEnums'
 import AppAnimate from '@crema/components/AppAnimate';
 import IntlMessages from '@crema/utility/IntlMessages';
-import {ReactComponent as Logo} from '../../../assets/icon/403.svg';
 import {useTheme} from '@mui/material';
 import {initialUrl} from "@crema/constants/AppConst";
 
@@ -43,7 +42,7 @@ const Error403 = () => {
             },
           }}
         >
-          <Logo fill={theme.palette.primary.main} />
+            <img src={'/assets/icon/403.svg'} alt='403' />
         </Box>
         <Box sx={{mb: {xs: 4, xl: 5}}}>
           <Box
