@@ -7,6 +7,7 @@ import Typography from '@mui/material/Typography';
 import AppCircularProgress from '@crema/components/AppCircularProgress';
 import SaleStaticChart from './SaleStaticChart';
 import AppGridContainer from '@crema/components/AppGridContainer';
+import AppImage from "@crema/components/AppImage";
 
 const SaleStatics = () => {
   const {messages} = useIntl();

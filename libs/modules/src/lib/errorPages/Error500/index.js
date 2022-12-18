@@ -8,6 +8,7 @@ import {Fonts} from '@crema/constants/AppEnums'
 import {initialUrl} from "@crema/constants/AppConst";
 import AppAnimate from '@crema/components/AppAnimate';
 import IntlMessages from '@crema/utility/IntlMessages';
+import AppImage from "@crema/components/AppImage";
 
 const Error500 = () => {
   const navigate = useNavigate();

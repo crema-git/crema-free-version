@@ -4,6 +4,7 @@ import Button from '@mui/material/Button';
 import IntlMessages from '@crema/utility/IntlMessages';
 import Box from '@mui/material/Box';
 import {Fonts} from '@crema/constants/AppEnums'
+import AppImage from "@crema/components/AppImage";
 
 const Introduction = () => {
   return (

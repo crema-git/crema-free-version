@@ -8,7 +8,7 @@ import {Fonts} from '@crema/constants/AppEnums'
 import {initialUrl} from "@crema/constants/AppConst";
 import AppAnimate from '@crema/components/AppAnimate';
 import IntlMessages from '@crema/utility/IntlMessages';
-import {useTheme} from '@mui/material';
+import AppImage from "@crema/components/AppImage";
 
 const Error401 = () => {
   const navigate = useNavigate();

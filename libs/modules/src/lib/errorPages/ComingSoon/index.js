@@ -13,6 +13,7 @@ import AppTextField from '@crema/components/AppTextField';
 import {styled} from '@mui/material/styles';
 import AppInfoView from '@crema/components/AppInfoView';
 import AppAnimate from '@crema/components/AppAnimate';
+import AppImage from "@crema/components/AppImage";
 
 const FormWrapper = styled(Form)(() => {
   return {

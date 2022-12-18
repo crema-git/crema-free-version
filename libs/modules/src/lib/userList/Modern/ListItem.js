@@ -11,6 +11,7 @@ import Box from '@mui/material/Box';
 import PropTypes from 'prop-types';
 import {grey} from '@mui/material/colors';
 import {Fonts} from '@crema/constants/AppEnums'
+import AppImage from "@crema/components/AppImage";
 
 const ListItem = (props) => {
   const {user} = props;

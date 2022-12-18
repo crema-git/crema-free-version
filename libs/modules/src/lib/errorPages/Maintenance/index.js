@@ -8,6 +8,7 @@ import {Fonts} from '@crema/constants/AppEnums'
 import AppAnimate from '@crema/components/AppAnimate';
 import IntlMessages from '@crema/utility/IntlMessages';
 import {initialUrl} from "@crema/constants/AppConst";
+import AppImage from "@crema/components/AppImage";
 
 const Maintenance = () => {
   const navigate = useNavigate();

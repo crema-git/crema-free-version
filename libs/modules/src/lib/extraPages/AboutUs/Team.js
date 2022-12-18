@@ -5,6 +5,7 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import {Fonts} from '@crema/constants/AppEnums'
 import AppCard from '@crema/components/AppCard';
+import AppImage from "@crema/components/AppImage";
 import {teamData} from "../../../../../mockapi/src/fakedb/extraPages/aboutUs";
 
 const settings = {
