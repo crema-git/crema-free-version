@@ -7,9 +7,8 @@ import AppContextProvider from '@crema/context/AppContextProvider';
 import AppThemeProvider from '@crema/context/AppThemeProvider';
 import AppStyleProvider from '@crema/context/AppStyleProvider';
 import AppLocaleProvider from '@crema/context/AppLocaleProvider';
-import FirebaseAuthProvider from '@crema/services/auth/firebase/FirebaseAuthProvider';
-import AuthRoutes from '@crema/utility/AuthRoutes';
-
+import FirebaseAuthProvider from '@crema/services/auth/FirebaseAuthProvider'
+import AuthRoutes from "@crema/components/AuthRoutes";
 import '@crema/services/index';
 import '../shared/vendors/index.css';
 import AppPageMeta from '@crema/core/AppPageMeta';

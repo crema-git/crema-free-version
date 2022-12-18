@@ -14,5 +14,5 @@ export const defaultUser = {
   role: 'user',
   photoURL: '/assets/images/avatar/A11.jpg',
 };
-export const fileStackKey = 'Ach6MsgoQHGK6tCaq5uJgz';
-export const initialUrl = '/dashboards/crypto'; // this url will open after login
+export const fileStackKey = process.env.NX_FILESTACK_KEY;
+export const initialUrl = process.env.NX_INITIAL_URL; // this url will open after login
