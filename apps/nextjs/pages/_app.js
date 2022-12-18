@@ -1,17 +1,48 @@
-import Head from 'next/head';
-import './styles.css';
+import * as React from 'react';
+import PropTypes from 'prop-types';
+import CssBaseline from '@mui/material/CssBaseline';
+import {CacheProvider} from '@emotion/react';
+import createEmotionCache from '../createEmotionCache';
+import AppContextProvider from '@crema/context/AppContextProvider';
+import AppThemeProvider from '@crema/context/AppThemeProvider';
+import AppStyleProvider from '@crema/context/AppStyleProvider';
+import AppLocaleProvider from '@crema/context/AppLocaleProvider';
+import FirebaseAuthProvider from '@crema/services/auth/firebase/FirebaseAuthProvider';
+import AuthRoutes from '@crema/utility/AuthRoutes';
 
-function CustomApp({ Component, pageProps }){
+import '@crema/services/index';
+import '../shared/vendors/index.css';
+import AppPageMeta from '@crema/core/AppPageMeta';
+
+// Client-side cache, shared for the whole session of the user in the browser.
+const clientSideEmotionCache = createEmotionCache();
+
+export default function MyApp(props) {
+  const {Component, emotionCache = clientSideEmotionCache, pageProps} = props;
+
   return (
-    <>
-      <Head>
-        <title>Welcome to nextjs!</title>
-      </Head>
-      <main className="app">
-        <Component {...pageProps} />
-      </main>
-    </>
+    <CacheProvider value={emotionCache}>
+      <AppContextProvider>
+        <AppThemeProvider>
+          <AppStyleProvider>
+            <AppLocaleProvider>
+              <FirebaseAuthProvider>
+                <AuthRoutes>
+                  <CssBaseline />
+                  <AppPageMeta />
+                  <Component {...pageProps} />
+                </AuthRoutes>
+              </FirebaseAuthProvider>
+            </AppLocaleProvider>
+          </AppStyleProvider>
+        </AppThemeProvider>
+      </AppContextProvider>
+    </CacheProvider>
   );
 }
 
-export default CustomApp;
+MyApp.propTypes = {
+  Component: PropTypes.elementType.isRequired,
+  emotionCache: PropTypes.object,
+  pageProps: PropTypes.object.isRequired,
+};
