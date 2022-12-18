@@ -386,8 +386,9 @@
         "libs/modules/src/lib/userList/Standard/index.js"
       ],
       "@crema/redux": ["libs/redux/src/index.js"],
-      "@crema/redux/reducers": ["libs/redux/src/lib/reducers/index.js"],
+      "@crema/redux-toolkit/libs": ["libs/redux-toolkit/libs/src/index.ts"],
       "@crema/redux/actions": ["libs/redux/src/lib/actions/index.js"],
+      "@crema/redux/reducers": ["libs/redux/src/lib/reducers/index.js"],
       "@crema/redux/store": ["libs/redux/src/lib/store/index.js"],
       "@crema/services": ["libs/services/src/index.js"],
       "@crema/services/auth": ["libs/services/auth/src/index.js"],
@@ -400,11 +401,11 @@
       "@crema/services/auth/FirebaseAuthProvider": [
         "libs/services/auth/src/lib/firebase/FirebaseAuthProvider.js"
       ],
-      "@crema/services/auth/JWTAuthProvider": [
-        "libs/services/auth/src/lib/jwt-auth/JWTAuthProvider.js"
-      ],
       "@crema/services/auth/JWT": [
         "libs/services/auth/src/lib/jwt-auth/index.js"
+      ],
+      "@crema/services/auth/JWTAuthProvider": [
+        "libs/services/auth/src/lib/jwt-auth/JWTAuthProvider.js"
       ],
       "@crema/services/axios": ["libs/services/axios/src/index.js"],
       "@crema/services/localization": [
