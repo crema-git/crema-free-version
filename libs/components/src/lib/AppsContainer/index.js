@@ -92,8 +92,7 @@ const AppsContainer = (props) => {
 
       <AppContainerWrapper navStyle={navStyle} footer={footer}>
         {sidebarContent ? (
-          <AppSidebar 
-          routesConfig={routesConfig}
+          <AppSidebar
             isAppDrawerOpen={isNavCollapsed}
             toggleNavCollapsed={toggleNavCollapsed}
             footer={footer}

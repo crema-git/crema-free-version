@@ -1,6 +1,6 @@
 import React from 'react';
-import AppPage from '../@crema/hoc/DefaultPage/index';
-import asyncComponent from '../@crema/utility/asyncComponent';
+import AppPage from '@crema/hoc/DefaultPage';
+import asyncComponent  from "@crema/components/AppAsyncComponent"
 
 const ForgetPassword = asyncComponent(() =>
   import('../modules/auth/ForgetPassword/index'),

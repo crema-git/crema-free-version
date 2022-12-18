@@ -22,6 +22,10 @@ const leaveAnimationDefaults = {
 };
 
 function AppAnimateGroup({...props}) {
+
+  if (typeof window !== 'undefined') {
+    return props.children
+  } else{
   return (
     <VelocityTransitionGroup
       {...props}
@@ -29,6 +33,7 @@ function AppAnimateGroup({...props}) {
       leave={{...leaveAnimationDefaults, ...props.leave}}
     />
   );
+  }
 }
 
 AppAnimateGroup.propTypes = {

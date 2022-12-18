@@ -16,17 +16,14 @@
     "baseUrl": ".",
     "paths": {
       "@crema/components": ["libs/components/src/index.js"],
-      "@crema/components/AppImage": [
-        "libs/components/src/lib/AppImage/index.js"
-      ],
-      "@crema/components/AppPageMeta": [
-        "libs/components/src/lib/AppPageMeta/index.js"
-      ],
       "@crema/components/AppAnimate": [
         "libs/components/src/lib/AppAnimate/index.js"
       ],
       "@crema/components/AppAnimateGroup": [
         "libs/components/src/lib/AppAnimateGroup/index.js"
+      ],
+      "@crema/components/AppAsyncComponent": [
+        "libs/components/src/lib/AppAsyncComponent/index.js"
       ],
       "@crema/components/AppAutoComplete": [
         "libs/components/src/lib/AppFormComponents/AppAutoComplete/index.js"
@@ -68,6 +65,9 @@
       "@crema/components/AppGrid": ["libs/components/src/lib/AppGrid/index.js"],
       "@crema/components/AppGridContainer": [
         "libs/components/src/lib/AppGridContainer/index.js"
+      ],
+      "@crema/components/AppImage": [
+        "libs/components/src/lib/AppImage/index.js"
       ],
       "@crema/components/AppInfoView": [
         "libs/components/src/lib/AppInfoView/index.js"
@@ -115,6 +115,9 @@
       ],
       "@crema/components/AppNotifications/NotificationItem": [
         "libs/components/src/lib/AppNotifications/NotificationItem.js"
+      ],
+      "@crema/components/AppPageMeta": [
+        "libs/components/src/lib/AppPageMeta/index.js"
       ],
       "@crema/components/AppScrollbar": [
         "libs/components/src/lib/AppScrollbar/index.js"
@@ -243,6 +246,8 @@
       "@crema/custom-hooks": ["libs/custom-hooks/src/index.js"],
       "@crema/fakedb": ["libs/fakedb/src/index.js"],
       "@crema/helpers": ["libs/helpers/src/index.js"],
+      "@crema/hoc/AppPage": ["libs/hoc/src/lib/AppPage/index.js"],
+      "@crema/hoc/DefaultPage": ["libs/hoc/src/lib/DefaultPage/index.js"],
       "@crema/mockapi": ["libs/mockapi/src/index.js"],
       "@crema/modules": ["libs/modules/src/index.js"],
       "@crema/modules/MyProfile": [
@@ -392,7 +397,7 @@
         "libs/modules/src/lib/userList/Standard/index.js"
       ],
       "@crema/redux": ["libs/redux/src/index.js"],
-      "@crema/redux-toolkit/libs": ["libs/redux-toolkit/libs/src/index.ts"],
+      "@crema/redux-toolkit": ["libs/redux-toolkit/libs/src/index.ts"],
       "@crema/redux/actions": ["libs/redux/src/lib/actions/index.js"],
       "@crema/redux/reducers": ["libs/redux/src/lib/reducers/index.js"],
       "@crema/redux/store": ["libs/redux/src/lib/store/index.js"],

@@ -9,9 +9,9 @@ import AppStyleProvider from '@crema/context/AppStyleProvider';
 import AppLocaleProvider from '@crema/context/AppLocaleProvider';
 import FirebaseAuthProvider from '@crema/services/auth/FirebaseAuthProvider'
 import AuthRoutes from "@crema/components/AuthRoutes";
-import '@crema/services/index';
-import '../shared/vendors/index.css';
-import AppPageMeta from '@crema/core/AppPageMeta';
+import '@crema/mockapi';
+// import '../shared/vendors/index.css';
+import AppPageMeta from '@crema/components/AppPageMeta';
 
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();

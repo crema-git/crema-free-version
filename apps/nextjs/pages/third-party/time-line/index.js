@@ -1,5 +1,5 @@
 import React from 'react';
-import AppPage from '../../../@crema/hoc/AppPage';
+import AppPage from '@crema/hoc/AppPage';
 
 // const TimeLine = asyncComponent(() => import("../../../modules/thirdParty/timeLine"));
 // export default AppPage(() => <TimeLine/>);
