@@ -18,8 +18,6 @@ import SwitchesGroup from './SwitchesFormGroup';
 import SwitchesGroupSource from '!raw-loader!./SwitchesFormGroup';
 import CustomizedSwitches from './Customization';
 import CustomizedSwitchesSource from '!raw-loader!./Customization';
-import UnstyledSwitches from './Unstyled';
-import UnstyledSwitchesSource from '!raw-loader!./Unstyled';
 import FormControlLabelPosition from './LabelPlacement';
 import FormControlLabelPositionSource from '!raw-loader!./LabelPlacement';
 
@@ -85,15 +83,6 @@ const Switches = () => {
             source={CustomizedSwitchesSource}
             noScrollbar
             description='Here are some examples of customizing the component. You can learn more about this in the overrides documentation page.'
-          />
-        </Grid>
-        <Grid item xs={12} md={6}>
-          <AppComponentCard
-            title='Unstyled'
-            component={UnstyledSwitches}
-            source={UnstyledSwitchesSource}
-            noScrollbar
-            description='The switch also comes with an unstyled version. It ideal for doing heavy customizations and minimizing bundle size.'
           />
         </Grid>
         <Grid item xs={12} md={6}>

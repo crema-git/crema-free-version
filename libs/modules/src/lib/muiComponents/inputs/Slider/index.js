@@ -38,8 +38,6 @@ import TrackInvertedSlider from './InvertedTrack';
 import TrackInvertedSliderSource from '!raw-loader!./InvertedTrack';
 import NonLinearSlider from './NonLinearScale';
 import NonLinearSliderSource from '!raw-loader!./NonLinearScale';
-import UnstyledSlider from './Unstyled';
-import UnstyledSliderSource from '!raw-loader!./Unstyled';
 
 const Slider = () => {
   return (
@@ -191,15 +189,6 @@ const Slider = () => {
             source={NonLinearSliderSource}
             noScrollbar
             description='You can use the scale prop to represent the value on a different scale.'
-          />
-        </Grid>
-        <Grid item xs={12} md={6}>
-          <AppComponentCard
-            title='Unstyled'
-            component={UnstyledSlider}
-            source={UnstyledSliderSource}
-            noScrollbar
-            description='The slider also comes with an unstyled version. It ideal for doing heavy customizations and minimizing bundle size.'
           />
         </Grid>
         <Grid item xs={12} md={6}>

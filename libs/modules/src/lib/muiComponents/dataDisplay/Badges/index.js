@@ -18,8 +18,6 @@ import DotBadge from './DotBadge';
 import DotBadgeSource from '!raw-loader!./DotBadge';
 import BadgeOverlap from './BadgeOverlap';
 import BadgeOverlapSource from '!raw-loader!./BadgeOverlap';
-import UnstyledBadge from './Unstyled';
-import UnstyledBadgeSource from '!raw-loader!./Unstyled';
 import AccessibleBadges from './Accessibility';
 import AccessibleBadgesSource from '!raw-loader!./Accessibility';
 
@@ -94,15 +92,6 @@ const Badges = () => {
             source={BadgeOverlapSource}
             noScrollbar
             description='You can use the overlap prop to place the badge relative to the corner of the wrapped element.'
-          />
-        </Grid>
-        <Grid item xs={12} md={6}>
-          <AppComponentCard
-            title='Unstyled'
-            component={UnstyledBadge}
-            source={UnstyledBadgeSource}
-            noScrollbar
-            description='The badge also comes with an unstyled version. It ideal for doing heavy customizations and minimizing bundle size.'
           />
         </Grid>
         <Grid item xs={12} md={6}>

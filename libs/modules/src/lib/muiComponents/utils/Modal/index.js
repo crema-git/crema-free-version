@@ -7,8 +7,8 @@ import AppComponentCard from '@crema/components/AppComponentCard';
 import BasicModal from './BasicModal';
 import BasicModalSource from '!raw-loader!./BasicModal';
 
-import ModalUnstyledDemo from './ModalUnstyledDemo';
-import ModalUnstyledDemoSource from '!raw-loader!./ModalUnstyledDemo';
+import KeepMountedModal from './KeepMountedModal';
+import KeepMountedModalSource from '!raw-loader!./KeepMountedModal';
 
 import NestedModal from './NestedModal';
 import NestedModalSource from '!raw-loader!./NestedModal';
@@ -36,10 +36,10 @@ const Modal = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='ModalUnstyledDemo'
-            component={ModalUnstyledDemo}
-            source={ModalUnstyledDemoSource}
-            description='The modal also comes with an unstyled version. Its ideal for doing heavy customizations and minimizing bundle size.'
+            title='KeepMountedModal'
+            component={KeepMountedModal}
+            source={KeepMountedModalSource}
+            description='The content of modal is unmounted when closed. If you need to make the content available to search engines or render expensive component trees inside your modal while optimizing for interaction responsiveness it might be a good idea to change this default behavior by enabling the keepMounted prop.'
             noScrollbar
           />
         </Grid>
