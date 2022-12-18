@@ -55,6 +55,12 @@
         "linter": "eslint",
         "unitTestRunner": "vitest"
       }
+    },
+    "@nrwl/next": {
+      "application": {
+        "style": "@emotion/styled",
+        "linter": "eslint"
+      }
     }
   },
   "defaultProject": "crema"

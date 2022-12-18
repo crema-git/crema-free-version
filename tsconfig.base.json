@@ -252,6 +252,33 @@
       ],
       "@crema/modules/apps/ToDo": ["libs/modules/src/lib/apps/ToDo/index.js"],
       "@crema/modules/apps/Wall": ["libs/modules/src/lib/apps/Wall/index.js"],
+      "@crema/modules/components/dataDisplay": [
+        "libs/modules/src/lib/muiComponents/dataDisplay/index.js"
+      ],
+      "@crema/modules/components/datagrid": [
+        "libs/modules/src/lib/muiComponents/datagrid/index.js"
+      ],
+      "@crema/modules/components/feedBack": [
+        "libs/modules/src/lib/muiComponents/feedback/index.js"
+      ],
+      "@crema/modules/components/inputs": [
+        "libs/modules/src/lib/muiComponents/inputs/index.js"
+      ],
+      "@crema/modules/components/lab": [
+        "libs/modules/src/lib/muiComponents/lab/index.js"
+      ],
+      "@crema/modules/components/layout": [
+        "libs/modules/src/lib/muiComponents/layout/index.js"
+      ],
+      "@crema/modules/components/navigation": [
+        "libs/modules/src/lib/muiComponents/navigation/index.js"
+      ],
+      "@crema/modules/components/surfaces": [
+        "libs/modules/src/lib/muiComponents/surfaces/index.js"
+      ],
+      "@crema/modules/components/utils": [
+        "libs/modules/src/lib/muiComponents/utils/index.js"
+      ],
       "@crema/modules/dashboards/Academy": [
         "libs/modules/src/lib/dashboards/Academy/index.js"
       ],
@@ -348,6 +375,7 @@
       "@crema/modules/extraPages/Pricing": [
         "libs/modules/src/lib/extraPages/Pricing/index.js"
       ],
+      "@crema/modules/thirdParty": ["libs/modules/src/lib/thirdParty/index.js"],
       "@crema/modules/userList/Flat": [
         "libs/modules/src/lib/userList/Flat/index.js"
       ],
@@ -357,40 +385,10 @@
       "@crema/modules/userList/Standard": [
         "libs/modules/src/lib/userList/Standard/index.js"
       ],
-
-      //MUI Components
-      "@crema/modules/components/dataDisplay": [
-        "libs/modules/src/lib/muiComponents/dataDisplay/index.js"
-      ],
-      "@crema/modules/components/datagrid": [
-        "libs/modules/src/lib/muiComponents/datagrid/index.js"
-      ],
-      "@crema/modules/components/feedBack": [
-        "libs/modules/src/lib/muiComponents/feedback/index.js"
-      ],
-      "@crema/modules/components/inputs": [
-        "libs/modules/src/lib/muiComponents/inputs/index.js"
-      ],
-      "@crema/modules/components/lab": [
-        "libs/modules/src/lib/muiComponents/lab/index.js"
-      ],
-      "@crema/modules/components/layout": [
-        "libs/modules/src/lib/muiComponents/layout/index.js"
-      ],
-      "@crema/modules/components/navigation": [
-        "libs/modules/src/lib/muiComponents/navigation/index.js"
-      ],
-      "@crema/modules/components/surfaces": [
-        "libs/modules/src/lib/muiComponents/surfaces/index.js"
-      ],
-      "@crema/modules/components/utils": [
-        "libs/modules/src/lib/muiComponents/utils/index.js"
-      ],
-      "@crema/modules/thirdParty": [
-        "libs/modules/src/lib/thirdParty/index.js"
-      ],
-
       "@crema/redux": ["libs/redux/src/index.js"],
+      "@crema/redux/reducers": ["libs/redux/src/lib/reducers/index.js"],
+      "@crema/redux/actions": ["libs/redux/src/lib/actions/index.js"],
+      "@crema/redux/store": ["libs/redux/src/lib/store/index.js"],
       "@crema/services": ["libs/services/src/index.js"],
       "@crema/services/auth": ["libs/services/auth/src/index.js"],
       "@crema/services/auth/AWSAuthProvider": [
@@ -405,8 +403,10 @@
       "@crema/services/auth/JWTAuthProvider": [
         "libs/services/auth/src/lib/jwt-auth/JWTAuthProvider.js"
       ],
+      "@crema/services/auth/JWT": [
+        "libs/services/auth/src/lib/jwt-auth/index.js"
+      ],
       "@crema/services/axios": ["libs/services/axios/src/index.js"],
-
       "@crema/services/localization": [
         "libs/services/localization/src/index.js"
       ],

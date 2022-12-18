@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios from "@crema/services/axios";
 
 const jwtAxios = axios.create({
   baseURL: 'https://crema-mongo-api.herokuapp.com/api/', //YOUR_API_URL HERE

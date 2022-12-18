@@ -1,6 +1,6 @@
 import * as React from 'react';
-import FocusTrap from "@mui/base/FocusTrap";
 import Stack from "@mui/material/Stack";
+import FocusTrap from "@mui/base/FocusTrap";
 
 export default function ContainedToggleTrappedFocus() {
   const [open, setOpen] = React.useState(false);
