@@ -1,21 +1,38 @@
-import React from 'react';
-import {Grid} from '@mui/material';
+import React, { useEffect } from 'react';
+import { Grid } from '@mui/material';
 import AppGridContainer from '@crema/components/AppGridContainer';
 import AppInfoView from '@crema/components/AppInfoView';
 import AppAnimate from '@crema/components/AppAnimate';
-import {useGetDataApi} from '@crema/utility/APIHooks';
 import {
-    TicketsSupport,
-    InfoWidget, ActiveVisitors, WelcomeCard, StateCard, SalesState, VisitorPageView, EarningByCountry, TopSelling, TrafficSource, OrderNTransaction, PageVisits
+  TicketsSupport,
+  InfoWidget,
+  ActiveVisitors,
+  WelcomeCard,
+  StateCard,
+  SalesState,
+  VisitorPageView,
+  EarningByCountry,
+  TopSelling,
+  TrafficSource,
+  OrderNTransaction,
+  PageVisits,
 } from '@crema/modules/dashboards/Analytics';
+import { onGetAnalyticsData } from '@crema/redux-toolkit/actions';
+import { useDispatch, useSelector } from 'react-redux';
 
 const Analytics = () => {
-  const [{apiData: analyticsData}] = useGetDataApi('/dashboard/analytics');
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(onGetAnalyticsData());
+  }, [dispatch]);
+
+  const { analyticsData } = useSelector(({ dashboard }) => dashboard);
 
   return (
     <>
       {analyticsData ? (
-        <AppAnimate animation='transition.slideUpIn' delay={200}>
+        <AppAnimate animation="transition.slideUpIn" delay={200}>
           <AppGridContainer>
             <Grid item xs={12} lg={6}>
               <WelcomeCard data={analyticsData.welcomeCard} />
