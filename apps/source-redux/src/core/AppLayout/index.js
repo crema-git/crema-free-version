@@ -8,7 +8,7 @@ import {useLayoutActionsContext, useLayoutContext} from "@crema/context/LayoutCo
 import {useSidebarActionsContext} from "@crema/context/SidebarContextProvider";
 import {anonymousStructure, authorizedStructure, unAuthorizedStructure} from "../AppRoutes";
 import {useRoutes} from "react-router-dom";
-import routesConfig from "../../modules/routesConfig";
+import routesConfig from "../AppRoutes/routeConfig";
 
 const AppLayout = () => {
     const {navStyle} = useLayoutContext();

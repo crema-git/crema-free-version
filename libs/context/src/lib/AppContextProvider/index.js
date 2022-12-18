@@ -7,6 +7,7 @@ import SidebarContextProvider from './SidebarContextProvider';
 import InfoViewContextProvider from './InfoViewContextProvider';
 
 const AppContextProvider = ({children}) => {
+
   return (
     <ThemeContextProvider>
       <LocaleContextProvider>
