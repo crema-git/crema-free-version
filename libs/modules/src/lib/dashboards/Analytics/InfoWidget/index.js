@@ -3,6 +3,7 @@ import AppCard from '@crema/components/AppCard';
 import {Box} from '@mui/material';
 import {Fonts} from '@crema/constants/AppEnums'
 import PropTypes from 'prop-types';
+import AppImage from "@crema/components/AppImage";
 
 const InfoWidget = ({data}) => {
   return (
@@ -28,7 +29,7 @@ const InfoWidget = ({data}) => {
             },
           }}
         >
-          <img src={data.icon} alt='icon' />
+          <AppImage src={data.icon} alt='icon' />
         </Box>
         <Box
           sx={{

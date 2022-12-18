@@ -3,6 +3,7 @@ import Box from '@mui/material/Box';
 
 import {styled} from '@mui/material/styles';
 import AppLogo from './components/AppLogo';
+import AppImage from "@crema/components/AppImage";
 
 const LogoWrapper = styled('div')(({theme}) => {
   return {
@@ -29,7 +30,7 @@ const AuthImgPanel = () => {
         height: '100%',
       }}
     >
-      <img
+      <AppImage
         style={{
           width: '100%',
           height: '100%',

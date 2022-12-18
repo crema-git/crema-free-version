@@ -3,6 +3,7 @@ import {Box} from '@mui/material';
 import Typography from '@mui/material/Typography';
 import IntlMessages from '@crema/utility/IntlMessages';
 import {Fonts} from '@crema/constants/AppEnums'
+import AppImage from "@crema/components/AppImage";
 import invoiceData from "../../../../../mockapi/src/fakedb/extraPages/invoice/invoiceData";
 
 const Header = () => {
@@ -32,7 +33,7 @@ const Header = () => {
           },
         }}
       >
-          <img src={'/assets/icon/logo.svg'} alt='logo' />
+          <AppImage src={'/assets/icon/logo.svg'} alt='logo' />
       </Box>
 
       <Box

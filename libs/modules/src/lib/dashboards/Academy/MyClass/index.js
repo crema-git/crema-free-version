@@ -5,6 +5,7 @@ import Box from '@mui/material/Box';
 import {Fonts} from '@crema/constants/AppEnums'
 import AppLinearProgress from '@crema/components/AppLinearProgress';
 import {useIntl} from 'react-intl';
+import AppImage from "@crema/components/AppImage";
 
 import {alpha} from '@mui/material';
 import PropTypes from 'prop-types';
@@ -33,7 +34,7 @@ const ClassItem = ({item}) => {
           padding: 1.5,
         }}
       >
-        <img alt='' src={item.icon} />
+        <AppImage alt='' src={item.icon} />
       </Box>
       <Box
         sx={{

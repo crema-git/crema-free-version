@@ -39,7 +39,7 @@ const Error503 = () => {
             },
           }}
         >
-            <img src={'/assets/icon/503.svg'} alt='503' />
+            <AppImage src={'/assets/icon/503.svg'} alt='503' />
         </Box>
         <Box
           sx={{

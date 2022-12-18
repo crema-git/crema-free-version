@@ -6,6 +6,7 @@ import {Fonts} from '@crema/constants/AppEnums'
 import CourseGraph from './CourseGraph';
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 import PropTypes from 'prop-types';
+import AppImage from "@crema/components/AppImage";
 
 const CourseDetail = ({course}) => {
   const getTitle = () => (
@@ -26,7 +27,7 @@ const CourseDetail = ({course}) => {
           },
         }}
       >
-        <img className='logo' alt='' src={course.thumb} />
+        <AppImage className='logo' alt='' src={course.thumb} />
       </Box>
       <Box
         sx={{

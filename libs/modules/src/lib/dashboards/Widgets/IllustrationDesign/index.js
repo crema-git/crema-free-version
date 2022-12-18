@@ -8,6 +8,7 @@ import Box from '@mui/material/Box';
 import {Fonts} from '@crema/constants/AppEnums'
 import AppCard from '@crema/components/AppCard';
 import VisibilityOutlinedIcon from '@mui/icons-material/VisibilityOutlined';
+import AppImage from "@crema/components/AppImage";
 
 const IllustrationDesign = () => {
   return (
@@ -29,7 +30,7 @@ const IllustrationDesign = () => {
           },
         }}
       >
-        <img
+        <AppImage
           className='widthFull'
           src={'/assets/images/illustration.png'}
           alt='illustration'

@@ -2,6 +2,7 @@ import React from 'react';
 import {Box} from '@mui/material';
 import DeleteOutlineOutlinedIcon from '@mui/icons-material/DeleteOutlineOutlined';
 import PropsTypes from 'prop-types';
+import AppImage from "@crema/components/AppImage";
 
 const PreviewThumb = ({file, onDeleteUploadFile}) => {
   return (
@@ -45,7 +46,7 @@ const PreviewThumb = ({file, onDeleteUploadFile}) => {
           onClick={() => onDeleteUploadFile(file)}
         />
       </Box>
-      <img alt='preview' src={file.preview} />
+      <AppImage alt='preview' src={file.preview} />
     </Box>
   );
 };

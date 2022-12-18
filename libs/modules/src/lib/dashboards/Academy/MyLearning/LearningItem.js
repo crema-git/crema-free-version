@@ -4,6 +4,7 @@ import {Fonts} from '@crema/constants/AppEnums'
 import AppCircularProgress from '@crema/components/AppCircularProgress';
 import {alpha, useTheme} from '@mui/material';
 import PropTypes from 'prop-types';
+import AppImage from "@crema/components/AppImage";
 
 const LearningItem = ({course}) => {
   const theme = useTheme();
@@ -37,7 +38,7 @@ const LearningItem = ({course}) => {
             padding: 1.5,
           }}
         >
-          <img alt='' src={course.icon} />
+          <AppImage alt='' src={course.icon} />
         </Box>
         <Box
           sx={{

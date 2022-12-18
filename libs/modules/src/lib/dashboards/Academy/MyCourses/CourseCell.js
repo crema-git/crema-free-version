@@ -8,6 +8,7 @@ import Menu from '@mui/material/Menu';
 import Fade from '@mui/material/Fade';
 import MenuItem from '@mui/material/MenuItem';
 import PropTypes from 'prop-types';
+import AppImage from "@crema/components/AppImage";
 
 const CourseCell = ({course}) => {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -55,7 +56,7 @@ const CourseCell = ({course}) => {
             },
           }}
         >
-          <img className='logo' alt='' src={course.thumb} />
+          <AppImage className='logo' alt='' src={course.thumb} />
         </Box>
         <Box
           sx={{
@@ -125,7 +126,7 @@ const CourseCell = ({course}) => {
               alignItems: 'center',
             }}
           >
-            <img
+            <AppImage
               src={'/assets/images/dashboard/academy/rating.svg'}
               alt='rating'
             />

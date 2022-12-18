@@ -9,6 +9,7 @@ import {HiOutlineMailOpen} from 'react-icons/hi';
 import {BiMessageDetail} from 'react-icons/bi';
 import {CgFileDocument} from 'react-icons/cg';
 import AppScrollbar from '@crema/components/AppScrollbar';
+import AppImage from "@crema/components/AppImage";
 
 const getWelcomeIcon = (iconType) => {
   switch (iconType) {
@@ -161,7 +162,7 @@ const WelcomeCard = ({data}) => {
             },
           }}
         >
-          <img alt='welcome' src={'/assets/images/dashboard/welcomImage.svg'} />
+          <AppImage alt='welcome' src={'/assets/images/dashboard/welcomImage.svg'} />
         </Box>
       </Box>
     </AppCard>

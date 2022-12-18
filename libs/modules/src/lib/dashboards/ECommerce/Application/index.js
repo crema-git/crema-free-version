@@ -4,6 +4,7 @@ import {useIntl} from 'react-intl';
 import {Box} from '@mui/material';
 import Typography from '@mui/material/Typography';
 import AppCircularProgress from '@crema/components/AppCircularProgress';
+import AppImage from "@crema/components/AppImage";
 
 const Application = () => {
   const {messages} = useIntl();
@@ -26,7 +27,7 @@ const Application = () => {
             hidePercentage
             value={70}
             centerNode={
-              <img
+              <AppImage
                 alt='icon'
                 src={'/assets/images/dashboard/application_icon.svg'}
               />

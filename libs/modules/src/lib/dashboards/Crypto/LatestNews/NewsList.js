@@ -7,6 +7,7 @@ import {Box} from '@mui/material';
 import {Fonts} from '@crema/constants/AppEnums'
 import AppScrollbar from '@crema/components/AppScrollbar';
 import AppList from '@crema/components/AppList';
+import AppImage from "@crema/components/AppImage";
 
 const NewsList = (props) => {
   const {newsData} = props;
@@ -82,7 +83,7 @@ const NewsList = (props) => {
                     },
                   }}
                 >
-                  <img className='newsImg' src={news.image} alt='bitcoin' />
+                  <AppImage className='newsImg' src={news.image} alt='bitcoin' />
                 </Box>
               </ListItem>
             );

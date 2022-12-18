@@ -4,6 +4,7 @@ import Slider from 'react-slick';
 import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
 import MediaSlider from './MediaSlider';
+import AppImage from "@crema/components/AppImage";
 
 const settings = {
   dots: true,
@@ -43,7 +44,7 @@ const SlideBasicArrow = ({slideBasicArrow}) => {
                   },
                 }}
               >
-                <img src={slide.srcImg} alt={slide.title} />
+                <AppImage src={slide.srcImg} alt={slide.title} />
               </Box>
             </Box>
           ))}

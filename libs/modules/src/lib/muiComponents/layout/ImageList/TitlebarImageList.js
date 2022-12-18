@@ -5,6 +5,7 @@ import ImageListItemBar from '@mui/material/ImageListItemBar';
 import ListSubheader from '@mui/material/ListSubheader';
 import IconButton from '@mui/material/IconButton';
 import InfoIcon from '@mui/icons-material/Info';
+import AppImage from "@crema/components/AppImage";
 
 export default function TitlebarImageList() {
   return (
@@ -14,7 +15,7 @@ export default function TitlebarImageList() {
       </ImageListItem>
       {itemData.map((item) => (
         <ImageListItem key={item.img}>
-          <img
+          <AppImage
             src={`${item.img}?w=248&fit=crop&auto=format`}
             srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
             alt={item.title}

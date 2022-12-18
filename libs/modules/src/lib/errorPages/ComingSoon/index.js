@@ -68,7 +68,7 @@ const ComingSoon = () => {
               },
             }}
           >
-              <img src={'/assets/icon/comingsoon.svg'} alt='comingsoon' />
+              <AppImage src={'/assets/icon/comingsoon.svg'} alt='comingsoon' />
           </Box>
 
           <Box

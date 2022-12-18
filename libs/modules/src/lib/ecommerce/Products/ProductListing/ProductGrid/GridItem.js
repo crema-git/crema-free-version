@@ -10,6 +10,7 @@ import PropTypes from 'prop-types';
 import {green} from '@mui/material/colors';
 import {Fonts} from '@crema/constants/AppEnums'
 import {useNavigate} from 'react-router-dom';
+import AppImage from "@crema/components/AppImage";
 import AddShoppingCartOutlinedIcon from '@mui/icons-material/AddShoppingCartOutlined';
 
 const GridItem = (props) => {
@@ -87,7 +88,7 @@ const GridItem = (props) => {
             },
           }}
         >
-          <img src={item.image[0].src} alt='watch' />
+          <AppImage src={item.image[0].src} alt='watch' />
         </Box>
         <Box
           sx={{

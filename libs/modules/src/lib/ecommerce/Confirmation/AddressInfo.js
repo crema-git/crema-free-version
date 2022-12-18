@@ -4,6 +4,7 @@ import {Box, Button, Grid} from '@mui/material';
 import {Fonts} from '@crema/constants/AppEnums'
 import PropTypes from 'prop-types';
 import AppGridContainer from '@crema/components/AppGridContainer';
+import AppImage from "@crema/components/AppImage";
 
 const AddressInfo = ({address}) => {
   return (
@@ -59,7 +60,7 @@ const AddressInfo = ({address}) => {
                   mb: 1,
                 }}
               >
-                <img src={'/assets/images/ecommerce/sms-icon.png'} alt='sms' />
+                <AppImage src={'/assets/images/ecommerce/sms-icon.png'} alt='sms' />
                 <Box sx={{px: 3.5, fontSize: 14}}>
                   SMS updates at every step
                 </Box>
@@ -95,7 +96,7 @@ const AddressInfo = ({address}) => {
                   mb: 1,
                 }}
               >
-                <img
+                <AppImage
                   src={'/assets/images/ecommerce/add-person.png'}
                   alt='sms'
                 />

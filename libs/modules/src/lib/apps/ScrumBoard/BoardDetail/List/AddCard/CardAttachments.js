@@ -6,6 +6,7 @@ import DeleteOutlinedIcon from '@mui/icons-material/DeleteOutlined';
 import PropTypes from 'prop-types';
 import {Fonts} from '@crema/constants/AppEnums'
 import {IconButton, alpha} from '@mui/material';
+import AppImage from "@crema/components/AppImage";
 import CloudDownloadOutlinedIcon from '@mui/icons-material/CloudDownloadOutlined';
 
 import {styled} from '@mui/material/styles';
@@ -109,7 +110,7 @@ const CardAttachments = (props) => {
                 >
                   <CardAttachmentWrapper>
                     <Box className='attachment-thumb'>
-                      <img src={attachment.preview} alt='attachment' />
+                      <AppImage src={attachment.preview} alt='attachment' />
 
                       <Box className='attachment-action'>
                         <IconButton

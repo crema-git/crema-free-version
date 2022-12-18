@@ -37,7 +37,7 @@ const ListItem = (props) => {
             },
           }}
         >
-          <img src={user.image} alt='user' className='crUserImage' />
+          <AppImage src={user.image} alt='user' className='crUserImage' />
         </Box>
 
         <Box

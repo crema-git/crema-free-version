@@ -3,6 +3,7 @@ import AppCard from '@crema/components/AppCard';
 import {Box, Typography} from '@mui/material';
 import {Fonts} from '@crema/constants/AppEnums'
 import PropTypes from 'prop-types';
+import AppImage from "@crema/components/AppImage";
 
 const DrCard = ({data}) => {
   const {bgColor, icon, time, category, name} = data;
@@ -25,7 +26,7 @@ const DrCard = ({data}) => {
             alignSelf: 'center',
           }}
         >
-          <img src={icon} alt='icon' />
+          <AppImage src={icon} alt='icon' />
         </Box>
         <Box
           sx={{

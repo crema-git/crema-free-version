@@ -51,7 +51,7 @@ const Team = () => {
             return (
               <Box key={member.id} sx={{px: 5, textAlign: 'center'}}>
                 <Box width='100%' sx={{mb: 3}}>
-                  <img
+                  <AppImage
                     style={{width: '100%'}}
                     src={member.image}
                     alt='about us'

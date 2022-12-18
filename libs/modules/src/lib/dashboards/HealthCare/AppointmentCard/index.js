@@ -5,6 +5,7 @@ import Graph from './Graph';
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
 import {Fonts} from '@crema/constants/AppEnums'
 import PropTypes from 'prop-types';
+import AppImage from "@crema/components/AppImage";
 
 const AppointmentCard = ({data}) => {
   return (
@@ -24,7 +25,7 @@ const AppointmentCard = ({data}) => {
           }}
         >
           <Box>
-            <img src={data.icon} alt={data.name} />
+            <AppImage src={data.icon} alt={data.name} />
           </Box>
           <Box
             sx={{

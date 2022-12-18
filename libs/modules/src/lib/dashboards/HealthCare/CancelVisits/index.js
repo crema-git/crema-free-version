@@ -6,6 +6,7 @@ import VisitsGraph from './VisitsGraph';
 import AppMenu from '@crema/components/AppMenu';
 import {Fonts} from '@crema/constants/AppEnums'
 import PropTypes from 'prop-types';
+import AppImage from "@crema/components/AppImage";
 
 const CancelVisits = ({data}) => {
   const {messages} = useIntl();
@@ -40,7 +41,7 @@ const CancelVisits = ({data}) => {
               },
             }}
           >
-            <img src={'/assets/images/dashboard/decries_icon.png'} alt='down' />
+            <AppImage src={'/assets/images/dashboard/decries_icon.png'} alt='down' />
           </Box>
         </Box>
         <Box

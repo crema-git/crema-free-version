@@ -2,6 +2,7 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import Autocomplete from '@mui/material/Autocomplete';
+import AppImage from "@crema/components/AppImage";
 
 export default function CountrySelect() {
   return (
@@ -13,7 +14,7 @@ export default function CountrySelect() {
       getOptionLabel={(option) => option.label}
       renderOption={(props, option) => (
         <Box component='li' sx={{'& > img': {mr: 2, flexShrink: 0}}} {...props}>
-          <img
+          <AppImage
             loading='lazy'
             width='20'
             src={`https://flagcdn.com/w20/${option.code.toLowerCase()}.png`}

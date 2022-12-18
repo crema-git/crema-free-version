@@ -6,6 +6,7 @@ import notification from '../helpers/notification';
 import {getContainer} from '../helpers/randomize';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
+import AppImage from "@crema/components/AppImage";
 
 export default class CustomContentExample extends React.Component {
   addCustomIcon = (type, iconClassName) => {
@@ -49,7 +50,7 @@ export default class CustomContentExample extends React.Component {
             flexDirection='row'
             className='custom-image-content'
           >
-            <img src='/assets/images/logo.png' alt='' />
+            <AppImage src='/assets/images/logo.png' alt='' />
             <Box component='span' px={8} py={2}>
               Crema Admin
             </Box>

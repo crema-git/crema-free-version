@@ -41,7 +41,7 @@ const Error404 = () => {
             },
           }}
         >
-            <img src={'/assets/icon/404.svg'} alt='404' />
+            <AppImage src={'/assets/icon/404.svg'} alt='404' />
         </Box>
         <Box
           sx={{

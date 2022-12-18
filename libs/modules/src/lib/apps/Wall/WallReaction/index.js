@@ -1,6 +1,7 @@
 import React from 'react';
 import {Icon} from '@mui/material';
 import PropTypes from 'prop-types';
+import AppImage from "@crema/components/AppImage";
 
 const PollReaction = ({userReaction, selectedReaction}) => {
   /* const getReactionByPosition = (position) => {
@@ -76,32 +77,32 @@ const PollReaction = ({userReaction, selectedReaction}) => {
       <div className='mp-show-reaction'>
         {selectedReaction === 'like' ? (
           <span className='mp-show-reaction-thumb'>
-            <img src='/images/reaction/like.png' alt='' />
+            <AppImage src='/images/reaction/like.png' alt='' />
           </span>
         ) : null}
         {selectedReaction === 'love' ? (
           <span className='mp-show-reaction-thumb'>
-            <img src='/images/reaction/love.png' alt='' />
+            <AppImage src='/images/reaction/love.png' alt='' />
           </span>
         ) : null}
         {selectedReaction === 'haha' ? (
           <span className='mp-show-reaction-thumb'>
-            <img src='/images/reaction/haha.png' alt='' />
+            <AppImage src='/images/reaction/haha.png' alt='' />
           </span>
         ) : null}
         {selectedReaction === 'wow' ? (
           <span className='mp-show-reaction-thumb'>
-            <img src='/images/reaction/wow.png' alt='' />
+            <AppImage src='/images/reaction/wow.png' alt='' />
           </span>
         ) : null}
         {selectedReaction === 'sad' ? (
           <span className='mp-show-reaction-thumb'>
-            <img src='/images/reaction/sad.png' alt='' />
+            <AppImage src='/images/reaction/sad.png' alt='' />
           </span>
         ) : null}
         {selectedReaction === 'angry' ? (
           <span className='mp-show-reaction-thumb'>
-            <img src='/images/reaction/angry.png' alt='' />
+            <AppImage src='/images/reaction/angry.png' alt='' />
           </span>
         ) : null}{' '}
         <span className='mp-text-primary mp-ml-1'>Like</span>
@@ -122,22 +123,22 @@ const PollReaction = ({userReaction, selectedReaction}) => {
       </div>
       <div className='mp-reaction-box'>
         <div className='mp-reaction-icon'>
-          <img src='/images/reaction/like.png' alt='like' />
+          <AppImage src='/images/reaction/like.png' alt='like' />
         </div>
         <div className='mp-reaction-icon'>
-          <img src='/images/reaction/love.png' alt='love' />
+          <AppImage src='/images/reaction/love.png' alt='love' />
         </div>
         <div className='mp-reaction-icon'>
-          <img src='/images/reaction/haha.png' alt='' />
+          <AppImage src='/images/reaction/haha.png' alt='' />
         </div>
         <div className='mp-reaction-icon'>
-          <img src='/images/reaction/wow.png' alt='' />
+          <AppImage src='/images/reaction/wow.png' alt='' />
         </div>
         <div className='mp-reaction-icon'>
-          <img src='/images/reaction/sad.png' alt='' />
+          <AppImage src='/images/reaction/sad.png' alt='' />
         </div>
         <div className='mp-reaction-icon'>
-          <img src='/images/reaction/angry.png' alt='' />
+          <AppImage src='/images/reaction/angry.png' alt='' />
         </div>
       </div>
     </div>

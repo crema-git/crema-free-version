@@ -39,7 +39,7 @@ const Error500 = () => {
             },
           }}
         >
-            <img src={'/assets/icon/500.svg'} alt='500' />
+            <AppImage src={'/assets/icon/500.svg'} alt='500' />
         </Box>
         <Box
           sx={{

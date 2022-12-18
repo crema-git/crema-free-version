@@ -16,6 +16,12 @@
     "baseUrl": ".",
     "paths": {
       "@crema/components": ["libs/components/src/index.js"],
+      "@crema/components/AppImage": [
+        "libs/components/src/lib/AppImage/index.js"
+      ],
+      "@crema/components/AppPageMeta": [
+        "libs/components/src/lib/AppPageMeta/index.js"
+      ],
       "@crema/components/AppAnimate": [
         "libs/components/src/lib/AppAnimate/index.js"
       ],

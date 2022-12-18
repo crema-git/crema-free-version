@@ -6,6 +6,7 @@ import PropTypes from 'prop-types';
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 import IconButton from '@mui/material/IconButton';
 import {styled} from '@mui/material/styles';
+import AppImage from "@crema/components/AppImage";
 
 const ThumbWrapper = styled('div')(() => ({
   borderRadius: 4,
@@ -41,7 +42,7 @@ const WhatsHappenItem = ({data}) => {
       }}
     >
       <ThumbWrapper>
-        <img src={imgSrc} alt='happen img' />
+        <AppImage src={imgSrc} alt='happen img' />
       </ThumbWrapper>
       <Box
         sx={{

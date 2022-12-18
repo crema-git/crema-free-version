@@ -3,6 +3,7 @@ import IntlMessages from '@crema/utility/IntlMessages';
 import Box from '@mui/material/Box';
 import {Fonts} from '@crema/constants/AppEnums'
 import AppCard from '@crema/components/AppCard';
+import AppImage from "@crema/components/AppImage";
 
 const HollywoodMovie = () => {
   return (
@@ -56,7 +57,7 @@ const HollywoodMovie = () => {
               cursor: 'pointer',
             }}
           >
-            <img src={'/assets/images/playbutton.png'} alt='play' />
+            <AppImage src={'/assets/images/playbutton.png'} alt='play' />
           </Box>
         </Box>
         <Box

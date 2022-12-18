@@ -66,7 +66,7 @@ const Signup = () => {
                 },
               }}
             >
-              <img
+              <AppImage
                 className='logo'
                 src={'/assets/images/logo-icon-large.png'}
                 alt='crema'

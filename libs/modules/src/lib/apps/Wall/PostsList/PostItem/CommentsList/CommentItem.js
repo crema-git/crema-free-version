@@ -3,6 +3,7 @@ import Box from '@mui/material/Box';
 import Avatar from '@mui/material/Avatar';
 import PropTypes from 'prop-types';
 import {Typography} from '@mui/material';
+import AppImage from "@crema/components/AppImage";
 import {MessageType} from "../../../../../../../../mockapi/src/fakedb/apps/chat/connectionList";
 
 const CommentItem = ({item}) => {
@@ -53,7 +54,7 @@ const CommentItem = ({item}) => {
                 },
               }}
             >
-              <img src={media.url} alt='comment-img' />
+              <AppImage src={media.url} alt='comment-img' />
             </Box>
           )}
           <Box display='flex' alignItems='center' mt={1}>

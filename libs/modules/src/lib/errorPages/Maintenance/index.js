@@ -41,7 +41,7 @@ const Maintenance = () => {
             },
           }}
         >
-            <img src={'/assets/icon/maintenance.svg'} alt='maintenance' />
+            <AppImage src={'/assets/icon/maintenance.svg'} alt='maintenance' />
         </Box>
         <Box
           sx={{

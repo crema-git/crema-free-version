@@ -7,6 +7,7 @@ import {
   useLayoutContext,
 } from "@crema/context/LayoutContextProvider";
 import AppSelectedIcon from '../../AppSelectedIcon';
+import AppImage from "@crema/components/AppImage";
 import {navStyles} from "../../../../../mockapi/src/fakedb/navigationStyle";
 
 const NavStyles = () => {
@@ -50,7 +51,7 @@ const NavStyles = () => {
                 }}
                 onClick={() => onNavStyleChange(navLayout.alias)}
               >
-                <img src={navLayout.image} alt='nav' />
+                <AppImage src={navLayout.image} alt='nav' />
                 {navStyle === navLayout.alias ? <AppSelectedIcon /> : null}
               </Box>
             </Box>

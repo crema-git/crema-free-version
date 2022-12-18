@@ -3,6 +3,7 @@ import Box from '@mui/material/Box';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import {Fonts} from '@crema/constants/AppEnums'
 import PropTypes from 'prop-types';
+import AppImage from "@crema/components/AppImage";
 
 const CourseItem = ({data}) => {
   return (
@@ -19,7 +20,7 @@ const CourseItem = ({data}) => {
           },
         }}
       >
-        <img src={data.image} alt={data.title} />
+        <AppImage src={data.image} alt={data.title} />
       </Box>
       <Box
         component='p'

@@ -1,7 +1,8 @@
 import React from 'react';
+import AppImage from "@crema/components/AppImage";
 
 const ErrorIcon = () => {
-  return <img src={'/assets/icon/something-wrong.svg'} alt='something-wrong' />;
+  return <AppImage src={'/assets/icon/something-wrong.svg'} alt='something-wrong' />;
 };
 
 export default ErrorIcon;

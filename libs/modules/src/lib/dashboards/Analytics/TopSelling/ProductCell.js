@@ -5,6 +5,7 @@ import AppCircularProgress from '@crema/components/AppCircularProgress';
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 import Hidden from '@mui/material/Hidden';
 import PropTypes from 'prop-types';
+import AppImage from "@crema/components/AppImage";
 
 const ProductCell = ({data}) => {
   return (
@@ -29,7 +30,7 @@ const ProductCell = ({data}) => {
           },
         }}
       >
-        <img className='logo' alt='' src={data.icon} />
+        <AppImage className='logo' alt='' src={data.icon} />
 
         <Box
           sx={{

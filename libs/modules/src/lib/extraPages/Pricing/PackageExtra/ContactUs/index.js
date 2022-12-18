@@ -15,7 +15,7 @@ const ContactUs = ({contactList}) => {
     <Box>
       <Box>
         <Box>
-          <img src='/assets/images/extra-pages/price-global.svg' />
+          <AppImage src='/assets/images/extra-pages/price-global.svg' />
         </Box>
         <Box>
           <Typography component='h3'>Contact us!</Typography>

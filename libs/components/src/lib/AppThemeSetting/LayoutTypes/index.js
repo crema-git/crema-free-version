@@ -7,6 +7,7 @@ import {
   useLayoutContext,
 } from "@crema/context/LayoutContextProvider";
 import AppSelectedIcon from '../../AppSelectedIcon';
+import AppImage from "@crema/components/AppImage";
 import {layoutTypes} from "../../../../../mockapi/src/fakedb/navigationStyle";
 
 const LayoutTypes = () => {
@@ -48,7 +49,7 @@ const LayoutTypes = () => {
                 }}
                 onClick={() => onLayoutChange(layout.alias)}
               >
-                <img src={layout.image} alt='nav' />
+                <AppImage src={layout.image} alt='nav' />
                 {layoutType === layout.alias ? <AppSelectedIcon /> : null}
               </Box>
             </Box>

@@ -2,6 +2,7 @@ import React from 'react';
 import AppCard from '@crema/components/AppCard';
 import {Box, Typography} from '@mui/material';
 import PropTypes from 'prop-types';
+import AppImage from "@crema/components/AppImage";
 
 const HospitalStatics = ({data}) => {
   const {bgColor, icon, value, name} = data;
@@ -25,7 +26,7 @@ const HospitalStatics = ({data}) => {
             alignSelf: 'flex-start',
           }}
         >
-          <img src={icon} alt='icon' />
+          <AppImage src={icon} alt='icon' />
         </Box>
         <Box
           sx={{

@@ -41,7 +41,7 @@ const Error403 = () => {
             },
           }}
         >
-            <img src={'/assets/icon/403.svg'} alt='403' />
+            <AppImage src={'/assets/icon/403.svg'} alt='403' />
         </Box>
         <Box sx={{mb: {xs: 4, xl: 5}}}>
           <Box

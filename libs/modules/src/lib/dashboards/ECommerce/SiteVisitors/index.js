@@ -30,7 +30,7 @@ const CountryCell = ({data}) => (
         },
       }}
     >
-      <img src={data.icon} alt='icon' />
+      <AppImage src={data.icon} alt='icon' />
     </Box>
     <Box
       component='h6'

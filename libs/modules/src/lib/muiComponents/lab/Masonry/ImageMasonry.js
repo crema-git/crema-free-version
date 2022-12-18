@@ -4,6 +4,7 @@ import Stack from '@mui/material/Stack';
 import Paper from '@mui/material/Paper';
 import Masonry from '@mui/lab/Masonry';
 import {styled} from '@mui/material/styles';
+import AppImage from "@crema/components/AppImage";
 
 const Label = styled(Paper)(({theme}) => ({
   ...theme.typography.body2,
@@ -23,7 +24,7 @@ export default function ImageMasonry() {
         {itemData.map((item, index) => (
           <Stack key={index}>
             <Label>{index + 1}</Label>
-            <img
+            <AppImage
               src={`${item.img}?w=162&auto=format`}
               srcSet={`${item.img}?w=162&auto=format&dpr=2 2x`}
               alt={item.title}

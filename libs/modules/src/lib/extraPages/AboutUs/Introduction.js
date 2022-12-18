@@ -32,7 +32,7 @@ const Introduction = () => {
             },
           }}
         >
-          <img
+          <AppImage
             src={'/assets/images/AboutUs.png'}
             alt='about us'
             title='aboutUs'

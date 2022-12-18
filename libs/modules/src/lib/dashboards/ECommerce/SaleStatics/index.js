@@ -54,7 +54,7 @@ const SaleStatics = () => {
                 hidePercentage
                 value={70}
                 centerNode={
-                  <img
+                  <AppImage
                     alt='icon'
                     src={'/assets/images/dashboard/application_icon.svg'}
                   />

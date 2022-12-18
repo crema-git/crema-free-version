@@ -3,6 +3,7 @@ import AppCard from '@crema/components/AppCard';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import {Fonts} from '@crema/constants/AppEnums'
+import AppImage from "@crema/components/AppImage";
 
 const PromoCard = () => {
   return (
@@ -21,7 +22,7 @@ const PromoCard = () => {
             mb: 2,
           }}
         >
-          <img src={'/assets/images/dashboard/academy/promo.png'} alt='promo' />
+          <AppImage src={'/assets/images/dashboard/academy/promo.png'} alt='promo' />
         </Box>
         <Box
           component='p'

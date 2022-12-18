@@ -1,5 +1,6 @@
 import React from 'react';
 import {Box} from '@mui/material';
+import AppImage from "@crema/components/AppImage";
 
 const AppLogo = () => {
 
@@ -19,7 +20,7 @@ const AppLogo = () => {
       }}
       className='app-logo'
     >
-        <img src={'/assets/icon/logo.svg'} alt='logo' />
+        <AppImage src={'/assets/icon/logo.svg'} alt='logo' />
       <Box
         sx={{
           mt: 1,
@@ -29,7 +30,7 @@ const AppLogo = () => {
           },
         }}
       >
-          <img src={'/assets/icon/logo_text.svg'} alt='logo_text' />
+          <AppImage src={'/assets/icon/logo_text.svg'} alt='logo_text' />
       </Box>
     </Box>
   );

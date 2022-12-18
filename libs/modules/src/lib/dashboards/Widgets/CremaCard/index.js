@@ -3,6 +3,7 @@ import Box from '@mui/material/Box';
 import PropTypes from 'prop-types';
 import {Fonts} from '@crema/constants/AppEnums'
 import AppCard from '@crema/components/AppCard';
+import AppImage from "@crema/components/AppImage";
 
 const CremaCard = (props) => {
   const {data, bgColor, icon} = props;
@@ -36,7 +37,7 @@ const CremaCard = (props) => {
               width: 40,
             }}
           >
-            <img alt='logo' src={data.image} />
+            <AppImage alt='logo' src={data.image} />
           </Box>
           <Box
             sx={{

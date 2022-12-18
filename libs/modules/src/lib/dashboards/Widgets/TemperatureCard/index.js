@@ -7,6 +7,7 @@ import DayTemperature from './DayTemperature';
 import {teal} from '@mui/material/colors';
 import {Fonts} from '@crema/constants/AppEnums'
 import AppCard from '@crema/components/AppCard';
+import AppImage from "@crema/components/AppImage";
 
 const TemperatureCard = (props) => {
   const {temperatures} = props;
@@ -84,7 +85,7 @@ const TemperatureCard = (props) => {
               fontSize: 14,
             }}
           >
-            <img
+            <AppImage
               style={{
                 marginRight: 12,
               }}

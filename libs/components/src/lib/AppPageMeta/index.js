@@ -5,13 +5,13 @@ import {NextSeo} from 'next-seo';
 const SITE_URL =
   process.env.NODE_ENV === 'development'
     ? 'http://localhost:3000'
-    : 'https://qa-blog.mastersindia.co';
+    : 'https://cra.cremawork.com';
 
 const defaultTitle = 'Crema- React Material Admin Template';
 const defaultDescription =
   'Crema is purely based on Material UI components and follows Google’s Material Design guidelines.';
 const defaultImage =
-  'https://cdn.mastersindia.co/custom_pages/img/Masters India_GST_Software.svg';
+  '';
 const defaultTwitter = '@crema';
 const defaultSep = ' | ';
 
