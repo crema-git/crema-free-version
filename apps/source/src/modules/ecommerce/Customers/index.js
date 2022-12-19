@@ -10,12 +10,13 @@ import AppInfoView from '@crema/components/AppInfoView';
 import AppSearchBar from '@crema/components/AppSearchBar';
 import {useGetDataApi} from '@crema/utility/APIHooks';
 import {CustomerTable} from '@crema/modules/ecommerce/Customers';
+import AppLoader from "@crema/components/AppLoader";
 
 const Customers = () => {
   const {messages} = useIntl();
   const [
     {
-      apiData: {customers, customerCount},
+      apiData: {customers, customerCount}, loading
     },
     {setQueryParams},
   ] = useGetDataApi('/api/ecommerce/customers', {}, {}, false);
@@ -37,6 +38,9 @@ const Customers = () => {
 
   return (
     <>
+      {loading ? (
+        <AppLoader />
+      ): (
       <AppsContainer title={messages['sidebar.ecommerce.customers']} fullView>
         <AppsHeader>
           <Box
@@ -95,8 +99,7 @@ const Customers = () => {
           />
         </Hidden>
       </AppsContainer>
-
-      <AppInfoView />
+      )}
     </>
   );
 };

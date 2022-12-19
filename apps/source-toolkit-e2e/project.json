@@ -7,7 +7,7 @@
     "e2e": {
       "executor": "@nrwl/cypress:cypress",
       "options": {
-        "cypressConfig": "apps/source-toolkit-e2e/cypress.config.ts",
+        "cypressConfig": "apps/source-toolkit-e2e/cypress.config.js",
         "devServerTarget": "source-toolkit:serve:development",
         "testingType": "e2e"
       },

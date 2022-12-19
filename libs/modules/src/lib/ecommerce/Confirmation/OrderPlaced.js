@@ -5,6 +5,7 @@ import {Box, Button} from '@mui/material';
 import PropTypes from 'prop-types';
 import AppGridContainer from '@crema/components/AppGridContainer';
 import {getTotalPrice} from "./helper";
+import AppImage from "@crema/components/AppImage";
 
 const OrderPlaced = ({cartItems}) => {
   return (

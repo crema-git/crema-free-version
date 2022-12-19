@@ -1,26 +1,28 @@
 import React from 'react';
 import Grid from '@mui/material/Grid';
 import AppGridContainer from '@crema/components/AppGridContainer';
-import AppInfoView from '@crema/components/AppInfoView';
 import AppAnimate from '@crema/components/AppAnimate';
 import {useGetDataApi} from '@crema/utility/APIHooks';
 import {
-    Bitcoin,
-    BtcVolumeCurrency,
-    BuySell,
-    Coins,
-    CryptoMarketActivity,
-    LatestNews,
-    PopularCoins,
-    TotalBalance
+  Bitcoin,
+  BtcVolumeCurrency,
+  BuySell,
+  Coins,
+  CryptoMarketActivity,
+  LatestNews,
+  PopularCoins,
+  TotalBalance
 } from '@crema/modules/dashboards/Crypto';
+import AppLoader from "@crema/components/AppLoader";
 
 const Crypto = () => {
-  const [{apiData: cryptoData}] = useGetDataApi('/dashboard/crypto');
+  const [{apiData: cryptoData, loading}] = useGetDataApi('/dashboard/crypto');
 
   return (
     <>
-      {cryptoData ? (
+      {loading ? (
+        <AppLoader />
+      ): (
         <AppAnimate animation='transition.slideUpIn' delay={200}>
           <AppGridContainer>
             <Grid item xs={12} md={5}>
@@ -58,9 +60,7 @@ const Crypto = () => {
             </Grid>
           </AppGridContainer>
         </AppAnimate>
-      ) : null}
-
-      <AppInfoView />
+      )}
     </>
   );
 };

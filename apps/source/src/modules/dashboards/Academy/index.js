@@ -20,13 +20,16 @@ import {
   StudentRankings,
   VideoPromo
 } from '@crema/modules/dashboards/Academy';
+import AppLoader from "@crema/components/AppLoader";
 
 const Academy = () => {
-  const [{apiData: academyData}] = useGetDataApi('/dashboard/academy');
+  const [{apiData: academyData, loading}] = useGetDataApi('/dashboard/academy');
 
   return (
     <>
-      {academyData && (
+      {loading ? (
+        <AppLoader />
+      ): (
         <AppAnimate animation='transition.slideUpIn' delay={200}>
           <Box>
             <Box

@@ -1,7 +1,6 @@
 import React from 'react';
 import {Grid} from '@mui/material';
 import AppGridContainer from '@crema/components/AppGridContainer';
-import AppInfoView from '@crema/components/AppInfoView';
 import AppAnimate from '@crema/components/AppAnimate';
 import {useGetDataApi} from '@crema/utility/APIHooks';
 import {
@@ -17,13 +16,16 @@ import {
   TotalRevenue,
   WebTraffic
 } from '@crema/modules/dashboards/CRM';
+import AppLoader from "@crema/components/AppLoader";
 
 const CRM = () => {
-  const [{apiData: crmData}] = useGetDataApi('/dashboard/crm');
+  const [{apiData: crmData, loading}] = useGetDataApi('/dashboard/crm');
 
   return (
     <>
-      {crmData ? (
+      {loading ? (
+        <AppLoader />
+      ): (
         <AppAnimate animation='transition.slideUpIn' delay={200}>
           <AppGridContainer>
             <Grid item xs={12} md={5}>
@@ -71,9 +73,7 @@ const CRM = () => {
             </Grid>
           </AppGridContainer>
         </AppAnimate>
-      ) : null}
-
-      <AppInfoView />
+      )}
     </>
   );
 };

@@ -1,30 +1,32 @@
 import React from 'react';
-import AppInfoView from '@crema/components/AppInfoView';
 import {Grid} from '@mui/material';
 import AppGridContainer from '@crema/components/AppGridContainer';
 import AppAnimate from '@crema/components/AppAnimate';
 import {useGetDataApi} from '@crema/utility/APIHooks';
 import {
-    Application,
-    Browser,
-    MarketingCampaign,
-    NewCustomers,
-    Notifications,
-    PopularProducts,
-    RecentOrders,
-    ReportCard,
-    Revenue,
-    SalesState,
-    SaleStatics,
-    SiteVisitors
+  Application,
+  Browser,
+  MarketingCampaign,
+  NewCustomers,
+  Notifications,
+  PopularProducts,
+  RecentOrders,
+  ReportCard,
+  Revenue,
+  SalesState,
+  SaleStatics,
+  SiteVisitors
 } from '@crema/modules/dashboards/ECommerce';
+import AppLoader from "@crema/components/AppLoader";
 
 const ECommerce = () => {
-  const [{apiData: ecommerceData}] = useGetDataApi('/dashboard/ecommerce');
+  const [{apiData: ecommerceData, loading}] = useGetDataApi('/dashboard/ecommerce');
 
   return (
     <>
-      {ecommerceData ? (
+      {loading ? (
+        <AppLoader />
+      ): (
         <AppAnimate animation='transition.slideUpIn' delay={200}>
           <AppGridContainer>
             {ecommerceData.salesState.map((state, index) => (
@@ -76,8 +78,7 @@ const ECommerce = () => {
             </Grid>
           </AppGridContainer>
         </AppAnimate>
-      ) : null}
-      <AppInfoView />
+      )}
     </>
   );
 };

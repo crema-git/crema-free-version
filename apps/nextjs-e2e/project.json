@@ -7,7 +7,7 @@
     "e2e": {
       "executor": "@nrwl/cypress:cypress",
       "options": {
-        "cypressConfig": "apps/nextjs-e2e/cypress.config.ts",
+        "cypressConfig": "apps/nextjs-e2e/cypress.config.js",
         "devServerTarget": "nextjs:serve:development",
         "testingType": "e2e"
       },

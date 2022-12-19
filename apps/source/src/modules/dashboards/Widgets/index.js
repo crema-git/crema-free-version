@@ -2,7 +2,6 @@ import React from 'react';
 import AppGridContainer from '@crema/components/AppGridContainer';
 import Grid from '@mui/material/Grid';
 import {FiFacebook, FiTwitter} from 'react-icons/fi';
-import AppInfoView from '@crema/components/AppInfoView';
 import IntlMessages from '@crema/utility/IntlMessages';
 import Box from '@mui/material/Box';
 import {blue, indigo} from '@mui/material/colors';
@@ -37,11 +36,13 @@ import {
 
 
 const Widgets = () => {
-  const [{apiData: widgetsData}] = useGetDataApi('/dashboard/widgets');
+  const [{apiData: widgetsData, loading}] = useGetDataApi('/dashboard/widgets');
 
   return (
     <>
-      {widgetsData ? (
+      {loading ? (
+        <AppLoader />
+      ): (
         <AppAnimate animation='transition.slideUpIn' delay={200}>
           <>
             <Box
@@ -185,12 +186,8 @@ const Widgets = () => {
                 <Formats data={widgetsData.formatList} />
               </Grid>
             </AppGridContainer>
-
-            <AppInfoView />
           </>
         </AppAnimate>
-      ) : (
-        <AppLoader />
       )}
     </>
   );

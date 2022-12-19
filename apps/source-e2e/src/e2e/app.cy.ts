@@ -1,6 +1,6 @@
 import { getGreeting } from '../support/app.po';
 
-describe('source', () => {
+describe('source-redux', () => {
   beforeEach(() => cy.visit('/'));
 
   it('should display welcome message', () => {
@@ -8,6 +8,6 @@ describe('source', () => {
     cy.login('my-email@something.com', 'myPassword');
 
     // Function helper example, see `../support/app.po.ts` file
-    getGreeting().contains('Welcome source');
+    getGreeting().contains('Welcome source-redux');
   });
 });
