@@ -8,10 +8,11 @@ import {useParams} from 'react-router-dom';
 import AppInfoView from '@crema/components/AppInfoView';
 import {useGetDataApi} from '@crema/utility/APIHooks';
 import {Header, ProductImageSlide, ProductView, SimilarProduct} from '@crema/modules/ecommerce/ProductDetail';
+import AppLoader from "@crema/components/AppLoader";
 
 const ProductDetail = () => {
   const {id} = useParams();
-  const [{apiData: currentProduct}, {setQueryParams}] =
+  const [{apiData: currentProduct, loading}, {setQueryParams}] =
     useGetDataApi('/api/ecommerce/get');
 
   useEffect(() => {
@@ -20,7 +21,9 @@ const ProductDetail = () => {
 
   return (
     <>
-      {currentProduct ? (
+      {loading ? (
+        <AppLoader />
+      ): (
         <AppAnimate animation='transition.slideUpIn' delay={200}>
           <AppCard>
             <Header product={currentProduct} />
@@ -31,7 +34,7 @@ const ProductDetail = () => {
             <SimilarProduct />
           </AppCard>
         </AppAnimate>
-      ) : null}
+      ) }
       <AppInfoView />
     </>
   );

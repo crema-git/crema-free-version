@@ -3,6 +3,9 @@ import Box from '@mui/material/Box';
 import AppAnimate from '@crema/components/AppAnimate';
 import AppGridContainer from '@crema/components/AppGridContainer';
 import {Grid} from '@mui/material';
+import {useDispatch, useSelector} from "react-redux";
+import {onGetAcademyData} from "@crema/redux/actions";
+
 import {
   AverageGrades,
   CourseCategories,
@@ -19,8 +22,7 @@ import {
   StudentRankings,
   VideoPromo
 } from '@crema/modules/dashboards/Academy';
-import {useDispatch, useSelector} from "react-redux";
-import {onGetAcademyData} from "@crema/redux/actions";
+import AppLoader from "@crema/components/AppLoader";
 
 const Academy = () => {
   const dispatch = useDispatch();
@@ -31,9 +33,12 @@ const Academy = () => {
 
   const {academyData} = useSelector(({dashboard}) => dashboard);
   console.log("academyData",  academyData);
+
   return (
     <>
-      {academyData && (
+      {loading ? (
+        <AppLoader />
+      ): (
         <AppAnimate animation='transition.slideUpIn' delay={200}>
           <Box>
             <Box

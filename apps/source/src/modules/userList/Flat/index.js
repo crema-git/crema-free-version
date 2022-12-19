@@ -14,6 +14,7 @@ const Flat = () => {
       <AppLoader />
     ): (
         <AppList
+          onEndReached={() => console.log('onEndReached')}
           data={usersList}
           renderRow={(user) => {
             return <ListItem user={user} key={user.id} />;

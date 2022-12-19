@@ -1,8 +1,3 @@
-import React from 'react';
-import ForgetPasswordJwtAuth from './ForgetPasswordJwtAuth';
+import {ForgetPasswordJwtAuth} from '@crema/modules/auth/ForgetPassword';
 
-const ForgetPassword = () => {
-  return <ForgetPasswordJwtAuth />;
-};
-
-export default ForgetPassword;
+export default ForgetPasswordJwtAuth;
