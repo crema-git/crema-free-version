@@ -9,10 +9,12 @@ import {grey} from '@mui/material/colors';
 import {Fonts} from '@crema/constants/AppEnums'
 import IntlMessages from '@crema/utility/IntlMessages';
 import AppTextField from '@crema/components/AppTextField';
-
-import {styled} from '@mui/material/styles';
 import AppInfoView from '@crema/components/AppInfoView';
 import AppAnimate from '@crema/components/AppAnimate';
+
+import {styled} from '@mui/material/styles';
+import {ReactComponent as Logo} from '../../../assets/icon/comingsoon.svg';
+import {useTheme} from '@mui/material';
 
 const FormWrapper = styled(Form)(() => {
   return {
@@ -41,6 +43,7 @@ const validationSchema = yup.object({
 });
 
 const ComingSoon = () => {
+  const theme = useTheme();
   const infoViewActionsContext = useInfoViewActionsContext();
 
   return (
@@ -68,7 +71,7 @@ const ComingSoon = () => {
               },
             }}
           >
-              <img src={'/assets/icon/comingsoon.svg'} alt='comingsoon' />
+            <Logo fill={theme.palette.primary.main} />
           </Box>
 
           <Box

@@ -14,8 +14,7 @@ const AppSidebar = ({
   toggleNavCollapsed,
   position,
   isNavCollapsed,
-  variant,
-                      routesConfig
+  variant, routesConfig
 }) => {
   const {footer, footerType} = useLayoutContext();
 
@@ -90,6 +89,7 @@ AppSidebar.defaultProps = {
 AppSidebar.propTypes = {
   position: PropTypes.string,
   variant: PropTypes.string,
+  routesConfig: PropTypes.array,
   isNavCollapsed: PropTypes.bool,
   toggleNavCollapsed: PropTypes.func,
 };

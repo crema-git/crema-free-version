@@ -7,6 +7,7 @@ import AppSearchBar from '@crema/components/AppSearchBar';
 import Hidden from '@mui/material/Hidden';
 import IconButton from '@mui/material/IconButton';
 import PropTypes from 'prop-types';
+import PropsTypes from 'prop-types';
 import MenuIcon from '@mui/icons-material/Menu';
 import AppMessages from '../../../AppMessages';
 import AppNotifications from '../../../AppNotifications';
@@ -19,7 +20,6 @@ import AppLogo from '../../components/AppLogo';
 import UserInfo from '../../components/UserInfo';
 import HorizontalNav from '../../components/HorizontalNav';
 import {useSidebarContext} from "@crema/context/SidebarContextProvider";
-import PropsTypes from "prop-types";
 
 const AppHeader = ({toggleNavCollapsed,routesConfig}) => {
   const [anchorEl, setAnchorEl] = React.useState(null);

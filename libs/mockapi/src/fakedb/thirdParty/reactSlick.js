@@ -1,4 +1,4 @@
-const reactSlickData = {
+export const reactSlickData = {
   profileSlide: [
     {
       id: 1,

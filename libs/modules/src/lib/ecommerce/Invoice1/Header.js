@@ -3,7 +3,7 @@ import {Box} from '@mui/material';
 import Typography from '@mui/material/Typography';
 import IntlMessages from '@crema/utility/IntlMessages';
 import {Fonts} from '@crema/constants/AppEnums'
-import invoiceData from "../../../../../mockapi/src/fakedb/extraPages/invoice/invoiceData";
+import {invoiceData} from "@crema/fakedb/extraPages"
 
 const Header = () => {
   return (

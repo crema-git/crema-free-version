@@ -4,10 +4,7 @@ import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import {AdapterDateFns} from '@mui/x-date-pickers/AdapterDateFns';
 import {LocalizationProvider} from '@mui/x-date-pickers';
-import {
-  StaticDateRangePicker,
-  DateRangePickerDay,
-} from '@mui/x-date-pickers-pro';
+import {DateRangePickerDay, StaticDateRangePicker,} from '@mui/x-date-pickers-pro';
 
 const DateRangePickerDayStyled = styled(DateRangePickerDay)(
   ({theme, isHighlighting, isStartOfHighlighting, isEndOfHighlighting}) => ({

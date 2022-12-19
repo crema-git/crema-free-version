@@ -1,12 +1,5 @@
 import React from 'react';
-import {
-  BlockPicker,
-  ChromePicker,
-  CirclePicker,
-  CompactPicker,
-  GithubPicker,
-  TwitterPicker,
-} from 'react-color';
+import {BlockPicker, ChromePicker, CirclePicker, CompactPicker, GithubPicker, TwitterPicker,} from 'react-color';
 
 import Basic from './Basic';
 import BasicSource from '!raw-loader!./Basic';

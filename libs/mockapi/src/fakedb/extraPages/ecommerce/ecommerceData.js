@@ -1,4 +1,4 @@
-const ecommerceData = [
+export const ecommerceData = [
   {
     id: 1001,
     title: "Mens's Exclusive Watch",

@@ -1,8 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import LinearProgress, {
-  linearProgressClasses,
-} from '@mui/material/LinearProgress';
+import LinearProgress, {linearProgressClasses,} from '@mui/material/LinearProgress';
 
 export function CustomLinearProgress({
   pathColor,

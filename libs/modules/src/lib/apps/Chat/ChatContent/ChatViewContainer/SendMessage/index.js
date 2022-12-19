@@ -7,7 +7,7 @@ import SendOutlinedIcon from '@mui/icons-material/SendOutlined';
 import PropTypes from 'prop-types';
 import {useIntl} from 'react-intl';
 import AttachFileIcon from '@mui/icons-material/AttachFile';
-import {MessageType} from "../../../../../../../../mockapi/src/fakedb/apps/chat/connectionList";
+import {MessageType} from "@crema/fakedb/chat/connectionList"
 
 import {styled} from '@mui/material/styles';
 import {generateUniqueID} from "@crema/helpers";

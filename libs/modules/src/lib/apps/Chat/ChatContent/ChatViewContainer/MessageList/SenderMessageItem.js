@@ -18,7 +18,7 @@ import {Fonts} from '@crema/constants/AppEnums'
 
 import {getFileSize} from "@crema/helpers";
 import {styled} from '@mui/material/styles';
-import {MessageType} from "../../../../../../../../mockapi/src/fakedb/apps/chat/connectionList";
+import {MessageType} from "@crema/fakedb/chat/connectionList"
 
 const SenderMessageWrapper = styled('div')(({theme}) => {
   return {

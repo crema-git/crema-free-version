@@ -3,7 +3,7 @@ export const MessageType = Object.freeze({
   TEXT: 2,
 });
 
-const connectionList = [
+export const connectionList = [
   {
     id: 2,
     channelId: 2001,

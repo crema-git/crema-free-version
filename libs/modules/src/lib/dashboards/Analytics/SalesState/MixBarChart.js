@@ -1,5 +1,5 @@
 import React from 'react';
-import {BarChart, Bar, XAxis, ResponsiveContainer, Tooltip} from 'recharts';
+import {Bar, BarChart, ResponsiveContainer, Tooltip, XAxis} from 'recharts';
 import PropTypes from 'prop-types';
 
 const MixBarChart = ({data}) => {

@@ -8,7 +8,6 @@ import AppFixedFooter from './AppFixedFooter';
 import AppHeader from './AppHeader';
 import AppSidebarMenu from './AppSidebarMenu';
 import AppSidebarSubMenu from './AppSidebarSubMenu';
-import routesConfig from '../../../../pages/routesConfig';
 import {useLayoutContext} from "@crema/context/LayoutContextProvider";
 import {useThemeContext} from '@crema/context/ThemeContextProvider';
 import {useLocation} from 'react-router-dom';

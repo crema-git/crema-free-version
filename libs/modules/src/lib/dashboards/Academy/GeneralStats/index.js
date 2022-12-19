@@ -7,9 +7,8 @@ import {Fonts} from '@crema/constants/AppEnums'
 import PropTypes from 'prop-types';
 
 import {BiBasket} from 'react-icons/bi';
-import {FcGraduationCap} from 'react-icons/fc';
+import {FcGraduationCap, FcReading} from 'react-icons/fc';
 import {GiBookshelf} from 'react-icons/gi';
-import {FcReading} from 'react-icons/fc';
 
 const getIcon = (iconType) => {
   switch (iconType) {

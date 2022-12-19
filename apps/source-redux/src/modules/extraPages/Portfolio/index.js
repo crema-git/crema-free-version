@@ -1,6 +1,5 @@
 import React from 'react';
-import Portfolio from '@crema/modules/extraPages/Portfolio';
-import photos from "../../../../../../libs/mockapi/src/fakedb/gallery/photos";
+import Portfolio from '@crema/modules/extraPages/Portfolio';import {photos} from "@crema/fakedb/data"
 
 const PortFolioPage = () => {
   return (

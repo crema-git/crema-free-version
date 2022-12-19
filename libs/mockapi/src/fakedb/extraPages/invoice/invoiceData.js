@@ -1,4 +1,4 @@
-const invoiceData = {
+export const invoiceData = {
   company: {
     name: 'Crema Admin',
     address1: 'A-22, Garvit Complex',

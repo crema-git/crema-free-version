@@ -1,12 +1,5 @@
 import React from 'react';
-import {
-  Area,
-  AreaChart,
-  CartesianGrid,
-  ResponsiveContainer,
-  Tooltip,
-  XAxis,
-} from 'recharts';
+import {Area, AreaChart, CartesianGrid, ResponsiveContainer, Tooltip, XAxis,} from 'recharts';
 import PropTypes from 'prop-types';
 import {useThemeContext} from '@crema/context/ThemeContextProvider';
 

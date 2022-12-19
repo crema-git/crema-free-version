@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {createTheme} from '@mui/material/styles';
 import {makeStyles} from '@mui/styles';
-import {useGridApiRef, DataGridPro} from '@mui/x-data-grid-pro';
+import {DataGridPro, useGridApiRef} from '@mui/x-data-grid-pro';
 
 const defaultTheme = createTheme();
 const useStyles = makeStyles(

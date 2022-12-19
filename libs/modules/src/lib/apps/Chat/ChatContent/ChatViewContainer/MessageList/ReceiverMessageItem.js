@@ -12,8 +12,8 @@ import {orange} from '@mui/material/colors';
 import {Fonts} from '@crema/constants/AppEnums'
 
 import {styled} from '@mui/material/styles';
-import {MessageType} from "../../../../../../../../mockapi/src/fakedb/apps/chat/connectionList";
 import {getFileSize} from "@crema/helpers";
+import {MessageType} from "@crema/fakedb/chat/connectionList"
 
 const ReceiverMessageWrapper = styled('div')(() => {
   return {

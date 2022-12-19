@@ -11,7 +11,7 @@ import TableCell from '@mui/material/TableCell';
 import Table from '@mui/material/Table';
 
 import {Header, ItemList} from '@crema/modules/ecommerce/Invoice1';
-import invoiceData from "../../../../../../libs/mockapi/src/fakedb/extraPages/invoice/invoiceData";
+import {invoiceData} from "@crema/fakedb/extraPages"
 
 const Invoice1 = () => {
   return (

@@ -1,6 +1,6 @@
 import React from 'react';
 import PropsTypes from 'prop-types';
-import {Box, alpha} from '@mui/material';
+import {alpha, Box} from '@mui/material';
 import {useSidebarContext} from "@crema/context/SidebarContextProvider";
 import {ThemeMode} from '@crema/constants/AppEnums';
 

@@ -2,7 +2,7 @@ import React from 'react';
 import {styled} from '@mui/material/styles';
 import TableHead from '@mui/material/TableHead';
 import TableBody from '@mui/material/TableBody';
-import invoiceData from "../../../../../../mockapi/src/fakedb/extraPages/invoice/invoiceData";
+import {invoiceData} from "@crema/fakedb/extraPages"
 import Table from '@mui/material/Table';
 import TableHeading from './TableHeading';
 import TableItem from './TableItem';

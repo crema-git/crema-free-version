@@ -2,14 +2,7 @@ import React from 'react';
 import Button from '@mui/material/Button';
 import IntlMessages from "@crema/utility/IntlMessages";
 import PropTypes from 'prop-types';
-import {
-  Dialog,
-  DialogActions,
-  DialogContent,
-  DialogTitle,
-  Slide,
-  Typography,
-} from '@mui/material';
+import {Dialog, DialogActions, DialogContent, DialogTitle, Slide, Typography,} from '@mui/material';
 import {Fonts} from '@crema/constants/AppEnums';
 
 const Transition = React.forwardRef(function Transition(props, ref) {

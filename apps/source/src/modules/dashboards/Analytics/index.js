@@ -1,20 +1,32 @@
 import React from 'react';
 import {Grid} from '@mui/material';
 import AppGridContainer from '@crema/components/AppGridContainer';
-import AppInfoView from '@crema/components/AppInfoView';
 import AppAnimate from '@crema/components/AppAnimate';
 import {useGetDataApi} from '@crema/utility/APIHooks';
 import {
-    TicketsSupport,
-    InfoWidget, ActiveVisitors, WelcomeCard, StateCard, SalesState, VisitorPageView, EarningByCountry, TopSelling, TrafficSource, OrderNTransaction, PageVisits
+  ActiveVisitors,
+  EarningByCountry,
+  InfoWidget,
+  OrderNTransaction,
+  PageVisits,
+  SalesState,
+  StateCard,
+  TicketsSupport,
+  TopSelling,
+  TrafficSource,
+  VisitorPageView,
+  WelcomeCard
 } from '@crema/modules/dashboards/Analytics';
+import AppLoader from "@crema/components/AppLoader";
 
 const Analytics = () => {
-  const [{apiData: analyticsData}] = useGetDataApi('/dashboard/analytics');
+  const [{apiData: analyticsData,loading}] = useGetDataApi('/dashboard/analytics');
 
   return (
     <>
-      {analyticsData ? (
+      {loading ? (
+        <AppLoader />
+      ): (
         <AppAnimate animation='transition.slideUpIn' delay={200}>
           <AppGridContainer>
             <Grid item xs={12} lg={6}>
@@ -71,9 +83,7 @@ const Analytics = () => {
             </Grid>
           </AppGridContainer>
         </AppAnimate>
-      ) : null}
-
-      <AppInfoView />
+      )}
     </>
   );
 };

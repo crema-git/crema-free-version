@@ -5,9 +5,8 @@ import Grid from '@mui/material/Grid';
 import AppComponentCard from '@crema/components/AppComponentCard';
 
 import DensitySelectorGrid from './DensitySelectorGrid';
-import DensitySelectorGridSource from '!raw-loader!./DensitySelectorGrid';
-
 import DensitySelectorSmallGrid from './DensitySelectorGrid';
+import DensitySelectorGridSource from '!raw-loader!./DensitySelectorGrid';
 import DensitySelectorSmallGridSource from '!raw-loader!./DensitySelectorSmallGrid';
 
 const Accessibility = () => {

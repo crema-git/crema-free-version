@@ -3,7 +3,7 @@ import {Box} from '@mui/material';
 import AppAnimate from '@crema/components/AppAnimate';
 import {useGetDataApi} from '@crema/utility/APIHooks';
 import {AddressInfo, ItemsList, OrderPlaced} from '@crema/modules/ecommerce/Confirmation';
-import {addresses} from "../../../../../../libs/mockapi/src/fakedb/ecommerce/ecommerceData";
+import {addresses} from "@crema/fakedb/ecommerceData";
 
 
 const Confirmation = () => {

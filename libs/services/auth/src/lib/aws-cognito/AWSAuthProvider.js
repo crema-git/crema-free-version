@@ -1,10 +1,4 @@
-import React, {
-  createContext,
-  useContext,
-  useEffect,
-  useMemo,
-  useState,
-} from 'react';
+import React, {createContext, useContext, useEffect, useMemo, useState,} from 'react';
 import Auth from '@aws-amplify/auth';
 import PropTypes from 'prop-types';
 import {awsConfig} from './aws-exports';

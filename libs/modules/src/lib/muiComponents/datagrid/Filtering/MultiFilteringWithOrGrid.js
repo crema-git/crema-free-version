@@ -1,4 +1,4 @@
-import {GridLinkOperator, DataGridPro} from '@mui/x-data-grid-pro';
+import {DataGridPro, GridLinkOperator} from '@mui/x-data-grid-pro';
 import {useDemoData} from '@mui/x-data-grid-generator';
 import * as React from 'react';
 

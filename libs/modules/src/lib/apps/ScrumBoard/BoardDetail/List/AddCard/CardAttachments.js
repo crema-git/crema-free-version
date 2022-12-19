@@ -5,7 +5,7 @@ import moment from 'moment';
 import DeleteOutlinedIcon from '@mui/icons-material/DeleteOutlined';
 import PropTypes from 'prop-types';
 import {Fonts} from '@crema/constants/AppEnums'
-import {IconButton, alpha} from '@mui/material';
+import {alpha, IconButton} from '@mui/material';
 import CloudDownloadOutlinedIcon from '@mui/icons-material/CloudDownloadOutlined';
 
 import {styled} from '@mui/material/styles';

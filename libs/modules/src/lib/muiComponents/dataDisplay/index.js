@@ -1,4 +1,4 @@
-  import React from 'react';
+import React from 'react';
 
 const Avatar = React.lazy(() => import('./Avatar'));
 const Badges = React.lazy(() => import('./Badges'));

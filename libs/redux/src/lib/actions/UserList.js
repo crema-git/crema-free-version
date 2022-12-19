@@ -1,9 +1,4 @@
-import {
-  FETCH_ERROR,
-  FETCH_START,
-  FETCH_SUCCESS,
-  GET_USER_LIST,
-} from '@crema/constants/ActionTypes';
+import {FETCH_ERROR, FETCH_START, FETCH_SUCCESS, GET_USER_LIST,} from '@crema/constants/ActionTypes';
 import {appIntl} from "@crema/helpers";
 import jwtAxios from "@crema/services/auth/JWT";
 

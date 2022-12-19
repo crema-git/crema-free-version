@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import { Grid } from '@mui/material';
 import AppGridContainer from '@crema/components/AppGridContainer';
-import AppInfoView from '@crema/components/AppInfoView';
 import AppAnimate from '@crema/components/AppAnimate';
 import {
   Deals,
@@ -18,6 +17,7 @@ import {
 } from '@crema/modules/dashboards/CRM';
 import { useDispatch, useSelector } from 'react-redux';
 import { onGetCrmData } from '@crema/redux-toolkit/actions';
+import AppLoader from '@crema/components/AppLoader';
 
 const CRM = () => {
   const dispatch = useDispatch();
@@ -28,60 +28,56 @@ const CRM = () => {
 
   const { crmData } = useSelector(({ dashboard }) => dashboard);
 
-  return (
-    <>
-      {crmData ? (
-        <AppAnimate animation="transition.slideUpIn" delay={200}>
-          <AppGridContainer>
-            <Grid item xs={12} md={5}>
-              <TotalRevenue revenueData={crmData.revenueData} />
-            </Grid>
-            <Grid item xs={12} md={7}>
-              <QuickStats quickStatsData={crmData.quickStatsData} />
-            </Grid>
+  return crmData ? (
+    <AppAnimate animation="transition.slideUpIn" delay={200}>
+      <AppGridContainer>
+        <Grid item xs={12} md={5}>
+          <TotalRevenue revenueData={crmData.revenueData} />
+        </Grid>
+        <Grid item xs={12} md={7}>
+          <QuickStats quickStatsData={crmData.quickStatsData} />
+        </Grid>
 
-            <Grid item xs={12} md={8}>
-              <Statistics
-                clientsData={crmData.statisticsGraph.clientsData}
-                incomeData={crmData.statisticsGraph.incomeData}
-                projectData={crmData.statisticsGraph.projectData}
-              />
-            </Grid>
+        <Grid item xs={12} md={8}>
+          <Statistics
+            clientsData={crmData.statisticsGraph.clientsData}
+            incomeData={crmData.statisticsGraph.incomeData}
+            projectData={crmData.statisticsGraph.projectData}
+          />
+        </Grid>
 
-            <Grid item xs={12} md={4}>
-              <MonthlyEarning earningGraphData={crmData.earningGraphData} />
-            </Grid>
+        <Grid item xs={12} md={4}>
+          <MonthlyEarning earningGraphData={crmData.earningGraphData} />
+        </Grid>
 
-            <Grid item xs={12} md={4}>
-              <SocialMediaAdvertise socialMediaData={crmData.socialMediaData} />
-            </Grid>
+        <Grid item xs={12} md={4}>
+          <SocialMediaAdvertise socialMediaData={crmData.socialMediaData} />
+        </Grid>
 
-            <Grid item xs={12} md={8}>
-              <TodayTasks todayTaskData={crmData.todayTaskData} />
-            </Grid>
+        <Grid item xs={12} md={8}>
+          <TodayTasks todayTaskData={crmData.todayTaskData} />
+        </Grid>
 
-            <Grid item xs={12} md={8}>
-              <Deals dealsTableData={crmData.dealsTableData} />
-            </Grid>
+        <Grid item xs={12} md={8}>
+          <Deals dealsTableData={crmData.dealsTableData} />
+        </Grid>
 
-            <Grid item xs={12} md={4}>
-              <GoalProgress progressGraphData={crmData.progressGraphData} />
-            </Grid>
+        <Grid item xs={12} md={4}>
+          <GoalProgress progressGraphData={crmData.progressGraphData} />
+        </Grid>
 
-            <Grid item xs={12} md={5}>
-              <WebTraffic websiteTrafficData={crmData.websiteTrafficData} />
-              <Reviews reviewGraphData={crmData.reviewGraphData} />
-            </Grid>
+        <Grid item xs={12} md={5}>
+          <WebTraffic websiteTrafficData={crmData.websiteTrafficData} />
+          <Reviews reviewGraphData={crmData.reviewGraphData} />
+        </Grid>
 
-            <Grid item xs={12} md={7}>
-              <TicketSupport ticketSupportData={crmData.ticketSupportData} />
-            </Grid>
-          </AppGridContainer>
-        </AppAnimate>
-      ) : null}
-
-      <AppInfoView />
-    </>
+        <Grid item xs={12} md={7}>
+          <TicketSupport ticketSupportData={crmData.ticketSupportData} />
+        </Grid>
+      </AppGridContainer>
+    </AppAnimate>
+  ) : (
+    <AppLoader />
   );
 };
 

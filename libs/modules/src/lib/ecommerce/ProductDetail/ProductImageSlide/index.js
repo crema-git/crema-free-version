@@ -12,6 +12,7 @@ import PropTypes from 'prop-types';
 import {styled} from '@mui/material/styles';
 import {useInfoViewActionsContext} from '@crema/context/InfoViewContextProvider';
 import {postDataApi} from '@crema/utility/APIHooks';
+
 const BrainHubSliderRoot = styled(Box)(({theme}) => {
   return {
     position: 'relative',

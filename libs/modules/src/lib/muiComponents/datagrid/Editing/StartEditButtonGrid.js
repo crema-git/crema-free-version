@@ -1,12 +1,8 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import Button from '@mui/material/Button';
-import {useGridApiRef, DataGridPro} from '@mui/x-data-grid-pro';
-import {
-  randomCreatedDate,
-  randomTraderName,
-  randomUpdatedDate,
-} from '@mui/x-data-grid-generator';
+import {DataGridPro, useGridApiRef} from '@mui/x-data-grid-pro';
+import {randomCreatedDate, randomTraderName, randomUpdatedDate,} from '@mui/x-data-grid-generator';
 import {createTheme} from '@mui/material/styles';
 import {makeStyles} from '@mui/styles';
 

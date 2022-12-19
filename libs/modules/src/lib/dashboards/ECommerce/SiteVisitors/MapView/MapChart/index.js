@@ -1,10 +1,5 @@
 import React, {memo} from 'react';
-import {
-  ComposableMap,
-  Geographies,
-  Geography,
-  ZoomableGroup,
-} from 'react-simple-maps';
+import {ComposableMap, Geographies, Geography, ZoomableGroup,} from 'react-simple-maps';
 import PropTypes from 'prop-types';
 
 const geoUrl =

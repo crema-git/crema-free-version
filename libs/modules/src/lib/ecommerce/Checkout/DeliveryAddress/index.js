@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import AppList from '@crema/components/AppList';
 import AddressCell from './AddressCell';
-import {addresses} from "../../../../../../mockapi/src/fakedb/ecommerce/ecommerceData";
+import {addresses} from "@crema/fakedb/data"
 
 const DeliveryAddress = () => {
   const [selectedAddress, setSelectAddress] = useState(addresses[1]);

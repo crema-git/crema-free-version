@@ -1,10 +1,5 @@
 import mock from '../MockConfig';
-import ecommerceData, {
-  cartItems,
-  customersData,
-  recentOrders,
-  BrandData,
-} from '../../fakedb/ecommerce/ecommerceData';
+import ecommerceData, {BrandData, cartItems, customersData, recentOrders,} from '../../fakedb/ecommerce/ecommerceData';
 import {multiPropsFilter} from "@crema/helpers";
 
 let cartItemsData = cartItems;

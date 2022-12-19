@@ -2,12 +2,9 @@ import React from 'react';
 import {CustomizerItemWrapper} from '../index.style';
 import Box from '@mui/material/Box';
 import IntlMessages from "@crema/utility/IntlMessages";
-import {
-  useLayoutActionsContext,
-  useLayoutContext,
-} from "@crema/context/LayoutContextProvider";
+import {useLayoutActionsContext, useLayoutContext,} from "@crema/context/LayoutContextProvider";
 import AppSelectedIcon from '../../AppSelectedIcon';
-import {navStyles} from "../../../../../mockapi/src/fakedb/navigationStyle";
+import {navStyles} from "@crema/fakedb/navigationStyle";
 
 const NavStyles = () => {
   const {updateNavStyle} = useLayoutActionsContext();

@@ -8,8 +8,11 @@ import {Fonts} from '@crema/constants/AppEnums'
 import {initialUrl} from "@crema/constants/AppConst";
 import AppAnimate from '@crema/components/AppAnimate';
 import IntlMessages from '@crema/utility/IntlMessages';
+import {ReactComponent as Logo} from '../../../assets/icon/503.svg';
+import {useTheme} from '@mui/material';
 
 const Error503 = () => {
+  const theme = useTheme();
   const navigate = useNavigate();
 
   const onGoBackToHome = () => {
@@ -39,7 +42,7 @@ const Error503 = () => {
             },
           }}
         >
-            <img src={'/assets/icon/503.svg'} alt='503' />
+          <Logo fill={theme.palette.primary.main} />
         </Box>
         <Box
           sx={{

@@ -21,14 +21,14 @@ const leaveAnimationDefaults = {
   delay: 0,
 };
 
-function AppAnimateGroup({...props}) {
+const AppAnimateGroup=({...props})=> {
+
   return (
     <VelocityTransitionGroup
       {...props}
       enter={{...enterAnimationDefaults, ...props.enter}}
       leave={{...leaveAnimationDefaults, ...props.leave}}
-    />
-  );
+    />);
 }
 
 AppAnimateGroup.propTypes = {

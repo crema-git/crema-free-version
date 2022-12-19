@@ -12,6 +12,7 @@ import {useIntl} from 'react-intl';
 import AppTextField from '@crema/components/AppTextField';
 import {useAuthMethod} from '@crema/utility/AuthHooks';
 import {Fonts} from '@crema/constants/AppEnums'
+import AuthWrapper from '../AuthWrapper';
 
 const validationSchema = yup.object({
   email: yup
@@ -33,6 +34,7 @@ const SigninJwtAuth = () => {
   const {messages} = useIntl();
 
   return (
+    <AuthWrapper>
     <Box sx={{flex: 1, display: 'flex', flexDirection: 'column'}}>
       <Box sx={{flex: 1, display: 'flex', flexDirection: 'column', mb: 5}}>
         <Formik
@@ -168,6 +170,7 @@ const SigninJwtAuth = () => {
 
       <AppInfoView />
     </Box>
+    </AuthWrapper>
   );
 };
 

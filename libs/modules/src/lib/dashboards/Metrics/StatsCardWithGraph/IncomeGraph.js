@@ -1,5 +1,5 @@
 import React from 'react';
-import {AreaChart, Area, ResponsiveContainer, Tooltip} from 'recharts';
+import {Area, AreaChart, ResponsiveContainer, Tooltip} from 'recharts';
 import Box from '@mui/material/Box';
 import PropTypes from 'prop-types';
 

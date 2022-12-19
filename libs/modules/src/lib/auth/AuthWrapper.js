@@ -4,6 +4,7 @@ import Box from '@mui/material/Box';
 import PropTypes from 'prop-types';
 import {Typography} from '@mui/material';
 import {Fonts} from '@crema/constants/AppEnums'
+import AppLogo from "@crema/components/AppLogo";
 
 const AuthWrapper = ({children}) => {
   return (
@@ -35,7 +36,20 @@ const AuthWrapper = ({children}) => {
             justifyContent: 'center',
           }}
         >
+          <Box sx={{width: '100%'}}>
+            <Box sx={{mb: {xs: 6, xl: 8}}}>
+              <Box
+                sx={{
+                  mb: 5,
+                  display: 'flex',
+                  alignItems: 'center',
+                }}
+              >
+                <AppLogo />
+              </Box>
+            </Box>
           {children}
+          </Box>
         </Box>
         <Box
           sx={{

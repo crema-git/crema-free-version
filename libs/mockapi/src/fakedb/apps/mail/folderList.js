@@ -1,4 +1,4 @@
-const folderList = [
+export const folderList = [
   {id: 121, name: 'Inbox', alias: 'inbox'},
   {id: 122, name: 'Sent', alias: 'sent'},
   {id: 123, name: 'Draft', alias: 'draft'},

@@ -15,6 +15,7 @@ import {Fonts} from '@crema/constants/AppEnums'
 import {AiOutlineGoogle, AiOutlineTwitter} from 'react-icons/ai';
 import {FaFacebookF} from 'react-icons/fa';
 import {BsGithub} from 'react-icons/bs';
+import AuthWrapper from '../AuthWrapper';
 
 const validationSchema = yup.object({
   email: yup
@@ -37,6 +38,7 @@ const SigninFirebase = () => {
   const {messages} = useIntl();
 
   return (
+    <AuthWrapper>
     <Box sx={{flex: 1, display: 'flex', flexDirection: 'column'}}>
       <Box sx={{flex: 1, display: 'flex', flexDirection: 'column', mb: 5}}>
         <Formik
@@ -239,6 +241,7 @@ const SigninFirebase = () => {
 
       <AppInfoView />
     </Box>
+    </AuthWrapper>
   );
 };
 

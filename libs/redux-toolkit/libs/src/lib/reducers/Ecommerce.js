@@ -10,7 +10,7 @@ import {
   SET_PRODUCT_VIEW_TYPE,
   UPDATE_CART_ITEM,
 } from '@crema/constants/ActionTypes';
-import {cartItems} from "../../../../mockapi/src/fakedb/ecommerce/ecommerceData";
+import {cartItems} from "@crema/fakedb/data"
 
 export const VIEW_TYPE = Object.freeze({LIST: 1, GRID: 2});
 const initialState = {

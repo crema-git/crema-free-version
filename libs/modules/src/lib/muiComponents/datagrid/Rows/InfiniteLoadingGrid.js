@@ -1,10 +1,6 @@
 import * as React from 'react';
 import {DataGridPro, GridOverlay} from '@mui/x-data-grid-pro';
-import {
-  useDemoData,
-  getRealGridData,
-  getCommodityColumns,
-} from '@mui/x-data-grid-generator';
+import {getCommodityColumns, getRealGridData, useDemoData,} from '@mui/x-data-grid-generator';
 import LinearProgress from '@mui/material/LinearProgress';
 
 const MAX_ROW_LENGTH = 500;

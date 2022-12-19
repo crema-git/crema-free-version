@@ -5,10 +5,7 @@ import IntlMessages from "@crema/utility/IntlMessages";
 import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
 import {ThemeStyle} from '@crema/constants/AppEnums';
 import clsx from 'clsx';
-import {
-  useThemeActionsContext,
-  useThemeContext,
-} from '@crema/context/ThemeContextProvider';
+import {useThemeActionsContext, useThemeContext,} from '@crema/context/ThemeContextProvider';
 
 const ThemeStyles = () => {
   const {themeStyle} = useThemeContext();

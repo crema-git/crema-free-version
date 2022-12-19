@@ -6,14 +6,14 @@ import AppsHeader from '@crema/components/AppsHeader';
 import AppsContent from '@crema/components/AppsContent';
 import AppsPagination from '@crema/components/AppsPagination';
 import Box from '@mui/material/Box';
-import AppInfoView from '@crema/components/AppInfoView';
 import AppSearchBar from '@crema/components/AppSearchBar';
 import {useGetDataApi} from '@crema/utility/APIHooks';
 import {OrderTable} from '@crema/modules/ecommerce/Orders';
+import AppLoader from "@crema/components/AppLoader";
 
 const Orders = () => {
   const {messages} = useIntl();
-  const [{apiData}, {setQueryParams}] = useGetDataApi(
+  const [{apiData, loading}, {setQueryParams}] = useGetDataApi(
     '/api/ecommerce/orders',
     {},
     {},
@@ -35,6 +35,9 @@ const Orders = () => {
   };
   return (
     <>
+        {loading ? (
+          <AppLoader />
+        ): (
       <AppsContainer title={messages['eCommerce.recentOrders']} fullView>
         <AppsHeader>
           <Box
@@ -85,7 +88,7 @@ const Orders = () => {
           />
         </Hidden>
       </AppsContainer>
-      <AppInfoView />
+        )}
     </>
   );
 };

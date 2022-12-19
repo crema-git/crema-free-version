@@ -1,11 +1,7 @@
 import * as React from 'react';
 import Alert from '@mui/material/Alert';
-import {GridEvents, useGridApiRef, DataGridPro} from '@mui/x-data-grid-pro';
-import {
-  randomCreatedDate,
-  randomTraderName,
-  randomUpdatedDate,
-} from '@mui/x-data-grid-generator';
+import {DataGridPro, GridEvents, useGridApiRef} from '@mui/x-data-grid-pro';
+import {randomCreatedDate, randomTraderName, randomUpdatedDate,} from '@mui/x-data-grid-generator';
 
 export default function CatchEditingEventsGrid() {
   const apiRef = useGridApiRef();

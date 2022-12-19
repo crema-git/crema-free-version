@@ -7,12 +7,17 @@ import {Fonts} from '@crema/constants/AppEnums'
 import AppAnimate from '@crema/components/AppAnimate';
 import AppGridContainer from '@crema/components/AppGridContainer';
 import {useGetDataApi} from '@crema/utility/APIHooks';
-import {OrderSummary, DeliveryAddress, PaymentInfo} from '@crema/modules/ecommerce/Checkout';
+import {DeliveryAddress, OrderSummary, PaymentInfo} from '@crema/modules/ecommerce/Checkout';
+import AppLoader from "@crema/components/AppLoader";
 
 const Checkout = () => {
-  const [{apiData: cartItems}] = useGetDataApi('/api/cart/get', []);
+  const [{apiData: cartItems,loading}] = useGetDataApi('/api/cart/get', []);
 
   return (
+    <>
+      {loading ? (
+        <AppLoader />
+      ): (
     <AppAnimate animation='transition.slideUpIn' delay={200}>
       <Box>
         <Box
@@ -44,8 +49,8 @@ const Checkout = () => {
           </Grid>
         </AppGridContainer>
       </Box>
-    </AppAnimate>
-  );
+    </AppAnimate>)}
+    </>);
 };
 
 export default Checkout;

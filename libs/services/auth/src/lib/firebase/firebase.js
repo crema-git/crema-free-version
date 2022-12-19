@@ -1,19 +1,19 @@
 import {initializeApp} from 'firebase/app';
 import {getFirestore} from 'firebase/firestore';
 import {
-  getAuth,
-  signInWithPopup,
-  signInWithEmailAndPassword,
   createUserWithEmailAndPassword,
-  sendPasswordResetEmail,
-  signOut,
-  sendEmailVerification,
-  updateProfile,
-  onAuthStateChanged,
-  GoogleAuthProvider,
-  GithubAuthProvider,
   FacebookAuthProvider,
+  getAuth,
+  GithubAuthProvider,
+  GoogleAuthProvider,
+  onAuthStateChanged,
+  sendEmailVerification,
+  sendPasswordResetEmail,
+  signInWithEmailAndPassword,
+  signInWithPopup,
+  signOut,
   TwitterAuthProvider,
+  updateProfile,
 } from 'firebase/auth';
 
 // Initialize Firebase

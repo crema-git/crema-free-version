@@ -1,12 +1,5 @@
 import React from 'react';
-import {
-  Bar,
-  BarChart,
-  ResponsiveContainer,
-  Tooltip,
-  XAxis,
-  YAxis,
-} from 'recharts';
+import {Bar, BarChart, ResponsiveContainer, Tooltip, XAxis, YAxis,} from 'recharts';
 import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
 

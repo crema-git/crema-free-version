@@ -15,6 +15,7 @@ import {useAuthMethod, useAuthUser} from '@crema/utility/AuthHooks';
 import {Fonts} from '@crema/constants/AppEnums'
 import {AiOutlineGoogle} from 'react-icons/ai';
 import {FaFacebookF} from 'react-icons/fa';
+import AuthWrapper from '../AuthWrapper';
 
 const validationSchema = yup.object({
   email: yup
@@ -38,6 +39,7 @@ const SigninAwsCognito = () => {
   const {messages} = useIntl();
 
   return (
+    <AuthWrapper>
     <Box sx={{flex: 1, display: 'flex', flexDirection: 'column'}}>
       <Box sx={{flex: 1, display: 'flex', flexDirection: 'column', mb: 5}}>
         <Formik
@@ -223,6 +225,7 @@ const SigninAwsCognito = () => {
 
       <AppInfoView />
     </Box>
+    </AuthWrapper>
   );
 };
 

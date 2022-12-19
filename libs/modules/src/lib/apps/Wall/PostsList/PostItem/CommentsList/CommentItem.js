@@ -3,7 +3,7 @@ import Box from '@mui/material/Box';
 import Avatar from '@mui/material/Avatar';
 import PropTypes from 'prop-types';
 import {Typography} from '@mui/material';
-import {MessageType} from "../../../../../../../../mockapi/src/fakedb/apps/chat/connectionList";
+import {MessageType} from "@crema/fakedb/chat/connectionList"
 
 const CommentItem = ({item}) => {
   const {author, message_type, media, comment, liked} = item;

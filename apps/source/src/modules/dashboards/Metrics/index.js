@@ -1,7 +1,6 @@
 import React from 'react';
 import AppGridContainer from '@crema/components/AppGridContainer';
 import Grid from '@mui/material/Grid';
-import AppInfoView from '@crema/components/AppInfoView';
 import IntlMessages from '@crema/utility/IntlMessages';
 import Box from '@mui/material/Box';
 import {blue, green, grey, indigo, red} from '@mui/material/colors';
@@ -33,12 +32,14 @@ import {
 
 
 const Metrics = () => {
-  const [{apiData: metricsData}] = useGetDataApi('/dashboard/metrics');
+  const [{apiData: metricsData, loading}] = useGetDataApi('/dashboard/metrics');
   const {messages} = useIntl();
 
   return (
     <>
-      {metricsData ? (
+      {loading ? (
+        <AppLoader />
+      ): (
         <AppAnimate>
           <>
             <Box
@@ -310,10 +311,7 @@ const Metrics = () => {
             </AppGridContainer>
           </>
         </AppAnimate>
-      ) : (
-        <AppLoader />
-      )}
-      <AppInfoView />
+      ) }
     </>
   );
 };

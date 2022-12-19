@@ -14,7 +14,7 @@ import SimpleBarReact from 'simplebar-react';
 import {styled} from '@mui/material/styles';
 import {postDataApi, putDataApi, useGetDataApi} from '@crema/utility/APIHooks';
 import {useInfoViewActionsContext} from '@crema/context/InfoViewContextProvider';
-import {MessageType} from "../../../../../../../mockapi/src/fakedb/apps/chat/connectionList";
+import {MessageType} from "@crema/fakedb/chat/connectionList";
 
 const ScrollbarWrapper = styled(SimpleBarReact)(() => {
   return {

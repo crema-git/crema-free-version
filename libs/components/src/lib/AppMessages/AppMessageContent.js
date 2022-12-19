@@ -8,7 +8,7 @@ import CancelOutlinedIcon from '@mui/icons-material/CancelOutlined';
 import PropTypes from 'prop-types';
 import Typography from '@mui/material/Typography';
 import AppScrollbar from "../AppScrollbar";
-import messages from "../../../../mockapi/src/fakedb/messages";
+import {messages} from "@crema/fakedb/data";
 
 const AppMessageContent = ({onClose, sxStyle}) => {
   return (

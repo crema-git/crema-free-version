@@ -4,10 +4,7 @@ import Box from '@mui/material/Box';
 import IntlMessages from "@crema/utility/IntlMessages";
 import Switch from '@mui/material/Switch';
 import {LayoutDirection} from '@crema/constants/AppEnums';
-import {
-  useThemeActionsContext,
-  useThemeContext,
-} from '@crema/context/ThemeContextProvider';
+import {useThemeActionsContext, useThemeContext,} from '@crema/context/ThemeContextProvider';
 
 const ThemeDirection = () => {
   const {theme} = useThemeContext();

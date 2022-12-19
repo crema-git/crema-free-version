@@ -6,11 +6,11 @@ import IconButton from '@mui/material/IconButton';
 import HomeIcon from '@mui/icons-material/Home';
 import {
   DataGridPro,
-  useGridApiRef,
   gridVisibleRowCountSelector,
+  gridVisibleSortedRowIdsSelector,
+  useGridApiRef,
   visibleGridColumnsLengthSelector,
   visibleGridColumnsSelector,
-  gridVisibleSortedRowIdsSelector,
 } from '@mui/x-data-grid-pro';
 import {useDemoData} from '@mui/x-data-grid-generator';
 

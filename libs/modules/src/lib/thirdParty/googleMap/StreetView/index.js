@@ -1,10 +1,5 @@
 import React, {Component} from 'react';
-import {
-  GoogleMap,
-  OverlayView,
-  StreetViewPanorama,
-  withGoogleMap,
-} from 'react-google-maps';
+import {GoogleMap, OverlayView, StreetViewPanorama, withGoogleMap,} from 'react-google-maps';
 
 
 const coordinates = {lat: 49.2853171, lng: -123.1119202};

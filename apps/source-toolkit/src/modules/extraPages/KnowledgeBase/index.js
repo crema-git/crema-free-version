@@ -9,8 +9,8 @@ import Box from '@mui/material/Box';
 import {Fonts} from '@crema/constants/AppEnums'
 import AppAnimate from '@crema/components/AppAnimate';
 import {Sales, Installation} from '@crema/modules/extraPages/KnowledgeBase';
-import {salesData} from "../../../../../../libs/mockapi/src/fakedb/extraPages/portFolio/sales";
-import {installationData} from "../../../../../../libs/mockapi/src/fakedb/extraPages/portFolio/installation";
+import {salesData} from "@crema/fakedb/extraPages";
+import {installationData} from "@crema/fakedb/extraPages";
 
 const KnowledgeBase = () => {
   const {messages} = useIntl();

@@ -10,7 +10,6 @@ import IntlMessages from '@crema/utility/IntlMessages';
 import AppTextField from '@crema/components/AppTextField';
 import {Fonts} from '@crema/constants/AppEnums'
 import AuthWrapper from '../AuthWrapper';
-import AppLogo from '@crema/components/AppLogo';
 
 const validationSchema = yup.object({
   email: yup
@@ -24,15 +23,6 @@ const ForgetPasswordJwtAuth = () => {
     <AuthWrapper>
       <Box sx={{width: '100%'}}>
         <Box sx={{mb: {xs: 8, xl: 10}}}>
-          <Box
-            sx={{
-              mb: 5,
-              display: 'flex',
-              alignItems: 'center',
-            }}
-          >
-            <AppLogo />
-          </Box>
           <Typography
             variant='h2'
             component='h2'
