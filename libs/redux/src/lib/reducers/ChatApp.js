@@ -40,8 +40,8 @@ const chatReducer = (state = initialState, action) => {
       return {
         ...state,
         connectionList: state.connectionList.map((item) =>
-          item.id === action.payload.data.user.id
-            ? action.payload.data.user
+          item.id === action.payload.data.connectionData.id
+            ? action.payload.data.connectionData
             : item,
         ),
         userMessages: action.payload.data.userMessages,

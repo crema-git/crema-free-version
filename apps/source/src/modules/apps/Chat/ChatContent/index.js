@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import NoUserScreen from './NoUserScreen';
 import ChatViewContainer from './ChatViewContainer';
+import {NoUserScreen} from '@crema/modules/apps/Chat';
 
 import {styled} from '@mui/material/styles';
 import {Fonts} from '@crema/constants/AppEnums'

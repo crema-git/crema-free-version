@@ -1,9 +1,6 @@
 import React, {useEffect, useRef, useState} from 'react';
 import Box from '@mui/material/Box';
-import SendMessage from './SendMessage';
-import MessagesList from './MessageList';
 import moment from 'moment';
-import Header from './Header';
 import PropTypes from 'prop-types';
 import IntlMessages from '@crema/utility/IntlMessages';
 import AppsHeader from '@crema/components/AppsHeader';
@@ -12,9 +9,16 @@ import {useAuthUser} from '@crema/utility/AuthHooks';
 import SimpleBarReact from 'simplebar-react';
 
 import {styled} from '@mui/material/styles';
-import {postDataApi, putDataApi, useGetDataApi} from '@crema/utility/APIHooks';
-import {useInfoViewActionsContext} from '@crema/context/InfoViewContextProvider';
 import {MessageType} from "@crema/fakedb/chat/connectionList";
+import {Header, MessagesList, SendMessage} from '@crema/modules/apps/Chat';
+import {
+  getConnectionMessages,
+  onDeleteConversation,
+  onDeleteMessage,
+  onEditMessage,
+  onSendMessage
+} from "@crema/redux/actions";
+import {useDispatch, useSelector} from "react-redux";
 
 const ScrollbarWrapper = styled(SimpleBarReact)(() => {
   return {
@@ -35,26 +39,19 @@ const ScrollChatNoMainWrapper = styled('div')(() => {
 
 const ChatViewContainer = ({
   selectedUser,
-  setConnectionData,
-  setSelectedUser,
 }) => {
   const [message, setMessage] = useState('');
   const [isEdit, setIsEdit] = useState(false);
-  const infoViewActionsContext = useInfoViewActionsContext();
   const [selectedMessage, setSelectedMessage] = useState(null);
   const {user} = useAuthUser();
+  const dispatch = useDispatch();
 
   let _scrollBarRef = useRef();
-  const [{apiData: userMessages}, {setQueryParams, setData}] = useGetDataApi(
-    '/api/chatApp/connection/messages',
-    {},
-    {},
-    false,
-  );
+  const userMessages = useSelector(({chatApp}) => chatApp.userMessages);
 
   useEffect(() => {
-    setQueryParams({id: selectedUser?.channelId});
-  }, [selectedUser?.channelId]);
+    dispatch(getConnectionMessages(selectedUser.channelId));
+  }, [dispatch, selectedUser]);
 
   useEffect(() => {
     if (
@@ -75,21 +72,13 @@ const ChatViewContainer = ({
       sender: user.id,
       time: moment().format('llll'),
     };
-    postDataApi('/api/chatApp/message', infoViewActionsContext, {
-      channelId: selectedUser?.channelId,
-      message: data,
-    })
-      .then((data) => {
-        setData(data?.userMessages);
-        setConnectionData(data?.connectionData);
-        infoViewActionsContext.showMessage('Message Added Successfully!');
-      })
-      .catch((error) => {
-        infoViewActionsContext.fetchError(error.message);
-      });
+
+    dispatch(onSendMessage(selectedUser.channelId, data));
+
   };
 
   const onSend = (message) => {
+
     const data = {
       ...selectedMessage,
       message,
@@ -99,36 +88,16 @@ const ChatViewContainer = ({
     };
 
     if (isEdit) {
+
       data.edited = true;
-      putDataApi('/api/chatApp/message', infoViewActionsContext, {
-        channelId: selectedUser?.channelId,
-        message: data,
-      })
-        .then((data) => {
-          setData(data?.userMessages);
-          setConnectionData(data?.connectionData);
-          infoViewActionsContext.showMessage('Message Edited Successfully!');
-          setMessage('');
-          setIsEdit(false);
-          setSelectedMessage(null);
-        })
-        .catch((error) => {
-          infoViewActionsContext.fetchError(error.message);
-        });
+      dispatch(onEditMessage(selectedUser.channelId, data));
+      setMessage('');
+      setIsEdit(false);
+      setSelectedMessage(null)
     } else {
-      postDataApi('/api/chatApp/message', infoViewActionsContext, {
-        channelId: selectedUser?.channelId,
-        message: data,
-      })
-        .then((data) => {
-          setMessage('');
-          setData(data?.userMessages);
-          setConnectionData(data?.connectionData);
-          infoViewActionsContext.showMessage('Message Added Successfully!');
-        })
-        .catch((error) => {
-          infoViewActionsContext.fetchError(error.message);
-        });
+console.log('data', data,selectedUser);
+      dispatch(onSendMessage(selectedUser.channelId, data));
+      setMessage('')
     }
   };
 
@@ -141,32 +110,11 @@ const ChatViewContainer = ({
   };
 
   const deleteMessage = (messageId) => {
-    postDataApi('/api/chatApp/delete/message', infoViewActionsContext, {
-      channelId: selectedUser?.channelId,
-      messageId,
-    })
-      .then((data) => {
-        setData(data?.userMessages);
-        setConnectionData(data?.connectionData);
-        infoViewActionsContext.showMessage('Message Deleted Successfully!');
-      })
-      .catch((error) => {
-        infoViewActionsContext.fetchError(error.message);
-      });
+    dispatch(onDeleteMessage(selectedUser.channelId, messageId));
   };
 
   const deleteConversation = () => {
-    postDataApi('/api/chatApp/delete/user/messages', infoViewActionsContext, {
-      channelId: selectedUser?.channelId,
-    })
-      .then((data) => {
-        setSelectedUser(undefined);
-        setConnectionData(data);
-        infoViewActionsContext.showMessage('Chat Deleted Successfully!');
-      })
-      .catch((error) => {
-        infoViewActionsContext.fetchError(error.message);
-      });
+    dispatch(onDeleteConversation(selectedUser.channelId));
   };
 
   return (
