@@ -1,7 +1,7 @@
 import React from 'react';
 import IconButton from '@mui/material/IconButton';
 import Collapse from '@mui/material/Collapse';
-import {Box, alpha} from '@mui/material';
+import {alpha, Box} from '@mui/material';
 import Alert from '@mui/material/Alert';
 import CloseIcon from '@mui/icons-material/Close';
 import {useSidebarContext} from "@crema/context/SidebarContextProvider";

@@ -10,9 +10,9 @@ import {useNavigate} from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 import {styled} from '@mui/material/styles';
-import AppImage from "@crema/components/AppImage";
 import {useInfoViewActionsContext} from '@crema/context/InfoViewContextProvider';
 import {postDataApi} from '@crema/utility/APIHooks';
+
 const BrainHubSliderRoot = styled(Box)(({theme}) => {
   return {
     position: 'relative',
@@ -55,7 +55,7 @@ const ProductImageSlide = ({product}) => {
   const infoViewActionsContext = useInfoViewActionsContext();
   const navigate = useNavigate();
   const slides = product.image.map((data) => (
-    <AppImage src={data.src} alt='' key={data.src} />
+    <img src={data.src} alt='' key={data.src} />
   ));
   const onChange = (value) => {
     setValue(value);

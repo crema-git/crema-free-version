@@ -7,7 +7,6 @@ import TableRow from '@mui/material/TableRow';
 import PropTypes from 'prop-types';
 import {green, red} from '@mui/material/colors';
 import {Fonts} from '@crema/constants/AppEnums'
-import AppImage from "@crema/components/AppImage";
 
 const TableItem = (props) => {
   const {row} = props;
@@ -54,7 +53,7 @@ const TableItem = (props) => {
                   backgroundColor: row.image ? row.color : red[500],
                 }}
               >
-                <AppImage src={row.image} alt='' />
+                <img src={row.image} alt='' />
               </Avatar>
             ) : (
               <Avatar

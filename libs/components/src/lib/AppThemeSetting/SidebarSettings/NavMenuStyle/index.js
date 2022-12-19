@@ -1,13 +1,9 @@
 import React from 'react';
 import Box from '@mui/material/Box';
 import IntlMessages from "@crema/utility/IntlMessages";
-import {
-  useSidebarActionsContext,
-  useSidebarContext,
-} from "@crema/context/SidebarContextProvider";
+import {useSidebarActionsContext, useSidebarContext,} from "@crema/context/SidebarContextProvider";
 import AppSelectedIcon from '../../../AppSelectedIcon';
-import AppImage from "@crema/components/AppImage";
-import {menuStyles} from "../../../../../../mockapi/src/fakedb/navigationStyle";
+import {menuStyles} from "@crema/fakedb/navigationStyle";
 
 const NavMenuStyle = () => {
   const {menuStyle} = useSidebarContext();
@@ -48,7 +44,7 @@ const NavMenuStyle = () => {
                 }}
                 onClick={() => onMenuStyleChange(menu.alias)}
               >
-                <AppImage src={menu.image} alt='nav' />
+                <img src={menu.image} alt='nav' />
                 {menuStyle === menu.alias ? <AppSelectedIcon /> : null}
               </Box>
             </Box>

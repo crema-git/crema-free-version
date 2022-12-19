@@ -12,9 +12,8 @@ import {orange} from '@mui/material/colors';
 import {Fonts} from '@crema/constants/AppEnums'
 
 import {styled} from '@mui/material/styles';
-import AppImage from "@crema/components/AppImage";
 import {getFileSize} from "@crema/helpers";
-import {MessageType} from "../../../../../../../../mockapi/src/fakedb/apps/chat/connectionList";
+import {MessageType} from "@crema/fakedb/chat/connectionList"
 
 const ReceiverMessageWrapper = styled('div')(() => {
   return {
@@ -104,7 +103,7 @@ const getMediaMessage = (item) => {
           },
         }}
       >
-        <AppImage alt='' src={item.url} />
+        <img alt='' src={item.url} />
       </Box>
     );
   } else if (item.mime_type.startsWith('video')) {

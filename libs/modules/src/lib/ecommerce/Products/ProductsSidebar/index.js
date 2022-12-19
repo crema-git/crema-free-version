@@ -12,11 +12,11 @@ import AppGrid from '@crema/components/AppGrid';
 import ColorCell from './ColorCell';
 import RatingCell from './RatingCell';
 import {
-    BrandData,
-    DiscountList,
-    IdealFor,
-    ProductColors
-} from "../../../../../../mockapi/src/fakedb/ecommerce/ecommerceData";
+  BrandData,
+  DiscountList,
+  IdealFor,
+  ProductColors
+} from "@crema/fakedb/data";
 
 const ProductSidebar = ({filterData, setFilterData}) => {
   const [selectedBrand, setSelectedBrand] = useState(filterData.brand);

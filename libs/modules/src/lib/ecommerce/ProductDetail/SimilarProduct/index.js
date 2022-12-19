@@ -1,9 +1,9 @@
 import React from 'react';
-import {Box, alpha} from '@mui/material';
+import {alpha, Box} from '@mui/material';
 import Slider from 'react-slick';
 import GridItem from '../../Products/ProductListing/ProductGrid/GridItem';
 import MediaSlider from './MediaSlider';
-import ecommerce from "../../../../../../mockapi/src/fakedb/ecommerce/ecommerceData";
+import {ecommerce} from "@crema/fakedb/data"
 
 const settings = {
   dots: true,

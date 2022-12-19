@@ -8,9 +8,11 @@ import {Fonts} from '@crema/constants/AppEnums'
 import {initialUrl} from "@crema/constants/AppConst";
 import AppAnimate from '@crema/components/AppAnimate';
 import IntlMessages from '@crema/utility/IntlMessages';
-import AppImage from "@crema/components/AppImage";
+import {ReactComponent as Logo} from '../../../assets/icon/500.svg';
+import {useTheme} from '@mui/material';
 
 const Error500 = () => {
+  const theme = useTheme();
   const navigate = useNavigate();
 
   const onGoBackToHome = () => {
@@ -40,7 +42,7 @@ const Error500 = () => {
             },
           }}
         >
-            <AppImage src={'/assets/icon/500.svg'} alt='500' />
+          <Logo fill={theme.palette.primary.main} />
         </Box>
         <Box
           sx={{

@@ -1,13 +1,5 @@
 import React from 'react';
-import {
-  CartesianGrid,
-  ResponsiveContainer,
-  Scatter,
-  ScatterChart,
-  Tooltip,
-  XAxis,
-  YAxis,
-} from 'recharts';
+import {CartesianGrid, ResponsiveContainer, Scatter, ScatterChart, Tooltip, XAxis, YAxis,} from 'recharts';
 import PropTypes from 'prop-types';
 
 const SubscriptionGraph = ({data}) => {

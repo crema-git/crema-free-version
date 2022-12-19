@@ -5,7 +5,6 @@ import Box from '@mui/material/Box';
 import {green, red} from '@mui/material/colors';
 import {Fonts} from '@crema/constants/AppEnums'
 import AppCard from '@crema/components/AppCard';
-import AppImage from "@crema/components/AppImage";
 
 const CoinStats = (props) => {
   const {icon, bgColor, data, heading} = props;
@@ -33,7 +32,7 @@ const CoinStats = (props) => {
             backgroundColor: bgColor,
           }}
         >
-          <AppImage alt='' src={icon} />
+          <img alt='' src={icon} />
         </Avatar>
 
         <Box

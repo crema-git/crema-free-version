@@ -2,16 +2,12 @@ import React from 'react';
 import Box from '@mui/material/Box';
 import Switch from '@mui/material/Switch';
 import {CustomizerItemWrapper} from '../index.style';
-import {
-  useSidebarActionsContext,
-  useSidebarContext,
-} from "@crema/context/SidebarContextProvider";
+import {useSidebarActionsContext, useSidebarContext,} from "@crema/context/SidebarContextProvider";
 import CheckIcon from '@mui/icons-material/Check';
 import NavMenuStyle from './NavMenuStyle';
 import MenuColorCell from './MenuColorCell';
 import AppGrid from '../../AppGrid';
-import AppImage from "@crema/components/AppImage";
-import {sidebarBgImages, sidebarColors} from "../../../../../mockapi/src/fakedb/navigationStyle";
+import {sidebarBgImages, sidebarColors} from "@crema/fakedb/navigationStyle";
 
 const SidebarSettings = () => {
   const {sidebarBgImage, isSidebarBgImage} = useSidebarContext();
@@ -76,7 +72,7 @@ const SidebarSettings = () => {
                   }}
                   onClick={() => updateSidebarBgImage(imagesObj.id)}
                 >
-                  <AppImage src={imagesObj.image} alt='nav' />
+                  <img src={imagesObj.image} alt='nav' />
                   {sidebarBgImage === imagesObj.id ? (
                     <Box
                       sx={{

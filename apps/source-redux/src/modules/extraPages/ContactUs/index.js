@@ -8,7 +8,7 @@ import * as yup from 'yup';
 import IntlMessages from '@crema/utility/IntlMessages';
 import AppCard from '@crema/components/AppCard';
 import {ContactUsForm, SendMessage, Address, SimpleMap} from '@crema/modules/extraPages/ContactUs';
-import contactUsData from "../../../../../../libs/mockapi/src/fakedb/extraPages/contactUs";
+import {contactUsData} from "@crema/fakedb/extraPages"
 
 const validationSchema = yup.object({
   fullName: yup

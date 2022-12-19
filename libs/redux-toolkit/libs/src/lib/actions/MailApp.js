@@ -19,7 +19,7 @@ import {
 } from '@crema/constants/ActionTypes';
 import {appIntl} from "@crema/helpers";
 import jwtAxios from "@crema/services/auth/JWT";
-import {mailListMessages} from "../../../../mockapi/src/fakedb/apps/mail/folderList";
+import {mailListMessages} from "@crema/fakedb/mail/folderList";
 
 export const onGetMailList = (type, name, currentPage) => {
   const {messages} = appIntl();

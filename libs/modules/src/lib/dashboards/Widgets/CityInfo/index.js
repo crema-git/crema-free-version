@@ -7,7 +7,6 @@ import {Fonts} from '@crema/constants/AppEnums'
 import AppCard from '@crema/components/AppCard';
 import SlideContentWrapper from './SlideContentWrapper';
 import ImageCardSlideWrapper from './ImageCardSlideWrapper';
-import AppImage from "@crema/components/AppImage";
 
 const settings = {
   dots: true,
@@ -48,7 +47,7 @@ const CityInfo = (props) => {
                     },
                   }}
                 >
-                  <AppImage
+                  <img
                     className='imageSlideFull'
                     src={city.image}
                     alt='building'

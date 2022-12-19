@@ -1,10 +1,7 @@
 import React from 'react';
 import Box from '@mui/material/Box';
 import PropTypes from 'prop-types';
-import {
-  useSidebarActionsContext,
-  useSidebarContext,
-} from "@crema/context/SidebarContextProvider";
+import {useSidebarActionsContext, useSidebarContext,} from "@crema/context/SidebarContextProvider";
 import {MenuStyle, NavStyle, ThemeMode} from '@crema/constants/AppEnums';
 import clsx from 'clsx';
 import {useLayoutContext} from "@crema/context/LayoutContextProvider";

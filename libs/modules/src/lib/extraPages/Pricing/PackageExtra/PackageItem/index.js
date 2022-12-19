@@ -1,5 +1,5 @@
 import React from 'react';
-import {Box, alpha, Typography} from '@mui/material';
+import {alpha, Box, Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import {Fonts} from '@crema/constants/AppEnums'
 import Button from '@mui/material/Button';

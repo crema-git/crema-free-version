@@ -16,11 +16,7 @@ import DeleteOutlinedIcon from '@mui/icons-material/DeleteOutlined';
 import ArchiveOutlinedIcon from '@mui/icons-material/ArchiveOutlined';
 import MailOutlinedIcon from '@mui/icons-material/MailOutlined';
 import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
-import {
-  MailItemWrapper,
-  MailInfoWrapper,
-  MainActionWrapper,
-} from './index.styles';
+import {MailInfoWrapper, MailItemWrapper, MainActionWrapper,} from './index.styles';
 import {Fonts} from '@crema/constants/AppEnums'
 import {useInfoViewActionsContext} from '@crema/context/InfoViewContextProvider';
 import {putDataApi} from '@crema/utility/APIHooks';

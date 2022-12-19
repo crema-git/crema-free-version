@@ -6,7 +6,6 @@ import MediaViewer from '@crema/components/AppMedialViewer';
 
 import {styled} from '@mui/material/styles';
 import {alpha} from '@mui/material';
-import AppImage from "@crema/components/AppImage";
 
 const ImageView = styled(Box)(({theme}) => ({
   cursor: 'pointer',
@@ -58,7 +57,7 @@ const Attachments = ({attachments}) => {
         column={attachments.length > 3 ? 2 : attachments.length}
         renderRow={(item, index) => (
           <ImageView key={index}>
-            <AppImage
+            <img
               src={item.preview}
               alt='attachment'
               onClick={() => setIndex(index)}

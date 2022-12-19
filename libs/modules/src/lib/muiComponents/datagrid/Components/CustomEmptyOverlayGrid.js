@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {GridOverlay, DataGrid} from '@mui/x-data-grid';
+import {DataGrid, GridOverlay} from '@mui/x-data-grid';
 import {useDemoData} from '@mui/x-data-grid-generator';
 import {createTheme} from '@mui/material/styles';
 import {createStyles, makeStyles} from '@mui/styles';

@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import PropsTypes from 'prop-types';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import AppLngSwitcher from '@crema/components/AppLngSwitcher';
@@ -20,7 +21,6 @@ import AppLogo from '../../components/AppLogo';
 import UserInfo from '../../components/UserInfo';
 import HeaderNavWrapper from './HeaderNavWrapper';
 import HorizontalNav from '../../components/HorizontalNav';
-import PropsTypes from "prop-types";
 
 const AppHeader = ({toggleNavCollapsed,routesConfig}) => {
   const [anchorEl, setAnchorEl] = React.useState(null);

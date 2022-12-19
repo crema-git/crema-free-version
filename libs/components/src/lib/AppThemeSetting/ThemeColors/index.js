@@ -4,10 +4,7 @@ import Box from '@mui/material/Box';
 import IntlMessages from "@crema/utility/IntlMessages";
 import themeColorSets from '@crema/constants/ColorSets';
 import CustomColorCell from '../CustomColorCell';
-import {
-  useThemeActionsContext,
-  useThemeContext,
-} from '@crema/context/ThemeContextProvider';
+import {useThemeActionsContext, useThemeContext,} from '@crema/context/ThemeContextProvider';
 import AppGrid from '../../AppGrid';
 
 const ThemeColors = () => {

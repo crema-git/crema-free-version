@@ -8,8 +8,8 @@ import {
   EDIT_BOARD_DETAIL,
   EDIT_BOARD_LIST,
   EDIT_LIST_CARD,
-  GET_BOARDS,
   GET_BOARD_DETAIL,
+  GET_BOARDS,
   GET_MEMBER_LIST,
   GET_SCRUM_LABEL_LIST,
 } from '@crema/constants/ActionTypes';

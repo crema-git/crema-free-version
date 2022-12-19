@@ -6,7 +6,6 @@ import PersonIcon from '@mui/icons-material/Person';
 import {useIntl} from 'react-intl';
 import {Fonts} from '@crema/constants/AppEnums'
 import PropTypes from 'prop-types';
-import AppImage from "@crema/components/AppImage";
 
 const MyProfile = ({profile}) => {
   const {profile_pic, name, designation, achievements, friends} = profile;
@@ -93,7 +92,7 @@ const MyProfile = ({profile}) => {
                 mb: 3,
               }}
             >
-              <AppImage
+              <img
                 src={'/assets/images/dashboard/academy/achievements.svg'}
                 alt='achievements'
               />

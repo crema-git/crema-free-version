@@ -8,9 +8,11 @@ import {Fonts} from '@crema/constants/AppEnums'
 import {initialUrl} from "@crema/constants/AppConst";
 import AppAnimate from '@crema/components/AppAnimate';
 import IntlMessages from '@crema/utility/IntlMessages';
-import AppImage from "@crema/components/AppImage";
+import {ReactComponent as Logo} from '../../../assets/icon/403.svg';
+import {useTheme} from '@mui/material';
 
-const Error403 = () => {
+const Error401 = () => {
+  const theme = useTheme();
   const navigate = useNavigate();
 
   const onGoBackToHome = () => {
@@ -41,7 +43,7 @@ const Error403 = () => {
             },
           }}
         >
-            <AppImage src={'/assets/icon/403.svg'} alt='403' />
+          <Logo fill={theme.palette.primary.main} />
         </Box>
         <Box sx={{mb: {xs: 4, xl: 5}}}>
           <Box
@@ -82,4 +84,4 @@ const Error403 = () => {
   );
 };
 
-export default Error403;
+export default Error401;

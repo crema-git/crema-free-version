@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {makeStyles} from '@mui/styles';
 import {DataGrid} from '@mui/x-data-grid';
-import {randomStatusOptions, randomPrice} from '@mui/x-data-grid-generator';
+import {randomPrice, randomStatusOptions} from '@mui/x-data-grid-generator';
 
 const rows = [
   {

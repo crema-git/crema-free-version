@@ -1,7 +1,6 @@
 import * as React from 'react';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
-import AppImage from "@crema/components/AppImage";
 
 function srcset(image, size, rows = 1, cols = 1) {
   return {
@@ -26,7 +25,7 @@ export default function QuiltedImageList() {
           cols={item.cols || 1}
           rows={item.rows || 1}
         >
-          <AppImage
+          <img
             {...srcset(item.img, 121, item.rows, item.cols)}
             alt={item.title}
             loading='lazy'

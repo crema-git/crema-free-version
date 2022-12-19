@@ -1,2 +1,2 @@
-import Error500 from '@crema/modules/ecommerce/ErrorPages/Error500';
+import Error500 from '@crema/modules/ErrorPages/Error500';
 export default Error500;

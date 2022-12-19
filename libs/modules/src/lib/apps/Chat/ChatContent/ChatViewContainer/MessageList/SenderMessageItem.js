@@ -18,8 +18,7 @@ import {Fonts} from '@crema/constants/AppEnums'
 
 import {getFileSize} from "@crema/helpers";
 import {styled} from '@mui/material/styles';
-import AppImage from "@crema/components/AppImage";
-import {MessageType} from "../../../../../../../../mockapi/src/fakedb/apps/chat/connectionList";
+import {MessageType} from "@crema/fakedb/chat/connectionList"
 
 const SenderMessageWrapper = styled('div')(({theme}) => {
   return {
@@ -134,7 +133,7 @@ const getMediaMessage = (item) => {
           },
         }}
       >
-        <AppImage alt='' src={item.url} />
+        <img alt='' src={item.url} />
       </Box>
     );
   } else if (item.mime_type.startsWith('video')) {

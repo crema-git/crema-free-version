@@ -9,14 +9,13 @@ import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Switch from '@mui/material/Switch';
-import AppImage from "@crema/components/AppImage";
 
 const ContactUs = ({contactList}) => {
   return (
     <Box>
       <Box>
         <Box>
-          <AppImage src='/assets/images/extra-pages/price-global.svg' />
+          <img src='/assets/images/extra-pages/price-global.svg' />
         </Box>
         <Box>
           <Typography component='h3'>Contact us!</Typography>

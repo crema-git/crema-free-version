@@ -13,6 +13,7 @@ import {Fonts} from '@crema/constants/AppEnums'
 import {Link} from 'react-router-dom';
 import {FaFacebookF} from 'react-icons/fa';
 import {AiOutlineGoogle} from 'react-icons/ai';
+import AuthWrapper from '../AuthWrapper';
 
 const validationSchema = yup.object({
   name: yup.string().required(<IntlMessages id='validation.nameRequired' />),
@@ -33,6 +34,7 @@ const SignupAwsCognito = () => {
   const {signUpCognitoUser} = useAuthMethod();
 
   return (
+    <AuthWrapper>
     <Box sx={{flex: 1, display: 'flex', flexDirection: 'column'}}>
       <Box sx={{flex: 1, display: 'flex', flexDirection: 'column', mb: 5}}>
         <Formik
@@ -245,6 +247,7 @@ const SignupAwsCognito = () => {
 
       <AppInfoView />
     </Box>
+    </AuthWrapper>
   );
 };
 

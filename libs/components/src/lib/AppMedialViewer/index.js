@@ -9,7 +9,6 @@ import HighlightOffIcon from '@mui/icons-material/HighlightOff';
 import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
 import MediaSlider from './MediaSlider';
-import AppImage from "@crema/components/AppImage";
 
 const settings = {
   dots: false,
@@ -24,7 +23,7 @@ const settings = {
 const renderRow = (data, index) => {
   if (data.mime_type.startsWith('image')) {
     return (
-      <AppImage
+      <img
         key={'IMAGE-' + index}
         src={data.url}
         alt={data.name ? data.name : 'detail view'}

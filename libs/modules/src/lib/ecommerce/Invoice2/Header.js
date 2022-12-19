@@ -3,10 +3,13 @@ import {Box} from '@mui/material';
 import Typography from '@mui/material/Typography';
 import IntlMessages from '@crema/utility/IntlMessages';
 import {Fonts} from '@crema/constants/AppEnums'
-import AppImage from "@crema/components/AppImage";
-import invoiceData from "../../../../../mockapi/src/fakedb/extraPages/invoice/invoiceData";
+import {useThemeContext} from "@crema/context/ThemeContextProvider";
+
+import {ReactComponent as Logo} from '../../../assets/icon/logo.svg';
+import {invoiceData} from "@crema/fakedb/extraPages"
 
 const Header = () => {
+  const {theme} = useThemeContext();
   return (
     <Box
       sx={{
@@ -28,7 +31,7 @@ const Header = () => {
           },
         }}
       >
-          <AppImage src={'/assets/icon/logo.svg'} alt='logo' />
+        <Logo fill={theme.palette.primary.main} />
       </Box>
 
       <Box

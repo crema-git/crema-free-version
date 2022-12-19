@@ -1,4 +1,4 @@
-const dndData = [
+export const dndData = [
   {
     id: '1000',
     name: 'Aysha Julka',

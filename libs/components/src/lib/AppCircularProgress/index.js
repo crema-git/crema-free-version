@@ -1,8 +1,6 @@
 import React from 'react';
 import ProtoTypes from 'prop-types';
-import CircularProgress, {
-  circularProgressClasses,
-} from '@mui/material/CircularProgress';
+import CircularProgress, {circularProgressClasses,} from '@mui/material/CircularProgress';
 import Box from '@mui/material/Box';
 import {Fonts} from '@crema/constants/AppEnums';
 

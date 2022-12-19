@@ -1,11 +1,5 @@
 import React from 'react';
-import {
-  Funnel,
-  FunnelChart,
-  LabelList,
-  ResponsiveContainer,
-  Tooltip,
-} from 'recharts';
+import {Funnel, FunnelChart, LabelList, ResponsiveContainer, Tooltip,} from 'recharts';
 import data from './data';
 
 const SimpleFunnel = () => (

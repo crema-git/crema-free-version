@@ -2,13 +2,9 @@ import React from 'react';
 import {CustomizerItemWrapper} from '../index.style';
 import Box from '@mui/material/Box';
 import IntlMessages from "@crema/utility/IntlMessages";
-import {
-  useLayoutActionsContext,
-  useLayoutContext,
-} from "@crema/context/LayoutContextProvider";
+import {useLayoutActionsContext, useLayoutContext,} from "@crema/context/LayoutContextProvider";
 import AppSelectedIcon from '../../AppSelectedIcon';
-import AppImage from "@crema/components/AppImage";
-import {navStyles} from "../../../../../mockapi/src/fakedb/navigationStyle";
+import {navStyles} from "@crema/fakedb/navigationStyle";
 
 const NavStyles = () => {
   const {updateNavStyle} = useLayoutActionsContext();
@@ -51,7 +47,7 @@ const NavStyles = () => {
                 }}
                 onClick={() => onNavStyleChange(navLayout.alias)}
               >
-                <AppImage src={navLayout.image} alt='nav' />
+                <img src={navLayout.image} alt='nav' />
                 {navStyle === navLayout.alias ? <AppSelectedIcon /> : null}
               </Box>
             </Box>

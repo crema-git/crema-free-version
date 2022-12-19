@@ -7,7 +7,6 @@ import AppList from '@crema/components/AppList';
 import {Fonts} from '@crema/constants/AppEnums'
 import PropTypes from 'prop-types';
 import AppGridContainer from '@crema/components/AppGridContainer';
-import AppImage from "@crema/components/AppImage";
 
 const CountryCell = ({data}) => (
   <Box
@@ -31,7 +30,7 @@ const CountryCell = ({data}) => (
         },
       }}
     >
-      <AppImage src={data.icon} alt='icon' />
+      <img src={data.icon} alt='icon' />
     </Box>
     <Box
       component='h6'

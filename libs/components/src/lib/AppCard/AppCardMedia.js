@@ -1,13 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {
-  Box,
-  Card,
-  CardMedia,
-  CardContent,
-  CardActions,
-  alpha,
-} from '@mui/material';
+import {alpha, Box, Card, CardActions, CardContent, CardMedia,} from '@mui/material';
 import {Fonts} from '@crema/constants/AppEnums';
 
 const AppCardMedia = ({

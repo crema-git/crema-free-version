@@ -9,7 +9,7 @@ import PropTypes from 'prop-types';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import AppScrollbar from "../AppScrollbar";
-import notification from "../../../../mockapi/src/fakedb/notifications/";
+import {notification} from "@crema/fakedb/data";
 
 const AppNotificationContent = ({onClose, sxStyle}) => {
   return (

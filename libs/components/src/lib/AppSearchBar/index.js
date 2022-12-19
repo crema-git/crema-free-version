@@ -2,12 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import SearchIcon from '@mui/icons-material/Search';
-import {
-  SearchIconBox,
-  SearchIconWrapper,
-  SearchInputBase,
-  SearchWrapper,
-} from './index.style';
+import {SearchIconBox, SearchIconWrapper, SearchInputBase, SearchWrapper,} from './index.style';
 
 const AppSearch = ({
   placeholder,

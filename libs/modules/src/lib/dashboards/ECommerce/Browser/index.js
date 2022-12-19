@@ -5,7 +5,6 @@ import Box from '@mui/material/Box';
 import {Fonts} from '@crema/constants/AppEnums'
 import AppList from '@crema/components/AppList';
 import PropTypes from 'prop-types';
-import AppImage from "@crema/components/AppImage";
 
 const BrowserCell = ({item}) => {
   return (
@@ -23,7 +22,7 @@ const BrowserCell = ({item}) => {
           mr: 3.5,
         }}
       >
-        <AppImage alt='' style={{maxWidth: 40, display: 'block'}} src={item.icon} />
+        <img alt='' style={{maxWidth: 40, display: 'block'}} src={item.icon} />
       </Box>
 
       <Box

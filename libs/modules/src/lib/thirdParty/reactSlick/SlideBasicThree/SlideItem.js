@@ -2,7 +2,6 @@ import React from 'react';
 import {alpha, Box, Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import {Fonts} from '@crema/constants/AppEnums'
-import AppImage from "@crema/components/AppImage";
 
 const SlideItem = ({slide}) => {
   return (
@@ -27,7 +26,7 @@ const SlideItem = ({slide}) => {
           },
         }}
       >
-        <AppImage src={slide.srcImg} alt={slide.title} />
+        <img src={slide.srcImg} alt={slide.title} />
       </Box>
       <Box
         sx={{

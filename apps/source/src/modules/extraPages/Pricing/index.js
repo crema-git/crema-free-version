@@ -3,7 +3,7 @@ import {Grid} from '@mui/material';
 import AppGridContainer from '@crema/components/AppGridContainer';
 
 import {PackageFour, PackageOne, PackageThree, PackageTwo} from '@crema/modules/extraPages/Pricing';
-import pricingData from "../../../../../../libs/mockapi/src/fakedb/extraPages/pricing";
+import {pricingData} from "@crema/fakedb/extraPages"
 
 const Pricing = () => {
   return (

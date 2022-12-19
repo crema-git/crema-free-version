@@ -10,7 +10,6 @@ import {Fonts} from '@crema/constants/AppEnums'
 import {grey} from '@mui/material/colors/index';
 import AppAnimate from '@crema/components/AppAnimate';
 import AppTextField from '@crema/components/AppTextField';
-import AppImage from "@crema/components/AppImage";
 
 const validationSchema = yup.object({
   name: yup.string().required(<IntlMessages id='validation.nameRequired' />),
@@ -67,7 +66,7 @@ const Signup = () => {
                 },
               }}
             >
-              <AppImage
+              <img
                 className='logo'
                 src={'/assets/images/logo-icon-large.png'}
                 alt='crema'

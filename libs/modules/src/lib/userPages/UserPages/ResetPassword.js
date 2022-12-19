@@ -8,7 +8,6 @@ import Box from '@mui/material/Box';
 import {Fonts} from '@crema/constants/AppEnums'
 import AppAnimate from '@crema/components/AppAnimate';
 import AppTextField from '@crema/components/AppTextField';
-import AppImage from "@crema/components/AppImage";
 
 const validationSchema = yup.object({
   oldPassword: yup
@@ -63,7 +62,7 @@ const ResetPassword = () => {
                 },
               }}
             >
-              <AppImage
+              <img
                 className='logo'
                 src={'/assets/images/logo-icon-large.png'}
                 alt='crema'

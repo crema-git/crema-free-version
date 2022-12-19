@@ -7,7 +7,6 @@ import Typography from '@mui/material/Typography';
 import AppCircularProgress from '@crema/components/AppCircularProgress';
 import SaleStaticChart from './SaleStaticChart';
 import AppGridContainer from '@crema/components/AppGridContainer';
-import AppImage from "@crema/components/AppImage";
 
 const SaleStatics = () => {
   const {messages} = useIntl();
@@ -55,7 +54,7 @@ const SaleStatics = () => {
                 hidePercentage
                 value={70}
                 centerNode={
-                  <AppImage
+                  <img
                     alt='icon'
                     src={'/assets/images/dashboard/application_icon.svg'}
                   />

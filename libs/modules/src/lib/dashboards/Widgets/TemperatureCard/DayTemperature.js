@@ -2,7 +2,6 @@ import React from 'react';
 import Box from '@mui/material/Box';
 import PropTypes from 'prop-types';
 import {Fonts} from '@crema/constants/AppEnums'
-import AppImage from "@crema/components/AppImage";
 
 const DayTemperature = (props) => {
   const {day} = props;
@@ -31,7 +30,7 @@ const DayTemperature = (props) => {
           display: 'inline-block',
         }}
       >
-        <AppImage src={day.image} alt='weather' />
+        <img src={day.image} alt='weather' />
       </Box>
     </Box>
   );

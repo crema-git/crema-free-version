@@ -1,2 +1,2 @@
-import Maintenance from '@crema/modules/ecommerce/ErrorPages/Maintenance';
+import Maintenance from '@crema/modules/ErrorPages/Maintenance';
 export default Maintenance;

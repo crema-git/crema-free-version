@@ -7,7 +7,7 @@ import ToggleButton from '@mui/material/ToggleButton';
 import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
 import TextField from '@mui/material/TextField';
 import {AdapterDateFns} from '@mui/x-date-pickers/AdapterDateFns';
-import {LocalizationProvider, DatePicker} from '@mui/x-date-pickers';
+import {DatePicker, LocalizationProvider} from '@mui/x-date-pickers';
 
 const localeMap = {
   en: enLocale,

@@ -11,7 +11,8 @@ import SlideBasicThree from './SlideBasicThree';
 import SlideBasicArrow from './SlideBasicArrow';
 import SlideBasicFour from './SlideBasicFour';
 import SlideBasicFive from './SlideBasicFive';
-import reactSlickData from "../../../../../mockapi/src/fakedb/thirdParty/reactSlick";
+import {reactSlickData} from "@crema/fakedb/data";
+
 
 const ReactSlick = () => {
   return (

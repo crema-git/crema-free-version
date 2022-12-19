@@ -6,10 +6,7 @@ import InputLabel from '@mui/material/InputLabel';
 import Select from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
 import {HeaderType} from '@crema/constants/AppEnums';
-import {
-  useLayoutActionsContext,
-  useLayoutContext,
-} from "@crema/context/LayoutContextProvider";
+import {useLayoutActionsContext, useLayoutContext,} from "@crema/context/LayoutContextProvider";
 
 const ThemeHeader = () => {
   const {headerType} = useLayoutContext();

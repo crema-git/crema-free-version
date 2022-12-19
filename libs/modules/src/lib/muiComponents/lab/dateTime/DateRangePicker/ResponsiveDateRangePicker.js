@@ -4,10 +4,7 @@ import {AdapterDateFns} from '@mui/x-date-pickers/AdapterDateFns';
 import {LocalizationProvider} from '@mui/x-date-pickers';
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
-import {
-  MobileDateRangePicker,
-  DesktopDateRangePicker,
-} from '@mui/x-date-pickers-pro';
+import {DesktopDateRangePicker, MobileDateRangePicker,} from '@mui/x-date-pickers-pro';
 
 export default function ResponsiveDateRangePicker() {
   const [value, setValue] = React.useState([null, null]);

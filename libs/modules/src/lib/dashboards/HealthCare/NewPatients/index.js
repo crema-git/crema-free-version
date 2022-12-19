@@ -6,7 +6,6 @@ import {Box} from '@mui/material';
 import AppMenu from '@crema/components/AppMenu';
 import {Fonts} from '@crema/constants/AppEnums'
 import PropTypes from 'prop-types';
-import AppImage from "@crema/components/AppImage";
 
 const NewPatients = ({data}) => {
   const {messages} = useIntl();
@@ -38,7 +37,7 @@ const NewPatients = ({data}) => {
               },
             }}
           >
-            <AppImage
+            <img
               src={'/assets/images/dashboard/metrics_icon_active.png'}
               alt='down'
             />

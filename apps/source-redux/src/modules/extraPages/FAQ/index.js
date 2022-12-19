@@ -9,11 +9,11 @@ import {blue} from '@mui/material/colors';
 import {Fonts} from '@crema/constants/AppEnums'
 import AppAnimate from '@crema/components/AppAnimate';
 import {FaqList, FaqSideBar} from '@crema/modules/extraPages/FAQ';
-import {generalFaq} from "../../../../../../libs/mockapi/src/fakedb/extraPages/faqList/general";
-import {installationFaq} from "../../../../../../libs/mockapi/src/fakedb/extraPages/faqList/installation";
-import {pricingFaq} from "../../../../../../libs/mockapi/src/fakedb/extraPages/faqList/pricing";
-import {licenseFaq} from "../../../../../../libs/mockapi/src/fakedb/extraPages/faqList/licenseTypes";
-import {supportFaq} from "../../../../../../libs/mockapi/src/fakedb/extraPages/faqList/support";
+import {generalFaq} from "@crema/fakedb/extraPages"
+import {installationFaq} from "@crema/fakedb/extraPages"
+import {pricingFaq} from "@crema/fakedb/extraPages"
+import {licenseFaq} from "@crema/fakedb/extraPages"
+import {supportFaq} from "@crema/fakedb/extraPages"
 
 const FAQ = () => {
   const [dataValue, setDataValue] = useState(generalFaq);

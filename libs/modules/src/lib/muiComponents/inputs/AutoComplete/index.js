@@ -7,9 +7,9 @@ import AppComponentCard from '@crema/components/AppComponentCard';
 
 import ComboBox from './ComboBox';
 import ComboBoxSource from '!raw-loader!./ComboBox';
+import CountrySelectSource from '!raw-loader!./ComboBox';
 
 import CountrySelect from './CountrySelect';
-import CountrySelectSource from '!raw-loader!./ComboBox';
 
 import ControllableStates from './ControlledStates';
 import ControlledStatesSource from '!raw-loader!./ControlledStates';

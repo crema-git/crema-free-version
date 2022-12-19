@@ -1,12 +1,5 @@
 import React from 'react';
-import {
-  PolarAngleAxis,
-  PolarGrid,
-  PolarRadiusAxis,
-  Radar,
-  RadarChart,
-  ResponsiveContainer,
-} from 'recharts';
+import {PolarAngleAxis, PolarGrid, PolarRadiusAxis, Radar, RadarChart, ResponsiveContainer,} from 'recharts';
 import data from './data';
 
 const SimpleRadarChart = () => (

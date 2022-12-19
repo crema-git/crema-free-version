@@ -2,7 +2,6 @@ import React from 'react';
 import {Box, Typography} from '@mui/material';
 import AppCard from '@crema/components/AppCard';
 import PropTypes from 'prop-types';
-import AppImage from "@crema/components/AppImage";
 
 const SalesState = (props) => {
   const {bgColor, icon, type, value} = props.state;
@@ -31,7 +30,7 @@ const SalesState = (props) => {
             },
           }}
         >
-          <AppImage src={icon} alt='icon' />
+          <img src={icon} alt='icon' />
         </Box>
         <Box
           sx={{

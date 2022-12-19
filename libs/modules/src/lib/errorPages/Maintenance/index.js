@@ -7,10 +7,12 @@ import {grey} from '@mui/material/colors';
 import {Fonts} from '@crema/constants/AppEnums'
 import AppAnimate from '@crema/components/AppAnimate';
 import IntlMessages from '@crema/utility/IntlMessages';
+import {useTheme} from '@mui/material';
+import {ReactComponent as Logo} from '../../../assets/icon/maintenance.svg';
 import {initialUrl} from "@crema/constants/AppConst";
-import AppImage from "@crema/components/AppImage";
 
 const Maintenance = () => {
+  const theme = useTheme();
   const navigate = useNavigate();
 
   const onGoBackToHome = () => {
@@ -42,7 +44,7 @@ const Maintenance = () => {
             },
           }}
         >
-            <AppImage src={'/assets/icon/maintenance.svg'} alt='maintenance' />
+          <Logo fill={theme.palette.primary.main} />
         </Box>
         <Box
           sx={{

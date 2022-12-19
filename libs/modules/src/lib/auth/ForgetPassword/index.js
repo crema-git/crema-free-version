@@ -1,8 +1,4 @@
-import React from 'react';
 import ForgetPasswordJwtAuth from './ForgetPasswordJwtAuth';
+import ResetPasswordAwsCognito from './ResetPasswordAwsCognito';
 
-const ForgetPassword = () => {
-  return <ForgetPasswordJwtAuth />;
-};
-
-export default ForgetPassword;
+export {ForgetPasswordJwtAuth,ResetPasswordAwsCognito}

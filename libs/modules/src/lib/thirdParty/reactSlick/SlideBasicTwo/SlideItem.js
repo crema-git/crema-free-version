@@ -3,7 +3,6 @@ import Box from '@mui/material/Box';
 import PropTypes from 'prop-types';
 import {Typography} from '@mui/material';
 import {Fonts} from '@crema/constants/AppEnums'
-import AppImage from "@crema/components/AppImage";
 
 const SlideItem = ({slide}) => {
   return (
@@ -33,7 +32,7 @@ const SlideItem = ({slide}) => {
             height: '100%',
           }}
         >
-          <AppImage src={slide.srcImg} alt={slide.title} />
+          <img src={slide.srcImg} alt={slide.title} />
         </Box>
       </Box>
       <Box

@@ -1,11 +1,5 @@
 import React, {useEffect, useMemo, useState} from 'react';
-import {
-  Collapse,
-  Icon,
-  IconButton,
-  ListItem,
-  ListItemText,
-} from '@mui/material';
+import {Collapse, Icon, IconButton, ListItem, ListItemText,} from '@mui/material';
 import {useLocation} from 'react-router-dom';
 import clsx from 'clsx';
 import PropTypes from 'prop-types';

@@ -1,4 +1,4 @@
-const portfolioData = {
+export const portfolioData = {
   portfolio: {
     all: [
       {

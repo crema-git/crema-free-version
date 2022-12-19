@@ -1,2 +1,2 @@
-import Error403 from '@crema/modules/ecommerce/ErrorPages/Error403';
-export default Error403;
+import Error401 from '@crema/modules/ErrorPages/Error401';
+export default Error401;

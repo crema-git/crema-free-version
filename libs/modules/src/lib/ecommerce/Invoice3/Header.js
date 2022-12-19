@@ -2,8 +2,7 @@ import React from 'react';
 import {Box, Typography} from '@mui/material';
 import IntlMessages from '@crema/utility/IntlMessages';
 import {Fonts} from '@crema/constants/AppEnums'
-import AppImage from "@crema/components/AppImage";
-import invoiceData from "../../../../../mockapi/src/fakedb/extraPages/invoice/invoiceData";
+import {invoiceData} from "@crema/fakedb/extraPages"
 
 const Header = () => {
   return (
@@ -34,7 +33,7 @@ const Header = () => {
               },
             }}
           >
-              <AppImage src={'/assets/icon/logo.svg'} alt='logo' />
+              <img src={'/assets/icon/logo.svg'} alt='logo' />
             <Box
               component='span'
               sx={{

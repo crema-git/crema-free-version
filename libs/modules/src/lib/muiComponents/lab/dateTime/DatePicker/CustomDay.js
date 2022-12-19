@@ -2,11 +2,7 @@ import * as React from 'react';
 import {styled} from '@mui/material/styles';
 import TextField from '@mui/material/TextField';
 import {AdapterDateFns} from '@mui/x-date-pickers/AdapterDateFns';
-import {
-  LocalizationProvider,
-  StaticDatePicker,
-  PickersDay,
-} from '@mui/x-date-pickers';
+import {LocalizationProvider, PickersDay, StaticDatePicker,} from '@mui/x-date-pickers';
 import endOfWeek from 'date-fns/endOfWeek';
 import isSameDay from 'date-fns/isSameDay';
 import isWithinInterval from 'date-fns/isWithinInterval';

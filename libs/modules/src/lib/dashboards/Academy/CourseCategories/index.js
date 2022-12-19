@@ -5,7 +5,6 @@ import Slider from 'react-slick';
 import {Fonts} from '@crema/constants/AppEnums'
 import PropTypes from 'prop-types';
 import CourseSlider from './CourseSlider';
-import AppImage from "@crema/components/AppImage";
 
 const settings = {
   dots: true,
@@ -23,7 +22,7 @@ const CourseCategories = ({course}) => {
         <Slider {...settings}>
           {images.map((image, index) => (
             <Box key={index}>
-              <AppImage src={image.image} alt={image.title} />
+              <img src={image.image} alt={image.title} />
             </Box>
           ))}
         </Slider>
@@ -75,7 +74,7 @@ const CourseCategories = ({course}) => {
               },
             }}
           >
-            <AppImage
+            <img
               src={'/assets/images/dashboard/academy/lessons.svg'}
               alt='lessons'
             />
@@ -97,7 +96,7 @@ const CourseCategories = ({course}) => {
               },
             }}
           >
-            <AppImage src={'/assets/images/dashboard/academy/xp.svg'} alt='xp' />
+            <img src={'/assets/images/dashboard/academy/xp.svg'} alt='xp' />
             {xp} XP
           </Box>
         </Box>

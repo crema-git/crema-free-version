@@ -4,7 +4,6 @@ import IntlMessages from '@crema/utility/IntlMessages';
 import {blue} from '@mui/material/colors';
 import {Fonts} from '@crema/constants/AppEnums'
 import AppCard from '@crema/components/AppCard';
-import AppImage from "@crema/components/AppImage";
 
 const BirthdayCard = () => {
   return (
@@ -51,7 +50,7 @@ const BirthdayCard = () => {
             justifyContent: 'center',
           }}
         >
-          <AppImage src={'/assets/images/cakeicon.png'} alt='cake' />
+          <img src={'/assets/images/cakeicon.png'} alt='cake' />
         </Box>
         <Box
           sx={{

@@ -5,7 +5,6 @@ import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
 import Avatar from '@mui/material/Avatar';
 import {Fonts} from '@crema/constants/AppEnums'
-import AppImage from "@crema/components/AppImage";
 
 const TableItem = (props) => {
   return (
@@ -67,12 +66,12 @@ const TableItem = (props) => {
       <TableCell>{props.data.spent}</TableCell>
       <TableCell>
         {props.data.growth ? (
-          <AppImage
+          <img
             src={'/assets/images/dashboard/growth_icon.svg'}
             alt='growth_icon'
           />
         ) : (
-          <AppImage
+          <img
             src={'/assets/images/dashboard/decries_icon.svg'}
             alt='decries_icon'
           />

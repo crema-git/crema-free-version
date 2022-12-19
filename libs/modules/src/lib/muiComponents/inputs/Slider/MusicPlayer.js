@@ -11,7 +11,6 @@ import FastForwardRounded from '@mui/icons-material/FastForwardRounded';
 import FastRewindRounded from '@mui/icons-material/FastRewindRounded';
 import VolumeUpRounded from '@mui/icons-material/VolumeUpRounded';
 import VolumeDownRounded from '@mui/icons-material/VolumeDownRounded';
-import AppImage from "@crema/components/AppImage";
 
 const WallPaper = styled('div')({
   position: 'absolute',
@@ -105,7 +104,7 @@ export default function MusicPlayerSlider() {
       <Widget>
         <Box sx={{display: 'flex', alignItems: 'center'}}>
           <CoverImage>
-            <AppImage
+            <img
               alt="can't win - Chilling Sunday"
               src='/static/images/sliders/chilling-sunday.jpg'
             />

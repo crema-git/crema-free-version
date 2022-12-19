@@ -10,7 +10,7 @@ import TableRow from '@mui/material/TableRow';
 import TableCell from '@mui/material/TableCell';
 import {Typography} from '@mui/material';
 import {Header, ItemList} from '@crema/modules/ecommerce/Invoice3';
-import invoiceData from "../../../../../../libs/mockapi/src/fakedb/extraPages/invoice/invoiceData";
+import {invoiceData} from "@crema/fakedb/extraPages"
 
 const Invoice3 = () => {
   return (

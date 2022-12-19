@@ -1,5 +1,5 @@
 import React from 'react';
-import {Box, alpha} from '@mui/material';
+import {alpha, Box} from '@mui/material';
 import {Fonts} from '@crema/constants/AppEnums'
 import {useIntl} from 'react-intl';
 import AppCard from '@crema/components/AppCard';
@@ -9,7 +9,6 @@ import {HiOutlineMailOpen} from 'react-icons/hi';
 import {BiMessageDetail} from 'react-icons/bi';
 import {CgFileDocument} from 'react-icons/cg';
 import AppScrollbar from '@crema/components/AppScrollbar';
-import AppImage from "@crema/components/AppImage";
 
 const getWelcomeIcon = (iconType) => {
   switch (iconType) {
@@ -162,7 +161,7 @@ const WelcomeCard = ({data}) => {
             },
           }}
         >
-          <AppImage alt='welcome' src={'/assets/images/dashboard/welcomImage.svg'} />
+          <img alt='welcome' src={'/assets/images/dashboard/welcomImage.svg'} />
         </Box>
       </Box>
     </AppCard>

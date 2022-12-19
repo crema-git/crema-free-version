@@ -7,7 +7,6 @@ import AppLngSwitcher from '../../../../AppLngSwitcher';
 import AppMessages from '../../../../AppMessages';
 import AppNotifications from '../../../../AppNotifications';
 import UserInfo from '../UserInfo';
-import AppImage from "@crema/components/AppImage";
 
 const BucketMinibar = () => {
 
@@ -29,7 +28,7 @@ const BucketMinibar = () => {
           }}
           aria-label='show 17 new notifications'
         >
-            <AppImage src={'/assets/icon/logo.svg'} alt='logo' />
+            <img src={'/assets/icon/logo.svg'} alt='logo' />
         </IconButton>
 
         <IconButton

@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {useNavigate, useLocation, useParams} from 'react-router-dom';
+import {useLocation, useNavigate, useParams} from 'react-router-dom';
 import MailContentHeader from './MailContentHeader';
 import {Hidden} from '@mui/material';
 import AppsPagination from '@crema/components/AppsPagination';

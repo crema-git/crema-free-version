@@ -1,12 +1,5 @@
 import React from 'react';
-import {
-  CartesianGrid,
-  Line,
-  LineChart,
-  ResponsiveContainer,
-  Tooltip,
-  XAxis,
-} from 'recharts';
+import {CartesianGrid, Line, LineChart, ResponsiveContainer, Tooltip, XAxis,} from 'recharts';
 import PropTypes from 'prop-types';
 
 const StatGraphs = ({data}) => {

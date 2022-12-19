@@ -14,6 +14,7 @@ import {Link} from 'react-router-dom';
 import {AiOutlineGoogle, AiOutlineTwitter} from 'react-icons/ai';
 import {BsGithub} from 'react-icons/bs';
 import {FaFacebookF} from 'react-icons/fa';
+import AuthWrapper from '../AuthWrapper';
 
 const validationSchema = yup.object({
   name: yup.string().required(<IntlMessages id='validation.nameRequired' />),
@@ -30,6 +31,7 @@ const SignupFirebase = () => {
   const {registerUserWithEmailAndPassword, logInWithPopup} = useAuthMethod();
 
   return (
+    <AuthWrapper>
     <Box sx={{flex: 1, display: 'flex', flexDirection: 'column'}}>
       <Box sx={{flex: 1, display: 'flex', flexDirection: 'column', mb: 5}}>
         <Formik
@@ -247,6 +249,7 @@ const SignupFirebase = () => {
 
       <AppInfoView />
     </Box>
+    </AuthWrapper>
   );
 };
 

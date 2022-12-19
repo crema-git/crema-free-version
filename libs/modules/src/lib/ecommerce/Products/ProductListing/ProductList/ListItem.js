@@ -12,7 +12,6 @@ import {green, grey} from '@mui/material/colors';
 import {Fonts} from '@crema/constants/AppEnums'
 import {useNavigate} from 'react-router-dom';
 import MediaSlider from './MediaSlider';
-import AppImage from "@crema/components/AppImage";
 import AddShoppingCartOutlinedIcon from '@mui/icons-material/AddShoppingCartOutlined';
 
 const settings = {
@@ -81,7 +80,7 @@ const ListItem = (props) => {
                         height: '100%',
                       }}
                     >
-                      <AppImage src={img.src} alt='watch' />
+                      <img src={img.src} alt='watch' />
                     </Box>
                   </Box>
                 );

@@ -6,7 +6,6 @@ import IconButton from '@mui/material/IconButton';
 import StatGraphs from './StatGraphs';
 import AppCard from '@crema/components/AppCard';
 import PropTypes from 'prop-types';
-import AppImage from "@crema/components/AppImage";
 
 const StateCard = ({data}) => {
   return (
@@ -33,7 +32,7 @@ const StateCard = ({data}) => {
               mr: 4,
             }}
           >
-            <AppImage alt='icon' src={data.icon} />
+            <img alt='icon' src={data.icon} />
           </IconButton>
           <Box
             sx={{

@@ -5,7 +5,6 @@ import {Box, Button} from '@mui/material';
 import PropTypes from 'prop-types';
 import AppGridContainer from '@crema/components/AppGridContainer';
 import {getTotalPrice} from "./helper";
-import AppImage from "@crema/components/AppImage";
 
 const OrderPlaced = ({cartItems}) => {
   return (
@@ -13,7 +12,7 @@ const OrderPlaced = ({cartItems}) => {
       <AppGridContainer>
         <Grid xs={12} md={8} item>
           <Box sx={{display: 'flex', p: 4, alignItems: 'center'}}>
-            <AppImage src={'/assets/images/ecommerce/gift.png'} alt='confirm' />
+            <img src={'/assets/images/ecommerce/gift.png'} alt='confirm' />
             <Box p={4}>
               <Box
                 component='h3'
@@ -38,7 +37,7 @@ const OrderPlaced = ({cartItems}) => {
               </Button>
             </Box>
             <Box sx={{ml: 'auto'}}>
-              <AppImage
+              <img
                 style={{maxHeight: 60, marginTop: 20}}
                 src={'/assets/images/ecommerce/confirm-box.png'}
                 alt='confirm'

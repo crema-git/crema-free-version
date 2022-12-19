@@ -2,12 +2,7 @@ import * as React from 'react';
 import {createTheme} from '@mui/material/styles';
 import {makeStyles} from '@mui/styles';
 import {DataGrid} from '@mui/x-data-grid';
-import {
-  randomCreatedDate,
-  randomEmail,
-  randomTraderName,
-  randomUpdatedDate,
-} from '@mui/x-data-grid-generator';
+import {randomCreatedDate, randomEmail, randomTraderName, randomUpdatedDate,} from '@mui/x-data-grid-generator';
 
 const defaultTheme = createTheme();
 const useStyles = makeStyles(

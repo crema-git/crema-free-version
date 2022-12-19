@@ -5,8 +5,7 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import {Fonts} from '@crema/constants/AppEnums'
 import AppCard from '@crema/components/AppCard';
-import AppImage from "@crema/components/AppImage";
-import {teamData} from "../../../../../mockapi/src/fakedb/extraPages/aboutUs";
+import {teamData} from "@crema/fakedb/extraPages";
 
 const settings = {
   dots: true,
@@ -52,7 +51,7 @@ const Team = () => {
             return (
               <Box key={member.id} sx={{px: 5, textAlign: 'center'}}>
                 <Box width='100%' sx={{mb: 3}}>
-                  <AppImage
+                  <img
                     style={{width: '100%'}}
                     src={member.image}
                     alt='about us'

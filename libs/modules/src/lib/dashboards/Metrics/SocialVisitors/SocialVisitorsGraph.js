@@ -1,13 +1,5 @@
 import React from 'react';
-import {
-  Bar,
-  BarChart,
-  Cell,
-  LabelList,
-  ResponsiveContainer,
-  XAxis,
-  YAxis,
-} from 'recharts';
+import {Bar, BarChart, Cell, LabelList, ResponsiveContainer, XAxis, YAxis,} from 'recharts';
 import PropTypes from 'prop-types';
 import {Fonts} from '@crema/constants/AppEnums'
 import Box from '@mui/material/Box';

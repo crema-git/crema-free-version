@@ -4,7 +4,6 @@ import Box from '@mui/material/Box';
 import PropTypes from 'prop-types';
 import {Fonts} from '@crema/constants/AppEnums'
 import AppCard from '@crema/components/AppCard';
-import AppImage from "@crema/components/AppImage";
 
 const StatsCardSecond = ({icon, bgColor, text, value}) => {
   return (
@@ -26,7 +25,7 @@ const StatsCardSecond = ({icon, bgColor, text, value}) => {
           backgroundColor: bgColor,
         }}
       >
-        <AppImage src={icon} alt='' />
+        <img src={icon} alt='' />
       </Avatar>
       <Box
         component='h3'

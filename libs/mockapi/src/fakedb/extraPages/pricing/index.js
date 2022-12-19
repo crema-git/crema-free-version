@@ -1,4 +1,4 @@
-const pricingData = {
+export const pricingData = {
   pricingOne: [
     {
       id: 1,

@@ -1,12 +1,4 @@
-import {
-  blue,
-  green,
-  grey,
-  orange,
-  pink,
-  purple,
-  red,
-} from '@mui/material/colors';
+import {blue, green, grey, orange, pink, purple, red,} from '@mui/material/colors';
 
 const widgetsData = {
   recentActivity: [
