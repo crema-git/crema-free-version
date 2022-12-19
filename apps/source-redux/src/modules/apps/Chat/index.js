@@ -18,9 +18,6 @@ const Chat = () => {
     dispatch(getConnectionList());
   }, [dispatch]);
 
- const setConnectionData=(data)=>{
-   dispatch(onSendMessage(selectedUser.channelId, data));
- }
 
   const {messages} = useIntl();
 
@@ -42,8 +39,6 @@ const Chat = () => {
     >
       <ChatContent
         selectedUser={selectedUser}
-        setSelectedUser={setSelectedUser}
-        setConnectionData={setConnectionData}
       />
     </AppsContainer>
   );

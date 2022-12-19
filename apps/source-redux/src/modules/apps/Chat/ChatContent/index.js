@@ -36,15 +36,13 @@ const ScrollChatNoUser = styled('div')(({theme}) => {
   };
 });
 
-const ChatContent = ({selectedUser, setConnectionData, setSelectedUser}) => {
+const ChatContent = ({selectedUser}) => {
   return (
     <>
       {selectedUser ? (
         <MessagesScreen>
           <ChatViewContainer
             selectedUser={selectedUser}
-            setConnectionData={setConnectionData}
-            setSelectedUser={setSelectedUser}
           />
         </MessagesScreen>
       ) : (
