@@ -32,13 +32,10 @@ const Academy = () => {
   }, [dispatch]);
 
   const {academyData} = useSelector(({dashboard}) => dashboard);
-  console.log("academyData",  academyData);
 
   return (
     <>
-      {loading ? (
-        <AppLoader />
-      ): (
+      {academyData ?(
         <AppAnimate animation='transition.slideUpIn' delay={200}>
           <Box>
             <Box
@@ -144,6 +141,8 @@ const Academy = () => {
             </AppGridContainer>
           </Box>
         </AppAnimate>
+      ): (
+        <AppLoader />
       )}
     </>
   );

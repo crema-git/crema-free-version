@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import AppGridContainer from '@crema/components/AppGridContainer';
 import Grid from '@mui/material/Grid';
 import IntlMessages from '@crema/utility/IntlMessages';
@@ -29,17 +29,23 @@ import {
   WorkViews,
   YourAccount
 } from '@crema/modules/dashboards/Metrics';
+import {useDispatch, useSelector} from "react-redux";
+import {onGetMetricsData} from "@crema/redux/actions";
 
 
 const Metrics = () => {
-  const [{apiData: metricsData, loading}] = useGetDataApi('/dashboard/metrics');
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(onGetMetricsData());
+  }, [dispatch]);
   const {messages} = useIntl();
+
+  const metricsData = useSelector(({dashboard}) => dashboard.metricsData);
 
   return (
     <>
-      {loading ? (
-        <AppLoader />
-      ): (
+      {metricsData ? (
         <AppAnimate>
           <>
             <Box
@@ -311,7 +317,9 @@ const Metrics = () => {
             </AppGridContainer>
           </>
         </AppAnimate>
-      ) }
+      ): (
+        <AppLoader />
+        )}
     </>
   );
 };

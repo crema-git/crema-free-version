@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {Grid} from '@mui/material';
 import AppGridContainer from '@crema/components/AppGridContainer';
 import AppAnimate from '@crema/components/AppAnimate';
@@ -18,15 +18,21 @@ import {
   SiteVisitors
 } from '@crema/modules/dashboards/ECommerce';
 import AppLoader from "@crema/components/AppLoader";
+import {onGetECommerceData} from "@crema/redux/actions";
+import {useDispatch, useSelector} from "react-redux";
 
 const ECommerce = () => {
-  const [{apiData: ecommerceData, loading}] = useGetDataApi('/dashboard/ecommerce');
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(onGetECommerceData());
+  }, [dispatch]);
+
+  const ecommerceData = useSelector(({dashboard}) => dashboard.ecommerceData);
 
   return (
     <>
-      {loading ? (
-        <AppLoader />
-      ): (
+      {ecommerceData ? (
         <AppAnimate animation='transition.slideUpIn' delay={200}>
           <AppGridContainer>
             {ecommerceData.salesState.map((state, index) => (
@@ -78,7 +84,9 @@ const ECommerce = () => {
             </Grid>
           </AppGridContainer>
         </AppAnimate>
-      )}
+      ): (
+        <AppLoader />
+        )}
     </>
   );
 };

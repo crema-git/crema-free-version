@@ -12,7 +12,7 @@ export function contextReducer(state, action) {
       return {
         ...state,
         loading: true,
-        displayMessage: '',
+        message: '',
         error: '',
       };
     }
@@ -20,7 +20,7 @@ export function contextReducer(state, action) {
       return {
         ...state,
         loading: false,
-        displayMessage: '',
+        message: '',
         error: '',
       };
     }
@@ -28,7 +28,7 @@ export function contextReducer(state, action) {
       return {
         ...state,
         loading: false,
-        displayMessage: action.payload,
+        message: action.payload,
         error: '',
       };
     }
@@ -36,7 +36,7 @@ export function contextReducer(state, action) {
       return {
         ...state,
         loading: false,
-        displayMessage: '',
+        message: '',
         error: action.payload,
       };
     }
@@ -44,7 +44,7 @@ export function contextReducer(state, action) {
       return {
         ...state,
         loading: false,
-        displayMessage: '',
+        message: '',
         error: '',
       };
     }

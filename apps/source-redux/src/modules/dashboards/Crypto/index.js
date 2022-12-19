@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import Grid from '@mui/material/Grid';
 import AppGridContainer from '@crema/components/AppGridContainer';
 import AppAnimate from '@crema/components/AppAnimate';
@@ -14,15 +14,21 @@ import {
   TotalBalance
 } from '@crema/modules/dashboards/Crypto';
 import AppLoader from "@crema/components/AppLoader";
+import {onGetCryptoData} from "@crema/redux/actions";
+import {useDispatch, useSelector} from "react-redux";
 
 const Crypto = () => {
-  const [{apiData: cryptoData, loading}] = useGetDataApi('/dashboard/crypto');
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(onGetCryptoData());
+  }, [dispatch]);
+
+  const cryptoData = useSelector(({dashboard}) => dashboard.cryptoData);
 
   return (
     <>
-      {loading ? (
-        <AppLoader />
-      ): (
+      {cryptoData ? (
         <AppAnimate animation='transition.slideUpIn' delay={200}>
           <AppGridContainer>
             <Grid item xs={12} md={5}>
@@ -60,7 +66,9 @@ const Crypto = () => {
             </Grid>
           </AppGridContainer>
         </AppAnimate>
-      )}
+      ): (
+        <AppLoader />
+        )}
     </>
   );
 };

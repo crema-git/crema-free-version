@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 export const ContextState = {
   loading: false,
   error: '',
-  displayMessage: '',
+  message: '',
 };
 
 const InfoViewContext = createContext();
@@ -34,8 +34,8 @@ const InfoViewContextProvider = (props) => {
     dispatch({type: InFoViewActions.SET_ERROR, payload: error});
   };
 
-  const showMessage = (displayMessage) => {
-    dispatch({type: InFoViewActions.SET_MESSAGE, payload: displayMessage});
+  const showMessage = (message) => {
+    dispatch({type: InFoViewActions.SET_MESSAGE, payload: message});
   };
 
   const clearInfoView = () => {
