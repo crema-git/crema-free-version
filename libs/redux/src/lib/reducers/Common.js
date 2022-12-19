@@ -9,12 +9,13 @@ import {
 
 const INIT_STATE = {
   error: '',
-  loading: false,
+  loading: true,
   isAppDrawerOpen: false,
   message: '',
 };
 
 const commonReducer = (state = INIT_STATE, action) => {
+  console.log('commonReducer', action);
   switch (action.type) {
     case FETCH_START: {
       return {...state, error: '', message: '', loading: true};

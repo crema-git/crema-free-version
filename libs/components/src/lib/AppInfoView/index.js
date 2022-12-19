@@ -2,9 +2,12 @@ import React from 'react';
 import AppMessageView from '../AppMessageView';
 import AppLoader from '../AppLoader';
 import {useInfoViewContext} from "@crema/context/InfoViewContextProvider";
+import {useSelector} from "react-redux";
 
 const AppInfoView = () => {
-  const {error, loading, displayMessage: message} = useInfoViewContext();
+  const infoViewContext = useInfoViewContext();
+  const commonSelector = useSelector(({common}) => common);
+  const {error, loading, message} =  process.env.NX_IS_CONEXT==='true'?infoViewContext:commonSelector;
 
   const showMessage = () => {
     return <AppMessageView variant='success' message={message.toString()} />;

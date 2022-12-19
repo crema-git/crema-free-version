@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import AppGridContainer from '@crema/components/AppGridContainer';
 import Grid from '@mui/material/Grid';
 import {FiFacebook, FiTwitter} from 'react-icons/fi';
@@ -33,16 +33,22 @@ import {
   VisitorAnalysis,
   WallPaper
 } from '@crema/modules/dashboards/Widgets';
+import {useDispatch, useSelector} from "react-redux";
+import {onGetWidgetsData} from "@crema/redux/actions";
 
 
 const Widgets = () => {
-  const [{apiData: widgetsData, loading}] = useGetDataApi('/dashboard/widgets');
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(onGetWidgetsData());
+  }, [dispatch]);
+
+  const widgetsData = useSelector(({dashboard}) => dashboard.widgetsData);
 
   return (
     <>
-      {loading ? (
-        <AppLoader />
-      ): (
+      {widgetsData ? (
         <AppAnimate animation='transition.slideUpIn' delay={200}>
           <>
             <Box
@@ -188,7 +194,9 @@ const Widgets = () => {
             </AppGridContainer>
           </>
         </AppAnimate>
-      )}
+      ): (
+        <AppLoader />
+        )}
     </>
   );
 };

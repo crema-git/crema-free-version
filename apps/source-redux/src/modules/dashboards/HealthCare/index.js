@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {Grid} from '@mui/material';
 import AppGridContainer from '@crema/components/AppGridContainer';
 import AppAnimate from '@crema/components/AppAnimate';
@@ -21,16 +21,22 @@ import {
   YourActivity
 } from '@crema/modules/dashboards/HealthCare';
 import AppLoader from "@crema/components/AppLoader";
+import {useDispatch, useSelector} from "react-redux";
+import {onGetHCData} from "@crema/redux/actions";
 
 
 const HealthCare = () => {
-  const [{apiData: healthCare, loading}] = useGetDataApi('/dashboard/health_care');
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(onGetHCData());
+  }, [dispatch]);
+
+  const {healthCare} = useSelector(({dashboard}) => dashboard);
 
   return (
     <>
-      {loading ? (
-        <AppLoader />
-      ): (
+      {healthCare ? (
         <AppAnimate animation='transition.slideUpIn' delay={200}>
           <AppGridContainer>
             {healthCare.salesState.map((data, index) => (
@@ -110,7 +116,9 @@ const HealthCare = () => {
             </Grid>
           </AppGridContainer>
         </AppAnimate>
-      )}
+      ): (
+        <AppLoader />
+        )}
     </>
   );
 };
