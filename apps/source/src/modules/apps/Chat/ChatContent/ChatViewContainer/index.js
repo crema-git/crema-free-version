@@ -1,9 +1,6 @@
 import React, {useEffect, useRef, useState} from 'react';
 import Box from '@mui/material/Box';
-import SendMessage from './SendMessage';
-import MessagesList from './MessageList';
 import moment from 'moment';
-import Header from './Header';
 import PropTypes from 'prop-types';
 import IntlMessages from '@crema/utility/IntlMessages';
 import AppsHeader from '@crema/components/AppsHeader';
@@ -15,6 +12,7 @@ import {styled} from '@mui/material/styles';
 import {postDataApi, putDataApi, useGetDataApi} from '@crema/utility/APIHooks';
 import {useInfoViewActionsContext} from '@crema/context/InfoViewContextProvider';
 import {MessageType} from "@crema/fakedb/chat/connectionList";
+import {Header, MessagesList, SendMessage} from '@crema/modules/apps/Chat';
 
 const ScrollbarWrapper = styled(SimpleBarReact)(() => {
   return {
