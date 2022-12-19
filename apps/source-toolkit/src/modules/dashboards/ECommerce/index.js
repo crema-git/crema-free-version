@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import AppInfoView from '@crema/components/AppInfoView';
 import { Grid } from '@mui/material';
 import AppGridContainer from '@crema/components/AppGridContainer';
 import AppAnimate from '@crema/components/AppAnimate';
@@ -19,6 +18,7 @@ import {
 } from '@crema/modules/dashboards/ECommerce';
 import { useDispatch, useSelector } from 'react-redux';
 import { onGetECommerceData } from '@crema/redux-toolkit/actions';
+import AppLoader from '@crema/components/AppLoader';
 
 const ECommerce = () => {
   const dispatch = useDispatch();
@@ -79,7 +79,7 @@ const ECommerce = () => {
       </AppGridContainer>
     </AppAnimate>
   ) : (
-    <AppInfoView />
+    <AppLoader />
   );
 };
 

@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import AppInfoView from '@crema/components/AppInfoView';
+import AppLoader from '@crema/components/AppInfoView';
 import { Grid } from '@mui/material';
 import AppGridContainer from '@crema/components/AppGridContainer';
 import AppAnimate from '@crema/components/AppAnimate';
@@ -113,7 +113,7 @@ const HealthCare = () => {
       </AppGridContainer>
     </AppAnimate>
   ) : (
-    <AppInfoView />
+    <AppLoader />
   );
 };
 

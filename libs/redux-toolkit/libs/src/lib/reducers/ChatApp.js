@@ -30,23 +30,25 @@ const chatReducer = createReducer(initialState, (builder) => {
     })
     .addCase(ADD_NEW_MESSAGE, (state, action) => {
       state.connectionList = state.connectionList.map((item) =>
-        item.id === action.payload.data.user.id
-          ? action.payload.data.user
+        item.id === action.payload.data.connectionData.id
+          ? action.payload.data.connectionData
           : item
       );
       state.userMessages = action.payload.data.userMessages;
     })
     .addCase(EDIT_MESSAGE, (state, action) => {
       state.connectionList = state.connectionList.map((item) =>
-        item.id === action.payload.data.user.id
-          ? action.payload.data.user
+        item.id === action.payload.data.connectionData.id
+          ? action.payload.data.connectionData
           : item
       );
       state.userMessages = action.payload.data.userMessages;
     })
     .addCase(DELETE_MESSAGE, (state, action) => {
       state.connectionList = state.connectionList.map((item) =>
-        item.id === action.payload.user.id ? action.payload.user : item
+        item.id === action.payload.connectionData.id
+          ? action.payload.connectionData
+          : item
       );
       state.userMessages = action.payload.userMessages;
     })
@@ -63,81 +65,4 @@ const chatReducer = createReducer(initialState, (builder) => {
     });
 });
 
-// const chatReducer = (state = initialState, action) => {
-//   switch (action.type) {
-//     case GET_CONNECTIONS_LIST:
-//       return {
-//         ...state,
-//         connectionList: action.payload,
-//       };
-
-//     case TOGGLE_CHAT_DRAWER:
-//       return {
-//         ...state,
-//         chatDrawer: !state.chatDrawer,
-//       };
-
-//     case GET_USER_MESSAGES:
-//       return {
-//         ...state,
-//         userMessages: action.payload,
-//       };
-
-//     case ADD_NEW_MESSAGE: {
-//       return {
-//         ...state,
-//         connectionList: state.connectionList.map((item) =>
-//           item.id === action.payload.data.user.id
-//             ? action.payload.data.user
-//             : item
-//         ),
-//         userMessages: action.payload.data.userMessages,
-//       };
-//     }
-
-//     case EDIT_MESSAGE: {
-//       return {
-//         ...state,
-//         connectionList: state.connectionList.map((item) =>
-//           item.id === action.payload.data.user.id
-//             ? action.payload.data.user
-//             : item
-//         ),
-//         userMessages: action.payload.data.userMessages,
-//       };
-//     }
-
-//     case DELETE_MESSAGE: {
-//       return {
-//         ...state,
-//         connectionList: state.connectionList.map((item) =>
-//           item.id === action.payload.user.id ? action.payload.user : item
-//         ),
-//         userMessages: action.payload.userMessages,
-//       };
-//     }
-
-//     case DELETE_USER_MESSAGES: {
-//       return {
-//         ...state,
-//         connectionList: state.connectionList.map((item) =>
-//           item.id === action.payload.id ? action.payload : item
-//         ),
-//         userMessages: null,
-//         selectedUser: null,
-//       };
-//     }
-
-//     case SELECT_USER: {
-//       return {
-//         ...state,
-//         selectedUser: action.payload,
-//         userMessages: null,
-//       };
-//     }
-
-//     default:
-//       return state;
-//   }
-// };
 export default chatReducer;

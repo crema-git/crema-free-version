@@ -42,8 +42,6 @@ const Metrics = () => {
   const { messages } = useIntl();
 
   return metricsData ? (
-    <AppLoader />
-  ) : (
     <AppAnimate>
       <>
         <Box
@@ -315,6 +313,8 @@ const Metrics = () => {
         </AppGridContainer>
       </>
     </AppAnimate>
+  ) : (
+    <AppLoader />
   );
 };
 

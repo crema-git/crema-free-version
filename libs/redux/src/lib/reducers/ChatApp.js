@@ -42,7 +42,7 @@ const chatReducer = (state = initialState, action) => {
         connectionList: state.connectionList.map((item) =>
           item.id === action.payload.data.connectionData.id
             ? action.payload.data.connectionData
-            : item,
+            : item
         ),
         userMessages: action.payload.data.userMessages,
       };
@@ -52,9 +52,9 @@ const chatReducer = (state = initialState, action) => {
       return {
         ...state,
         connectionList: state.connectionList.map((item) =>
-          item.id === action.payload.data.user.id
-            ? action.payload.data.user
-            : item,
+          item.id === action.payload.data.connectionData.id
+            ? action.payload.data.connectionData
+            : item
         ),
         userMessages: action.payload.data.userMessages,
       };
@@ -64,7 +64,9 @@ const chatReducer = (state = initialState, action) => {
       return {
         ...state,
         connectionList: state.connectionList.map((item) =>
-          item.id === action.payload.user.id ? action.payload.user : item,
+          item.id === action.payload.connectionData.id
+            ? action.payload.connectionData
+            : item
         ),
         userMessages: action.payload.userMessages,
       };
@@ -74,7 +76,7 @@ const chatReducer = (state = initialState, action) => {
       return {
         ...state,
         connectionList: state.connectionList.map((item) =>
-          item.id === action.payload.id ? action.payload : item,
+          item.id === action.payload.id ? action.payload : item
         ),
         userMessages: null,
         selectedUser: null,
