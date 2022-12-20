@@ -9,46 +9,51 @@ const DatePickerWrapper = ({ children }) => {
         height: '100%',
         width: '100%',
         position: 'relative',
-        '& .PrivatePickersToolbar-root': {
+        '& .MuiPickersToolbar-root': {
+          '& > .MuiTypography-root': {
+            display: 'none',
+          },
+        },
+        '& .MuiPickersToolbar-content': {
           display: 'none',
         },
-        '& > div': {
-          minWidth: 100,
-          height: '100%',
-          '& > div': {
-            height: '100%',
-            '& > div, & .MuiCalendarPicker-root': {
-              height: '100%',
-              maxHeight: 450,
-              width: '100%',
-            },
-          },
-        },
-        '& .PrivatePickersFadeTransitionGroup-root': {
-          height: '100%',
-          '& > div': {
-            height: '100%',
-            '& > div': {
-              justifyContent: 'space-around',
-            },
-          },
-        },
-        '& .PrivatePickersSlideTransition-root': {
-          height: 'calc(100% - 40px)',
-          '& > div': {
-            height: '100%',
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'space-around',
-            '& > div': {
-              justifyContent: 'space-around',
-            },
-          },
-        },
-        '& .MuiButtonBase-root': {
-          padding: '3px',
-          color: 'text.primary',
-        },
+        // '& > div': {
+        //   minWidth: 100,
+        //   height: '100%',
+        //   '& > div': {
+        //     height: '100%',
+        //     '& > div, & .MuiCalendarPicker-root': {
+        //       height: '100%',
+        //       maxHeight: 450,
+        //       width: '100%',
+        //     },
+        //   },
+        // },
+        // '& .PrivatePickersFadeTransitionGroup-root': {
+        //   height: '100%',
+        //   '& > div': {
+        //     height: '100%',
+        //     '& > div': {
+        //       justifyContent: 'space-around',
+        //     },
+        //   },
+        // },
+        // '& .PrivatePickersSlideTransition-root': {
+        //   height: 'calc(100% - 40px)',
+        //   '& > div': {
+        //     height: '100%',
+        //     display: 'flex',
+        //     flexDirection: 'column',
+        //     justifyContent: 'space-around',
+        //     '& > div': {
+        //       justifyContent: 'space-around',
+        //     },
+        //   },
+        // },
+        // '& .MuiButtonBase-root': {
+        //   padding: '3px',
+        //   color: 'text.primary',
+        // },
       }}
     >
       {children}
