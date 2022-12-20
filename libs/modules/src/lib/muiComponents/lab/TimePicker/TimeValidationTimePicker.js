@@ -1,9 +1,8 @@
 import * as React from 'react';
 import TextField from '@mui/material/TextField';
 import Stack from '@mui/material/Stack';
-import AdapterDateFns from '@mui/lab/AdapterDateFns';
-import LocalizationProvider from '@mui/lab/LocalizationProvider';
-import TimePicker from '@mui/lab/TimePicker';
+import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
+import { LocalizationProvider, TimePicker } from '@mui/x-date-pickers';
 
 export default function TimeValidationTimePicker() {
   const [value, setValue] = React.useState(new Date('2020-01-01 12:00'));

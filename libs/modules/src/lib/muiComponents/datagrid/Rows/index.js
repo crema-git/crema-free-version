@@ -10,8 +10,8 @@ import RowsGridSource from '!raw-loader!./RowsGrid';
 import InfiniteLoadingGrid from './InfiniteLoadingGrid';
 import InfiniteLoadingGridSource from '!raw-loader!./InfiniteLoadingGrid';
 
-import ApiRefRowsGrid from './ApiRefRowsGrid';
-import ApiRefRowsGridSource from '!raw-loader!./ApiRefRowsGrid';
+// import ApiRefRowsGrid from './ApiRefRowsGrid';
+// import ApiRefRowsGridSource from '!raw-loader!./ApiRefRowsGrid';
 
 import ThrottledRowsGrid from './ThrottledRowsGrid';
 import ThrottledRowsGridSource from '!raw-loader!./ThrottledRowsGrid';
@@ -37,14 +37,14 @@ const Rows = () => {
             noScrollbar
           />
         </Grid>
-        <Grid item xs={12}>
-          <AppComponentCard
-            title="ApiRefRowsGrid"
-            component={ApiRefRowsGrid}
-            source={ApiRefRowsGridSource}
-            noScrollbar
-          />
-        </Grid>
+        {/*<Grid item xs={12}>*/}
+        {/*  <AppComponentCard*/}
+        {/*    title="ApiRefRowsGrid"*/}
+        {/*    component={ApiRefRowsGrid}*/}
+        {/*    source={ApiRefRowsGridSource}*/}
+        {/*    noScrollbar*/}
+        {/*  />*/}
+        {/*</Grid>*/}
         <Grid item xs={12}>
           <AppComponentCard
             title="ThrottledRowsGrid"

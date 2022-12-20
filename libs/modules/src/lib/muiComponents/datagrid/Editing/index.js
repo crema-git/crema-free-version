@@ -14,31 +14,31 @@ import CellEditControlGrid from './CellEditControlGrid';
 import CellEditControlGridSource from '!raw-loader!./CellEditControlGrid';
 
 import ValueGetterSetterGrid from './ValueGetterSetterGrid';
-import ValueGetterSetterGridSource from './ValueGetterSetterGrid';
+import ValueGetterSetterGridSource from '!raw-loader!./ValueGetterSetterGrid';
 
 import ValidateRowModelControlGrid from './ValidateRowModelControlGrid';
-import ValidateRowModelControlGridSource from './ValidateRowModelControlGrid';
+import ValidateRowModelControlGridSource from '!raw-loader!./ValidateRowModelControlGrid';
 
 import ValidateServerNameGrid from './ValidateServerNameGrid';
-import ValidateServerNameGridSource from './ValidateServerNameGrid';
+import ValidateServerNameGridSource from '!raw-loader!./ValidateServerNameGrid';
 
 import RenderRatingEditCellGrid from './RenderRatingEditCellGrid';
-import RenderRatingEditCellGridSource from './RenderRatingEditCellGrid';
+import RenderRatingEditCellGridSource from '!raw-loader!./RenderRatingEditCellGrid';
 
 import StartEditButtonGrid from './StartEditButtonGrid';
-import StartEditButtonGridSource from './StartEditButtonGrid';
+import StartEditButtonGridSource from '!raw-loader!./StartEditButtonGrid';
 
 import CatchEditingEventsGrid from './CatchEditingEventsGrid';
-import CatchEditingEventsGridSource from './CatchEditingEventsGrid';
+import CatchEditingEventsGridSource from '!raw-loader!./CatchEditingEventsGrid';
 
 import BasicRowEditingGrid from './BasicRowEditingGrid';
-import BasicRowEditingGridSource from './BasicRowEditingGrid';
+import BasicRowEditingGridSource from '!raw-loader!./BasicRowEditingGrid';
 
 import RowEditControlGrid from './RowEditControlGrid';
-import RowEditControlGridSource from './RowEditControlGrid';
+import RowEditControlGridSource from '!raw-loader!./RowEditControlGrid';
 
 import ConditionalValidationGrid from './ConditionalValidationGrid';
-import ConditionalValidationGridSource from './ConditionalValidationGrid';
+import ConditionalValidationGridSource from '!raw-loader!./ConditionalValidationGrid';
 
 const Editing = () => {
   return (

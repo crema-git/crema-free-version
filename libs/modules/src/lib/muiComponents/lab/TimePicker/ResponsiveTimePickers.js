@@ -1,11 +1,13 @@
 import * as React from 'react';
 import TextField from '@mui/material/TextField';
-import AdapterDateFns from '@mui/lab/AdapterDateFns';
+import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
 import Stack from '@mui/material/Stack';
-import LocalizationProvider from '@mui/lab/LocalizationProvider';
-import TimePicker from '@mui/lab/TimePicker';
-import MobileTimePicker from '@mui/lab/MobileTimePicker';
-import DesktopTimePicker from '@mui/lab/DesktopTimePicker';
+import {
+  DesktopTimePicker,
+  LocalizationProvider,
+  MobileTimePicker,
+  TimePicker,
+} from '@mui/x-date-pickers';
 
 export default function ResponsiveTimePickers() {
   const [value, setValue] = React.useState(

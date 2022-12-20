@@ -1,11 +1,13 @@
 import * as React from 'react';
 import TextField from '@mui/material/TextField';
-import AdapterDateFns from '@mui/lab/AdapterDateFns';
-import LocalizationProvider from '@mui/lab/LocalizationProvider';
+import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
+import { LocalizationProvider } from '@mui/x-date-pickers';
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
-import MobileDateRangePicker from '@mui/lab/MobileDateRangePicker';
-import DesktopDateRangePicker from '@mui/lab/DesktopDateRangePicker';
+import {
+  DesktopDateRangePicker,
+  MobileDateRangePicker,
+} from '@mui/x-date-pickers-pro';
 
 export default function ResponsiveDateRangePicker() {
   const [value, setValue] = React.useState([null, null]);
@@ -14,7 +16,7 @@ export default function ResponsiveDateRangePicker() {
     <LocalizationProvider dateAdapter={AdapterDateFns}>
       <Stack spacing={3}>
         <MobileDateRangePicker
-          startText="Mobile start"
+          localeText={{ start: 'Mobile start' }}
           value={value}
           onChange={(newValue) => {
             setValue(newValue);
@@ -28,7 +30,7 @@ export default function ResponsiveDateRangePicker() {
           )}
         />
         <DesktopDateRangePicker
-          startText="Desktop start"
+          localeText={{ start: 'Desktop start' }}
           value={value}
           onChange={(newValue) => {
             setValue(newValue);

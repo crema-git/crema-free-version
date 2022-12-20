@@ -1,10 +1,12 @@
 import * as React from 'react';
 import Badge from '@mui/material/Badge';
 import TextField from '@mui/material/TextField';
-import AdapterDateFns from '@mui/lab/AdapterDateFns';
-import LocalizationProvider from '@mui/lab/LocalizationProvider';
-import PickersDay from '@mui/lab/PickersDay';
-import DatePicker from '@mui/lab/DatePicker';
+import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
+import {
+  DatePicker,
+  LocalizationProvider,
+  PickersDay,
+} from '@mui/x-date-pickers';
 import CalendarPickerSkeleton from '@mui/lab/CalendarPickerSkeleton';
 import getDaysInMonth from 'date-fns/getDaysInMonth';
 

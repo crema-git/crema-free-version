@@ -1,22 +1,16 @@
-import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import AppList from '@crema/components/AppList';
-import { ListItem } from '@crema/modules/userList/Flat';
-import AppLoader from '@crema/components/AppLoader';
-import { onGetUserList } from '@crema/redux/actions';
+import React from "react";
+import AppList from "@crema/components/AppList";
+import { ListItem } from "@crema/modules/userList/Flat";
+import AppLoader from "@crema/components/AppLoader";
+import { useGetDataApi } from "@crema/utility";
 
 const Flat = () => {
-  const dispatch = useDispatch();
-
-  const usersList = useSelector(({ userList }) => userList.usersList);
-
-  useEffect(() => {
-    dispatch(onGetUserList());
-  }, [dispatch]);
-
+  const [{ apiData: usersList, loading }] = useGetDataApi('/api/user/list', []);
   return (
     <>
-      {usersList ? (
+      {loading ? (
+        <AppLoader />
+      ) : (
         <AppList
           onEndReached={() => console.log('onEndReached')}
           data={usersList}
@@ -24,8 +18,6 @@ const Flat = () => {
             return <ListItem user={user} key={user.id} />;
           }}
         />
-      ) : (
-        <AppLoader />
       )}
     </>
   );

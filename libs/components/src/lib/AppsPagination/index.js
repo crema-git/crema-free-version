@@ -3,7 +3,7 @@ import TablePagination from '@mui/material/TablePagination';
 import PropTypes from 'prop-types';
 
 const AppsPagination = ({
-  count,
+  count=0,
   page,
   onPageChange,
   rowsPerPage,
@@ -31,8 +31,8 @@ AppsPagination.defaultProps = {
 };
 
 AppsPagination.propTypes = {
-  count: PropTypes.number.isRequired,
-  page: PropTypes.number.isRequired,
+  count: PropTypes.number,
+  page: PropTypes.number,
   onPageChange: PropTypes.func,
   rowsPerPage: PropTypes.number,
 };

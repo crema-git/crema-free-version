@@ -1,8 +1,8 @@
 import * as React from 'react';
 import TextField from '@mui/material/TextField';
-import DateRangePicker from '@mui/lab/DateRangePicker';
-import AdapterDateFns from '@mui/lab/AdapterDateFns';
-import LocalizationProvider from '@mui/lab/LocalizationProvider';
+import { DateRangePicker } from '@mui/x-date-pickers-pro';
+import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
+import { LocalizationProvider } from '@mui/x-date-pickers';
 import Box from '@mui/material/Box';
 
 export default function BasicDateRangePicker() {
@@ -11,8 +11,7 @@ export default function BasicDateRangePicker() {
   return (
     <LocalizationProvider dateAdapter={AdapterDateFns}>
       <DateRangePicker
-        startText="Check-in"
-        endText="Check-out"
+        localeText={{ start: 'Check-in', end: 'Check-out' }}
         value={value}
         onChange={(newValue) => {
           setValue(newValue);

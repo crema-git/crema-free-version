@@ -3,14 +3,14 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
 import IntlMessages from '@crema/utility/IntlMessages';
-import { BiUser } from 'react-icons/bi';
-import { AiOutlineLock } from 'react-icons/ai';
-import { IoMdInformationCircleOutline } from 'react-icons/io';
-import { IoShareSocialOutline } from 'react-icons/io5';
+import {BiUser} from 'react-icons/bi';
+import {AiOutlineLock} from 'react-icons/ai';
+import {IoMdInformationCircleOutline} from 'react-icons/io';
+import {IoShareSocialOutline} from 'react-icons/io5';
 import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone';
-import { accountData } from '@crema/mockapi';
+import {accountData} from '@crema/mockapi';
 import AppAnimate from '@crema/components/AppAnimate';
-import { Fonts } from '@crema/constants/AppEnums';
+import {Fonts} from '@crema/constants/AppEnums';
 import {
   AccountTabsWrapper,
   ChangePassword,
@@ -60,23 +60,25 @@ const Account = () => {
 
   return (
     <>
-      <Box
-        component="h2"
-        variant="h2"
-        sx={{
-          fontSize: 16,
-          color: 'text.primary',
-          fontWeight: Fonts.SEMI_BOLD,
-          mb: {
-            xs: 2,
-            lg: 4,
-          },
-        }}
-      >
-        My Account
-      </Box>
-      <AppAnimate animation="transition.slideUpIn" delay={200}>
-        <AccountTabsWrapper>
+      <AppAnimate animation="transition.slideDownIn" delay={300}>
+        <Box
+          component="h2"
+          variant="h2"
+          sx={{
+            fontSize: 16,
+            color: 'text.primary',
+            fontWeight: Fonts.SEMI_BOLD,
+            mb: {
+              xs: 2,
+              lg: 4,
+            },
+          }}
+        >
+          My Account
+        </Box>
+      </AppAnimate>
+      <AccountTabsWrapper key="2">
+        <AppAnimate animation="transition.slideLeftIn" delay={300}>
           <Tabs
             className="account-tabs"
             value={value}
@@ -94,6 +96,8 @@ const Account = () => {
               />
             ))}
           </Tabs>
+        </AppAnimate>
+        <AppAnimate animation="transition.slideRightIn" delay={300}>
           <Box className="account-tabs-content">
             {value === 0 && <PersonalInfo />}
             {value === 1 && <ChangePassword />}
@@ -101,8 +105,8 @@ const Account = () => {
             {value === 3 && <Social social={accountData.member} />}
             {value === 4 && <Notification />}
           </Box>
-        </AccountTabsWrapper>
-      </AppAnimate>
+        </AppAnimate>
+      </AccountTabsWrapper>
     </>
   );
 };

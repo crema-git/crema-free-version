@@ -44,7 +44,6 @@ const DateRangePicker = () => {
             component={BasicDateRangePicker}
             source={BasicDateRangePickerSource}
             noScrollbar
-            description="Note that you can pass almost any prop from DatePicker."
           />
         </Grid>
         <Grid item xs={12} md={6}>
@@ -53,7 +52,6 @@ const DateRangePicker = () => {
             component={MinMaxDateRangePicker}
             source={MinMaxDateRangePickerSource}
             noScrollbar
-            description="Disabling dates behaves the same as the simple DatePicker."
           />
         </Grid>
         <Grid item xs={12} md={6}>
@@ -62,7 +60,6 @@ const DateRangePicker = () => {
             component={ResponsiveDateRangePicker}
             source={ResponsiveDateRangePickerSource}
             noScrollbar
-            description="The date range picker component is designed to be optimized for the device it runs on."
           />
         </Grid>
         <Grid item xs={12} md={6}>
@@ -71,7 +68,6 @@ const DateRangePicker = () => {
             component={FormPropsDateRangePickers}
             source={FormPropsDateRangePickersSource}
             noScrollbar
-            description="The date range picker component can be disabled or read-only."
           />
         </Grid>
 
@@ -81,7 +77,6 @@ const DateRangePicker = () => {
             component={CustomDateRangePickerDay}
             source={CustomDateRangePickerDaySource}
             noScrollbar
-            description="The displayed days are customizable with the renderDay function prop. You can take advantage of the internal DateRangePickerDay component."
           />
         </Grid>
         <Grid item xs={12} md={6}>
@@ -90,8 +85,6 @@ const DateRangePicker = () => {
             component={StaticDateRangePickerDemo}
             source={StaticDateRangePickerDemoSource}
             noScrollbar
-            description="Its possible to render any picker inline. This will enable building custom popover/modal containers.
-            "
           />
         </Grid>
         <Grid item xs={12} md={6}>
@@ -100,7 +93,6 @@ const DateRangePicker = () => {
             component={CalendarsDateRangePicker}
             source={CalendarsDateRangePickerSource}
             noScrollbar
-            description="Note that the calendars prop only works in desktop mode."
           />
         </Grid>
         <Grid item xs={12} md={6}>
@@ -109,7 +101,6 @@ const DateRangePicker = () => {
             component={CustomDateRangeInputs}
             source={CustomDateRangeInputsSource}
             noScrollbar
-            description="You can customize the rendered input with the renderInput prop. For DateRangePicker it takes 2 parameters – for start and end input respectively. If you need to render custom inputs make sure to spread ref and inputProps correctly to the input components."
           />
         </Grid>
       </AppGridContainer>

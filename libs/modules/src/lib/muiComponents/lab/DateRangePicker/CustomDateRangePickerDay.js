@@ -2,13 +2,14 @@ import * as React from 'react';
 import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
-import AdapterDateFns from '@mui/lab/AdapterDateFns';
-import LocalizationProvider from '@mui/lab/LocalizationProvider';
+import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
+import { LocalizationProvider } from '@mui/x-date-pickers';
+import {
+  DateRangePickerDay,
+  StaticDateRangePicker,
+} from '@mui/x-date-pickers-pro';
 
-import StaticDateRangePicker from '@mui/lab/StaticDateRangePicker';
-import MuiDateRangePickerDay from '@mui/lab/DateRangePickerDay';
-
-const DateRangePickerDay = styled(MuiDateRangePickerDay)(
+const DateRangePickerDayStyled = styled(DateRangePickerDay)(
   ({ theme, isHighlighting, isStartOfHighlighting, isEndOfHighlighting }) => ({
     ...(isHighlighting && {
       borderRadius: 0,
@@ -33,7 +34,7 @@ export default function CustomDateRangePickerDay() {
   const [value, setValue] = React.useState([null, null]);
 
   const renderWeekPickerDay = (date, dateRangePickerDayProps) => {
-    return <DateRangePickerDay {...dateRangePickerDayProps} />;
+    return <DateRangePickerDayStyled {...dateRangePickerDayProps} />;
   };
 
   return (

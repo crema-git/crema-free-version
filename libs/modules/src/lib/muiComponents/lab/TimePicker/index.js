@@ -47,7 +47,6 @@ const TimePicker = () => {
             component={BasicTimePicker}
             source={BasicTimePickerSource}
             noScrollbar
-            description="The date picker is rendered as a modal dialog on mobile, and a textbox with a popup on desktop."
           />
         </Grid>
 
@@ -57,7 +56,6 @@ const TimePicker = () => {
             component={ResponsiveTimePickers}
             source={ResponsiveTimePickersSource}
             noScrollbar
-            description="The time picker component is designed and optimized for the device it runs on."
           />
         </Grid>
         <Grid item xs={12} md={6}>
@@ -66,7 +64,6 @@ const TimePicker = () => {
             component={FormPropsTimePickers}
             source={FormPropsTimePickersSource}
             noScrollbar
-            description="The time picker component can be disabled or read-only."
           />
         </Grid>
         <Grid item xs={12} md={6}>
@@ -75,7 +72,6 @@ const TimePicker = () => {
             component={LocalizedTimePicker}
             source={LocalizedTimePickerSource}
             noScrollbar
-            description="Use LocalizationProvider to change the date-engine locale that is used to render the time picker. The time picker will automatically adjust to the locales time setting, i.e. the 12-hour or 24-hour format. This can be controlled with ampm prop."
           />
         </Grid>
         <Grid item xs={12} md={6}>
@@ -92,7 +88,6 @@ const TimePicker = () => {
             component={SecondsTimePicker}
             source={SecondsTimePickerSource}
             noScrollbar
-            description="The seconds input can be used for selection of a precise time point."
           />
         </Grid>
         <Grid item xs={12} md={6}>
@@ -101,7 +96,6 @@ const TimePicker = () => {
             component={StaticTimePickerLandscape}
             source={StaticTimePickerLandscapeSource}
             noScrollbar
-            description=""
           />
         </Grid>
         <Grid item xs={12} md={6}>
@@ -110,7 +104,6 @@ const TimePicker = () => {
             component={SubComponentsTimePickers}
             source={SubComponentsTimePickersSource}
             noScrollbar
-            description="Some lower-level sub-components (ClockPicker) are also exported. These are rendered without a wrapper or outer logic (masked input, date values parsing and validation, etc.)."
           />
         </Grid>
         <Grid item xs={12} md={6}>
@@ -119,7 +112,6 @@ const TimePicker = () => {
             component={StaticTimePickerDemo}
             source={StaticTimePickerDemoSource}
             noScrollbar
-            description="Its possible to render any time picker inline. This will enable building custom popover/modal containers."
           />
         </Grid>
       </AppGridContainer>

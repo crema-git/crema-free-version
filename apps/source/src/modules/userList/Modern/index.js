@@ -1,30 +1,22 @@
-import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import AppList from '@crema/components/AppList';
-import { ListItem } from '@crema/modules/userList/Modern';
-import AppLoader from '@crema/components/AppLoader';
-import { onGetUserList } from '@crema/redux/actions';
+import React from "react";
+import AppList from "@crema/components/AppList";
+import { ListItem } from "@crema/modules/userList/Modern";
+import AppLoader from "@crema/components/AppLoader";
+import { useGetDataApi } from "@crema/utility";
 
 const Modern = () => {
-  const dispatch = useDispatch();
-
-  const usersList = useSelector(({ userList }) => userList.usersList);
-
-  useEffect(() => {
-    dispatch(onGetUserList());
-  }, [dispatch]);
-
+  const [{ apiData: usersList, loading }] = useGetDataApi('/api/user/list', []);
   return (
     <>
-      {usersList ? (
+      {loading ? (
+        <AppLoader />
+      ) : (
         <AppList
           data={usersList}
           renderRow={(user) => {
             return <ListItem user={user} key={user.id} />;
           }}
         />
-      ) : (
-        <AppLoader />
       )}
     </>
   );

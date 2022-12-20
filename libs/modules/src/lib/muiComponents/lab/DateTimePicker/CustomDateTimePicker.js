@@ -3,10 +3,12 @@ import AlarmIcon from '@mui/icons-material/Alarm';
 import SnoozeIcon from '@mui/icons-material/Snooze';
 import TextField from '@mui/material/TextField';
 import ClockIcon from '@mui/icons-material/AccessTime';
-import AdapterDateFns from '@mui/lab/AdapterDateFns';
-import LocalizationProvider from '@mui/lab/LocalizationProvider';
-import DateTimePicker from '@mui/lab/DateTimePicker';
-import MobileDateTimePicker from '@mui/lab/MobileDateTimePicker';
+import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
+import {
+  DateTimePicker,
+  LocalizationProvider,
+  MobileDateTimePicker,
+} from '@mui/x-date-pickers';
 import Stack from '@mui/material/Stack';
 
 export default function CustomDateTimePicker() {

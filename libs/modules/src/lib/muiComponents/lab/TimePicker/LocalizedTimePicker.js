@@ -6,9 +6,8 @@ import enLocale from 'date-fns/locale/en-US';
 import ToggleButton from '@mui/material/ToggleButton';
 import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
 import TextField from '@mui/material/TextField';
-import AdapterDateFns from '@mui/lab/AdapterDateFns';
-import LocalizationProvider from '@mui/lab/LocalizationProvider';
-import TimePicker from '@mui/lab/TimePicker';
+import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
+import { LocalizationProvider, TimePicker } from '@mui/x-date-pickers';
 
 const localeMap = {
   en: enLocale,
@@ -28,7 +27,7 @@ export default function LocalizedTimePicker() {
   return (
     <LocalizationProvider
       dateAdapter={AdapterDateFns}
-      locale={localeMap[locale]}
+      adapterLocale={localeMap[locale]}
     >
       <div>
         <ToggleButtonGroup
