@@ -40,7 +40,7 @@ const CancelVisits = ({ data }) => {
               },
             }}
           >
-            <img src={'/assets/images/dashboard/decries_icon.png'} alt="down" />
+            <img src={'/assets/images/dashboard/decries_icon.svg'} alt="down" />
           </Box>
         </Box>
         <Box

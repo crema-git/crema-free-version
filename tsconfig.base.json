@@ -237,7 +237,7 @@
       "@crema/context/ThemeContextProvider": [
         "libs/context/src/lib/AppContextProvider/ThemeContextProvider.js"
       ],
-      "@crema/custom-hooks": ["libs/custom-hooks/src/index.js"],
+      "@crema/hooks": ["libs/hooks/src/index.js"],
       "@crema/fakedb": ["libs/fakedb/src/index.js"],
       "@crema/fakedb/chat/connectionList": [
         "libs/mockapi/src/fakedb/apps/chat/connectionList.js"

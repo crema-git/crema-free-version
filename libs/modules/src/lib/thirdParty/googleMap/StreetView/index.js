@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import {
   GoogleMap,
   OverlayView,
@@ -50,15 +50,12 @@ const StreetViewPanoramaExampleGoogleMap = withGoogleMap(() => (
 /*
  * Add <script src="https://maps.googleapis.com/maps/api/js"></script> to your HTML to provide google.maps reference
  */
-export default class StreetViewPanoramaExample extends Component {
-  render() {
-    return (
-      <StreetViewPanoramaExampleGoogleMap
-        containerElement={
-          <div className="cr-embed-responsive cr-embed-responsive-21by9" />
-        }
-        mapElement={<div className="cr-embed-responsive-item" />}
-      />
-    );
-  }
-}
+const StreetViewPanoramaExample = () => (
+  <StreetViewPanoramaExampleGoogleMap
+    containerElement={
+      <div className="cr-embed-responsive cr-embed-responsive-21by9" />
+    }
+    mapElement={<div className="cr-embed-responsive-item" />}
+  />
+);
+export default StreetViewPanoramaExample;

@@ -13,11 +13,12 @@ const Share = (props) => {
         data={data}
         itemPadding={5}
         responsive={{
-          xs: 1,
-          sm: 2,
+          xs: 3,
+          sm: 3,
           md: 3,
           lg: 3,
-          xl: 4,
+          xl: 3,
+          xxl: 4,
         }}
         renderRow={(data, index) => (
           <Box

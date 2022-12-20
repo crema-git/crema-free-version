@@ -1,14 +1,7 @@
-import React, { memo } from 'react';
-import {
-  ComposableMap,
-  Geographies,
-  Geography,
-  ZoomableGroup,
-} from 'react-simple-maps';
+import React, {memo} from 'react';
+import {ComposableMap, Geographies, Geography, ZoomableGroup,} from 'react-simple-maps';
 import PropTypes from 'prop-types';
-
-const geoUrl =
-  'https://raw.githubusercontent.com/zcreativelabs/react-simple-maps/master/topojson-maps/world-110m.json';
+import data from './features.json';
 
 const rounded = (num) => {
   if (num > 1000000000) {
@@ -25,7 +18,7 @@ const MapChart = ({ setTooltipContent }) => {
     <>
       <ComposableMap data-tip="" projectionConfig={{ scale: 200 }}>
         <ZoomableGroup>
-          <Geographies geography={geoUrl}>
+          <Geographies geography={data}>
             {({ geographies }) =>
               geographies.map((geo) => (
                 <Geography

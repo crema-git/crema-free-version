@@ -13,6 +13,7 @@ const MailDetail = () => {
   const contentRef = createRef();
 
   const { id } = useParams();
+  console.log(id)
   const [{ apiData: selectedMail }, { setQueryParams, setData }] =
     useGetDataApi('/api/mailApp/mail/', undefined, { id: id }, false);
 

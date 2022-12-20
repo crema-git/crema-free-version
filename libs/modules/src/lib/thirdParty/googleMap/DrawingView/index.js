@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { GoogleMap, withGoogleMap } from 'react-google-maps';
 import DrawingManager from 'react-google-maps/lib/components/drawing/DrawingManager';
 
@@ -14,7 +14,7 @@ import DrawingManager from 'react-google-maps/lib/components/drawing/DrawingMana
  * Credits: thanks @idolize for the contribution!
  */
 
-const google = window.google;
+// const google = window.google;
 
 const DrawingExampleGoogleMap = withGoogleMap(() => (
   <GoogleMap
@@ -54,15 +54,12 @@ const DrawingExampleGoogleMap = withGoogleMap(() => (
     />
   </GoogleMap>
 ));
-export default class DrawingView extends Component {
-  render() {
-    return (
-      <DrawingExampleGoogleMap
-        containerElement={
-          <div className="cr-embed-responsive cr-embed-responsive-21by9" />
-        }
-        mapElement={<div className="cr-embed-responsive-item" />}
-      />
-    );
-  }
-}
+const DrawingView = () => (
+  <DrawingExampleGoogleMap
+    containerElement={
+      <div className="cr-embed-responsive cr-embed-responsive-21by9" />
+    }
+    mapElement={<div className="cr-embed-responsive-item" />}
+  />
+);
+export default DrawingView;

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Checkbox } from '@mui/material';
+import {Checkbox} from '@mui/material';
 import LabelOutlinedIcon from '@mui/icons-material/LabelOutlined';
 import AttachFileIcon from '@mui/icons-material/AttachFile';
 import DraftsOutlinedIcon from '@mui/icons-material/DraftsOutlined';
@@ -16,14 +16,10 @@ import DeleteOutlinedIcon from '@mui/icons-material/DeleteOutlined';
 import ArchiveOutlinedIcon from '@mui/icons-material/ArchiveOutlined';
 import MailOutlinedIcon from '@mui/icons-material/MailOutlined';
 import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
-import {
-  MailInfoWrapper,
-  MailItemWrapper,
-  MainActionWrapper,
-} from './index.styles';
-import { Fonts } from '@crema/constants/AppEnums';
-import { useInfoViewActionsContext } from '@crema/context/InfoViewContextProvider';
-import { putDataApi } from '@crema/utility/APIHooks';
+import {MailInfoWrapper, MailItemWrapper, MainActionWrapper,} from './index.styles';
+import {Fonts} from '@crema/constants/AppEnums';
+import {useInfoViewActionsContext} from '@crema/context/InfoViewContextProvider';
+import {putDataApi} from '@crema/utility/APIHooks';
 
 const MailListItem = (props) => {
   const {
@@ -133,15 +129,9 @@ const MailListItem = (props) => {
     }
   };
   const getSenderImage = () => {
-    if (messages === 1) {
-      return mail.messages[0].sender.profilePic;
-    } else if (messages === 2) {
-      return `${mail.messages[0].sender.name}, ${mail.messages[1].sender.name}(2)`;
-    } else {
-      return `${mail.messages[0].sender.name}, ${
-        mail.messages[messages - 2].sender.name
-      }, ${mail.messages[messages - 1].sender.name}(${messages})`;
-    }
+    return mail?.messages?.[messages - 1]?.sender?.profilePic
+      ? mail.messages?.[messages - 1]?.sender?.profilePic
+      : mail?.messages?.[messages - 1]?.sender?.name;
   };
 
   return (

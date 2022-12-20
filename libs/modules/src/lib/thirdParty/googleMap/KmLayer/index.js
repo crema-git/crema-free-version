@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { GoogleMap, KmlLayer, withGoogleMap } from 'react-google-maps';
 
 const KmlLayerExampleGoogleMap = withGoogleMap(() => (
@@ -13,15 +13,13 @@ const KmlLayerExampleGoogleMap = withGoogleMap(() => (
 /*
  * Add <script src="https://maps.googleapis.com/maps/api/js"></script> to your HTML to provide google.maps reference
  */
-export default class MapKmLayer extends Component {
-  render() {
-    return (
-      <KmlLayerExampleGoogleMap
-        containerElement={
-          <div className="cr-embed-responsive cr-embed-responsive-21by9" />
-        }
-        mapElement={<div className="cr-embed-responsive-item" />}
-      />
-    );
-  }
-}
+const MapKmLayer = () => (
+  <KmlLayerExampleGoogleMap
+    containerElement={
+      <div className="cr-embed-responsive cr-embed-responsive-21by9" />
+    }
+    mapElement={<div className="cr-embed-responsive-item" />}
+  />
+);
+
+export default MapKmLayer;

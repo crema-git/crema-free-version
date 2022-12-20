@@ -64,14 +64,23 @@ const MailsList = () => {
   };
 
   const onViewMailDetail = (mail) => {
+    console.log('params: ', params);
     if (mail.isRead) {
-      navigate(`/apps/mail/${params.name}/${mail.id}`);
+      navigate(
+        `/apps/mail/${
+          params.folder ? params.folder : `label/${params.label}`
+        }/${mail.id}`
+      );
     } else {
       mail.isRead = true;
       putDataApi('/api/mailApp/mail/', infoViewActionsContext, { mail })
         .then((data) => {
           onUpdateItem(data);
-          navigate(`/apps/mail/${params.name}/${mail.id}`);
+          navigate(
+            `/apps/mail/${
+              params.folder ? params.folder : `label/${params.label}`
+            }/${mail.id}`
+          );
           infoViewActionsContext.showMessage(
             mail.isRead
               ? 'Mail Marked as Read Successfully'

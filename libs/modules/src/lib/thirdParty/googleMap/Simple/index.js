@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { GoogleMap, withGoogleMap } from 'react-google-maps';
 import PropTypes from 'prop-types';
 
@@ -19,22 +19,19 @@ const SimpleMapExampleGoogleMap = withGoogleMap(() => (
 /*
  * Add <script src="https://maps.googleapis.com/maps/api/js"></script> to your HTML to provide google.maps reference
  */
-export default class SimpleMap extends Component {
-  render() {
-    let styleName = this.props.styleName;
-    if (!styleName) {
-      styleName = 'cr-embed-responsive-21by9';
-    }
-    return (
-      <SimpleMapExampleGoogleMap
-        containerElement={
-          <div className={`cr-embed-responsive ${styleName}`} />
-        }
-        mapElement={<div className="cr-embed-responsive-item" />}
-      />
-    );
+const SimpleMap = (props) => {
+  let styleName = props.styleName;
+  if (!styleName) {
+    styleName = 'cr-embed-responsive-21by9';
   }
-}
+  return (
+    <SimpleMapExampleGoogleMap
+      containerElement={<div className={`cr-embed-responsive ${styleName}`} />}
+      mapElement={<div className="cr-embed-responsive-item" />}
+    />
+  );
+};
+export default SimpleMap;
 
 SimpleMap.propTypes = {
   styleName: PropTypes.string,
