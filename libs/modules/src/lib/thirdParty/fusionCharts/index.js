@@ -2,19 +2,19 @@ import React from 'react';
 import AppComponentHeader from '@crema/components/AppComponentHeader';
 import AppGridContainer from '@crema/components/AppGridContainer';
 import Grid from '@mui/material/Grid';
-// import AppComponentCard from '@crema/components/AppComponentCard';
-// import SimpleChart from './SimpleChart';
-// import SimpleChartSource from '!raw-loader!./SimpleChart';
-// import SimpleGuage from './SimpleGuage';
-// import SimpleGuageSource from '!raw-loader!./SimpleGuage';
-// import WorldMap from './WorldMap';
-// import WorldMapSource from '!raw-loader!./WorldMap';
-// import StackedColumns from './StackedColumns';
-// import StackedColumnsSource from '!raw-loader!./StackedColumns';
-// import StackedNegative from './StackedNegative';
-// import StackedNegativeSource from '!raw-loader!./StackedNegative';
-// import StackedArea from './StackedArea';
-// import StackedAreaSource from '!raw-loader!./StackedArea';
+import AppComponentCard from '@crema/components/AppComponentCard';
+import SimpleChart from './SimpleChart';
+import SimpleChartSource from '!raw-loader!./SimpleChart';
+import SimpleGuage from './SimpleGuage';
+import SimpleGuageSource from '!raw-loader!./SimpleGuage';
+import WorldMap from './WorldMap';
+import WorldMapSource from '!raw-loader!./WorldMap';
+import StackedColumns from './StackedColumns';
+import StackedColumnsSource from '!raw-loader!./StackedColumns';
+import StackedNegative from './StackedNegative';
+import StackedNegativeSource from '!raw-loader!./StackedNegative';
+import StackedArea from './StackedArea';
+import StackedAreaSource from '!raw-loader!./StackedArea';
 
 const FusionCharts = () => {
   return (
@@ -26,7 +26,7 @@ const FusionCharts = () => {
       />
 
       <AppGridContainer>
-        {/*
+
         <Grid item xs={12} lg={6}>
           <AppComponentCard
             title='Stacked Columns'
@@ -68,21 +68,6 @@ const FusionCharts = () => {
             component={WorldMap}
             source={WorldMapSource}
           />
-        </Grid>*/}
-        <Grid item xs={12} lg={6}>
-          <strong>
-            Code Commented due to some issue with Fusion Charts at compile time.
-          </strong>
-          <pre>
-            {/* eslint-disable-next-line react/no-unescaped-entities */}
-            Failed to parse source map:
-            {/* eslint-disable-next-line react/no-unescaped-entities */}
-            'http://localhost:3052/3.19.0/map/eval/fusioncharts.maps.js.map' URL
-            is not supported
-          </pre>
-          <strong>
-            If you want to use this just uncomment the code and go ahead.
-          </strong>
         </Grid>
       </AppGridContainer>
     </>

@@ -11,43 +11,43 @@ import {useRoutes} from "react-router-dom";
 import routesConfig from "../AppRoutes/routeConfig";
 
 const AppLayout = () => {
-    const {navStyle} = useLayoutContext();
+  const {navStyle} = useLayoutContext();
 
-    const {user, isAuthenticated} = useAuthUser();
-    const {updateNavStyle} = useLayoutActionsContext();
-    const {updateMenuStyle, setSidebarBgImage} = useSidebarActionsContext();
-    const AppLayout = Layouts[navStyle];
-    const [params] = useUrlSearchParams();
-    const generatedRoutes=generateRoutes({
-        isAuthenticated: isAuthenticated,
-        userRole: user?.role,
-        unAuthorizedStructure,
-        authorizedStructure,
-        anonymousStructure,
-    })
-    const routes = useRoutes(generatedRoutes)
-    useEffect(() => {
-        if (params.layout) updateNavStyle(params.layout);
-        if (params.menuStyle) updateMenuStyle(params.menuStyle);
-        if (params.sidebarImage) setSidebarBgImage(true);
-    }, [
-        params.layout,
-        params.menuStyle,
-        params.sidebarImage,
-        updateNavStyle,
-        updateMenuStyle,
-        setSidebarBgImage,
-    ]);
+  const {user, isAuthenticated} = useAuthUser();
+  const {updateNavStyle} = useLayoutActionsContext();
+  const {updateMenuStyle, setSidebarBgImage} = useSidebarActionsContext();
+  const AppLayout = Layouts[navStyle];
+  const [params] = useUrlSearchParams();
+  const generatedRoutes=generateRoutes({
+    isAuthenticated: isAuthenticated,
+    userRole: user?.role,
+    unAuthorizedStructure,
+    authorizedStructure,
+    anonymousStructure,
+  })
+  const routes = useRoutes(generatedRoutes)
+  useEffect(() => {
+    if (params.layout) updateNavStyle(params.layout);
+    if (params.menuStyle) updateMenuStyle(params.menuStyle);
+    if (params.sidebarImage) setSidebarBgImage(true);
+  }, [
+    params.layout,
+    params.menuStyle,
+    params.sidebarImage,
+    updateNavStyle,
+    updateMenuStyle,
+    setSidebarBgImage,
+  ]);
 
-    return (
-        <>
-            {isAuthenticated ? (
-                <AppLayout routes={routes} routesConfig={routesConfig}/>
-            ) : (
-                <AppContentView routes={routes} />
-            )}
-        </>
-    );
+  return (
+    <>
+      {isAuthenticated ? (
+        <AppLayout routes={routes} routesConfig={routesConfig}/>
+      ) : (
+        <AppContentView routes={routes} />
+      )}
+    </>
+  );
 };
 
 export default AppLayout;

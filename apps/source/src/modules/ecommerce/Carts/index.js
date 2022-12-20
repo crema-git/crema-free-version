@@ -12,8 +12,13 @@ import {CartTable, OrderSummary} from '@crema/modules/ecommerce/Carts';
 import AppLoader from "@crema/components/AppLoader";
 
 const Carts = () => {
+  const dispatch = useDispatch();
   const navigate = useNavigate();
-  const [{apiData,loading}, {setData}] = useGetDataApi('/api/cart/get', [], {});
+  const cartItems = useSelector(({ecommerce}) => ecommerce.cartItems);
+
+  useEffect(() => {
+    dispatch(getCartItems());
+  }, [dispatch]);
 
   return (<>
     {loading ? (
