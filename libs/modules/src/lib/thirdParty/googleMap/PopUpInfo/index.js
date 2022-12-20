@@ -7,7 +7,7 @@ import {
 } from 'react-google-maps';
 import Box from '@mui/material/Box';
 
-// const google = window.google;
+const google = window.google;
 
 const PopUpInfoWindowExampleGoogleMap = withGoogleMap((props) => (
   <GoogleMap defaultZoom={15} center={props.center}>

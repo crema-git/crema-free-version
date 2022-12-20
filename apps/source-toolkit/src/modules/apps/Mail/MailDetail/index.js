@@ -1,32 +1,38 @@
-import React, {createRef, useEffect} from 'react';
+import React, { createRef, useEffect } from 'react';
 import MailDetailHeader from './MailDetailHeader';
 import MailDetailBody from './MailDetailBody';
-import {useParams} from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import AppsContent from '@crema/components/AppsContent';
 import AppsHeader from '@crema/components/AppsHeader';
 import AppAnimate from '@crema/components/AppAnimate';
-import {MailDetailSkeleton} from '@crema/components/MailDetailSkeleton';
+import { MailDetailSkeleton } from '@crema/components/MailDetailSkeleton';
 import Box from '@mui/material/Box';
-import {useGetDataApi} from '@crema/utility/APIHooks';
+import { useDispatch, useSelector } from 'react-redux';
+import {
+  onGetSelectedMail,
+  onNullifyMail,
+  onUpdateMailReadStatus,
+} from '@crema/redux-toolkit/actions';
 
 const MailDetail = () => {
+  const dispatch = useDispatch();
   const contentRef = createRef();
 
-  const {id} = useParams();
-  const [{apiData: selectedMail}, {setQueryParams, setData}] = useGetDataApi(
-    '/api/mailApp/mail/',
-    undefined,
-    {id: id},
-    false,
-  );
+  const { id } = useParams();
+  const selectedMail = useSelector(({ mailApp }) => mailApp.selectedMail);
 
   useEffect(() => {
-    setQueryParams({id});
-  }, [id]);
+    dispatch(onGetSelectedMail(id));
+    return () => {
+      onNullifyMail();
+    };
+  }, [dispatch, id]);
 
-  const onUpdateSelectedMail = (data) => {
-    setData(data);
-  };
+  useEffect(() => {
+    if (selectedMail && !selectedMail.isRead) {
+      dispatch(onUpdateMailReadStatus([selectedMail.id], true));
+    }
+  }, [dispatch, selectedMail]);
 
   if (!selectedMail) {
     return <MailDetailSkeleton />;
@@ -42,18 +48,11 @@ const MailDetail = () => {
       ref={contentRef}
     >
       <AppsHeader>
-        <MailDetailHeader
-          selectedMail={selectedMail}
-          onUpdateSelectedMail={onUpdateSelectedMail}
-        />
+        <MailDetailHeader selectedMail={selectedMail} />
       </AppsHeader>
       <AppsContent isDetailView>
-        <AppAnimate animatoin='transition.slideUpIn'>
-          <MailDetailBody
-            selectedMail={selectedMail}
-            key={'mail_detail'}
-            onUpdateSelectedMail={onUpdateSelectedMail}
-          />
+        <AppAnimate animatoin="transition.slideUpIn">
+          <MailDetailBody selectedMail={selectedMail} />
         </AppAnimate>
       </AppsContent>
     </Box>

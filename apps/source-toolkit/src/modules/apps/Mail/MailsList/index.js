@@ -1,6 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { useLocation, useNavigate, useParams } from 'react-router-dom';
+import { useNavigate, useLocation, useParams } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
 import MailContentHeader from './MailContentHeader';
+import {
+  onGetMailList,
+  onUpdateMailStarredStatus,
+} from '@crema/redux-toolkit/actions';
 import { Hidden } from '@mui/material';
 import AppsPagination from '@crema/components/AppsPagination';
 import AppsContent from '@crema/components/AppsContent';
@@ -10,46 +15,42 @@ import AppList from '@crema/components/AppList';
 import ListEmptyResult from '@crema/components/AppList/ListEmptyResult';
 import EmailListSkeleton from '@crema/components/EmailListSkeleton';
 import MailListItem from './MailListItem';
-import { useInfoViewActionsContext } from '@crema/context/InfoViewContextProvider';
-import { putDataApi, useGetDataApi } from '@crema/utility/APIHooks';
 import { MailListItemMobile } from '@crema/modules/apps/Mail';
 
 const MailsList = () => {
+  const dispatch = useDispatch();
   const navigate = useNavigate();
-  const params = useParams();
-  const infoViewActionsContext = useInfoViewActionsContext();
-  const { pathname } = useLocation();
-  const path = pathname.split('/');
-  const [page, setPage] = useState(0);
-
-  const [{ apiData, loading }, { setQueryParams, setData }] = useGetDataApi(
-    '/api/mailApp/folder/mail/List',
-    undefined,
-    {
-      type: params?.folder ? 'folder' : 'label',
-      name: params?.folder || params?.label,
-      page: page,
-    },
-    false
-  );
-
-  const [{ apiData: labelList }] = useGetDataApi('/api/mailApp/labels/list');
-  const [checkedMails, setCheckedMails] = useState([]);
+  const { folder, label } = useParams();
 
   const [filterText, onSetFilterText] = useState('');
+
+  const mailList = useSelector(({ mailApp }) => mailApp.mailList);
+
+  const labelList = useSelector(({ mailApp }) => mailApp.labelList);
+
+  const [page, setPage] = useState(0);
+
+  const { pathname } = useLocation();
+
+  const path = pathname.split('/');
+
+  const loading = useSelector(({ common }) => common.loading);
 
   useEffect(() => {
     setPage(0);
   }, [pathname]);
 
   useEffect(() => {
-    setQueryParams({
-      type: params?.folder ? 'folder' : 'label',
-      name: params?.folder || params?.label,
-      page: page,
-      checkedMails: checkedMails,
-    });
-  }, [page, pathname, checkedMails]);
+    setPage(0);
+    if (folder) {
+      dispatch(onGetMailList('folder', folder, page));
+    }
+    if (label) {
+      dispatch(onGetMailList('label', label, page));
+    }
+  }, [dispatch, folder, label, page]);
+
+  const [checkedMails, setCheckedMails] = useState([]);
 
   const onPageChange = (event, value) => {
     setPage(value);
@@ -63,82 +64,32 @@ const MailsList = () => {
     }
   };
 
-  const onNavigatePage = (mail) => {
-    if (params?.folder) navigate(`/apps/mail/${params?.folder}/${mail.id}`);
-    if (params?.label) navigate(`/apps/mail/label/${params?.label}/${mail.id}`);
-  };
-
   const onViewMailDetail = (mail) => {
-    if (mail.isRead) {
-      onNavigatePage(mail);
-    } else {
-      mail.isRead = true;
-      putDataApi('/api/mailApp/mail/', infoViewActionsContext, { mail })
-        .then((data) => {
-          onNavigatePage(mail);
-          onUpdateItem(data);
-          infoViewActionsContext.showMessage(
-            mail.isRead
-              ? 'Mail Marked as Read Successfully'
-              : 'Mail Marked as Unread Successfully'
-          );
-        })
-        .catch((error) => {
-          infoViewActionsContext.fetchError(error.message);
-        });
-    }
+    if (label) navigate(`/apps/mail/label/${label}/${mail.id}`);
+    if (folder) navigate(`/apps/mail/${folder}/${mail.id}`);
   };
 
   const onChangeStarred = (checked, mail) => {
-    putDataApi('/api/mailApp/update/starred', infoViewActionsContext, {
-      mailIds: [mail.id],
-      status: checked,
-    })
-      .then((data) => {
-        onUpdateItem(data[0]);
-        infoViewActionsContext.showMessage(
-          checked
-            ? 'Mail Marked as Starred Successfully'
-            : 'Mail Marked as Unstarred Successfully'
-        );
-      })
-      .catch((error) => {
-        infoViewActionsContext.fetchError(error.message);
-      });
+    dispatch(
+      onUpdateMailStarredStatus([mail.id], checked, path[path.length - 1])
+    );
   };
-
-  const onUpdateItem = (data) => {
-    setData({
-      data: apiData.data.map((item) => {
-        if (item.id === data.id) {
-          return data;
-        }
-        return item;
-      }),
-      count: apiData.count,
-    });
-  };
-
   const onGetFilteredMails = () => {
     if (filterText === '') {
-      return apiData?.data;
+      return mailList;
     } else {
-      return apiData?.data.filter(
+      return mailList.filter(
         (mail) =>
-          mail?.subject?.toLowerCase()?.includes(filterText.toLowerCase()) ||
-          mail?.detail?.toLowerCase()?.includes(filterText.toLowerCase())
+          mail.subject.toLowerCase().includes(filterText.toLowerCase()) ||
+          mail.detail.toLowerCase().includes(filterText.toLowerCase())
       );
     }
   };
 
-  const onRemoveItem = (data) => {
-    setData({
-      data: apiData?.data.filter((item) => item.id !== data.id),
-      count: apiData?.count - 1,
-    });
-  };
+  const totalMails = useSelector(({ mailApp }) => mailApp.totalMails);
 
   const list = onGetFilteredMails();
+  console.log('list', list, mailList, labelList);
   return (
     <>
       <AppsHeader>
@@ -150,9 +101,6 @@ const MailsList = () => {
           onSetFilterText={onSetFilterText}
           page={page}
           path={path}
-          setData={setData}
-          mailList={list}
-          totalMails={apiData?.count}
         />
       </AppsHeader>
       <AppsContent>
@@ -178,8 +126,6 @@ const MailsList = () => {
                 checkedMails={checkedMails}
                 onViewMailDetail={onViewMailDetail}
                 onChangeStarred={onChangeStarred}
-                onRemoveItem={onRemoveItem}
-                onUpdateItem={onUpdateItem}
               />
             )}
           />
@@ -215,7 +161,7 @@ const MailsList = () => {
         {list?.length > 0 ? (
           <AppsFooter>
             <AppsPagination
-              count={apiData?.count}
+              count={totalMails}
               page={page}
               onPageChange={onPageChange}
             />

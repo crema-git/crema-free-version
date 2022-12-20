@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import MailsList from './MailsList';
 import MailDetail from './MailDetail';
+import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
 import AppsContainer from '@crema/components/AppsContainer';
 import MailSidebar from './MailSideBar';
@@ -10,6 +11,11 @@ import clsx from 'clsx';
 import Box from '@mui/material/Box';
 
 import { styled } from '@mui/material/styles';
+import {
+  onGetConnectionList,
+  onGetMailFolderList,
+  onGetMailLabelList,
+} from '@crema/redux-toolkit/actions';
 
 const MailDetailViewWrapper = styled(Box)(({ theme }) => {
   return {
@@ -33,7 +39,21 @@ const MailDetailViewWrapper = styled(Box)(({ theme }) => {
 });
 
 const Mail = () => {
+  const dispatch = useDispatch();
   const { id } = useParams();
+
+  useEffect(() => {
+    dispatch(onGetMailLabelList());
+  }, [dispatch]);
+
+  useEffect(() => {
+    dispatch(onGetMailFolderList());
+  }, [dispatch]);
+
+  useEffect(() => {
+    dispatch(onGetConnectionList());
+  }, [dispatch]);
+
   const { messages } = useIntl();
 
   return (

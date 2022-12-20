@@ -3,7 +3,7 @@ import { useIntl } from 'react-intl';
 import AppsContainer from '@crema/components/AppsContainer';
 
 import {
-  ProductListing,
+  ProductList,
   ProductsSidebar,
   VIEW_TYPE,
 } from '@crema/modules/ecommerce/Products';
@@ -30,7 +30,7 @@ const Products = () => {
         />
       }
     >
-      <ProductListing
+      <ProductList
         filterData={filterData}
         viewType={viewType}
         setViewType={setViewType}

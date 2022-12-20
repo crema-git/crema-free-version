@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import AppGridContainer from '@crema/components/AppGridContainer';
 import Grid from '@mui/material/Grid';
 import { FiFacebook, FiTwitter } from 'react-icons/fi';
-import AppInfoView from '@crema/components/AppInfoView';
 import IntlMessages from '@crema/utility/IntlMessages';
 import Box from '@mui/material/Box';
 import { blue, indigo } from '@mui/material/colors';
@@ -189,8 +188,6 @@ const Widgets = () => {
             <Formats data={widgetsData.formatList} />
           </Grid>
         </AppGridContainer>
-
-        <AppInfoView />
       </>
     </AppAnimate>
   ) : (

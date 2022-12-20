@@ -3,45 +3,26 @@ import Box from '@mui/material/Box';
 import PropTypes from 'prop-types';
 import LabelOutlinedIcon from '@mui/icons-material/LabelOutlined';
 import AppTooltip from '@crema/components/AppTooltip';
-import { putDataApi } from '@crema/utility/APIHooks';
-import { useInfoViewActionsContext } from '@crema/context/InfoViewContextProvider';
 import { MessageItem } from '@crema/modules/apps/Mail';
+import { useDispatch } from 'react-redux';
+import { onUpdateSelectedMail } from '@crema/redux-toolkit/actions';
 
 const MailDetailBody = (props) => {
-  const infoViewActionsContext = useInfoViewActionsContext();
-  const { selectedMail, onUpdateSelectedMail } = props;
+  const dispatch = useDispatch();
+  const { selectedMail } = props;
 
   const onSubmitMail = (message, index) => {
     let messages = selectedMail.messages;
     messages.splice(index + 1, 0, message);
     selectedMail.messages = messages;
-    putDataApi('/api/mailApp/mail/', infoViewActionsContext, {
-      mail: selectedMail,
-    })
-      .then((data) => {
-        onUpdateSelectedMail(data);
-        infoViewActionsContext.showMessage('Mail Sent Successfully');
-      })
-      .catch((error) => {
-        infoViewActionsContext.fetchError(error.message);
-      });
+    dispatch(onUpdateSelectedMail(selectedMail));
   };
 
   const onChangeStarred = (message, isStarred) => {
-    message.isStarred = isStarred;
     selectedMail.messages = selectedMail.messages.map((data) =>
-      data.messageId === message.messageId ? message : data
+      data.messageId === message.messageId ? { ...message, isStarred } : data
     );
-    putDataApi('/api/mailApp/mail/', infoViewActionsContext, {
-      mail: selectedMail,
-    })
-      .then((data) => {
-        onUpdateSelectedMail(data);
-        infoViewActionsContext.showMessage('Mail Updated Successfully');
-      })
-      .catch((error) => {
-        infoViewActionsContext.fetchError(error.message);
-      });
+    dispatch(onUpdateSelectedMail(selectedMail));
   };
   return (
     <Box sx={{ px: 5, py: 1 }}>

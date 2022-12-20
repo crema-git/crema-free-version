@@ -1,7 +1,7 @@
 import PersonIcon from '@mui/icons-material/Person';
 import WorkIcon from '@mui/icons-material/Work';
 import React from 'react';
-import { blue, green, red } from '@mui/material/colors';
+import { blue, green, grey, red } from '@mui/material/colors';
 
 const labelList = [
   {
@@ -29,7 +29,7 @@ const labelList = [
     id: 214,
     name: 'Paypal',
     alias: 'paypal',
-    color: 'grey.500',
+    color: grey[500],
     icon: <WorkIcon />,
   },
 ];

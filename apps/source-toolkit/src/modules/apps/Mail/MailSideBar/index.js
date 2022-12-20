@@ -4,6 +4,7 @@ import Button from '@mui/material/Button';
 import List from '@mui/material/List';
 import IntlMessages from '@crema/utility/IntlMessages';
 import AppScrollbar from '@crema/components/AppScrollbar';
+import { useSelector } from 'react-redux';
 import ComposeMail from '../ComposeMail';
 import AppsSideBarFolderItem from '@crema/components/AppsSideBarFolderItem';
 import { Fonts } from '@crema/constants/AppEnums';
@@ -12,15 +13,14 @@ import ListEmptyResult from '@crema/components/AppList/ListEmptyResult';
 import SidebarPlaceholder from '@crema/components/SidebarListSkeleton';
 import AddIcon from '@mui/icons-material/Add';
 import { Zoom } from '@mui/material';
-import { useGetDataApi } from '@crema/utility/APIHooks';
 import { ConnectionListItem, LabelItem } from '@crema/modules/apps/Mail';
 
 const MailSidebar = () => {
-  const [{ apiData: labelList }] = useGetDataApi('/api/mailApp/labels/list');
-  const [{ apiData: connectionList }] = useGetDataApi(
-    '/api/mailApp/connection/list'
-  );
-  const [{ apiData: folderList }] = useGetDataApi('/api/mailApp/folders/list');
+  const labelList = useSelector(({ mailApp }) => mailApp.labelList);
+
+  const connectionList = useSelector(({ mailApp }) => mailApp.connectionList);
+
+  const folderList = useSelector(({ mailApp }) => mailApp.folderList);
 
   const [isComposeMail, setComposeMail] = useState(false);
 
