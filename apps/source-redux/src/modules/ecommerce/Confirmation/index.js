@@ -1,10 +1,14 @@
 import React from 'react';
-import {Box} from '@mui/material';
+import { Box } from '@mui/material';
 import AppAnimate from '@crema/components/AppAnimate';
-import {AddressInfo, ItemsList, OrderPlaced,} from '@crema/modules/ecommerce/Confirmation';
-import {addresses} from '@crema/fakedb/ecommerceData';
+import {
+  AddressInfo,
+  ItemsList,
+  OrderPlaced,
+} from '@crema/modules/ecommerce/Confirmation';
+import { addresses } from '@crema/fakedb/ecommerceData';
 import AppLoader from '@crema/components/AppLoader';
-import {useSelector} from 'react-redux';
+import { useSelector } from 'react-redux';
 
 const Confirmation = () => {
   const cartItems = useSelector(({ ecommerce }) => ecommerce.cartItems);

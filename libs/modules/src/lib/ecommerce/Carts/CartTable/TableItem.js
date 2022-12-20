@@ -7,8 +7,8 @@ import Avatar from '@mui/material/Avatar';
 import CancelIcon from '@mui/icons-material/Cancel';
 import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
-import {Fonts} from '@crema/constants/AppEnums';
-import {styled} from '@mui/material/styles';
+import { Fonts } from '@crema/constants/AppEnums';
+import { styled } from '@mui/material/styles';
 
 const StyledTableCell = styled(TableCell)(() => ({
   fontSize: 14,

@@ -14,7 +14,7 @@ import {
 } from '@crema/constants/ActionTypes';
 import jwtAxios from '@crema/services/auth/JWT';
 
-export const onGetEcommerceData = ({filterData, page}) => {
+export const onGetEcommerceData = ({ filterData, page }) => {
   return (dispatch) => {
     dispatch({ type: FETCH_START });
     jwtAxios

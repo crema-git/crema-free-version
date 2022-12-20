@@ -1,16 +1,20 @@
-import React, {useEffect} from 'react';
-import {Box, Grid} from '@mui/material';
+import React, { useEffect } from 'react';
+import { Box, Grid } from '@mui/material';
 import Button from '@mui/material/Button';
-import {useNavigate} from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import AppCard from '@crema/components/AppCard';
 import IntlMessages from '@crema/utility/IntlMessages';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Fonts } from '@crema/constants/AppEnums';
 import AppAnimate from '@crema/components/AppAnimate';
 import AppGridContainer from '@crema/components/AppGridContainer';
-import {CartTable, OrderSummary} from '@crema/modules/ecommerce/Carts';
+import { CartTable, OrderSummary } from '@crema/modules/ecommerce/Carts';
 import AppLoader from '@crema/components/AppLoader';
-import {useDispatch, useSelector} from 'react-redux';
-import {getCartItems, removeCartItem, updateCartItem,} from '@crema/redux/actions';
+import { useDispatch, useSelector } from 'react-redux';
+import {
+  getCartItems,
+  removeCartItem,
+  updateCartItem,
+} from '@crema/redux/actions';
 
 const Carts = () => {
   const dispatch = useDispatch();

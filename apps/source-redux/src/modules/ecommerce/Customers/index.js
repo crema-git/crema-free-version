@@ -1,16 +1,16 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import AppsContainer from '@crema/components/AppsContainer';
-import {useIntl} from 'react-intl';
-import {Button, Hidden} from '@mui/material';
+import { useIntl } from 'react-intl';
+import { Button, Hidden } from '@mui/material';
 import AppsHeader from '@crema/components/AppsHeader';
 import AppsContent from '@crema/components/AppsContent';
 import AppsPagination from '@crema/components/AppsPagination';
 import Box from '@mui/material/Box';
 import AppSearchBar from '@crema/components/AppSearchBar';
-import {CustomerTable} from '@crema/modules/ecommerce/Customers';
+import { CustomerTable } from '@crema/modules/ecommerce/Customers';
 import AppLoader from '@crema/components/AppLoader';
-import {useDispatch, useSelector} from 'react-redux';
-import {getCustomers} from '@crema/redux/actions';
+import { useDispatch, useSelector } from 'react-redux';
+import { getCustomers } from '@crema/redux/actions';
 
 const Customers = () => {
   const { messages } = useIntl();

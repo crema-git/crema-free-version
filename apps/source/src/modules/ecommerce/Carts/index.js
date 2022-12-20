@@ -1,16 +1,20 @@
 import React from 'react';
-import {Box, Grid} from '@mui/material';
+import { Box, Grid } from '@mui/material';
 import Button from '@mui/material/Button';
-import {useNavigate} from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import AppCard from '@crema/components/AppCard';
 import IntlMessages from '@crema/utility/IntlMessages';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Fonts } from '@crema/constants/AppEnums';
 import AppAnimate from '@crema/components/AppAnimate';
 import AppGridContainer from '@crema/components/AppGridContainer';
-import {postDataApi, putDataApi, useGetDataApi,} from '@crema/utility/APIHooks';
-import {CartTable, OrderSummary} from '@crema/modules/ecommerce/Carts';
+import {
+  postDataApi,
+  putDataApi,
+  useGetDataApi,
+} from '@crema/utility/APIHooks';
+import { CartTable, OrderSummary } from '@crema/modules/ecommerce/Carts';
 import AppLoader from '@crema/components/AppLoader';
-import {useInfoViewActionsContext} from '@crema/context/InfoViewContextProvider';
+import { useInfoViewActionsContext } from '@crema/context/InfoViewContextProvider';
 
 const Carts = () => {
   const infoViewActionsContext = useInfoViewActionsContext();

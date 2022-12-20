@@ -1,15 +1,20 @@
-import React, {useEffect} from 'react';
+import React, { useEffect } from 'react';
 import AppCard from '@crema/components/AppCard';
 import AppGridContainer from '@crema/components/AppGridContainer';
 
 import AppAnimate from '@crema/components/AppAnimate';
 import PropTypes from 'prop-types';
-import {useParams} from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import AppInfoView from '@crema/components/AppInfoView';
-import {Header, ProductImageSlide, ProductView, SimilarProduct,} from '@crema/modules/ecommerce/ProductDetail';
+import {
+  Header,
+  ProductImageSlide,
+  ProductView,
+  SimilarProduct,
+} from '@crema/modules/ecommerce/ProductDetail';
 import AppLoader from '@crema/components/AppLoader';
-import {useDispatch, useSelector} from 'react-redux';
-import {getProductDetail} from "@crema/redux/actions";
+import { useDispatch, useSelector } from 'react-redux';
+import { getProductDetail } from '@crema/redux/actions';
 
 const ProductDetail = () => {
   const dispatch = useDispatch();

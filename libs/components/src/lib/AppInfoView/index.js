@@ -2,8 +2,8 @@ import React from 'react';
 import AppMessageView from '../AppMessageView';
 import AppLoader from '../AppLoader';
 // import { useInfoViewContext,useInfoViewActionsContext } from '@crema/context/InfoViewContextProvider';
-import {useDispatch, useSelector} from 'react-redux';
-import {hideMessage} from '@crema/redux/actions';
+import { useDispatch, useSelector } from 'react-redux';
+import { hideMessage } from '@crema/redux/actions';
 
 const AppInfoView = () => {
   // const { error, loading, message } = useInfoViewContext();

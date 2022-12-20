@@ -7,12 +7,7 @@ import TableItem from './TableItem';
 import AppTableContainer from '@crema/components/AppTableContainer';
 import PropTypes from 'prop-types';
 
-const CartTable = ({
-  cartItems,
-  onRemoveItem,
-  onIncrement,
-  onDecrement,
-}) => {
+const CartTable = ({ cartItems, onRemoveItem, onIncrement, onDecrement }) => {
   return (
     <AppTableContainer>
       <Table stickyHeader className="table">

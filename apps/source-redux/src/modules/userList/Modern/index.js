@@ -1,10 +1,10 @@
-import React, {useEffect} from 'react';
+import React, { useEffect } from 'react';
 import AppInfoView from '@crema/components/AppInfoView';
 import AppList from '@crema/components/AppList';
-import {ListItem} from '@crema/modules/userList/Modern';
+import { ListItem } from '@crema/modules/userList/Modern';
 import AppLoader from '@crema/components/AppLoader';
-import {useDispatch, useSelector} from 'react-redux';
-import {onGetUserList} from '@crema/redux/actions';
+import { useDispatch, useSelector } from 'react-redux';
+import { onGetUserList } from '@crema/redux/actions';
 
 const Modern = () => {
   const dispatch = useDispatch();

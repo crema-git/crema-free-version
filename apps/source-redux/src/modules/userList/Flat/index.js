@@ -1,10 +1,10 @@
-import React, {useEffect} from 'react';
+import React, { useEffect } from 'react';
 import AppInfoView from '@crema/components/AppInfoView';
 import AppList from '@crema/components/AppList';
-import {ListItem} from '@crema/modules/userList/Flat';
+import { ListItem } from '@crema/modules/userList/Flat';
 import AppLoader from '@crema/components/AppLoader';
-import {useDispatch, useSelector} from 'react-redux';
-import {onGetUserList} from '@crema/redux/actions';
+import { useDispatch, useSelector } from 'react-redux';
+import { onGetUserList } from '@crema/redux/actions';
 
 const Flat = () => {
   const dispatch = useDispatch();
