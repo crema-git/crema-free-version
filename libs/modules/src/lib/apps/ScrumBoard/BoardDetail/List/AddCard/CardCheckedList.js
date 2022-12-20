@@ -7,9 +7,9 @@ import TextField from '@mui/material/TextField';
 import DeleteOutlinedIcon from '@mui/icons-material/DeleteOutlined';
 import PropTypes from 'prop-types';
 import Hidden from '@mui/material/Hidden';
-import {IconButton} from '@mui/material';
+import { IconButton } from '@mui/material';
 
-import {styled} from '@mui/material/styles';
+import { styled } from '@mui/material/styles';
 
 const CheckedItemWrapper = styled('div')(() => {
   return {
@@ -51,8 +51,8 @@ const CardCheckedList = (props) => {
           alignItems: 'center',
         }}
       >
-        <Box component='h4'>
-          <IntlMessages id='scrumboard.checkedLists' />
+        <Box component="h4">
+          <IntlMessages id="scrumboard.checkedLists" />
         </Box>
         <Box
           sx={{
@@ -61,14 +61,14 @@ const CardCheckedList = (props) => {
           }}
         >
           <Button
-            variant='outlined'
+            variant="outlined"
             sx={{
               textTransform: 'capitalize',
               px: 4,
             }}
             onClick={() => onAddNewCheckedItem()}
           >
-            <IntlMessages id='scrumboard.addNew' />
+            <IntlMessages id="scrumboard.addNew" />
           </Button>
         </Box>
       </Box>
@@ -99,7 +99,7 @@ const CardCheckedList = (props) => {
                     margin: 'auto',
                   },
                 }}
-                variant='outlined'
+                variant="outlined"
                 InputProps={{
                   className: 'inputprops-root',
                 }}
@@ -110,14 +110,14 @@ const CardCheckedList = (props) => {
               />
             </Box>
             <Box
-              component='span'
+              component="span"
               sx={{
                 mb: 4,
                 ml: 3,
               }}
             >
               <IconButton
-                className='icon-btn'
+                className="icon-btn"
                 onClick={() => onDeleteCheckedItem(checkedItem.id)}
               >
                 <DeleteOutlinedIcon />

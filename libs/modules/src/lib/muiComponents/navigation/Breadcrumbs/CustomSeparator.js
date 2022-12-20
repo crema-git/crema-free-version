@@ -13,39 +13,39 @@ function handleClick(event) {
 export default function CustomSeparator() {
   const breadcrumbs = [
     <Link
-      underline='hover'
-      key='1'
-      color='inherit'
-      href='/'
+      underline="hover"
+      key="1"
+      color="inherit"
+      href="/"
       onClick={handleClick}
     >
       MUI
     </Link>,
     <Link
-      underline='hover'
-      key='2'
-      color='inherit'
-      href='/material-ui/getting-started/installation/'
+      underline="hover"
+      key="2"
+      color="inherit"
+      href="/material-ui/getting-started/installation/"
       onClick={handleClick}
     >
       Core
     </Link>,
-    <Typography key='3' color='text.primary'>
+    <Typography key="3" color="text.primary">
       Breadcrumb
     </Typography>,
   ];
 
   return (
     <Stack spacing={2}>
-      <Breadcrumbs separator='›' aria-label='breadcrumb'>
+      <Breadcrumbs separator="›" aria-label="breadcrumb">
         {breadcrumbs}
       </Breadcrumbs>
-      <Breadcrumbs separator='-' aria-label='breadcrumb'>
+      <Breadcrumbs separator="-" aria-label="breadcrumb">
         {breadcrumbs}
       </Breadcrumbs>
       <Breadcrumbs
-        separator={<NavigateNextIcon fontSize='small' />}
-        aria-label='breadcrumb'
+        separator={<NavigateNextIcon fontSize="small" />}
+        aria-label="breadcrumb"
       >
         {breadcrumbs}
       </Breadcrumbs>

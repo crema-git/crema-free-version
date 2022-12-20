@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {createTheme, ThemeProvider, useTheme} from '@mui/material/styles';
+import { createTheme, ThemeProvider, useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 
 function MyComponent() {

@@ -1,20 +1,20 @@
-import React, {useMemo} from 'react';
+import React, { useMemo } from 'react';
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
 import VerticalCollapse from '../VerticalCollapse';
 import VerticalItem from '../VerticalItem';
-import IntlMessages from "@crema/utility/IntlMessages";
-import {useSidebarContext} from "@crema/context/SidebarContextProvider";
+import IntlMessages from '@crema/utility/IntlMessages';
+import { useSidebarContext } from '@crema/context/SidebarContextProvider';
 import VerticalNavGroupItem from './VerticalNavGroupItem';
-import {useAuthUser} from "@crema/utility/AuthHooks";
-import {checkPermission} from "@crema/helpers";
+import { useAuthUser } from '@crema/utility/AuthHooks';
+import { checkPermission } from '@crema/helpers';
 
-const VerticalNavGroup = ({item, level}) => {
-  const {sidebarTextColor} = useSidebarContext();
-  const {user} = useAuthUser();
+const VerticalNavGroup = ({ item, level }) => {
+  const { sidebarTextColor } = useSidebarContext();
+  const { user } = useAuthUser();
   const hasPermission = useMemo(
     () => checkPermission(item.permittedRole, user.role),
-    [item.permittedRole, user.role],
+    [item.permittedRole, user.role]
   );
 
   if (!hasPermission) {
@@ -25,7 +25,7 @@ const VerticalNavGroup = ({item, level}) => {
       <VerticalNavGroupItem
         level={level}
         sidebarTextColor={sidebarTextColor}
-        component='div'
+        component="div"
         className={clsx('nav-item nav-item-header')}
       >
         {<IntlMessages id={item.messageId} />}

@@ -3,7 +3,7 @@ import ListView from './ListView';
 import PropTypes from 'prop-types';
 import ListFooter from './ListFooter';
 
-const AppList = ({footerProps, ...props}) => {
+const AppList = ({ footerProps, ...props }) => {
   return (
     <ListView
       {...props}

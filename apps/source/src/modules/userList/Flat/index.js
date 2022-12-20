@@ -1,18 +1,16 @@
-import React from 'react';
-import AppInfoView from '@crema/components/AppInfoView';
-import AppList from '@crema/components/AppList';
-import {useGetDataApi} from '@crema/utility/APIHooks';
-import {ListItem} from "@crema/modules/userList/Flat";
+import React from "react";
+import AppList from "@crema/components/AppList";
+import { ListItem } from "@crema/modules/userList/Flat";
 import AppLoader from "@crema/components/AppLoader";
+import { useGetDataApi } from "@crema/utility";
 
 const Flat = () => {
-  const [{apiData: usersList, loading}] = useGetDataApi('/api/user/list', []);
-
+  const [{ apiData: usersList, loading }] = useGetDataApi('/api/user/list', []);
   return (
     <>
-    {loading ? (
-      <AppLoader />
-    ): (
+      {loading ? (
+        <AppLoader />
+      ) : (
         <AppList
           onEndReached={() => console.log('onEndReached')}
           data={usersList}
@@ -21,7 +19,6 @@ const Flat = () => {
           }}
         />
       )}
-      <AppInfoView />
     </>
   );
 };

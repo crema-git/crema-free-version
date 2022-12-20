@@ -1,12 +1,12 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import SubscriptionGraph from './SubscriptionGraph';
-import {useIntl} from 'react-intl';
+import { useIntl } from 'react-intl';
 import Box from '@mui/material/Box';
 import PropTypes from 'prop-types';
 import AppSelect from '@crema/components/AppSelect';
 import AppCard from '@crema/components/AppCard';
 
-const Subscriptions = ({data}) => {
+const Subscriptions = ({ data }) => {
   const [graphData, setGraphData] = useState(data.dataOne);
 
   const handleYearChange = (value) => {
@@ -41,16 +41,16 @@ const Subscriptions = ({data}) => {
     }
   };
 
-  const {messages} = useIntl();
+  const { messages } = useIntl();
 
   return (
     <AppCard
-      sxStyle={{height: 1}}
+      sxStyle={{ height: 1 }}
       title={messages['dashboard.subscriptions']}
       action={
         <Box
           sx={{
-            textAlign: {sm: 'right'},
+            textAlign: { sm: 'right' },
           }}
         >
           <AppSelect

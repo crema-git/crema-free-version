@@ -20,7 +20,7 @@ export default function FormDialog() {
 
   return (
     <div>
-      <Button variant='outlined' onClick={handleClickOpen}>
+      <Button variant="outlined" onClick={handleClickOpen}>
         Open form dialog
       </Button>
       <Dialog open={open} onClose={handleClose}>
@@ -32,12 +32,12 @@ export default function FormDialog() {
           </DialogContentText>
           <TextField
             autoFocus
-            margin='dense'
-            id='name'
-            label='Email Address'
-            type='email'
+            margin="dense"
+            id="name"
+            label="Email Address"
+            type="email"
             fullWidth
-            variant='standard'
+            variant="standard"
           />
         </DialogContent>
         <DialogActions>

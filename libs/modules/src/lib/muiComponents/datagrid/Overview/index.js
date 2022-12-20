@@ -14,15 +14,15 @@ const Overview = () => {
   return (
     <>
       <AppComponentHeader
-        title='Overview'
-        description='Data tables display information in a grid-like format of rows and columns. They organize information in a way that’s easy to scan so that users can look for patterns and insights. The data grid comes in 2 versions, both in MUI X:'
-        refUrl='hhttps://mui.com/components/data-grid/'
+        title="Overview"
+        description="Data tables display information in a grid-like format of rows and columns. They organize information in a way that’s easy to scan so that users can look for patterns and insights. The data grid comes in 2 versions, both in MUI X:"
+        refUrl="hhttps://mui.com/components/data-grid/"
       />
 
       <AppGridContainer>
         <Grid item xs={12}>
           <AppComponentCard
-            title='DataGridDemo'
+            title="DataGridDemo"
             component={DataGridDemo}
             source={DataGridDemoSource}
             noScrollbar
@@ -30,7 +30,7 @@ const Overview = () => {
         </Grid>
         <Grid item xs={12}>
           <AppComponentCard
-            title='DataGridProDemo'
+            title="DataGridProDemo"
             component={DataGridProDemo}
             source={DataGridProDemoSource}
             noScrollbar

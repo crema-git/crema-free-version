@@ -3,9 +3,9 @@ import RadioGroup from '@mui/material/RadioGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Radio from '@mui/material/Radio';
 import PropTypes from 'prop-types';
-import {Fonts} from '@crema/constants/AppEnums'
+import { Fonts } from '@crema/constants/AppEnums';
 import AppCard from '@crema/components/AppCard';
-import {useIntl} from 'react-intl';
+import { useIntl } from 'react-intl';
 
 const getData = (data) => {
   return data;
@@ -13,10 +13,10 @@ const getData = (data) => {
 
 const Formats = (props) => {
   const data = getData(props.data);
-  const {messages} = useIntl();
+  const { messages } = useIntl();
 
   return (
-    <AppCard sxStyle={{height: 1}} title={messages['dashboard.formats']}>
+    <AppCard sxStyle={{ height: 1 }} title={messages['dashboard.formats']}>
       <RadioGroup
         sx={{
           display: 'flex',

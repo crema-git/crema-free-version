@@ -7,4 +7,4 @@ const Grid2 = React.lazy(() => import('./Grid2'));
 const Stack = React.lazy(() => import('./Stack'));
 const ImageList = React.lazy(() => import('./ImageList'));
 
-export {Box, Container, Grid, Grid2, Stack, ImageList};
+export { Box, Container, Grid, Grid2, Stack, ImageList };

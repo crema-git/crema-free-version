@@ -38,15 +38,15 @@ const Filtering = () => {
   return (
     <>
       <AppComponentHeader
-        title='Filtering'
-        description='Filtering helps to view a subset of the records based on a criteria.'
-        refUrl='https://mui.com/components/data-grid/filtering/'
+        title="Filtering"
+        description="Filtering helps to view a subset of the records based on a criteria."
+        refUrl="https://mui.com/components/data-grid/filtering/"
       />
 
       <AppGridContainer>
         <Grid item xs={12}>
           <AppComponentCard
-            title='BasicFilteringGrid'
+            title="BasicFilteringGrid"
             component={BasicFilteringGrid}
             source={BasicFilteringGridSource}
             noScrollbar
@@ -54,7 +54,7 @@ const Filtering = () => {
         </Grid>
         <Grid item xs={12}>
           <AppComponentCard
-            title='FilterOperators'
+            title="FilterOperators"
             component={FilterOperators}
             source={FilterOperatorsSource}
             noScrollbar
@@ -62,7 +62,7 @@ const Filtering = () => {
         </Grid>
         <Grid item xs={12}>
           <AppComponentCard
-            title='DisableFilteringGrid'
+            title="DisableFilteringGrid"
             component={DisableFilteringGrid}
             source={DisableFilteringGridSource}
             noScrollbar
@@ -70,7 +70,7 @@ const Filtering = () => {
         </Grid>
         <Grid item xs={12}>
           <AppComponentCard
-            title='ExtendNumericOperator'
+            title="ExtendNumericOperator"
             component={ExtendNumericOperator}
             source={ExtendNumericOperatorSource}
             noScrollbar
@@ -78,7 +78,7 @@ const Filtering = () => {
         </Grid>
         <Grid item xs={12}>
           <AppComponentCard
-            title='ColumnTypeFilteringGrid'
+            title="ColumnTypeFilteringGrid"
             component={ColumnTypeFilteringGrid}
             source={ColumnTypeFilteringGridSource}
             noScrollbar
@@ -86,7 +86,7 @@ const Filtering = () => {
         </Grid>
         <Grid item xs={12}>
           <AppComponentCard
-            title='CustomRatingOperator'
+            title="CustomRatingOperator"
             component={CustomRatingOperator}
             source={CustomRatingOperatorSource}
             noScrollbar
@@ -94,7 +94,7 @@ const Filtering = () => {
         </Grid>
         <Grid item xs={12}>
           <AppComponentCard
-            title='ServerFilterGrid'
+            title="ServerFilterGrid"
             component={ServerFilterGrid}
             source={ServerFilterGridSource}
             noScrollbar
@@ -102,7 +102,7 @@ const Filtering = () => {
         </Grid>
         <Grid item xs={12}>
           <AppComponentCard
-            title='MultiFilteringGrid'
+            title="MultiFilteringGrid"
             component={MultiFilteringGrid}
             source={MultiFilteringGridSource}
             noScrollbar
@@ -110,7 +110,7 @@ const Filtering = () => {
         </Grid>
         <Grid item xs={12}>
           <AppComponentCard
-            title='MultiFilteringWithOrGrid'
+            title="MultiFilteringWithOrGrid"
             component={MultiFilteringWithOrGrid}
             source={MultiFilteringWithOrGridSource}
             noScrollbar
@@ -118,7 +118,7 @@ const Filtering = () => {
         </Grid>
         <Grid item xs={12}>
           <AppComponentCard
-            title='QuickFilteringGrid'
+            title="QuickFilteringGrid"
             component={QuickFilteringGrid}
             source={QuickFilteringGridSource}
             noScrollbar

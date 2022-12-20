@@ -1,2 +1,2 @@
-import {ReactPlayer } from '@crema/modules/thirdParty';
-export  default ReactPlayer;
+import { ReactPlayer } from '@crema/modules/thirdParty';
+export default ReactPlayer;

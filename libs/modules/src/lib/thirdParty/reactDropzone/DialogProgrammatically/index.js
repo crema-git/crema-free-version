@@ -1,7 +1,7 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import UploadClassic from '../components/UploadClassic';
 import Box from '@mui/material/Box';
-import {useDropzone} from 'react-dropzone';
+import { useDropzone } from 'react-dropzone';
 import FileRow from '../components/FileRow';
 import AppList from '@crema/components/AppList';
 
@@ -11,7 +11,7 @@ const DialogProgrammatically = () => {
       'image/png': ['.png', '.jpg', '.jpeg'],
     },
   });
-  const {fileRejections, acceptedFiles} = dropzone;
+  const { fileRejections, acceptedFiles } = dropzone;
   const [uploadedFiles, setUploadedFiles] = useState([]);
 
   useEffect(() => {
@@ -26,7 +26,7 @@ const DialogProgrammatically = () => {
   return (
     <Box>
       <UploadClassic
-        uploadText='Drag your documents, photos or videos here to start uploading.'
+        uploadText="Drag your documents, photos or videos here to start uploading."
         dropzone={dropzone}
       />
       <aside>
@@ -41,7 +41,7 @@ const DialogProgrammatically = () => {
             />
           )}
         />
-        <h4 style={{marginTop: 10}}>Rejected files</h4>
+        <h4 style={{ marginTop: 10 }}>Rejected files</h4>
         <AppList
           data={fileRejections}
           renderRow={(file, index) => (

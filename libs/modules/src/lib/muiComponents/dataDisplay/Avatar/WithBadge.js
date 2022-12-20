@@ -1,10 +1,10 @@
 import * as React from 'react';
-import {styled} from '@mui/material/styles';
+import { styled } from '@mui/material/styles';
 import Badge from '@mui/material/Badge';
 import Avatar from '@mui/material/Avatar';
 import Stack from '@mui/material/Stack';
 
-const StyledBadge = styled(Badge)(({theme}) => ({
+const StyledBadge = styled(Badge)(({ theme }) => ({
   '& .MuiBadge-badge': {
     backgroundColor: '#44b700',
     color: '#44b700',
@@ -33,7 +33,7 @@ const StyledBadge = styled(Badge)(({theme}) => ({
   },
 }));
 
-const SmallAvatar = styled(Avatar)(({theme}) => ({
+const SmallAvatar = styled(Avatar)(({ theme }) => ({
   width: 22,
   height: 22,
   border: `2px solid ${theme.palette.background.paper}`,
@@ -41,22 +41,22 @@ const SmallAvatar = styled(Avatar)(({theme}) => ({
 
 export default function BadgeAvatars() {
   return (
-    <Stack direction='row' spacing={2}>
+    <Stack direction="row" spacing={2}>
       <StyledBadge
-        overlap='circular'
-        anchorOrigin={{vertical: 'bottom', horizontal: 'right'}}
-        variant='dot'
+        overlap="circular"
+        anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
+        variant="dot"
       >
-        <Avatar alt='Remy Sharp' src='/assets/images/avatar/A1.jpg' />
+        <Avatar alt="Remy Sharp" src="/assets/images/avatar/A1.jpg" />
       </StyledBadge>
       <Badge
-        overlap='circular'
-        anchorOrigin={{vertical: 'bottom', horizontal: 'right'}}
+        overlap="circular"
+        anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
         badgeContent={
-          <SmallAvatar alt='Remy Sharp' src='/assets/images/avatar/A1.jpg' />
+          <SmallAvatar alt="Remy Sharp" src="/assets/images/avatar/A1.jpg" />
         }
       >
-        <Avatar alt='Travis Howard' src='/assets/images/avatar/A2.jpg' />
+        <Avatar alt="Travis Howard" src="/assets/images/avatar/A2.jpg" />
       </Badge>
     </Stack>
   );

@@ -17,7 +17,7 @@ export default function ContextMenu() {
         : // repeated contextmenu when it is already open closes it with Chrome 84 on Ubuntu
           // Other native context menus might behave different.
           // With this behavior we prevent contextmenu from the backdrop to re-locale existing context menus.
-          null,
+          null
     );
   };
 
@@ -26,7 +26,7 @@ export default function ContextMenu() {
   };
 
   return (
-    <div onContextMenu={handleContextMenu} style={{cursor: 'context-menu'}}>
+    <div onContextMenu={handleContextMenu} style={{ cursor: 'context-menu' }}>
       <Typography>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ipsum
         purus, bibendum sit amet vulputate eget, porta semper ligula. Donec
@@ -41,10 +41,10 @@ export default function ContextMenu() {
       <Menu
         open={contextMenu !== null}
         onClose={handleClose}
-        anchorReference='anchorPosition'
+        anchorReference="anchorPosition"
         anchorPosition={
           contextMenu !== null
-            ? {top: contextMenu.mouseY, left: contextMenu.mouseX}
+            ? { top: contextMenu.mouseY, left: contextMenu.mouseX }
             : undefined
         }
       >

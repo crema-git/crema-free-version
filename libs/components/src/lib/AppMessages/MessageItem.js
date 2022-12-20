@@ -3,18 +3,18 @@ import ListItemAvatar from '@mui/material/ListItemAvatar';
 import Avatar from '@mui/material/Avatar';
 import PropTypes from 'prop-types';
 import ListItem from '@mui/material/ListItem';
-import {Box, Typography} from '@mui/material';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Box, Typography } from '@mui/material';
+import { Fonts } from '@crema/constants/AppEnums';
 
 const MessageItem = (props) => {
-  const {item} = props;
+  const { item } = props;
 
   return (
     <ListItem
       sx={{
         padding: '8px 20px',
       }}
-      className='item-hover'
+      className="item-hover"
     >
       <ListItemAvatar
         sx={{
@@ -37,8 +37,8 @@ const MessageItem = (props) => {
         }}
       >
         <Typography
-          component='h4'
-          variant='h4'
+          component="h4"
+          variant="h4"
           sx={{
             fontSize: 14,
             fontWeight: Fonts.MEDIUM,

@@ -10,23 +10,23 @@ export default function StateTextFields() {
 
   return (
     <Box
-      component='form'
+      component="form"
       sx={{
-        '& > :not(style)': {m: 1, width: '25ch'},
+        '& > :not(style)': { m: 1, width: '25ch' },
       }}
       noValidate
-      autoComplete='off'
+      autoComplete="off"
     >
       <TextField
-        id='outlined-name'
-        label='Name'
+        id="outlined-name"
+        label="Name"
         value={name}
         onChange={handleChange}
       />
       <TextField
-        id='outlined-uncontrolled'
-        label='Uncontrolled'
-        defaultValue='foo'
+        id="outlined-uncontrolled"
+        label="Uncontrolled"
+        defaultValue="foo"
       />
     </Box>
   );

@@ -1,2 +1,2 @@
-import {Styling} from '@crema/modules/components/datagrid';
+import { Styling } from '@crema/modules/components/datagrid';
 export default Styling;

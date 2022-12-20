@@ -26,20 +26,20 @@ export default function ToggleButtonNotEmpty() {
   };
 
   return (
-    <Stack direction='row' spacing={4}>
+    <Stack direction="row" spacing={4}>
       <ToggleButtonGroup
         value={alignment}
         exclusive
         onChange={handleAlignment}
-        aria-label='text alignment'
+        aria-label="text alignment"
       >
-        <ToggleButton value='left' aria-label='left aligned'>
+        <ToggleButton value="left" aria-label="left aligned">
           <FormatAlignLeftIcon />
         </ToggleButton>
-        <ToggleButton value='center' aria-label='centered'>
+        <ToggleButton value="center" aria-label="centered">
           <FormatAlignCenterIcon />
         </ToggleButton>
-        <ToggleButton value='right' aria-label='right aligned'>
+        <ToggleButton value="right" aria-label="right aligned">
           <FormatAlignRightIcon />
         </ToggleButton>
       </ToggleButtonGroup>
@@ -47,15 +47,15 @@ export default function ToggleButtonNotEmpty() {
       <ToggleButtonGroup
         value={devices}
         onChange={handleDevices}
-        aria-label='device'
+        aria-label="device"
       >
-        <ToggleButton value='laptop' aria-label='laptop'>
+        <ToggleButton value="laptop" aria-label="laptop">
           <LaptopIcon />
         </ToggleButton>
-        <ToggleButton value='tv' aria-label='tv'>
+        <ToggleButton value="tv" aria-label="tv">
           <TvIcon />
         </ToggleButton>
-        <ToggleButton value='phone' aria-label='phone'>
+        <ToggleButton value="phone" aria-label="phone">
           <PhoneAndroidIcon />
         </ToggleButton>
       </ToggleButtonGroup>

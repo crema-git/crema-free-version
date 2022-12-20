@@ -4,7 +4,7 @@ import WebTrafficGraph from './WebTrafficGraph';
 import RevenueGrowthGraph from './RevenueGrowthGraph';
 import Box from '@mui/material/Box';
 import PropTypes from 'prop-types';
-import {Fonts} from '@crema/constants/AppEnums'
+import { Fonts } from '@crema/constants/AppEnums';
 import AppCard from '@crema/components/AppCard';
 
 const StatsCardWithGraph = ({
@@ -51,18 +51,18 @@ const StatsCardWithGraph = ({
           }}
         >
           <Box
-            component='p'
+            component="p"
             sx={{
               color: headingColor,
               fontSize: 16,
               fontWeight: Fonts.BOLD,
-              mb: {xs: 4, md: 6},
+              mb: { xs: 4, md: 6 },
             }}
           >
             {text}
           </Box>
           <Box
-            component='h3'
+            component="h3"
             sx={{
               color: valueColor,
               fontSize: 20,

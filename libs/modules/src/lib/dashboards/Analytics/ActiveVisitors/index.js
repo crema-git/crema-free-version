@@ -1,20 +1,20 @@
 import React from 'react';
 import Box from '@mui/material/Box';
 import PropTypes from 'prop-types';
-import {Fonts} from '@crema/constants/AppEnums'
-import {useIntl} from 'react-intl';
+import { Fonts } from '@crema/constants/AppEnums';
+import { useIntl } from 'react-intl';
 import AppCard from '@crema/components/AppCard';
 import VisitorsGraph from './VisitorsGraph';
 import Link from '@mui/material/Link';
-import {green, red} from '@mui/material/colors';
+import { green, red } from '@mui/material/colors';
 
-const ActiveVisitors = ({data}) => {
-  const {messages} = useIntl();
+const ActiveVisitors = ({ data }) => {
+  const { messages } = useIntl();
   return (
-    <AppCard contentStyle={{padding: 0}}>
+    <AppCard contentStyle={{ padding: 0 }}>
       <Box
         sx={{
-          pt: {xs: 5, sm: 5, xl: 5},
+          pt: { xs: 5, sm: 5, xl: 5 },
           backgroundColor: '#49bd65',
         }}
       >
@@ -30,7 +30,7 @@ const ActiveVisitors = ({data}) => {
               fontWeight: Fonts.BOLD,
               fontSize: 16,
             }}
-            component='h3'
+            component="h3"
           >
             {messages['dashboard.analytics.activeVisitors']}
           </Box>
@@ -73,7 +73,7 @@ const ActiveVisitors = ({data}) => {
                 fontWeight: Fonts.MEDIUM,
                 fontSize: 18,
               }}
-              component='h3'
+              component="h3"
             >
               {data.value}
             </Box>
@@ -84,13 +84,13 @@ const ActiveVisitors = ({data}) => {
                 fontWeight: Fonts.MEDIUM,
                 color: data.growth > 0.0 ? green[500] : red[500],
               }}
-              component='span'
+              component="span"
             >
               {data.growth}% Then yesterday
             </Box>
           </Box>
           <Box
-            component='p'
+            component="p"
             sx={{
               fontSize: 14,
               color: 'text.secondary',
@@ -106,11 +106,11 @@ const ActiveVisitors = ({data}) => {
           }}
         >
           <Link
-            component='button'
+            component="button"
             sx={{
               color: 'secondary.main',
               fontSize: 16,
-              marginTop: {xs: 1.5, xl: 4},
+              marginTop: { xs: 1.5, xl: 4 },
               textDecoration: 'none',
             }}
           >

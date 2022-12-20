@@ -5,7 +5,7 @@ import TrafficRaiseGraph from './TrafficRaiseGraph';
 import LessOrdersGraph from './LessOrdersGraph';
 import Box from '@mui/material/Box';
 import PropTypes from 'prop-types';
-import {Fonts} from '@crema/constants/AppEnums'
+import { Fonts } from '@crema/constants/AppEnums';
 import AppCard from '@crema/components/AppCard';
 
 const ComparisonCard = ({
@@ -40,7 +40,7 @@ const ComparisonCard = ({
       sxStyle={{
         backgroundColor: bgColor,
       }}
-      contentStyle={{padding: 0}}
+      contentStyle={{ padding: 0 }}
     >
       <Box
         sx={{
@@ -57,7 +57,7 @@ const ComparisonCard = ({
           }}
         >
           <Box
-            component='p'
+            component="p"
             sx={{
               mb: 4,
               color: headingColor,
@@ -68,7 +68,7 @@ const ComparisonCard = ({
             {text}
           </Box>
           <Box
-            component='h3'
+            component="h3"
             sx={{
               color: valueColor,
               fontSize: 20,

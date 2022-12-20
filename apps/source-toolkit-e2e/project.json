@@ -7,7 +7,7 @@
     "e2e": {
       "executor": "@nrwl/cypress:cypress",
       "options": {
-        "cypressConfig": "apps/source-toolkit-e2e/cypress.config.js",
+        "cypressConfig": "apps/source-toolkit-e2e/cypress.config.ts",
         "devServerTarget": "source-toolkit:serve:development",
         "testingType": "e2e"
       },
@@ -21,7 +21,7 @@
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["apps/source-toolkit-e2e/**/*.{js,ts}"]
+        "lintFilePatterns": ["apps/source-toolkit-e2e/**/*.js"]
       }
     }
   },

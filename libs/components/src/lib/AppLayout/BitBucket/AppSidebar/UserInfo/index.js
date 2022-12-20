@@ -1,16 +1,16 @@
 import React from 'react';
 import orange from '@mui/material/colors/orange';
-import {alpha, Box} from '@mui/material';
+import { alpha, Box } from '@mui/material';
 import Avatar from '@mui/material/Avatar';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
-import {Fonts} from '@crema/constants/AppEnums';
-import {useNavigate} from 'react-router-dom';
-import {useAuthMethod, useAuthUser} from "@crema/utility/AuthHooks";
+import { Fonts } from '@crema/constants/AppEnums';
+import { useNavigate } from 'react-router-dom';
+import { useAuthMethod, useAuthUser } from '@crema/utility/AuthHooks';
 
 const UserInfo = () => {
-  const {logout} = useAuthMethod();
-  const {user} = useAuthUser();
+  const { logout } = useAuthMethod();
+  const { user } = useAuthUser();
   const navigate = useNavigate();
 
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -67,7 +67,7 @@ const UserInfo = () => {
         )}
       </Box>
       <Menu
-        id='simple-menu'
+        id="simple-menu"
         anchorEl={anchorEl}
         keepMounted
         open={Boolean(anchorEl)}
@@ -120,7 +120,7 @@ const UserInfo = () => {
                 fontSize: 14,
                 fontWeight: Fonts.MEDIUM,
               }}
-              component='span'
+              component="span"
             >
               {user.displayName ? user.displayName : 'Admin User '}
             </Box>

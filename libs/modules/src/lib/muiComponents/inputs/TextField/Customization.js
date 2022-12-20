@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {alpha, styled} from '@mui/material/styles';
+import { alpha, styled } from '@mui/material/styles';
 import InputBase from '@mui/material/InputBase';
 import Box from '@mui/material/Box';
 import InputLabel from '@mui/material/InputLabel';
@@ -26,7 +26,7 @@ const CssTextField = styled(TextField)({
   },
 });
 
-const BootstrapInput = styled(InputBase)(({theme}) => ({
+const BootstrapInput = styled(InputBase)(({ theme }) => ({
   'label + &': {
     marginTop: theme.spacing(3),
   },
@@ -64,8 +64,8 @@ const BootstrapInput = styled(InputBase)(({theme}) => ({
 }));
 
 const RedditTextField = styled((props) => (
-  <TextField InputProps={{disableUnderline: true}} {...props} />
-))(({theme}) => ({
+  <TextField InputProps={{ disableUnderline: true }} {...props} />
+))(({ theme }) => ({
   '& .MuiFilledInput-root': {
     border: '1px solid #e2e2e1',
     overflow: 'hidden',
@@ -105,34 +105,34 @@ const ValidationTextField = styled(TextField)({
 export default function CustomizedInputs() {
   return (
     <Box
-      component='form'
+      component="form"
       noValidate
       sx={{
         display: 'grid',
-        gridTemplateColumns: {sm: '1fr 1fr'},
+        gridTemplateColumns: { sm: '1fr 1fr' },
         gap: 2,
       }}
     >
-      <FormControl variant='standard'>
-        <InputLabel shrink htmlFor='bootstrap-input'>
+      <FormControl variant="standard">
+        <InputLabel shrink htmlFor="bootstrap-input">
           Bootstrap
         </InputLabel>
-        <BootstrapInput defaultValue='react-bootstrap' id='bootstrap-input' />
+        <BootstrapInput defaultValue="react-bootstrap" id="bootstrap-input" />
       </FormControl>
       <RedditTextField
-        label='Reddit'
-        defaultValue='react-reddit'
-        id='reddit-input'
-        variant='filled'
-        style={{marginTop: 11}}
+        label="Reddit"
+        defaultValue="react-reddit"
+        id="reddit-input"
+        variant="filled"
+        style={{ marginTop: 11 }}
       />
-      <CssTextField label='Custom CSS' id='custom-css-outlined-input' />
+      <CssTextField label="Custom CSS" id="custom-css-outlined-input" />
       <ValidationTextField
-        label='CSS validation style'
+        label="CSS validation style"
         required
-        variant='outlined'
-        defaultValue='Success'
-        id='validation-outlined-input'
+        variant="outlined"
+        defaultValue="Success"
+        id="validation-outlined-input"
       />
     </Box>
   );

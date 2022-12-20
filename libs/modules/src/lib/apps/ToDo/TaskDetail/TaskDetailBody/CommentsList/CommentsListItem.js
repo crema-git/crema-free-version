@@ -1,12 +1,12 @@
 import React from 'react';
 import Avatar from '@mui/material/Avatar';
 import PropTypes from 'prop-types';
-import {Box, Typography} from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import clsx from 'clsx';
 
-import {styled} from '@mui/material/styles';
+import { styled } from '@mui/material/styles';
 
-const CommentWrapper = styled(Box)(({theme}) => ({
+const CommentWrapper = styled(Box)(({ theme }) => ({
   display: 'flex',
   borderTopRightRadius: theme.cardRadius,
   borderBottomRightRadius: theme.cardRadius,
@@ -18,7 +18,7 @@ const CommentWrapper = styled(Box)(({theme}) => ({
   },
 }));
 
-const CommentsListItem = ({item, isPreviousSender = false, isLast}) => {
+const CommentsListItem = ({ item, isPreviousSender = false, isLast }) => {
   return (
     <Box
       sx={{
@@ -39,7 +39,7 @@ const CommentsListItem = ({item, isPreviousSender = false, isLast}) => {
       }}
       className={clsx(
         isPreviousSender ? 'hideUserInfo' : 'first-chat-message',
-        isLast ? 'last-chat-message' : '',
+        isLast ? 'last-chat-message' : ''
       )}
     >
       <Box
@@ -47,7 +47,7 @@ const CommentsListItem = ({item, isPreviousSender = false, isLast}) => {
           marginRight: 2.5,
           position: 'relative',
         }}
-        className='todo-comment-user'
+        className="todo-comment-user"
       >
         {item.image ? (
           <Avatar
@@ -72,7 +72,7 @@ const CommentsListItem = ({item, isPreviousSender = false, isLast}) => {
         sx={{
           position: 'relative',
         }}
-        className='todo-comment-info'
+        className="todo-comment-info"
       >
         <Box
           sx={{
@@ -84,7 +84,7 @@ const CommentsListItem = ({item, isPreviousSender = false, isLast}) => {
               marginRight: 1,
             },
           }}
-          className='todo-comment-time'
+          className="todo-comment-time"
         >
           <span>{item.name},</span>
           <span>{item.time},</span>

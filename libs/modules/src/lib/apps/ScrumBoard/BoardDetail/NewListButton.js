@@ -4,12 +4,12 @@ import AddIcon from '@mui/icons-material/Add';
 import Card from '@mui/material/Card';
 import Box from '@mui/material/Box';
 import PropTypes from 'prop-types';
-import {grey} from '@mui/material/colors';
-import {Fonts} from '@crema/constants/AppEnums'
+import { grey } from '@mui/material/colors';
+import { Fonts } from '@crema/constants/AppEnums';
 import IntlMessages from '@crema/utility/IntlMessages';
 
 const NewListButton = (props) => {
-  const {onClick} = props;
+  const { onClick } = props;
 
   return (
     <Box
@@ -62,7 +62,7 @@ const NewListButton = (props) => {
                 color: (theme) => theme.palette.text.secondary,
               }}
             >
-              <IntlMessages id='scrumboard.addAList' />
+              <IntlMessages id="scrumboard.addAList" />
             </Box>
           </Box>
         </Box>

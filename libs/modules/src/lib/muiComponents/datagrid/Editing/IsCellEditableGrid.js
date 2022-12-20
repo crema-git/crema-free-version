@@ -1,8 +1,12 @@
 import * as React from 'react';
-import {createTheme} from '@mui/material/styles';
-import {makeStyles} from '@mui/styles';
-import {DataGrid} from '@mui/x-data-grid';
-import {randomCreatedDate, randomTraderName, randomUpdatedDate,} from '@mui/x-data-grid-generator';
+import { createTheme } from '@mui/material/styles';
+import { makeStyles } from '@mui/styles';
+import { DataGrid } from '@mui/x-data-grid';
+import {
+  randomCreatedDate,
+  randomTraderName,
+  randomUpdatedDate,
+} from '@mui/x-data-grid-generator';
 
 const defaultTheme = createTheme();
 const useStyles = makeStyles(
@@ -17,13 +21,13 @@ const useStyles = makeStyles(
       },
     };
   },
-  {defaultTheme},
+  { defaultTheme }
 );
 
 export default function IsCellEditableGrid() {
   const classes = useStyles();
   return (
-    <div style={{height: 400, width: '100%'}}>
+    <div style={{ height: 400, width: '100%' }}>
       <DataGrid
         className={classes.root}
         rows={rows}
@@ -35,8 +39,8 @@ export default function IsCellEditableGrid() {
 }
 
 const columns = [
-  {field: 'name', headerName: 'Name', width: 180, editable: true},
-  {field: 'age', headerName: 'Age', type: 'number', editable: true},
+  { field: 'name', headerName: 'Name', width: 180, editable: true },
+  { field: 'age', headerName: 'Age', type: 'number', editable: true },
   {
     field: 'dateCreated',
     headerName: 'Date Created',

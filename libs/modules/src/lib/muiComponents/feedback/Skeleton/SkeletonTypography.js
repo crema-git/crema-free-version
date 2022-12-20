@@ -7,12 +7,12 @@ import Grid from '@mui/material/Grid';
 const variants = ['h1', 'h3', 'body1', 'caption'];
 
 function TypographyDemo(props) {
-  const {loading = false} = props;
+  const { loading = false } = props;
 
   return (
     <div>
       {variants.map((variant) => (
-        <Typography component='div' key={variant} variant={variant}>
+        <Typography component="div" key={variant} variant={variant}>
           {loading ? <Skeleton /> : variant}
         </Typography>
       ))}

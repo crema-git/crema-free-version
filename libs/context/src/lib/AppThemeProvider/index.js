@@ -1,12 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {createTheme, StyledEngineProvider, ThemeProvider,} from '@mui/material/styles';
-import {useThemeContext} from '../AppContextProvider/ThemeContextProvider';
-import {AdapterDateFns} from '@mui/x-date-pickers/AdapterDateFns';
-import {LocalizationProvider} from '@mui/x-date-pickers';
+import {
+  createTheme,
+  StyledEngineProvider,
+  ThemeProvider,
+} from '@mui/material/styles';
+import { useThemeContext } from '../AppContextProvider/ThemeContextProvider';
+import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
+import { LocalizationProvider } from '@mui/x-date-pickers';
 
 const AppThemeProvider = (props) => {
-  const {theme} = useThemeContext();
+  const { theme } = useThemeContext();
 
   return (
     <StyledEngineProvider injectFirst>

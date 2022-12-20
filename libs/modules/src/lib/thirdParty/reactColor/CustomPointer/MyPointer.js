@@ -9,7 +9,7 @@ export const MyPointer = () => {
         height: 40,
       }}
     >
-      <i className='zmdi zmdi-colorize' />
+      <i className="zmdi zmdi-colorize" />
     </IconButton>
   );
 };

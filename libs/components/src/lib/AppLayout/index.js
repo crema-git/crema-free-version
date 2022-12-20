@@ -1,3 +1,3 @@
-import Layouts from "./Layouts";
+import Layouts from './Layouts';
 
-export {Layouts};
+export { Layouts };

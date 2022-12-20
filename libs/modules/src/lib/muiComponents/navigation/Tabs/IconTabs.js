@@ -13,10 +13,10 @@ export default function IconTabs() {
   };
 
   return (
-    <Tabs value={value} onChange={handleChange} aria-label='icon tabs example'>
-      <Tab icon={<PhoneIcon />} aria-label='phone' />
-      <Tab icon={<FavoriteIcon />} aria-label='favorite' />
-      <Tab icon={<PersonPinIcon />} aria-label='person' />
+    <Tabs value={value} onChange={handleChange} aria-label="icon tabs example">
+      <Tab icon={<PhoneIcon />} aria-label="phone" />
+      <Tab icon={<FavoriteIcon />} aria-label="favorite" />
+      <Tab icon={<PersonPinIcon />} aria-label="person" />
     </Tabs>
   );
 }

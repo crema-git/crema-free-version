@@ -1,18 +1,21 @@
 import React from 'react';
-import {CustomizerItemWrapper, StyledToggleButton} from '../index.style';
+import { CustomizerItemWrapper, StyledToggleButton } from '../index.style';
 import Box from '@mui/material/Box';
 import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
-import {ThemeMode} from '@crema/constants/AppEnums';
+import { ThemeMode } from '@crema/constants/AppEnums';
 import clsx from 'clsx';
-import {useThemeActionsContext, useThemeContext} from "@crema/context/ThemeContextProvider";
-import {useSidebarActionsContext} from "@crema/context/SidebarContextProvider";
-import {DarkSidebar, LightSidebar} from "@crema/constants/defaultConfig";
-import IntlMessages from "@crema/utility/IntlMessages";
+import {
+  useThemeActionsContext,
+  useThemeContext,
+} from '@crema/context/ThemeContextProvider';
+import { useSidebarActionsContext } from '@crema/context/SidebarContextProvider';
+import { DarkSidebar, LightSidebar } from '@crema/constants/defaultConfig';
+import IntlMessages from '@crema/utility/IntlMessages';
 
 const ThemeModes = () => {
-  const {updateThemeMode} = useThemeActionsContext();
-  const {updateSidebarColorSet} = useSidebarActionsContext();
-  const {themeMode, theme} = useThemeContext();
+  const { updateThemeMode } = useThemeActionsContext();
+  const { updateSidebarColorSet } = useSidebarActionsContext();
+  const { themeMode, theme } = useThemeContext();
 
   const onModeChange = (event, themeMode) => {
     if (themeMode) {
@@ -41,23 +44,23 @@ const ThemeModes = () => {
 
   return (
     <CustomizerItemWrapper>
-      <Box component='h4' sx={{mb: 2}}>
-        <IntlMessages id='customizer.themeMode' />
+      <Box component="h4" sx={{ mb: 2 }}>
+        <IntlMessages id="customizer.themeMode" />
       </Box>
       <ToggleButtonGroup
         value={themeMode}
         exclusive
         onChange={onModeChange}
-        aria-label='text alignment'
+        aria-label="text alignment"
       >
         <StyledToggleButton
           value={ThemeMode.LIGHT}
           className={clsx({
             active: themeMode === ThemeMode.LIGHT,
           })}
-          aria-label='left aligned'
+          aria-label="left aligned"
         >
-          <IntlMessages id='customizer.light' />
+          <IntlMessages id="customizer.light" />
         </StyledToggleButton>
 
         <StyledToggleButton
@@ -67,9 +70,9 @@ const ThemeModes = () => {
               themeMode === ThemeMode.DARK ||
               theme.palette.type === ThemeMode.DARK,
           })}
-          aria-label='centered'
+          aria-label="centered"
         >
-          <IntlMessages id='customizer.dark' />
+          <IntlMessages id="customizer.dark" />
         </StyledToggleButton>
       </ToggleButtonGroup>
     </CustomizerItemWrapper>

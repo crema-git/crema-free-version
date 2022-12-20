@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import TaskItem from './TaskItem';
 import AppList from '@crema/components/AppList';
 import AppCard from '@crema/components/AppCard';
-import {useIntl} from 'react-intl';
+import { useIntl } from 'react-intl';
 import AppScrollbar from '@crema/components/AppScrollbar';
 
 const getData = (data) => {
@@ -14,11 +14,11 @@ const getData = (data) => {
 const TaskList = (props) => {
   const data = getData(props.data);
 
-  const {messages} = useIntl();
+  const { messages } = useIntl();
   return (
     <AppCard
       title={messages['dashboard.taskList']}
-      contentStyle={{px: 0}}
+      contentStyle={{ px: 0 }}
       action={
         <CloseIcon
           sx={{

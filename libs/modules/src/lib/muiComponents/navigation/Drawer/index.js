@@ -38,93 +38,93 @@ const BottomNavigation = () => {
   return (
     <>
       <AppComponentHeader
-        title='Drawer'
-        description='Navigation drawers provide access to destinations in your app. Side sheets are surfaces containing supplementary content that are anchored to the left or right edge of the screen.'
-        refUrl='https://mui.com/components/drawers/'
+        title="Drawer"
+        description="Navigation drawers provide access to destinations in your app. Side sheets are surfaces containing supplementary content that are anchored to the left or right edge of the screen."
+        refUrl="https://mui.com/components/drawers/"
       />
 
       <AppGridContainer>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Temporary drawer'
+            title="Temporary drawer"
             component={TemporaryDrawer}
             source={TemporaryDrawerSource}
             noScrollbar
-            description='Temporary navigation drawers can toggle open or closed. Closed by default, the drawer opens temporarily above all other content until a section is selected.'
+            description="Temporary navigation drawers can toggle open or closed. Closed by default, the drawer opens temporarily above all other content until a section is selected."
           />
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Swipeable Temporary Drawer'
+            title="Swipeable Temporary Drawer"
             component={SwipeableTemporaryDrawer}
             source={SwipeableTemporaryDrawerSource}
             noScrollbar
-            description='Temporary navigation drawers can toggle open or closed. Closed by default, the drawer opens temporarily above all other content until a section is selected.'
+            description="Temporary navigation drawers can toggle open or closed. Closed by default, the drawer opens temporarily above all other content until a section is selected."
           />
         </Grid>
         <Grid item xs={12}>
           <AppComponentCard
-            title='Swipeable Edge Drawer'
+            title="Swipeable Edge Drawer"
             component={SwipeableEdgeDrawer}
             source={SwipeableEdgeDrawerSource}
             noScrollbar
-            description='Temporary navigation drawers can toggle open or closed. Closed by default, the drawer opens temporarily above all other content until a section is selected.'
+            description="Temporary navigation drawers can toggle open or closed. Closed by default, the drawer opens temporarily above all other content until a section is selected."
           />
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Responsive Drawer'
+            title="Responsive Drawer"
             component={ResponsiveDrawer}
             source={ResponsiveDrawerSource}
-            description='Temporary navigation drawers can toggle open or closed. Closed by default, the drawer opens temporarily above all other content until a section is selected.'
+            description="Temporary navigation drawers can toggle open or closed. Closed by default, the drawer opens temporarily above all other content until a section is selected."
           />
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Persistent Drawer Left'
+            title="Persistent Drawer Left"
             component={PersistentDrawerLeft}
             source={PersistentDrawerLeftSource}
-            description='Temporary navigation drawers can toggle open or closed. Closed by default, the drawer opens temporarily above all other content until a section is selected.'
+            description="Temporary navigation drawers can toggle open or closed. Closed by default, the drawer opens temporarily above all other content until a section is selected."
           />
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Persistent Drawer Right'
+            title="Persistent Drawer Right"
             component={PersistentDrawerRight}
             source={PersistentDrawerRightSource}
-            description='Temporary navigation drawers can toggle open or closed. Closed by default, the drawer opens temporarily above all other content until a section is selected.'
+            description="Temporary navigation drawers can toggle open or closed. Closed by default, the drawer opens temporarily above all other content until a section is selected."
           />
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Mini Drawer'
+            title="Mini Drawer"
             component={MiniDrawer}
             source={MiniDrawerSource}
-            description='Temporary navigation drawers can toggle open or closed. Closed by default, the drawer opens temporarily above all other content until a section is selected.'
+            description="Temporary navigation drawers can toggle open or closed. Closed by default, the drawer opens temporarily above all other content until a section is selected."
           />
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Permanent Drawer Left'
+            title="Permanent Drawer Left"
             component={PermanentDrawerLeft}
             source={PermanentDrawerLeftSource}
-            description='Temporary navigation drawers can toggle open or closed. Closed by default, the drawer opens temporarily above all other content until a section is selected.'
+            description="Temporary navigation drawers can toggle open or closed. Closed by default, the drawer opens temporarily above all other content until a section is selected."
           />
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Permanent Drawer Right'
+            title="Permanent Drawer Right"
             component={PermanentDrawerRight}
             source={PermanentDrawerRightSource}
-            description='Temporary navigation drawers can toggle open or closed. Closed by default, the drawer opens temporarily above all other content until a section is selected.'
+            description="Temporary navigation drawers can toggle open or closed. Closed by default, the drawer opens temporarily above all other content until a section is selected."
           />
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Clipped Drawer'
+            title="Clipped Drawer"
             component={ClippedDrawer}
             source={ClippedDrawerSource}
-            description='Temporary navigation drawers can toggle open or closed. Closed by default, the drawer opens temporarily above all other content until a section is selected.'
+            description="Temporary navigation drawers can toggle open or closed. Closed by default, the drawer opens temporarily above all other content until a section is selected."
           />
         </Grid>
       </AppGridContainer>

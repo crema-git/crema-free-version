@@ -17,21 +17,21 @@ const drawerWidth = 240;
 
 export default function PermanentDrawerRight() {
   return (
-    <Box sx={{display: 'flex'}}>
+    <Box sx={{ display: 'flex' }}>
       <CssBaseline />
       <AppBar
-        position='fixed'
-        sx={{width: `calc(100% - ${drawerWidth}px)`, mr: `${drawerWidth}px`}}
+        position="fixed"
+        sx={{ width: `calc(100% - ${drawerWidth}px)`, mr: `${drawerWidth}px` }}
       >
         <Toolbar>
-          <Typography variant='h6' noWrap component='div'>
+          <Typography variant="h6" noWrap component="div">
             Permanent drawer
           </Typography>
         </Toolbar>
       </AppBar>
       <Box
-        component='main'
-        sx={{flexGrow: 1, bgcolor: 'background.default', p: 3}}
+        component="main"
+        sx={{ flexGrow: 1, bgcolor: 'background.default', p: 3 }}
       >
         <Toolbar />
         <Typography paragraph>
@@ -73,8 +73,8 @@ export default function PermanentDrawerRight() {
             boxSizing: 'border-box',
           },
         }}
-        variant='permanent'
-        anchor='right'
+        variant="permanent"
+        anchor="right"
       >
         <Toolbar />
         <Divider />

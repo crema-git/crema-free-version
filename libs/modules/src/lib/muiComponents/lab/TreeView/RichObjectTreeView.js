@@ -36,11 +36,11 @@ export default function RichObjectTreeView() {
 
   return (
     <TreeView
-      aria-label='rich object'
+      aria-label="rich object"
       defaultCollapseIcon={<ExpandMoreIcon />}
       defaultExpanded={['root']}
       defaultExpandIcon={<ChevronRightIcon />}
-      sx={{height: 110, flexGrow: 1, maxWidth: 400, overflowY: 'auto'}}
+      sx={{ height: 110, flexGrow: 1, maxWidth: 400, overflowY: 'auto' }}
     >
       {renderTree(data)}
     </TreeView>

@@ -29,75 +29,75 @@ const Skeleton = () => {
   return (
     <>
       <AppComponentHeader
-        title='Skeleton'
-        description='Display a placeholder preview of your content before the data gets loaded to reduce load-time frustration'
-        refUrl='https://mui.com/components/skeleton//'
+        title="Skeleton"
+        description="Display a placeholder preview of your content before the data gets loaded to reduce load-time frustration"
+        refUrl="https://mui.com/components/skeleton//"
       />
 
       <AppGridContainer>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Variants'
+            title="Variants"
             component={Variants}
             source={VariantsSource}
             noScrollbar
-            description='The component supports 3 shape variants.'
+            description="The component supports 3 shape variants."
           />
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Skeleton Color'
+            title="Skeleton Color"
             component={SkeletonColor}
             source={SkeletonColorSource}
             noScrollbar
-            description='The component supports 3 shape variants.'
+            description="The component supports 3 shape variants."
           />
         </Grid>
 
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Animations'
+            title="Animations"
             component={Animations}
             source={AnimationsSource}
             noScrollbar
-            description='The component supports 3 shape variants.'
+            description="The component supports 3 shape variants."
           />
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Skeleton Typography'
+            title="Skeleton Typography"
             component={SkeletonTypography}
             source={SkeletonTypographySource}
             noScrollbar
-            description='The component supports 3 shape variants.'
+            description="The component supports 3 shape variants."
           />
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='YouTube'
+            title="YouTube"
             component={YouTube}
             source={YouTubeSource}
             noScrollbar
-            description='The component supports 3 shape variants.'
+            description="The component supports 3 shape variants."
           />
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Skeleton Children'
+            title="Skeleton Children"
             component={SkeletonChildren}
             source={SkeletonChildrenSource}
             noScrollbar
-            description='The component supports 3 shape variants.'
+            description="The component supports 3 shape variants."
           />
         </Grid>
 
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Facebook'
+            title="Facebook"
             component={Facebook}
             source={FacebookSource}
             noScrollbar
-            description='The component supports 3 shape variants.'
+            description="The component supports 3 shape variants."
           />
         </Grid>
       </AppGridContainer>

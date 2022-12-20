@@ -5,26 +5,27 @@ import AppCard from '@crema/components/AppCard';
 import AppGrid from '@crema/components/AppGrid';
 
 const Share = (props) => {
-  const {data} = props;
+  const { data } = props;
 
   return (
-    <AppCard sxStyle={{height: 1}} title='Share'>
+    <AppCard sxStyle={{ height: 1 }} title="Share">
       <AppGrid
         data={data}
         itemPadding={5}
         responsive={{
-          xs: 1,
-          sm: 2,
+          xs: 3,
+          sm: 3,
           md: 3,
           lg: 3,
-          xl: 4,
+          xl: 3,
+          xxl: 4,
         }}
         renderRow={(data, index) => (
           <Box
             key={index}
             sx={{
               backgroundColor: data.color,
-              width: {xs: 50, xl: 65},
+              width: { xs: 50, xl: 65 },
               color: (theme) => theme.palette.primary.contrastText,
               padding: '6px 5px',
               borderRadius: 1,
@@ -35,7 +36,7 @@ const Share = (props) => {
           >
             <i className={'zmdi zmdi-' + data.icon} />
             <Box
-              component='span'
+              component="span"
               sx={{
                 ml: 1,
               }}

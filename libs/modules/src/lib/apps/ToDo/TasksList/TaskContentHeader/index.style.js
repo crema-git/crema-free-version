@@ -1,8 +1,8 @@
-import {alpha, Box} from '@mui/material';
-import {styled} from '@mui/material/styles';
+import { alpha, Box } from '@mui/material';
+import { styled } from '@mui/material/styles';
 import Select from '@mui/material/Select';
 
-export const StyledSelect = styled(Select)(({theme}) => ({
+export const StyledSelect = styled(Select)(({ theme }) => ({
   maxWidth: 100,
   cursor: 'pointer',
   width: 'auto',
@@ -32,7 +32,7 @@ export const StyledSelect = styled(Select)(({theme}) => ({
   },
 }));
 
-export const StyledBox = styled(Box)(({theme}) => ({
+export const StyledBox = styled(Box)(({ theme }) => ({
   display: 'flex',
   alignItems: 'center',
   [theme.breakpoints.up('sm')]: {

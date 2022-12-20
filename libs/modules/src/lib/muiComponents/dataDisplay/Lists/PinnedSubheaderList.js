@@ -14,7 +14,7 @@ export default function PinnedSubheaderList() {
         position: 'relative',
         overflow: 'auto',
         maxHeight: 300,
-        '& ul': {padding: 0},
+        '& ul': { padding: 0 },
       }}
       subheader={<li />}
     >

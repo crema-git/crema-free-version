@@ -17,14 +17,14 @@ const drawerWidth = 240;
 
 export default function PermanentDrawerLeft() {
   return (
-    <Box sx={{display: 'flex'}}>
+    <Box sx={{ display: 'flex' }}>
       <CssBaseline />
       <AppBar
-        position='fixed'
-        sx={{width: `calc(100% - ${drawerWidth}px)`, ml: `${drawerWidth}px`}}
+        position="fixed"
+        sx={{ width: `calc(100% - ${drawerWidth}px)`, ml: `${drawerWidth}px` }}
       >
         <Toolbar>
-          <Typography variant='h6' noWrap component='div'>
+          <Typography variant="h6" noWrap component="div">
             Permanent drawer
           </Typography>
         </Toolbar>
@@ -38,8 +38,8 @@ export default function PermanentDrawerLeft() {
             boxSizing: 'border-box',
           },
         }}
-        variant='permanent'
-        anchor='left'
+        variant="permanent"
+        anchor="left"
       >
         <Toolbar />
         <Divider />
@@ -66,8 +66,8 @@ export default function PermanentDrawerLeft() {
         </List>
       </Drawer>
       <Box
-        component='main'
-        sx={{flexGrow: 1, bgcolor: 'background.default', p: 3}}
+        component="main"
+        sx={{ flexGrow: 1, bgcolor: 'background.default', p: 3 }}
       >
         <Toolbar />
         <Typography paragraph>

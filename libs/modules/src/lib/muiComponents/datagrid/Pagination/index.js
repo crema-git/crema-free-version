@@ -32,15 +32,15 @@ const Pagination = () => {
   return (
     <>
       <AppComponentHeader
-        title='Pagination'
-        description='Through pagination, a segment of data can be viewed from the assigned data source.'
-        refUrl='https://mui.com/components/data-grid/pagination/'
+        title="Pagination"
+        description="Through pagination, a segment of data can be viewed from the assigned data source."
+        refUrl="https://mui.com/components/data-grid/pagination/"
       />
 
       <AppGridContainer>
         <Grid item xs={12}>
           <AppComponentCard
-            title='BasicPaginationGrid'
+            title="BasicPaginationGrid"
             component={BasicPaginationGrid}
             source={BasicPaginationGridSource}
             noScrollbar
@@ -48,7 +48,7 @@ const Pagination = () => {
         </Grid>
         <Grid item xs={12}>
           <AppComponentCard
-            title='SizePaginationGrid'
+            title="SizePaginationGrid"
             component={SizePaginationGrid}
             source={SizePaginationGridSource}
             noScrollbar
@@ -56,7 +56,7 @@ const Pagination = () => {
         </Grid>
         <Grid item xs={12}>
           <AppComponentCard
-            title='ControlledPaginationGrid'
+            title="ControlledPaginationGrid"
             component={ControlledPaginationGrid}
             source={ControlledPaginationGridSource}
             noScrollbar
@@ -64,7 +64,7 @@ const Pagination = () => {
         </Grid>
         <Grid item xs={12}>
           <AppComponentCard
-            title='AutoPaginationGrid'
+            title="AutoPaginationGrid"
             component={AutoPaginationGrid}
             source={AutoPaginationGridSource}
             noScrollbar
@@ -72,7 +72,7 @@ const Pagination = () => {
         </Grid>
         <Grid item xs={12}>
           <AppComponentCard
-            title='ServerPaginationGrid'
+            title="ServerPaginationGrid"
             component={ServerPaginationGrid}
             source={ServerPaginationGridSource}
             noScrollbar
@@ -80,7 +80,7 @@ const Pagination = () => {
         </Grid>
         <Grid item xs={12}>
           <AppComponentCard
-            title='CursorPaginationGrid'
+            title="CursorPaginationGrid"
             component={CursorPaginationGrid}
             source={CursorPaginationGridSource}
             noScrollbar
@@ -88,7 +88,7 @@ const Pagination = () => {
         </Grid>
         <Grid item xs={12}>
           <AppComponentCard
-            title='BasisPaginationGrid'
+            title="BasisPaginationGrid"
             component={BasisPaginationGrid}
             source={BasisPaginationGridSource}
             noScrollbar
@@ -96,7 +96,7 @@ const Pagination = () => {
         </Grid>
         <Grid item xs={12}>
           <AppComponentCard
-            title='ApiRefPaginationGrid'
+            title="ApiRefPaginationGrid"
             component={ApiRefPaginationGrid}
             source={ApiRefPaginationGridSource}
             noScrollbar

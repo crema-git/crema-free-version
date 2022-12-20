@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import TreeView from '@mui/lab/TreeView';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
-import TreeItem, {useTreeItem} from '@mui/lab/TreeItem';
+import TreeItem, { useTreeItem } from '@mui/lab/TreeItem';
 import clsx from 'clsx';
 import Typography from '@mui/material/Typography';
 
@@ -58,7 +58,7 @@ const CustomContent = React.forwardRef(function CustomContent(props, ref) {
       </div>
       <Typography
         onClick={handleSelectionClick}
-        component='div'
+        component="div"
         className={classes.label}
       >
         {label}
@@ -105,22 +105,22 @@ const CustomTreeItem = (props) => (
 export default function IconExpansionTreeView() {
   return (
     <TreeView
-      aria-label='icon expansion'
+      aria-label="icon expansion"
       defaultCollapseIcon={<ExpandMoreIcon />}
       defaultExpandIcon={<ChevronRightIcon />}
-      sx={{height: 240, flexGrow: 1, maxWidth: 400, overflowY: 'auto'}}
+      sx={{ height: 240, flexGrow: 1, maxWidth: 400, overflowY: 'auto' }}
     >
-      <CustomTreeItem nodeId='1' label='Applications'>
-        <CustomTreeItem nodeId='2' label='Calendar' />
-        <CustomTreeItem nodeId='3' label='Chrome' />
-        <CustomTreeItem nodeId='4' label='Webstorm' />
+      <CustomTreeItem nodeId="1" label="Applications">
+        <CustomTreeItem nodeId="2" label="Calendar" />
+        <CustomTreeItem nodeId="3" label="Chrome" />
+        <CustomTreeItem nodeId="4" label="Webstorm" />
       </CustomTreeItem>
-      <CustomTreeItem nodeId='5' label='Documents'>
-        <CustomTreeItem nodeId='10' label='OSS' />
-        <CustomTreeItem nodeId='6' label='MUI'>
-          <CustomTreeItem nodeId='7' label='src'>
-            <CustomTreeItem nodeId='8' label='index.js' />
-            <CustomTreeItem nodeId='9' label='tree-view.js' />
+      <CustomTreeItem nodeId="5" label="Documents">
+        <CustomTreeItem nodeId="10" label="OSS" />
+        <CustomTreeItem nodeId="6" label="MUI">
+          <CustomTreeItem nodeId="7" label="src">
+            <CustomTreeItem nodeId="8" label="index.js" />
+            <CustomTreeItem nodeId="9" label="tree-view.js" />
           </CustomTreeItem>
         </CustomTreeItem>
       </CustomTreeItem>

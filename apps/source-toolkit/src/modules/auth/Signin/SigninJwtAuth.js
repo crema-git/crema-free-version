@@ -1,40 +1,40 @@
 import React from 'react';
 import Button from '@mui/material/Button';
-import {Checkbox} from '@mui/material';
-import {Form, Formik} from 'formik';
+import { Checkbox } from '@mui/material';
+import { Form, Formik } from 'formik';
 import * as yup from 'yup';
 
 import AppInfoView from '@crema/components/AppInfoView';
-import {Link, useNavigate} from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Box from '@mui/material/Box';
 import IntlMessages from '@crema/utility/IntlMessages';
-import {useIntl} from 'react-intl';
+import { useIntl } from 'react-intl';
 import AppTextField from '@crema/components/AppTextField';
-import {useAuthMethod} from '@crema/utility/AuthHooks';
-import {Fonts} from '@crema/constants/AppEnums'
+import { useAuthMethod } from '@crema/utility/AuthHooks';
+import { Fonts } from '@crema/constants/AppEnums';
 
 const validationSchema = yup.object({
   email: yup
     .string()
-    .email(<IntlMessages id='validation.emailFormat' />)
-    .required(<IntlMessages id='validation.emailRequired' />),
+    .email(<IntlMessages id="validation.emailFormat" />)
+    .required(<IntlMessages id="validation.emailRequired" />),
   password: yup
     .string()
-    .required(<IntlMessages id='validation.passwordRequired' />),
+    .required(<IntlMessages id="validation.passwordRequired" />),
 });
 
 const SigninJwtAuth = () => {
   const navigate = useNavigate();
-  const {signInUser} = useAuthMethod();
+  const { signInUser } = useAuthMethod();
   const onGoToForgetPassword = () => {
-    navigate('/forget-password', {tab: 'jwtAuth'});
+    navigate('/forget-password', { tab: 'jwtAuth' });
   };
 
-  const {messages} = useIntl();
+  const { messages } = useIntl();
 
   return (
-    <Box sx={{flex: 1, display: 'flex', flexDirection: 'column'}}>
-      <Box sx={{flex: 1, display: 'flex', flexDirection: 'column', mb: 5}}>
+    <Box sx={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
+      <Box sx={{ flex: 1, display: 'flex', flexDirection: 'column', mb: 5 }}>
         <Formik
           validateOnChange={true}
           initialValues={{
@@ -42,7 +42,7 @@ const SigninJwtAuth = () => {
             password: 'Pass@1!@all',
           }}
           validationSchema={validationSchema}
-          onSubmit={(data, {setSubmitting}) => {
+          onSubmit={(data, { setSubmitting }) => {
             setSubmitting(true);
             signInUser({
               email: data.email,
@@ -51,14 +51,14 @@ const SigninJwtAuth = () => {
             setSubmitting(false);
           }}
         >
-          {({isSubmitting}) => (
-            <Form style={{textAlign: 'left'}} noValidate autoComplete='off'>
-              <Box sx={{mb: {xs: 5, xl: 8}}}>
+          {({ isSubmitting }) => (
+            <Form style={{ textAlign: 'left' }} noValidate autoComplete="off">
+              <Box sx={{ mb: { xs: 5, xl: 8 } }}>
                 <AppTextField
                   placeholder={messages['common.email']}
-                  name='email'
-                  label={<IntlMessages id='common.email' />}
-                  variant='outlined'
+                  name="email"
+                  label={<IntlMessages id="common.email" />}
+                  variant="outlined"
                   sx={{
                     width: '100%',
                     '& .MuiInputBase-input': {
@@ -68,13 +68,13 @@ const SigninJwtAuth = () => {
                 />
               </Box>
 
-              <Box sx={{mb: {xs: 3, xl: 4}}}>
+              <Box sx={{ mb: { xs: 3, xl: 4 } }}>
                 <AppTextField
-                  type='password'
+                  type="password"
                   placeholder={messages['common.password']}
-                  label={<IntlMessages id='common.password' />}
-                  name='password'
-                  variant='outlined'
+                  label={<IntlMessages id="common.password" />}
+                  name="password"
+                  variant="outlined"
                   sx={{
                     width: '100%',
                     '& .MuiInputBase-input': {
@@ -86,7 +86,7 @@ const SigninJwtAuth = () => {
 
               <Box
                 sx={{
-                  mb: {xs: 3, xl: 4},
+                  mb: { xs: 3, xl: 4 },
                 }}
               >
                 <Box
@@ -95,18 +95,18 @@ const SigninJwtAuth = () => {
                     alignItems: 'center',
                   }}
                 >
-                  <Checkbox color='primary' sx={{ml: -3}} />
+                  <Checkbox color="primary" sx={{ ml: -3 }} />
                   <Box
-                    component='span'
+                    component="span"
                     sx={{
                       color: 'grey.500',
                     }}
                   >
-                    <IntlMessages id='common.rememberMe' />
+                    <IntlMessages id="common.rememberMe" />
                   </Box>
                 </Box>
                 <Box
-                  component='span'
+                  component="span"
                   sx={{
                     color: (theme) => theme.palette.primary.main,
                     fontWeight: Fonts.MEDIUM,
@@ -116,15 +116,15 @@ const SigninJwtAuth = () => {
                   }}
                   onClick={onGoToForgetPassword}
                 >
-                  <IntlMessages id='common.forgetPassword' />
+                  <IntlMessages id="common.forgetPassword" />
                 </Box>
               </Box>
 
               <div>
                 <Button
-                  variant='contained'
-                  color='primary'
-                  type='submit'
+                  variant="contained"
+                  color="primary"
+                  type="submit"
                   disabled={isSubmitting}
                   sx={{
                     minWidth: 160,
@@ -134,7 +134,7 @@ const SigninJwtAuth = () => {
                     padding: '4px 16px 8px',
                   }}
                 >
-                  <IntlMessages id='common.login' />
+                  <IntlMessages id="common.login" />
                 </Button>
               </div>
             </Form>
@@ -147,11 +147,11 @@ const SigninJwtAuth = () => {
           color: 'grey.500',
         }}
       >
-        <span style={{marginRight: 4}}>
-          <IntlMessages id='common.dontHaveAccount' />
+        <span style={{ marginRight: 4 }}>
+          <IntlMessages id="common.dontHaveAccount" />
         </span>
         <Box
-          component='span'
+          component="span"
           sx={{
             fontWeight: Fonts.MEDIUM,
             '& a': {
@@ -160,8 +160,8 @@ const SigninJwtAuth = () => {
             },
           }}
         >
-          <Link to='/signup'>
-            <IntlMessages id='common.signup' />
+          <Link to="/signup">
+            <IntlMessages id="common.signup" />
           </Link>
         </Box>
       </Box>

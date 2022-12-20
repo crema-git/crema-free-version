@@ -1,2 +1,2 @@
-import {Tooltip} from '@crema/modules/components/dataDisplay';
+import { Tooltip } from '@crema/modules/components/dataDisplay';
 export default Tooltip;

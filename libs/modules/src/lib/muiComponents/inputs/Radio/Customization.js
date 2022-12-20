@@ -1,12 +1,12 @@
 import * as React from 'react';
-import {styled} from '@mui/material/styles';
+import { styled } from '@mui/material/styles';
 import Radio from '@mui/material/Radio';
 import RadioGroup from '@mui/material/RadioGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import FormControl from '@mui/material/FormControl';
 import FormLabel from '@mui/material/FormLabel';
 
-const BpIcon = styled('span')(({theme}) => ({
+const BpIcon = styled('span')(({ theme }) => ({
   borderRadius: '50%',
   width: 16,
   height: 16,
@@ -61,7 +61,7 @@ function BpRadio(props) {
         },
       }}
       disableRipple
-      color='default'
+      color="default"
       checkedIcon={<BpCheckedIcon />}
       icon={<BpIcon />}
       {...props}
@@ -71,21 +71,21 @@ function BpRadio(props) {
 
 export default function CustomizedRadios() {
   return (
-    <FormControl component='fieldset'>
-      <FormLabel component='legend'>Gender</FormLabel>
+    <FormControl component="fieldset">
+      <FormLabel component="legend">Gender</FormLabel>
       <RadioGroup
-        defaultValue='female'
-        aria-label='gender'
-        name='customized-radios'
+        defaultValue="female"
+        aria-label="gender"
+        name="customized-radios"
       >
-        <FormControlLabel value='female' control={<BpRadio />} label='Female' />
-        <FormControlLabel value='male' control={<BpRadio />} label='Male' />
-        <FormControlLabel value='other' control={<BpRadio />} label='Other' />
+        <FormControlLabel value="female" control={<BpRadio />} label="Female" />
+        <FormControlLabel value="male" control={<BpRadio />} label="Male" />
+        <FormControlLabel value="other" control={<BpRadio />} label="Other" />
         <FormControlLabel
-          value='disabled'
+          value="disabled"
           disabled
           control={<BpRadio />}
-          label='(Disabled option)'
+          label="(Disabled option)"
         />
       </RadioGroup>
     </FormControl>

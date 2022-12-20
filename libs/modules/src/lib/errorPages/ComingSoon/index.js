@@ -1,20 +1,20 @@
 import React from 'react';
 import Button from '@mui/material/Button';
-import {useInfoViewActionsContext} from '@crema/context/InfoViewContextProvider';
-import {Form, Formik} from 'formik';
+import { useInfoViewActionsContext } from '@crema/context/InfoViewContextProvider';
+import { Form, Formik } from 'formik';
 import * as yup from 'yup';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
-import {grey} from '@mui/material/colors';
-import {Fonts} from '@crema/constants/AppEnums'
+import { grey } from '@mui/material/colors';
+import { Fonts } from '@crema/constants/AppEnums';
 import IntlMessages from '@crema/utility/IntlMessages';
 import AppTextField from '@crema/components/AppTextField';
 import AppInfoView from '@crema/components/AppInfoView';
 import AppAnimate from '@crema/components/AppAnimate';
 
-import {styled} from '@mui/material/styles';
-import {ReactComponent as Logo} from '../../../assets/icon/comingsoon.svg';
-import {useTheme} from '@mui/material';
+import { styled } from '@mui/material/styles';
+import { ReactComponent as Logo } from '../../../assets/icon/comingsoon.svg';
+import { useTheme } from '@mui/material';
 
 const FormWrapper = styled(Form)(() => {
   return {
@@ -47,11 +47,11 @@ const ComingSoon = () => {
   const infoViewActionsContext = useInfoViewActionsContext();
 
   return (
-    <AppAnimate animation='transition.slideUpIn' delay={200}>
+    <AppAnimate animation="transition.slideUpIn" delay={200}>
       <>
         <Box
           sx={{
-            py: {xl: 8},
+            py: { xl: 8 },
             flex: 1,
             display: 'flex',
             flexDirection: 'column',
@@ -62,9 +62,9 @@ const ComingSoon = () => {
         >
           <Box
             sx={{
-              mb: {xs: 4, xl: 8},
+              mb: { xs: 4, xl: 8 },
               width: '100%',
-              maxWidth: {xs: 200, sm: 300, xl: 706},
+              maxWidth: { xs: 200, sm: 300, xl: 706 },
               '& svg': {
                 width: '100%',
                 maxWidth: 400,
@@ -75,27 +75,27 @@ const ComingSoon = () => {
           </Box>
 
           <Box
-            variant='h3'
+            variant="h3"
             sx={{
-              mb: {xs: 3, xl: 4},
-              fontSize: {xs: 20, md: 24},
+              mb: { xs: 3, xl: 4 },
+              fontSize: { xs: 20, md: 24 },
               fontWeight: Fonts.MEDIUM,
             }}
           >
-            <IntlMessages id='error.comingSoon' />!
+            <IntlMessages id="error.comingSoon" />!
           </Box>
 
           <Box
             sx={{
-              mb: {xs: 4, xl: 5},
+              mb: { xs: 4, xl: 5 },
               color: grey[600],
             }}
           >
-            <Typography style={{fontSize: 18, marginTop: 3}}>
-              <IntlMessages id='error.comingSoonMessage1' />
+            <Typography style={{ fontSize: 18, marginTop: 3 }}>
+              <IntlMessages id="error.comingSoonMessage1" />
             </Typography>
-            <Typography style={{fontSize: 18}}>
-              <IntlMessages id='error.comingSoonMessage2' />
+            <Typography style={{ fontSize: 18 }}>
+              <IntlMessages id="error.comingSoonMessage2" />
             </Typography>
           </Box>
         </Box>
@@ -112,9 +112,9 @@ const ComingSoon = () => {
               email: '',
             }}
             validationSchema={validationSchema}
-            onSubmit={(data, {resetForm}) => {
+            onSubmit={(data, { resetForm }) => {
               infoViewActionsContext.showMessage(
-                <IntlMessages id='error.comingSoonNotification' />,
+                <IntlMessages id="error.comingSoonNotification" />
               );
               resetForm();
             }}
@@ -122,20 +122,20 @@ const ComingSoon = () => {
             {() => (
               <FormWrapper>
                 <AppTextField
-                  placeholder='Email'
-                  name='email'
-                  label={<IntlMessages id='common.emailAddress' />}
-                  className='text-field'
-                  variant='outlined'
+                  placeholder="Email"
+                  name="email"
+                  label={<IntlMessages id="common.emailAddress" />}
+                  className="text-field"
+                  variant="outlined"
                 />
 
                 <Button
-                  variant='contained'
-                  color='primary'
-                  type='submit'
-                  className='button'
+                  variant="contained"
+                  color="primary"
+                  type="submit"
+                  className="button"
                 >
-                  <IntlMessages id='error.notifyMe' />
+                  <IntlMessages id="error.notifyMe" />
                 </Button>
               </FormWrapper>
             )}

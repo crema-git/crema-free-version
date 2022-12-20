@@ -2,30 +2,30 @@ import React from 'react';
 import EditOutlinedIcon from '@mui/icons-material/EditOutlined';
 import PhotoCameraOutlinedIcon from '@mui/icons-material/PhotoCameraOutlined';
 import SearchIcon from '@mui/icons-material/Search';
-import IntlMessages from "@crema/utility/IntlMessages";
-import {blue, red, teal} from '@mui/material/colors';
+import IntlMessages from '@crema/utility/IntlMessages';
+import { blue, red, teal } from '@mui/material/colors';
 
 export const aboutUsData = [
   {
     alias: 'branding',
-    title: <IntlMessages id='extra.branding' />,
+    title: <IntlMessages id="extra.branding" />,
     avatarColor: teal[600],
     icon: <EditOutlinedIcon />,
-    content: <IntlMessages id='extra.brandingContent' />,
+    content: <IntlMessages id="extra.brandingContent" />,
   },
   {
     alias: 'photography',
-    title: <IntlMessages id='extra.photography' />,
+    title: <IntlMessages id="extra.photography" />,
     avatarColor: red[500],
     icon: <PhotoCameraOutlinedIcon />,
-    content: <IntlMessages id='extra.brandingContent' />,
+    content: <IntlMessages id="extra.brandingContent" />,
   },
   {
     alias: 'seo',
-    title: <IntlMessages id='extra.seo' />,
+    title: <IntlMessages id="extra.seo" />,
     avatarColor: blue[500],
     icon: <SearchIcon />,
-    content: <IntlMessages id='extra.brandingContent' />,
+    content: <IntlMessages id="extra.brandingContent" />,
   },
 ];
 

@@ -3,21 +3,21 @@ import IntlMessages from '@crema/utility/IntlMessages';
 import Box from '@mui/material/Box';
 import PropTypes from 'prop-types';
 import UserSocialMediaInfo from './UserSocialMediaInfo';
-import {Fonts} from '@crema/constants/AppEnums'
+import { Fonts } from '@crema/constants/AppEnums';
 
 const ListItem = (props) => {
-  const {user} = props;
+  const { user } = props;
 
   return (
     <Box
       sx={{
-        mb: {xs: 6, xl: 8},
+        mb: { xs: 6, xl: 8 },
       }}
     >
       <Box
         sx={{
           display: 'flex',
-          flexDirection: {xs: 'column', sm: 'row'},
+          flexDirection: { xs: 'column', sm: 'row' },
           position: 'relative',
 
           '&:hover': {
@@ -29,20 +29,20 @@ const ListItem = (props) => {
       >
         <Box
           sx={{
-            mr: {sm: 5},
+            mr: { sm: 5 },
             mb: 4,
             '.crUserImage': {
-              width: {sx: '100%', sm: 130},
-              height: {sx: 180, sm: 130},
+              width: { sx: '100%', sm: 130 },
+              height: { sx: 180, sm: 130 },
             },
           }}
         >
-          <img src={user.image} alt='user' className='crUserImage' />
+          <img src={user.image} alt="user" className="crUserImage" />
         </Box>
 
         <Box
           sx={{
-            pb: {xs: 5, xl: 8},
+            pb: { xs: 5, xl: 8 },
             flex: 1,
             position: 'relative',
             borderBottom: 'solid 2px',
@@ -62,10 +62,10 @@ const ListItem = (props) => {
           }}
         >
           <Box
-            sx={{mb: 3, fontSize: 16, component: 'h3', color: 'text.primary'}}
+            sx={{ mb: 3, fontSize: 16, component: 'h3', color: 'text.primary' }}
           >
             <Box
-              component='span'
+              component="span"
               sx={{
                 fontWeight: Fonts.BOLD,
                 color: 'text.primary',
@@ -74,9 +74,9 @@ const ListItem = (props) => {
             >
               {user.name}
             </Box>
-            <IntlMessages id='common.in' />
+            <IntlMessages id="common.in" />
             <Box
-              component='span'
+              component="span"
               sx={{
                 color: 'primary.main',
                 fontWeight: Fonts.BOLD,
@@ -89,11 +89,11 @@ const ListItem = (props) => {
 
           <Box
             sx={{
-              pr: {lg: 6, xl: 16},
+              pr: { lg: 6, xl: 16 },
             }}
           >
             <Box
-              component='p'
+              component="p"
               sx={{
                 color: 'text.secondary',
                 fontSize: 14,

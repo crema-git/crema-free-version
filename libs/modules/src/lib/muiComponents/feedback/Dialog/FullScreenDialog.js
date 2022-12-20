@@ -13,7 +13,7 @@ import CloseIcon from '@mui/icons-material/Close';
 import Slide from '@mui/material/Slide';
 
 const Transition = React.forwardRef(function Transition(props, ref) {
-  return <Slide direction='up' ref={ref} {...props} />;
+  return <Slide direction="up" ref={ref} {...props} />;
 });
 
 export default function FullScreenDialog() {
@@ -29,7 +29,7 @@ export default function FullScreenDialog() {
 
   return (
     <div>
-      <Button variant='outlined' onClick={handleClickOpen}>
+      <Button variant="outlined" onClick={handleClickOpen}>
         Open full-screen dialog
       </Button>
       <Dialog
@@ -38,33 +38,33 @@ export default function FullScreenDialog() {
         onClose={handleClose}
         TransitionComponent={Transition}
       >
-        <AppBar sx={{position: 'relative'}}>
+        <AppBar sx={{ position: 'relative' }}>
           <Toolbar>
             <IconButton
-              edge='start'
-              color='inherit'
+              edge="start"
+              color="inherit"
               onClick={handleClose}
-              aria-label='close'
+              aria-label="close"
             >
               <CloseIcon />
             </IconButton>
-            <Typography sx={{ml: 2, flex: 1}} variant='h6' component='div'>
+            <Typography sx={{ ml: 2, flex: 1 }} variant="h6" component="div">
               Sound
             </Typography>
-            <Button autoFocus color='inherit' onClick={handleClose}>
+            <Button autoFocus color="inherit" onClick={handleClose}>
               save
             </Button>
           </Toolbar>
         </AppBar>
         <List>
           <ListItem button>
-            <ListItemText primary='Phone ringtone' secondary='Titania' />
+            <ListItemText primary="Phone ringtone" secondary="Titania" />
           </ListItem>
           <Divider />
           <ListItem button>
             <ListItemText
-              primary='Default notification ringtone'
-              secondary='Tethys'
+              primary="Default notification ringtone"
+              secondary="Tethys"
             />
           </ListItem>
         </List>

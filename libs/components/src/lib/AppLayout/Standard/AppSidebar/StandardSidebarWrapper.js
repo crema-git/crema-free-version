@@ -1,8 +1,8 @@
 import React from 'react';
 import PropsTypes from 'prop-types';
-import {Box} from '@mui/material';
+import { Box } from '@mui/material';
 
-const StandardSidebarWrapper = ({children, ...rest}) => {
+const StandardSidebarWrapper = ({ children, ...rest }) => {
   return (
     <Box
       sx={{
@@ -10,8 +10,8 @@ const StandardSidebarWrapper = ({children, ...rest}) => {
         display: 'flex',
         flexDirection: 'column',
         transition: 'all 0.5s ease',
-        position: {xs: 'relative', lg: 'fixed'},
-        top: {xs: 0, lg: 71},
+        position: { xs: 'relative', lg: 'fixed' },
+        top: { xs: 0, lg: 71 },
         left: 0,
         zIndex: 1101,
         '& .app-sidebar': {

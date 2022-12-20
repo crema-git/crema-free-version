@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {DataGridPro} from '@mui/x-data-grid-pro';
+import { DataGridPro } from '@mui/x-data-grid-pro';
 
 const rows = [
   {
@@ -11,12 +11,12 @@ const rows = [
 
 export default function ColumnOrderingDisabledGrid() {
   return (
-    <div style={{height: 250, width: '100%'}}>
+    <div style={{ height: 250, width: '100%' }}>
       <DataGridPro
         columns={[
-          {field: 'id'},
-          {field: 'username'},
-          {field: 'age', disableReorder: true},
+          { field: 'id' },
+          { field: 'username' },
+          { field: 'age', disableReorder: true },
         ]}
         rows={rows}
       />

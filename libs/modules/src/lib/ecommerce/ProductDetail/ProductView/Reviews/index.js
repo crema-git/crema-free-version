@@ -1,5 +1,5 @@
 import React from 'react';
-import {Box} from '@mui/material';
+import { Box } from '@mui/material';
 import AppList from '@crema/components/AppList';
 import ReviewCell from './ReviewCell';
 import Divider from '@mui/material/Divider';
@@ -9,7 +9,7 @@ const Review = () => {
   return (
     <Box>
       <Box
-        component='h3'
+        component="h3"
         sx={{
           color: 'text.primary',
           fontSize: 16,
@@ -19,7 +19,7 @@ const Review = () => {
         Reviews
       </Box>
       <ReviewInfo />
-      <Divider style={{marginTop: 15, marginBottom: 15}} />
+      <Divider style={{ marginTop: 15, marginBottom: 15 }} />
       <AppList
         data={[1, 2, 3, 4, 5]}
         renderRow={(data) => <ReviewCell key={data} />}

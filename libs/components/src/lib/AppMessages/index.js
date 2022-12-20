@@ -1,11 +1,11 @@
-import React, {useState} from 'react';
-import {IconButton} from '@mui/material';
+import React, { useState } from 'react';
+import { IconButton } from '@mui/material';
 import PropTypes from 'prop-types';
 import AppTooltip from '../AppTooltip';
 import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
 import Drawer from '@mui/material/Drawer';
 import AppMessageContent from './AppMessageContent';
-import {alpha} from '@mui/material/styles';
+import { alpha } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 
 const AppMessages = ({
@@ -18,13 +18,13 @@ const AppMessages = ({
   return (
     <>
       {isMenu ? (
-        <Box component='span' onClick={() => setShowMessage(true)}>
+        <Box component="span" onClick={() => setShowMessage(true)}>
           Message
         </Box>
       ) : (
-        <AppTooltip title='Message' placement={tooltipPosition}>
+        <AppTooltip title="Message" placement={tooltipPosition}>
           <IconButton
-            className='icon-btn'
+            className="icon-btn"
             sx={{
               borderRadius: '50%',
               width: 40,
@@ -42,9 +42,9 @@ const AppMessages = ({
               },
             }}
             onClick={() => setShowMessage(true)}
-            size='large'
+            size="large"
           >
-            <EmailOutlinedIcon className='icon' />
+            <EmailOutlinedIcon className="icon" />
           </IconButton>
         </AppTooltip>
       )}

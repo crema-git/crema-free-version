@@ -27,87 +27,87 @@ const Avatar = () => {
   return (
     <>
       <AppComponentHeader
-        title='Avatar'
-        description='Avatars are found throughout material design with uses in everything from tables to dialog menus.'
-        refUrl='https://mui.com/components/avatars/'
+        title="Avatar"
+        description="Avatars are found throughout material design with uses in everything from tables to dialog menus."
+        refUrl="https://mui.com/components/avatars/"
       />
 
       <AppGridContainer>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Image avatars'
+            title="Image avatars"
             component={ImageAvatars}
             source={ImageAvatarsSource}
             noScrollbar
-            description='Image avatars can be created by passing standard img props src or srcSet to the component.'
+            description="Image avatars can be created by passing standard img props src or srcSet to the component."
           />
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Letter avatars'
+            title="Letter avatars"
             component={LetterAvatars}
             source={LetterAvatarsSource}
             noScrollbar
-            description='Avatars containing simple characters can be created by passing a string as children.'
+            description="Avatars containing simple characters can be created by passing a string as children."
           />
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Sizes'
+            title="Sizes"
             component={SizesImageAvatars}
             source={SizesImageAvatarsSource}
             noScrollbar
-            description='You can change the size of the avatar with the height and width CSS properties.'
+            description="You can change the size of the avatar with the height and width CSS properties."
           />
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Icon avatars'
+            title="Icon avatars"
             component={IconAvatars}
             source={IconAvatarsSource}
             noScrollbar
-            description='Icon avatars are created by passing an icon as children.'
+            description="Icon avatars are created by passing an icon as children."
           />
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Variants'
+            title="Variants"
             component={VariantAvatars}
             source={VariantAvatarsSource}
             noScrollbar
-            description='If you need square or rounded avatars, use the variant prop.'
+            description="If you need square or rounded avatars, use the variant prop."
           />
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Fallbacks'
+            title="Fallbacks"
             component={FallbackAvatars}
             source={FallbackAvatarsSource}
             noScrollbar
-            description='If there is an error loading the avatar image, the component falls back to an alternative in the following order:'
+            description="If there is an error loading the avatar image, the component falls back to an alternative in the following order:"
           />
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Grouped'
+            title="Grouped"
             component={GroupAvatars}
             source={GroupAvatarsSource}
             noScrollbar
-            description='AvatarGroup renders its children as a stack.'
+            description="AvatarGroup renders its children as a stack."
           />
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Total avatars'
+            title="Total avatars"
             component={TotalAvatars}
             source={TotalAvatarsSource}
             noScrollbar
-            description='AvatarGroup renders its children as a stack and shows count of total avatars.'
+            description="AvatarGroup renders its children as a stack and shows count of total avatars."
           />
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='With badge'
+            title="With badge"
             component={BadgeAvatars}
             source={BadgeAvatarsSource}
             noScrollbar

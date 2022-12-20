@@ -17,15 +17,15 @@ const Text = () => {
   return (
     <>
       <AppComponentHeader
-        title='Text'
-        description='A textarea component for React which grows with content.'
-        refUrl='https://mui.com/components/textarea-autosize/'
+        title="Text"
+        description="A textarea component for React which grows with content."
+        refUrl="https://mui.com/components/textarea-autosize/"
       />
 
       <AppGridContainer>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Empty Text area'
+            title="Empty Text area"
             component={EmptyTextarea}
             source={EmptyTextareaSource}
             noScrollbar
@@ -33,7 +33,7 @@ const Text = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='MinHeightTextarea'
+            title="MinHeightTextarea"
             component={MinHeightTextarea}
             source={MinHeightTextareaSource}
             noScrollbar
@@ -41,7 +41,7 @@ const Text = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='MaxHeightTextarea'
+            title="MaxHeightTextarea"
             component={MaxHeightTextarea}
             source={MaxHeightTextareaSource}
             noScrollbar

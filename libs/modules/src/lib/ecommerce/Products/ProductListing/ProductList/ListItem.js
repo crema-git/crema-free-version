@@ -1,6 +1,6 @@
 import React from 'react';
 import Card from '@mui/material/Card';
-import {Checkbox} from '@mui/material';
+import { Checkbox } from '@mui/material';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import FavoriteOutlinedIcon from '@mui/icons-material/FavoriteOutlined';
 import Rating from '@mui/material/Rating';
@@ -8,9 +8,9 @@ import Slider from 'react-slick';
 import IntlMessages from '@crema/utility/IntlMessages';
 import Box from '@mui/material/Box';
 import PropTypes from 'prop-types';
-import {green, grey} from '@mui/material/colors';
-import {Fonts} from '@crema/constants/AppEnums'
-import {useNavigate} from 'react-router-dom';
+import { green, grey } from '@mui/material/colors';
+import { Fonts } from '@crema/constants/AppEnums';
+import { useNavigate } from 'react-router-dom';
 import MediaSlider from './MediaSlider';
 import AddShoppingCartOutlinedIcon from '@mui/icons-material/AddShoppingCartOutlined';
 
@@ -25,7 +25,7 @@ const settings = {
 };
 
 const ListItem = (props) => {
-  const {item} = props;
+  const { item } = props;
   const navigate = useNavigate();
 
   return (
@@ -35,7 +35,7 @@ const ListItem = (props) => {
         mb: 4,
         cursor: 'pointer',
       }}
-      className='item-hover'
+      className="item-hover"
       onClick={() => {
         navigate('/ecommerce/product_detail/' + item.id);
       }}
@@ -43,16 +43,16 @@ const ListItem = (props) => {
       <Box
         sx={{
           display: 'flex',
-          flexDirection: {xs: 'column', sm: 'row'},
+          flexDirection: { xs: 'column', sm: 'row' },
         }}
       >
         <Box
           sx={{
-            pr: {xs: 0, sm: 4},
-            mb: {xs: 3, sm: 0},
+            pr: { xs: 0, sm: 4 },
+            mb: { xs: 3, sm: 0 },
             maxWidth: '100%',
             textAlign: 'center',
-            width: {sm: '8rem', xl: '10rem'},
+            width: { sm: '8rem', xl: '10rem' },
           }}
         >
           <MediaSlider>
@@ -80,7 +80,7 @@ const ListItem = (props) => {
                         height: '100%',
                       }}
                     >
-                      <img src={img.src} alt='watch' />
+                      <img src={img.src} alt="watch" />
                     </Box>
                   </Box>
                 );
@@ -109,7 +109,7 @@ const ListItem = (props) => {
             }}
           >
             <Box
-              component='h3'
+              component="h3"
               sx={{
                 fontWeight: Fonts.BOLD,
                 fontSize: 16,
@@ -123,7 +123,7 @@ const ListItem = (props) => {
             </Box>
 
             <Box
-              component='span'
+              component="span"
               sx={{
                 ml: 'auto',
                 display: 'block',
@@ -141,7 +141,7 @@ const ListItem = (props) => {
           </Box>
 
           <Box
-            component='p'
+            component="p"
             sx={{
               color: 'text.secondary',
               mb: 5,
@@ -153,33 +153,33 @@ const ListItem = (props) => {
 
           <Box
             sx={{
-              mb: {xs: 3, xl: 5},
+              mb: { xs: 3, xl: 5 },
               display: 'flex',
               flexWrap: 'wrap',
-              fontSize: {xs: 12, xl: 14},
+              fontSize: { xs: 12, xl: 14 },
             }}
           >
             <Box
               sx={{
-                mr: {xs: 2, xl: 4},
+                mr: { xs: 2, xl: 4 },
                 mb: 1,
-                pr: {xs: 2, xl: 4},
+                pr: { xs: 2, xl: 4 },
                 borderRight: 1,
                 borderColor: grey[200],
               }}
             >
               <Box
-                component='span'
+                component="span"
                 sx={{
                   color: 'text.secondary',
                   fontWeight: Fonts.MEDIUM,
                   textTransform: 'uppercase',
                 }}
               >
-                <IntlMessages id='ecommerce.exclusivePrice' />:
+                <IntlMessages id="ecommerce.exclusivePrice" />:
               </Box>
               <Box
-                component='span'
+                component="span"
                 sx={{
                   ml: 2,
                   fontWeight: Fonts.MEDIUM,
@@ -190,17 +190,17 @@ const ListItem = (props) => {
             </Box>
             <Box
               sx={{
-                mr: {xs: 2, xl: 4},
+                mr: { xs: 2, xl: 4 },
                 mb: 1,
-                pr: {xs: 2, xl: 4},
+                pr: { xs: 2, xl: 4 },
                 color: 'text.secondary',
                 borderRight: 1,
                 borderColor: 'primary.main',
               }}
             >
-              <IntlMessages id='ecommerce.mrp' />:
+              <IntlMessages id="ecommerce.mrp" />:
               <Box
-                component='span'
+                component="span"
                 sx={{
                   textDecoration: 'line-through',
                 }}
@@ -215,7 +215,7 @@ const ListItem = (props) => {
                 color: green[600],
               }}
             >
-              {item.discount}% <IntlMessages id='ecommerce.off' />
+              {item.discount}% <IntlMessages id="ecommerce.off" />
             </Box>
           </Box>
 
@@ -223,7 +223,7 @@ const ListItem = (props) => {
             sx={{
               mt: 'auto',
               mb: -3,
-              mx: {xs: -2, xl: -3},
+              mx: { xs: -2, xl: -3 },
               display: 'flex',
               flexWrap: 'wrap',
               justifyContent: 'space-between',
@@ -232,7 +232,7 @@ const ListItem = (props) => {
           >
             <Box
               sx={{
-                px: {xs: 2, xl: 3},
+                px: { xs: 2, xl: 3 },
                 mb: 2,
                 display: 'flex',
                 alignItems: 'center',
@@ -243,27 +243,27 @@ const ListItem = (props) => {
                   mr: 1,
                 }}
               >
-                <AddShoppingCartOutlinedIcon sx={{fontSize: 16, mt: 1}} />
+                <AddShoppingCartOutlinedIcon sx={{ fontSize: 16, mt: 1 }} />
               </Box>
               <Box
-                component='span'
+                component="span"
                 sx={{
                   fontSize: 14,
                 }}
               >
-                <IntlMessages id='ecommerce.addToCart' />
+                <IntlMessages id="ecommerce.addToCart" />
               </Box>
             </Box>
             <Box
               sx={{
-                px: {xs: 2, xl: 3},
+                px: { xs: 2, xl: 3 },
                 mb: 2,
                 display: 'flex',
                 alignItems: 'center',
               }}
             >
-              <Box sx={{mt: 1.5}}>
-                <Rating size='small' value={item.rating} readOnly />
+              <Box sx={{ mt: 1.5 }}>
+                <Rating size="small" value={item.rating} readOnly />
               </Box>
               <Box
                 sx={{

@@ -1,4 +1,9 @@
-import {backgroundDark, backgroundLight, textDark, textLight,} from './defaultConfig';
+import {
+  backgroundDark,
+  backgroundLight,
+  textDark,
+  textLight,
+} from './defaultConfig';
 
 const colorSet = [
   {

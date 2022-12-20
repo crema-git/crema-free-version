@@ -10,14 +10,14 @@ import BeachAccessIcon from '@mui/icons-material/BeachAccess';
 
 export default function FolderList() {
   return (
-    <List sx={{width: '100%', maxWidth: 360, bgcolor: 'background.paper'}}>
+    <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
       <ListItem>
         <ListItemAvatar>
           <Avatar>
             <ImageIcon />
           </Avatar>
         </ListItemAvatar>
-        <ListItemText primary='Photos' secondary='Jan 9, 2014' />
+        <ListItemText primary="Photos" secondary="Jan 9, 2014" />
       </ListItem>
       <ListItem>
         <ListItemAvatar>
@@ -25,7 +25,7 @@ export default function FolderList() {
             <WorkIcon />
           </Avatar>
         </ListItemAvatar>
-        <ListItemText primary='Work' secondary='Jan 7, 2014' />
+        <ListItemText primary="Work" secondary="Jan 7, 2014" />
       </ListItem>
       <ListItem>
         <ListItemAvatar>
@@ -33,7 +33,7 @@ export default function FolderList() {
             <BeachAccessIcon />
           </Avatar>
         </ListItemAvatar>
-        <ListItemText primary='Vacation' secondary='July 20, 2014' />
+        <ListItemText primary="Vacation" secondary="July 20, 2014" />
       </ListItem>
     </List>
   );

@@ -1,23 +1,23 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import AppsContainer from '@crema/components/AppsContainer';
-import {useIntl} from 'react-intl';
-import {Button, Hidden} from '@mui/material';
+import { useIntl } from 'react-intl';
+import { Button, Hidden } from '@mui/material';
 import AppsHeader from '@crema/components/AppsHeader';
 import AppsContent from '@crema/components/AppsContent';
 import AppsPagination from '@crema/components/AppsPagination';
 import Box from '@mui/material/Box';
 import AppInfoView from '@crema/components/AppInfoView';
 import AppSearchBar from '@crema/components/AppSearchBar';
-import {useGetDataApi} from '@crema/utility/APIHooks';
-import {OrderTable} from '@crema/modules/ecommerce/Orders';
+import { useGetDataApi } from '@crema/utility/APIHooks';
+import { OrderTable } from '@crema/modules/ecommerce/Orders';
 
 const Orders = () => {
-  const {messages} = useIntl();
-  const [{apiData}, {setQueryParams}] = useGetDataApi(
+  const { messages } = useIntl();
+  const [{ apiData }, { setQueryParams }] = useGetDataApi(
     '/api/ecommerce/orders',
     {},
     {},
-    false,
+    false
   );
   const [page, setPage] = useState(0);
   const [search, setSearchQuery] = useState('');
@@ -26,7 +26,7 @@ const Orders = () => {
     setPage(value);
   };
   useEffect(() => {
-    setQueryParams({search, page});
+    setQueryParams({ search, page });
   }, [search, page]);
 
   const onSearchOrder = (value) => {
@@ -38,20 +38,20 @@ const Orders = () => {
       <AppsContainer title={messages['eCommerce.recentOrders']} fullView>
         <AppsHeader>
           <Box
-            display='flex'
-            flexDirection='row'
-            alignItems='center'
+            display="flex"
+            flexDirection="row"
+            alignItems="center"
             width={1}
-            justifyContent='space-between'
+            justifyContent="space-between"
           >
             <AppSearchBar
-              iconPosition='right'
+              iconPosition="right"
               overlap={false}
               onChange={(event) => onSearchOrder(event.target.value)}
               placeholder={messages['common.searchHere']}
             />
-            <Box display='flex' flexDirection='row' alignItems='center'>
-              <Button variant='contained' color='primary'>
+            <Box display="flex" flexDirection="row" alignItems="center">
+              <Button variant="contained" color="primary">
                 Add Order
               </Button>
 

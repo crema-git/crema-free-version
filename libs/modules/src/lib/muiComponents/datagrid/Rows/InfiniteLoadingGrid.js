@@ -1,6 +1,10 @@
 import * as React from 'react';
-import {DataGridPro, GridOverlay} from '@mui/x-data-grid-pro';
-import {getCommodityColumns, getRealGridData, useDemoData,} from '@mui/x-data-grid-generator';
+import { DataGridPro, GridOverlay } from '@mui/x-data-grid-pro';
+import {
+  getCommodityColumns,
+  getRealGridData,
+  useDemoData,
+} from '@mui/x-data-grid-generator';
 import LinearProgress from '@mui/material/LinearProgress';
 
 const MAX_ROW_LENGTH = 500;
@@ -16,7 +20,7 @@ async function sleep(duration) {
 function CustomLoadingOverlay() {
   return (
     <GridOverlay>
-      <div style={{position: 'absolute', top: 0, width: '100%'}}>
+      <div style={{ position: 'absolute', top: 0, width: '100%' }}>
         <LinearProgress />
       </div>
     </GridOverlay>
@@ -27,7 +31,7 @@ export default function InfiniteLoadingGrid() {
   const [loading, setLoading] = React.useState(false);
   const [loadedRows, setLoadedRows] = React.useState([]);
   const mounted = React.useRef(true);
-  const {data} = useDemoData({
+  const { data } = useDemoData({
     dataSet: 'Commodity',
     rowLength: 20,
     maxColumns: 6,
@@ -58,7 +62,7 @@ export default function InfiniteLoadingGrid() {
   }, []);
 
   return (
-    <div style={{height: 400, width: '100%'}}>
+    <div style={{ height: 400, width: '100%' }}>
       <DataGridPro
         {...data}
         rows={data.rows.concat(loadedRows)}

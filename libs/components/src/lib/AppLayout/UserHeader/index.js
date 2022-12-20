@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import AppSidebar from './AppSidebar';
 import AppContentView from '../../AppContentView';
 import AppThemeSetting from '../../AppThemeSetting';
@@ -7,15 +7,15 @@ import clsx from 'clsx';
 import Box from '@mui/material/Box';
 import UserHeaderWrapper from './UserHeaderWrapper';
 import AppFixedFooter from './AppFixedFooter';
-import {useLayoutContext} from "@crema/context/LayoutContextProvider";
-import {LayoutType} from '@crema/constants/AppEnums';
+import { useLayoutContext } from '@crema/context/LayoutContextProvider';
+import { LayoutType } from '@crema/constants/AppEnums';
 import UserHeaderContainer from './UserHeaderContainer';
-import {useLocation} from 'react-router-dom';
-import PropsTypes from "prop-types";
+import { useLocation } from 'react-router-dom';
+import PropsTypes from 'prop-types';
 
-const UserHeader = ({routes,routesConfig}) => {
-  const {pathname} = useLocation();
-  const {footer, layoutType, footerType} = useLayoutContext();
+const UserHeader = ({ routes, routesConfig }) => {
+  const { pathname } = useLocation();
+  const { footer, layoutType, footerType } = useLayoutContext();
   const [isNavCollapsed, setNavCollapsed] = useState(false);
 
   const toggleNavCollapsed = () => {
@@ -39,13 +39,13 @@ const UserHeader = ({routes,routesConfig}) => {
         })}
       >
         <AppHeader toggleNavCollapsed={toggleNavCollapsed} />
-        <Box className='mainContent'>
-          <AppSidebar 
-          routesConfig={routesConfig}
+        <Box className="mainContent">
+          <AppSidebar
+            routesConfig={routesConfig}
             isNavCollapsed={isNavCollapsed}
             toggleNavCollapsed={toggleNavCollapsed}
           />
-          <AppContentView  routes={routes} />
+          <AppContentView routes={routes} />
           <AppFixedFooter />
         </Box>
         <AppThemeSetting />
@@ -59,4 +59,3 @@ UserHeader.propsTypes = {
   routes: PropsTypes.object.isRequired,
   routesConfig: PropsTypes.array.isRequired,
 };
-

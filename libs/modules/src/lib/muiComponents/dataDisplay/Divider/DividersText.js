@@ -1,9 +1,9 @@
 import * as React from 'react';
-import {styled} from '@mui/material/styles';
+import { styled } from '@mui/material/styles';
 import Divider from '@mui/material/Divider';
 import Chip from '@mui/material/Chip';
 
-const Root = styled('div')(({theme}) => ({
+const Root = styled('div')(({ theme }) => ({
   width: '100%',
   ...theme.typography.body2,
   '& > :not(style) + :not(style)': {
@@ -25,12 +25,12 @@ export default function DividerText() {
       {content}
       <Divider>CENTER</Divider>
       {content}
-      <Divider textAlign='left'>LEFT</Divider>
+      <Divider textAlign="left">LEFT</Divider>
       {content}
-      <Divider textAlign='right'>RIGHT</Divider>
+      <Divider textAlign="right">RIGHT</Divider>
       {content}
       <Divider>
-        <Chip label='CHIP' />
+        <Chip label="CHIP" />
       </Divider>
       {content}
     </Root>

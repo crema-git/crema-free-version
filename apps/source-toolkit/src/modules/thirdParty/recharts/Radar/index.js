@@ -1,2 +1,2 @@
-import {Radar } from '@crema/modules/thirdParty';
-export  default Radar;
+import { Radar } from '@crema/modules/thirdParty';
+export default Radar;

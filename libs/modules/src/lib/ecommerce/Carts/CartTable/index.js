@@ -7,16 +7,22 @@ import TableItem from './TableItem';
 import AppTableContainer from '@crema/components/AppTableContainer';
 import PropTypes from 'prop-types';
 
-const CartTable = ({cartItems, setTableData}) => {
+const CartTable = ({ cartItems, onRemoveItem, onIncrement, onDecrement }) => {
   return (
     <AppTableContainer>
-      <Table stickyHeader className='table'>
+      <Table stickyHeader className="table">
         <TableHead>
           <TableHeading />
         </TableHead>
         <TableBody>
           {cartItems.map((data) => (
-            <TableItem data={data} key={data.id} setTableData={setTableData} />
+            <TableItem
+              data={data}
+              key={data.id}
+              onRemoveItem={onRemoveItem}
+              onIncrement={onIncrement}
+              onDecrement={onDecrement}
+            />
           ))}
         </TableBody>
       </Table>
@@ -28,5 +34,7 @@ export default CartTable;
 
 CartTable.propTypes = {
   cartItems: PropTypes.array,
-  setTableData: PropTypes.func,
+  onDecrement: PropTypes.func,
+  onIncrement: PropTypes.func,
+  onRemoveItem: PropTypes.func,
 };

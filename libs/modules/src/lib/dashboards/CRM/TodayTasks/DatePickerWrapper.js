@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {Box} from '@mui/material';
+import { Box } from '@mui/material';
 
-const DatePickerWrapper = ({children}) => {
+const DatePickerWrapper = ({ children }) => {
   return (
     <Box
       sx={{

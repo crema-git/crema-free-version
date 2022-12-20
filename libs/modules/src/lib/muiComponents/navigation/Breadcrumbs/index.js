@@ -23,15 +23,15 @@ const BottomNavigation = () => {
   return (
     <>
       <AppComponentHeader
-        title='Breadcrumbs'
-        description='Breadcrumbs allow users to make selections from a range of values.'
-        refUrl='https://mui.com/components/breadcrumbs/'
+        title="Breadcrumbs"
+        description="Breadcrumbs allow users to make selections from a range of values."
+        refUrl="https://mui.com/components/breadcrumbs/"
       />
 
       <AppGridContainer>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Bottom Navigation'
+            title="Bottom Navigation"
             component={BasicBreadcrumbs}
             source={BasicBreadcrumbsSource}
             noScrollbar
@@ -39,7 +39,7 @@ const BottomNavigation = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='ActiveLast Breadcrumb'
+            title="ActiveLast Breadcrumb"
             component={ActiveLastBreadcrumb}
             source={ActiveLastBreadcrumbSource}
             noScrollbar
@@ -47,7 +47,7 @@ const BottomNavigation = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Customized Breadcrumbs'
+            title="Customized Breadcrumbs"
             component={CustomizedBreadcrumbs}
             source={CustomizedBreadcrumbsSource}
             noScrollbar
@@ -55,7 +55,7 @@ const BottomNavigation = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Collapsed Breadcrumbs'
+            title="Collapsed Breadcrumbs"
             component={CollapsedBreadcrumbs}
             source={CollapsedBreadcrumbsSource}
             noScrollbar
@@ -63,7 +63,7 @@ const BottomNavigation = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Custom Separator'
+            title="Custom Separator"
             component={CustomSeparator}
             source={CustomSeparatorSource}
             noScrollbar

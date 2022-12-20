@@ -1,7 +1,7 @@
 import React from 'react';
 import Box from '@mui/material/Box';
 import IntlMessages from '@crema/utility/IntlMessages';
-import {Form} from 'formik';
+import { Form } from 'formik';
 import AppGridContainer from '@crema/components/AppGridContainer';
 import Grid from '@mui/material/Grid';
 import TextField from '@mui/material/TextField';
@@ -10,14 +10,14 @@ import CardAttachments from './CardAttachments';
 import CardCheckedList from './CardCheckedList';
 import CardComments from './CardComments';
 import Button from '@mui/material/Button';
-import {useIntl} from 'react-intl';
+import { useIntl } from 'react-intl';
 import Divider from '@mui/material/Divider';
 import moment from 'moment';
 import PropTypes from 'prop-types';
-import {Autocomplete, DatePicker} from '@mui/lab';
+import { Autocomplete, DatePicker } from '@mui/lab';
 import AppTextField from '@crema/components/AppTextField';
 import AppScrollbar from '@crema/components/AppScrollbar';
-import {useGetDataApi} from '@crema/utility/APIHooks';
+import { useGetDataApi } from '@crema/utility/APIHooks';
 
 const AddCardForm = (props) => {
   const {
@@ -39,15 +39,15 @@ const AddCardForm = (props) => {
     isSubmitting,
   } = props;
 
-  const {messages} = useIntl();
+  const { messages } = useIntl();
 
-  const [{apiData: labelList}] = useGetDataApi(
+  const [{ apiData: labelList }] = useGetDataApi(
     '/api/scrumboard/label/list',
-    [],
+    []
   );
-  const [{apiData: memberList}] = useGetDataApi(
+  const [{ apiData: memberList }] = useGetDataApi(
     '/api/scrumboard/member/list',
-    [],
+    []
   );
   console.log('memberList', memberList);
   const onDeleteCheckedItem = (id) => {
@@ -86,13 +86,13 @@ const AddCardForm = (props) => {
         },
         comment: comment,
         date: moment().format('ll'),
-      }),
+      })
     );
   };
 
   const onDeleteAttachment = (id) => {
     const updatedAttachments = attachments.filter(
-      (attachment) => attachment.id !== id,
+      (attachment) => attachment.id !== id
     );
     setAttachments(updatedAttachments);
   };
@@ -104,7 +104,7 @@ const AddCardForm = (props) => {
         height: '100%',
       }}
       noValidate
-      autoComplete='off'
+      autoComplete="off"
     >
       <AppScrollbar
         sx={{
@@ -117,34 +117,34 @@ const AddCardForm = (props) => {
         <Box
           sx={{
             pt: 6,
-            px: {xs: 5, lg: 8, xl: 10},
+            px: { xs: 5, lg: 8, xl: 10 },
             pb: 2,
             display: 'flex',
-            flexDirection: {xs: 'column', md: 'row'},
-            alignItems: {md: 'center'},
+            flexDirection: { xs: 'column', md: 'row' },
+            alignItems: { md: 'center' },
           }}
         >
           <Box
             sx={{
               mb: 3,
-              width: {md: '60%'},
+              width: { md: '60%' },
             }}
           >
             <AppTextField
               sx={{
                 width: '100%',
               }}
-              variant='outlined'
-              label={<IntlMessages id='common.title' />}
-              name='title'
+              variant="outlined"
+              label={<IntlMessages id="common.title" />}
+              name="title"
             />
           </Box>
 
           <Box
             sx={{
-              ml: {md: 8},
+              ml: { md: 8 },
               mb: 3,
-              width: {md: '40%'},
+              width: { md: '40%' },
               '& .MuiFormControl-root': {
                 width: '100%',
               },
@@ -152,11 +152,11 @@ const AddCardForm = (props) => {
           >
             <DatePicker
               autoOk
-              format='YYYY/MM/DD'
-              variant='outlined'
-              inputVariant='outlined'
-              label={<IntlMessages id='common.date' />}
-              name='date'
+              format="YYYY/MM/DD"
+              variant="outlined"
+              inputVariant="outlined"
+              label={<IntlMessages id="common.date" />}
+              name="date"
               value={values.date}
               onChange={(value) => setFieldValue('date', value)}
               renderInput={(params) => <TextField {...params} />}
@@ -167,18 +167,18 @@ const AddCardForm = (props) => {
         <Box
           sx={{
             pb: 5,
-            px: {xs: 5, lg: 8, xl: 10},
+            px: { xs: 5, lg: 8, xl: 10 },
           }}
         >
           <AppTextField
-            name='desc'
+            name="desc"
             multiline
             sx={{
               width: '100%',
               mb: 5,
             }}
-            rows='3'
-            variant='outlined'
+            rows="3"
+            variant="outlined"
             placeholder={messages['common.description']}
           />
 
@@ -190,7 +190,7 @@ const AddCardForm = (props) => {
             <Grid item xs={12} md={6}>
               <Autocomplete
                 multiple
-                id='tags-outlined'
+                id="tags-outlined"
                 options={labelList}
                 getOptionLabel={(option) => option.name}
                 value={selectedLabels}
@@ -199,8 +199,8 @@ const AddCardForm = (props) => {
                 renderInput={(params) => (
                   <TextField
                     {...params}
-                    variant='outlined'
-                    label={<IntlMessages id='common.label' />}
+                    variant="outlined"
+                    label={<IntlMessages id="common.label" />}
                     fullWidth
                   />
                 )}
@@ -210,7 +210,7 @@ const AddCardForm = (props) => {
             <Grid item xs={12} md={6}>
               <Autocomplete
                 multiple
-                id='tags-outlined'
+                id="tags-outlined"
                 options={memberList}
                 autoHighlight
                 getOptionLabel={(option) => option.name}
@@ -218,8 +218,8 @@ const AddCardForm = (props) => {
                 onChange={(event, value) => setMembersList(value)}
                 renderOption={(props, option) => (
                   <Box
-                    component='li'
-                    sx={{display: 'flex', alignItems: 'center'}}
+                    component="li"
+                    sx={{ display: 'flex', alignItems: 'center' }}
                     {...props}
                   >
                     {option.image ? (
@@ -234,8 +234,8 @@ const AddCardForm = (props) => {
                 renderInput={(params) => (
                   <TextField
                     {...params}
-                    variant='outlined'
-                    label={<IntlMessages id='common.members' />}
+                    variant="outlined"
+                    label={<IntlMessages id="common.members" />}
                     fullWidth
                   />
                 )}
@@ -259,8 +259,8 @@ const AddCardForm = (props) => {
 
           <Divider
             sx={{
-              mb: {xs: 4, md: 6},
-              mx: {xs: -5, lg: -8, xl: -10},
+              mb: { xs: 4, md: 6 },
+              mx: { xs: -5, lg: -8, xl: -10 },
             }}
           />
 
@@ -279,23 +279,23 @@ const AddCardForm = (props) => {
           sx={{
             px: 8,
           }}
-          color='primary'
-          variant='outlined'
+          color="primary"
+          variant="outlined"
           disabled={isSubmitting}
-          type='submit'
+          type="submit"
         >
-          <IntlMessages id='common.done' />
+          <IntlMessages id="common.done" />
         </Button>
         <Button
           sx={{
             px: 8,
             ml: 2.5,
           }}
-          color='primary'
-          variant='outlined'
+          color="primary"
+          variant="outlined"
           onClick={onCloseAddCard}
         >
-          <IntlMessages id='common.cancel' />
+          <IntlMessages id="common.cancel" />
         </Button>
       </Box>
     </Form>

@@ -8,18 +8,18 @@ import NavigationIcon from '@mui/icons-material/Navigation';
 
 export default function FloatingActionButtons() {
   return (
-    <Box sx={{'& > :not(style)': {m: 1}}}>
-      <Fab color='primary' aria-label='add'>
+    <Box sx={{ '& > :not(style)': { m: 1 } }}>
+      <Fab color="primary" aria-label="add">
         <AddIcon />
       </Fab>
-      <Fab color='secondary' aria-label='edit'>
+      <Fab color="secondary" aria-label="edit">
         <EditIcon />
       </Fab>
-      <Fab variant='extended'>
-        <NavigationIcon sx={{mr: 1}} />
+      <Fab variant="extended">
+        <NavigationIcon sx={{ mr: 1 }} />
         Navigate
       </Fab>
-      <Fab disabled aria-label='like'>
+      <Fab disabled aria-label="like">
         <FavoriteIcon />
       </Fab>
     </Box>

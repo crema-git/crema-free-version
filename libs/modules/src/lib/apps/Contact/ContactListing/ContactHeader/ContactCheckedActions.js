@@ -7,10 +7,10 @@ import DeleteOutlinedIcon from '@mui/icons-material/DeleteOutlined';
 import LabelOutlinedIcon from '@mui/icons-material/LabelOutlined';
 import PropTypes from 'prop-types';
 import IconButton from '@mui/material/IconButton';
-import {Hidden} from '@mui/material';
+import { Hidden } from '@mui/material';
 import AppTooltip from '@crema/components/AppTooltip';
-import {putDataApi} from '@crema/utility/APIHooks';
-import {useInfoViewActionsContext} from '@crema/context/InfoViewContextProvider';
+import { putDataApi } from '@crema/utility/APIHooks';
+import { useInfoViewActionsContext } from '@crema/context/InfoViewContextProvider';
 
 const ContactCheckedActions = (props) => {
   const {
@@ -51,19 +51,19 @@ const ContactCheckedActions = (props) => {
 
   return (
     <Box
-      component='span'
+      component="span"
       sx={{
         display: 'flex',
         alignItems: 'center',
-        mr: {xs: 2, xl: 3},
+        mr: { xs: 2, xl: 3 },
       }}
     >
-      <AppTooltip title={<IntlMessages id='common.delete' />}>
+      <AppTooltip title={<IntlMessages id="common.delete" />}>
         <IconButton
           sx={{
             color: (theme) => theme.palette.text.disabled,
           }}
-          size='large'
+          size="large"
         >
           <DeleteOutlinedIcon
             sx={{
@@ -76,12 +76,12 @@ const ContactCheckedActions = (props) => {
       </AppTooltip>
 
       <Hidden smDown>
-        <AppTooltip title={<IntlMessages id='common.label' />}>
+        <AppTooltip title={<IntlMessages id="common.label" />}>
           <IconButton
             sx={{
               color: (theme) => theme.palette.text.disabled,
             }}
-            size='large'
+            size="large"
           >
             <LabelOutlinedIcon
               sx={{
@@ -103,13 +103,13 @@ const ContactCheckedActions = (props) => {
         onClose={onLabelClose}
       >
         <MenuItem value={311} onClick={onSelectLabel}>
-          <IntlMessages id='common.crema' />
+          <IntlMessages id="common.crema" />
         </MenuItem>
         <MenuItem value={312} onClick={onSelectLabel}>
-          <IntlMessages id='common.personal' />
+          <IntlMessages id="common.personal" />
         </MenuItem>
         <MenuItem value={313} onClick={onSelectLabel}>
-          <IntlMessages id='common.work' />
+          <IntlMessages id="common.work" />
         </MenuItem>
       </Menu>
     </Box>

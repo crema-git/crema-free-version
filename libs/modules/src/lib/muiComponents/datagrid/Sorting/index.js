@@ -26,15 +26,15 @@ const Sorting = () => {
   return (
     <>
       <AppComponentHeader
-        title='Sorting'
-        description='Sorting allows ordering records in the data grid.'
-        refUrl='https://mui.com/components/data-grid/sorting/'
+        title="Sorting"
+        description="Sorting allows ordering records in the data grid."
+        refUrl="https://mui.com/components/data-grid/sorting/"
       />
 
       <AppGridContainer>
         <Grid item xs={12}>
           <AppComponentCard
-            title='BasicSortingGrid'
+            title="BasicSortingGrid"
             component={BasicSortingGrid}
             source={BasicSortingGridSource}
             noScrollbar
@@ -42,7 +42,7 @@ const Sorting = () => {
         </Grid>
         <Grid item xs={12}>
           <AppComponentCard
-            title='ComparatorSortingGrid'
+            title="ComparatorSortingGrid"
             component={ComparatorSortingGrid}
             source={ComparatorSortingGridSource}
             noScrollbar
@@ -50,7 +50,7 @@ const Sorting = () => {
         </Grid>
         <Grid item xs={12}>
           <AppComponentCard
-            title='OrderSortingGrid'
+            title="OrderSortingGrid"
             component={OrderSortingGrid}
             source={OrderSortingGridSource}
             noScrollbar
@@ -58,7 +58,7 @@ const Sorting = () => {
         </Grid>
         <Grid item xs={12}>
           <AppComponentCard
-            title='DisableSortingGrid'
+            title="DisableSortingGrid"
             component={DisableSortingGrid}
             source={DisableSortingGridSource}
             noScrollbar
@@ -66,7 +66,7 @@ const Sorting = () => {
         </Grid>
         <Grid item xs={12}>
           <AppComponentCard
-            title='ServerSortingGrid'
+            title="ServerSortingGrid"
             component={ServerSortingGrid}
             source={ServerSortingGridSource}
             noScrollbar
@@ -74,7 +74,7 @@ const Sorting = () => {
         </Grid>
         <Grid item xs={12}>
           <AppComponentCard
-            title='MultiSortingGrid'
+            title="MultiSortingGrid"
             component={MultiSortingGrid}
             source={MultiSortingGridSource}
             noScrollbar

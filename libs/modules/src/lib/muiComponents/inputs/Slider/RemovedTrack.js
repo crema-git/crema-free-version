@@ -1,13 +1,13 @@
 import * as React from 'react';
-import {styled} from '@mui/material/styles';
+import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Slider from '@mui/material/Slider';
 
 const Separator = styled('div')(
-  ({theme}) => `
+  ({ theme }) => `
   height: ${theme.spacing(3)};
-`,
+`
 );
 
 const marks = [
@@ -35,24 +35,24 @@ function valuetext(value) {
 
 export default function TrackFalseSlider() {
   return (
-    <Box sx={{width: 250}}>
-      <Typography id='track-false-slider' gutterBottom>
+    <Box sx={{ width: 250 }}>
+      <Typography id="track-false-slider" gutterBottom>
         Removed track
       </Typography>
       <Slider
         track={false}
-        aria-labelledby='track-false-slider'
+        aria-labelledby="track-false-slider"
         getAriaValueText={valuetext}
         defaultValue={30}
         marks={marks}
       />
       <Separator />
-      <Typography id='track-false-range-slider' gutterBottom>
+      <Typography id="track-false-range-slider" gutterBottom>
         Removed track range slider
       </Typography>
       <Slider
         track={false}
-        aria-labelledby='track-false-range-slider'
+        aria-labelledby="track-false-range-slider"
         getAriaValueText={valuetext}
         defaultValue={[20, 37, 50]}
         marks={marks}

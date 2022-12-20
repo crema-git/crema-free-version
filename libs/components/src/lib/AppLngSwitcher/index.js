@@ -4,16 +4,19 @@ import Menu from '@mui/material/Menu';
 import IconButton from '@mui/material/IconButton';
 import MenuItem from '@mui/material/MenuItem';
 import TranslateOutlinedIcon from '@mui/icons-material/TranslateOutlined';
-import {Fonts} from '@crema/constants/AppEnums';
-import {useLocaleActionsContext, useLocaleContext,} from "@crema/context/LocaleContextProvider";
+import { Fonts } from '@crema/constants/AppEnums';
+import {
+  useLocaleActionsContext,
+  useLocaleContext,
+} from '@crema/context/LocaleContextProvider';
 import Typography from '@mui/material/Typography';
-import {alpha, Box} from '@mui/material';
+import { alpha, Box } from '@mui/material';
 import PropsTypes from 'prop-types';
 import AppTooltip from '../AppTooltip';
 
-const AppLngSwitcher = ({iconOnly, tooltipPosition}) => {
-  const {locale} = useLocaleContext();
-  const {updateLocale} = useLocaleActionsContext();
+const AppLngSwitcher = ({ iconOnly, tooltipPosition }) => {
+  const { locale } = useLocaleContext();
+  const { updateLocale } = useLocaleActionsContext();
   const [anchorElLng, setAnchorElLng] = React.useState(null);
 
   const onClickMenu = (event) => {
@@ -52,25 +55,25 @@ const AppLngSwitcher = ({iconOnly, tooltipPosition}) => {
               ml: 2.5,
               fontSize: 16,
               fontWeight: Fonts.REGULAR,
-              display: {xs: 'none', sm: 'inline-block'},
+              display: { xs: 'none', sm: 'inline-block' },
             },
             '& svg': {
               fontSize: 20,
             },
           }}
-          className='lang-switcher-btn'
-          aria-label='account of current user'
-          aria-controls='language-switcher'
-          aria-haspopup='true'
+          className="lang-switcher-btn"
+          aria-label="account of current user"
+          aria-controls="language-switcher"
+          aria-haspopup="true"
           onClick={onClickMenu}
-          color='inherit'
-          size='large'
+          color="inherit"
+          size="large"
         >
           <TranslateOutlinedIcon />
-          <span className='langText'>{locale.name}</span>
+          <span className="langText">{locale.name}</span>
         </IconButton>
       ) : (
-        <AppTooltip title='Language' placement={tooltipPosition}>
+        <AppTooltip title="Language" placement={tooltipPosition}>
           <IconButton
             sx={{
               height: 40,
@@ -92,19 +95,19 @@ const AppLngSwitcher = ({iconOnly, tooltipPosition}) => {
                 ml: 2.5,
                 fontSize: 16,
                 fontWeight: Fonts.REGULAR,
-                display: {xs: 'none', sm: 'inline-block'},
+                display: { xs: 'none', sm: 'inline-block' },
               },
               '& svg': {
                 fontSize: 20,
               },
             }}
-            className='lang-switcher-btn'
-            aria-label='account of current user'
-            aria-controls='language-switcher'
-            aria-haspopup='true'
+            className="lang-switcher-btn"
+            aria-label="account of current user"
+            aria-controls="language-switcher"
+            aria-haspopup="true"
             onClick={onClickMenu}
-            color='inherit'
-            size='large'
+            color="inherit"
+            size="large"
           >
             <TranslateOutlinedIcon />
           </IconButton>
@@ -112,7 +115,7 @@ const AppLngSwitcher = ({iconOnly, tooltipPosition}) => {
       )}
       <Menu
         anchorEl={anchorElLng}
-        id='language-switcher'
+        id="language-switcher"
         keepMounted
         open={Boolean(anchorElLng)}
         onClose={() => setAnchorElLng(null)}
@@ -127,11 +130,11 @@ const AppLngSwitcher = ({iconOnly, tooltipPosition}) => {
               <Typography
                 sx={{
                   mb: 0,
-                  fontSize: {xs: 14, sm: 16},
+                  fontSize: { xs: 14, sm: 16 },
                   fontWeight: Fonts.MEDIUM,
                 }}
-                component='h4'
-                variant='h4'
+                component="h4"
+                variant="h4"
               >
                 {language.name}
               </Typography>

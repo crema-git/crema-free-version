@@ -16,57 +16,57 @@ export default function ComposedTextField() {
 
   return (
     <Box
-      component='form'
+      component="form"
       sx={{
-        '& > :not(style)': {m: 1},
+        '& > :not(style)': { m: 1 },
       }}
       noValidate
-      autoComplete='off'
+      autoComplete="off"
     >
-      <FormControl variant='standard'>
-        <InputLabel htmlFor='component-simple'>Name</InputLabel>
-        <Input id='component-simple' value={name} onChange={handleChange} />
+      <FormControl variant="standard">
+        <InputLabel htmlFor="component-simple">Name</InputLabel>
+        <Input id="component-simple" value={name} onChange={handleChange} />
       </FormControl>
-      <FormControl variant='standard'>
-        <InputLabel htmlFor='component-helper'>Name</InputLabel>
+      <FormControl variant="standard">
+        <InputLabel htmlFor="component-helper">Name</InputLabel>
         <Input
-          id='component-helper'
+          id="component-helper"
           value={name}
           onChange={handleChange}
-          aria-describedby='component-helper-text'
+          aria-describedby="component-helper-text"
         />
-        <FormHelperText id='component-helper-text'>
+        <FormHelperText id="component-helper-text">
           Some important helper text
         </FormHelperText>
       </FormControl>
-      <FormControl disabled variant='standard'>
-        <InputLabel htmlFor='component-disabled'>Name</InputLabel>
-        <Input id='component-disabled' value={name} onChange={handleChange} />
+      <FormControl disabled variant="standard">
+        <InputLabel htmlFor="component-disabled">Name</InputLabel>
+        <Input id="component-disabled" value={name} onChange={handleChange} />
         <FormHelperText>Disabled</FormHelperText>
       </FormControl>
-      <FormControl error variant='standard'>
-        <InputLabel htmlFor='component-error'>Name</InputLabel>
+      <FormControl error variant="standard">
+        <InputLabel htmlFor="component-error">Name</InputLabel>
         <Input
-          id='component-error'
+          id="component-error"
           value={name}
           onChange={handleChange}
-          aria-describedby='component-error-text'
+          aria-describedby="component-error-text"
         />
-        <FormHelperText id='component-error-text'>Error</FormHelperText>
+        <FormHelperText id="component-error-text">Error</FormHelperText>
       </FormControl>
       <FormControl>
-        <InputLabel htmlFor='component-outlined'>Name</InputLabel>
+        <InputLabel htmlFor="component-outlined">Name</InputLabel>
         <OutlinedInput
-          id='component-outlined'
+          id="component-outlined"
           value={name}
           onChange={handleChange}
-          label='Name'
+          label="Name"
         />
       </FormControl>
-      <FormControl variant='filled'>
-        <InputLabel htmlFor='component-filled'>Name</InputLabel>
+      <FormControl variant="filled">
+        <InputLabel htmlFor="component-filled">Name</InputLabel>
         <FilledInput
-          id='component-filled'
+          id="component-filled"
           value={name}
           onChange={handleChange}
         />

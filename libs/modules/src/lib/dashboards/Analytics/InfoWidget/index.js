@@ -1,14 +1,14 @@
 import React from 'react';
 import AppCard from '@crema/components/AppCard';
-import {Box} from '@mui/material';
-import {Fonts} from '@crema/constants/AppEnums'
+import { Box } from '@mui/material';
+import { Fonts } from '@crema/constants/AppEnums';
 import PropTypes from 'prop-types';
 
-const InfoWidget = ({data}) => {
+const InfoWidget = ({ data }) => {
   return (
     <AppCard
-      sxStyle={{height: 1, backgroundColor: data.bgColor}}
-      contentStyle={{px: 2}}
+      sxStyle={{ height: 1, backgroundColor: data.bgColor }}
+      contentStyle={{ px: 2 }}
     >
       <Box
         sx={{
@@ -23,12 +23,12 @@ const InfoWidget = ({data}) => {
           sx={{
             mb: 4,
             '& img': {
-              height: {xs: 60, md: 70, xl: 80},
-              width: {xs: 60, md: 70, xl: 80},
+              height: { xs: 60, md: 70, xl: 80 },
+              width: { xs: 60, md: 70, xl: 80 },
             },
           }}
         >
-          <img src={data.icon} alt='icon' />
+          <img src={data.icon} alt="icon" />
         </Box>
         <Box
           sx={{
@@ -36,7 +36,7 @@ const InfoWidget = ({data}) => {
           }}
         >
           <Box
-            component='h3'
+            component="h3"
             sx={{
               color: 'text.primary',
               fontWeight: Fonts.MEDIUM,
@@ -46,7 +46,7 @@ const InfoWidget = ({data}) => {
             {data.count}
           </Box>
           <Box
-            component='p'
+            component="p"
             sx={{
               color: 'text.secondary',
             }}

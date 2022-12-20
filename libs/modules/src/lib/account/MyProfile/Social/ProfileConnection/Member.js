@@ -1,11 +1,11 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import {alpha, Avatar, Box, Typography} from '@mui/material';
+import { alpha, Avatar, Box, Typography } from '@mui/material';
 import Button from '@mui/material/Button';
-import {Fonts} from '@crema/constants/AppEnums'
+import { Fonts } from '@crema/constants/AppEnums';
 import AppCard from '@crema/components/AppCard';
 
-const Member = ({member}) => {
+const Member = ({ member }) => {
   const [connect, setConnect] = useState(false);
 
   const onConnect = () => {
@@ -32,7 +32,7 @@ const Member = ({member}) => {
       }}
     >
       {connect ? (
-        <Box sx={{mb: 2}}>
+        <Box sx={{ mb: 2 }}>
           <Button
             sx={{
               boxShadow: 'none',
@@ -42,7 +42,7 @@ const Member = ({member}) => {
               pb: 1.5,
               px: 3,
             }}
-            variant='outlined'
+            variant="outlined"
             onClick={onConnect}
           >
             Connect
@@ -55,10 +55,10 @@ const Member = ({member}) => {
             alignItems: 'center',
           }}
         >
-          <Box sx={{mr: 2.5}}>
+          <Box sx={{ mr: 2.5 }}>
             <Avatar src={member.srcImg} alt={member.title} />
           </Box>
-          <Box sx={{width: 'calc(100% - 50px)'}}>
+          <Box sx={{ width: 'calc(100% - 50px)' }}>
             <Typography
               sx={{
                 fontWeight: Fonts.MEDIUM,
@@ -93,7 +93,7 @@ const Member = ({member}) => {
               onClick={onDisconnect}
             >
               <Box
-                component='span'
+                component="span"
                 sx={{
                   width: '100%',
                   whiteSpace: 'nowrap',

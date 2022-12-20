@@ -26,12 +26,12 @@ export default function LeadingClickAway() {
 
   return (
     <ClickAwayListener
-      mouseEvent='onMouseDown'
-      touchEvent='onTouchStart'
+      mouseEvent="onMouseDown"
+      touchEvent="onTouchStart"
       onClickAway={handleClickAway}
     >
-      <Box sx={{position: 'relative'}}>
-        <button type='button' onClick={handleClick}>
+      <Box sx={{ position: 'relative' }}>
+        <button type="button" onClick={handleClick}>
           Open menu dropdown
         </button>
         {open ? (

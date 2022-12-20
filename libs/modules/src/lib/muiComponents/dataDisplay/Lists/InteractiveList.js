@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {styled} from '@mui/material/styles';
+import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
@@ -20,11 +20,11 @@ function generate(element) {
   return [0, 1, 2].map((value) =>
     React.cloneElement(element, {
       key: value,
-    }),
+    })
   );
 }
 
-const Demo = styled('div')(({theme}) => ({
+const Demo = styled('div')(({ theme }) => ({
   backgroundColor: theme.palette.background.paper,
 }));
 
@@ -33,7 +33,7 @@ export default function InteractiveList() {
   const [secondary, setSecondary] = React.useState(false);
 
   return (
-    <Box sx={{flexGrow: 1, maxWidth: 752}}>
+    <Box sx={{ flexGrow: 1, maxWidth: 752 }}>
       <FormGroup row>
         <FormControlLabel
           control={
@@ -42,7 +42,7 @@ export default function InteractiveList() {
               onChange={(event) => setDense(event.target.checked)}
             />
           }
-          label='Enable dense'
+          label="Enable dense"
         />
         <FormControlLabel
           control={
@@ -51,12 +51,12 @@ export default function InteractiveList() {
               onChange={(event) => setSecondary(event.target.checked)}
             />
           }
-          label='Enable secondary text'
+          label="Enable secondary text"
         />
       </FormGroup>
       <Grid container spacing={2}>
         <Grid item xs={12} md={6}>
-          <Typography sx={{mt: 4, mb: 2}} variant='h6' component='div'>
+          <Typography sx={{ mt: 4, mb: 2 }} variant="h6" component="div">
             Text only
           </Typography>
           <Demo>
@@ -64,16 +64,16 @@ export default function InteractiveList() {
               {generate(
                 <ListItem>
                   <ListItemText
-                    primary='Single-line item'
+                    primary="Single-line item"
                     secondary={secondary ? 'Secondary text' : null}
                   />
-                </ListItem>,
+                </ListItem>
               )}
             </List>
           </Demo>
         </Grid>
         <Grid item xs={12} md={6}>
-          <Typography sx={{mt: 4, mb: 2}} variant='h6' component='div'>
+          <Typography sx={{ mt: 4, mb: 2 }} variant="h6" component="div">
             Icon with text
           </Typography>
           <Demo>
@@ -84,10 +84,10 @@ export default function InteractiveList() {
                     <FolderIcon />
                   </ListItemIcon>
                   <ListItemText
-                    primary='Single-line item'
+                    primary="Single-line item"
                     secondary={secondary ? 'Secondary text' : null}
                   />
-                </ListItem>,
+                </ListItem>
               )}
             </List>
           </Demo>
@@ -95,7 +95,7 @@ export default function InteractiveList() {
       </Grid>
       <Grid container spacing={2}>
         <Grid item xs={12} md={6}>
-          <Typography sx={{mt: 4, mb: 2}} variant='h6' component='div'>
+          <Typography sx={{ mt: 4, mb: 2 }} variant="h6" component="div">
             Avatar with text
           </Typography>
           <Demo>
@@ -108,16 +108,16 @@ export default function InteractiveList() {
                     </Avatar>
                   </ListItemAvatar>
                   <ListItemText
-                    primary='Single-line item'
+                    primary="Single-line item"
                     secondary={secondary ? 'Secondary text' : null}
                   />
-                </ListItem>,
+                </ListItem>
               )}
             </List>
           </Demo>
         </Grid>
         <Grid item xs={12} md={6}>
-          <Typography sx={{mt: 4, mb: 2}} variant='h6' component='div'>
+          <Typography sx={{ mt: 4, mb: 2 }} variant="h6" component="div">
             Avatar with text and icon
           </Typography>
           <Demo>
@@ -125,7 +125,7 @@ export default function InteractiveList() {
               {generate(
                 <ListItem
                   secondaryAction={
-                    <IconButton edge='end' aria-label='delete'>
+                    <IconButton edge="end" aria-label="delete">
                       <DeleteIcon />
                     </IconButton>
                   }
@@ -136,10 +136,10 @@ export default function InteractiveList() {
                     </Avatar>
                   </ListItemAvatar>
                   <ListItemText
-                    primary='Single-line item'
+                    primary="Single-line item"
                     secondary={secondary ? 'Secondary text' : null}
                   />
-                </ListItem>,
+                </ListItem>
               )}
             </List>
           </Demo>

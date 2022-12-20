@@ -7,7 +7,7 @@ import TableHeading from './TableHeading';
 import TableItem from './TableItem';
 import TableContainer from '@mui/material/TableContainer';
 
-const OrderTable = ({orderData}) => {
+const OrderTable = ({ orderData }) => {
   return (
     <TableContainer>
       <Table>

@@ -1,5 +1,5 @@
 import saMessages from '../locales/es_ES.json';
-import {esES} from '@mui/material/locale';
+import { esES } from '@mui/material/locale';
 
 const saLang = {
   messages: {

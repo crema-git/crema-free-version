@@ -1,7 +1,7 @@
 import React from 'react';
 import BoardDetail from './BoardDetail';
 import BoardList from './BoardList';
-import {useParams} from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 
 const ScrumBoard = () => {
   const params = useParams();

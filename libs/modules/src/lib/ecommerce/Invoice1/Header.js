@@ -1,27 +1,27 @@
 import React from 'react';
-import {Box} from '@mui/material';
+import { Box } from '@mui/material';
 import Typography from '@mui/material/Typography';
 import IntlMessages from '@crema/utility/IntlMessages';
-import {Fonts} from '@crema/constants/AppEnums'
-import {invoiceData} from "@crema/fakedb/extraPages"
+import { Fonts } from '@crema/constants/AppEnums';
+import { invoiceData } from '@crema/fakedb/extraPages';
 
 const Header = () => {
   return (
     <Box
       sx={{
         pt: 2,
-        pb: {xs: 6, sm: 8, xl: 10},
-        mb: {xl: 8},
+        pb: { xs: 6, sm: 8, xl: 10 },
+        mb: { xl: 8 },
         display: 'flex',
-        flexDirection: {xs: 'column', lg: 'row'},
-        alignItems: {lg: 'center'},
+        flexDirection: { xs: 'column', lg: 'row' },
+        alignItems: { lg: 'center' },
       }}
     >
       <Box
         sx={{
-          mr: {lg: 10},
-          mb: {xs: 8, lg: 0},
-          alignSelf: {xs: 'center', lg: 'flex-start'},
+          mr: { lg: 10 },
+          mb: { xs: 8, lg: 0 },
+          alignSelf: { xs: 'center', lg: 'flex-start' },
           display: 'inline-block',
           '& svg': {
             height: 80,
@@ -32,7 +32,7 @@ const Header = () => {
           },
         }}
       >
-          <img src={'/assets/icon/logo.svg'} alt='logo' />
+        <img src={'/assets/icon/logo.svg'} alt="logo" />
       </Box>
 
       <Box
@@ -40,7 +40,7 @@ const Header = () => {
           mx: -3,
           color: 'text.secondary',
           display: 'flex',
-          flexDirection: {xs: 'column', sm: 'row'},
+          flexDirection: { xs: 'column', sm: 'row' },
           justifyContent: 'space-between',
           flex: 1,
         }}
@@ -48,13 +48,13 @@ const Header = () => {
         <Box
           sx={{
             px: 3,
-            mb: {xs: 3, sm: 0},
-            textAlign: {xs: 'center', sm: 'left'},
+            mb: { xs: 3, sm: 0 },
+            textAlign: { xs: 'center', sm: 'left' },
             minWidth: 200,
           }}
         >
           <Box
-            component='h3'
+            component="h3"
             sx={{
               color: 'text.secondary',
               mb: 1,
@@ -64,13 +64,13 @@ const Header = () => {
           >
             {invoiceData.company.name}
           </Box>
-          <Typography component='p' sx={{mb: 1}}>
+          <Typography component="p" sx={{ mb: 1 }}>
             {invoiceData.company.address1}
           </Typography>
-          <Typography component='p' sx={{mb: 1}}>
+          <Typography component="p" sx={{ mb: 1 }}>
             {invoiceData.company.address2}
           </Typography>
-          <Typography component='p' sx={{mb: 1}}>
+          <Typography component="p" sx={{ mb: 1 }}>
             Phone: {invoiceData.company.phone}
           </Typography>
         </Box>
@@ -78,8 +78,8 @@ const Header = () => {
         <Box
           sx={{
             px: 3,
-            mb: {xs: 3, sm: 0},
-            textAlign: {xs: 'center', lg: 'left'},
+            mb: { xs: 3, sm: 0 },
+            textAlign: { xs: 'center', lg: 'left' },
             minWidth: 200,
           }}
         >
@@ -90,17 +90,17 @@ const Header = () => {
               mb: 1,
               fontWeight: Fonts.BOLD,
             }}
-            component='h3'
+            component="h3"
           >
-            <IntlMessages id='invoice.client' />
+            <IntlMessages id="invoice.client" />
           </Box>
-          <Typography component='p' sx={{mb: 1}}>
+          <Typography component="p" sx={{ mb: 1 }}>
             {invoiceData.client.name}
           </Typography>
-          <Typography component='p' sx={{mb: 1}}>
+          <Typography component="p" sx={{ mb: 1 }}>
             {invoiceData.client.phone}
           </Typography>
-          <Typography component='p' sx={{mb: 1}}>
+          <Typography component="p" sx={{ mb: 1 }}>
             {invoiceData.client.email}
           </Typography>
         </Box>
@@ -108,13 +108,13 @@ const Header = () => {
         <Box
           sx={{
             px: 3,
-            mb: {xs: 3, sm: 0},
-            textAlign: {xs: 'center', sm: 'right', lg: 'left'},
+            mb: { xs: 3, sm: 0 },
+            textAlign: { xs: 'center', sm: 'right', lg: 'left' },
             minWidth: 200,
           }}
         >
           <Box
-            component='h3'
+            component="h3"
             sx={{
               mb: 1,
               color: 'text.secondary',
@@ -122,16 +122,16 @@ const Header = () => {
               fontSize: 16,
             }}
           >
-            <IntlMessages id='invoice.invoice' />
+            <IntlMessages id="invoice.invoice" />
           </Box>
-          <Typography component='p' sx={{mb: 1, fontWeight: Fonts.MEDIUM}}>
-            <IntlMessages id='invoice.id' />: {invoiceData.invoice.id}
+          <Typography component="p" sx={{ mb: 1, fontWeight: Fonts.MEDIUM }}>
+            <IntlMessages id="invoice.id" />: {invoiceData.invoice.id}
           </Typography>
-          <Typography component='p' sx={{mb: 1}}>
-            <IntlMessages id='invoice.issued' />: {invoiceData.invoice.date}
+          <Typography component="p" sx={{ mb: 1 }}>
+            <IntlMessages id="invoice.issued" />: {invoiceData.invoice.date}
           </Typography>
-          <Typography component='p' sx={{mb: 1, fontWeight: Fonts.MEDIUM}}>
-            <IntlMessages id='invoice.dueOn' />: {invoiceData.invoice.dueDate}
+          <Typography component="p" sx={{ mb: 1, fontWeight: Fonts.MEDIUM }}>
+            <IntlMessages id="invoice.dueOn" />: {invoiceData.invoice.dueDate}
           </Typography>
         </Box>
       </Box>

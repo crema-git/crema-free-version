@@ -17,13 +17,13 @@ export default function HorizontalStepperWithError() {
   };
 
   return (
-    <Box sx={{width: '100%'}}>
+    <Box sx={{ width: '100%' }}>
       <Stepper activeStep={1}>
         {steps.map((label, index) => {
           const labelProps = {};
           if (isStepFailed(index)) {
             labelProps.optional = (
-              <Typography variant='caption' color='error'>
+              <Typography variant="caption" color="error">
                 Alert message
               </Typography>
             );

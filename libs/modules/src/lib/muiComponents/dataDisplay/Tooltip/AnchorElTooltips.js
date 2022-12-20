@@ -12,7 +12,7 @@ export default function AnchorElTooltips() {
   const areaRef = React.useRef(null);
 
   const handleMouseMove = (event) => {
-    positionRef.current = {x: event.clientX, y: event.clientY};
+    positionRef.current = { x: event.clientX, y: event.clientY };
 
     if (popperRef.current != null) {
       popperRef.current.update();
@@ -21,8 +21,8 @@ export default function AnchorElTooltips() {
 
   return (
     <Tooltip
-      title='Add'
-      placement='top'
+      title="Add"
+      placement="top"
       arrow
       PopperProps={{
         popperRef,
@@ -32,7 +32,7 @@ export default function AnchorElTooltips() {
               positionRef.current.x,
               areaRef.current.getBoundingClientRect().y,
               0,
-              0,
+              0
             );
           },
         },

@@ -1,14 +1,14 @@
 import React from 'react';
 import AppCard from '@crema/components/AppCard';
-import {Box} from '@mui/material';
+import { Box } from '@mui/material';
 import Graph from './Graph';
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
-import {Fonts} from '@crema/constants/AppEnums'
+import { Fonts } from '@crema/constants/AppEnums';
 import PropTypes from 'prop-types';
 
-const AppointmentCard = ({data}) => {
+const AppointmentCard = ({ data }) => {
   return (
-    <AppCard sxStyle={{backgroundColor: data.color}} className='card-hover'>
+    <AppCard sxStyle={{ backgroundColor: data.color }} className="card-hover">
       <Box
         sx={{
           display: 'flex',

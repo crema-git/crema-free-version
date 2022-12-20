@@ -1,8 +1,8 @@
-import {alpha, Box, ListItem} from '@mui/material';
+import { alpha, Box, ListItem } from '@mui/material';
 
-import {styled} from '@mui/material/styles';
+import { styled } from '@mui/material/styles';
 
-export const StyledListItem = styled(ListItem)(({theme}) => ({
+export const StyledListItem = styled(ListItem)(({ theme }) => ({
   padding: '4px 20px 4px 10px',
   overflow: 'hidden',
   display: 'flex',
@@ -53,7 +53,7 @@ export const StyledListItem = styled(ListItem)(({theme}) => ({
   },
 }));
 
-export const TaskInfoWrapper = styled(Box)(({theme}) => ({
+export const TaskInfoWrapper = styled(Box)(({ theme }) => ({
   display: 'flex',
   alignItems: 'center',
   width: '90%',
@@ -62,14 +62,14 @@ export const TaskInfoWrapper = styled(Box)(({theme}) => ({
   },
 }));
 
-export const ActionWrapper = styled(Box)(({theme}) => ({
+export const ActionWrapper = styled(Box)(({ theme }) => ({
   display: 'flex',
   borderRadius: theme.cardRadius,
   width: '100%',
   cursor: 'pointer',
   alignItems: 'center',
   justifyContent: 'flex-end',
-  pl: {sm: 3},
+  pl: { sm: 3 },
   [theme.breakpoints.up('sm')]: {
     width: '50%',
   },

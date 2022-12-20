@@ -23,15 +23,15 @@ const TrapFocus = () => {
   return (
     <>
       <AppComponentHeader
-        title='TrapFocus'
-        description='The timeline displays a list of events in chronological order.'
-        refUrl='https://mui.com/components/timeline/'
+        title="TrapFocus"
+        description="The timeline displays a list of events in chronological order."
+        refUrl="https://mui.com/components/timeline/"
       />
 
       <AppGridContainer>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='BasicTrapFocus'
+            title="BasicTrapFocus"
             component={BasicTrapFocus}
             source={BasicTrapFocusSource}
             noScrollbar
@@ -39,7 +39,7 @@ const TrapFocus = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='DisableEnforceFocus'
+            title="DisableEnforceFocus"
             component={DisableEnforceFocus}
             source={DisableEnforceFocusSource}
             noScrollbar
@@ -47,7 +47,7 @@ const TrapFocus = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='LazyTrapFocus'
+            title="LazyTrapFocus"
             component={LazyTrapFocus}
             source={LazyTrapFocusSource}
             noScrollbar
@@ -55,7 +55,7 @@ const TrapFocus = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='PortalTrapFocus'
+            title="PortalTrapFocus"
             component={PortalTrapFocus}
             source={PortalTrapFocusSource}
             noScrollbar
@@ -63,7 +63,7 @@ const TrapFocus = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='ToggleTrapFocus'
+            title="ToggleTrapFocus"
             component={ToggleTrapFocus}
             source={ToggleTrapFocusSource}
             noScrollbar

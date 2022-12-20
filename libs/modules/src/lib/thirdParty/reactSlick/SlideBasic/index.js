@@ -15,7 +15,7 @@ const settings = {
   slidesToScroll: 1,
 };
 
-const SlideBasic = ({slideBasic}) => {
+const SlideBasic = ({ slideBasic }) => {
   return (
     <AppCard>
       <MediaSlider>
@@ -25,8 +25,8 @@ const SlideBasic = ({slideBasic}) => {
               key={index}
               sx={{
                 position: 'relative',
-                maxHeight: {xs: 260, md: 320},
-                minHeight: {xs: 250, md: 310},
+                maxHeight: { xs: 260, md: 320 },
+                minHeight: { xs: 250, md: 310 },
               }}
             >
               <Box

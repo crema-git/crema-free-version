@@ -1,7 +1,7 @@
 import React from 'react';
 import Checkbox from '@mui/material/Checkbox/index';
 import Box from '@mui/material/Box';
-import {useIntl} from 'react-intl';
+import { useIntl } from 'react-intl';
 import AppSearchBar from '@crema/components/AppSearchBar';
 import PropTypes from 'prop-types';
 import SelectTasksDropdown from './SelectTasksDropdown';
@@ -46,13 +46,13 @@ const TaskContentHeader = (props) => {
 
       case 2:
         setCheckedTasks(
-          taskLists?.filter((task) => task.isStarred).map((task) => task.id),
+          taskLists?.filter((task) => task.isStarred).map((task) => task.id)
         );
         break;
 
       case 3:
         setCheckedTasks(
-          taskLists?.filter((task) => task.isAttachment).map((task) => task.id),
+          taskLists?.filter((task) => task.isAttachment).map((task) => task.id)
         );
         break;
 
@@ -61,7 +61,7 @@ const TaskContentHeader = (props) => {
     }
   };
 
-  const {messages} = useIntl();
+  const { messages } = useIntl();
 
   return (
     <>
@@ -89,9 +89,9 @@ const TaskContentHeader = (props) => {
             onChange={onHandleMasterCheckbox}
           />
         </span>
-        <Box sx={{mr: 3}}>
+        <Box sx={{ mr: 3 }}>
           <AppSearchBar
-            iconPosition='right'
+            iconPosition="right"
             overlap={false}
             value={filterText}
             onChange={(event) => onSetFilterText(event.target.value)}
@@ -104,9 +104,9 @@ const TaskContentHeader = (props) => {
         />
         {checkedTasks.length > 0 ? (
           <Box
-            component='span'
+            component="span"
             sx={{
-              mr: {sm: 4},
+              mr: { sm: 4 },
               display: 'flex',
             }}
           >
@@ -123,7 +123,7 @@ const TaskContentHeader = (props) => {
 
       <Box
         sx={{
-          mr: {xs: 3, xl: 4},
+          mr: { xs: 3, xl: 4 },
         }}
       >
         <ViewSelectButtons

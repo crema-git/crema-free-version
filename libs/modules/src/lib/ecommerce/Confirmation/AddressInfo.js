@@ -1,28 +1,28 @@
 import React from 'react';
 import AppCard from '@crema/components/AppCard';
-import {Box, Button, Grid} from '@mui/material';
-import {Fonts} from '@crema/constants/AppEnums'
+import { Box, Button, Grid } from '@mui/material';
+import { Fonts } from '@crema/constants/AppEnums';
 import PropTypes from 'prop-types';
 import AppGridContainer from '@crema/components/AppGridContainer';
 
-const AddressInfo = ({address}) => {
+const AddressInfo = ({ address }) => {
   return (
-    <AppCard style={{marginBottom: 24}}>
+    <AppCard style={{ marginBottom: 24 }}>
       <AppGridContainer>
         <Grid xs={12} md={6} item>
-          <Box sx={{px: 4}}>
-            <Box sx={{my: 4, fontSize: 16, fontWeight: Fonts.BOLD}}>
+          <Box sx={{ px: 4 }}>
+            <Box sx={{ my: 4, fontSize: 16, fontWeight: Fonts.BOLD }}>
               Delivery Address
             </Box>
-            <Box sx={{fontSize: 14, fontWeight: Fonts.BOLD}}>
+            <Box sx={{ fontSize: 14, fontWeight: Fonts.BOLD }}>
               {address.name}
             </Box>
-            <Box sx={{fontSize: 14, fontWeight: Fonts.REGULAR}}>
+            <Box sx={{ fontSize: 14, fontWeight: Fonts.REGULAR }}>
               {address.addressLine}, {address.city}, {address.pin}
             </Box>
           </Box>
 
-          <Box sx={{p: 4, borderColor: '#D9DBE3'}}>
+          <Box sx={{ p: 4, borderColor: '#D9DBE3' }}>
             <Box
               sx={{
                 display: 'flex',
@@ -37,8 +37,10 @@ const AddressInfo = ({address}) => {
           </Box>
         </Grid>
         <Grid xs={12} md={6} item>
-          <Box sx={{p: 4}}>
-            <Box sx={{fontSize: 16, fontWeight: Fonts.BOLD}}>Your Rewards</Box>
+          <Box sx={{ p: 4 }}>
+            <Box sx={{ fontSize: 16, fontWeight: Fonts.BOLD }}>
+              Your Rewards
+            </Box>
 
             <Box
               sx={{
@@ -59,14 +61,14 @@ const AddressInfo = ({address}) => {
                   mb: 1,
                 }}
               >
-                <img src={'/assets/images/ecommerce/sms-icon.png'} alt='sms' />
-                <Box sx={{px: 3.5, fontSize: 14}}>
+                <img src={'/assets/images/ecommerce/sms-icon.png'} alt="sms" />
+                <Box sx={{ px: 3.5, fontSize: 14 }}>
                   SMS updates at every step
                 </Box>
               </Box>
-              <Box sx={{mb: 1}}>
+              <Box sx={{ mb: 1 }}>
                 <Button
-                  variant='contained'
+                  variant="contained"
                   sx={{
                     color: 'primary',
                     minWidth: 120,
@@ -97,15 +99,15 @@ const AddressInfo = ({address}) => {
               >
                 <img
                   src={'/assets/images/ecommerce/add-person.png'}
-                  alt='sms'
+                  alt="sms"
                 />
-                <Box sx={{px: 3.5, fontSize: 14}}>
+                <Box sx={{ px: 3.5, fontSize: 14 }}>
                   Order shared with 1 Person
                 </Box>
               </Box>
-              <Box sx={{mb: 1}}>
+              <Box sx={{ mb: 1 }}>
                 <Button
-                  variant='contained'
+                  variant="contained"
                   sx={{
                     color: 'primary',
                     minWidth: 120,

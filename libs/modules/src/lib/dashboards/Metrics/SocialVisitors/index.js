@@ -3,10 +3,10 @@ import SocialVisitorsGraph from './SocialVisitorsGraph';
 import PropTypes from 'prop-types';
 import Categories from './Categories';
 import AppCard from '@crema/components/AppCard';
-import {useIntl} from 'react-intl';
+import { useIntl } from 'react-intl';
 
-const SocialVisitors = ({data}) => {
-  const {messages} = useIntl();
+const SocialVisitors = ({ data }) => {
+  const { messages } = useIntl();
   return (
     <AppCard
       title={messages['dashboard.socialVisitors']}

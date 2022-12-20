@@ -1,10 +1,10 @@
 import React from 'react';
-import {Bar, BarChart, ResponsiveContainer, Tooltip, XAxis} from 'recharts';
+import { Bar, BarChart, ResponsiveContainer, Tooltip, XAxis } from 'recharts';
 import PropTypes from 'prop-types';
 
-const MixBarChart = ({data}) => {
+const MixBarChart = ({ data }) => {
   return (
-    <ResponsiveContainer width='100%' height={270}>
+    <ResponsiveContainer width="100%" height={270}>
       <BarChart
         barSize={7}
         data={data}
@@ -15,10 +15,10 @@ const MixBarChart = ({data}) => {
           bottom: 5,
         }}
       >
-        <XAxis dataKey='name' dy={10} />
+        <XAxis dataKey="name" dy={10} />
         <Tooltip />
-        <Bar dataKey='AS' stackId='a' fill='#49BD65' />
-        <Bar dataKey='Rev' stackId='a' fill='#0A8FDC' />
+        <Bar dataKey="AS" stackId="a" fill="#49BD65" />
+        <Bar dataKey="Rev" stackId="a" fill="#0A8FDC" />
       </BarChart>
     </ResponsiveContainer>
   );

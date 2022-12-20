@@ -3,12 +3,12 @@ import Box from '@mui/material/Box';
 import Avatar from '@mui/material/Avatar';
 import PropTypes from 'prop-types';
 import Typography from '@mui/material/Typography';
-import {timeFromNow} from "@crema/helpers";
+import { timeFromNow } from '@crema/helpers';
 
-const RequestItem = ({request}) => {
+const RequestItem = ({ request }) => {
   return (
     <Box
-      className='item-hover'
+      className="item-hover"
       sx={{
         display: 'flex',
         alignItems: 'center',
@@ -39,13 +39,13 @@ const RequestItem = ({request}) => {
               marginBottom: 1,
               whiteSpace: 'nowrap',
             }}
-            component='h5'
-            variant='h5'
+            component="h5"
+            variant="h5"
           >
             {request.name}
           </Typography>
         </Box>
-        <Box component='p' color='text.secondary' mb={1}>
+        <Box component="p" color="text.secondary" mb={1}>
           {timeFromNow(request.date)}
         </Box>
       </Box>

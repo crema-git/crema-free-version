@@ -1,8 +1,8 @@
-import React, {isValidElement} from 'react';
+import React, { isValidElement } from 'react';
 import Card from '@mui/material/Card';
 import PropTypes from 'prop-types';
-import {Box, CardHeader} from '@mui/material';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Box, CardHeader } from '@mui/material';
+import { Fonts } from '@crema/constants/AppEnums';
 import Link from '@mui/material/Link';
 import CardContent from '@mui/material/CardContent';
 import CardActions from '@mui/material/CardActions';
@@ -22,7 +22,10 @@ const AppCard = ({
   ...rest
 }) => {
   return (
-    <Card sx={{display: 'flex', flexDirection: 'column', ...sxStyle}} {...rest}>
+    <Card
+      sx={{ display: 'flex', flexDirection: 'column', ...sxStyle }}
+      {...rest}
+    >
       {title || action ? (
         <CardHeader
           sx={{
@@ -42,7 +45,7 @@ const AppCard = ({
               title
             ) : (
               <Box
-                component='h3'
+                component="h3"
                 sx={{
                   color: 'text.primary',
                   fontWeight: Fonts.SEMI_BOLD,
@@ -64,9 +67,9 @@ const AppCard = ({
             ) : (
               <span {...actionStyle}>
                 <Link
-                  href='#'
-                  color='secondary'
-                  underline='none'
+                  href="#"
+                  color="secondary"
+                  underline="none"
                   sx={{
                     fontSize: 14,
                     fontWeight: Fonts.MEDIUM,
@@ -103,13 +106,13 @@ const AppCard = ({
             footer
           ) : (
             <Box
-              component='span'
-              sx={{ml: footerPosition === 'right' ? 'auto' : 0}}
+              component="span"
+              sx={{ ml: footerPosition === 'right' ? 'auto' : 0 }}
             >
               <Link
-                color='secondary'
-                component='button'
-                underline='none'
+                color="secondary"
+                component="button"
+                underline="none"
                 sx={{
                   fontSize: 14,
                   fontWeight: Fonts.MEDIUM,

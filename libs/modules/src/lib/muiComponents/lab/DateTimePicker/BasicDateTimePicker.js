@@ -1,8 +1,7 @@
 import * as React from 'react';
 import TextField from '@mui/material/TextField';
-import AdapterDateFns from '@mui/lab/AdapterDateFns';
-import LocalizationProvider from '@mui/lab/LocalizationProvider';
-import DateTimePicker from '@mui/lab/DateTimePicker';
+import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
+import { DateTimePicker, LocalizationProvider } from '@mui/x-date-pickers';
 
 export default function BasicDateTimePicker() {
   const [value, setValue] = React.useState(new Date());
@@ -11,7 +10,7 @@ export default function BasicDateTimePicker() {
     <LocalizationProvider dateAdapter={AdapterDateFns}>
       <DateTimePicker
         renderInput={(props) => <TextField {...props} />}
-        label='DateTimePicker'
+        label="DateTimePicker"
         value={value}
         onChange={(newValue) => {
           setValue(newValue);

@@ -1,11 +1,12 @@
-import React, {useState} from 'react';
-import {useIntl} from 'react-intl';
+import React, { useState } from 'react';
+import { useIntl } from 'react-intl';
 import AppsContainer from '@crema/components/AppsContainer';
 
-import {ProductListing, ProductsSidebar, VIEW_TYPE} from '@crema/modules/ecommerce/Products';
+import { ProductsSidebar, VIEW_TYPE } from '@crema/modules/ecommerce/Products';
+import ProductListing from './ProductListing';
 
 const Products = () => {
-  const {messages} = useIntl();
+  const { messages } = useIntl();
   const [filterData, setFilterData] = useState({
     title: '',
     brand: [],

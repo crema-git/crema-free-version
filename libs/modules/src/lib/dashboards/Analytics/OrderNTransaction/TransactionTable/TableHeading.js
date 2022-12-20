@@ -1,8 +1,8 @@
 import React from 'react';
 import TableCell from '@mui/material/TableCell';
 import TableRow from '@mui/material/TableRow';
-import {grey} from '@mui/material/colors';
-import {Fonts} from '@crema/constants/AppEnums'
+import { grey } from '@mui/material/colors';
+import { Fonts } from '@crema/constants/AppEnums';
 
 const TableHeading = () => {
   return (
@@ -22,20 +22,20 @@ const TableHeading = () => {
         },
       }}
     >
-      <TableCell className='tableCell'>OrderID</TableCell>
-      <TableCell align='left' className='tableCell'>
+      <TableCell className="tableCell">OrderID</TableCell>
+      <TableCell align="left" className="tableCell">
         Customer
       </TableCell>
-      <TableCell align='left' className='tableCell'>
+      <TableCell align="left" className="tableCell">
         Order Date
       </TableCell>
-      <TableCell align='left' className='tableCell'>
+      <TableCell align="left" className="tableCell">
         Payment
       </TableCell>
-      <TableCell align='left' className='tableCell'>
+      <TableCell align="left" className="tableCell">
         Status
       </TableCell>
-      <TableCell align='right' className='tableCell' />
+      <TableCell align="right" className="tableCell" />
     </TableRow>
   );
 };

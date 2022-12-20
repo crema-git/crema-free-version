@@ -1,8 +1,8 @@
 import React from 'react';
-import {alpha, Box} from '@mui/material';
+import { alpha, Box } from '@mui/material';
 import PropsTypes from 'prop-types';
 
-const FooterWrapper = ({children, ...rest}) => {
+const FooterWrapper = ({ children, ...rest }) => {
   return (
     <Box
       sx={{
@@ -17,7 +17,7 @@ const FooterWrapper = ({children, ...rest}) => {
         backgroundImage: (theme) =>
           `linear-gradient(${alpha(theme.palette.common.white, 0.05)}, ${alpha(
             theme.palette.common.white,
-            0.05,
+            0.05
           )})`,
         color: (theme) => theme.palette.text.primary,
         margin: '0',
@@ -25,7 +25,7 @@ const FooterWrapper = ({children, ...rest}) => {
           alignItems: 'center',
           flexDirection: 'row',
           display: 'flex',
-          padding: {xs: '5px 20px', md: '5px 32px', xl: '10px 32px'},
+          padding: { xs: '5px 20px', md: '5px 32px', xl: '10px 32px' },
         },
       }}
       {...rest}

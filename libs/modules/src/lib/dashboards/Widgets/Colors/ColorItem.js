@@ -2,10 +2,10 @@ import React from 'react';
 import Box from '@mui/material/Box';
 import Checkbox from '@mui/material/Checkbox';
 import PropTypes from 'prop-types';
-import {Fonts} from '@crema/constants/AppEnums'
+import { Fonts } from '@crema/constants/AppEnums';
 
 const ColorItem = (props) => {
-  const {item, handleChange} = props;
+  const { item, handleChange } = props;
 
   return (
     <Box
@@ -15,7 +15,7 @@ const ColorItem = (props) => {
         px: 5,
       }}
       key={item.id}
-      className='item-hover'
+      className="item-hover"
     >
       <Box
         sx={{
@@ -32,7 +32,7 @@ const ColorItem = (props) => {
         />
       </Box>
       <Box
-        component='span'
+        component="span"
         sx={{
           color: item.color,
           fontWeight: Fonts.MEDIUM,

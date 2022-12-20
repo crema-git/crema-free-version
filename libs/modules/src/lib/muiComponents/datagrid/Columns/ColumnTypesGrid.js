@@ -1,9 +1,12 @@
 import * as React from 'react';
-import {DataGrid, GridActionsCellItem} from '@mui/x-data-grid';
+import { DataGrid, GridActionsCellItem } from '@mui/x-data-grid';
 import DeleteIcon from '@mui/icons-material/Delete';
 import SecurityIcon from '@mui/icons-material/Security';
 import FileCopyIcon from '@mui/icons-material/FileCopy';
-import {randomCreatedDate, randomUpdatedDate} from '@mui/x-data-grid-generator';
+import {
+  randomCreatedDate,
+  randomUpdatedDate,
+} from '@mui/x-data-grid-generator';
 
 const initialRows = [
   {
@@ -47,37 +50,37 @@ export default function ColumnTypesGrid() {
         setRows((prevRows) => prevRows.filter((row) => row.id !== id));
       });
     },
-    [],
+    []
   );
 
   const toggleAdmin = React.useCallback(
     (id) => () => {
       setRows((prevRows) =>
         prevRows.map((row) =>
-          row.id === id ? {...row, isAdmin: !row.isAdmin} : row,
-        ),
+          row.id === id ? { ...row, isAdmin: !row.isAdmin } : row
+        )
       );
     },
-    [],
+    []
   );
 
   const duplicateUser = React.useCallback(
     (id) => () => {
       setRows((prevRows) => {
         const rowToDuplicate = prevRows.find((row) => row.id === id);
-        return [...prevRows, {...rowToDuplicate, id: Date.now()}];
+        return [...prevRows, { ...rowToDuplicate, id: Date.now() }];
       });
     },
-    [],
+    []
   );
 
   const columns = React.useMemo(
     () => [
-      {field: 'name', type: 'string'},
-      {field: 'age', type: 'number'},
-      {field: 'dateCreated', type: 'date', width: 130},
-      {field: 'lastLogin', type: 'dateTime', width: 180},
-      {field: 'isAdmin', type: 'boolean', width: 120},
+      { field: 'name', type: 'string' },
+      { field: 'age', type: 'number' },
+      { field: 'dateCreated', type: 'date', width: 130 },
+      { field: 'lastLogin', type: 'dateTime', width: 180 },
+      { field: 'isAdmin', type: 'boolean', width: 120 },
       {
         field: 'country',
         type: 'singleSelect',
@@ -96,7 +99,7 @@ export default function ColumnTypesGrid() {
         type: 'singleSelect',
         width: 120,
         editable: true,
-        valueOptions: ({row}) => {
+        valueOptions: ({ row }) => {
           if (row === undefined) {
             return ['EU-resident', 'junior'];
           }
@@ -118,31 +121,31 @@ export default function ColumnTypesGrid() {
           <GridActionsCellItem
             key={params.id}
             icon={<DeleteIcon />}
-            label='Delete'
+            label="Delete"
             onClick={deleteUser(params.id)}
           />,
           <GridActionsCellItem
             key={params.id}
             icon={<SecurityIcon />}
-            label='Toggle Admin'
+            label="Toggle Admin"
             onClick={toggleAdmin(params.id)}
             showInMenu
           />,
           <GridActionsCellItem
             key={params.id}
             icon={<FileCopyIcon />}
-            label='Duplicate User'
+            label="Duplicate User"
             onClick={duplicateUser(params.id)}
             showInMenu
           />,
         ],
       },
     ],
-    [deleteUser, toggleAdmin, duplicateUser],
+    [deleteUser, toggleAdmin, duplicateUser]
   );
 
   return (
-    <div style={{height: 300, width: '100%'}}>
+    <div style={{ height: 300, width: '100%' }}>
       <DataGrid columns={columns} rows={rows} />
     </div>
   );

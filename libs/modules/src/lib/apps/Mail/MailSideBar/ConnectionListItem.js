@@ -3,11 +3,11 @@ import ListItemAvatar from '@mui/material/ListItemAvatar';
 import Avatar from '@mui/material/Avatar';
 import ListItemText from '@mui/material/ListItemText';
 import ListItem from '@mui/material/ListItem';
-import {Box} from '@mui/material';
+import { Box } from '@mui/material';
 import PropTypes from 'prop-types';
-import {Fonts} from '@crema/constants/AppEnums'
+import { Fonts } from '@crema/constants/AppEnums';
 
-import {styled} from '@mui/material/styles';
+import { styled } from '@mui/material/styles';
 
 const ListItemTextWrapper = styled(ListItemText)(() => {
   return {
@@ -26,7 +26,7 @@ const ListItemTextWrapper = styled(ListItemText)(() => {
 });
 
 const ConnectionListItem = (props) => {
-  const {connection} = props;
+  const { connection } = props;
 
   return (
     <>
@@ -36,7 +36,7 @@ const ConnectionListItem = (props) => {
           px: 0,
           cursor: 'pointer',
         }}
-        alignItems='flex-start'
+        alignItems="flex-start"
       >
         <ListItemAvatar
           sx={{
@@ -57,7 +57,7 @@ const ConnectionListItem = (props) => {
         <ListItemTextWrapper
           primary={
             <Box
-              component='span'
+              component="span"
               sx={{
                 mb: 0,
                 fontWeight: Fonts.MEDIUM,

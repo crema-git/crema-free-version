@@ -1,14 +1,14 @@
 import React from 'react';
 import AppCard from '@crema/components/AppCard';
-import {Box, Grid} from '@mui/material';
-import {useIntl} from 'react-intl';
+import { Box, Grid } from '@mui/material';
+import { useIntl } from 'react-intl';
 import MapView from './MapView';
 import AppList from '@crema/components/AppList';
-import {Fonts} from '@crema/constants/AppEnums'
+import { Fonts } from '@crema/constants/AppEnums';
 import PropTypes from 'prop-types';
 import AppGridContainer from '@crema/components/AppGridContainer';
 
-const CountryCell = ({data}) => (
+const CountryCell = ({ data }) => (
   <Box
     sx={{
       display: 'flex',
@@ -16,7 +16,7 @@ const CountryCell = ({data}) => (
       py: 2,
       px: 5,
     }}
-    className='item-hover'
+    className="item-hover"
   >
     <Box
       sx={{
@@ -30,10 +30,10 @@ const CountryCell = ({data}) => (
         },
       }}
     >
-      <img src={data.icon} alt='icon' />
+      <img src={data.icon} alt="icon" />
     </Box>
     <Box
-      component='h6'
+      component="h6"
       sx={{
         flex: 1,
         overflow: 'hidden',
@@ -60,18 +60,18 @@ CountryCell.propTypes = {
   data: PropTypes.object,
 };
 
-const SiteVisitors = ({siteVisitorsData}) => {
-  const {messages} = useIntl();
+const SiteVisitors = ({ siteVisitorsData }) => {
+  const { messages } = useIntl();
   return (
     <AppCard
-      sxStyle={{height: 1}}
+      sxStyle={{ height: 1 }}
       title={messages['eCommerce.siteVisitorsStatistics']}
-      contentStyle={{px: 0}}
+      contentStyle={{ px: 0 }}
     >
       <AppGridContainer>
         <Grid item xs={12} md={3}>
           <Box
-            component='p'
+            component="p"
             sx={{
               color: 'text.secondary',
               pl: 4,
@@ -91,7 +91,7 @@ const SiteVisitors = ({siteVisitorsData}) => {
         </Grid>
         <Grid item xs={12} md={3}>
           <Box
-            component='p'
+            component="p"
             sx={{
               color: 'text.secondary',
               pl: 4,

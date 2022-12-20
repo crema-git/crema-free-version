@@ -1,5 +1,5 @@
-import {makeStyles} from '@mui/material';
-import {ThemeStyle} from '@crema/constants/AppEnums';
+import { makeStyles } from '@mui/material';
+import { ThemeStyle } from '@crema/constants/AppEnums';
 
 const useStyles = makeStyles((theme) => {
   return {

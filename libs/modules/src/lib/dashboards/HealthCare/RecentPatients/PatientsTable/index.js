@@ -7,10 +7,10 @@ import TableHeading from './TableHeading';
 import TableItem from './TableItem';
 import AppTableContainer from '@crema/components/AppTableContainer';
 
-const PatientsTable = ({recentPatients}) => {
+const PatientsTable = ({ recentPatients }) => {
   return (
     <AppTableContainer>
-      <Table className='table'>
+      <Table className="table">
         <TableHead>
           <TableHeading />
         </TableHead>

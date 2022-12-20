@@ -1,20 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {Box} from '@mui/material';
+import { Box } from '@mui/material';
 
-const CircleWrapper = ({children}) => {
+const CircleWrapper = ({ children }) => {
   return (
     <Box
-      component='span'
-      className='circle'
+      component="span"
+      className="circle"
       sx={{
         backgroundColor: (theme) => theme.palette.background.paper,
         border: (theme) => `2px solid ${theme.palette.secondary.main}`,
         borderRadius: '50%',
         position: 'absolute',
         top: 'calc(50% - 15px)',
-        right: {xs: 'auto', sm: '-60px', xl: '-80px'},
-        left: {'@media (max-width: 499px)': '-56px', xs: '-75px', sm: 'auto'},
+        right: { xs: 'auto', sm: '-60px', xl: '-80px' },
+        left: { '@media (max-width: 499px)': '-56px', xs: '-75px', sm: 'auto' },
         width: 30,
         height: 30,
         zIndex: 100,

@@ -17,7 +17,7 @@ export default function FrameDeferring() {
   return (
     <div>
       <button
-        type='button'
+        type="button"
         onClick={() =>
           setState({
             open: !state.open,
@@ -29,7 +29,7 @@ export default function FrameDeferring() {
       </button>
       <br />
       <button
-        type='button'
+        type="button"
         onClick={() =>
           setState({
             open: !state.open,
@@ -41,7 +41,7 @@ export default function FrameDeferring() {
       </button>
       <br />
       <br />
-      <Box sx={{width: 300, display: 'flex', flexWrap: 'wrap'}}>
+      <Box sx={{ width: 300, display: 'flex', flexWrap: 'wrap' }}>
         {state.open ? (
           <React.Fragment>
             <div>Outside NoSsr</div>

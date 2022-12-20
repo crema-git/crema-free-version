@@ -16,11 +16,11 @@ export default function IconLabelTabs() {
     <Tabs
       value={value}
       onChange={handleChange}
-      aria-label='icon label tabs example'
+      aria-label="icon label tabs example"
     >
-      <Tab icon={<PhoneIcon />} label='RECENTS' />
-      <Tab icon={<FavoriteIcon />} label='FAVORITES' />
-      <Tab icon={<PersonPinIcon />} label='NEARBY' />
+      <Tab icon={<PhoneIcon />} label="RECENTS" />
+      <Tab icon={<FavoriteIcon />} label="FAVORITES" />
+      <Tab icon={<PersonPinIcon />} label="NEARBY" />
     </Tabs>
   );
 }

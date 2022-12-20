@@ -11,15 +11,15 @@ const Localization = () => {
   return (
     <>
       <AppComponentHeader
-        title='Localization'
-        description='The Data Grid allows to support users from different locales, with formatting, RTL, and localized strings.'
-        refUrl='https://mui.com/components/data-grid/localization/'
+        title="Localization"
+        description="The Data Grid allows to support users from different locales, with formatting, RTL, and localized strings."
+        refUrl="https://mui.com/components/data-grid/localization/"
       />
 
       <AppGridContainer>
         <Grid item xs={12}>
           <AppComponentCard
-            title='Custom Locale Text Grid'
+            title="Custom Locale Text Grid"
             component={CustomLocaleTextGrid}
             source={CustomLocaleTextGridSource}
             noScrollbar

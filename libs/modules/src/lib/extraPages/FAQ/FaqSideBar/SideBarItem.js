@@ -6,7 +6,7 @@ import ListItem from '@mui/material/ListItem';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
 
-const SideBarItem = ({item, onGetFaqData, selectionId}) => {
+const SideBarItem = ({ item, onGetFaqData, selectionId }) => {
   return (
     <ListItem
       button
@@ -15,7 +15,7 @@ const SideBarItem = ({item, onGetFaqData, selectionId}) => {
       })}
       onClick={() => onGetFaqData(item.id)}
     >
-      <Box sx={{mr: 3, color: 'text.primary'}}>
+      <Box sx={{ mr: 3, color: 'text.primary' }}>
         <ListItemIcon
           sx={{
             minWidth: 10,

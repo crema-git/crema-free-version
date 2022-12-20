@@ -26,8 +26,8 @@ export default function ClickAway() {
 
   return (
     <ClickAwayListener onClickAway={handleClickAway}>
-      <Box sx={{position: 'relative'}}>
-        <button type='button' onClick={handleClick}>
+      <Box sx={{ position: 'relative' }}>
+        <button type="button" onClick={handleClick}>
           Open menu dropdown
         </button>
         {open ? (

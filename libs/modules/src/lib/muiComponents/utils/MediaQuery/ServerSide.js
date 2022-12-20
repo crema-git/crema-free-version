@@ -1,7 +1,7 @@
 import * as React from 'react';
 import mediaQuery from 'css-mediaquery';
 
-import {ThemeProvider} from '@mui/material/styles';
+import { ThemeProvider } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 
 function MyComponent() {
@@ -24,7 +24,7 @@ export default function ServerSide() {
         components: {
           MuiUseMediaQuery: {
             // Change the default options of useMediaQuery
-            defaultProps: {ssrMatchMedia},
+            defaultProps: { ssrMatchMedia },
           },
         },
       }}

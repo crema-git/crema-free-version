@@ -7,6 +7,16 @@ import ecommerceData, {
   IdealFor,
   ProductColors,
   recentOrders,
-} from "./ecommerceData";
+} from './ecommerceData';
 
-export{ecommerceData,BrandData, ProductColors, IdealFor,addresses,DiscountList,cartItems,recentOrders,customersData,};
+export {
+  ecommerceData,
+  BrandData,
+  ProductColors,
+  IdealFor,
+  addresses,
+  DiscountList,
+  cartItems,
+  recentOrders,
+  customersData,
+};

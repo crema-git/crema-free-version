@@ -1,5 +1,5 @@
 import React from 'react';
-import {Box, IconButton} from '@mui/material';
+import { Box, IconButton } from '@mui/material';
 import MessageItem from './MessageItem';
 import List from '@mui/material/List';
 import Button from '@mui/material/Button';
@@ -7,10 +7,10 @@ import IntlMessages from '@crema/utility/IntlMessages';
 import CancelOutlinedIcon from '@mui/icons-material/CancelOutlined';
 import PropTypes from 'prop-types';
 import Typography from '@mui/material/Typography';
-import AppScrollbar from "../AppScrollbar";
-import {messages} from "@crema/fakedb/data";
+import AppScrollbar from '../AppScrollbar';
+import { messages } from '@crema/fakedb/data';
 
-const AppMessageContent = ({onClose, sxStyle}) => {
+const AppMessageContent = ({ onClose, sxStyle }) => {
   return (
     <Box
       sx={{
@@ -28,11 +28,11 @@ const AppMessageContent = ({onClose, sxStyle}) => {
           alignItems: 'center',
           borderBottom: 1,
           borderBottomColor: (theme) => theme.palette.divider,
-          minHeight: {xs: 56, sm: 70},
+          minHeight: { xs: 56, sm: 70 },
         }}
       >
-        <Typography component='h3' variant='h3'>
-          <IntlMessages id='dashboard.messages' />({messages.length})
+        <Typography component="h3" variant="h3">
+          <IntlMessages id="dashboard.messages" />({messages.length})
         </Typography>
         <IconButton
           sx={{
@@ -42,14 +42,14 @@ const AppMessageContent = ({onClose, sxStyle}) => {
             color: 'text.secondary',
           }}
           onClick={onClose}
-          size='large'
+          size="large"
         >
           <CancelOutlinedIcon />
         </IconButton>
       </Box>
       <AppScrollbar
         sx={{
-          height: {xs: 'calc(100% - 96px)', sm: 'calc(100% - 110px)'},
+          height: { xs: 'calc(100% - 96px)', sm: 'calc(100% - 110px)' },
         }}
       >
         <List
@@ -70,10 +70,10 @@ const AppMessageContent = ({onClose, sxStyle}) => {
           marginTop: 'auto',
           height: 40,
         }}
-        variant='contained'
-        color='primary'
+        variant="contained"
+        color="primary"
       >
-        <IntlMessages id='common.viewAll' />
+        <IntlMessages id="common.viewAll" />
       </Button>
     </Box>
   );

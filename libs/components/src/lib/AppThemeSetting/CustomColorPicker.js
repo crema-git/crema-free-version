@@ -1,9 +1,9 @@
-import React, {useState} from 'react';
-import {SketchPicker} from 'react-color';
+import React, { useState } from 'react';
+import { SketchPicker } from 'react-color';
 import Box from '@mui/material/Box';
 import PropTypes from 'prop-types';
 
-const CustomColorPicker = ({title, color, onUpdateColor}) => {
+const CustomColorPicker = ({ title, color, onUpdateColor }) => {
   const [visible, setVisibility] = useState(false);
 
   return (
@@ -29,7 +29,7 @@ const CustomColorPicker = ({title, color, onUpdateColor}) => {
             backgroundColor: color,
           }}
         />
-        <Box component='span' className='font-extrabold'>
+        <Box component="span" className="font-extrabold">
           {title}
         </Box>
       </Box>

@@ -1,17 +1,16 @@
 import React from 'react';
-import {Box} from '@mui/material';
-import {useThemeContext} from "@crema/context/ThemeContextProvider";
-import {alpha} from "@mui/material/styles";
-import {ReactComponent as Logo} from '../../../../assets/icon/logo.svg';
-import {ReactComponent as LogoText} from '../../../../assets/icon/logo_text.svg';
+import { Box } from '@mui/material';
+import { useThemeContext } from '@crema/context/ThemeContextProvider';
+import { alpha } from '@mui/material/styles';
+import { ReactComponent as Logo } from '../../../../assets/icon/logo.svg';
+import { ReactComponent as LogoText } from '../../../../assets/icon/logo_text.svg';
 
 const AppLogo = () => {
-
-  const {theme} = useThemeContext();
+  const { theme } = useThemeContext();
   return (
     <Box
       sx={{
-        height: {xs: 56, sm: 70},
+        height: { xs: 56, sm: 70 },
         padding: 2.5,
         display: 'flex',
         flexDirection: 'row',
@@ -19,18 +18,18 @@ const AppLogo = () => {
         alignItems: 'center',
         justifyContent: 'center',
         '& svg': {
-          height: {xs: 40, sm: 45},
+          height: { xs: 40, sm: 45 },
         },
       }}
-      className='app-logo'
+      className="app-logo"
     >
       <Logo fill={theme.palette.primary.main} />
       <Box
         sx={{
           mt: 1,
-          display: {xs: 'none', md: 'block'},
+          display: { xs: 'none', md: 'block' },
           '& svg': {
-            height: {xs: 25, sm: 30},
+            height: { xs: 25, sm: 30 },
           },
         }}
       >

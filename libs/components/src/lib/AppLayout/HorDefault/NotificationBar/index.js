@@ -20,7 +20,7 @@ const NotificationBar = () => {
         <Box
           sx={{
             width: '100%',
-            maxWidth: {lg: 1140, xl: 1420},
+            maxWidth: { lg: 1140, xl: 1420 },
             mx: 'auto',
             px: 5,
           }}
@@ -40,14 +40,14 @@ const NotificationBar = () => {
             icon={false}
             action={
               <IconButton
-                aria-label='close'
-                color='inherit'
-                size='small'
+                aria-label="close"
+                color="inherit"
+                size="small"
                 onClick={() => {
                   setOpen(false);
                 }}
               >
-                <CloseIcon fontSize='inherit' />
+                <CloseIcon fontSize="inherit" />
               </IconButton>
             }
           >

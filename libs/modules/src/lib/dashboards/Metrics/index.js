@@ -17,4 +17,23 @@ import SocialVisitors from './SocialVisitors';
 import Subscriptions from './Subscriptions';
 import Share from './Share';
 
-export { StatsCard, StatsCardWithGraph, ComparisonCard, Sales, YourAccount, EarningInMonth, MetricTitleLineGraphCard, FloatingGraphs, Visits, StatsCardSecond, Orders, ProfileViews, WorkViews, SocialDataCard, Stats, SocialVisitors, Subscriptions, Share };
+export {
+  StatsCard,
+  StatsCardWithGraph,
+  ComparisonCard,
+  Sales,
+  YourAccount,
+  EarningInMonth,
+  MetricTitleLineGraphCard,
+  FloatingGraphs,
+  Visits,
+  StatsCardSecond,
+  Orders,
+  ProfileViews,
+  WorkViews,
+  SocialDataCard,
+  Stats,
+  SocialVisitors,
+  Subscriptions,
+  Share,
+};

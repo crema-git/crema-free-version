@@ -1,8 +1,8 @@
 import React from 'react';
-import {Grid} from '@mui/material';
+import { Grid } from '@mui/material';
 import AppGridContainer from '@crema/components/AppGridContainer';
 import AppAnimate from '@crema/components/AppAnimate';
-import {useGetDataApi} from '@crema/utility/APIHooks';
+import { useGetDataApi } from '@crema/utility/APIHooks';
 import {
   Application,
   Browser,
@@ -15,19 +15,21 @@ import {
   Revenue,
   SalesState,
   SaleStatics,
-  SiteVisitors
+  SiteVisitors,
 } from '@crema/modules/dashboards/ECommerce';
-import AppLoader from "@crema/components/AppLoader";
+import AppLoader from '@crema/components/AppLoader';
 
 const ECommerce = () => {
-  const [{apiData: ecommerceData, loading}] = useGetDataApi('/dashboard/ecommerce');
+  const [{ apiData: ecommerceData, loading }] = useGetDataApi(
+    '/dashboard/ecommerce'
+  );
 
   return (
     <>
       {loading ? (
         <AppLoader />
-      ): (
-        <AppAnimate animation='transition.slideUpIn' delay={200}>
+      ) : (
+        <AppAnimate animation="transition.slideUpIn" delay={200}>
           <AppGridContainer>
             {ecommerceData.salesState.map((state, index) => (
               <Grid item xs={12} sm={6} md={3} key={index}>

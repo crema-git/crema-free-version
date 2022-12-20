@@ -1,19 +1,19 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
-import {useLocation} from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import ContactHeader from './ContactHeader';
 import AppConfirmDialog from '@crema/components/AppConfirmDialog';
 import IntlMessages from '@crema/utility/IntlMessages';
 import CreateContact from '../CreateContact';
-import {Hidden} from '@mui/material';
+import { Hidden } from '@mui/material';
 import ContactView from './ContactView';
 import ContactDetail from '../ContactDetail';
 import AppsPagination from '@crema/components/AppsPagination';
 import AppsHeader from '@crema/components/AppsHeader';
 import AppsContent from '@crema/components/AppsContent';
 import AppsFooter from '@crema/components/AppsFooter';
-import {useInfoViewActionsContext} from '@crema/context/InfoViewContextProvider';
-import {postDataApi, putDataApi} from '@crema/utility/APIHooks';
+import { useInfoViewActionsContext } from '@crema/context/InfoViewContextProvider';
+import { postDataApi, putDataApi } from '@crema/utility/APIHooks';
 
 const ContactListing = ({
   apiData,
@@ -22,7 +22,7 @@ const ContactListing = ({
   setData,
   reCallAPI,
 }) => {
-  const {pathname} = useLocation();
+  const { pathname } = useLocation();
   const infoViewActionsContext = useInfoViewActionsContext();
 
   const [filterText, onSetFilterText] = useState('');
@@ -87,7 +87,7 @@ const ContactListing = ({
       setCheckedContacts(checkedContacts.concat(id));
     } else {
       setCheckedContacts(
-        checkedContacts.filter((contactId) => contactId !== id),
+        checkedContacts.filter((contactId) => contactId !== id)
       );
     }
   };
@@ -103,7 +103,7 @@ const ContactListing = ({
         infoViewActionsContext.showMessage(
           data[0].isStarred
             ? 'Contact Marked as Starred Successfully'
-            : 'Contact Marked as Unstarred Successfully',
+            : 'Contact Marked as Unstarred Successfully'
         );
       })
       .catch((error) => {
@@ -146,7 +146,7 @@ const ContactListing = ({
       return apiData?.data;
     } else {
       return apiData?.data.filter((contact) =>
-        contact.name.toUpperCase().includes(filterText.toUpperCase()),
+        contact.name.toUpperCase().includes(filterText.toUpperCase())
       );
     }
   };
@@ -242,8 +242,8 @@ const ContactListing = ({
         open={isDeleteDialogOpen}
         onDeny={setDeleteDialogOpen}
         onConfirm={onDeleteSelectedContacts}
-        title={<IntlMessages id='contactApp.deleteContact' />}
-        dialogTitle={<IntlMessages id='common.deleteItem' />}
+        title={<IntlMessages id="contactApp.deleteContact" />}
+        dialogTitle={<IntlMessages id="common.deleteItem" />}
       />
     </>
   );

@@ -3,20 +3,22 @@ import TaskSideBar from './TaskSideBar/index';
 import TasksList from './TasksList';
 import TaskDetail from './TaskDetail';
 import PropTypes from 'prop-types';
-import {useIntl} from 'react-intl';
+import { useIntl } from 'react-intl';
 import AppsContainer from '@crema/components/AppsContainer';
 import clsx from 'clsx';
-import {useParams} from 'react-router-dom';
-import {Box} from '@mui/material';
-import {useGetDataApi} from '@crema/utility/APIHooks';
+import { useParams } from 'react-router-dom';
+import { Box } from '@mui/material';
+import { useGetDataApi } from '@crema/utility/APIHooks';
 
 const ToDo = () => {
-  const {id} = useParams();
+  const { id } = useParams();
 
-  const [{apiData: taskLists, loading}, {setQueryParams, setData, reCallAPI}] =
-    useGetDataApi('/api/todo/task/list', {}, {}, false);
+  const [
+    { apiData: taskLists, loading },
+    { setQueryParams, setData, reCallAPI },
+  ] = useGetDataApi('/api/todo/task/list', {}, {}, false);
 
-  const {messages} = useIntl();
+  const { messages } = useIntl();
   return (
     <AppsContainer
       title={messages['todo.todoApp']}

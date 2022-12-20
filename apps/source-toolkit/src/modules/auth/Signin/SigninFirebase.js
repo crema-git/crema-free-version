@@ -1,8 +1,8 @@
 import React from 'react';
-import {Form, Formik} from 'formik';
+import { Form, Formik } from 'formik';
 import * as yup from 'yup';
-import {Link, useNavigate} from 'react-router-dom';
-import {useIntl} from 'react-intl';
+import { Link, useNavigate } from 'react-router-dom';
+import { useIntl } from 'react-intl';
 import IntlMessages from '@crema/utility/IntlMessages';
 import Box from '@mui/material/Box';
 import AppTextField from '@crema/components/AppTextField';
@@ -10,35 +10,35 @@ import Checkbox from '@mui/material/Checkbox';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import AppInfoView from '@crema/components/AppInfoView';
-import {useAuthMethod} from '@crema/utility/AuthHooks';
-import {Fonts} from '@crema/constants/AppEnums'
-import {AiOutlineGoogle, AiOutlineTwitter} from 'react-icons/ai';
-import {FaFacebookF} from 'react-icons/fa';
-import {BsGithub} from 'react-icons/bs';
+import { useAuthMethod } from '@crema/utility/AuthHooks';
+import { Fonts } from '@crema/constants/AppEnums';
+import { AiOutlineGoogle, AiOutlineTwitter } from 'react-icons/ai';
+import { FaFacebookF } from 'react-icons/fa';
+import { BsGithub } from 'react-icons/bs';
 
 const validationSchema = yup.object({
   email: yup
     .string()
-    .email(<IntlMessages id='validation.emailFormat' />)
-    .required(<IntlMessages id='validation.emailRequired' />),
+    .email(<IntlMessages id="validation.emailFormat" />)
+    .required(<IntlMessages id="validation.emailRequired" />),
   password: yup
     .string()
-    .required(<IntlMessages id='validation.passwordRequired' />),
+    .required(<IntlMessages id="validation.passwordRequired" />),
 });
 
 const SigninFirebase = () => {
-  const {logInWithEmailAndPassword, logInWithPopup} = useAuthMethod();
+  const { logInWithEmailAndPassword, logInWithPopup } = useAuthMethod();
   const navigate = useNavigate();
 
   const onGoToForgetPassword = () => {
-    navigate('/forget-password', {tab: 'firebase'});
+    navigate('/forget-password', { tab: 'firebase' });
   };
 
-  const {messages} = useIntl();
+  const { messages } = useIntl();
 
   return (
-    <Box sx={{flex: 1, display: 'flex', flexDirection: 'column'}}>
-      <Box sx={{flex: 1, display: 'flex', flexDirection: 'column', mb: 5}}>
+    <Box sx={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
+      <Box sx={{ flex: 1, display: 'flex', flexDirection: 'column', mb: 5 }}>
         <Formik
           validateOnChange={true}
           initialValues={{
@@ -46,20 +46,20 @@ const SigninFirebase = () => {
             password: 'Pass@1!@all',
           }}
           validationSchema={validationSchema}
-          onSubmit={(data, {setSubmitting}) => {
+          onSubmit={(data, { setSubmitting }) => {
             setSubmitting(true);
             logInWithEmailAndPassword(data);
             setSubmitting(false);
           }}
         >
-          {({isSubmitting}) => (
-            <Form style={{textAlign: 'left'}} noValidate autoComplete='off'>
-              <Box sx={{mb: {xs: 5, xl: 8}}}>
+          {({ isSubmitting }) => (
+            <Form style={{ textAlign: 'left' }} noValidate autoComplete="off">
+              <Box sx={{ mb: { xs: 5, xl: 8 } }}>
                 <AppTextField
                   placeholder={messages['common.email']}
-                  name='email'
-                  label={<IntlMessages id='common.email' />}
-                  variant='outlined'
+                  name="email"
+                  label={<IntlMessages id="common.email" />}
+                  variant="outlined"
                   sx={{
                     width: '100%',
                     '& .MuiInputBase-input': {
@@ -69,13 +69,13 @@ const SigninFirebase = () => {
                 />
               </Box>
 
-              <Box sx={{mb: {xs: 3, xl: 4}}}>
+              <Box sx={{ mb: { xs: 3, xl: 4 } }}>
                 <AppTextField
-                  type='password'
+                  type="password"
                   placeholder={messages['common.password']}
-                  label={<IntlMessages id='common.password' />}
-                  name='password'
-                  variant='outlined'
+                  label={<IntlMessages id="common.password" />}
+                  name="password"
+                  variant="outlined"
                   sx={{
                     width: '100%',
                     '& .MuiInputBase-input': {
@@ -87,7 +87,7 @@ const SigninFirebase = () => {
 
               <Box
                 sx={{
-                  mb: {xs: 3, xl: 4},
+                  mb: { xs: 3, xl: 4 },
                 }}
               >
                 <Box
@@ -96,18 +96,18 @@ const SigninFirebase = () => {
                     alignItems: 'center',
                   }}
                 >
-                  <Checkbox sx={{ml: -3}} />
+                  <Checkbox sx={{ ml: -3 }} />
                   <Box
-                    component='span'
+                    component="span"
                     sx={{
                       color: 'grey.500',
                     }}
                   >
-                    <IntlMessages id='common.rememberMe' />
+                    <IntlMessages id="common.rememberMe" />
                   </Box>
                 </Box>
                 <Box
-                  component='span'
+                  component="span"
                   sx={{
                     color: (theme) => theme.palette.primary.main,
                     fontWeight: Fonts.MEDIUM,
@@ -117,15 +117,15 @@ const SigninFirebase = () => {
                   }}
                   onClick={onGoToForgetPassword}
                 >
-                  <IntlMessages id='common.forgetPassword' />
+                  <IntlMessages id="common.forgetPassword" />
                 </Box>
               </Box>
 
               <div>
                 <Button
-                  variant='contained'
-                  color='primary'
-                  type='submit'
+                  variant="contained"
+                  color="primary"
+                  type="submit"
                   disabled={isSubmitting}
                   sx={{
                     minWidth: 160,
@@ -135,7 +135,7 @@ const SigninFirebase = () => {
                     padding: '4px 16px 8px',
                   }}
                 >
-                  <IntlMessages id='common.login' />
+                  <IntlMessages id="common.login" />
                 </Button>
               </div>
             </Form>
@@ -146,14 +146,14 @@ const SigninFirebase = () => {
       <Box
         sx={{
           color: 'grey.500',
-          mb: {xs: 5, md: 7},
+          mb: { xs: 5, md: 7 },
         }}
       >
-        <span style={{marginRight: 4}}>
-          <IntlMessages id='common.dontHaveAccount' />
+        <span style={{ marginRight: 4 }}>
+          <IntlMessages id="common.dontHaveAccount" />
         </span>
         <Box
-          component='span'
+          component="span"
           sx={{
             fontWeight: Fonts.MEDIUM,
             '& a': {
@@ -162,8 +162,8 @@ const SigninFirebase = () => {
             },
           }}
         >
-          <Link to='/signup'>
-            <IntlMessages id='common.signup' />
+          <Link to="/signup">
+            <IntlMessages id="common.signup" />
           </Link>
         </Box>
       </Box>
@@ -174,11 +174,11 @@ const SigninFirebase = () => {
           alignItems: 'center',
           justifyContent: 'space-between',
           backgroundColor: (theme) => theme.palette.background.default,
-          mx: {xs: -5, lg: -10},
-          mb: {xs: -6, lg: -11},
+          mx: { xs: -5, lg: -10 },
+          mb: { xs: -6, lg: -11 },
           mt: 'auto',
           py: 2,
-          px: {xs: 5, lg: 10},
+          px: { xs: 5, lg: 10 },
         }}
       >
         <Box
@@ -186,7 +186,7 @@ const SigninFirebase = () => {
             color: (theme) => theme.palette.text.secondary,
           }}
         >
-          <IntlMessages id='common.orLoginWith' />
+          <IntlMessages id="common.orLoginWith" />
         </Box>
         <Box
           sx={{
@@ -197,7 +197,7 @@ const SigninFirebase = () => {
           <IconButton
             sx={{
               p: 2,
-              '& svg': {fontSize: 18},
+              '& svg': { fontSize: 18 },
               color: (theme) => theme.palette.text.secondary,
             }}
             onClick={() => logInWithPopup('google')}
@@ -207,7 +207,7 @@ const SigninFirebase = () => {
           <IconButton
             sx={{
               p: 1.5,
-              '& svg': {fontSize: 18},
+              '& svg': { fontSize: 18 },
               color: (theme) => theme.palette.text.secondary,
             }}
             onClick={() => logInWithPopup('facebook')}
@@ -217,7 +217,7 @@ const SigninFirebase = () => {
           <IconButton
             sx={{
               p: 1.5,
-              '& svg': {fontSize: 18},
+              '& svg': { fontSize: 18 },
               color: (theme) => theme.palette.text.secondary,
             }}
             onClick={() => logInWithPopup('github')}
@@ -227,7 +227,7 @@ const SigninFirebase = () => {
           <IconButton
             sx={{
               p: 1.5,
-              '& svg': {fontSize: 18},
+              '& svg': { fontSize: 18 },
               color: (theme) => theme.palette.text.secondary,
             }}
             onClick={() => logInWithPopup('twitter')}

@@ -7,4 +7,13 @@ import PopularCoins from './PopularCoins';
 import LatestNews from './LatestNews';
 import CryptoMarketActivity from './CryptoMarketActivity';
 
-export { TotalBalance, Coins, Bitcoin, BuySell, BtcVolumeCurrency, PopularCoins, LatestNews, CryptoMarketActivity };
+export {
+  TotalBalance,
+  Coins,
+  Bitcoin,
+  BuySell,
+  BtcVolumeCurrency,
+  PopularCoins,
+  LatestNews,
+  CryptoMarketActivity,
+};

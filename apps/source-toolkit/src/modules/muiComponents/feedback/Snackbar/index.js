@@ -1,2 +1,2 @@
-import {Snackbar} from '@crema/modules/components/feedBack';
+import { Snackbar } from '@crema/modules/components/feedBack';
 export default Snackbar;

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {styled, useTheme} from '@mui/material/styles';
+import { styled, useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
 import MuiAppBar from '@mui/material/AppBar';
@@ -20,8 +20,8 @@ import MailIcon from '@mui/icons-material/Mail';
 
 const drawerWidth = 240;
 
-const Main = styled('main', {shouldForwardProp: (prop) => prop !== 'open'})(
-  ({theme, open}) => ({
+const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })(
+  ({ theme, open }) => ({
     flexGrow: 1,
     padding: theme.spacing(3),
     transition: theme.transitions.create('margin', {
@@ -36,12 +36,12 @@ const Main = styled('main', {shouldForwardProp: (prop) => prop !== 'open'})(
       }),
       marginRight: 0,
     }),
-  }),
+  })
 );
 
 const AppBar = styled(MuiAppBar, {
   shouldForwardProp: (prop) => prop !== 'open',
-})(({theme, open}) => ({
+})(({ theme, open }) => ({
   transition: theme.transitions.create(['margin', 'width'], {
     easing: theme.transitions.easing.sharp,
     duration: theme.transitions.duration.leavingScreen,
@@ -56,7 +56,7 @@ const AppBar = styled(MuiAppBar, {
   }),
 }));
 
-const DrawerHeader = styled('div')(({theme}) => ({
+const DrawerHeader = styled('div')(({ theme }) => ({
   display: 'flex',
   alignItems: 'center',
   padding: theme.spacing(0, 1),
@@ -78,19 +78,19 @@ export default function PersistentDrawerRight() {
   };
 
   return (
-    <Box sx={{display: 'flex'}}>
+    <Box sx={{ display: 'flex' }}>
       <CssBaseline />
-      <AppBar position='fixed' open={open}>
+      <AppBar position="fixed" open={open}>
         <Toolbar>
-          <Typography variant='h6' noWrap sx={{flexGrow: 1}} component='div'>
+          <Typography variant="h6" noWrap sx={{ flexGrow: 1 }} component="div">
             Persistent drawer
           </Typography>
           <IconButton
-            color='inherit'
-            aria-label='open drawer'
-            edge='end'
+            color="inherit"
+            aria-label="open drawer"
+            edge="end"
             onClick={handleDrawerOpen}
-            sx={{...(open && {display: 'none'})}}
+            sx={{ ...(open && { display: 'none' }) }}
           >
             <MenuIcon />
           </IconButton>
@@ -136,8 +136,8 @@ export default function PersistentDrawerRight() {
             width: drawerWidth,
           },
         }}
-        variant='persistent'
-        anchor='right'
+        variant="persistent"
+        anchor="right"
         open={open}
       >
         <DrawerHeader>

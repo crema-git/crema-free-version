@@ -1,26 +1,22 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import AppsContainer from '@crema/components/AppsContainer';
-import {useIntl} from 'react-intl';
-import {Button, Hidden} from '@mui/material';
+import { useIntl } from 'react-intl';
+import { Button, Hidden } from '@mui/material';
 import AppsHeader from '@crema/components/AppsHeader';
 import AppsContent from '@crema/components/AppsContent';
 import AppsPagination from '@crema/components/AppsPagination';
 import Box from '@mui/material/Box';
-import AppInfoView from '@crema/components/AppInfoView';
 import AppSearchBar from '@crema/components/AppSearchBar';
-import {useGetDataApi} from '@crema/utility/APIHooks';
-import {CustomerTable} from '@crema/modules/ecommerce/Customers';
-import AppLoader from "@crema/components/AppLoader";
+import { CustomerTable } from '@crema/modules/ecommerce/Customers';
+import AppLoader from '@crema/components/AppLoader';
+import { useDispatch, useSelector } from 'react-redux';
+import { getCustomers } from '@crema/redux/actions';
 
 const Customers = () => {
-  const {messages} = useIntl();
-  const [
-    {
-      apiData: {customers, customerCount}, loading
-    },
-    {setQueryParams},
-  ] = useGetDataApi('/api/ecommerce/customers', {}, {}, false);
-
+  const { messages } = useIntl();
+  const dispatch = useDispatch();
+  const customers = useSelector(({ ecommerce }) => ecommerce.customers);
+  const customerCount = useSelector(({ ecommerce }) => ecommerce.customerCount);
   const [page, setPage] = useState(0);
   const [search, setSearchQuery] = useState('');
 
@@ -28,8 +24,8 @@ const Customers = () => {
     setPage(value);
   };
   useEffect(() => {
-    setQueryParams({search, page});
-  }, [search, page]);
+    dispatch(getCustomers(search, page));
+  }, [dispatch, search, page]);
 
   const onSearchCustomer = (e) => {
     setSearchQuery(e.target.value);
@@ -38,67 +34,67 @@ const Customers = () => {
 
   return (
     <>
-      {loading ? (
-        <AppLoader />
-      ): (
-      <AppsContainer title={messages['sidebar.ecommerce.customers']} fullView>
-        <AppsHeader>
-          <Box
-            sx={{
-              display: 'flex',
-              flexDirection: 'row',
-              alignItems: 'center',
-              width: 1,
-            }}
-          >
-            <AppSearchBar
-              iconPosition='right'
-              overlap={false}
-              onChange={(event) => onSearchCustomer(event.target.value)}
-              placeholder={messages['common.searchHere']}
-            />
+      {customers ? (
+        <AppsContainer title={messages['sidebar.ecommerce.customers']} fullView>
+          <AppsHeader>
             <Box
               sx={{
                 display: 'flex',
                 flexDirection: 'row',
                 alignItems: 'center',
-                ml: 'auto',
+                width: 1,
               }}
             >
-              <Button variant='contained' color='primary'>
-                Add Customer
-              </Button>
+              <AppSearchBar
+                iconPosition="right"
+                overlap={false}
+                onChange={(event) => onSearchCustomer(event.target.value)}
+                placeholder={messages['common.searchHere']}
+              />
+              <Box
+                sx={{
+                  display: 'flex',
+                  flexDirection: 'row',
+                  alignItems: 'center',
+                  ml: 'auto',
+                }}
+              >
+                <Button variant="contained" color="primary">
+                  Add Customer
+                </Button>
 
-              <Hidden smDown>
-                <AppsPagination
-                  rowsPerPage={10}
-                  count={customerCount}
-                  page={page}
-                  onPageChange={onPageChange}
-                />
-              </Hidden>
+                <Hidden smDown>
+                  <AppsPagination
+                    rowsPerPage={10}
+                    count={customerCount}
+                    page={page}
+                    onPageChange={onPageChange}
+                  />
+                </Hidden>
+              </Box>
             </Box>
-          </Box>
-        </AppsHeader>
+          </AppsHeader>
 
-        <AppsContent
-          sx={{
-            paddingTop: 2.5,
-            paddingBottom: 2.5,
-          }}
-        >
-          <CustomerTable customers={customers} />
-        </AppsContent>
+          <AppsContent
+            sx={{
+              paddingTop: 2.5,
+              paddingBottom: 2.5,
+            }}
+          >
+            <CustomerTable customers={customers} />
+          </AppsContent>
 
-        <Hidden smUp>
-          <AppsPagination
-            rowsPerPage={10}
-            count={customerCount}
-            page={page}
-            onPageChange={onPageChange}
-          />
-        </Hidden>
-      </AppsContainer>
+          <Hidden smUp>
+            <AppsPagination
+              rowsPerPage={10}
+              count={customerCount}
+              page={page}
+              onPageChange={onPageChange}
+            />
+          </Hidden>
+        </AppsContainer>
+      ) : (
+        <AppLoader />
       )}
     </>
   );

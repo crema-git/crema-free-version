@@ -36,25 +36,25 @@ export default function MultipleSelectCheckmarks() {
 
   const handleChange = (event) => {
     const {
-      target: {value},
+      target: { value },
     } = event;
     setPersonName(
       // On autofill we get a the stringified value.
-      typeof value === 'string' ? value.split(',') : value,
+      typeof value === 'string' ? value.split(',') : value
     );
   };
 
   return (
     <div>
-      <FormControl sx={{m: 1, width: 300}}>
-        <InputLabel id='demo-multiple-checkbox-label'>Tag</InputLabel>
+      <FormControl sx={{ m: 1, width: 300 }}>
+        <InputLabel id="demo-multiple-checkbox-label">Tag</InputLabel>
         <Select
-          labelId='demo-multiple-checkbox-label'
-          id='demo-multiple-checkbox'
+          labelId="demo-multiple-checkbox-label"
+          id="demo-multiple-checkbox"
           multiple
           value={personName}
           onChange={handleChange}
-          input={<OutlinedInput label='Tag' />}
+          input={<OutlinedInput label="Tag" />}
           renderValue={(selected) => selected.join(', ')}
           MenuProps={MenuProps}
         >

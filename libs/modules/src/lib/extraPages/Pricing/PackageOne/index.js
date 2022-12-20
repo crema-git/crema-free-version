@@ -5,9 +5,9 @@ import Grid from '@mui/material/Grid';
 import PackageCard from './PackageCard';
 import AppCard from '@crema/components/AppCard';
 
-const PackageOne = ({pricing}) => {
+const PackageOne = ({ pricing }) => {
   return (
-    <AppCard title='Pricing Package Style 1' sxStyle={{alignItems: 'center'}}>
+    <AppCard title="Pricing Package Style 1" sxStyle={{ alignItems: 'center' }}>
       <AppGridContainer
         sx={{
           maxWidth: 1000,

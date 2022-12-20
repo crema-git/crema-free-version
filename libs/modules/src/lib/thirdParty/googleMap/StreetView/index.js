@@ -1,8 +1,12 @@
-import React, {Component} from 'react';
-import {GoogleMap, OverlayView, StreetViewPanorama, withGoogleMap,} from 'react-google-maps';
+import React from 'react';
+import {
+  GoogleMap,
+  OverlayView,
+  StreetViewPanorama,
+  withGoogleMap,
+} from 'react-google-maps';
 
-
-const coordinates = {lat: 49.2853171, lng: -123.1119202};
+const coordinates = { lat: 49.2853171, lng: -123.1119202 };
 
 const STYLES = {
   overlayView: {
@@ -14,14 +18,14 @@ const STYLES = {
 };
 
 function getPixelPositionOffset(width, height) {
-  return {x: -(width / 2), y: -(height / 2)};
+  return { x: -(width / 2), y: -(height / 2) };
 }
 
 const StreetViewPanoramaExampleGoogleMap = withGoogleMap(() => (
   <GoogleMap defaultZoom={8} defaultCenter={coordinates}>
     <StreetViewPanorama defaultPosition={coordinates} visible>
       <OverlayView
-        position={{lat: 49.28590291211115, lng: -123.11248166065218}}
+        position={{ lat: 49.28590291211115, lng: -123.11248166065218 }}
         mapPaneName={OverlayView.OVERLAY_LAYER}
         getPixelPositionOffset={getPixelPositionOffset}
       >
@@ -46,15 +50,12 @@ const StreetViewPanoramaExampleGoogleMap = withGoogleMap(() => (
 /*
  * Add <script src="https://maps.googleapis.com/maps/api/js"></script> to your HTML to provide google.maps reference
  */
-export default class StreetViewPanoramaExample extends Component {
-  render() {
-    return (
-      <StreetViewPanoramaExampleGoogleMap
-        containerElement={
-          <div className='cr-embed-responsive cr-embed-responsive-21by9' />
-        }
-        mapElement={<div className='cr-embed-responsive-item' />}
-      />
-    );
-  }
-}
+const StreetViewPanoramaExample = () => (
+  <StreetViewPanoramaExampleGoogleMap
+    containerElement={
+      <div className="cr-embed-responsive cr-embed-responsive-21by9" />
+    }
+    mapElement={<div className="cr-embed-responsive-item" />}
+  />
+);
+export default StreetViewPanoramaExample;

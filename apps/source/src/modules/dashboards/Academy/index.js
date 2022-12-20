@@ -2,8 +2,8 @@ import React from 'react';
 import Box from '@mui/material/Box';
 import AppAnimate from '@crema/components/AppAnimate';
 import AppGridContainer from '@crema/components/AppGridContainer';
-import {Grid} from '@mui/material';
-import {useGetDataApi} from '@crema/utility/APIHooks';
+import { Grid } from '@mui/material';
+import { useGetDataApi } from '@crema/utility/APIHooks';
 import {
   AverageGrades,
   CourseCategories,
@@ -18,23 +18,24 @@ import {
   PromoCard,
   RelatedCourses,
   StudentRankings,
-  VideoPromo
+  VideoPromo,
 } from '@crema/modules/dashboards/Academy';
-import AppLoader from "@crema/components/AppLoader";
+import AppLoader from '@crema/components/AppLoader';
 
 const Academy = () => {
-  const [{apiData: academyData, loading}] = useGetDataApi('/dashboard/academy');
+  const [{ apiData: academyData, loading }] =
+    useGetDataApi('/dashboard/academy');
 
   return (
     <>
       {loading ? (
         <AppLoader />
-      ): (
-        <AppAnimate animation='transition.slideUpIn' delay={200}>
+      ) : (
+        <AppAnimate animation="transition.slideUpIn" delay={200}>
           <Box>
             <Box
               sx={{
-                pb: {xs: 5, md: 8},
+                pb: { xs: 5, md: 8 },
               }}
             >
               <AppGridContainer>
@@ -54,7 +55,7 @@ const Academy = () => {
 
             <Box
               sx={{
-                pb: {xs: 5, md: 8},
+                pb: { xs: 5, md: 8 },
               }}
             >
               <AppGridContainer>
@@ -68,7 +69,7 @@ const Academy = () => {
                   sm={6}
                   lg={3}
                   sx={{
-                    order: {lg: 2},
+                    order: { lg: 2 },
                   }}
                 >
                   <Notifications notifications={academyData.notifications} />
@@ -80,7 +81,7 @@ const Academy = () => {
                   sm={12}
                   lg={6}
                   sx={{
-                    order: {lg: 1},
+                    order: { lg: 1 },
                   }}
                 >
                   <MyCourses courses={academyData.courses} />

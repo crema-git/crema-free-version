@@ -35,31 +35,31 @@ export default function DialogSelect() {
       <Dialog disableEscapeKeyDown open={open} onClose={handleClose}>
         <DialogTitle>Fill the form</DialogTitle>
         <DialogContent>
-          <Box component='form' sx={{display: 'flex', flexWrap: 'wrap'}}>
-            <FormControl sx={{m: 1, minWidth: 120}}>
-              <InputLabel htmlFor='demo-dialog-native'>Age</InputLabel>
+          <Box component="form" sx={{ display: 'flex', flexWrap: 'wrap' }}>
+            <FormControl sx={{ m: 1, minWidth: 120 }}>
+              <InputLabel htmlFor="demo-dialog-native">Age</InputLabel>
               <Select
                 native
                 value={age}
                 onChange={handleChange}
-                input={<OutlinedInput label='Age' id='demo-dialog-native' />}
+                input={<OutlinedInput label="Age" id="demo-dialog-native" />}
               >
-                <option aria-label='None' value='' />
+                <option aria-label="None" value="" />
                 <option value={10}>Ten</option>
                 <option value={20}>Twenty</option>
                 <option value={30}>Thirty</option>
               </Select>
             </FormControl>
-            <FormControl sx={{m: 1, minWidth: 120}}>
-              <InputLabel id='demo-dialog-select-label'>Age</InputLabel>
+            <FormControl sx={{ m: 1, minWidth: 120 }}>
+              <InputLabel id="demo-dialog-select-label">Age</InputLabel>
               <Select
-                labelId='demo-dialog-select-label'
-                id='demo-dialog-select'
+                labelId="demo-dialog-select-label"
+                id="demo-dialog-select"
                 value={age}
                 onChange={handleChange}
-                input={<OutlinedInput label='Age' />}
+                input={<OutlinedInput label="Age" />}
               >
-                <MenuItem value=''>
+                <MenuItem value="">
                   <em>None</em>
                 </MenuItem>
                 <MenuItem value={10}>Ten</MenuItem>

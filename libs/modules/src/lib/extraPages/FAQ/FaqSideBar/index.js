@@ -10,39 +10,46 @@ import IntlMessages from '@crema/utility/IntlMessages';
 import Box from '@mui/material/Box';
 import PropTypes from 'prop-types';
 import SideBarItem from './SideBarItem';
-import {Fonts} from '@crema/constants/AppEnums'
+import { Fonts } from '@crema/constants/AppEnums';
 import AppCard from '@crema/components/AppCard';
 
 const faqFolderList = [
-  {id: 101, name: <IntlMessages id='faq.general' />, icon: <CachedIcon />},
+  { id: 101, name: <IntlMessages id="faq.general" />, icon: <CachedIcon /> },
   {
     id: 102,
-    name: <IntlMessages id='knowledge.installation' />,
+    name: <IntlMessages id="knowledge.installation" />,
     icon: <SettingsOutlinedIcon />,
   },
-  {id: 103, name: <IntlMessages id='faq.pricing' />, icon: <AttachMoneyIcon />},
+  {
+    id: 103,
+    name: <IntlMessages id="faq.pricing" />,
+    icon: <AttachMoneyIcon />,
+  },
   {
     id: 104,
-    name: <IntlMessages id='faq.licenseTypes' />,
+    name: <IntlMessages id="faq.licenseTypes" />,
     icon: <DescriptionOutlinedIcon />,
   },
   {
     id: 105,
-    name: <IntlMessages id='faq.support' />,
+    name: <IntlMessages id="faq.support" />,
     icon: <InsertEmoticonIcon />,
   },
 ];
 
-const FaqSideBar = ({onGetFaqData, selectionId}) => {
+const FaqSideBar = ({ onGetFaqData, selectionId }) => {
   return (
     <AppCard>
       <AppScrollbar>
-        <Box component='h3' sx={{mb: 4, fontWeight: Fonts.BOLD, fontSize: 16}}>
-          <IntlMessages id='faq.queries' />
+        <Box
+          component="h3"
+          sx={{ mb: 4, fontWeight: Fonts.BOLD, fontSize: 16 }}
+        >
+          <IntlMessages id="faq.queries" />
         </Box>
         <List
-          component='nav'
-          aria-label='main mailbox folders'
+          component="nav"
+          aria-label="main mailbox folders"
           sx={{
             paddingTop: 0,
             paddingBottom: 0,

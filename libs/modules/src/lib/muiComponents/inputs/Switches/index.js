@@ -25,69 +25,69 @@ const Switches = () => {
   return (
     <>
       <AppComponentHeader
-        title='Switch'
-        description='Switches toggle the state of a single setting on or off.'
-        refUrl='https://mui.com/components/switches/'
+        title="Switch"
+        description="Switches toggle the state of a single setting on or off."
+        refUrl="https://mui.com/components/switches/"
       />
 
       <AppGridContainer>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Basic Switches'
+            title="Basic Switches"
             component={BasicSwitches}
             source={BasicSwitchesSource}
             noScrollbar
-            description='Switches are the preferred way to adjust settings on mobile.'
+            description="Switches are the preferred way to adjust settings on mobile."
           />
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Size'
+            title="Size"
             component={SwitchesSize}
             source={SwitchesSizeSource}
             noScrollbar
-            description='Use the size prop to change the size of the switch.'
+            description="Use the size prop to change the size of the switch."
           />
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Controlled'
+            title="Controlled"
             component={ControlledSwitches}
             source={ControlledSwitchesSource}
             noScrollbar
-            description='You can control the switch with the checked and onChange props:'
+            description="You can control the switch with the checked and onChange props:"
           />
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Label'
+            title="Label"
             component={SwitchLabels}
             source={SwitchLabelsSource}
             noScrollbar
-            description='You can provide a label to the Switch thanks to the FormControlLabel component.'
+            description="You can provide a label to the Switch thanks to the FormControlLabel component."
           />
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Switches with FormGroup'
+            title="Switches with FormGroup"
             component={SwitchesGroup}
             source={SwitchesGroupSource}
             noScrollbar
-            description='FormGroup is a helpful wrapper used to group selection controls components that provides an easier API. '
+            description="FormGroup is a helpful wrapper used to group selection controls components that provides an easier API. "
           />
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Customization'
+            title="Customization"
             component={CustomizedSwitches}
             source={CustomizedSwitchesSource}
             noScrollbar
-            description='Here are some examples of customizing the component. You can learn more about this in the overrides documentation page.'
+            description="Here are some examples of customizing the component. You can learn more about this in the overrides documentation page."
           />
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Color'
+            title="Color"
             component={ColorSwitches}
             source={ColorSwitchesSource}
             noScrollbar
@@ -95,11 +95,11 @@ const Switches = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Label placement'
+            title="Label placement"
             component={FormControlLabelPosition}
             source={FormControlLabelPositionSource}
             noScrollbar
-            description='You can change the placement of the label:'
+            description="You can change the placement of the label:"
           />
         </Grid>
       </AppGridContainer>

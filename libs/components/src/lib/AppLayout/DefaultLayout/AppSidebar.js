@@ -6,19 +6,20 @@ import PropTypes from 'prop-types';
 import AppScrollbar from '../../AppScrollbar';
 import VerticalNav from '../components/VerticalNav';
 import MainSidebar from '../components/MainSidebar';
-import {useLayoutContext} from "@crema/context/LayoutContextProvider";
+import { useLayoutContext } from '@crema/context/LayoutContextProvider';
 import UserInfo from '../components/UserInfo';
-import {useSidebarContext} from "@crema/context/SidebarContextProvider";
+import { useSidebarContext } from '@crema/context/SidebarContextProvider';
 
 const AppSidebar = ({
   toggleNavCollapsed,
   position,
   isNavCollapsed,
-  variant, routesConfig
+  variant,
+  routesConfig,
 }) => {
-  const {footer, footerType} = useLayoutContext();
+  const { footer, footerType } = useLayoutContext();
 
-  const {sidebarTextColor} = useSidebarContext();
+  const { sidebarTextColor } = useSidebarContext();
 
   const handleToggleDrawer = () => {
     toggleNavCollapsed();
@@ -34,7 +35,7 @@ const AppSidebar = ({
             root: clsx(variant),
             paper: clsx(variant),
           }}
-          style={{position: 'absolute'}}
+          style={{ position: 'absolute' }}
         >
           <MainSidebar>
             <UserInfo color={sidebarTextColor} />
@@ -46,7 +47,7 @@ const AppSidebar = ({
                 mt: 0.5,
               }}
             >
-               <VerticalNav routesConfig={routesConfig} />
+              <VerticalNav routesConfig={routesConfig} />
             </AppScrollbar>
           </MainSidebar>
         </Drawer>

@@ -4,7 +4,7 @@ import TableRow from '@mui/material/TableRow';
 import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
 import Avatar from '@mui/material/Avatar';
-import {Fonts} from '@crema/constants/AppEnums'
+import { Fonts } from '@crema/constants/AppEnums';
 
 const TableItem = (props) => {
   return (
@@ -23,7 +23,7 @@ const TableItem = (props) => {
           },
         },
       }}
-      className='item-hover'
+      className="item-hover"
     >
       <TableCell>
         <Box
@@ -53,7 +53,7 @@ const TableItem = (props) => {
               {props.data.name}
             </Box>
             <Box
-              component='p'
+              component="p"
               sx={{
                 color: 'text.secondary',
               }}
@@ -68,16 +68,16 @@ const TableItem = (props) => {
         {props.data.growth ? (
           <img
             src={'/assets/images/dashboard/growth_icon.svg'}
-            alt='growth_icon'
+            alt="growth_icon"
           />
         ) : (
           <img
             src={'/assets/images/dashboard/decries_icon.svg'}
-            alt='decries_icon'
+            alt="decries_icon"
           />
         )}
         <Box
-          component='span'
+          component="span"
           sx={{
             mx: 2,
             color: props.data.growth ? '#0A8FDC' : '#F44D50',
@@ -86,7 +86,7 @@ const TableItem = (props) => {
           {props.data.graph}
         </Box>
         <Box
-          component='span'
+          component="span"
           sx={{
             color: 'text.secondary',
           }}

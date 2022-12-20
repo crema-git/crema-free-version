@@ -1,2 +1,2 @@
-import {Tabs} from '@crema/modules/components/navigation';
+import { Tabs } from '@crema/modules/components/navigation';
 export default Tabs;

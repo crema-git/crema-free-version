@@ -5,14 +5,14 @@ import Avatar from '@mui/material/Avatar';
 import PropTypes from 'prop-types';
 import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
-import {Fonts} from '@crema/constants/AppEnums'
+import { Fonts } from '@crema/constants/AppEnums';
 
-const NotificationCell = ({item}) => {
+const NotificationCell = ({ item }) => {
   return (
     <ListItem
       disableGutters
-      className='item-hover'
-      sx={{paddingLeft: 5, paddingRight: 5}}
+      className="item-hover"
+      sx={{ paddingLeft: 5, paddingRight: 5 }}
     >
       <ListItemAvatar
         sx={{
@@ -31,7 +31,7 @@ const NotificationCell = ({item}) => {
       <ListItemText
         primary={
           <Box
-            component='span'
+            component="span"
             sx={{
               color: 'text.primary',
               mb: 0.5,
@@ -44,7 +44,7 @@ const NotificationCell = ({item}) => {
         }
         secondary={
           <Box
-            component='span'
+            component="span"
             sx={{
               display: 'flex',
               alignItems: 'center',
@@ -54,7 +54,7 @@ const NotificationCell = ({item}) => {
             }}
           >
             <Box
-              component='span'
+              component="span"
               sx={{
                 display: 'block',
                 mr: 2,
@@ -63,7 +63,7 @@ const NotificationCell = ({item}) => {
               {item.name}
             </Box>
             <Box
-              component='span'
+              component="span"
               sx={{
                 display: 'block',
                 color: 'text.secondary',

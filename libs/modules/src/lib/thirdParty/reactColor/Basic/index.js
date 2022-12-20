@@ -1,6 +1,6 @@
 import React from 'react';
-import {SketchPicker} from 'react-color';
-import {Box} from '@mui/material';
+import { SketchPicker } from 'react-color';
+import { Box } from '@mui/material';
 
 class Basic extends React.Component {
   state = {
@@ -14,15 +14,15 @@ class Basic extends React.Component {
   };
 
   handleClick = () => {
-    this.setState({displayColorPicker: !this.state.displayColorPicker});
+    this.setState({ displayColorPicker: !this.state.displayColorPicker });
   };
 
   handleClose = () => {
-    this.setState({displayColorPicker: false});
+    this.setState({ displayColorPicker: false });
   };
 
   handleChange = (color) => {
-    this.setState({color: color.rgb});
+    this.setState({ color: color.rgb });
   };
 
   render() {

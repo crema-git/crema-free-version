@@ -1,5 +1,5 @@
-import {MessageType} from './chat/connectionList';
-import {generateUniqueID, getFormattedDateTime} from "@crema/helpers";
+import { MessageType } from './chat/connectionList';
+import { generateUniqueID, getFormattedDateTime } from '@crema/helpers';
 
 export const wallData = {
   id: 123,
@@ -374,19 +374,19 @@ export const postsList = [
         id: 5445,
         path: '/assets/images/wall/berlin.jpg',
         preview: '/assets/images/wall/berlin.jpg',
-        metaData: {type: 'images/jpg', size: 2343},
+        metaData: { type: 'images/jpg', size: 2343 },
       },
       {
         id: 54546,
         path: '/assets/images/wall/cairo.jpg',
         preview: '/assets/images/wall/cairo.jpg',
-        metaData: {type: 'images/jpg', size: 2345},
+        metaData: { type: 'images/jpg', size: 2345 },
       },
       {
         id: 54547,
         path: '/assets/images/wall/berlin.jpg',
         preview: '/assets/images/wall/berlin.jpg',
-        metaData: {type: 'images/jpg', size: 2346},
+        metaData: { type: 'images/jpg', size: 2346 },
       },
     ],
     message: 'Beautiful cities of Europe...',
@@ -439,13 +439,13 @@ export const postsList = [
         id: 5445,
         path: '/assets/images/wall/berlin.jpg',
         preview: '/assets/images/wall/berlin.jpg',
-        metaData: {type: 'images/jpg', size: 2343},
+        metaData: { type: 'images/jpg', size: 2343 },
       },
       {
         id: 54546,
         path: '/assets/images/wall/cairo.jpg',
         preview: '/assets/images/wall/cairo.jpg',
-        metaData: {type: 'images/jpg', size: 2345},
+        metaData: { type: 'images/jpg', size: 2345 },
       },
     ],
     message: 'Amazing clicks from my camera!',
@@ -481,7 +481,7 @@ export const postsList = [
         id: 54546,
         path: '/assets/images/wall/cairo.jpg',
         preview: '/assets/images/wall/cairo.jpg',
-        metaData: {type: 'images/jpg', size: 2345},
+        metaData: { type: 'images/jpg', size: 2345 },
       },
     ],
     content: '',

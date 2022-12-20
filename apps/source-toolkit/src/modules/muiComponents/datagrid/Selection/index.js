@@ -1,2 +1,2 @@
-import {Selection} from '@crema/modules/components/datagrid';
+import { Selection } from '@crema/modules/components/datagrid';
 export default Selection;

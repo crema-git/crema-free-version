@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {DataGrid} from '@mui/x-data-grid';
+import { DataGrid } from '@mui/x-data-grid';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 
@@ -45,8 +45,8 @@ export default function RowContextMenu() {
     setSelectedRow(Number(event.currentTarget.getAttribute('data-id')));
     setContextMenu(
       contextMenu === null
-        ? {mouseX: event.clientX - 2, mouseY: event.clientY - 4}
-        : null,
+        ? { mouseX: event.clientX - 2, mouseY: event.clientY - 4 }
+        : null
     );
   };
 
@@ -85,24 +85,24 @@ export default function RowContextMenu() {
   };
 
   return (
-    <div style={{height: 400, width: '100%'}}>
+    <div style={{ height: 400, width: '100%' }}>
       <DataGrid
         columns={columns}
         rows={rows}
         componentsProps={{
           row: {
             onContextMenu: handleContextMenu,
-            style: {cursor: 'context-menu'},
+            style: { cursor: 'context-menu' },
           },
         }}
       />
       <Menu
         open={contextMenu !== null}
         onClose={handleClose}
-        anchorReference='anchorPosition'
+        anchorReference="anchorPosition"
         anchorPosition={
           contextMenu !== null
-            ? {top: contextMenu.mouseY, left: contextMenu.mouseX}
+            ? { top: contextMenu.mouseY, left: contextMenu.mouseX }
             : undefined
         }
         componentsProps={{

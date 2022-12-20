@@ -1,15 +1,15 @@
-import React, {useEffect, useMemo, useState} from 'react';
-import {Collapse, Icon, IconButton, ListItemText} from '@mui/material';
-import {useLocation} from 'react-router-dom';
+import React, { useEffect, useMemo, useState } from 'react';
+import { Collapse, Icon, IconButton, ListItemText } from '@mui/material';
+import { useLocation } from 'react-router-dom';
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
 import VerticalItem from '../VerticalItem';
 import Box from '@mui/material/Box';
-import IntlMessages from "@crema/utility/IntlMessages";
-import {checkPermission} from "@crema/helpers";
-import {useAuthUser} from "@crema/utility/AuthHooks";
-import {useThemeContext} from '@crema/context/ThemeContextProvider';
-import {useSidebarContext} from "@crema/context/SidebarContextProvider";
+import IntlMessages from '@crema/utility/IntlMessages';
+import { checkPermission } from '@crema/helpers';
+import { useAuthUser } from '@crema/utility/AuthHooks';
+import { useThemeContext } from '@crema/context/ThemeContextProvider';
+import { useSidebarContext } from '@crema/context/SidebarContextProvider';
 import VerticalCollapseItem from './VerticalCollapseItem';
 
 const needsToBeOpened = (pathname, item) => {
@@ -39,10 +39,10 @@ const isUrlInChildren = (parent, url) => {
   return false;
 };
 
-const VerticalCollapse = ({item, level}) => {
-  const {theme} = useThemeContext();
-  const {sidebarTextColor} = useSidebarContext();
-  const {pathname} = useLocation();
+const VerticalCollapse = ({ item, level }) => {
+  const { theme } = useThemeContext();
+  const { sidebarTextColor } = useSidebarContext();
+  const { pathname } = useLocation();
   const [open, setOpen] = useState(() => needsToBeOpened(pathname, item));
 
   useEffect(() => {
@@ -55,10 +55,10 @@ const VerticalCollapse = ({item, level}) => {
     setOpen(!open);
   };
 
-  const {user} = useAuthUser();
+  const { user } = useAuthUser();
   const hasPermission = useMemo(
     () => checkPermission(item.permittedRole, user.role),
-    [item.permittedRole, user.role],
+    [item.permittedRole, user.role]
   );
 
   if (!hasPermission) {
@@ -71,13 +71,17 @@ const VerticalCollapse = ({item, level}) => {
         level={level}
         sidebarTextColor={sidebarTextColor}
         button
-        component='div'
+        component="div"
         className={clsx('menu-vertical-collapse', open && 'open')}
         onClick={handleClick}
       >
         {item.icon && (
-          <Box component='span'>
-            <Icon sx={{mr: 4}} color='action' className={clsx('nav-item-icon')}>
+          <Box component="span">
+            <Icon
+              sx={{ mr: 4 }}
+              color="action"
+              className={clsx('nav-item-icon')}
+            >
               {item.icon}
             </Icon>
           </Box>
@@ -89,17 +93,17 @@ const VerticalCollapse = ({item, level}) => {
             whiteSpace: 'nowrap',
             fontSize: 14,
           }}
-          className='nav-item-content'
-          classes={{primary: clsx('nav-item-text')}}
+          className="nav-item-content"
+          classes={{ primary: clsx('nav-item-text') }}
           primary={<IntlMessages id={item.messageId} />}
         />
         <IconButton
-          className='nav-item-icon-arrow-btn'
-          sx={{p: 0, mr: 0.75}}
+          className="nav-item-icon-arrow-btn"
+          sx={{ p: 0, mr: 0.75 }}
           disableRipple
-          size='large'
+          size="large"
         >
-          <Icon className='nav-item-icon-arrow' color='inherit'>
+          <Icon className="nav-item-icon-arrow" color="inherit">
             {open
               ? 'expand_more'
               : theme.direction === 'ltr'
@@ -110,7 +114,7 @@ const VerticalCollapse = ({item, level}) => {
       </VerticalCollapseItem>
 
       {item.children && (
-        <Collapse in={open} className='collapse-children'>
+        <Collapse in={open} className="collapse-children">
           {item.children.map((item) => (
             <React.Fragment key={item.id}>
               {item.type === 'collapse' && (

@@ -1,18 +1,18 @@
 import React from 'react';
 import AppCard from '@crema/components/AppCard';
-import {Box, darken} from '@mui/material';
+import { Box, darken } from '@mui/material';
 import AppLinearProgress from '@crema/components/AppLinearProgress';
-import {Fonts} from '@crema/constants/AppEnums'
-import {useIntl} from 'react-intl';
+import { Fonts } from '@crema/constants/AppEnums';
+import { useIntl } from 'react-intl';
 import PropTypes from 'prop-types';
-import {styled} from '@mui/material/styles';
+import { styled } from '@mui/material/styles';
 import MuiAccordion from '@mui/material/Accordion';
 import MuiAccordionSummary from '@mui/material/AccordionSummary';
 import MuiAccordionDetails from '@mui/material/AccordionDetails';
 
 const Accordion = styled((props) => (
   <MuiAccordion disableGutters elevation={0} square {...props} />
-))(({theme}) => ({
+))(({ theme }) => ({
   '&:before': {
     display: 'none',
   },
@@ -22,7 +22,7 @@ const Accordion = styled((props) => (
 }));
 
 const AccordionSummary = styled((props) => <MuiAccordionSummary {...props} />)(
-  ({theme}) => ({
+  ({ theme }) => ({
     backgroundColor: theme.palette.background.paper,
     flexDirection: 'row-reverse',
     '& .MuiAccordionSummary-expandIconWrapper.Mui-expanded': {
@@ -34,21 +34,21 @@ const AccordionSummary = styled((props) => <MuiAccordionSummary {...props} />)(
     '&.Mui-expanded': {
       backgroundColor: theme.palette.background.default,
     },
-  }),
+  })
 );
 
-const AccordionDetails = styled(MuiAccordionDetails)(({theme}) => ({
+const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
   padding: theme.spacing(2),
   borderTop: '1px solid rgba(0, 0, 0, .125)',
 }));
 
-const TrafficSource = ({trafficData}) => {
+const TrafficSource = ({ trafficData }) => {
   const [expanded, setExpanded] = React.useState(1);
 
   const handleChange = (panel) => (event, isExpanded) => {
     setExpanded(isExpanded ? panel : false);
   };
-  const {messages} = useIntl();
+  const { messages } = useIntl();
   return (
     <AppCard title={messages['dashboard.analytics.trafficSource']}>
       {trafficData.map((data) => (
@@ -59,8 +59,8 @@ const TrafficSource = ({trafficData}) => {
         >
           <AccordionSummary
             expanded={expanded === data.id ? 'selected' : ''}
-            aria-controls='panel1bh-content'
-            id='panel1bh-header'
+            aria-controls="panel1bh-content"
+            id="panel1bh-header"
           >
             <Box
               sx={{
@@ -79,7 +79,7 @@ const TrafficSource = ({trafficData}) => {
               >
                 <Box>{data.title}</Box>
                 <Box
-                  component='span'
+                  component="span"
                   sx={{
                     color: 'text.secondary',
                   }}
@@ -90,7 +90,7 @@ const TrafficSource = ({trafficData}) => {
               <AppLinearProgress
                 value={data.value}
                 thickness={10}
-                activeColor='#0698EC'
+                activeColor="#0698EC"
               />
             </Box>
           </AccordionSummary>
@@ -103,7 +103,7 @@ const TrafficSource = ({trafficData}) => {
               }}
             >
               <Box
-                component='span'
+                component="span"
                 sx={{
                   ml: 2,
                   fontWeight: Fonts.LIGHT,
@@ -112,7 +112,7 @@ const TrafficSource = ({trafficData}) => {
                 {data.session}
               </Box>
               <Box
-                component='span'
+                component="span"
                 sx={{
                   ml: 2,
                   color: 'text.secondary',

@@ -1,7 +1,7 @@
-import React, {useEffect, useState} from 'react';
-import {useLocation, useNavigate, useParams} from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import MailContentHeader from './MailContentHeader';
-import {Hidden} from '@mui/material';
+import { Hidden } from '@mui/material';
 import AppsPagination from '@crema/components/AppsPagination';
 import AppsContent from '@crema/components/AppsContent';
 import AppsHeader from '@crema/components/AppsHeader';
@@ -11,18 +11,18 @@ import ListEmptyResult from '@crema/components/AppList/ListEmptyResult';
 import EmailListSkeleton from '@crema/components/EmailListSkeleton';
 import MailListItemMobile from './MailListItemMobile';
 import MailListItem from './MailListItem';
-import {useInfoViewActionsContext} from '@crema/context/InfoViewContextProvider';
-import {putDataApi, useGetDataApi} from '@crema/utility/APIHooks';
+import { useInfoViewActionsContext } from '@crema/context/InfoViewContextProvider';
+import { putDataApi, useGetDataApi } from '@crema/utility/APIHooks';
 
 const MailsList = () => {
   const navigate = useNavigate();
   const params = useParams();
   const infoViewActionsContext = useInfoViewActionsContext();
-  const {pathname} = useLocation();
+  const { pathname } = useLocation();
   const path = pathname.split('/');
   const [page, setPage] = useState(0);
 
-  const [{apiData, loading}, {setQueryParams, setData}] = useGetDataApi(
+  const [{ apiData, loading }, { setQueryParams, setData }] = useGetDataApi(
     '/api/mailApp/folder/mail/List',
     undefined,
     {
@@ -30,10 +30,10 @@ const MailsList = () => {
       name: params?.folder || params?.label,
       page: page,
     },
-    false,
+    false
   );
 
-  const [{apiData: labelList}] = useGetDataApi('/api/mailApp/labels/list');
+  const [{ apiData: labelList }] = useGetDataApi('/api/mailApp/labels/list');
   const [checkedMails, setCheckedMails] = useState([]);
 
   const [filterText, onSetFilterText] = useState('');
@@ -64,18 +64,27 @@ const MailsList = () => {
   };
 
   const onViewMailDetail = (mail) => {
+    console.log('params: ', params);
     if (mail.isRead) {
-      navigate(`/apps/mail/${params.name}/${mail.id}`);
+      navigate(
+        `/apps/mail/${
+          params.folder ? params.folder : `label/${params.label}`
+        }/${mail.id}`
+      );
     } else {
       mail.isRead = true;
-      putDataApi('/api/mailApp/mail/', infoViewActionsContext, {mail})
+      putDataApi('/api/mailApp/mail/', infoViewActionsContext, { mail })
         .then((data) => {
           onUpdateItem(data);
-          navigate(`/apps/mail/${params.name}/${mail.id}`);
+          navigate(
+            `/apps/mail/${
+              params.folder ? params.folder : `label/${params.label}`
+            }/${mail.id}`
+          );
           infoViewActionsContext.showMessage(
             mail.isRead
               ? 'Mail Marked as Read Successfully'
-              : 'Mail Marked as Unread Successfully',
+              : 'Mail Marked as Unread Successfully'
           );
         })
         .catch((error) => {
@@ -94,7 +103,7 @@ const MailsList = () => {
         infoViewActionsContext.showMessage(
           checked
             ? 'Mail Marked as Starred Successfully'
-            : 'Mail Marked as Unstarred Successfully',
+            : 'Mail Marked as Unstarred Successfully'
         );
       })
       .catch((error) => {
@@ -121,7 +130,7 @@ const MailsList = () => {
       return apiData?.data.filter(
         (mail) =>
           mail?.subject?.toLowerCase()?.includes(filterText.toLowerCase()) ||
-          mail?.detail?.toLowerCase()?.includes(filterText.toLowerCase()),
+          mail?.detail?.toLowerCase()?.includes(filterText.toLowerCase())
       );
     }
   };

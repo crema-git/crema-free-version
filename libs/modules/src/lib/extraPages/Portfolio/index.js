@@ -1,23 +1,23 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import Tab from '@mui/material/Tab';
 import Tabs from '@mui/material/Tabs';
 import Gallery from 'react-photo-gallery';
 import IntlMessages from '@crema/utility/IntlMessages';
 import Box from '@mui/material/Box';
-import {Fonts} from '@crema/constants/AppEnums'
+import { Fonts } from '@crema/constants/AppEnums';
 import AppAnimate from '@crema/components/AppAnimate';
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 
 const tabs = [
-  {id: 323, name: <IntlMessages id='common.all' />},
-  {id: 333, name: <IntlMessages id='portfolio.logo' />},
-  {id: 32323, name: <IntlMessages id='portfolio.painting' />},
-  {id: 421, name: <IntlMessages id='portfolio.graphicDesign' />},
-  {id: 4454, name: <IntlMessages id='portfolio.webDesign' />},
-  {id: 221, name: <IntlMessages id='portfolio.ui' />},
+  { id: 323, name: <IntlMessages id="common.all" /> },
+  { id: 333, name: <IntlMessages id="portfolio.logo" /> },
+  { id: 32323, name: <IntlMessages id="portfolio.painting" /> },
+  { id: 421, name: <IntlMessages id="portfolio.graphicDesign" /> },
+  { id: 4454, name: <IntlMessages id="portfolio.webDesign" /> },
+  { id: 221, name: <IntlMessages id="portfolio.ui" /> },
 ];
 
-const Portfolio = ({photos}) => {
+const Portfolio = ({ photos }) => {
   const [value, setValue] = useState(0);
 
   const handleChange = (event, newValue) => {
@@ -51,32 +51,32 @@ const Portfolio = ({photos}) => {
   };
 
   return (
-    <AppAnimate animation='transition.slideUpIn' delay={200}>
+    <AppAnimate animation="transition.slideUpIn" delay={200}>
       <Box flex={1}>
-        <Box mx='auto' textAlign='center' maxWidth={672}>
+        <Box mx="auto" textAlign="center" maxWidth={672}>
           <Box mb={6}>
             <Box
-              component='h2'
-              color='text.primary'
+              component="h2"
+              color="text.primary"
               mb={4}
               fontWeight={Fonts.MEDIUM}
               fontSize={20}
             >
-              <IntlMessages id='portfolio.heading' />
+              <IntlMessages id="portfolio.heading" />
             </Box>
-            <Box component='p' color='text.secondary' mb={3}>
-              <IntlMessages id='portfolio.content' />
+            <Box component="p" color="text.secondary" mb={3}>
+              <IntlMessages id="portfolio.content" />
             </Box>
           </Box>
 
           <Tabs
             value={value}
             onChange={handleChange}
-            indicatorColor='primary'
-            textColor='primary'
-            variant='scrollable'
-            scrollButtons='auto'
-            aria-label='scrollable auto tabs example'
+            indicatorColor="primary"
+            textColor="primary"
+            variant="scrollable"
+            scrollButtons="auto"
+            aria-label="scrollable auto tabs example"
             sx={{
               marginBottom: 5,
               position: 'relative',
@@ -109,22 +109,22 @@ const Portfolio = ({photos}) => {
           }}
         >
           {value === 0 && (
-            <Gallery margin={10} photos={shuffle(photos)} direction='column' />
+            <Gallery margin={10} photos={shuffle(photos)} direction="column" />
           )}
           {value === 1 && (
-            <Gallery margin={10} photos={shuffle(photos)} direction='column' />
+            <Gallery margin={10} photos={shuffle(photos)} direction="column" />
           )}
           {value === 2 && (
-            <Gallery margin={10} photos={shuffle(photos)} direction='column' />
+            <Gallery margin={10} photos={shuffle(photos)} direction="column" />
           )}
           {value === 3 && (
-            <Gallery margin={10} photos={shuffle(photos)} direction='column' />
+            <Gallery margin={10} photos={shuffle(photos)} direction="column" />
           )}
           {value === 4 && (
-            <Gallery margin={10} photos={shuffle(photos)} direction='column' />
+            <Gallery margin={10} photos={shuffle(photos)} direction="column" />
           )}
           {value === 5 && (
-            <Gallery margin={10} photos={shuffle(photos)} direction='column' />
+            <Gallery margin={10} photos={shuffle(photos)} direction="column" />
           )}
         </Box>
       </Box>
@@ -134,5 +134,5 @@ const Portfolio = ({photos}) => {
 
 export default Portfolio;
 Portfolio.propTypes = {
-    photos: PropTypes.array.isRequired,
-}
+  photos: PropTypes.array.isRequired,
+};

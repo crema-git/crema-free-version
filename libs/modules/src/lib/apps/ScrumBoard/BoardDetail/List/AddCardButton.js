@@ -4,8 +4,8 @@ import Avatar from '@mui/material/Avatar';
 import AddIcon from '@mui/icons-material/Add';
 import Card from '@mui/material/Card';
 import PropTypes from 'prop-types';
-import {grey} from '@mui/material/colors';
-import {Fonts} from '@crema/constants/AppEnums'
+import { grey } from '@mui/material/colors';
+import { Fonts } from '@crema/constants/AppEnums';
 import IntlMessages from '@crema/utility/IntlMessages';
 
 const AddCardButton = (props) => {
@@ -44,7 +44,7 @@ const AddCardButton = (props) => {
             fontWeight: Fonts.REGULAR,
           }}
         >
-          <IntlMessages id='scrumboard.addACard' />
+          <IntlMessages id="scrumboard.addACard" />
         </Box>
       </Box>
     </Card>

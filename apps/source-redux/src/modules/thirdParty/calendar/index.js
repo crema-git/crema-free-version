@@ -1,2 +1,2 @@
-import {Calendar } from '@crema/modules/thirdParty';
-export  default Calendar;
+import { Calendar } from '@crema/modules/thirdParty';
+export default Calendar;

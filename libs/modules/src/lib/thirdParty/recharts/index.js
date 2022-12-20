@@ -9,4 +9,15 @@ import Scatter from './Scatter';
 import Radar from './Radar';
 import FunnelChart from './Funnel';
 
-export { AreaChart, BarChart, ComposedChart, LineChart, PieChart, Radial, Treemap, Scatter, Radar, FunnelChart };
+export {
+  AreaChart,
+  BarChart,
+  ComposedChart,
+  LineChart,
+  PieChart,
+  Radial,
+  Treemap,
+  Scatter,
+  Radar,
+  FunnelChart,
+};

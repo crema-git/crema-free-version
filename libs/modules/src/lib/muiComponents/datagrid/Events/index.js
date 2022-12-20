@@ -14,15 +14,15 @@ const Events = () => {
   return (
     <>
       <AppComponentHeader
-        title='Events'
-        description='The data grid emits events that can be subscribed to attach custom behavior.'
-        refUrl='https://mui.com/components/data-grid/events/'
+        title="Events"
+        description="The data grid emits events that can be subscribed to attach custom behavior."
+        refUrl="https://mui.com/components/data-grid/events/"
       />
 
       <AppGridContainer>
         <Grid item xs={12}>
           <AppComponentCard
-            title='SubscribeToEvents'
+            title="SubscribeToEvents"
             component={SubscribeToEvents}
             source={SubscribeToEventsSource}
             noScrollbar
@@ -30,7 +30,7 @@ const Events = () => {
         </Grid>
         <Grid item xs={12}>
           <AppComponentCard
-            title='DoubleClickWithCtrlToEdit'
+            title="DoubleClickWithCtrlToEdit"
             component={DoubleClickWithCtrlToEdit}
             source={DoubleClickWithCtrlToEditSource}
             noScrollbar

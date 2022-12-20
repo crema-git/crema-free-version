@@ -1,9 +1,9 @@
 import * as React from 'react';
 import Divider from '@mui/material/Divider';
 import MuiGrid from '@mui/material/Grid';
-import {styled} from '@mui/material/styles';
+import { styled } from '@mui/material/styles';
 
-const Grid = styled(MuiGrid)(({theme}) => ({
+const Grid = styled(MuiGrid)(({ theme }) => ({
   width: '100%',
   ...theme.typography.body2,
   '& [role="separator"]': {
@@ -25,7 +25,7 @@ export default function VerticalDividersWithText() {
       <Grid item xs>
         {content}
       </Grid>
-      <Divider orientation='vertical' flexItem>
+      <Divider orientation="vertical" flexItem>
         VERTICAL
       </Divider>
       <Grid item xs>

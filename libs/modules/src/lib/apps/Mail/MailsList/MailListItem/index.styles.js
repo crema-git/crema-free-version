@@ -1,7 +1,7 @@
-import {alpha} from '@mui/material';
-import {Fonts} from '@crema/constants/AppEnums'
+import { alpha } from '@mui/material';
+import { Fonts } from '@crema/constants/AppEnums';
 
-import {styled} from '@mui/material/styles';
+import { styled } from '@mui/material/styles';
 import ListItem from '@mui/material/ListItem';
 
 export const MailItemWrapper = styled(ListItem)((props) => {
@@ -54,7 +54,7 @@ export const MailItemWrapper = styled(ListItem)((props) => {
   };
 });
 
-export const MailInfoWrapper = styled('div')(({theme}) => {
+export const MailInfoWrapper = styled('div')(({ theme }) => {
   return {
     width: '100%',
     padding: '5px 0 8px 15px',

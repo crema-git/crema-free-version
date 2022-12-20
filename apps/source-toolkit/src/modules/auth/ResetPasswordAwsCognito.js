@@ -1,10 +1,10 @@
-import React, {useState} from 'react';
-import {Form, Formik} from 'formik';
+import React, { useState } from 'react';
+import { Form, Formik } from 'formik';
 import * as yup from 'yup';
 import ReactCodeInput from 'react-code-input';
-import {useInfoViewActionsContext} from '@crema/context/InfoViewContextProvider';
-import {useIntl} from 'react-intl';
-import {Fonts} from '@crema/constants/AppEnums'
+import { useInfoViewActionsContext } from '@crema/context/InfoViewContextProvider';
+import { useIntl } from 'react-intl';
+import { Fonts } from '@crema/constants/AppEnums';
 import PropTypes from 'prop-types';
 import AppTextField from '@crema/components/AppTextField';
 import IntlMessages from '@crema/utility/IntlMessages';
@@ -18,10 +18,10 @@ import AppLogo from '@crema/components/AppLogo';
 const validationSchema = yup.object({
   newPassword: yup
     .string()
-    .required(<IntlMessages id='validation.enterNewPassword' />),
+    .required(<IntlMessages id="validation.enterNewPassword" />),
   confirmPassword: yup
     .string()
-    .required(<IntlMessages id='validation.reTypePassword' />),
+    .required(<IntlMessages id="validation.reTypePassword" />),
 });
 
 const ResetPasswordAwsCognito = () => {
@@ -29,11 +29,11 @@ const ResetPasswordAwsCognito = () => {
 
   const [pin, setPin] = useState('');
 
-  const {messages} = useIntl();
+  const { messages } = useIntl();
 
   return (
     <AuthWrapper>
-      <Box sx={{width: '100%'}}>
+      <Box sx={{ width: '100%' }}>
         <Box
           sx={{
             mb: 5,
@@ -44,16 +44,16 @@ const ResetPasswordAwsCognito = () => {
           <AppLogo />
         </Box>
         <Typography
-          variant='h2'
-          component='h2'
+          variant="h2"
+          component="h2"
           sx={{
             mb: 1.5,
             color: (theme) => theme.palette.text.primary,
             fontWeight: Fonts.SEMI_BOLD,
-            fontSize: {xs: 14, xl: 16},
+            fontSize: { xs: 14, xl: 16 },
           }}
         >
-          <IntlMessages id='common.resetPassword' />
+          <IntlMessages id="common.resetPassword" />
         </Typography>
 
         <Formik
@@ -64,15 +64,15 @@ const ResetPasswordAwsCognito = () => {
             confirmPassword: '',
           }}
           validationSchema={validationSchema}
-          onSubmit={(data, {setErrors, resetForm, setSubmitting}) => {
+          onSubmit={(data, { setErrors, resetForm, setSubmitting }) => {
             if (pin.length !== 6) {
               infoViewActionsContext.fetchError(
-                messages['validation.pinLength'],
+                messages['validation.pinLength']
               );
             } else if (data.newPassword !== data.confirmPassword) {
               setErrors({
                 confirmPassword: (
-                  <IntlMessages id='validation.passwordMisMatch' />
+                  <IntlMessages id="validation.passwordMisMatch" />
                 ),
               });
             } else {
@@ -82,25 +82,25 @@ const ResetPasswordAwsCognito = () => {
             }
           }}
         >
-          {({isSubmitting}) => (
-            <Form noValidate autoComplete='off'>
+          {({ isSubmitting }) => (
+            <Form noValidate autoComplete="off">
               <Box
                 sx={{
                   mb: 6,
-                  fontSize: {xs: 16, sm: 18},
+                  fontSize: { xs: 16, sm: 18 },
                 }}
               >
                 <Typography>
-                  <IntlMessages id='common.verificationMessage' />
+                  <IntlMessages id="common.verificationMessage" />
                 </Typography>
               </Box>
               <Box
                 sx={{
-                  mb: {xs: 4, lg: 6},
+                  mb: { xs: 4, lg: 6 },
                 }}
               >
                 <ReactCodeInput
-                  type='password'
+                  type="password"
                   value={pin}
                   fields={6}
                   onChange={(value) => setPin(value)}
@@ -109,41 +109,41 @@ const ResetPasswordAwsCognito = () => {
 
               <Box
                 sx={{
-                  mb: {xs: 4, lg: 6},
+                  mb: { xs: 4, lg: 6 },
                 }}
               >
                 <AppTextField
-                  name='newPassword'
-                  label={<IntlMessages id='common.newPassword' />}
+                  name="newPassword"
+                  label={<IntlMessages id="common.newPassword" />}
                   sx={{
                     width: '100%',
                   }}
-                  variant='outlined'
-                  type='password'
+                  variant="outlined"
+                  type="password"
                 />
               </Box>
 
               <Box
                 sx={{
-                  mb: {xs: 4, lg: 6},
+                  mb: { xs: 4, lg: 6 },
                 }}
               >
                 <AppTextField
-                  name='confirmPassword'
-                  label={<IntlMessages id='common.retypePassword' />}
+                  name="confirmPassword"
+                  label={<IntlMessages id="common.retypePassword" />}
                   sx={{
                     width: '100%',
                   }}
-                  variant='outlined'
-                  type='password'
+                  variant="outlined"
+                  type="password"
                 />
               </Box>
 
               <Button
-                variant='contained'
+                variant="contained"
                 disabled={isSubmitting}
-                color='primary'
-                type='submit'
+                color="primary"
+                type="submit"
                 sx={{
                   fontWeight: Fonts.REGULAR,
                   textTransform: 'capitalize',
@@ -151,7 +151,7 @@ const ResetPasswordAwsCognito = () => {
                   minWidth: 160,
                 }}
               >
-                <IntlMessages id='common.resetMyPassword' />
+                <IntlMessages id="common.resetMyPassword" />
               </Button>
             </Form>
           )}

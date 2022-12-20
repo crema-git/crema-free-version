@@ -5,7 +5,7 @@ const Wistia = () => {
   return (
     <ReactPlayer
       controls={true}
-      url='https://home.wistia.com/medias/e4a27b971d'
+      url="https://home.wistia.com/medias/e4a27b971d"
     />
   );
 };

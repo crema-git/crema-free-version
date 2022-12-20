@@ -17,37 +17,37 @@ const Links = () => {
   return (
     <>
       <AppComponentHeader
-        title='Links'
-        description='The Link component allows you to easily customize anchor elements with your theme colors and typography styles.'
-        refUrl='https://mui.com/components/links/'
+        title="Links"
+        description="The Link component allows you to easily customize anchor elements with your theme colors and typography styles."
+        refUrl="https://mui.com/components/links/"
       />
 
       <AppGridContainer>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Basic links'
+            title="Basic links"
             component={BasicLinks}
             source={BasicLinksSource}
             noScrollbar
-            description='The Link component is built on top of the Typography component, meaning that you can use its props.'
+            description="The Link component is built on top of the Typography component, meaning that you can use its props."
           />
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Under line Link'
+            title="Under line Link"
             component={UnderlineLink}
             source={UnderlineLinkSource}
             noScrollbar
-            description='The Link component is built on top of the Typography component, meaning that you can use its props.'
+            description="The Link component is built on top of the Typography component, meaning that you can use its props."
           />
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='ButtonLink'
+            title="ButtonLink"
             component={ButtonLink}
             source={ButtonLinkSource}
             noScrollbar
-            description='The Link component is built on top of the Typography component, meaning that you can use its props.'
+            description="The Link component is built on top of the Typography component, meaning that you can use its props."
           />
         </Grid>
       </AppGridContainer>

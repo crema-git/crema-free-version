@@ -35,52 +35,48 @@ const TimePicker = () => {
   return (
     <>
       <AppComponentHeader
-        title='TimePicker'
-        description='Time pickers allow the user to select a single time.'
-        refUrl='https://mui.com/components/time-picker/'
+        title="TimePicker"
+        description="Time pickers allow the user to select a single time."
+        refUrl="https://mui.com/components/time-picker/"
       />
 
       <AppGridContainer>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='BasicTimePicker'
+            title="BasicTimePicker"
             component={BasicTimePicker}
             source={BasicTimePickerSource}
             noScrollbar
-            description='The date picker is rendered as a modal dialog on mobile, and a textbox with a popup on desktop.'
           />
         </Grid>
 
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='ResponsiveTimePickers'
+            title="ResponsiveTimePickers"
             component={ResponsiveTimePickers}
             source={ResponsiveTimePickersSource}
             noScrollbar
-            description='The time picker component is designed and optimized for the device it runs on.'
           />
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='FormPropsTimePickers'
+            title="FormPropsTimePickers"
             component={FormPropsTimePickers}
             source={FormPropsTimePickersSource}
             noScrollbar
-            description='The time picker component can be disabled or read-only.'
           />
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='LocalizedTimePicker'
+            title="LocalizedTimePicker"
             component={LocalizedTimePicker}
             source={LocalizedTimePickerSource}
             noScrollbar
-            description='Use LocalizationProvider to change the date-engine locale that is used to render the time picker. The time picker will automatically adjust to the locales time setting, i.e. the 12-hour or 24-hour format. This can be controlled with ampm prop.'
           />
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='TimeValidationTimePicker'
+            title="TimeValidationTimePicker"
             component={TimeValidationTimePicker}
             source={TimeValidationTimePickerSource}
             noScrollbar
@@ -88,38 +84,34 @@ const TimePicker = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='SecondsTimePicker'
+            title="SecondsTimePicker"
             component={SecondsTimePicker}
             source={SecondsTimePickerSource}
             noScrollbar
-            description='The seconds input can be used for selection of a precise time point.'
           />
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='StaticTimePickerLandscape'
+            title="StaticTimePickerLandscape"
             component={StaticTimePickerLandscape}
             source={StaticTimePickerLandscapeSource}
             noScrollbar
-            description=''
           />
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='SubComponentsTimePickers'
+            title="SubComponentsTimePickers"
             component={SubComponentsTimePickers}
             source={SubComponentsTimePickersSource}
             noScrollbar
-            description='Some lower-level sub-components (ClockPicker) are also exported. These are rendered without a wrapper or outer logic (masked input, date values parsing and validation, etc.).'
           />
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='StaticTimePickerDemo'
+            title="StaticTimePickerDemo"
             component={StaticTimePickerDemo}
             source={StaticTimePickerDemoSource}
             noScrollbar
-            description='Its possible to render any time picker inline. This will enable building custom popover/modal containers.'
           />
         </Grid>
       </AppGridContainer>

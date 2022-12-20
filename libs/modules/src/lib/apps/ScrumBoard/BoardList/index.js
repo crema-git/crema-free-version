@@ -1,25 +1,29 @@
-import React, {useState} from 'react';
-import {useNavigate} from 'react-router-dom';
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import AddNewBoard from './AddNewBoard';
 import IntlMessages from '@crema/utility/IntlMessages';
 import Box from '@mui/material/Box';
 import AppGridContainer from '@crema/components/AppGridContainer';
 import BoardItem from './BoardItem';
 import AddBoardButton from './AddBoardButton';
-import {Fonts} from '@crema/constants/AppEnums'
+import { Fonts } from '@crema/constants/AppEnums';
 import AppInfoView from '@crema/components/AppInfoView';
-import {Zoom} from '@mui/material';
-import {useInfoViewActionsContext} from '@crema/context/InfoViewContextProvider';
-import {postDataApi, putDataApi, useGetDataApi} from '@crema/utility/APIHooks';
+import { Zoom } from '@mui/material';
+import { useInfoViewActionsContext } from '@crema/context/InfoViewContextProvider';
+import {
+  postDataApi,
+  putDataApi,
+  useGetDataApi,
+} from '@crema/utility/APIHooks';
 
 const BoardList = () => {
   const navigate = useNavigate();
 
   const infoViewActionsContext = useInfoViewActionsContext();
 
-  const [{apiData: boardList}, {setData}] = useGetDataApi(
+  const [{ apiData: boardList }, { setData }] = useGetDataApi(
     '/api/scrumboard/board/list',
-    [],
+    []
   );
 
   const [isAddBoardOpen, setAddBoardOpen] = useState(false);
@@ -42,7 +46,7 @@ const BoardList = () => {
 
   const onAddBoard = (name) => {
     if (selectedBoard) {
-      const board = {...selectedBoard, name};
+      const board = { ...selectedBoard, name };
       putDataApi('/api/scrumboard/edit/board', infoViewActionsContext, {
         board,
       })
@@ -54,7 +58,7 @@ const BoardList = () => {
         });
     } else {
       postDataApi('/api/scrumboard/add/board', infoViewActionsContext, {
-        board: {name},
+        board: { name },
       })
         .then((data) => {
           setData(data);
@@ -72,7 +76,7 @@ const BoardList = () => {
 
   return (
     <>
-      <Zoom direction='up' in mountOnEnter unmountOnExit>
+      <Zoom direction="up" in mountOnEnter unmountOnExit>
         <Box
           sx={{
             pt: 4,
@@ -82,16 +86,16 @@ const BoardList = () => {
           }}
         >
           <Box
-            component='h2'
+            component="h2"
             sx={{
-              my: {xs: 5, sm: 5, xl: 8},
+              my: { xs: 5, sm: 5, xl: 8 },
               color: 'text.primary',
               fontWeight: Fonts.BOLD,
               textAlign: 'center',
               fontSize: 16,
             }}
           >
-            <IntlMessages id='scrumboard.scrumboardApp' />
+            <IntlMessages id="scrumboard.scrumboardApp" />
           </Box>
           <AppGridContainer
             sx={{

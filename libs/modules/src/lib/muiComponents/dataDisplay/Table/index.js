@@ -41,109 +41,109 @@ const Table = () => {
   return (
     <>
       <AppComponentHeader
-        title='Table'
-        description='Tables display sets of data. They can be fully customized.'
-        refUrl='https://mui.com/components/tables/'
+        title="Table"
+        description="Tables display sets of data. They can be fully customized."
+        refUrl="https://mui.com/components/tables/"
       />
 
       <AppGridContainer>
         <Grid item xs={12}>
           <AppComponentCard
-            title='Basic table'
+            title="Basic table"
             component={BasicTable}
             source={BasicTableSource}
             noScrollbar
-            description='A simple example with no frills.'
+            description="A simple example with no frills."
           />
         </Grid>
         <Grid item xs={12}>
           <AppComponentCard
-            title='Data Table'
+            title="Data Table"
             component={DataTable}
             source={DataTableSource}
             noScrollbar
-            description='A simple example with no frills.'
+            description="A simple example with no frills."
           />
         </Grid>
         <Grid item xs={12}>
           <AppComponentCard
-            title='Dense Table'
+            title="Dense Table"
             component={DenseTable}
             source={DenseTableSource}
             noScrollbar
-            description='A simple example with no frills.'
+            description="A simple example with no frills."
           />
         </Grid>
         <Grid item xs={12}>
           <AppComponentCard
-            title='Enhanced Table'
+            title="Enhanced Table"
             component={EnhancedTable}
             source={EnhancedTableSource}
             noScrollbar
-            description='A simple example with no frills.'
+            description="A simple example with no frills."
           />
         </Grid>
         <Grid item xs={12}>
           <AppComponentCard
-            title='ColumnGrouping'
+            title="ColumnGrouping"
             component={ColumnGrouping}
             source={ColumnGroupingSource}
             noScrollbar
-            description='A simple example with no frills.'
+            description="A simple example with no frills."
           />
         </Grid>
         <Grid item xs={12}>
           <AppComponentCard
-            title='CustomPaginationActionsTable'
+            title="CustomPaginationActionsTable"
             component={CustomPaginationActionsTable}
             source={CustomPaginationActionsTableSource}
             noScrollbar
-            description='A simple example with no frills.'
+            description="A simple example with no frills."
           />
         </Grid>
         <Grid item xs={12}>
           <AppComponentCard
-            title='Sticky Head Table'
+            title="Sticky Head Table"
             component={StickyHeadTable}
             source={StickyHeadTableSource}
             noScrollbar
-            description='A simple example with no frills.'
+            description="A simple example with no frills."
           />
         </Grid>
         <Grid item xs={12}>
           <AppComponentCard
-            title='Column Grouping Table'
+            title="Column Grouping Table"
             component={ColumnGroupingTable}
             source={ColumnGroupingTableSource}
             noScrollbar
-            description='A simple example with no frills.'
+            description="A simple example with no frills."
           />
         </Grid>
         <Grid item xs={12}>
           <AppComponentCard
-            title='CollapsibleTable'
+            title="CollapsibleTable"
             component={CollapsibleTable}
             source={CollapsibleTableSource}
             noScrollbar
-            description='A simple example with no frills.'
+            description="A simple example with no frills."
           />
         </Grid>
         <Grid item xs={12}>
           <AppComponentCard
-            title='Spanning Table'
+            title="Spanning Table"
             component={SpanningTable}
             source={SpanningTableSource}
             noScrollbar
-            description='A simple example with no frills.'
+            description="A simple example with no frills."
           />
         </Grid>
         <Grid item xs={12}>
           <AppComponentCard
-            title='Acccessible Table'
+            title="Acccessible Table"
             component={AcccessibleTable}
             source={AcccessibleTableSource}
             noScrollbar
-            description='A simple example with no frills.'
+            description="A simple example with no frills."
           />
         </Grid>
       </AppGridContainer>

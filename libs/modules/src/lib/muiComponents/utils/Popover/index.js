@@ -14,15 +14,15 @@ const Popover = () => {
   return (
     <>
       <AppComponentHeader
-        title='Popover'
-        description='A Popover can be used to display some content on top of another.'
-        refUrl='https://mui.com/components/popover/'
+        title="Popover"
+        description="A Popover can be used to display some content on top of another."
+        refUrl="https://mui.com/components/popover/"
       />
 
       <AppGridContainer>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='BasicPopover'
+            title="BasicPopover"
             component={BasicPopover}
             source={BasicPopoverSource}
             noScrollbar
@@ -30,7 +30,7 @@ const Popover = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Mouse Over Popover'
+            title="Mouse Over Popover"
             component={MouseOverPopover}
             source={MouseOverPopoverSource}
             noScrollbar

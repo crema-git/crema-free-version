@@ -25,7 +25,7 @@ export default function CheckboxList() {
   };
 
   return (
-    <List sx={{width: '100%', maxWidth: 360, bgcolor: 'background.paper'}}>
+    <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
       {[0, 1, 2, 3].map((value) => {
         const labelId = `checkbox-list-label-${value}`;
 
@@ -33,7 +33,7 @@ export default function CheckboxList() {
           <ListItem
             key={value}
             secondaryAction={
-              <IconButton edge='end' aria-label='comments'>
+              <IconButton edge="end" aria-label="comments">
                 <CommentIcon />
               </IconButton>
             }
@@ -46,11 +46,11 @@ export default function CheckboxList() {
             >
               <ListItemIcon>
                 <Checkbox
-                  edge='start'
+                  edge="start"
                   checked={checked.indexOf(value) !== -1}
                   tabIndex={-1}
                   disableRipple
-                  inputProps={{'aria-labelledby': labelId}}
+                  inputProps={{ 'aria-labelledby': labelId }}
                 />
               </ListItemIcon>
               <ListItemText id={labelId} primary={`Line item ${value + 1}`} />

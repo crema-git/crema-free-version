@@ -10,27 +10,27 @@ import PriorityHighIcon from '@mui/icons-material/PriorityHigh';
 
 export default function TypographyMenu() {
   return (
-    <Paper sx={{width: 230}}>
+    <Paper sx={{ width: 230 }}>
       <MenuList>
         <MenuItem>
           <ListItemIcon>
-            <SendIcon fontSize='small' />
+            <SendIcon fontSize="small" />
           </ListItemIcon>
-          <Typography variant='inherit'>A short message</Typography>
+          <Typography variant="inherit">A short message</Typography>
         </MenuItem>
         <MenuItem>
           <ListItemIcon>
-            <PriorityHighIcon fontSize='small' />
+            <PriorityHighIcon fontSize="small" />
           </ListItemIcon>
-          <Typography variant='inherit'>
+          <Typography variant="inherit">
             A very long text that overflows
           </Typography>
         </MenuItem>
         <MenuItem>
           <ListItemIcon>
-            <DraftsIcon fontSize='small' />
+            <DraftsIcon fontSize="small" />
           </ListItemIcon>
-          <Typography variant='inherit' noWrap>
+          <Typography variant="inherit" noWrap>
             A very long text that overflows
           </Typography>
         </MenuItem>

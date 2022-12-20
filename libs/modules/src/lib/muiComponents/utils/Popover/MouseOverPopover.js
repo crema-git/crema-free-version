@@ -19,14 +19,14 @@ export default function MouseOverPopover() {
     <div>
       <Typography
         aria-owns={open ? 'mouse-over-popover' : undefined}
-        aria-haspopup='true'
+        aria-haspopup="true"
         onMouseEnter={handlePopoverOpen}
         onMouseLeave={handlePopoverClose}
       >
         Hover with a Popover.
       </Typography>
       <Popover
-        id='mouse-over-popover'
+        id="mouse-over-popover"
         sx={{
           pointerEvents: 'none',
         }}
@@ -43,7 +43,7 @@ export default function MouseOverPopover() {
         onClose={handlePopoverClose}
         disableRestoreFocus
       >
-        <Typography sx={{p: 1}}>I use Popover.</Typography>
+        <Typography sx={{ p: 1 }}>I use Popover.</Typography>
       </Popover>
     </div>
   );

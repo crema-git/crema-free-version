@@ -1,10 +1,10 @@
 import React from 'react';
 import Box from '@mui/material/Box';
 import Avatar from '@mui/material/Avatar';
-import {Fonts} from '@crema/constants/AppEnums'
+import { Fonts } from '@crema/constants/AppEnums';
 import PropTypes from 'prop-types';
 
-const ProductCell = ({data}) => {
+const ProductCell = ({ data }) => {
   return (
     <Box
       key={data.id}
@@ -14,7 +14,7 @@ const ProductCell = ({data}) => {
         py: 2,
         px: 5,
       }}
-      className='item-hover'
+      className="item-hover"
     >
       <Avatar
         sx={{
@@ -22,8 +22,8 @@ const ProductCell = ({data}) => {
           height: 70,
           width: 70,
         }}
-        variant='rounded'
-        alt=''
+        variant="rounded"
+        alt=""
         src={data.icon}
       />
 
@@ -33,7 +33,7 @@ const ProductCell = ({data}) => {
         }}
       >
         <Box
-          component='h3'
+          component="h3"
           sx={{
             color: 'primary.main',
             fontWeight: Fonts.MEDIUM,
@@ -44,7 +44,7 @@ const ProductCell = ({data}) => {
           {data.name}
         </Box>
         <Box
-          component='p'
+          component="p"
           sx={{
             fontSize: 14,
             color: 'text.secondary',
@@ -54,7 +54,7 @@ const ProductCell = ({data}) => {
           {data.description}
         </Box>
         <Box
-          component='p'
+          component="p"
           sx={{
             fontSize: 14,
             fontWeight: Fonts.MEDIUM,
@@ -62,7 +62,7 @@ const ProductCell = ({data}) => {
         >
           ${data.price}
           <Box
-            component='span'
+            component="span"
             sx={{
               textDecoration: 'line-through',
               mb: 1,

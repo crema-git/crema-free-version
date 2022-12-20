@@ -1,8 +1,8 @@
-import React, {useEffect} from 'react';
+import React, { useEffect } from 'react';
 import Grid from '@mui/material/Grid';
 import AppGridContainer from '@crema/components/AppGridContainer';
 import AppAnimate from '@crema/components/AppAnimate';
-import {useGetDataApi} from '@crema/utility/APIHooks';
+import { useGetDataApi } from '@crema/utility/APIHooks';
 import {
   Bitcoin,
   BtcVolumeCurrency,
@@ -11,11 +11,11 @@ import {
   CryptoMarketActivity,
   LatestNews,
   PopularCoins,
-  TotalBalance
+  TotalBalance,
 } from '@crema/modules/dashboards/Crypto';
-import AppLoader from "@crema/components/AppLoader";
-import {onGetCryptoData} from "@crema/redux/actions";
-import {useDispatch, useSelector} from "react-redux";
+import AppLoader from '@crema/components/AppLoader';
+import { onGetCryptoData } from '@crema/redux/actions';
+import { useDispatch, useSelector } from 'react-redux';
 
 const Crypto = () => {
   const dispatch = useDispatch();
@@ -24,12 +24,12 @@ const Crypto = () => {
     dispatch(onGetCryptoData());
   }, [dispatch]);
 
-  const cryptoData = useSelector(({dashboard}) => dashboard.cryptoData);
+  const cryptoData = useSelector(({ dashboard }) => dashboard.cryptoData);
 
   return (
     <>
       {cryptoData ? (
-        <AppAnimate animation='transition.slideUpIn' delay={200}>
+        <AppAnimate animation="transition.slideUpIn" delay={200}>
           <AppGridContainer>
             <Grid item xs={12} md={5}>
               <TotalBalance totalBalanceData={cryptoData.totalBalanceData} />
@@ -66,9 +66,9 @@ const Crypto = () => {
             </Grid>
           </AppGridContainer>
         </AppAnimate>
-      ): (
+      ) : (
         <AppLoader />
-        )}
+      )}
     </>
   );
 };

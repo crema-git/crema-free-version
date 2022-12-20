@@ -1,23 +1,23 @@
 import React from 'react';
 import Box from '@mui/material/Box';
 import PropTypes from 'prop-types';
-import {Avatar, Typography} from '@mui/material';
-import {Fonts} from '@crema/constants/AppEnums'
+import { Avatar, Typography } from '@mui/material';
+import { Fonts } from '@crema/constants/AppEnums';
 
-const SlideItem = ({slide}) => {
+const SlideItem = ({ slide }) => {
   return (
     <Box
       sx={{
         display: 'flex',
-        flexDirection: {xs: 'column', md: 'row'},
+        flexDirection: { xs: 'column', md: 'row' },
       }}
     >
       <Box
         sx={{
           position: 'relative',
-          maxHeight: {xs: 220, md: 280, lg: 360, xl: 340},
-          minHeight: {xs: 210, md: 270, lg: 350, xl: 330},
-          width: {xs: '100%', md: '50%'},
+          maxHeight: { xs: 220, md: 280, lg: 360, xl: 340 },
+          minHeight: { xs: 210, md: 270, lg: 350, xl: 330 },
+          width: { xs: '100%', md: '50%' },
         }}
       >
         <Box
@@ -36,19 +36,19 @@ const SlideItem = ({slide}) => {
             },
           }}
         >
-          <img src={slide.srcImg} alt='Art' />
+          <img src={slide.srcImg} alt="Art" />
         </Box>
       </Box>
       <Box
         sx={{
-          width: {xs: '100%', md: '50%'},
-          pt: {xs: 4, md: 10},
-          pb: {xs: 4, md: 6},
-          px: {md: 8},
+          width: { xs: '100%', md: '50%' },
+          pt: { xs: 4, md: 10 },
+          pb: { xs: 4, md: 6 },
+          px: { md: 8 },
         }}
       >
         <Typography
-          component='h3'
+          component="h3"
           sx={{
             fontSize: 16,
             fontWeight: Fonts.SEMI_BOLD,
@@ -77,7 +77,7 @@ const SlideItem = ({slide}) => {
             }}
           >
             <Typography
-              component='h5'
+              component="h5"
               sx={{
                 fontWeight: Fonts.SEMI_BOLD,
               }}

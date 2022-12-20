@@ -1,2 +1,2 @@
-import {ReactDropzone } from '@crema/modules/thirdParty';
-export  default ReactDropzone;
+import { ReactDropzone } from '@crema/modules/thirdParty';
+export default ReactDropzone;

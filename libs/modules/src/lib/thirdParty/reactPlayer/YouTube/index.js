@@ -5,7 +5,7 @@ const YouTube = () => {
   return (
     <ReactPlayer
       controls={true}
-      url='https://www.youtube.com/watch?v=oUFJJNQGwhk'
+      url="https://www.youtube.com/watch?v=oUFJJNQGwhk"
     />
   );
 };

@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import Box from '@mui/material/Box';
 import Avatar from '@mui/material/Avatar';
 import TextField from '@mui/material/TextField';
@@ -6,16 +6,16 @@ import EmojiEmotionsOutlinedIcon from '@mui/icons-material/EmojiEmotionsOutlined
 import PropTypes from 'prop-types';
 import IconButton from '@mui/material/IconButton';
 import AttachFileIcon from '@mui/icons-material/AttachFile';
-import {useDropzone} from 'react-dropzone';
+import { useDropzone } from 'react-dropzone';
 import SendOutlinedIcon from '@mui/icons-material/SendOutlined';
-import {styled} from '@mui/material/styles';
-import {darken} from '@mui/material';
-import {generateUniqueID} from '@crema/helpers';
-import {useInfoViewActionsContext} from '@crema/context/InfoViewContextProvider';
-import {postDataApi} from '@crema/utility/APIHooks';
-import {MessageType} from "@crema/fakedb/chat/connectionList";
+import { styled } from '@mui/material/styles';
+import { darken } from '@mui/material';
+import { generateUniqueID } from '@crema/helpers';
+import { useInfoViewActionsContext } from '@crema/context/InfoViewContextProvider';
+import { postDataApi } from '@crema/utility/APIHooks';
+import { MessageType } from '@crema/fakedb/chat/connectionList';
 
-const AddCommentWrapper = styled('div')(({theme}) => ({
+const AddCommentWrapper = styled('div')(({ theme }) => ({
   borderTop: `solid 1px ${theme.palette.divider}`,
   display: 'flex',
   paddingTop: 16,
@@ -23,7 +23,7 @@ const AddCommentWrapper = styled('div')(({theme}) => ({
     marginBottom: 20,
   },
 }));
-const AddCommentContent = styled(Box)(({theme}) => ({
+const AddCommentContent = styled(Box)(({ theme }) => ({
   backgroundColor: darken(theme.palette.background.paper, 0.03),
   borderRadius: 30,
   padding: '7px 20px',
@@ -47,10 +47,10 @@ const CommentTextField = styled(TextField)(() => ({
     padding: '6px 5px 7px',
   },
 }));
-const AddComment = ({postId, wallData, setPostList}) => {
+const AddComment = ({ postId, wallData, setPostList }) => {
   const infoViewActionsContext = useInfoViewActionsContext();
   const [comment, setComment] = useState('');
-  const {getRootProps, getInputProps} = useDropzone({
+  const { getRootProps, getInputProps } = useDropzone({
     multiple: false,
     onDrop: (acceptedFiles) => {
       console.log('acceptedFiles', acceptedFiles);
@@ -125,18 +125,18 @@ const AddComment = ({postId, wallData, setPostList}) => {
       />
       <AddCommentContent
         sx={{
-          mb: {xs: 3, md: 0},
+          mb: { xs: 3, md: 0 },
         }}
       >
         <CommentTextField
-          placeholder='Write a comment'
+          placeholder="Write a comment"
           fullWidth
           value={comment}
           onChange={(e) => setComment(e.target.value)}
           onKeyPress={submitComment}
         />
 
-        <Box display='flex' alignItems='center'>
+        <Box display="flex" alignItems="center">
           {comment === '' ? (
             <>
               <IconButton

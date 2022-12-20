@@ -1,21 +1,21 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import clsx from 'clsx';
 import AppContentView from '../../AppContentView';
 import AppFixedFooter from './AppFixedFooter';
 import AppHeader from './AppHeader';
 import AppSidebar from './AppSidebar';
-import {useLayoutContext} from "@crema/context/LayoutContextProvider";
+import { useLayoutContext } from '@crema/context/LayoutContextProvider';
 import AppThemeSetting from '../../AppThemeSetting';
 import HorDefaultWrapper from './HorDefaultWrapper';
 import MainContent from './MainContent';
-import {LayoutType} from '@crema/constants/AppEnums';
+import { LayoutType } from '@crema/constants/AppEnums';
 import HorDefaultContainer from './HorDefaultContainer';
-import {useLocation} from 'react-router-dom';
-import PropsTypes from "prop-types";
+import { useLocation } from 'react-router-dom';
+import PropsTypes from 'prop-types';
 
-const HorDefault = ({routes,routesConfig}) => {
-  const {pathname} = useLocation();
-  const {footer, layoutType, footerType} = useLayoutContext();
+const HorDefault = ({ routes, routesConfig }) => {
+  const { pathname } = useLocation();
+  const { footer, layoutType, footerType } = useLayoutContext();
   const [isNavCollapsed, setNavCollapsed] = useState(false);
 
   const toggleNavCollapsed = () => {
@@ -38,15 +38,18 @@ const HorDefault = ({routes,routesConfig}) => {
           appMainFixedFooter: footer && footerType === 'fixed',
         })}
       >
-        <AppSidebar 
+        <AppSidebar
           routesConfig={routesConfig}
           isNavCollapsed={isNavCollapsed}
           toggleNavCollapsed={toggleNavCollapsed}
         />
 
         <MainContent>
-          <AppHeader toggleNavCollapsed={toggleNavCollapsed} routesConfig={routesConfig} />
-          <AppContentView  routes={routes} />
+          <AppHeader
+            toggleNavCollapsed={toggleNavCollapsed}
+            routesConfig={routesConfig}
+          />
+          <AppContentView routes={routes} />
           <AppFixedFooter />
         </MainContent>
         <AppThemeSetting />
@@ -60,4 +63,3 @@ HorDefault.propsTypes = {
   routes: PropsTypes.object.isRequired,
   routesConfig: PropsTypes.array.isRequired,
 };
-

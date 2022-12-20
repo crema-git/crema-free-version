@@ -39,24 +39,24 @@ const Selects = () => {
   return (
     <>
       <AppComponentHeader
-        title='Select'
-        description='Select components are used for collecting user provided information from a list of options.'
-        refUrl='https://mui.com/components/selects/'
+        title="Select"
+        description="Select components are used for collecting user provided information from a list of options."
+        refUrl="https://mui.com/components/selects/"
       />
 
       <AppGridContainer>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Basic select'
+            title="Basic select"
             component={BasicSelect}
             source={BasicSelectSource}
             noScrollbar
-            description='Menus are positioned under their emitting elements, unless they are close to the bottom of the viewport.'
+            description="Menus are positioned under their emitting elements, unless they are close to the bottom of the viewport."
           />
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Labels and helper text'
+            title="Labels and helper text"
             component={SelectLabels}
             source={SelectLabelsSource}
             noScrollbar
@@ -64,7 +64,7 @@ const Selects = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Filled and standard variants'
+            title="Filled and standard variants"
             component={SelectVariants}
             source={SelectVariantsSource}
             noScrollbar
@@ -72,7 +72,7 @@ const Selects = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Auto width'
+            title="Auto width"
             component={SelectAutoWidth}
             source={SelectAutoWidthSource}
             noScrollbar
@@ -80,7 +80,7 @@ const Selects = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Other props'
+            title="Other props"
             component={SelectOtherProps}
             source={SelectOtherPropsSource}
             noScrollbar
@@ -88,16 +88,16 @@ const Selects = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Customization'
+            title="Customization"
             component={CustomizedSelects}
             source={CustomizedSelectsSource}
             noScrollbar
-            description='Here are some examples of customizing the component. You can learn more about this in the overrides documentation page.'
+            description="Here are some examples of customizing the component. You can learn more about this in the overrides documentation page."
           />
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Native select'
+            title="Native select"
             component={NativeSelectDemo}
             source={NativeSelectDemoSource}
             noScrollbar
@@ -105,25 +105,25 @@ const Selects = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Multiple Select'
+            title="Multiple Select"
             component={MultipleSelect}
             source={MultipleSelectSource}
             noScrollbar
-            description='The Select component can handle multiple selections. It enabled with the multiple prop.'
+            description="The Select component can handle multiple selections. It enabled with the multiple prop."
           />
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Dialog Select'
+            title="Dialog Select"
             component={DialogSelect}
             source={DialogSelectSource}
             noScrollbar
-            description='While it discouraged by the Material Design guidelines, you can use a select inside a dialog.'
+            description="While it discouraged by the Material Design guidelines, you can use a select inside a dialog."
           />
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Multiple Select Checkmarks'
+            title="Multiple Select Checkmarks"
             component={MultipleSelectCheckmarks}
             source={MultipleSelectCheckmarksSource}
             noScrollbar
@@ -131,7 +131,7 @@ const Selects = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Multiple Select Chip'
+            title="Multiple Select Chip"
             component={MultipleSelectChip}
             source={MultipleSelectChipSource}
             noScrollbar
@@ -139,7 +139,7 @@ const Selects = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Multiple Select Placeholder'
+            title="Multiple Select Placeholder"
             component={MultipleSelectPlaceholder}
             source={MultipleSelectPlaceholderSource}
             noScrollbar
@@ -147,7 +147,7 @@ const Selects = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Multiple Select Native'
+            title="Multiple Select Native"
             component={MultipleSelectNative}
             source={MultipleSelectNativeSource}
             noScrollbar
@@ -155,7 +155,7 @@ const Selects = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Controlled Open Select'
+            title="Controlled Open Select"
             component={ControlledOpenSelect}
             source={ControlledOpenSelectSource}
             noScrollbar
@@ -163,11 +163,11 @@ const Selects = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Grouped Select'
+            title="Grouped Select"
             component={GroupedSelect}
             source={GroupedSelectSource}
             noScrollbar
-            description='Display categories with the ListSubheader component or the native <optgroup> element.'
+            description="Display categories with the ListSubheader component or the native <optgroup> element."
           />
         </Grid>
       </AppGridContainer>

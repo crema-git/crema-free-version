@@ -1,2 +1,2 @@
-import {Columns} from '@crema/modules/components/datagrid';
+import { Columns } from '@crema/modules/components/datagrid';
 export default Columns;

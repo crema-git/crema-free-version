@@ -1,2 +1,2 @@
-import {Editing} from '@crema/modules/components/datagrid';
+import { Editing } from '@crema/modules/components/datagrid';
 export default Editing;

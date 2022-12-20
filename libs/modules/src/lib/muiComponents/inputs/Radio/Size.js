@@ -12,12 +12,12 @@ export default function SizeRadioButtons() {
     onChange: handleChange,
     value: item,
     name: 'size-radio-button-demo',
-    inputProps: {'aria-label': item},
+    inputProps: { 'aria-label': item },
   });
 
   return (
     <div>
-      <Radio {...controlProps('a')} size='small' />
+      <Radio {...controlProps('a')} size="small" />
       <Radio {...controlProps('b')} />
       <Radio
         {...controlProps('c')}

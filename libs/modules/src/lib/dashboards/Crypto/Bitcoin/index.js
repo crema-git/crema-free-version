@@ -1,18 +1,18 @@
-import React, {useCallback, useEffect, useState} from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import BitcoinGraph from './BitcoinGraph';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import IntlMessages from '@crema/utility/IntlMessages';
-import {useIntl} from 'react-intl';
-import {Box} from '@mui/material';
+import { useIntl } from 'react-intl';
+import { Box } from '@mui/material';
 import PropTypes from 'prop-types';
-import {green, indigo} from '@mui/material/colors';
-import {Fonts} from '@crema/constants/AppEnums'
+import { green, indigo } from '@mui/material/colors';
+import { Fonts } from '@crema/constants/AppEnums';
 import AppCard from '@crema/components/AppCard';
 import AppSelect from '@crema/components/AppSelect';
 
 const Bitcoin = (props) => {
-  const {coinGraphData} = props;
+  const { coinGraphData } = props;
 
   const onGetCoinData = useCallback(
     (coin) => {
@@ -30,7 +30,7 @@ const Bitcoin = (props) => {
           return coinGraphData.bitcoin;
       }
     },
-    [coinGraphData],
+    [coinGraphData]
   );
 
   const [graphType, setGraphType] = useState(0);
@@ -45,7 +45,7 @@ const Bitcoin = (props) => {
     setGraphType(newValue);
   };
 
-  const {messages} = useIntl();
+  const { messages } = useIntl();
   const handleSelectionType = (data) => {
     setCoinType(data);
   };
@@ -56,8 +56,8 @@ const Bitcoin = (props) => {
         sx={{
           mt: -2,
           display: 'flex',
-          flexDirection: {xs: 'column', md: 'row'},
-          alignItems: {md: 'center'},
+          flexDirection: { xs: 'column', md: 'row' },
+          alignItems: { md: 'center' },
         }}
       >
         <Box
@@ -96,7 +96,7 @@ const Bitcoin = (props) => {
                 color: indigo[700],
                 fontSize: 18,
               }}
-              component='h3'
+              component="h3"
             >
               $7280.45
             </Box>
@@ -107,7 +107,7 @@ const Bitcoin = (props) => {
                 color: green[600],
                 fontSize: 14,
               }}
-              component='span'
+              component="span"
             >
               0.8%
             </Box>
@@ -115,7 +115,7 @@ const Bitcoin = (props) => {
         </Box>
         <Box
           sx={{
-            ml: {md: 'auto'},
+            ml: { md: 'auto' },
           }}
         >
           <Tabs
@@ -125,30 +125,30 @@ const Bitcoin = (props) => {
                 fontSize: 14,
                 textTransform: 'capitalize',
                 padding: 0,
-                mx: {xs: 1, sm: 2, xl: 5},
+                mx: { xs: 1, sm: 2, xl: 5 },
                 minWidth: 10,
               },
             }}
             value={graphType}
             onChange={handleChange}
-            indicatorColor='primary'
-            textColor='primary'
+            indicatorColor="primary"
+            textColor="primary"
           >
             <Tab
-              className='muiTab'
-              label={<IntlMessages id='common.yearly' />}
+              className="muiTab"
+              label={<IntlMessages id="common.yearly" />}
             />
             <Tab
-              className='muiTab'
-              label={<IntlMessages id='common.monthly' />}
+              className="muiTab"
+              label={<IntlMessages id="common.monthly" />}
             />
             <Tab
-              className='muiTab'
-              label={<IntlMessages id='common.weekly' />}
+              className="muiTab"
+              label={<IntlMessages id="common.weekly" />}
             />
             <Tab
-              className='muiTab'
-              label={<IntlMessages id='common.today' />}
+              className="muiTab"
+              label={<IntlMessages id="common.today" />}
             />
           </Tabs>
         </Box>

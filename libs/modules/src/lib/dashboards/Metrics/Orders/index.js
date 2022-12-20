@@ -1,16 +1,16 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import OrdersGraph from './OrdersGraph';
 import IntlMessages from '@crema/utility/IntlMessages';
 import Box from '@mui/material/Box';
 import PropTypes from 'prop-types';
-import {Fonts} from '@crema/constants/AppEnums'
+import { Fonts } from '@crema/constants/AppEnums';
 import AppCard from '@crema/components/AppCard';
 import AppSelect from '@crema/components/AppSelect';
-import {useIntl} from 'react-intl';
+import { useIntl } from 'react-intl';
 
-const Orders = ({data}) => {
+const Orders = ({ data }) => {
   const [graphData, setGraphData] = useState(data.graphData.dataTwo);
-  const {messages} = useIntl();
+  const { messages } = useIntl();
 
   const handleWeekChange = (value) => {
     switch (value) {
@@ -42,7 +42,7 @@ const Orders = ({data}) => {
         },
       }}
       title={messages['common.orders']}
-      titleStyle={{color: '#FFFFFF'}}
+      titleStyle={{ color: '#FFFFFF' }}
       action={
         <AppSelect
           menus={[
@@ -67,15 +67,15 @@ const Orders = ({data}) => {
           }}
         >
           <Box
-            component='p'
+            component="p"
             sx={{
               color: '#FFFFFF88',
               fontSize: 14,
             }}
           >
-            <IntlMessages id='common.revenue' />
+            <IntlMessages id="common.revenue" />
             <Box
-              component='span'
+              component="span"
               sx={{
                 ml: 2,
                 color: 'primary.contrastText',
@@ -85,15 +85,15 @@ const Orders = ({data}) => {
             </Box>
           </Box>
           <Box
-            component='p'
+            component="p"
             sx={{
               color: '#FFFFFF88',
               fontSize: 14,
             }}
           >
-            <IntlMessages id='common.orders' />
+            <IntlMessages id="common.orders" />
             <Box
-              component='span'
+              component="span"
               sx={{
                 ml: 2,
                 color: 'primary.contrastText',

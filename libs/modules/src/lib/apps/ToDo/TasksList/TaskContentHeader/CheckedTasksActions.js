@@ -6,12 +6,12 @@ import MenuItem from '@mui/material/MenuItem';
 import Box from '@mui/material/Box';
 import AppsDeleteIcon from '@crema/components/AppsDeleteIcon';
 import PropTypes from 'prop-types';
-import {useParams} from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import IconButton from '@mui/material/IconButton';
 import AppTooltip from '@crema/components/AppTooltip';
-import {StyledBox} from './index.style';
-import {useInfoViewActionsContext} from '@crema/context/InfoViewContextProvider';
-import {putDataApi, useGetDataApi} from '@crema/utility/APIHooks';
+import { StyledBox } from './index.style';
+import { useInfoViewActionsContext } from '@crema/context/InfoViewContextProvider';
+import { putDataApi, useGetDataApi } from '@crema/utility/APIHooks';
 
 const CheckedTasksActions = ({
   checkedTasks,
@@ -22,7 +22,7 @@ const CheckedTasksActions = ({
 }) => {
   const params = useParams();
   const infoViewActionsContext = useInfoViewActionsContext();
-  const [{apiData: labelList}] = useGetDataApi('/api/todo/labels/list', []);
+  const [{ apiData: labelList }] = useGetDataApi('/api/todo/labels/list', []);
 
   const [isLabelOpen, onOpenLabel] = React.useState(null);
 
@@ -70,11 +70,11 @@ const CheckedTasksActions = ({
 
   return (
     <>
-      <StyledBox component='span'>
-        <Box component='span'>
+      <StyledBox component="span">
+        <Box component="span">
           <AppsDeleteIcon
             deleteAction={onDeleteTasks}
-            deleteTitle={<IntlMessages id='todo.deleteMessage' />}
+            deleteTitle={<IntlMessages id="todo.deleteMessage" />}
             sx={{
               cursor: 'pointer',
               color: 'text.disabled',
@@ -82,13 +82,13 @@ const CheckedTasksActions = ({
           />
         </Box>
 
-        <Box component='span'>
-          <AppTooltip title={<IntlMessages id='common.label' />}>
+        <Box component="span">
+          <AppTooltip title={<IntlMessages id="common.label" />}>
             <IconButton
               sx={{
                 color: 'text.disabled',
               }}
-              size='large'
+              size="large"
             >
               <LabelOutlinedIcon
                 sx={{
@@ -112,7 +112,7 @@ const CheckedTasksActions = ({
           return (
             <MenuItem
               key={label.id}
-              sx={{p: '8px !important'}}
+              sx={{ p: '8px !important' }}
               value={label.id}
               onClick={onSelectLabel}
             >

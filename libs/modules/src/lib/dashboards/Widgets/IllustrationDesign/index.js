@@ -5,7 +5,7 @@ import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlin
 import ChatOutlinedIcon from '@mui/icons-material/ChatOutlined';
 import IntlMessages from '@crema/utility/IntlMessages';
 import Box from '@mui/material/Box';
-import {Fonts} from '@crema/constants/AppEnums'
+import { Fonts } from '@crema/constants/AppEnums';
 import AppCard from '@crema/components/AppCard';
 import VisibilityOutlinedIcon from '@mui/icons-material/VisibilityOutlined';
 
@@ -17,7 +17,7 @@ const IllustrationDesign = () => {
         display: 'flex',
         flexDirection: 'column',
       }}
-      contentStyle={{padding: 0}}
+      contentStyle={{ padding: 0 }}
     >
       <Box
         sx={{
@@ -30,9 +30,9 @@ const IllustrationDesign = () => {
         }}
       >
         <img
-          className='widthFull'
+          className="widthFull"
           src={'/assets/images/illustration.png'}
-          alt='illustration'
+          alt="illustration"
         />
         <Box
           sx={{
@@ -40,7 +40,7 @@ const IllustrationDesign = () => {
             position: 'absolute',
             left: 0,
             bottom: 0,
-            m: {xs: 4, xl: 6},
+            m: { xs: 4, xl: 6 },
           }}
         >
           <Chip
@@ -49,28 +49,28 @@ const IllustrationDesign = () => {
               color: (theme) => theme.palette.primary.contrastText,
               fontWeight: Fonts.LIGHT,
               textTransform: 'capitalize',
-              fontSize: {xs: 16, sm: 18},
+              fontSize: { xs: 16, sm: 18 },
             }}
-            label={<IntlMessages id='dashboard.designs' />}
+            label={<IntlMessages id="dashboard.designs" />}
           />
         </Box>
       </Box>
 
       <Box
         sx={{
-          pt: {xs: 4, xl: 6},
-          px: {xs: 4, xl: 6},
+          pt: { xs: 4, xl: 6 },
+          px: { xs: 4, xl: 6 },
         }}
       >
         <Box
-          component='h4'
+          component="h4"
           sx={{
             mb: 4,
             fontSize: 16,
             fontWeight: Fonts.BOLD,
           }}
         >
-          <IntlMessages id='dashboard.illustrationDesign' />
+          <IntlMessages id="dashboard.illustrationDesign" />
         </Box>
         <Divider
           sx={{
@@ -88,14 +88,14 @@ const IllustrationDesign = () => {
           }}
         >
           <Box
-            component='span'
+            component="span"
             sx={{
               px: 3,
               textAlign: 'center',
             }}
           >
             <Box
-              component='span'
+              component="span"
               sx={{
                 mr: 2,
                 verticalAlign: 'middle',
@@ -107,13 +107,13 @@ const IllustrationDesign = () => {
             11.7 K
           </Box>
           <Box
-            component='span'
+            component="span"
             sx={{
               px: 3,
             }}
           >
             <Box
-              component='span'
+              component="span"
               sx={{
                 mr: 2,
                 verticalAlign: 'middle',
@@ -125,13 +125,13 @@ const IllustrationDesign = () => {
             2.6 K
           </Box>
           <Box
-            component='span'
+            component="span"
             sx={{
               px: 3,
             }}
           >
             <Box
-              component='span'
+              component="span"
               sx={{
                 mr: 2,
                 verticalAlign: 'middle',

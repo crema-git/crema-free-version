@@ -50,15 +50,15 @@ const Tooltip = () => {
   return (
     <>
       <AppComponentHeader
-        title='Tooltip'
-        description='Tooltips display informative text when users hover over, focus on, or tap an element.'
-        refUrl='https://mui.com/components/tooltips/'
+        title="Tooltip"
+        description="Tooltips display informative text when users hover over, focus on, or tap an element."
+        refUrl="https://mui.com/components/tooltips/"
       />
 
       <AppGridContainer>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Basic Tooltip'
+            title="Basic Tooltip"
             component={BasicTooltip}
             source={BasicTooltipSource}
             noScrollbar
@@ -67,7 +67,7 @@ const Tooltip = () => {
 
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Customized Tooltips'
+            title="Customized Tooltips"
             component={CustomizedTooltips}
             source={CustomizedTooltipsSource}
             noScrollbar
@@ -75,7 +75,7 @@ const Tooltip = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Arrow Tooltips'
+            title="Arrow Tooltips"
             component={ArrowTooltips}
             source={ArrowTooltipsSource}
             noScrollbar
@@ -83,7 +83,7 @@ const Tooltip = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Triggers Tooltips'
+            title="Triggers Tooltips"
             component={TriggersTooltips}
             source={TriggersTooltipsSource}
             noScrollbar
@@ -91,7 +91,7 @@ const Tooltip = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Controlled Tooltips'
+            title="Controlled Tooltips"
             component={ControlledTooltips}
             source={ControlledTooltipsSource}
             noScrollbar
@@ -99,7 +99,7 @@ const Tooltip = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Variable Width'
+            title="Variable Width"
             component={VariableWidth}
             source={VariableWidthSource}
             noScrollbar
@@ -107,7 +107,7 @@ const Tooltip = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Not Interactive Tooltips'
+            title="Not Interactive Tooltips"
             component={NotInteractiveTooltips}
             source={NotInteractiveTooltipsSource}
             noScrollbar
@@ -115,7 +115,7 @@ const Tooltip = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Disabled Tooltips'
+            title="Disabled Tooltips"
             component={DisabledTooltips}
             source={DisabledTooltipsSource}
             noScrollbar
@@ -123,7 +123,7 @@ const Tooltip = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Transitions Tooltips'
+            title="Transitions Tooltips"
             component={TransitionsTooltips}
             source={TransitionsTooltipsSource}
             noScrollbar
@@ -131,7 +131,7 @@ const Tooltip = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='FollowCursor Tooltips'
+            title="FollowCursor Tooltips"
             component={FollowCursorTooltips}
             source={FollowCursorTooltipsSource}
             noScrollbar
@@ -139,7 +139,7 @@ const Tooltip = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='AnchorEl Tooltips'
+            title="AnchorEl Tooltips"
             component={AnchorElTooltips}
             source={AnchorElTooltipsSource}
             noScrollbar
@@ -147,7 +147,7 @@ const Tooltip = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Delay Tool tips'
+            title="Delay Tool tips"
             component={DelayTooltips}
             source={DelayTooltipsSource}
             noScrollbar
@@ -155,7 +155,7 @@ const Tooltip = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Accessibility Tooltips'
+            title="Accessibility Tooltips"
             component={AccessibilityTooltips}
             source={AccessibilityTooltipsSource}
             noScrollbar
@@ -163,7 +163,7 @@ const Tooltip = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Positioned Tooltips'
+            title="Positioned Tooltips"
             component={PositionedTooltips}
             source={PositionedTooltipsSource}
             noScrollbar

@@ -17,7 +17,7 @@ import ArchiveOutlinedIcon from '@mui/icons-material/ArchiveOutlined';
 import MailOutlinedIcon from '@mui/icons-material/MailOutlined';
 import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
 import {MailInfoWrapper, MailItemWrapper, MainActionWrapper,} from './index.styles';
-import {Fonts} from '@crema/constants/AppEnums'
+import {Fonts} from '@crema/constants/AppEnums';
 import {useInfoViewActionsContext} from '@crema/context/InfoViewContextProvider';
 import {putDataApi} from '@crema/utility/APIHooks';
 
@@ -70,7 +70,7 @@ const MailListItem = (props) => {
         infoViewActionsContext.showMessage(
           data.isRead
             ? 'Mail Marked as Read Successfully'
-            : 'Mail Marked as Unread Successfully',
+            : 'Mail Marked as Unread Successfully'
         );
       })
       .catch((error) => {
@@ -129,15 +129,9 @@ const MailListItem = (props) => {
     }
   };
   const getSenderImage = () => {
-    if (messages === 1) {
-      return mail.messages[0].sender.profilePic;
-    } else if (messages === 2) {
-      return `${mail.messages[0].sender.name}, ${mail.messages[1].sender.name}(2)`;
-    } else {
-      return `${mail.messages[0].sender.name}, ${
-        mail.messages[messages - 2].sender.name
-      }, ${mail.messages[messages - 1].sender.name}(${messages})`;
-    }
+    return mail?.messages?.[messages - 1]?.sender?.profilePic
+      ? mail.messages?.[messages - 1]?.sender?.profilePic
+      : mail?.messages?.[messages - 1]?.sender?.name;
   };
 
   return (
@@ -155,11 +149,11 @@ const MailListItem = (props) => {
         sx={{
           display: 'flex',
           alignItems: 'center',
-          width: {xs: '100%', sm: 'auto'},
+          width: { xs: '100%', sm: 'auto' },
         }}
       >
         <Box
-          component='span'
+          component="span"
           sx={{
             display: 'inline-block',
           }}
@@ -173,18 +167,18 @@ const MailListItem = (props) => {
             onChange={(event) =>
               onChangeCheckedMails(event.target.checked, mail.id)
             }
-            color='primary'
+            color="primary"
           />
         </Box>
         <Box
           sx={{
             mr: 2.5,
-            display: {xs: 'none', sm: 'inline-block'},
+            display: { xs: 'none', sm: 'inline-block' },
             '& .MuiCheckbox-root': {
               color: (theme) => theme.palette.warning.main,
             },
           }}
-          component='span'
+          component="span"
           onClick={(event) => event.stopPropagation()}
         >
           <AppsStarredIcon item={mail} onChange={onChangeStarred} />
@@ -196,7 +190,7 @@ const MailListItem = (props) => {
           }}
         >
           <Avatar
-            className='avatar'
+            className="avatar"
             alt={getSenderName()}
             src={getSenderImage()}
           />
@@ -209,7 +203,7 @@ const MailListItem = (props) => {
             whiteSpace: 'nowrap',
             fontWeight: mail.isRead ? Fonts.REGULAR : Fonts.MEDIUM,
             fontSize: 14,
-            width: {sm: '120px'},
+            width: { sm: '120px' },
           }}
           className={clsx(!mail.isRead ? 'fontBold' : '')}
         >
@@ -221,7 +215,7 @@ const MailListItem = (props) => {
 
       <MailInfoWrapper>
         <Box
-          className='mail-info-content'
+          className="mail-info-content"
           sx={{
             display: 'flex',
             flexDirection: 'row',
@@ -238,14 +232,14 @@ const MailListItem = (props) => {
               mr: 3,
               mb: 0,
             }}
-            component='p'
+            component="p"
             className={clsx(!mail.isRead ? 'fontBold' : '')}
           >
             {mail.subject}
           </Box>
           {mail.isAttachment ? (
             <Box
-              component='p'
+              component="p"
               sx={{
                 color: 'text.secondary',
                 position: 'relative',
@@ -259,7 +253,7 @@ const MailListItem = (props) => {
             </Box>
           ) : null}
           <Box
-            component='p'
+            component="p"
             sx={{
               overflow: 'hidden',
               textOverflow: 'ellipsis',
@@ -272,8 +266,8 @@ const MailListItem = (props) => {
         </Box>
 
         <Box
-          className='mail-time'
-          component='span'
+          className="mail-time"
+          component="span"
           sx={{
             px: 2.5,
             minWidth: 110,
@@ -288,7 +282,7 @@ const MailListItem = (props) => {
             sx={{
               color: mail.label.color,
             }}
-            component='span'
+            component="span"
           >
             <LabelOutlinedIcon
               sx={{
@@ -297,7 +291,7 @@ const MailListItem = (props) => {
             />
           </Box>
           <Box
-            component='span'
+            component="span"
             sx={{
               whiteSpace: 'pre',
               fontWeight: Fonts.MEDIUM,
@@ -308,13 +302,13 @@ const MailListItem = (props) => {
           </Box>
         </Box>
 
-        <MainActionWrapper className='main-action-wrapper'>
+        <MainActionWrapper className="main-action-wrapper">
           <IconButton
             sx={{
               color: (theme) => theme.palette.text.disabled,
             }}
             onClick={onArchive}
-            size='large'
+            size="large"
           >
             <ArchiveOutlinedIcon />
           </IconButton>
@@ -323,7 +317,7 @@ const MailListItem = (props) => {
               color: (theme) => theme.palette.text.disabled,
             }}
             onClick={onDelete}
-            size='large'
+            size="large"
           >
             <DeleteOutlinedIcon />
           </IconButton>
@@ -332,7 +326,7 @@ const MailListItem = (props) => {
               color: (theme) => theme.palette.text.disabled,
             }}
             onClick={onUpdateReadStatus}
-            size='large'
+            size="large"
           >
             {mail.isRead ? <MailOutlinedIcon /> : <DraftsOutlinedIcon />}
           </IconButton>
@@ -341,7 +335,7 @@ const MailListItem = (props) => {
               color: (theme) => theme.palette.text.disabled,
             }}
             onClick={onReportSpam}
-            size='large'
+            size="large"
           >
             <InfoOutlinedIcon />
           </IconButton>

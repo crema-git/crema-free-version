@@ -1,2 +1,2 @@
-import {ReactSlick } from '@crema/modules/thirdParty';
-export  default ReactSlick;
+import { ReactSlick } from '@crema/modules/thirdParty';
+export default ReactSlick;

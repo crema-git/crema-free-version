@@ -1,8 +1,10 @@
 import React from 'react';
 import ProtoTypes from 'prop-types';
-import CircularProgress, {circularProgressClasses,} from '@mui/material/CircularProgress';
+import CircularProgress, {
+  circularProgressClasses,
+} from '@mui/material/CircularProgress';
 import Box from '@mui/material/Box';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Fonts } from '@crema/constants/AppEnums';
 
 const AppCircularProgress = ({
   value,
@@ -25,9 +27,9 @@ const AppCircularProgress = ({
         margin: '0 auto',
       }}
     >
-      <Box sx={{position: 'relative'}}>
+      <Box sx={{ position: 'relative' }}>
         <CircularProgress
-          variant='determinate'
+          variant="determinate"
           value={100}
           sx={{
             color: pathColor,
@@ -50,7 +52,7 @@ const AppCircularProgress = ({
               strokeLinecap: 'round',
             },
           }}
-          variant='determinate'
+          variant="determinate"
           value={value}
           thickness={thickness}
           {...props}
@@ -72,7 +74,7 @@ const AppCircularProgress = ({
         {centerNode}
         {hidePercentage ? null : (
           <Box
-            component='p'
+            component="p"
             sx={{
               fontSize: 30,
               fontWeight: Fonts.MEDIUM,

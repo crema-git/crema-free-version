@@ -6,10 +6,10 @@ import ListIcon from '@mui/icons-material/List';
 import Box from '@mui/material/Box';
 import PropTypes from 'prop-types';
 
-import {styled} from '@mui/material/styles';
-import {alpha} from '@mui/material';
+import { styled } from '@mui/material/styles';
+import { alpha } from '@mui/material';
 
-const IconBtn = styled(IconButton)(({theme}) => {
+const IconBtn = styled(IconButton)(({ theme }) => {
   return {
     color: theme.palette.text.disabled,
     backgroundColor: alpha(theme.palette.primary.main, 0.05),
@@ -23,7 +23,7 @@ const IconBtn = styled(IconButton)(({theme}) => {
   };
 });
 
-const ViewSelectButtons = ({pageView, onChangePageView}) => {
+const ViewSelectButtons = ({ pageView, onChangePageView }) => {
   return (
     <Box
       sx={{
@@ -38,7 +38,7 @@ const ViewSelectButtons = ({pageView, onChangePageView}) => {
             active: pageView === 'grid',
           })}
           onClick={() => onChangePageView('grid')}
-          size='large'
+          size="large"
         >
           <AppsIcon />
         </IconBtn>
@@ -53,7 +53,7 @@ const ViewSelectButtons = ({pageView, onChangePageView}) => {
             active: pageView === 'list',
           })}
           onClick={() => onChangePageView('list')}
-          size='large'
+          size="large"
         >
           <ListIcon />
         </IconBtn>

@@ -1,2 +1,2 @@
-import {Selects} from '@crema/modules/components/inputs';
+import { Selects } from '@crema/modules/components/inputs';
 export default Selects;

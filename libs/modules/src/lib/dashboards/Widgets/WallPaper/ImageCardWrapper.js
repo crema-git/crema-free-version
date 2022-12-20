@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import AppCard from '@crema/components/AppCard';
 
-const ImageCardWrapper = ({children}) => {
+const ImageCardWrapper = ({ children }) => {
   return (
     <AppCard
       sxStyle={{

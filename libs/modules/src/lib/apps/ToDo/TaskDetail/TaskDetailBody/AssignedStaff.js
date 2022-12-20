@@ -3,13 +3,13 @@ import Box from '@mui/material/Box';
 import Avatar from '@mui/material/Avatar';
 import IntlMessages from '@crema/utility/IntlMessages';
 import PropTypes from 'prop-types';
-import {Fonts} from '@crema/constants/AppEnums'
+import { Fonts } from '@crema/constants/AppEnums';
 
-const AssignedStaff = ({assignedStaff}) => {
+const AssignedStaff = ({ assignedStaff }) => {
   return (
     <>
       {assignedStaff ? (
-        <Box mr={4} display='flex' alignItems='center'>
+        <Box mr={4} display="flex" alignItems="center">
           {assignedStaff.image ? (
             <Avatar
               sx={{
@@ -30,21 +30,21 @@ const AssignedStaff = ({assignedStaff}) => {
           )}
           <Box ml={3.5} fontSize={14}>
             <Box
-              component='p'
+              component="p"
               sx={{
                 mb: 0.5,
                 fontWeight: Fonts.MEDIUM,
               }}
             >
-              <IntlMessages id='todo.assignedTo' />
+              <IntlMessages id="todo.assignedTo" />
             </Box>
-            <Box component='p' color='text.secondary'>
+            <Box component="p" color="text.secondary">
               {assignedStaff.name}
             </Box>
           </Box>
         </Box>
       ) : (
-        <Box mr={4} display='flex' alignItems='center'>
+        <Box mr={4} display="flex" alignItems="center">
           <Avatar
             sx={{
               height: 36,
@@ -54,14 +54,14 @@ const AssignedStaff = ({assignedStaff}) => {
           />
           <Box ml={4}>
             <Box
-              component='p'
+              component="p"
               sx={{
                 mb: 0,
                 fontWeight: Fonts.MEDIUM,
                 color: 'primary.main',
               }}
             >
-              <IntlMessages id='todo.currentlyUnassigned' />
+              <IntlMessages id="todo.currentlyUnassigned" />
             </Box>
           </Box>
         </Box>

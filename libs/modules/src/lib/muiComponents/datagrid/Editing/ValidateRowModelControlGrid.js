@@ -1,8 +1,13 @@
 import * as React from 'react';
-import {createTheme} from '@mui/material/styles';
-import {makeStyles} from '@mui/styles';
-import {DataGrid} from '@mui/x-data-grid';
-import {randomCreatedDate, randomEmail, randomTraderName, randomUpdatedDate,} from '@mui/x-data-grid-generator';
+import { createTheme } from '@mui/material/styles';
+import { makeStyles } from '@mui/styles';
+import { DataGrid } from '@mui/x-data-grid';
+import {
+  randomCreatedDate,
+  randomEmail,
+  randomTraderName,
+  randomUpdatedDate,
+} from '@mui/x-data-grid-generator';
 
 const defaultTheme = createTheme();
 const useStyles = makeStyles(
@@ -22,7 +27,7 @@ const useStyles = makeStyles(
       },
     };
   },
-  {defaultTheme},
+  { defaultTheme }
 );
 
 function validateEmail(email) {
@@ -35,14 +40,14 @@ export default function ValidateRowModelControlGrid() {
   const classes = useStyles();
 
   return (
-    <div style={{height: 400, width: '100%'}}>
+    <div style={{ height: 400, width: '100%' }}>
       <DataGrid className={classes.root} rows={rows} columns={columns} />
     </div>
   );
 }
 
 const columns = [
-  {field: 'name', headerName: 'Name', width: 180, editable: true},
+  { field: 'name', headerName: 'Name', width: 180, editable: true },
   {
     field: 'email',
     headerName: 'Email',
@@ -50,7 +55,7 @@ const columns = [
     editable: true,
     preProcessEditCellProps: (params) => {
       const isValid = validateEmail(params.props.value);
-      return {...params.props, error: !isValid};
+      return { ...params.props, error: !isValid };
     },
   },
   {

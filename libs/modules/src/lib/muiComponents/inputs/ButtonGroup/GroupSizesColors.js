@@ -4,9 +4,9 @@ import Box from '@mui/material/Box';
 import ButtonGroup from '@mui/material/ButtonGroup';
 
 const buttons = [
-  <Button key='one'>One</Button>,
-  <Button key='two'>Two</Button>,
-  <Button key='three'>Three</Button>,
+  <Button key="one">One</Button>,
+  <Button key="two">Two</Button>,
+  <Button key="three">Three</Button>,
 ];
 
 export default function GroupSizesColors() {
@@ -21,13 +21,13 @@ export default function GroupSizesColors() {
         },
       }}
     >
-      <ButtonGroup size='small' aria-label='small button group'>
+      <ButtonGroup size="small" aria-label="small button group">
         {buttons}
       </ButtonGroup>
-      <ButtonGroup color='secondary' aria-label='medium secondary button group'>
+      <ButtonGroup color="secondary" aria-label="medium secondary button group">
         {buttons}
       </ButtonGroup>
-      <ButtonGroup size='large' aria-label='large button group'>
+      <ButtonGroup size="large" aria-label="large button group">
         {buttons}
       </ButtonGroup>
     </Box>

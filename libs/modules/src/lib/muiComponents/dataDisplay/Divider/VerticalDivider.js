@@ -30,7 +30,7 @@ export default function VerticalDividers() {
         <FormatAlignLeftIcon />
         <FormatAlignCenterIcon />
         <FormatAlignRightIcon />
-        <Divider orientation='vertical' flexItem />
+        <Divider orientation="vertical" flexItem />
         <FormatBoldIcon />
         <FormatItalicIcon />
       </Box>

@@ -1,8 +1,8 @@
 import React from 'react';
-import {Icon} from '@mui/material';
+import { Icon } from '@mui/material';
 import PropTypes from 'prop-types';
 
-const PollReaction = ({userReaction, selectedReaction}) => {
+const PollReaction = ({ userReaction, selectedReaction }) => {
   /* const getReactionByPosition = (position) => {
     switch (position) {
       case 0:
@@ -73,71 +73,71 @@ const PollReaction = ({userReaction, selectedReaction}) => {
 
   const getSelectedReaction = (selectedReaction) => {
     return (
-      <div className='mp-show-reaction'>
+      <div className="mp-show-reaction">
         {selectedReaction === 'like' ? (
-          <span className='mp-show-reaction-thumb'>
-            <img src='/images/reaction/like.png' alt='' />
+          <span className="mp-show-reaction-thumb">
+            <img src="/images/reaction/like.png" alt="" />
           </span>
         ) : null}
         {selectedReaction === 'love' ? (
-          <span className='mp-show-reaction-thumb'>
-            <img src='/images/reaction/love.png' alt='' />
+          <span className="mp-show-reaction-thumb">
+            <img src="/images/reaction/love.png" alt="" />
           </span>
         ) : null}
         {selectedReaction === 'haha' ? (
-          <span className='mp-show-reaction-thumb'>
-            <img src='/images/reaction/haha.png' alt='' />
+          <span className="mp-show-reaction-thumb">
+            <img src="/images/reaction/haha.png" alt="" />
           </span>
         ) : null}
         {selectedReaction === 'wow' ? (
-          <span className='mp-show-reaction-thumb'>
-            <img src='/images/reaction/wow.png' alt='' />
+          <span className="mp-show-reaction-thumb">
+            <img src="/images/reaction/wow.png" alt="" />
           </span>
         ) : null}
         {selectedReaction === 'sad' ? (
-          <span className='mp-show-reaction-thumb'>
-            <img src='/images/reaction/sad.png' alt='' />
+          <span className="mp-show-reaction-thumb">
+            <img src="/images/reaction/sad.png" alt="" />
           </span>
         ) : null}
         {selectedReaction === 'angry' ? (
-          <span className='mp-show-reaction-thumb'>
-            <img src='/images/reaction/angry.png' alt='' />
+          <span className="mp-show-reaction-thumb">
+            <img src="/images/reaction/angry.png" alt="" />
           </span>
         ) : null}{' '}
-        <span className='mp-text-primary mp-ml-1'>Like</span>
+        <span className="mp-text-primary mp-ml-1">Like</span>
       </div>
     );
   };
 
   return (
-    <div className='mp-like-btn'>
-      <div className='mp-p-2'>
+    <div className="mp-like-btn">
+      <div className="mp-p-2">
         {!userReaction ? (
           <>
-            <Icon type='like' theme='outlined' /> Like
+            <Icon type="like" theme="outlined" /> Like
           </>
         ) : (
           getSelectedReaction(selectedReaction)
         )}
       </div>
-      <div className='mp-reaction-box'>
-        <div className='mp-reaction-icon'>
-          <img src='/images/reaction/like.png' alt='like' />
+      <div className="mp-reaction-box">
+        <div className="mp-reaction-icon">
+          <img src="/images/reaction/like.png" alt="like" />
         </div>
-        <div className='mp-reaction-icon'>
-          <img src='/images/reaction/love.png' alt='love' />
+        <div className="mp-reaction-icon">
+          <img src="/images/reaction/love.png" alt="love" />
         </div>
-        <div className='mp-reaction-icon'>
-          <img src='/images/reaction/haha.png' alt='' />
+        <div className="mp-reaction-icon">
+          <img src="/images/reaction/haha.png" alt="" />
         </div>
-        <div className='mp-reaction-icon'>
-          <img src='/images/reaction/wow.png' alt='' />
+        <div className="mp-reaction-icon">
+          <img src="/images/reaction/wow.png" alt="" />
         </div>
-        <div className='mp-reaction-icon'>
-          <img src='/images/reaction/sad.png' alt='' />
+        <div className="mp-reaction-icon">
+          <img src="/images/reaction/sad.png" alt="" />
         </div>
-        <div className='mp-reaction-icon'>
-          <img src='/images/reaction/angry.png' alt='' />
+        <div className="mp-reaction-icon">
+          <img src="/images/reaction/angry.png" alt="" />
         </div>
       </div>
     </div>

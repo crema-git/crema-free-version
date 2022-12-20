@@ -1,18 +1,18 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import clsx from 'clsx';
-import {useDropzone} from 'react-dropzone';
-import {Box, darken, IconButton} from '@mui/material';
+import { useDropzone } from 'react-dropzone';
+import { Box, darken, IconButton } from '@mui/material';
 import TextField from '@mui/material/TextField';
 import SendOutlinedIcon from '@mui/icons-material/SendOutlined';
 import PropTypes from 'prop-types';
-import {useIntl} from 'react-intl';
+import { useIntl } from 'react-intl';
 import AttachFileIcon from '@mui/icons-material/AttachFile';
-import {MessageType} from "@crema/fakedb/chat/connectionList"
+import { MessageType } from '@crema/fakedb/chat/connectionList';
 
-import {styled} from '@mui/material/styles';
-import {generateUniqueID} from "@crema/helpers";
+import { styled } from '@mui/material/styles';
+import { generateUniqueID } from '@crema/helpers';
 
-const SendBtn = styled(IconButton)(({theme}) => {
+const SendBtn = styled(IconButton)(({ theme }) => {
   return {
     height: 40,
     width: 40,
@@ -29,9 +29,13 @@ const SendBtn = styled(IconButton)(({theme}) => {
   };
 });
 
-const SendMessage = ({sendFileMessage, onSendMessage, currentMessage = ''}) => {
+const SendMessage = ({
+  sendFileMessage,
+  onSendMessage,
+  currentMessage = '',
+}) => {
   const [message, setMessage] = useState(currentMessage);
-  const {getRootProps, getInputProps} = useDropzone({
+  const { getRootProps, getInputProps } = useDropzone({
     multiple: true,
     onDrop: (acceptedFiles) => {
       sendFileMessage({
@@ -67,7 +71,7 @@ const SendMessage = ({sendFileMessage, onSendMessage, currentMessage = ''}) => {
     }
   };
 
-  const {messages} = useIntl();
+  const { messages } = useIntl();
 
   return (
     <Box
@@ -86,8 +90,8 @@ const SendMessage = ({sendFileMessage, onSendMessage, currentMessage = ''}) => {
             {...getRootProps({
               className: clsx('dropzone'),
             })}
-            style={{height: 40, width: 40}}
-            size='large'
+            style={{ height: 40, width: 40 }}
+            size="large"
           >
             <input {...getInputProps()} />
             <AttachFileIcon />
@@ -104,7 +108,7 @@ const SendMessage = ({sendFileMessage, onSendMessage, currentMessage = ''}) => {
           },
         }}
         multiline
-        variant='outlined'
+        variant="outlined"
         placeholder={messages['chatApp.sendMessagePlaceholder']}
         value={message}
         onChange={(event) => {
@@ -117,7 +121,7 @@ const SendMessage = ({sendFileMessage, onSendMessage, currentMessage = ''}) => {
           ml: 2,
         }}
       >
-        <SendBtn onClick={onClickSendMessage} size='large'>
+        <SendBtn onClick={onClickSendMessage} size="large">
           <SendOutlinedIcon />
         </SendBtn>
       </Box>

@@ -1,5 +1,5 @@
 import React from 'react';
-import {useNavigate} from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import IntlMessages from '@crema/utility/IntlMessages';
 import Box from '@mui/material/Box';
 import PropTypes from 'prop-types';
@@ -8,11 +8,11 @@ import StatusToggleButton from './StatusToggleButton';
 import AppsDeleteIcon from '@crema/components/AppsDeleteIcon';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import AppTooltip from '@crema/components/AppTooltip';
-import {useInfoViewActionsContext} from '@crema/context/InfoViewContextProvider';
-import {putDataApi} from '@crema/utility/APIHooks';
+import { useInfoViewActionsContext } from '@crema/context/InfoViewContextProvider';
+import { putDataApi } from '@crema/utility/APIHooks';
 
 const TaskDetailHeader = (props) => {
-  const {selectedTask, onUpdateSelectedTask} = props;
+  const { selectedTask, onUpdateSelectedTask } = props;
   const infoViewActionsContext = useInfoViewActionsContext();
 
   const navigate = useNavigate();
@@ -31,7 +31,7 @@ const TaskDetailHeader = (props) => {
         infoViewActionsContext.showMessage(
           data[0].isStarred
             ? 'Task Marked as Starred Successfully'
-            : 'Task Marked as Unstarred Successfully',
+            : 'Task Marked as Unstarred Successfully'
         );
       })
       .catch((error) => {
@@ -61,11 +61,11 @@ const TaskDetailHeader = (props) => {
         sx={{
           cursor: 'pointer',
         }}
-        component='span'
-        mr={{xs: 2, sm: 4}}
+        component="span"
+        mr={{ xs: 2, sm: 4 }}
         onClick={onClickBackButton}
       >
-        <AppTooltip title={<IntlMessages id='common.back' />}>
+        <AppTooltip title={<IntlMessages id="common.back" />}>
           <ArrowBackIcon
             sx={{
               color: 'text.secondary',
@@ -80,10 +80,10 @@ const TaskDetailHeader = (props) => {
       />
 
       <Box
-        component='span'
+        component="span"
         sx={{
           marginLeft: 'auto',
-          display: {xs: 'none', sm: 'block'},
+          display: { xs: 'none', sm: 'block' },
         }}
         onChange={onChangeStarred}
       >
@@ -92,7 +92,7 @@ const TaskDetailHeader = (props) => {
 
       <AppsDeleteIcon
         deleteAction={onDeleteTask}
-        deleteTitle={<IntlMessages id='todo.deleteMessage' />}
+        deleteTitle={<IntlMessages id="todo.deleteMessage" />}
         sx={{
           color: 'text.disabled',
         }}

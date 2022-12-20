@@ -1,2 +1,2 @@
-import {ReactNotificationEx } from '@crema/modules/thirdParty';
-export  default ReactNotificationEx;
+import { ReactNotificationEx } from '@crema/modules/thirdParty';
+export default ReactNotificationEx;

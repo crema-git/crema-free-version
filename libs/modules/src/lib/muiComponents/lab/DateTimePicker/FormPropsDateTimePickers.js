@@ -1,8 +1,7 @@
 import * as React from 'react';
 import TextField from '@mui/material/TextField';
-import AdapterDateFns from '@mui/lab/AdapterDateFns';
-import LocalizationProvider from '@mui/lab/LocalizationProvider';
-import DateTimePicker from '@mui/lab/DateTimePicker';
+import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
+import { DateTimePicker, LocalizationProvider } from '@mui/x-date-pickers';
 import Stack from '@mui/material/Stack';
 
 export default function FormPropsDateTimePickers() {
@@ -12,7 +11,7 @@ export default function FormPropsDateTimePickers() {
     <LocalizationProvider dateAdapter={AdapterDateFns}>
       <Stack spacing={3}>
         <DateTimePicker
-          label='disabled'
+          label="disabled"
           disabled
           value={value}
           onChange={(newValue) => {
@@ -21,7 +20,7 @@ export default function FormPropsDateTimePickers() {
           renderInput={(params) => <TextField {...params} />}
         />
         <DateTimePicker
-          label='read-only'
+          label="read-only"
           readOnly
           value={value}
           onChange={(newValue) => {

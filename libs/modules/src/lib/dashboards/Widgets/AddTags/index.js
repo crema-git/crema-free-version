@@ -1,24 +1,24 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import Chip from '@mui/material/Chip';
 import Box from '@mui/material/Box';
 import AddNewTag from './AddNewTag';
 import PropTypes from 'prop-types';
-import {blue, green, orange, red, teal} from '@mui/material/colors';
+import { blue, green, orange, red, teal } from '@mui/material/colors';
 import AppCard from '@crema/components/AppCard';
-import {useIntl} from 'react-intl';
-import {darken} from '@mui/material';
+import { useIntl } from 'react-intl';
+import { darken } from '@mui/material';
 
 const colorList = [
-  {id: 9001, color: blue[600]},
-  {id: 9002, color: red[600]},
-  {id: 9003, color: green[600]},
-  {id: 9004, color: orange[600]},
-  {id: 9005, color: teal[600]},
-  {id: 9006, color: blue[600]},
+  { id: 9001, color: blue[600] },
+  { id: 9002, color: red[600] },
+  { id: 9003, color: green[600] },
+  { id: 9004, color: orange[600] },
+  { id: 9005, color: teal[600] },
+  { id: 9006, color: blue[600] },
 ];
 
 const AddTags = (props) => {
-  const {data} = props;
+  const { data } = props;
 
   const [tags, setTags] = useState(data);
 
@@ -35,10 +35,10 @@ const AddTags = (props) => {
     setTags((tags) => tags.concat(tag));
   };
 
-  const {messages} = useIntl();
+  const { messages } = useIntl();
 
   return (
-    <AppCard sxStyle={{height: 1}} title={messages['dashboard.addTags']}>
+    <AppCard sxStyle={{ height: 1 }} title={messages['dashboard.addTags']}>
       <Box
         sx={{
           p: 2,

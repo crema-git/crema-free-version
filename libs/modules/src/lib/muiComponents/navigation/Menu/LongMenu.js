@@ -36,17 +36,17 @@ export default function LongMenu() {
   return (
     <div>
       <IconButton
-        aria-label='more'
-        id='long-button'
-        aria-controls='long-menu'
+        aria-label="more"
+        id="long-button"
+        aria-controls="long-menu"
         aria-expanded={open ? 'true' : undefined}
-        aria-haspopup='true'
+        aria-haspopup="true"
         onClick={handleClick}
       >
         <MoreVertIcon />
       </IconButton>
       <Menu
-        id='long-menu'
+        id="long-menu"
         MenuListProps={{
           'aria-labelledby': 'long-button',
         }}

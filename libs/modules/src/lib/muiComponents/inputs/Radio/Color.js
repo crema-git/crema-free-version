@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {pink} from '@mui/material/colors';
+import { pink } from '@mui/material/colors';
 import Radio from '@mui/material/Radio';
 
 export default function ColorRadioButtons() {
@@ -14,15 +14,15 @@ export default function ColorRadioButtons() {
     onChange: handleChange,
     value: item,
     name: 'color-radio-button-demo',
-    inputProps: {'aria-label': item},
+    inputProps: { 'aria-label': item },
   });
 
   return (
     <div>
       <Radio {...controlProps('a')} />
-      <Radio {...controlProps('b')} color='secondary' />
-      <Radio {...controlProps('c')} color='success' />
-      <Radio {...controlProps('d')} color='default' />
+      <Radio {...controlProps('b')} color="secondary" />
+      <Radio {...controlProps('c')} color="success" />
+      <Radio {...controlProps('d')} color="default" />
       <Radio
         {...controlProps('e')}
         sx={{

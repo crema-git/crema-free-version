@@ -1,11 +1,11 @@
 import * as React from 'react';
-import {emphasize, styled} from '@mui/material/styles';
+import { emphasize, styled } from '@mui/material/styles';
 import Breadcrumbs from '@mui/material/Breadcrumbs';
 import Chip from '@mui/material/Chip';
 import HomeIcon from '@mui/icons-material/Home';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
-const StyledBreadcrumb = styled(Chip)(({theme}) => {
+const StyledBreadcrumb = styled(Chip)(({ theme }) => {
   const backgroundColor =
     theme.palette.mode === 'light'
       ? theme.palette.grey[100]
@@ -32,17 +32,17 @@ function handleClick(event) {
 
 export default function CustomizedBreadcrumbs() {
   return (
-    <div role='presentation' onClick={handleClick}>
-      <Breadcrumbs aria-label='breadcrumb'>
+    <div role="presentation" onClick={handleClick}>
+      <Breadcrumbs aria-label="breadcrumb">
         <StyledBreadcrumb
-          component='a'
-          href='#'
-          label='Home'
-          icon={<HomeIcon fontSize='small' />}
+          component="a"
+          href="#"
+          label="Home"
+          icon={<HomeIcon fontSize="small" />}
         />
-        <StyledBreadcrumb component='a' href='#' label='Catalog' />
+        <StyledBreadcrumb component="a" href="#" label="Catalog" />
         <StyledBreadcrumb
-          label='Accessories'
+          label="Accessories"
           deleteIcon={<ExpandMoreIcon />}
           onDelete={handleClick}
         />

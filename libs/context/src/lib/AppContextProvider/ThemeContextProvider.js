@@ -1,13 +1,19 @@
-import React, {createContext, useCallback, useContext, useEffect, useState,} from 'react';
+import React, {
+  createContext,
+  useCallback,
+  useContext,
+  useEffect,
+  useState,
+} from 'react';
 import defaultConfig, {
   backgroundDark,
   backgroundLight,
   defaultTheme,
   textDark,
   textLight,
-} from "@crema/constants/defaultConfig";
+} from '@crema/constants/defaultConfig';
 import PropTypes from 'prop-types';
-import {LayoutDirection, ThemeMode} from '@crema/constants/AppEnums';
+import { LayoutDirection, ThemeMode } from '@crema/constants/AppEnums';
 
 const ThemeContext = createContext();
 const ThemeActionsContext = createContext();
@@ -16,7 +22,7 @@ export const useThemeContext = () => useContext(ThemeContext);
 
 export const useThemeActionsContext = () => useContext(ThemeActionsContext);
 
-const ThemeContextProvider = ({children}) => {
+const ThemeContextProvider = ({ children }) => {
   const [theme, setTheme] = useState(defaultTheme.theme);
   const [themeMode, updateThemeMode] = useState(defaultConfig.themeMode);
   const [themeStyle, updateThemeStyle] = useState(defaultConfig.themeStyle);

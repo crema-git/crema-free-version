@@ -10,4 +10,16 @@ import WebTraffic from './WebTraffic';
 import Reviews from './Reviews';
 import TicketSupport from './TicketSupport';
 
-export { TotalRevenue, QuickStats, Statistics, MonthlyEarning, Deals, SocialMediaAdvertise, TodayTasks, GoalProgress, WebTraffic, Reviews, TicketSupport };
+export {
+  TotalRevenue,
+  QuickStats,
+  Statistics,
+  MonthlyEarning,
+  Deals,
+  SocialMediaAdvertise,
+  TodayTasks,
+  GoalProgress,
+  WebTraffic,
+  Reviews,
+  TicketSupport,
+};

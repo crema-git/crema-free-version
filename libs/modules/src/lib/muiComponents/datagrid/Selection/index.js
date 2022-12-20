@@ -29,15 +29,15 @@ const Selection = () => {
   return (
     <>
       <AppComponentHeader
-        title='Selection'
-        description='Selection allows the user to select and highlight a number of rows that they can then take action on.'
-        refUrl='https://mui.com/components/data-grid/selection/'
+        title="Selection"
+        description="Selection allows the user to select and highlight a number of rows that they can then take action on."
+        refUrl="https://mui.com/components/data-grid/selection/"
       />
 
       <AppGridContainer>
         <Grid item xs={12}>
           <AppComponentCard
-            title='SingleRowSelectionGrid'
+            title="SingleRowSelectionGrid"
             component={SingleRowSelectionGrid}
             source={SingleRowSelectionGridSource}
             noScrollbar
@@ -45,7 +45,7 @@ const Selection = () => {
         </Grid>
         <Grid item xs={12}>
           <AppComponentCard
-            title='MultipleRowSelectionGrid'
+            title="MultipleRowSelectionGrid"
             component={MultipleRowSelectionGrid}
             source={MultipleRowSelectionGridSource}
             noScrollbar
@@ -53,7 +53,7 @@ const Selection = () => {
         </Grid>
         <Grid item xs={12}>
           <AppComponentCard
-            title='CheckboxSelectionGrid'
+            title="CheckboxSelectionGrid"
             component={CheckboxSelectionGrid}
             source={CheckboxSelectionGridSource}
             noScrollbar
@@ -61,7 +61,7 @@ const Selection = () => {
         </Grid>
         <Grid item xs={12}>
           <AppComponentCard
-            title='DisableClickSelectionGrid'
+            title="DisableClickSelectionGrid"
             component={DisableClickSelectionGrid}
             source={DisableClickSelectionGridSource}
             noScrollbar
@@ -69,7 +69,7 @@ const Selection = () => {
         </Grid>
         <Grid item xs={12}>
           <AppComponentCard
-            title='DisableRowSelection'
+            title="DisableRowSelection"
             component={DisableRowSelection}
             source={DisableRowSelectionSource}
             noScrollbar
@@ -77,7 +77,7 @@ const Selection = () => {
         </Grid>
         <Grid item xs={12}>
           <AppComponentCard
-            title='ControlledSelectionGrid'
+            title="ControlledSelectionGrid"
             component={ControlledSelectionGrid}
             source={ControlledSelectionGridSource}
             noScrollbar
@@ -85,7 +85,7 @@ const Selection = () => {
         </Grid>
         <Grid item xs={12}>
           <AppComponentCard
-            title='ControlledSelectionServerPaginationGrid'
+            title="ControlledSelectionServerPaginationGrid"
             component={ControlledSelectionServerPaginationGrid}
             source={ControlledSelectionServerPaginationGridSource}
             noScrollbar

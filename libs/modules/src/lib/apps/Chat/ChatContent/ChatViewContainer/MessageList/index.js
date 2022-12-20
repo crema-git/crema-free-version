@@ -20,7 +20,7 @@ const MessageList = ({
       }}
     >
       <AppList
-        animation='transition.slideUpIn'
+        animation="transition.slideUpIn"
         data={userMessages.messageData}
         renderRow={(item, index) => {
           if (item.sender === authUser.id) {

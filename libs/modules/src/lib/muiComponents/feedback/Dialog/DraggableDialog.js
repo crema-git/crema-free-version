@@ -11,7 +11,7 @@ import Draggable from 'react-draggable';
 function PaperComponent(props) {
   return (
     <Draggable
-      handle='#draggable-dialog-title'
+      handle="#draggable-dialog-title"
       cancel={'[class*="MuiDialogContent-root"]'}
     >
       <Paper {...props} />
@@ -32,16 +32,16 @@ export default function DraggableDialog() {
 
   return (
     <div>
-      <Button variant='outlined' onClick={handleClickOpen}>
+      <Button variant="outlined" onClick={handleClickOpen}>
         Open draggable dialog
       </Button>
       <Dialog
         open={open}
         onClose={handleClose}
         PaperComponent={PaperComponent}
-        aria-labelledby='draggable-dialog-title'
+        aria-labelledby="draggable-dialog-title"
       >
-        <DialogTitle style={{cursor: 'move'}} id='draggable-dialog-title'>
+        <DialogTitle style={{ cursor: 'move' }} id="draggable-dialog-title">
           Subscribe
         </DialogTitle>
         <DialogContent>

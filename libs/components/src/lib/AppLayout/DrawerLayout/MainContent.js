@@ -1,8 +1,8 @@
 import React from 'react';
-import {Box} from '@mui/material';
+import { Box } from '@mui/material';
 import PropsTypes from 'prop-types';
 
-const MainContent = ({children, ...rest}) => {
+const MainContent = ({ children, ...rest }) => {
   return (
     <Box
       sx={{
@@ -13,7 +13,7 @@ const MainContent = ({children, ...rest}) => {
         position: 'relative',
         transition: 'all 0.5s ease',
       }}
-      className='mainContent'
+      className="mainContent"
       {...rest}
     >
       {children}

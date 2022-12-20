@@ -1,5 +1,5 @@
-import React, {useEffect} from 'react';
-import {styled} from '@mui/material/styles';
+import React, { useEffect } from 'react';
+import { styled } from '@mui/material/styles';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
@@ -10,9 +10,9 @@ import IconButton from '@mui/material/IconButton';
 import SnackbarContent from '@mui/material/SnackbarContent';
 import WarningIcon from '@mui/icons-material/Warning';
 import Snackbar from '@mui/material/Snackbar';
-import {useInfoViewActionsContext} from '@crema/context/InfoViewContextProvider';
-import {Slide} from '@mui/material';
-import {amber, green} from '@mui/material/colors';
+import { useInfoViewActionsContext } from '@crema/context/InfoViewContextProvider';
+import { Slide } from '@mui/material';
+import { amber, green } from '@mui/material/colors';
 
 const PREFIX = 'AppMessageView';
 
@@ -26,7 +26,7 @@ const classes = {
   message: `${PREFIX}-message`,
 };
 
-const StyledSnackbar = styled(Snackbar)(({theme}) => ({
+const StyledSnackbar = styled(Snackbar)(({ theme }) => ({
   [`& .${classes.success}`]: {
     backgroundColor: green[600],
   },
@@ -66,17 +66,16 @@ const variantIcon = {
 };
 
 function TransitionLeft(props) {
-  return <Slide {...props} direction='left' />;
+  return <Slide {...props} direction="left" />;
 }
 
 const AppMessageView = (props) => {
   const [open, setOpen] = React.useState(false);
-  const {className, message, variant, ...other} = props;
+  const { clearInfoView, className, message, variant, ...other } = props;
   const Icon = variantIcon[variant];
-  const infoViewActionsContext = useInfoViewActionsContext();
   const onClose = () => {
     setOpen(false);
-    setTimeout(() => infoViewActionsContext.clearInfoView(), 500);
+    setTimeout(() => clearInfoView(), 500);
   };
   useEffect(() => {
     if (message) {
@@ -97,20 +96,20 @@ const AppMessageView = (props) => {
     >
       <SnackbarContent
         className={clsx(classes[variant], className)}
-        aria-describedby='client-snackbar'
+        aria-describedby="client-snackbar"
         message={
-          <span id='client-snackbar' className={classes.message}>
+          <span id="client-snackbar" className={classes.message}>
             <Icon className={clsx(classes.icon, classes.iconVariant)} />
             {message}
           </span>
         }
         action={[
           <IconButton
-            key='close'
-            aria-label='close'
-            color='inherit'
+            key="close"
+            aria-label="close"
+            color="inherit"
             onClick={onClose}
-            size='large'
+            size="large"
           >
             <CloseIcon className={classes.icon} />
           </IconButton>,
@@ -121,6 +120,7 @@ const AppMessageView = (props) => {
   );
 };
 AppMessageView.propTypes = {
+  clearInfoView: PropTypes.func,
   className: PropTypes.string,
   message: PropTypes.string,
   variant: PropTypes.oneOf(['error', 'info', 'success', 'warning']).isRequired,

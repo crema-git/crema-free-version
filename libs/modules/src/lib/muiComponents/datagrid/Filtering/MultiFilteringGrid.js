@@ -1,9 +1,9 @@
 import * as React from 'react';
-import {DataGridPro} from '@mui/x-data-grid-pro';
-import {useDemoData} from '@mui/x-data-grid-generator';
+import { DataGridPro } from '@mui/x-data-grid-pro';
+import { useDemoData } from '@mui/x-data-grid-generator';
 
 export default function MultiFilteringGrid() {
-  const {data} = useDemoData({
+  const { data } = useDemoData({
     dataSet: 'Commodity',
     rowLength: 200,
     maxColumns: 6,
@@ -17,12 +17,12 @@ export default function MultiFilteringGrid() {
         operatorValue: 'contains',
         value: 'rice',
       },
-      {id: 2, columnField: 'quantity', operatorValue: '>=', value: '20000'},
+      { id: 2, columnField: 'quantity', operatorValue: '>=', value: '20000' },
     ],
   });
 
   return (
-    <div style={{height: 400, width: '100%'}}>
+    <div style={{ height: 400, width: '100%' }}>
       <DataGridPro
         {...data}
         filterModel={filterModel}

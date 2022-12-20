@@ -1,9 +1,9 @@
 import React from 'react';
-import {store} from 'react-notifications-component';
+import { store } from 'react-notifications-component';
 import Button from '@mui/material/Button';
 
 import notification from '../helpers/notification';
-import {getMessage, getTitle, getType} from '../helpers/randomize';
+import { getMessage, getTitle, getType } from '../helpers/randomize';
 import Box from '@mui/material/Box';
 
 export default class ContainerExample extends React.Component {
@@ -16,17 +16,17 @@ export default class ContainerExample extends React.Component {
         message: getMessage(type),
         container,
         type,
-      }),
+      })
     );
   };
 
   render() {
     return (
-      <Box display='flex' flexWrap='wrap'>
+      <Box display="flex" flexWrap="wrap">
         <Box mr={2} my={1}>
           <Button
-            color='primary'
-            variant='contained'
+            color="primary"
+            variant="contained"
             onClick={() => this.add('top-left')}
           >
             Top Left
@@ -34,8 +34,8 @@ export default class ContainerExample extends React.Component {
         </Box>
         <Box mr={2} my={1}>
           <Button
-            color='primary'
-            variant='contained'
+            color="primary"
+            variant="contained"
             onClick={() => this.add('top-right')}
           >
             Top Right
@@ -43,8 +43,8 @@ export default class ContainerExample extends React.Component {
         </Box>
         <Box mr={2} my={1}>
           <Button
-            color='primary'
-            variant='contained'
+            color="primary"
+            variant="contained"
             onClick={() => this.add('top-center')}
           >
             Top Center
@@ -52,8 +52,8 @@ export default class ContainerExample extends React.Component {
         </Box>
         <Box mr={2} my={1}>
           <Button
-            color='primary'
-            variant='contained'
+            color="primary"
+            variant="contained"
             onClick={() => this.add('bottom-left')}
           >
             Bottom Left
@@ -61,8 +61,8 @@ export default class ContainerExample extends React.Component {
         </Box>
         <Box mr={2} my={1}>
           <Button
-            color='primary'
-            variant='contained'
+            color="primary"
+            variant="contained"
             onClick={() => this.add('bottom-right')}
           >
             Bottom Right
@@ -70,8 +70,8 @@ export default class ContainerExample extends React.Component {
         </Box>
         <Box mr={2} my={1}>
           <Button
-            color='primary'
-            variant='contained'
+            color="primary"
+            variant="contained"
             onClick={() => this.add('bottom-center')}
           >
             Bottom Center

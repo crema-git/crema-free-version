@@ -1,13 +1,13 @@
 import * as React from 'react';
-import {styled} from '@mui/material/styles';
+import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Slider from '@mui/material/Slider';
 
 const Separator = styled('div')(
-  ({theme}) => `
+  ({ theme }) => `
   height: ${theme.spacing(3)};
-`,
+`
 );
 
 const marks = [
@@ -35,24 +35,24 @@ function valuetext(value) {
 
 export default function TrackInvertedSlider() {
   return (
-    <Box sx={{width: 250}}>
-      <Typography id='track-inverted-slider' gutterBottom>
+    <Box sx={{ width: 250 }}>
+      <Typography id="track-inverted-slider" gutterBottom>
         Inverted track
       </Typography>
       <Slider
-        track='inverted'
-        aria-labelledby='track-inverted-slider'
+        track="inverted"
+        aria-labelledby="track-inverted-slider"
         getAriaValueText={valuetext}
         defaultValue={30}
         marks={marks}
       />
       <Separator />
-      <Typography id='track-inverted-range-slider' gutterBottom>
+      <Typography id="track-inverted-range-slider" gutterBottom>
         Inverted track range
       </Typography>
       <Slider
-        track='inverted'
-        aria-labelledby='track-inverted-range-slider'
+        track="inverted"
+        aria-labelledby="track-inverted-range-slider"
         getAriaValueText={valuetext}
         defaultValue={[20, 37]}
         marks={marks}

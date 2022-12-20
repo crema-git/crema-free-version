@@ -1,27 +1,27 @@
 import React from 'react';
-import {Form, Formik} from 'formik';
+import { Form, Formik } from 'formik';
 import * as yup from 'yup';
 import Button from '@mui/material/Button';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
-import {useInfoViewActionsContext} from '@crema/context/InfoViewContextProvider';
+import { useInfoViewActionsContext } from '@crema/context/InfoViewContextProvider';
 import IntlMessages from '@crema/utility/IntlMessages';
-import {useIntl} from 'react-intl';
+import { useIntl } from 'react-intl';
 import Box from '@mui/material/Box';
-import {red} from '@mui/material/colors';
+import { red } from '@mui/material/colors';
 import AppCard from '@crema/components/AppCard';
 import AppTextField from '@crema/components/AppTextField';
 
 const validationSchema = yup.object({
   email: yup
     .string()
-    .email(<IntlMessages id='validation.emailFormat' />)
-    .required(<IntlMessages id='validation.emailRequired' />),
+    .email(<IntlMessages id="validation.emailFormat" />)
+    .required(<IntlMessages id="validation.emailRequired" />),
 });
 
 const Subscribe = () => {
   const infoViewActionsContext = useInfoViewActionsContext();
 
-  const {messages} = useIntl();
+  const { messages } = useIntl();
 
   return (
     <AppCard
@@ -30,18 +30,18 @@ const Subscribe = () => {
         backgroundColor: red[600],
         color: 'white',
       }}
-      titleStyle={{color: 'white'}}
+      titleStyle={{ color: 'white' }}
       title={messages['dashboard.subscribe']}
     >
       <Box
-        component='p'
+        component="p"
         sx={{
           mb: 6,
           pr: 4,
           fontSize: 14,
         }}
       >
-        <IntlMessages id='dashboard.subscribeContent' />
+        <IntlMessages id="dashboard.subscribeContent" />
       </Box>
       <Formik
         validateOnChange={true}
@@ -49,16 +49,16 @@ const Subscribe = () => {
           email: '',
         }}
         validationSchema={validationSchema}
-        onSubmit={(data, {setSubmitting, resetForm}) => {
+        onSubmit={(data, { setSubmitting, resetForm }) => {
           setSubmitting(true);
           infoViewActionsContext.showMessage(
-            <IntlMessages id='message.thankYouSubscription' />,
+            <IntlMessages id="message.thankYouSubscription" />
           );
           setSubmitting(false);
           resetForm();
         }}
       >
-        {({isSubmitting}) => (
+        {({ isSubmitting }) => (
           <Box
             sx={{
               textAlign: 'left',
@@ -78,8 +78,8 @@ const Subscribe = () => {
                 >
                   <AppTextField
                     placeholder={messages['common.email']}
-                    name='email'
-                    label={<IntlMessages id='common.emailAddress' />}
+                    name="email"
+                    label={<IntlMessages id="common.emailAddress" />}
                     inputProps={{
                       'aria-label': 'naked',
                     }}
@@ -106,11 +106,11 @@ const Subscribe = () => {
                   }}
                 >
                   <Button
-                    size='large'
-                    variant='contained'
-                    color='primary'
+                    size="large"
+                    variant="contained"
+                    color="primary"
                     disabled={isSubmitting}
-                    type='submit'
+                    type="submit"
                     sx={{
                       width: '100%',
                       height: '51.1px',

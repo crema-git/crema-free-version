@@ -1,5 +1,5 @@
 import React from 'react';
-import {Cell, Pie, PieChart} from 'recharts';
+import { Cell, Pie, PieChart } from 'recharts';
 import PropTypes from 'prop-types';
 
 const RADIAN = Math.PI / 180;
@@ -20,16 +20,16 @@ const renderCustomizedLabel = ({
     <text
       x={x}
       y={y}
-      fill='white'
+      fill="white"
       textAnchor={x > cx ? 'start' : 'end'}
-      dominantBaseline='central'
+      dominantBaseline="central"
     >
       {`${(percent * 100).toFixed(0)}%`}
     </text>
   );
 };
 
-const EarningGraph = ({data}) => {
+const EarningGraph = ({ data }) => {
   return (
     <PieChart width={400} height={400}>
       <Pie
@@ -39,8 +39,8 @@ const EarningGraph = ({data}) => {
         labelLine={false}
         label={renderCustomizedLabel}
         outerRadius={150}
-        fill='#8884d8'
-        dataKey='value'
+        fill="#8884d8"
+        dataKey="value"
       >
         {data.map((entry, index) => (
           <Cell key={`cell-${index}`} fill={entry.color} />

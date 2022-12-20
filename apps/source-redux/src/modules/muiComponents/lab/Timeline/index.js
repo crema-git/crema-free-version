@@ -1,2 +1,2 @@
-import {Timeline} from '@crema/modules/components/lab';
+import { Timeline } from '@crema/modules/components/lab';
 export default Timeline;

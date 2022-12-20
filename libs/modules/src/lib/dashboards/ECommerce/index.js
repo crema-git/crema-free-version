@@ -11,4 +11,17 @@ import PopularProducts from './PopularProducts';
 import Browser from './Browser';
 import SiteVisitors from './SiteVisitors';
 
-export { SalesState, SaleStatics, Application, ReportCard, RecentOrders, Revenue, MarketingCampaign, Notifications, NewCustomers, PopularProducts, Browser, SiteVisitors };
+export {
+  SalesState,
+  SaleStatics,
+  Application,
+  ReportCard,
+  RecentOrders,
+  Revenue,
+  MarketingCampaign,
+  Notifications,
+  NewCustomers,
+  PopularProducts,
+  Browser,
+  SiteVisitors,
+};

@@ -4,7 +4,7 @@ import StarIcon from '@mui/icons-material/Star';
 import {Checkbox} from '@mui/material';
 import PropTypes from 'prop-types';
 
-const AppsStarredIcon = ({item, onChange}) => {
+const AppsStarredIcon = ({ item, onChange }) => {
   return (
     <Checkbox
       sx={{
@@ -18,7 +18,7 @@ const AppsStarredIcon = ({item, onChange}) => {
       }}
       icon={<StarBorderIcon />}
       checkedIcon={<StarIcon />}
-      checked={item.isStarred}
+      checked={item?.isStarred || false}
       onChange={(event) => onChange(event.target.checked, item)}
     />
   );

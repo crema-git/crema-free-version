@@ -1,26 +1,26 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import Box from '@mui/material/Box';
 import clsx from 'clsx';
 import AppContentView from '../../AppContentView';
-import {LayoutType} from '@crema/constants/AppEnums';
+import { LayoutType } from '@crema/constants/AppEnums';
 import useStyles from './index.style';
 import AppFixedFooter from './AppFixedFooter';
 import AppHeader from './AppHeader';
 import AppSidebarMenu from './AppSidebarMenu';
 import AppSidebarSubMenu from './AppSidebarSubMenu';
-import {useLayoutContext} from "@crema/context/LayoutContextProvider";
-import {useThemeContext} from '@crema/context/ThemeContextProvider';
-import {useLocation} from 'react-router-dom';
-import PropsTypes from "prop-types";
+import { useLayoutContext } from '@crema/context/LayoutContextProvider';
+import { useThemeContext } from '@crema/context/ThemeContextProvider';
+import { useLocation } from 'react-router-dom';
+import PropsTypes from 'prop-types';
 
-const DoubleMenu = ({routes,routesConfig}) => {
-  const {pathname} = useLocation();
+const DoubleMenu = ({ routes, routesConfig }) => {
+  const { pathname } = useLocation();
   const [isNavCollapsed, setNavCollapsed] = useState(false);
   const [sidebarMenuState, setSidebarMenuState] = useState(2);
   const [selectedMenu, setSelectedMenu] = useState(routesConfig[0]);
-  const {themeStyle} = useThemeContext();
-  const {footer, layoutType, footerType} = useLayoutContext();
-  const classes = useStyles({footer, themeStyle});
+  const { themeStyle } = useThemeContext();
+  const { footer, layoutType, footerType } = useLayoutContext();
+  const classes = useStyles({ footer, themeStyle });
 
   const toggleNavCollapsed = () => {
     setNavCollapsed(!isNavCollapsed);
@@ -45,7 +45,7 @@ const DoubleMenu = ({routes,routesConfig}) => {
         {
           appMainFooter: footer && footerType === 'fluid',
           appMainFixedFooter: footer && footerType === 'fixed',
-        },
+        }
       )}
     >
       <AppHeader
@@ -62,7 +62,7 @@ const DoubleMenu = ({routes,routesConfig}) => {
           },
           {
             subMenuMainContent: sidebarMenuState > 1 && sidebarMenuState < 3,
-          },
+          }
         )}
       >
         <Box className={classes.appSidebarRoot}>
@@ -79,7 +79,7 @@ const DoubleMenu = ({routes,routesConfig}) => {
           />
         </Box>
         <Box className={classes.mainContainer}>
-          <AppContentView  routes={routes} />
+          <AppContentView routes={routes} />
           <AppFixedFooter />
         </Box>
       </Box>
@@ -92,4 +92,3 @@ DoubleMenu.propsTypes = {
   routes: PropsTypes.object.isRequired,
   routesConfig: PropsTypes.array.isRequired,
 };
-

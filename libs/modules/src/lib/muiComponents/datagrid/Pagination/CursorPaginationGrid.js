@@ -1,6 +1,6 @@
 import * as React from 'react';
-import {DataGrid} from '@mui/x-data-grid';
-import {useDemoData} from '@mui/x-data-grid-generator';
+import { DataGrid } from '@mui/x-data-grid';
+import { useDemoData } from '@mui/x-data-grid-generator';
 
 const PAGE_SIZE = 5;
 
@@ -13,13 +13,13 @@ function loadServerRows(cursor, data) {
       const end = start + PAGE_SIZE;
       const rows = data.rows.slice(start, end);
 
-      resolve({rows, nextCursor: data.rows[end]?.id});
+      resolve({ rows, nextCursor: data.rows[end]?.id });
     }, Math.random() * 500 + 100); // simulate network latency
   });
 }
 
 export default function CursorPaginationGrid() {
-  const {data} = useDemoData({
+  const { data } = useDemoData({
     dataSet: 'Commodity',
     rowLength: 100,
     maxColumns: 6,
@@ -69,7 +69,7 @@ export default function CursorPaginationGrid() {
   }, [page, data]);
 
   return (
-    <div style={{height: 400, width: '100%'}}>
+    <div style={{ height: 400, width: '100%' }}>
       <DataGrid
         rows={rows}
         columns={data.columns}
@@ -77,7 +77,7 @@ export default function CursorPaginationGrid() {
         pageSize={5}
         rowsPerPageOptions={[5]}
         rowCount={100}
-        paginationMode='server'
+        paginationMode="server"
         onPageChange={handlePageChange}
         page={page}
         loading={loading}

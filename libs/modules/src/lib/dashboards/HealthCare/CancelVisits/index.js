@@ -1,14 +1,14 @@
 import React from 'react';
-import {useIntl} from 'react-intl';
+import { useIntl } from 'react-intl';
 import AppCard from '@crema/components/AppCard';
-import {Box} from '@mui/material';
+import { Box } from '@mui/material';
 import VisitsGraph from './VisitsGraph';
 import AppMenu from '@crema/components/AppMenu';
-import {Fonts} from '@crema/constants/AppEnums'
+import { Fonts } from '@crema/constants/AppEnums';
 import PropTypes from 'prop-types';
 
-const CancelVisits = ({data}) => {
-  const {messages} = useIntl();
+const CancelVisits = ({ data }) => {
+  const { messages } = useIntl();
 
   return (
     <AppCard
@@ -24,7 +24,7 @@ const CancelVisits = ({data}) => {
           }}
         >
           <Box
-            component='span'
+            component="span"
             sx={{
               mr: 2,
               fontSize: 20,
@@ -40,7 +40,7 @@ const CancelVisits = ({data}) => {
               },
             }}
           >
-            <img src={'/assets/images/dashboard/decries_icon.png'} alt='down' />
+            <img src={'/assets/images/dashboard/decries_icon.svg'} alt="down" />
           </Box>
         </Box>
         <Box

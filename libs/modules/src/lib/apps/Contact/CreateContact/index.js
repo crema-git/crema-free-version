@@ -1,22 +1,22 @@
-import React, {useEffect, useState} from 'react';
-import {Formik} from 'formik';
+import React, { useEffect, useState } from 'react';
+import { Formik } from 'formik';
 import * as yup from 'yup';
 import IntlMessages from '@crema/utility/IntlMessages';
 import PropTypes from 'prop-types';
 import AddContactForm from './AddContactForm';
 import AppDialog from '@crema/components/AppDialog';
-import {useInfoViewActionsContext} from '@crema/context/InfoViewContextProvider';
-import {postDataApi, putDataApi} from '@crema/utility/APIHooks';
+import { useInfoViewActionsContext } from '@crema/context/InfoViewContextProvider';
+import { postDataApi, putDataApi } from '@crema/utility/APIHooks';
 
 const validationSchema = yup.object({
-  name: yup.string().required(<IntlMessages id='validation.nameRequired' />),
+  name: yup.string().required(<IntlMessages id="validation.nameRequired" />),
   email: yup
     .string()
-    .email(<IntlMessages id='validation.emailFormat' />)
-    .required(<IntlMessages id='validation.emailRequired' />),
+    .email(<IntlMessages id="validation.emailFormat" />)
+    .required(<IntlMessages id="validation.emailRequired" />),
   contact: yup
     .string()
-    .required(<IntlMessages id='validation.phoneNumberRequired' />),
+    .required(<IntlMessages id="validation.phoneNumberRequired" />),
 });
 
 const CreateContact = (props) => {
@@ -32,13 +32,13 @@ const CreateContact = (props) => {
   const [userImage, setUserImage] = useState(
     selectContact && selectContact.image
       ? selectContact.image
-      : '/assets/images/placeholder.jpg',
+      : '/assets/images/placeholder.jpg'
   );
   useEffect(() => {
     setUserImage(
       selectContact && selectContact.image
         ? selectContact.image
-        : '/assets/images/placeholder.jpg',
+        : '/assets/images/placeholder.jpg'
     );
   }, [selectContact]);
 
@@ -78,7 +78,7 @@ const CreateContact = (props) => {
             selectContact && selectContact.label ? selectContact.label : '',
         }}
         validationSchema={validationSchema}
-        onSubmit={(data, {setSubmitting, resetForm}) => {
+        onSubmit={(data, { setSubmitting, resetForm }) => {
           setSubmitting(true);
           if (selectContact) {
             const newContact = {
@@ -94,7 +94,7 @@ const CreateContact = (props) => {
               .then(() => {
                 reCallAPI();
                 infoViewActionsContext.showMessage(
-                  'Contact updated successfully!',
+                  'Contact updated successfully!'
                 );
               })
               .catch((error) => {
@@ -115,7 +115,7 @@ const CreateContact = (props) => {
               .then(() => {
                 reCallAPI();
                 infoViewActionsContext.showMessage(
-                  'Contact created successfully!',
+                  'Contact created successfully!'
                 );
               })
               .catch((error) => {
@@ -127,7 +127,7 @@ const CreateContact = (props) => {
           setSubmitting(false);
         }}
       >
-        {({values, setFieldValue}) => (
+        {({ values, setFieldValue }) => (
           <AddContactForm
             setUserImage={setUserImage}
             userImage={userImage}

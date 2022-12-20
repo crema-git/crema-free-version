@@ -8,18 +8,18 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import BitBucketHeaderWrapper from './BitBucketHeaderWrapper';
 
-const AppHeader = ({toggleNavCollapsed}) => {
+const AppHeader = ({ toggleNavCollapsed }) => {
   return (
     <Hidden lgUp>
-      <BitBucketHeaderWrapper className='bit-bucket-header'>
+      <BitBucketHeaderWrapper className="bit-bucket-header">
         <IconButton
-          edge='start'
-          className='menu-btn'
-          color='inherit'
-          aria-label='open drawer'
+          edge="start"
+          className="menu-btn"
+          color="inherit"
+          aria-label="open drawer"
           onClick={toggleNavCollapsed}
         >
-          <MenuIcon className='menu-icon' />
+          <MenuIcon className="menu-icon" />
         </IconButton>
         <AppLogo />
         <Box
@@ -27,7 +27,7 @@ const AppHeader = ({toggleNavCollapsed}) => {
             ml: 'auto',
           }}
         >
-          <SearchBar borderLight placeholder='Search…' />
+          <SearchBar borderLight placeholder="Search…" />
         </Box>
       </BitBucketHeaderWrapper>
     </Hidden>

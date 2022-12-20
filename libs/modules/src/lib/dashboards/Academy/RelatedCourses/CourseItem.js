@@ -1,14 +1,14 @@
 import React from 'react';
 import Box from '@mui/material/Box';
 import VisibilityIcon from '@mui/icons-material/Visibility';
-import {Fonts} from '@crema/constants/AppEnums'
+import { Fonts } from '@crema/constants/AppEnums';
 import PropTypes from 'prop-types';
 
-const CourseItem = ({data}) => {
+const CourseItem = ({ data }) => {
   return (
     <Box
       sx={{
-        px: {sm: 3},
+        px: { sm: 3 },
       }}
     >
       <Box
@@ -22,7 +22,7 @@ const CourseItem = ({data}) => {
         <img src={data.image} alt={data.title} />
       </Box>
       <Box
-        component='p'
+        component="p"
         sx={{
           fontSize: 14,
           fontWeight: Fonts.MEDIUM,
@@ -38,7 +38,7 @@ const CourseItem = ({data}) => {
           color: 'text.secondary',
         }}
       >
-        <Box component='p'>{data.author}</Box>
+        <Box component="p">{data.author}</Box>
         <Box
           sx={{
             ml: 3,
@@ -51,7 +51,7 @@ const CourseItem = ({data}) => {
         >
           <VisibilityIcon />
           <Box
-            component='p'
+            component="p"
             sx={{
               ml: 2,
             }}

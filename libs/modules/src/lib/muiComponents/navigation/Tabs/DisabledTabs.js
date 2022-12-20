@@ -13,11 +13,11 @@ export default function DisabledTabs() {
     <Tabs
       value={value}
       onChange={handleChange}
-      aria-label='disabled tabs example'
+      aria-label="disabled tabs example"
     >
-      <Tab label='Active' />
-      <Tab label='Disabled' disabled />
-      <Tab label='Active' />
+      <Tab label="Active" />
+      <Tab label="Disabled" disabled />
+      <Tab label="Active" />
     </Tabs>
   );
 }

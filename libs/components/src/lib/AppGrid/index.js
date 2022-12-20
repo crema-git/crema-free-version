@@ -3,7 +3,7 @@ import GridView from './GridView';
 import PropTypes from 'prop-types';
 import GridFooter from './GridFooter';
 
-const AppGrid = ({footerProps, ...rest}) => {
+const AppGrid = ({ footerProps, ...rest }) => {
   return (
     <GridView
       {...rest}

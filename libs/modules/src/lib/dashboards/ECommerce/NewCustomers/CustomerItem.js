@@ -4,9 +4,9 @@ import Avatar from '@mui/material/Avatar';
 import PropTypes from 'prop-types';
 import IconButton from '@mui/material/IconButton';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
-import {Fonts} from '@crema/constants/AppEnums'
+import { Fonts } from '@crema/constants/AppEnums';
 
-const CustomerItem = ({item}) => {
+const CustomerItem = ({ item }) => {
   const getStatusColor = () => {
     if (item.orders === 0) {
       return '#F84E4E';
@@ -19,13 +19,13 @@ const CustomerItem = ({item}) => {
     <Box
       sx={{
         display: 'flex',
-        alignItems: {xs: 'flex-start', sm: 'center'},
+        alignItems: { xs: 'flex-start', sm: 'center' },
         padding: '8px 20px',
         '&:not(:last-of-type)': {
           borderBottom: '1px solid #ECEDF1',
         },
       }}
-      className='item-hover'
+      className="item-hover"
     >
       <Avatar
         sx={{
@@ -39,8 +39,8 @@ const CustomerItem = ({item}) => {
         sx={{
           flex: 1,
           display: 'flex',
-          alignItems: {sm: 'center'},
-          flexDirection: {xs: 'column', sm: 'row'},
+          alignItems: { sm: 'center' },
+          flexDirection: { xs: 'column', sm: 'row' },
         }}
       >
         <Box
@@ -86,9 +86,9 @@ const CustomerItem = ({item}) => {
             {item.orders} orders
           </Box>
           <IconButton
-            aria-label='more'
-            aria-controls='long-menu'
-            aria-haspopup='true'
+            aria-label="more"
+            aria-controls="long-menu"
+            aria-haspopup="true"
             onClick={null}
           >
             <MoreVertIcon />

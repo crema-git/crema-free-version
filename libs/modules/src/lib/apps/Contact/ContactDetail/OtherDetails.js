@@ -4,11 +4,11 @@ import IntlMessages from '@crema/utility/IntlMessages';
 import BusinessIcon from '@mui/icons-material/Business';
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import PropTypes from 'prop-types';
-import {Fonts} from '@crema/constants/AppEnums'
-import {FiFacebook, FiTwitter} from 'react-icons/fi';
+import { Fonts } from '@crema/constants/AppEnums';
+import { FiFacebook, FiTwitter } from 'react-icons/fi';
 
 const OtherDetails = (props) => {
-  const {contact} = props;
+  const { contact } = props;
 
   return (
     <Box
@@ -17,19 +17,19 @@ const OtherDetails = (props) => {
       }}
     >
       <Box
-        component='h4'
+        component="h4"
         sx={{
           mb: 4,
           fontWeight: Fonts.SEMI_BOLD,
         }}
       >
-        <IntlMessages id='common.otherDetails' />
+        <IntlMessages id="common.otherDetails" />
       </Box>
 
       <div>
         <Box
           sx={{
-            mb: {xs: 2, md: 3},
+            mb: { xs: 2, md: 3 },
             display: 'flex',
             alignItems: 'center',
           }}
@@ -48,14 +48,14 @@ const OtherDetails = (props) => {
             {contact.company ? (
               contact.company
             ) : (
-              <IntlMessages id='common.na' />
+              <IntlMessages id="common.na" />
             )}
           </Box>
         </Box>
 
         <Box
           sx={{
-            mb: {xs: 2, md: 3},
+            mb: { xs: 2, md: 3 },
             display: 'flex',
             alignItems: 'center',
           }}
@@ -74,14 +74,14 @@ const OtherDetails = (props) => {
             {contact.address ? (
               contact.address
             ) : (
-              <IntlMessages id='common.na' />
+              <IntlMessages id="common.na" />
             )}
           </Box>
         </Box>
 
         <Box
           sx={{
-            mb: {xs: 2, md: 3},
+            mb: { xs: 2, md: 3 },
             display: 'flex',
             alignItems: 'center',
           }}
@@ -100,7 +100,7 @@ const OtherDetails = (props) => {
             {contact.facebookId ? (
               contact.facebookId
             ) : (
-              <IntlMessages id='common.na' />
+              <IntlMessages id="common.na" />
             )}
           </Box>
         </Box>
@@ -125,7 +125,7 @@ const OtherDetails = (props) => {
             {contact.twitterId ? (
               contact.twitterId
             ) : (
-              <IntlMessages id='common.na' />
+              <IntlMessages id="common.na" />
             )}
           </Box>
         </Box>

@@ -21,16 +21,16 @@ export default function SimpleSnackbar() {
 
   const action = (
     <React.Fragment>
-      <Button color='secondary' size='small' onClick={handleClose}>
+      <Button color="secondary" size="small" onClick={handleClose}>
         UNDO
       </Button>
       <IconButton
-        size='small'
-        aria-label='close'
-        color='inherit'
+        size="small"
+        aria-label="close"
+        color="inherit"
         onClick={handleClose}
       >
-        <CloseIcon fontSize='small' />
+        <CloseIcon fontSize="small" />
       </IconButton>
     </React.Fragment>
   );
@@ -42,7 +42,7 @@ export default function SimpleSnackbar() {
         open={open}
         autoHideDuration={6000}
         onClose={handleClose}
-        message='Note archived'
+        message="Note archived"
         action={action}
       />
     </div>

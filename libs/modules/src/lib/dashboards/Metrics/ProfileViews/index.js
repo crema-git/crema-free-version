@@ -3,17 +3,17 @@ import ProfileViewsGraph from './ProfileViewsGraph';
 import IntlMessages from '@crema/utility/IntlMessages';
 import Box from '@mui/material/Box';
 import PropTypes from 'prop-types';
-import {Fonts} from '@crema/constants/AppEnums'
+import { Fonts } from '@crema/constants/AppEnums';
 import AppCard from '@crema/components/AppCard';
 
-const ProfileViews = ({data}) => {
+const ProfileViews = ({ data }) => {
   return (
     <AppCard
-      sxStyle={{height: 1}}
-      contentStyle={{display: 'flex', flexDirection: 'column'}}
+      sxStyle={{ height: 1 }}
+      contentStyle={{ display: 'flex', flexDirection: 'column' }}
     >
       <Box
-        component='h3'
+        component="h3"
         sx={{
           mb: 1,
           color: 'text.primary',
@@ -24,14 +24,14 @@ const ProfileViews = ({data}) => {
         {data.views}
       </Box>
       <Box
-        component='p'
+        component="p"
         sx={{
           color: 'text.secondary',
           fontSize: 14,
           fontWeight: Fonts.REGULAR,
         }}
       >
-        <IntlMessages id='dashboard.profileViews' />
+        <IntlMessages id="dashboard.profileViews" />
       </Box>
       <Box
         sx={{

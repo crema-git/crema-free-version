@@ -13,17 +13,17 @@ export default function BasicTrapFocus() {
         flexDirection: 'column',
       }}
     >
-      <button type='button' onClick={() => setOpen(true)}>
+      <button type="button" onClick={() => setOpen(true)}>
         Open
       </button>
       {open && (
         <FocusTrap open>
-          <Box tabIndex={-1} sx={{mt: 1, p: 1}}>
+          <Box tabIndex={-1} sx={{ mt: 1, p: 1 }}>
             <label>
-              First name: <input type='text' />
+              First name: <input type="text" />
             </label>
             <br />
-            <button type='button' onClick={() => setOpen(false)}>
+            <button type="button" onClick={() => setOpen(false)}>
               Close
             </button>
           </Box>

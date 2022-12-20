@@ -1,2 +1,2 @@
-import {Progress} from '@crema/modules/components/feedBack';
+import { Progress } from '@crema/modules/components/feedBack';
 export default Progress;

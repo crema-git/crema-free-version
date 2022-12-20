@@ -18,4 +18,22 @@ const Scrolling = React.lazy(() => import('./Scrolling'));
 const Virtualization = React.lazy(() => import('./Virtualization'));
 const Accessibility = React.lazy(() => import('./Accessibility'));
 
-export { Overview, Layout, Columns, Rows, Editing, Sorting, Filtering, Pagination, Selection, Events, Export, Components, Styling, Localization, Scrolling, Virtualization, Accessibility };
+export {
+  Overview,
+  Layout,
+  Columns,
+  Rows,
+  Editing,
+  Sorting,
+  Filtering,
+  Pagination,
+  Selection,
+  Events,
+  Export,
+  Components,
+  Styling,
+  Localization,
+  Scrolling,
+  Virtualization,
+  Accessibility,
+};

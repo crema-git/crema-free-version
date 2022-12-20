@@ -1,18 +1,18 @@
 import React from 'react';
-import {styled} from '@mui/material/styles';
+import { styled } from '@mui/material/styles';
 import AppCard from '@crema/components/AppCard';
 import Box from '@mui/material/Box';
 import EditOutlinedIcon from '@mui/icons-material/EditOutlined';
 import IconButton from '@mui/material/IconButton';
 import AppList from '@crema/components/AppList';
 import PropTypes from 'prop-types';
-import {useIntl} from 'react-intl';
-import {AiOutlineMail, AiOutlineUser} from 'react-icons/ai';
-import {BiErrorCircle, BiPhone} from 'react-icons/bi';
-import {FiThumbsUp} from 'react-icons/fi';
-import {MdPublic} from 'react-icons/md';
+import { useIntl } from 'react-intl';
+import { AiOutlineMail, AiOutlineUser } from 'react-icons/ai';
+import { BiErrorCircle, BiPhone } from 'react-icons/bi';
+import { FiThumbsUp } from 'react-icons/fi';
+import { MdPublic } from 'react-icons/md';
 
-const AboutItemRoot = styled('div')(({theme}) => ({
+const AboutItemRoot = styled('div')(({ theme }) => ({
   display: 'flex',
   alignItems: 'center',
   '&:not(:last-of-type)': {
@@ -57,7 +57,7 @@ const getIconByName = (iconName) => {
   }
 };
 
-const AboutItem = ({item}) => {
+const AboutItem = ({ item }) => {
   const getLinkAddress = () => {
     switch (item.linkType) {
       case 'link': {
@@ -70,17 +70,17 @@ const AboutItem = ({item}) => {
         return <a href={`mailto:${item.text}`}>{item.text}</a>;
       }
       default:
-        return <Box component='p'>{item.text}</Box>;
+        return <Box component="p">{item.text}</Box>;
     }
   };
 
   return (
     <AboutItemRoot>
-      <Box component='span' sx={{mr: 3.5, fontSize: 20}}>
+      <Box component="span" sx={{ mr: 3.5, fontSize: 20 }}>
         {getIconByName(item.icon)}
       </Box>
       {getLinkAddress()}
-      <Box component='span' ml='auto' mr={-2} mt={-2}>
+      <Box component="span" ml="auto" mr={-2} mt={-2}>
         <IconButton
           sx={{
             color: 'primary.main',
@@ -91,7 +91,7 @@ const AboutItem = ({item}) => {
               fontSize: 20,
             },
           }}
-          size='large'
+          size="large"
         >
           <EditOutlinedIcon />
         </IconButton>
@@ -100,16 +100,16 @@ const AboutItem = ({item}) => {
   );
 };
 
-const About = ({about}) => {
-  const {messages} = useIntl();
+const About = ({ about }) => {
+  const { messages } = useIntl();
   return (
     <AppCard
-      sxStyle={{mb: 8}}
+      sxStyle={{ mb: 8 }}
       title={messages['wall.about']}
       action={messages['wall.editPageInfo']}
     >
       <AppList
-        animation='transition.slideRightBigIn'
+        animation="transition.slideRightBigIn"
         data={about}
         renderRow={(data, index) => <AboutItem key={index} item={data} />}
       />

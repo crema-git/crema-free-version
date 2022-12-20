@@ -1,4 +1,4 @@
-import {blue, green, red} from '@mui/material/colors';
+import { blue, green, red } from '@mui/material/colors';
 
 export const labelList = [
   {

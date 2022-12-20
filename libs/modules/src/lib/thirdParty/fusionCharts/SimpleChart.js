@@ -3,7 +3,7 @@ import FusionCharts from 'fusioncharts';
 import Charts from 'fusioncharts/fusioncharts.charts';
 import ReactFC from 'react-fusioncharts';
 import FusionTheme from 'fusioncharts/themes/fusioncharts.theme.fusion';
-import {simpleChartData} from './data';
+import { simpleChartData } from './data';
 
 ReactFC.fcRoot(FusionCharts, Charts, FusionTheme);
 

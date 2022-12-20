@@ -1,16 +1,16 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import StatGraphs from './StatGraphs';
 import IntlMessages from '@crema/utility/IntlMessages';
-import {useIntl} from 'react-intl';
+import { useIntl } from 'react-intl';
 import Box from '@mui/material/Box';
 import PropTypes from 'prop-types';
-import {Fonts} from '@crema/constants/AppEnums'
+import { Fonts } from '@crema/constants/AppEnums';
 import AppSelect from '@crema/components/AppSelect';
 
 const GraphTabs = (props) => {
-  const {clientsData, incomeData, projectData} = props;
+  const { clientsData, incomeData, projectData } = props;
 
   const [value, setValue] = useState(0);
 
@@ -80,7 +80,7 @@ const GraphTabs = (props) => {
     };
   };
 
-  const {messages} = useIntl();
+  const { messages } = useIntl();
 
   return (
     <Box
@@ -91,63 +91,63 @@ const GraphTabs = (props) => {
       <Box
         sx={{
           display: 'flex',
-          flexDirection: {xs: 'column', md: 'row'},
-          alignItems: {md: 'center'},
+          flexDirection: { xs: 'column', md: 'row' },
+          alignItems: { md: 'center' },
         }}
       >
         <Box
-          component='h3'
+          component="h3"
           sx={{
             fontWeight: Fonts.BOLD,
             fontSize: 16,
           }}
         >
-          <IntlMessages id='dashboard.statistics' />
+          <IntlMessages id="dashboard.statistics" />
         </Box>
 
         <Box
           sx={{
-            mt: {md: -2},
+            mt: { md: -2 },
             flex: 1,
             display: 'flex',
-            flexDirection: {xs: 'column', md: 'row'},
-            alignItems: {md: 'center'},
+            flexDirection: { xs: 'column', md: 'row' },
+            alignItems: { md: 'center' },
           }}
         >
           <Tabs
             value={value}
             onChange={handleChange}
-            indicatorColor='primary'
-            textColor='primary'
-            aria-label='simple tabs example'
+            indicatorColor="primary"
+            textColor="primary"
+            aria-label="simple tabs example"
             sx={{
               flex: '1',
               position: 'relative',
               '& .MuiTabs-flexContainer': {
-                justifyContent: {md: 'center'},
+                justifyContent: { md: 'center' },
               },
               '& .crMuiTab': {
                 minWidth: '10px',
                 textTransform: 'capitalize',
                 padding: 0,
-                mx: {xs: 2, xl: 3.5},
+                mx: { xs: 2, xl: 3.5 },
                 fontSize: 14,
               },
             }}
           >
             <Tab
-              className='crMuiTab'
-              label={<IntlMessages id='dashboard.project' />}
+              className="crMuiTab"
+              label={<IntlMessages id="dashboard.project" />}
               {...a11yProps(0)}
             />
             <Tab
-              className='crMuiTab'
-              label={<IntlMessages id='dashboard.newClients' />}
+              className="crMuiTab"
+              label={<IntlMessages id="dashboard.newClients" />}
               {...a11yProps(1)}
             />
             <Tab
-              className='crMuiTab'
-              label={<IntlMessages id='dashboard.income' />}
+              className="crMuiTab"
+              label={<IntlMessages id="dashboard.income" />}
               {...a11yProps(2)}
             />
           </Tabs>

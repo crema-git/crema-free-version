@@ -3,4 +3,4 @@ import SendMessage from './SendMessage';
 import Address from './Address';
 import SimpleMap from './SimpleMap';
 
-export {ContactUsForm, SendMessage, Address, SimpleMap};
+export { ContactUsForm, SendMessage, Address, SimpleMap };

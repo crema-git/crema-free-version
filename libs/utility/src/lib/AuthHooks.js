@@ -25,11 +25,14 @@ export const useAuthMethod = () => {
 };*/
 //For Firebase Auth
 
-import {useFirebase, useFirebaseActions} from "@crema/services/auth/FirebaseAuthProvider";
-import {getUserFromFirebase} from "@crema/helpers";
+import {
+  useFirebase,
+  useFirebaseActions,
+} from '@crema/services/auth/FirebaseAuthProvider';
+import { getUserFromFirebase } from '@crema/helpers';
 
 export const useAuthUser = () => {
-  const {user, isAuthenticated, isLoading} = useFirebase();
+  const { user, isAuthenticated, isLoading } = useFirebase();
   return {
     isLoading,
     isAuthenticated,

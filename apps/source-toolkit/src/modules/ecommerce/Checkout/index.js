@@ -1,19 +1,23 @@
 import React from 'react';
-import {Box, Grid} from '@mui/material';
+import { Box, Grid } from '@mui/material';
 import AppCard from '@crema/components/AppCard';
 import IntlMessages from '@crema/utility/IntlMessages';
-import {Fonts} from '@crema/constants/AppEnums'
+import { Fonts } from '@crema/constants/AppEnums';
 
 import AppAnimate from '@crema/components/AppAnimate';
 import AppGridContainer from '@crema/components/AppGridContainer';
-import {useGetDataApi} from '@crema/utility/APIHooks';
-import {OrderSummary, DeliveryAddress, PaymentInfo} from '@crema/modules/ecommerce/Checkout';
+import { useGetDataApi } from '@crema/utility/APIHooks';
+import {
+  OrderSummary,
+  DeliveryAddress,
+  PaymentInfo,
+} from '@crema/modules/ecommerce/Checkout';
 
 const Checkout = () => {
-  const [{apiData: cartItems}] = useGetDataApi('/api/cart/get', []);
+  const [{ apiData: cartItems }] = useGetDataApi('/api/cart/get', []);
 
   return (
-    <AppAnimate animation='transition.slideUpIn' delay={200}>
+    <AppAnimate animation="transition.slideUpIn" delay={200}>
       <Box>
         <Box
           sx={{
@@ -24,13 +28,13 @@ const Checkout = () => {
             fontSize: 16,
           }}
         >
-          <IntlMessages id='sidebar.ecommerce.checkout' />
+          <IntlMessages id="sidebar.ecommerce.checkout" />
         </Box>
         <AppGridContainer>
           <Grid item xs={12} md={8}>
             <AppCard
               title={
-                <Box sx={{fontSize: 16, fontWeight: Fonts.BOLD}}>
+                <Box sx={{ fontSize: 16, fontWeight: Fonts.BOLD }}>
                   Delivery Address
                 </Box>
               }

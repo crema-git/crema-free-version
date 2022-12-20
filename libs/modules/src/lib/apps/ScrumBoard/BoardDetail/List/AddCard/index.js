@@ -1,49 +1,49 @@
-import React, {useEffect, useState} from 'react';
-import {Formik} from 'formik';
+import React, { useEffect, useState } from 'react';
+import { Formik } from 'formik';
 import * as yup from 'yup';
 import AppConfirmDialog from '@crema/components/AppConfirmDialog';
 import IntlMessages from '@crema/utility/IntlMessages';
 import CardHeader from './CardHeader';
 import PropTypes from 'prop-types';
 import AddCardForm from './AddCardForm';
-import {useAuthUser} from '@crema/utility/AuthHooks';
+import { useAuthUser } from '@crema/utility/AuthHooks';
 import Drawer from '@mui/material/Drawer';
 import Box from '@mui/material/Box';
-import {useInfoViewActionsContext} from '@crema/context/InfoViewContextProvider';
-import {postDataApi, putDataApi} from '@crema/utility/APIHooks';
+import { useInfoViewActionsContext } from '@crema/context/InfoViewContextProvider';
+import { postDataApi, putDataApi } from '@crema/utility/APIHooks';
 
 const validationSchema = yup.object({
-  title: yup.string().required(<IntlMessages id='validation.titleRequired' />),
+  title: yup.string().required(<IntlMessages id="validation.titleRequired" />),
 });
 
 const AddCard = (props) => {
-  const {isAddCardOpen, onCloseAddCard, board, list, selectedCard, setData} =
+  const { isAddCardOpen, onCloseAddCard, board, list, selectedCard, setData } =
     props;
 
   const infoViewActionsContext = useInfoViewActionsContext();
 
-  const {user} = useAuthUser();
+  const { user } = useAuthUser();
   console.log('selectedCard: ', selectedCard);
   const [checkedList, setCheckedList] = useState(() =>
-    selectedCard ? selectedCard.checkedList : [],
+    selectedCard ? selectedCard.checkedList : []
   );
 
   const [isDeleteDialogOpen, setDeleteDialogOpen] = useState(false);
 
   const [selectedMembers, setMembersList] = useState(() =>
-    selectedCard ? selectedCard.members : [],
+    selectedCard ? selectedCard.members : []
   );
 
   const [selectedLabels, setSelectedLabels] = useState(() =>
-    selectedCard ? selectedCard.label : [],
+    selectedCard ? selectedCard.label : []
   );
 
   const [comments, setComments] = useState(() =>
-    selectedCard ? selectedCard.comments : [],
+    selectedCard ? selectedCard.comments : []
   );
 
   const [attachments, setAttachments] = useState(() =>
-    selectedCard ? selectedCard.attachments : [],
+    selectedCard ? selectedCard.attachments : []
   );
 
   const onAddAttachments = (files) => {
@@ -93,11 +93,11 @@ const AddCard = (props) => {
       sx={{
         flexShrink: 0,
         '& .MuiDrawer-paper': {
-          width: {xs: 320, sm: 400, md: 600, lg: 900},
+          width: { xs: 320, sm: 400, md: 600, lg: 900 },
           boxSizing: 'border-box',
         },
       }}
-      anchor='right'
+      anchor="right"
       open={isAddCardOpen}
       onClose={onCloseAddCard}
     >
@@ -112,7 +112,7 @@ const AddCard = (props) => {
           date: selectedCard && selectedCard.date ? selectedCard.date : null,
         }}
         validationSchema={validationSchema}
-        onSubmit={(data, {setSubmitting, resetForm}) => {
+        onSubmit={(data, { setSubmitting, resetForm }) => {
           setSubmitting(true);
           if (selectedCard) {
             const editedCard = {
@@ -164,7 +164,7 @@ const AddCard = (props) => {
           setSubmitting(false);
         }}
       >
-        {({values, isSubmitting, setFieldValue}) => (
+        {({ values, isSubmitting, setFieldValue }) => (
           <>
             <CardHeader
               onAddAttachments={onAddAttachments}
@@ -206,8 +206,8 @@ const AddCard = (props) => {
           open={isDeleteDialogOpen}
           onDeny={setDeleteDialogOpen}
           onConfirm={onDeleteCard}
-          title={<IntlMessages id='scrumboard.deleteCard' />}
-          dialogTitle={<IntlMessages id='common.deleteItem' />}
+          title={<IntlMessages id="scrumboard.deleteCard" />}
+          dialogTitle={<IntlMessages id="common.deleteItem" />}
         />
       ) : null}
     </Drawer>

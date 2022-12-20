@@ -8,17 +8,17 @@ import TimelineDot from '@mui/lab/TimelineDot';
 
 export default function ColorsTimeline() {
   return (
-    <Timeline position='alternate'>
+    <Timeline position="alternate">
       <TimelineItem>
         <TimelineSeparator>
-          <TimelineDot color='secondary' />
+          <TimelineDot color="secondary" />
           <TimelineConnector />
         </TimelineSeparator>
         <TimelineContent>Secondary</TimelineContent>
       </TimelineItem>
       <TimelineItem>
         <TimelineSeparator>
-          <TimelineDot color='success' />
+          <TimelineDot color="success" />
         </TimelineSeparator>
         <TimelineContent>Success</TimelineContent>
       </TimelineItem>

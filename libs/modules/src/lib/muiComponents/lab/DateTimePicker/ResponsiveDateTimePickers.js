@@ -1,15 +1,17 @@
 import * as React from 'react';
 import TextField from '@mui/material/TextField';
-import AdapterDateFns from '@mui/lab/AdapterDateFns';
-import LocalizationProvider from '@mui/lab/LocalizationProvider';
-import DateTimePicker from '@mui/lab/DateTimePicker';
-import MobileDateTimePicker from '@mui/lab/MobileDateTimePicker';
-import DesktopDateTimePicker from '@mui/lab/DesktopDateTimePicker';
+import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
+import {
+  DateTimePicker,
+  DesktopDateTimePicker,
+  LocalizationProvider,
+  MobileDateTimePicker,
+} from '@mui/x-date-pickers';
 import Stack from '@mui/material/Stack';
 
 export default function ResponsiveDateTimePickers() {
   const [value, setValue] = React.useState(
-    new Date('2018-01-01T00:00:00.000Z'),
+    new Date('2018-01-01T00:00:00.000Z')
   );
 
   return (

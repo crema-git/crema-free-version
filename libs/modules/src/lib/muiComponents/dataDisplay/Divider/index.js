@@ -23,24 +23,24 @@ const Divider = () => {
   return (
     <>
       <AppComponentHeader
-        title='Divider'
-        description='A divider is a thin line that groups content in lists and layouts.'
-        refUrl='https://mui.com/components/dividers/'
+        title="Divider"
+        description="A divider is a thin line that groups content in lists and layouts."
+        refUrl="https://mui.com/components/dividers/"
       />
 
       <AppGridContainer>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='List dividers'
+            title="List dividers"
             component={ListDividers}
             source={ListDividersSource}
             noScrollbar
-            description='The divider renders as an <hr> by default. You can save rendering this DOM element by using the divider prop on the ListItem component.'
+            description="The divider renders as an <hr> by default. You can save rendering this DOM element by using the divider prop on the ListItem component."
           />
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Inset dividers'
+            title="Inset dividers"
             component={InsetDividers}
             source={InsetDividersSource}
             noScrollbar
@@ -48,7 +48,7 @@ const Divider = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Subheader dividers'
+            title="Subheader dividers"
             component={SubheaderDividers}
             source={SubheaderDividersSource}
             noScrollbar
@@ -56,7 +56,7 @@ const Divider = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Middle divider'
+            title="Middle divider"
             component={MiddleDividers}
             source={MiddleDividersSource}
             noScrollbar
@@ -64,29 +64,29 @@ const Divider = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Dividers with text'
+            title="Dividers with text"
             component={DividerText}
             source={DividerTextSource}
             noScrollbar
-            description='You can also render a divider with content.'
+            description="You can also render a divider with content."
           />
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Vertical divider'
+            title="Vertical divider"
             component={VerticalDividers}
             source={VerticalDividersSource}
             noScrollbar
-            description='You can also render a divider vertically using the orientation prop.'
+            description="You can also render a divider vertically using the orientation prop."
           />
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Vertical divider with text'
+            title="Vertical divider with text"
             component={VerticalDividersWithText}
             source={VerticalDividerWithTextSource}
             noScrollbar
-            description='You can also render a vertical divider with content.'
+            description="You can also render a vertical divider with content."
           />
         </Grid>
       </AppGridContainer>

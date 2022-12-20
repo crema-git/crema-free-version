@@ -1,10 +1,11 @@
-import ProductListing from './ProductListing';
 import ProductsSidebar from './ProductsSidebar';
 import ProductHeader from './ProductHeader';
+import ProductGrid from './ProductListing/ProductGrid';
+import ProductList from './ProductListing/ProductList';
 
 export const VIEW_TYPE = {
-    GRID: 'grid',
-    LIST: 'list',
+  GRID: 'grid',
+  LIST: 'list',
 };
 
-export { ProductListing, ProductsSidebar, ProductHeader };
+export { ProductGrid, ProductList, ProductsSidebar, ProductHeader };

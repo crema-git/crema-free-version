@@ -7,8 +7,8 @@ import AppLogo from '@crema/components/AppLogo';
 const Signup = () => {
   return (
     <AuthWrapper>
-      <Box sx={{width: '100%'}}>
-        <Box sx={{mb: {xs: 6, xl: 8}}}>
+      <Box sx={{ width: '100%' }}>
+        <Box sx={{ mb: { xs: 6, xl: 8 } }}>
           <Box
             sx={{
               mb: 5,

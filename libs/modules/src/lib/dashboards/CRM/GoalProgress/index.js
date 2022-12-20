@@ -4,12 +4,12 @@ import IntlMessages from '@crema/utility/IntlMessages';
 import Box from '@mui/material/Box';
 import PropTypes from 'prop-types';
 import AppCard from '@crema/components/AppCard';
-import {useIntl} from 'react-intl';
+import { useIntl } from 'react-intl';
 
-const GoalProgress = ({progressGraphData}) => {
-  const {messages} = useIntl();
+const GoalProgress = ({ progressGraphData }) => {
+  const { messages } = useIntl();
   return (
-    <AppCard sxStyle={{height: 1}} title={messages['dashboard.goalProgress']}>
+    <AppCard sxStyle={{ height: 1 }} title={messages['dashboard.goalProgress']}>
       <GoalProgressGraph progressGraphData={progressGraphData} />
       <Box
         sx={{
@@ -27,22 +27,22 @@ const GoalProgress = ({progressGraphData}) => {
           }}
         >
           <Box
-            component='span'
+            component="span"
             sx={{
-              height: {xs: 12, xl: 16},
-              width: {xs: 12, xl: 16},
+              height: { xs: 12, xl: 16 },
+              width: { xs: 12, xl: 16 },
               mr: 2,
               borderRadius: '50%',
               backgroundColor: 'primary.main',
             }}
           />
           <Box
-            component='span'
+            component="span"
             sx={{
               fontSize: 14,
             }}
           >
-            <IntlMessages id='dashboard.inProgress' />
+            <IntlMessages id="dashboard.inProgress" />
           </Box>
         </Box>
         <Box
@@ -53,22 +53,22 @@ const GoalProgress = ({progressGraphData}) => {
           }}
         >
           <Box
-            component='span'
+            component="span"
             sx={{
-              height: {xs: 12, xl: 16},
-              width: {xs: 12, xl: 16},
+              height: { xs: 12, xl: 16 },
+              width: { xs: 12, xl: 16 },
               mr: 2,
               borderRadius: '50%',
               backgroundColor: 'error.main',
             }}
           />
           <Box
-            component='span'
+            component="span"
             sx={{
               fontSize: 14,
             }}
           >
-            <IntlMessages id='common.actual' />
+            <IntlMessages id="common.actual" />
           </Box>
         </Box>
       </Box>

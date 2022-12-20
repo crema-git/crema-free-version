@@ -4,15 +4,15 @@ import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 import GraphFile from './GraphFile';
 import Box from '@mui/material/Box';
 import PropTypes from 'prop-types';
-import {Fonts} from '@crema/constants/AppEnums'
-import {green} from '@mui/material/colors';
+import { Fonts } from '@crema/constants/AppEnums';
+import { green } from '@mui/material/colors';
 import AppCard from '@crema/components/AppCard';
 
-const FloatingGraphs = ({data, title}) => {
+const FloatingGraphs = ({ data, title }) => {
   return (
-    <AppCard sxStyle={{height: 1, textAlign: 'center'}}>
+    <AppCard sxStyle={{ height: 1, textAlign: 'center' }}>
       <Box
-        component='p'
+        component="p"
         sx={{
           mb: 3,
           color: 'text.secondary',
@@ -22,7 +22,7 @@ const FloatingGraphs = ({data, title}) => {
         {title}
       </Box>
       <Box
-        component='h3'
+        component="h3"
         sx={{
           fontWeight: Fonts.MEDIUM,
           fontSize: 20,
@@ -32,7 +32,7 @@ const FloatingGraphs = ({data, title}) => {
         }}
       >
         <Box
-          component='span'
+          component="span"
           sx={{
             px: 3,
           }}
@@ -41,7 +41,7 @@ const FloatingGraphs = ({data, title}) => {
         </Box>
         {data.change > 0 ? (
           <Box
-            component='span'
+            component="span"
             sx={{
               display: 'flex',
               alignItems: 'center',
@@ -52,7 +52,7 @@ const FloatingGraphs = ({data, title}) => {
             }}
           >
             <Box
-              component='span'
+              component="span"
               sx={{
                 fontWeight: Fonts.LIGHT,
                 fontSize: 14,
@@ -61,7 +61,7 @@ const FloatingGraphs = ({data, title}) => {
               <ArrowUpwardIcon />
             </Box>
             <Box
-              component='span'
+              component="span"
               sx={{
                 ml: 1,
                 mb: 1,
@@ -72,7 +72,7 @@ const FloatingGraphs = ({data, title}) => {
           </Box>
         ) : (
           <Box
-            component='span'
+            component="span"
             sx={{
               display: 'flex',
               alignItems: 'center',
@@ -83,7 +83,7 @@ const FloatingGraphs = ({data, title}) => {
             }}
           >
             <Box
-              component='span'
+              component="span"
               sx={{
                 fontWeight: Fonts.LIGHT,
                 fontSize: 14,
@@ -92,7 +92,7 @@ const FloatingGraphs = ({data, title}) => {
               <ArrowDownwardIcon />
             </Box>
             <Box
-              component='span'
+              component="span"
               sx={{
                 ml: 1,
                 mb: 1,

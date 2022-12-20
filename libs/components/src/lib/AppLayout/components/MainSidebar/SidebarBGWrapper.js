@@ -1,11 +1,11 @@
 import React from 'react';
 import PropsTypes from 'prop-types';
 import Box from '@mui/material/Box';
-import {alpha} from '@mui/material';
-import {ThemeMode} from '@crema/constants/AppEnums';
-import {useSidebarContext} from "@crema/context/SidebarContextProvider";
+import { alpha } from '@mui/material';
+import { ThemeMode } from '@crema/constants/AppEnums';
+import { useSidebarContext } from '@crema/context/SidebarContextProvider';
 
-const SidebarBgWrapper = ({children}) => {
+const SidebarBgWrapper = ({ children }) => {
   const {
     sidebarBgColor,
     sidebarTextColor,

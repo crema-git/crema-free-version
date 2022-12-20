@@ -1,13 +1,13 @@
 import React from 'react';
 import Checkbox from '@mui/material/Checkbox/index';
 import Box from '@mui/material/Box';
-import {Hidden} from '@mui/material';
+import { Hidden } from '@mui/material';
 import PropTypes from 'prop-types';
 import CheckedMailActions from './CheckedMailActions';
 import MoreOptions from './MoreOptions';
 import AppsPagination from '@crema/components/AppsPagination';
 import AppSearchBar from '@crema/components/AppSearchBar';
-import {useIntl} from 'react-intl';
+import { useIntl } from 'react-intl';
 
 const MailContentHeader = (props) => {
   const {
@@ -23,7 +23,7 @@ const MailContentHeader = (props) => {
     onSetFilterText,
   } = props;
 
-  const {messages} = useIntl();
+  const { messages } = useIntl();
 
   const onHandleMasterCheckbox = (event) => {
     if (event.target.checked) {
@@ -40,15 +40,15 @@ const MailContentHeader = (props) => {
         sx={{
           display: 'flex',
           alignItems: 'center',
-          width: {xs: '100%', sm: 'auto'},
+          width: { xs: '100%', sm: 'auto' },
         }}
       >
-        <Box component='span'>
+        <Box component="span">
           <Checkbox
             sx={{
               color: (theme) => theme.palette.text.disabled,
             }}
-            color='primary'
+            color="primary"
             indeterminate={
               checkedMails?.length > 0 &&
               checkedMails?.length < mailList?.length
@@ -59,9 +59,9 @@ const MailContentHeader = (props) => {
             onChange={onHandleMasterCheckbox}
           />
         </Box>
-        <Box sx={{mr: 5}}>
+        <Box sx={{ mr: 5 }}>
           <AppSearchBar
-            iconPosition='right'
+            iconPosition="right"
             overlap={false}
             value={filterText}
             onChange={(event) => onSetFilterText(event.target.value)}
@@ -87,9 +87,9 @@ const MailContentHeader = (props) => {
       <Hidden smDown>
         {mailList?.length > 0 ? (
           <Box
-            component='span'
+            component="span"
             sx={{
-              ml: {sm: 'auto'},
+              ml: { sm: 'auto' },
             }}
           >
             <AppsPagination

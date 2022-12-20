@@ -1,6 +1,6 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import UploadModern from '../components/UploadModern';
-import {useDropzone} from 'react-dropzone';
+import { useDropzone } from 'react-dropzone';
 import PreviewThumb from '../components/PreviewThumb';
 import AppGrid from '@crema/components/AppGrid';
 
@@ -15,8 +15,8 @@ const Previews = () => {
         acceptedFiles.map((file) =>
           Object.assign(file, {
             preview: URL.createObjectURL(file),
-          }),
-        ),
+          })
+        )
       );
     },
   });
@@ -30,9 +30,9 @@ const Previews = () => {
   };
 
   return (
-    <section className='container' style={{cursor: 'pointer'}}>
+    <section className="container" style={{ cursor: 'pointer' }}>
       <UploadModern
-        uploadText='Drag n drop some files here, or click to select files'
+        uploadText="Drag n drop some files here, or click to select files"
         setUploadedFiles={setUploadedFiles}
         dropzone={dropzone}
       />

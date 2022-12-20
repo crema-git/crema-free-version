@@ -1,8 +1,10 @@
 import * as React from 'react';
 import TextField from '@mui/material/TextField';
-import AdapterDateFns from '@mui/lab/AdapterDateFns';
-import LocalizationProvider from '@mui/lab/LocalizationProvider';
-import StaticDateTimePicker from '@mui/lab/StaticDateTimePicker';
+import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
+import {
+  LocalizationProvider,
+  StaticDateTimePicker,
+} from '@mui/x-date-pickers';
 
 export default function StaticDateTimePickerDemo() {
   const [value, setValue] = React.useState(new Date());
@@ -10,8 +12,8 @@ export default function StaticDateTimePickerDemo() {
   return (
     <LocalizationProvider dateAdapter={AdapterDateFns}>
       <StaticDateTimePicker
-        displayStaticWrapperAs='desktop'
-        openTo='year'
+        displayStaticWrapperAs="desktop"
+        openTo="year"
         value={value}
         onChange={(newValue) => {
           setValue(newValue);

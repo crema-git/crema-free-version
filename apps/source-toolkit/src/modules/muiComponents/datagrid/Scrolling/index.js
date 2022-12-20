@@ -1,2 +1,2 @@
-import {Scrolling} from '@crema/modules/components/datagrid';
+import { Scrolling } from '@crema/modules/components/datagrid';
 export default Scrolling;

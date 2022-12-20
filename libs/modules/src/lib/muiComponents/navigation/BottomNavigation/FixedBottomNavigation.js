@@ -17,7 +17,7 @@ function refreshMessages() {
   const getRandomInt = (max) => Math.floor(Math.random() * Math.floor(max));
 
   return Array.from(new Array(50)).map(
-    () => messageExamples[getRandomInt(messageExamples.length)],
+    () => messageExamples[getRandomInt(messageExamples.length)]
   );
 }
 
@@ -32,20 +32,20 @@ export default function FixedBottomNavigation() {
   }, [value, setMessages]);
 
   return (
-    <Box sx={{pb: 7}} ref={ref}>
+    <Box sx={{ pb: 7 }} ref={ref}>
       <CssBaseline />
       <List>
-        {messages.map(({primary, secondary, person}, index) => (
+        {messages.map(({ primary, secondary, person }, index) => (
           <ListItem button key={index + person}>
             <ListItemAvatar>
-              <Avatar alt='Profile Picture' src={person} />
+              <Avatar alt="Profile Picture" src={person} />
             </ListItemAvatar>
             <ListItemText primary={primary} secondary={secondary} />
           </ListItem>
         ))}
       </List>
       <Paper
-        sx={{position: 'fixed', bottom: 0, left: 0, right: 0}}
+        sx={{ position: 'fixed', bottom: 0, left: 0, right: 0 }}
         elevation={3}
       >
         <BottomNavigation
@@ -55,9 +55,9 @@ export default function FixedBottomNavigation() {
             setValue(newValue);
           }}
         >
-          <BottomNavigationAction label='Recents' icon={<RestoreIcon />} />
-          <BottomNavigationAction label='Favorites' icon={<FavoriteIcon />} />
-          <BottomNavigationAction label='Archive' icon={<ArchiveIcon />} />
+          <BottomNavigationAction label="Recents" icon={<RestoreIcon />} />
+          <BottomNavigationAction label="Favorites" icon={<FavoriteIcon />} />
+          <BottomNavigationAction label="Archive" icon={<ArchiveIcon />} />
         </BottomNavigation>
       </Paper>
     </Box>

@@ -32,8 +32,8 @@ export default function LinearBuffer() {
   }, []);
 
   return (
-    <Box sx={{width: '100%'}}>
-      <LinearProgress variant='buffer' value={progress} valueBuffer={buffer} />
+    <Box sx={{ width: '100%' }}>
+      <LinearProgress variant="buffer" value={progress} valueBuffer={buffer} />
     </Box>
   );
 }

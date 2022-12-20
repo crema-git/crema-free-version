@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import AppList from '@crema/components/AppList';
 import ListEmptyResult from '@crema/components/AppList/ListEmptyResult';
 import ChatListSkeleton from '@crema/components/ChatListSkeleton';
-import {useIntl} from 'react-intl';
+import { useIntl } from 'react-intl';
 
 const ContactList = ({
   connectionListData,
@@ -12,7 +12,7 @@ const ContactList = ({
   setSelectedUser,
   selectedUser,
 }) => {
-  const {messages} = useIntl();
+  const { messages } = useIntl();
   return (
     <AppList
       containerStyle={{
@@ -29,7 +29,7 @@ const ContactList = ({
       }
       renderRow={(item) => (
         <ContactItem
-          listStyle='px-0'
+          listStyle="px-0"
           key={'connection-item-' + item.id}
           item={item}
           selectedUser={selectedUser}

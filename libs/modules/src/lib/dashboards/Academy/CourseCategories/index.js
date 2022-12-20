@@ -2,7 +2,7 @@ import React from 'react';
 import AppCard from '@crema/components/AppCard';
 import Box from '@mui/material/Box';
 import Slider from 'react-slick';
-import {Fonts} from '@crema/constants/AppEnums'
+import { Fonts } from '@crema/constants/AppEnums';
 import PropTypes from 'prop-types';
 import CourseSlider from './CourseSlider';
 
@@ -14,10 +14,10 @@ const settings = {
   slidesToScroll: 1,
 };
 
-const CourseCategories = ({course}) => {
-  const {images, title, desc, lessons, xp} = course;
+const CourseCategories = ({ course }) => {
+  const { images, title, desc, lessons, xp } = course;
   return (
-    <AppCard sxStyle={{height: 1}} contentStyle={{padding: 0}}>
+    <AppCard sxStyle={{ height: 1 }} contentStyle={{ padding: 0 }}>
       <CourseSlider>
         <Slider {...settings}>
           {images.map((image, index) => (
@@ -34,7 +34,7 @@ const CourseCategories = ({course}) => {
         }}
       >
         <Box
-          component='h5'
+          component="h5"
           sx={{
             mb: 1,
             fontSize: 16,
@@ -44,7 +44,7 @@ const CourseCategories = ({course}) => {
           {title}
         </Box>
         <Box
-          component='p'
+          component="p"
           sx={{
             mb: 4,
             color: 'text.secondary',
@@ -62,7 +62,7 @@ const CourseCategories = ({course}) => {
             sx={{
               color: '#259BE0',
               backgroundColor: '#E7F4FC',
-              padding: {xs: '3px 12px', xl: '3px 18px'},
+              padding: { xs: '3px 12px', xl: '3px 18px' },
               borderRadius: 30,
               display: 'flex',
               alignItems: 'center',
@@ -76,7 +76,7 @@ const CourseCategories = ({course}) => {
           >
             <img
               src={'/assets/images/dashboard/academy/lessons.svg'}
-              alt='lessons'
+              alt="lessons"
             />
             {lessons} Lessons
           </Box>
@@ -84,7 +84,7 @@ const CourseCategories = ({course}) => {
             sx={{
               color: '#FCB267',
               backgroundColor: '#FFF5EB',
-              padding: {xs: '3px 12px', xl: '3px 18px'},
+              padding: { xs: '3px 12px', xl: '3px 18px' },
               borderRadius: 30,
               display: 'flex',
               alignItems: 'center',
@@ -96,7 +96,7 @@ const CourseCategories = ({course}) => {
               },
             }}
           >
-            <img src={'/assets/images/dashboard/academy/xp.svg'} alt='xp' />
+            <img src={'/assets/images/dashboard/academy/xp.svg'} alt="xp" />
             {xp} XP
           </Box>
         </Box>

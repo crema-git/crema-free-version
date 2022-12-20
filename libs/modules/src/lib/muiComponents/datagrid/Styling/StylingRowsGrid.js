@@ -1,8 +1,8 @@
 import * as React from 'react';
-import {DataGrid} from '@mui/x-data-grid';
-import {useDemoData} from '@mui/x-data-grid-generator';
-import {createTheme, darken, lighten} from '@mui/material/styles';
-import {makeStyles} from '@mui/styles';
+import { DataGrid } from '@mui/x-data-grid';
+import { useDemoData } from '@mui/x-data-grid-generator';
+import { createTheme, darken, lighten } from '@mui/material/styles';
+import { makeStyles } from '@mui/styles';
 
 const defaultTheme = createTheme();
 const useStyles = makeStyles(
@@ -25,7 +25,7 @@ const useStyles = makeStyles(
           backgroundColor: getBackgroundColor(theme.palette.success.main),
           '&:hover': {
             backgroundColor: getHoverBackgroundColor(
-              theme.palette.success.main,
+              theme.palette.success.main
             ),
           },
         },
@@ -33,7 +33,7 @@ const useStyles = makeStyles(
           backgroundColor: getBackgroundColor(theme.palette.warning.main),
           '&:hover': {
             backgroundColor: getHoverBackgroundColor(
-              theme.palette.warning.main,
+              theme.palette.warning.main
             ),
           },
         },
@@ -46,19 +46,19 @@ const useStyles = makeStyles(
       },
     };
   },
-  {defaultTheme},
+  { defaultTheme }
 );
 
 export default function StylingRowsGrid() {
   const classes = useStyles();
 
-  const {data} = useDemoData({
+  const { data } = useDemoData({
     dataSet: 'Commodity',
     rowLength: 100,
   });
 
   return (
-    <div style={{height: 400, width: '100%'}} className={classes.root}>
+    <div style={{ height: 400, width: '100%' }} className={classes.root}>
       <DataGrid
         {...data}
         getRowClassName={(params) =>

@@ -1,18 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {Box} from '@mui/material';
+import { Box } from '@mui/material';
 
-const TimelineItemWrapper = ({children}) => {
+const TimelineItemWrapper = ({ children }) => {
   return (
     <Box
       sx={{
         display: 'flex',
         justifyContent: 'flex-end',
-        paddingRight: {xs: 0, sm: '45px', xl: '65px'},
-        paddingLeft: {'@media (max-width: 499px)': '50px', xs: '90px', sm: 0},
+        paddingRight: { xs: 0, sm: '45px', xl: '65px' },
+        paddingLeft: { '@media (max-width: 499px)': '50px', xs: '90px', sm: 0 },
         position: 'relative',
         margin: '10px 0',
-        width: {xs: '100%', sm: '50%'},
+        width: { xs: '100%', sm: '50%' },
 
         '&:nth-child(odd)': {
           alignSelf: 'flex-end',

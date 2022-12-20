@@ -1,8 +1,8 @@
 import React from 'react';
-import {Box, Button, CircularProgress, Typography} from '@mui/material';
-import IntlMessages from "@crema/utility/IntlMessages";
+import { Box, Button, CircularProgress, Typography } from '@mui/material';
+import IntlMessages from '@crema/utility/IntlMessages';
 import PropTypes from 'prop-types';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Fonts } from '@crema/constants/AppEnums';
 
 const ListEmptyResult = ({
   loader,
@@ -35,7 +35,7 @@ const ListEmptyResult = ({
             }}
           >
             <CircularProgress size={16} />
-            <Box component='span' sx={{ml: 2}}>
+            <Box component="span" sx={{ ml: 2 }}>
               Loading...
             </Box>
           </Box>
@@ -68,8 +68,8 @@ const ListEmptyResult = ({
               fontWeight: Fonts.MEDIUM,
               mb: 2,
             }}
-            component='h4'
-            variant='h4'
+            component="h4"
+            variant="h4"
           >
             {title}
           </Typography>
@@ -85,9 +85,9 @@ const ListEmptyResult = ({
 
         {actionTitle ? (
           <Button
-            color='primary'
-            variant='contained'
-            style={{mt: 7.5, height: 45, minWidth: 150}}
+            color="primary"
+            variant="contained"
+            style={{ mt: 7.5, height: 45, minWidth: 150 }}
             onClick={onClick}
           >
             {actionTitle}
@@ -101,7 +101,7 @@ const ListEmptyResult = ({
 export default ListEmptyResult;
 
 ListEmptyResult.defaultProps = {
-  title: <IntlMessages id='common.noRecordFound' />,
+  title: <IntlMessages id="common.noRecordFound" />,
 };
 
 ListEmptyResult.propTypes = {

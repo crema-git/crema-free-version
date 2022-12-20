@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import AppCard from '@crema/components/AppCard';
 import Box from '@mui/material/Box';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
@@ -7,17 +7,17 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Button from '@mui/material/Button';
 import ReactPlayer from 'react-player';
-import {Fonts} from '@crema/constants/AppEnums'
+import { Fonts } from '@crema/constants/AppEnums';
 import PropTypes from 'prop-types';
 
 const tabs = [
-  {id: 1, title: 'Class Detail', slug: 'class'},
-  {id: 2, title: 'Assignments', slug: 'assignments'},
-  {id: 3, title: 'Projects', slug: 'projects'},
-  {id: 4, title: 'Exams', slug: 'exams'},
+  { id: 1, title: 'Class Detail', slug: 'class' },
+  { id: 2, title: 'Assignments', slug: 'assignments' },
+  { id: 3, title: 'Projects', slug: 'projects' },
+  { id: 4, title: 'Exams', slug: 'exams' },
 ];
 
-const VideoPromo = ({videoPromo}) => {
+const VideoPromo = ({ videoPromo }) => {
   const [tabValue, setTabValue] = useState('assignments');
 
   const handleTabChange = (event, newValue) => {
@@ -25,7 +25,7 @@ const VideoPromo = ({videoPromo}) => {
   };
 
   return (
-    <AppCard sxStyle={{height: 1}}>
+    <AppCard sxStyle={{ height: 1 }}>
       <Box
         sx={{
           mt: -5,
@@ -36,9 +36,9 @@ const VideoPromo = ({videoPromo}) => {
         }}
       >
         <ReactPlayer
-          className='react-player'
+          className="react-player"
           controls={true}
-          url='https://www.youtube.com/watch?v=X1dz0xRbSJc'
+          url="https://www.youtube.com/watch?v=X1dz0xRbSJc"
         />
       </Box>
       <Box
@@ -49,8 +49,8 @@ const VideoPromo = ({videoPromo}) => {
         <Box
           sx={{
             display: 'flex',
-            flexDirection: {xs: 'column', sm: 'row'},
-            alignItems: {sm: 'center'},
+            flexDirection: { xs: 'column', sm: 'row' },
+            alignItems: { sm: 'center' },
             mb: 1,
           }}
         >
@@ -62,7 +62,7 @@ const VideoPromo = ({videoPromo}) => {
             }}
           >
             <Box
-              component='p'
+              component="p"
               sx={{
                 fontSize: 14,
                 fontWeight: Fonts.BOLD,
@@ -76,10 +76,10 @@ const VideoPromo = ({videoPromo}) => {
                 alignItems: 'center',
                 flexWrap: 'wrap',
               }}
-              component='p'
+              component="p"
             >
               <Box
-                component='span'
+                component="span"
                 sx={{
                   color: 'text.secondary',
                   position: 'relative',
@@ -98,7 +98,7 @@ const VideoPromo = ({videoPromo}) => {
                 {videoPromo.owner}
               </Box>
               <Box
-                component='span'
+                component="span"
                 sx={{
                   color: 'text.secondary',
                   ml: 2,
@@ -118,7 +118,7 @@ const VideoPromo = ({videoPromo}) => {
                 {videoPromo.category}
               </Box>
               <Box
-                component='span'
+                component="span"
                 sx={{
                   ml: 2,
                   color: 'primary.main',
@@ -179,8 +179,8 @@ const VideoPromo = ({videoPromo}) => {
             }}
             value={tabValue}
             onChange={handleTabChange}
-            indicatorColor='primary'
-            aria-label='profile tabs'
+            indicatorColor="primary"
+            aria-label="profile tabs"
           >
             {tabs.map((item, index) => {
               return (
@@ -221,13 +221,13 @@ const VideoPromo = ({videoPromo}) => {
                 mb: 2,
                 fontWeight: Fonts.MEDIUM,
               }}
-              component='p'
+              component="p"
             >{`${index + 1}. ${item.title} `}</Box>
             <Box
               sx={{
                 mb: 4,
               }}
-              component='p'
+              component="p"
             >
               {item.desc}
             </Box>
@@ -235,23 +235,23 @@ const VideoPromo = ({videoPromo}) => {
               sx={{
                 display: 'flex',
                 flexWrap: 'wrap',
-                flexDirection: {xs: 'column', sm: 'row'},
-                alignItems: {sm: 'center'},
+                flexDirection: { xs: 'column', sm: 'row' },
+                alignItems: { sm: 'center' },
               }}
             >
               <Box
                 sx={{
                   my: 1,
-                  mr: {sm: 'auto'},
+                  mr: { sm: 'auto' },
                   display: 'flex',
                   alignItems: 'center',
                 }}
               >
                 <Button
-                  size='small'
-                  sx={{fontSize: 10, whiteSpace: 'nowrap'}}
-                  variant='outlined'
-                  color='primary'
+                  size="small"
+                  sx={{ fontSize: 10, whiteSpace: 'nowrap' }}
+                  variant="outlined"
+                  color="primary"
                 >
                   See Calendar
                 </Button>
@@ -261,10 +261,10 @@ const VideoPromo = ({videoPromo}) => {
                   }}
                 >
                   <Button
-                    size='small'
-                    sx={{fontSize: 10, whiteSpace: 'nowrap'}}
-                    variant='contained'
-                    color='primary'
+                    size="small"
+                    sx={{ fontSize: 10, whiteSpace: 'nowrap' }}
+                    variant="contained"
+                    color="primary"
                   >
                     View details
                   </Button>
@@ -277,9 +277,9 @@ const VideoPromo = ({videoPromo}) => {
                   alignItems: 'center',
                 }}
               >
-                <Box component='span'>{item.students} Students enrolled</Box>
+                <Box component="span">{item.students} Students enrolled</Box>
                 <Box
-                  component='span'
+                  component="span"
                   sx={{
                     ml: 2,
                     color: '#F66F71',

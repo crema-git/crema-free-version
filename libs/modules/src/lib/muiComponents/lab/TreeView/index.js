@@ -35,15 +35,15 @@ const TreeView = () => {
   return (
     <>
       <AppComponentHeader
-        title='TreeView'
-        description='A tree view widget presents a hierarchical list.'
-        refUrl='https://mui.com/components/tree-view/'
+        title="TreeView"
+        description="A tree view widget presents a hierarchical list."
+        refUrl="https://mui.com/components/tree-view/"
       />
 
       <AppGridContainer>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='File System Navigator'
+            title="File System Navigator"
             component={FileSystemNavigator}
             source={FileSystemNavigatorSource}
             noScrollbar
@@ -51,7 +51,7 @@ const TreeView = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Icon Expansion Tree View'
+            title="Icon Expansion Tree View"
             component={IconExpansionTreeView}
             source={IconExpansionTreeViewSource}
             noScrollbar
@@ -59,7 +59,7 @@ const TreeView = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Multi Select Tree View'
+            title="Multi Select Tree View"
             component={MultiSelectTreeView}
             source={MultiSelectTreeViewSource}
             noScrollbar
@@ -67,7 +67,7 @@ const TreeView = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Bar Tree View'
+            title="Bar Tree View"
             component={BarTreeView}
             source={BarTreeViewSource}
             noScrollbar
@@ -75,7 +75,7 @@ const TreeView = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Customized Tree View'
+            title="Customized Tree View"
             component={CustomizedTreeView}
             source={CustomizedTreeViewSource}
             noScrollbar
@@ -84,7 +84,7 @@ const TreeView = () => {
 
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Rich Object Tree View'
+            title="Rich Object Tree View"
             component={RichObjectTreeView}
             source={RichObjectTreeViewSource}
             noScrollbar
@@ -92,7 +92,7 @@ const TreeView = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Controlled Tree View'
+            title="Controlled Tree View"
             component={ControlledTreeView}
             source={ControlledTreeViewSource}
             noScrollbar
@@ -101,7 +101,7 @@ const TreeView = () => {
 
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='GmailTreeView'
+            title="GmailTreeView"
             component={GmailTreeView}
             source={GmailTreeViewSource}
             noScrollbar
@@ -109,7 +109,7 @@ const TreeView = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='DisabledTreeItems'
+            title="DisabledTreeItems"
             component={DisabledTreeItems}
             source={DisabledTreeItemsSource}
             noScrollbar

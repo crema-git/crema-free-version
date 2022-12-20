@@ -21,27 +21,27 @@ const OrderActions = () => {
   return (
     <Box>
       <IconButton
-        aria-controls='alpha-menu'
-        aria-haspopup='true'
+        aria-controls="alpha-menu"
+        aria-haspopup="true"
         onClick={handleClick}
       >
         <MoreVertIcon />
       </IconButton>
       <Menu
-        id='alpha-menu'
+        id="alpha-menu"
         anchorEl={anchorEl}
         keepMounted
         open={open}
         onClose={handleClose}
         TransitionComponent={Fade}
       >
-        <MenuItem style={{fontSize: 14}} onClick={handleClose}>
+        <MenuItem style={{ fontSize: 14 }} onClick={handleClose}>
           View Order
         </MenuItem>
-        <MenuItem style={{fontSize: 14}} onClick={handleClose}>
+        <MenuItem style={{ fontSize: 14 }} onClick={handleClose}>
           Edit
         </MenuItem>
-        <MenuItem style={{fontSize: 14}} onClick={handleClose}>
+        <MenuItem style={{ fontSize: 14 }} onClick={handleClose}>
           Delete
         </MenuItem>
       </Menu>

@@ -1,11 +1,11 @@
-import {blue, green, red} from '@mui/material/colors';
+import { blue, green, red } from '@mui/material/colors';
 import moment from 'moment';
 
 const todoList = [
   {
     id: 456753,
     title: 'Check the documents of audit',
-    priority: {id: 4545554, name: 'High', type: 1, color: red[500]},
+    priority: { id: 4545554, name: 'High', type: 1, color: red[500] },
     isStarred: true,
     isReplied: false,
     label: [
@@ -51,7 +51,7 @@ const todoList = [
   {
     id: 435544534,
     title: 'Arrange a trip for best performing staff members',
-    priority: {id: 9384234, name: 'Medium', type: 2, color: blue[500]},
+    priority: { id: 9384234, name: 'Medium', type: 2, color: blue[500] },
     isStarred: true,
     isReplied: false,
     label: [
@@ -116,7 +116,7 @@ const todoList = [
         color: blue[500],
       },
     ],
-    priority: {id: 4545554, name: 'High', type: 1, color: red[500]},
+    priority: { id: 4545554, name: 'High', type: 1, color: red[500] },
     isAttachment: false,
     sentAt: '10.30am',
     folderValue: 121,
@@ -168,7 +168,7 @@ const todoList = [
         color: blue[500],
       },
     ],
-    priority: {id: 4545554, name: 'High', type: 1, color: red[500]},
+    priority: { id: 4545554, name: 'High', type: 1, color: red[500] },
     isAttachment: false,
     sentAt: '10.30am',
     folderValue: 121,
@@ -202,7 +202,7 @@ const todoList = [
   {
     id: 454553,
     title: 'Check the documents of audit',
-    priority: {id: 9384234, name: 'Medium', type: 2, color: blue[500]},
+    priority: { id: 9384234, name: 'Medium', type: 2, color: blue[500] },
     isStarred: true,
     isReplied: false,
     label: [
@@ -256,7 +256,7 @@ const todoList = [
   {
     id: 5467454354,
     title: 'Check the documents of audit',
-    priority: {id: 9384234, name: 'Medium', type: 2, color: blue[500]},
+    priority: { id: 9384234, name: 'Medium', type: 2, color: blue[500] },
     isStarred: true,
     isReplied: false,
     label: [
@@ -310,7 +310,7 @@ const todoList = [
   {
     id: 345655,
     title: 'Arrange birthday party for the staff',
-    priority: {id: 4354454, name: 'Low', type: 3, color: green[500]},
+    priority: { id: 4354454, name: 'Low', type: 3, color: green[500] },
     isStarred: false,
     isReplied: false,
     label: [
@@ -357,7 +357,7 @@ const todoList = [
   {
     id: 5432356454,
     title: 'Arrange birthday party for the staff',
-    priority: {id: 4354454, name: 'Low', type: 3, color: green[500]},
+    priority: { id: 4354454, name: 'Low', type: 3, color: green[500] },
     isStarred: false,
     isReplied: false,
     label: [
@@ -404,7 +404,7 @@ const todoList = [
   {
     id: 765645,
     title: 'Go to marketing section for diwali gifts',
-    priority: {id: 9384234, name: 'Medium', type: 2, color: blue[500]},
+    priority: { id: 9384234, name: 'Medium', type: 2, color: blue[500] },
     isStarred: true,
     isReplied: false,
     label: [
@@ -458,7 +458,7 @@ const todoList = [
   {
     id: 4324543234,
     title: 'Go to marketing section for diwali gifts',
-    priority: {id: 9384234, name: 'Medium', type: 2, color: blue[500]},
+    priority: { id: 9384234, name: 'Medium', type: 2, color: blue[500] },
     isStarred: true,
     isReplied: false,
     label: [
@@ -512,7 +512,7 @@ const todoList = [
   {
     id: 765635,
     title: 'Ask secretary for meeting minutes',
-    priority: {id: 4545554, name: 'High', type: 1, color: red[500]},
+    priority: { id: 4545554, name: 'High', type: 1, color: red[500] },
     isStarred: true,
     isReplied: false,
     label: [
@@ -566,7 +566,7 @@ const todoList = [
   {
     id: 345536,
     title: 'To arrange a meeting with React team',
-    priority: {id: 4354454, name: 'Low', type: 3, color: green[500]},
+    priority: { id: 4354454, name: 'Low', type: 3, color: green[500] },
     isStarred: true,
     isReplied: false,
     label: [
@@ -620,7 +620,7 @@ const todoList = [
   {
     id: 654343443,
     title: 'Ask secretary for meeting minutes',
-    priority: {id: 4545554, name: 'High', type: 1, color: red[500]},
+    priority: { id: 4545554, name: 'High', type: 1, color: red[500] },
     isStarred: true,
     isReplied: false,
     label: [
@@ -674,7 +674,7 @@ const todoList = [
   {
     id: 785655,
     title: 'Arrange a trip for best performing staff members',
-    priority: {id: 9384234, name: 'Medium', type: 2, color: blue[500]},
+    priority: { id: 9384234, name: 'Medium', type: 2, color: blue[500] },
     isStarred: true,
     isReplied: false,
     label: [
@@ -728,7 +728,7 @@ const todoList = [
   {
     id: 234554,
     title: 'Schedule an interview for hiring React developer',
-    priority: {id: 4354454, name: 'Low', type: 3, color: green[500]},
+    priority: { id: 4354454, name: 'Low', type: 3, color: green[500] },
     isStarred: false,
     isReplied: false,
     label: [
@@ -774,7 +774,7 @@ const todoList = [
   {
     id: 86764543,
     title: 'To arrange a meeting with React team',
-    priority: {id: 4354454, name: 'Low', type: 3, color: green[500]},
+    priority: { id: 4354454, name: 'Low', type: 3, color: green[500] },
     isStarred: true,
     isReplied: false,
     label: [
@@ -828,7 +828,7 @@ const todoList = [
   {
     id: 907645,
     title: 'Check the documents of audit',
-    priority: {id: 4545554, name: 'High', type: 1, color: red[500]},
+    priority: { id: 4545554, name: 'High', type: 1, color: red[500] },
     isStarred: true,
     isReplied: false,
     label: [
@@ -882,7 +882,7 @@ const todoList = [
   {
     id: 678434,
     title: 'Download freebie Hello Tune plugin',
-    priority: {id: 4545554, name: 'High', type: 1, color: red[500]},
+    priority: { id: 4545554, name: 'High', type: 1, color: red[500] },
     isStarred: true,
     isReplied: false,
     label: [
@@ -936,7 +936,7 @@ const todoList = [
   {
     id: 2344344334,
     title: 'Arrange a trip for best performing staff members',
-    priority: {id: 9384234, name: 'Medium', type: 2, color: blue[500]},
+    priority: { id: 9384234, name: 'Medium', type: 2, color: blue[500] },
     isStarred: true,
     isReplied: false,
     label: [
@@ -990,7 +990,7 @@ const todoList = [
   {
     id: 789754,
     title: 'Arrange a trip for best performing staff members',
-    priority: {id: 9384234, name: 'Medium', type: 2, color: blue[500]},
+    priority: { id: 9384234, name: 'Medium', type: 2, color: blue[500] },
     isStarred: true,
     isReplied: false,
     label: [
@@ -1036,7 +1036,7 @@ const todoList = [
   {
     id: 345656,
     title: 'Check the documents of audit',
-    priority: {id: 4354454, name: 'Low', type: 3, color: green[500]},
+    priority: { id: 4354454, name: 'Low', type: 3, color: green[500] },
     isStarred: false,
     isReplied: false,
     label: [],
@@ -1073,7 +1073,7 @@ const todoList = [
   {
     id: 767643433,
     title: 'Schedule an interview for hiring React developer',
-    priority: {id: 4354454, name: 'Low', type: 3, color: green[500]},
+    priority: { id: 4354454, name: 'Low', type: 3, color: green[500] },
     isStarred: false,
     isReplied: false,
     label: [
@@ -1119,7 +1119,7 @@ const todoList = [
   {
     id: 856787,
     title: 'Arrange birthday party for the staff',
-    priority: {id: 9384234, name: 'Medium', type: 2, color: blue[500]},
+    priority: { id: 9384234, name: 'Medium', type: 2, color: blue[500] },
     isStarred: true,
     isReplied: false,
     label: [
@@ -1173,7 +1173,7 @@ const todoList = [
   {
     id: 234546,
     title: 'Arrange a trip for best performing staff members',
-    priority: {id: 4354454, name: 'Low', type: 3, color: green[500]},
+    priority: { id: 4354454, name: 'Low', type: 3, color: green[500] },
     isStarred: true,
     isReplied: false,
     label: [],
@@ -1210,7 +1210,7 @@ const todoList = [
   {
     id: 432445554,
     title: 'Check the documents of audit',
-    priority: {id: 4545554, name: 'High', type: 1, color: red[500]},
+    priority: { id: 4545554, name: 'High', type: 1, color: red[500] },
     isStarred: true,
     isReplied: false,
     label: [
@@ -1264,7 +1264,7 @@ const todoList = [
   {
     id: 455643,
     title: 'Check the documents of audit',
-    priority: {id: 4545554, name: 'High', type: 1, color: red[500]},
+    priority: { id: 4545554, name: 'High', type: 1, color: red[500] },
     isStarred: true,
     isReplied: false,
     label: [
@@ -1310,7 +1310,7 @@ const todoList = [
   {
     id: 856121,
     title: 'Arrange birthday party for the staff',
-    priority: {id: 9384234, name: 'Medium', type: 2, color: blue[500]},
+    priority: { id: 9384234, name: 'Medium', type: 2, color: blue[500] },
     isStarred: true,
     isReplied: false,
     label: [
@@ -1364,7 +1364,7 @@ const todoList = [
   {
     id: 2344354334,
     title: 'Download freebie Hello Tune plugin',
-    priority: {id: 4545554, name: 'High', type: 1, color: red[500]},
+    priority: { id: 4545554, name: 'High', type: 1, color: red[500] },
     isStarred: true,
     isReplied: false,
     label: [
@@ -1418,7 +1418,7 @@ const todoList = [
   {
     id: 233346,
     title: 'Arrange a trip for best performing staff members',
-    priority: {id: 4354454, name: 'Low', type: 3, color: green[500]},
+    priority: { id: 4354454, name: 'Low', type: 3, color: green[500] },
     isStarred: true,
     isReplied: false,
     label: [],

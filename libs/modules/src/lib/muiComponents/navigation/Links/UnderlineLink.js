@@ -19,13 +19,13 @@ export default function UnderlineLink() {
       }}
       onClick={preventDefault}
     >
-      <Link href='#' underline='none'>
+      <Link href="#" underline="none">
         {'underline="none"'}
       </Link>
-      <Link href='#' underline='hover'>
+      <Link href="#" underline="hover">
         {'underline="hover"'}
       </Link>
-      <Link href='#' underline='always'>
+      <Link href="#" underline="always">
         {'underline="always"'}
       </Link>
     </Box>

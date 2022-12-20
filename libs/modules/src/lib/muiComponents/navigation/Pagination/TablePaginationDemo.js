@@ -16,7 +16,7 @@ export default function TablePaginationDemo() {
 
   return (
     <TablePagination
-      component='div'
+      component="div"
       count={100}
       page={page}
       onPageChange={handleChangePage}

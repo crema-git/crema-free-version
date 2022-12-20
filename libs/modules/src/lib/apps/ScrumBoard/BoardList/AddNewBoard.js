@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import Card from '@mui/material/Card';
@@ -6,11 +6,11 @@ import Dialog from '@mui/material/Dialog';
 import Slide from '@mui/material/Slide';
 import IntlMessages from '@crema/utility/IntlMessages';
 import PropTypes from 'prop-types';
-import {Fonts} from '@crema/constants/AppEnums'
+import { Fonts } from '@crema/constants/AppEnums';
 import Box from '@mui/material/Box';
 
 const Transition = React.forwardRef(function Transition(props, ref) {
-  return <Slide direction='down' ref={ref} {...props} />;
+  return <Slide direction="down" ref={ref} {...props} />;
 });
 
 const AddNewBoard = ({
@@ -20,7 +20,7 @@ const AddNewBoard = ({
   selectedBoard,
 }) => {
   const [boardName, setBoardName] = useState(() =>
-    selectedBoard ? selectedBoard.name : '',
+    selectedBoard ? selectedBoard.name : ''
   );
 
   const onClickAddButton = () => {
@@ -35,9 +35,9 @@ const AddNewBoard = ({
     <Dialog
       open={isAddBoardOpen}
       onClose={() => onCloseAddBoardModal(false)}
-      aria-labelledby='simple-modal-title'
+      aria-labelledby="simple-modal-title"
       TransitionComponent={Transition}
-      aria-describedby='simple-modal-description'
+      aria-describedby="simple-modal-description"
       sx={{
         '& .MuiDialog-paperWidthSm': {
           maxWidth: 600,
@@ -55,8 +55,8 @@ const AddNewBoard = ({
       >
         <TextField
           fullWidth
-          margin='normal'
-          label={<IntlMessages id='scrumboard.boardTitle' />}
+          margin="normal"
+          label={<IntlMessages id="scrumboard.boardTitle" />}
           value={boardName}
           onChange={(event) => setBoardName(event.target.value)}
         />
@@ -67,14 +67,14 @@ const AddNewBoard = ({
           }}
         >
           <Button
-            variant='outlined'
+            variant="outlined"
             sx={{
               paddingRight: 8,
               paddingLeft: 8,
             }}
             onClick={onClickAddButton}
           >
-            <IntlMessages id='common.add' />
+            <IntlMessages id="common.add" />
           </Button>
         </Box>
       </Card>

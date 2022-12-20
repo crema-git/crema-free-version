@@ -8,25 +8,25 @@ import IntlMessages from '@crema/utility/IntlMessages';
 import AppScrollbar from '@crema/components/AppScrollbar';
 import AppsSideBarFolderItem from '@crema/components/AppsSideBarFolderItem';
 import LabelItem from './LabelItem';
-import {Fonts} from '@crema/constants/AppEnums'
+import { Fonts } from '@crema/constants/AppEnums';
 import AppList from '@crema/components/AppList';
 import ListEmptyResult from '@crema/components/AppList/ListEmptyResult';
 import SidebarPlaceholder from '@crema/components/SidebarListSkeleton';
 import AddIcon from '@mui/icons-material/Add';
-import {Zoom} from '@mui/material';
-import {styled} from '@mui/material/styles';
-import {useGetDataApi} from '@crema/utility/APIHooks';
+import { Zoom } from '@mui/material';
+import { styled } from '@mui/material/styles';
+import { useGetDataApi } from '@crema/utility/APIHooks';
 
-const ListWrapper = styled(List)(({theme}) => ({
+const ListWrapper = styled(List)(({ theme }) => ({
   marginBottom: 8,
   [theme.breakpoints.up('xl')]: {
     marginBottom: 20,
   },
 }));
 
-const TaskSideBar = ({reCallAPI}) => {
-  const [{apiData: labelList}] = useGetDataApi('/api/todo/labels/list', []);
-  const [{apiData: folderList}] = useGetDataApi('/api/todo/folders/list', []);
+const TaskSideBar = ({ reCallAPI }) => {
+  const [{ apiData: labelList }] = useGetDataApi('/api/todo/labels/list', []);
+  const [{ apiData: folderList }] = useGetDataApi('/api/todo/folders/list', []);
 
   const [isAddTaskOpen, setAddTaskOpen] = React.useState(false);
 
@@ -40,11 +40,11 @@ const TaskSideBar = ({reCallAPI}) => {
 
   return (
     <>
-      <Box sx={{px: {xs: 4, md: 5}, pt: {xs: 4, md: 5}, pb: 2.5}}>
-        <Zoom in style={{transitionDelay: '300ms'}}>
+      <Box sx={{ px: { xs: 4, md: 5 }, pt: { xs: 4, md: 5 }, pb: 2.5 }}>
+        <Zoom in style={{ transitionDelay: '300ms' }}>
           <Button
-            variant='outlined'
-            color='primary'
+            variant="outlined"
+            color="primary"
             sx={{
               padding: '8px 28px',
               borderRadius: 30,
@@ -55,7 +55,7 @@ const TaskSideBar = ({reCallAPI}) => {
             startIcon={<AddIcon />}
             onClick={onOpenAddTask}
           >
-            <IntlMessages id='todo.addNewTask' />
+            <IntlMessages id="todo.addNewTask" />
           </Button>
         </Zoom>
       </Box>
@@ -67,17 +67,17 @@ const TaskSideBar = ({reCallAPI}) => {
         <Box
           sx={{
             pr: 4,
-            pb: {xs: 4, md: 5, lg: 6.2},
+            pb: { xs: 4, md: 5, lg: 6.2 },
           }}
         >
-          <ListWrapper component='nav' aria-label='main task folders'>
+          <ListWrapper component="nav" aria-label="main task folders">
             <AppList
               data={folderList}
               ListEmptyComponent={
                 <ListEmptyResult
                   loading={true}
                   placeholder={
-                    <Box px={{xs: 4, md: 5, lg: 6.2}}>
+                    <Box px={{ xs: 4, md: 5, lg: 6.2 }}>
                       <SidebarPlaceholder />
                     </Box>
                   }
@@ -94,22 +94,22 @@ const TaskSideBar = ({reCallAPI}) => {
           </ListWrapper>
 
           <Box
-            component='h4'
-            mt={{xs: 4, xl: 5}}
-            px={{xs: 4, md: 5, lg: 6.2}}
+            component="h4"
+            mt={{ xs: 4, xl: 5 }}
+            px={{ xs: 4, md: 5, lg: 6.2 }}
             fontWeight={Fonts.SEMI_BOLD}
           >
             Labels
           </Box>
 
-          <List component='nav' aria-label='main mailbox folders'>
+          <List component="nav" aria-label="main mailbox folders">
             <AppList
               data={labelList}
               ListEmptyComponent={
                 <ListEmptyResult
                   loading={true}
                   placeholder={
-                    <Box px={{xs: 4, md: 5, lg: 6.2}}>
+                    <Box px={{ xs: 4, md: 5, lg: 6.2 }}>
                       <SidebarPlaceholder />
                     </Box>
                   }

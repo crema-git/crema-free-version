@@ -3,13 +3,13 @@ import Box from '@mui/material/Box';
 import StaticsGraph from './StaticsGraph';
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
-import {Fonts} from '@crema/constants/AppEnums'
+import { Fonts } from '@crema/constants/AppEnums';
 import AppCard from '@crema/components/AppCard';
 import PropTypes from 'prop-types';
 
-const ReportCard = ({data}) => {
+const ReportCard = ({ data }) => {
   return (
-    <AppCard className='card-hover'>
+    <AppCard className="card-hover">
       <Box
         sx={{
           display: 'flex',
@@ -22,7 +22,7 @@ const ReportCard = ({data}) => {
           }}
         >
           <Box
-            component='h3'
+            component="h3"
             sx={{
               mb: 0.5,
               fontSize: 20,
@@ -31,7 +31,7 @@ const ReportCard = ({data}) => {
             {data.value}
           </Box>
           <Box
-            component='p'
+            component="p"
             sx={{
               color: '#737989',
             }}
@@ -51,16 +51,16 @@ const ReportCard = ({data}) => {
             strokeColor={data.strokeColor}
           />
           <Box
-            display='flex'
-            alignItems='center'
-            justifyContent='center'
+            display="flex"
+            alignItems="center"
+            justifyContent="center"
             fontWeight={Fonts.BOLD}
             color={data.strokeColor}
           >
             {data.growth > 0 ? (
-              <ArrowUpwardIcon style={{color: data.strokeColor}} />
+              <ArrowUpwardIcon style={{ color: data.strokeColor }} />
             ) : (
-              <ArrowDownwardIcon style={{color: data.strokeColor}} />
+              <ArrowDownwardIcon style={{ color: data.strokeColor }} />
             )}
             {data.growth}
           </Box>

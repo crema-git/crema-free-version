@@ -1,2 +1,2 @@
-import {FunnelChart } from '@crema/modules/thirdParty';
-export  default FunnelChart;
+import { FunnelChart } from '@crema/modules/thirdParty';
+export default FunnelChart;

@@ -23,22 +23,22 @@ export default function ControlledOpenSelect() {
 
   return (
     <div>
-      <Button sx={{display: 'block', mt: 2}} onClick={handleOpen}>
+      <Button sx={{ display: 'block', mt: 2 }} onClick={handleOpen}>
         Open the select
       </Button>
-      <FormControl sx={{m: 1, minWidth: 120}}>
-        <InputLabel id='demo-controlled-open-select-label'>Age</InputLabel>
+      <FormControl sx={{ m: 1, minWidth: 120 }}>
+        <InputLabel id="demo-controlled-open-select-label">Age</InputLabel>
         <Select
-          labelId='demo-controlled-open-select-label'
-          id='demo-controlled-open-select'
+          labelId="demo-controlled-open-select-label"
+          id="demo-controlled-open-select"
           open={open}
           onClose={handleClose}
           onOpen={handleOpen}
           value={age}
-          label='Age'
+          label="Age"
           onChange={handleChange}
         >
-          <MenuItem value=''>
+          <MenuItem value="">
             <em>None</em>
           </MenuItem>
           <MenuItem value={10}>Ten</MenuItem>

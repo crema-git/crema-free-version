@@ -4,10 +4,10 @@ import ListItemAvatar from '@mui/material/ListItemAvatar';
 import Avatar from '@mui/material/Avatar';
 import PropTypes from 'prop-types';
 import ListItem from '@mui/material/ListItem';
-import {Fonts} from '@crema/constants/AppEnums'
+import { Fonts } from '@crema/constants/AppEnums';
 
 const MessageItem = (props) => {
-  const {item, listStyle} = props;
+  const { item, listStyle } = props;
 
   return (
     <ListItem
@@ -32,8 +32,8 @@ const MessageItem = (props) => {
         >
           <Avatar
             sx={{
-              width: {xs: 40, xl: 60},
-              height: {xs: 40, xl: 60},
+              width: { xs: 40, xl: 60 },
+              height: { xs: 40, xl: 60 },
             }}
             src={item.image}
           />
@@ -41,21 +41,21 @@ const MessageItem = (props) => {
       </Box>
       <Box
         sx={{
-          fontSize: {xs: 16, xl: 18},
+          fontSize: { xs: 16, xl: 18 },
         }}
       >
         <Box
-          component='span'
+          component="span"
           sx={{
             fontWeight: Fonts.LIGHT,
             display: 'block',
-            fontSize: {xs: 16, xl: 18},
+            fontSize: { xs: 16, xl: 18 },
           }}
         >
           {item.name}
         </Box>
         <Box
-          component='span'
+          component="span"
           sx={{
             color: 'text.secondary',
             display: 'block',

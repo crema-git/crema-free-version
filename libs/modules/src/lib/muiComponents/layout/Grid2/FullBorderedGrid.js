@@ -4,7 +4,7 @@ import Grid from '@mui/material/Unstable_Grid2';
 
 export default function FullBorderedGrid() {
   return (
-    <Box sx={{flexGrow: 1, p: 2}}>
+    <Box sx={{ flexGrow: 1, p: 2 }}>
       <Grid
         container
         spacing={2}
@@ -23,7 +23,7 @@ export default function FullBorderedGrid() {
         {[...Array(6)].map((_, index) => (
           <Grid
             key={index}
-            {...{xs: 12, sm: 6, md: 4, lg: 3}}
+            {...{ xs: 12, sm: 6, md: 4, lg: 3 }}
             minHeight={160}
           />
         ))}

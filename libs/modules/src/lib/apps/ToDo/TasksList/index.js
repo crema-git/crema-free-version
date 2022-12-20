@@ -1,10 +1,10 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import TaskContentHeader from './TaskContentHeader';
 import TaskListItem from './TaskListItem';
-import {useParams} from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import AddNewTask from '../AddNewTask';
-import {Hidden} from '@mui/material';
+import { Hidden } from '@mui/material';
 import AppsPagination from '@crema/components/AppsPagination';
 import AppsHeader from '@crema/components/AppsHeader';
 import AppsContent from '@crema/components/AppsContent';
@@ -14,19 +14,19 @@ import TodoListSkeleton from '@crema/components/TodoListSkeleton';
 import AppList from '@crema/components/AppList';
 import TaskListItemMobile from './TaskListItemMobile';
 import TaskCalender from './TaskCalendar';
-import {putDataApi, useGetDataApi} from '@crema/utility/APIHooks';
-import {useInfoViewActionsContext} from '@crema/context/InfoViewContextProvider';
+import { putDataApi, useGetDataApi } from '@crema/utility/APIHooks';
+import { useInfoViewActionsContext } from '@crema/context/InfoViewContextProvider';
 
 export const ViewMode = {
   List: 'list',
   Calendar: 'calendar',
 };
-const TasksList = ({taskLists, loading, setQueryParams, setData}) => {
+const TasksList = ({ taskLists, loading, setQueryParams, setData }) => {
   const infoViewActionsContext = useInfoViewActionsContext();
 
   const params = useParams();
 
-  const [{apiData: labelList}] = useGetDataApi('/api/todo/labels/list', []);
+  const [{ apiData: labelList }] = useGetDataApi('/api/todo/labels/list', []);
 
   const [filterText, onSetFilterText] = useState('');
   const [viewMode, setViewMode] = useState(ViewMode.List);
@@ -76,7 +76,7 @@ const TasksList = ({taskLists, loading, setQueryParams, setData}) => {
         infoViewActionsContext.showMessage(
           data[0].isStarred
             ? 'Todo Marked as Starred Successfully'
-            : 'Todo Marked as Unstarred Successfully',
+            : 'Todo Marked as Unstarred Successfully'
         );
       })
       .catch((error) => {
@@ -89,7 +89,7 @@ const TasksList = ({taskLists, loading, setQueryParams, setData}) => {
       return taskLists?.data;
     } else {
       return taskLists?.data.filter((task) =>
-        task.title.toUpperCase().includes(filterText.toUpperCase()),
+        task.title.toUpperCase().includes(filterText.toUpperCase())
       );
     }
   };
@@ -169,7 +169,7 @@ const TasksList = ({taskLists, loading, setQueryParams, setData}) => {
                 ListEmptyComponent={
                   <ListEmptyResult
                     loading={loading}
-                    actionTitle='Add Task'
+                    actionTitle="Add Task"
                     onAction={onOpenAddTask}
                     placeholder={<TodoListSkeleton />}
                   />
@@ -196,7 +196,7 @@ const TasksList = ({taskLists, loading, setQueryParams, setData}) => {
                 ListEmptyComponent={
                   <ListEmptyResult
                     loading={loading}
-                    actionTitle='Add Task'
+                    actionTitle="Add Task"
                     onAction={onOpenAddTask}
                     placeholder={<TodoListSkeleton />}
                   />

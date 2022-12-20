@@ -1,2 +1,2 @@
-import {Accessibility} from '@crema/modules/components/datagrid';
+import { Accessibility } from '@crema/modules/components/datagrid';
 export default Accessibility;

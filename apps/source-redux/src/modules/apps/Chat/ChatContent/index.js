@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import ChatViewContainer from './ChatViewContainer';
-import {NoUserScreen} from '@crema/modules/apps/Chat';
+import { NoUserScreen } from '@crema/modules/apps/Chat';
 
-import {styled} from '@mui/material/styles';
-import {Fonts} from '@crema/constants/AppEnums'
+import { styled } from '@mui/material/styles';
+import { Fonts } from '@crema/constants/AppEnums';
 
 const MessagesScreen = styled('div')(() => {
   return {
@@ -13,7 +13,7 @@ const MessagesScreen = styled('div')(() => {
     flexDirection: 'column',
   };
 });
-const ScrollChatNoUser = styled('div')(({theme}) => {
+const ScrollChatNoUser = styled('div')(({ theme }) => {
   return {
     fontSize: 18,
     padding: 16,
@@ -36,14 +36,12 @@ const ScrollChatNoUser = styled('div')(({theme}) => {
   };
 });
 
-const ChatContent = ({selectedUser}) => {
+const ChatContent = ({ selectedUser }) => {
   return (
     <>
       {selectedUser ? (
         <MessagesScreen>
-          <ChatViewContainer
-            selectedUser={selectedUser}
-          />
+          <ChatViewContainer selectedUser={selectedUser} />
         </MessagesScreen>
       ) : (
         <ScrollChatNoUser>

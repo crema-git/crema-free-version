@@ -15,11 +15,11 @@ export default function Links() {
       }}
       onClick={preventDefault}
     >
-      <Link href='#'>Link</Link>
-      <Link href='#' color='inherit'>
+      <Link href="#">Link</Link>
+      <Link href="#" color="inherit">
         {'color="inherit"'}
       </Link>
-      <Link href='#' variant='body2'>
+      <Link href="#" variant="body2">
         {'variant="body2"'}
       </Link>
     </Box>

@@ -38,15 +38,15 @@ const Components = () => {
   return (
     <>
       <AppComponentHeader
-        title='Components'
-        description='Easily export the rows in various file formats such as CSV, Excel, or PDF.'
-        refUrl='https://mui.com/components/data-grid/components/'
+        title="Components"
+        description="Easily export the rows in various file formats such as CSV, Excel, or PDF."
+        refUrl="https://mui.com/components/data-grid/components/"
       />
 
       <AppGridContainer>
         <Grid item xs={12}>
           <AppComponentCard
-            title='Custom Column Menu'
+            title="Custom Column Menu"
             component={CustomColumnMenu}
             source={CustomColumnMenuSource}
             noScrollbar
@@ -54,7 +54,7 @@ const Components = () => {
         </Grid>
         <Grid item xs={12}>
           <AppComponentCard
-            title='Toolbar Grid'
+            title="Toolbar Grid"
             component={ToolbarGrid}
             source={ToolbarGridSource}
             noScrollbar
@@ -62,7 +62,7 @@ const Components = () => {
         </Grid>
         <Grid item xs={12}>
           <AppComponentCard
-            title='Custom Toolbar Grid'
+            title="Custom Toolbar Grid"
             component={CustomToolbarGrid}
             source={CustomToolbarGridSource}
             noScrollbar
@@ -70,7 +70,7 @@ const Components = () => {
         </Grid>
         <Grid item xs={12}>
           <AppComponentCard
-            title='Custom Footer'
+            title="Custom Footer"
             component={CustomFooter}
             source={CustomFooterSource}
             noScrollbar
@@ -78,7 +78,7 @@ const Components = () => {
         </Grid>
         <Grid item xs={12}>
           <AppComponentCard
-            title='Custom Pagination Grid'
+            title="Custom Pagination Grid"
             component={CustomPaginationGrid}
             source={CustomPaginationGridSource}
             noScrollbar
@@ -86,7 +86,7 @@ const Components = () => {
         </Grid>
         <Grid item xs={12}>
           <AppComponentCard
-            title='Custom Loading Over layGrid'
+            title="Custom Loading Over layGrid"
             component={CustomLoadingOverlayGrid}
             source={CustomLoadingOverlayGridSource}
             noScrollbar
@@ -94,7 +94,7 @@ const Components = () => {
         </Grid>
         <Grid item xs={12}>
           <AppComponentCard
-            title='Custom Empty Over layGrid'
+            title="Custom Empty Over layGrid"
             component={CustomEmptyOverlayGrid}
             source={CustomEmptyOverlayGridSource}
             noScrollbar
@@ -102,7 +102,7 @@ const Components = () => {
         </Grid>
         <Grid item xs={12}>
           <AppComponentCard
-            title='Row Context Menu'
+            title="Row Context Menu"
             component={RowContextMenu}
             source={RowContextMenuSource}
             noScrollbar
@@ -110,7 +110,7 @@ const Components = () => {
         </Grid>
         <Grid item xs={12}>
           <AppComponentCard
-            title='Cell With Popover'
+            title="Cell With Popover"
             component={CellWithPopover}
             source={CellWithPopoverSource}
             noScrollbar
@@ -118,7 +118,7 @@ const Components = () => {
         </Grid>
         <Grid item xs={12}>
           <AppComponentCard
-            title='Cell With Popover'
+            title="Cell With Popover"
             component={CellWithPopover}
             source={CellWithPopoverSource}
             noScrollbar
@@ -126,7 +126,7 @@ const Components = () => {
         </Grid>
         <Grid item xs={12}>
           <AppComponentCard
-            title='Custom Sort Icons'
+            title="Custom Sort Icons"
             component={CustomSortIcons}
             source={CustomSortIconsSource}
             noScrollbar

@@ -1,19 +1,19 @@
-import React, {useState} from 'react';
-import Carousel, {Dots} from '@brainhubeu/react-carousel';
+import React, { useState } from 'react';
+import Carousel, { Dots } from '@brainhubeu/react-carousel';
 import '@brainhubeu/react-carousel/lib/style.css';
-import {Button, Checkbox} from '@mui/material';
+import { Button, Checkbox } from '@mui/material';
 import Box from '@mui/material/Box';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import FavoriteOutlinedIcon from '@mui/icons-material/FavoriteOutlined';
 import Grid from '@mui/material/Grid';
-import {useNavigate} from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-import {styled} from '@mui/material/styles';
-import {useInfoViewActionsContext} from '@crema/context/InfoViewContextProvider';
-import {postDataApi} from '@crema/utility/APIHooks';
+import { styled } from '@mui/material/styles';
+import { useInfoViewActionsContext } from '@crema/context/InfoViewContextProvider';
+import { postDataApi } from '@crema/utility/APIHooks';
 
-const BrainHubSliderRoot = styled(Box)(({theme}) => {
+const BrainHubSliderRoot = styled(Box)(({ theme }) => {
   return {
     position: 'relative',
     display: 'flex',
@@ -50,12 +50,12 @@ const BrainHubSliderRoot = styled(Box)(({theme}) => {
   };
 });
 
-const ProductImageSlide = ({product}) => {
+const ProductImageSlide = ({ product }) => {
   const [value, setValue] = useState(0);
   const infoViewActionsContext = useInfoViewActionsContext();
   const navigate = useNavigate();
   const slides = product.image.map((data) => (
-    <img src={data.src} alt='' key={data.src} />
+    <img src={data.src} alt="" key={data.src} />
   ));
   const onChange = (value) => {
     setValue(value);
@@ -67,7 +67,7 @@ const ProductImageSlide = ({product}) => {
     })
       .then(() => {
         infoViewActionsContext.showMessage(
-          `${product.title} added to cart successfully`,
+          `${product.title} added to cart successfully`
         );
       })
       .catch((error) => {
@@ -90,14 +90,14 @@ const ProductImageSlide = ({product}) => {
     <Grid item sm={12} md={4}>
       <BrainHubSliderRoot>
         <Dots
-          position='left'
+          position="left"
           thumbnails={slides}
           value={value}
           onChange={onChange}
           number={slides.length}
         />
         <Carousel
-          position='left'
+          position="left"
           value={value}
           slides={slides}
           onChange={onChange}
@@ -131,17 +131,17 @@ const ProductImageSlide = ({product}) => {
         }}
       >
         <Button
-          variant='contained'
-          color='primary'
+          variant="contained"
+          color="primary"
           onClick={onAddToCard}
-          style={{marginRight: 20, width: 140}}
+          style={{ marginRight: 20, width: 140 }}
         >
           Add to cart
         </Button>
         <Button
-          style={{width: 140}}
-          variant='contained'
-          color='secondary'
+          style={{ width: 140 }}
+          variant="contained"
+          color="secondary"
           onClick={onButNowToCard}
         >
           Buy now

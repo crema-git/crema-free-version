@@ -2,7 +2,7 @@ import React from 'react';
 import Card from '@mui/material/Card';
 import Avatar from '@mui/material/Avatar';
 import Box from '@mui/material/Box';
-import {grey} from '@mui/material/colors';
+import { grey } from '@mui/material/colors';
 import Chip from '@mui/material/Chip';
 import Button from '@mui/material/Button';
 import MailIcon from '@mui/icons-material/Mail';
@@ -13,26 +13,26 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import LanguageIcon from '@mui/icons-material/Language';
 
-import {Fonts} from '@crema/constants/AppEnums'
+import { Fonts } from '@crema/constants/AppEnums';
 import IntlMessages from '@crema/utility/IntlMessages';
 import PropTypes from 'prop-types';
 
 const ListItem = (props) => {
-  const {user} = props;
+  const { user } = props;
   return (
-    <Box sx={{mb: 8}} className='item-hover'>
+    <Box sx={{ mb: 8 }} className="item-hover">
       <Card>
         <Box
           sx={{
             display: 'flex',
-            flexDirection: {xs: 'column', sm: 'row'},
+            flexDirection: { xs: 'column', sm: 'row' },
           }}
         >
           <Box
             sx={{
               color: 'primary.contrastText',
-              width: {xs: '100%', sm: 200, xl: 256},
-              p: {xs: 3, lg: 5},
+              width: { xs: '100%', sm: 200, xl: 256 },
+              p: { xs: 3, lg: 5 },
               bgcolor: 'primary.main',
               display: 'flex',
               flexDirection: 'column',
@@ -40,7 +40,7 @@ const ListItem = (props) => {
               justifyContent: 'center',
             }}
           >
-            <Box sx={{mb: 3}}>
+            <Box sx={{ mb: 3 }}>
               <Avatar
                 src={user.image}
                 sx={{
@@ -50,7 +50,7 @@ const ListItem = (props) => {
               />
             </Box>
             <Box
-              component='h3'
+              component="h3"
               sx={{
                 overflow: 'hidden',
                 textOverflow: 'ellipsis',
@@ -84,11 +84,11 @@ const ListItem = (props) => {
           >
             <Box
               sx={{
-                mb: {xs: 2, xl: 3},
+                mb: { xs: 2, xl: 3 },
                 color: 'grey.600',
                 display: 'flex',
-                flexDirection: {xs: 'column', lg: 'row'},
-                alignItems: {lg: 'center'},
+                flexDirection: { xs: 'column', lg: 'row' },
+                alignItems: { lg: 'center' },
               }}
             >
               <Box
@@ -96,10 +96,10 @@ const ListItem = (props) => {
                   mx: -3,
                   mb: 2,
                   color: 'text.primary',
-                  pr: {xl: 32},
+                  pr: { xl: 32 },
                   display: 'flex',
                   flex: 1,
-                  fontSize: {xs: 14, xl: 16},
+                  fontSize: { xs: 14, xl: 16 },
                   flexWrap: 'wrap',
                   justifyContent: 'space-between',
                 }}
@@ -161,47 +161,47 @@ const ListItem = (props) => {
 
               <Box
                 sx={{
-                  mx: {xs: -1, xl: -4},
+                  mx: { xs: -1, xl: -4 },
                   mb: 2,
-                  pl: {lg: 6, xl: 10},
+                  pl: { lg: 6, xl: 10 },
                   display: 'flex',
                   alignItems: 'center',
-                  justifyContent: {xs: 'space-between', sm: 'flex-start'},
+                  justifyContent: { xs: 'space-between', sm: 'flex-start' },
                   color: 'text.primary',
                 }}
               >
                 <Box
-                  component='span'
+                  component="span"
                   sx={{
                     cursor: 'pointer',
-                    mx: {xs: 1, xl: 4},
+                    mx: { xs: 1, xl: 4 },
                   }}
                 >
                   <FacebookIcon />
                 </Box>
                 <Box
-                  component='span'
+                  component="span"
                   sx={{
                     cursor: 'pointer',
-                    mx: {xs: 1, xl: 4},
+                    mx: { xs: 1, xl: 4 },
                   }}
                 >
                   <LinkedInIcon />
                 </Box>
                 <Box
-                  component='span'
+                  component="span"
                   sx={{
                     cursor: 'pointer',
-                    mx: {xs: 1, xl: 4},
+                    mx: { xs: 1, xl: 4 },
                   }}
                 >
                   <InstagramIcon />
                 </Box>
                 <Box
-                  component='span'
+                  component="span"
                   sx={{
                     cursor: 'pointer',
-                    mx: {xs: 1, xl: 4},
+                    mx: { xs: 1, xl: 4 },
                   }}
                 >
                   <TwitterIcon />
@@ -211,11 +211,11 @@ const ListItem = (props) => {
 
             <Box
               sx={{
-                pr: {lg: 6, xl: 16},
+                pr: { lg: 6, xl: 16 },
               }}
             >
               <Box
-                component='p'
+                component="p"
                 sx={{
                   color: 'text.secondary',
                   mb: 4,
@@ -230,13 +230,13 @@ const ListItem = (props) => {
             <Box
               sx={{
                 display: 'flex',
-                alignItems: {md: 'center'},
-                flexDirection: {xs: 'column', md: 'row'},
+                alignItems: { md: 'center' },
+                flexDirection: { xs: 'column', md: 'row' },
               }}
             >
               <Box
                 sx={{
-                  mx: {xs: -1, xl: -2},
+                  mx: { xs: -1, xl: -2 },
                 }}
               >
                 {user.skills.map((skill, index) => {
@@ -251,8 +251,8 @@ const ListItem = (props) => {
                             : theme.palette.grey[200],
                         padding: '4px 12px',
                         marginTop: 2,
-                        marginRight: {xs: 1, xl: 2},
-                        marginLeft: {xs: 1, xl: 2},
+                        marginRight: { xs: 1, xl: 2 },
+                        marginLeft: { xs: 1, xl: 2 },
                         border: '1px solid',
                         borderColor: grey[500],
                         borderRadius: 2,
@@ -264,12 +264,12 @@ const ListItem = (props) => {
 
               <Box
                 sx={{
-                  ml: {md: 'auto'},
+                  ml: { md: 'auto' },
                 }}
               >
                 <Button
-                  variant='contained'
-                  color='primary'
+                  variant="contained"
+                  color="primary"
                   sx={{
                     marginRight: 5,
                     marginTop: 2,
@@ -279,10 +279,10 @@ const ListItem = (props) => {
                     fontWeight: Fonts.MEDIUM,
                   }}
                 >
-                  <IntlMessages id='common.hire' />
+                  <IntlMessages id="common.hire" />
                 </Button>
                 <Button
-                  variant='contained'
+                  variant="contained"
                   sx={{
                     backgroundColor: (theme) =>
                       theme.palette.primary.contrastText,
@@ -296,7 +296,7 @@ const ListItem = (props) => {
                     lineHeight: 1,
                   }}
                 >
-                  <IntlMessages id='mailApp.remove' />
+                  <IntlMessages id="mailApp.remove" />
                 </Button>
               </Box>
             </Box>

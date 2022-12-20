@@ -11,15 +11,14 @@ import SlideBasicThree from './SlideBasicThree';
 import SlideBasicArrow from './SlideBasicArrow';
 import SlideBasicFour from './SlideBasicFour';
 import SlideBasicFive from './SlideBasicFive';
-import {reactSlickData} from "@crema/fakedb/data";
-
+import { reactSlickData } from '@crema/fakedb/data';
 
 const ReactSlick = () => {
   return (
     <>
       <AppComponentHeader
-        title='React Slick'
-        refUrl='https://react-slick.neostack.com/'
+        title="React Slick"
+        refUrl="https://react-slick.neostack.com/"
       />
 
       <AppGridContainer>

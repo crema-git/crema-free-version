@@ -12,6 +12,16 @@ import WelcomeCard from './WelcomeCard';
 import ActiveVisitors from './ActiveVisitors';
 
 export {
-    TicketsSupport,
-    InfoWidget, ActiveVisitors, WelcomeCard, StateCard, SalesState, VisitorPageView, EarningByCountry, TopSelling, TrafficSource, OrderNTransaction, PageVisits
-}
+  TicketsSupport,
+  InfoWidget,
+  ActiveVisitors,
+  WelcomeCard,
+  StateCard,
+  SalesState,
+  VisitorPageView,
+  EarningByCountry,
+  TopSelling,
+  TrafficSource,
+  OrderNTransaction,
+  PageVisits,
+};

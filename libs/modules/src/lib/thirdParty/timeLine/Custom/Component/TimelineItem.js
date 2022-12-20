@@ -1,5 +1,5 @@
 import React from 'react';
-import {Fonts} from '@crema/constants/AppEnums'
+import { Fonts } from '@crema/constants/AppEnums';
 import TimelineItemWrapper from './TimelineItemWrapper';
 import TimelineItemContentWrapper from './TimelineItemContentWrapper';
 import grey from '@mui/material/colors/grey';
@@ -8,7 +8,7 @@ import CircleWrapper from './CircleWrapper';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 
-const TimelineItem = ({data}) => {
+const TimelineItem = ({ data }) => {
   return (
     <TimelineItemWrapper>
       <TimelineItemContentWrapper>
@@ -21,13 +21,13 @@ const TimelineItem = ({data}) => {
             justifyContent: 'space-between',
           }}
         >
-          <Box sx={{mb: 1}}>
+          <Box sx={{ mb: 1 }}>
             <Box
-              component='h2'
+              component="h2"
               sx={{
                 mb: 2,
                 fontWeight: Fonts.LIGHT,
-                fontSize: {xs: 16, xl: 18},
+                fontSize: { xs: 16, xl: 18 },
               }}
             >
               {data.title}
@@ -50,13 +50,13 @@ const TimelineItem = ({data}) => {
                   },
                 }}
               >
-                <i className='material-icons'>event</i>
+                <i className="material-icons">event</i>
               </Box>
               {data.date}
             </time>
           </Box>
           <Box
-            component='span'
+            component="span"
             sx={{
               py: 2,
               px: 4,
@@ -86,7 +86,7 @@ const TimelineItem = ({data}) => {
           sx={{
             textAlign: 'center',
             margin: '20px -20px -20px',
-            padding: {xs: '12px 20px', sm: '20px'},
+            padding: { xs: '12px 20px', sm: '20px' },
             borderTop: (theme) => `solid 1px ${theme.palette.grey[300]}`,
             '& .link': {
               color: (theme) => theme.palette.secondary.main,
@@ -98,10 +98,10 @@ const TimelineItem = ({data}) => {
         >
           {data.link && (
             <a
-              className='link'
+              className="link"
               href={data.link.url}
-              target='_blank'
-              rel='noopener noreferrer'
+              target="_blank"
+              rel="noopener noreferrer"
             >
               {data.link.text}
             </a>
@@ -109,7 +109,7 @@ const TimelineItem = ({data}) => {
         </Box>
         <CircleWrapper>
           <Box
-            component='span'
+            component="span"
             sx={{
               backgroundColor: (theme) => theme.palette.secondary.main,
               borderRadius: '50%',

@@ -23,56 +23,56 @@ const SpeedDial = () => {
   return (
     <>
       <AppComponentHeader
-        title='Speed Dial'
-        description='When pressed, a floating action button can display three to six related actions in the form of a speed dial.'
-        refUrl='https://mui.com/components/speed-dial/'
+        title="Speed Dial"
+        description="When pressed, a floating action button can display three to six related actions in the form of a speed dial."
+        refUrl="https://mui.com/components/speed-dial/"
       />
 
       <AppGridContainer>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Basic speed dial'
+            title="Basic speed dial"
             component={BasicSpeedDial}
             source={BasicSpeedDialSource}
             noScrollbar
-            description='The floating action button can display related actions.'
+            description="The floating action button can display related actions."
           />
         </Grid>
 
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Controlled Open Speed Dial'
+            title="Controlled Open Speed Dial"
             component={ControlledOpenSpeedDial}
             source={ControlledOpenSpeedDialSource}
             noScrollbar
-            description='The floating action button can display related actions.'
+            description="The floating action button can display related actions."
           />
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='OpenIcon Speed Dial'
+            title="OpenIcon Speed Dial"
             component={OpenIconSpeedDial}
             source={OpenIconSpeedDialSource}
             noScrollbar
-            description='The floating action button can display related actions.'
+            description="The floating action button can display related actions."
           />
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='SpeedDial Tooltip Open'
+            title="SpeedDial Tooltip Open"
             component={SpeedDialTooltipOpen}
             source={SpeedDialTooltipOpenSource}
             noScrollbar
-            description='The floating action button can display related actions.'
+            description="The floating action button can display related actions."
           />
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='PlaygroundSpeedDial'
+            title="PlaygroundSpeedDial"
             component={PlaygroundSpeedDial}
             source={PlaygroundSpeedDialSource}
             noScrollbar
-            description='The floating action button can display related actions.'
+            description="The floating action button can display related actions."
           />
         </Grid>
       </AppGridContainer>

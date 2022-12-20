@@ -27,78 +27,78 @@ const Radio = () => {
   return (
     <>
       <AppComponentHeader
-        title='Radio'
-        description='Radio buttons allow the user to select one option from a set.'
-        refUrl='https://mui.com/components/radio-buttons/'
+        title="Radio"
+        description="Radio buttons allow the user to select one option from a set."
+        refUrl="https://mui.com/components/radio-buttons/"
       />
 
       <AppGridContainer>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Radio group'
+            title="Radio group"
             component={RadioButtonsGroup}
             source={RadioButtonsGroupSource}
             noScrollbar
-            description='RadioGroup is a helpful wrapper used to group Radio components that provides an easier API, and proper keyboard accessibility to the group.'
+            description="RadioGroup is a helpful wrapper used to group Radio components that provides an easier API, and proper keyboard accessibility to the group."
           />
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Show error'
+            title="Show error"
             component={ErrorRadios}
             source={ErrorRadiosSource}
             noScrollbar
-            description='In general, radio buttons should have a value selected by default. If this is not the case, you can display an error if no value is selected when the form is submitted:'
+            description="In general, radio buttons should have a value selected by default. If this is not the case, you can display an error if no value is selected when the form is submitted:"
           />
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Controlled'
+            title="Controlled"
             component={ControlledRadioButtonsGroup}
             source={ControlledRadioButtonsGroupSource}
             noScrollbar
-            description='You can control the radio with the value and onChange props:'
+            description="You can control the radio with the value and onChange props:"
           />
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Label placement'
+            title="Label placement"
             component={FormControlLabelPlacement}
             source={FormControlLabelPlacementSource}
             noScrollbar
-            description='You can change the placement of the label with the FormControlLabel component labelPlacement prop:'
+            description="You can change the placement of the label with the FormControlLabel component labelPlacement prop:"
           />
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Direction'
+            title="Direction"
             component={RowRadioButtonsGroup}
             source={RowRadioButtonsGroupSource}
             noScrollbar
-            description='To lay out the buttons horizontally, set the row prop:'
+            description="To lay out the buttons horizontally, set the row prop:"
           />
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Standalone radio buttons'
+            title="Standalone radio buttons"
             component={RadioButtons}
             source={RadioButtonsSource}
             noScrollbar
-            description='Radio can also be used standalone, without the RadioGroup wrapper.'
+            description="Radio can also be used standalone, without the RadioGroup wrapper."
           />
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Size'
+            title="Size"
             component={SizeRadioButtons}
             source={SizeRadioButtonsSource}
             noScrollbar
-            description='Use the size prop or customize the font size of the svg icons to change the size of the radios.'
+            description="Use the size prop or customize the font size of the svg icons to change the size of the radios."
           />
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Color'
+            title="Color"
             component={ColorRadioButtons}
             source={ColorRadioButtonsSource}
             noScrollbar
@@ -106,11 +106,11 @@ const Radio = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Customization'
+            title="Customization"
             component={CustomizedRadios}
             source={CustomizedRadiosSource}
             noScrollbar
-            description='Here is an example of customizing the component. You can learn more about this in the overrides documentation page.'
+            description="Here is an example of customizing the component. You can learn more about this in the overrides documentation page."
           />
         </Grid>
       </AppGridContainer>

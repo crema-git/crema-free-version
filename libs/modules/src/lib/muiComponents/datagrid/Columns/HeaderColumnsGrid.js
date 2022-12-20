@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {DataGrid} from '@mui/x-data-grid';
+import { DataGrid } from '@mui/x-data-grid';
 
 const rows = [
   {
@@ -11,7 +11,7 @@ const rows = [
 
 export default function HeaderColumnsGrid() {
   return (
-    <div style={{height: 250, width: '100%'}}>
+    <div style={{ height: 250, width: '100%' }}>
       <DataGrid
         columns={[
           {
@@ -20,7 +20,7 @@ export default function HeaderColumnsGrid() {
             description:
               'The identification used by the person with access to the online service.',
           },
-          {field: 'age', headerName: 'Age'},
+          { field: 'age', headerName: 'Age' },
         ]}
         rows={rows}
       />

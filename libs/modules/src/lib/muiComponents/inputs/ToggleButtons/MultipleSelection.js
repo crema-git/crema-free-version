@@ -18,18 +18,18 @@ export default function ToggleButtonsMultiple() {
     <ToggleButtonGroup
       value={formats}
       onChange={handleFormat}
-      aria-label='text formatting'
+      aria-label="text formatting"
     >
-      <ToggleButton value='bold' aria-label='bold'>
+      <ToggleButton value="bold" aria-label="bold">
         <FormatBoldIcon />
       </ToggleButton>
-      <ToggleButton value='italic' aria-label='italic'>
+      <ToggleButton value="italic" aria-label="italic">
         <FormatItalicIcon />
       </ToggleButton>
-      <ToggleButton value='underlined' aria-label='underlined'>
+      <ToggleButton value="underlined" aria-label="underlined">
         <FormatUnderlinedIcon />
       </ToggleButton>
-      <ToggleButton value='color' aria-label='color' disabled>
+      <ToggleButton value="color" aria-label="color" disabled>
         <FormatColorFillIcon />
         <ArrowDropDownIcon />
       </ToggleButton>

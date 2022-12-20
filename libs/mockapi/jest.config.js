@@ -1,5 +1,5 @@
 /* eslint-disable */
-export default {
+module.exports = {
   displayName: 'mockapi',
   preset: '../../jest.preset.js',
   transform: {

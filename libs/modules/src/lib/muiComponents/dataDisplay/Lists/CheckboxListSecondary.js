@@ -26,7 +26,7 @@ export default function CheckboxListSecondary() {
   return (
     <List
       dense
-      sx={{width: '100%', maxWidth: 360, bgcolor: 'background.paper'}}
+      sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}
     >
       {[0, 1, 2, 3].map((value) => {
         const labelId = `checkbox-list-secondary-label-${value}`;
@@ -35,10 +35,10 @@ export default function CheckboxListSecondary() {
             key={value}
             secondaryAction={
               <Checkbox
-                edge='end'
+                edge="end"
                 onChange={handleToggle(value)}
                 checked={checked.indexOf(value) !== -1}
-                inputProps={{'aria-labelledby': labelId}}
+                inputProps={{ 'aria-labelledby': labelId }}
               />
             }
             disablePadding

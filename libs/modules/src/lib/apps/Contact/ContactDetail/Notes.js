@@ -1,31 +1,31 @@
 import React from 'react';
 import Box from '@mui/material/Box';
 import IntlMessages from '@crema/utility/IntlMessages';
-import {useIntl} from 'react-intl';
+import { useIntl } from 'react-intl';
 import PropTypes from 'prop-types';
-import {Fonts} from '@crema/constants/AppEnums'
+import { Fonts } from '@crema/constants/AppEnums';
 import TextField from '@mui/material/TextField';
 
 const Notes = (props) => {
-  const {contact} = props;
-  const {messages} = useIntl();
+  const { contact } = props;
+  const { messages } = useIntl();
 
   return (
     <Box
       sx={{
-        pr: {xs: 5, lg: 8, xl: 10},
+        pr: { xs: 5, lg: 8, xl: 10 },
         py: 5,
       }}
     >
       <Box
-        component='h6'
+        component="h6"
         sx={{
           m: 2,
           fontWeight: Fonts.MEDIUM,
           fontSize: 16,
         }}
       >
-        <IntlMessages id='common.notes' />
+        <IntlMessages id="common.notes" />
       </Box>
 
       <TextField
@@ -33,11 +33,11 @@ const Notes = (props) => {
         sx={{
           width: '100%',
         }}
-        rows='4'
+        rows="4"
         placeholder={messages['common.notes']}
-        name='notes'
+        name="notes"
         value={contact.notes}
-        variant='outlined'
+        variant="outlined"
         disabled
       />
     </Box>

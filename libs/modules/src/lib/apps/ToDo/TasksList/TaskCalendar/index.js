@@ -1,25 +1,25 @@
-import React, {useState} from 'react';
-import {momentLocalizer} from 'react-big-calendar';
+import React, { useState } from 'react';
+import { momentLocalizer } from 'react-big-calendar';
 import moment from 'moment';
 import AddNewTask from '../../AddNewTask';
 import PropTypes from 'prop-types';
-import {StyledCalendar} from './Calendar.style';
-import {Box} from '@mui/material';
-import {useNavigate, useParams} from 'react-router-dom';
+import { StyledCalendar } from './Calendar.style';
+import { Box } from '@mui/material';
+import { useNavigate, useParams } from 'react-router-dom';
 import './calendar.css';
 import AppTooltip from '@crema/components/AppTooltip';
 import CustomToolbar from './CustomToolbar';
 
 const localizer = momentLocalizer(moment);
 
-const TaskCalender = ({taskList}) => {
+const TaskCalender = ({ taskList }) => {
   const [isAddTaskOpen, setAddTaskOpen] = useState(false);
   const navigate = useNavigate();
-  const {folder, label} = useParams();
+  const { folder, label } = useParams();
   console.log('taskList:', taskList);
   const [selectedDate, setSelectedDate] = useState(null);
 
-  const onSelectDate = ({start}) => {
+  const onSelectDate = ({ start }) => {
     setSelectedDate(start);
     setAddTaskOpen(true);
   };
@@ -85,7 +85,7 @@ const TaskCalender = ({taskList}) => {
         }}
         popup
         onSelectSlot={onSelectDate}
-        defaultView='month'
+        defaultView="month"
       />
 
       {isAddTaskOpen ? (
