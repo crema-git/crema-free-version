@@ -1,5 +1,5 @@
 /* eslint-disable */
-export default {
+module.exports = {
   displayName: 'services-localization',
   preset: '../../../jest.preset.js',
   transform: {

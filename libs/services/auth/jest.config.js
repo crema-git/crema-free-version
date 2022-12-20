@@ -1,5 +1,5 @@
 /* eslint-disable */
-export default {
+module.exports = {
   displayName: 'services-auth',
   preset: '../../../jest.preset.js',
   transform: {

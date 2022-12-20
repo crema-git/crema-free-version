@@ -34,8 +34,8 @@
         "production": {
           "fileReplacements": [
             {
-              "replace": "apps/source-toolkit/src/environments/environment.ts",
-              "with": "apps/source-toolkit/src/environments/environment.prod.ts"
+              "replace": "apps/source-toolkit/src/environments/environment.js",
+              "with": "apps/source-toolkit/src/environments/environment.prod.js"
             }
           ],
           "optimization": true,
@@ -75,7 +75,7 @@
       "executor": "@nrwl/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "apps/source-toolkit/jest.config.ts",
+        "jestConfig": "apps/source-toolkit/jest.config.js",
         "passWithNoTests": true
       }
     }
