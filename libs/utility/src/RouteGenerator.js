@@ -1,5 +1,5 @@
 import { Navigate } from 'react-router-dom';
-import { authRole, RoutePermittedRole } from '@crema/constants/AppConst';
+import { authRole, RoutePermittedRole } from "@crema/constants";
 import { checkPermission } from '@crema/helpers';
 
 /**

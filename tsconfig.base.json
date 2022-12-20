@@ -199,43 +199,43 @@
         "libs/components/src/lib/AppSkeleton/TodoListSkeleton.js"
       ],
       "@crema/constants": ["libs/constants/src/index.js"],
-      "@crema/constants/ActionTypes": ["libs/constants/src/lib/ActionTypes.js"],
-      "@crema/constants/AppConst": ["libs/constants/src/lib/AppConst.js"],
-      "@crema/constants/AppEnums": ["libs/constants/src/lib/AppEnums.js"],
-      "@crema/constants/ColorSets": ["libs/constants/src/lib/ColorSets.js"],
+      "@crema/constants/ActionTypes": ["libs/constants/src/ActionTypes.js"],
+      "@crema/constants/AppConst": ["libs/constants/src/AppConst.js"],
+      "@crema/constants/AppEnums": ["libs/constants/src/AppEnums.js"],
+      "@crema/constants/ColorSets": ["libs/constants/src/ColorSets.js"],
       "@crema/constants/db/navigationStyle": [
-        "libs/mockapi/src/lib/fakedb/navigationStyle.js"
+        "libs/mockapi/src/fakedb/navigationStyle.js"
       ],
       "@crema/constants/defaultConfig": [
-        "libs/constants/src/lib/defaultConfig.js"
+        "libs/constants/src/defaultConfig.js"
       ],
       "@crema/context": ["libs/context/src/index.ts"],
       "@crema/context/AppContextProvider": [
-        "libs/context/src/lib/AppContextProvider/index.js"
+        "libs/context/src/AppContextProvider/index.js"
       ],
       "@crema/context/AppLocaleProvider": [
-        "libs/context/src/lib/AppLocaleProvider/index.js"
+        "libs/context/src/AppLocaleProvider/index.js"
       ],
       "@crema/context/AppStyleProvider": [
-        "libs/context/src/lib/AppStyleProvider/index.js"
+        "libs/context/src/AppStyleProvider/index.js"
       ],
       "@crema/context/AppThemeProvider": [
-        "libs/context/src/lib/AppThemeProvider/index.js"
+        "libs/context/src/AppThemeProvider/index.js"
       ],
       "@crema/context/InfoViewContextProvider": [
-        "libs/context/src/lib/AppContextProvider/InfoViewContextProvider.js"
+        "libs/context/src/AppContextProvider/InfoViewContextProvider.js"
       ],
       "@crema/context/LayoutContextProvider": [
-        "libs/context/src/lib/AppContextProvider/LayoutContextProvider.js"
+        "libs/context/src/AppContextProvider/LayoutContextProvider.js"
       ],
       "@crema/context/LocaleContextProvider": [
-        "libs/context/src/lib/AppContextProvider/LocaleContextProvider.js"
+        "libs/context/src/AppContextProvider/LocaleContextProvider.js"
       ],
       "@crema/context/SidebarContextProvider": [
-        "libs/context/src/lib/AppContextProvider/SidebarContextProvider.js"
+        "libs/context/src/AppContextProvider/SidebarContextProvider.js"
       ],
       "@crema/context/ThemeContextProvider": [
-        "libs/context/src/lib/AppContextProvider/ThemeContextProvider.js"
+        "libs/context/src/AppContextProvider/ThemeContextProvider.js"
       ],
       "@crema/hooks": ["libs/hooks/src/index.js"],
       "@crema/fakedb": ["libs/fakedb/src/index.js"],
@@ -256,8 +256,6 @@
         "libs/mockapi/src/fakedb/navigationStyle.js"
       ],
       "@crema/helpers": ["libs/helpers/src/index.js"],
-      "@crema/hoc/AppPage": ["libs/hoc/src/lib/AppPage/index.js"],
-      "@crema/hoc/DefaultPage": ["libs/hoc/src/lib/DefaultPage/index.js"],
       "@crema/mockapi": ["libs/mockapi/src/index.js"],
       "@crema/modules": ["libs/modules/src/index.js"],
       "@crema/modules/ErrorPages/ComingSoon": [
@@ -417,26 +415,25 @@
       ],
       "@crema/modules/userPages": ["libs/modules/src/lib/userPages/index.js"],
       "@crema/redux": ["libs/redux/src/index.js"],
-      "@crema/redux-toolkit": ["libs/redux-toolkit/libs/src/index.ts"],
-      "@crema/redux/actions": ["libs/redux/src/lib/actions/index.js"],
-      "@crema/redux/reducers": ["libs/redux/src/lib/reducers/index.js"],
-      "@crema/redux/store": ["libs/redux/src/lib/store/index.js"],
-      "@crema/services": ["libs/services/src/index.js"],
+      "@crema/redux-toolkit": ["libs/redux-toolkit/src/index.ts"],
+      "@crema/redux/actions": ["libs/redux/src/actions/index.js"],
+      "@crema/redux/reducers": ["libs/redux/src/reducers/index.js"],
+      "@crema/redux/store": ["libs/redux/src/store/index.js"],
       "@crema/services/auth": ["libs/services/auth/src/index.js"],
       "@crema/services/auth/AWSAuthProvider": [
-        "libs/services/auth/src/lib/aws-cognito/AWSAuthProvider.js"
+        "libs/services/auth/src/aws-cognito/AWSAuthProvider.js"
       ],
       "@crema/services/auth/Auth0Provider": [
-        "libs/services/auth/src/lib/auth0/Auth0Provider.js"
+        "libs/services/auth/src/auth0/Auth0Provider.js"
       ],
       "@crema/services/auth/FirebaseAuthProvider": [
-        "libs/services/auth/src/lib/firebase/FirebaseAuthProvider.js"
+        "libs/services/auth/src/firebase/FirebaseAuthProvider.js"
       ],
       "@crema/services/auth/JWT": [
-        "libs/services/auth/src/lib/jwt-auth/index.js"
+        "libs/services/auth/lib/jwt-auth/index.js"
       ],
       "@crema/services/auth/JWTAuthProvider": [
-        "libs/services/auth/src/lib/jwt-auth/JWTAuthProvider.js"
+        "libs/services/auth/src/jwt-auth/JWTAuthProvider.js"
       ],
       "@crema/services/axios": ["libs/services/axios/src/index.js"],
       "@crema/services/localization": [
@@ -444,13 +441,13 @@
       ],
       "@crema/svg-icons": ["libs/svg-icons/src/index.ts"],
       "@crema/utility": ["libs/utility/src/index.js"],
-      "@crema/utility/APIHooks": ["libs/utility/src/lib/APIHooks.js"],
-      "@crema/utility/AuthHooks": ["libs/utility/src/lib/AuthHooks.js"],
-      "@crema/utility/IntlMessages": ["libs/utility/src/lib/IntlMessages.js"],
+      "@crema/utility/APIHooks": ["libs/utility/src/APIHooks.js"],
+      "@crema/utility/AuthHooks": ["libs/utility/src/AuthHooks.js"],
+      "@crema/utility/IntlMessages": ["libs/utility/src/IntlMessages.js"],
       "@crema/utility/RouteGenerator": [
-        "libs/utility/src/lib/RouteGenerator.js"
+        "libs/utility/src/RouteGenerator.js"
       ],
-      "@crema/utility/Utils": ["libs/utility/src/lib/Utils.js"]
+      "@crema/utility/Utils": ["libs/utility/src/Utils.js"]
     }
   },
   "exclude": ["node_modules", "tmp"]
