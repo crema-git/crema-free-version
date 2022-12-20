@@ -15,7 +15,6 @@ import {
 import AppLoader from '@crema/components/AppLoader';
 
 const Checkout = () => {
-  use;
 
   const [{ apiData: cartItems, loading }] = useGetDataApi('/api/cart/get', []);
 

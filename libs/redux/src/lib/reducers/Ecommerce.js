@@ -60,8 +60,8 @@ const ecommerceReducer = (state = initialState, action) => {
     case GET_RECENT_ORDER:
       return {
         ...state,
-        recentOrders: action.payload.orders,
-        orderCount: action.payload.orderCount,
+        recentOrders: action.payload.data,
+        orderCount: action.payload.count,
       };
 
     case SET_CART_ITEMS:

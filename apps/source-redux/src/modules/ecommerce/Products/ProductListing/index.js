@@ -1,16 +1,19 @@
 import React, { useEffect, useState } from 'react';
 import AppsHeader from '@crema/components/AppsHeader';
-import ProductHeader from '../ProductHeader';
-import ProductGrid from './ProductGrid/index';
 import PropTypes from 'prop-types';
-import ProductList from './ProductList';
 import AppsContent from '@crema/components/AppsContent';
 import { alpha, Box, Hidden } from '@mui/material';
 import { useThemeContext } from '@crema/context/ThemeContextProvider';
 import AppsFooter from '@crema/components/AppsFooter';
 import AppsPagination from '@crema/components/AppsPagination';
-import { VIEW_TYPE } from '../index';
-import { useGetDataApi } from '@crema/utility/APIHooks';
+import {
+  ProductGrid,
+  ProductHeader,
+  ProductList,
+  VIEW_TYPE,
+} from '@crema/modules/ecommerce/Products';
+import { useDispatch, useSelector } from 'react-redux';
+import { onGetEcommerceData } from '@crema/redux/actions';
 
 const ProductListing = ({
   filterData,
@@ -18,17 +21,17 @@ const ProductListing = ({
   setViewType,
   setFilterData,
 }) => {
+  const dispatch = useDispatch();
   const { theme } = useThemeContext();
   const [page, setPage] = useState(0);
 
-  const [{ apiData: ecommerceList, loading }, { setQueryParams }] =
-    useGetDataApi('/api/ecommerce/list', [], {}, false);
-
-  const { list, total } = ecommerceList;
+  const ecommerceList = useSelector(({ ecommerce }) => ecommerce.ecommerceList);
+  const { list = [], total = 0 } = ecommerceList;
+  const loading = useSelector(({ common }) => common.loading);
 
   useEffect(() => {
-    setQueryParams({ page, filterData });
-  }, [page, filterData]);
+    dispatch(onGetEcommerceData({ filterData, page }));
+  }, [dispatch, filterData, page]);
 
   const onPageChange = (event, value) => {
     setPage(value);
@@ -37,6 +40,7 @@ const ProductListing = ({
   const searchProduct = (title) => {
     setFilterData({ ...filterData, title });
   };
+
   return (
     <>
       <AppsHeader>

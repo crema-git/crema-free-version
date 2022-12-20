@@ -71,12 +71,11 @@ function TransitionLeft(props) {
 
 const AppMessageView = (props) => {
   const [open, setOpen] = React.useState(false);
-  const { className, message, variant, ...other } = props;
+  const { clearInfoView, className, message, variant, ...other } = props;
   const Icon = variantIcon[variant];
-  const infoViewActionsContext = useInfoViewActionsContext();
   const onClose = () => {
     setOpen(false);
-    setTimeout(() => infoViewActionsContext.clearInfoView(), 500);
+    setTimeout(() => clearInfoView(), 500);
   };
   useEffect(() => {
     if (message) {
@@ -121,6 +120,7 @@ const AppMessageView = (props) => {
   );
 };
 AppMessageView.propTypes = {
+  clearInfoView: PropTypes.func,
   className: PropTypes.string,
   message: PropTypes.string,
   variant: PropTypes.oneOf(['error', 'info', 'success', 'warning']).isRequired,

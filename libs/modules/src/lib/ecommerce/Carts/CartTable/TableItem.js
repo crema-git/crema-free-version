@@ -7,10 +7,8 @@ import Avatar from '@mui/material/Avatar';
 import CancelIcon from '@mui/icons-material/Cancel';
 import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
-import { Fonts } from '@crema/constants/AppEnums';
-import { styled } from '@mui/material/styles';
-import { useInfoViewActionsContext } from '@crema/context/InfoViewContextProvider';
-import { postDataApi, putDataApi } from '@crema/utility/APIHooks';
+import {Fonts} from '@crema/constants/AppEnums';
+import {styled} from '@mui/material/styles';
 
 const StyledTableCell = styled(TableCell)(() => ({
   fontSize: 14,
@@ -22,56 +20,7 @@ const StyledTableCell = styled(TableCell)(() => ({
     paddingRight: 20,
   },
 }));
-const TableItem = ({ data, setTableData }) => {
-  const infoViewActionsContext = useInfoViewActionsContext();
-
-  const onRemoveItem = (product) => {
-    postDataApi('/api/cart/remove', infoViewActionsContext, {
-      product,
-    })
-      .then((data) => {
-        setTableData(data);
-      })
-      .catch((error) => {
-        infoViewActionsContext.fetchError(error.message);
-      });
-  };
-
-  const onDecrement = () => {
-    if (data.count > 0) {
-      putDataApi('/api/cart/update', infoViewActionsContext, {
-        product: { ...data, count: data.count - 1 },
-      })
-        .then((data) => {
-          setTableData(data);
-        })
-        .catch((error) => {
-          infoViewActionsContext.fetchError(error.message);
-        });
-    } else {
-      postDataApi('/api/cart/remove', infoViewActionsContext, {
-        product: data,
-      })
-        .then((data) => {
-          setTableData(data);
-        })
-        .catch((error) => {
-          infoViewActionsContext.fetchError(error.message);
-        });
-    }
-  };
-  const onIncrement = () => {
-    putDataApi('/api/cart/update', infoViewActionsContext, {
-      product: { ...data, count: data.count + 1 },
-    })
-      .then((data) => {
-        setTableData(data);
-      })
-      .catch((error) => {
-        infoViewActionsContext.fetchError(error.message);
-      });
-  };
-
+const TableItem = ({ data, onRemoveItem, onIncrement, onDecrement }) => {
   return (
     <TableRow key={data.name} className="item-hover">
       <StyledTableCell>
@@ -101,11 +50,11 @@ const TableItem = ({ data, setTableData }) => {
           width={100}
           height={36}
         >
-          <AddIcon className="pointer" onClick={onIncrement} />
+          <AddIcon className="pointer" onClick={() => onIncrement(data)} />
           <Box component="span" px={3}>
             {data.count}
           </Box>
-          <RemoveIcon className="pointer" onClick={onDecrement} />
+          <RemoveIcon className="pointer" onClick={() => onDecrement(data)} />
         </Box>
       </StyledTableCell>
       <StyledTableCell align="left" fontWeight={Fonts.MEDIUM}>
@@ -123,4 +72,7 @@ export default TableItem;
 TableItem.propTypes = {
   data: PropTypes.object.isRequired,
   setTableData: PropTypes.func,
+  onDecrement: PropTypes.func,
+  onIncrement: PropTypes.func,
+  onRemoveItem: PropTypes.func,
 };

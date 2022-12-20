@@ -1,24 +1,73 @@
 import React from 'react';
-import { Box, Grid } from '@mui/material';
+import {Box, Grid} from '@mui/material';
 import Button from '@mui/material/Button';
-import { useNavigate } from 'react-router-dom';
+import {useNavigate} from 'react-router-dom';
 import AppCard from '@crema/components/AppCard';
 import IntlMessages from '@crema/utility/IntlMessages';
-import { Fonts } from '@crema/constants/AppEnums';
+import {Fonts} from '@crema/constants/AppEnums';
 import AppAnimate from '@crema/components/AppAnimate';
 import AppGridContainer from '@crema/components/AppGridContainer';
-import { useGetDataApi } from '@crema/utility/APIHooks';
-import { CartTable, OrderSummary } from '@crema/modules/ecommerce/Carts';
+import {postDataApi, putDataApi, useGetDataApi,} from '@crema/utility/APIHooks';
+import {CartTable, OrderSummary} from '@crema/modules/ecommerce/Carts';
 import AppLoader from '@crema/components/AppLoader';
+import {useInfoViewActionsContext} from '@crema/context/InfoViewContextProvider';
 
 const Carts = () => {
-  const dispatch = useDispatch();
+  const infoViewActionsContext = useInfoViewActionsContext();
   const navigate = useNavigate();
-  const cartItems = useSelector(({ ecommerce }) => ecommerce.cartItems);
 
-  useEffect(() => {
-    dispatch(getCartItems());
-  }, [dispatch]);
+  const [{ apiData, loading }, { setData }] = useGetDataApi(
+    '/api/cart/get',
+    [],
+    {}
+  );
+
+  const onRemoveItem = (product) => {
+    postDataApi('/api/cart/remove', infoViewActionsContext, {
+      product,
+    })
+      .then((data) => {
+        setData(data);
+      })
+      .catch((error) => {
+        infoViewActionsContext.fetchError(error.message);
+      });
+  };
+
+  const onDecrement = (data) => {
+    if (data.count > 1) {
+      putDataApi('/api/cart/update', infoViewActionsContext, {
+        product: { ...data, count: data.count - 1 },
+      })
+        .then((data) => {
+          setData(data);
+        })
+        .catch((error) => {
+          infoViewActionsContext.fetchError(error.message);
+        });
+    } else {
+      postDataApi('/api/cart/remove', infoViewActionsContext, {
+        product: data,
+      })
+        .then((data) => {
+          setData(data);
+        })
+        .catch((error) => {
+          infoViewActionsContext.fetchError(error.message);
+        });
+    }
+  };
+  const onIncrement = (data) => {
+    putDataApi('/api/cart/update', infoViewActionsContext, {
+      product: { ...data, count: data.count + 1 },
+    })
+      .then((data) => {
+        setData(data);
+      })
+      .catch((error) => {
+        infoViewActionsContext.fetchError(error.message);
+      });
+  };
 
   return (
     <>
@@ -72,7 +121,12 @@ const Carts = () => {
                     </Box>
                   }
                 >
-                  <CartTable cartItems={apiData} setTableData={setData} />
+                  <CartTable
+                    cartItems={apiData}
+                    onRemoveItem={onRemoveItem}
+                    onIncrement={onIncrement}
+                    onDecrement={onDecrement}
+                  />
                 </AppCard>
               </Grid>
               <Grid item xs={12} md={4}>
