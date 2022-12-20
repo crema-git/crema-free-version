@@ -23,15 +23,15 @@ const Rows = () => {
   return (
     <>
       <AppComponentHeader
-        title='Rows'
+        title="Rows"
         description='The portal component renders its children into a new "subtree" outside of current DOM hierarchy.'
-        refUrl='https://mui.com/components/portal/'
+        refUrl="https://mui.com/components/portal/"
       />
 
       <AppGridContainer>
         <Grid item xs={12}>
           <AppComponentCard
-            title='InfiniteLoadingGrid'
+            title="InfiniteLoadingGrid"
             component={InfiniteLoadingGrid}
             source={InfiniteLoadingGridSource}
             noScrollbar
@@ -39,7 +39,7 @@ const Rows = () => {
         </Grid>
         <Grid item xs={12}>
           <AppComponentCard
-            title='ApiRefRowsGrid'
+            title="ApiRefRowsGrid"
             component={ApiRefRowsGrid}
             source={ApiRefRowsGridSource}
             noScrollbar
@@ -47,7 +47,7 @@ const Rows = () => {
         </Grid>
         <Grid item xs={12}>
           <AppComponentCard
-            title='ThrottledRowsGrid'
+            title="ThrottledRowsGrid"
             component={ThrottledRowsGrid}
             source={ThrottledRowsGridSource}
             noScrollbar
@@ -55,7 +55,7 @@ const Rows = () => {
         </Grid>
         <Grid item xs={12}>
           <AppComponentCard
-            title='DenseHeightGrid'
+            title="DenseHeightGrid"
             component={DenseHeightGrid}
             source={DenseHeightGridSource}
             noScrollbar
@@ -63,7 +63,7 @@ const Rows = () => {
         </Grid>
         <Grid item xs={12}>
           <AppComponentCard
-            title='RowsGrid'
+            title="RowsGrid"
             component={RowsGrid}
             source={RowsGridSource}
             noScrollbar

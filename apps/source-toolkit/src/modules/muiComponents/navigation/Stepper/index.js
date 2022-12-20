@@ -1,3 +1,3 @@
-import {Stepper} from '@crema/modules/components/navigation';
+import { Stepper } from '@crema/modules/components/navigation';
 
 export default Stepper;

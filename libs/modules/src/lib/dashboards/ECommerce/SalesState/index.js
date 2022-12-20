@@ -1,10 +1,10 @@
 import React from 'react';
-import {Box, Typography} from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import AppCard from '@crema/components/AppCard';
 import PropTypes from 'prop-types';
 
 const SalesState = (props) => {
-  const {bgColor, icon, type, value} = props.state;
+  const { bgColor, icon, type, value } = props.state;
 
   return (
     <AppCard
@@ -12,7 +12,7 @@ const SalesState = (props) => {
         backgroundColor: bgColor,
         height: 1,
       }}
-      className='card-hover'
+      className="card-hover"
     >
       <Box
         sx={{
@@ -26,11 +26,11 @@ const SalesState = (props) => {
             alignSelf: 'flex-start',
             '& img': {
               display: 'block',
-              width: {xs: 'auto', lg: 50, xl: 'auto'},
+              width: { xs: 'auto', lg: 50, xl: 'auto' },
             },
           }}
         >
-          <img src={icon} alt='icon' />
+          <img src={icon} alt="icon" />
         </Box>
         <Box
           sx={{
@@ -39,8 +39,8 @@ const SalesState = (props) => {
           }}
         >
           <Typography
-            component='h3'
-            variant='inherit'
+            component="h3"
+            variant="inherit"
             sx={{
               color: 'inherit',
             }}
@@ -51,7 +51,7 @@ const SalesState = (props) => {
             sx={{
               mt: 0.5,
             }}
-            component='p'
+            component="p"
           >
             {type}
           </Box>

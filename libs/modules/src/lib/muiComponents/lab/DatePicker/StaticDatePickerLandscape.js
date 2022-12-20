@@ -11,8 +11,8 @@ export default function StaticDatePickerLandscape() {
   return (
     <LocalizationProvider dateAdapter={AdapterDateFns}>
       <StaticDatePicker
-        orientation='landscape'
-        openTo='day'
+        orientation="landscape"
+        openTo="day"
         value={value}
         shouldDisableDate={isWeekend}
         onChange={(newValue) => {

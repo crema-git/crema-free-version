@@ -10,7 +10,7 @@ export default function StaticTimePickerDemo() {
   return (
     <LocalizationProvider dateAdapter={AdapterDateFns}>
       <StaticTimePicker
-        displayStaticWrapperAs='mobile'
+        displayStaticWrapperAs="mobile"
         value={value}
         onChange={(newValue) => {
           setValue(newValue);

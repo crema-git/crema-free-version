@@ -1,4 +1,9 @@
-import {CREATE_NEW_POST, GET_FEED_POSTS, GET_WALL_DATA, UPDATE_POST,} from '@crema/constants/ActionTypes';
+import {
+  CREATE_NEW_POST,
+  GET_FEED_POSTS,
+  GET_WALL_DATA,
+  UPDATE_POST,
+} from '@crema/constants/ActionTypes';
 
 const initialState = {
   wallData: null,
@@ -13,7 +18,7 @@ const wallReducer = (state = initialState, action) => {
         wallData: action.payload,
       };
     case GET_FEED_POSTS: {
-      return {...state, postList: action.payload};
+      return { ...state, postList: action.payload };
     }
 
     case CREATE_NEW_POST: {
@@ -27,7 +32,7 @@ const wallReducer = (state = initialState, action) => {
       return {
         ...state,
         postList: state.postList.map((item) =>
-          item.id === action.payload.id ? action.payload : item,
+          item.id === action.payload.id ? action.payload : item
         ),
       };
     }

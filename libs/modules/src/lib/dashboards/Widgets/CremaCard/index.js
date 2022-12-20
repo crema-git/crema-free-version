@@ -1,11 +1,11 @@
 import React from 'react';
 import Box from '@mui/material/Box';
 import PropTypes from 'prop-types';
-import {Fonts} from '@crema/constants/AppEnums'
+import { Fonts } from '@crema/constants/AppEnums';
 import AppCard from '@crema/components/AppCard';
 
 const CremaCard = (props) => {
-  const {data, bgColor, icon} = props;
+  const { data, bgColor, icon } = props;
 
   return (
     <AppCard
@@ -16,7 +16,7 @@ const CremaCard = (props) => {
     >
       <Box
         sx={{
-          mb: {xs: 4, xl: 6},
+          mb: { xs: 4, xl: 6 },
           mt: 1,
           display: 'flex',
           alignItems: 'center',
@@ -36,7 +36,7 @@ const CremaCard = (props) => {
               width: 40,
             }}
           >
-            <img alt='logo' src={data.image} />
+            <img alt="logo" src={data.image} />
           </Box>
           <Box
             sx={{
@@ -46,7 +46,7 @@ const CremaCard = (props) => {
             }}
           >
             <Box
-              component='h4'
+              component="h4"
               sx={{
                 color: 'primary.contrastText',
                 fontWeight: Fonts.BOLD,
@@ -61,7 +61,7 @@ const CremaCard = (props) => {
               {data.name}
             </Box>
             <Box
-              component='span'
+              component="span"
               sx={{
                 color: 'primary.contrastText',
                 mb: 0,
@@ -77,7 +77,7 @@ const CremaCard = (props) => {
           </Box>
         </Box>
         <Box
-          component='span'
+          component="span"
           sx={{
             ml: 'auto',
             fontSize: 20,
@@ -88,10 +88,10 @@ const CremaCard = (props) => {
       </Box>
 
       <Box
-        component='p'
+        component="p"
         sx={{
           color: 'primary.contrastText',
-          mb: {xs: 1, xl: 4},
+          mb: { xs: 1, xl: 4 },
           fontSize: 14,
         }}
       >

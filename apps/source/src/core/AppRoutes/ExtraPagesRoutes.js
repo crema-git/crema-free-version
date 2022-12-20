@@ -1,10 +1,16 @@
 import React from 'react';
-import {RoutePermittedRole} from "@crema/constants/AppConst";
+import { RoutePermittedRole } from '@crema/constants/AppConst';
 
 const AboutUs = React.lazy(() => import('../../modules/extraPages/AboutUs'));
-const ContactUs = React.lazy(() => import('../../modules/extraPages/ContactUs'));
-const KnowledgeBase = React.lazy(() => import('../../modules/extraPages/KnowledgeBase'));
-const Portfolio = React.lazy(() => import('../../modules/extraPages/Portfolio'));
+const ContactUs = React.lazy(() =>
+  import('../../modules/extraPages/ContactUs')
+);
+const KnowledgeBase = React.lazy(() =>
+  import('../../modules/extraPages/KnowledgeBase')
+);
+const Portfolio = React.lazy(() =>
+  import('../../modules/extraPages/Portfolio')
+);
 const FAQ = React.lazy(() => import('../../modules/extraPages/FAQ'));
 const Pricing = React.lazy(() => import('../../modules/extraPages/Pricing'));
 

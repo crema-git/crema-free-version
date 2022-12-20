@@ -1,10 +1,10 @@
 import React from 'react';
 import CheckIcon from '@mui/icons-material/Check';
-import IntlMessages from "@crema/utility/IntlMessages";
+import IntlMessages from '@crema/utility/IntlMessages';
 import Box from '@mui/material/Box';
 import PropTypes from 'prop-types';
 
-const AppSelectedIcon = ({backgroundColor, isCenter = true, color}) => {
+const AppSelectedIcon = ({ backgroundColor, isCenter = true, color }) => {
   let centerStyle = isCenter
     ? {
         position: 'absolute',
@@ -38,7 +38,7 @@ const AppSelectedIcon = ({backgroundColor, isCenter = true, color}) => {
       }}
     >
       <CheckIcon>
-        <IntlMessages id='customizer.checked' />
+        <IntlMessages id="customizer.checked" />
       </CheckIcon>
     </Box>
   );

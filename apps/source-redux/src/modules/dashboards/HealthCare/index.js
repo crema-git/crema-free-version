@@ -1,8 +1,8 @@
-import React, {useEffect} from 'react';
-import {Grid} from '@mui/material';
+import React, { useEffect } from 'react';
+import { Grid } from '@mui/material';
 import AppGridContainer from '@crema/components/AppGridContainer';
 import AppAnimate from '@crema/components/AppAnimate';
-import {useGetDataApi} from '@crema/utility/APIHooks';
+import { useGetDataApi } from '@crema/utility/APIHooks';
 import {
   AppointmentCard,
   CancelVisits,
@@ -18,12 +18,11 @@ import {
   RecentPatients,
   TopDoctors,
   UpcomingAppointments,
-  YourActivity
+  YourActivity,
 } from '@crema/modules/dashboards/HealthCare';
-import AppLoader from "@crema/components/AppLoader";
-import {useDispatch, useSelector} from "react-redux";
-import {onGetHCData} from "@crema/redux/actions";
-
+import AppLoader from '@crema/components/AppLoader';
+import { useDispatch, useSelector } from 'react-redux';
+import { onGetHCData } from '@crema/redux/actions';
 
 const HealthCare = () => {
   const dispatch = useDispatch();
@@ -32,12 +31,12 @@ const HealthCare = () => {
     dispatch(onGetHCData());
   }, [dispatch]);
 
-  const {healthCare} = useSelector(({dashboard}) => dashboard);
+  const { healthCare } = useSelector(({ dashboard }) => dashboard);
 
   return (
     <>
       {healthCare ? (
-        <AppAnimate animation='transition.slideUpIn' delay={200}>
+        <AppAnimate animation="transition.slideUpIn" delay={200}>
           <AppGridContainer>
             {healthCare.salesState.map((data, index) => (
               <Grid item xs={12} sm={6} lg={3} key={index}>
@@ -116,9 +115,9 @@ const HealthCare = () => {
             </Grid>
           </AppGridContainer>
         </AppAnimate>
-      ): (
+      ) : (
         <AppLoader />
-        )}
+      )}
     </>
   );
 };

@@ -1,9 +1,9 @@
 import React from 'react';
 import Box from '@mui/material/Box';
 import AppSearchBar from '@crema/components/AppSearchBar';
-import {Hidden} from '@mui/material';
+import { Hidden } from '@mui/material';
 import PropTypes from 'prop-types';
-import {useIntl} from 'react-intl';
+import { useIntl } from 'react-intl';
 import CheckBox from './CheckBox';
 import ContactCheckedActions from './ContactCheckedActions';
 import ViewSelectButtons from './ViewSelectButtons';
@@ -24,7 +24,7 @@ const ContactHeader = (props) => {
     pageView,
   } = props;
 
-  const {messages} = useIntl();
+  const { messages } = useIntl();
 
   return (
     <>
@@ -43,7 +43,7 @@ const ContactHeader = (props) => {
         />
 
         <AppSearchBar
-          iconPosition='right'
+          iconPosition="right"
           overlap={false}
           value={filterText}
           onChange={(event) => onSetFilterText(event.target.value)}
@@ -66,7 +66,7 @@ const ContactHeader = (props) => {
       <Hidden smDown>
         {apiData?.data?.length > 0 ? (
           <AppsPagination
-            sx={{ml: 2}}
+            sx={{ ml: 2 }}
             count={apiData?.count}
             page={page}
             onPageChange={onPageChange}

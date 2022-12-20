@@ -7,10 +7,10 @@ import AddIcon from '@mui/icons-material/Add';
 import IntlMessages from '@crema/utility/IntlMessages';
 import Grid from '@mui/material/Grid';
 import PropTypes from 'prop-types';
-import {Fonts} from '@crema/constants/AppEnums'
-import {grey} from '@mui/material/colors';
+import { Fonts } from '@crema/constants/AppEnums';
+import { grey } from '@mui/material/colors';
 
-const AddBoardButton = ({onAddButtonClick}) => {
+const AddBoardButton = ({ onAddButtonClick }) => {
   return (
     <Grid item xs={12} sm={6} md={4} lg={3}>
       <Card
@@ -43,13 +43,13 @@ const AddBoardButton = ({onAddButtonClick}) => {
           />
         </Avatar>
         <Box
-          component='p'
+          component="p"
           sx={{
             fontWeight: Fonts.MEDIUM,
             fontSize: 14,
           }}
         >
-          <IntlMessages id='scrumboard.addNewBoard' />
+          <IntlMessages id="scrumboard.addNewBoard" />
         </Box>
       </Card>
     </Grid>

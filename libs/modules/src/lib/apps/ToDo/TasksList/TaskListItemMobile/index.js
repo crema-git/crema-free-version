@@ -1,6 +1,6 @@
 import React from 'react';
 import ListItem from '@mui/material/ListItem';
-import {useNavigate, useParams} from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import Box from '@mui/material/Box';
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
@@ -8,11 +8,11 @@ import Priority from './Priority';
 import AppsStarredIcon from '@crema/components/AppsStarredIcon';
 import Avatar from '@mui/material/Avatar';
 import Typography from '@mui/material/Typography';
-import {alpha} from '@mui/material';
-import {styled} from '@mui/material/styles';
+import { alpha } from '@mui/material';
+import { styled } from '@mui/material/styles';
 import moment from 'moment';
 
-const StyledListItem = styled(ListItem)(({theme}) => ({
+const StyledListItem = styled(ListItem)(({ theme }) => ({
   padding: '8px 20px 4px 20px',
   overflow: 'hidden',
   display: 'flex',
@@ -35,7 +35,7 @@ const StyledListItem = styled(ListItem)(({theme}) => ({
   },
 }));
 
-const UserInfoWrapper = styled('div')(({theme}) => ({
+const UserInfoWrapper = styled('div')(({ theme }) => ({
   display: 'flex',
   alignItems: 'flex-start',
   width: '80%',
@@ -43,7 +43,7 @@ const UserInfoWrapper = styled('div')(({theme}) => ({
     width: '75%',
   },
 }));
-const TaskActionView = styled(Box)(({theme}) => ({
+const TaskActionView = styled(Box)(({ theme }) => ({
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
@@ -56,9 +56,9 @@ const TaskActionView = styled(Box)(({theme}) => ({
   },
 }));
 
-const TaskListItemMobile = ({task, checkedTasks, onChangeStarred}) => {
+const TaskListItemMobile = ({ task, checkedTasks, onChangeStarred }) => {
   const navigate = useNavigate();
-  const {folder, label} = useParams();
+  const { folder, label } = useParams();
 
   const onViewTaskDetail = (task) => {
     if (folder) navigate(`/apps/todo/${folder}/${task.id}`);
@@ -93,7 +93,7 @@ const TaskListItemMobile = ({task, checkedTasks, onChangeStarred}) => {
             overflow: 'hidden',
           }}
         >
-          <Box sx={{display: 'flex', alignItems: 'center'}}>
+          <Box sx={{ display: 'flex', alignItems: 'center' }}>
             <Box
               sx={{
                 mb: 1.5,
@@ -102,7 +102,7 @@ const TaskListItemMobile = ({task, checkedTasks, onChangeStarred}) => {
                 textOverflow: 'ellipsis',
                 whiteSpace: 'nowrap',
               }}
-              component='p'
+              component="p"
             >
               {task.title}
             </Box>
@@ -125,7 +125,7 @@ const TaskListItemMobile = ({task, checkedTasks, onChangeStarred}) => {
 
       <TaskActionView>
         <Box
-          component='span'
+          component="span"
           sx={{
             color: 'text.secondary',
             fontSize: 12,
@@ -138,8 +138,8 @@ const TaskListItemMobile = ({task, checkedTasks, onChangeStarred}) => {
           {moment(task.startDate).format('HH:mm A')}
         </Box>
         <Box
-          mt='auto'
-          component='span'
+          mt="auto"
+          component="span"
           onClick={(event) => event.stopPropagation()}
         >
           <AppsStarredIcon item={task} onChange={onChangeStarred} />

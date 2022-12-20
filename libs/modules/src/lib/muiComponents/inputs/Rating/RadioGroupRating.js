@@ -31,7 +31,7 @@ const customIcons = {
 };
 
 function IconContainer(props) {
-  const {value, ...other} = props;
+  const { value, ...other } = props;
   return <span {...other}>{customIcons[value].icon}</span>;
 }
 
@@ -42,7 +42,7 @@ IconContainer.propTypes = {
 export default function RadioGroupRating() {
   return (
     <Rating
-      name='highlight-selected-only'
+      name="highlight-selected-only"
       defaultValue={2}
       IconContainerComponent={IconContainer}
       highlightSelectedOnly

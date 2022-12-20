@@ -14,11 +14,11 @@ import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import AppTooltip from '../../../AppTooltip';
-import {alpha} from '@mui/material/styles';
+import { alpha } from '@mui/material/styles';
 import AppLogo from '../../components/AppLogo';
 import UserInfo from '../../components/UserInfo';
 
-const AppHeader = ({toggleNavCollapsed}) => {
+const AppHeader = ({ toggleNavCollapsed }) => {
   const [anchorEl, setAnchorEl] = React.useState(null);
 
   const handleClick = (event) => {
@@ -31,7 +31,7 @@ const AppHeader = ({toggleNavCollapsed}) => {
 
   return (
     <AppBar
-      color='inherit'
+      color="inherit"
       sx={{
         boxShadow: 'none',
         borderBottom: (theme) => `1px solid ${theme.palette.divider}`,
@@ -39,25 +39,25 @@ const AppHeader = ({toggleNavCollapsed}) => {
         transition: 'width 0.5s ease',
         width: '100%',
       }}
-      className='app-bar'
+      className="app-bar"
     >
       <Toolbar
         sx={{
           boxSizing: 'border-box',
-          minHeight: {xs: 56, sm: 70},
-          paddingLeft: {xs: 2.5, md: 5},
-          paddingRight: {xs: 2.5, md: 5},
+          minHeight: { xs: 56, sm: 70 },
+          paddingLeft: { xs: 2.5, md: 5 },
+          paddingRight: { xs: 2.5, md: 5 },
         }}
       >
         <Hidden lgUp>
           <IconButton
-            sx={{color: 'text.secondary'}}
-            edge='start'
-            className='menu-btn'
-            color='inherit'
-            aria-label='open drawer'
+            sx={{ color: 'text.secondary' }}
+            edge="start"
+            className="menu-btn"
+            color="inherit"
+            aria-label="open drawer"
             onClick={toggleNavCollapsed}
-            size='large'
+            size="large"
           >
             <MenuIcon
               sx={{
@@ -70,7 +70,7 @@ const AppHeader = ({toggleNavCollapsed}) => {
         <Box
           sx={{
             '& .logo-text': {
-              display: {xs: 'none', sm: 'block'},
+              display: { xs: 'none', sm: 'block' },
             },
           }}
         >
@@ -85,19 +85,19 @@ const AppHeader = ({toggleNavCollapsed}) => {
           sx={{
             minHeight: 40,
             position: 'relative',
-            display: {xs: 'none', sm: 'block'},
+            display: { xs: 'none', sm: 'block' },
             '& .searchRoot': {
-              position: {xs: 'absolute', sm: 'relative'},
-              right: {xs: 0, sm: 'auto'},
-              top: {xs: 0, sm: 'auto'},
+              position: { xs: 'absolute', sm: 'relative' },
+              right: { xs: 0, sm: 'auto' },
+              top: { xs: 0, sm: 'auto' },
             },
           }}
         >
-          <AppSearchBar iconPosition='right' placeholder='Search…' />
+          <AppSearchBar iconPosition="right" placeholder="Search…" />
         </Box>
 
-        <Box sx={{ml: 4}}>
-          <AppLngSwitcher iconOnly={true} tooltipPosition='bottom' />
+        <Box sx={{ ml: 4 }}>
+          <AppLngSwitcher iconOnly={true} tooltipPosition="bottom" />
         </Box>
 
         <Box
@@ -136,14 +136,14 @@ const AppHeader = ({toggleNavCollapsed}) => {
 
           <Box
             sx={{
-              ml: {sm: 4},
-              mr: {xs: 4, sm: 0},
-              minWidth: {md: 220},
+              ml: { sm: 4 },
+              mr: { xs: 4, sm: 0 },
+              minWidth: { md: 220 },
               '& .user-info-view': {
                 p: 0,
               },
               '& .user-info': {
-                display: {xs: 'none', md: 'block'},
+                display: { xs: 'none', md: 'block' },
               },
             }}
           >
@@ -165,7 +165,7 @@ const AppHeader = ({toggleNavCollapsed}) => {
                   px: 1.85,
                 }}
               >
-                <AppTooltip title='More'>
+                <AppTooltip title="More">
                   <IconButton
                     sx={{
                       borderRadius: '50%',
@@ -185,7 +185,7 @@ const AppHeader = ({toggleNavCollapsed}) => {
                       },
                     }}
                     onClick={handleClick}
-                    size='large'
+                    size="large"
                   >
                     <MoreVertIcon />
                   </IconButton>
@@ -194,7 +194,7 @@ const AppHeader = ({toggleNavCollapsed}) => {
             </Box>
           </Hidden>
           <Menu
-            id='simple-menu'
+            id="simple-menu"
             anchorEl={anchorEl}
             keepMounted
             open={Boolean(anchorEl)}

@@ -1,11 +1,11 @@
 import React from 'react';
-import {Box, CardMedia} from '@mui/material';
+import { Box, CardMedia } from '@mui/material';
 import Avatar from '@mui/material/Avatar';
 import Typography from '@mui/material/Typography';
 import PropTypes from 'prop-types';
-import {styled} from '@mui/material/styles';
+import { styled } from '@mui/material/styles';
 
-const UserInfoContainer = styled('div')(({theme}) => ({
+const UserInfoContainer = styled('div')(({ theme }) => ({
   position: 'absolute',
   bottom: 0,
   left: 0,
@@ -35,8 +35,8 @@ const UserInfoContainer = styled('div')(({theme}) => ({
   },
 }));
 
-const StoriesItem = ({data}) => {
-  const {imgSrc, avatar, title} = data;
+const StoriesItem = ({ data }) => {
+  const { imgSrc, avatar, title } = data;
   return (
     <Box
       sx={{
@@ -44,14 +44,14 @@ const StoriesItem = ({data}) => {
       }}
     >
       <CardMedia
-        component='img'
+        component="img"
         sx={{
           width: '100%',
           minHeight: 160,
           borderRadius: 1,
         }}
         src={imgSrc}
-        alt='Stories 1'
+        alt="Stories 1"
       />
       <UserInfoContainer>
         <Avatar
@@ -67,7 +67,7 @@ const StoriesItem = ({data}) => {
             },
           }}
           src={avatar}
-          alt='Avatar'
+          alt="Avatar"
         />
         <Typography
           sx={{

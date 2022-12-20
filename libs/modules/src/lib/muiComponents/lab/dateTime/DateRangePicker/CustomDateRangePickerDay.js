@@ -1,13 +1,16 @@
 import * as React from 'react';
-import {styled} from '@mui/material/styles';
+import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
-import {AdapterDateFns} from '@mui/x-date-pickers/AdapterDateFns';
-import {LocalizationProvider} from '@mui/x-date-pickers';
-import {DateRangePickerDay, StaticDateRangePicker,} from '@mui/x-date-pickers-pro';
+import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
+import { LocalizationProvider } from '@mui/x-date-pickers';
+import {
+  DateRangePickerDay,
+  StaticDateRangePicker,
+} from '@mui/x-date-pickers-pro';
 
 const DateRangePickerDayStyled = styled(DateRangePickerDay)(
-  ({theme, isHighlighting, isStartOfHighlighting, isEndOfHighlighting}) => ({
+  ({ theme, isHighlighting, isStartOfHighlighting, isEndOfHighlighting }) => ({
     ...(isHighlighting && {
       borderRadius: 0,
       backgroundColor: theme.palette.primary.main,
@@ -24,7 +27,7 @@ const DateRangePickerDayStyled = styled(DateRangePickerDay)(
       borderTopRightRadius: '50%',
       borderBottomRightRadius: '50%',
     }),
-  }),
+  })
 );
 
 export default function CustomDateRangePickerDay() {
@@ -37,15 +40,15 @@ export default function CustomDateRangePickerDay() {
   return (
     <LocalizationProvider dateAdapter={AdapterDateFns}>
       <StaticDateRangePicker
-        displayStaticWrapperAs='desktop'
-        label='date range'
+        displayStaticWrapperAs="desktop"
+        label="date range"
         value={value}
         onChange={(newValue) => setValue(newValue)}
         renderDay={renderWeekPickerDay}
         renderInput={(startProps, endProps) => (
           <React.Fragment>
             <TextField {...startProps} />
-            <Box sx={{mx: 2}}> to </Box>
+            <Box sx={{ mx: 2 }}> to </Box>
             <TextField {...endProps} />
           </React.Fragment>
         )}

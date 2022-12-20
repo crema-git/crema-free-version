@@ -7,7 +7,7 @@ export default function StandaloneToggleButton() {
 
   return (
     <ToggleButton
-      value='check'
+      value="check"
       selected={selected}
       onChange={() => {
         setSelected(!selected);

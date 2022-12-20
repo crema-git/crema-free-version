@@ -14,15 +14,15 @@ const NoSSR1 = () => {
   return (
     <>
       <AppComponentHeader
-        title='NoSSR1'
-        description='The modal component provides a solid foundation for creating dialogs, popovers, lightboxes, or whatever else.'
-        refUrl='https://mui.com/components/no-ssr/'
+        title="NoSSR1"
+        description="The modal component provides a solid foundation for creating dialogs, popovers, lightboxes, or whatever else."
+        refUrl="https://mui.com/components/no-ssr/"
       />
 
       <AppGridContainer>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Simple No Ssr'
+            title="Simple No Ssr"
             component={SimpleNoSsr}
             source={SimpleNoSsrSource}
             noScrollbar
@@ -30,7 +30,7 @@ const NoSSR1 = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='FrameDeferring'
+            title="FrameDeferring"
             component={FrameDeferring}
             source={FrameDeferringSource}
             noScrollbar

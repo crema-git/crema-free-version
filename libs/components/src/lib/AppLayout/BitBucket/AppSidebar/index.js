@@ -12,24 +12,30 @@ import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 import BitBucketSidebarWrapper from './BitBucketSidebarWrapper';
 import AppSidebarContainer from './AppSidebarContainer';
 import BucketMinibar from './BucketMinibar';
-import {Typography} from '@mui/material';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Typography } from '@mui/material';
+import { Fonts } from '@crema/constants/AppEnums';
 
 const AppSidebar = (props) => {
-  const {isCollapsed, setCollapsed, routesConfig,isNavCollapsed, toggleNavCollapsed} = props;
+  const {
+    isCollapsed,
+    setCollapsed,
+    routesConfig,
+    isNavCollapsed,
+    toggleNavCollapsed,
+  } = props;
 
   const sideBarComponent = () => {
     return (
-      <BitBucketSidebarWrapper className='bit-bucket-sidebar'>
-        <Box className='bit-bucket-sidebar-fixed'>
+      <BitBucketSidebarWrapper className="bit-bucket-sidebar">
+        <Box className="bit-bucket-sidebar-fixed">
           <Box
-            className='bit-bucket-btn'
+            className="bit-bucket-btn"
             onClick={() => setCollapsed(!isCollapsed)}
           >
             {isCollapsed ? <NavigateNextIcon /> : <NavigateBeforeIcon />}
           </Box>
           <BucketMinibar />
-          <AppSidebarContainer   className='app-sidebar-container'>
+          <AppSidebarContainer className="app-sidebar-container">
             <MainSidebar>
               <Box
                 sx={{
@@ -42,7 +48,7 @@ const AppSidebar = (props) => {
                     fontSize: 22,
                     fontWeight: Fonts.MEDIUM,
                   }}
-                  component='h2'
+                  component="h2"
                 >
                   Crema
                 </Typography>
@@ -54,7 +60,7 @@ const AppSidebar = (props) => {
                 }}
                 scrollToTop={false}
               >
-                 <VerticalNav routesConfig={props.routesConfig} />
+                <VerticalNav routesConfig={props.routesConfig} />
               </AppScrollbar>
             </MainSidebar>
           </AppSidebarContainer>
@@ -73,7 +79,7 @@ const AppSidebar = (props) => {
             root: clsx(props.variant),
             paper: clsx(props.variant),
           }}
-          style={{position: 'absolute'}}
+          style={{ position: 'absolute' }}
         >
           {sideBarComponent()}
         </Drawer>

@@ -1,12 +1,12 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import Box from '@mui/material/Box';
 import Avatar from '@mui/material/Avatar';
 import PropTypes from 'prop-types';
-import {Typography} from '@mui/material';
-import {MessageType} from "@crema/fakedb/chat/connectionList"
+import { Typography } from '@mui/material';
+import { MessageType } from '@crema/fakedb/chat/connectionList';
 
-const CommentItem = ({item}) => {
-  const {author, message_type, media, comment, liked} = item;
+const CommentItem = ({ item }) => {
+  const { author, message_type, media, comment, liked } = item;
   const [isLiked, setIsLiked] = useState(liked);
 
   const toggleLikeStatus = () => {
@@ -21,7 +21,7 @@ const CommentItem = ({item}) => {
         },
       }}
     >
-      <Box display='flex'>
+      <Box display="flex">
         <Avatar
           sx={{
             width: 44,
@@ -53,18 +53,18 @@ const CommentItem = ({item}) => {
                 },
               }}
             >
-              <img src={media.url} alt='comment-img' />
+              <img src={media.url} alt="comment-img" />
             </Box>
           )}
-          <Box display='flex' alignItems='center' mt={1}>
+          <Box display="flex" alignItems="center" mt={1}>
             <Box
-              className='pointer'
+              className="pointer"
               color={isLiked && 'primary.main'}
               onClick={toggleLikeStatus}
             >
               Like
             </Box>
-            <Box ml={4} className='pointer'>
+            <Box ml={4} className="pointer">
               Reply
             </Box>
           </Box>

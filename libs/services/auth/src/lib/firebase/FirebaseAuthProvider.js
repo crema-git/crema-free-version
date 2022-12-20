@@ -1,4 +1,4 @@
-import React, {createContext, useContext, useEffect, useState} from 'react';
+import React, { createContext, useContext, useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import {
   auth,
@@ -14,7 +14,7 @@ import {
   twitterAuthProvider,
   updateProfile,
 } from './firebase';
-import {useInfoViewActionsContext} from '@crema/context/InfoViewContextProvider';
+import { useInfoViewActionsContext } from '@crema/context/InfoViewContextProvider';
 
 const FirebaseContext = createContext();
 const FirebaseActionsContext = createContext();
@@ -23,7 +23,7 @@ export const useFirebase = () => useContext(FirebaseContext);
 
 export const useFirebaseActions = () => useContext(FirebaseActionsContext);
 
-const FirebaseAuthProvider = ({children}) => {
+const FirebaseAuthProvider = ({ children }) => {
   const [firebaseData, setFirebaseData] = useState({
     user: undefined,
     isLoading: true,
@@ -54,7 +54,7 @@ const FirebaseAuthProvider = ({children}) => {
           isLoading: false,
           isAuthenticated: completed,
         });
-      },
+      }
     );
 
     return () => {
@@ -84,7 +84,7 @@ const FirebaseAuthProvider = ({children}) => {
   const logInWithPopup = async (providerName) => {
     infoViewActionsContext.fetchStart();
     try {
-      const {user} = await signInWithPopup(auth, getProvider(providerName));
+      const { user } = await signInWithPopup(auth, getProvider(providerName));
       setFirebaseData({
         user,
         isAuthenticated: true,
@@ -101,11 +101,11 @@ const FirebaseAuthProvider = ({children}) => {
     }
   };
 
-  const logInWithEmailAndPassword = async ({email, password}) => {
+  const logInWithEmailAndPassword = async ({ email, password }) => {
     infoViewActionsContext.fetchStart();
     try {
-      const {user} = await signInWithEmailAndPassword(auth, email, password);
-      setFirebaseData({user, isAuthenticated: true, isLoading: false});
+      const { user } = await signInWithEmailAndPassword(auth, email, password);
+      setFirebaseData({ user, isAuthenticated: true, isLoading: false });
       infoViewActionsContext.fetchSuccess();
     } catch (error) {
       setFirebaseData({
@@ -116,13 +116,17 @@ const FirebaseAuthProvider = ({children}) => {
       infoViewActionsContext.fetchError(error.message);
     }
   };
-  const registerUserWithEmailAndPassword = async ({name, email, password}) => {
+  const registerUserWithEmailAndPassword = async ({
+    name,
+    email,
+    password,
+  }) => {
     infoViewActionsContext.fetchStart();
     try {
-      const {user} = await createUserWithEmailAndPassword(
+      const { user } = await createUserWithEmailAndPassword(
         auth,
         email,
-        password,
+        password
       );
       await sendEmailVerification(auth.currentUser, {
         url: window.location.href,
@@ -132,7 +136,7 @@ const FirebaseAuthProvider = ({children}) => {
         displayName: name,
       });
       setFirebaseData({
-        user: {...user, displayName: name},
+        user: { ...user, displayName: name },
         isAuthenticated: true,
         isLoading: false,
       });
@@ -148,7 +152,7 @@ const FirebaseAuthProvider = ({children}) => {
   };
 
   const logout = async () => {
-    setFirebaseData({...firebaseData, isLoading: true});
+    setFirebaseData({ ...firebaseData, isLoading: true });
     try {
       await signOut(auth);
       setFirebaseData({

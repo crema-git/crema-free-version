@@ -4,17 +4,17 @@ import IntlMessages from '@crema/utility/IntlMessages';
 import Box from '@mui/material/Box';
 import PropTypes from 'prop-types';
 import CloseIcon from '@mui/icons-material/Close';
-import {Fonts} from '@crema/constants/AppEnums'
+import { Fonts } from '@crema/constants/AppEnums';
 import AppCard from '@crema/components/AppCard';
-import {useIntl} from 'react-intl';
+import { useIntl } from 'react-intl';
 
 const Profile = (props) => {
-  const {data} = props;
+  const { data } = props;
 
-  const {messages} = useIntl();
+  const { messages } = useIntl();
   return (
     <AppCard
-      sxStyle={{height: 1}}
+      sxStyle={{ height: 1 }}
       contentStyle={{
         display: 'flex',
         flexDirection: 'column',
@@ -41,13 +41,13 @@ const Profile = (props) => {
       >
         <Avatar
           sx={{
-            width: {xs: 100, md: 120},
-            height: {xs: 100, md: 120},
+            width: { xs: 100, md: 120 },
+            height: { xs: 100, md: 120 },
           }}
           src={data.image}
         />
         <Box
-          component='h3'
+          component="h3"
           sx={{
             mt: 8,
             fontWeight: Fonts.BOLD,
@@ -68,11 +68,11 @@ const Profile = (props) => {
       >
         <Box
           sx={{
-            px: {xs: 2, xl: 4},
+            px: { xs: 2, xl: 4 },
           }}
         >
           <Box
-            component='span'
+            component="span"
             sx={{
               display: 'block',
               mb: 2,
@@ -83,7 +83,7 @@ const Profile = (props) => {
             {data.photos}
           </Box>
           <Box
-            component='span'
+            component="span"
             sx={{
               color: 'text.secondary',
               display: 'block',
@@ -91,16 +91,16 @@ const Profile = (props) => {
               textTransform: 'uppercase',
             }}
           >
-            <IntlMessages id='dashboard.photos' />
+            <IntlMessages id="dashboard.photos" />
           </Box>
         </Box>
         <Box
           sx={{
-            px: {xs: 2, xl: 4},
+            px: { xs: 2, xl: 4 },
           }}
         >
           <Box
-            component='span'
+            component="span"
             sx={{
               display: 'block',
               mb: 2,
@@ -111,7 +111,7 @@ const Profile = (props) => {
             {data.followers}
           </Box>
           <Box
-            component='span'
+            component="span"
             sx={{
               color: 'text.secondary',
               display: 'block',
@@ -119,16 +119,16 @@ const Profile = (props) => {
               textTransform: 'uppercase',
             }}
           >
-            <IntlMessages id='dashboard.followers' />
+            <IntlMessages id="dashboard.followers" />
           </Box>
         </Box>
         <Box
           sx={{
-            px: {xs: 2, xl: 4},
+            px: { xs: 2, xl: 4 },
           }}
         >
           <Box
-            component='span'
+            component="span"
             sx={{
               display: 'block',
               mb: 2,
@@ -139,7 +139,7 @@ const Profile = (props) => {
             {data.following}
           </Box>
           <Box
-            component='span'
+            component="span"
             sx={{
               color: 'text.secondary',
               display: 'block',
@@ -147,7 +147,7 @@ const Profile = (props) => {
               textTransform: 'uppercase',
             }}
           >
-            <IntlMessages id='dashboard.following' />
+            <IntlMessages id="dashboard.following" />
           </Box>
         </Box>
       </Box>

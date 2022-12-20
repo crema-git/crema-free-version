@@ -1,7 +1,7 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import MapChart from './MapChart';
 import ReactTooltip from 'react-tooltip';
-import {Box} from '@mui/material';
+import { Box } from '@mui/material';
 
 const MapView = () => {
   const [content, setContent] = useState('');

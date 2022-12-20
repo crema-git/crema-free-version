@@ -17,15 +17,15 @@ const Accordion = () => {
   return (
     <>
       <AppComponentHeader
-        title='Accordion'
-        description='Accordions contain creation flows and allow lightweight editing of an element'
-        refUrl='https://mui.com/components/accordion/'
+        title="Accordion"
+        description="Accordions contain creation flows and allow lightweight editing of an element"
+        refUrl="https://mui.com/components/accordion/"
       />
 
       <AppGridContainer>
         <Grid item xs={12}>
           <AppComponentCard
-            title='Controlled Accordions'
+            title="Controlled Accordions"
             component={ControlledAccordions}
             source={ControlledAccordionsSource}
             noScrollbar
@@ -33,7 +33,7 @@ const Accordion = () => {
         </Grid>
         <Grid item xs={12}>
           <AppComponentCard
-            title='Customized Accordions'
+            title="Customized Accordions"
             component={CustomizedAccordions}
             source={CustomizedAccordionsSource}
             noScrollbar
@@ -41,7 +41,7 @@ const Accordion = () => {
         </Grid>
         <Grid item xs={12}>
           <AppComponentCard
-            title='Basic accordion'
+            title="Basic accordion"
             component={SimpleAccordion}
             source={SimpleAccordionSource}
             noScrollbar

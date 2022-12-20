@@ -21,14 +21,14 @@ const OrderActions = () => {
   return (
     <Box>
       <IconButton
-        aria-controls='alpha-menu'
-        aria-haspopup='true'
+        aria-controls="alpha-menu"
+        aria-haspopup="true"
         onClick={handleClick}
       >
         <MoreVertIcon />
       </IconButton>
       <Menu
-        id='alpha-menu'
+        id="alpha-menu"
         anchorEl={anchorEl}
         keepMounted
         open={open}

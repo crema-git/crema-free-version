@@ -1,4 +1,4 @@
-import {SET_INITIAL_PATH,} from '@crema/constants/ActionTypes';
+import { SET_INITIAL_PATH } from '@crema/constants/ActionTypes';
 
 const initialSettings = {
   initialPath: '/',

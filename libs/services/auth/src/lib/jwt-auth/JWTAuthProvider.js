@@ -1,7 +1,7 @@
-import React, {createContext, useContext, useEffect, useState} from 'react';
+import React, { createContext, useContext, useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
-import {useInfoViewActionsContext} from '@crema/context/InfoViewContextProvider';
-import jwtAxios, {setAuthToken} from './index';
+import { useInfoViewActionsContext } from '@crema/context/InfoViewContextProvider';
+import jwtAxios, { setAuthToken } from './index';
 
 const JWTAuthContext = createContext();
 const JWTAuthActionsContext = createContext();
@@ -10,7 +10,7 @@ export const useJWTAuth = () => useContext(JWTAuthContext);
 
 export const useJWTAuthActions = () => useContext(JWTAuthActionsContext);
 
-const JWTAuthAuthProvider = ({children}) => {
+const JWTAuthAuthProvider = ({ children }) => {
   const [firebaseData, setJWTAuthData] = useState({
     user: null,
     isAuthenticated: false,
@@ -34,29 +34,29 @@ const JWTAuthAuthProvider = ({children}) => {
       setAuthToken(token);
       jwtAxios
         .get('/auth')
-        .then(({data}) =>
+        .then(({ data }) =>
           setJWTAuthData({
             user: data,
             isLoading: false,
             isAuthenticated: true,
-          }),
+          })
         )
         .catch(() =>
           setJWTAuthData({
             user: undefined,
             isLoading: false,
             isAuthenticated: false,
-          }),
+          })
         );
     };
 
     getAuthUser();
   }, []);
 
-  const signInUser = async ({email, password}) => {
+  const signInUser = async ({ email, password }) => {
     infoViewActionsContext.fetchStart();
     try {
-      const {data} = await jwtAxios.post('auth', {email, password});
+      const { data } = await jwtAxios.post('auth', { email, password });
       localStorage.setItem('token', data.token);
       setAuthToken(data.token);
       const res = await jwtAxios.get('/auth');
@@ -73,15 +73,15 @@ const JWTAuthAuthProvider = ({children}) => {
         isLoading: false,
       });
       infoViewActionsContext.fetchError(
-        error?.response?.data?.error || 'Something went wrong',
+        error?.response?.data?.error || 'Something went wrong'
       );
     }
   };
 
-  const signUpUser = async ({name, email, password}) => {
+  const signUpUser = async ({ name, email, password }) => {
     infoViewActionsContext.fetchStart();
     try {
-      const {data} = await jwtAxios.post('users', {name, email, password});
+      const { data } = await jwtAxios.post('users', { name, email, password });
       localStorage.setItem('token', data.token);
       setAuthToken(data.token);
       const res = await jwtAxios.get('/auth');
@@ -99,7 +99,7 @@ const JWTAuthAuthProvider = ({children}) => {
       });
       console.log('error:', error.response.data.error);
       infoViewActionsContext.fetchError(
-        error?.response?.data?.error || 'Something went wrong',
+        error?.response?.data?.error || 'Something went wrong'
       );
     }
   };

@@ -1,2 +1,2 @@
-import {Breadcrumbs} from '@crema/modules/components/navigation';
+import { Breadcrumbs } from '@crema/modules/components/navigation';
 export default Breadcrumbs;

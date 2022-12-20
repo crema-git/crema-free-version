@@ -1,2 +1,2 @@
-import {Lists} from '@crema/modules/components/dataDisplay';
+import { Lists } from '@crema/modules/components/dataDisplay';
 export default Lists;

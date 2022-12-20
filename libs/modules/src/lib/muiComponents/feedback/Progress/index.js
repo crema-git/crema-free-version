@@ -47,15 +47,15 @@ const Progress = () => {
   return (
     <>
       <AppComponentHeader
-        title='Progress'
-        description='Progress indicators commonly known as spinners, express an unspecified wait time or display the length of a process'
-        refUrl='https://mui.com/components/progress/'
+        title="Progress"
+        description="Progress indicators commonly known as spinners, express an unspecified wait time or display the length of a process"
+        refUrl="https://mui.com/components/progress/"
       />
 
       <AppGridContainer>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Circular indeterminate'
+            title="Circular indeterminate"
             component={CircularIndeterminate}
             source={CircularIndeterminateSource}
             noScrollbar
@@ -63,7 +63,7 @@ const Progress = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Circular Color'
+            title="Circular Color"
             component={CircularColor}
             source={CircularColorSource}
             noScrollbar
@@ -71,7 +71,7 @@ const Progress = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Circular Determinate'
+            title="Circular Determinate"
             component={CircularDeterminate}
             source={CircularDeterminateSource}
             noScrollbar
@@ -80,7 +80,7 @@ const Progress = () => {
 
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Circular Static'
+            title="Circular Static"
             component={CircularStatic}
             source={CircularStaticSource}
             noScrollbar
@@ -88,7 +88,7 @@ const Progress = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Linear Indeterminate'
+            title="Linear Indeterminate"
             component={LinearIndeterminate}
             source={LinearIndeterminateSource}
             noScrollbar
@@ -97,7 +97,7 @@ const Progress = () => {
 
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Linear Determinate'
+            title="Linear Determinate"
             component={LinearDeterminate}
             source={LinearDeterminateSource}
             noScrollbar
@@ -105,7 +105,7 @@ const Progress = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Linear Buffer'
+            title="Linear Buffer"
             component={LinearBuffer}
             source={LinearBufferSource}
             noScrollbar
@@ -113,7 +113,7 @@ const Progress = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Linear With Value Label'
+            title="Linear With Value Label"
             component={LinearWithValueLabel}
             source={LinearWithValueLabelSource}
             noScrollbar
@@ -121,7 +121,7 @@ const Progress = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Linear Color'
+            title="Linear Color"
             component={LinearColor}
             source={LinearColorSource}
             noScrollbar
@@ -129,7 +129,7 @@ const Progress = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Circular Under Load'
+            title="Circular Under Load"
             component={CircularUnderLoad}
             source={CircularUnderLoadSource}
             noScrollbar
@@ -137,7 +137,7 @@ const Progress = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='CustomizedProgressBars'
+            title="CustomizedProgressBars"
             component={CustomizedProgressBars}
             source={CustomizedProgressBarsSource}
             noScrollbar
@@ -146,7 +146,7 @@ const Progress = () => {
 
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Circular Integration'
+            title="Circular Integration"
             component={CircularIntegration}
             source={CircularIntegrationSource}
             noScrollbar
@@ -155,7 +155,7 @@ const Progress = () => {
 
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='DelayingAppearance'
+            title="DelayingAppearance"
             component={DelayingAppearance}
             source={DelayingAppearanceSource}
             noScrollbar

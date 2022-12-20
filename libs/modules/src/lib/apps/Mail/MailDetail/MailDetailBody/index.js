@@ -4,12 +4,12 @@ import PropTypes from 'prop-types';
 import MessageItem from './MessageItem';
 import LabelOutlinedIcon from '@mui/icons-material/LabelOutlined';
 import AppTooltip from '@crema/components/AppTooltip';
-import {putDataApi} from '@crema/utility/APIHooks';
-import {useInfoViewActionsContext} from '@crema/context/InfoViewContextProvider';
+import { putDataApi } from '@crema/utility/APIHooks';
+import { useInfoViewActionsContext } from '@crema/context/InfoViewContextProvider';
 
 const MailDetailBody = (props) => {
   const infoViewActionsContext = useInfoViewActionsContext();
-  const {selectedMail, onUpdateSelectedMail} = props;
+  const { selectedMail, onUpdateSelectedMail } = props;
 
   const onSubmitMail = (message, index) => {
     let messages = selectedMail.messages;
@@ -30,7 +30,7 @@ const MailDetailBody = (props) => {
   const onChangeStarred = (message, isStarred) => {
     message.isStarred = isStarred;
     selectedMail.messages = selectedMail.messages.map((data) =>
-      data.messageId === message.messageId ? message : data,
+      data.messageId === message.messageId ? message : data
     );
     putDataApi('/api/mailApp/mail/', infoViewActionsContext, {
       mail: selectedMail,
@@ -44,7 +44,7 @@ const MailDetailBody = (props) => {
       });
   };
   return (
-    <Box sx={{px: 5, py: 1}}>
+    <Box sx={{ px: 5, py: 1 }}>
       {selectedMail ? (
         <>
           <Box
@@ -56,11 +56,11 @@ const MailDetailBody = (props) => {
             }}
           >
             <Box
-              component='span'
+              component="span"
               sx={{
-                fontSize: {xs: 16, sm: 18},
+                fontSize: { xs: 16, sm: 18 },
                 marginRight: 3,
-                paddingLeft: {xs: 0, sm: 12.5},
+                paddingLeft: { xs: 0, sm: 12.5 },
               }}
             >
               {selectedMail.subject}

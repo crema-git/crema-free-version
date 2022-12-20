@@ -4,14 +4,14 @@ import MailDetail from './MailDetail';
 import PropTypes from 'prop-types';
 import AppsContainer from '@crema/components/AppsContainer';
 import MailSidebar from './MailSideBar';
-import {useIntl} from 'react-intl';
-import {useParams} from 'react-router-dom';
+import { useIntl } from 'react-intl';
+import { useParams } from 'react-router-dom';
 import clsx from 'clsx';
 import Box from '@mui/material/Box';
 
-import {styled} from '@mui/material/styles';
+import { styled } from '@mui/material/styles';
 
-const MailDetailViewWrapper = styled(Box)(({theme}) => {
+const MailDetailViewWrapper = styled(Box)(({ theme }) => {
   return {
     transition: 'all 0.5s ease',
     transform: 'translateX(100%)',
@@ -33,8 +33,8 @@ const MailDetailViewWrapper = styled(Box)(({theme}) => {
 });
 
 const Mail = () => {
-  const {id} = useParams();
-  const {messages} = useIntl();
+  const { id } = useParams();
+  const { messages } = useIntl();
 
   return (
     <AppsContainer

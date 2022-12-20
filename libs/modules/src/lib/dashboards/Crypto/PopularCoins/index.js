@@ -2,15 +2,15 @@ import React from 'react';
 import PopularCoinsTable from './PopularCoinsTable';
 import PropTypes from 'prop-types';
 import AppCard from '@crema/components/AppCard';
-import {useIntl} from 'react-intl';
+import { useIntl } from 'react-intl';
 
 const PopularCoins = (props) => {
-  const {popularCoins} = props;
-  const {messages} = useIntl();
+  const { popularCoins } = props;
+  const { messages } = useIntl();
   return (
     <AppCard
-      sxStyle={{height: 1}}
-      contentStyle={{px: 0}}
+      sxStyle={{ height: 1 }}
+      contentStyle={{ px: 0 }}
       title={messages['dashboard.popularCoins']}
       action={messages['common.viewAll']}
     >

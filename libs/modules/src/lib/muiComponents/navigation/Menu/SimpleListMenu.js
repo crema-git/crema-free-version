@@ -32,27 +32,27 @@ export default function SimpleListMenu() {
   return (
     <div>
       <List
-        component='nav'
-        aria-label='Device settings'
-        sx={{bgcolor: 'background.paper'}}
+        component="nav"
+        aria-label="Device settings"
+        sx={{ bgcolor: 'background.paper' }}
       >
         <ListItem
           button
-          id='lock-button'
-          aria-haspopup='listbox'
-          aria-controls='lock-menu'
-          aria-label='when device is locked'
+          id="lock-button"
+          aria-haspopup="listbox"
+          aria-controls="lock-menu"
+          aria-label="when device is locked"
           aria-expanded={open ? 'true' : undefined}
           onClick={handleClickListItem}
         >
           <ListItemText
-            primary='When device is locked'
+            primary="When device is locked"
             secondary={options[selectedIndex]}
           />
         </ListItem>
       </List>
       <Menu
-        id='lock-menu'
+        id="lock-menu"
         anchorEl={anchorEl}
         open={open}
         onClose={handleClose}

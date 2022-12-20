@@ -7,32 +7,32 @@ import FormLabel from '@mui/material/FormLabel';
 
 export default function FormControlLabelPosition() {
   return (
-    <FormControl component='fieldset'>
-      <FormLabel component='legend'>Label placement</FormLabel>
-      <FormGroup aria-label='position' row>
+    <FormControl component="fieldset">
+      <FormLabel component="legend">Label placement</FormLabel>
+      <FormGroup aria-label="position" row>
         <FormControlLabel
-          value='top'
+          value="top"
           control={<Checkbox />}
-          label='Top'
-          labelPlacement='top'
+          label="Top"
+          labelPlacement="top"
         />
         <FormControlLabel
-          value='start'
+          value="start"
           control={<Checkbox />}
-          label='Start'
-          labelPlacement='start'
+          label="Start"
+          labelPlacement="start"
         />
         <FormControlLabel
-          value='bottom'
+          value="bottom"
           control={<Checkbox />}
-          label='Bottom'
-          labelPlacement='bottom'
+          label="Bottom"
+          labelPlacement="bottom"
         />
         <FormControlLabel
-          value='end'
+          value="end"
           control={<Checkbox />}
-          label='End'
-          labelPlacement='end'
+          label="End"
+          labelPlacement="end"
         />
       </FormGroup>
     </FormControl>

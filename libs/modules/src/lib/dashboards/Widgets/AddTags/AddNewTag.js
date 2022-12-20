@@ -1,14 +1,14 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import IntlMessages from '@crema/utility/IntlMessages';
 import CheckIcon from '@mui/icons-material/Check';
 import CloseIcon from '@mui/icons-material/Close';
 import PropTypes from 'prop-types';
-import {Fonts} from '@crema/constants/AppEnums'
+import { Fonts } from '@crema/constants/AppEnums';
 
 const AddNewTag = (props) => {
-  const {onAddNewTag} = props;
+  const { onAddNewTag } = props;
   const [newTag, setNewTag] = useState('');
 
   const [isAddNewTag, setAddNewTag] = useState(false);
@@ -29,16 +29,16 @@ const AddNewTag = (props) => {
             alignItems: 'center',
           }}
         >
-          <Box component='span'>
+          <Box component="span">
             <TextField
-              label={<IntlMessages id='common.tag' />}
-              variant='outlined'
+              label={<IntlMessages id="common.tag" />}
+              variant="outlined"
               value={newTag}
               onChange={(e) => setNewTag(e.target.value)}
             />
           </Box>
           <Box
-            component='span'
+            component="span"
             sx={{
               mx: 3,
             }}
@@ -59,18 +59,18 @@ const AddNewTag = (props) => {
         </Box>
       ) : (
         <Box
-          component='p'
+          component="p"
           sx={{
             m: 2,
             ml: 3,
             color: 'secondary.main',
-            fontSize: {xs: 16, xl: 18},
+            fontSize: { xs: 16, xl: 18 },
             cursor: 'pointer',
             fontWeight: Fonts.MEDIUM,
           }}
           onClick={() => setAddNewTag(true)}
         >
-          <IntlMessages id='dashboard.addNewTag' />
+          <IntlMessages id="dashboard.addNewTag" />
         </Box>
       )}
     </>

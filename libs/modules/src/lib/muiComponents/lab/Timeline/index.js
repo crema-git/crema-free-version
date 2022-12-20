@@ -26,15 +26,15 @@ const Timeline = () => {
   return (
     <>
       <AppComponentHeader
-        title='Timeline'
-        description='The timeline displays a list of events in chronological order.'
-        refUrl='https://mui.com/components/timeline/'
+        title="Timeline"
+        description="The timeline displays a list of events in chronological order."
+        refUrl="https://mui.com/components/timeline/"
       />
 
       <AppGridContainer>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='BasicTimeline'
+            title="BasicTimeline"
             component={BasicTimeline}
             source={BasicTimelineSource}
             noScrollbar
@@ -42,7 +42,7 @@ const Timeline = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='ColorsTimeline'
+            title="ColorsTimeline"
             component={ColorsTimeline}
             source={ColorsTimelineSource}
             noScrollbar
@@ -50,7 +50,7 @@ const Timeline = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='LeftPositionedTimeline'
+            title="LeftPositionedTimeline"
             component={LeftPositionedTimeline}
             source={LeftPositionedTimelineSource}
             noScrollbar
@@ -59,7 +59,7 @@ const Timeline = () => {
 
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='OutlinedTimeline'
+            title="OutlinedTimeline"
             component={OutlinedTimeline}
             source={OutlinedTimelineSource}
             noScrollbar
@@ -67,7 +67,7 @@ const Timeline = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='OppositeContentTimeline'
+            title="OppositeContentTimeline"
             component={OppositeContentTimeline}
             source={OppositeContentTimelineSource}
             noScrollbar
@@ -75,7 +75,7 @@ const Timeline = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='CustomizedTimeline'
+            title="CustomizedTimeline"
             component={CustomizedTimeline}
             source={CustomizedTimelineSource}
             noScrollbar

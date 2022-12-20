@@ -1,6 +1,11 @@
 import * as React from 'react';
-import {AdapterDateFns} from '@mui/x-date-pickers/AdapterDateFns';
-import {CalendarPicker, LocalizationProvider, MonthPicker, YearPicker,} from '@mui/x-date-pickers';
+import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
+import {
+  CalendarPicker,
+  LocalizationProvider,
+  MonthPicker,
+  YearPicker,
+} from '@mui/x-date-pickers';
 import Grid from '@mui/material/Grid';
 
 const minDate = new Date('2020-01-01T00:00:00.000');

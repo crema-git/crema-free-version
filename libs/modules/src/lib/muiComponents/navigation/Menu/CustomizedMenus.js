@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {alpha, styled} from '@mui/material/styles';
+import { alpha, styled } from '@mui/material/styles';
 import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
@@ -23,7 +23,7 @@ const StyledMenu = styled((props) => (
     }}
     {...props}
   />
-))(({theme}) => ({
+))(({ theme }) => ({
   '& .MuiPaper-root': {
     borderRadius: 6,
     marginTop: theme.spacing(1),
@@ -46,7 +46,7 @@ const StyledMenu = styled((props) => (
       '&:active': {
         backgroundColor: alpha(
           theme.palette.primary.main,
-          theme.palette.action.selectedOpacity,
+          theme.palette.action.selectedOpacity
         ),
       },
     },
@@ -66,11 +66,11 @@ export default function CustomizedMenus() {
   return (
     <div>
       <Button
-        id='demo-customized-button'
-        aria-controls='demo-customized-menu'
-        aria-haspopup='true'
+        id="demo-customized-button"
+        aria-controls="demo-customized-menu"
+        aria-haspopup="true"
         aria-expanded={open ? 'true' : undefined}
-        variant='contained'
+        variant="contained"
         disableElevation
         onClick={handleClick}
         endIcon={<KeyboardArrowDownIcon />}
@@ -78,7 +78,7 @@ export default function CustomizedMenus() {
         Options
       </Button>
       <StyledMenu
-        id='demo-customized-menu'
+        id="demo-customized-menu"
         MenuListProps={{
           'aria-labelledby': 'demo-customized-button',
         }}
@@ -94,7 +94,7 @@ export default function CustomizedMenus() {
           <FileCopyIcon />
           Duplicate
         </MenuItem>
-        <Divider sx={{my: 0.5}} />
+        <Divider sx={{ my: 0.5 }} />
         <MenuItem onClick={handleClose} disableRipple>
           <ArchiveIcon />
           Archive

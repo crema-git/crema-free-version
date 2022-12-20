@@ -7,4 +7,4 @@ const Progress = React.lazy(() => import('./Progress'));
 const Skeleton = React.lazy(() => import('./Skeleton'));
 const Snackbar = React.lazy(() => import('./Snackbar'));
 
-export {Alert, Backdrop, Dialog, Progress, Skeleton, Snackbar};
+export { Alert, Backdrop, Dialog, Progress, Skeleton, Snackbar };

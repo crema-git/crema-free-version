@@ -1,6 +1,6 @@
-import {applyMiddleware, compose, createStore} from 'redux';
+import { applyMiddleware, compose, createStore } from 'redux';
 import reducers from '../reducers';
-import {routerMiddleware} from 'connected-react-router';
+import { routerMiddleware } from 'connected-react-router';
 import thunk from 'redux-thunk';
 
 const createBrowserHistory = require('history').createBrowserHistory;
@@ -14,7 +14,7 @@ export default function configureStore(initialState) {
   const store = createStore(
     reducers(),
     initialState,
-    composeEnhancers(applyMiddleware(...middlewares)),
+    composeEnhancers(applyMiddleware(...middlewares))
   );
 
   if (module.hot) {

@@ -21,11 +21,11 @@ export default function NestedList() {
 
   return (
     <List
-      sx={{width: '100%', maxWidth: 360, bgcolor: 'background.paper'}}
-      component='nav'
-      aria-labelledby='nested-list-subheader'
+      sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}
+      component="nav"
+      aria-labelledby="nested-list-subheader"
       subheader={
-        <ListSubheader component='div' id='nested-list-subheader'>
+        <ListSubheader component="div" id="nested-list-subheader">
           Nested List Items
         </ListSubheader>
       }
@@ -34,28 +34,28 @@ export default function NestedList() {
         <ListItemIcon>
           <SendIcon />
         </ListItemIcon>
-        <ListItemText primary='Sent mail' />
+        <ListItemText primary="Sent mail" />
       </ListItemButton>
       <ListItemButton>
         <ListItemIcon>
           <DraftsIcon />
         </ListItemIcon>
-        <ListItemText primary='Drafts' />
+        <ListItemText primary="Drafts" />
       </ListItemButton>
       <ListItemButton onClick={handleClick}>
         <ListItemIcon>
           <InboxIcon />
         </ListItemIcon>
-        <ListItemText primary='Inbox' />
+        <ListItemText primary="Inbox" />
         {open ? <ExpandLess /> : <ExpandMore />}
       </ListItemButton>
-      <Collapse in={open} timeout='auto' unmountOnExit>
-        <List component='div' disablePadding>
-          <ListItemButton sx={{pl: 4}}>
+      <Collapse in={open} timeout="auto" unmountOnExit>
+        <List component="div" disablePadding>
+          <ListItemButton sx={{ pl: 4 }}>
             <ListItemIcon>
               <StarBorder />
             </ListItemIcon>
-            <ListItemText primary='Starred' />
+            <ListItemText primary="Starred" />
           </ListItemButton>
         </List>
       </Collapse>

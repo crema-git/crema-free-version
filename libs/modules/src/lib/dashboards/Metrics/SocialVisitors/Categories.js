@@ -1,9 +1,9 @@
 import React from 'react';
 import Box from '@mui/material/Box';
 import PropTypes from 'prop-types';
-import {Fonts} from '@crema/constants/AppEnums'
+import { Fonts } from '@crema/constants/AppEnums';
 
-const Categories = ({data}) => {
+const Categories = ({ data }) => {
   return (
     <Box
       sx={{
@@ -29,10 +29,10 @@ const Categories = ({data}) => {
               }}
             >
               <Box
-                component='span'
+                component="span"
                 sx={{
-                  height: {xs: 12, xl: 16},
-                  width: {xs: 12, xl: 16},
+                  height: { xs: 12, xl: 16 },
+                  width: { xs: 12, xl: 16 },
                   borderRadius: '50%',
                   display: 'block',
                   bgcolor: item.color,
@@ -41,7 +41,7 @@ const Categories = ({data}) => {
                 }}
               />
               <Box
-                component='p'
+                component="p"
                 sx={{
                   mb: 1,
                   fontWeight: Fonts.MEDIUM,
@@ -52,7 +52,7 @@ const Categories = ({data}) => {
               </Box>
             </Box>
             <Box
-              component='p'
+              component="p"
               sx={{
                 textTransform: 'capitalize',
                 color: 'text.secondary',

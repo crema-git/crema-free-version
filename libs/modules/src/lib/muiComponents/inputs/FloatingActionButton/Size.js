@@ -7,28 +7,28 @@ import NavigationIcon from '@mui/icons-material/Navigation';
 export default function FloatingActionButtonSize() {
   return (
     <Box>
-      <Box sx={{'& > :not(style)': {m: 1}}}>
-        <Fab size='small' color='secondary' aria-label='add'>
+      <Box sx={{ '& > :not(style)': { m: 1 } }}>
+        <Fab size="small" color="secondary" aria-label="add">
           <AddIcon />
         </Fab>
-        <Fab size='medium' color='secondary' aria-label='add'>
+        <Fab size="medium" color="secondary" aria-label="add">
           <AddIcon />
         </Fab>
-        <Fab color='secondary' aria-label='add'>
+        <Fab color="secondary" aria-label="add">
           <AddIcon />
         </Fab>
       </Box>
-      <Box sx={{'& > :not(style)': {m: 1}}}>
-        <Fab variant='extended' size='small' color='primary' aria-label='add'>
-          <NavigationIcon sx={{mr: 1}} />
+      <Box sx={{ '& > :not(style)': { m: 1 } }}>
+        <Fab variant="extended" size="small" color="primary" aria-label="add">
+          <NavigationIcon sx={{ mr: 1 }} />
           Extended
         </Fab>
-        <Fab variant='extended' size='medium' color='primary' aria-label='add'>
-          <NavigationIcon sx={{mr: 1}} />
+        <Fab variant="extended" size="medium" color="primary" aria-label="add">
+          <NavigationIcon sx={{ mr: 1 }} />
           Extended
         </Fab>
-        <Fab variant='extended' color='primary' aria-label='add'>
-          <NavigationIcon sx={{mr: 1}} />
+        <Fab variant="extended" color="primary" aria-label="add">
+          <NavigationIcon sx={{ mr: 1 }} />
           Extended
         </Fab>
       </Box>

@@ -44,122 +44,122 @@ const Menu = () => {
   return (
     <>
       <AppComponentHeader
-        title='Menu'
-        description='Menus display a list of choices on temporary surfaces.'
-        refUrl='https://mui.com/components/menus/'
+        title="Menu"
+        description="Menus display a list of choices on temporary surfaces."
+        refUrl="https://mui.com/components/menus/"
       />
 
       <AppGridContainer>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Basic menu'
+            title="Basic menu"
             component={BasicMenu}
             source={BasicMenuSource}
             noScrollbar
-            description='A basic menu opens over the anchor element by default (this option can be changed via props).'
+            description="A basic menu opens over the anchor element by default (this option can be changed via props)."
           />
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Positioned Menu'
+            title="Positioned Menu"
             component={PositionedMenu}
             source={PositionedMenuSource}
             noScrollbar
-            description='A basic menu opens over the anchor element by default (this option can be changed via props).'
+            description="A basic menu opens over the anchor element by default (this option can be changed via props)."
           />
         </Grid>
 
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Context Menu'
+            title="Context Menu"
             component={ContextMenu}
             source={ContextMenuSource}
             noScrollbar
-            description='A basic menu opens over the anchor element by default (this option can be changed via props).'
+            description="A basic menu opens over the anchor element by default (this option can be changed via props)."
           />
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Icon Menu'
+            title="Icon Menu"
             component={IconMenu}
             source={IconMenuSource}
             noScrollbar
-            description='A basic menu opens over the anchor element by default (this option can be changed via props).'
+            description="A basic menu opens over the anchor element by default (this option can be changed via props)."
           />
         </Grid>
 
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Menu List Composition'
+            title="Menu List Composition"
             component={MenuListComposition}
             source={MenuListCompositionSource}
             noScrollbar
-            description='A basic menu opens over the anchor element by default (this option can be changed via props).'
+            description="A basic menu opens over the anchor element by default (this option can be changed via props)."
           />
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='SimpleList Menu'
+            title="SimpleList Menu"
             component={SimpleListMenu}
             source={SimpleListMenuSource}
             noScrollbar
-            description='A basic menu opens over the anchor element by default (this option can be changed via props).'
+            description="A basic menu opens over the anchor element by default (this option can be changed via props)."
           />
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Account Menu'
+            title="Account Menu"
             component={AccountMenu}
             source={AccountMenuSource}
             noScrollbar
-            description='A basic menu opens over the anchor element by default (this option can be changed via props).'
+            description="A basic menu opens over the anchor element by default (this option can be changed via props)."
           />
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Customized Menus'
+            title="Customized Menus"
             component={CustomizedMenus}
             source={CustomizedMenusSource}
             noScrollbar
-            description='A basic menu opens over the anchor element by default (this option can be changed via props).'
+            description="A basic menu opens over the anchor element by default (this option can be changed via props)."
           />
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Long Menu'
+            title="Long Menu"
             component={LongMenu}
             source={LongMenuSource}
             noScrollbar
-            description='A basic menu opens over the anchor element by default (this option can be changed via props).'
+            description="A basic menu opens over the anchor element by default (this option can be changed via props)."
           />
         </Grid>
 
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Fade Menu'
+            title="Fade Menu"
             component={FadeMenu}
             source={FadeMenuSource}
             noScrollbar
-            description='A basic menu opens over the anchor element by default (this option can be changed via props).'
+            description="A basic menu opens over the anchor element by default (this option can be changed via props)."
           />
         </Grid>
 
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Dense Menu'
+            title="Dense Menu"
             component={DenseMenu}
             source={DenseMenuSource}
             noScrollbar
-            description='A basic menu opens over the anchor element by default (this option can be changed via props).'
+            description="A basic menu opens over the anchor element by default (this option can be changed via props)."
           />
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Typography Menu'
+            title="Typography Menu"
             component={TypographyMenu}
             source={TypographyMenuSource}
             noScrollbar
-            description='A basic menu opens over the anchor element by default (this option can be changed via props).'
+            description="A basic menu opens over the anchor element by default (this option can be changed via props)."
           />
         </Grid>
       </AppGridContainer>

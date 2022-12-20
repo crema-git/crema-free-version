@@ -1,8 +1,8 @@
 import React from 'react';
-import {Box} from '@mui/material';
+import { Box } from '@mui/material';
 import IntlMessages from '@crema/utility/IntlMessages';
-import {blue} from '@mui/material/colors';
-import {Fonts} from '@crema/constants/AppEnums'
+import { blue } from '@mui/material/colors';
+import { Fonts } from '@crema/constants/AppEnums';
 import AppCard from '@crema/components/AppCard';
 
 const BirthdayCard = () => {
@@ -14,18 +14,18 @@ const BirthdayCard = () => {
         flexDirection: 'column',
         p: 0,
       }}
-      contentStyle={{padding: 0}}
+      contentStyle={{ padding: 0 }}
     >
       <Box
         sx={{
-          p: {xs: 5, xl: 8},
+          p: { xs: 5, xl: 8 },
           color: 'primary.contrastText',
           textAlign: 'center',
           backgroundColor: blue[700],
         }}
       >
         <Box
-          component='h3'
+          component="h3"
           sx={{
             fontWeight: Fonts.BOLD,
             fontSize: 16,
@@ -36,8 +36,8 @@ const BirthdayCard = () => {
       </Box>
       <Box
         sx={{
-          px: {xs: 6, sm: 8, xl: 10},
-          py: {xs: 5, sm: 7, xl: 8},
+          px: { xs: 6, sm: 8, xl: 10 },
+          py: { xs: 5, sm: 7, xl: 8 },
         }}
       >
         <Box
@@ -50,21 +50,21 @@ const BirthdayCard = () => {
             justifyContent: 'center',
           }}
         >
-          <img src={'/assets/images/cakeicon.png'} alt='cake' />
+          <img src={'/assets/images/cakeicon.png'} alt="cake" />
         </Box>
         <Box
           sx={{
-            mb: {xl: 5},
+            mb: { xl: 5 },
             textAlign: 'center',
           }}
         >
           <Box
-            component='p'
+            component="p"
             sx={{
               fontSize: 14,
             }}
           >
-            <IntlMessages id='dashboard.antonBirthday' />
+            <IntlMessages id="dashboard.antonBirthday" />
           </Box>
         </Box>
       </Box>

@@ -1,14 +1,14 @@
 import React from 'react';
 import Button from '@mui/material/Button';
-import {useNavigate} from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
-import {grey} from '@mui/material/colors';
-import {Fonts} from '@crema/constants/AppEnums'
+import { grey } from '@mui/material/colors';
+import { Fonts } from '@crema/constants/AppEnums';
 import AppAnimate from '@crema/components/AppAnimate';
 import IntlMessages from '@crema/utility/IntlMessages';
-import {useTheme} from '@mui/material';
-import {initialUrl} from "@crema/constants/AppConst";
+import { useTheme } from '@mui/material';
+import { initialUrl } from '@crema/constants/AppConst';
 
 const Error403 = () => {
   const theme = useTheme();
@@ -19,10 +19,10 @@ const Error403 = () => {
   };
 
   return (
-    <AppAnimate animation='transition.slideUpIn' delay={200}>
+    <AppAnimate animation="transition.slideUpIn" delay={200}>
       <Box
         sx={{
-          py: {xl: 8},
+          py: { xl: 8 },
           flex: 1,
           display: 'flex',
           flexDirection: 'column',
@@ -33,23 +33,23 @@ const Error403 = () => {
       >
         <Box
           sx={{
-            mb: {xs: 4, xl: 8},
+            mb: { xs: 4, xl: 8 },
             width: '100%',
-            maxWidth: {xs: 200, sm: 300, xl: 706},
+            maxWidth: { xs: 200, sm: 300, xl: 706 },
             '& svg': {
               width: '100%',
               maxWidth: 400,
             },
           }}
         >
-            <img src={'/assets/icon/403.svg'} alt='403' />
+          <img src={'/assets/icon/403.svg'} alt="403" />
         </Box>
-        <Box sx={{mb: {xs: 4, xl: 5}}}>
+        <Box sx={{ mb: { xs: 4, xl: 5 } }}>
           <Box
-            variant='h3'
+            variant="h3"
             sx={{
-              mb: {xs: 3, xl: 4},
-              fontSize: {xs: 20, md: 24},
+              mb: { xs: 3, xl: 4 },
+              fontSize: { xs: 20, md: 24 },
               fontWeight: Fonts.MEDIUM,
             }}
           >
@@ -57,7 +57,7 @@ const Error403 = () => {
           </Box>
           <Box
             sx={{
-              mb: {xs: 4, xl: 5},
+              mb: { xs: 4, xl: 5 },
               color: grey[600],
               fontSize: 16,
               fontWeight: Fonts.MEDIUM,
@@ -66,8 +66,8 @@ const Error403 = () => {
             <Typography>You are not authorized for this page</Typography>
           </Box>
           <Button
-            variant='contained'
-            color='primary'
+            variant="contained"
+            color="primary"
             sx={{
               fontWeight: Fonts.MEDIUM,
               fontSize: 16,
@@ -75,7 +75,7 @@ const Error403 = () => {
             }}
             onClick={onGoBackToHome}
           >
-            <IntlMessages id='error.goBackToHome' />
+            <IntlMessages id="error.goBackToHome" />
           </Button>
         </Box>
       </Box>

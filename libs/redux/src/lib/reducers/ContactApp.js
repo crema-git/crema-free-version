@@ -67,7 +67,7 @@ const contactReducer = (state = initialState, action) => {
       const updatedList = state.contactList.map((contact) => {
         if (contactIds.includes(contact.id)) {
           return action.payload.data.find(
-            (selectedContact) => selectedContact.id === contact.id,
+            (selectedContact) => selectedContact.id === contact.id
           );
         } else {
           return contact;
@@ -76,7 +76,7 @@ const contactReducer = (state = initialState, action) => {
       const filteredList =
         action.payload.labelName === 'label'
           ? updatedList.filter(
-              (item) => item.label !== action.payload.labelType,
+              (item) => item.label !== action.payload.labelType
             )
           : updatedList;
       const total = filteredList.length;
@@ -92,7 +92,7 @@ const contactReducer = (state = initialState, action) => {
       const updatedList = state.contactList.map((contact) => {
         if (contactIds.includes(contact.id)) {
           return action.payload.data.find(
-            (selectedContact) => selectedContact.id === contact.id,
+            (selectedContact) => selectedContact.id === contact.id
           );
         } else {
           return contact;
@@ -124,7 +124,7 @@ const contactReducer = (state = initialState, action) => {
         ...state,
         selectedContact: action.payload,
         contactList: state.contactList.map((contact) =>
-          contact.id === action.payload.id ? action.payload : contact,
+          contact.id === action.payload.id ? action.payload : contact
         ),
       };
 

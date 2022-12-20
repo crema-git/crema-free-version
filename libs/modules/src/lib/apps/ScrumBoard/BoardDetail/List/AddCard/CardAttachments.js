@@ -4,13 +4,13 @@ import IntlMessages from '@crema/utility/IntlMessages';
 import moment from 'moment';
 import DeleteOutlinedIcon from '@mui/icons-material/DeleteOutlined';
 import PropTypes from 'prop-types';
-import {Fonts} from '@crema/constants/AppEnums'
-import {alpha, IconButton} from '@mui/material';
+import { Fonts } from '@crema/constants/AppEnums';
+import { alpha, IconButton } from '@mui/material';
 import CloudDownloadOutlinedIcon from '@mui/icons-material/CloudDownloadOutlined';
 
-import {styled} from '@mui/material/styles';
+import { styled } from '@mui/material/styles';
 
-const CardAttachmentWrapper = styled('div')(({theme}) => {
+const CardAttachmentWrapper = styled('div')(({ theme }) => {
   return {
     transition: 'all 0.4s ease',
     backgroundColor: alpha(theme.palette.common.black, 0.04),
@@ -70,7 +70,7 @@ const CardAttachmentWrapper = styled('div')(({theme}) => {
 });
 
 const CardAttachments = (props) => {
-  const {attachments, onDeleteAttachment} = props;
+  const { attachments, onDeleteAttachment } = props;
 
   return (
     <>
@@ -82,11 +82,11 @@ const CardAttachments = (props) => {
         >
           <Box
             sx={{
-              mb: {xs: 3, sm: 5},
+              mb: { xs: 3, sm: 5 },
             }}
           >
-            <Box component='h4'>
-              <IntlMessages id='common.attachments' />
+            <Box component="h4">
+              <IntlMessages id="common.attachments" />
             </Box>
           </Box>
 
@@ -98,7 +98,7 @@ const CardAttachments = (props) => {
             }}
           >
             {attachments.map((attachment) => {
-              const {file} = attachment;
+              const { file } = attachment;
               return (
                 <Box
                   key={attachment.id}
@@ -108,23 +108,23 @@ const CardAttachments = (props) => {
                   }}
                 >
                   <CardAttachmentWrapper>
-                    <Box className='attachment-thumb'>
-                      <img src={attachment.preview} alt='attachment' />
+                    <Box className="attachment-thumb">
+                      <img src={attachment.preview} alt="attachment" />
 
-                      <Box className='attachment-action'>
+                      <Box className="attachment-action">
                         <IconButton
-                          className='icon-btn'
-                          color='primary'
-                          variant='outlined'
-                          aria-label='edit'
+                          className="icon-btn"
+                          color="primary"
+                          variant="outlined"
+                          aria-label="edit"
                         >
                           <CloudDownloadOutlinedIcon />
                         </IconButton>
                         <IconButton
-                          className='icon-btn'
-                          color='primary'
-                          variant='outlined'
-                          aria-label='delete'
+                          className="icon-btn"
+                          color="primary"
+                          variant="outlined"
+                          aria-label="delete"
                           onClick={() => onDeleteAttachment(attachment.id)}
                         >
                           <DeleteOutlinedIcon />
@@ -153,7 +153,7 @@ const CardAttachments = (props) => {
                         }}
                       >
                         <Box
-                          component='span'
+                          component="span"
                           sx={{
                             mr: 1,
                           }}
@@ -161,14 +161,14 @@ const CardAttachments = (props) => {
                           {moment(file.lastModified).format('ll').split(',')[0]}
                         </Box>
                         <Box
-                          component='span'
+                          component="span"
                           sx={{
                             mr: 1,
                           }}
                         >
-                          <IntlMessages id='common.at' />
+                          <IntlMessages id="common.at" />
                         </Box>
-                        <Box component='span'>
+                        <Box component="span">
                           {moment(file.lastModified).format('LT')}
                         </Box>
                       </Box>

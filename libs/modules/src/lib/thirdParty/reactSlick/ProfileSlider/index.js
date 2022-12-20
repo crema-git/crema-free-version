@@ -15,7 +15,7 @@ const settings = {
   slidesToScroll: 1,
 };
 
-const ProfileSlider = ({profile}) => {
+const ProfileSlider = ({ profile }) => {
   return (
     <AppCard
       sxStyle={{

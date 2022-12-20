@@ -13,7 +13,7 @@ export default function DateTimeValidation() {
       <Stack spacing={3}>
         <DateTimePicker
           renderInput={(params) => <TextField {...params} />}
-          label='Ignore date and time'
+          label="Ignore date and time"
           value={value}
           onChange={(newValue) => {
             setValue(newValue);
@@ -22,7 +22,7 @@ export default function DateTimeValidation() {
         />
         <DateTimePicker
           renderInput={(params) => <TextField {...params} />}
-          label='Ignore time in each day'
+          label="Ignore time in each day"
           value={value}
           onChange={(newValue) => {
             setValue(newValue);

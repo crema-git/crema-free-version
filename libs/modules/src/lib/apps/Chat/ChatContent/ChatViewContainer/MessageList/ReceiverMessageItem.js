@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import Box from '@mui/material/Box';
 import Avatar from '@mui/material/Avatar';
 import clsx from 'clsx';
@@ -7,13 +7,13 @@ import EditIcon from '@mui/icons-material/Edit';
 import PlayCircleOutlineIcon from '@mui/icons-material/PlayCircleOutline';
 import DescriptionOutlinedIcon from '@mui/icons-material/DescriptionOutlined';
 import MediaViewer from '@crema/components/AppMedialViewer';
-import {alpha, Typography} from '@mui/material';
-import {orange} from '@mui/material/colors';
-import {Fonts} from '@crema/constants/AppEnums'
+import { alpha, Typography } from '@mui/material';
+import { orange } from '@mui/material/colors';
+import { Fonts } from '@crema/constants/AppEnums';
 
-import {styled} from '@mui/material/styles';
-import {getFileSize} from "@crema/helpers";
-import {MessageType} from "@crema/fakedb/chat/connectionList"
+import { styled } from '@mui/material/styles';
+import { getFileSize } from '@crema/helpers';
+import { MessageType } from '@crema/fakedb/chat/connectionList';
 
 const ReceiverMessageWrapper = styled('div')(() => {
   return {
@@ -38,7 +38,7 @@ const ReceiverMessageWrapper = styled('div')(() => {
     },
   };
 });
-const VideoWrapper = styled('div')(({theme}) => {
+const VideoWrapper = styled('div')(({ theme }) => {
   return {
     position: 'relative',
     width: 56,
@@ -65,7 +65,7 @@ const VideoWrapper = styled('div')(({theme}) => {
     },
   };
 });
-const MessageChat = styled('div')(({theme}) => {
+const MessageChat = styled('div')(({ theme }) => {
   return {
     display: 'inline-flex',
     border: `solid 1px ${theme.palette.grey[200]}`,
@@ -103,7 +103,7 @@ const getMediaMessage = (item) => {
           },
         }}
       >
-        <img alt='' src={item.url} />
+        <img alt="" src={item.url} />
       </Box>
     );
   } else if (item.mime_type.startsWith('video')) {
@@ -132,15 +132,15 @@ const getMediaMessage = (item) => {
       >
         <DescriptionOutlinedIcon />
         <Box
-          component='p'
+          component="p"
           sx={{
             ml: 2,
           }}
         >
-          <Box component='span' sx={{display: 'block'}}>
+          <Box component="span" sx={{ display: 'block' }}>
             {item.file_name}
           </Box>
-          <Box component='span' sx={{display: 'block'}}>
+          <Box component="span" sx={{ display: 'block' }}>
             {getFileSize(item.file_size)}
           </Box>
         </Box>
@@ -229,7 +229,7 @@ const ReceiverMessageItem = ({
     <ReceiverMessageWrapper
       className={clsx(
         isPreviousSender ? 'hideUser-info' : '',
-        isLast ? 'last-chat-message' : '',
+        isLast ? 'last-chat-message' : ''
       )}
     >
       <Box
@@ -247,7 +247,7 @@ const ReceiverMessageItem = ({
               mr: 2.5,
               mb: 5.5,
             }}
-            className='message-chat-avatar'
+            className="message-chat-avatar"
             src={selectedUser.image}
           />
         ) : (
@@ -259,7 +259,7 @@ const ReceiverMessageItem = ({
               mr: 2.5,
               mb: 5.5,
             }}
-            className='message-chat-avatar'
+            className="message-chat-avatar"
           >
             {selectedUser.name.charAt(0).toUpperCase()}
           </Avatar>
@@ -268,17 +268,17 @@ const ReceiverMessageItem = ({
           sx={{
             position: 'relative',
           }}
-          className='message-chat-item'
+          className="message-chat-item"
         >
           <Box
-            component='span'
+            component="span"
             sx={{
               fontSize: 12,
               color: (theme) => theme.palette.text.secondary,
               display: 'block',
               mb: 1.5,
             }}
-            className='message-time'
+            className="message-time"
           >
             {item.time}
           </Box>

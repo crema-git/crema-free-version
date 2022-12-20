@@ -1,2 +1,2 @@
-import {Radio} from '@crema/modules/components/inputs';
+import { Radio } from '@crema/modules/components/inputs';
 export default Radio;

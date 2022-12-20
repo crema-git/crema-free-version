@@ -1,2 +1,2 @@
-import {Components} from '@crema/modules/components/datagrid';
+import { Components } from '@crema/modules/components/datagrid';
 export default Components;

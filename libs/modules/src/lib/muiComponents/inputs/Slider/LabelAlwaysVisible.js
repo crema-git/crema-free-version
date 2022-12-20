@@ -27,14 +27,14 @@ function valuetext(value) {
 
 export default function DiscreteSliderLabel() {
   return (
-    <Box sx={{width: 300}}>
+    <Box sx={{ width: 300 }}>
       <Slider
-        aria-label='Always visible'
+        aria-label="Always visible"
         defaultValue={80}
         getAriaValueText={valuetext}
         step={10}
         marks={marks}
-        valueLabelDisplay='on'
+        valueLabelDisplay="on"
       />
     </Box>
   );

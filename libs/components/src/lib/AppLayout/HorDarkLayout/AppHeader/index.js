@@ -14,17 +14,17 @@ import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import AppTooltip from '../../../AppTooltip';
-import {alpha} from '@mui/material/styles';
+import { alpha } from '@mui/material/styles';
 import NotificationBar from '../NotificationBar';
 import AppLogo from '../../components/AppLogo';
 import UserInfo from '../../components/UserInfo';
 import HeaderNavWrapper from './HeaderNavWrapper';
 import HorizontalNav from '../../components/HorizontalNav';
-import {useSidebarContext} from "@crema/context/SidebarContextProvider";
+import { useSidebarContext } from '@crema/context/SidebarContextProvider';
 
-const AppHeader = ({toggleNavCollapsed,routesConfig}) => {
+const AppHeader = ({ toggleNavCollapsed, routesConfig }) => {
   const [anchorEl, setAnchorEl] = React.useState(null);
-  const {sidebarBgColor, sidebarTextColor} = useSidebarContext();
+  const { sidebarBgColor, sidebarTextColor } = useSidebarContext();
 
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
@@ -36,221 +36,221 @@ const AppHeader = ({toggleNavCollapsed,routesConfig}) => {
 
   return (
     <AppBar
-        position='relative'
-        color='inherit'
+      position="relative"
+      color="inherit"
+      sx={{
+        boxShadow: 'none',
+        width: '100%',
+      }}
+      className="app-bar"
+    >
+      <NotificationBar />
+      <Toolbar
         sx={{
-          boxShadow: 'none',
-          width: '100%',
+          boxSizing: 'border-box',
+          minHeight: { xs: 56, sm: 70 },
+          px: { xs: 0 },
+          borderBottom: (theme) =>
+            `solid 1px ${alpha(theme.palette.common.black, 0.15)}`,
+          backgroundColor: sidebarBgColor,
+          color: sidebarTextColor,
         }}
-        className='app-bar'
       >
-        <NotificationBar />
-        <Toolbar
+        <Box
           sx={{
-            boxSizing: 'border-box',
-            minHeight: {xs: 56, sm: 70},
-            px: {xs: 0},
-            borderBottom: (theme) =>
-              `solid 1px ${alpha(theme.palette.common.black, 0.15)}`,
-            backgroundColor: sidebarBgColor,
-            color: sidebarTextColor,
+            width: '100%',
+            maxWidth: { lg: 1140, xl: 1420 },
+            mx: 'auto',
+            px: 5,
+            display: 'flex',
+            alignItems: 'center',
           }}
         >
+          <Hidden lgUp>
+            <IconButton
+              sx={{
+                marginRight: (theme) => theme.spacing(2),
+                color: sidebarTextColor,
+              }}
+              edge="start"
+              className="menu-btn"
+              color="inherit"
+              aria-label="open drawer"
+              onClick={toggleNavCollapsed}
+              size="large"
+            >
+              <MenuIcon
+                sx={{
+                  width: 35,
+                  height: 35,
+                }}
+              />
+            </IconButton>
+          </Hidden>
+
           <Box
             sx={{
-              width: '100%',
-              maxWidth: {lg: 1140, xl: 1420},
-              mx: 'auto',
-              px: 5,
+              '& .app-logo': {
+                pl: 0,
+              },
+              '& .logo-text': {
+                display: { xs: 'none', sm: 'block' },
+              },
+            }}
+          >
+            <AppLogo />
+          </Box>
+
+          <Box
+            sx={{
+              flexGrow: 1,
+            }}
+          />
+          <Box
+            sx={{
+              minHeight: 40,
+              position: 'relative',
+              display: { xs: 'none', sm: 'block' },
+              '& .searchRoot': {
+                position: { xs: 'absolute', sm: 'relative' },
+                right: { xs: 0, sm: 'auto' },
+                top: { xs: 0, sm: 'auto' },
+              },
+            }}
+          >
+            <AppSearchBar iconPosition="right" placeholder="Search…" />
+          </Box>
+          <Box sx={{ ml: 4 }}>
+            <AppLngSwitcher iconOnly={true} tooltipPosition="bottom" />
+          </Box>
+
+          <Box
+            sx={{
+              ml: 4,
               display: 'flex',
               alignItems: 'center',
             }}
           >
-            <Hidden lgUp>
-              <IconButton
+            <Hidden smDown>
+              <Box
                 sx={{
-                  marginRight: (theme) => theme.spacing(2),
-                  color: sidebarTextColor,
+                  position: 'relative',
+                  display: 'flex',
+                  alignItems: 'center',
+                  marginLeft: -2,
+                  marginRight: -2,
                 }}
-                edge='start'
-                className='menu-btn'
-                color='inherit'
-                aria-label='open drawer'
-                onClick={toggleNavCollapsed}
-                size='large'
               >
-                <MenuIcon
+                <Box
                   sx={{
-                    width: 35,
-                    height: 35,
+                    px: 1.85,
                   }}
-                />
-              </IconButton>
+                >
+                  <AppNotifications />
+                </Box>
+                <Box
+                  sx={{
+                    px: 1.85,
+                  }}
+                >
+                  <AppMessages />
+                </Box>
+              </Box>
             </Hidden>
 
             <Box
               sx={{
-                '& .app-logo': {
-                  pl: 0,
+                ml: { sm: 4 },
+                mr: { xs: 4, sm: 0 },
+                minWidth: { md: 220 },
+                '& .user-info-view': {
+                  p: 0,
                 },
-                '& .logo-text': {
-                  display: {xs: 'none', sm: 'block'},
-                },
-              }}
-            >
-              <AppLogo />
-            </Box>
-
-            <Box
-              sx={{
-                flexGrow: 1,
-              }}
-            />
-            <Box
-              sx={{
-                minHeight: 40,
-                position: 'relative',
-                display: {xs: 'none', sm: 'block'},
-                '& .searchRoot': {
-                  position: {xs: 'absolute', sm: 'relative'},
-                  right: {xs: 0, sm: 'auto'},
-                  top: {xs: 0, sm: 'auto'},
+                '& .user-info': {
+                  display: { xs: 'none', md: 'block' },
+                  color: 'inherit',
                 },
               }}
             >
-              <AppSearchBar iconPosition='right' placeholder='Search…' />
-            </Box>
-            <Box sx={{ml: 4}}>
-              <AppLngSwitcher iconOnly={true} tooltipPosition='bottom' />
+              <UserInfo />
             </Box>
 
-            <Box
-              sx={{
-                ml: 4,
-                display: 'flex',
-                alignItems: 'center',
-              }}
-            >
-              <Hidden smDown>
-                <Box
-                  sx={{
-                    position: 'relative',
-                    display: 'flex',
-                    alignItems: 'center',
-                    marginLeft: -2,
-                    marginRight: -2,
-                  }}
-                >
-                  <Box
-                    sx={{
-                      px: 1.85,
-                    }}
-                  >
-                    <AppNotifications />
-                  </Box>
-                  <Box
-                    sx={{
-                      px: 1.85,
-                    }}
-                  >
-                    <AppMessages />
-                  </Box>
-                </Box>
-              </Hidden>
-
+            <Hidden smUp>
               <Box
                 sx={{
-                  ml: {sm: 4},
-                  mr: {xs: 4, sm: 0},
-                  minWidth: {md: 220},
-                  '& .user-info-view': {
-                    p: 0,
-                  },
-                  '& .user-info': {
-                    display: {xs: 'none', md: 'block'},
-                    color: 'inherit',
-                  },
+                  position: 'relative',
+                  display: 'flex',
+                  alignItems: 'center',
+                  marginLeft: -2,
+                  marginRight: -2,
                 }}
               >
-                <UserInfo />
-              </Box>
-
-              <Hidden smUp>
                 <Box
                   sx={{
-                    position: 'relative',
-                    display: 'flex',
-                    alignItems: 'center',
-                    marginLeft: -2,
-                    marginRight: -2,
+                    px: 1.85,
                   }}
                 >
-                  <Box
-                    sx={{
-                      px: 1.85,
-                    }}
-                  >
-                    <AppTooltip title='More'>
-                      <IconButton
-                        sx={{
-                          borderRadius: '50%',
-                          width: 40,
-                          height: 40,
-                          color: (theme) => theme.palette.text.secondary,
+                  <AppTooltip title="More">
+                    <IconButton
+                      sx={{
+                        borderRadius: '50%',
+                        width: 40,
+                        height: 40,
+                        color: (theme) => theme.palette.text.secondary,
+                        backgroundColor: (theme) =>
+                          theme.palette.background.default,
+                        border: 1,
+                        borderColor: 'transparent',
+                        '&:hover, &:focus': {
+                          color: (theme) => theme.palette.text.primary,
                           backgroundColor: (theme) =>
-                            theme.palette.background.default,
-                          border: 1,
-                          borderColor: 'transparent',
-                          '&:hover, &:focus': {
-                            color: (theme) => theme.palette.text.primary,
-                            backgroundColor: (theme) =>
-                              alpha(theme.palette.background.default, 0.9),
-                            borderColor: (theme) =>
-                              alpha(theme.palette.text.secondary, 0.25),
-                          },
-                        }}
-                        onClick={handleClick}
-                        size='large'
-                      >
-                        <MoreVertIcon />
-                      </IconButton>
-                    </AppTooltip>
-                  </Box>
+                            alpha(theme.palette.background.default, 0.9),
+                          borderColor: (theme) =>
+                            alpha(theme.palette.text.secondary, 0.25),
+                        },
+                      }}
+                      onClick={handleClick}
+                      size="large"
+                    >
+                      <MoreVertIcon />
+                    </IconButton>
+                  </AppTooltip>
                 </Box>
-              </Hidden>
-              <Menu
-                id='simple-menu'
-                anchorEl={anchorEl}
-                keepMounted
-                open={Boolean(anchorEl)}
-                onClose={handleClose}
-              >
-                <MenuItem>
-                  <AppNotifications isMenu />
-                </MenuItem>
-                <MenuItem>
-                  <AppMessages isMenu />
-                </MenuItem>
-                <MenuItem>Setting</MenuItem>
-              </Menu>
-            </Box>
-          </Box>
-        </Toolbar>
-        <Hidden lgDown>
-          <HeaderNavWrapper>
-            <Box
-              sx={{
-                width: '100%',
-                maxWidth: {lg: 1140, xl: 1436},
-                mx: 'auto',
-                px: 5,
-              }}
+              </Box>
+            </Hidden>
+            <Menu
+              id="simple-menu"
+              anchorEl={anchorEl}
+              keepMounted
+              open={Boolean(anchorEl)}
+              onClose={handleClose}
             >
+              <MenuItem>
+                <AppNotifications isMenu />
+              </MenuItem>
+              <MenuItem>
+                <AppMessages isMenu />
+              </MenuItem>
+              <MenuItem>Setting</MenuItem>
+            </Menu>
+          </Box>
+        </Box>
+      </Toolbar>
+      <Hidden lgDown>
+        <HeaderNavWrapper>
+          <Box
+            sx={{
+              width: '100%',
+              maxWidth: { lg: 1140, xl: 1436 },
+              mx: 'auto',
+              px: 5,
+            }}
+          >
             <HorizontalNav routesConfig={routesConfig} />
-            </Box>
-          </HeaderNavWrapper>
-        </Hidden>
-      </AppBar>
+          </Box>
+        </HeaderNavWrapper>
+      </Hidden>
+    </AppBar>
   );
 };
 export default AppHeader;

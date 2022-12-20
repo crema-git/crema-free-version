@@ -1,12 +1,12 @@
-import React, {useState} from 'react';
-import {IconButton} from '@mui/material';
+import React, { useState } from 'react';
+import { IconButton } from '@mui/material';
 import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
 import AppNotificationContent from './AppNotificationContent';
 import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone';
 import AppTooltip from '../AppTooltip';
-import {alpha} from '@mui/material/styles';
+import { alpha } from '@mui/material/styles';
 
 const AppNotifications = ({
   drawerPosition,
@@ -19,13 +19,13 @@ const AppNotifications = ({
   return (
     <>
       {isMenu ? (
-        <Box component='span' onClick={() => setShowNotification(true)}>
+        <Box component="span" onClick={() => setShowNotification(true)}>
           Message
         </Box>
       ) : (
-        <AppTooltip title='Notification' placement={tooltipPosition}>
+        <AppTooltip title="Notification" placement={tooltipPosition}>
           <IconButton
-            className='icon-btn'
+            className="icon-btn"
             sx={{
               borderRadius: '50%',
               width: 40,
@@ -43,7 +43,7 @@ const AppNotifications = ({
               },
             }}
             onClick={() => setShowNotification(true)}
-            size='large'
+            size="large"
           >
             <NotificationsNoneIcon />
           </IconButton>

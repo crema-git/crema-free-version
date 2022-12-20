@@ -22,15 +22,15 @@ export default function LayoutTextFields() {
       sx={{
         display: 'flex',
         flexDirection: 'column',
-        '& .MuiTextField-root': {width: '25ch'},
+        '& .MuiTextField-root': { width: '25ch' },
       }}
     >
       <RedBar />
-      <TextField label={'margin="none"'} id='margin-none' />
+      <TextField label={'margin="none"'} id="margin-none" />
       <RedBar />
-      <TextField label={'margin="dense"'} id='margin-dense' margin='dense' />
+      <TextField label={'margin="dense"'} id="margin-dense" margin="dense" />
       <RedBar />
-      <TextField label={'margin="normal"'} id='margin-normal' margin='normal' />
+      <TextField label={'margin="normal"'} id="margin-normal" margin="normal" />
       <RedBar />
     </Box>
   );

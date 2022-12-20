@@ -1,5 +1,5 @@
 import React from 'react';
-import {Typography} from '@mui/material';
+import { Typography } from '@mui/material';
 import IntlMessages from '@crema/utility/IntlMessages';
 import ChatBubbleOutlineIcon from '@mui/icons-material/ChatBubbleOutline';
 
@@ -8,7 +8,7 @@ const NoUserScreen = () => {
     <div>
       <ChatBubbleOutlineIcon />
       <Typography>
-        <IntlMessages id='chatApp.noUser' />
+        <IntlMessages id="chatApp.noUser" />
       </Typography>
     </div>
   );

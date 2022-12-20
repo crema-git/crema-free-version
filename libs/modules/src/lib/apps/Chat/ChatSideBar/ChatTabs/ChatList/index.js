@@ -3,11 +3,11 @@ import ChatItem from './ChatItem';
 import PropTypes from 'prop-types';
 import AppList from '@crema/components/AppList';
 import ListEmptyResult from '@crema/components/AppList/ListEmptyResult';
-import {useIntl} from 'react-intl';
+import { useIntl } from 'react-intl';
 import ChatListSkeleton from '@crema/components/ChatListSkeleton';
 
-const ChatList = ({chatListData, loading, setSelectedUser, selectedUser}) => {
-  const {messages} = useIntl();
+const ChatList = ({ chatListData, loading, setSelectedUser, selectedUser }) => {
+  const { messages } = useIntl();
   return (
     <AppList
       containerStyle={{

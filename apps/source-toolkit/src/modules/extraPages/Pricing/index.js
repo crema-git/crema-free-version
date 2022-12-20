@@ -1,9 +1,14 @@
 import React from 'react';
-import {Grid} from '@mui/material';
+import { Grid } from '@mui/material';
 import AppGridContainer from '@crema/components/AppGridContainer';
 
-import {PackageFour, PackageOne, PackageThree, PackageTwo} from '@crema/modules/extraPages/Pricing';
-import {pricingData} from "@crema/fakedb/extraPages"
+import {
+  PackageFour,
+  PackageOne,
+  PackageThree,
+  PackageTwo,
+} from '@crema/modules/extraPages/Pricing';
+import { pricingData } from '@crema/fakedb/extraPages';
 
 const Pricing = () => {
   return (

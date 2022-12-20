@@ -7,16 +7,16 @@ import Grow from '@mui/material/Grow';
 import FormControlLabel from '@mui/material/FormControlLabel';
 
 const icon = (
-  <Paper sx={{m: 1}} elevation={4}>
-    <Box component='svg' sx={{width: 100, height: 100}}>
+  <Paper sx={{ m: 1 }} elevation={4}>
+    <Box component="svg" sx={{ width: 100, height: 100 }}>
       <Box
-        component='polygon'
+        component="polygon"
         sx={{
           fill: (theme) => theme.palette.common.white,
           stroke: (theme) => theme.palette.divider,
           strokeWidth: 1,
         }}
-        points='0,100 50,00, 100,100'
+        points="0,100 50,00, 100,100"
       />
     </Box>
   </Paper>
@@ -30,18 +30,18 @@ export default function SimpleGrow() {
   };
 
   return (
-    <Box sx={{height: 180}}>
+    <Box sx={{ height: 180 }}>
       <FormControlLabel
         control={<Switch checked={checked} onChange={handleChange} />}
-        label='Show'
+        label="Show"
       />
-      <Box sx={{display: 'flex'}}>
+      <Box sx={{ display: 'flex' }}>
         <Grow in={checked}>{icon}</Grow>
         {/* Conditionally applies the timeout prop to change the entry speed. */}
         <Grow
           in={checked}
-          style={{transformOrigin: '0 0 0'}}
-          {...(checked ? {timeout: 1000} : {})}
+          style={{ transformOrigin: '0 0 0' }}
+          {...(checked ? { timeout: 1000 } : {})}
         >
           {icon}
         </Grow>

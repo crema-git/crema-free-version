@@ -57,7 +57,7 @@ const scrumBoardReducer = (state = initialState, action) => {
       return {
         ...state,
         boardList: state.boardList.map((board) =>
-          board.id === action.payload.id ? action.payload : board,
+          board.id === action.payload.id ? action.payload : board
         ),
       };
     }
@@ -66,7 +66,7 @@ const scrumBoardReducer = (state = initialState, action) => {
       return {
         ...state,
         boardList: state.boardList.filter(
-          (board) => board.id !== action.payload,
+          (board) => board.id !== action.payload
         ),
       };
 

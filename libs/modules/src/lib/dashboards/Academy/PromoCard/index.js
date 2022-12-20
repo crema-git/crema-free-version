@@ -2,11 +2,11 @@ import React from 'react';
 import AppCard from '@crema/components/AppCard';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
-import {Fonts} from '@crema/constants/AppEnums'
+import { Fonts } from '@crema/constants/AppEnums';
 
 const PromoCard = () => {
   return (
-    <AppCard sxStyle={{height: 1, backgroundColor: '#0A8FDC'}}>
+    <AppCard sxStyle={{ height: 1, backgroundColor: '#0A8FDC' }}>
       <Box
         sx={{
           display: 'flex',
@@ -21,10 +21,10 @@ const PromoCard = () => {
             mb: 2,
           }}
         >
-          <img src={'/assets/images/dashboard/academy/promo.png'} alt='promo' />
+          <img src={'/assets/images/dashboard/academy/promo.png'} alt="promo" />
         </Box>
         <Box
-          component='p'
+          component="p"
           sx={{
             mb: 2,
             fontSize: 14,
@@ -35,7 +35,7 @@ const PromoCard = () => {
           Do you want to get
         </Box>
         <Box
-          component='p'
+          component="p"
           sx={{
             mb: 3,
             color: '#fff',
@@ -45,8 +45,8 @@ const PromoCard = () => {
         </Box>
         <Box>
           <Button
-            variant='contained'
-            size='small'
+            variant="contained"
+            size="small"
             sx={{
               backgroundColor: '#fff',
               color: '#000',

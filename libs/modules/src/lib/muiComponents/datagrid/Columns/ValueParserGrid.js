@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {DataGrid} from '@mui/x-data-grid';
+import { DataGrid } from '@mui/x-data-grid';
 
 const rows = [
   {
@@ -18,7 +18,7 @@ const rows = [
 
 export default function ValueParserGrid() {
   return (
-    <div style={{height: 300, width: '100%'}}>
+    <div style={{ height: 300, width: '100%' }}>
       <DataGrid
         rows={rows}
         columns={[
@@ -29,7 +29,7 @@ export default function ValueParserGrid() {
             width: 150,
             valueFormatter: (params) => {
               const valueFormatted = Number(
-                params.value * 100,
+                params.value * 100
               ).toLocaleString();
               return `${valueFormatted} %`;
             },

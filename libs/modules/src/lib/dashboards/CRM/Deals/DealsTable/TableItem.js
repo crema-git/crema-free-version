@@ -1,11 +1,11 @@
 import React from 'react';
 import TableCell from '@mui/material/TableCell';
-import {Box} from '@mui/material';
+import { Box } from '@mui/material';
 import Avatar from '@mui/material/Avatar';
 import TableRow from '@mui/material/TableRow';
 import PropTypes from 'prop-types';
-import {blue, green, red} from '@mui/material/colors';
-import {Fonts} from '@crema/constants/AppEnums'
+import { blue, green, red } from '@mui/material/colors';
+import { Fonts } from '@crema/constants/AppEnums';
 
 const getProgressColor = (progress) => {
   switch (progress) {
@@ -24,7 +24,7 @@ const getProgressColor = (progress) => {
 };
 
 const TableItem = (props) => {
-  const {row} = props;
+  const { row } = props;
 
   return (
     <TableRow
@@ -43,17 +43,17 @@ const TableItem = (props) => {
           },
         },
       }}
-      className='item-hover'
+      className="item-hover"
     >
-      <TableCell scope='row' className='tableCell'>
+      <TableCell scope="row" className="tableCell">
         {row.id}.
       </TableCell>
       <TableCell
-        align='left'
+        align="left"
         sx={{
           whiteSpace: 'no-wrap',
         }}
-        className='tableCell'
+        className="tableCell"
       >
         <Box
           sx={{
@@ -67,7 +67,7 @@ const TableItem = (props) => {
             <Avatar>{row.name[0].toUpperCase()}</Avatar>
           )}
           <Box
-            component='span'
+            component="span"
             sx={{
               ml: 3.5,
               fontWeight: Fonts.MEDIUM,
@@ -78,14 +78,14 @@ const TableItem = (props) => {
         </Box>
       </TableCell>
       <TableCell
-        align='left'
+        align="left"
         sx={{
           color: getProgressColor(row.progress),
         }}
-        className='tableCell'
+        className="tableCell"
       >
         <Box
-          component='span'
+          component="span"
           sx={{
             fontWeight: Fonts.REGULAR,
           }}
@@ -93,18 +93,18 @@ const TableItem = (props) => {
           {row.progress}
         </Box>
       </TableCell>
-      <TableCell align='left' className='tableCell'>
+      <TableCell align="left" className="tableCell">
         {row.type}
       </TableCell>
-      <TableCell align='left' className='tableCell' fontWeight={Fonts.MEDIUM}>
+      <TableCell align="left" className="tableCell" fontWeight={Fonts.MEDIUM}>
         {row.amount}
       </TableCell>
       <TableCell
-        align='left'
+        align="left"
         sx={{
           whiteSpace: 'no-wrap',
         }}
-        className='tableCell'
+        className="tableCell"
       >
         {row.created}
       </TableCell>

@@ -2,28 +2,28 @@ import Box from '@mui/material/Box';
 import PropTypes from 'prop-types';
 import Button from '@mui/material/Button';
 import List from '@mui/material/List';
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import IntlMessages from '@crema/utility/IntlMessages';
 import AppScrollbar from '@crema/components/AppScrollbar';
 import CreateContact from '../CreateContact';
 import LabelItem from './LabelItem';
 import AppsSideBarFolderItem from '@crema/components/AppsSideBarFolderItem';
-import {Fonts} from '@crema/constants/AppEnums'
+import { Fonts } from '@crema/constants/AppEnums';
 import AppList from '@crema/components/AppList';
 import ListEmptyResult from '@crema/components/AppList/ListEmptyResult';
 import SidebarPlaceholder from '@crema/components/SidebarListSkeleton';
 import AddIcon from '@mui/icons-material/Add';
-import {Zoom} from '@mui/material';
-import {useGetDataApi} from '@crema/utility/APIHooks';
+import { Zoom } from '@mui/material';
+import { useGetDataApi } from '@crema/utility/APIHooks';
 
-const SideBarContent = ({reCallAPI}) => {
-  const [{apiData: labelList}] = useGetDataApi(
+const SideBarContent = ({ reCallAPI }) => {
+  const [{ apiData: labelList }] = useGetDataApi(
     '/api/contactApp/labels/list',
-    [],
+    []
   );
-  const [{apiData: folderList}] = useGetDataApi(
+  const [{ apiData: folderList }] = useGetDataApi(
     '/api/contactApp/folders/list',
-    [],
+    []
   );
 
   const [isAddContact, onSetIsAddContact] = useState(false);
@@ -40,15 +40,15 @@ const SideBarContent = ({reCallAPI}) => {
     <>
       <Box
         sx={{
-          px: {xs: 4, md: 5},
-          pt: {xs: 4, md: 5},
+          px: { xs: 4, md: 5 },
+          pt: { xs: 4, md: 5 },
           pb: 2.5,
         }}
       >
-        <Zoom in style={{transitionDelay: '300ms'}}>
+        <Zoom in style={{ transitionDelay: '300ms' }}>
           <Button
-            variant='outlined'
-            color='primary'
+            variant="outlined"
+            color="primary"
             sx={{
               padding: '8px 28px',
               borderRadius: 8,
@@ -59,27 +59,27 @@ const SideBarContent = ({reCallAPI}) => {
             startIcon={<AddIcon />}
             onClick={handleAddContactOpen}
           >
-            <IntlMessages id='contactApp.createContact' />
+            <IntlMessages id="contactApp.createContact" />
           </Button>
         </Zoom>
       </Box>
 
-      <AppScrollbar className='scroll-app-sidebar'>
+      <AppScrollbar className="scroll-app-sidebar">
         <Box
           sx={{
             pr: 4,
-            pb: {xs: 4, md: 5, lg: 6.2},
+            pb: { xs: 4, md: 5, lg: 6.2 },
           }}
         >
           <List
             sx={{
-              mb: {xs: 2, xl: 5},
+              mb: { xs: 2, xl: 5 },
             }}
-            component='nav'
-            aria-label='main task folders'
+            component="nav"
+            aria-label="main task folders"
           >
             <AppList
-              animation='transition.slideLeftIn'
+              animation="transition.slideLeftIn"
               data={folderList}
               ListEmptyComponent={
                 <ListEmptyResult
@@ -87,7 +87,7 @@ const SideBarContent = ({reCallAPI}) => {
                   placeholder={
                     <Box
                       sx={{
-                        px: {xs: 4, md: 5, lg: 6.2},
+                        px: { xs: 4, md: 5, lg: 6.2 },
                       }}
                     >
                       <SidebarPlaceholder />
@@ -106,19 +106,19 @@ const SideBarContent = ({reCallAPI}) => {
           </List>
 
           <Box
-            component='h4'
+            component="h4"
             sx={{
-              mt: {xs: 4, xl: 5},
-              px: {xs: 4, md: 5, lg: 6.2},
+              mt: { xs: 4, xl: 5 },
+              px: { xs: 4, md: 5, lg: 6.2 },
               fontWeight: Fonts.SEMI_BOLD,
             }}
           >
-            <IntlMessages id='common.labels' />
+            <IntlMessages id="common.labels" />
           </Box>
 
-          <List component='nav' aria-label='main mailbox folders'>
+          <List component="nav" aria-label="main mailbox folders">
             <AppList
-              animation='transition.slideLeftIn'
+              animation="transition.slideLeftIn"
               data={labelList}
               ListEmptyComponent={
                 <ListEmptyResult
@@ -126,7 +126,7 @@ const SideBarContent = ({reCallAPI}) => {
                   placeholder={
                     <Box
                       sx={{
-                        px: {xs: 4, md: 5, lg: 6.2},
+                        px: { xs: 4, md: 5, lg: 6.2 },
                       }}
                     >
                       <SidebarPlaceholder />

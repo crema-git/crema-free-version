@@ -1,5 +1,5 @@
 import React from 'react';
-import {IconButton} from '@mui/material';
+import { IconButton } from '@mui/material';
 import List from '@mui/material/List';
 import Button from '@mui/material/Button';
 import IntlMessages from '@crema/utility/IntlMessages';
@@ -8,10 +8,10 @@ import CancelOutlinedIcon from '@mui/icons-material/CancelOutlined';
 import PropTypes from 'prop-types';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
-import AppScrollbar from "../AppScrollbar";
-import {notification} from "@crema/fakedb/data";
+import AppScrollbar from '../AppScrollbar';
+import { notification } from '@crema/fakedb/data';
 
-const AppNotificationContent = ({onClose, sxStyle}) => {
+const AppNotificationContent = ({ onClose, sxStyle }) => {
   return (
     <Box
       sx={{
@@ -29,11 +29,11 @@ const AppNotificationContent = ({onClose, sxStyle}) => {
           alignItems: 'center',
           borderBottom: 1,
           borderBottomColor: (theme) => theme.palette.divider,
-          minHeight: {xs: 56, sm: 70},
+          minHeight: { xs: 56, sm: 70 },
         }}
       >
-        <Typography component='h3' variant='h3'>
-          <IntlMessages id='common.notifications' />({notification.length})
+        <Typography component="h3" variant="h3">
+          <IntlMessages id="common.notifications" />({notification.length})
         </Typography>
         <IconButton
           sx={{
@@ -43,17 +43,17 @@ const AppNotificationContent = ({onClose, sxStyle}) => {
             color: 'text.secondary',
           }}
           onClick={onClose}
-          size='large'
+          size="large"
         >
           <CancelOutlinedIcon />
         </IconButton>
       </Box>
       <AppScrollbar
         sx={{
-          height: {xs: 'calc(100% - 96px)', sm: 'calc(100% - 110px)'},
+          height: { xs: 'calc(100% - 96px)', sm: 'calc(100% - 110px)' },
         }}
       >
-        <List sx={{py: 0}}>
+        <List sx={{ py: 0 }}>
           {notification.map((item) => (
             <NotificationItem key={item.id} item={item} />
           ))}
@@ -67,10 +67,10 @@ const AppNotificationContent = ({onClose, sxStyle}) => {
           marginTop: 'auto',
           height: 40,
         }}
-        variant='contained'
-        color='primary'
+        variant="contained"
+        color="primary"
       >
-        <IntlMessages id='common.viewAll' />
+        <IntlMessages id="common.viewAll" />
       </Button>
     </Box>
   );

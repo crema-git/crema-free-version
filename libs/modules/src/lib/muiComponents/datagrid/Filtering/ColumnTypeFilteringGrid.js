@@ -1,7 +1,7 @@
 import * as React from 'react';
 import InputAdornment from '@mui/material/InputAdornment';
-import {DataGrid, getGridNumericColumnOperators} from '@mui/x-data-grid';
-import {useDemoData} from '@mui/x-data-grid-generator';
+import { DataGrid, getGridNumericColumnOperators } from '@mui/x-data-grid';
+import { useDemoData } from '@mui/x-data-grid-generator';
 
 const priceColumnType = {
   extendType: 'number',
@@ -12,7 +12,7 @@ const priceColumnType = {
         ...operator,
         InputComponentProps: {
           InputProps: {
-            startAdornment: <InputAdornment position='start'>$</InputAdornment>,
+            startAdornment: <InputAdornment position="start">$</InputAdornment>,
           },
         },
       };
@@ -20,7 +20,7 @@ const priceColumnType = {
 };
 
 export default function ColumnTypeFilteringGrid() {
-  const {data} = useDemoData({dataSet: 'Commodity', rowLength: 100});
+  const { data } = useDemoData({ dataSet: 'Commodity', rowLength: 100 });
   const columns = React.useMemo(() => {
     if (data.columns.length > 0) {
       const visibleFields = ['desk', 'commodity', 'totalPrice'];
@@ -42,11 +42,11 @@ export default function ColumnTypeFilteringGrid() {
   }, [data.columns]);
 
   return (
-    <div style={{height: 400, width: '100%'}}>
+    <div style={{ height: 400, width: '100%' }}>
       <DataGrid
         rows={data.rows}
         columns={columns}
-        columnTypes={{price: priceColumnType}}
+        columnTypes={{ price: priceColumnType }}
         initialState={{
           filter: {
             filterModel: {

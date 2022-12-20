@@ -36,31 +36,31 @@ export default function ErrorRadios() {
   return (
     <form onSubmit={handleSubmit}>
       <FormControl
-        sx={{m: 3}}
-        component='fieldset'
+        sx={{ m: 3 }}
+        component="fieldset"
         error={error}
-        variant='standard'
+        variant="standard"
       >
-        <FormLabel component='legend'>Pop quiz: MUI is...</FormLabel>
+        <FormLabel component="legend">Pop quiz: MUI is...</FormLabel>
         <RadioGroup
-          aria-label='quiz'
-          name='quiz'
+          aria-label="quiz"
+          name="quiz"
           value={value}
           onChange={handleRadioChange}
         >
           <FormControlLabel
-            value='best'
+            value="best"
             control={<Radio />}
-            label='The best!'
+            label="The best!"
           />
           <FormControlLabel
-            value='worst'
+            value="worst"
             control={<Radio />}
-            label='The worst.'
+            label="The worst."
           />
         </RadioGroup>
         <FormHelperText>{helperText}</FormHelperText>
-        <Button sx={{mt: 1, mr: 1}} type='submit' variant='outlined'>
+        <Button sx={{ mt: 1, mr: 1 }} type="submit" variant="outlined">
           Check Answer
         </Button>
       </FormControl>

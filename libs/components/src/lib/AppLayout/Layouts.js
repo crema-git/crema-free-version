@@ -1,5 +1,5 @@
 import Default from './DefaultLayout';
-import {NavStyle} from '@crema/constants/AppEnums';
+import { NavStyle } from '@crema/constants/AppEnums';
 import BitBucket from './BitBucket';
 import Standard from './Standard';
 import DrawerLayout from './DrawerLayout';

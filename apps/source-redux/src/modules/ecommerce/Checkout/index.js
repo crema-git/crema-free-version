@@ -1,15 +1,19 @@
-import React, {useEffect} from 'react';
-import {Box, Grid} from '@mui/material';
+import React, { useEffect } from 'react';
+import { Box, Grid } from '@mui/material';
 import AppCard from '@crema/components/AppCard';
 import IntlMessages from '@crema/utility/IntlMessages';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Fonts } from '@crema/constants/AppEnums';
 
 import AppAnimate from '@crema/components/AppAnimate';
 import AppGridContainer from '@crema/components/AppGridContainer';
-import {DeliveryAddress, OrderSummary, PaymentInfo,} from '@crema/modules/ecommerce/Checkout';
+import {
+  DeliveryAddress,
+  OrderSummary,
+  PaymentInfo,
+} from '@crema/modules/ecommerce/Checkout';
 import AppLoader from '@crema/components/AppLoader';
-import {useDispatch, useSelector} from 'react-redux';
-import {getCartItems} from '../../../../../../libs/redux/src/lib/actions';
+import { useDispatch, useSelector } from 'react-redux';
+import { getCartItems } from '@crema/redux/actions';
 
 const Checkout = () => {
   const dispatch = useDispatch();

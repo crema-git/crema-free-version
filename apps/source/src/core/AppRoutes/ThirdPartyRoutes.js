@@ -1,5 +1,5 @@
 import React from 'react';
-import {rechartsConfigs} from './RechartRoutes';
+import { rechartsConfigs } from './RechartRoutes';
 import ColorPicker from '../../modules/thirdParty/reactColor';
 import GoogleMap from '../../modules/thirdParty/googleMap';
 import ReactNotificationEx from '../../modules/thirdParty/reactNotification';

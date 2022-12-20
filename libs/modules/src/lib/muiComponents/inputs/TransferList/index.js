@@ -13,15 +13,15 @@ const TransferList = () => {
   return (
     <>
       <AppComponentHeader
-        title='Transfer List'
+        title="Transfer List"
         description='A transfer list (or "shuttle") enables the user to move one or more list items between lists.'
-        refUrl='https://mui.com/components/transfer-list/'
+        refUrl="https://mui.com/components/transfer-list/"
       />
 
       <AppGridContainer>
         <Grid item xs={12}>
           <AppComponentCard
-            title='Basic transfer list'
+            title="Basic transfer list"
             component={BasicTransferList}
             source={BasicTransferListSource}
             noScrollbar
@@ -30,7 +30,7 @@ const TransferList = () => {
         </Grid>
         <Grid item xs={12}>
           <AppComponentCard
-            title='Enhanced transfer list'
+            title="Enhanced transfer list"
             component={EnhancedTransferList}
             source={EnhancedTransferListSource}
             noScrollbar

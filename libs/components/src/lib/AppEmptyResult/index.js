@@ -1,12 +1,12 @@
 import React from 'react';
 import Button from '@mui/material/Button';
 import PropTypes from 'prop-types';
-import IntlMessages from "@crema/utility/IntlMessages";
-import {Typography} from '@mui/material';
+import IntlMessages from '@crema/utility/IntlMessages';
+import { Typography } from '@mui/material';
 import Box from '@mui/material/Box';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Fonts } from '@crema/constants/AppEnums';
 
-const AppEmptyResult = ({title, description, actionTitle, onAction}) => {
+const AppEmptyResult = ({ title, description, actionTitle, onAction }) => {
   return (
     <Box
       sx={{
@@ -21,8 +21,8 @@ const AppEmptyResult = ({title, description, actionTitle, onAction}) => {
       }}
     >
       <Typography
-        variant='h4'
-        component='h4'
+        variant="h4"
+        component="h4"
         sx={{
           mb: 4,
           fontWeight: Fonts.REGULAR,
@@ -43,9 +43,9 @@ const AppEmptyResult = ({title, description, actionTitle, onAction}) => {
       ) : null}
       {actionTitle ? (
         <Button
-          sx={{mb: 2}}
-          variant='contained'
-          color='primary'
+          sx={{ mb: 2 }}
+          variant="contained"
+          color="primary"
           onClick={onAction}
         >
           {actionTitle}
@@ -58,7 +58,7 @@ const AppEmptyResult = ({title, description, actionTitle, onAction}) => {
 export default AppEmptyResult;
 
 AppEmptyResult.defaultProps = {
-  title: <IntlMessages id='common.noRecordFound' />,
+  title: <IntlMessages id="common.noRecordFound" />,
   description: '',
 };
 

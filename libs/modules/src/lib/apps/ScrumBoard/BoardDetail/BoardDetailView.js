@@ -1,4 +1,4 @@
-import React, {useCallback, useEffect, useState} from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import AddCard from './List/AddCard';
 import AppsContent from '@crema/components/AppsContent';
 import Board from 'react-trello';
@@ -8,11 +8,11 @@ import AddCardButton from './List/AddCardButton';
 import AddNewList from './AddNewList';
 import NewListButton from './NewListButton';
 import PropTypes from 'prop-types';
-import {Box, useTheme} from '@mui/material';
-import {useInfoViewActionsContext} from '@crema/context/InfoViewContextProvider';
-import {postDataApi, putDataApi} from '@crema/utility/APIHooks';
+import { Box, useTheme } from '@mui/material';
+import { useInfoViewActionsContext } from '@crema/context/InfoViewContextProvider';
+import { postDataApi, putDataApi } from '@crema/utility/APIHooks';
 
-const BoardWrapper = ({children}) => {
+const BoardWrapper = ({ children }) => {
   return (
     <Box
       sx={{
@@ -39,7 +39,7 @@ const BoardDetailView = (props) => {
   const [isAddCardOpen, setAddCardOpen] = useState(false);
 
   const [selectedCard, setSelectedCard] = useState(null);
-  const {boardDetail, setData} = props;
+  const { boardDetail, setData } = props;
 
   const getBoardData = useCallback(() => {
     return {
@@ -105,7 +105,7 @@ const BoardDetailView = (props) => {
     sourceLaneId,
     targetLaneId,
     position,
-    cardDetails,
+    cardDetails
   ) => {
     if (sourceLaneId !== targetLaneId) {
       const boardId = boardDetail.id;
@@ -190,7 +190,7 @@ const BoardDetailView = (props) => {
         onLaneAdd={(name) => onAddList(name)}
         onLaneUpdate={(laneId, data) => {
           const lane = boardData.lanes.find((item) => item.id === laneId);
-          onEditBoardList(boardDetail.id, {...lane, name: data.title});
+          onEditBoardList(boardDetail.id, { ...lane, name: data.title });
         }}
         onLaneDelete={(laneId) => onDeleteSelectedList(boardDetail.id, laneId)}
         t={(listId) => onClickAddCard(listId)}

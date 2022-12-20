@@ -14,10 +14,10 @@ import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import AppTooltip from '../../../AppTooltip';
-import {alpha} from '@mui/material/styles';
+import { alpha } from '@mui/material/styles';
 import AppLogo from '../../components/AppLogo';
 
-const AppHeader = ({toggleNavCollapsed}) => {
+const AppHeader = ({ toggleNavCollapsed }) => {
   const [anchorEl, setAnchorEl] = React.useState(null);
 
   const handleClick = (event) => {
@@ -30,34 +30,34 @@ const AppHeader = ({toggleNavCollapsed}) => {
 
   return (
     <AppBar
-      position='relative'
-      color='inherit'
+      position="relative"
+      color="inherit"
       sx={{
         boxShadow: 'none',
         borderBottom: (theme) => `solid 1px ${theme.palette.divider}`,
         backgroundColor: 'background.paper',
         width: '100%',
       }}
-      className='app-bar'
+      className="app-bar"
     >
       <Toolbar
         sx={{
           boxSizing: 'border-box',
-          minHeight: {xs: 56, sm: 70},
-          paddingLeft: {xs: 5},
-          paddingRight: {xs: 5, md: 7.5},
+          minHeight: { xs: 56, sm: 70 },
+          paddingLeft: { xs: 5 },
+          paddingRight: { xs: 5, md: 7.5 },
         }}
       >
         <IconButton
           sx={{
             color: 'text.secondary',
           }}
-          edge='start'
-          className='menu-btn'
-          color='inherit'
-          aria-label='open drawer'
+          edge="start"
+          className="menu-btn"
+          color="inherit"
+          aria-label="open drawer"
           onClick={toggleNavCollapsed}
-          size='large'
+          size="large"
         >
           <MenuIcon
             sx={{
@@ -69,7 +69,7 @@ const AppHeader = ({toggleNavCollapsed}) => {
         <Box
           sx={{
             '& .logo-text': {
-              display: {xs: 'none', sm: 'block'},
+              display: { xs: 'none', sm: 'block' },
             },
           }}
         >
@@ -86,20 +86,20 @@ const AppHeader = ({toggleNavCollapsed}) => {
             minHeight: 40,
             position: 'relative',
             '& .searchRoot': {
-              position: {xs: 'absolute', sm: 'relative'},
-              right: {xs: 0, sm: 'auto'},
-              top: {xs: 0, sm: 'auto'},
+              position: { xs: 'absolute', sm: 'relative' },
+              right: { xs: 0, sm: 'auto' },
+              top: { xs: 0, sm: 'auto' },
             },
           }}
         >
-          <AppSearchBar iconPosition='right' placeholder='Search…' />
+          <AppSearchBar iconPosition="right" placeholder="Search…" />
         </Box>
 
-        <Box sx={{ml: 4}}>
-          <AppLngSwitcher iconOnly={true} tooltipPosition='bottom' />
+        <Box sx={{ ml: 4 }}>
+          <AppLngSwitcher iconOnly={true} tooltipPosition="bottom" />
         </Box>
 
-        <Box sx={{ml: 4}}>
+        <Box sx={{ ml: 4 }}>
           <Hidden smDown>
             <Box
               sx={{
@@ -142,7 +142,7 @@ const AppHeader = ({toggleNavCollapsed}) => {
                   px: 1.85,
                 }}
               >
-                <AppTooltip title='More'>
+                <AppTooltip title="More">
                   <IconButton
                     sx={{
                       borderRadius: '50%',
@@ -162,7 +162,7 @@ const AppHeader = ({toggleNavCollapsed}) => {
                       },
                     }}
                     onClick={handleClick}
-                    size='large'
+                    size="large"
                   >
                     <MoreVertIcon />
                   </IconButton>
@@ -171,7 +171,7 @@ const AppHeader = ({toggleNavCollapsed}) => {
             </Box>
           </Hidden>
           <Menu
-            id='simple-menu'
+            id="simple-menu"
             anchorEl={anchorEl}
             keepMounted
             open={Boolean(anchorEl)}

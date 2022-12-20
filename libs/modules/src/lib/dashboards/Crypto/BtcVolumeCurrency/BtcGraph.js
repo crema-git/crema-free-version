@@ -1,5 +1,5 @@
-import React, {useState} from 'react';
-import {Cell, Pie, PieChart, ResponsiveContainer, Sector} from 'recharts';
+import React, { useState } from 'react';
+import { Cell, Pie, PieChart, ResponsiveContainer, Sector } from 'recharts';
 import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
 
@@ -29,7 +29,7 @@ const renderActiveShape = (props) => {
 
   return (
     <g>
-      <text x={cx} y={cy} dy={8} textAnchor='middle' fill={fill}>
+      <text x={cx} y={cy} dy={8} textAnchor="middle" fill={fill}>
         {payload.name}
       </text>
       <Sector
@@ -53,21 +53,21 @@ const renderActiveShape = (props) => {
       <path
         d={`M${sx},${sy}L${mx},${my}L${ex},${ey}`}
         stroke={fill}
-        fill='none'
+        fill="none"
       />
-      <circle cx={ex} cy={ey} r={2} fill={fill} stroke='none' />
+      <circle cx={ex} cy={ey} r={2} fill={fill} stroke="none" />
       <text
         x={ex + (cos >= 0 ? 1 : -1) * 12}
         y={ey}
         textAnchor={textAnchor}
-        fill='#333'
+        fill="#333"
       >{`${value}`}</text>
     </g>
   );
 };
 
 const BtcGraph = (props) => {
-  const {data} = props;
+  const { data } = props;
 
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -93,19 +93,19 @@ const BtcGraph = (props) => {
         },
       }}
     >
-      <ResponsiveContainer height='100%' width='100%'>
-        <PieChart className='btcGraph'>
+      <ResponsiveContainer height="100%" width="100%">
+        <PieChart className="btcGraph">
           <Pie
             activeIndex={activeIndex}
             activeShape={renderActiveShape}
             data={data}
-            cx='50%'
-            cy='50%'
+            cx="50%"
+            cy="50%"
             innerRadius={100}
             outerRadius={115}
-            fill='#8884d8'
+            fill="#8884d8"
             paddingAngle={5}
-            dataKey='value'
+            dataKey="value"
             onMouseEnter={onPieEnter}
           >
             {data.map((entry, index) => (

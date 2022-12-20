@@ -1,14 +1,14 @@
 import React from 'react';
 import Box from '@mui/material/Box';
 import PropTypes from 'prop-types';
-import {Fonts} from '@crema/constants/AppEnums'
+import { Fonts } from '@crema/constants/AppEnums';
 
-const CoinsInfo = ({coins}) => {
+const CoinsInfo = ({ coins }) => {
   return (
     <Box
       sx={{
         mx: -2,
-        mb: {xl: 1},
+        mb: { xl: 1 },
         display: 'flex',
         flexWrap: 'wrap',
         justifyContent: 'space-between',
@@ -18,13 +18,13 @@ const CoinsInfo = ({coins}) => {
         return (
           <Box
             sx={{
-              mt: {xl: 3},
+              mt: { xl: 3 },
               px: 2,
             }}
             key={coin.id}
           >
             <Box
-              component='h3'
+              component="h3"
               sx={{
                 fontWeight: Fonts.BOLD,
                 fontSize: 20,
@@ -34,7 +34,7 @@ const CoinsInfo = ({coins}) => {
               {coin.value}
             </Box>
             <Box
-              component='p'
+              component="p"
               sx={{
                 fontSize: 14,
                 color: 'text.secondary',

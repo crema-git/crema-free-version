@@ -7,9 +7,9 @@ import ListItem from '@mui/material/ListItem';
 import PropTypes from 'prop-types';
 
 const CategoryItem = (props) => {
-  const {item, handleChange} = props;
+  const { item, handleChange } = props;
   return (
-    <ListItem key={item.id} className='item-hover'>
+    <ListItem key={item.id} className="item-hover">
       <ListItemIcon>
         <Box
           sx={{
@@ -17,7 +17,7 @@ const CategoryItem = (props) => {
           }}
         >
           <Checkbox
-            color='primary'
+            color="primary"
             checked={item.isChecked}
             onChange={(e) => handleChange(e, item)}
           />
@@ -26,7 +26,7 @@ const CategoryItem = (props) => {
       <ListItemText
         primary={
           <Box
-            component='span'
+            component="span"
             sx={{
               color: !item.isChecked ? 'text.secondary' : '',
               fontSize: 14,

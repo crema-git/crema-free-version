@@ -68,7 +68,7 @@ export default function TransferList() {
   const customList = (title, items) => (
     <Card>
       <CardHeader
-        sx={{px: 2, py: 1}}
+        sx={{ px: 2, py: 1 }}
         avatar={
           <Checkbox
             onClick={handleToggleAll(items)}
@@ -97,8 +97,8 @@ export default function TransferList() {
           overflow: 'auto',
         }}
         dense
-        component='div'
-        role='list'
+        component="div"
+        role="list"
       >
         {items.map((value) => {
           const labelId = `transfer-list-all-item-${value}-label`;
@@ -106,7 +106,7 @@ export default function TransferList() {
           return (
             <ListItem
               key={value}
-              role='listitem'
+              role="listitem"
               button
               onClick={handleToggle(value)}
             >
@@ -130,27 +130,27 @@ export default function TransferList() {
   );
 
   return (
-    <Grid container spacing={2} justifyContent='center' alignItems='center'>
+    <Grid container spacing={2} justifyContent="center" alignItems="center">
       <Grid item>{customList('Choices', left)}</Grid>
       <Grid item>
-        <Grid container direction='column' alignItems='center'>
+        <Grid container direction="column" alignItems="center">
           <Button
-            sx={{my: 0.5}}
-            variant='outlined'
-            size='small'
+            sx={{ my: 0.5 }}
+            variant="outlined"
+            size="small"
             onClick={handleCheckedRight}
             disabled={leftChecked.length === 0}
-            aria-label='move selected right'
+            aria-label="move selected right"
           >
             &gt;
           </Button>
           <Button
-            sx={{my: 0.5}}
-            variant='outlined'
-            size='small'
+            sx={{ my: 0.5 }}
+            variant="outlined"
+            size="small"
             onClick={handleCheckedLeft}
             disabled={rightChecked.length === 0}
-            aria-label='move selected left'
+            aria-label="move selected left"
           >
             &lt;
           </Button>

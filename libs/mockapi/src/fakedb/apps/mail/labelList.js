@@ -1,7 +1,7 @@
 import PersonIcon from '@mui/icons-material/Person';
 import WorkIcon from '@mui/icons-material/Work';
 import React from 'react';
-import {blue, green, red} from '@mui/material/colors';
+import { blue, green, red } from '@mui/material/colors';
 
 const labelList = [
   {

@@ -5,7 +5,7 @@ const Facebook = () => {
   return (
     <ReactPlayer
       controls={true}
-      url='https://www.facebook.com/facebook/videos/10153231379946729/'
+      url="https://www.facebook.com/facebook/videos/10153231379946729/"
     />
   );
 };

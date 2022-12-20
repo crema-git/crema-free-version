@@ -1,7 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {alpha, Box, Card, CardActions, CardContent, CardMedia,} from '@mui/material';
-import {Fonts} from '@crema/constants/AppEnums';
+import {
+  alpha,
+  Box,
+  Card,
+  CardActions,
+  CardContent,
+  CardMedia,
+} from '@mui/material';
+import { Fonts } from '@crema/constants/AppEnums';
 
 const AppCardMedia = ({
   children,
@@ -16,12 +23,15 @@ const AppCardMedia = ({
   ...rest
 }) => {
   return (
-    <Card sx={{display: 'flex', flexDirection: 'column', ...sxStyle}} {...rest}>
-      <Box sx={{position: 'relative'}}>
+    <Card
+      sx={{ display: 'flex', flexDirection: 'column', ...sxStyle }}
+      {...rest}
+    >
+      <Box sx={{ position: 'relative' }}>
         <CardMedia
-          component='img'
+          component="img"
           image={cardMedia}
-          alt='card media'
+          alt="card media"
           sx={{
             minHeight: 140,
             width: '100%',
@@ -31,7 +41,7 @@ const AppCardMedia = ({
         />
         {cardMediaAction ? (
           <Box
-            component='span'
+            component="span"
             sx={{
               backgroundColor: (theme) =>
                 alpha(theme.palette.text.primary, 0.7),

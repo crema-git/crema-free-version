@@ -1,7 +1,7 @@
 import * as React from 'react';
-import {makeStyles} from '@mui/styles';
-import {DataGrid} from '@mui/x-data-grid';
-import {randomPrice, randomStatusOptions} from '@mui/x-data-grid-generator';
+import { makeStyles } from '@mui/styles';
+import { DataGrid } from '@mui/x-data-grid';
+import { randomPrice, randomStatusOptions } from '@mui/x-data-grid-generator';
 
 const rows = [
   {
@@ -32,7 +32,7 @@ const currencyFormatter = new Intl.NumberFormat('en-US', {
 const usdPrice = {
   type: 'number',
   width: 130,
-  valueFormatter: ({value}) => currencyFormatter.format(Number(value)),
+  valueFormatter: ({ value }) => currencyFormatter.format(Number(value)),
   cellClassName: 'font-tabular-nums',
 };
 
@@ -48,12 +48,12 @@ export default function CustomColumnTypesGrid() {
   const classes = useStyles();
 
   return (
-    <div style={{height: 300, width: '100%'}} className={classes.root}>
+    <div style={{ height: 300, width: '100%' }} className={classes.root}>
       <DataGrid
         columns={[
-          {field: 'status', width: 130},
-          {field: 'subTotal', ...usdPrice},
-          {field: 'total', ...usdPrice},
+          { field: 'status', width: 130 },
+          { field: 'subTotal', ...usdPrice },
+          { field: 'total', ...usdPrice },
         ]}
         rows={rows}
       />

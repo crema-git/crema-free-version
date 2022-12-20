@@ -1,9 +1,9 @@
 import React from 'react';
-import {Box} from '@mui/material';
+import { Box } from '@mui/material';
 import DeleteOutlineOutlinedIcon from '@mui/icons-material/DeleteOutlineOutlined';
 import PropsTypes from 'prop-types';
 
-const PreviewThumb = ({file, onDeleteUploadFile}) => {
+const PreviewThumb = ({ file, onDeleteUploadFile }) => {
   return (
     <Box
       sx={{
@@ -45,7 +45,7 @@ const PreviewThumb = ({file, onDeleteUploadFile}) => {
           onClick={() => onDeleteUploadFile(file)}
         />
       </Box>
-      <img alt='preview' src={file.preview} />
+      <img alt="preview" src={file.preview} />
     </Box>
   );
 };

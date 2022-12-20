@@ -1,15 +1,15 @@
 import React from 'react';
 import Box from '@mui/material/Box';
-import {Fonts} from '@crema/constants/AppEnums'
+import { Fonts } from '@crema/constants/AppEnums';
 import AppCircularProgress from '@crema/components/AppCircularProgress';
-import {alpha, useTheme} from '@mui/material';
+import { alpha, useTheme } from '@mui/material';
 import PropTypes from 'prop-types';
 
-const LearningItem = ({course}) => {
+const LearningItem = ({ course }) => {
   const theme = useTheme();
   return (
     <Box
-      className='item-hover'
+      className="item-hover"
       key={course.id}
       sx={{
         display: 'flex',
@@ -37,7 +37,7 @@ const LearningItem = ({course}) => {
             padding: 1.5,
           }}
         >
-          <img alt='' src={course.icon} />
+          <img alt="" src={course.icon} />
         </Box>
         <Box
           sx={{
@@ -52,12 +52,12 @@ const LearningItem = ({course}) => {
               fontWeight: Fonts.MEDIUM,
               fontSize: 14,
             }}
-            component='h3'
+            component="h3"
           >
             {course.title}
           </Box>
           <Box
-            component='p'
+            component="p"
             sx={{
               fontSize: 14,
               color: 'text.secondary',
@@ -77,7 +77,7 @@ const LearningItem = ({course}) => {
         <AppCircularProgress
           minWidth={42}
           maxWidth={45}
-          activeColor='#0A8FDC'
+          activeColor="#0A8FDC"
           value={course.percentage}
           valueStyle={{
             fontSize: 12,

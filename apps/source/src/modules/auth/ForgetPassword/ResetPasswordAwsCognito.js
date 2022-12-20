@@ -1,3 +1,3 @@
-import {ResetPasswordAwsCognito} from '@crema/modules/auth/ForgetPassword';
+import { ResetPasswordAwsCognito } from '@crema/modules/auth/ForgetPassword';
 
 export default ResetPasswordAwsCognito;

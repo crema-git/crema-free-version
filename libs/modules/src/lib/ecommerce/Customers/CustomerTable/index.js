@@ -7,10 +7,10 @@ import TableHeading from './TableHeading';
 import TableItem from './TableItem';
 import AppTableContainer from '@crema/components/AppTableContainer';
 
-const CustomerTable = ({customers}) => {
+const CustomerTable = ({ customers }) => {
   return (
     <AppTableContainer>
-      <Table stickyHeader className='table'>
+      <Table stickyHeader className="table">
         <TableHead>
           <TableHeading />
         </TableHead>

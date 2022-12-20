@@ -1,8 +1,8 @@
 import React from 'react';
-import {Grid} from '@mui/material';
+import { Grid } from '@mui/material';
 import AppGridContainer from '@crema/components/AppGridContainer';
 import AppAnimate from '@crema/components/AppAnimate';
-import {useGetDataApi} from '@crema/utility/APIHooks';
+import { useGetDataApi } from '@crema/utility/APIHooks';
 import {
   AppointmentCard,
   CancelVisits,
@@ -18,20 +18,21 @@ import {
   RecentPatients,
   TopDoctors,
   UpcomingAppointments,
-  YourActivity
+  YourActivity,
 } from '@crema/modules/dashboards/HealthCare';
-import AppLoader from "@crema/components/AppLoader";
-
+import AppLoader from '@crema/components/AppLoader';
 
 const HealthCare = () => {
-  const [{apiData: healthCare, loading}] = useGetDataApi('/dashboard/health_care');
+  const [{ apiData: healthCare, loading }] = useGetDataApi(
+    '/dashboard/health_care'
+  );
 
   return (
     <>
       {loading ? (
         <AppLoader />
-      ): (
-        <AppAnimate animation='transition.slideUpIn' delay={200}>
+      ) : (
+        <AppAnimate animation="transition.slideUpIn" delay={200}>
           <AppGridContainer>
             {healthCare.salesState.map((data, index) => (
               <Grid item xs={12} sm={6} lg={3} key={index}>

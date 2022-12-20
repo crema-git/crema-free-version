@@ -1,35 +1,35 @@
 import React from 'react';
 import Box from '@mui/material/Box';
 import IntlMessages from '@crema/utility/IntlMessages';
-import {FiFacebook, FiTwitter} from 'react-icons/fi';
+import { FiFacebook, FiTwitter } from 'react-icons/fi';
 import PropTypes from 'prop-types';
-import {Fonts} from '@crema/constants/AppEnums'
+import { Fonts } from '@crema/constants/AppEnums';
 
 const SocialMedia = (props) => {
-  const {contact} = props;
+  const { contact } = props;
 
   return (
     <Box
       sx={{
-        pr: {xs: 5, lg: 8, xl: 10},
+        pr: { xs: 5, lg: 8, xl: 10 },
         py: 5,
         borderBottom: (theme) => `1px solid ${theme.palette.divider}`,
       }}
     >
       <Box
-        component='h6'
+        component="h6"
         sx={{
           mb: 2,
           fontWeight: Fonts.MEDIUM,
           fontSize: 16,
         }}
       >
-        <IntlMessages id='common.socialMedia' />
+        <IntlMessages id="common.socialMedia" />
       </Box>
 
       <Box
         sx={{
-          px: {xs: 5, lg: 8, xl: 10},
+          px: { xs: 5, lg: 8, xl: 10 },
         }}
       >
         <Box
@@ -53,7 +53,7 @@ const SocialMedia = (props) => {
             {contact.facebookId ? (
               contact.facebookId
             ) : (
-              <IntlMessages id='common.na' />
+              <IntlMessages id="common.na" />
             )}
           </Box>
         </Box>
@@ -78,7 +78,7 @@ const SocialMedia = (props) => {
             {contact.twitterId ? (
               contact.twitterId
             ) : (
-              <IntlMessages id='common.na' />
+              <IntlMessages id="common.na" />
             )}
           </Box>
         </Box>

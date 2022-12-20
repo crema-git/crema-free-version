@@ -1,20 +1,20 @@
 import React from 'react';
-import {Icon, ListItem, ListItemText} from '@mui/material';
+import { Icon, ListItem, ListItemText } from '@mui/material';
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
-import IntlMessages from "@crema/utility/IntlMessages";
+import IntlMessages from '@crema/utility/IntlMessages';
 import Box from '@mui/material/Box';
 import AppNavLink from '../../../AppNavLink';
 import Badge from '@mui/material/Badge';
-import {useSidebarContext} from "@crema/context/SidebarContextProvider";
-import {useLocation} from 'react-router-dom';
+import { useSidebarContext } from '@crema/context/SidebarContextProvider';
+import { useLocation } from 'react-router-dom';
 
 function HorizontalItem(props) {
-  const {item, dense} = props;
+  const { item, dense } = props;
 
   const location = useLocation();
   const active = isUrlInChildren(item, location.pathname);
-  const {sidebarMenuSelectedBgColor, sidebarMenuSelectedTextColor} =
+  const { sidebarMenuSelectedBgColor, sidebarMenuSelectedTextColor } =
     useSidebarContext();
 
   function isUrlInChildren(parent, url) {
@@ -44,7 +44,7 @@ function HorizontalItem(props) {
     <ListItem
       component={AppNavLink}
       to={item.url}
-      activeClassName='active'
+      activeClassName="active"
       className={clsx('navItemSubmenu', dense && 'dense')}
       exact={item.exact}
       sx={{
@@ -81,14 +81,14 @@ function HorizontalItem(props) {
           sx={{
             color: active ? sidebarMenuSelectedTextColor : 'action',
             mr: 3,
-            fontSize: {xs: 16, xl: 18},
+            fontSize: { xs: 16, xl: 18 },
           }}
         >
           {item.icon}
         </Icon>
       )}
       <ListItemText
-        className='AppNavLinkTextSubmenu'
+        className="AppNavLinkTextSubmenu"
         primary={<IntlMessages id={item.messageId} />}
       />
       {item.count && (

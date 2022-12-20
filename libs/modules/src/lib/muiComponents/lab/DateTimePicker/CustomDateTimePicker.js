@@ -20,8 +20,8 @@ export default function CustomDateTimePicker() {
           disableFuture
           hideTabs
           showTodayButton
-          todayText='now'
-          openTo='hours'
+          todayText="now"
+          openTo="hours"
           value={value}
           onChange={(newValue) => {
             setValue(newValue);
@@ -32,12 +32,12 @@ export default function CustomDateTimePicker() {
             RightArrowIcon: SnoozeIcon,
             OpenPickerIcon: ClockIcon,
           }}
-          leftArrowButtonText='Open previous month'
-          rightArrowButtonText='Open next month'
+          leftArrowButtonText="Open previous month"
+          rightArrowButtonText="Open next month"
           minTime={new Date(0, 0, 0, 9)}
           maxTime={new Date(0, 0, 0, 20)}
           renderInput={(params) => (
-            <TextField {...params} helperText='Hardcoded helper text' />
+            <TextField {...params} helperText="Hardcoded helper text" />
           )}
         />
         <MobileDateTimePicker
@@ -45,11 +45,11 @@ export default function CustomDateTimePicker() {
           onChange={(newValue) => {
             setValue(newValue);
           }}
-          label='With error handler'
+          label="With error handler"
           onError={console.log}
           minDate={new Date('2018-01-01T00:00')}
-          inputFormat='yyyy/MM/dd hh:mm a'
-          mask='___/__/__ __:__ _M'
+          inputFormat="yyyy/MM/dd hh:mm a"
+          mask="___/__/__ __:__ _M"
           renderInput={(params) => <TextField {...params} />}
         />
         <DateTimePicker
@@ -57,7 +57,7 @@ export default function CustomDateTimePicker() {
           value={clearedDate}
           onChange={(newValue) => setClearedDate(newValue)}
           renderInput={(params) => (
-            <TextField {...params} helperText='Clear Initial State' />
+            <TextField {...params} helperText="Clear Initial State" />
           )}
         />
       </Stack>

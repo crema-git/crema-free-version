@@ -1,2 +1,2 @@
-import {FileStack  } from '@crema/modules/thirdParty';
-export  default FileStack;
+import { FileStack } from '@crema/modules/thirdParty';
+export default FileStack;

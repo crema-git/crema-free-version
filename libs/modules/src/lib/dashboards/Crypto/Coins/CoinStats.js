@@ -2,12 +2,12 @@ import React from 'react';
 import Avatar from '@mui/material/Avatar';
 import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
-import {green, red} from '@mui/material/colors';
-import {Fonts} from '@crema/constants/AppEnums'
+import { green, red } from '@mui/material/colors';
+import { Fonts } from '@crema/constants/AppEnums';
 import AppCard from '@crema/components/AppCard';
 
 const CoinStats = (props) => {
-  const {icon, bgColor, data, heading} = props;
+  const { icon, bgColor, data, heading } = props;
 
   return (
     <AppCard
@@ -15,7 +15,7 @@ const CoinStats = (props) => {
         borderRadius: (theme) =>
           theme.components.MuiCard.styleOverrides.root.borderRadius / 4,
       }}
-      className='card-hover'
+      className="card-hover"
     >
       <Box
         sx={{
@@ -26,13 +26,13 @@ const CoinStats = (props) => {
         <Avatar
           sx={{
             p: 3,
-            fontSize: {xs: 30, md: 48},
-            height: {xs: 46, md: 50, xl: 60},
-            width: {xs: 46, md: 50, xl: 60},
+            fontSize: { xs: 30, md: 48 },
+            height: { xs: 46, md: 50, xl: 60 },
+            width: { xs: 46, md: 50, xl: 60 },
             backgroundColor: bgColor,
           }}
         >
-          <img alt='' src={icon} />
+          <img alt="" src={icon} />
         </Avatar>
 
         <Box
@@ -42,7 +42,7 @@ const CoinStats = (props) => {
           }}
         >
           <Box
-            component='p'
+            component="p"
             sx={{
               fontSize: 14,
               color: 'text.secondary',
@@ -52,7 +52,7 @@ const CoinStats = (props) => {
             {heading}
           </Box>
           <Box
-            component='h3'
+            component="h3"
             sx={{
               display: 'inline-block',
               fontWeight: Fonts.MEDIUM,
@@ -63,7 +63,7 @@ const CoinStats = (props) => {
             ${data.price}
           </Box>
           <Box
-            component='span'
+            component="span"
             sx={{
               fontSize: 16,
               fontWeight: Fonts.MEDIUM,

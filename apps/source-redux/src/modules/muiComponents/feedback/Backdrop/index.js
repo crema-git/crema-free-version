@@ -1,2 +1,2 @@
-import {Backdrop} from '@crema/modules/components/feedBack';
+import { Backdrop } from '@crema/modules/components/feedBack';
 export default Backdrop;

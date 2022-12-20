@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {Box} from '@mui/material';
-import {Fonts} from '@crema/constants/AppEnums';
-import {getBreakPointsValue} from "@crema/helpers";
+import { Box } from '@mui/material';
+import { Fonts } from '@crema/constants/AppEnums';
+import { getBreakPointsValue } from '@crema/helpers';
 
 // FIXME checkout https://material-ui.com/components/use-media-query/#migrating-from-withwidth
 const withWidth = () => (WrappedComponent) => (props) =>
-  <WrappedComponent {...props} width='xs' />;
+  <WrappedComponent {...props} width="xs" />;
 
 const AppSemiCircleProgress = ({
   activeColor,
@@ -51,17 +51,17 @@ const AppSemiCircleProgress = ({
   }
 
   return (
-    <Box sx={{width: actualDiameter}} style={{position: 'relative'}}>
+    <Box sx={{ width: actualDiameter }} style={{ position: 'relative' }}>
       <svg
         width={actualDiameter}
         height={actualDiameter / 2}
-        style={{transform: rotation, overflow: 'hidden'}}
+        style={{ transform: rotation, overflow: 'hidden' }}
       >
         <circle
           cx={coordinateForCircle}
           cy={coordinateForCircle}
           r={radius}
-          fill='none'
+          fill="none"
           stroke={pathColor}
           strokeWidth={strokeWidth}
           strokeDasharray={circumference}
@@ -73,7 +73,7 @@ const AppSemiCircleProgress = ({
           cx={coordinateForCircle}
           cy={coordinateForCircle}
           r={radius}
-          fill='none'
+          fill="none"
           stroke={activeColor}
           strokeWidth={strokeWidth}
           strokeDasharray={circumference}
@@ -101,18 +101,18 @@ const AppSemiCircleProgress = ({
           }}
         >
           <Box
-            component='span'
+            component="span"
             sx={{
-              fontSize: {xs: 18, sm: 20, xl: 22},
+              fontSize: { xs: 18, sm: 20, xl: 22 },
               fontWeight: Fonts.LIGHT,
             }}
           >
             {percentage}%
           </Box>
           <Box
-            component='span'
+            component="span"
             sx={{
-              fontSize: {xs: 16, sm: 18, xl: 20},
+              fontSize: { xs: 16, sm: 18, xl: 20 },
               textTransform: 'uppercase',
               color: (theme) => theme.palette.text.secondary,
             }}
@@ -135,12 +135,12 @@ function percentageValidation(isRequired) {
     } else {
       if (typeof prop !== 'number') {
         return new Error(
-          'Invalid percentage. Must be a number between 0 and 100.',
+          'Invalid percentage. Must be a number between 0 and 100.'
         );
       }
       if (props[propName] < 0 || props[propName] > 100) {
         return new Error(
-          'Invalid percentage. Must be a number between 0 and 100.',
+          'Invalid percentage. Must be a number between 0 and 100.'
         );
       }
     }

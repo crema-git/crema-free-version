@@ -6,8 +6,8 @@ import Switch from '@mui/material/Switch';
 export default function SwitchLabels() {
   return (
     <FormGroup>
-      <FormControlLabel control={<Switch defaultChecked />} label='Label' />
-      <FormControlLabel disabled control={<Switch />} label='Disabled' />
+      <FormControlLabel control={<Switch defaultChecked />} label="Label" />
+      <FormControlLabel disabled control={<Switch />} label="Disabled" />
     </FormGroup>
   );
 }

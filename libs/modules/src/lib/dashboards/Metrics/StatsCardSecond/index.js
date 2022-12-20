@@ -2,10 +2,10 @@ import React from 'react';
 import Avatar from '@mui/material/Avatar';
 import Box from '@mui/material/Box';
 import PropTypes from 'prop-types';
-import {Fonts} from '@crema/constants/AppEnums'
+import { Fonts } from '@crema/constants/AppEnums';
 import AppCard from '@crema/components/AppCard';
 
-const StatsCardSecond = ({icon, bgColor, text, value}) => {
+const StatsCardSecond = ({ icon, bgColor, text, value }) => {
   return (
     <AppCard
       sxStyle={{
@@ -17,18 +17,18 @@ const StatsCardSecond = ({icon, bgColor, text, value}) => {
         sx={{
           padding: 3,
           display: 'flex',
-          mb: {xs: 4, xl: 6},
+          mb: { xs: 4, xl: 6 },
           marginLeft: 'auto',
           marginRight: 'auto',
-          height: {xs: 60},
-          width: {xs: 60},
+          height: { xs: 60 },
+          width: { xs: 60 },
           backgroundColor: bgColor,
         }}
       >
-        <img src={icon} alt='' />
+        <img src={icon} alt="" />
       </Avatar>
       <Box
-        component='h3'
+        component="h3"
         sx={{
           mb: 2,
           fontSize: 20,
@@ -38,7 +38,7 @@ const StatsCardSecond = ({icon, bgColor, text, value}) => {
         {value}
       </Box>
       <Box
-        component='p'
+        component="p"
         sx={{
           mb: 2,
           color: 'text.secondary',

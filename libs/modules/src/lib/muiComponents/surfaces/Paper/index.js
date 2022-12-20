@@ -17,15 +17,15 @@ const Paper = () => {
   return (
     <>
       <AppComponentHeader
-        title='Paper'
-        description='In Material Design, the physical properties of paper are translated to the screen.'
-        refUrl='https://mui.com/components/paper/'
+        title="Paper"
+        description="In Material Design, the physical properties of paper are translated to the screen."
+        refUrl="https://mui.com/components/paper/"
       />
 
       <AppGridContainer>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Basic paper'
+            title="Basic paper"
             component={SimplePaper}
             source={SimplePaperSource}
             noScrollbar
@@ -33,7 +33,7 @@ const Paper = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Variants'
+            title="Variants"
             component={Variants}
             source={VariantsSource}
             noScrollbar
@@ -41,7 +41,7 @@ const Paper = () => {
         </Grid>
         <Grid item xs={12}>
           <AppComponentCard
-            title='Elevation'
+            title="Elevation"
             component={Elevation}
             source={ElevationSource}
             noScrollbar

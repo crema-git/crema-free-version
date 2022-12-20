@@ -20,51 +20,50 @@ const FusionCharts = () => {
   return (
     <>
       <AppComponentHeader
-        title='FusionCharts'
-        description='Build beautiful web & mobile dashboards'
-        refUrl='https://www.fusioncharts.com/react-charts?framework=react/'
+        title="FusionCharts"
+        description="Build beautiful web & mobile dashboards"
+        refUrl="https://www.fusioncharts.com/react-charts?framework=react/"
       />
 
       <AppGridContainer>
-
         <Grid item xs={12} lg={6}>
           <AppComponentCard
-            title='Stacked Columns'
+            title="Stacked Columns"
             component={StackedColumns}
             source={StackedColumnsSource}
           />
         </Grid>
         <Grid item xs={12} lg={6}>
           <AppComponentCard
-            title='Stacked Negative'
+            title="Stacked Negative"
             component={StackedNegative}
             source={StackedNegativeSource}
           />
         </Grid>
         <Grid item xs={12} lg={6}>
           <AppComponentCard
-            title='Stacked Area'
+            title="Stacked Area"
             component={StackedArea}
             source={StackedAreaSource}
           />
         </Grid>
         <Grid item xs={12} lg={6}>
           <AppComponentCard
-            title='Simple Chart'
+            title="Simple Chart"
             component={SimpleChart}
             source={SimpleChartSource}
           />
         </Grid>
         <Grid item xs={12} lg={6}>
           <AppComponentCard
-            title='Simple Guage'
+            title="Simple Guage"
             component={SimpleGuage}
             source={SimpleGuageSource}
           />
         </Grid>
         <Grid item xs={12} lg={6}>
           <AppComponentCard
-            title='WorldMap'
+            title="WorldMap"
             component={WorldMap}
             source={WorldMapSource}
           />

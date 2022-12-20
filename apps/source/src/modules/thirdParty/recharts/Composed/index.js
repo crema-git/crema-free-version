@@ -1,2 +1,2 @@
-import {ComposedChart } from '@crema/modules/thirdParty';
-export  default ComposedChart;
+import { ComposedChart } from '@crema/modules/thirdParty';
+export default ComposedChart;

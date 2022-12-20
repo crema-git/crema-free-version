@@ -14,15 +14,15 @@ const Timeline = () => {
   return (
     <>
       <AppComponentHeader
-        title='Timeline'
-        description='A React component for playing a variety of URLs, including file paths, YouTube, Facebook, Twitch, SoundCloud, Streamable, Vimeo, Wistia, Mixcloud, and DailyMotion.'
-        refUrl='https://cookpete.com/react-player/'
+        title="Timeline"
+        description="A React component for playing a variety of URLs, including file paths, YouTube, Facebook, Twitch, SoundCloud, Streamable, Vimeo, Wistia, Mixcloud, and DailyMotion."
+        refUrl="https://cookpete.com/react-player/"
       />
 
       <AppGridContainer>
         <Grid item xs={12}>
           <AppComponentCard
-            title='Custom'
+            title="Custom"
             maxHeight={700}
             component={Custom}
             source={CustomSource}
@@ -30,7 +30,7 @@ const Timeline = () => {
         </Grid>
         <Grid item xs={12}>
           <AppComponentCard
-            title='React Image Timeline'
+            title="React Image Timeline"
             maxHeight={700}
             component={ReactImageTimeline}
             source={ReactImageTimelineSource}

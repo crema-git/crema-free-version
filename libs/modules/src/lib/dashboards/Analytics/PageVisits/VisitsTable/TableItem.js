@@ -1,12 +1,12 @@
 import React from 'react';
 import TableCell from '@mui/material/TableCell';
-import {Box} from '@mui/material';
+import { Box } from '@mui/material';
 import TableRow from '@mui/material/TableRow';
 import PropTypes from 'prop-types';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import ArrowDropUpIcon from '@mui/icons-material/ArrowDropUp';
 
-const TableItem = ({data}) => {
+const TableItem = ({ data }) => {
   return (
     <TableRow
       sx={{
@@ -22,12 +22,12 @@ const TableItem = ({data}) => {
         },
       }}
       key={data.id}
-      className='item-hover'
+      className="item-hover"
     >
-      <TableCell component='th' scope='data' className='tableCell'>
+      <TableCell component="th" scope="data" className="tableCell">
         {data.page}
       </TableCell>
-      <TableCell align='right' className='tableCell'>
+      <TableCell align="right" className="tableCell">
         <Box
           sx={{
             display: 'flex',
@@ -45,7 +45,7 @@ const TableItem = ({data}) => {
           {data.pageView}
         </Box>
       </TableCell>
-      <TableCell align='right' className='tableCell'>
+      <TableCell align="right" className="tableCell">
         <Box
           sx={{
             display: 'flex',

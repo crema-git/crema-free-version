@@ -1,4 +1,4 @@
-import {GET_USER_LIST} from '@crema/constants/ActionTypes';
+import { GET_USER_LIST } from '@crema/constants/ActionTypes';
 
 const initialState = {
   usersList: [],

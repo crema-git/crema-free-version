@@ -1,22 +1,22 @@
 import React from 'react';
 import AppCard from '@crema/components/AppCard';
 import Box from '@mui/material/Box';
-import {Avatar} from '@mui/material';
+import { Avatar } from '@mui/material';
 import Typography from '@mui/material/Typography';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import ThumbUpAltOutlinedIcon from '@mui/icons-material/ThumbUpAltOutlined';
 import PropTypes from 'prop-types';
 import IntlMessages from '@crema/utility/IntlMessages';
-import {useIntl} from 'react-intl';
+import { useIntl } from 'react-intl';
 
-const SuggestTeam = ({data}) => {
-  const {icon, title, subTitle, mediaImg} = data;
-  const {messages} = useIntl();
+const SuggestTeam = ({ data }) => {
+  const { icon, title, subTitle, mediaImg } = data;
+  const { messages } = useIntl();
 
   return (
     <AppCard
-      sxStyle={{mb: 8}}
+      sxStyle={{ mb: 8 }}
       contentStyle={{
         p: 0,
         '&:last-of-type': {
@@ -32,21 +32,21 @@ const SuggestTeam = ({data}) => {
             height: 46,
             borderRadius: 0,
           }}
-          color='primary'
+          color="primary"
           startIcon={<ThumbUpAltOutlinedIcon />}
         >
-          <IntlMessages id='wall.likeTeam' />
+          <IntlMessages id="wall.likeTeam" />
         </Button>
       }
-      footerStyle={{padding: 0}}
+      footerStyle={{ padding: 0 }}
     >
-      <Box px={5} pt={3} pb={4} display='flex' alignItems='center'>
-        <Avatar src={icon} alt='Face Book' />
+      <Box px={5} pt={3} pb={4} display="flex" alignItems="center">
+        <Avatar src={icon} alt="Face Book" />
         <Box ml={3.5}>
-          <Typography component='h4' variant='h4'>
+          <Typography component="h4" variant="h4">
             {title}
           </Typography>
-          <Box component='p' color='text.secondary'>
+          <Box component="p" color="text.secondary">
             {subTitle}
           </Box>
         </Box>
@@ -57,7 +57,7 @@ const SuggestTeam = ({data}) => {
           width: '100%',
         }}
         image={mediaImg}
-        alt='F man'
+        alt="F man"
       />
     </AppCard>
   );

@@ -6,9 +6,9 @@ import PropTypes from 'prop-types';
 import Typography from '@mui/material/Typography';
 import CheckCircleOutlinedIcon from '@mui/icons-material/CheckCircleOutlined';
 
-const FollowItem = ({item}) => {
+const FollowItem = ({ item }) => {
   return (
-    <Box className='item-hover' px={5} py={2} display='flex'>
+    <Box className="item-hover" px={5} py={2} display="flex">
       <Avatar
         sx={{
           width: 36,
@@ -17,10 +17,10 @@ const FollowItem = ({item}) => {
         }}
         src={item.profilePic}
       />
-      <Box ml={3.5} flex={1} display='flex' alignItems='center' flexWrap='wrap'>
+      <Box ml={3.5} flex={1} display="flex" alignItems="center" flexWrap="wrap">
         <Box mb={1} flex={1} mr={1}>
-          <Box display='flex' alignItems='center'>
-            <Typography component='h5' variant='h5'>
+          <Box display="flex" alignItems="center">
+            <Typography component="h5" variant="h5">
               {item.title}
             </Typography>
             <Box
@@ -36,15 +36,15 @@ const FollowItem = ({item}) => {
               <CheckCircleOutlinedIcon />
             </Box>
           </Box>
-          <Box component='p' color='text.secondary'>
+          <Box component="p" color="text.secondary">
             {item.subTitle}
           </Box>
         </Box>
         <Box mb={1}>
           <Button
-            variant='outlined'
-            color='primary'
-            size='small'
+            variant="outlined"
+            color="primary"
+            size="small"
             sx={{
               borderRadius: 30,
             }}

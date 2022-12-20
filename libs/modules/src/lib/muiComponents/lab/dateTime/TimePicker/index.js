@@ -35,15 +35,15 @@ const TimePicker = () => {
   return (
     <>
       <AppComponentHeader
-        title='TimePicker'
-        description='Time pickers allow the user to select a single time.'
-        refUrl='https://mui.com/components/time-picker/'
+        title="TimePicker"
+        description="Time pickers allow the user to select a single time."
+        refUrl="https://mui.com/components/time-picker/"
       />
 
       <AppGridContainer>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='BasicTimePicker'
+            title="BasicTimePicker"
             component={BasicTimePicker}
             source={BasicTimePickerSource}
             noScrollbar
@@ -52,7 +52,7 @@ const TimePicker = () => {
 
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='ResponsiveTimePickers'
+            title="ResponsiveTimePickers"
             component={ResponsiveTimePickers}
             source={ResponsiveTimePickersSource}
             noScrollbar
@@ -60,7 +60,7 @@ const TimePicker = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='FormPropsTimePickers'
+            title="FormPropsTimePickers"
             component={FormPropsTimePickers}
             source={FormPropsTimePickersSource}
             noScrollbar
@@ -68,7 +68,7 @@ const TimePicker = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='LocalizedTimePicker'
+            title="LocalizedTimePicker"
             component={LocalizedTimePicker}
             source={LocalizedTimePickerSource}
             noScrollbar
@@ -76,7 +76,7 @@ const TimePicker = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='TimeValidationTimePicker'
+            title="TimeValidationTimePicker"
             component={TimeValidationTimePicker}
             source={TimeValidationTimePickerSource}
             noScrollbar
@@ -84,7 +84,7 @@ const TimePicker = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='SecondsTimePicker'
+            title="SecondsTimePicker"
             component={SecondsTimePicker}
             source={SecondsTimePickerSource}
             noScrollbar
@@ -92,7 +92,7 @@ const TimePicker = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='StaticTimePickerLandscape'
+            title="StaticTimePickerLandscape"
             component={StaticTimePickerLandscape}
             source={StaticTimePickerLandscapeSource}
             noScrollbar
@@ -100,7 +100,7 @@ const TimePicker = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='SubComponentsTimePickers'
+            title="SubComponentsTimePickers"
             component={SubComponentsTimePickers}
             source={SubComponentsTimePickersSource}
             noScrollbar
@@ -108,7 +108,7 @@ const TimePicker = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='StaticTimePickerDemo'
+            title="StaticTimePickerDemo"
             component={StaticTimePickerDemo}
             source={StaticTimePickerDemoSource}
             noScrollbar

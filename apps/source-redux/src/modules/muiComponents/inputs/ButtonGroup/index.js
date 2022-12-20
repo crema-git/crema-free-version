@@ -1,2 +1,2 @@
-import {ButtonGroup} from '@crema/modules/components/inputs';
+import { ButtonGroup } from '@crema/modules/components/inputs';
 export default ButtonGroup;

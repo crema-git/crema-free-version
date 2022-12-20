@@ -17,16 +17,16 @@ export default function FadeMenu() {
   return (
     <div>
       <Button
-        id='fade-button'
-        aria-controls='fade-menu'
-        aria-haspopup='true'
+        id="fade-button"
+        aria-controls="fade-menu"
+        aria-haspopup="true"
         aria-expanded={open ? 'true' : undefined}
         onClick={handleClick}
       >
         Dashboard
       </Button>
       <Menu
-        id='fade-menu'
+        id="fade-menu"
         MenuListProps={{
           'aria-labelledby': 'fade-button',
         }}

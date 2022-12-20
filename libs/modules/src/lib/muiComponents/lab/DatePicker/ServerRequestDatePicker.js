@@ -16,15 +16,15 @@ function getRandomNumber(min, max) {
  * Mimic fetch with abort controller https://developer.mozilla.org/en-US/docs/Web/API/AbortController/abort
  * ⚠️ No IE11 support
  */
-function fakeFetch(date, {signal}) {
+function fakeFetch(date, { signal }) {
   return new Promise((resolve, reject) => {
     const timeout = setTimeout(() => {
       const daysInMonth = getDaysInMonth(date);
       const daysToHighlight = [1, 2, 3].map(() =>
-        getRandomNumber(1, daysInMonth),
+        getRandomNumber(1, daysInMonth)
       );
 
-      resolve({daysToHighlight});
+      resolve({ daysToHighlight });
     }, 500);
 
     signal.onabort = () => {
@@ -47,7 +47,7 @@ export default function ServerRequestDatePicker() {
     fakeFetch(date, {
       signal: controller.signal,
     })
-      .then(({daysToHighlight}) => {
+      .then(({ daysToHighlight }) => {
         setHighlightedDays(daysToHighlight);
         setIsLoading(false);
       })
@@ -98,7 +98,7 @@ export default function ServerRequestDatePicker() {
           return (
             <Badge
               key={day.toString()}
-              overlap='circular'
+              overlap="circular"
               badgeContent={isSelected ? '🌚' : undefined}
             >
               <PickersDay {...DayComponentProps} />

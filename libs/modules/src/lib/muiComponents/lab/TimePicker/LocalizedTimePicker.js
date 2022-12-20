@@ -34,7 +34,7 @@ export default function LocalizedTimePicker() {
         <ToggleButtonGroup
           value={locale}
           exclusive
-          sx={{mb: 2, display: 'block'}}
+          sx={{ mb: 2, display: 'block' }}
         >
           {Object.keys(localeMap).map((localeItem) => (
             <ToggleButton

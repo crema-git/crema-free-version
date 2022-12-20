@@ -9,7 +9,6 @@ import AppNotifications from '../../../../AppNotifications';
 import UserInfo from '../UserInfo';
 
 const BucketMinibar = () => {
-
   return (
     <BucketMinibarWrapper>
       <Box
@@ -26,28 +25,28 @@ const BucketMinibar = () => {
             color: 'white',
             mb: 2.5,
           }}
-          aria-label='show 17 new notifications'
+          aria-label="show 17 new notifications"
         >
-            <img src={'/assets/icon/logo.svg'} alt='logo' />
+          <img src={'/assets/icon/logo.svg'} alt="logo" />
         </IconButton>
 
         <IconButton
-          className='search-icon-btn'
-          aria-label='show 17 new notifications'
+          className="search-icon-btn"
+          aria-label="show 17 new notifications"
         >
           <SearchIcon />
         </IconButton>
-        <AppLngSwitcher iconOnly={true} tooltipPosition='right' />
+        <AppLngSwitcher iconOnly={true} tooltipPosition="right" />
 
         <AppNotifications
-          drawerPosition='left'
-          tooltipPosition='right'
-          sxNotificationContentStyle={{width: 320}}
+          drawerPosition="left"
+          tooltipPosition="right"
+          sxNotificationContentStyle={{ width: 320 }}
         />
         <AppMessages
-          drawerPosition='left'
-          tooltipPosition='right'
-          sxMessageContentStyle={{width: 320}}
+          drawerPosition="left"
+          tooltipPosition="right"
+          sxMessageContentStyle={{ width: 320 }}
         />
       </Box>
       <Box

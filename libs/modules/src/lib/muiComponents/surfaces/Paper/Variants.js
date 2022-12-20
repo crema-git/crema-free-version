@@ -14,8 +14,8 @@ export default function Variants() {
         },
       }}
     >
-      <Paper variant='outlined' />
-      <Paper variant='outlined' square />
+      <Paper variant="outlined" />
+      <Paper variant="outlined" square />
     </Box>
   );
 }

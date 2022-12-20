@@ -1,2 +1,2 @@
-import {ColorPicker } from '@crema/modules/thirdParty';
-export  default ColorPicker;
+import { ColorPicker } from '@crema/modules/thirdParty';
+export default ColorPicker;

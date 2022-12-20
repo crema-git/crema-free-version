@@ -1,6 +1,6 @@
 import React from 'react';
 import AppCard from '@crema/components/AppCard';
-import {useIntl} from 'react-intl';
+import { useIntl } from 'react-intl';
 import IconButton from '@mui/material/IconButton';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import AppScrollbar from '@crema/components/AppScrollbar';
@@ -9,11 +9,11 @@ import AppList from '@crema/components/AppList';
 import PropTypes from 'prop-types';
 
 const Notifications = (props) => {
-  const {messages} = useIntl();
+  const { messages } = useIntl();
 
   return (
     <AppCard
-      contentStyle={{px: 0}}
+      contentStyle={{ px: 0 }}
       title={messages['eCommerce.notifications']}
       action={
         <IconButton
@@ -21,9 +21,9 @@ const Notifications = (props) => {
             height: 30,
             width: 30,
           }}
-          aria-label='more'
-          aria-controls='long-menu'
-          aria-haspopup='true'
+          aria-label="more"
+          aria-controls="long-menu"
+          aria-haspopup="true"
           onClick={null}
         >
           <MoreVertIcon />

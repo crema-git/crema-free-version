@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import Tab from '@mui/material/Tab';
 import Tabs from '@mui/material/Tabs';
 import Box from '@mui/material/Box';
@@ -7,11 +7,11 @@ import ChatList from './ChatList';
 import AppScrollbar from '@crema/components/AppScrollbar';
 import PropTypes from 'prop-types';
 import IntlMessages from '@crema/utility/IntlMessages';
-import {Fonts} from '@crema/constants/AppEnums'
+import { Fonts } from '@crema/constants/AppEnums';
 import AccountBoxOutlinedIcon from '@mui/icons-material/AccountBoxOutlined';
 import ChatOutlinedIcon from '@mui/icons-material/ChatOutlined';
 
-import {styled} from '@mui/material/styles';
+import { styled } from '@mui/material/styles';
 
 const TabLabel = styled(Tab)(() => {
   return {
@@ -34,8 +34,8 @@ const TabLabel = styled(Tab)(() => {
 });
 
 const tabs = [
-  {id: 1, name: <IntlMessages id='dashboard.messages' />},
-  {id: 2, name: <IntlMessages id='chatApp.contacts' />},
+  { id: 1, name: <IntlMessages id="dashboard.messages" /> },
+  { id: 2, name: <IntlMessages id="chatApp.contacts" /> },
 ];
 
 const UserTabs = ({
@@ -69,11 +69,11 @@ const UserTabs = ({
         <Tabs
           value={value}
           onChange={handleChange}
-          indicatorColor='primary'
-          textColor='primary'
-          variant='scrollable'
-          scrollButtons='auto'
-          aria-label='scrollable auto tabs example'
+          indicatorColor="primary"
+          textColor="primary"
+          variant="scrollable"
+          scrollButtons="auto"
+          aria-label="scrollable auto tabs example"
           sx={{
             borderBottom: (theme) => `1px solid ${theme.palette.grey[300]}`,
             position: 'relative',
@@ -124,7 +124,7 @@ const UserTabs = ({
                     px: 5,
                     fontWeight: Fonts.SEMI_BOLD,
                   }}
-                  component='h4'
+                  component="h4"
                 >
                   Connections
                 </Box>
@@ -147,7 +147,7 @@ const UserTabs = ({
                     px: 5,
                     fontWeight: Fonts.SEMI_BOLD,
                   }}
-                  component='h4'
+                  component="h4"
                 >
                   Contacts
                 </Box>

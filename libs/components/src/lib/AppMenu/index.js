@@ -20,15 +20,15 @@ const AppMenu = () => {
   return (
     <>
       <IconButton
-        style={{height: 30, width: 30}}
-        aria-label='more'
+        style={{ height: 30, width: 30 }}
+        aria-label="more"
         onClick={handleClick}
-        size='large'
+        size="large"
       >
         <MoreVertIcon />
       </IconButton>
       <Menu
-        id='long-menu'
+        id="long-menu"
         anchorEl={anchorEl}
         keepMounted
         open={open}

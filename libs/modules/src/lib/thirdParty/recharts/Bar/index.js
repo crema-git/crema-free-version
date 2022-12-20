@@ -23,57 +23,57 @@ const BarChart = () => {
   return (
     <>
       <AppComponentHeader
-        title='Bar Chart'
-        description='All svg elements can be added into the BarChart component, such as defs, linearGradient, etc.'
-        refUrl='http://recharts.org/en-US/api/BarChart/'
+        title="Bar Chart"
+        description="All svg elements can be added into the BarChart component, such as defs, linearGradient, etc."
+        refUrl="http://recharts.org/en-US/api/BarChart/"
       />
 
       <AppGridContainer>
         <Grid item xs={12} lg={6}>
           <AppComponentCard
-            title='Tiny Bar Chart'
+            title="Tiny Bar Chart"
             component={TinyBarChart}
             source={TinyBarChartSource}
           />
         </Grid>
         <Grid item xs={12} lg={6}>
           <AppComponentCard
-            title='Stacked Bar Chart'
+            title="Stacked Bar Chart"
             component={StackedBarChart}
             source={StackedBarChartSource}
           />
         </Grid>
         <Grid item xs={12} lg={6}>
           <AppComponentCard
-            title='Mix Bar Chart'
+            title="Mix Bar Chart"
             component={MixBarChart}
             source={MixBarChartSource}
           />
         </Grid>
         <Grid item xs={12} lg={6}>
           <AppComponentCard
-            title='Custom Shape Bar Chart'
+            title="Custom Shape Bar Chart"
             component={CustomShapeBarChart}
             source={CustomShapeBarChartSource}
           />
         </Grid>
         <Grid item xs={12} lg={6}>
           <AppComponentCard
-            title='Positive And Negative Bar Chart'
+            title="Positive And Negative Bar Chart"
             component={PositiveAndNegativeBarChart}
             source={PositiveAndNegativeBarChartSource}
           />
         </Grid>
         <Grid item xs={12} lg={6}>
           <AppComponentCard
-            title='Bar Chart Stacked By Sign'
+            title="Bar Chart Stacked By Sign"
             component={BarChartStackedBySign}
             source={BarChartStackedBySignSource}
           />
         </Grid>
         <Grid item xs={12} lg={6}>
           <AppComponentCard
-            title='Biaxial Bar Chart'
+            title="Biaxial Bar Chart"
             component={BiaxialBarChart}
             source={BiaxialBarChartSource}
           />

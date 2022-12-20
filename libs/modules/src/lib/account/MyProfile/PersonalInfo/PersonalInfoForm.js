@@ -1,18 +1,18 @@
 import React from 'react';
-import {alpha, Box, Button, Typography} from '@mui/material';
+import { alpha, Box, Button, Typography } from '@mui/material';
 import Avatar from '@mui/material/Avatar';
 import AppGridContainer from '@crema/components/AppGridContainer';
 import Grid from '@mui/material/Grid';
 import IntlMessages from '@crema/utility/IntlMessages';
-import {useDropzone} from 'react-dropzone';
-import {Form} from 'formik';
+import { useDropzone } from 'react-dropzone';
+import { Form } from 'formik';
 import PropTypes from 'prop-types';
 import AppTextField from '@crema/components/AppTextField';
 import EditIcon from '@mui/icons-material/Edit';
-import {styled} from '@mui/material/styles';
-import {Fonts} from '@crema/constants/AppEnums'
+import { styled } from '@mui/material/styles';
+import { Fonts } from '@crema/constants/AppEnums';
 
-const AvatarViewWrapper = styled('div')(({theme}) => {
+const AvatarViewWrapper = styled('div')(({ theme }) => {
   return {
     position: 'relative',
     cursor: 'pointer',
@@ -45,8 +45,8 @@ const AvatarViewWrapper = styled('div')(({theme}) => {
   };
 });
 
-const PersonalInfoForm = ({values, setFieldValue}) => {
-  const {getRootProps, getInputProps} = useDropzone({
+const PersonalInfoForm = ({ values, setFieldValue }) => {
+  const { getRootProps, getInputProps } = useDropzone({
     accept: 'image/*',
     onDrop: (acceptedFiles) => {
       setFieldValue('photoURL', URL.createObjectURL(acceptedFiles[0]));
@@ -54,36 +54,36 @@ const PersonalInfoForm = ({values, setFieldValue}) => {
   });
 
   return (
-    <Form noValidate autoComplete='off'>
+    <Form noValidate autoComplete="off">
       <Typography
-        component='h3'
+        component="h3"
         sx={{
           fontSize: 16,
           fontWeight: Fonts.BOLD,
-          mb: {xs: 3, lg: 4},
+          mb: { xs: 3, lg: 4 },
         }}
       >
-        <IntlMessages id='common.personalInfo' />
+        <IntlMessages id="common.personalInfo" />
       </Typography>
       <Box
         sx={{
           display: 'flex',
           alignItems: 'center',
-          mb: {xs: 5, lg: 6},
+          mb: { xs: 5, lg: 6 },
         }}
       >
-        <AvatarViewWrapper {...getRootProps({className: 'dropzone'})}>
+        <AvatarViewWrapper {...getRootProps({ className: 'dropzone' })}>
           <input {...getInputProps()} />
-          <label htmlFor='icon-button-file'>
+          <label htmlFor="icon-button-file">
             <Avatar
               sx={{
-                width: {xs: 50, lg: 64},
-                height: {xs: 50, lg: 64},
+                width: { xs: 50, lg: 64 },
+                height: { xs: 50, lg: 64 },
                 cursor: 'pointer',
               }}
               src={values.photoURL}
             />
-            <Box className='edit-icon'>
+            <Box className="edit-icon">
               <EditIcon />
             </Box>
           </label>
@@ -112,30 +112,30 @@ const PersonalInfoForm = ({values, setFieldValue}) => {
       <AppGridContainer spacing={4}>
         <Grid item xs={12} md={6}>
           <AppTextField
-            name='displayName'
+            name="displayName"
             fullWidth
-            label={<IntlMessages id='common.fullName' />}
+            label={<IntlMessages id="common.fullName" />}
           />
         </Grid>
         <Grid item xs={12} md={6}>
           <AppTextField
             fullWidth
-            name='username'
-            label={<IntlMessages id='common.userName' />}
+            name="username"
+            label={<IntlMessages id="common.userName" />}
           />
         </Grid>
         <Grid item xs={12} md={6}>
           <AppTextField
-            name='email'
+            name="email"
             fullWidth
-            label={<IntlMessages id='common.email' />}
+            label={<IntlMessages id="common.email" />}
           />
         </Grid>
         <Grid item xs={12} md={6}>
           <AppTextField
-            name='company'
+            name="company"
             fullWidth
-            label={<IntlMessages id='common.company' />}
+            label={<IntlMessages id="common.company" />}
           />
         </Grid>
         <Grid item xs={12} md={12}>
@@ -150,11 +150,11 @@ const PersonalInfoForm = ({values, setFieldValue}) => {
                 position: 'relative',
                 minWidth: 100,
               }}
-              color='primary'
-              variant='contained'
-              type='submit'
+              color="primary"
+              variant="contained"
+              type="submit"
             >
-              <IntlMessages id='common.saveChanges' />
+              <IntlMessages id="common.saveChanges" />
             </Button>
             <Button
               sx={{
@@ -162,11 +162,11 @@ const PersonalInfoForm = ({values, setFieldValue}) => {
                 minWidth: 100,
                 ml: 2.5,
               }}
-              color='primary'
-              variant='outlined'
-              type='cancel'
+              color="primary"
+              variant="outlined"
+              type="cancel"
             >
-              <IntlMessages id='common.cancel' />
+              <IntlMessages id="common.cancel" />
             </Button>
           </Box>
         </Grid>

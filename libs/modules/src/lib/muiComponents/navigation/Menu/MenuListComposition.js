@@ -44,7 +44,7 @@ export default function MenuListComposition() {
   }, [open]);
 
   return (
-    <Stack direction='row' spacing={2}>
+    <Stack direction="row" spacing={2}>
       <Paper>
         <MenuList>
           <MenuItem>Profile</MenuItem>
@@ -55,10 +55,10 @@ export default function MenuListComposition() {
       <div>
         <Button
           ref={anchorRef}
-          id='composition-button'
+          id="composition-button"
           aria-controls={open ? 'composition-menu' : undefined}
           aria-expanded={open ? 'true' : undefined}
-          aria-haspopup='true'
+          aria-haspopup="true"
           onClick={handleToggle}
         >
           Dashboard
@@ -67,11 +67,11 @@ export default function MenuListComposition() {
           open={open}
           anchorEl={anchorRef.current}
           role={undefined}
-          placement='bottom-start'
+          placement="bottom-start"
           transition
           disablePortal
         >
-          {({TransitionProps, placement}) => (
+          {({ TransitionProps, placement }) => (
             <Grow
               {...TransitionProps}
               style={{
@@ -83,8 +83,8 @@ export default function MenuListComposition() {
                 <ClickAwayListener onClickAway={handleClose}>
                   <MenuList
                     autoFocusItem={open}
-                    id='composition-menu'
-                    aria-labelledby='composition-button'
+                    id="composition-menu"
+                    aria-labelledby="composition-button"
                     onKeyDown={handleListKeyDown}
                   >
                     <MenuItem onClick={handleClose}>Profile</MenuItem>

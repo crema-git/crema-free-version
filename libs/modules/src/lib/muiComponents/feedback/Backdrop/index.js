@@ -11,19 +11,19 @@ const Backdrop = () => {
   return (
     <>
       <AppComponentHeader
-        title='Backdrop'
-        description='The backdrop component is used to provide emphasis on a particular element or parts of it.'
-        refUrl='https://mui.com/components/backdrop/'
+        title="Backdrop"
+        description="The backdrop component is used to provide emphasis on a particular element or parts of it."
+        refUrl="https://mui.com/components/backdrop/"
       />
 
       <AppGridContainer>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Simple Backdrop'
+            title="Simple Backdrop"
             component={SimpleBackdrop}
             source={SimpleBackdropSource}
             noScrollbar
-            description='The alert offers four severity levels that set a distinctive icon and color.'
+            description="The alert offers four severity levels that set a distinctive icon and color."
           />
         </Grid>
       </AppGridContainer>

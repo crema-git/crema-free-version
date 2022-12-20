@@ -1,7 +1,7 @@
 import React from 'react';
 import AppCard from '@crema/components/AppCard';
 import Avatar from '@mui/material/Avatar';
-import {Box} from '@mui/material';
+import { Box } from '@mui/material';
 
 const ProfileCard = () => {
   return (
@@ -15,7 +15,7 @@ const ProfileCard = () => {
         }}
       >
         <Avatar
-          sx={{height: 80, width: 80}}
+          sx={{ height: 80, width: 80 }}
           src={'/assets/images/avatar/A10.jpg'}
         />
         <Box
@@ -24,7 +24,7 @@ const ProfileCard = () => {
             mb: 4,
             mt: 2,
           }}
-          component='h5'
+          component="h5"
         >
           Talan Phips
         </Box>
@@ -51,7 +51,7 @@ const ProfileCard = () => {
                 borderRight: (theme) => `solid 1px ${theme.palette.grey[200]}`,
               }}
             >
-              <Box component='h5'>24</Box>
+              <Box component="h5">24</Box>
               <Box
                 sx={{
                   color: 'text.secondary',
@@ -67,7 +67,7 @@ const ProfileCard = () => {
                 width: 1 / 2,
               }}
             >
-              <Box component='h5'>A+</Box>
+              <Box component="h5">A+</Box>
               <Box
                 sx={{
                   color: 'text.secondary',
@@ -93,7 +93,7 @@ const ProfileCard = () => {
                 borderRight: (theme) => `solid 1px ${theme.palette.grey[200]}`,
               }}
             >
-              <Box component='h5'>185 cm</Box>
+              <Box component="h5">185 cm</Box>
               <Box
                 sx={{
                   color: 'text.secondary',
@@ -109,7 +109,7 @@ const ProfileCard = () => {
                 width: 1 / 2,
               }}
             >
-              <Box component='h5'>84 kg</Box>
+              <Box component="h5">84 kg</Box>
               <Box
                 sx={{
                   color: 'text.secondary',

@@ -1,15 +1,15 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import IconButton from '@mui/material/IconButton';
 import Drawer from '@mui/material/Drawer';
 import Box from '@mui/material/Box';
 import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
 import ColorLensIcon from '@mui/icons-material/ColorLens';
 
-import IntlMessages from "@crema/utility/IntlMessages";
-import {LayoutType} from '@crema/constants/AppEnums';
-import {useLayoutContext} from "@crema/context/LayoutContextProvider";
+import IntlMessages from '@crema/utility/IntlMessages';
+import { LayoutType } from '@crema/constants/AppEnums';
+import { useLayoutContext } from '@crema/context/LayoutContextProvider';
 import AppScrollbar from '../AppScrollbar';
-import {orange} from '@mui/material/colors';
+import { orange } from '@mui/material/colors';
 import ThemeColors from './ThemeColors';
 import ThemeFooter from './ThemeFooter';
 import ThemeModes from './ThemeModes';
@@ -22,16 +22,16 @@ import ThemeHeader from './ThemeHeader';
 const AppThemeSetting = () => {
   const [isSettingOpen, setSettingOpen] = useState(false);
   const [isColorSettingOpen, setColorSettingOpen] = useState(false);
-  const {layoutType} = useLayoutContext();
+  const { layoutType } = useLayoutContext();
   return (
     <Box
       sx={{
         position: 'fixed',
         right: 0,
-        top: {xs: 85, xl: 125},
+        top: { xs: 85, xl: 125 },
         zIndex: 1110,
       }}
-      className='customizerOption'
+      className="customizerOption"
     >
       <Box
         sx={{
@@ -85,7 +85,7 @@ const AppThemeSetting = () => {
         </IconButton>
       </Box>
       <Drawer
-        anchor='right'
+        anchor="right"
         sx={{
           '& .MuiBackdrop-root': {
             background: 'transparent',
@@ -97,25 +97,25 @@ const AppThemeSetting = () => {
       >
         <AppScrollbar
           sx={{
-            width: {xs: 300, md: 360, xl: 400},
+            width: { xs: 300, md: 360, xl: 400 },
           }}
         >
           <Box
             sx={{
-              padding: {xs: '20px', xl: '28px 22px'},
+              padding: { xs: '20px', xl: '28px 22px' },
               borderBottom: (theme) => `1px solid ${theme.palette.divider}`,
             }}
           >
-            <Box component='h3' mb={0.5} fontSize={18}>
-              <IntlMessages id='customizer.customiseSidebar' />
+            <Box component="h3" mb={0.5} fontSize={18}>
+              <IntlMessages id="customizer.customiseSidebar" />
             </Box>
-            <Box component='p' mb={0} color='text.secondary'>
-              <IntlMessages id='customizer.customiseSidebarText' />
+            <Box component="p" mb={0} color="text.secondary">
+              <IntlMessages id="customizer.customiseSidebarText" />
             </Box>
           </Box>
           <Box
             sx={{
-              padding: {xs: '20px', xl: '28px 22px'},
+              padding: { xs: '20px', xl: '28px 22px' },
             }}
           >
             <NavStyles />
@@ -128,7 +128,7 @@ const AppThemeSetting = () => {
         </AppScrollbar>
       </Drawer>
       <Drawer
-        anchor='right'
+        anchor="right"
         open={isColorSettingOpen}
         onClose={() => setColorSettingOpen(false)}
         sx={{
@@ -140,25 +140,25 @@ const AppThemeSetting = () => {
       >
         <AppScrollbar
           sx={{
-            width: {xs: 300, md: 360, xl: 400},
+            width: { xs: 300, md: 360, xl: 400 },
           }}
         >
           <Box
             sx={{
-              padding: {xs: '20px', xl: '28px 22px'},
+              padding: { xs: '20px', xl: '28px 22px' },
               borderBottom: (theme) => `1px solid ${theme.palette.divider}`,
             }}
           >
-            <Box component='h3' mb={0.5} fontSize={18}>
-              <IntlMessages id='customizer.customiseTheme' />
+            <Box component="h3" mb={0.5} fontSize={18}>
+              <IntlMessages id="customizer.customiseTheme" />
             </Box>
-            <Box component='p' mb={0} color='text.secondary'>
-              <IntlMessages id='customizer.customiseText' />
+            <Box component="p" mb={0} color="text.secondary">
+              <IntlMessages id="customizer.customiseText" />
             </Box>
           </Box>
           <Box
             sx={{
-              padding: {xs: '20px', xl: '28px 22px'},
+              padding: { xs: '20px', xl: '28px 22px' },
             }}
           >
             <ThemeModes />

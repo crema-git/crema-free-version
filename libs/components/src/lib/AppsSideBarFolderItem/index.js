@@ -17,11 +17,11 @@ import CheckCircleOutlinedIcon from '@mui/icons-material/CheckCircleOutlined';
 import SendOutlinedIcon from '@mui/icons-material/SendOutlined';
 import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
 import LabelImportantIcon from '@mui/icons-material/LabelImportant';
-import {alpha, styled} from '@mui/material/styles';
-import {Fonts} from '@crema/constants/AppEnums';
+import { alpha, styled } from '@mui/material/styles';
+import { Fonts } from '@crema/constants/AppEnums';
 import AppNavLink from '../AppNavLink';
 
-const AppsSideBarFolderList = styled(ListItem)(({theme}) => {
+const AppsSideBarFolderList = styled(ListItem)(({ theme }) => {
   return {
     padding: '7px 16px',
     borderRadius: '0 30px 30px 0',
@@ -99,14 +99,14 @@ const getIconByName = (name) => {
   }
 };
 
-const AppsSideBarFolderItem = ({item, path}) => {
+const AppsSideBarFolderItem = ({ item, path }) => {
   return (
     <AppsSideBarFolderList
       button
       key={item.id}
       to={path}
       component={AppNavLink}
-      activeClassName='active'
+      activeClassName="active"
     >
       <ListItemIcon
         sx={{
@@ -129,7 +129,7 @@ const AppsSideBarFolderItem = ({item, path}) => {
             mb: 0.5,
           },
         }}
-        className='list-item-text'
+        className="list-item-text"
       />
     </AppsSideBarFolderList>
   );

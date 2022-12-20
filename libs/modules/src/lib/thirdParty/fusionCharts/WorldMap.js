@@ -4,7 +4,7 @@ import Maps from 'fusioncharts/fusioncharts.maps';
 import World from 'fusioncharts/maps/fusioncharts.world';
 import ReactFC from 'react-fusioncharts';
 import FusionTheme from 'fusioncharts/themes/fusioncharts.theme.fusion';
-import {worldMapData} from './data';
+import { worldMapData } from './data';
 
 ReactFC.fcRoot(FusionCharts, Maps, World, FusionTheme);
 

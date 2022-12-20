@@ -1,7 +1,7 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import SwipeableViews from 'react-swipeable-views';
-import {useTheme} from '@mui/material/styles';
+import { useTheme } from '@mui/material/styles';
 import AppBar from '@mui/material/AppBar';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
@@ -11,22 +11,22 @@ import Fab from '@mui/material/Fab';
 import AddIcon from '@mui/icons-material/Add';
 import EditIcon from '@mui/icons-material/Edit';
 import UpIcon from '@mui/icons-material/KeyboardArrowUp';
-import {green} from '@mui/material/colors';
+import { green } from '@mui/material/colors';
 import Box from '@mui/material/Box';
 
 function TabPanel(props) {
-  const {children, value, index, ...other} = props;
+  const { children, value, index, ...other } = props;
 
   return (
     <Typography
-      component='div'
-      role='tabpanel'
+      component="div"
+      role="tabpanel"
       hidden={value !== index}
       id={`action-tabpanel-${index}`}
       aria-labelledby={`action-tab-${index}`}
       {...other}
     >
-      {value === index && <Box sx={{p: 3}}>{children}</Box>}
+      {value === index && <Box sx={{ p: 3 }}>{children}</Box>}
     </Typography>
   );
 }
@@ -90,7 +90,7 @@ export default function FloatingActionButtonZoom() {
     },
     {
       color: 'inherit',
-      sx: {...fabStyle, ...fabGreenStyle},
+      sx: { ...fabStyle, ...fabGreenStyle },
       icon: <UpIcon />,
       label: 'Expand',
     },
@@ -105,18 +105,18 @@ export default function FloatingActionButtonZoom() {
         minHeight: 200,
       }}
     >
-      <AppBar position='static' color='default'>
+      <AppBar position="static" color="default">
         <Tabs
           value={value}
           onChange={handleChange}
-          indicatorColor='primary'
-          textColor='primary'
-          variant='fullWidth'
-          aria-label='action tabs example'
+          indicatorColor="primary"
+          textColor="primary"
+          variant="fullWidth"
+          aria-label="action tabs example"
         >
-          <Tab label='Item One' {...a11yProps(0)} />
-          <Tab label='Item Two' {...a11yProps(1)} />
-          <Tab label='Item Three' {...a11yProps(2)} />
+          <Tab label="Item One" {...a11yProps(0)} />
+          <Tab label="Item Two" {...a11yProps(1)} />
+          <Tab label="Item Three" {...a11yProps(2)} />
         </Tabs>
       </AppBar>
       <SwipeableViews

@@ -2,8 +2,8 @@ import React from 'react';
 import TableCell from '@mui/material/TableCell';
 import IntlMessages from '@crema/utility/IntlMessages';
 import TableRow from '@mui/material/TableRow';
-import {grey} from '@mui/material/colors';
-import {Fonts} from '@crema/constants/AppEnums'
+import { grey } from '@mui/material/colors';
+import { Fonts } from '@crema/constants/AppEnums';
 
 const TableHeading = () => {
   return (
@@ -25,23 +25,23 @@ const TableHeading = () => {
         },
       }}
     >
-      <TableCell className='tableCell'>
-        <IntlMessages id='common.num' />
+      <TableCell className="tableCell">
+        <IntlMessages id="common.num" />
       </TableCell>
-      <TableCell align='left' className='tableCell'>
-        <IntlMessages id='common.name' />
+      <TableCell align="left" className="tableCell">
+        <IntlMessages id="common.name" />
       </TableCell>
-      <TableCell align='left' className='tableCell'>
-        <IntlMessages id='common.progress' />
+      <TableCell align="left" className="tableCell">
+        <IntlMessages id="common.progress" />
       </TableCell>
-      <TableCell align='left' className='tableCell'>
-        <IntlMessages id='common.type' />
+      <TableCell align="left" className="tableCell">
+        <IntlMessages id="common.type" />
       </TableCell>
-      <TableCell align='left' className='tableCell'>
-        <IntlMessages id='common.amount' />
+      <TableCell align="left" className="tableCell">
+        <IntlMessages id="common.amount" />
       </TableCell>
-      <TableCell align='left' className='tableCell'>
-        <IntlMessages id='common.created' />
+      <TableCell align="left" className="tableCell">
+        <IntlMessages id="common.created" />
       </TableCell>
     </TableRow>
   );

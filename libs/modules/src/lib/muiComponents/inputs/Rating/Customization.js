@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {styled} from '@mui/material/styles';
+import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Rating from '@mui/material/Rating';
 import FavoriteIcon from '@mui/icons-material/Favorite';
@@ -19,20 +19,20 @@ export default function CustomizedRating() {
   return (
     <Box
       sx={{
-        '& > legend': {mt: 2},
+        '& > legend': { mt: 2 },
       }}
     >
-      <Typography component='legend'>Custom icon and color</Typography>
+      <Typography component="legend">Custom icon and color</Typography>
       <StyledRating
-        name='customized-color'
+        name="customized-color"
         defaultValue={2}
         getLabelText={(value) => `${value} Heart${value !== 1 ? 's' : ''}`}
         precision={0.5}
-        icon={<FavoriteIcon fontSize='inherit' />}
-        emptyIcon={<FavoriteBorderIcon fontSize='inherit' />}
+        icon={<FavoriteIcon fontSize="inherit" />}
+        emptyIcon={<FavoriteBorderIcon fontSize="inherit" />}
       />
-      <Typography component='legend'>10 stars</Typography>
-      <Rating name='customized-10' defaultValue={2} max={10} />
+      <Typography component="legend">10 stars</Typography>
+      <Rating name="customized-10" defaultValue={2} max={10} />
     </Box>
   );
 }

@@ -239,11 +239,48 @@
       ],
       "@crema/custom-hooks": ["libs/custom-hooks/src/index.js"],
       "@crema/fakedb": ["libs/fakedb/src/index.js"],
+      "@crema/fakedb/chat/connectionList": [
+        "libs/mockapi/src/fakedb/apps/chat/connectionList.js"
+      ],
+      "@crema/fakedb/data": ["libs/mockapi/src/fakedb/index.js"],
+      "@crema/fakedb/ecommerceData": [
+        "libs/mockapi/src/fakedb/ecommerce/index.js"
+      ],
+      "@crema/fakedb/extraPages": [
+        "libs/mockapi/src/fakedb/extraPages/index.js"
+      ],
+      "@crema/fakedb/mail/folderList": [
+        "libs/mockapi/src/fakedb/apps/mail/folderList.js"
+      ],
+      "@crema/fakedb/navigationStyle": [
+        "libs/mockapi/src/fakedb/navigationStyle.js"
+      ],
       "@crema/helpers": ["libs/helpers/src/index.js"],
       "@crema/hoc/AppPage": ["libs/hoc/src/lib/AppPage/index.js"],
       "@crema/hoc/DefaultPage": ["libs/hoc/src/lib/DefaultPage/index.js"],
       "@crema/mockapi": ["libs/mockapi/src/index.js"],
       "@crema/modules": ["libs/modules/src/index.js"],
+      "@crema/modules/ErrorPages/ComingSoon": [
+        "libs/modules/src/lib/errorPages/ComingSoon/index.js"
+      ],
+      "@crema/modules/ErrorPages/Error401": [
+        "libs/modules/src/lib/errorPages/Error401/index.js"
+      ],
+      "@crema/modules/ErrorPages/Error403": [
+        "libs/modules/src/lib/errorPages/Error403/index.js"
+      ],
+      "@crema/modules/ErrorPages/Error404": [
+        "libs/modules/src/lib/errorPages/Error404/index.js"
+      ],
+      "@crema/modules/ErrorPages/Error500": [
+        "libs/modules/src/lib/errorPages/Error500/index.js"
+      ],
+      "@crema/modules/ErrorPages/Error503": [
+        "libs/modules/src/lib/errorPages/Error503/index.js"
+      ],
+      "@crema/modules/ErrorPages/Maintenance": [
+        "libs/modules/src/lib/errorPages/Maintenance/index.js"
+      ],
       "@crema/modules/MyProfile": [
         "libs/modules/src/lib/account/MyProfile/index.js"
       ],
@@ -257,6 +294,15 @@
       ],
       "@crema/modules/apps/ToDo": ["libs/modules/src/lib/apps/ToDo/index.js"],
       "@crema/modules/apps/Wall": ["libs/modules/src/lib/apps/Wall/index.js"],
+      "@crema/modules/auth/ForgetPassword": [
+        "libs/modules/src/lib/auth/ForgetPassword/index.js"
+      ],
+      "@crema/modules/auth/SignIn": [
+        "libs/modules/src/lib/auth/Signin/index.js"
+      ],
+      "@crema/modules/auth/SignUp": [
+        "libs/modules/src/lib/auth/Signup/index.js"
+      ],
       "@crema/modules/components/dataDisplay": [
         "libs/modules/src/lib/muiComponents/dataDisplay/index.js"
       ],
@@ -320,27 +366,6 @@
       "@crema/modules/ecommerce/Customers": [
         "libs/modules/src/lib/ecommerce/Customers/index.js"
       ],
-      "@crema/modules/ErrorPages/ComingSoon": [
-        "libs/modules/src/lib/errorPages/ComingSoon/index.js"
-      ],
-      "@crema/modules/ErrorPages/Error401": [
-        "libs/modules/src/lib/errorPages/Error401/index.js"
-      ],
-      "@crema/modules/ErrorPages/Error403": [
-        "libs/modules/src/lib/errorPages/Error403/index.js"
-      ],
-      "@crema/modules/ErrorPages/Error404": [
-        "libs/modules/src/lib/errorPages/Error404/index.js"
-      ],
-      "@crema/modules/ErrorPages/Error500": [
-        "libs/modules/src/lib/errorPages/Error500/index.js"
-      ],
-      "@crema/modules/ErrorPages/Error503": [
-        "libs/modules/src/lib/errorPages/Error503/index.js"
-      ],
-      "@crema/modules/ErrorPages/Maintenance": [
-        "libs/modules/src/lib/errorPages/Maintenance/index.js"
-      ],
       "@crema/modules/ecommerce/Invoice1": [
         "libs/modules/src/lib/ecommerce/Invoice1/index.js"
       ],
@@ -390,28 +415,8 @@
       "@crema/modules/userList/Standard": [
         "libs/modules/src/lib/userList/Standard/index.js"
       ],
-      "@crema/modules/userPages": [
-        "libs/modules/src/lib/userPages/index.js"
-      ],
-      "@crema/modules/auth/ForgetPassword": [
-        "libs/modules/src/lib/auth/ForgetPassword/index.js"
-      ],
-      "@crema/modules/auth/SignUp": [
-        "libs/modules/src/lib/auth/Signup/index.js"
-      ],
-      "@crema/modules/auth/SignIn": [
-        "libs/modules/src/lib/auth/Signin/index.js"
-      ],
+      "@crema/modules/userPages": ["libs/modules/src/lib/userPages/index.js"],
       "@crema/redux": ["libs/redux/src/index.js"],
-      "@crema/fakedb/ecommerceData": ["libs/mockapi/src/fakedb/ecommerce/index.js"],
-      "@crema/fakedb/chat/connectionList": ["libs/mockapi/src/fakedb/apps/chat/connectionList.js"],
-      "@crema/fakedb/data": ["libs/mockapi/src/fakedb/index.js"],
-      "@crema/fakedb/navigationStyle": ["libs/mockapi/src/fakedb/navigationStyle.js"],
-      "@crema/fakedb/mail/folderList": ["libs/mockapi/src/fakedb/apps/mail/folderList.js"],
-      "@crema/fakedb/extraPages": [
-        "libs/mockapi/src/fakedb/extraPages/index.js"
-      ],
-
       "@crema/redux-toolkit": ["libs/redux-toolkit/libs/src/index.ts"],
       "@crema/redux/actions": ["libs/redux/src/lib/actions/index.js"],
       "@crema/redux/reducers": ["libs/redux/src/lib/reducers/index.js"],
@@ -437,8 +442,6 @@
       "@crema/services/localization": [
         "libs/services/localization/src/index.js"
       ],
-
-
       "@crema/svg-icons": ["libs/svg-icons/src/index.ts"],
       "@crema/utility": ["libs/utility/src/index.js"],
       "@crema/utility/APIHooks": ["libs/utility/src/lib/APIHooks.js"],

@@ -17,13 +17,13 @@ export default function TransitionsPopper() {
 
   return (
     <div>
-      <button aria-describedby={id} type='button' onClick={handleClick}>
+      <button aria-describedby={id} type="button" onClick={handleClick}>
         Toggle Popper
       </button>
       <Popper id={id} open={open} anchorEl={anchorEl} transition>
-        {({TransitionProps}) => (
+        {({ TransitionProps }) => (
           <Fade {...TransitionProps} timeout={350}>
-            <Box sx={{border: 1, p: 1, bgcolor: 'background.paper'}}>
+            <Box sx={{ border: 1, p: 1, bgcolor: 'background.paper' }}>
               The content of the Popper.
             </Box>
           </Fade>

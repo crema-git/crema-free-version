@@ -9,8 +9,8 @@ import TablePagination from '@mui/material/TablePagination';
 import TableRow from '@mui/material/TableRow';
 
 const columns = [
-  {id: 'name', label: 'Name', minWidth: 170},
-  {id: 'code', label: 'ISO\u00a0Code', minWidth: 100},
+  { id: 'name', label: 'Name', minWidth: 170 },
+  { id: 'code', label: 'ISO\u00a0Code', minWidth: 100 },
   {
     id: 'population',
     label: 'Population',
@@ -36,7 +36,7 @@ const columns = [
 
 function createData(name, code, population, size) {
   const density = population / size;
-  return {name, code, population, size, density};
+  return { name, code, population, size, density };
 }
 
 const rows = [
@@ -71,16 +71,16 @@ export default function StickyHeadTable() {
   };
 
   return (
-    <Paper sx={{width: '100%', overflow: 'hidden'}}>
-      <TableContainer sx={{maxHeight: 440}}>
-        <Table stickyHeader aria-label='sticky table'>
+    <Paper sx={{ width: '100%', overflow: 'hidden' }}>
+      <TableContainer sx={{ maxHeight: 440 }}>
+        <Table stickyHeader aria-label="sticky table">
           <TableHead>
             <TableRow>
               {columns.map((column) => (
                 <TableCell
                   key={column.id}
                   align={column.align}
-                  style={{minWidth: column.minWidth}}
+                  style={{ minWidth: column.minWidth }}
                 >
                   {column.label}
                 </TableCell>
@@ -92,7 +92,7 @@ export default function StickyHeadTable() {
               .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
               .map((row) => {
                 return (
-                  <TableRow hover role='checkbox' tabIndex={-1} key={row.code}>
+                  <TableRow hover role="checkbox" tabIndex={-1} key={row.code}>
                     {columns.map((column) => {
                       const value = row[column.id];
                       return (
@@ -111,7 +111,7 @@ export default function StickyHeadTable() {
       </TableContainer>
       <TablePagination
         rowsPerPageOptions={[10, 25, 100]}
-        component='div'
+        component="div"
         count={rows.length}
         rowsPerPage={rowsPerPage}
         page={page}

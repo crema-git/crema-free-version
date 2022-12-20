@@ -1,13 +1,13 @@
 import React from 'react';
 import Checkbox from '@mui/material/Checkbox';
-import {Favorite, FavoriteBorder} from '@mui/icons-material';
+import { Favorite, FavoriteBorder } from '@mui/icons-material';
 import Avatar from '@mui/material/Avatar';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
 import ChatIcon from '@mui/icons-material/Chat';
 import IntlMessages from '@crema/utility/IntlMessages';
 import Box from '@mui/material/Box';
-import {Fonts} from '@crema/constants/AppEnums'
+import { Fonts } from '@crema/constants/AppEnums';
 import ImageCardWrapper from './ImageCardWrapper';
 
 const WallPaper = () => {
@@ -17,18 +17,18 @@ const WallPaper = () => {
         sx={{
           display: 'flex',
           alignItems: 'center',
-          mb: {xs: 4, lg: 6},
+          mb: { xs: 4, lg: 6 },
         }}
       >
         <Box
-          component='p'
+          component="p"
           sx={{
             fontWeight: Fonts.BOLD,
             fontSize: 16,
             textTransform: 'uppercase',
           }}
         >
-          <IntlMessages id='dashboard.latestPost' />
+          <IntlMessages id="dashboard.latestPost" />
         </Box>
         <Box
           sx={{
@@ -37,7 +37,7 @@ const WallPaper = () => {
           }}
         >
           <Checkbox
-            icon={<FavoriteBorder style={{color: 'white'}} />}
+            icon={<FavoriteBorder style={{ color: 'white' }} />}
             checkedIcon={<Favorite />}
           />
         </Box>
@@ -63,24 +63,24 @@ const WallPaper = () => {
         </Box>
 
         <Box
-          component='h1'
+          component="h1"
           sx={{
             fontWeight: Fonts.MEDIUM,
-            fontSize: {xs: 20, sm: 24, xl: 30},
+            fontSize: { xs: 20, sm: 24, xl: 30 },
             lineHeight: 1.25,
           }}
         >
-          <IntlMessages id='dashboard.hdColorful' />
+          <IntlMessages id="dashboard.hdColorful" />
         </Box>
         <Box
-          component='h1'
+          component="h1"
           sx={{
             fontWeight: Fonts.MEDIUM,
-            fontSize: {xs: 20, sm: 24, xl: 30},
+            fontSize: { xs: 20, sm: 24, xl: 30 },
             lineHeight: 1.25,
           }}
         >
-          <IntlMessages id='dashboard.wallpaperFree' />
+          <IntlMessages id="dashboard.wallpaperFree" />
         </Box>
 
         <Box
@@ -90,14 +90,14 @@ const WallPaper = () => {
           }}
         >
           <Box
-            component='h1'
+            component="h1"
             sx={{
               fontWeight: Fonts.MEDIUM,
-              fontSize: {xs: 20, sm: 24, xl: 30},
+              fontSize: { xs: 20, sm: 24, xl: 30 },
               lineHeight: 1.25,
             }}
           >
-            <IntlMessages id='common.download' />
+            <IntlMessages id="common.download" />
           </Box>
           <Box
             sx={{
@@ -106,11 +106,11 @@ const WallPaper = () => {
               fontWeight: Fonts.MEDIUM,
               display: 'flex',
               textTransform: 'uppercase',
-              fontSize: {xs: 14, sm: 16, xl: 18},
+              fontSize: { xs: 14, sm: 16, xl: 18 },
             }}
           >
             <Box
-              component='span'
+              component="span"
               sx={{
                 display: 'block',
                 px: 3,
@@ -118,14 +118,14 @@ const WallPaper = () => {
             >
               <VisibilityIcon
                 sx={{
-                  display: {xs: 'block', sm: 'inline-block'},
-                  verticalAlign: {sm: 'middle'},
+                  display: { xs: 'block', sm: 'inline-block' },
+                  verticalAlign: { sm: 'middle' },
                 }}
               />{' '}
               11.7 K
             </Box>
             <Box
-              component='span'
+              component="span"
               sx={{
                 display: 'block',
                 px: 3,
@@ -133,14 +133,14 @@ const WallPaper = () => {
             >
               <FavoriteBorderOutlinedIcon
                 sx={{
-                  display: {xs: 'block', sm: 'inline-block'},
-                  verticalAlign: {sm: 'middle'},
+                  display: { xs: 'block', sm: 'inline-block' },
+                  verticalAlign: { sm: 'middle' },
                 }}
               />{' '}
               2.6 K
             </Box>
             <Box
-              component='span'
+              component="span"
               sx={{
                 display: 'block',
                 px: 3,
@@ -148,8 +148,8 @@ const WallPaper = () => {
             >
               <ChatIcon
                 sx={{
-                  display: {xs: 'block', sm: 'inline-block'},
-                  verticalAlign: {sm: 'middle'},
+                  display: { xs: 'block', sm: 'inline-block' },
+                  verticalAlign: { sm: 'middle' },
                 }}
               />{' '}
               345

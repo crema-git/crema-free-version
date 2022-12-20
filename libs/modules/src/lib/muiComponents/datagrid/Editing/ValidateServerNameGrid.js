@@ -1,7 +1,7 @@
 import * as React from 'react';
-import {createTheme} from '@mui/material/styles';
-import {makeStyles} from '@mui/styles';
-import {DataGridPro, useGridApiRef} from '@mui/x-data-grid-pro';
+import { createTheme } from '@mui/material/styles';
+import { makeStyles } from '@mui/styles';
+import { DataGridPro, useGridApiRef } from '@mui/x-data-grid-pro';
 
 const defaultTheme = createTheme();
 const useStyles = makeStyles(
@@ -20,7 +20,7 @@ const useStyles = makeStyles(
       },
     };
   },
-  {defaultTheme},
+  { defaultTheme }
 );
 
 let promiseTimeout;
@@ -48,7 +48,7 @@ export default function ValidateServerNameGrid() {
       // basic debouncing here
       keyStrokeTimeoutRef.current = setTimeout(async () => {
         const isValid = await validateName(params.props.value.toString());
-        resolve({...params.props, error: !isValid});
+        resolve({ ...params.props, error: !isValid });
       }, 100);
     });
 
@@ -70,7 +70,7 @@ export default function ValidateServerNameGrid() {
   }, []);
 
   return (
-    <div style={{height: 400, width: '100%'}}>
+    <div style={{ height: 400, width: '100%' }}>
       <DataGridPro
         className={classes.root}
         apiRef={apiRef}

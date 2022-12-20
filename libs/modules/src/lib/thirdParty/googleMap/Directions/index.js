@@ -1,5 +1,9 @@
-import React, {Component} from 'react';
-import {DirectionsRenderer, GoogleMap, withGoogleMap} from 'react-google-maps';
+import React, { Component } from 'react';
+import {
+  DirectionsRenderer,
+  GoogleMap,
+  withGoogleMap,
+} from 'react-google-maps';
 
 const google = window.google;
 
@@ -39,7 +43,7 @@ export default class MapDirections extends Component {
         } else {
           console.error(`error fetching directions ${result}`);
         }
-      },
+      }
     );
   }
 
@@ -47,9 +51,9 @@ export default class MapDirections extends Component {
     return (
       <DirectionsExampleGoogleMap
         containerElement={
-          <div className='cr-embed-responsive cr-embed-responsive-21by9' />
+          <div className="cr-embed-responsive cr-embed-responsive-21by9" />
         }
-        mapElement={<div className='cr-embed-responsive-item' />}
+        mapElement={<div className="cr-embed-responsive-item" />}
         center={this.state.origin}
         directions={this.state.directions}
       />

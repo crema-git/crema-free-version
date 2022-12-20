@@ -1,9 +1,9 @@
 import React from 'react';
-import {Box} from '@mui/material';
+import { Box } from '@mui/material';
 import Checkbox from '@mui/material/Checkbox';
 import PropTypes from 'prop-types';
 
-const CheckedCell = ({selected, data, onChange}) => {
+const CheckedCell = ({ selected, data, onChange }) => {
   return (
     <Box
       sx={{
@@ -16,8 +16,8 @@ const CheckedCell = ({selected, data, onChange}) => {
     >
       <Checkbox
         checked={selected.some((item) => item === data.id)}
-        color='primary'
-        inputProps={{'aria-label': 'secondary checkbox'}}
+        color="primary"
+        inputProps={{ 'aria-label': 'secondary checkbox' }}
       />
       <Box>{data.name}</Box>
     </Box>

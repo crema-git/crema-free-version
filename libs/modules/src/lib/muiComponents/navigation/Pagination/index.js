@@ -38,15 +38,15 @@ const Pagination = () => {
   return (
     <>
       <AppComponentHeader
-        title='Pagination'
-        description='The Pagination component enables the user to select a specific page from a range of pages.'
-        refUrl='https://mui.com/components/pagination/'
+        title="Pagination"
+        description="The Pagination component enables the user to select a specific page from a range of pages."
+        refUrl="https://mui.com/components/pagination/"
       />
 
       <AppGridContainer>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Basic pagination'
+            title="Basic pagination"
             component={BasicPagination}
             source={BasicPaginationSource}
             noScrollbar
@@ -54,7 +54,7 @@ const Pagination = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='PaginationOutlined'
+            title="PaginationOutlined"
             component={PaginationOutlined}
             source={PaginationOutlinedSource}
             noScrollbar
@@ -62,7 +62,7 @@ const Pagination = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Pagination Rounded'
+            title="Pagination Rounded"
             component={PaginationRounded}
             source={PaginationRoundedSource}
             noScrollbar
@@ -71,7 +71,7 @@ const Pagination = () => {
 
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Pagination Buttons'
+            title="Pagination Buttons"
             component={PaginationButtons}
             source={PaginationButtonsSource}
             noScrollbar
@@ -79,7 +79,7 @@ const Pagination = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Custom Icons'
+            title="Custom Icons"
             component={CustomIcons}
             source={CustomIconsSource}
             noScrollbar
@@ -87,7 +87,7 @@ const Pagination = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Pagination Controlled'
+            title="Pagination Controlled"
             component={PaginationControlled}
             source={PaginationControlledSource}
             noScrollbar
@@ -95,7 +95,7 @@ const Pagination = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='TablePaginationDemo'
+            title="TablePaginationDemo"
             component={TablePaginationDemo}
             source={TablePaginationDemoSource}
             noScrollbar
@@ -104,7 +104,7 @@ const Pagination = () => {
 
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Pagination Size'
+            title="Pagination Size"
             component={PaginationSize}
             source={PaginationSizeSource}
             noScrollbar
@@ -112,7 +112,7 @@ const Pagination = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Pagination Ranges'
+            title="Pagination Ranges"
             component={PaginationRanges}
             source={PaginationRangesSource}
             noScrollbar
@@ -120,7 +120,7 @@ const Pagination = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='UsePagination'
+            title="UsePagination"
             component={UsePagination}
             source={UsePaginationSource}
             noScrollbar

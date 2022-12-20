@@ -31,7 +31,7 @@ const options = [
 ];
 
 function ConfirmationDialogRaw(props) {
-  const {onClose, value: valueProp, open, ...other} = props;
+  const { onClose, value: valueProp, open, ...other } = props;
   const [value, setValue] = React.useState(valueProp);
   const radioGroupRef = React.useRef(null);
 
@@ -61,9 +61,9 @@ function ConfirmationDialogRaw(props) {
 
   return (
     <Dialog
-      sx={{'& .MuiDialog-paper': {width: '80%', maxHeight: 435}}}
-      maxWidth='xs'
-      TransitionProps={{onEntering: handleEntering}}
+      sx={{ '& .MuiDialog-paper': { width: '80%', maxHeight: 435 } }}
+      maxWidth="xs"
+      TransitionProps={{ onEntering: handleEntering }}
       open={open}
       {...other}
     >
@@ -71,8 +71,8 @@ function ConfirmationDialogRaw(props) {
       <DialogContent dividers>
         <RadioGroup
           ref={radioGroupRef}
-          aria-label='ringtone'
-          name='ringtone'
+          aria-label="ringtone"
+          name="ringtone"
           value={value}
           onChange={handleChange}
         >
@@ -119,29 +119,29 @@ export default function ConfirmationDialog() {
   };
 
   return (
-    <Box sx={{width: '100%', maxWidth: 360, bgcolor: 'background.paper'}}>
-      <List component='div' role='group'>
+    <Box sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
+      <List component="div" role="group">
         <ListItem button divider disabled>
-          <ListItemText primary='Interruptions' />
+          <ListItemText primary="Interruptions" />
         </ListItem>
         <ListItem
           button
           divider
-          aria-haspopup='true'
-          aria-controls='ringtone-menu'
-          aria-label='phone ringtone'
+          aria-haspopup="true"
+          aria-controls="ringtone-menu"
+          aria-label="phone ringtone"
           onClick={handleClickListItem}
         >
-          <ListItemText primary='Phone ringtone' secondary={value} />
+          <ListItemText primary="Phone ringtone" secondary={value} />
         </ListItem>
         <ListItem button divider disabled>
           <ListItemText
-            primary='Default notification ringtone'
-            secondary='Tethys'
+            primary="Default notification ringtone"
+            secondary="Tethys"
           />
         </ListItem>
         <ConfirmationDialogRaw
-          id='ringtone-menu'
+          id="ringtone-menu"
           keepMounted
           open={open}
           onClose={handleClose}

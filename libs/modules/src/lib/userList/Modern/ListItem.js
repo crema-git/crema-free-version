@@ -9,11 +9,11 @@ import Button from '@mui/material/Button';
 import IntlMessages from '@crema/utility/IntlMessages';
 import Box from '@mui/material/Box';
 import PropTypes from 'prop-types';
-import {grey} from '@mui/material/colors';
-import {Fonts} from '@crema/constants/AppEnums'
+import { grey } from '@mui/material/colors';
+import { Fonts } from '@crema/constants/AppEnums';
 
 const ListItem = (props) => {
-  const {user} = props;
+  const { user } = props;
 
   return (
     <Card
@@ -21,43 +21,43 @@ const ListItem = (props) => {
         p: 5,
         mb: 5,
       }}
-      className='item-hover'
+      className="item-hover"
     >
       <Box
         sx={{
           display: 'flex',
-          flexDirection: {xs: 'column', sm: 'row'},
+          flexDirection: { xs: 'column', sm: 'row' },
         }}
       >
         <Box
           sx={{
-            mr: {sm: 5},
-            mb: {xs: 3, sm: 0},
+            mr: { sm: 5 },
+            mb: { xs: 3, sm: 0 },
             '.crUserImage': {
               objectFit: 'cover',
               borderRadius: (theme) =>
                 theme.components.MuiCard.styleOverrides.root.borderRadius,
-              width: {sx: '100%', sm: 130},
-              height: {sx: 180, sm: 130},
+              width: { sx: '100%', sm: 130 },
+              height: { sx: 180, sm: 130 },
             },
           }}
         >
-          <img src={user.image} alt='user' className='crUserImage' />
+          <img src={user.image} alt="user" className="crUserImage" />
         </Box>
 
-        <Box sx={{flex: 1}}>
+        <Box sx={{ flex: 1 }}>
           <Box
             sx={{
               mb: 3,
               display: 'flex',
-              flexDirection: {xs: 'column', sm: 'row'},
+              flexDirection: { xs: 'column', sm: 'row' },
               color: 'text.secondary',
             }}
           >
             <Box
-              component='h3'
+              component="h3"
               sx={{
-                mb: {xs: 2, sm: 0},
+                mb: { xs: 2, sm: 0 },
                 fontSize: 16,
                 fontWeight: Fonts.BOLD,
               }}
@@ -67,42 +67,42 @@ const ListItem = (props) => {
 
             <Box
               sx={{
-                ml: {xs: -4, sm: 'auto'},
-                mr: {sm: -4},
+                ml: { xs: -4, sm: 'auto' },
+                mr: { sm: -4 },
                 display: 'flex',
                 alignItems: 'center',
-                justifyContent: {xs: 'space-between', sm: 'flex-end'},
+                justifyContent: { xs: 'space-between', sm: 'flex-end' },
                 color: 'text.secondary',
               }}
             >
-              <Box sx={{mx: 4}} component='span'>
+              <Box sx={{ mx: 4 }} component="span">
                 <Tooltip
                   sx={{
                     cursor: 'pointer',
                   }}
-                  title={<IntlMessages id='common.share' />}
+                  title={<IntlMessages id="common.share" />}
                 >
                   <ShareIcon />
                 </Tooltip>
               </Box>
 
-              <Box sx={{mx: 4}} component='span'>
+              <Box sx={{ mx: 4 }} component="span">
                 <Tooltip
                   sc={{
                     cursor: 'pointer',
                   }}
-                  title={<IntlMessages id='common.bookmark' />}
+                  title={<IntlMessages id="common.bookmark" />}
                 >
                   <BookmarkBorderIcon />
                 </Tooltip>
               </Box>
 
-              <Box sx={{mx: 4}} component='span'>
+              <Box sx={{ mx: 4 }} component="span">
                 <Tooltip
                   sc={{
                     cursor: 'pointer',
                   }}
-                  title={<IntlMessages id='common.more' />}
+                  title={<IntlMessages id="common.more" />}
                 >
                   <MoreVertIcon />
                 </Tooltip>
@@ -112,11 +112,11 @@ const ListItem = (props) => {
 
           <Box
             sx={{
-              pr: {lg: 6, xl: 16},
+              pr: { lg: 6, xl: 16 },
             }}
           >
             <Box
-              component='p'
+              component="p"
               sx={{
                 color: 'text.secondary',
                 mb: 4,
@@ -130,11 +130,11 @@ const ListItem = (props) => {
           <Box
             sx={{
               display: 'flex',
-              flexDirection: {xs: 'column', md: 'row'},
-              alignItems: {md: 'center'},
+              flexDirection: { xs: 'column', md: 'row' },
+              alignItems: { md: 'center' },
             }}
           >
-            <Box sx={{mx: {xs: -1, xl: -2}}}>
+            <Box sx={{ mx: { xs: -1, xl: -2 } }}>
               {user.skills.map((skill, index) => {
                 return (
                   <Chip
@@ -147,8 +147,8 @@ const ListItem = (props) => {
                           : theme.palette.grey[200],
                       padding: '4px 12px',
                       marginTop: 2,
-                      marginRight: {sx: 1, xl: 2},
-                      marginLeft: {sx: 1, xl: 2},
+                      marginRight: { sx: 1, xl: 2 },
+                      marginLeft: { sx: 1, xl: 2 },
                       border: '1px solid',
                       borderColor: grey[500],
                       borderRadius: 2,
@@ -160,12 +160,12 @@ const ListItem = (props) => {
 
             <Box
               sx={{
-                ml: {md: 'auto'},
+                ml: { md: 'auto' },
               }}
             >
               <Button
-                variant='contained'
-                color='primary'
+                variant="contained"
+                color="primary"
                 sx={{
                   marginRight: 5,
                   marginTop: 2,
@@ -175,10 +175,10 @@ const ListItem = (props) => {
                   fontWeight: Fonts.MEDIUM,
                 }}
               >
-                <IntlMessages id='common.hire' />
+                <IntlMessages id="common.hire" />
               </Button>
               <Button
-                variant='contained'
+                variant="contained"
                 sx={{
                   backgroundColor: (theme) =>
                     theme.palette.primary.contrastText,
@@ -192,7 +192,7 @@ const ListItem = (props) => {
                   lineHeight: 1,
                 }}
               >
-                <IntlMessages id='mailApp.remove' />
+                <IntlMessages id="mailApp.remove" />
               </Button>
             </Box>
           </Box>

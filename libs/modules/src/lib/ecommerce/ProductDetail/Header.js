@@ -1,7 +1,7 @@
 import React from 'react';
 import Box from '@mui/material/Box';
 import Rating from '@mui/material/Rating';
-import {Fonts} from '@crema/constants/AppEnums'
+import { Fonts } from '@crema/constants/AppEnums';
 
 import {
   FacebookIcon,
@@ -13,7 +13,7 @@ import {
 } from 'react-share';
 import PropTypes from 'prop-types';
 
-const Header = ({product}) => {
+const Header = ({ product }) => {
   const shareUrl = `https://cra.crema-mui.com/ecommerce/product_detail/${product.id}`;
 
   return (
@@ -21,7 +21,7 @@ const Header = ({product}) => {
       sx={{
         display: 'flex',
         alignItems: 'center',
-        flexDirection: {xs: 'column', sm: 'row'},
+        flexDirection: { xs: 'column', sm: 'row' },
         pb: 5,
         mb: 5,
         borderBottom: '1px solid #E5E4EA',
@@ -33,7 +33,7 @@ const Header = ({product}) => {
         }}
       >
         <Box
-          component='h3'
+          component="h3"
           sx={{
             color: 'text.primary',
             fontWeight: Fonts.BOLD,
@@ -48,7 +48,7 @@ const Header = ({product}) => {
             display: 'flex',
           }}
         >
-          <Rating defaultValue={product.rating} size='small' readOnly />
+          <Rating defaultValue={product.rating} size="small" readOnly />
           <Box
             sx={{
               ml: 2,
@@ -62,7 +62,7 @@ const Header = ({product}) => {
           <Box>
             SKU :{' '}
             <Box
-              component='span'
+              component="span"
               sx={{
                 ml: 2,
                 color: 'text.secondary',
@@ -77,13 +77,13 @@ const Header = ({product}) => {
       <Box
         sx={{
           display: 'flex',
-          mt: {xs: 4, sm: 0},
+          mt: { xs: 4, sm: 0 },
         }}
       >
-        <LinkedinShareButton url={shareUrl} style={{marginRight: 10}}>
+        <LinkedinShareButton url={shareUrl} style={{ marginRight: 10 }}>
           <LinkedinIcon size={32} round={true} />
         </LinkedinShareButton>
-        <FacebookShareButton url={shareUrl} style={{marginRight: 10}}>
+        <FacebookShareButton url={shareUrl} style={{ marginRight: 10 }}>
           <FacebookIcon size={32} round={true} />
         </FacebookShareButton>
         <TwitterShareButton url={shareUrl}>

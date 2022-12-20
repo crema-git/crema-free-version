@@ -50,15 +50,15 @@ const Lists = () => {
   return (
     <>
       <AppComponentHeader
-        title='Lists'
-        description='Lists are continuous, vertical indexes of text or images.'
-        refUrl='https://mui.com/components/lists/'
+        title="Lists"
+        description="Lists are continuous, vertical indexes of text or images."
+        refUrl="https://mui.com/components/lists/"
       />
 
       <AppGridContainer>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Basic Lists'
+            title="Basic Lists"
             component={BasicList}
             source={BasicListSource}
             noScrollbar
@@ -66,7 +66,7 @@ const Lists = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Nested List'
+            title="Nested List"
             component={NestedList}
             source={NestedListSource}
             noScrollbar
@@ -74,7 +74,7 @@ const Lists = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Folder List'
+            title="Folder List"
             component={FolderList}
             source={FolderListSource}
             noScrollbar
@@ -82,7 +82,7 @@ const Lists = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Selected ListItem'
+            title="Selected ListItem"
             component={SelectedListItem}
             source={SelectedListItemSource}
             noScrollbar
@@ -90,7 +90,7 @@ const Lists = () => {
         </Grid>
         <Grid item xs={12}>
           <AppComponentCard
-            title='Interactive List'
+            title="Interactive List"
             component={InteractiveList}
             source={InteractiveListSource}
             noScrollbar
@@ -98,7 +98,7 @@ const Lists = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='AlignItems List'
+            title="AlignItems List"
             component={AlignItemsList}
             source={AlignItemsListSource}
             noScrollbar
@@ -106,7 +106,7 @@ const Lists = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Checkbox List'
+            title="Checkbox List"
             component={CheckboxList}
             source={CheckboxListSource}
             noScrollbar
@@ -114,7 +114,7 @@ const Lists = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Checkbox ListSecondary'
+            title="Checkbox ListSecondary"
             component={CheckboxListSecondary}
             source={CheckboxListSecondarySource}
             noScrollbar
@@ -122,7 +122,7 @@ const Lists = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Switch ListSecondary'
+            title="Switch ListSecondary"
             component={SwitchListSecondary}
             source={SwitchListSecondarySource}
             noScrollbar
@@ -130,7 +130,7 @@ const Lists = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Pinned Subheader List'
+            title="Pinned Subheader List"
             component={PinnedSubheaderList}
             source={PinnedSubheaderListSource}
             noScrollbar
@@ -138,7 +138,7 @@ const Lists = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Customized List'
+            title="Customized List"
             component={CustomizedList}
             source={CustomizedListSource}
             noScrollbar
@@ -146,7 +146,7 @@ const Lists = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Inset List'
+            title="Inset List"
             component={InsetList}
             source={InsetListSource}
             noScrollbar
@@ -154,7 +154,7 @@ const Lists = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Gutter less List'
+            title="Gutter less List"
             component={GutterlessList}
             source={GutterlessListSource}
             noScrollbar
@@ -162,7 +162,7 @@ const Lists = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Virtualized List'
+            title="Virtualized List"
             component={VirtualizedList}
             source={VirtualizedListSource}
             noScrollbar

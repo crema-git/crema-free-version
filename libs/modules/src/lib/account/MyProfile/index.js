@@ -5,4 +5,11 @@ import Information from './Information';
 import Social from './Social';
 import Notification from './Notification';
 
-export {AccountTabsWrapper, PersonalInfo, ChangePassword, Information, Social, Notification};
+export {
+  AccountTabsWrapper,
+  PersonalInfo,
+  ChangePassword,
+  Information,
+  Social,
+  Notification,
+};

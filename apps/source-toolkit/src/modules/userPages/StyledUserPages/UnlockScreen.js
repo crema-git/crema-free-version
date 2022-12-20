@@ -1,31 +1,31 @@
 import React from 'react';
 import Card from '@mui/material/Card';
 import Button from '@mui/material/Button';
-import {Form, Formik} from 'formik';
+import { Form, Formik } from 'formik';
 import * as yup from 'yup';
 import Grid from '@mui/material/Grid';
 import IntlMessages from '@crema/utility/IntlMessages';
 import Box from '@mui/material/Box';
-import {Typography, useTheme} from '@mui/material';
-import {Fonts} from '@crema/constants/AppEnums'
+import { Typography, useTheme } from '@mui/material';
+import { Fonts } from '@crema/constants/AppEnums';
 import AppAnimate from '@crema/components/AppAnimate';
 import AppTextField from '@crema/components/AppTextField';
-import {ReactComponent as Logo} from '../../../assets/user/lock-screen.svg';
+import { ReactComponent as Logo } from '../../../assets/user/lock-screen.svg';
 
 const validationSchema = yup.object({
   password: yup
     .string()
-    .required(<IntlMessages id='validation.passwordRequired' />),
+    .required(<IntlMessages id="validation.passwordRequired" />),
 });
 
 const UnlockScreen = () => {
   const theme = useTheme();
   return (
-    <AppAnimate animation='transition.slideUpIn' delay={200}>
+    <AppAnimate animation="transition.slideUpIn" delay={200}>
       <Box
         sx={{
           pb: 6,
-          py: {xl: 8},
+          py: { xl: 8 },
           display: 'flex',
           flex: 1,
           flexDirection: 'column',
@@ -39,7 +39,7 @@ const UnlockScreen = () => {
             width: '100%',
             textAlign: 'center',
             overflow: 'hidden',
-            padding: {xs: 8, md: 12},
+            padding: { xs: 8, md: 12 },
             boxShadow:
               '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
             paddingLeft: {
@@ -55,7 +55,7 @@ const UnlockScreen = () => {
           <Grid container spacing={5}>
             <Grid item xs={12} md={6}>
               <Box
-                display='inline-block'
+                display="inline-block"
                 sx={{
                   width: '100%',
                   height: '100%',
@@ -64,7 +64,7 @@ const UnlockScreen = () => {
                     width: '100%',
                     height: '300px',
                     display: 'inline-block',
-                    paddingRight: {xs: 0, lg: 10},
+                    paddingRight: { xs: 0, lg: 10 },
                   },
                 }}
               >
@@ -75,24 +75,24 @@ const UnlockScreen = () => {
             <Grid item xs={12} md={6}>
               <Box
                 sx={{
-                  mb: {xs: 6, xl: 8},
+                  mb: { xs: 6, xl: 8 },
                   fontWeight: Fonts.BOLD,
                   fontSize: 20,
                 }}
               >
-                <IntlMessages id='common.unlockScreen' />
+                <IntlMessages id="common.unlockScreen" />
               </Box>
               <Box
                 sx={{
-                  mb: {xs: 3, xl: 4},
+                  mb: { xs: 3, xl: 4 },
                   fontSize: 14,
                 }}
               >
-                <Typography component='span'>
-                  <IntlMessages id='common.unlockScreenTextOne' />
+                <Typography component="span">
+                  <IntlMessages id="common.unlockScreenTextOne" />
                 </Typography>
-                <Typography component='span'>
-                  <IntlMessages id='common.unlockScreenTextTwo' />
+                <Typography component="span">
+                  <IntlMessages id="common.unlockScreenTextTwo" />
                 </Typography>
               </Box>
               <Formik
@@ -101,11 +101,11 @@ const UnlockScreen = () => {
                   password: '',
                 }}
                 validationSchema={validationSchema}
-                onSubmit={(data, {resetForm}) => {
+                onSubmit={(data, { resetForm }) => {
                   resetForm();
                 }}
               >
-                {({isSubmitting}) => (
+                {({ isSubmitting }) => (
                   <Form
                     sx={{
                       textAlign: 'left',
@@ -113,30 +113,30 @@ const UnlockScreen = () => {
                   >
                     <Box
                       sx={{
-                        mb: {xs: 3, xl: 4},
+                        mb: { xs: 3, xl: 4 },
                       }}
                     >
                       <AppTextField
-                        name='password'
-                        label={<IntlMessages id='common.password' />}
+                        name="password"
+                        label={<IntlMessages id="common.password" />}
                         sx={{
                           width: '100%',
                         }}
-                        variant='outlined'
-                        type='password'
+                        variant="outlined"
+                        type="password"
                       />
                     </Box>
                     <Button
-                      variant='contained'
-                      color='primary'
+                      variant="contained"
+                      color="primary"
                       disabled={isSubmitting}
                       sx={{
                         width: '100%',
                         height: 44,
                       }}
-                      type='submit'
+                      type="submit"
                     >
-                      <IntlMessages id='common.unlockItForMe' />
+                      <IntlMessages id="common.unlockItForMe" />
                     </Button>
                   </Form>
                 )}

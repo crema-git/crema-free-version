@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import Card from '@mui/material/Card';
 import TextField from '@mui/material/TextField';
 import CloseIcon from '@mui/icons-material/Close';
@@ -7,13 +7,13 @@ import EditOutlinedIcon from '@mui/icons-material/EditOutlined';
 import CheckIcon from '@mui/icons-material/Check';
 import Box from '@mui/material/Box';
 import PropTypes from 'prop-types';
-import {Fonts} from '@crema/constants/AppEnums'
+import { Fonts } from '@crema/constants/AppEnums';
 import IntlMessages from '@crema/utility/IntlMessages';
 import AppConfirmDialog from '@crema/components/AppConfirmDialog';
 import IconButton from '@mui/material/IconButton';
 
 const ListHeader = (props) => {
-  const {name, id, onDelete, updateTitle} = props;
+  const { name, id, onDelete, updateTitle } = props;
 
   const [isEditListName, setEditListName] = useState(false);
 
@@ -56,7 +56,7 @@ const ListHeader = (props) => {
         {!isEditListName ? (
           <>
             <Box
-              componet='h5'
+              componet="h5"
               sx={{
                 fontSize: 15,
                 fontWeight: Fonts.MEDIUM,
@@ -103,7 +103,7 @@ const ListHeader = (props) => {
             >
               <TextField
                 fullWidth
-                label={<IntlMessages id='scrumboard.listTitle' />}
+                label={<IntlMessages id="scrumboard.listTitle" />}
                 value={editedListName}
                 onChange={(event) => setEditedListName(event.target.value)}
               />
@@ -142,8 +142,8 @@ const ListHeader = (props) => {
           open={isDeleteDialogOpen}
           onDeny={setDeleteDialogOpen}
           onConfirm={onDeleteBoardList}
-          title={<IntlMessages id='scrumboard.deleteMessage' />}
-          dialogTitle={<IntlMessages id='common.deleteItem' />}
+          title={<IntlMessages id="scrumboard.deleteMessage" />}
+          dialogTitle={<IntlMessages id="common.deleteItem" />}
         />
       ) : null}
     </Card>

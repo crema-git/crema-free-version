@@ -13,17 +13,17 @@ export default function SelectAutoWidth() {
 
   return (
     <div>
-      <FormControl sx={{m: 1, minWidth: 80}}>
-        <InputLabel id='demo-simple-select-autowidth-label'>Age</InputLabel>
+      <FormControl sx={{ m: 1, minWidth: 80 }}>
+        <InputLabel id="demo-simple-select-autowidth-label">Age</InputLabel>
         <Select
-          labelId='demo-simple-select-autowidth-label'
-          id='demo-simple-select-autowidth'
+          labelId="demo-simple-select-autowidth-label"
+          id="demo-simple-select-autowidth"
           value={age}
           onChange={handleChange}
           autoWidth
-          label='Age'
+          label="Age"
         >
-          <MenuItem value=''>
+          <MenuItem value="">
             <em>None</em>
           </MenuItem>
           <MenuItem value={10}>Twenty</MenuItem>

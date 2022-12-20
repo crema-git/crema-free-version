@@ -8,7 +8,7 @@ export default function FixedContainer() {
     <React.Fragment>
       <CssBaseline />
       <Container fixed>
-        <Box sx={{bgcolor: '#cfe8fc', height: '100vh'}} />
+        <Box sx={{ bgcolor: '#cfe8fc', height: '100vh' }} />
       </Container>
     </React.Fragment>
   );

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {styled} from '@mui/material/styles';
+import { styled } from '@mui/material/styles';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -84,33 +84,33 @@ export default function BottomAppBar() {
   return (
     <React.Fragment>
       <CssBaseline />
-      <Paper square sx={{pb: '50px'}}>
+      <Paper square sx={{ pb: '50px' }}>
         <Typography
-          variant='h5'
+          variant="h5"
           gutterBottom
-          component='div'
-          sx={{p: 2, pb: 0}}
+          component="div"
+          sx={{ p: 2, pb: 0 }}
         >
           Inbox
         </Typography>
-        <List sx={{mb: 2}}>
-          {messages.map(({id, primary, secondary, person}) => (
+        <List sx={{ mb: 2 }}>
+          {messages.map(({ id, primary, secondary, person }) => (
             <React.Fragment key={id}>
               {id === 1 && (
-                <ListSubheader sx={{bgcolor: 'background.paper'}}>
+                <ListSubheader sx={{ bgcolor: 'background.paper' }}>
                   Today
                 </ListSubheader>
               )}
 
               {id === 3 && (
-                <ListSubheader sx={{bgcolor: 'background.paper'}}>
+                <ListSubheader sx={{ bgcolor: 'background.paper' }}>
                   Yesterday
                 </ListSubheader>
               )}
 
               <ListItem button>
                 <ListItemAvatar>
-                  <Avatar alt='Profile Picture' src={person} />
+                  <Avatar alt="Profile Picture" src={person} />
                 </ListItemAvatar>
                 <ListItemText primary={primary} secondary={secondary} />
               </ListItem>
@@ -118,19 +118,19 @@ export default function BottomAppBar() {
           ))}
         </List>
       </Paper>
-      <AppBar position='fixed' color='primary' sx={{top: 'auto', bottom: 0}}>
+      <AppBar position="fixed" color="primary" sx={{ top: 'auto', bottom: 0 }}>
         <Toolbar>
-          <IconButton color='inherit' aria-label='open drawer'>
+          <IconButton color="inherit" aria-label="open drawer">
             <MenuIcon />
           </IconButton>
-          <StyledFab color='secondary' aria-label='add'>
+          <StyledFab color="secondary" aria-label="add">
             <AddIcon />
           </StyledFab>
-          <Box sx={{flexGrow: 1}} />
-          <IconButton color='inherit'>
+          <Box sx={{ flexGrow: 1 }} />
+          <IconButton color="inherit">
             <SearchIcon />
           </IconButton>
-          <IconButton color='inherit'>
+          <IconButton color="inherit">
             <MoreIcon />
           </IconButton>
         </Toolbar>

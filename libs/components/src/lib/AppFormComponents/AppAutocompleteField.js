@@ -1,4 +1,4 @@
-import {useField} from 'formik';
+import { useField } from 'formik';
 import AppAutoComplete from './AppAutoComplete';
 import React from 'react';
 import PropTypes from 'prop-types';

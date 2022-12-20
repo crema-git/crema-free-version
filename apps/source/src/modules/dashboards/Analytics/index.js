@@ -1,8 +1,8 @@
 import React from 'react';
-import {Grid} from '@mui/material';
+import { Grid } from '@mui/material';
 import AppGridContainer from '@crema/components/AppGridContainer';
 import AppAnimate from '@crema/components/AppAnimate';
-import {useGetDataApi} from '@crema/utility/APIHooks';
+import { useGetDataApi } from '@crema/utility/APIHooks';
 import {
   ActiveVisitors,
   EarningByCountry,
@@ -15,19 +15,21 @@ import {
   TopSelling,
   TrafficSource,
   VisitorPageView,
-  WelcomeCard
+  WelcomeCard,
 } from '@crema/modules/dashboards/Analytics';
-import AppLoader from "@crema/components/AppLoader";
+import AppLoader from '@crema/components/AppLoader';
 
 const Analytics = () => {
-  const [{apiData: analyticsData,loading}] = useGetDataApi('/dashboard/analytics');
+  const [{ apiData: analyticsData, loading }] = useGetDataApi(
+    '/dashboard/analytics'
+  );
 
   return (
     <>
       {loading ? (
         <AppLoader />
-      ): (
-        <AppAnimate animation='transition.slideUpIn' delay={200}>
+      ) : (
+        <AppAnimate animation="transition.slideUpIn" delay={200}>
           <AppGridContainer>
             <Grid item xs={12} lg={6}>
               <WelcomeCard data={analyticsData.welcomeCard} />

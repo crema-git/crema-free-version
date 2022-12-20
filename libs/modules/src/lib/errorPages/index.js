@@ -6,4 +6,12 @@ import Error500 from './Error500';
 import Error503 from './Error503';
 import Maintenance from './Maintenance';
 
-export {ComingSoon, Error401, Error403, Error404, Error500, Error503, Maintenance};
+export {
+  ComingSoon,
+  Error401,
+  Error403,
+  Error404,
+  Error500,
+  Error503,
+  Maintenance,
+};

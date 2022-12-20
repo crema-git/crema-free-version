@@ -1,14 +1,14 @@
 import React from 'react';
 import Box from '@mui/material/Box';
-import {Button} from '@mui/material';
+import { Button } from '@mui/material';
 import IntlMessages from '@crema/utility/IntlMessages';
 import Activity from './Activity';
-import {accountData} from '@crema/mockapi';
+import { accountData } from '@crema/mockapi';
 import Application from './Application';
 
 const Notification = () => {
   return (
-    <Box sx={{position: 'relative'}}>
+    <Box sx={{ position: 'relative' }}>
       <Activity activity={accountData.notification.activity} />
 
       <Box
@@ -33,11 +33,11 @@ const Notification = () => {
             position: 'relative',
             minWidth: 100,
           }}
-          color='primary'
-          variant='contained'
-          type='submit'
+          color="primary"
+          variant="contained"
+          type="submit"
         >
-          <IntlMessages id='common.saveChanges' />
+          <IntlMessages id="common.saveChanges" />
         </Button>
         <Button
           sx={{
@@ -45,11 +45,11 @@ const Notification = () => {
             minWidth: 100,
             ml: 2.5,
           }}
-          color='primary'
-          variant='outlined'
-          type='cancel'
+          color="primary"
+          variant="outlined"
+          type="cancel"
         >
-          <IntlMessages id='common.cancel' />
+          <IntlMessages id="common.cancel" />
         </Button>
       </Box>
     </Box>

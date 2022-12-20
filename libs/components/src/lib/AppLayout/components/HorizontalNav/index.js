@@ -4,12 +4,11 @@ import HorizontalCollapse from './HorizontalCollapse';
 import HorizontalItem from './HorizontalItem';
 import Divider from '@mui/material/Divider';
 import List from '@mui/material/List';
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 
-
-const HorizontalNav = ({routesConfig}) => {
+const HorizontalNav = ({ routesConfig }) => {
   return (
-    <List className='navbarNav'>
+    <List className="navbarNav">
       {routesConfig.map((item) => (
         <React.Fragment key={item.id}>
           {item.type === 'group' && (
@@ -24,7 +23,7 @@ const HorizontalNav = ({routesConfig}) => {
             <HorizontalItem item={item} nestedLevel={0} />
           )}
 
-          {item.type === 'divider' && <Divider sx={{my: 5}} />}
+          {item.type === 'divider' && <Divider sx={{ my: 5 }} />}
         </React.Fragment>
       ))}
     </List>
@@ -33,5 +32,5 @@ const HorizontalNav = ({routesConfig}) => {
 
 export default HorizontalNav;
 HorizontalNav.propsTypes = {
-    routesConfig: PropTypes.array.isRequired,
-}
+  routesConfig: PropTypes.array.isRequired,
+};

@@ -1,13 +1,13 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import UserInfo from './UserInfo';
 import PropTypes from 'prop-types';
 import ChatTabs from './ChatTabs';
 import Box from '@mui/material/Box';
 import moment from 'moment';
-import {Zoom} from '@mui/material';
-import {useIntl} from 'react-intl';
+import { Zoom } from '@mui/material';
+import { useIntl } from 'react-intl';
 import AppSearchBar from '@crema/components/AppSearchBar';
-import {useAuthUser} from '@crema/utility/AuthHooks';
+import { useAuthUser } from '@crema/utility/AuthHooks';
 
 const ChatSideBar = ({
   selectedUser,
@@ -16,12 +16,12 @@ const ChatSideBar = ({
   loading,
 }) => {
   const [keywords, setKeywords] = useState('');
-  const {user} = useAuthUser();
+  const { user } = useAuthUser();
 
   const getConnectionList = () => {
     if (keywords !== '') {
       return connectionList.filter((item) =>
-        item.name.toUpperCase().includes(keywords.toUpperCase()),
+        item.name.toUpperCase().includes(keywords.toUpperCase())
       );
     }
     return connectionList;
@@ -31,7 +31,7 @@ const ChatSideBar = ({
     let chatsList = connectionList.filter((item) => item.lastMessage);
     if (keywords !== '') {
       chatsList = chatsList.filter((item) =>
-        item.name.toUpperCase().includes(keywords.toUpperCase()),
+        item.name.toUpperCase().includes(keywords.toUpperCase())
       );
     }
     chatsList.sort((a, b) => {
@@ -46,7 +46,7 @@ const ChatSideBar = ({
 
   const chatListData = getChatList();
 
-  const {messages} = useIntl();
+  const { messages } = useIntl();
 
   return (
     <Box
@@ -56,7 +56,7 @@ const ChatSideBar = ({
         flexDirection: 'column',
       }}
     >
-      <Zoom in style={{transitionDelay: '300ms'}}>
+      <Zoom in style={{ transitionDelay: '300ms' }}>
         <Box
           sx={{
             px: 5,
@@ -88,7 +88,7 @@ const ChatSideBar = ({
               },
             },
           }}
-          iconPosition='right'
+          iconPosition="right"
           overlap={false}
           value={keywords}
           onChange={(e) => setKeywords(e.target.value)}

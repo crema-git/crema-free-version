@@ -1,23 +1,23 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import AppsContainer from '@crema/components/AppsContainer';
-import {useIntl} from 'react-intl';
-import {Button, Hidden} from '@mui/material';
+import { useIntl } from 'react-intl';
+import { Button, Hidden } from '@mui/material';
 import AppsHeader from '@crema/components/AppsHeader';
 import AppsContent from '@crema/components/AppsContent';
 import AppsPagination from '@crema/components/AppsPagination';
 import Box from '@mui/material/Box';
 import AppInfoView from '@crema/components/AppInfoView';
 import AppSearchBar from '@crema/components/AppSearchBar';
-import {useGetDataApi} from '@crema/utility/APIHooks';
-import {CustomerTable} from '@crema/modules/ecommerce/Customers';
+import { useGetDataApi } from '@crema/utility/APIHooks';
+import { CustomerTable } from '@crema/modules/ecommerce/Customers';
 
 const Customers = () => {
-  const {messages} = useIntl();
+  const { messages } = useIntl();
   const [
     {
-      apiData: {customers, customerCount},
+      apiData: { customers, customerCount },
     },
-    {setQueryParams},
+    { setQueryParams },
   ] = useGetDataApi('/api/ecommerce/customers', {}, {}, false);
 
   const [page, setPage] = useState(0);
@@ -27,7 +27,7 @@ const Customers = () => {
     setPage(value);
   };
   useEffect(() => {
-    setQueryParams({search, page});
+    setQueryParams({ search, page });
   }, [search, page]);
 
   const onSearchCustomer = (e) => {
@@ -48,7 +48,7 @@ const Customers = () => {
             }}
           >
             <AppSearchBar
-              iconPosition='right'
+              iconPosition="right"
               overlap={false}
               onChange={(event) => onSearchCustomer(event.target.value)}
               placeholder={messages['common.searchHere']}
@@ -61,7 +61,7 @@ const Customers = () => {
                 ml: 'auto',
               }}
             >
-              <Button variant='contained' color='primary'>
+              <Button variant="contained" color="primary">
                 Add Customer
               </Button>
 

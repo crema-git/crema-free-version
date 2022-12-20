@@ -7,10 +7,10 @@ import Avatar from '@mui/material/Avatar';
 import CancelIcon from '@mui/icons-material/Cancel';
 import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
-import {Fonts} from '@crema/constants/AppEnums'
-import {styled} from '@mui/material/styles';
-import {useInfoViewActionsContext} from '@crema/context/InfoViewContextProvider';
-import {postDataApi, putDataApi} from '@crema/utility/APIHooks';
+import { Fonts } from '@crema/constants/AppEnums';
+import { styled } from '@mui/material/styles';
+import { useInfoViewActionsContext } from '@crema/context/InfoViewContextProvider';
+import { postDataApi, putDataApi } from '@crema/utility/APIHooks';
 
 const StyledTableCell = styled(TableCell)(() => ({
   fontSize: 14,
@@ -22,7 +22,7 @@ const StyledTableCell = styled(TableCell)(() => ({
     paddingRight: 20,
   },
 }));
-const TableItem = ({data, setTableData}) => {
+const TableItem = ({ data, setTableData }) => {
   const infoViewActionsContext = useInfoViewActionsContext();
 
   const onRemoveItem = (product) => {
@@ -40,7 +40,7 @@ const TableItem = ({data, setTableData}) => {
   const onDecrement = () => {
     if (data.count > 0) {
       putDataApi('/api/cart/update', infoViewActionsContext, {
-        product: {...data, count: data.count - 1},
+        product: { ...data, count: data.count - 1 },
       })
         .then((data) => {
           setTableData(data);
@@ -62,7 +62,7 @@ const TableItem = ({data, setTableData}) => {
   };
   const onIncrement = () => {
     putDataApi('/api/cart/update', infoViewActionsContext, {
-      product: {...data, count: data.count + 1},
+      product: { ...data, count: data.count + 1 },
     })
       .then((data) => {
         setTableData(data);
@@ -73,45 +73,45 @@ const TableItem = ({data, setTableData}) => {
   };
 
   return (
-    <TableRow key={data.name} className='item-hover'>
+    <TableRow key={data.name} className="item-hover">
       <StyledTableCell>
-        <Box display='flex'>
-          <Avatar sx={{mr: 3.5}} src={data.image} />
+        <Box display="flex">
+          <Avatar sx={{ mr: 3.5 }} src={data.image} />
           <Box>
             <Box fontSize={14} fontWeight={Fonts.MEDIUM}>
               {data.title}
             </Box>
-            <Box color='text.secondary' fontSize={14}>
+            <Box color="text.secondary" fontSize={14}>
               Brand: {data.brand}
             </Box>
           </Box>
         </Box>
       </StyledTableCell>
-      <StyledTableCell align='left' fontWeight={Fonts.MEDIUM}>
+      <StyledTableCell align="left" fontWeight={Fonts.MEDIUM}>
         ${+data.mrp - +data.discount}
       </StyledTableCell>
-      <StyledTableCell align='left'>
+      <StyledTableCell align="left">
         <Box
           border={1}
           borderRadius={4}
-          display='flex'
-          borderColor='text.secondary'
-          alignItems='center'
-          justifyContent='center'
+          display="flex"
+          borderColor="text.secondary"
+          alignItems="center"
+          justifyContent="center"
           width={100}
           height={36}
         >
-          <AddIcon className='pointer' onClick={onIncrement} />
-          <Box component='span' px={3}>
+          <AddIcon className="pointer" onClick={onIncrement} />
+          <Box component="span" px={3}>
             {data.count}
           </Box>
-          <RemoveIcon className='pointer' onClick={onDecrement} />
+          <RemoveIcon className="pointer" onClick={onDecrement} />
         </Box>
       </StyledTableCell>
-      <StyledTableCell align='left' fontWeight={Fonts.MEDIUM}>
+      <StyledTableCell align="left" fontWeight={Fonts.MEDIUM}>
         ${(+data.mrp - +data.discount) * +data.count}
       </StyledTableCell>
-      <StyledTableCell component='th' scope='row'>
+      <StyledTableCell component="th" scope="row">
         <CancelIcon onClick={() => onRemoveItem(data)} />
       </StyledTableCell>
     </TableRow>

@@ -1,8 +1,8 @@
-import React, {useState} from 'react';
-import {styled} from '@mui/material/styles';
+import React, { useState } from 'react';
+import { styled } from '@mui/material/styles';
 import Index from '../../../ChatSideBar/UserInfo';
 import Box from '@mui/material/Box';
-import {alpha, Checkbox, IconButton} from '@mui/material';
+import { alpha, Checkbox, IconButton } from '@mui/material';
 import IntlMessages from '@crema/utility/IntlMessages';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import Menu from '@mui/material/Menu';
@@ -15,7 +15,7 @@ import PhoneOutlinedIcon from '@mui/icons-material/PhoneOutlined';
 import VideocamOutlinedIcon from '@mui/icons-material/VideocamOutlined';
 import AppTooltip from '@crema/components/AppTooltip';
 
-const ChatHeaderWrapper = styled(Box)(({theme}) => ({
+const ChatHeaderWrapper = styled(Box)(({ theme }) => ({
   position: 'relative',
   paddingLeft: 10,
   paddingRight: 10,
@@ -30,7 +30,7 @@ const ChatHeaderWrapper = styled(Box)(({theme}) => ({
   },
 }));
 
-const Header = ({selectedUser, deleteConversation}) => {
+const Header = ({ selectedUser, deleteConversation }) => {
   const [isMoreIcon, onOpenMoreIcon] = useState(null);
   const [isDeleteDialogOpen, setDeleteDialogOpen] = useState(false);
 
@@ -61,11 +61,11 @@ const Header = ({selectedUser, deleteConversation}) => {
           alignItems: 'center',
         }}
       >
-        <AppTooltip title={<IntlMessages id='chat.call' />}>
+        <AppTooltip title={<IntlMessages id="chat.call" />}>
           <Box
-            component='span'
+            component="span"
             sx={{
-              ml: {xs: 2, md: 3.5},
+              ml: { xs: 2, md: 3.5 },
               color: 'text.disabled',
             }}
           >
@@ -76,18 +76,18 @@ const Header = ({selectedUser, deleteConversation}) => {
                 color: (theme) => theme.palette.text.secondary,
                 padding: 2,
               }}
-              size='large'
+              size="large"
             >
               <PhoneOutlinedIcon />
             </IconButton>
           </Box>
         </AppTooltip>
 
-        <AppTooltip title={<IntlMessages id='wall.videoCall' />}>
+        <AppTooltip title={<IntlMessages id="wall.videoCall" />}>
           <Box
-            component='span'
+            component="span"
             sx={{
-              ml: {xs: 2, md: 3.5},
+              ml: { xs: 2, md: 3.5 },
               color: 'text.disabled',
             }}
           >
@@ -98,7 +98,7 @@ const Header = ({selectedUser, deleteConversation}) => {
                 color: (theme) => theme.palette.text.secondary,
                 padding: 2,
               }}
-              size='large'
+              size="large"
             >
               <VideocamOutlinedIcon />
             </IconButton>
@@ -106,9 +106,9 @@ const Header = ({selectedUser, deleteConversation}) => {
         </AppTooltip>
 
         <Box
-          component='span'
+          component="span"
           sx={{
-            ml: {xs: 2, md: 3.5},
+            ml: { xs: 2, md: 3.5 },
             color: 'text.disabled',
           }}
         >
@@ -127,11 +127,11 @@ const Header = ({selectedUser, deleteConversation}) => {
           />
         </Box>
 
-        <AppTooltip title={<IntlMessages id='common.more' />}>
+        <AppTooltip title={<IntlMessages id="common.more" />}>
           <Box
-            component='span'
+            component="span"
             sx={{
-              ml: {xs: 2, md: 3.5},
+              ml: { xs: 2, md: 3.5 },
               color: 'text.disabled',
             }}
           >
@@ -143,7 +143,7 @@ const Header = ({selectedUser, deleteConversation}) => {
                 padding: 2,
               }}
               onClick={onViewMoreOpen}
-              size='large'
+              size="large"
             >
               <MoreVertIcon />
             </IconButton>
@@ -157,13 +157,13 @@ const Header = ({selectedUser, deleteConversation}) => {
         onClose={onViewMoreClose}
       >
         <MenuItem onClick={toggleDeleteDialog}>
-          <IntlMessages id='chatApp.deleteConversation' />
+          <IntlMessages id="chatApp.deleteConversation" />
         </MenuItem>
         <MenuItem onClick={onViewMoreClose}>
-          <IntlMessages id='chatApp.mute' />
+          <IntlMessages id="chatApp.mute" />
         </MenuItem>
         <MenuItem onClick={onViewMoreClose}>
-          <IntlMessages id='chatApp.hide' />
+          <IntlMessages id="chatApp.hide" />
         </MenuItem>
       </Menu>
 
@@ -171,8 +171,8 @@ const Header = ({selectedUser, deleteConversation}) => {
         open={isDeleteDialogOpen}
         onDeny={setDeleteDialogOpen}
         onConfirm={onDeleteConversation}
-        title={<IntlMessages id='chatApp.deleteTitle' />}
-        dialogTitle={<IntlMessages id='chatApp.deleteContent' />}
+        title={<IntlMessages id="chatApp.deleteTitle" />}
+        dialogTitle={<IntlMessages id="chatApp.deleteContent" />}
       />
     </ChatHeaderWrapper>
   );

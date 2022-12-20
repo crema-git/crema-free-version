@@ -7,10 +7,10 @@ import Drawer from '@mui/material/Drawer';
 import VerticalNav from '../../components/VerticalNav';
 import StandardSidebarWrapper from './StandardSidebarWrapper';
 import UserInfo from '../../components/UserInfo';
-import {useSidebarContext} from "@crema/context/SidebarContextProvider";
+import { useSidebarContext } from '@crema/context/SidebarContextProvider';
 
 const AppSidebar = (props) => {
-  const {sidebarTextColor} = useSidebarContext();
+  const { sidebarTextColor } = useSidebarContext();
 
   return (
     <>
@@ -22,9 +22,9 @@ const AppSidebar = (props) => {
           root: clsx(props.variant),
           paper: clsx(props.variant),
         }}
-        style={{position: 'absolute'}}
+        style={{ position: 'absolute' }}
       >
-        <StandardSidebarWrapper className='standard-sidebar'>
+        <StandardSidebarWrapper className="standard-sidebar">
           <MainSidebar>
             <UserInfo color={sidebarTextColor} />
             <AppScrollbar
@@ -34,7 +34,7 @@ const AppSidebar = (props) => {
               }}
               scrollToTop={false}
             >
-               <VerticalNav routesConfig={props.routesConfig} />
+              <VerticalNav routesConfig={props.routesConfig} />
             </AppScrollbar>
           </MainSidebar>
         </StandardSidebarWrapper>

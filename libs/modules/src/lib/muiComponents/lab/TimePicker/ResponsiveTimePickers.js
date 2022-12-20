@@ -9,14 +9,14 @@ import DesktopTimePicker from '@mui/lab/DesktopTimePicker';
 
 export default function ResponsiveTimePickers() {
   const [value, setValue] = React.useState(
-    new Date('2018-01-01T00:00:00.000Z'),
+    new Date('2018-01-01T00:00:00.000Z')
   );
 
   return (
     <LocalizationProvider dateAdapter={AdapterDateFns}>
       <Stack spacing={3}>
         <MobileTimePicker
-          label='For mobile'
+          label="For mobile"
           value={value}
           onChange={(newValue) => {
             setValue(newValue);
@@ -24,7 +24,7 @@ export default function ResponsiveTimePickers() {
           renderInput={(params) => <TextField {...params} />}
         />
         <DesktopTimePicker
-          label='For desktop'
+          label="For desktop"
           value={value}
           onChange={(newValue) => {
             setValue(newValue);

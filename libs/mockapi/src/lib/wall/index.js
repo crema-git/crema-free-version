@@ -1,5 +1,5 @@
 import mock from '../MockConfig';
-import {postsList, wallData} from '../../fakedb/apps/wall';
+import { postsList, wallData } from '../../fakedb/apps/wall';
 
 let posts = postsList;
 
@@ -8,7 +8,7 @@ mock.onGet('/wall').reply(200, wallData);
 mock.onGet('/wall/posts').reply(200, posts);
 
 mock.onPost('/wall/posts').reply((request) => {
-  const {post} = JSON.parse(request.data);
+  const { post } = JSON.parse(request.data);
   const newPost = {
     id: Math.floor(Math.random() * 10000),
     date: new Date().toString(),
@@ -23,7 +23,7 @@ mock.onPost('/wall/posts').reply((request) => {
 });
 
 mock.onPut('/wall/posts').reply((request) => {
-  const {postId, status} = JSON.parse(request.data);
+  const { postId, status } = JSON.parse(request.data);
   const post = posts.find((item) => item.id === postId);
   post.liked = status;
   if (status) {
@@ -36,7 +36,7 @@ mock.onPut('/wall/posts').reply((request) => {
 });
 
 mock.onPost('/wall/posts/comments').reply((request) => {
-  const {postId, comment} = JSON.parse(request.data);
+  const { postId, comment } = JSON.parse(request.data);
   const post = posts.find((item) => item.id === postId);
   const newComment = {
     id: Math.floor(Math.random() * 10000),

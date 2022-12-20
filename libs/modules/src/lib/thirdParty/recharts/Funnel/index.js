@@ -11,14 +11,14 @@ const FunnelChart = () => {
   return (
     <>
       <AppComponentHeader
-        title='Funnel Chart'
-        refUrl='http://recharts.org/en-US/api/FunnelChart/'
+        title="Funnel Chart"
+        refUrl="http://recharts.org/en-US/api/FunnelChart/"
       />
 
       <AppGridContainer>
         <Grid item xs={12} lg={12}>
           <AppComponentCard
-            title='Simple FunnelChart'
+            title="Simple FunnelChart"
             component={SimpleFunnel}
             source={SimpleFunnelSource}
           />

@@ -10,9 +10,9 @@ const FroalaEditor = () => {
   return (
     <>
       <AppComponentHeader
-        title='Froala WYSIWYG Editor'
-        description='React JS Froala WYSIWYG Editor'
-        refUrl='https://froala.com/wysiwyg-editor/docs/framework-plugins/react/'
+        title="Froala WYSIWYG Editor"
+        description="React JS Froala WYSIWYG Editor"
+        refUrl="https://froala.com/wysiwyg-editor/docs/framework-plugins/react/"
       />
 
       <AppGridContainer>

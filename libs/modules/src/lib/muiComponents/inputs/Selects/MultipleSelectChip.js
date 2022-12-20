@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {useTheme} from '@mui/material/styles';
+import { useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import OutlinedInput from '@mui/material/OutlinedInput';
 import InputLabel from '@mui/material/InputLabel';
@@ -47,27 +47,27 @@ export default function MultipleSelectChip() {
 
   const handleChange = (event) => {
     const {
-      target: {value},
+      target: { value },
     } = event;
     setPersonName(
       // On autofill we get a the stringified value.
-      typeof value === 'string' ? value.split(',') : value,
+      typeof value === 'string' ? value.split(',') : value
     );
   };
 
   return (
     <div>
-      <FormControl sx={{m: 1, width: 300}}>
-        <InputLabel id='demo-multiple-chip-label'>Chip</InputLabel>
+      <FormControl sx={{ m: 1, width: 300 }}>
+        <InputLabel id="demo-multiple-chip-label">Chip</InputLabel>
         <Select
-          labelId='demo-multiple-chip-label'
-          id='demo-multiple-chip'
+          labelId="demo-multiple-chip-label"
+          id="demo-multiple-chip"
           multiple
           value={personName}
           onChange={handleChange}
-          input={<OutlinedInput id='select-multiple-chip' label='Chip' />}
+          input={<OutlinedInput id="select-multiple-chip" label="Chip" />}
           renderValue={(selected) => (
-            <Box sx={{display: 'flex', flexWrap: 'wrap', gap: 0.5}}>
+            <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 0.5 }}>
               {selected.map((value) => (
                 <Chip key={value} label={value} />
               ))}

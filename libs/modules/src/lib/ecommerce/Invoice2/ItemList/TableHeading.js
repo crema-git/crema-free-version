@@ -2,8 +2,8 @@ import React from 'react';
 import TableCell from '@mui/material/TableCell';
 import IntlMessages from '@crema/utility/IntlMessages';
 import TableRow from '@mui/material/TableRow';
-import {Box} from '@mui/material';
-import {Fonts} from '@crema/constants/AppEnums'
+import { Box } from '@mui/material';
+import { Fonts } from '@crema/constants/AppEnums';
 
 const TableHeading = () => {
   return (
@@ -16,7 +16,7 @@ const TableHeading = () => {
             fontWeight: Fonts.BOLD,
           }}
         >
-          <IntlMessages id='invoice.itemDesc' />
+          <IntlMessages id="invoice.itemDesc" />
         </Box>
       </TableCell>
       <TableCell>
@@ -28,7 +28,7 @@ const TableHeading = () => {
             fontWeight: Fonts.BOLD,
           }}
         >
-          <IntlMessages id='invoice.assignment' />
+          <IntlMessages id="invoice.assignment" />
         </Box>
       </TableCell>
       <TableCell>
@@ -40,7 +40,7 @@ const TableHeading = () => {
             fontWeight: Fonts.BOLD,
           }}
         >
-          <IntlMessages id='invoice.quantity' />
+          <IntlMessages id="invoice.quantity" />
         </Box>
       </TableCell>
       <TableCell>
@@ -52,7 +52,7 @@ const TableHeading = () => {
             fontWeight: Fonts.BOLD,
           }}
         >
-          <IntlMessages id='ecommerce.exclusivePrice' />
+          <IntlMessages id="ecommerce.exclusivePrice" />
         </Box>
       </TableCell>
     </TableRow>

@@ -1,2 +1,2 @@
-import {StyledSignup} from '@crema/modules/userPages';
+import { StyledSignup } from '@crema/modules/userPages';
 export default StyledSignup;

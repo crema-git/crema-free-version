@@ -4,7 +4,7 @@ import 'froala-editor/js/plugins/align.min.js';
 import 'froala-editor/js/froala_editor.pkgd.min.js';
 import 'froala-editor/css/froala_editor.pkgd.min.css';
 import FroalaEditor from 'react-froala-wysiwyg';
-import {Box} from '@mui/material';
+import { Box } from '@mui/material';
 
 const SampleEditor = () => {
   return (

@@ -8,10 +8,14 @@ import Box from '@mui/material/Box';
 import PropTypes from 'prop-types';
 import AppsStarredIcon from '@crema/components/AppsStarredIcon';
 import Avatar from '@mui/material/Avatar';
-import {AttachmentWrapper, AvatarWrapper, MailMobileItemWrapper,} from './index.styles';
+import {
+  AttachmentWrapper,
+  AvatarWrapper,
+  MailMobileItemWrapper,
+} from './index.styles';
 import CheckOutlinedIcon from '@mui/icons-material/CheckOutlined';
-import {Fonts} from '@crema/constants/AppEnums'
-import {getStringFromHtml} from "@crema/helpers";
+import { Fonts } from '@crema/constants/AppEnums';
+import { getStringFromHtml } from '@crema/helpers';
 
 const MailListItemMobile = (props) => {
   const {
@@ -102,7 +106,7 @@ const MailListItemMobile = (props) => {
             <CheckOutlinedIcon />
           ) : (
             <Avatar
-              className='avatar'
+              className="avatar"
               alt={getSenderName()}
               src={getSenderImage()}
             />
@@ -175,7 +179,7 @@ const MailListItemMobile = (props) => {
           }}
         >
           <Box
-            component='span'
+            component="span"
             sx={{
               fontWeight: Fonts.MEDIUM,
               fontSize: 12,
@@ -186,7 +190,7 @@ const MailListItemMobile = (props) => {
           </Box>
 
           <Box
-            component='span'
+            component="span"
             sx={{
               mt: 'auto',
             }}

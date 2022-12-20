@@ -41,110 +41,110 @@ const Dialog = () => {
   return (
     <>
       <AppComponentHeader
-        title='Dialog'
-        description='Dialogs inform users about a task and can contain critical information, require decisions, or involve multiple tasks.'
-        refUrl='https://mui.com/components/dialogs/'
+        title="Dialog"
+        description="Dialogs inform users about a task and can contain critical information, require decisions, or involve multiple tasks."
+        refUrl="https://mui.com/components/dialogs/"
       />
 
       <AppGridContainer>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Alert Dialog'
+            title="Alert Dialog"
             component={AlertDialog}
             source={AlertDialogSource}
             noScrollbar
-            description='Simple dialogs can provide additional details or actions about a list item. For example, they can display avatars, icons, clarifying subtext, or orthogonal actions (such as adding an account).'
+            description="Simple dialogs can provide additional details or actions about a list item. For example, they can display avatars, icons, clarifying subtext, or orthogonal actions (such as adding an account)."
           />
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Alert Dialog Slide'
+            title="Alert Dialog Slide"
             component={AlertDialogSlide}
             source={AlertDialogSlideSource}
             noScrollbar
-            description='Simple dialogs can provide additional details or actions about a list item. For example, they can display avatars, icons, clarifying subtext, or orthogonal actions (such as adding an account).'
+            description="Simple dialogs can provide additional details or actions about a list item. For example, they can display avatars, icons, clarifying subtext, or orthogonal actions (such as adding an account)."
           />
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Form Dialog'
+            title="Form Dialog"
             component={FormDialog}
             source={FormDialogSource}
             noScrollbar
-            description='Simple dialogs can provide additional details or actions about a list item. For example, they can display avatars, icons, clarifying subtext, or orthogonal actions (such as adding an account).'
+            description="Simple dialogs can provide additional details or actions about a list item. For example, they can display avatars, icons, clarifying subtext, or orthogonal actions (such as adding an account)."
           />
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Customized Dialogs'
+            title="Customized Dialogs"
             component={CustomizedDialogs}
             source={CustomizedDialogsSource}
             noScrollbar
-            description='Simple dialogs can provide additional details or actions about a list item. For example, they can display avatars, icons, clarifying subtext, or orthogonal actions (such as adding an account).'
+            description="Simple dialogs can provide additional details or actions about a list item. For example, they can display avatars, icons, clarifying subtext, or orthogonal actions (such as adding an account)."
           />
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='FullScreen Dialogs'
+            title="FullScreen Dialogs"
             component={FullScreenDialog}
             source={FullScreenDialogSource}
             noScrollbar
-            description='Simple dialogs can provide additional details or actions about a list item. For example, they can display avatars, icons, clarifying subtext, or orthogonal actions (such as adding an account).'
+            description="Simple dialogs can provide additional details or actions about a list item. For example, they can display avatars, icons, clarifying subtext, or orthogonal actions (such as adding an account)."
           />
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Max Width Dialog'
+            title="Max Width Dialog"
             component={MaxWidthDialog}
             source={MaxWidthDialogSource}
             noScrollbar
-            description='Simple dialogs can provide additional details or actions about a list item. For example, they can display avatars, icons, clarifying subtext, or orthogonal actions (such as adding an account).'
+            description="Simple dialogs can provide additional details or actions about a list item. For example, they can display avatars, icons, clarifying subtext, or orthogonal actions (such as adding an account)."
           />
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Responsive Dialog'
+            title="Responsive Dialog"
             component={ResponsiveDialog}
             source={ResponsiveDialogSource}
             noScrollbar
-            description='Simple dialogs can provide additional details or actions about a list item. For example, they can display avatars, icons, clarifying subtext, or orthogonal actions (such as adding an account).'
+            description="Simple dialogs can provide additional details or actions about a list item. For example, they can display avatars, icons, clarifying subtext, or orthogonal actions (such as adding an account)."
           />
         </Grid>
 
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='DraggableDialog'
+            title="DraggableDialog"
             component={DraggableDialog}
             source={DraggableDialogSource}
             noScrollbar
-            description='Simple dialogs can provide additional details or actions about a list item. For example, they can display avatars, icons, clarifying subtext, or orthogonal actions (such as adding an account).'
+            description="Simple dialogs can provide additional details or actions about a list item. For example, they can display avatars, icons, clarifying subtext, or orthogonal actions (such as adding an account)."
           />
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Scroll Dialog'
+            title="Scroll Dialog"
             component={ScrollDialog}
             source={ScrollDialogSource}
             noScrollbar
-            description='Simple dialogs can provide additional details or actions about a list item. For example, they can display avatars, icons, clarifying subtext, or orthogonal actions (such as adding an account).'
+            description="Simple dialogs can provide additional details or actions about a list item. For example, they can display avatars, icons, clarifying subtext, or orthogonal actions (such as adding an account)."
           />
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Simple Dialog'
+            title="Simple Dialog"
             component={SimpleDialog}
             source={SimpleDialogSource}
             noScrollbar
-            description='Simple dialogs can provide additional details or actions about a list item. For example, they can display avatars, icons, clarifying subtext, or orthogonal actions (such as adding an account).'
+            description="Simple dialogs can provide additional details or actions about a list item. For example, they can display avatars, icons, clarifying subtext, or orthogonal actions (such as adding an account)."
           />
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='ConfirmationDialog'
+            title="ConfirmationDialog"
             component={ConfirmationDialog}
             source={ConfirmationDialogSource}
             noScrollbar
-            description='Simple dialogs can provide additional details or actions about a list item. For example, they can display avatars, icons, clarifying subtext, or orthogonal actions (such as adding an account).'
+            description="Simple dialogs can provide additional details or actions about a list item. For example, they can display avatars, icons, clarifying subtext, or orthogonal actions (such as adding an account)."
           />
         </Grid>
       </AppGridContainer>

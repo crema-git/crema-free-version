@@ -5,7 +5,7 @@ const DailyMotion = () => {
   return (
     <ReactPlayer
       controls={true}
-      url='https://www.dailymotion.com/video/x5e9eog'
+      url="https://www.dailymotion.com/video/x5e9eog"
     />
   );
 };

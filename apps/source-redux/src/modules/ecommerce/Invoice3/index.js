@@ -3,18 +3,18 @@ import AppAnimate from '@crema/components/AppAnimate';
 import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
 import AppTableContainer from '@crema/components/AppTableContainer';
-import {Fonts} from '@crema/constants/AppEnums'
+import { Fonts } from '@crema/constants/AppEnums';
 import IntlMessages from '@crema/utility/IntlMessages';
 import TableBody from '@mui/material/TableBody';
 import TableRow from '@mui/material/TableRow';
 import TableCell from '@mui/material/TableCell';
-import {Typography} from '@mui/material';
-import {Header, ItemList} from '@crema/modules/ecommerce/Invoice3';
-import {invoiceData} from "@crema/fakedb/extraPages"
+import { Typography } from '@mui/material';
+import { Header, ItemList } from '@crema/modules/ecommerce/Invoice3';
+import { invoiceData } from '@crema/fakedb/extraPages';
 
 const Invoice3 = () => {
   return (
-    <AppAnimate animation='transition.slideUpIn' delay={200}>
+    <AppAnimate animation="transition.slideUpIn" delay={200}>
       <Box
         sx={{
           flex: 1,
@@ -23,19 +23,19 @@ const Invoice3 = () => {
           alignItems: 'center',
         }}
       >
-        <Box sx={{flex: 1, maxWidth: 900, width: '100%'}}>
+        <Box sx={{ flex: 1, maxWidth: 900, width: '100%' }}>
           <Card
             sx={{
-              py: {xs: 6, xl: 8},
+              py: { xs: 6, xl: 8 },
               minHeight: 1200,
               display: 'flex',
               flexDirection: 'column',
             }}
           >
-            <Box sx={{px: {xs: 6, xl: 8}}}>
+            <Box sx={{ px: { xs: 6, xl: 8 } }}>
               <Header />
             </Box>
-            <Box sx={{mb: 5}}>
+            <Box sx={{ mb: 5 }}>
               <AppTableContainer>
                 <ItemList />
               </AppTableContainer>
@@ -45,19 +45,19 @@ const Invoice3 = () => {
               sx={{
                 mt: 'auto',
                 display: 'flex',
-                flexDirection: {xs: 'column', md: 'row'},
-                justifyContent: {md: 'space-between'},
+                flexDirection: { xs: 'column', md: 'row' },
+                justifyContent: { md: 'space-between' },
                 borderTop: (theme) => `solid 1px ${theme.palette.divider}`,
                 pt: 4,
               }}
             >
               <Box
                 sx={{
-                  px: {xs: 6, xl: 8},
+                  px: { xs: 6, xl: 8 },
                 }}
               >
                 <Box
-                  component='h4'
+                  component="h4"
                   sx={{
                     mb: 5,
                     color: 'text.secondary',
@@ -65,26 +65,26 @@ const Invoice3 = () => {
                     fontWeight: Fonts.MEDIUM,
                   }}
                 >
-                  <IntlMessages id='invoice.thankYou' />
+                  <IntlMessages id="invoice.thankYou" />
                 </Box>
                 <Box
                   sx={{
-                    display: {xs: 'flex', md: 'inherit'},
-                    flexDirection: {xs: 'column', md: 'inherit'},
-                    alignItems: {xs: 'center', md: 'inherit'},
-                    justifyContent: {xs: 'center', md: 'inherit'},
-                    mb: {xs: 5, md: 0},
+                    display: { xs: 'flex', md: 'inherit' },
+                    flexDirection: { xs: 'column', md: 'inherit' },
+                    alignItems: { xs: 'center', md: 'inherit' },
+                    justifyContent: { xs: 'center', md: 'inherit' },
+                    mb: { xs: 5, md: 0 },
                   }}
                 >
                   <Typography
-                    component='h3'
+                    component="h3"
                     sx={{
                       fontSize: 16,
                       fontWeight: Fonts.BOLD,
                       mb: 3,
                     }}
                   >
-                    <IntlMessages id='invoice.paymentInfo' />
+                    <IntlMessages id="invoice.paymentInfo" />
                   </Typography>
                   <Box>
                     <Box
@@ -95,14 +95,14 @@ const Invoice3 = () => {
                       }}
                     >
                       <Box
-                        component='span'
+                        component="span"
                         sx={{
                           minWidth: 120,
                         }}
                       >
-                        <IntlMessages id='invoice.accountNumber' />:
+                        <IntlMessages id="invoice.accountNumber" />:
                       </Box>
-                      <Box component='span'>{invoiceData.accountNumber}</Box>
+                      <Box component="span">{invoiceData.accountNumber}</Box>
                     </Box>
                     <Box
                       sx={{
@@ -112,14 +112,14 @@ const Invoice3 = () => {
                       }}
                     >
                       <Box
-                        component='span'
+                        component="span"
                         sx={{
                           minWidth: 120,
                         }}
                       >
-                        <IntlMessages id='invoice.accountName' />:
+                        <IntlMessages id="invoice.accountName" />:
                       </Box>
-                      <Box component='span'>{invoiceData.accountName}</Box>
+                      <Box component="span">{invoiceData.accountName}</Box>
                     </Box>
                     <Box
                       sx={{
@@ -129,14 +129,14 @@ const Invoice3 = () => {
                       }}
                     >
                       <Box
-                        component='span'
+                        component="span"
                         sx={{
                           minWidth: 120,
                         }}
                       >
-                        <IntlMessages id='invoice.ifscCode' />:
+                        <IntlMessages id="invoice.ifscCode" />:
                       </Box>
-                      <Box component='span'>{invoiceData.ifscCode}</Box>
+                      <Box component="span">{invoiceData.ifscCode}</Box>
                     </Box>
                   </Box>
                 </Box>
@@ -150,15 +150,15 @@ const Invoice3 = () => {
               >
                 <AppTableContainer
                   sxStyle={{
-                    width: {xs: 'auto', md: '100%'},
+                    width: { xs: 'auto', md: '100%' },
                   }}
                 >
                   <TableBody>
                     <TableRow>
                       <TableCell
-                        component='th'
-                        scope='row'
-                        sx={{border: '0 none', px: {xs: 6, xl: 8}, py: 1}}
+                        component="th"
+                        scope="row"
+                        sx={{ border: '0 none', px: { xs: 6, xl: 8 }, py: 1 }}
                       >
                         <Box
                           sx={{
@@ -169,11 +169,11 @@ const Invoice3 = () => {
                             fontWeight: Fonts.REGULAR,
                           }}
                         >
-                          <IntlMessages id='invoice.subTotal' />:
+                          <IntlMessages id="invoice.subTotal" />:
                         </Box>
                       </TableCell>
                       <TableCell
-                        sx={{border: '0 none', px: {xs: 6, xl: 8}, py: 1}}
+                        sx={{ border: '0 none', px: { xs: 6, xl: 8 }, py: 1 }}
                       >
                         <Box
                           sx={{
@@ -189,9 +189,9 @@ const Invoice3 = () => {
 
                     <TableRow>
                       <TableCell
-                        component='th'
-                        scope='row'
-                        sx={{border: '0 none', px: {xs: 6, xl: 8}, py: 1}}
+                        component="th"
+                        scope="row"
+                        sx={{ border: '0 none', px: { xs: 6, xl: 8 }, py: 1 }}
                       >
                         <Box
                           sx={{
@@ -202,11 +202,11 @@ const Invoice3 = () => {
                             fontWeight: Fonts.REGULAR,
                           }}
                         >
-                          <IntlMessages id='invoice.discountAmount' />:
+                          <IntlMessages id="invoice.discountAmount" />:
                         </Box>
                       </TableCell>
                       <TableCell
-                        sx={{border: '0 none', px: {xs: 6, xl: 8}, py: 1}}
+                        sx={{ border: '0 none', px: { xs: 6, xl: 8 }, py: 1 }}
                       >
                         <Box
                           sx={{
@@ -222,11 +222,11 @@ const Invoice3 = () => {
 
                     <TableRow>
                       <TableCell
-                        component='th'
-                        scope='row'
+                        component="th"
+                        scope="row"
                         sx={{
                           border: '0 none',
-                          px: {xs: 6, xl: 8},
+                          px: { xs: 6, xl: 8 },
                           pt: 1,
                           pb: 5,
                         }}
@@ -240,13 +240,13 @@ const Invoice3 = () => {
                             fontWeight: Fonts.REGULAR,
                           }}
                         >
-                          <IntlMessages id='invoice.gSTTaxVAT' />:
+                          <IntlMessages id="invoice.gSTTaxVAT" />:
                         </Box>
                       </TableCell>
                       <TableCell
                         sx={{
                           border: '0 none',
-                          px: {xs: 6, xl: 8},
+                          px: { xs: 6, xl: 8 },
                           pt: 1,
                           pb: 5,
                         }}
@@ -265,11 +265,11 @@ const Invoice3 = () => {
 
                     <TableRow>
                       <TableCell
-                        component='th'
-                        scope='row'
+                        component="th"
+                        scope="row"
                         sx={{
                           border: '0 none',
-                          px: {xs: 6, xl: 8},
+                          px: { xs: 6, xl: 8 },
                           py: 2,
                         }}
                       >
@@ -281,13 +281,13 @@ const Invoice3 = () => {
                             fontWeight: Fonts.REGULAR,
                           }}
                         >
-                          <IntlMessages id='invoice.grandTotal' />:
+                          <IntlMessages id="invoice.grandTotal" />:
                         </Box>
                       </TableCell>
                       <TableCell
                         sx={{
                           border: '0 none',
-                          px: {xs: 6, xl: 8},
+                          px: { xs: 6, xl: 8 },
                           py: 2,
                         }}
                       >

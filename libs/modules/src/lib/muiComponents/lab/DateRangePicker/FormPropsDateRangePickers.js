@@ -14,8 +14,8 @@ export default function FormPropsDateRangePickers() {
       <Stack spacing={3}>
         <DateRangePicker
           disabled
-          startText='disabled start'
-          endText='disabled end'
+          startText="disabled start"
+          endText="disabled end"
           value={value}
           onChange={(newValue) => {
             setValue(newValue);
@@ -23,15 +23,15 @@ export default function FormPropsDateRangePickers() {
           renderInput={(startProps, endProps) => (
             <React.Fragment>
               <TextField {...startProps} />
-              <Box sx={{mx: 2}}> to </Box>
+              <Box sx={{ mx: 2 }}> to </Box>
               <TextField {...endProps} />
             </React.Fragment>
           )}
         />
         <DateRangePicker
           readOnly
-          startText='read-only start'
-          endText='read-only end'
+          startText="read-only start"
+          endText="read-only end"
           value={value}
           onChange={(newValue) => {
             setValue(newValue);
@@ -39,7 +39,7 @@ export default function FormPropsDateRangePickers() {
           renderInput={(startProps, endProps) => (
             <React.Fragment>
               <TextField {...startProps} />
-              <Box sx={{mx: 2}}> to </Box>
+              <Box sx={{ mx: 2 }}> to </Box>
               <TextField {...endProps} />
             </React.Fragment>
           )}

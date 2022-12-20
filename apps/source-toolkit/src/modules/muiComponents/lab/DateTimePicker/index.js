@@ -1,2 +1,2 @@
-import {DateTimePicker} from '@crema/modules/components/lab';
+import { DateTimePicker } from '@crema/modules/components/lab';
 export default DateTimePicker;

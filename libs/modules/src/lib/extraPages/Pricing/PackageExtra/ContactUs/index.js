@@ -1,8 +1,8 @@
 import React from 'react';
 import Box from '@mui/material/Box';
-import {Typography} from '@mui/material';
+import { Typography } from '@mui/material';
 import Button from '@mui/material/Button';
-import {BsArrowRightShort} from 'react-icons/bs';
+import { BsArrowRightShort } from 'react-icons/bs';
 import PropTypes from 'prop-types';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
@@ -10,15 +10,15 @@ import ListItemText from '@mui/material/ListItemText';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Switch from '@mui/material/Switch';
 
-const ContactUs = ({contactList}) => {
+const ContactUs = ({ contactList }) => {
   return (
     <Box>
       <Box>
         <Box>
-          <img src='/assets/images/extra-pages/price-global.svg' />
+          <img src="/assets/images/extra-pages/price-global.svg" />
         </Box>
         <Box>
-          <Typography component='h3'>Contact us!</Typography>
+          <Typography component="h3">Contact us!</Typography>
           <Button>
             Get Started <BsArrowRightShort />
           </Button>
@@ -45,13 +45,13 @@ const ContactUs = ({contactList}) => {
       </List>
       <Box>
         <FormControlLabel
-          value='Monthly Pricing'
-          control={<Switch color='primary' />}
-          label='Monthly Pricing'
-          labelPlacement='start'
+          value="Monthly Pricing"
+          control={<Switch color="primary" />}
+          label="Monthly Pricing"
+          labelPlacement="start"
         />
-        <Box component='span'>Yearly Pricing</Box>
-        <Box component='span'>/ save 17%</Box>
+        <Box component="span">Yearly Pricing</Box>
+        <Box component="span">/ save 17%</Box>
       </Box>
     </Box>
   );

@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import {Box} from '@mui/material';
+import { Box } from '@mui/material';
 
-const AppsHeader = ({children}) => {
+const AppsHeader = ({ children }) => {
   return (
     <Box
       sx={{
@@ -16,7 +16,7 @@ const AppsHeader = ({children}) => {
           xl: '12px 10px',
         },
       }}
-      className='apps-header'
+      className="apps-header"
     >
       {children}
     </Box>

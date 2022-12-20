@@ -1,30 +1,30 @@
-import React, {useState} from 'react';
-import {styled} from '@mui/material/styles';
+import React, { useState } from 'react';
+import { styled } from '@mui/material/styles';
 import AppCard from '@crema/components/AppCard';
 import AppGrid from '@crema/components/AppGrid';
-import {useIntl} from 'react-intl';
+import { useIntl } from 'react-intl';
 import MediaViewer from '@crema/components/AppMedialViewer';
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
 
-const StyledImage = styled('img')(({theme}) => ({
+const StyledImage = styled('img')(({ theme }) => ({
   borderRadius: theme.cardRadius,
   display: 'block',
   width: '100%',
   cursor: 'pointer',
 }));
 
-const Photos = ({photos}) => {
+const Photos = ({ photos }) => {
   const [index, setIndex] = useState(-1);
 
   const onClose = () => {
     setIndex(-1);
   };
-  const {messages} = useIntl();
+  const { messages } = useIntl();
 
   return (
     <AppCard
-      sxStyle={{mb: 8}}
+      sxStyle={{ mb: 8 }}
       title={messages['wall.photos']}
       action={messages['common.viewAll']}
     >
@@ -46,7 +46,7 @@ const Photos = ({photos}) => {
               className={clsx('card-hover')}
               key={index}
               src={photo.thumb}
-              alt='user'
+              alt="user"
             />
           )}
         />

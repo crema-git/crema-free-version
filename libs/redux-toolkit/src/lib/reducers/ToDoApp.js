@@ -91,7 +91,7 @@ const todoReducer = (state = initialState, action) => {
       const updatedList = state.taskList.map((task) => {
         if (taskIds.includes(task.id)) {
           return action.payload.find(
-            (selectedTask) => selectedTask.id === task.id,
+            (selectedTask) => selectedTask.id === task.id
           );
         } else {
           return task;
@@ -108,7 +108,7 @@ const todoReducer = (state = initialState, action) => {
       const updatedList = state.taskList.map((task) => {
         if (taskIds.includes(task.id)) {
           return action.payload.data.find(
-            (selectedTask) => selectedTask.id === task.id,
+            (selectedTask) => selectedTask.id === task.id
           );
         } else {
           return task;

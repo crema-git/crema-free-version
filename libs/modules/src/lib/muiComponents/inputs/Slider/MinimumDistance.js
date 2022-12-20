@@ -44,12 +44,12 @@ export default function MinimumDistanceSlider() {
   };
 
   return (
-    <Box sx={{width: 300}}>
+    <Box sx={{ width: 300 }}>
       <Slider
         getAriaLabel={() => 'Minimum distance'}
         value={value1}
         onChange={handleChange1}
-        valueLabelDisplay='auto'
+        valueLabelDisplay="auto"
         getAriaValueText={valuetext}
         disableSwap
       />
@@ -57,7 +57,7 @@ export default function MinimumDistanceSlider() {
         getAriaLabel={() => 'Minimum distance shift'}
         value={value2}
         onChange={handleChange2}
-        valueLabelDisplay='auto'
+        valueLabelDisplay="auto"
         getAriaValueText={valuetext}
         disableSwap
       />

@@ -14,26 +14,26 @@ const ClickawayListener = () => {
   return (
     <>
       <AppComponentHeader
-        title='Clickaway Listener'
-        description='Detect if a click event happened outside of an element. It listens for clicks that occur somewhere in the document.'
-        refUrl='https://mui.com/components/click-away-listener'
+        title="Clickaway Listener"
+        description="Detect if a click event happened outside of an element. It listens for clicks that occur somewhere in the document."
+        refUrl="https://mui.com/components/click-away-listener"
       />
 
       <AppGridContainer>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='ClickAway'
+            title="ClickAway"
             component={ClickAway}
             source={ClickAwaySource}
-            description='For instance, if you need to hide a menu dropdown when people click anywhere else on your page:
+            description="For instance, if you need to hide a menu dropdown when people click anywhere else on your page:
 
-'
+"
             noScrollbar
           />
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Portal Click Away'
+            title="Portal Click Away"
             component={PortalClickAway}
             source={PortalClickAwaySource}
             description='The following demo uses Portal to render the dropdown into a new "subtree" outside of current DOM hierarchy.
@@ -44,14 +44,14 @@ const ClickawayListener = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Portal Click Away'
+            title="Portal Click Away"
             component={PortalClickAway}
             source={PortalClickAwaySource}
-            description='By default, the component responds to the trailing events (click + touch end). However, you can configure it to respond to the leading events (mouse down + touch start).
+            description="By default, the component responds to the trailing events (click + touch end). However, you can configure it to respond to the leading events (mouse down + touch start).
 
 .
 
-'
+"
             noScrollbar
           />
         </Grid>

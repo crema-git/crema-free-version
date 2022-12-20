@@ -4,7 +4,7 @@ import Tooltip from '@mui/material/Tooltip';
 
 export default function NotInteractiveTooltips() {
   return (
-    <Tooltip title='Add' disableInteractive>
+    <Tooltip title="Add" disableInteractive>
       <Button>Not interactive</Button>
     </Tooltip>
   );

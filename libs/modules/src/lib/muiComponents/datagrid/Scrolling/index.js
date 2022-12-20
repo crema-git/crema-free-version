@@ -11,15 +11,15 @@ const Scrolling = () => {
   return (
     <>
       <AppComponentHeader
-        title='Scrolling'
-        description=' This section presents how to programmatically control the scroll.'
-        refUrl='https://mui.com/components/data-grid/scrolling/'
+        title="Scrolling"
+        description=" This section presents how to programmatically control the scroll."
+        refUrl="https://mui.com/components/data-grid/scrolling/"
       />
 
       <AppGridContainer>
         <Grid item xs={12}>
           <AppComponentCard
-            title='Scroll Play ground'
+            title="Scroll Play ground"
             component={ScrollPlayground}
             source={ScrollPlaygroundSource}
             noScrollbar

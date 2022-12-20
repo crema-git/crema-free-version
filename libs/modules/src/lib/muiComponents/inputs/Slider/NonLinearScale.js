@@ -31,8 +31,8 @@ export default function NonLinearSlider() {
   };
 
   return (
-    <Box sx={{width: 250}}>
-      <Typography id='non-linear-slider' gutterBottom>
+    <Box sx={{ width: 250 }}>
+      <Typography id="non-linear-slider" gutterBottom>
         Storage: {valueLabelFormat(calculateValue(value))}
       </Typography>
       <Slider
@@ -44,8 +44,8 @@ export default function NonLinearSlider() {
         getAriaValueText={valueLabelFormat}
         valueLabelFormat={valueLabelFormat}
         onChange={handleChange}
-        valueLabelDisplay='auto'
-        aria-labelledby='non-linear-slider'
+        valueLabelDisplay="auto"
+        aria-labelledby="non-linear-slider"
       />
     </Box>
   );

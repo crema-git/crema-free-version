@@ -1,2 +1,2 @@
-import {Overview} from '@crema/modules/components/datagrid';
+import { Overview } from '@crema/modules/components/datagrid';
 export default Overview;

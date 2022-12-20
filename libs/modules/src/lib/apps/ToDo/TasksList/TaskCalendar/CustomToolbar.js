@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import moment from 'moment';
 import 'react-big-calendar/lib/css/react-big-calendar.css';
 import CalendarViewMonthOutlinedIcon from '@mui/icons-material/CalendarViewMonthOutlined';
@@ -6,13 +6,13 @@ import ViewAgendaOutlinedIcon from '@mui/icons-material/ViewAgendaOutlined';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import PropTypes from 'prop-types';
-import {alpha, Box, Button, IconButton, Stack} from '@mui/material';
+import { alpha, Box, Button, IconButton, Stack } from '@mui/material';
 import AppTooltip from '@crema/components/AppTooltip';
-import {styled} from '@mui/material/styles';
+import { styled } from '@mui/material/styles';
 import clsx from 'clsx';
-import {Fonts} from '@crema/constants/AppEnums'
+import { Fonts } from '@crema/constants/AppEnums';
 
-const IconBtn = styled(IconButton)(({theme}) => {
+const IconBtn = styled(IconButton)(({ theme }) => {
   return {
     color: theme.palette.text.disabled,
     backgroundColor: alpha(theme.palette.primary.main, 0.05),
@@ -108,13 +108,13 @@ const CustomToolbar = (props) => {
           mb: 2,
         }}
       >
-        <Stack spacing={2} direction='row' sx={{alignItems: 'center'}}>
+        <Stack spacing={2} direction="row" sx={{ alignItems: 'center' }}>
           <IconBtn
             className={clsx({
               active: viewState === 'month',
             })}
           >
-            <AppTooltip title='Month'>
+            <AppTooltip title="Month">
               <CalendarViewMonthOutlinedIcon onClick={goToMonthView} />
             </AppTooltip>
           </IconBtn>
@@ -129,33 +129,33 @@ const CustomToolbar = (props) => {
               active: viewState === 'agenda',
             })}
           >
-            <AppTooltip title='Agenda'>
+            <AppTooltip title="Agenda">
               <ViewAgendaOutlinedIcon onClick={goToAgenda} />
             </AppTooltip>
           </IconBtn>
         </Stack>
 
-        <Box sx={{fontWeight: Fonts.SEMI_BOLD}}>
+        <Box sx={{ fontWeight: Fonts.SEMI_BOLD }}>
           {moment(props.date).format('DD/MM/YYYY')}
         </Box>
 
-        <Stack spacing={2} direction='row' sx={{alignItems: 'center'}}>
+        <Stack spacing={2} direction="row" sx={{ alignItems: 'center' }}>
           <IconButton>
-            <AppTooltip title='Next'>
+            <AppTooltip title="Next">
               <ArrowBackIosNewIcon onClick={goToBack} />
             </AppTooltip>
           </IconButton>
           <Button
-            sx={{maxHeight: 36}}
-            size='small'
-            color='primary'
-            variant='contained'
+            sx={{ maxHeight: 36 }}
+            size="small"
+            color="primary"
+            variant="contained"
             onClick={goToToday}
           >
             today
           </Button>
           <IconButton>
-            <AppTooltip title='Next'>
+            <AppTooltip title="Next">
               <ArrowForwardIosIcon onClick={goToNext} />
             </AppTooltip>
           </IconButton>

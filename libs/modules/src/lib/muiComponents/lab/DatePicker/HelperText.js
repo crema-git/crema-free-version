@@ -10,7 +10,7 @@ export default function HelperText() {
   return (
     <LocalizationProvider dateAdapter={AdapterDateFns}>
       <DatePicker
-        label='Helper text example'
+        label="Helper text example"
         value={value}
         onChange={(newValue) => {
           setValue(newValue);

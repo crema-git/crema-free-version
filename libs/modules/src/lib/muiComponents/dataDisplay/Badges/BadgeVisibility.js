@@ -32,38 +32,38 @@ export default function BadgeVisibility() {
       }}
     >
       <div>
-        <Badge color='secondary' badgeContent={count}>
+        <Badge color="secondary" badgeContent={count}>
           <MailIcon />
         </Badge>
         <ButtonGroup>
           <Button
-            aria-label='reduce'
+            aria-label="reduce"
             onClick={() => {
               setCount(Math.max(count - 1, 0));
             }}
           >
-            <RemoveIcon fontSize='small' />
+            <RemoveIcon fontSize="small" />
           </Button>
           <Button
-            aria-label='increase'
+            aria-label="increase"
             onClick={() => {
               setCount(count + 1);
             }}
           >
-            <AddIcon fontSize='small' />
+            <AddIcon fontSize="small" />
           </Button>
         </ButtonGroup>
       </div>
       <div>
-        <Badge color='secondary' variant='dot' invisible={invisible}>
+        <Badge color="secondary" variant="dot" invisible={invisible}>
           <MailIcon />
         </Badge>
         <FormControlLabel
-          sx={{color: 'text.primary'}}
+          sx={{ color: 'text.primary' }}
           control={
             <Switch checked={!invisible} onChange={handleBadgeVisibility} />
           }
-          label='Show Badge'
+          label="Show Badge"
         />
       </div>
     </Box>

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {styled, useTheme} from '@mui/material/styles';
+import { styled, useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Slider from '@mui/material/Slider';
@@ -45,7 +45,7 @@ const WallPaper = styled('div')({
   },
 });
 
-const Widget = styled('div')(({theme}) => ({
+const Widget = styled('div')(({ theme }) => ({
   padding: 16,
   borderRadius: 16,
   width: 343,
@@ -102,17 +102,17 @@ export default function MusicPlayerSlider() {
       }}
     >
       <Widget>
-        <Box sx={{display: 'flex', alignItems: 'center'}}>
+        <Box sx={{ display: 'flex', alignItems: 'center' }}>
           <CoverImage>
             <img
               alt="can't win - Chilling Sunday"
-              src='/static/images/sliders/chilling-sunday.jpg'
+              src="/static/images/sliders/chilling-sunday.jpg"
             />
           </CoverImage>
-          <Box sx={{ml: 1.5, minWidth: 0}}>
+          <Box sx={{ ml: 1.5, minWidth: 0 }}>
             <Typography
-              variant='caption'
-              color='text.secondary'
+              variant="caption"
+              color="text.secondary"
               fontWeight={500}
             >
               Jun Pulse
@@ -126,8 +126,8 @@ export default function MusicPlayerSlider() {
           </Box>
         </Box>
         <Slider
-          aria-label='time-indicator'
-          size='small'
+          aria-label="time-indicator"
+          size="small"
           value={position}
           min={0}
           step={1}
@@ -179,8 +179,8 @@ export default function MusicPlayerSlider() {
             mt: -1,
           }}
         >
-          <IconButton aria-label='previous song'>
-            <FastRewindRounded fontSize='large' htmlColor={mainIconColor} />
+          <IconButton aria-label="previous song">
+            <FastRewindRounded fontSize="large" htmlColor={mainIconColor} />
           </IconButton>
           <IconButton
             aria-label={paused ? 'play' : 'pause'}
@@ -188,26 +188,29 @@ export default function MusicPlayerSlider() {
           >
             {paused ? (
               <PlayArrowRounded
-                sx={{fontSize: '3rem'}}
+                sx={{ fontSize: '3rem' }}
                 htmlColor={mainIconColor}
               />
             ) : (
-              <PauseRounded sx={{fontSize: '3rem'}} htmlColor={mainIconColor} />
+              <PauseRounded
+                sx={{ fontSize: '3rem' }}
+                htmlColor={mainIconColor}
+              />
             )}
           </IconButton>
-          <IconButton aria-label='next song'>
-            <FastForwardRounded fontSize='large' htmlColor={mainIconColor} />
+          <IconButton aria-label="next song">
+            <FastForwardRounded fontSize="large" htmlColor={mainIconColor} />
           </IconButton>
         </Box>
         <Stack
           spacing={2}
-          direction='row'
-          sx={{mb: 1, px: 1}}
-          alignItems='center'
+          direction="row"
+          sx={{ mb: 1, px: 1 }}
+          alignItems="center"
         >
           <VolumeDownRounded htmlColor={lightIconColor} />
           <Slider
-            aria-label='Volume'
+            aria-label="Volume"
             defaultValue={30}
             sx={{
               color:

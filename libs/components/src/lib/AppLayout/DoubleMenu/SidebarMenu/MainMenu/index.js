@@ -1,11 +1,11 @@
-import React, {useMemo} from 'react';
+import React, { useMemo } from 'react';
 import PropTypes from 'prop-types';
-import {useSelector} from 'react-redux';
+import { useSelector } from 'react-redux';
 import VerticalItem from './VerticalItem';
 import VerticalCollapse from './VerticalCollapse';
 import List from '@mui/material/List';
 import makeStyles from '@mui/material/styles/makeStyles';
-import {checkPermission} from "@crema/helpers";
+import { checkPermission } from '@crema/helpers';
 
 const useStyles = makeStyles(() => ({
   listRoot: {
@@ -15,12 +15,12 @@ const useStyles = makeStyles(() => ({
   },
 }));
 
-const MainMenu = ({item}) => {
+const MainMenu = ({ item }) => {
   const classes = useStyles();
-  const {user} = useSelector(({auth}) => auth);
+  const { user } = useSelector(({ auth }) => auth);
   const hasPermission = useMemo(
     () => checkPermission(item.auth, user.role),
-    [item.auth, user.role],
+    [item.auth, user.role]
   );
   if (!hasPermission) {
     return null;
@@ -28,7 +28,7 @@ const MainMenu = ({item}) => {
   return (
     <React.Fragment>
       {item.children && (
-        <List component='div' className={classes.listRoot}>
+        <List component="div" className={classes.listRoot}>
           {item.children.map((item) => (
             <React.Fragment key={item.id}>
               {/*{item.type === 'group' && (*/}

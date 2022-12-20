@@ -2,9 +2,9 @@ import React from 'react';
 import Box from '@mui/material/Box';
 import Rating from '@mui/material/Rating';
 import PropTypes from 'prop-types';
-import {Fonts} from '@crema/constants/AppEnums'
+import { Fonts } from '@crema/constants/AppEnums';
 
-const ReviewItem = ({item}) => {
+const ReviewItem = ({ item }) => {
   return (
     <Box
       sx={{
@@ -12,7 +12,7 @@ const ReviewItem = ({item}) => {
         px: 5,
         py: 2,
       }}
-      className='item-hover'
+      className="item-hover"
       key={item.id}
     >
       <Box
@@ -24,7 +24,7 @@ const ReviewItem = ({item}) => {
       >
         <Rating value={item.rating} readOnly />
         <Box
-          component='span'
+          component="span"
           sx={{
             ml: 'auto',
             color: 'text.secondary',
@@ -35,7 +35,7 @@ const ReviewItem = ({item}) => {
         </Box>
       </Box>
       <Box
-        component='p'
+        component="p"
         sx={{
           color: 'text.secondary',
           mb: 1,
@@ -44,7 +44,7 @@ const ReviewItem = ({item}) => {
         {item.content}
       </Box>
       <Box
-        component='span'
+        component="span"
         sx={{
           color: 'primary.main',
           fontWeight: Fonts.MEDIUM,

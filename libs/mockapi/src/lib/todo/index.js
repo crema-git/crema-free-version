@@ -1,9 +1,9 @@
 import mock from '../MockConfig';
-import {staffList} from '../../fakedb/apps/todo/staffList';
+import { staffList } from '../../fakedb/apps/todo/staffList';
 import priorityList from '../../fakedb/apps/todo/priorityList';
 import todoList from '../../fakedb/apps/todo/todoList';
 import folderList from '../../fakedb/apps/todo/folderList';
-import {labelList, onGetLabel} from '../../fakedb/apps/todo/labelList';
+import { labelList, onGetLabel } from '../../fakedb/apps/todo/labelList';
 import statusList from '../../fakedb/apps/todo/statusList';
 
 let todoData = todoList;
@@ -20,7 +20,7 @@ const onGetTaskList = (name, data) => {
 
     case 'priority': {
       return data.filter(
-        (task) => task.folderValue !== 126 && task.priority === 1,
+        (task) => task.folderValue !== 126 && task.priority === 1
       );
     }
 
@@ -36,7 +36,7 @@ const onGetTaskList = (name, data) => {
 
     case 'completed': {
       return data.filter(
-        (task) => task.folderValue !== 126 && task.status === 3,
+        (task) => task.folderValue !== 126 && task.status === 3
       );
     }
 
@@ -69,7 +69,7 @@ mock.onGet('/api/todo/task/list').reply((config) => {
     folderTaskList.length > 15
       ? folderTaskList.slice(index, index + 15)
       : folderTaskList;
-  return [200, {data, count}];
+  return [200, { data, count }];
 });
 
 mock.onGet('/api/todoApp/task/').reply((config) => {
@@ -79,7 +79,7 @@ mock.onGet('/api/todoApp/task/').reply((config) => {
 });
 
 mock.onPut('/api/todoApp/task/').reply((request) => {
-  const {task} = JSON.parse(request.data);
+  const { task } = JSON.parse(request.data);
   // task.assignedTo = staffList.find(staff => staff.id === task.assignedTo);
   todoData = todoData.map((item) => (item.id === task.id ? task : item));
   return [200, todoData];
@@ -96,7 +96,7 @@ mock.onGet('/api/todo/priority/list').reply(200, priorityList);
 mock.onGet('/api/todo/status/list').reply(200, statusList);
 
 mock.onPut('/api/todo/update/label').reply((request) => {
-  const {taskIds, type} = JSON.parse(request.data);
+  const { taskIds, type } = JSON.parse(request.data);
   todoData = todoData.map((task) => {
     if (taskIds.includes(task.id)) {
       if (task.label.some((label) => label.id === +type)) {
@@ -115,7 +115,7 @@ mock.onPut('/api/todo/update/label').reply((request) => {
 });
 
 mock.onPut('/api/todo/update/folder').reply((request) => {
-  const {taskIds, type, name, page} = JSON.parse(request.data);
+  const { taskIds, type, name, page } = JSON.parse(request.data);
   todoData = todoData.map((task) => {
     if (taskIds.includes(task.id)) {
       task.folderValue = 126;
@@ -142,11 +142,11 @@ mock.onPut('/api/todo/update/folder').reply((request) => {
     folderTaskList.length > 15
       ? folderTaskList.slice(index, index + 15)
       : folderTaskList;
-  return [200, {data, count}];
+  return [200, { data, count }];
 });
 
 mock.onPut('/api/todo/update/starred').reply((request) => {
-  const {taskIds, status} = JSON.parse(request.data);
+  const { taskIds, status } = JSON.parse(request.data);
   todoData = todoData.map((task) => {
     if (taskIds.includes(task.id)) {
       task.isStarred = !!status;
@@ -160,10 +160,10 @@ mock.onPut('/api/todo/update/starred').reply((request) => {
 });
 
 mock.onPost('/api/todoApp/compose').reply((request) => {
-  const {task} = JSON.parse(request.data);
+  const { task } = JSON.parse(request.data);
   task.assignedTo = staffList.find((staff) => staff.id === task.assignedTo);
   task.priority = priorityList.find(
-    (priority) => priority.type === task.priority,
+    (priority) => priority.type === task.priority
   );
   todoData = [task, ...todoData];
   return [200, task];

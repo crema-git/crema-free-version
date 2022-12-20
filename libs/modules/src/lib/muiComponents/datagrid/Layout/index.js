@@ -17,15 +17,15 @@ const Layout = () => {
   return (
     <>
       <AppComponentHeader
-        title='Layout'
-        description='A textarea component for React which grows with content.'
-        refUrl='https://mui.com/components/data-grid/layout/'
+        title="Layout"
+        description="A textarea component for React which grows with content."
+        refUrl="https://mui.com/components/data-grid/layout/"
       />
 
       <AppGridContainer>
         <Grid item xs={12}>
           <AppComponentCard
-            title='FlexLayoutGrid'
+            title="FlexLayoutGrid"
             component={FlexLayoutGrid}
             source={FlexLayoutGridSource}
             noScrollbar
@@ -33,7 +33,7 @@ const Layout = () => {
         </Grid>
         <Grid item xs={12}>
           <AppComponentCard
-            title='FixedSizeGrid'
+            title="FixedSizeGrid"
             component={FixedSizeGrid}
             source={FixedSizeGridSource}
             noScrollbar
@@ -41,7 +41,7 @@ const Layout = () => {
         </Grid>
         <Grid item xs={12}>
           <AppComponentCard
-            title='AutoHeightGrid'
+            title="AutoHeightGrid"
             component={AutoHeightGrid}
             source={AutoHeightGridSource}
             noScrollbar

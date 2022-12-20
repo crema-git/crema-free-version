@@ -44,17 +44,17 @@ export default function SplitButton() {
   return (
     <React.Fragment>
       <ButtonGroup
-        variant='contained'
+        variant="contained"
         ref={anchorRef}
-        aria-label='split button'
+        aria-label="split button"
       >
         <Button onClick={handleClick}>{options[selectedIndex]}</Button>
         <Button
-          size='small'
+          size="small"
           aria-controls={open ? 'split-button-menu' : undefined}
           aria-expanded={open ? 'true' : undefined}
-          aria-label='select merge strategy'
-          aria-haspopup='menu'
+          aria-label="select merge strategy"
+          aria-haspopup="menu"
           onClick={handleToggle}
         >
           <ArrowDropDownIcon />
@@ -67,7 +67,7 @@ export default function SplitButton() {
         transition
         disablePortal
       >
-        {({TransitionProps, placement}) => (
+        {({ TransitionProps, placement }) => (
           <Grow
             {...TransitionProps}
             style={{
@@ -77,7 +77,7 @@ export default function SplitButton() {
           >
             <Paper>
               <ClickAwayListener onClickAway={handleClose}>
-                <MenuList id='split-button-menu'>
+                <MenuList id="split-button-menu">
                   {options.map((option, index) => (
                     <MenuItem
                       key={option}

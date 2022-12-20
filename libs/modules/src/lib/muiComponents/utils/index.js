@@ -11,4 +11,15 @@ const Transitions = React.lazy(() => import('./Transitions'));
 const MediaQuery = React.lazy(() => import('./MediaQuery'));
 const TextareaAutosize = React.lazy(() => import('./TextareaAutosize'));
 
-export {ClickawayListener, Modal, NoSSR1, Popover, Popper, Portal, Text, Transitions,TextareaAutosize, MediaQuery};
+export {
+  ClickawayListener,
+  Modal,
+  NoSSR1,
+  Popover,
+  Popper,
+  Portal,
+  Text,
+  Transitions,
+  TextareaAutosize,
+  MediaQuery,
+};

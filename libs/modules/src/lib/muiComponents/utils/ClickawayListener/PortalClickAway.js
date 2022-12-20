@@ -28,7 +28,7 @@ export default function PortalClickAway() {
   return (
     <ClickAwayListener onClickAway={handleClickAway}>
       <div>
-        <button type='button' onClick={handleClick}>
+        <button type="button" onClick={handleClick}>
           Open menu dropdown
         </button>
         {open ? (

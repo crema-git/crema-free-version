@@ -9,13 +9,13 @@ import PostStats from './PostStats';
 import AddComment from './AddComment';
 import CommentsList from './CommentsList';
 import PropTypes from 'prop-types';
-import {timeFromNow} from "@crema/helpers";
+import { timeFromNow } from '@crema/helpers';
 
-const PostItem = ({post, wallData, setPostList}) => {
-  const {owner, message, date, attachments, comments} = post;
+const PostItem = ({ post, wallData, setPostList }) => {
+  const { owner, message, date, attachments, comments } = post;
 
   const getTitle = () => (
-    <Box display='flex' alignItems='center'>
+    <Box display="flex" alignItems="center">
       <Avatar
         sx={{
           width: 44,
@@ -24,10 +24,10 @@ const PostItem = ({post, wallData, setPostList}) => {
         src={owner.profilePic}
       />
       <Box ml={3.5}>
-        <Box component='h4' mb={0.5}>
+        <Box component="h4" mb={0.5}>
           {owner.name}
         </Box>
-        <Box component='p' color='text.secondary' fontSize={14}>
+        <Box component="p" color="text.secondary" fontSize={14}>
           {timeFromNow(date)}
         </Box>
       </Box>
@@ -47,17 +47,17 @@ const PostItem = ({post, wallData, setPostList}) => {
           sx={{
             padding: 1.5,
           }}
-          aria-label='more'
-          aria-controls='long-menu'
-          aria-haspopup='true'
-          size='large'
+          aria-label="more"
+          aria-controls="long-menu"
+          aria-haspopup="true"
+          size="large"
         >
           <MoreHorizIcon />
         </IconButton>
       }
     >
       {message ? (
-        <Box component='p' mb={2} fontSize={14}>
+        <Box component="p" mb={2} fontSize={14}>
           {message}
         </Box>
       ) : null}

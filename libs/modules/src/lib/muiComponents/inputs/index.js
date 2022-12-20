@@ -14,4 +14,18 @@ const TextField = React.lazy(() => import('./TextField'));
 const TransferList = React.lazy(() => import('./TransferList'));
 const ToggleButtons = React.lazy(() => import('./ToggleButtons'));
 
-export { AutoComplete, Buttons, ButtonGroup, Checkboxes, FloatingActionButton, Radio, Rating, Selects, Slider, Switches, TextField, TransferList, ToggleButtons };
+export {
+  AutoComplete,
+  Buttons,
+  ButtonGroup,
+  Checkboxes,
+  FloatingActionButton,
+  Radio,
+  Rating,
+  Selects,
+  Slider,
+  Switches,
+  TextField,
+  TransferList,
+  ToggleButtons,
+};

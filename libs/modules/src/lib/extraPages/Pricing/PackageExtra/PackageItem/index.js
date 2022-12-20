@@ -1,14 +1,14 @@
 import React from 'react';
-import {alpha, Box, Typography} from '@mui/material';
+import { alpha, Box, Typography } from '@mui/material';
 import PropTypes from 'prop-types';
-import {Fonts} from '@crema/constants/AppEnums'
+import { Fonts } from '@crema/constants/AppEnums';
 import Button from '@mui/material/Button';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemIcon from '@mui/material/ListItemIcon';
-import {AiOutlineCheckCircle, AiOutlineCloseCircle} from 'react-icons/ai';
+import { AiOutlineCheckCircle, AiOutlineCloseCircle } from 'react-icons/ai';
 
-const PackageItem = ({pricing}) => {
+const PackageItem = ({ pricing }) => {
   return (
     <Box
       sx={{
@@ -17,16 +17,16 @@ const PackageItem = ({pricing}) => {
     >
       <Box>
         <Typography
-          component='h3'
+          component="h3"
           sx={{
             fontWeight: Fonts.MEDIUM,
-            fontSize: {xs: 18, lg: 20},
+            fontSize: { xs: 18, lg: 20 },
           }}
         >
           {pricing.title}
         </Typography>
         <Typography
-          component='h4'
+          component="h4"
           sx={{
             fontSize: 14,
             fontWeight: Fonts.MEDIUM,
@@ -35,10 +35,10 @@ const PackageItem = ({pricing}) => {
           }}
         >
           <Box
-            component='span'
+            component="span"
             sx={{
               fontWeight: Fonts.BOLD,
-              fontSize: {xs: 26, md: 28, lg: 30},
+              fontSize: { xs: 26, md: 28, lg: 30 },
               color: (theme) => theme.palette.text.primary,
             }}
           >
@@ -47,7 +47,7 @@ const PackageItem = ({pricing}) => {
           /month
         </Typography>
         <Button
-          variant='contained'
+          variant="contained"
           sx={{
             fontWeight: Fonts.BOLD,
             backgroundColor: (theme) => alpha(theme.palette.primary.main, 0.1),
@@ -77,7 +77,7 @@ const PackageItem = ({pricing}) => {
                 mb: 2.5,
               }}
             >
-              <ListItemIcon sx={{minWidth: 10, mr: 3.5}}>
+              <ListItemIcon sx={{ minWidth: 10, mr: 3.5 }}>
                 {data.label === 'true' ? (
                   <AiOutlineCheckCircle
                     sx={{

@@ -1,19 +1,19 @@
 import React from 'react';
 import Box from '@mui/material/Box';
 import PropTypes from 'prop-types';
-import {Typography} from '@mui/material';
+import { Typography } from '@mui/material';
 import ErrorIcon from './ErrorIcon';
 
 class AppErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {hasError: false};
+    this.state = { hasError: false };
   }
 
   static getDerivedStateFromError(error) {
     console.log('error: ', error);
     // Update state so the next render will show the fallback UI.
-    return {hasError: true};
+    return { hasError: true };
   }
 
   componentDidCatch(error, errorInfo) {
@@ -42,16 +42,16 @@ class AppErrorBoundary extends React.Component {
         >
           <ErrorIcon />
           <Typography
-            variant='h2'
-            component='h2'
-            style={{fontSize: 30, marginTop: 16}}
+            variant="h2"
+            component="h2"
+            style={{ fontSize: 30, marginTop: 16 }}
           >
             Ah! Something went wrong.
           </Typography>
-          <Typography style={{fontSize: 18, marginTop: 12}}>
+          <Typography style={{ fontSize: 18, marginTop: 12 }}>
             Brace yourself till we get the error fixed.
           </Typography>
-          <Typography style={{fontSize: 18}}>
+          <Typography style={{ fontSize: 18 }}>
             You may also refresh the page or try again latter
           </Typography>
         </Box>
@@ -65,5 +65,5 @@ class AppErrorBoundary extends React.Component {
 export default AppErrorBoundary;
 
 AppErrorBoundary.propTypes = {
-    children: PropTypes.node,
+  children: PropTypes.node,
 };

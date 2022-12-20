@@ -21,4 +21,27 @@ import Price from './Price';
 import CityInfo from './CityInfo';
 import DateSelector from './DatePicker';
 
-export { WallPaper, TemperatureCard, VisitorAnalysis, BirthdayCard, RecentActivity, IllustrationDesign, Categories, Header, Subscribe, Profile, Messages, TaskList, HollywoodMovie, CountryMap, Colors, AddTags, Reviews, CremaCard, Formats, Price, CityInfo, DateSelector };
+export {
+  WallPaper,
+  TemperatureCard,
+  VisitorAnalysis,
+  BirthdayCard,
+  RecentActivity,
+  IllustrationDesign,
+  Categories,
+  Header,
+  Subscribe,
+  Profile,
+  Messages,
+  TaskList,
+  HollywoodMovie,
+  CountryMap,
+  Colors,
+  AddTags,
+  Reviews,
+  CremaCard,
+  Formats,
+  Price,
+  CityInfo,
+  DateSelector,
+};

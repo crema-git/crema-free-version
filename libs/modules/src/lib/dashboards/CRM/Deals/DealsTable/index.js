@@ -8,11 +8,11 @@ import TableItem from './TableItem';
 import AppTableContainer from '@crema/components/AppTableContainer';
 
 const DealsTable = (props) => {
-  const {dealsTableData} = props;
+  const { dealsTableData } = props;
 
   return (
     <AppTableContainer>
-      <Table className='table'>
+      <Table className="table">
         <TableHead
           sx={{
             borderBottom: '0 none',

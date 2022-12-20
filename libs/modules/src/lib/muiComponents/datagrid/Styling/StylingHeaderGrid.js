@@ -1,6 +1,6 @@
 import * as React from 'react';
-import {DataGrid} from '@mui/x-data-grid';
-import {makeStyles} from '@mui/styles';
+import { DataGrid } from '@mui/x-data-grid';
+import { makeStyles } from '@mui/styles';
 
 const columns = [
   {
@@ -47,7 +47,7 @@ export default function StylingHeaderGrid() {
   const classes = useStyles();
 
   return (
-    <div style={{height: 300, width: '100%'}} className={classes.root}>
+    <div style={{ height: 300, width: '100%' }} className={classes.root}>
       <DataGrid rows={rows} columns={columns} />
     </div>
   );

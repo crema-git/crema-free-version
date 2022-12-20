@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
 import OrderActions from './OrderActions';
 import StarRateIcon from '@mui/icons-material/StarRate';
-import {styled} from '@mui/material/styles';
+import { styled } from '@mui/material/styles';
 
 const StyledTableCell = styled(TableCell)(() => ({
   fontSize: 14,
@@ -17,10 +17,10 @@ const StyledTableCell = styled(TableCell)(() => ({
     paddingRight: 20,
   },
 }));
-const TableItem = ({data}) => {
+const TableItem = ({ data }) => {
   return (
-    <TableRow key={data.name} className='item-hover'>
-      <StyledTableCell component='th' scope='row'>
+    <TableRow key={data.name} className="item-hover">
+      <StyledTableCell component="th" scope="row">
         <Box
           sx={{
             color: 'primary.main',
@@ -31,12 +31,12 @@ const TableItem = ({data}) => {
           {data.name}
         </Box>
       </StyledTableCell>
-      <StyledTableCell align='left'>{data.email}</StyledTableCell>
-      <StyledTableCell align='left'>{data.lastItem}</StyledTableCell>
-      <StyledTableCell align='left'>{data.lastOrder}</StyledTableCell>
-      <StyledTableCell align='left'>
+      <StyledTableCell align="left">{data.email}</StyledTableCell>
+      <StyledTableCell align="left">{data.lastItem}</StyledTableCell>
+      <StyledTableCell align="left">{data.lastOrder}</StyledTableCell>
+      <StyledTableCell align="left">
         <Box
-          component='span'
+          component="span"
           sx={{
             color: 'white',
             backgroundColor: '#388E3C',
@@ -51,13 +51,13 @@ const TableItem = ({data}) => {
             fontSize: 12,
           }}
         >
-          {data.rating} <StarRateIcon style={{fontSize: 16}} />
+          {data.rating} <StarRateIcon style={{ fontSize: 16 }} />
         </Box>
       </StyledTableCell>
-      <StyledTableCell align='left'>{data.balance}</StyledTableCell>
-      <StyledTableCell align='left'>{data.address}</StyledTableCell>
-      <StyledTableCell align='left'>{data.joinDate}</StyledTableCell>
-      <StyledTableCell align='right'>
+      <StyledTableCell align="left">{data.balance}</StyledTableCell>
+      <StyledTableCell align="left">{data.address}</StyledTableCell>
+      <StyledTableCell align="left">{data.joinDate}</StyledTableCell>
+      <StyledTableCell align="right">
         <OrderActions />
       </StyledTableCell>
     </TableRow>

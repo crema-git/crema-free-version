@@ -1,8 +1,8 @@
-import React, {useState} from 'react';
-import {styled} from '@mui/material/styles';
+import React, { useState } from 'react';
+import { styled } from '@mui/material/styles';
 import AppCard from '@crema/components/AppCard';
 import PropTypes from 'prop-types';
-import {useDropzone} from 'react-dropzone';
+import { useDropzone } from 'react-dropzone';
 import Box from '@mui/material/Box';
 import Avatar from '@mui/material/Avatar';
 import TextField from '@mui/material/TextField';
@@ -11,14 +11,14 @@ import PhotoOutlinedIcon from '@mui/icons-material/PhotoOutlined';
 import VideocamOutlinedIcon from '@mui/icons-material/VideocamOutlined';
 import EmojiEmotionsOutlinedIcon from '@mui/icons-material/EmojiEmotionsOutlined';
 import PersonOutlinedIcon from '@mui/icons-material/PersonOutlined';
-import {useIntl} from 'react-intl';
+import { useIntl } from 'react-intl';
 import IconButton from '@mui/material/IconButton';
 import SendOutlinedIcon from '@mui/icons-material/SendOutlined';
-import {darken} from '@mui/material';
-import {useInfoViewActionsContext} from '@crema/context/InfoViewContextProvider';
-import {postDataApi} from '@crema/utility/APIHooks';
+import { darken } from '@mui/material';
+import { useInfoViewActionsContext } from '@crema/context/InfoViewContextProvider';
+import { postDataApi } from '@crema/utility/APIHooks';
 
-const CreateView = styled('div')(({theme}) => ({
+const CreateView = styled('div')(({ theme }) => ({
   flex: 1,
   display: 'flex',
   flexDirection: 'row',
@@ -68,12 +68,12 @@ const StyledImage = styled('img')(() => ({
   display: 'block',
 }));
 
-const CreatePost = ({wallData, setPostList}) => {
+const CreatePost = ({ wallData, setPostList }) => {
   const [message, setMessage] = useState('');
   const infoViewActionsContext = useInfoViewActionsContext();
   const [attachments, setAttachments] = useState([]);
 
-  const {getRootProps, getInputProps} = useDropzone({
+  const { getRootProps, getInputProps } = useDropzone({
     accept: {
       'image/png': ['.png', '.jpg', '.jpeg'],
       'application/pdf': ['.pdf'],
@@ -84,7 +84,7 @@ const CreatePost = ({wallData, setPostList}) => {
         return {
           id: Math.floor(Math.random() * 10000),
           path: file.path,
-          metaData: {type: file.type, size: file.size},
+          metaData: { type: file.type, size: file.size },
           preview: URL.createObjectURL(file),
         };
       });
@@ -120,15 +120,15 @@ const CreatePost = ({wallData, setPostList}) => {
       });
   };
 
-  const {messages} = useIntl();
+  const { messages } = useIntl();
 
   return (
     <AppCard
-      sxStyle={{mb: 8}}
-      headerStyle={{paddingTop: 5}}
+      sxStyle={{ mb: 8 }}
+      headerStyle={{ paddingTop: 5 }}
       title={messages['wall.createPost']}
     >
-      <Box display='flex' mb={1}>
+      <Box display="flex" mb={1}>
         <Avatar
           sx={{
             marginRight: 3.5,
@@ -145,27 +145,27 @@ const CreatePost = ({wallData, setPostList}) => {
             value={message}
             onChange={(e) => setMessage(e.target.value)}
           />
-          <Box display='flex' flexWrap='wrap'>
-            <Box display='flex' alignItems='center'>
+          <Box display="flex" flexWrap="wrap">
+            <Box display="flex" alignItems="center">
               <span {...getRootProps()}>
                 <input {...getInputProps()} />
-                <StyledIconButton size='large'>
+                <StyledIconButton size="large">
                   <PhotoOutlinedIcon />
                 </StyledIconButton>
               </span>
-              <StyledIconButton size='large'>
+              <StyledIconButton size="large">
                 <VideocamOutlinedIcon />
               </StyledIconButton>
-              <StyledIconButton size='large'>
+              <StyledIconButton size="large">
                 <EmojiEmotionsOutlinedIcon />
               </StyledIconButton>
-              <StyledIconButton size='large'>
+              <StyledIconButton size="large">
                 <PersonOutlinedIcon />
               </StyledIconButton>
               <StyledIconButton
                 disabled={!message.trim() && attachments.length === 0}
                 onClick={handlePostSubmit}
-                size='large'
+                size="large"
               >
                 <SendOutlinedIcon />
               </StyledIconButton>
@@ -175,10 +175,10 @@ const CreatePost = ({wallData, setPostList}) => {
       </Box>
       <AppList
         data={attachments}
-        containerStyle={{display: 'flex', flexWrap: 'wrap'}}
+        containerStyle={{ display: 'flex', flexWrap: 'wrap' }}
         renderRow={(item, index) => (
           <Box p={1} key={index}>
-            <StyledImage src={item.preview} alt='upload' />
+            <StyledImage src={item.preview} alt="upload" />
           </Box>
         )}
       />

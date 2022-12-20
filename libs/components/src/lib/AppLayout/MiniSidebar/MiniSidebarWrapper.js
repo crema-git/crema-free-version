@@ -1,8 +1,8 @@
 import React from 'react';
 import PropsTypes from 'prop-types';
-import {Box} from '@mui/material';
+import { Box } from '@mui/material';
 
-const MiniSidebarWrapper = ({children, ...rest}) => {
+const MiniSidebarWrapper = ({ children, ...rest }) => {
   return (
     <Box
       sx={{
@@ -15,17 +15,17 @@ const MiniSidebarWrapper = ({children, ...rest}) => {
           display: 'flex',
           flexDirection: 'column',
           position: 'relative',
-          width: {xs: '100%', lg: 'calc(100% - 280px)'},
+          width: { xs: '100%', lg: 'calc(100% - 280px)' },
           transition: 'all 0.5s ease',
-          ml: {lg: '280px'},
+          ml: { lg: '280px' },
         },
         '&.mini-sidebar-collapsed': {
           '& .mainContent': {
-            width: {lg: 'calc(100% - 64px)'},
-            ml: {lg: '64px'},
+            width: { lg: 'calc(100% - 64px)' },
+            ml: { lg: '64px' },
           },
           '& .mini-sidebar:not(:hover)': {
-            width: {lg: 64},
+            width: { lg: 64 },
             '& .user-info, & .nav-item-header, & .nav-item-content, & .menu-badge, & .collapse-children, & .nav-item-icon-arrow-btn':
               {
                 display: 'none',
@@ -36,7 +36,7 @@ const MiniSidebarWrapper = ({children, ...rest}) => {
             },
           },
           '&.appMainFixedHeader .app-bar': {
-            width: {lg: 'calc(100% - 64px)'},
+            width: { lg: 'calc(100% - 64px)' },
           },
           '& .menu-vertical-item': {
             pl: 3,
@@ -74,10 +74,10 @@ const MiniSidebarWrapper = ({children, ...rest}) => {
           },
         },
         '&.appMainFixedFooter': {
-          pb: {xs: 12, xl: 14.5},
+          pb: { xs: 12, xl: 14.5 },
         },
         '&.appMainFixedHeader': {
-          pt: {xs: 14, sm: 17.5},
+          pt: { xs: 14, sm: 17.5 },
           '& .app-bar': {
             position: 'fixed',
             top: 0,

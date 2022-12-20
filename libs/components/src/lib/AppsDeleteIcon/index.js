@@ -1,20 +1,20 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import DeleteOutlinedIcon from '@mui/icons-material/DeleteOutlined';
-import IntlMessages from "@crema/utility/IntlMessages";
+import IntlMessages from '@crema/utility/IntlMessages';
 import AppConfirmDialog from '../AppConfirmDialog';
 import IconButton from '@mui/material/IconButton';
 import PropTypes from 'prop-types';
 import AppTooltip from '../AppTooltip';
 
-const AppsDeleteIcon = ({deleteAction, deleteTitle, sx}) => {
+const AppsDeleteIcon = ({ deleteAction, deleteTitle, sx }) => {
   const [isDeleteDialogOpen, setDeleteDialogOpen] = useState(false);
 
   return (
     <>
-      <AppTooltip title={<IntlMessages id='common.trash' />}>
+      <AppTooltip title={<IntlMessages id="common.trash" />}>
         <IconButton
           sx={sx}
-          size='large'
+          size="large"
           onClick={() => setDeleteDialogOpen(true)}
         >
           <DeleteOutlinedIcon />
@@ -25,7 +25,7 @@ const AppsDeleteIcon = ({deleteAction, deleteTitle, sx}) => {
         onDeny={setDeleteDialogOpen}
         onConfirm={deleteAction}
         title={deleteTitle}
-        dialogTitle={<IntlMessages id='common.deleteItem' />}
+        dialogTitle={<IntlMessages id="common.deleteItem" />}
       />
     </>
   );

@@ -23,12 +23,12 @@ export default function AccountMenu() {
   };
   return (
     <React.Fragment>
-      <Box sx={{display: 'flex', alignItems: 'center', textAlign: 'center'}}>
-        <Typography sx={{minWidth: 100}}>Contact</Typography>
-        <Typography sx={{minWidth: 100}}>Profile</Typography>
-        <Tooltip title='Account settings'>
-          <IconButton onClick={handleClick} size='small' sx={{ml: 2}}>
-            <Avatar sx={{width: 32, height: 32}}>M</Avatar>
+      <Box sx={{ display: 'flex', alignItems: 'center', textAlign: 'center' }}>
+        <Typography sx={{ minWidth: 100 }}>Contact</Typography>
+        <Typography sx={{ minWidth: 100 }}>Profile</Typography>
+        <Tooltip title="Account settings">
+          <IconButton onClick={handleClick} size="small" sx={{ ml: 2 }}>
+            <Avatar sx={{ width: 32, height: 32 }}>M</Avatar>
           </IconButton>
         </Tooltip>
       </Box>
@@ -63,8 +63,8 @@ export default function AccountMenu() {
             },
           },
         }}
-        transformOrigin={{horizontal: 'right', vertical: 'top'}}
-        anchorOrigin={{horizontal: 'right', vertical: 'bottom'}}
+        transformOrigin={{ horizontal: 'right', vertical: 'top' }}
+        anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
       >
         <MenuItem>
           <Avatar /> Profile
@@ -75,19 +75,19 @@ export default function AccountMenu() {
         <Divider />
         <MenuItem>
           <ListItemIcon>
-            <PersonAdd fontSize='small' />
+            <PersonAdd fontSize="small" />
           </ListItemIcon>
           Add another account
         </MenuItem>
         <MenuItem>
           <ListItemIcon>
-            <Settings fontSize='small' />
+            <Settings fontSize="small" />
           </ListItemIcon>
           Settings
         </MenuItem>
         <MenuItem>
           <ListItemIcon>
-            <Logout fontSize='small' />
+            <Logout fontSize="small" />
           </ListItemIcon>
           Logout
         </MenuItem>

@@ -2,18 +2,18 @@ import React from 'react';
 import ListItemAvatar from '@mui/material/ListItemAvatar';
 import Avatar from '@mui/material/Avatar';
 import PropTypes from 'prop-types';
-import {Box, ListItem, Typography} from '@mui/material';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Box, ListItem, Typography } from '@mui/material';
+import { Fonts } from '@crema/constants/AppEnums';
 
 const NotificationItem = (props) => {
-  const {item} = props;
+  const { item } = props;
 
   return (
     <ListItem
       sx={{
         padding: '8px 20px',
       }}
-      className='item-hover'
+      className="item-hover"
     >
       <ListItemAvatar
         sx={{
@@ -26,7 +26,7 @@ const NotificationItem = (props) => {
             width: 48,
             height: 48,
           }}
-          alt='Remy Sharp'
+          alt="Remy Sharp"
           src={item.image}
         />
       </ListItemAvatar>
@@ -38,7 +38,7 @@ const NotificationItem = (props) => {
       >
         <Typography>
           <Box
-            component='span'
+            component="span"
             sx={{
               fontSize: 14,
               fontWeight: Fonts.MEDIUM,

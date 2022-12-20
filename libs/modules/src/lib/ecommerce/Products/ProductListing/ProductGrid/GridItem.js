@@ -3,17 +3,17 @@ import Card from '@mui/material/Card';
 import StarBorderIcon from '@mui/icons-material/StarBorder';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import FavoriteOutlinedIcon from '@mui/icons-material/FavoriteOutlined';
-import {Checkbox} from '@mui/material';
+import { Checkbox } from '@mui/material';
 import IntlMessages from '@crema/utility/IntlMessages';
 import Box from '@mui/material/Box';
 import PropTypes from 'prop-types';
-import {green} from '@mui/material/colors';
-import {Fonts} from '@crema/constants/AppEnums'
-import {useNavigate} from 'react-router-dom';
+import { green } from '@mui/material/colors';
+import { Fonts } from '@crema/constants/AppEnums';
+import { useNavigate } from 'react-router-dom';
 import AddShoppingCartOutlinedIcon from '@mui/icons-material/AddShoppingCartOutlined';
 
 const GridItem = (props) => {
-  const {item} = props;
+  const { item } = props;
   const navigate = useNavigate();
 
   return (
@@ -25,7 +25,7 @@ const GridItem = (props) => {
         display: 'flex',
         flexDirection: 'column',
       }}
-      className='item-hover'
+      className="item-hover"
       onClick={() => {
         navigate('/ecommerce/product_detail/' + item.id);
       }}
@@ -39,7 +39,7 @@ const GridItem = (props) => {
         }}
       >
         <Box
-          component='span'
+          component="span"
           sx={{
             maxHeight: 28,
             width: 48,
@@ -56,11 +56,11 @@ const GridItem = (props) => {
             fontSize: 14,
           }}
         >
-          <Box component='span' sx={{pb: 1.25}}>
+          <Box component="span" sx={{ pb: 1.25 }}>
             {item.rating}
           </Box>
           <Box
-            component='span'
+            component="span"
             sx={{
               ml: 1,
             }}
@@ -75,8 +75,8 @@ const GridItem = (props) => {
         <Box
           sx={{
             mx: 2,
-            maxHeight: {xs: 140, sm: 200, md: 260},
-            minHeight: {xs: 140, sm: 200, md: 260},
+            maxHeight: { xs: 140, sm: 200, md: 260 },
+            minHeight: { xs: 140, sm: 200, md: 260 },
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
@@ -87,7 +87,7 @@ const GridItem = (props) => {
             },
           }}
         >
-          <img src={item.image[0].src} alt='watch' />
+          <img src={item.image[0].src} alt="watch" />
         </Box>
         <Box
           sx={{
@@ -111,13 +111,13 @@ const GridItem = (props) => {
           textOverflow: 'ellipsis',
           whiteSpace: 'nowrap',
         }}
-        component='h3'
+        component="h3"
       >
         {item.title}
       </Box>
 
       <Box
-        component='p'
+        component="p"
         sx={{
           mb: 3,
           color: 'text.secondary',
@@ -138,12 +138,12 @@ const GridItem = (props) => {
           alignItems: 'center',
           fontWeight: Fonts.MEDIUM,
           justifyContent: 'space-between',
-          fontSize: {xs: 12, xl: 14},
+          fontSize: { xs: 12, xl: 14 },
         }}
       >
         <Box>
           <Box
-            component='span'
+            component="span"
             sx={{
               px: 1,
               mb: 2,
@@ -153,7 +153,7 @@ const GridItem = (props) => {
             $ {+item.mrp - Math.round((+item.mrp * +item.discount) / 100)}
           </Box>
           <Box
-            component='span'
+            component="span"
             sx={{
               px: 1,
               mb: 2,
@@ -164,18 +164,18 @@ const GridItem = (props) => {
             ${item.mrp}
           </Box>
           <Box
-            component='span'
+            component="span"
             sx={{
               px: 1,
               mb: 2,
               color: green[500],
             }}
           >
-            {item.discount}% <IntlMessages id='ecommerce.off' />
+            {item.discount}% <IntlMessages id="ecommerce.off" />
           </Box>
         </Box>
-        <Box sx={{ml: 2}}>
-          <AddShoppingCartOutlinedIcon sx={{fontSize: 16, mt: 1}} />
+        <Box sx={{ ml: 2 }}>
+          <AddShoppingCartOutlinedIcon sx={{ fontSize: 16, mt: 1 }} />
         </Box>
       </Box>
     </Card>

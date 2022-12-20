@@ -29,15 +29,15 @@ const Masonry = () => {
   return (
     <>
       <AppComponentHeader
-        title='Masonry'
-        description='Masonry lays out contents of different sizes as blocks of the same width and variable height with configurable gaps.'
-        refUrl='https://mui.com/components/masonry/'
+        title="Masonry"
+        description="Masonry lays out contents of different sizes as blocks of the same width and variable height with configurable gaps."
+        refUrl="https://mui.com/components/masonry/"
       />
 
       <AppGridContainer>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='FixedColumns'
+            title="FixedColumns"
             component={FixedColumns}
             source={FixedColumnsSource}
             noScrollbar
@@ -45,7 +45,7 @@ const Masonry = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='ResponsiveColumns'
+            title="ResponsiveColumns"
             component={ResponsiveColumns}
             source={ResponsiveColumnsSource}
             noScrollbar
@@ -54,7 +54,7 @@ const Masonry = () => {
 
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='FixedSpacing'
+            title="FixedSpacing"
             component={FixedSpacing}
             source={FixedSpacingSource}
             noScrollbar
@@ -62,7 +62,7 @@ const Masonry = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='ResponsiveSpacing'
+            title="ResponsiveSpacing"
             component={ResponsiveSpacing}
             source={ResponsiveSpacingSource}
             noScrollbar
@@ -70,7 +70,7 @@ const Masonry = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='BasicMasonry'
+            title="BasicMasonry"
             component={BasicMasonry}
             source={BasicMasonrySource}
             noScrollbar
@@ -78,7 +78,7 @@ const Masonry = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='SSRMasonry'
+            title="SSRMasonry"
             component={SSRMasonry}
             source={SSRMasonrySource}
             noScrollbar
@@ -86,7 +86,7 @@ const Masonry = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='ImageMasonry'
+            title="ImageMasonry"
             component={ImageMasonry}
             source={ImageMasonrySource}
             noScrollbar

@@ -2,12 +2,12 @@ import React from 'react';
 import Box from '@mui/material/Box';
 import AppList from '@crema/components/AppList';
 import CommentItem from './CommentItem';
-import {Fonts} from '@crema/constants/AppEnums'
+import { Fonts } from '@crema/constants/AppEnums';
 import PropTypes from 'prop-types';
 import IntlMessages from '@crema/utility/IntlMessages';
-import {styled} from '@mui/material/styles';
+import { styled } from '@mui/material/styles';
 
-const CommentsListWrapper = styled('div')(({theme}) => ({
+const CommentsListWrapper = styled('div')(({ theme }) => ({
   borderTop: `solid 1px ${theme.palette.divider}`,
   paddingTop: 20,
   marginLeft: -20,
@@ -16,11 +16,11 @@ const CommentsListWrapper = styled('div')(({theme}) => ({
   paddingRight: 20,
 }));
 
-const CommentsList = ({comments}) => {
+const CommentsList = ({ comments }) => {
   return (
     <CommentsListWrapper>
-      <Box component='p' mb={5} fontSize={16} fontWeight={Fonts.MEDIUM}>
-        <IntlMessages id='wall.comments' />
+      <Box component="p" mb={5} fontSize={16} fontWeight={Fonts.MEDIUM}>
+        <IntlMessages id="wall.comments" />
       </Box>
       <AppList
         data={comments}

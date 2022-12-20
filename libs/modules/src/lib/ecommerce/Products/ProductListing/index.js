@@ -1,32 +1,33 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import AppsHeader from '@crema/components/AppsHeader';
 import ProductHeader from '../ProductHeader';
 import ProductGrid from './ProductGrid/index';
 import PropTypes from 'prop-types';
 import ProductList from './ProductList';
 import AppsContent from '@crema/components/AppsContent';
-import {alpha, Box, Hidden} from '@mui/material';
-import {useThemeContext} from '@crema/context/ThemeContextProvider';
+import { alpha, Box, Hidden } from '@mui/material';
+import { useThemeContext } from '@crema/context/ThemeContextProvider';
 import AppsFooter from '@crema/components/AppsFooter';
 import AppsPagination from '@crema/components/AppsPagination';
-import {VIEW_TYPE} from '../index';
-import {useGetDataApi} from '@crema/utility/APIHooks';
+import { VIEW_TYPE } from '../index';
+import { useGetDataApi } from '@crema/utility/APIHooks';
 
-const ProductListing = ({filterData, viewType, setViewType, setFilterData}) => {
-  const {theme} = useThemeContext();
+const ProductListing = ({
+  filterData,
+  viewType,
+  setViewType,
+  setFilterData,
+}) => {
+  const { theme } = useThemeContext();
   const [page, setPage] = useState(0);
 
-  const [{apiData: ecommerceList, loading}, {setQueryParams}] = useGetDataApi(
-    '/api/ecommerce/list',
-    [],
-    {},
-    false,
-  );
+  const [{ apiData: ecommerceList, loading }, { setQueryParams }] =
+    useGetDataApi('/api/ecommerce/list', [], {}, false);
 
-  const {list, total} = ecommerceList;
+  const { list, total } = ecommerceList;
 
   useEffect(() => {
-    setQueryParams({page, filterData});
+    setQueryParams({ page, filterData });
   }, [page, filterData]);
 
   const onPageChange = (event, value) => {
@@ -34,7 +35,7 @@ const ProductListing = ({filterData, viewType, setViewType, setFilterData}) => {
   };
 
   const searchProduct = (title) => {
-    setFilterData({...filterData, title});
+    setFilterData({ ...filterData, title });
   };
   return (
     <>
@@ -51,7 +52,9 @@ const ProductListing = ({filterData, viewType, setViewType, setFilterData}) => {
       </AppsHeader>
 
       <AppsContent
-        style={{backgroundColor: alpha(theme.palette.background.default, 0.6)}}
+        style={{
+          backgroundColor: alpha(theme.palette.background.default, 0.6),
+        }}
       >
         <Box
           sx={{

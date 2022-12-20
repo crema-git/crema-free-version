@@ -11,19 +11,19 @@ import {
   SELECT_USER,
   TOGGLE_CHAT_DRAWER,
 } from '@crema/constants/ActionTypes';
-import {appIntl} from "@crema/helpers";
-import jwtAxios from "@crema/services/auth/JWT";
+import { appIntl } from '@crema/helpers';
+import jwtAxios from '@crema/services/auth/JWT';
 
 export const getConnectionList = () => {
-  const {messages} = appIntl();
+  const { messages } = appIntl();
   return (dispatch) => {
-    dispatch({type: FETCH_START});
+    dispatch({ type: FETCH_START });
     jwtAxios
       .get('/api/chatApp/connections')
       .then((data) => {
         if (data.status === 200) {
-          dispatch({type: FETCH_SUCCESS});
-          dispatch({type: GET_CONNECTIONS_LIST, payload: data.data});
+          dispatch({ type: FETCH_SUCCESS });
+          dispatch({ type: GET_CONNECTIONS_LIST, payload: data.data });
         } else {
           dispatch({
             type: FETCH_ERROR,
@@ -32,15 +32,15 @@ export const getConnectionList = () => {
         }
       })
       .catch((error) => {
-        dispatch({type: FETCH_ERROR, payload: error.message});
+        dispatch({ type: FETCH_ERROR, payload: error.message });
       });
   };
 };
 
 export const getConnectionMessages = (id) => {
-  const {messages} = appIntl();
+  const { messages } = appIntl();
   return (dispatch) => {
-    dispatch({type: FETCH_START});
+    dispatch({ type: FETCH_START });
     jwtAxios
       .get('/api/chatApp/connection/messages', {
         params: {
@@ -49,8 +49,8 @@ export const getConnectionMessages = (id) => {
       })
       .then((data) => {
         if (data.status === 200) {
-          dispatch({type: FETCH_SUCCESS});
-          dispatch({type: GET_USER_MESSAGES, payload: data.data});
+          dispatch({ type: FETCH_SUCCESS });
+          dispatch({ type: GET_USER_MESSAGES, payload: data.data });
         } else {
           dispatch({
             type: FETCH_ERROR,
@@ -59,19 +59,19 @@ export const getConnectionMessages = (id) => {
         }
       })
       .catch((error) => {
-        dispatch({type: FETCH_ERROR, payload: error.message});
+        dispatch({ type: FETCH_ERROR, payload: error.message });
       });
   };
 };
 
 export const onSendMessage = (channelId, message) => {
-  const {messages} = appIntl();
+  const { messages } = appIntl();
   return (dispatch, getState) => {
     jwtAxios
-      .post('/api/chatApp/message', {channelId, message})
+      .post('/api/chatApp/message', { channelId, message })
       .then((data) => {
         if (data.status === 200) {
-          dispatch({type: FETCH_SUCCESS});
+          dispatch({ type: FETCH_SUCCESS });
           if (
             data.data.userMessages &&
             data.data.userMessages.messageData.length === 1 &&
@@ -80,7 +80,7 @@ export const onSendMessage = (channelId, message) => {
           ) {
             console.log(
               'getState().chatApp.userMessages.messageData',
-              getState().chatApp.userMessages.messageData,
+              getState().chatApp.userMessages.messageData
             );
             dispatch({
               type: ADD_NEW_MESSAGE,
@@ -91,7 +91,7 @@ export const onSendMessage = (channelId, message) => {
                     ...data.userMessages,
                     messageData:
                       getState().chatApp.userMessages.messageData.concat(
-                        data.data.userMessages.messageData,
+                        data.data.userMessages.messageData
                       ),
                   },
                 },
@@ -101,7 +101,7 @@ export const onSendMessage = (channelId, message) => {
           } else {
             dispatch({
               type: ADD_NEW_MESSAGE,
-              payload: {data: data.data},
+              payload: { data: data.data },
             });
           }
         } else {
@@ -112,22 +112,22 @@ export const onSendMessage = (channelId, message) => {
         }
       })
       .catch((error) => {
-        dispatch({type: FETCH_ERROR, payload: error.message});
+        dispatch({ type: FETCH_ERROR, payload: error.message });
       });
   };
 };
 
 export const onEditMessage = (channelId, message) => {
-  const {messages} = appIntl();
+  const { messages } = appIntl();
   return (dispatch) => {
     jwtAxios
-      .put('/api/chatApp/message', {channelId, message})
+      .put('/api/chatApp/message', { channelId, message })
       .then((data) => {
         if (data.status === 200) {
-          dispatch({type: FETCH_SUCCESS});
+          dispatch({ type: FETCH_SUCCESS });
           dispatch({
             type: EDIT_MESSAGE,
-            payload: {data: data.data},
+            payload: { data: data.data },
           });
         } else {
           dispatch({
@@ -137,20 +137,20 @@ export const onEditMessage = (channelId, message) => {
         }
       })
       .catch((error) => {
-        dispatch({type: FETCH_ERROR, payload: error.message});
+        dispatch({ type: FETCH_ERROR, payload: error.message });
       });
   };
 };
 
 export const onDeleteMessage = (channelId, messageId) => {
-  const {messages} = appIntl();
+  const { messages } = appIntl();
   return (dispatch) => {
     jwtAxios
-      .post('/api/chatApp/delete/message', {channelId, messageId})
+      .post('/api/chatApp/delete/message', { channelId, messageId })
       .then((data) => {
         if (data.status === 200) {
-          dispatch({type: FETCH_SUCCESS});
-          dispatch({type: DELETE_MESSAGE, payload: data.data});
+          dispatch({ type: FETCH_SUCCESS });
+          dispatch({ type: DELETE_MESSAGE, payload: data.data });
         } else {
           dispatch({
             type: FETCH_ERROR,
@@ -159,21 +159,21 @@ export const onDeleteMessage = (channelId, messageId) => {
         }
       })
       .catch((error) => {
-        dispatch({type: FETCH_ERROR, payload: error.message});
+        dispatch({ type: FETCH_ERROR, payload: error.message });
       });
   };
 };
 
 export const onDeleteConversation = (channelId) => {
-  const {messages} = appIntl();
+  const { messages } = appIntl();
   return (dispatch) => {
-    dispatch({type: FETCH_START});
+    dispatch({ type: FETCH_START });
     jwtAxios
-      .post('/api/chatApp/delete/user/messages', {channelId})
+      .post('/api/chatApp/delete/user/messages', { channelId })
       .then((data) => {
         if (data.status === 200) {
-          dispatch({type: FETCH_SUCCESS});
-          dispatch({type: DELETE_USER_MESSAGES, payload: data.data});
+          dispatch({ type: FETCH_SUCCESS });
+          dispatch({ type: DELETE_USER_MESSAGES, payload: data.data });
         } else {
           dispatch({
             type: FETCH_ERROR,
@@ -182,19 +182,19 @@ export const onDeleteConversation = (channelId) => {
         }
       })
       .catch((error) => {
-        dispatch({type: FETCH_ERROR, payload: error.message});
+        dispatch({ type: FETCH_ERROR, payload: error.message });
       });
   };
 };
 
 export const onSelectUser = (user) => {
   return (dispatch) => {
-    dispatch({type: SELECT_USER, payload: user});
+    dispatch({ type: SELECT_USER, payload: user });
   };
 };
 
 export const onToggleChatDrawer = () => {
   return (dispatch) => {
-    dispatch({type: TOGGLE_CHAT_DRAWER});
+    dispatch({ type: TOGGLE_CHAT_DRAWER });
   };
 };

@@ -3,18 +3,18 @@ import DoneIcon from '@mui/icons-material/Done';
 import IntlMessages from '@crema/utility/IntlMessages';
 import PropTypes from 'prop-types';
 import Button from '@mui/material/Button';
-import {styled} from '@mui/material/styles';
-import {useInfoViewActionsContext} from '@crema/context/InfoViewContextProvider';
-import {putDataApi} from '@crema/utility/APIHooks';
+import { styled } from '@mui/material/styles';
+import { useInfoViewActionsContext } from '@crema/context/InfoViewContextProvider';
+import { putDataApi } from '@crema/utility/APIHooks';
 
-const StatusButton = styled(Button)(({theme}) => ({
+const StatusButton = styled(Button)(({ theme }) => ({
   fontSize: 12,
   [theme.breakpoints.up('lg')]: {
     fontSize: 14,
   },
 }));
 
-const StyledDoneIcon = styled(DoneIcon)(({theme}) => ({
+const StyledDoneIcon = styled(DoneIcon)(({ theme }) => ({
   marginRight: 4,
   fontSize: 18,
   verticalAlign: 'middle',
@@ -23,7 +23,7 @@ const StyledDoneIcon = styled(DoneIcon)(({theme}) => ({
   },
 }));
 
-const StatusToggleButton = ({selectedTask, onUpdateSelectedTask}) => {
+const StatusToggleButton = ({ selectedTask, onUpdateSelectedTask }) => {
   const infoViewActionsContext = useInfoViewActionsContext();
 
   const onChangeTaskStatus = (status) => {
@@ -45,21 +45,21 @@ const StatusToggleButton = ({selectedTask, onUpdateSelectedTask}) => {
     <>
       {selectedTask.status === 3 ? (
         <StatusButton
-          variant='contained'
-          color='primary'
+          variant="contained"
+          color="primary"
           startIcon={<StyledDoneIcon />}
           onClick={() => onChangeTaskStatus(1)}
         >
-          <IntlMessages id='todo.completed' />
+          <IntlMessages id="todo.completed" />
         </StatusButton>
       ) : (
         <StatusButton
-          variant='outlined'
-          color='primary'
+          variant="outlined"
+          color="primary"
           startIcon={<StyledDoneIcon />}
           onClick={() => onChangeTaskStatus(3)}
         >
-          <IntlMessages id='todo.markAsCompleted' />
+          <IntlMessages id="todo.markAsCompleted" />
         </StatusButton>
       )}
     </>

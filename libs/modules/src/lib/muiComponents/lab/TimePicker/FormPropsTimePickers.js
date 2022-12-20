@@ -12,7 +12,7 @@ export default function FormPropsTimePickers() {
     <LocalizationProvider dateAdapter={AdapterDateFns}>
       <Stack spacing={3}>
         <TimePicker
-          label='disabled'
+          label="disabled"
           disabled
           value={value}
           onChange={(newValue) => {
@@ -21,7 +21,7 @@ export default function FormPropsTimePickers() {
           renderInput={(params) => <TextField {...params} />}
         />
         <TimePicker
-          label='read-only'
+          label="read-only"
           readOnly
           value={value}
           onChange={(newValue) => {

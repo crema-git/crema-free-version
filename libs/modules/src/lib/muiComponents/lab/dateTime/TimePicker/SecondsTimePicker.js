@@ -1,7 +1,7 @@
 import * as React from 'react';
 import TextField from '@mui/material/TextField';
-import {AdapterDateFns} from '@mui/x-date-pickers/AdapterDateFns';
-import {LocalizationProvider, TimePicker} from '@mui/x-date-pickers';
+import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
+import { LocalizationProvider, TimePicker } from '@mui/x-date-pickers';
 import Stack from '@mui/material/Stack';
 
 export default function SecondsTimePicker() {
@@ -12,11 +12,11 @@ export default function SecondsTimePicker() {
       <Stack spacing={3}>
         <TimePicker
           ampm={false}
-          openTo='hours'
+          openTo="hours"
           views={['hours', 'minutes', 'seconds']}
-          inputFormat='HH:mm:ss'
-          mask='__:__:__'
-          label='With seconds'
+          inputFormat="HH:mm:ss"
+          mask="__:__:__"
+          label="With seconds"
           value={value}
           onChange={(newValue) => {
             setValue(newValue);
@@ -26,9 +26,9 @@ export default function SecondsTimePicker() {
         <TimePicker
           ampmInClock
           views={['minutes', 'seconds']}
-          inputFormat='mm:ss'
-          mask='__:__'
-          label='Minutes and seconds'
+          inputFormat="mm:ss"
+          mask="__:__"
+          label="Minutes and seconds"
           value={value}
           onChange={(newValue) => {
             setValue(newValue);

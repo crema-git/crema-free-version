@@ -10,13 +10,13 @@ export default function CustomInput() {
   return (
     <LocalizationProvider dateAdapter={AdapterDateFns}>
       <DesktopDatePicker
-        label='Custom input'
+        label="Custom input"
         value={value}
         onChange={(newValue) => {
           setValue(newValue);
         }}
-        renderInput={({inputRef, inputProps, InputProps}) => (
-          <Box sx={{display: 'flex', alignItems: 'center'}}>
+        renderInput={({ inputRef, inputProps, InputProps }) => (
+          <Box sx={{ display: 'flex', alignItems: 'center' }}>
             <input ref={inputRef} {...inputProps} />
             {InputProps?.endAdornment}
           </Box>

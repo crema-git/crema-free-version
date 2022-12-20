@@ -10,4 +10,14 @@ const SpeedDial = React.lazy(() => import('./SpeedDial'));
 const Stepper = React.lazy(() => import('./Stepper'));
 const Tabs = React.lazy(() => import('./Tabs'));
 
-export {BottomNavigation, Breadcrumbs, Drawer, Links, Menu, Pagination, SpeedDial, Stepper, Tabs};
+export {
+  BottomNavigation,
+  Breadcrumbs,
+  Drawer,
+  Links,
+  Menu,
+  Pagination,
+  SpeedDial,
+  Stepper,
+  Tabs,
+};

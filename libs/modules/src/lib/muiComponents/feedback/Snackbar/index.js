@@ -35,93 +35,93 @@ const Snackbar = () => {
   return (
     <>
       <AppComponentHeader
-        title='Snackbar'
-        description='Snackbars provide brief notifications. The component is also known as a toast.'
-        refUrl='https://mui.com/components/snackbars/'
+        title="Snackbar"
+        description="Snackbars provide brief notifications. The component is also known as a toast."
+        refUrl="https://mui.com/components/snackbars/"
       />
 
       <AppGridContainer>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Simple Snackbar'
+            title="Simple Snackbar"
             component={SimpleSnackbar}
             source={SimpleSnackbarSource}
             noScrollbar
-            description='The alert offers four severity levels that set a distinctive icon and color.'
+            description="The alert offers four severity levels that set a distinctive icon and color."
           />
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Consecutive Snackbars'
+            title="Consecutive Snackbars"
             component={ConsecutiveSnackbars}
             source={ConsecutiveSnackbarsSource}
             noScrollbar
-            description='The alert offers four severity levels that set a distinctive icon and color.'
+            description="The alert offers four severity levels that set a distinctive icon and color."
           />
         </Grid>
 
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Customized Snackbars'
+            title="Customized Snackbars"
             component={CustomizedSnackbars}
             source={CustomizedSnackbarsSource}
             noScrollbar
-            description='The alert offers four severity levels that set a distinctive icon and color.'
+            description="The alert offers four severity levels that set a distinctive icon and color."
           />
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Long Text Snackbar'
+            title="Long Text Snackbar"
             component={LongTextSnackbar}
             source={LongTextSnackbarSource}
             noScrollbar
-            description='The alert offers four severity levels that set a distinctive icon and color.'
+            description="The alert offers four severity levels that set a distinctive icon and color."
           />
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Positioned Snackbar'
+            title="Positioned Snackbar"
             component={PositionedSnackbar}
             source={PositionedSnackbarSource}
             noScrollbar
-            description='The alert offers four severity levels that set a distinctive icon and color.'
+            description="The alert offers four severity levels that set a distinctive icon and color."
           />
         </Grid>
 
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='FabIntegration Snackbar'
+            title="FabIntegration Snackbar"
             component={FabIntegrationSnackbar}
             source={FabIntegrationSnackbarSource}
             noScrollbar
-            description='The alert offers four severity levels that set a distinctive icon and color.'
+            description="The alert offers four severity levels that set a distinctive icon and color."
           />
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Transitions Snackbar'
+            title="Transitions Snackbar"
             component={TransitionsSnackbar}
             source={TransitionsSnackbarSource}
             noScrollbar
-            description='The alert offers four severity levels that set a distinctive icon and color.'
+            description="The alert offers four severity levels that set a distinctive icon and color."
           />
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Direction Snackbar'
+            title="Direction Snackbar"
             component={DirectionSnackbar}
             source={DirectionSnackbarSource}
             noScrollbar
-            description='The alert offers four severity levels that set a distinctive icon and color.'
+            description="The alert offers four severity levels that set a distinctive icon and color."
           />
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='IntegrationNotistack'
+            title="IntegrationNotistack"
             component={IntegrationNotistack}
             source={IntegrationNotistackSource}
             noScrollbar
-            description='The alert offers four severity levels that set a distinctive icon and color.'
+            description="The alert offers four severity levels that set a distinctive icon and color."
           />
         </Grid>
       </AppGridContainer>

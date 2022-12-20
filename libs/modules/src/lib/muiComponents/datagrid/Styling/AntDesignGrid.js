@@ -1,8 +1,8 @@
 import * as React from 'react';
-import {DataGrid, useGridApiContext, useGridState} from '@mui/x-data-grid';
-import {useDemoData} from '@mui/x-data-grid-generator';
-import {createTheme} from '@mui/material/styles';
-import {createStyles, makeStyles} from '@mui/styles';
+import { DataGrid, useGridApiContext, useGridState } from '@mui/x-data-grid';
+import { useDemoData } from '@mui/x-data-grid-generator';
+import { createTheme } from '@mui/material/styles';
+import { createStyles, makeStyles } from '@mui/styles';
 import Pagination from '@mui/material/Pagination';
 import PaginationItem from '@mui/material/PaginationItem';
 
@@ -104,7 +104,7 @@ const useStyles = makeStyles(
         ...customCheckbox(theme),
       },
     }),
-  {defaultTheme},
+  { defaultTheme }
 );
 
 function CustomPagination() {
@@ -113,9 +113,9 @@ function CustomPagination() {
 
   return (
     <Pagination
-      color='primary'
-      variant='outlined'
-      shape='rounded'
+      color="primary"
+      variant="outlined"
+      shape="rounded"
       page={state.pagination.page + 1}
       count={state.pagination.pageCount}
       // @ts-expect-error
@@ -126,7 +126,7 @@ function CustomPagination() {
 }
 
 export default function AntDesignGrid() {
-  const {data} = useDemoData({
+  const { data } = useDemoData({
     dataSet: 'Commodity',
     rowLength: 10,
     maxColumns: 10,
@@ -135,7 +135,7 @@ export default function AntDesignGrid() {
   const classes = useStyles();
 
   return (
-    <div style={{height: 400, width: '100%'}}>
+    <div style={{ height: 400, width: '100%' }}>
       <DataGrid
         className={classes.root}
         checkboxSelection

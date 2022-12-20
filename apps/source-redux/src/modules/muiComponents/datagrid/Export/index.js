@@ -1,2 +1,2 @@
-import {Export} from '@crema/modules/components/datagrid';
+import { Export } from '@crema/modules/components/datagrid';
 export default Export;

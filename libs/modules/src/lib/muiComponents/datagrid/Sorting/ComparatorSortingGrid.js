@@ -1,10 +1,13 @@
 import * as React from 'react';
-import {DataGrid} from '@mui/x-data-grid';
-import {randomCreatedDate, randomUpdatedDate} from '@mui/x-data-grid-generator';
+import { DataGrid } from '@mui/x-data-grid';
+import {
+  randomCreatedDate,
+  randomUpdatedDate,
+} from '@mui/x-data-grid-generator';
 
 const columns = [
-  {field: 'name'},
-  {field: 'age', type: 'number'},
+  { field: 'name' },
+  { field: 'age', type: 'number' },
   {
     field: 'username',
     valueGetter: (params) =>
@@ -16,8 +19,8 @@ const columns = [
       param2.api.getCellValue(param2.id, 'age'),
     width: 150,
   },
-  {field: 'dateCreated', type: 'date', width: 180},
-  {field: 'lastLogin', type: 'dateTime', width: 180},
+  { field: 'dateCreated', type: 'date', width: 180 },
+  { field: 'lastLogin', type: 'dateTime', width: 180 },
 ];
 
 const rows = [
@@ -74,7 +77,7 @@ export default function ComparatorSortingGrid() {
   ]);
 
   return (
-    <div style={{height: 400, width: '100%'}}>
+    <div style={{ height: 400, width: '100%' }}>
       <DataGrid
         sortModel={sortModel}
         rows={rows}

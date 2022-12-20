@@ -4,11 +4,11 @@ import ThumbUpAltOutlinedIcon from '@mui/icons-material/ThumbUpAltOutlined';
 import ShareOutlinedIcon from '@mui/icons-material/ShareOutlined';
 import CommentOutlinedIcon from '@mui/icons-material/CommentOutlined';
 import PropTypes from 'prop-types';
-import {Fonts} from '@crema/constants/AppEnums'
-import {useInfoViewActionsContext} from '@crema/context/InfoViewContextProvider';
-import {putDataApi} from '@crema/utility/APIHooks';
+import { Fonts } from '@crema/constants/AppEnums';
+import { useInfoViewActionsContext } from '@crema/context/InfoViewContextProvider';
+import { putDataApi } from '@crema/utility/APIHooks';
 
-const PostStats = ({post, setPostList}) => {
+const PostStats = ({ post, setPostList }) => {
   const infoViewActionsContext = useInfoViewActionsContext();
 
   const toggleLikeStatus = () => {
@@ -27,17 +27,17 @@ const PostStats = ({post, setPostList}) => {
 
   return (
     <Box
-      mb={{xs: 4, xl: 6}}
+      mb={{ xs: 4, xl: 6 }}
       fontWeight={Fonts.MEDIUM}
-      color='text.secondary'
-      display='flex'
-      alignItems='center'
-      justifyContent='space-around'
+      color="text.secondary"
+      display="flex"
+      alignItems="center"
+      justifyContent="space-around"
     >
       <Box
-        display='flex'
-        alignItems='center'
-        className='pointer'
+        display="flex"
+        alignItems="center"
+        className="pointer"
         color={post.liked ? 'primary.main' : 'text.secondary'}
         onClick={toggleLikeStatus}
       >
@@ -46,29 +46,29 @@ const PostStats = ({post, setPostList}) => {
             fontSize: 18,
           }}
         />
-        <Box fontSize={{xs: 12, md: 14}} component='span' ml={1.5}>
+        <Box fontSize={{ xs: 12, md: 14 }} component="span" ml={1.5}>
           {post.likes} likes
         </Box>
       </Box>
       {post.comments.length > 0 && (
-        <Box display='flex' className='pointer' alignItems='center' ml={3}>
+        <Box display="flex" className="pointer" alignItems="center" ml={3}>
           <CommentOutlinedIcon
             sx={{
               fontSize: 18,
             }}
           />
-          <Box fontSize={{xs: 12, md: 14}} component='span' ml={1.5}>
+          <Box fontSize={{ xs: 12, md: 14 }} component="span" ml={1.5}>
             {post.comments.length} Comments
           </Box>
         </Box>
       )}
-      <Box display='flex' alignItems='center' className='pointer' ml={3}>
+      <Box display="flex" alignItems="center" className="pointer" ml={3}>
         <ShareOutlinedIcon
           sx={{
             fontSize: 18,
           }}
         />
-        <Box fontSize={{xs: 12, md: 14}} component='span' ml={1.5}>
+        <Box fontSize={{ xs: 12, md: 14 }} component="span" ml={1.5}>
           {post.shares} Shares
         </Box>
       </Box>

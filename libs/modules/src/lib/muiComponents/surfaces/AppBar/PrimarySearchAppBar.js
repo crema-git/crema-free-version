@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {alpha, styled} from '@mui/material/styles';
+import { alpha, styled } from '@mui/material/styles';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -16,7 +16,7 @@ import MailIcon from '@mui/icons-material/Mail';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import MoreIcon from '@mui/icons-material/MoreVert';
 
-const Search = styled('div')(({theme}) => ({
+const Search = styled('div')(({ theme }) => ({
   position: 'relative',
   borderRadius: theme.shape.borderRadius,
   backgroundColor: alpha(theme.palette.common.white, 0.15),
@@ -32,7 +32,7 @@ const Search = styled('div')(({theme}) => ({
   },
 }));
 
-const SearchIconWrapper = styled('div')(({theme}) => ({
+const SearchIconWrapper = styled('div')(({ theme }) => ({
   padding: theme.spacing(0, 2),
   height: '100%',
   position: 'absolute',
@@ -42,7 +42,7 @@ const SearchIconWrapper = styled('div')(({theme}) => ({
   justifyContent: 'center',
 }));
 
-const StyledInputBase = styled(InputBase)(({theme}) => ({
+const StyledInputBase = styled(InputBase)(({ theme }) => ({
   color: 'inherit',
   '& .MuiInputBase-input': {
     padding: theme.spacing(1, 1, 1, 0),
@@ -120,8 +120,8 @@ export default function PrimarySearchAppBar() {
       onClose={handleMobileMenuClose}
     >
       <MenuItem>
-        <IconButton size='large' aria-label='show 4 new mails' color='inherit'>
-          <Badge badgeContent={4} color='error'>
+        <IconButton size="large" aria-label="show 4 new mails" color="inherit">
+          <Badge badgeContent={4} color="error">
             <MailIcon />
           </Badge>
         </IconButton>
@@ -129,11 +129,11 @@ export default function PrimarySearchAppBar() {
       </MenuItem>
       <MenuItem>
         <IconButton
-          size='large'
-          aria-label='show 17 new notifications'
-          color='inherit'
+          size="large"
+          aria-label="show 17 new notifications"
+          color="inherit"
         >
-          <Badge badgeContent={17} color='error'>
+          <Badge badgeContent={17} color="error">
             <NotificationsIcon />
           </Badge>
         </IconButton>
@@ -141,11 +141,11 @@ export default function PrimarySearchAppBar() {
       </MenuItem>
       <MenuItem onClick={handleProfileMenuOpen}>
         <IconButton
-          size='large'
-          aria-label='account of current user'
-          aria-controls='primary-search-account-menu'
-          aria-haspopup='true'
-          color='inherit'
+          size="large"
+          aria-label="account of current user"
+          aria-controls="primary-search-account-menu"
+          aria-haspopup="true"
+          color="inherit"
         >
           <AccountCircle />
         </IconButton>
@@ -155,23 +155,23 @@ export default function PrimarySearchAppBar() {
   );
 
   return (
-    <Box sx={{flexGrow: 1}}>
-      <AppBar position='static'>
+    <Box sx={{ flexGrow: 1 }}>
+      <AppBar position="static">
         <Toolbar>
           <IconButton
-            size='large'
-            edge='start'
-            color='inherit'
-            aria-label='open drawer'
-            sx={{mr: 2}}
+            size="large"
+            edge="start"
+            color="inherit"
+            aria-label="open drawer"
+            sx={{ mr: 2 }}
           >
             <MenuIcon />
           </IconButton>
           <Typography
-            variant='h6'
+            variant="h6"
             noWrap
-            component='div'
-            sx={{display: {xs: 'none', sm: 'block'}}}
+            component="div"
+            sx={{ display: { xs: 'none', sm: 'block' } }}
           >
             MUI
           </Typography>
@@ -180,50 +180,50 @@ export default function PrimarySearchAppBar() {
               <SearchIcon />
             </SearchIconWrapper>
             <StyledInputBase
-              placeholder='Search…'
-              inputProps={{'aria-label': 'search'}}
+              placeholder="Search…"
+              inputProps={{ 'aria-label': 'search' }}
             />
           </Search>
-          <Box sx={{flexGrow: 1}} />
-          <Box sx={{display: {xs: 'none', md: 'flex'}}}>
+          <Box sx={{ flexGrow: 1 }} />
+          <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
             <IconButton
-              size='large'
-              aria-label='show 4 new mails'
-              color='inherit'
+              size="large"
+              aria-label="show 4 new mails"
+              color="inherit"
             >
-              <Badge badgeContent={4} color='error'>
+              <Badge badgeContent={4} color="error">
                 <MailIcon />
               </Badge>
             </IconButton>
             <IconButton
-              size='large'
-              aria-label='show 17 new notifications'
-              color='inherit'
+              size="large"
+              aria-label="show 17 new notifications"
+              color="inherit"
             >
-              <Badge badgeContent={17} color='error'>
+              <Badge badgeContent={17} color="error">
                 <NotificationsIcon />
               </Badge>
             </IconButton>
             <IconButton
-              size='large'
-              edge='end'
-              aria-label='account of current user'
+              size="large"
+              edge="end"
+              aria-label="account of current user"
               aria-controls={menuId}
-              aria-haspopup='true'
+              aria-haspopup="true"
               onClick={handleProfileMenuOpen}
-              color='inherit'
+              color="inherit"
             >
               <AccountCircle />
             </IconButton>
           </Box>
-          <Box sx={{display: {xs: 'flex', md: 'none'}}}>
+          <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
             <IconButton
-              size='large'
-              aria-label='show more'
+              size="large"
+              aria-label="show more"
               aria-controls={mobileMenuId}
-              aria-haspopup='true'
+              aria-haspopup="true"
               onClick={handleMobileMenuOpen}
-              color='inherit'
+              color="inherit"
             >
               <MoreIcon />
             </IconButton>

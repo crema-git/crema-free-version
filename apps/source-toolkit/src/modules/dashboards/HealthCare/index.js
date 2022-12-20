@@ -1,35 +1,34 @@
 import React from 'react';
 import AppInfoView from '@crema/components/AppInfoView';
-import {Grid} from '@mui/material';
+import { Grid } from '@mui/material';
 import AppGridContainer from '@crema/components/AppGridContainer';
 import AppAnimate from '@crema/components/AppAnimate';
-import {useGetDataApi} from '@crema/utility/APIHooks';
+import { useGetDataApi } from '@crema/utility/APIHooks';
 import {
-    AppointmentCard,
-    CancelVisits,
-    DrCard,
-    HealthStatics,
-    HeartRate,
-    HospitalActivity,
-    HospitalStatics,
-    InfoWidget,
-    NewPatients,
-    Notifications,
-    ProfileCard,
-    RecentPatients,
-    TopDoctors,
-    UpcomingAppointments,
-    YourActivity
+  AppointmentCard,
+  CancelVisits,
+  DrCard,
+  HealthStatics,
+  HeartRate,
+  HospitalActivity,
+  HospitalStatics,
+  InfoWidget,
+  NewPatients,
+  Notifications,
+  ProfileCard,
+  RecentPatients,
+  TopDoctors,
+  UpcomingAppointments,
+  YourActivity,
 } from '@crema/modules/dashboards/HealthCare';
 
-
 const HealthCare = () => {
-  const [{apiData: healthCare}] = useGetDataApi('/dashboard/health_care');
+  const [{ apiData: healthCare }] = useGetDataApi('/dashboard/health_care');
 
   return (
     <>
       {healthCare ? (
-        <AppAnimate animation='transition.slideUpIn' delay={200}>
+        <AppAnimate animation="transition.slideUpIn" delay={200}>
           <AppGridContainer>
             {healthCare.salesState.map((data, index) => (
               <Grid item xs={12} sm={6} lg={3} key={index}>

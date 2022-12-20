@@ -1,10 +1,10 @@
 import React from 'react';
 import Box from '@mui/material/Box';
 import PropTypes from 'prop-types';
-import {Fonts} from '@crema/constants/AppEnums'
+import { Fonts } from '@crema/constants/AppEnums';
 
 const DayTemperature = (props) => {
-  const {day} = props;
+  const { day } = props;
 
   return (
     <Box
@@ -14,7 +14,7 @@ const DayTemperature = (props) => {
       }}
     >
       <Box
-        component='span'
+        component="span"
         sx={{
           mb: 3,
           display: 'block',
@@ -30,7 +30,7 @@ const DayTemperature = (props) => {
           display: 'inline-block',
         }}
       >
-        <img src={day.image} alt='weather' />
+        <img src={day.image} alt="weather" />
       </Box>
     </Box>
   );

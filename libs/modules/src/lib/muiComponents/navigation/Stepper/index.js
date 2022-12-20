@@ -38,100 +38,100 @@ const Stepper = () => {
   return (
     <>
       <AppComponentHeader
-        title='Stepper'
-        description='Steppers convey progress through numbered steps. It provides a wizard-like workflow.'
-        refUrl='https://mui.com/components/steppers/'
+        title="Stepper"
+        description="Steppers convey progress through numbered steps. It provides a wizard-like workflow."
+        refUrl="https://mui.com/components/steppers/"
       />
 
       <AppGridContainer>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Horizontal stepper'
+            title="Horizontal stepper"
             component={HorizontalLinearStepper}
             source={HorizontalLinearStepperSource}
             noScrollbar
-            description='Horizontal steppers are ideal when the contents of one step depend on an earlier step.'
+            description="Horizontal steppers are ideal when the contents of one step depend on an earlier step."
           />
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='HorizontalNonLinearStepper'
+            title="HorizontalNonLinearStepper"
             component={HorizontalNonLinearStepper}
             source={HorizontalNonLinearStepperSource}
             noScrollbar
-            description='Horizontal steppers are ideal when the contents of one step depend on an earlier step.'
+            description="Horizontal steppers are ideal when the contents of one step depend on an earlier step."
           />
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='HorizontalLabelPositionBelowStepper'
+            title="HorizontalLabelPositionBelowStepper"
             component={HorizontalLabelPositionBelowStepper}
             source={HorizontalLabelPositionBelowStepperSource}
             noScrollbar
-            description='Horizontal steppers are ideal when the contents of one step depend on an earlier step.'
+            description="Horizontal steppers are ideal when the contents of one step depend on an earlier step."
           />
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='HorizontalStepperWithError'
+            title="HorizontalStepperWithError"
             component={HorizontalStepperWithError}
             source={HorizontalStepperWithErrorSource}
             noScrollbar
-            description='Horizontal steppers are ideal when the contents of one step depend on an earlier step.'
+            description="Horizontal steppers are ideal when the contents of one step depend on an earlier step."
           />
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='CustomizedSteppers'
+            title="CustomizedSteppers"
             component={CustomizedSteppers}
             source={CustomizedSteppersSource}
             noScrollbar
-            description='Horizontal steppers are ideal when the contents of one step depend on an earlier step.'
+            description="Horizontal steppers are ideal when the contents of one step depend on an earlier step."
           />
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='VerticalLinearStepper'
+            title="VerticalLinearStepper"
             component={VerticalLinearStepper}
             source={VerticalLinearStepperSource}
             noScrollbar
-            description='Horizontal steppers are ideal when the contents of one step depend on an earlier step.'
+            description="Horizontal steppers are ideal when the contents of one step depend on an earlier step."
           />
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='TextMobileStepper'
+            title="TextMobileStepper"
             component={TextMobileStepper}
             source={TextMobileStepperSource}
             noScrollbar
-            description='Horizontal steppers are ideal when the contents of one step depend on an earlier step.'
+            description="Horizontal steppers are ideal when the contents of one step depend on an earlier step."
           />
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='SwipeableTextMobileStepper'
+            title="SwipeableTextMobileStepper"
             component={SwipeableTextMobileStepper}
             source={SwipeableTextMobileStepperSource}
             noScrollbar
-            description='Horizontal steppers are ideal when the contents of one step depend on an earlier step.'
+            description="Horizontal steppers are ideal when the contents of one step depend on an earlier step."
           />
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='DotsMobileStepper'
+            title="DotsMobileStepper"
             component={DotsMobileStepper}
             source={DotsMobileStepperSource}
             noScrollbar
-            description='Horizontal steppers are ideal when the contents of one step depend on an earlier step.'
+            description="Horizontal steppers are ideal when the contents of one step depend on an earlier step."
           />
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='ProgressMobileStepper'
+            title="ProgressMobileStepper"
             component={ProgressMobileStepper}
             source={ProgressMobileStepperSource}
             noScrollbar
-            description='Horizontal steppers are ideal when the contents of one step depend on an earlier step.'
+            description="Horizontal steppers are ideal when the contents of one step depend on an earlier step."
           />
         </Grid>
       </AppGridContainer>

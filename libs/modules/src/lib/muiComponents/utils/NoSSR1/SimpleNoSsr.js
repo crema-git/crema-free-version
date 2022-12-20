@@ -5,7 +5,9 @@ import Box from '@mui/material/Box';
 export default function SimpleNoSsr() {
   return (
     <div>
-      <Box sx={{p: 2, bgcolor: 'primary.main', color: 'primary.contrastText'}}>
+      <Box
+        sx={{ p: 2, bgcolor: 'primary.main', color: 'primary.contrastText' }}
+      >
         Server and Client
       </Box>
       <NoSsr>

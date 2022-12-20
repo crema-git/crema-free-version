@@ -9,4 +9,13 @@ const TimePicker = React.lazy(() => import('./TimePicker'));
 const TrapFocus = React.lazy(() => import('./TrapFocus'));
 const TreeView = React.lazy(() => import('./TreeView'));
 
-export {Masonry, Timeline,TimePicker, TrapFocus, TreeView, DatePicker, DateRangePicker, DateTimePicker};
+export {
+  Masonry,
+  Timeline,
+  TimePicker,
+  TrapFocus,
+  TreeView,
+  DatePicker,
+  DateRangePicker,
+  DateTimePicker,
+};

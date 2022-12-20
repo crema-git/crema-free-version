@@ -1,21 +1,21 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import clsx from 'clsx';
 import AppContentView from '../../AppContentView';
 import AppFixedFooter from './AppFixedFooter';
 import AppHeader from './AppHeader';
 import AppSidebar from './AppSidebar';
-import {useLayoutContext} from "@crema/context/LayoutContextProvider";
+import { useLayoutContext } from '@crema/context/LayoutContextProvider';
 import AppThemeSetting from '../../AppThemeSetting';
 import HorDarkWrapper from './HorDarkWrapper';
 import MainContent from './MainContent';
-import {LayoutType} from '@crema/constants/AppEnums';
+import { LayoutType } from '@crema/constants/AppEnums';
 import HorDarkContainer from './HorDarkContainer';
-import {useLocation} from 'react-router-dom';
-import PropsTypes from "prop-types";
+import { useLocation } from 'react-router-dom';
+import PropsTypes from 'prop-types';
 
-const HorDarkLayout = ({routes,routesConfig}) => {
-  const {footer, layoutType, footerType} = useLayoutContext();
-  const {pathname} = useLocation();
+const HorDarkLayout = ({ routes, routesConfig }) => {
+  const { footer, layoutType, footerType } = useLayoutContext();
+  const { pathname } = useLocation();
   const [isNavCollapsed, setNavCollapsed] = useState(false);
 
   const toggleNavCollapsed = () => {
@@ -38,15 +38,18 @@ const HorDarkLayout = ({routes,routesConfig}) => {
           appMainFixedFooter: footer && footerType === 'fixed',
         })}
       >
-        <AppSidebar 
+        <AppSidebar
           routesConfig={routesConfig}
           isNavCollapsed={isNavCollapsed}
           toggleNavCollapsed={toggleNavCollapsed}
         />
 
         <MainContent>
-          <AppHeader toggleNavCollapsed={toggleNavCollapsed} routesConfig={routesConfig}/>
-          <AppContentView  routes={routes} />
+          <AppHeader
+            toggleNavCollapsed={toggleNavCollapsed}
+            routesConfig={routesConfig}
+          />
+          <AppContentView routes={routes} />
           <AppFixedFooter />
         </MainContent>
         <AppThemeSetting />
@@ -60,5 +63,3 @@ HorDarkLayout.propsTypes = {
   routes: PropsTypes.object.isRequired,
   routesConfig: PropsTypes.array.isRequired,
 };
-
-

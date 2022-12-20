@@ -1,4 +1,4 @@
-import {MessageType} from './connectionList';
+import { MessageType } from './connectionList';
 
 const chatList = [
   {

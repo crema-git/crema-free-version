@@ -1,9 +1,9 @@
-import React, {useEffect, useState} from 'react';
-import {useBottomScrollListener} from 'react-bottom-scroll-listener';
+import React, { useEffect, useState } from 'react';
+import { useBottomScrollListener } from 'react-bottom-scroll-listener';
 import PropTypes from 'prop-types';
-import {Box, useTheme} from '@mui/material';
+import { Box, useTheme } from '@mui/material';
 import AppAnimateGroup from '../AppAnimateGroup';
-import {useWidth} from "@crema/helpers";
+import { useWidth } from '@crema/helpers';
 
 const getEmptyContainer = (ListEmptyComponent) => {
   if (ListEmptyComponent)
@@ -93,7 +93,7 @@ const GridView = ({
 
   let style = containerStyle;
   if (border) {
-    style = {...style, ...borderStyle};
+    style = { ...style, ...borderStyle };
   }
   useBottomScrollListener(onEndReached, 200);
   return (

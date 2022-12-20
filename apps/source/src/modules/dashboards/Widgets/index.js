@@ -1,14 +1,14 @@
 import React from 'react';
 import AppGridContainer from '@crema/components/AppGridContainer';
 import Grid from '@mui/material/Grid';
-import {FiFacebook, FiTwitter} from 'react-icons/fi';
+import { FiFacebook, FiTwitter } from 'react-icons/fi';
 import IntlMessages from '@crema/utility/IntlMessages';
 import Box from '@mui/material/Box';
-import {blue, indigo} from '@mui/material/colors';
-import {Fonts} from '@crema/constants/AppEnums'
+import { blue, indigo } from '@mui/material/colors';
+import { Fonts } from '@crema/constants/AppEnums';
 import AppAnimate from '@crema/components/AppAnimate';
 import AppLoader from '@crema/components/AppLoader';
-import {useGetDataApi} from '@crema/utility/APIHooks';
+import { useGetDataApi } from '@crema/utility/APIHooks';
 import {
   AddTags,
   BirthdayCard,
@@ -31,30 +31,30 @@ import {
   TaskList,
   TemperatureCard,
   VisitorAnalysis,
-  WallPaper
+  WallPaper,
 } from '@crema/modules/dashboards/Widgets';
 
-
 const Widgets = () => {
-  const [{apiData: widgetsData, loading}] = useGetDataApi('/dashboard/widgets');
+  const [{ apiData: widgetsData, loading }] =
+    useGetDataApi('/dashboard/widgets');
 
   return (
     <>
       {loading ? (
         <AppLoader />
-      ): (
-        <AppAnimate animation='transition.slideUpIn' delay={200}>
+      ) : (
+        <AppAnimate animation="transition.slideUpIn" delay={200}>
           <>
             <Box
-              component='h3'
+              component="h3"
               sx={{
                 color: 'text.primary',
-                mb: {xs: 4, sm: 4, xl: 6},
+                mb: { xs: 4, sm: 4, xl: 6 },
                 fontSize: 16,
                 fontWeight: Fonts.BOLD,
               }}
             >
-              <IntlMessages id='dashboard.widgets' />
+              <IntlMessages id="dashboard.widgets" />
             </Box>
 
             <AppGridContainer>
@@ -146,7 +146,7 @@ const Widgets = () => {
                 <CremaCard
                   data={widgetsData.mateInfo.facebookInfo}
                   bgColor={indigo[600]}
-                  color='white'
+                  color="white"
                   icon={
                     <Box
                       sx={{
@@ -166,7 +166,7 @@ const Widgets = () => {
                 <CremaCard
                   data={widgetsData.mateInfo.twitterInfo}
                   bgColor={blue[600]}
-                  color='white'
+                  color="white"
                   icon={
                     <Box
                       sx={{

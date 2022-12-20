@@ -1,8 +1,8 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import ProductsCategory from './ProductsCategory';
-import {Box} from '@mui/material';
-import {Fonts} from '@crema/constants/AppEnums'
+import { Box } from '@mui/material';
+import { Fonts } from '@crema/constants/AppEnums';
 import Divider from '@mui/material/Divider';
 import PriceSelector from './PriceSelector';
 import AppScrollbar from '@crema/components/AppScrollbar';
@@ -15,10 +15,10 @@ import {
   BrandData,
   DiscountList,
   IdealFor,
-  ProductColors
-} from "@crema/fakedb/data";
+  ProductColors,
+} from '@crema/fakedb/data';
 
-const ProductSidebar = ({filterData, setFilterData}) => {
+const ProductSidebar = ({ filterData, setFilterData }) => {
   const [selectedBrand, setSelectedBrand] = useState(filterData.brand);
   const [selectedFor, setSelectedFor] = useState(filterData.ideaFor);
   const [selectedDiscount, setSelectedDiscount] = useState(filterData.discount);
@@ -91,7 +91,7 @@ const ProductSidebar = ({filterData, setFilterData}) => {
         }}
       >
         <Box
-          component='h5'
+          component="h5"
           sx={{
             mb: 2,
             fontWeight: Fonts.MEDIUM,
@@ -211,7 +211,7 @@ const ProductSidebar = ({filterData, setFilterData}) => {
             fontWeight: Fonts.MEDIUM,
           }}
         >
-          <Box sx={{mb: 3}}>COLOR</Box>
+          <Box sx={{ mb: 3 }}>COLOR</Box>
 
           <AppGrid
             data={Object.values(ProductColors)}

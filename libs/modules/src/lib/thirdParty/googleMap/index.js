@@ -26,71 +26,71 @@ const GoogleMap = () => {
   return (
     <>
       <AppComponentHeader
-        title='Google Map'
-        description='A wrapper around google.maps.Map'
-        refUrl='https://developers.google.com/maps/documentation/javascript/3.exp/reference#Map/'
+        title="Google Map"
+        description="A wrapper around google.maps.Map"
+        refUrl="https://developers.google.com/maps/documentation/javascript/3.exp/reference#Map/"
       />
 
       <AppGridContainer>
         <Grid item xs={12}>
           <AppComponentCard
-            title='Simple Map'
+            title="Simple Map"
             component={SimpleMap}
             source={SimpleMapSource}
           />
         </Grid>
         <Grid item xs={12}>
           <AppComponentCard
-            title='Marker Clusterer Map'
+            title="Marker Clusterer Map"
             component={MapClustering}
             source={MapClusteringSource}
           />
         </Grid>
         <Grid item xs={12}>
           <AppComponentCard
-            title='StreetView Map'
+            title="StreetView Map"
             component={StreetViewMap}
             source={StreetViewMapSource}
           />
         </Grid>
         <Grid item xs={12}>
           <AppComponentCard
-            title='Traffic Map'
+            title="Traffic Map"
             component={TrafficLayer}
             source={TrafficLayerSource}
           />
         </Grid>
         <Grid item xs={12}>
           <AppComponentCard
-            title='Styled Map'
+            title="Styled Map"
             component={Styled}
             source={StyledSource}
           />
         </Grid>
         <Grid item xs={12}>
           <AppComponentCard
-            title='Directions Map'
+            title="Directions Map"
             component={MapDirections}
             source={MapDirectionsSource}
           />
         </Grid>
         <Grid item xs={12}>
           <AppComponentCard
-            title='Drawing View Map'
+            title="Drawing View Map"
             component={DrawingView}
             source={DrawingViewSource}
           />
         </Grid>
         <Grid item xs={12}>
           <AppComponentCard
-            title='KmlLayer Map'
+            title="KmlLayer Map"
             component={MapKmLayer}
             source={KmLayerSource}
           />
         </Grid>
         <Grid item xs={12}>
           <AppComponentCard
-            title='Google Map InfoWindow'
+            title="Google Map InfoWindow"
             component={PopUpInfo}
             source={PopUpInfoSource}
           />

@@ -32,15 +32,15 @@ const DateRangePicker = () => {
   return (
     <>
       <AppComponentHeader
-        title='DateRangePicker'
-        description='Date pickers let the user select a range of dates.'
-        refUrl='https://mui.com/components/date-range-picker/'
+        title="DateRangePicker"
+        description="Date pickers let the user select a range of dates."
+        refUrl="https://mui.com/components/date-range-picker/"
       />
 
       <AppGridContainer>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='BasicDateRangePicker'
+            title="BasicDateRangePicker"
             component={BasicDateRangePicker}
             source={BasicDateRangePickerSource}
             noScrollbar
@@ -48,7 +48,7 @@ const DateRangePicker = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='MinMaxDateRangePicker'
+            title="MinMaxDateRangePicker"
             component={MinMaxDateRangePicker}
             source={MinMaxDateRangePickerSource}
             noScrollbar
@@ -56,7 +56,7 @@ const DateRangePicker = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='ResponsiveDateRangePicker'
+            title="ResponsiveDateRangePicker"
             component={ResponsiveDateRangePicker}
             source={ResponsiveDateRangePickerSource}
             noScrollbar
@@ -64,7 +64,7 @@ const DateRangePicker = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='FormPropsDateRangePickers'
+            title="FormPropsDateRangePickers"
             component={FormPropsDateRangePickers}
             source={FormPropsDateRangePickersSource}
             noScrollbar
@@ -73,7 +73,7 @@ const DateRangePicker = () => {
 
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='CustomDateRangePickerDay'
+            title="CustomDateRangePickerDay"
             component={CustomDateRangePickerDay}
             source={CustomDateRangePickerDaySource}
             noScrollbar
@@ -81,7 +81,7 @@ const DateRangePicker = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='StaticDateRangePickerDemo'
+            title="StaticDateRangePickerDemo"
             component={StaticDateRangePickerDemo}
             source={StaticDateRangePickerDemoSource}
             noScrollbar
@@ -89,7 +89,7 @@ const DateRangePicker = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='CalendarsDateRangePicker'
+            title="CalendarsDateRangePicker"
             component={CalendarsDateRangePicker}
             source={CalendarsDateRangePickerSource}
             noScrollbar
@@ -97,7 +97,7 @@ const DateRangePicker = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='CustomDateRangeInputs'
+            title="CustomDateRangeInputs"
             component={CustomDateRangeInputs}
             source={CustomDateRangeInputsSource}
             noScrollbar

@@ -1,2 +1,2 @@
-import {Card} from '@crema/modules/components/surfaces';
+import { Card } from '@crema/modules/components/surfaces';
 export default Card;

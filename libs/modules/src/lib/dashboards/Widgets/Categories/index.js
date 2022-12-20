@@ -1,10 +1,10 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import CloseIcon from '@mui/icons-material/Close';
 import List from '@mui/material/List';
 import PropTypes from 'prop-types';
 import CategoryItem from './CategoryItem';
 import AppCard from '@crema/components/AppCard';
-import {useIntl} from 'react-intl';
+import { useIntl } from 'react-intl';
 import AppScrollbar from '@crema/components/AppScrollbar';
 
 const getData = (data) => {
@@ -12,7 +12,7 @@ const getData = (data) => {
 };
 
 const Categories = (props) => {
-  const {messages} = useIntl();
+  const { messages } = useIntl();
   const data = getData(props.data);
 
   const [categoryList, handleList] = useState(data);
@@ -20,7 +20,7 @@ const Categories = (props) => {
   const handleChange = (e, category) => {
     category.isChecked = e.target.checked;
     const list = categoryList.map((item) =>
-      item.id === category.id ? category : item,
+      item.id === category.id ? category : item
     );
     handleList(list);
   };
@@ -28,7 +28,7 @@ const Categories = (props) => {
   return (
     <AppCard
       title={messages['dashboard.categories']}
-      contentStyle={{px: 0}}
+      contentStyle={{ px: 0 }}
       action={
         <CloseIcon
           sx={{
@@ -36,9 +36,9 @@ const Categories = (props) => {
           }}
         />
       }
-      sxStyle={{height: 1}}
+      sxStyle={{ height: 1 }}
     >
-      <AppScrollbar sx={{maxHeight: 218}}>
+      <AppScrollbar sx={{ maxHeight: 218 }}>
         <List
           sx={{
             display: 'flex',

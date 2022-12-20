@@ -3,11 +3,11 @@ import Card from '@mui/material/Card';
 import AttachFileIcon from '@mui/icons-material/AttachFile';
 import ChatBubbleIcon from '@mui/icons-material/ChatBubble';
 import moment from 'moment';
-import {Box} from '@mui/material';
+import { Box } from '@mui/material';
 import PropTypes from 'prop-types';
 import Members from './Members';
 import Labels from './Labels';
-import {Fonts} from '@crema/constants/AppEnums'
+import { Fonts } from '@crema/constants/AppEnums';
 
 const CardDetail = ({
   title,
@@ -61,7 +61,7 @@ const CardDetail = ({
               }}
             >
               <Box
-                component='span'
+                component="span"
                 sx={{
                   fontWeight: Fonts.LIGHT,
                 }}
@@ -105,7 +105,7 @@ const CardDetail = ({
               }}
             >
               <Box
-                component='span'
+                component="span"
                 sx={{
                   mr: 2,
                   fontWeight: Fonts.LIGHT,

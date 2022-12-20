@@ -1,7 +1,7 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
-import {makeStyles} from '@mui/styles';
-import {createTheme} from '@mui/material/styles';
+import { makeStyles } from '@mui/styles';
+import { createTheme } from '@mui/material/styles';
 import Button from '@mui/material/Button';
 import {
   DataGridPro,
@@ -25,12 +25,12 @@ const useStyles = makeStyles(
       color: theme.palette.secondary.contrastText,
     },
   }),
-  {defaultTheme},
+  { defaultTheme }
 );
 
 function CustomColumnMenuComponent(props) {
   const classes = useStyles();
-  const {hideMenu, currentColumn, color, ...other} = props;
+  const { hideMenu, currentColumn, color, ...other } = props;
 
   if (currentColumn.field === 'name') {
     return (
@@ -63,7 +63,7 @@ function CustomColumnMenuComponent(props) {
             alignItems: 'center',
           }}
         >
-          <StarOutlineIcon style={{fontSize: 80}} />
+          <StarOutlineIcon style={{ fontSize: 80 }} />
         </div>
       </GridColumnMenuContainer>
     );
@@ -84,7 +84,7 @@ CustomColumnMenuComponent.propTypes = {
   hideMenu: PropTypes.func.isRequired,
 };
 
-export {CustomColumnMenuComponent};
+export { CustomColumnMenuComponent };
 
 export default function CustomColumnMenu() {
   const [color, setColor] = React.useState('primary');
@@ -98,24 +98,24 @@ export default function CustomColumnMenu() {
     >
       <Button
         color={color}
-        variant='outlined'
+        variant="outlined"
         onClick={(event) => {
           event.stopPropagation();
           setColor((current) =>
-            current === 'primary' ? 'secondary' : 'primary',
+            current === 'primary' ? 'secondary' : 'primary'
           );
           apiRef.current.showColumnMenu('default');
         }}
       >
         Toggle menu background
       </Button>
-      <div style={{height: 250, width: '100%', marginTop: 16}}>
+      <div style={{ height: 250, width: '100%', marginTop: 16 }}>
         <DataGridPro
           apiRef={apiRef}
           columns={[
-            {field: 'default', width: 150},
-            {field: 'name', width: 150},
-            {field: 'stars', width: 150},
+            { field: 'default', width: 150 },
+            { field: 'name', width: 150 },
+            { field: 'stars', width: 150 },
           ]}
           rows={[
             {
@@ -135,7 +135,7 @@ export default function CustomColumnMenu() {
             ColumnMenu: CustomColumnMenuComponent,
           }}
           componentsProps={{
-            columnMenu: {color},
+            columnMenu: { color },
           }}
         />
       </div>

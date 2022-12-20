@@ -3,7 +3,7 @@ import Checkbox from '@mui/material/Checkbox';
 import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
 
-const CheckBox = ({checkedContacts, contactList, setCheckedContacts}) => {
+const CheckBox = ({ checkedContacts, contactList, setCheckedContacts }) => {
   const onHandleMasterCheckbox = (event) => {
     if (event.target.checked) {
       const contactIds = contactList.map((contact) => contact.id);
@@ -23,7 +23,7 @@ const CheckBox = ({checkedContacts, contactList, setCheckedContacts}) => {
         sx={{
           color: (theme) => theme.palette.text.disabled,
         }}
-        color='primary'
+        color="primary"
         indeterminate={
           checkedContacts.length > 0 &&
           checkedContacts.length < contactList.length

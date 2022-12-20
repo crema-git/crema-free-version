@@ -1,24 +1,24 @@
-import React, {useEffect, useRef, useState} from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Box from '@mui/material/Box';
 import moment from 'moment';
 import PropTypes from 'prop-types';
 import IntlMessages from '@crema/utility/IntlMessages';
 import AppsHeader from '@crema/components/AppsHeader';
 import AppsFooter from '@crema/components/AppsFooter';
-import {useAuthUser} from '@crema/utility/AuthHooks';
+import { useAuthUser } from '@crema/utility/AuthHooks';
 import SimpleBarReact from 'simplebar-react';
 
-import {styled} from '@mui/material/styles';
-import {MessageType} from "@crema/fakedb/chat/connectionList";
-import {Header, MessagesList, SendMessage} from '@crema/modules/apps/Chat';
+import { styled } from '@mui/material/styles';
+import { MessageType } from '@crema/fakedb/chat/connectionList';
+import { Header, MessagesList, SendMessage } from '@crema/modules/apps/Chat';
 import {
   getConnectionMessages,
   onDeleteConversation,
   onDeleteMessage,
   onEditMessage,
-  onSendMessage
-} from "@crema/redux/actions";
-import {useDispatch, useSelector} from "react-redux";
+  onSendMessage,
+} from '@crema/redux/actions';
+import { useDispatch, useSelector } from 'react-redux';
 
 const ScrollbarWrapper = styled(SimpleBarReact)(() => {
   return {
@@ -37,17 +37,15 @@ const ScrollChatNoMainWrapper = styled('div')(() => {
   };
 });
 
-const ChatViewContainer = ({
-  selectedUser,
-}) => {
+const ChatViewContainer = ({ selectedUser }) => {
   const [message, setMessage] = useState('');
   const [isEdit, setIsEdit] = useState(false);
   const [selectedMessage, setSelectedMessage] = useState(null);
-  const {user} = useAuthUser();
+  const { user } = useAuthUser();
   const dispatch = useDispatch();
 
   let _scrollBarRef = useRef();
-  const userMessages = useSelector(({chatApp}) => chatApp.userMessages);
+  const userMessages = useSelector(({ chatApp }) => chatApp.userMessages);
 
   useEffect(() => {
     dispatch(getConnectionMessages(selectedUser.channelId));
@@ -74,11 +72,9 @@ const ChatViewContainer = ({
     };
 
     dispatch(onSendMessage(selectedUser.channelId, data));
-
   };
 
   const onSend = (message) => {
-
     const data = {
       ...selectedMessage,
       message,
@@ -88,16 +84,15 @@ const ChatViewContainer = ({
     };
 
     if (isEdit) {
-
       data.edited = true;
       dispatch(onEditMessage(selectedUser.channelId, data));
       setMessage('');
       setIsEdit(false);
-      setSelectedMessage(null)
+      setSelectedMessage(null);
     } else {
-console.log('data', data,selectedUser);
+      console.log('data', data, selectedUser);
       dispatch(onSendMessage(selectedUser.channelId, data));
-      setMessage('')
+      setMessage('');
     }
   };
 
@@ -149,13 +144,13 @@ console.log('data', data,selectedUser);
       ) : (
         <ScrollChatNoMainWrapper>
           <Box
-            component='span'
+            component="span"
             sx={{
               fontSize: 18,
               color: 'grey.500',
             }}
           >
-            <IntlMessages id='chatApp.sayHi' /> {selectedUser.name}
+            <IntlMessages id="chatApp.sayHi" /> {selectedUser.name}
           </Box>
         </ScrollChatNoMainWrapper>
       )}

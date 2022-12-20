@@ -5,9 +5,9 @@ import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
 import AppMenu from '@crema/components/AppMenu';
 import Avatar from '@mui/material/Avatar';
-import {Fonts} from '@crema/constants/AppEnums'
+import { Fonts } from '@crema/constants/AppEnums';
 
-const TableItem = ({data}) => {
+const TableItem = ({ data }) => {
   return (
     <TableRow
       key={data.name}
@@ -24,9 +24,9 @@ const TableItem = ({data}) => {
           },
         },
       }}
-      className='item-hover'
+      className="item-hover"
     >
-      <TableCell component='th' scope='row' className='tableCell'>
+      <TableCell component="th" scope="row" className="tableCell">
         <Box
           sx={{
             display: 'flex',
@@ -48,17 +48,17 @@ const TableItem = ({data}) => {
           </Box>
         </Box>
       </TableCell>
-      <TableCell align='left' className='tableCell'>
+      <TableCell align="left" className="tableCell">
         {data.gender}
       </TableCell>
-      <TableCell align='left' className='tableCell'>
+      <TableCell align="left" className="tableCell">
         {data.weight}
       </TableCell>
-      <TableCell align='left' className='tableCell'>
+      <TableCell align="left" className="tableCell">
         {data.assignedDr}
       </TableCell>
-      <TableCell align='left'>{data.date}</TableCell>
-      <TableCell align='left'>
+      <TableCell align="left">{data.date}</TableCell>
+      <TableCell align="left">
         <Box
           sx={{
             color: data.color,
@@ -72,7 +72,7 @@ const TableItem = ({data}) => {
           {data.status}
         </Box>
       </TableCell>
-      <TableCell align='right'>
+      <TableCell align="right">
         <AppMenu />
       </TableCell>
     </TableRow>

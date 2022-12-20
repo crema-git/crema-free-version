@@ -1,9 +1,9 @@
 import React from 'react';
 import Slider from '@mui/material/Slider';
 import Box from '@mui/material/Box';
-import {Fonts} from '@crema/constants/AppEnums'
+import { Fonts } from '@crema/constants/AppEnums';
 import AppCard from '@crema/components/AppCard';
-import {useIntl} from 'react-intl';
+import { useIntl } from 'react-intl';
 
 const Price = () => {
   const [value, setValue] = React.useState([20, 37]);
@@ -11,11 +11,11 @@ const Price = () => {
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
-  const {messages} = useIntl();
+  const { messages } = useIntl();
   return (
     <AppCard title={messages['dashboard.price']}>
       <Box
-        component='p'
+        component="p"
         sx={{
           color: 'text.secondary',
           fontWeight: Fonts.MEDIUM,

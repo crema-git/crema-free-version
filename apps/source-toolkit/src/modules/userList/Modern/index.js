@@ -2,11 +2,11 @@ import React from 'react';
 import AppInfoView from '@crema/components/AppInfoView';
 import Box from '@mui/material/Box';
 import AppList from '@crema/components/AppList';
-import {useGetDataApi} from '@crema/utility/APIHooks';
-import {ListItem} from "@crema/modules/userList/Modern";
+import { useGetDataApi } from '@crema/utility/APIHooks';
+import { ListItem } from '@crema/modules/userList/Modern';
 
 const Modern = () => {
-  const [{apiData: usersList}] = useGetDataApi('/api/user/list', []);
+  const [{ apiData: usersList }] = useGetDataApi('/api/user/list', []);
 
   return (
     <Box flex={1}>

@@ -1,12 +1,12 @@
 import React from 'react';
-import {useThemeContext} from '@crema/context/ThemeContextProvider';
+import { useThemeContext } from '@crema/context/ThemeContextProvider';
 import Box from '@mui/material/Box';
-import {TiFolderOpen} from 'react-icons/ti';
+import { TiFolderOpen } from 'react-icons/ti';
 import PropTypes from 'prop-types';
 import Button from '@mui/material/Button';
 
-const UploadClassic = ({uploadText, dropzone}) => {
-  const {theme} = useThemeContext();
+const UploadClassic = ({ uploadText, dropzone }) => {
+  const { theme } = useThemeContext();
   return (
     <Box
       sx={{
@@ -34,7 +34,7 @@ const UploadClassic = ({uploadText, dropzone}) => {
             maxWidth: 200,
             mx: 'auto',
           }}
-          {...dropzone.getRootProps({className: 'dropzone'})}
+          {...dropzone.getRootProps({ className: 'dropzone' })}
         >
           <input {...dropzone.getInputProps()} />
           <TiFolderOpen
@@ -44,11 +44,11 @@ const UploadClassic = ({uploadText, dropzone}) => {
               color: theme.palette.primary.main,
             }}
           />
-          <Box component='p' sx={{mb: 3}}>
+          <Box component="p" sx={{ mb: 3 }}>
             {uploadText}
           </Box>
           <Box
-            component='p'
+            component="p"
             sx={{
               mb: 3,
               position: 'relative',
@@ -65,7 +65,7 @@ const UploadClassic = ({uploadText, dropzone}) => {
             }}
           >
             <Box
-              component='span'
+              component="span"
               sx={{
                 backgroundColor: (theme) => theme.palette.background.default,
                 p: 2,
@@ -75,7 +75,7 @@ const UploadClassic = ({uploadText, dropzone}) => {
               Or
             </Box>
           </Box>
-          <Button variant='contained'>Browse Files</Button>
+          <Button variant="contained">Browse Files</Button>
         </Box>
       </Box>
     </Box>

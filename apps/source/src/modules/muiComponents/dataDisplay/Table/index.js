@@ -1,2 +1,2 @@
-import {Table} from '@crema/modules/components/dataDisplay';
+import { Table } from '@crema/modules/components/dataDisplay';
 export default Table;

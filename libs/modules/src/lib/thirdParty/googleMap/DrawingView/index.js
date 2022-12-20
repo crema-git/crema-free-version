@@ -1,7 +1,6 @@
-import React, {Component} from 'react';
-import {GoogleMap, withGoogleMap} from 'react-google-maps';
+import React, { Component } from 'react';
+import { GoogleMap, withGoogleMap } from 'react-google-maps';
 import DrawingManager from 'react-google-maps/lib/components/drawing/DrawingManager';
-
 
 /*
  * Add <script src="https://maps.googleapis.com/maps/api/js"></script> to your HTML to provide google.maps reference
@@ -60,9 +59,9 @@ export default class DrawingView extends Component {
     return (
       <DrawingExampleGoogleMap
         containerElement={
-          <div className='cr-embed-responsive cr-embed-responsive-21by9' />
+          <div className="cr-embed-responsive cr-embed-responsive-21by9" />
         }
-        mapElement={<div className='cr-embed-responsive-item' />}
+        mapElement={<div className="cr-embed-responsive-item" />}
       />
     );
   }

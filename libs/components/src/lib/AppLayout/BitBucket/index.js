@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import AppSidebar from './AppSidebar';
 import AppThemeSetting from '../../AppThemeSetting';
 import AppHeader from './AppHeader';
@@ -6,18 +6,18 @@ import clsx from 'clsx';
 import Hidden from '@mui/material/Hidden';
 import Box from '@mui/material/Box';
 import BitBucketWrapper from './BitBucketWrapper';
-import {LayoutType} from '@crema/constants/AppEnums';
-import {useLayoutContext} from "@crema/context/LayoutContextProvider";
+import { LayoutType } from '@crema/constants/AppEnums';
+import { useLayoutContext } from '@crema/context/LayoutContextProvider';
 import BitBucketContainer from './BitBucketContainer';
 import AppContentView from '../../AppContentView';
-import {useLocation} from 'react-router-dom';
-import PropsTypes from "prop-types";
+import { useLocation } from 'react-router-dom';
+import PropsTypes from 'prop-types';
 
-const BitBucket = ({routes,routesConfig}) => {
-  const {pathname} = useLocation();
+const BitBucket = ({ routes, routesConfig }) => {
+  const { pathname } = useLocation();
   const [isCollapsed, setCollapsed] = useState(false);
   const [isNavCollapsed, setNavCollapsed] = useState(false);
-  const {layoutType} = useLayoutContext();
+  const { layoutType } = useLayoutContext();
 
   const toggleNavCollapsed = () => {
     setNavCollapsed(!isNavCollapsed);
@@ -41,15 +41,15 @@ const BitBucket = ({routes,routesConfig}) => {
         <Hidden lgUp>
           <AppHeader toggleNavCollapsed={toggleNavCollapsed} />
         </Hidden>
-        <AppSidebar 
+        <AppSidebar
           routesConfig={routesConfig}
           isCollapsed={isCollapsed}
           setCollapsed={setCollapsed}
           isNavCollapsed={isNavCollapsed}
           toggleNavCollapsed={toggleNavCollapsed}
         />
-        <Box className='mainContent'>
-          <AppContentView  routes={routes} />
+        <Box className="mainContent">
+          <AppContentView routes={routes} />
         </Box>
         <AppThemeSetting />
       </BitBucketWrapper>
@@ -62,4 +62,3 @@ BitBucket.propsTypes = {
   routes: PropsTypes.object.isRequired,
   routesConfig: PropsTypes.array.isRequired,
 };
-

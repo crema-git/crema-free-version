@@ -1,2 +1,2 @@
-import {ResetPassword} from '@crema/modules/userPages';
+import { ResetPassword } from '@crema/modules/userPages';
 export default ResetPassword;

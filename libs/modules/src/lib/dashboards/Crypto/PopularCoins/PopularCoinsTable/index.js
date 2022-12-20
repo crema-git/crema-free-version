@@ -8,7 +8,7 @@ import TableItem from './TableItem';
 import AppTableContainer from '@crema/components/AppTableContainer';
 
 const PopularCoinsTable = (props) => {
-  const {popularCoins} = props;
+  const { popularCoins } = props;
 
   return (
     <AppTableContainer>

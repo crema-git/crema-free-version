@@ -11,7 +11,7 @@ export default function BasicDateTimePicker() {
     <LocalizationProvider dateAdapter={AdapterDateFns}>
       <DateTimePicker
         renderInput={(props) => <TextField {...props} />}
-        label='DateTimePicker'
+        label="DateTimePicker"
         value={value}
         onChange={(newValue) => {
           setValue(newValue);

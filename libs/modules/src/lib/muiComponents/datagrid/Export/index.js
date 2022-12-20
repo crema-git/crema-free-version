@@ -14,15 +14,15 @@ const Export = () => {
   return (
     <>
       <AppComponentHeader
-        title='Export'
-        description='Easily export the rows in various file formats such as CSV, Excel, or PDF.'
-        refUrl='https://mui.com/components/data-grid/export/'
+        title="Export"
+        description="Easily export the rows in various file formats such as CSV, Excel, or PDF."
+        refUrl="https://mui.com/components/data-grid/export/"
       />
 
       <AppGridContainer>
         <Grid item xs={12}>
           <AppComponentCard
-            title='ExportSelectorGrid'
+            title="ExportSelectorGrid"
             component={ExportSelectorGrid}
             source={ExportSelectorGridSource}
             noScrollbar
@@ -30,7 +30,7 @@ const Export = () => {
         </Grid>
         <Grid item xs={12}>
           <AppComponentCard
-            title='ExportSelectorGridPrint'
+            title="ExportSelectorGridPrint"
             component={ExportSelectorGridPrint}
             source={ExportSelectorGridPrintSource}
             noScrollbar

@@ -77,7 +77,7 @@ const mailReducer = (state = initialState, action) => {
 
     case UPDATE_MAIL_FOLDER: {
       const updatedList = state.mailList.filter(
-        (mail) => !action.payload.includes(mail.id),
+        (mail) => !action.payload.includes(mail.id)
       );
       return {
         ...state,
@@ -91,7 +91,7 @@ const mailReducer = (state = initialState, action) => {
       const updatedList = state.mailList.map((mail) => {
         if (mailIds.includes(mail.id)) {
           return action.payload.find(
-            (selectedMail) => selectedMail.id === mail.id,
+            (selectedMail) => selectedMail.id === mail.id
           );
         } else {
           return mail;
@@ -108,7 +108,7 @@ const mailReducer = (state = initialState, action) => {
       const updatedList = state.mailList.map((mail) => {
         if (mailIds.includes(mail.id)) {
           return action.payload.find(
-            (selectedMail) => selectedMail.id === mail.id,
+            (selectedMail) => selectedMail.id === mail.id
           );
         } else {
           return mail;
@@ -125,7 +125,7 @@ const mailReducer = (state = initialState, action) => {
       const updatedList = state.mailList.map((mail) => {
         if (mailIds.includes(mail.id)) {
           return action.payload.data.find(
-            (selectedMail) => selectedMail.id === mail.id,
+            (selectedMail) => selectedMail.id === mail.id
           );
         } else {
           return mail;
@@ -156,7 +156,7 @@ const mailReducer = (state = initialState, action) => {
       return {
         ...state,
         mailList: state.mailList.map((data) =>
-          data.id === action.payload.id ? action.payload : data,
+          data.id === action.payload.id ? action.payload : data
         ),
         selectedMail: action.payload,
       };

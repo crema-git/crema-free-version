@@ -1,14 +1,14 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
-import {alpha, styled} from '@mui/material/styles';
+import { alpha, styled } from '@mui/material/styles';
 import TreeView from '@mui/lab/TreeView';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
-import TreeItem, {useTreeItem} from '@mui/lab/TreeItem';
+import TreeItem, { useTreeItem } from '@mui/lab/TreeItem';
 import clsx from 'clsx';
 import Typography from '@mui/material/Typography';
 
-const CustomContentRoot = styled('div')(({theme}) => ({
+const CustomContentRoot = styled('div')(({ theme }) => ({
   WebkitTapHighlightColor: 'transparent',
   '&:hover, &.Mui-disabled, &.Mui-focused, &.Mui-selected, &.Mui-selected.Mui-focused, &.Mui-selected:hover':
     {
@@ -36,28 +36,26 @@ const CustomContentRoot = styled('div')(({theme}) => ({
     '&.Mui-selected &': {
       backgroundColor: alpha(
         theme.palette.primary.main,
-        theme.palette.action.selectedOpacity,
+        theme.palette.action.selectedOpacity
       ),
     },
     '&.Mui-selected:hover &': {
       backgroundColor: alpha(
         theme.palette.primary.main,
-        theme.palette.action.selectedOpacity +
-          theme.palette.action.hoverOpacity,
+        theme.palette.action.selectedOpacity + theme.palette.action.hoverOpacity
       ),
       // Reset on touch devices, it doesn't add specificity
       '@media (hover: none)': {
         backgroundColor: alpha(
           theme.palette.primary.main,
-          theme.palette.action.selectedOpacity,
+          theme.palette.action.selectedOpacity
         ),
       },
     },
     '&.Mui-selected.Mui-focused &': {
       backgroundColor: alpha(
         theme.palette.primary.main,
-        theme.palette.action.selectedOpacity +
-          theme.palette.action.focusOpacity,
+        theme.palette.action.selectedOpacity + theme.palette.action.focusOpacity
       ),
     },
   },
@@ -107,9 +105,9 @@ const CustomContent = React.forwardRef(function CustomContent(props, ref) {
       onMouseDown={handleMouseDown}
       ref={ref}
     >
-      <div className='MuiTreeItem-contentBar' />
+      <div className="MuiTreeItem-contentBar" />
       <div className={classes.iconContainer}>{icon}</div>
-      <Typography component='div' className={classes.label}>
+      <Typography component="div" className={classes.label}>
         {label}
       </Typography>
     </CustomContentRoot>
@@ -154,22 +152,22 @@ const CustomTreeItem = (props) => (
 export default function BarTreeView() {
   return (
     <TreeView
-      aria-label='icon expansion'
+      aria-label="icon expansion"
       defaultCollapseIcon={<ExpandMoreIcon />}
       defaultExpandIcon={<ChevronRightIcon />}
-      sx={{height: 240, flexGrow: 1, maxWidth: 400, position: 'relative'}}
+      sx={{ height: 240, flexGrow: 1, maxWidth: 400, position: 'relative' }}
     >
-      <CustomTreeItem nodeId='1' label='Applications'>
-        <CustomTreeItem nodeId='2' label='Calendar' />
-        <CustomTreeItem nodeId='3' label='Chrome' />
-        <CustomTreeItem nodeId='4' label='Webstorm' />
+      <CustomTreeItem nodeId="1" label="Applications">
+        <CustomTreeItem nodeId="2" label="Calendar" />
+        <CustomTreeItem nodeId="3" label="Chrome" />
+        <CustomTreeItem nodeId="4" label="Webstorm" />
       </CustomTreeItem>
-      <CustomTreeItem nodeId='5' label='Documents'>
-        <CustomTreeItem nodeId='10' label='OSS' />
-        <CustomTreeItem nodeId='6' label='MUI'>
-          <CustomTreeItem nodeId='7' label='src'>
-            <CustomTreeItem nodeId='8' label='index.js' />
-            <CustomTreeItem nodeId='9' label='tree-view.js' />
+      <CustomTreeItem nodeId="5" label="Documents">
+        <CustomTreeItem nodeId="10" label="OSS" />
+        <CustomTreeItem nodeId="6" label="MUI">
+          <CustomTreeItem nodeId="7" label="src">
+            <CustomTreeItem nodeId="8" label="index.js" />
+            <CustomTreeItem nodeId="9" label="tree-view.js" />
           </CustomTreeItem>
         </CustomTreeItem>
       </CustomTreeItem>

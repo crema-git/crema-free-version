@@ -10,9 +10,9 @@ import {
   SET_PRODUCT_VIEW_TYPE,
   UPDATE_CART_ITEM,
 } from '@crema/constants/ActionTypes';
-import {cartItems} from "@crema/fakedb/data"
+import { cartItems } from '@crema/fakedb/data';
 
-export const VIEW_TYPE = Object.freeze({LIST: 1, GRID: 2});
+export const VIEW_TYPE = Object.freeze({ LIST: 1, GRID: 2 });
 const initialState = {
   ecommerceList: [],
   viewType: VIEW_TYPE.LIST,
@@ -74,7 +74,7 @@ const ecommerceReducer = (state = initialState, action) => {
       return {
         ...state,
         cartItems: state.cartItems.map((item) =>
-          item.id === action.payload.id ? action.payload : item,
+          item.id === action.payload.id ? action.payload : item
         ),
       };
 
@@ -116,7 +116,7 @@ const ecommerceReducer = (state = initialState, action) => {
       return {
         ...state,
         cartItems: state.cartItems.filter(
-          (item) => item.id !== action.payload.id,
+          (item) => item.id !== action.payload.id
         ),
       };
 

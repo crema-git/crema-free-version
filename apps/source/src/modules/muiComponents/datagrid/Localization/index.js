@@ -1,2 +1,2 @@
-import {Localization} from '@crema/modules/components/datagrid';
+import { Localization } from '@crema/modules/components/datagrid';
 export default Localization;

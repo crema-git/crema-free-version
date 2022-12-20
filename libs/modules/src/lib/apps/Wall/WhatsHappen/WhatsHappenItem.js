@@ -1,11 +1,11 @@
 import React from 'react';
 import Box from '@mui/material/Box';
-import {Fonts} from '@crema/constants/AppEnums'
-import {Typography} from '@mui/material';
+import { Fonts } from '@crema/constants/AppEnums';
+import { Typography } from '@mui/material';
 import PropTypes from 'prop-types';
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 import IconButton from '@mui/material/IconButton';
-import {styled} from '@mui/material/styles';
+import { styled } from '@mui/material/styles';
 
 const ThumbWrapper = styled('div')(() => ({
   borderRadius: 4,
@@ -28,11 +28,11 @@ const StyledBox = styled(Box)(() => ({
   mb: 0.5,
 }));
 
-const WhatsHappenItem = ({data}) => {
-  const {imgSrc, subTitle, title} = data;
+const WhatsHappenItem = ({ data }) => {
+  const { imgSrc, subTitle, title } = data;
   return (
     <Box
-      className='item-hover'
+      className="item-hover"
       sx={{
         position: 'relative',
         display: 'flex',
@@ -41,7 +41,7 @@ const WhatsHappenItem = ({data}) => {
       }}
     >
       <ThumbWrapper>
-        <img src={imgSrc} alt='happen img' />
+        <img src={imgSrc} alt="happen img" />
       </ThumbWrapper>
       <Box
         sx={{
@@ -49,12 +49,12 @@ const WhatsHappenItem = ({data}) => {
           width: 'calc(100% - 98px)',
         }}
       >
-        <StyledBox component='p' color='text.secondary'>
+        <StyledBox component="p" color="text.secondary">
           {subTitle}
         </StyledBox>
         <Typography
-          component='h5'
-          variant='h5'
+          component="h5"
+          variant="h5"
           sx={{
             fontWeight: Fonts.SEMI_BOLD,
             marginBottom: 1,
@@ -65,9 +65,9 @@ const WhatsHappenItem = ({data}) => {
         >
           {title}
         </Typography>
-        <StyledBox color='primary.main' component='p'>
+        <StyledBox color="primary.main" component="p">
           {data.tag.map((val) => (
-            <Box component='span' mr={1} key={val.id}>
+            <Box component="span" mr={1} key={val.id}>
               #{val.name}
             </Box>
           ))}
@@ -85,7 +85,7 @@ const WhatsHappenItem = ({data}) => {
             marginTop: -2.5,
             marginRight: -3,
           }}
-          size='large'
+          size="large"
         >
           <MoreHorizIcon />
         </IconButton>

@@ -1,5 +1,5 @@
 import React from 'react';
-import {RoutePermittedRole} from "@crema/constants/AppConst";
+import { RoutePermittedRole } from '@crema/constants/AppConst';
 import Account from '../../modules/account/MyProfile';
 
 export const accountPagesConfigs = [

@@ -3,37 +3,37 @@ import SalesGraph from './SalesGraph';
 import IntlMessages from '@crema/utility/IntlMessages';
 import Box from '@mui/material/Box';
 import PropTypes from 'prop-types';
-import {Fonts} from '@crema/constants/AppEnums'
+import { Fonts } from '@crema/constants/AppEnums';
 import AppCard from '@crema/components/AppCard';
-import {useIntl} from 'react-intl';
+import { useIntl } from 'react-intl';
 
-const Sales = ({data}) => {
-  const {messages} = useIntl();
+const Sales = ({ data }) => {
+  const { messages } = useIntl();
   return (
     <AppCard
       title={messages['dashboard.salesToday']}
-      sxStyle={{height: 1}}
-      contentStyle={{display: 'flex', flexDirection: 'column'}}
+      sxStyle={{ height: 1 }}
+      contentStyle={{ display: 'flex', flexDirection: 'column' }}
     >
       <Box
-        component='h2'
+        component="h2"
         sx={{
           mb: 2,
           color: 'text.secondary',
           fontWeight: Fonts.MEDIUM,
-          fontSize: {xs: 24, md: 38, xl: 36},
+          fontSize: { xs: 24, md: 38, xl: 36 },
         }}
       >
         {data.salesToday}
       </Box>
       <Box
-        component='p'
+        component="p"
         sx={{
           color: 'secondary.main',
           fontSize: 14,
         }}
       >
-        {data.salesYesterday} <IntlMessages id='common.yesterday' />
+        {data.salesYesterday} <IntlMessages id="common.yesterday" />
       </Box>
       <Box
         sx={{

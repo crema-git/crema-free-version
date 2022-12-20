@@ -8,7 +8,7 @@ import TimelineDot from '@mui/lab/TimelineDot';
 
 export default function LeftPositionedTimeline() {
   return (
-    <Timeline position='left'>
+    <Timeline position="left">
       <TimelineItem>
         <TimelineSeparator>
           <TimelineDot />

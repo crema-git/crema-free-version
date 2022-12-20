@@ -1,2 +1,2 @@
-import {TextareaAutosize} from '@crema/modules/components/utils';
+import { TextareaAutosize } from '@crema/modules/components/utils';
 export default TextareaAutosize;

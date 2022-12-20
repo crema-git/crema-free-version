@@ -25,7 +25,7 @@ export default function MinMaxDateRangePicker() {
         renderInput={(startProps, endProps) => (
           <React.Fragment>
             <TextField {...startProps} />
-            <Box sx={{mx: 2}}> to </Box>
+            <Box sx={{ mx: 2 }}> to </Box>
             <TextField {...endProps} />
           </React.Fragment>
         )}

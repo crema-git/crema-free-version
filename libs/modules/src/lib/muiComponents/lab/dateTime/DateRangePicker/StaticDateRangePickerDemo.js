@@ -1,8 +1,8 @@
 import * as React from 'react';
 import TextField from '@mui/material/TextField';
-import {StaticDateRangePicker} from '@mui/x-date-pickers-pro';
-import {AdapterDateFns} from '@mui/x-date-pickers/AdapterDateFns';
-import {LocalizationProvider} from '@mui/x-date-pickers';
+import { StaticDateRangePicker } from '@mui/x-date-pickers-pro';
+import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
+import { LocalizationProvider } from '@mui/x-date-pickers';
 import Box from '@mui/material/Box';
 
 export default function StaticDateRangePickerDemo() {
@@ -11,7 +11,7 @@ export default function StaticDateRangePickerDemo() {
   return (
     <LocalizationProvider dateAdapter={AdapterDateFns}>
       <StaticDateRangePicker
-        displayStaticWrapperAs='desktop'
+        displayStaticWrapperAs="desktop"
         value={value}
         onChange={(newValue) => {
           setValue(newValue);
@@ -19,7 +19,7 @@ export default function StaticDateRangePickerDemo() {
         renderInput={(startProps, endProps) => (
           <React.Fragment>
             <TextField {...startProps} />
-            <Box sx={{mx: 2}}> to </Box>
+            <Box sx={{ mx: 2 }}> to </Box>
             <TextField {...endProps} />
           </React.Fragment>
         )}

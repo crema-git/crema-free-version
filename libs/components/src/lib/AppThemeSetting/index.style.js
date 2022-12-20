@@ -1,8 +1,8 @@
-import {styled} from '@mui/material/styles';
+import { styled } from '@mui/material/styles';
 import ToggleButton from '@mui/material/ToggleButton';
-import {Box} from '@mui/material';
+import { Box } from '@mui/material';
 
-export const CustomizerItemWrapper = styled(Box)(({theme}) => ({
+export const CustomizerItemWrapper = styled(Box)(({ theme }) => ({
   '&:not(:last-of-type)': {
     borderBottom: [`1px solid ${theme.palette.divider}`],
     paddingBottom: 20,
@@ -13,7 +13,7 @@ export const CustomizerItemWrapper = styled(Box)(({theme}) => ({
     },
   },
 }));
-export const StyledToggleButton = styled(ToggleButton)(({theme}) => ({
+export const StyledToggleButton = styled(ToggleButton)(({ theme }) => ({
   height: 36,
   backgroundColor: theme.palette.background.paper,
   color: theme.palette.primary.main,

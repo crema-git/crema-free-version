@@ -1,7 +1,7 @@
 import React from 'react';
-import {store} from 'react-notifications-component';
+import { store } from 'react-notifications-component';
 import Button from '@mui/material/Button';
-import {getContainer, getMessage, getType} from '../helpers/randomize';
+import { getContainer, getMessage, getType } from '../helpers/randomize';
 import notification from '../helpers/notification';
 import Box from '@mui/material/Box';
 
@@ -14,16 +14,16 @@ const AnimationEntrance = () => {
         container: getContainer(),
         message: getMessage(type),
         type,
-      }),
+      })
     );
   };
 
   return (
-    <Box display='flex' flexWrap='wrap'>
+    <Box display="flex" flexWrap="wrap">
       <Box mr={2} my={1}>
         <Button
-          color='primary'
-          variant='contained'
+          color="primary"
+          variant="contained"
           onClick={() => add(['animated bounceIn'])}
         >
           Bounce In
@@ -31,8 +31,8 @@ const AnimationEntrance = () => {
       </Box>
       <Box mr={2} my={1}>
         <Button
-          color='primary'
-          variant='contained'
+          color="primary"
+          variant="contained"
           onClick={() => add(['animated fadeIn'])}
         >
           Fade In
@@ -40,8 +40,8 @@ const AnimationEntrance = () => {
       </Box>
       <Box mr={2} my={1}>
         <Button
-          color='primary'
-          variant='contained'
+          color="primary"
+          variant="contained"
           onClick={() => add(['animated flipInX'])}
         >
           Flip In X
@@ -49,8 +49,8 @@ const AnimationEntrance = () => {
       </Box>
       <Box mr={2} my={1}>
         <Button
-          color='primary'
-          variant='contained'
+          color="primary"
+          variant="contained"
           onClick={() => add(['animated flipInY'])}
         >
           Flip In Y
@@ -58,8 +58,8 @@ const AnimationEntrance = () => {
       </Box>
       <Box mr={2} my={1}>
         <Button
-          color='primary'
-          variant='contained'
+          color="primary"
+          variant="contained"
           onClick={() => add(['animated zoomIn'])}
         >
           Zoom In
@@ -67,8 +67,8 @@ const AnimationEntrance = () => {
       </Box>
       <Box mr={2} my={1}>
         <Button
-          color='primary'
-          variant='contained'
+          color="primary"
+          variant="contained"
           onClick={() => add(['animated flash'])}
         >
           Flash
@@ -76,8 +76,8 @@ const AnimationEntrance = () => {
       </Box>
       <Box mr={2} my={1}>
         <Button
-          color='primary'
-          variant='contained'
+          color="primary"
+          variant="contained"
           onClick={() => add(['animated jackInTheBox'])}
         >
           Jack In The Box

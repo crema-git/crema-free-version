@@ -8,13 +8,13 @@ import Drawer from '@mui/material/Drawer';
 import VerticalNav from '../../components/VerticalNav';
 import StandardSidebarWrapper from './StandardSidebarWrapper';
 import UserInfo from '../../components/UserInfo';
-import {useLayoutContext} from "@crema/context/LayoutContextProvider";
-import {useSidebarContext} from "@crema/context/SidebarContextProvider";
+import { useLayoutContext } from '@crema/context/LayoutContextProvider';
+import { useSidebarContext } from '@crema/context/SidebarContextProvider';
 
 const AppSidebar = (props) => {
-  const {footer, footerType} = useLayoutContext();
+  const { footer, footerType } = useLayoutContext();
 
-  const {sidebarTextColor} = useSidebarContext();
+  const { sidebarTextColor } = useSidebarContext();
 
   return (
     <>
@@ -27,9 +27,9 @@ const AppSidebar = (props) => {
             root: clsx(props.variant),
             paper: clsx(props.variant),
           }}
-          style={{position: 'absolute'}}
+          style={{ position: 'absolute' }}
         >
-          <StandardSidebarWrapper className='standard-sidebar'>
+          <StandardSidebarWrapper className="standard-sidebar">
             <MainSidebar>
               <UserInfo color={sidebarTextColor} />
               <AppScrollbar
@@ -39,14 +39,14 @@ const AppSidebar = (props) => {
                 }}
                 scrollToTop={false}
               >
-                 <VerticalNav routesConfig={props.routesConfig} />
+                <VerticalNav routesConfig={props.routesConfig} />
               </AppScrollbar>
             </MainSidebar>
           </StandardSidebarWrapper>
         </Drawer>
       </Hidden>
       <Hidden lgDown>
-        <StandardSidebarWrapper className='standard-sidebar'>
+        <StandardSidebarWrapper className="standard-sidebar">
           <MainSidebar>
             <UserInfo color={sidebarTextColor} />
             <AppScrollbar
@@ -62,7 +62,7 @@ const AppSidebar = (props) => {
               }}
               scrollToTop={false}
             >
-               <VerticalNav routesConfig={props.routesConfig} />
+              <VerticalNav routesConfig={props.routesConfig} />
             </AppScrollbar>
           </MainSidebar>
         </StandardSidebarWrapper>

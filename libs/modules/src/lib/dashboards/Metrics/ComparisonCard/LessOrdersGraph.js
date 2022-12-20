@@ -1,9 +1,9 @@
 import React from 'react';
-import {Area, AreaChart, ResponsiveContainer} from 'recharts';
+import { Area, AreaChart, ResponsiveContainer } from 'recharts';
 import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
 
-const LessOrdersGraph = ({data}) => {
+const LessOrdersGraph = ({ data }) => {
   return (
     <Box
       sx={{
@@ -13,7 +13,7 @@ const LessOrdersGraph = ({data}) => {
         },
       }}
     >
-      <ResponsiveContainer height={200} className='containerGraph'>
+      <ResponsiveContainer height={200} className="containerGraph">
         <AreaChart
           width={500}
           height={100}
@@ -26,10 +26,10 @@ const LessOrdersGraph = ({data}) => {
           }}
         >
           <Area
-            type='monotone'
-            dataKey='orders'
-            stroke='#E53E3E'
-            fill='#E53E3E'
+            type="monotone"
+            dataKey="orders"
+            stroke="#E53E3E"
+            fill="#E53E3E"
             strokeWidth={4}
           />
         </AreaChart>

@@ -13,21 +13,21 @@ const Scatter = () => {
   return (
     <>
       <AppComponentHeader
-        title='ScatterChart'
-        refUrl='http://recharts.org/en-US/api/ScatterChart'
+        title="ScatterChart"
+        refUrl="http://recharts.org/en-US/api/ScatterChart"
       />
 
       <AppGridContainer>
         <Grid item xs={12} lg={6}>
           <AppComponentCard
-            title='Simple Scatter Chart'
+            title="Simple Scatter Chart"
             component={SimpleScatterChart}
             source={SimpleScatterChartSource}
           />
         </Grid>
         <Grid item xs={12} lg={6}>
           <AppComponentCard
-            title='Three Dim Scatter Chart'
+            title="Three Dim Scatter Chart"
             component={ThreeDimScatterChart}
             source={ThreeDimScatterChartSource}
           />

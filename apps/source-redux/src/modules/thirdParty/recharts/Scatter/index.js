@@ -1,2 +1,2 @@
-import {Scatter } from '@crema/modules/thirdParty';
-export  default Scatter;
+import { Scatter } from '@crema/modules/thirdParty';
+export default Scatter;

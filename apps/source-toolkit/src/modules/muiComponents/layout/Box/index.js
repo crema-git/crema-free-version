@@ -1,2 +1,2 @@
-import {Box} from '@crema/modules/components/layout';
+import { Box } from '@crema/modules/components/layout';
 export default Box;

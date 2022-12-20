@@ -1,2 +1,2 @@
-import {Menu} from '@crema/modules/components/navigation';
+import { Menu } from '@crema/modules/components/navigation';
 export default Menu;

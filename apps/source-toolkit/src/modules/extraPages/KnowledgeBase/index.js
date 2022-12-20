@@ -1,19 +1,19 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import TextField from '@mui/material/TextField';
 import Divider from '@mui/material/Divider';
 import InputAdornment from '@mui/material/InputAdornment';
 import SearchIcon from '@mui/icons-material/Search';
 import IntlMessages from '@crema/utility/IntlMessages';
-import {useIntl} from 'react-intl';
+import { useIntl } from 'react-intl';
 import Box from '@mui/material/Box';
-import {Fonts} from '@crema/constants/AppEnums'
+import { Fonts } from '@crema/constants/AppEnums';
 import AppAnimate from '@crema/components/AppAnimate';
-import {Sales, Installation} from '@crema/modules/extraPages/KnowledgeBase';
-import {salesData} from "@crema/fakedb/extraPages";
-import {installationData} from "@crema/fakedb/extraPages";
+import { Sales, Installation } from '@crema/modules/extraPages/KnowledgeBase';
+import { salesData } from '@crema/fakedb/extraPages';
+import { installationData } from '@crema/fakedb/extraPages';
 
 const KnowledgeBase = () => {
-  const {messages} = useIntl();
+  const { messages } = useIntl();
 
   const [filterText, setFilterText] = useState('');
 
@@ -28,28 +28,28 @@ const KnowledgeBase = () => {
       : installationData;
 
   return (
-    <AppAnimate animation='transition.slideUpIn' delay={200}>
+    <AppAnimate animation="transition.slideUpIn" delay={200}>
       <Box flex={1}>
-        <Box mx='auto' textAlign='center' maxWidth={768}>
+        <Box mx="auto" textAlign="center" maxWidth={768}>
           <Box
-            component='h2'
-            color='text.primary'
+            component="h2"
+            color="text.primary"
             mb={6}
             fontSize={20}
             fontWeight={Fonts.MEDIUM}
           >
-            <IntlMessages id='knowledge.howHelp' />
+            <IntlMessages id="knowledge.howHelp" />
           </Box>
 
           <TextField
-            id='outlined-with-placeholder'
+            id="outlined-with-placeholder"
             placeholder={messages['knowledge.AppSkeleton']}
-            style={{width: '100%'}}
-            variant='outlined'
+            style={{ width: '100%' }}
+            variant="outlined"
             InputProps={{
               startAdornment: (
                 <InputAdornment
-                  position='start'
+                  position="start"
                   sx={{
                     fontWeight: Fonts.MEDIUM,
                   }}
@@ -65,8 +65,8 @@ const KnowledgeBase = () => {
 
         <Divider
           sx={{
-            marginTop: {xs: 4, sm: 6, lg: 8, xl: 10},
-            marginBottom: {xs: 4, sm: 6, lg: 8, xl: 10},
+            marginTop: { xs: 4, sm: 6, lg: 8, xl: 10 },
+            marginBottom: { xs: 4, sm: 6, lg: 8, xl: 10 },
           }}
         />
 

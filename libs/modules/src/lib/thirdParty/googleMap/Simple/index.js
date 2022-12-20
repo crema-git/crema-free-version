@@ -1,7 +1,6 @@
-import React, {Component} from 'react';
-import {GoogleMap, withGoogleMap} from 'react-google-maps';
+import React, { Component } from 'react';
+import { GoogleMap, withGoogleMap } from 'react-google-maps';
 import PropTypes from 'prop-types';
-
 
 /*
  * Sample From: https://developers.google.com/maps/documentation/javascript/examples/map-simple
@@ -13,7 +12,7 @@ const SimpleMapExampleGoogleMap = withGoogleMap(() => (
     options={{
       scrollwheel: false,
     }}
-    defaultCenter={{lat: 47.646935, lng: -122.303763}}
+    defaultCenter={{ lat: 47.646935, lng: -122.303763 }}
   />
 ));
 
@@ -31,7 +30,7 @@ export default class SimpleMap extends Component {
         containerElement={
           <div className={`cr-embed-responsive ${styleName}`} />
         }
-        mapElement={<div className='cr-embed-responsive-item' />}
+        mapElement={<div className="cr-embed-responsive-item" />}
       />
     );
   }

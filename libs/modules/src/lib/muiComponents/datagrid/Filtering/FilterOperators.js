@@ -1,9 +1,9 @@
 import * as React from 'react';
-import {DataGrid} from '@mui/x-data-grid';
-import {useDemoData} from '@mui/x-data-grid-generator';
+import { DataGrid } from '@mui/x-data-grid';
+import { useDemoData } from '@mui/x-data-grid-generator';
 
 const columns = [
-  {field: 'name', headerName: 'Name', width: 180},
+  { field: 'name', headerName: 'Name', width: 180 },
   {
     field: 'rating',
     headerName: 'Rating',
@@ -25,13 +25,13 @@ const columns = [
 ];
 
 export default function FilterOperators() {
-  const {data} = useDemoData({
+  const { data } = useDemoData({
     dataSet: 'Employee',
     rowLength: 10,
   });
 
   return (
-    <div style={{height: 400, width: '100%'}}>
+    <div style={{ height: 400, width: '100%' }}>
       <DataGrid rows={data.rows} columns={columns} />
     </div>
   );

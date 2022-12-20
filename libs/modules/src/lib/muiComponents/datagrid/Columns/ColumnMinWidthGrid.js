@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {DataGrid} from '@mui/x-data-grid';
+import { DataGrid } from '@mui/x-data-grid';
 
 const rows = [
   {
@@ -11,9 +11,9 @@ const rows = [
 
 export default function ColumnMinWidthGrid() {
   return (
-    <div style={{height: 250, width: '100%'}}>
+    <div style={{ height: 250, width: '100%' }}>
       <DataGrid
-        columns={[{field: 'username', minWidth: 150}, {field: 'age'}]}
+        columns={[{ field: 'username', minWidth: 150 }, { field: 'age' }]}
         rows={rows}
       />
     </div>

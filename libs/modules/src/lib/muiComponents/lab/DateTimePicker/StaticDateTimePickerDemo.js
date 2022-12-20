@@ -10,8 +10,8 @@ export default function StaticDateTimePickerDemo() {
   return (
     <LocalizationProvider dateAdapter={AdapterDateFns}>
       <StaticDateTimePicker
-        displayStaticWrapperAs='desktop'
-        openTo='year'
+        displayStaticWrapperAs="desktop"
+        openTo="year"
         value={value}
         onChange={(newValue) => {
           setValue(newValue);

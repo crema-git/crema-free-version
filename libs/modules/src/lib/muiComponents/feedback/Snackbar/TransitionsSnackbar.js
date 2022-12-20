@@ -6,7 +6,7 @@ import Slide from '@mui/material/Slide';
 import Grow from '@mui/material/Grow';
 
 function SlideTransition(props) {
-  return <Slide {...props} direction='up' />;
+  return <Slide {...props} direction="up" />;
 }
 
 function GrowTransition(props) {
@@ -42,7 +42,7 @@ export default function TransitionsSnackbar() {
         open={state.open}
         onClose={handleClose}
         TransitionComponent={state.Transition}
-        message='I love snacks'
+        message="I love snacks"
         key={state.Transition.name}
       />
     </div>

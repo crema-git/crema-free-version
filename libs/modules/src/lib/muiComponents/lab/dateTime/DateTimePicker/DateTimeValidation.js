@@ -1,7 +1,7 @@
 import * as React from 'react';
 import TextField from '@mui/material/TextField';
-import {AdapterDateFns} from '@mui/x-date-pickers/AdapterDateFns';
-import {DateTimePicker, LocalizationProvider} from '@mui/x-date-pickers';
+import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
+import { DateTimePicker, LocalizationProvider } from '@mui/x-date-pickers';
 import Stack from '@mui/material/Stack';
 
 export default function DateTimeValidation() {
@@ -12,7 +12,7 @@ export default function DateTimeValidation() {
       <Stack spacing={3}>
         <DateTimePicker
           renderInput={(params) => <TextField {...params} />}
-          label='Ignore date and time'
+          label="Ignore date and time"
           value={value}
           onChange={(newValue) => {
             setValue(newValue);
@@ -21,7 +21,7 @@ export default function DateTimeValidation() {
         />
         <DateTimePicker
           renderInput={(params) => <TextField {...params} />}
-          label='Ignore time in each day'
+          label="Ignore time in each day"
           value={value}
           onChange={(newValue) => {
             setValue(newValue);

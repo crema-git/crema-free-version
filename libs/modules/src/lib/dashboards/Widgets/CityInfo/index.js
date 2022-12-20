@@ -3,7 +3,7 @@ import Slider from 'react-slick/lib';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import PropTypes from 'prop-types';
-import {Fonts} from '@crema/constants/AppEnums'
+import { Fonts } from '@crema/constants/AppEnums';
 import AppCard from '@crema/components/AppCard';
 import SlideContentWrapper from './SlideContentWrapper';
 import ImageCardSlideWrapper from './ImageCardSlideWrapper';
@@ -17,12 +17,15 @@ const settings = {
 };
 
 const CityInfo = (props) => {
-  const {cityData} = props;
+  const { cityData } = props;
 
   return (
-    <AppCard sxStyle={{height: 1}} contentStyle={{p: 0, pb: '0 !important'}}>
+    <AppCard
+      sxStyle={{ height: 1 }}
+      contentStyle={{ p: 0, pb: '0 !important' }}
+    >
       <ImageCardSlideWrapper>
-        <Slider className='imageCardSlide' {...settings}>
+        <Slider className="imageCardSlide" {...settings}>
           {cityData.map((city) => {
             return (
               <Box
@@ -30,7 +33,7 @@ const CityInfo = (props) => {
                 sx={{
                   position: 'relative',
                   textAlign: 'center',
-                  fontSize: {xs: 20, xl: 24},
+                  fontSize: { xs: 20, xl: 24 },
                   height: '100%',
                 }}
               >
@@ -48,14 +51,14 @@ const CityInfo = (props) => {
                   }}
                 >
                   <img
-                    className='imageSlideFull'
+                    className="imageSlideFull"
                     src={city.image}
-                    alt='building'
+                    alt="building"
                   />
                 </Box>
                 <SlideContentWrapper>
                   <Box
-                    component='h3'
+                    component="h3"
                     sx={{
                       mb: 4,
                       fontWeight: Fonts.BOLD,
@@ -70,7 +73,7 @@ const CityInfo = (props) => {
                       mt: 'auto',
                     }}
                   >
-                    <Typography component='p'>{city.desc}</Typography>
+                    <Typography component="p">{city.desc}</Typography>
                   </Box>
                 </SlideContentWrapper>
               </Box>

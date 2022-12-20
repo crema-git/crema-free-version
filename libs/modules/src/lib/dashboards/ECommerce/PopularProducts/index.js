@@ -1,19 +1,19 @@
 import React from 'react';
 import AppCard from '@crema/components/AppCard';
-import {useIntl} from 'react-intl';
+import { useIntl } from 'react-intl';
 import ProductCell from './ProductCell';
 import AppGrid from '@crema/components/AppGrid';
 import AppScrollbar from '@crema/components/AppScrollbar';
 import PropTypes from 'prop-types';
 
-const PopularProducts = ({popularProducts}) => {
-  const {messages} = useIntl();
+const PopularProducts = ({ popularProducts }) => {
+  const { messages } = useIntl();
   return (
     <AppCard
       title={messages['eCommerce.popularProducts']}
-      contentStyle={{px: 0}}
+      contentStyle={{ px: 0 }}
     >
-      <AppScrollbar sx={{maxHeight: 280}}>
+      <AppScrollbar sx={{ maxHeight: 280 }}>
         <AppGrid
           data={popularProducts}
           responsive={{

@@ -6,11 +6,11 @@ import ListIcon from '@mui/icons-material/List';
 import Box from '@mui/material/Box';
 import PropTypes from 'prop-types';
 
-import {styled} from '@mui/material/styles';
-import {alpha} from '@mui/material';
-import {ViewMode} from '../index';
+import { styled } from '@mui/material/styles';
+import { alpha } from '@mui/material';
+import { ViewMode } from '../index';
 
-const IconBtn = styled(IconButton)(({theme}) => {
+const IconBtn = styled(IconButton)(({ theme }) => {
   return {
     color: theme.palette.text.disabled,
     backgroundColor: alpha(theme.palette.primary.main, 0.05),
@@ -24,7 +24,7 @@ const IconBtn = styled(IconButton)(({theme}) => {
   };
 });
 
-const ViewSelectButtons = ({viewMode, onViewModeSelect}) => {
+const ViewSelectButtons = ({ viewMode, onViewModeSelect }) => {
   return (
     <Box
       sx={{
@@ -39,7 +39,7 @@ const ViewSelectButtons = ({viewMode, onViewModeSelect}) => {
             active: viewMode === ViewMode.List,
           })}
           onClick={() => onViewModeSelect(ViewMode.List)}
-          size='large'
+          size="large"
         >
           <ListIcon />
         </IconBtn>
@@ -54,7 +54,7 @@ const ViewSelectButtons = ({viewMode, onViewModeSelect}) => {
             active: viewMode === ViewMode.Calendar,
           })}
           onClick={() => onViewModeSelect(ViewMode.Calendar)}
-          size='large'
+          size="large"
         >
           <DateRangeOutlinedIcon />
         </IconBtn>

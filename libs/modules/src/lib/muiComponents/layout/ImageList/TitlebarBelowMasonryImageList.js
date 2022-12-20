@@ -6,17 +6,17 @@ import ImageListItemBar from '@mui/material/ImageListItemBar';
 
 export default function TitlebarBelowMasonryImageList() {
   return (
-    <Box sx={{width: 500, height: 450, overflowY: 'scroll'}}>
-      <ImageList variant='masonry' cols={3} gap={8}>
+    <Box sx={{ width: 500, height: 450, overflowY: 'scroll' }}>
+      <ImageList variant="masonry" cols={3} gap={8}>
         {itemData.map((item) => (
           <ImageListItem key={item.img}>
             <img
               src={`${item.img}?w=248&fit=crop&auto=format`}
               srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
               alt={item.title}
-              loading='lazy'
+              loading="lazy"
             />
-            <ImageListItemBar position='below' title={item.author} />
+            <ImageListItemBar position="below" title={item.author} />
           </ImageListItem>
         ))}
       </ImageList>

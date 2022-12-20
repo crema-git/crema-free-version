@@ -1,14 +1,14 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import VisitsGraph from './VisitsGraph';
 import IntlMessages from '@crema/utility/IntlMessages';
-import {useIntl} from 'react-intl';
+import { useIntl } from 'react-intl';
 import Box from '@mui/material/Box';
 import PropTypes from 'prop-types';
-import {Fonts} from '@crema/constants/AppEnums'
+import { Fonts } from '@crema/constants/AppEnums';
 import AppSelect from '@crema/components/AppSelect';
 import AppCard from '@crema/components/AppCard';
 
-const Visits = ({data}) => {
+const Visits = ({ data }) => {
   const [graphData, setGraphData] = useState(data.graphData.dataOne);
 
   const handleWeekChange = (value) => {
@@ -27,7 +27,7 @@ const Visits = ({data}) => {
     }
   };
 
-  const {messages} = useIntl();
+  const { messages } = useIntl();
 
   return (
     <AppCard
@@ -43,7 +43,7 @@ const Visits = ({data}) => {
           onChange={handleWeekChange}
         />
       }
-      sxStyle={{height: 1}}
+      sxStyle={{ height: 1 }}
       footer={
         <Box
           sx={{
@@ -57,15 +57,15 @@ const Visits = ({data}) => {
           }}
         >
           <Box
-            component='p'
+            component="p"
             sx={{
               color: 'text.primary',
               fontSize: 14,
             }}
           >
-            <IntlMessages id='common.new' />
+            <IntlMessages id="common.new" />
             <Box
-              component='span'
+              component="span"
               sx={{
                 ml: 2,
                 color: 'primary.main',
@@ -75,15 +75,15 @@ const Visits = ({data}) => {
             </Box>
           </Box>
           <Box
-            component='p'
+            component="p"
             sx={{
               color: 'text.primary',
               fontSize: 14,
             }}
           >
-            <IntlMessages id='common.returning' />
+            <IntlMessages id="common.returning" />
             <Box
-              component='span'
+              component="span"
               sx={{
                 ml: 2,
                 color: 'primary.main',

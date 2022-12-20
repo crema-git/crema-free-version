@@ -1,18 +1,22 @@
-import React, {useEffect, useRef, useState} from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Box from '@mui/material/Box';
 import moment from 'moment';
 import PropTypes from 'prop-types';
 import IntlMessages from '@crema/utility/IntlMessages';
 import AppsHeader from '@crema/components/AppsHeader';
 import AppsFooter from '@crema/components/AppsFooter';
-import {useAuthUser} from '@crema/utility/AuthHooks';
+import { useAuthUser } from '@crema/utility/AuthHooks';
 import SimpleBarReact from 'simplebar-react';
 
-import {styled} from '@mui/material/styles';
-import {postDataApi, putDataApi, useGetDataApi} from '@crema/utility/APIHooks';
-import {useInfoViewActionsContext} from '@crema/context/InfoViewContextProvider';
-import {MessageType} from "@crema/fakedb/chat/connectionList";
-import {Header, MessagesList, SendMessage} from '@crema/modules/apps/Chat';
+import { styled } from '@mui/material/styles';
+import {
+  postDataApi,
+  putDataApi,
+  useGetDataApi,
+} from '@crema/utility/APIHooks';
+import { useInfoViewActionsContext } from '@crema/context/InfoViewContextProvider';
+import { MessageType } from '@crema/fakedb/chat/connectionList';
+import { Header, MessagesList, SendMessage } from '@crema/modules/apps/Chat';
 
 const ScrollbarWrapper = styled(SimpleBarReact)(() => {
   return {
@@ -40,18 +44,14 @@ const ChatViewContainer = ({
   const [isEdit, setIsEdit] = useState(false);
   const infoViewActionsContext = useInfoViewActionsContext();
   const [selectedMessage, setSelectedMessage] = useState(null);
-  const {user} = useAuthUser();
+  const { user } = useAuthUser();
 
   let _scrollBarRef = useRef();
-  const [{apiData: userMessages}, {setQueryParams, setData}] = useGetDataApi(
-    '/api/chatApp/connection/messages',
-    {},
-    {},
-    false,
-  );
+  const [{ apiData: userMessages }, { setQueryParams, setData }] =
+    useGetDataApi('/api/chatApp/connection/messages', {}, {}, false);
 
   useEffect(() => {
-    setQueryParams({id: selectedUser?.channelId});
+    setQueryParams({ id: selectedUser?.channelId });
   }, [selectedUser?.channelId]);
 
   useEffect(() => {
@@ -199,13 +199,13 @@ const ChatViewContainer = ({
       ) : (
         <ScrollChatNoMainWrapper>
           <Box
-            component='span'
+            component="span"
             sx={{
               fontSize: 18,
               color: 'grey.500',
             }}
           >
-            <IntlMessages id='chatApp.sayHi' /> {selectedUser.name}
+            <IntlMessages id="chatApp.sayHi" /> {selectedUser.name}
           </Box>
         </ScrollChatNoMainWrapper>
       )}

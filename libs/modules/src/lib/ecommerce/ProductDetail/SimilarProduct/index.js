@@ -1,9 +1,9 @@
 import React from 'react';
-import {alpha, Box} from '@mui/material';
+import { alpha, Box } from '@mui/material';
 import Slider from 'react-slick';
 import GridItem from '../../Products/ProductListing/ProductGrid/GridItem';
 import MediaSlider from './MediaSlider';
-import {ecommerce} from "@crema/fakedb/data"
+import { ecommerce } from '@crema/fakedb/data';
 
 const settings = {
   dots: true,
@@ -55,7 +55,7 @@ const SimilarProduct = () => {
       <MediaSlider>
         <Slider {...settings}>
           {ecommerce.map((item, index) => (
-            <Box key={index} sx={{px: 3, py: 3, height: '100%'}}>
+            <Box key={index} sx={{ px: 3, py: 3, height: '100%' }}>
               <GridItem item={item} />
             </Box>
           ))}

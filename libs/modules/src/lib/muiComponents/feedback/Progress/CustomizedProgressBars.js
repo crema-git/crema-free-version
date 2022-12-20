@@ -1,10 +1,14 @@
 import * as React from 'react';
-import {styled} from '@mui/material/styles';
+import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
-import CircularProgress, {circularProgressClasses,} from '@mui/material/CircularProgress';
-import LinearProgress, {linearProgressClasses,} from '@mui/material/LinearProgress';
+import CircularProgress, {
+  circularProgressClasses,
+} from '@mui/material/CircularProgress';
+import LinearProgress, {
+  linearProgressClasses,
+} from '@mui/material/LinearProgress';
 
-const BorderLinearProgress = styled(LinearProgress)(({theme}) => ({
+const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
   height: 10,
   borderRadius: 5,
   [`&.${linearProgressClasses.colorPrimary}`]: {
@@ -20,9 +24,9 @@ const BorderLinearProgress = styled(LinearProgress)(({theme}) => ({
 // Inspired by the former Facebook spinners.
 function FacebookCircularProgress(props) {
   return (
-    <Box sx={{position: 'relative'}}>
+    <Box sx={{ position: 'relative' }}>
       <CircularProgress
-        variant='determinate'
+        variant="determinate"
         sx={{
           color: (theme) =>
             theme.palette.grey[theme.palette.mode === 'light' ? 200 : 800],
@@ -33,7 +37,7 @@ function FacebookCircularProgress(props) {
         value={100}
       />
       <CircularProgress
-        variant='indeterminate'
+        variant="indeterminate"
         disableShrink
         sx={{
           color: (theme) =>
@@ -55,10 +59,10 @@ function FacebookCircularProgress(props) {
 
 export default function CustomizedProgressBars() {
   return (
-    <Box sx={{flexGrow: 1}}>
+    <Box sx={{ flexGrow: 1 }}>
       <FacebookCircularProgress />
       <br />
-      <BorderLinearProgress variant='determinate' value={50} />
+      <BorderLinearProgress variant="determinate" value={50} />
     </Box>
   );
 }

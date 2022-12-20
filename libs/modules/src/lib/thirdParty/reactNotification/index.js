@@ -22,9 +22,9 @@ const ReactNotificationEx = () => {
   return (
     <>
       <AppComponentHeader
-        title='React Notifications'
-        description='Delightful and highly customisable React Component to notify your users.'
-        refUrl='https://teodosii.github.io/react-notifications-component//'
+        title="React Notifications"
+        description="Delightful and highly customisable React Component to notify your users."
+        refUrl="https://teodosii.github.io/react-notifications-component//"
       />
 
       <ReactNotification
@@ -39,31 +39,31 @@ const ReactNotificationEx = () => {
       <AppGridContainer>
         <Grid item xs={12}>
           <AppComponentCard
-            title='Animation Entrance'
-            description='Entrance animation can be customised by specifying CSS classes'
+            title="Animation Entrance"
+            description="Entrance animation can be customised by specifying CSS classes"
             component={AnimationEntrance}
             source={AnimationEntranceSource}
           />
         </Grid>
         <Grid item xs={12}>
           <AppComponentCard
-            title='Animation Exit'
-            description='Exit animation can be customised by specifying CSS classes'
+            title="Animation Exit"
+            description="Exit animation can be customised by specifying CSS classes"
             component={AnimationExit}
             source={AnimationExitSource}
           />
         </Grid>
         <Grid item xs={12}>
           <AppComponentCard
-            title='Container'
-            description='Container can be set from predefined values top-left, top-right, top-center, bottom-left, bottom-right, bottom-center'
+            title="Container"
+            description="Container can be set from predefined values top-left, top-right, top-center, bottom-left, bottom-right, bottom-center"
             component={Container}
             source={ContainerSource}
           />
         </Grid>
         <Grid item xs={12}>
           <AppComponentCard
-            title='Custom Content'
+            title="Custom Content"
             description="With react-notifications-component notification's content can be customised to suit your needs."
             component={CustomContent}
             source={CustomContentSource}
@@ -71,16 +71,16 @@ const ReactNotificationEx = () => {
         </Grid>
         <Grid item xs={12}>
           <AppComponentCard
-            title='Insert'
-            description='Insertion in react-notifications can be done either at the top or at the bottom of the container'
+            title="Insert"
+            description="Insertion in react-notifications can be done either at the top or at the bottom of the container"
             component={Insert}
             source={InsertSource}
           />
         </Grid>
         <Grid item xs={12}>
           <AppComponentCard
-            title='Type'
-            description='Type can be set from predefined values success, default, warning, info, danger or custom to suit your needs'
+            title="Type"
+            description="Type can be set from predefined values success, default, warning, info, danger or custom to suit your needs"
             component={Type}
             source={TypeSource}
           />

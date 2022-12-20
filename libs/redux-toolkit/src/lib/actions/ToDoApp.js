@@ -17,14 +17,14 @@ import {
   UPDATE_TASK_LABEL,
   UPDATE_TASK_STARRED_STATUS,
 } from '@crema/constants/ActionTypes';
-import {appIntl} from "@crema/helpers";
-import jwtAxios from "@crema/services/auth/JWT";
+import { appIntl } from '@crema/helpers';
+import jwtAxios from '@crema/services/auth/JWT';
 
 export const onGetTaskList = (type, name, currentPage) => {
-  const {messages} = appIntl();
+  const { messages } = appIntl();
   const page = currentPage ? currentPage : null;
   return (dispatch) => {
-    dispatch({type: FETCH_START});
+    dispatch({ type: FETCH_START });
     jwtAxios
       .get('/api/todo/task/list', {
         params: {
@@ -35,8 +35,8 @@ export const onGetTaskList = (type, name, currentPage) => {
       })
       .then((data) => {
         if (data.status === 200) {
-          dispatch({type: FETCH_SUCCESS});
-          dispatch({type: GET_TASK_LIST, payload: data.data});
+          dispatch({ type: FETCH_SUCCESS });
+          dispatch({ type: GET_TASK_LIST, payload: data.data });
         } else {
           dispatch({
             type: FETCH_ERROR,
@@ -45,27 +45,27 @@ export const onGetTaskList = (type, name, currentPage) => {
         }
       })
       .catch((error) => {
-        dispatch({type: FETCH_ERROR, payload: error.message});
+        dispatch({ type: FETCH_ERROR, payload: error.message });
       });
   };
 };
 
 export const onToggleTodoDrawer = () => {
   return (dispatch) => {
-    dispatch({type: TOGGLE_TODO_DRAWER});
+    dispatch({ type: TOGGLE_TODO_DRAWER });
   };
 };
 
 export const onGetToDoLabelList = () => {
-  const {messages} = appIntl();
+  const { messages } = appIntl();
   return (dispatch) => {
-    dispatch({type: FETCH_START});
+    dispatch({ type: FETCH_START });
     jwtAxios
       .get('/api/todo/labels/list')
       .then((data) => {
         if (data.status === 200) {
-          dispatch({type: FETCH_SUCCESS});
-          dispatch({type: GET_TODO_LABEL_LIST, payload: data.data});
+          dispatch({ type: FETCH_SUCCESS });
+          dispatch({ type: GET_TODO_LABEL_LIST, payload: data.data });
         } else {
           dispatch({
             type: FETCH_ERROR,
@@ -74,21 +74,21 @@ export const onGetToDoLabelList = () => {
         }
       })
       .catch((error) => {
-        dispatch({type: FETCH_ERROR, payload: error.message});
+        dispatch({ type: FETCH_ERROR, payload: error.message });
       });
   };
 };
 
 export const onGetToDoStaffList = () => {
-  const {messages} = appIntl();
+  const { messages } = appIntl();
   return (dispatch) => {
-    dispatch({type: FETCH_START});
+    dispatch({ type: FETCH_START });
     jwtAxios
       .get('/api/todo/staff/list')
       .then((data) => {
         if (data.status === 200) {
-          dispatch({type: FETCH_SUCCESS});
-          dispatch({type: GET_TODO_STAFF_LIST, payload: data.data});
+          dispatch({ type: FETCH_SUCCESS });
+          dispatch({ type: GET_TODO_STAFF_LIST, payload: data.data });
         } else {
           dispatch({
             type: FETCH_ERROR,
@@ -97,21 +97,21 @@ export const onGetToDoStaffList = () => {
         }
       })
       .catch((error) => {
-        dispatch({type: FETCH_ERROR, payload: error.message});
+        dispatch({ type: FETCH_ERROR, payload: error.message });
       });
   };
 };
 
 export const onGetToDoPriorityList = () => {
-  const {messages} = appIntl();
+  const { messages } = appIntl();
   return (dispatch) => {
-    dispatch({type: FETCH_START});
+    dispatch({ type: FETCH_START });
     jwtAxios
       .get('/api/todo/priority/list')
       .then((data) => {
         if (data.status === 200) {
-          dispatch({type: FETCH_SUCCESS});
-          dispatch({type: GET_TODO_PRIORITY_LIST, payload: data.data});
+          dispatch({ type: FETCH_SUCCESS });
+          dispatch({ type: GET_TODO_PRIORITY_LIST, payload: data.data });
         } else {
           dispatch({
             type: FETCH_ERROR,
@@ -120,21 +120,21 @@ export const onGetToDoPriorityList = () => {
         }
       })
       .catch((error) => {
-        dispatch({type: FETCH_ERROR, payload: error.message});
+        dispatch({ type: FETCH_ERROR, payload: error.message });
       });
   };
 };
 
 export const onGetToDoFolderList = () => {
-  const {messages} = appIntl();
+  const { messages } = appIntl();
   return (dispatch) => {
-    dispatch({type: FETCH_START});
+    dispatch({ type: FETCH_START });
     jwtAxios
       .get('/api/todo/folders/list')
       .then((data) => {
         if (data.status === 200) {
-          dispatch({type: FETCH_SUCCESS});
-          dispatch({type: GET_TODO_FOLDER_LIST, payload: data.data});
+          dispatch({ type: FETCH_SUCCESS });
+          dispatch({ type: GET_TODO_FOLDER_LIST, payload: data.data });
         } else {
           dispatch({
             type: FETCH_ERROR,
@@ -143,21 +143,21 @@ export const onGetToDoFolderList = () => {
         }
       })
       .catch((error) => {
-        dispatch({type: FETCH_ERROR, payload: error.message});
+        dispatch({ type: FETCH_ERROR, payload: error.message });
       });
   };
 };
 
 export const onGetToDoStatusList = () => {
-  const {messages} = appIntl();
+  const { messages } = appIntl();
   return (dispatch) => {
-    dispatch({type: FETCH_START});
+    dispatch({ type: FETCH_START });
     jwtAxios
       .get('/api/todo/status/list')
       .then((data) => {
         if (data.status === 200) {
-          dispatch({type: FETCH_SUCCESS});
-          dispatch({type: GET_TODO_STATUS_LIST, payload: data.data});
+          dispatch({ type: FETCH_SUCCESS });
+          dispatch({ type: GET_TODO_STATUS_LIST, payload: data.data });
         } else {
           dispatch({
             type: FETCH_ERROR,
@@ -166,21 +166,21 @@ export const onGetToDoStatusList = () => {
         }
       })
       .catch((error) => {
-        dispatch({type: FETCH_ERROR, payload: error.message});
+        dispatch({ type: FETCH_ERROR, payload: error.message });
       });
   };
 };
 
 export const onUpdateTaskLabels = (taskIds, type) => {
-  const {messages} = appIntl();
+  const { messages } = appIntl();
   return (dispatch) => {
-    dispatch({type: FETCH_START});
+    dispatch({ type: FETCH_START });
     jwtAxios
-      .put('/api/todo/update/label', {taskIds, type})
+      .put('/api/todo/update/label', { taskIds, type })
       .then((data) => {
         if (data.status === 200) {
-          dispatch({type: FETCH_SUCCESS});
-          dispatch({type: UPDATE_TASK_LABEL, payload: data.data});
+          dispatch({ type: FETCH_SUCCESS });
+          dispatch({ type: UPDATE_TASK_LABEL, payload: data.data });
           dispatch({
             type: SHOW_MESSAGE,
             payload: messages['message.labelUpdatedTo'],
@@ -193,23 +193,23 @@ export const onUpdateTaskLabels = (taskIds, type) => {
         }
       })
       .catch((error) => {
-        dispatch({type: FETCH_ERROR, payload: error.message});
+        dispatch({ type: FETCH_ERROR, payload: error.message });
       });
   };
 };
 
 export const onUpdateTaskStarredStatus = (taskIds, status, folderName) => {
-  const {messages} = appIntl();
+  const { messages } = appIntl();
   return (dispatch) => {
-    dispatch({type: FETCH_START});
+    dispatch({ type: FETCH_START });
     jwtAxios
-      .put('/api/todo/update/starred', {taskIds, status})
+      .put('/api/todo/update/starred', { taskIds, status })
       .then((data) => {
         if (data.status === 200) {
-          dispatch({type: FETCH_SUCCESS});
+          dispatch({ type: FETCH_SUCCESS });
           dispatch({
             type: UPDATE_TASK_STARRED_STATUS,
-            payload: {data: data.data, folderName: folderName},
+            payload: { data: data.data, folderName: folderName },
           });
           dispatch({
             type: SHOW_MESSAGE,
@@ -223,21 +223,21 @@ export const onUpdateTaskStarredStatus = (taskIds, status, folderName) => {
         }
       })
       .catch((error) => {
-        dispatch({type: FETCH_ERROR, payload: error.message});
+        dispatch({ type: FETCH_ERROR, payload: error.message });
       });
   };
 };
 
 export const onDeleteSelectedTasks = (taskIds, type, name, page) => {
-  const {messages} = appIntl();
+  const { messages } = appIntl();
   return (dispatch) => {
-    dispatch({type: FETCH_START});
+    dispatch({ type: FETCH_START });
     jwtAxios
-      .put('/api/todo/update/folder', {taskIds, type, name, page})
+      .put('/api/todo/update/folder', { taskIds, type, name, page })
       .then((data) => {
         if (data.status === 200) {
-          dispatch({type: FETCH_SUCCESS});
-          dispatch({type: UPDATE_TASK_FOLDER, payload: data.data});
+          dispatch({ type: FETCH_SUCCESS });
+          dispatch({ type: UPDATE_TASK_FOLDER, payload: data.data });
           dispatch({
             type: SHOW_MESSAGE,
             payload: messages['task.deleted'],
@@ -250,21 +250,21 @@ export const onDeleteSelectedTasks = (taskIds, type, name, page) => {
         }
       })
       .catch((error) => {
-        dispatch({type: FETCH_ERROR, payload: error.message});
+        dispatch({ type: FETCH_ERROR, payload: error.message });
       });
   };
 };
 
 export const onCreateTask = (task) => {
-  const {messages} = appIntl();
+  const { messages } = appIntl();
   return (dispatch) => {
-    dispatch({type: FETCH_START});
+    dispatch({ type: FETCH_START });
     jwtAxios
-      .post('/api/todoApp/compose', {task})
+      .post('/api/todoApp/compose', { task })
       .then((data) => {
         if (data.status === 200) {
-          dispatch({type: FETCH_SUCCESS});
-          dispatch({type: CREATE_NEW_TASK, payload: data.data});
+          dispatch({ type: FETCH_SUCCESS });
+          dispatch({ type: CREATE_NEW_TASK, payload: data.data });
           dispatch({
             type: SHOW_MESSAGE,
             payload: messages['task.created'],
@@ -277,15 +277,15 @@ export const onCreateTask = (task) => {
         }
       })
       .catch((error) => {
-        dispatch({type: FETCH_ERROR, payload: error.message});
+        dispatch({ type: FETCH_ERROR, payload: error.message });
       });
   };
 };
 
 export const onGetSelectedTask = (id) => {
-  const {messages} = appIntl();
+  const { messages } = appIntl();
   return (dispatch) => {
-    dispatch({type: FETCH_START});
+    dispatch({ type: FETCH_START });
     jwtAxios
       .get(`/api/todoApp/task/`, {
         params: {
@@ -294,8 +294,8 @@ export const onGetSelectedTask = (id) => {
       })
       .then((data) => {
         if (data.status === 200) {
-          dispatch({type: FETCH_SUCCESS});
-          dispatch({type: GET_TASK_DETAIL, payload: data.data});
+          dispatch({ type: FETCH_SUCCESS });
+          dispatch({ type: GET_TASK_DETAIL, payload: data.data });
         } else {
           dispatch({
             type: FETCH_ERROR,
@@ -304,21 +304,21 @@ export const onGetSelectedTask = (id) => {
         }
       })
       .catch((error) => {
-        dispatch({type: FETCH_ERROR, payload: error.message});
+        dispatch({ type: FETCH_ERROR, payload: error.message });
       });
   };
 };
 
 export const onUpdateSelectedTask = (task) => {
-  const {messages} = appIntl();
+  const { messages } = appIntl();
   return (dispatch) => {
-    dispatch({type: FETCH_START});
+    dispatch({ type: FETCH_START });
     jwtAxios
-      .put('/api/todoApp/task/', {task})
+      .put('/api/todoApp/task/', { task })
       .then((data) => {
         if (data.status === 200) {
-          dispatch({type: FETCH_SUCCESS});
-          dispatch({type: UPDATE_TASK_DETAIL, payload: data.data});
+          dispatch({ type: FETCH_SUCCESS });
+          dispatch({ type: UPDATE_TASK_DETAIL, payload: data.data });
           dispatch({
             type: SHOW_MESSAGE,
             payload:
@@ -334,7 +334,7 @@ export const onUpdateSelectedTask = (task) => {
         }
       })
       .catch((error) => {
-        dispatch({type: FETCH_ERROR, payload: error.message});
+        dispatch({ type: FETCH_ERROR, payload: error.message });
       });
   };
 };

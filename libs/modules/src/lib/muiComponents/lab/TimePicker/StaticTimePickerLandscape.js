@@ -11,8 +11,8 @@ export default function StaticTimePickerLandscape() {
     <LocalizationProvider dateAdapter={AdapterDateFns}>
       <StaticTimePicker
         ampm
-        orientation='landscape'
-        openTo='minutes'
+        orientation="landscape"
+        openTo="minutes"
         value={value}
         onChange={(newValue) => {
           setValue(newValue);

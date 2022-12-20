@@ -23,33 +23,33 @@ const ToggleButtons = () => {
   return (
     <>
       <AppComponentHeader
-        title='Toggle Buttons'
-        description='Toggle buttons can be used to group related options.'
-        refUrl='https://mui.com/components/toggle-button/'
+        title="Toggle Buttons"
+        description="Toggle buttons can be used to group related options."
+        refUrl="https://mui.com/components/toggle-button/"
       />
 
       <AppGridContainer>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Exclusive selection'
+            title="Exclusive selection"
             component={ExclusiveSelection}
             source={ExclusiveSelectionSource}
             noScrollbar
-            description='With exclusive selection, selecting one option deselects any other.'
+            description="With exclusive selection, selecting one option deselects any other."
           />
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Multiple selection'
+            title="Multiple selection"
             component={ToggleButtonsMultiple}
             source={ToggleButtonsMultipleSource}
             noScrollbar
-            description='Multiple selection allows for logically-grouped options, like bold, italic, and underline, to have multiple options selected.'
+            description="Multiple selection allows for logically-grouped options, like bold, italic, and underline, to have multiple options selected."
           />
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Color'
+            title="Color"
             component={ColorToggleButton}
             source={ColorToggleButtonSource}
             noScrollbar
@@ -57,7 +57,7 @@ const ToggleButtons = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Standalone toggle button'
+            title="Standalone toggle button"
             component={StandaloneToggleButton}
             source={StandaloneToggleButtonSource}
             noScrollbar
@@ -65,25 +65,25 @@ const ToggleButtons = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Enforce value sets'
+            title="Enforce value sets"
             component={ToggleButtonNotEmpty}
             source={ToggleButtonNotEmptySource}
             noScrollbar
-            description='If you want to enforce that at least one button must be active, you can adapt your handleChange function.'
+            description="If you want to enforce that at least one button must be active, you can adapt your handleChange function."
           />
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Customization'
+            title="Customization"
             component={CustomizedDividers}
             source={CustomizedDividersSource}
             noScrollbar
-            description='Here is an example of customizing the component. You can learn more about this in the overrides documentation page.'
+            description="Here is an example of customizing the component. You can learn more about this in the overrides documentation page."
           />
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Vertical buttons'
+            title="Vertical buttons"
             component={VerticalToggleButtons}
             source={VerticalToggleButtonsSource}
             noScrollbar

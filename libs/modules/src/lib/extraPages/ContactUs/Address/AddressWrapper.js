@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {Box} from '@mui/material';
+import { Box } from '@mui/material';
 
-const AddressWrapper = ({children}) => {
+const AddressWrapper = ({ children }) => {
   return (
     <Box
       sx={{
@@ -14,15 +14,15 @@ const AddressWrapper = ({children}) => {
         py: 3.75,
         px: 5,
         '& .avatar-icon': {
-          width: {xs: 40, md: 48},
-          height: {xs: 40, md: 48},
+          width: { xs: 40, md: 48 },
+          height: { xs: 40, md: 48 },
           backgroundColor: (theme) => theme.palette.background.paper,
           color: (theme) => theme.palette.primary.main,
           borderRadius: '50%',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          mr: {xs: 3.5, md: 4},
+          mr: { xs: 3.5, md: 4 },
           '& svg': {
             fontSize: 20,
           },

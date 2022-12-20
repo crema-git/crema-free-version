@@ -2,7 +2,7 @@ import React from 'react';
 import TableCell from '@mui/material/TableCell';
 import IntlMessages from '@crema/utility/IntlMessages';
 import TableRow from '@mui/material/TableRow';
-import {Fonts} from '@crema/constants/AppEnums'
+import { Fonts } from '@crema/constants/AppEnums';
 
 const TableHeading = () => {
   return (
@@ -23,20 +23,20 @@ const TableHeading = () => {
         },
       }}
     >
-      <TableCell className='tableCell'>
-        <IntlMessages id='common.num' />
+      <TableCell className="tableCell">
+        <IntlMessages id="common.num" />
       </TableCell>
-      <TableCell align='left' className='tableCell'>
-        <IntlMessages id='common.name' />
+      <TableCell align="left" className="tableCell">
+        <IntlMessages id="common.name" />
       </TableCell>
-      <TableCell align='left' className='tableCell'>
-        <IntlMessages id='dashboard.marketCap' />
+      <TableCell align="left" className="tableCell">
+        <IntlMessages id="dashboard.marketCap" />
       </TableCell>
-      <TableCell align='left' className='tableCell'>
-        <IntlMessages id='dashboard.volume24h' />
+      <TableCell align="left" className="tableCell">
+        <IntlMessages id="dashboard.volume24h" />
       </TableCell>
-      <TableCell align='right' className='tableCell'>
-        <IntlMessages id='dashboard.24h' /> %
+      <TableCell align="right" className="tableCell">
+        <IntlMessages id="dashboard.24h" /> %
       </TableCell>
     </TableRow>
   );

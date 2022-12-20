@@ -1,11 +1,11 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import Box from '@mui/material/Box';
 import Avatar from '@mui/material/Avatar';
-import {useIntl} from 'react-intl';
+import { useIntl } from 'react-intl';
 import PropTypes from 'prop-types';
-import {orange} from '@mui/material/colors';
-import {TextField} from '@mui/material';
-import {styled} from '@mui/material/styles';
+import { orange } from '@mui/material/colors';
+import { TextField } from '@mui/material';
+import { styled } from '@mui/material/styles';
 import IntlMessages from '@crema/utility/IntlMessages';
 import IconButton from '@mui/material/IconButton';
 import SendOutlinedIcon from '@mui/icons-material/SendOutlined';
@@ -27,14 +27,14 @@ const CommentItemWrapper = styled('div')((props) => ({
   marginLeft: props.isPreviousSender ? 55 : 15,
 }));
 
-const CommentDateWrapper = styled('div')(({theme}) => ({
+const CommentDateWrapper = styled('div')(({ theme }) => ({
   color: theme.palette.text.disabled,
   fontSize: 12,
   display: 'block',
   marginBottom: 6,
 }));
 
-const CommentTextWrapper = styled('div')(({theme}) => ({
+const CommentTextWrapper = styled('div')(({ theme }) => ({
   display: 'inline-block',
   borderRadius: '0 10px 10px 0',
   padding: '6px 12px',
@@ -51,7 +51,7 @@ const CommentTextWrapper = styled('div')(({theme}) => ({
 }));
 
 const CardComments = (props) => {
-  const {comments, onAddNewComment} = props;
+  const { comments, onAddNewComment } = props;
   const [comment, setComment] = useState('');
 
   const onAddComment = () => {
@@ -59,11 +59,11 @@ const CardComments = (props) => {
     setComment('');
   };
 
-  const {messages} = useIntl();
+  const { messages } = useIntl();
   return (
     <Box>
-      <Box component='h4'>
-        <IntlMessages id='common.comments' />
+      <Box component="h4">
+        <IntlMessages id="common.comments" />
       </Box>
 
       <Box
@@ -86,7 +86,7 @@ const CardComments = (props) => {
                   {item.sender.image ? (
                     <Avatar
                       src={item.sender.image}
-                      className='avatar'
+                      className="avatar"
                       sx={{
                         width: 40,
                         height: 40,
@@ -95,7 +95,7 @@ const CardComments = (props) => {
                     />
                   ) : (
                     <Avatar
-                      className='avatar'
+                      className="avatar"
                       sx={{
                         width: 40,
                         height: 40,
@@ -107,10 +107,10 @@ const CardComments = (props) => {
                   )}
 
                   <CommentItemWrapper isPreviousSender={isPreviousSender}>
-                    <CommentDateWrapper className='date'>
+                    <CommentDateWrapper className="date">
                       {item.date}
                     </CommentDateWrapper>
-                    <CommentTextWrapper component='p'>
+                    <CommentTextWrapper component="p">
                       {item.comment}
                     </CommentTextWrapper>
                   </CommentItemWrapper>
@@ -134,8 +134,8 @@ const CardComments = (props) => {
           sx={{
             width: '100%',
           }}
-          rows='1'
-          variant='outlined'
+          rows="1"
+          variant="outlined"
           placeholder={messages['common.pressEnter']}
         />
         <IconButton
@@ -147,9 +147,9 @@ const CardComments = (props) => {
               pl: 1,
             },
           }}
-          aria-label='send'
+          aria-label="send"
         >
-          <SendOutlinedIcon fontSize='inherit' />
+          <SendOutlinedIcon fontSize="inherit" />
         </IconButton>
       </Box>
     </Box>

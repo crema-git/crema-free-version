@@ -18,29 +18,29 @@ export default function SubheaderDividers() {
       }}
     >
       <ListItem>
-        <ListItemText primary='Photos' secondary='Jan 9, 2014' />
+        <ListItemText primary="Photos" secondary="Jan 9, 2014" />
       </ListItem>
-      <Divider component='li' />
+      <Divider component="li" />
       <li>
         <Typography
-          sx={{mt: 0.5, ml: 2}}
-          color='text.secondary'
-          display='block'
-          variant='caption'
+          sx={{ mt: 0.5, ml: 2 }}
+          color="text.secondary"
+          display="block"
+          variant="caption"
         >
           Divider
         </Typography>
       </li>
       <ListItem>
-        <ListItemText primary='Work' secondary='Jan 7, 2014' />
+        <ListItemText primary="Work" secondary="Jan 7, 2014" />
       </ListItem>
-      <Divider component='li' variant='inset' />
+      <Divider component="li" variant="inset" />
       <li>
         <Typography
-          sx={{mt: 0.5, ml: 9}}
-          color='text.secondary'
-          display='block'
-          variant='caption'
+          sx={{ mt: 0.5, ml: 9 }}
+          color="text.secondary"
+          display="block"
+          variant="caption"
         >
           Leisure
         </Typography>
@@ -51,7 +51,7 @@ export default function SubheaderDividers() {
             <BeachAccessIcon />
           </Avatar>
         </ListItemAvatar>
-        <ListItemText primary='Vacation' secondary='July 20, 2014' />
+        <ListItemText primary="Vacation" secondary="July 20, 2014" />
       </ListItem>
     </List>
   );

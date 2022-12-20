@@ -1,12 +1,12 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import TextField from '@mui/material/TextField';
 import IntlMessages from '@crema/utility/IntlMessages';
 import Box from '@mui/material/Box';
 import PropTypes from 'prop-types';
-import {Fonts} from '@crema/constants/AppEnums'
+import { Fonts } from '@crema/constants/AppEnums';
 
 const TabForm = (props) => {
-  const {data} = props;
+  const { data } = props;
 
   const [inputValue, setValue] = useState(data.value);
   const [inputPrice, setPrice] = useState(data.price);
@@ -14,7 +14,7 @@ const TabForm = (props) => {
 
   return (
     <Box>
-      <form noValidate autoComplete='off'>
+      <form noValidate autoComplete="off">
         <Box
           sx={{
             mb: 5,
@@ -28,12 +28,12 @@ const TabForm = (props) => {
               fontSize: 14,
             }}
           >
-            <IntlMessages id='dashboard.btc' />
+            <IntlMessages id="dashboard.btc" />
           </Box>
           <TextField
             fullWidth
-            variant='outlined'
-            label={<IntlMessages id='common.volume' />}
+            variant="outlined"
+            label={<IntlMessages id="common.volume" />}
             value={inputValue}
             onChange={(e) => setValue(e.target.value)}
             sx={{
@@ -60,12 +60,12 @@ const TabForm = (props) => {
               fontSize: 14,
             }}
           >
-            <IntlMessages id='dashboard.btc' />
+            <IntlMessages id="dashboard.btc" />
           </Box>
           <TextField
             fullWidth
-            variant='outlined'
-            label={<IntlMessages id='common.price' />}
+            variant="outlined"
+            label={<IntlMessages id="common.price" />}
             value={inputPrice}
             onChange={(e) => setPrice(e.target.value)}
             sx={{
@@ -92,12 +92,12 @@ const TabForm = (props) => {
               fontSize: 14,
             }}
           >
-            <IntlMessages id='dashboard.btc' />
+            <IntlMessages id="dashboard.btc" />
           </Box>
           <TextField
             fullWidth
-            variant='outlined'
-            label={<IntlMessages id='common.amount' />}
+            variant="outlined"
+            label={<IntlMessages id="common.amount" />}
             value={inputAmount}
             onChange={(e) => setAmount(e.target.value)}
             sx={{

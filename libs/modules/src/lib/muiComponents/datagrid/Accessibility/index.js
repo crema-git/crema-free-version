@@ -13,15 +13,15 @@ const Accessibility = () => {
   return (
     <>
       <AppComponentHeader
-        title='Accessibility'
-        description='The Data Grid has complete accessibility support. For instance, every cell is accessible using the keyboard.'
-        refUrl='https://mui.com/components/data-grid/accessibility/'
+        title="Accessibility"
+        description="The Data Grid has complete accessibility support. For instance, every cell is accessible using the keyboard."
+        refUrl="https://mui.com/components/data-grid/accessibility/"
       />
 
       <AppGridContainer>
         <Grid item xs={12}>
           <AppComponentCard
-            title='DensitySelectorGrid'
+            title="DensitySelectorGrid"
             component={DensitySelectorGrid}
             source={DensitySelectorGridSource}
             noScrollbar
@@ -29,7 +29,7 @@ const Accessibility = () => {
         </Grid>
         <Grid item xs={12}>
           <AppComponentCard
-            title='DensitySelectorSmallGrid'
+            title="DensitySelectorSmallGrid"
             component={DensitySelectorSmallGrid}
             source={DensitySelectorSmallGridSource}
             noScrollbar

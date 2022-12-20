@@ -1,13 +1,13 @@
 import React from 'react';
 import Box from '@mui/material/Box';
-import {Fonts} from '@crema/constants/AppEnums'
-import {green, red} from '@mui/material/colors';
+import { Fonts } from '@crema/constants/AppEnums';
+import { green, red } from '@mui/material/colors';
 import IconButton from '@mui/material/IconButton';
 import StatGraphs from './StatGraphs';
 import AppCard from '@crema/components/AppCard';
 import PropTypes from 'prop-types';
 
-const StateCard = ({data}) => {
+const StateCard = ({ data }) => {
   return (
     <AppCard>
       <Box
@@ -32,7 +32,7 @@ const StateCard = ({data}) => {
               mr: 4,
             }}
           >
-            <img alt='icon' src={data.icon} />
+            <img alt="icon" src={data.icon} />
           </IconButton>
           <Box
             sx={{
@@ -45,7 +45,7 @@ const StateCard = ({data}) => {
               }}
             >
               <Box
-                component='h3'
+                component="h3"
                 sx={{
                   display: 'inline-block',
                   fontWeight: Fonts.MEDIUM,
@@ -61,13 +61,13 @@ const StateCard = ({data}) => {
                   fontWeight: Fonts.MEDIUM,
                   color: data.growth > 0.0 ? green[500] : red[500],
                 }}
-                component='span'
+                component="span"
               >
                 {data.growth}%
               </Box>
             </Box>
             <Box
-              component='p'
+              component="p"
               sx={{
                 fontSize: 14,
                 color: 'text.secondary',

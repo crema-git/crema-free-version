@@ -13,10 +13,9 @@ export const setRoutes = (config) => {
       let auth = route.auth
         ? [...config.auth, ...route.auth]
         : [...config.auth];
-      return {...route, auth};
+      return { ...route, auth };
     });
   }
 
   return [...routes];
 };
-

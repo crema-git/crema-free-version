@@ -1,9 +1,9 @@
 import * as React from 'react';
-import {DataGrid} from '@mui/x-data-grid';
-import {useDemoData} from '@mui/x-data-grid-generator';
+import { DataGrid } from '@mui/x-data-grid';
+import { useDemoData } from '@mui/x-data-grid-generator';
 
 export default function ControlledPaginationGrid() {
-  const {data} = useDemoData({
+  const { data } = useDemoData({
     dataSet: 'Commodity',
     rowLength: 100,
     maxColumns: 6,
@@ -12,7 +12,7 @@ export default function ControlledPaginationGrid() {
   const [page, setPage] = React.useState(0);
 
   return (
-    <div style={{height: 400, width: '100%'}}>
+    <div style={{ height: 400, width: '100%' }}>
       <DataGrid
         page={page}
         onPageChange={(newPage) => setPage(newPage)}

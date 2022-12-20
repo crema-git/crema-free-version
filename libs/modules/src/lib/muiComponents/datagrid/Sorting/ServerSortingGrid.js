@@ -1,6 +1,6 @@
 import * as React from 'react';
-import {DataGrid} from '@mui/x-data-grid';
-import {useDemoData} from '@mui/x-data-grid-generator';
+import { DataGrid } from '@mui/x-data-grid';
+import { useDemoData } from '@mui/x-data-grid-generator';
 
 function loadServerRows(sortModel, data) {
   return new Promise((resolve) => {
@@ -14,8 +14,8 @@ function loadServerRows(sortModel, data) {
 
       let sortedRows = [...data.rows].sort((a, b) =>
         String(a[sortedColumn.field]).localeCompare(
-          String(b[sortedColumn.field]),
-        ),
+          String(b[sortedColumn.field])
+        )
       );
 
       if (sortModel[0].sort === 'desc') {
@@ -28,14 +28,14 @@ function loadServerRows(sortModel, data) {
 }
 
 export default function ServerSortingGrid() {
-  const {data} = useDemoData({
+  const { data } = useDemoData({
     dataSet: 'Commodity',
     rowLength: 10,
     maxColumns: 6,
   });
 
   const [sortModel, setSortModel] = React.useState([
-    {field: 'commodity', sort: 'asc'},
+    { field: 'commodity', sort: 'asc' },
   ]);
 
   const [rows, setRows] = React.useState([]);
@@ -66,11 +66,11 @@ export default function ServerSortingGrid() {
   }, [sortModel, data]);
 
   return (
-    <div style={{height: 400, width: '100%'}}>
+    <div style={{ height: 400, width: '100%' }}>
       <DataGrid
         rows={rows}
         columns={data.columns}
-        sortingMode='server'
+        sortingMode="server"
         sortModel={sortModel}
         onSortModelChange={handleSortModelChange}
         loading={loading}

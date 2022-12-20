@@ -1,10 +1,10 @@
 import React from 'react';
 import Box from '@mui/material/Box';
 
-import {styled} from '@mui/material/styles';
+import { styled } from '@mui/material/styles';
 import AppLogo from '@crema/components/AppLogo';
 
-const LogoWrapper = styled('div')(({theme}) => {
+const LogoWrapper = styled('div')(({ theme }) => {
   return {
     position: 'absolute',
     left: 0,
@@ -35,8 +35,8 @@ const AuthImgPanel = () => {
           height: '100%',
           objectFit: 'cover',
         }}
-        src='/assets/images/auth/auth.svg'
-        alt='crema-logo'
+        src="/assets/images/auth/auth.svg"
+        alt="crema-logo"
       />
       <LogoWrapper>
         <AppLogo />

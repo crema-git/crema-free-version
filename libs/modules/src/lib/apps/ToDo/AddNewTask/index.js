@@ -1,17 +1,17 @@
-import React, {useState} from 'react';
-import {Formik} from 'formik';
+import React, { useState } from 'react';
+import { Formik } from 'formik';
 import * as yup from 'yup';
 import moment from 'moment';
 import IntlMessages from '@crema/utility/IntlMessages';
 import AddTaskForm from './AddTaskForm';
 import PropTypes from 'prop-types';
 import AppDialog from '@crema/components/AppDialog';
-import {useAuthUser} from '@crema/utility/AuthHooks';
-import {postDataApi} from '@crema/utility/APIHooks';
-import {useInfoViewActionsContext} from '@crema/context/InfoViewContextProvider';
+import { useAuthUser } from '@crema/utility/AuthHooks';
+import { postDataApi } from '@crema/utility/APIHooks';
+import { useInfoViewActionsContext } from '@crema/context/InfoViewContextProvider';
 
 const validationSchema = yup.object({
-  title: yup.string().required(<IntlMessages id='validation.titleRequired' />),
+  title: yup.string().required(<IntlMessages id="validation.titleRequired" />),
 });
 
 const AddNewTask = ({
@@ -20,17 +20,17 @@ const AddNewTask = ({
   selectedDate,
   reCallAPI,
 }) => {
-  const {user} = useAuthUser();
+  const { user } = useAuthUser();
   const infoViewActionsContext = useInfoViewActionsContext();
   const [taskLabels, setTaskLabels] = useState([]);
 
   return (
     <AppDialog
       dividers
-      maxWidth='md'
+      maxWidth="md"
       open={isAddTaskOpen}
       onClose={() => onCloseAddTask()}
-      title={<IntlMessages id='todo.addNewTask' />}
+      title={<IntlMessages id="todo.addNewTask" />}
     >
       <Formik
         validateOnChange={true}
@@ -45,7 +45,7 @@ const AddNewTask = ({
           content: '',
         }}
         validationSchema={validationSchema}
-        onSubmit={(data, {setSubmitting, resetForm}) => {
+        onSubmit={(data, { setSubmitting, resetForm }) => {
           setSubmitting(true);
           const newTask = {
             id: Math.floor(Math.random() * 1000000),
@@ -72,7 +72,7 @@ const AddNewTask = ({
             .then(() => {
               reCallAPI();
               infoViewActionsContext.showMessage(
-                'New Task has been created successfully!',
+                'New Task has been created successfully!'
               );
             })
             .catch((error) => {
@@ -84,7 +84,7 @@ const AddNewTask = ({
           setSubmitting(false);
         }}
       >
-        {({isSubmitting, values, setFieldValue}) => (
+        {({ isSubmitting, values, setFieldValue }) => (
           <AddTaskForm
             isSubmitting={isSubmitting}
             values={values}

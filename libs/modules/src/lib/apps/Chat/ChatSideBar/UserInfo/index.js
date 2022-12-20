@@ -1,13 +1,13 @@
 import React from 'react';
 import Avatar from '@mui/material/Avatar';
 import Box from '@mui/material/Box';
-import {green, orange, red} from '@mui/material/colors';
+import { green, orange, red } from '@mui/material/colors';
 import PropTypes from 'prop-types';
-import {Typography} from '@mui/material';
+import { Typography } from '@mui/material';
 import IntlMessages from '@crema/utility/IntlMessages';
-import {Fonts} from '@crema/constants/AppEnums'
+import { Fonts } from '@crema/constants/AppEnums';
 
-const UserInfo = ({user, showStatus}) => {
+const UserInfo = ({ user, showStatus }) => {
   const getUserAvatar = () => {
     const name = user.displayName || user.name;
     if (name) {
@@ -27,7 +27,7 @@ const UserInfo = ({user, showStatus}) => {
         display: 'flex',
         alignItems: 'center',
       }}
-      className='user-info'
+      className="user-info"
     >
       <Box
         sx={{
@@ -104,8 +104,8 @@ const UserInfo = ({user, showStatus}) => {
           }}
         >
           {user.isGroup ? (
-            <span className='pointer'>
-              {user.members.length} <IntlMessages id='chatApp.participants' />{' '}
+            <span className="pointer">
+              {user.members.length} <IntlMessages id="chatApp.participants" />{' '}
             </span>
           ) : (
             <span> {user.status ? user.status : 'Online'}</span>

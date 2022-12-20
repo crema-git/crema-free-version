@@ -14,5 +14,18 @@ import RelatedCourses from './RelatedCourses';
 import VideoPromo from './VideoPromo';
 
 export {
-    GeneralStats, AverageGrades, CourseCategories, MyProfile, MyCourses, Notifications, CourseDetail, MyLearning, LatestResults, MyClass, StudentRankings, PromoCard, RelatedCourses, VideoPromo
-}
+  GeneralStats,
+  AverageGrades,
+  CourseCategories,
+  MyProfile,
+  MyCourses,
+  Notifications,
+  CourseDetail,
+  MyLearning,
+  LatestResults,
+  MyClass,
+  StudentRankings,
+  PromoCard,
+  RelatedCourses,
+  VideoPromo,
+};

@@ -1,2 +1,2 @@
-import {ClickawayListener} from '@crema/modules/components/utils';
+import { ClickawayListener } from '@crema/modules/components/utils';
 export default ClickawayListener;

@@ -1,12 +1,12 @@
 import React from 'react';
 import AppCard from '@crema/components/AppCard';
-import {useIntl} from 'react-intl';
-import {Box} from '@mui/material';
-import {Fonts} from '@crema/constants/AppEnums'
+import { useIntl } from 'react-intl';
+import { Box } from '@mui/material';
+import { Fonts } from '@crema/constants/AppEnums';
 import AppCircularProgress from '@crema/components/AppCircularProgress';
 
 const Revenue = () => {
-  const {messages} = useIntl();
+  const { messages } = useIntl();
 
   return (
     <AppCard title={messages['eCommerce.revenue']}>
@@ -17,7 +17,7 @@ const Revenue = () => {
         }}
       >
         <AppCircularProgress
-          activeColor='#0A8FDC'
+          activeColor="#0A8FDC"
           value={70}
           hidePercentage
           centerNode={
@@ -29,7 +29,7 @@ const Revenue = () => {
                 }}
               >
                 <Box
-                  component='span'
+                  component="span"
                   sx={{
                     fontSize: 14,
                     fontWeight: Fonts.MEDIUM,
@@ -38,7 +38,7 @@ const Revenue = () => {
                   $
                 </Box>
                 <Box
-                  component='h3'
+                  component="h3"
                   sx={{
                     color: 'text.primary',
                     fontSize: 18,
@@ -49,7 +49,7 @@ const Revenue = () => {
                 </Box>
               </Box>
               <Box
-                component='p'
+                component="p"
                 sx={{
                   ml: 2,
                   fontSize: 14,

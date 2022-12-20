@@ -8,25 +8,25 @@ import TableBody from '@mui/material/TableBody';
 import AppTableContainer from '@crema/components/AppTableContainer';
 import TableHeading from './TableHeading';
 import TableItem from './TableItem';
-import {useIntl} from 'react-intl';
+import { useIntl } from 'react-intl';
 import PropTypes from 'prop-types';
 
-const StudentRankings = ({studentRankings}) => {
-  const {messages} = useIntl();
+const StudentRankings = ({ studentRankings }) => {
+  const { messages } = useIntl();
   return (
     <AppCard
-      sxStyle={{height: 1}}
+      sxStyle={{ height: 1 }}
       title={messages['academy.studentRankings']}
-      contentStyle={{px: 0}}
+      contentStyle={{ px: 0 }}
       action={
         <IconButton
           sx={{
             height: 30,
             width: 30,
           }}
-          aria-label='more'
-          aria-controls='long-menu'
-          aria-haspopup='true'
+          aria-label="more"
+          aria-controls="long-menu"
+          aria-haspopup="true"
           onClick={null}
         >
           <MoreVertIcon />
@@ -34,7 +34,7 @@ const StudentRankings = ({studentRankings}) => {
       }
     >
       <AppTableContainer>
-        <Table className='table'>
+        <Table className="table">
           <TableHead>
             <TableHeading />
           </TableHead>

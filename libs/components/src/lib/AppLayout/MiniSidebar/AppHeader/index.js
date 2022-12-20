@@ -14,11 +14,11 @@ import MenuItem from '@mui/material/MenuItem';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import AppTooltip from '../../../AppTooltip';
 import PropTypes from 'prop-types';
-import {alpha} from '@mui/material/styles';
+import { alpha } from '@mui/material/styles';
 import AppLogo from '../../components/AppLogo';
 
 const AppHeader = (props) => {
-  const {isCollapsed, setCollapsed, toggleNavCollapsed} = props;
+  const { isCollapsed, setCollapsed, toggleNavCollapsed } = props;
 
   const [anchorEl, setAnchorEl] = React.useState(null);
 
@@ -32,8 +32,8 @@ const AppHeader = (props) => {
 
   return (
     <AppBar
-      position='relative'
-      color='inherit'
+      position="relative"
+      color="inherit"
       sx={{
         boxShadow: 'none',
         borderBottom: (theme) => `1px solid ${theme.palette.divider}`,
@@ -41,25 +41,25 @@ const AppHeader = (props) => {
         transition: 'width 0.5s ease',
         width: '100%',
       }}
-      className='app-bar'
+      className="app-bar"
     >
       <Toolbar
         sx={{
           boxSizing: 'border-box',
-          minHeight: {xs: 56, sm: 70},
-          paddingLeft: {xs: 5},
-          paddingRight: {xs: 5, md: 7.5},
+          minHeight: { xs: 56, sm: 70 },
+          paddingLeft: { xs: 5 },
+          paddingRight: { xs: 5, md: 7.5 },
         }}
       >
         <Hidden lgDown>
           <IconButton
-            sx={{color: 'text.secondary'}}
-            edge='start'
-            className='menu-btn'
-            color='inherit'
-            aria-label='open drawer'
+            sx={{ color: 'text.secondary' }}
+            edge="start"
+            className="menu-btn"
+            color="inherit"
+            aria-label="open drawer"
             onClick={() => setCollapsed(!isCollapsed)}
-            size='large'
+            size="large"
           >
             <MenuIcon
               sx={{
@@ -71,13 +71,13 @@ const AppHeader = (props) => {
         </Hidden>
         <Hidden lgUp>
           <IconButton
-            sx={{color: 'text.secondary'}}
-            edge='start'
-            className='menu-btn'
-            color='inherit'
-            aria-label='open drawer'
+            sx={{ color: 'text.secondary' }}
+            edge="start"
+            className="menu-btn"
+            color="inherit"
+            aria-label="open drawer"
             onClick={toggleNavCollapsed}
-            size='large'
+            size="large"
           >
             <MenuIcon
               sx={{
@@ -90,7 +90,7 @@ const AppHeader = (props) => {
         <Box
           sx={{
             '& .logo-text': {
-              display: {xs: 'none', sm: 'block'},
+              display: { xs: 'none', sm: 'block' },
             },
           }}
         >
@@ -106,20 +106,20 @@ const AppHeader = (props) => {
             minHeight: 40,
             position: 'relative',
             '& .searchRoot': {
-              position: {xs: 'absolute', sm: 'relative'},
-              right: {xs: 0, sm: 'auto'},
-              top: {xs: 0, sm: 'auto'},
+              position: { xs: 'absolute', sm: 'relative' },
+              right: { xs: 0, sm: 'auto' },
+              top: { xs: 0, sm: 'auto' },
             },
           }}
         >
-          <AppSearchBar iconPosition='right' placeholder='Search…' />
+          <AppSearchBar iconPosition="right" placeholder="Search…" />
         </Box>
 
-        <Box sx={{ml: 4}}>
-          <AppLngSwitcher iconOnly={true} tooltipPosition='bottom' />
+        <Box sx={{ ml: 4 }}>
+          <AppLngSwitcher iconOnly={true} tooltipPosition="bottom" />
         </Box>
 
-        <Box sx={{ml: 4}}>
+        <Box sx={{ ml: 4 }}>
           <Hidden smDown>
             <Box
               sx={{
@@ -162,7 +162,7 @@ const AppHeader = (props) => {
                   px: 1.85,
                 }}
               >
-                <AppTooltip title='More'>
+                <AppTooltip title="More">
                   <IconButton
                     sx={{
                       borderRadius: '50%',
@@ -182,7 +182,7 @@ const AppHeader = (props) => {
                       },
                     }}
                     onClick={handleClick}
-                    size='large'
+                    size="large"
                   >
                     <MoreVertIcon />
                   </IconButton>
@@ -191,7 +191,7 @@ const AppHeader = (props) => {
             </Box>
           </Hidden>
           <Menu
-            id='simple-menu'
+            id="simple-menu"
             anchorEl={anchorEl}
             keepMounted
             open={Boolean(anchorEl)}

@@ -1,10 +1,10 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import Divider from '@mui/material/Divider';
 import Button from '@mui/material/Button';
 import moment from 'moment';
-import {alpha} from '@mui/material';
+import { alpha } from '@mui/material';
 import Box from '@mui/material/Box';
-import {useIntl} from 'react-intl';
+import { useIntl } from 'react-intl';
 import PropTypes from 'prop-types';
 import Labels from '../../TasksList/TaskListItem/Labels';
 import ChangeStaff from './ChangeStaff';
@@ -18,20 +18,20 @@ import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
 import EditOutlinedIcon from '@mui/icons-material/EditOutlined';
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
-import {useAuthUser} from '@crema/utility/AuthHooks';
+import { useAuthUser } from '@crema/utility/AuthHooks';
 import SendOutlinedIcon from '@mui/icons-material/SendOutlined';
 import CommentsList from './CommentsList';
-import {Fonts} from '@crema/constants/AppEnums'
-import {useInfoViewActionsContext} from '@crema/context/InfoViewContextProvider';
-import {putDataApi, useGetDataApi} from '@crema/utility/APIHooks';
+import { Fonts } from '@crema/constants/AppEnums';
+import { useInfoViewActionsContext } from '@crema/context/InfoViewContextProvider';
+import { putDataApi, useGetDataApi } from '@crema/utility/APIHooks';
 
 const TaskDetailBody = (props) => {
-  const {selectedTask, onUpdateSelectedTask} = props;
+  const { selectedTask, onUpdateSelectedTask } = props;
   const infoViewActionsContext = useInfoViewActionsContext();
 
-  const {user} = useAuthUser();
+  const { user } = useAuthUser();
 
-  const [{apiData: staffList}] = useGetDataApi('/api/todo/staff/list', []);
+  const [{ apiData: staffList }] = useGetDataApi('/api/todo/staff/list', []);
 
   const [isEdit, setEdit] = useState(false);
 
@@ -40,7 +40,7 @@ const TaskDetailBody = (props) => {
   const [comment, setComment] = useState('');
 
   const [scheduleDate, setScheduleDate] = useState(
-    moment(selectedTask.startDate).format('YYYY/MM/DD'),
+    moment(selectedTask.startDate).format('YYYY/MM/DD')
   );
 
   const [selectedStaff, setStaff] = useState(selectedTask.assignedTo);
@@ -93,7 +93,7 @@ const TaskDetailBody = (props) => {
     setStaff(staff);
   };
 
-  const {messages} = useIntl();
+  const { messages } = useIntl();
 
   return (
     <Box
@@ -108,14 +108,14 @@ const TaskDetailBody = (props) => {
         sx={{
           mb: 5,
           display: 'flex',
-          flexDirection: {xs: 'column', sm: 'row'},
-          alignItems: {sm: 'center'},
+          flexDirection: { xs: 'column', sm: 'row' },
+          alignItems: { sm: 'center' },
         }}
       >
-        <Box sx={{display: 'flex', alignItems: 'center'}}>
+        <Box sx={{ display: 'flex', alignItems: 'center' }}>
           <Typography
-            component='h2'
-            variant='h2'
+            component="h2"
+            variant="h2"
             sx={{
               overflow: 'hidden',
               textOverflow: 'ellipsis',
@@ -123,15 +123,15 @@ const TaskDetailBody = (props) => {
               marginRight: 3.5,
               fontSize: 16,
               fontWeight: Fonts.MEDIUM,
-              mb: {xs: 3, sm: 0},
+              mb: { xs: 3, sm: 0 },
             }}
           >
             {selectedTask.title}
           </Typography>
 
-          <Box mr={1} mb={{xs: 3, sm: 0}}>
+          <Box mr={1} mb={{ xs: 3, sm: 0 }}>
             <Box
-              component='span'
+              component="span"
               sx={{
                 px: 3,
                 py: 1,
@@ -147,24 +147,24 @@ const TaskDetailBody = (props) => {
           </Box>
         </Box>
 
-        <Box display='flex' alignItems='center' ml={{sm: 'auto'}}>
+        <Box display="flex" alignItems="center" ml={{ sm: 'auto' }}>
           <Labels labels={selectedTask.label} />
-          <Box component='span' color='text.secondary' fontSize={14} ml={2}>
+          <Box component="span" color="text.secondary" fontSize={14} ml={2}>
             Nov 21, 2020, 9:46 AM
           </Box>
         </Box>
       </Box>
 
-      <Box mb={0.5} display='flex'>
+      <Box mb={0.5} display="flex">
         <Box
-          display='flex'
-          flexDirection={{xs: 'column', sm: 'row'}}
+          display="flex"
+          flexDirection={{ xs: 'column', sm: 'row' }}
           mr={2}
-          alignItems={{sm: 'center'}}
+          alignItems={{ sm: 'center' }}
         >
           {isEdit ? (
             <>
-              <Box mb={{xs: 3, sm: 0}}>
+              <Box mb={{ xs: 3, sm: 0 }}>
                 <ChangeStaff
                   selectedStaff={selectedStaff}
                   handleStaffChange={handleStaffChange}
@@ -181,7 +181,7 @@ const TaskDetailBody = (props) => {
           )}
         </Box>
 
-        <Box ml='auto'>
+        <Box ml="auto">
           {!isEdit ? (
             <EditButton
               action={onClickEditButton}
@@ -216,7 +216,7 @@ const TaskDetailBody = (props) => {
       />
 
       {!isEdit ? (
-        <Typography sx={{color: 'text.secondary'}}>{content}</Typography>
+        <Typography sx={{ color: 'text.secondary' }}>{content}</Typography>
       ) : (
         <TextField
           multiline
@@ -226,10 +226,10 @@ const TaskDetailBody = (props) => {
               padding: '10px 15px',
             },
           }}
-          rows='6'
-          variant='outlined'
+          rows="6"
+          variant="outlined"
           placeholder={messages['common.description']}
-          name='content'
+          name="content"
           value={content}
           onChange={(event) => setContent(event.target.value)}
         />
@@ -238,13 +238,15 @@ const TaskDetailBody = (props) => {
       <Box
         sx={{
           display: 'flex',
-          flexDirection: {xs: 'column', sm: 'row'},
-          alignItems: {sm: 'center'},
+          flexDirection: { xs: 'column', sm: 'row' },
+          alignItems: { sm: 'center' },
           mb: 1,
           pt: 5,
         }}
       >
-        <Box sx={{display: 'flex', alignItems: 'center', mb: {xs: 3, sm: 0}}}>
+        <Box
+          sx={{ display: 'flex', alignItems: 'center', mb: { xs: 3, sm: 0 } }}
+        >
           <Box mr={5}>
             <TaskStatus
               selectedTask={selectedTask}
@@ -291,8 +293,8 @@ const TaskDetailBody = (props) => {
               padding: '10px 15px',
             },
           }}
-          rows='1'
-          variant='outlined'
+          rows="1"
+          variant="outlined"
           placeholder={messages['common.writeComment']}
           value={comment}
           onChange={(event) => setComment(event.target.value)}
@@ -309,8 +311,8 @@ const TaskDetailBody = (props) => {
               marginLeft: 0.75,
             },
           }}
-          variant='contained'
-          color='primary'
+          variant="contained"
+          color="primary"
           disabled={!comment}
           onClick={onAddComments}
         >

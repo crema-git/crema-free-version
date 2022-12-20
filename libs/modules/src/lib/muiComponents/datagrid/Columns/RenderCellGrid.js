@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Button from '@mui/material/Button';
-import {DataGrid} from '@mui/x-data-grid';
+import { DataGrid } from '@mui/x-data-grid';
 
 const columns = [
   {
@@ -11,10 +11,10 @@ const columns = [
       <strong>
         {params.value.getFullYear()}
         <Button
-          variant='contained'
-          color='primary'
-          size='small'
-          style={{marginLeft: 16}}
+          variant="contained"
+          color="primary"
+          size="small"
+          style={{ marginLeft: 16 }}
         >
           Open
         </Button>
@@ -40,7 +40,7 @@ const rows = [
 
 export default function RenderCellGrid() {
   return (
-    <div style={{height: 300, width: '100%'}}>
+    <div style={{ height: 300, width: '100%' }}>
       <DataGrid rows={rows} columns={columns} />
     </div>
   );

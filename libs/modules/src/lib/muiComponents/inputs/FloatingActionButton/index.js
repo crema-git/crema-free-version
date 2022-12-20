@@ -15,15 +15,15 @@ const FloatingActionButton = () => {
   return (
     <>
       <AppComponentHeader
-        title='Floating action button'
-        description='A floating action button (FAB) performs the primary, or most common, action on a screen.'
-        refUrl='https://mui.com/components/floating-action-button/'
+        title="Floating action button"
+        description="A floating action button (FAB) performs the primary, or most common, action on a screen."
+        refUrl="https://mui.com/components/floating-action-button/"
       />
 
       <AppGridContainer>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Basic FAB'
+            title="Basic FAB"
             component={FloatingActionButtons}
             source={FloatingActionButtonsSource}
             noScrollbar
@@ -31,20 +31,20 @@ const FloatingActionButton = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Size'
+            title="Size"
             component={FloatingActionButtonSize}
             source={FloatingActionButtonSizeSource}
             noScrollbar
-            description='By default, the size is large. Use the size prop for smaller floating action buttons.'
+            description="By default, the size is large. Use the size prop for smaller floating action buttons."
           />
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Animation'
+            title="Animation"
             component={FloatingActionButtonZoom}
             source={FloatingActionButtonZoomSource}
             noScrollbar
-            description='The floating action button animates onto the screen as an expanding piece of material, by default.'
+            description="The floating action button animates onto the screen as an expanding piece of material, by default."
           />
         </Grid>
       </AppGridContainer>

@@ -1,22 +1,25 @@
 import React from 'react';
 import Box from '@mui/material/Box';
-import IntlMessages from "@crema/utility/IntlMessages";
-import {useSidebarActionsContext, useSidebarContext,} from "@crema/context/SidebarContextProvider";
+import IntlMessages from '@crema/utility/IntlMessages';
+import {
+  useSidebarActionsContext,
+  useSidebarContext,
+} from '@crema/context/SidebarContextProvider';
 import AppSelectedIcon from '../../../AppSelectedIcon';
-import {menuStyles} from "@crema/fakedb/navigationStyle";
+import { menuStyles } from '@crema/fakedb/navigationStyle';
 
 const NavMenuStyle = () => {
-  const {menuStyle} = useSidebarContext();
+  const { menuStyle } = useSidebarContext();
 
-  const {updateMenuStyle} = useSidebarActionsContext();
+  const { updateMenuStyle } = useSidebarActionsContext();
   const onMenuStyleChange = (menuStyle) => {
     updateMenuStyle(menuStyle);
   };
 
   return (
     <>
-      <Box component='h4' sx={{mb: 3}}>
-        <IntlMessages id='customizer.sidebarMenuStyle' />
+      <Box component="h4" sx={{ mb: 3 }}>
+        <IntlMessages id="customizer.sidebarMenuStyle" />
       </Box>
       <Box
         sx={{
@@ -44,7 +47,7 @@ const NavMenuStyle = () => {
                 }}
                 onClick={() => onMenuStyleChange(menu.alias)}
               >
-                <img src={menu.image} alt='nav' />
+                <img src={menu.image} alt="nav" />
                 {menuStyle === menu.alias ? <AppSelectedIcon /> : null}
               </Box>
             </Box>

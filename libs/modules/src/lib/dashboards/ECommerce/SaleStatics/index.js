@@ -1,15 +1,15 @@
 import React from 'react';
 import AppCard from '@crema/components/AppCard';
-import {useIntl} from 'react-intl';
+import { useIntl } from 'react-intl';
 import AppSelect from '@crema/components/AppSelect';
-import {Box, Grid} from '@mui/material';
+import { Box, Grid } from '@mui/material';
 import Typography from '@mui/material/Typography';
 import AppCircularProgress from '@crema/components/AppCircularProgress';
 import SaleStaticChart from './SaleStaticChart';
 import AppGridContainer from '@crema/components/AppGridContainer';
 
 const SaleStatics = () => {
-  const {messages} = useIntl();
+  const { messages } = useIntl();
   const handleSelectionType = (data) => {
     console.log('data: ', data);
   };
@@ -45,17 +45,17 @@ const SaleStatics = () => {
             <Box
               sx={{
                 mb: 9,
-                pl: {xl: 8},
+                pl: { xl: 8 },
               }}
             >
               <AppCircularProgress
-                activeColor='#0A8FDC'
-                pathColor='#F44D50'
+                activeColor="#0A8FDC"
+                pathColor="#F44D50"
                 hidePercentage
                 value={70}
                 centerNode={
                   <img
-                    alt='icon'
+                    alt="icon"
                     src={'/assets/images/dashboard/application_icon.svg'}
                   />
                 }

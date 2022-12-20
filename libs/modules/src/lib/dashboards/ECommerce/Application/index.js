@@ -1,14 +1,14 @@
 import React from 'react';
 import AppCard from '@crema/components/AppCard';
-import {useIntl} from 'react-intl';
-import {Box} from '@mui/material';
+import { useIntl } from 'react-intl';
+import { Box } from '@mui/material';
 import Typography from '@mui/material/Typography';
 import AppCircularProgress from '@crema/components/AppCircularProgress';
 
 const Application = () => {
-  const {messages} = useIntl();
+  const { messages } = useIntl();
   return (
-    <AppCard title={messages['eCommerce.application']} sxStyle={{height: 1}}>
+    <AppCard title={messages['eCommerce.application']} sxStyle={{ height: 1 }}>
       <Box
         sx={{
           display: 'flex',
@@ -22,12 +22,12 @@ const Application = () => {
           }}
         >
           <AppCircularProgress
-            activeColor='#49BD65'
+            activeColor="#49BD65"
             hidePercentage
             value={70}
             centerNode={
               <img
-                alt='icon'
+                alt="icon"
                 src={'/assets/images/dashboard/application_icon.svg'}
               />
             }

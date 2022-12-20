@@ -4,12 +4,12 @@ import IntlMessages from '@crema/utility/IntlMessages';
 import Select from '@mui/material/Select';
 import FormControl from '@mui/material/FormControl';
 import PropTypes from 'prop-types';
-import {MenuItem} from '@mui/material';
-import {putDataApi, useGetDataApi} from '@crema/utility/APIHooks';
-import {useInfoViewActionsContext} from '@crema/context/InfoViewContextProvider';
+import { MenuItem } from '@mui/material';
+import { putDataApi, useGetDataApi } from '@crema/utility/APIHooks';
+import { useInfoViewActionsContext } from '@crema/context/InfoViewContextProvider';
 
-const TaskStatus = ({selectedTask, onUpdateSelectedTask}) => {
-  const [{apiData: statusList}] = useGetDataApi('/api/todo/status/list', []);
+const TaskStatus = ({ selectedTask, onUpdateSelectedTask }) => {
+  const [{ apiData: statusList }] = useGetDataApi('/api/todo/status/list', []);
   const infoViewActionsContext = useInfoViewActionsContext();
 
   const onChangeStatus = (event) => {
@@ -28,13 +28,13 @@ const TaskStatus = ({selectedTask, onUpdateSelectedTask}) => {
   };
 
   return (
-    <FormControl variant='outlined'>
-      <InputLabel id='status-select-outlined-label'>
-        <IntlMessages id='common.status' />
+    <FormControl variant="outlined">
+      <InputLabel id="status-select-outlined-label">
+        <IntlMessages id="common.status" />
       </InputLabel>
       <Select
-        labelId='status-select-outlined-label'
-        label={<IntlMessages id='common.status' />}
+        labelId="status-select-outlined-label"
+        label={<IntlMessages id="common.status" />}
         value={selectedTask.status}
         onChange={(event) => onChangeStatus(event)}
         sx={{

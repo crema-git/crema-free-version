@@ -1,5 +1,5 @@
 import React from 'react';
-import {Box} from '@mui/material';
+import { Box } from '@mui/material';
 import Grid from '@mui/material/Grid';
 
 const productSpecification = [
@@ -44,7 +44,7 @@ const ProductSpecification = () => {
   return (
     <>
       <Box
-        component='h3'
+        component="h3"
         sx={{
           color: 'text.primary',
           fontSize: 16,

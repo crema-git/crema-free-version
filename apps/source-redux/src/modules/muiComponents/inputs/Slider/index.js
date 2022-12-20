@@ -1,2 +1,2 @@
-import {Slider} from '@crema/modules/components/inputs';
+import { Slider } from '@crema/modules/components/inputs';
 export default Slider;

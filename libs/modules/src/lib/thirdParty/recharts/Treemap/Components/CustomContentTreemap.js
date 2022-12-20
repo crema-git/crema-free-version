@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import {ResponsiveContainer, Treemap} from 'recharts';
+import React, { Component } from 'react';
+import { ResponsiveContainer, Treemap } from 'recharts';
 import PropTypes from 'prop-types';
 import data from './data';
 
@@ -14,7 +14,8 @@ const COLORS = [
 
 class CustomizedContent extends Component {
   render() {
-    const {root, depth, x, y, width, height, index, colors, name} = this.props;
+    const { root, depth, x, y, width, height, index, colors, name } =
+      this.props;
 
     return (
       <g>
@@ -37,8 +38,8 @@ class CustomizedContent extends Component {
           <text
             x={x + width / 2}
             y={y + height / 2 + 7}
-            textAnchor='middle'
-            fill='#fff'
+            textAnchor="middle"
+            fill="#fff"
             fontSize={14}
           >
             {name}
@@ -48,7 +49,7 @@ class CustomizedContent extends Component {
           <text
             x={x + 4}
             y={y + 18}
-            fill='#fff'
+            fill="#fff"
             fontSize={16}
             fillOpacity={0.9}
           >
@@ -73,13 +74,13 @@ CustomizedContent.propTypes = {
 };
 
 const CustomContentTreemap = () => (
-  <ResponsiveContainer width='100%' height={200}>
+  <ResponsiveContainer width="100%" height={200}>
     <Treemap
       data={data}
-      dataKey='size'
+      dataKey="size"
       ratio={4 / 3}
-      stroke='#fff'
-      fill='#4299E1'
+      stroke="#fff"
+      fill="#4299E1"
       content={<CustomizedContent colors={COLORS} />}
     />
   </ResponsiveContainer>

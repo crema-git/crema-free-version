@@ -2,14 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
 
-const CourseSlider = ({children}) => {
+const CourseSlider = ({ children }) => {
   return (
     <Box
       sx={{
         position: 'relative',
         '& .slideRoot': {
           paddingBottom: 0,
-          mx: {sm: -3},
+          mx: { sm: -3 },
           '& .slick-slide': {
             '&  img': {
               height: 'auto',

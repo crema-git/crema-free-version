@@ -8,7 +8,7 @@ import {
   Radar,
   Radial,
   Scatter,
-  Treemap
+  Treemap,
 } from './recharts';
 import ColorPicker from './reactColor';
 import GoogleMap from './googleMap';
@@ -22,4 +22,26 @@ import FroalaEditor from './froalaEditor';
 import FileStack from './filestack';
 import FusionCharts from './fusionCharts';
 
-export {AreaChart, BarChart, ComposedChart, LineChart, PieChart, Radial, Treemap, Scatter, Radar, FunnelChart,ColorPicker, GoogleMap, ReactNotificationEx, ReactDropzone, ReactPlayer, Calendar, ReactSlick, Timeline, FroalaEditor, FileStack, FusionCharts};
+export {
+  AreaChart,
+  BarChart,
+  ComposedChart,
+  LineChart,
+  PieChart,
+  Radial,
+  Treemap,
+  Scatter,
+  Radar,
+  FunnelChart,
+  ColorPicker,
+  GoogleMap,
+  ReactNotificationEx,
+  ReactDropzone,
+  ReactPlayer,
+  Calendar,
+  ReactSlick,
+  Timeline,
+  FroalaEditor,
+  FileStack,
+  FusionCharts,
+};

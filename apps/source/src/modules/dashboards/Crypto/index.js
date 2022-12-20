@@ -2,7 +2,7 @@ import React from 'react';
 import Grid from '@mui/material/Grid';
 import AppGridContainer from '@crema/components/AppGridContainer';
 import AppAnimate from '@crema/components/AppAnimate';
-import {useGetDataApi} from '@crema/utility/APIHooks';
+import { useGetDataApi } from '@crema/utility/APIHooks';
 import {
   Bitcoin,
   BtcVolumeCurrency,
@@ -11,19 +11,19 @@ import {
   CryptoMarketActivity,
   LatestNews,
   PopularCoins,
-  TotalBalance
+  TotalBalance,
 } from '@crema/modules/dashboards/Crypto';
-import AppLoader from "@crema/components/AppLoader";
+import AppLoader from '@crema/components/AppLoader';
 
 const Crypto = () => {
-  const [{apiData: cryptoData, loading}] = useGetDataApi('/dashboard/crypto');
+  const [{ apiData: cryptoData, loading }] = useGetDataApi('/dashboard/crypto');
 
   return (
     <>
       {loading ? (
         <AppLoader />
-      ): (
-        <AppAnimate animation='transition.slideUpIn' delay={200}>
+      ) : (
+        <AppAnimate animation="transition.slideUpIn" delay={200}>
           <AppGridContainer>
             <Grid item xs={12} md={5}>
               <TotalBalance totalBalanceData={cryptoData.totalBalanceData} />

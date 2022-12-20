@@ -12,7 +12,7 @@ export default function FormPropsDatePickers() {
     <LocalizationProvider dateAdapter={AdapterDateFns}>
       <Stack spacing={3}>
         <DatePicker
-          label='disabled'
+          label="disabled"
           disabled
           value={value}
           onChange={(newValue) => {
@@ -21,7 +21,7 @@ export default function FormPropsDatePickers() {
           renderInput={(params) => <TextField {...params} />}
         />
         <DatePicker
-          label='read-only'
+          label="read-only"
           readOnly
           value={value}
           onChange={(newValue) => {

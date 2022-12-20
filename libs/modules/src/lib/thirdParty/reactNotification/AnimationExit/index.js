@@ -1,8 +1,8 @@
 import React from 'react';
-import {store} from 'react-notifications-component';
+import { store } from 'react-notifications-component';
 import Button from '@mui/material/Button';
 
-import {getContainer, getMessage, getType} from '../helpers/randomize';
+import { getContainer, getMessage, getType } from '../helpers/randomize';
 import notification from '../helpers/notification';
 import Box from '@mui/material/Box';
 
@@ -11,21 +11,21 @@ const AnimationExit = () => {
     const type = getType();
     return store.addNotification(
       Object.assign({}, notification, {
-        slidingExit: {delay: 300},
+        slidingExit: { delay: 300 },
         animationOut: htmlClasses,
         container: getContainer(),
         message: getMessage(type),
         type,
-      }),
+      })
     );
   };
 
   return (
-    <Box display='flex' flexWrap='wrap'>
+    <Box display="flex" flexWrap="wrap">
       <Box mr={2} my={1}>
         <Button
-          color='primary'
-          variant='contained'
+          color="primary"
+          variant="contained"
           onClick={() => add(['animated bounceOut'])}
         >
           Bounce Out
@@ -33,8 +33,8 @@ const AnimationExit = () => {
       </Box>
       <Box mr={2} my={1}>
         <Button
-          color='primary'
-          variant='contained'
+          color="primary"
+          variant="contained"
           onClick={() => add(['animated fadeOut'])}
         >
           Fade Out
@@ -42,8 +42,8 @@ const AnimationExit = () => {
       </Box>
       <Box mr={2} my={1}>
         <Button
-          color='primary'
-          variant='contained'
+          color="primary"
+          variant="contained"
           onClick={() => add(['animated flipOutX'])}
         >
           Flip Out X
@@ -51,8 +51,8 @@ const AnimationExit = () => {
       </Box>
       <Box mr={2} my={1}>
         <Button
-          color='primary'
-          variant='contained'
+          color="primary"
+          variant="contained"
           onClick={() => add(['animated flipOutY'])}
         >
           Flip Out Y
@@ -60,8 +60,8 @@ const AnimationExit = () => {
       </Box>
       <Box mr={2} my={1}>
         <Button
-          color='primary'
-          variant='contained'
+          color="primary"
+          variant="contained"
           onClick={() => add(['animated zoomOut'])}
         >
           Zoom Out

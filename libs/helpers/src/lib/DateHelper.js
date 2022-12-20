@@ -1,9 +1,9 @@
 import moment from 'moment';
 
 export const getCustomDateTime = (
-    value = 0,
-    unit = 'days',
-    format = 'YYYY-MM-DD',
+  value = 0,
+  unit = 'days',
+  format = 'YYYY-MM-DD'
 ) => {
   if (value === 0) {
     return moment().format(format);
@@ -14,7 +14,7 @@ export const getCustomDateTime = (
 export const getFormattedDateTime = (
   value = 0,
   unit = 'days',
-  format = 'YYYY-MM-DD',
+  format = 'YYYY-MM-DD'
 ) => {
   if (value === 0) {
     return moment().format(format);

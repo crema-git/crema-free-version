@@ -18,27 +18,27 @@ export default function FabIntegrationSnackbar() {
       {/* TODO: Fix theme type in GlobalStyles */}
       <GlobalStyles
         styles={(theme) => ({
-          body: {backgroundColor: theme.palette.background.paper},
+          body: { backgroundColor: theme.palette.background.paper },
         })}
       />
       <div>
-        <AppBar position='static' color='primary'>
+        <AppBar position="static" color="primary">
           <Toolbar>
             <IconButton
-              edge='start'
-              sx={{mr: 2}}
-              color='inherit'
-              aria-label='menu'
+              edge="start"
+              sx={{ mr: 2 }}
+              color="inherit"
+              aria-label="menu"
             >
               <MenuIcon />
             </IconButton>
-            <Typography variant='h6' color='inherit' component='div'>
+            <Typography variant="h6" color="inherit" component="div">
               App Bar
             </Typography>
           </Toolbar>
         </AppBar>
         <Fab
-          color='secondary'
+          color="secondary"
           sx={{
             position: 'absolute',
             bottom: (theme) => theme.spacing(2),
@@ -50,13 +50,13 @@ export default function FabIntegrationSnackbar() {
         <Snackbar
           open
           autoHideDuration={6000}
-          message='Archived'
+          message="Archived"
           action={
-            <Button color='inherit' size='small'>
+            <Button color="inherit" size="small">
               Undo
             </Button>
           }
-          sx={{bottom: {xs: 90, sm: 0}}}
+          sx={{ bottom: { xs: 90, sm: 0 } }}
         />
       </div>
     </React.Fragment>

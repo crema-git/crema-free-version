@@ -17,36 +17,36 @@ const BottomNavigation = () => {
   return (
     <>
       <AppComponentHeader
-        title='Bottom Navigation'
-        description='Bottom navigation bars allow movement between primary destinations in an app.'
-        refUrl='https://mui.com/components/bottom-navigation/'
+        title="Bottom Navigation"
+        description="Bottom navigation bars allow movement between primary destinations in an app."
+        refUrl="https://mui.com/components/bottom-navigation/"
       />
 
       <AppGridContainer>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Bottom Navigation'
+            title="Bottom Navigation"
             component={SimpleBottomNavigation}
             source={SimpleBottomNavigationSource}
             noScrollbar
-            description='When there are only three actions, display both icons and text labels at all times.'
+            description="When there are only three actions, display both icons and text labels at all times."
           />
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='LabelBottomNavigation'
+            title="LabelBottomNavigation"
             component={LabelBottomNavigation}
             source={LabelBottomNavigationSource}
             noScrollbar
-            description='When there are only three actions, display both icons and text labels at all times.'
+            description="When there are only three actions, display both icons and text labels at all times."
           />
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='FixedBottomNavigation'
+            title="FixedBottomNavigation"
             component={FixedBottomNavigation}
             source={FixedBottomNavigationSource}
-            description='When there are only three actions, display both icons and text labels at all times.'
+            description="When there are only three actions, display both icons and text labels at all times."
           />
         </Grid>
       </AppGridContainer>

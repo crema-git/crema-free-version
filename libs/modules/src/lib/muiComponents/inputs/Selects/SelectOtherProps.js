@@ -14,16 +14,16 @@ export default function SelectOtherProps() {
 
   return (
     <div>
-      <FormControl sx={{m: 1, minWidth: 120}} disabled>
-        <InputLabel id='demo-simple-select-disabled-label'>Age</InputLabel>
+      <FormControl sx={{ m: 1, minWidth: 120 }} disabled>
+        <InputLabel id="demo-simple-select-disabled-label">Age</InputLabel>
         <Select
-          labelId='demo-simple-select-disabled-label'
-          id='demo-simple-select-disabled'
+          labelId="demo-simple-select-disabled-label"
+          id="demo-simple-select-disabled"
           value={age}
-          label='Age'
+          label="Age"
           onChange={handleChange}
         >
-          <MenuItem value=''>
+          <MenuItem value="">
             <em>None</em>
           </MenuItem>
           <MenuItem value={10}>Ten</MenuItem>
@@ -32,17 +32,17 @@ export default function SelectOtherProps() {
         </Select>
         <FormHelperText>Disabled</FormHelperText>
       </FormControl>
-      <FormControl sx={{m: 1, minWidth: 120}} error>
-        <InputLabel id='demo-simple-select-error-label'>Age</InputLabel>
+      <FormControl sx={{ m: 1, minWidth: 120 }} error>
+        <InputLabel id="demo-simple-select-error-label">Age</InputLabel>
         <Select
-          labelId='demo-simple-select-error-label'
-          id='demo-simple-select-error'
+          labelId="demo-simple-select-error-label"
+          id="demo-simple-select-error"
           value={age}
-          label='Age'
+          label="Age"
           onChange={handleChange}
           renderValue={(value) => `⚠️  - ${value}`}
         >
-          <MenuItem value=''>
+          <MenuItem value="">
             <em>None</em>
           </MenuItem>
           <MenuItem value={10}>Ten</MenuItem>
@@ -51,17 +51,17 @@ export default function SelectOtherProps() {
         </Select>
         <FormHelperText>Error</FormHelperText>
       </FormControl>
-      <FormControl sx={{m: 1, minWidth: 120}}>
-        <InputLabel id='demo-simple-select-readonly-label'>Age</InputLabel>
+      <FormControl sx={{ m: 1, minWidth: 120 }}>
+        <InputLabel id="demo-simple-select-readonly-label">Age</InputLabel>
         <Select
-          labelId='demo-simple-select-readonly-label'
-          id='demo-simple-select-readonly'
+          labelId="demo-simple-select-readonly-label"
+          id="demo-simple-select-readonly"
           value={age}
-          label='Age'
+          label="Age"
           onChange={handleChange}
-          inputProps={{readOnly: true}}
+          inputProps={{ readOnly: true }}
         >
-          <MenuItem value=''>
+          <MenuItem value="">
             <em>None</em>
           </MenuItem>
           <MenuItem value={10}>Ten</MenuItem>
@@ -70,16 +70,16 @@ export default function SelectOtherProps() {
         </Select>
         <FormHelperText>Read only</FormHelperText>
       </FormControl>
-      <FormControl required sx={{m: 1, minWidth: 120}}>
-        <InputLabel id='demo-simple-select-required-label'>Age</InputLabel>
+      <FormControl required sx={{ m: 1, minWidth: 120 }}>
+        <InputLabel id="demo-simple-select-required-label">Age</InputLabel>
         <Select
-          labelId='demo-simple-select-required-label'
-          id='demo-simple-select-required'
+          labelId="demo-simple-select-required-label"
+          id="demo-simple-select-required"
           value={age}
-          label='Age *'
+          label="Age *"
           onChange={handleChange}
         >
-          <MenuItem value=''>
+          <MenuItem value="">
             <em>None</em>
           </MenuItem>
           <MenuItem value={10}>Ten</MenuItem>

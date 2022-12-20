@@ -1,3 +1,3 @@
-import {FloatingActionButton} from '@crema/modules/components/inputs';
+import { FloatingActionButton } from '@crema/modules/components/inputs';
 
 export default FloatingActionButton;

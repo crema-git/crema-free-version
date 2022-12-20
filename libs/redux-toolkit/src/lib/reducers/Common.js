@@ -19,10 +19,10 @@ const INIT_STATE = {
 const commonReducer = (state = INIT_STATE, action) => {
   switch (action.type) {
     case FETCH_START: {
-      return {...state, error: '', message: '', loading: true};
+      return { ...state, error: '', message: '', loading: true };
     }
     case UPDATING_CONTENT: {
-      return {...state, error: '', message: '', updatingContent: true};
+      return { ...state, error: '', message: '', updatingContent: true };
     }
     case FETCH_SUCCESS: {
       return {

@@ -13,21 +13,21 @@ const Radar = () => {
   return (
     <>
       <AppComponentHeader
-        title='Radar Chart'
-        refUrl='http://recharts.org/en-US/api/RadarChart'
+        title="Radar Chart"
+        refUrl="http://recharts.org/en-US/api/RadarChart"
       />
 
       <AppGridContainer>
         <Grid item xs={12} lg={6}>
           <AppComponentCard
-            title='Simple Radar Chart'
+            title="Simple Radar Chart"
             component={SimpleRadarChart}
             source={SimpleRadarChartSource}
           />
         </Grid>
         <Grid item xs={12} lg={6}>
           <AppComponentCard
-            title='Specified Domain Radar Chart'
+            title="Specified Domain Radar Chart"
             component={SpecifiedDomainRadarChart}
             source={SpecifiedDomainRadarChartSource}
           />

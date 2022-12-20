@@ -26,15 +26,15 @@ const DateTimePicker = () => {
   return (
     <>
       <AppComponentHeader
-        title='DateTimePicker'
-        description='Combined date & time picker.'
-        refUrl='https://mui.com/components/date-time-picker/'
+        title="DateTimePicker"
+        description="Combined date & time picker."
+        refUrl="https://mui.com/components/date-time-picker/"
       />
 
       <AppGridContainer>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='BasicDateTimePicker'
+            title="BasicDateTimePicker"
             component={BasicDateTimePicker}
             source={BasicDateTimePickerSource}
             noScrollbar
@@ -42,7 +42,7 @@ const DateTimePicker = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='ResponsiveDateTimePickers'
+            title="ResponsiveDateTimePickers"
             component={ResponsiveDateTimePickers}
             source={ResponsiveDateTimePickersSource}
             noScrollbar
@@ -50,7 +50,7 @@ const DateTimePicker = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='FormPropsDateTimePickers'
+            title="FormPropsDateTimePickers"
             component={FormPropsDateTimePickers}
             source={FormPropsDateTimePickersSource}
             noScrollbar
@@ -58,7 +58,7 @@ const DateTimePicker = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='DateTimeValidation'
+            title="DateTimeValidation"
             component={DateTimeValidation}
             source={DateTimeValidationSource}
             noScrollbar
@@ -66,7 +66,7 @@ const DateTimePicker = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='StaticDateTimePickerDemo'
+            title="StaticDateTimePickerDemo"
             component={StaticDateTimePickerDemo}
             source={StaticDateTimePickerDemoSource}
             noScrollbar
@@ -74,7 +74,7 @@ const DateTimePicker = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='CustomDateTimePicker'
+            title="CustomDateTimePicker"
             component={CustomDateTimePicker}
             source={CustomDateTimePickerSource}
             noScrollbar

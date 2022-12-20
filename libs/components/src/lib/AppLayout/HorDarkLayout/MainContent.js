@@ -1,8 +1,8 @@
 import React from 'react';
-import {Box} from '@mui/material';
+import { Box } from '@mui/material';
 import PropsTypes from 'prop-types';
 
-const MainContent = ({children, ...rest}) => {
+const MainContent = ({ children, ...rest }) => {
   return (
     <Box
       sx={{
@@ -15,11 +15,11 @@ const MainContent = ({children, ...rest}) => {
         '& .app-content, & .footerContainer': {
           px: 5,
           width: '100%',
-          maxWidth: {lg: 1140, xl: 1420},
+          maxWidth: { lg: 1140, xl: 1420 },
           mx: 'auto',
         },
       }}
-      className='mainContent'
+      className="mainContent"
       {...rest}
     >
       {children}

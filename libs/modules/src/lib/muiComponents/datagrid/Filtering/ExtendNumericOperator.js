@@ -1,9 +1,9 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
-import {makeStyles} from '@mui/styles';
+import { makeStyles } from '@mui/styles';
 import Rating from '@mui/material/Rating';
-import {DataGrid, getGridNumericColumnOperators} from '@mui/x-data-grid';
-import {useDemoData} from '@mui/x-data-grid-generator';
+import { DataGrid, getGridNumericColumnOperators } from '@mui/x-data-grid';
+import { useDemoData } from '@mui/x-data-grid-generator';
 
 const useStyles = makeStyles({
   root: {
@@ -17,17 +17,17 @@ const useStyles = makeStyles({
 
 function RatingInputValue(props) {
   const classes = useStyles();
-  const {item, applyValue} = props;
+  const { item, applyValue } = props;
 
   const handleFilterChange = (event) => {
-    applyValue({...item, value: event.target.value});
+    applyValue({ ...item, value: event.target.value });
   };
 
   return (
     <div className={classes.root}>
       <Rating
-        name='custom-rating-filter-operator'
-        placeholder='Filter value'
+        name="custom-rating-filter-operator"
+        placeholder="Filter value"
         value={Number(item.value)}
         onChange={handleFilterChange}
         precision={0.5}
@@ -47,11 +47,11 @@ RatingInputValue.propTypes = {
 };
 
 export default function ExtendNumericOperator() {
-  const {data} = useDemoData({dataSet: 'Employee', rowLength: 100});
+  const { data } = useDemoData({ dataSet: 'Employee', rowLength: 100 });
   const columns = [...data.columns];
 
   const [filterModel, setFilterModel] = React.useState({
-    items: [{columnField: 'rating', value: '3.5', operatorValue: '>='}],
+    items: [{ columnField: 'rating', value: '3.5', operatorValue: '>=' }],
   });
 
   if (columns.length > 0) {
@@ -62,7 +62,7 @@ export default function ExtendNumericOperator() {
       (operator) => ({
         ...operator,
         InputComponent: RatingInputValue,
-      }),
+      })
     );
 
     columns[ratingColIndex] = {
@@ -71,7 +71,7 @@ export default function ExtendNumericOperator() {
     };
   }
   return (
-    <div style={{height: 400, width: '100%'}}>
+    <div style={{ height: 400, width: '100%' }}>
       <DataGrid
         rows={data.rows}
         columns={columns}

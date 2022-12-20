@@ -5,7 +5,7 @@ const Mixcloud = () => {
   return (
     <ReactPlayer
       controls={true}
-      url='https://www.mixcloud.com/mixcloud/meet-the-curators/'
+      url="https://www.mixcloud.com/mixcloud/meet-the-curators/"
     />
   );
 };

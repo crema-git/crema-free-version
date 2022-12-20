@@ -1,18 +1,18 @@
 import React from 'react';
 import AppCard from '@crema/components/AppCard';
-import {Box, Typography} from '@mui/material';
-import {Fonts} from '@crema/constants/AppEnums'
+import { Box, Typography } from '@mui/material';
+import { Fonts } from '@crema/constants/AppEnums';
 import PropTypes from 'prop-types';
 
-const DrCard = ({data}) => {
-  const {bgColor, icon, time, category, name} = data;
+const DrCard = ({ data }) => {
+  const { bgColor, icon, time, category, name } = data;
   return (
     <AppCard
       sxStyle={{
         backgroundColor: bgColor,
         height: 1,
       }}
-      className='card-hover'
+      className="card-hover"
     >
       <Box
         sx={{
@@ -25,7 +25,7 @@ const DrCard = ({data}) => {
             alignSelf: 'center',
           }}
         >
-          <img src={icon} alt='icon' />
+          <img src={icon} alt="icon" />
         </Box>
         <Box
           sx={{
@@ -50,14 +50,14 @@ const DrCard = ({data}) => {
                 whiteSpace: 'nowrap',
                 width: '100%',
               }}
-              component='h5'
-              variant='inherit'
-              color='inherit'
+              component="h5"
+              variant="inherit"
+              color="inherit"
             >
               {category}
             </Typography>
             <Box
-              component='p'
+              component="p"
               sx={{
                 pt: 1.5,
                 overflow: 'hidden',

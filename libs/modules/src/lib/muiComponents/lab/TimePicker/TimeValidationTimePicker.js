@@ -14,7 +14,7 @@ export default function TimeValidationTimePicker() {
         <TimePicker
           renderInput={(params) => <TextField {...params} />}
           value={value}
-          label='min/max time'
+          label="min/max time"
           onChange={(newValue) => {
             setValue(newValue);
           }}
@@ -23,7 +23,7 @@ export default function TimeValidationTimePicker() {
         />
         <TimePicker
           renderInput={(params) => <TextField {...params} />}
-          label='Disable odd hours'
+          label="Disable odd hours"
           value={value}
           onChange={(newValue) => {
             setValue(newValue);

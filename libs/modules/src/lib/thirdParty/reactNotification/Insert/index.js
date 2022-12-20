@@ -1,9 +1,9 @@
 import React from 'react';
-import {store} from 'react-notifications-component';
+import { store } from 'react-notifications-component';
 import Button from '@mui/material/Button';
 
 import notification from '../helpers/notification';
-import {getMessage, getTitle, getType} from '../helpers/randomize';
+import { getMessage, getTitle, getType } from '../helpers/randomize';
 import Box from '@mui/material/Box';
 
 const InsertExample = () => {
@@ -15,7 +15,7 @@ const InsertExample = () => {
         insert,
         message: getMessage(type),
         title: getTitle(type),
-      }),
+      })
     );
   };
 
@@ -28,8 +28,8 @@ const InsertExample = () => {
           marginLeft: 2,
           marginRight: 2,
         }}
-        color='primary'
-        variant='contained'
+        color="primary"
+        variant="contained"
         onClick={() => add('top')}
       >
         Top
@@ -41,8 +41,8 @@ const InsertExample = () => {
           marginLeft: 2,
           marginRight: 2,
         }}
-        color='primary'
-        variant='contained'
+        color="primary"
+        variant="contained"
         onClick={() => add('bottom')}
       >
         Bottom

@@ -17,11 +17,11 @@ export default function CustomInputAutocomplete() {
               theme.palette.getContrastText(theme.palette.background.paper),
           },
         }}
-        id='custom-input-demo'
+        id="custom-input-demo"
         options={options}
         renderInput={(params) => (
           <div ref={params.InputProps.ref}>
-            <input type='text' {...params.inputProps} />
+            <input type="text" {...params.inputProps} />
           </div>
         )}
       />

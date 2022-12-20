@@ -11,8 +11,8 @@ export default function SimpleAccordion() {
       <Accordion>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
-          aria-controls='panel1a-content'
-          id='panel1a-header'
+          aria-controls="panel1a-content"
+          id="panel1a-header"
         >
           <Typography>Accordion 1</Typography>
         </AccordionSummary>
@@ -26,8 +26,8 @@ export default function SimpleAccordion() {
       <Accordion>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
-          aria-controls='panel2a-content'
-          id='panel2a-header'
+          aria-controls="panel2a-content"
+          id="panel2a-header"
         >
           <Typography>Accordion 2</Typography>
         </AccordionSummary>
@@ -41,8 +41,8 @@ export default function SimpleAccordion() {
       <Accordion disabled>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
-          aria-controls='panel3a-content'
-          id='panel3a-header'
+          aria-controls="panel3a-content"
+          id="panel3a-header"
         >
           <Typography>Disabled Accordion</Typography>
         </AccordionSummary>

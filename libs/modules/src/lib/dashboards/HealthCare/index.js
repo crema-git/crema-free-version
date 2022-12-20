@@ -14,4 +14,20 @@ import AppointmentCard from './AppointmentCard';
 import HeartRate from './HeartRate';
 import YourActivity from './YourActivity';
 
-export { DrCard, HealthStatics, NewPatients, CancelVisits, TopDoctors, UpcomingAppointments, Notifications, HospitalStatics, RecentPatients, InfoWidget, HospitalActivity, ProfileCard, AppointmentCard, HeartRate, YourActivity };
+export {
+  DrCard,
+  HealthStatics,
+  NewPatients,
+  CancelVisits,
+  TopDoctors,
+  UpcomingAppointments,
+  Notifications,
+  HospitalStatics,
+  RecentPatients,
+  InfoWidget,
+  HospitalActivity,
+  ProfileCard,
+  AppointmentCard,
+  HeartRate,
+  YourActivity,
+};

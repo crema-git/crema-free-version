@@ -62,15 +62,15 @@ const Columns = () => {
   return (
     <>
       <AppComponentHeader
-        title='Columns'
-        description='A textarea component for React which grows with content.'
-        refUrl='https://mui.com/components/data-grid/columns/'
+        title="Columns"
+        description="A textarea component for React which grows with content."
+        refUrl="https://mui.com/components/data-grid/columns/"
       />
 
       <AppGridContainer>
         <Grid item xs={12}>
           <AppComponentCard
-            title='Basic Columns Grid'
+            title="Basic Columns Grid"
             component={BasicColumnsGrid}
             source={BasicColumnsGridSource}
             noScrollbar
@@ -78,7 +78,7 @@ const Columns = () => {
         </Grid>
         <Grid item xs={12}>
           <AppComponentCard
-            title='Header Columns Grid'
+            title="Header Columns Grid"
             component={HeaderColumnsGrid}
             source={HeaderColumnsGridSource}
             noScrollbar
@@ -86,7 +86,7 @@ const Columns = () => {
         </Grid>
         <Grid item xs={12}>
           <AppComponentCard
-            title='Column Width Grid'
+            title="Column Width Grid"
             component={ColumnWidthGrid}
             source={ColumnWidthGridSource}
             noScrollbar
@@ -94,7 +94,7 @@ const Columns = () => {
         </Grid>
         <Grid item xs={12}>
           <AppComponentCard
-            title='ColumnMinWidthGrid'
+            title="ColumnMinWidthGrid"
             component={ColumnMinWidthGrid}
             source={ColumnMinWidthGridSource}
             noScrollbar
@@ -102,7 +102,7 @@ const Columns = () => {
         </Grid>
         <Grid item xs={12}>
           <AppComponentCard
-            title='ColumnFluidWidthGrid'
+            title="ColumnFluidWidthGrid"
             component={ColumnFluidWidthGrid}
             source={ColumnFluidWidthGridSource}
             noScrollbar
@@ -110,7 +110,7 @@ const Columns = () => {
         </Grid>
         <Grid item xs={12}>
           <AppComponentCard
-            title='ColumnSizingGrid'
+            title="ColumnSizingGrid"
             component={ColumnSizingGrid}
             source={ColumnSizingGridSource}
             noScrollbar
@@ -118,7 +118,7 @@ const Columns = () => {
         </Grid>
         <Grid item xs={12}>
           <AppComponentCard
-            title='ValueGetterGrid'
+            title="ValueGetterGrid"
             component={ValueGetterGrid}
             source={ValueGetterGridSource}
             noScrollbar
@@ -126,7 +126,7 @@ const Columns = () => {
         </Grid>
         <Grid item xs={12}>
           <AppComponentCard
-            title='ValueFormatterGrid'
+            title="ValueFormatterGrid"
             component={ValueFormatterGrid}
             source={ValueFormatterGridSource}
             noScrollbar
@@ -134,7 +134,7 @@ const Columns = () => {
         </Grid>
         <Grid item xs={12}>
           <AppComponentCard
-            title='ValueParserGrid'
+            title="ValueParserGrid"
             component={ValueParserGrid}
             source={ValueParserGridSource}
             noScrollbar
@@ -142,7 +142,7 @@ const Columns = () => {
         </Grid>
         <Grid item xs={12}>
           <AppComponentCard
-            title='RenderCellGrid'
+            title="RenderCellGrid"
             component={RenderCellGrid}
             source={RenderCellGridSource}
             noScrollbar
@@ -150,7 +150,7 @@ const Columns = () => {
         </Grid>
         <Grid item xs={12}>
           <AppComponentCard
-            title='RenderExpandCellGrid'
+            title="RenderExpandCellGrid"
             component={RenderExpandCellGrid}
             source={RenderExpandCellGridSource}
             noScrollbar
@@ -158,7 +158,7 @@ const Columns = () => {
         </Grid>
         <Grid item xs={12}>
           <AppComponentCard
-            title='RenderHeaderGrid'
+            title="RenderHeaderGrid"
             component={RenderHeaderGrid}
             source={RenderHeaderGridSource}
             noScrollbar
@@ -166,7 +166,7 @@ const Columns = () => {
         </Grid>
         <Grid item xs={12}>
           <AppComponentCard
-            title='ColumnTypesGrid'
+            title="ColumnTypesGrid"
             component={ColumnTypesGrid}
             source={ColumnTypesGridSource}
             noScrollbar
@@ -174,7 +174,7 @@ const Columns = () => {
         </Grid>
         <Grid item xs={12}>
           <AppComponentCard
-            title='CustomColumnTypesGrid'
+            title="CustomColumnTypesGrid"
             component={CustomColumnTypesGrid}
             source={CustomColumnTypesGridSource}
             noScrollbar
@@ -182,7 +182,7 @@ const Columns = () => {
         </Grid>
         <Grid item xs={12}>
           <AppComponentCard
-            title='ColumnMenuGrid'
+            title="ColumnMenuGrid"
             component={ColumnMenuGrid}
             source={ColumnMenuGridSource}
             noScrollbar
@@ -190,7 +190,7 @@ const Columns = () => {
         </Grid>
         <Grid item xs={12}>
           <AppComponentCard
-            title='ColumnSelectorGrid'
+            title="ColumnSelectorGrid"
             component={ColumnSelectorGrid}
             source={ColumnSelectorGridSource}
             noScrollbar
@@ -198,7 +198,7 @@ const Columns = () => {
         </Grid>
         <Grid item xs={12}>
           <AppComponentCard
-            title='ColumnOrderingGrid'
+            title="ColumnOrderingGrid"
             component={ColumnOrderingGrid}
             source={ColumnOrderingGridSource}
             noScrollbar
@@ -206,7 +206,7 @@ const Columns = () => {
         </Grid>
         <Grid item xs={12}>
           <AppComponentCard
-            title='ColumnOrderingDisabledGrid'
+            title="ColumnOrderingDisabledGrid"
             component={ColumnOrderingDisabledGrid}
             source={ColumnOrderingDisabledGridSource}
             noScrollbar

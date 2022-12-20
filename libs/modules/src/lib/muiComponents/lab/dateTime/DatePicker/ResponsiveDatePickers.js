@@ -1,7 +1,12 @@
 import * as React from 'react';
 import TextField from '@mui/material/TextField';
-import {AdapterDateFns} from '@mui/x-date-pickers/AdapterDateFns';
-import {DatePicker, DesktopDatePicker, LocalizationProvider, MobileDatePicker,} from '@mui/x-date-pickers';
+import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
+import {
+  DatePicker,
+  DesktopDatePicker,
+  LocalizationProvider,
+  MobileDatePicker,
+} from '@mui/x-date-pickers';
 import Stack from '@mui/material/Stack';
 
 export default function ResponsiveDatePickers() {
@@ -11,7 +16,7 @@ export default function ResponsiveDatePickers() {
     <LocalizationProvider dateAdapter={AdapterDateFns}>
       <Stack spacing={3}>
         <MobileDatePicker
-          label='For mobile'
+          label="For mobile"
           value={value}
           onChange={(newValue) => {
             setValue(newValue);
@@ -19,7 +24,7 @@ export default function ResponsiveDatePickers() {
           renderInput={(params) => <TextField {...params} />}
         />
         <DesktopDatePicker
-          label='For desktop'
+          label="For desktop"
           value={value}
           minDate={new Date('2017-01-01')}
           onChange={(newValue) => {
@@ -29,8 +34,8 @@ export default function ResponsiveDatePickers() {
         />
         <DatePicker
           disableFuture
-          label='Responsive'
-          openTo='year'
+          label="Responsive"
+          openTo="year"
           views={['year', 'month', 'day']}
           value={value}
           onChange={(newValue) => {

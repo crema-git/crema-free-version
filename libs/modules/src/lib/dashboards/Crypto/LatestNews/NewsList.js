@@ -3,13 +3,13 @@ import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
 import List from '@mui/material/List';
 import PropTypes from 'prop-types';
-import {Box} from '@mui/material';
-import {Fonts} from '@crema/constants/AppEnums'
+import { Box } from '@mui/material';
+import { Fonts } from '@crema/constants/AppEnums';
 import AppScrollbar from '@crema/components/AppScrollbar';
 import AppList from '@crema/components/AppList';
 
 const NewsList = (props) => {
-  const {newsData} = props;
+  const { newsData } = props;
 
   return (
     <AppScrollbar>
@@ -20,12 +20,12 @@ const NewsList = (props) => {
             return (
               <ListItem
                 key={news.id}
-                className='item-hover'
+                className="item-hover"
                 sx={{
                   px: 5,
                   display: 'flex',
                   alignItems: 'flex-start',
-                  flexDirection: {xs: 'column', sm: 'row'},
+                  flexDirection: { xs: 'column', sm: 'row' },
                 }}
               >
                 <ListItemText
@@ -34,7 +34,7 @@ const NewsList = (props) => {
                   }}
                   primary={
                     <Box
-                      component='span'
+                      component="span"
                       sx={{
                         mb: 1,
                         display: 'flex',
@@ -61,7 +61,7 @@ const NewsList = (props) => {
                   }
                   secondary={
                     <Box
-                      component='span'
+                      component="span"
                       sx={{
                         color: 'text.secondary',
                         fontWeight: Fonts.MEDIUM,
@@ -74,15 +74,15 @@ const NewsList = (props) => {
                 />
                 <Box
                   sx={{
-                    ml: {sm: 3, xl: 5},
-                    width: {xs: '100%', sm: 'auto'},
+                    ml: { sm: 3, xl: 5 },
+                    width: { xs: '100%', sm: 'auto' },
                     '& .newsImg': {
-                      width: {xs: '100%', sm: '10rem'},
+                      width: { xs: '100%', sm: '10rem' },
                       display: 'block',
                     },
                   }}
                 >
-                  <img className='newsImg' src={news.image} alt='bitcoin' />
+                  <img className="newsImg" src={news.image} alt="bitcoin" />
                 </Box>
               </ListItem>
             );

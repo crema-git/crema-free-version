@@ -1,10 +1,10 @@
 import React from 'react';
-import {Box} from '@mui/material';
+import { Box } from '@mui/material';
 import CheckIcon from '@mui/icons-material/Check';
 import IconButton from '@mui/material/IconButton';
 import PropTypes from 'prop-types';
 
-const ColorCell = ({selected, data, onChange}) => {
+const ColorCell = ({ selected, data, onChange }) => {
   return (
     <Box
       sx={{
@@ -18,7 +18,7 @@ const ColorCell = ({selected, data, onChange}) => {
         justifyContent: 'center',
       }}
       onClick={() => onChange(data)}
-      className='pointer'
+      className="pointer"
     >
       {selected.some((item) => item === data) ? (
         <IconButton
@@ -27,7 +27,7 @@ const ColorCell = ({selected, data, onChange}) => {
             width: 40,
           }}
         >
-          <CheckIcon style={{color: 'white'}} />
+          <CheckIcon style={{ color: 'white' }} />
         </IconButton>
       ) : null}
     </Box>

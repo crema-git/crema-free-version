@@ -3,11 +3,11 @@ import Avatar from '@mui/material/Avatar';
 import Box from '@mui/material/Box';
 import IntlMessages from '@crema/utility/IntlMessages';
 import PropTypes from 'prop-types';
-import {Fonts} from '@crema/constants/AppEnums'
+import { Fonts } from '@crema/constants/AppEnums';
 
-const TaskCreatedByInfo = ({createdBy, createdOn}) => {
+const TaskCreatedByInfo = ({ createdBy, createdOn }) => {
   return (
-    <Box sx={{display: 'flex', alignItems: 'center'}}>
+    <Box sx={{ display: 'flex', alignItems: 'center' }}>
       {createdBy.image ? (
         <Avatar
           src={createdBy.image}
@@ -31,12 +31,12 @@ const TaskCreatedByInfo = ({createdBy, createdOn}) => {
           ml: 3.5,
           fontSize: 14,
           display: 'flex',
-          flexDirection: {xs: 'column', md: 'row'},
-          alignItems: {md: 'center'},
+          flexDirection: { xs: 'column', md: 'row' },
+          alignItems: { md: 'center' },
         }}
       >
         <Box
-          component='span'
+          component="span"
           sx={{
             mr: 1,
             fontWeight: Fonts.MEDIUM,
@@ -45,11 +45,11 @@ const TaskCreatedByInfo = ({createdBy, createdOn}) => {
         >
           {createdBy.name}
         </Box>
-        <Box component='p' mb={0}>
-          <Box component='span'>
-            <IntlMessages id='todo.createdThisTask' />
+        <Box component="p" mb={0}>
+          <Box component="span">
+            <IntlMessages id="todo.createdThisTask" />
           </Box>
-          <Box component='span' color='text.secondary' ml={1}>
+          <Box component="span" color="text.secondary" ml={1}>
             on {createdOn}
           </Box>
         </Box>

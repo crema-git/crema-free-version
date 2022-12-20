@@ -1,7 +1,11 @@
 import * as React from 'react';
 import Alert from '@mui/material/Alert';
-import {DataGridPro, GridEvents, useGridApiRef} from '@mui/x-data-grid-pro';
-import {randomCreatedDate, randomTraderName, randomUpdatedDate,} from '@mui/x-data-grid-generator';
+import { DataGridPro, GridEvents, useGridApiRef } from '@mui/x-data-grid-pro';
+import {
+  randomCreatedDate,
+  randomTraderName,
+  randomUpdatedDate,
+} from '@mui/x-data-grid-generator';
 
 export default function CatchEditingEventsGrid() {
   const apiRef = useGridApiRef();
@@ -12,9 +16,9 @@ export default function CatchEditingEventsGrid() {
       GridEvents.cellEditStart,
       (params, event) => {
         setMessage(
-          `Editing cell with value: ${params.value} and row id: ${params.id}, column: ${params.field}, triggered by ${event.type}.`,
+          `Editing cell with value: ${params.value} and row id: ${params.id}, column: ${params.field}, triggered by ${event.type}.`
         );
-      },
+      }
     );
   }, [apiRef]);
 
@@ -25,12 +29,12 @@ export default function CatchEditingEventsGrid() {
   }, [apiRef]);
 
   return (
-    <div style={{width: '100%'}}>
-      <div style={{height: 180, width: '100%'}}>
+    <div style={{ width: '100%' }}>
+      <div style={{ height: 180, width: '100%' }}>
         <DataGridPro rows={rows} columns={columns} apiRef={apiRef} />
       </div>
       {message && (
-        <Alert severity='info' style={{marginTop: 8}}>
+        <Alert severity="info" style={{ marginTop: 8 }}>
           {message}
         </Alert>
       )}
@@ -39,8 +43,8 @@ export default function CatchEditingEventsGrid() {
 }
 
 const columns = [
-  {field: 'name', headerName: 'Name', width: 180, editable: true},
-  {field: 'age', headerName: 'Age', type: 'number', editable: true},
+  { field: 'name', headerName: 'Name', width: 180, editable: true },
+  { field: 'age', headerName: 'Age', type: 'number', editable: true },
   {
     field: 'dateCreated',
     headerName: 'Date Created',

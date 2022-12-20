@@ -2,12 +2,12 @@ import React from 'react';
 import Button from '@mui/material/Button';
 import IntlMessages from '@crema/utility/IntlMessages';
 import Box from '@mui/material/Box';
-import {Fonts} from '@crema/constants/AppEnums'
+import { Fonts } from '@crema/constants/AppEnums';
 import AppCard from '@crema/components/AppCard';
-import {useIntl} from 'react-intl';
+import { useIntl } from 'react-intl';
 
 const Header = () => {
-  const {messages} = useIntl();
+  const { messages } = useIntl();
   return (
     <AppCard
       sxStyle={{
@@ -34,24 +34,24 @@ const Header = () => {
           zIndex: 3,
         },
       }}
-      titleStyle={{color: 'white'}}
+      titleStyle={{ color: 'white' }}
       title={messages['dashboard.jombie']}
     >
       <Box
         sx={{
-          width: {xs: '100%', lg: '70%', xl: '50%'},
+          width: { xs: '100%', lg: '70%', xl: '50%' },
           height: 1,
           display: 'flex',
           flexDirection: 'column',
         }}
       >
         <Box
-          component='p'
+          component="p"
           sx={{
             fontSize: 14,
           }}
         >
-          <IntlMessages id='dashboard.jombieContent' />
+          <IntlMessages id="dashboard.jombieContent" />
         </Box>
 
         <Box
@@ -62,18 +62,18 @@ const Header = () => {
           }}
         >
           <Button
-            variant='contained'
-            color='primary'
+            variant="contained"
+            color="primary"
             sx={{
               fontWeight: Fonts.LIGHT,
               fontSize: 14,
               mr: 4,
             }}
           >
-            <IntlMessages id='dashboard.getStarted' />
+            <IntlMessages id="dashboard.getStarted" />
           </Button>
           <Button
-            variant='outlined'
+            variant="outlined"
             sx={{
               fontWeight: Fonts.LIGHT,
               fontSize: 14,
@@ -82,7 +82,7 @@ const Header = () => {
               color: (theme) => theme.palette.primary.contrastText,
             }}
           >
-            <IntlMessages id='dashboard.readMore' />
+            <IntlMessages id="dashboard.readMore" />
           </Button>
         </Box>
       </Box>

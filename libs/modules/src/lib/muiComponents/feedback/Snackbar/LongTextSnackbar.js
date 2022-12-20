@@ -4,15 +4,15 @@ import Stack from '@mui/material/Stack';
 import SnackbarContent from '@mui/material/SnackbarContent';
 
 const action = (
-  <Button color='secondary' size='small'>
+  <Button color="secondary" size="small">
     lorem ipsum dolorem
   </Button>
 );
 
 export default function LongTextSnackbar() {
   return (
-    <Stack spacing={2} sx={{maxWidth: 600}}>
-      <SnackbarContent message='I love snacks.' action={action} />
+    <Stack spacing={2} sx={{ maxWidth: 600 }}>
+      <SnackbarContent message="I love snacks." action={action} />
       <SnackbarContent
         message={
           'I love candy. I love cookies. I love cupcakes. \
@@ -20,7 +20,7 @@ export default function LongTextSnackbar() {
         }
       />
       <SnackbarContent
-        message='I love candy. I love cookies. I love cupcakes.'
+        message="I love candy. I love cookies. I love cupcakes."
         action={action}
       />
       <SnackbarContent

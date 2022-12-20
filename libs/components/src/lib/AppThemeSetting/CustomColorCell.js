@@ -1,13 +1,13 @@
 import React from 'react';
 import Box from '@mui/material/Box';
 import CheckIcon from '@mui/icons-material/Check';
-import IntlMessages from "@crema/utility/IntlMessages";
+import IntlMessages from '@crema/utility/IntlMessages';
 import PropTypes from 'prop-types';
-import {useThemeContext} from '@crema/context/ThemeContextProvider';
+import { useThemeContext } from '@crema/context/ThemeContextProvider';
 import AddOutlinedIcon from '@mui/icons-material/AddOutlined';
 
-const CustomColorCell = ({themeColorSet, updateThemeColors}) => {
-  const {theme} = useThemeContext();
+const CustomColorCell = ({ themeColorSet, updateThemeColors }) => {
+  const { theme } = useThemeContext();
   return (
     <Box
       onClick={() => {
@@ -57,7 +57,7 @@ const CustomColorCell = ({themeColorSet, updateThemeColors}) => {
                   fontSize: 16,
                 }}
               >
-                <IntlMessages id='customizer.checked' />
+                <IntlMessages id="customizer.checked" />
               </CheckIcon>
             </Box>
           ) : null}
@@ -109,7 +109,7 @@ const CustomColorCell = ({themeColorSet, updateThemeColors}) => {
           Background
         </Box>
       </Box>
-      <Box sx={{pt: 2, px: 3, pb: 3}}>{themeColorSet.title}</Box>
+      <Box sx={{ pt: 2, px: 3, pb: 3 }}>{themeColorSet.title}</Box>
     </Box>
   );
 };

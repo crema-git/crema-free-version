@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
-import {useTheme} from '@mui/material/styles';
+import { useTheme } from '@mui/material/styles';
 import MobileStepper from '@mui/material/MobileStepper';
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
@@ -43,7 +43,7 @@ export default function TextMobileStepper() {
   };
 
   return (
-    <Box sx={{maxWidth: 400, flexGrow: 1}}>
+    <Box sx={{ maxWidth: 400, flexGrow: 1 }}>
       <Paper
         square
         elevation={0}
@@ -57,17 +57,17 @@ export default function TextMobileStepper() {
       >
         <Typography>{steps[activeStep].label}</Typography>
       </Paper>
-      <Box sx={{height: 255, maxWidth: 400, width: '100%', p: 2}}>
+      <Box sx={{ height: 255, maxWidth: 400, width: '100%', p: 2 }}>
         {steps[activeStep].description}
       </Box>
       <MobileStepper
-        variant='text'
+        variant="text"
         steps={maxSteps}
-        position='static'
+        position="static"
         activeStep={activeStep}
         nextButton={
           <Button
-            size='small'
+            size="small"
             onClick={handleNext}
             disabled={activeStep === maxSteps - 1}
           >
@@ -80,7 +80,7 @@ export default function TextMobileStepper() {
           </Button>
         }
         backButton={
-          <Button size='small' onClick={handleBack} disabled={activeStep === 0}>
+          <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
             {theme.direction === 'rtl' ? (
               <KeyboardArrowRight />
             ) : (

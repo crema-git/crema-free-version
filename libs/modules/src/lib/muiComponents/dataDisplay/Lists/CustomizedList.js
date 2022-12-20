@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
-import {createTheme, styled, ThemeProvider} from '@mui/material/styles';
+import { createTheme, styled, ThemeProvider } from '@mui/material/styles';
 import Divider from '@mui/material/Divider';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
@@ -20,10 +20,10 @@ import Dns from '@mui/icons-material/Dns';
 import Public from '@mui/icons-material/Public';
 
 const data = [
-  {icon: <People />, label: 'Authentication'},
-  {icon: <Dns />, label: 'Database'},
-  {icon: <PermMedia />, label: 'Storage'},
-  {icon: <Public />, label: 'Hosting'},
+  { icon: <People />, label: 'Authentication' },
+  { icon: <Dns />, label: 'Database' },
+  { icon: <PermMedia />, label: 'Storage' },
+  { icon: <Public />, label: 'Hosting' },
 ];
 
 const FireNav = styled(List)({
@@ -43,7 +43,7 @@ const FireNav = styled(List)({
 export default function CustomizedList() {
   const [open, setOpen] = React.useState(true);
   return (
-    <Box sx={{display: 'flex'}}>
+    <Box sx={{ display: 'flex' }}>
       <ThemeProvider
         theme={createTheme({
           components: {
@@ -55,18 +55,18 @@ export default function CustomizedList() {
           },
           palette: {
             mode: 'dark',
-            primary: {main: 'rgb(102, 157, 246)'},
-            background: {paper: 'rgb(5, 30, 52)'},
+            primary: { main: 'rgb(102, 157, 246)' },
+            background: { paper: 'rgb(5, 30, 52)' },
           },
         })}
       >
-        <Paper elevation={0} sx={{maxWidth: 256}}>
-          <FireNav component='nav' disablePadding>
-            <ListItemButton component='a' href='#customized-list'>
-              <ListItemIcon sx={{fontSize: 20}}>🔥</ListItemIcon>
+        <Paper elevation={0} sx={{ maxWidth: 256 }}>
+          <FireNav component="nav" disablePadding>
+            <ListItemButton component="a" href="#customized-list">
+              <ListItemIcon sx={{ fontSize: 20 }}>🔥</ListItemIcon>
               <ListItemText
-                sx={{my: 0}}
-                primary='Firebash'
+                sx={{ my: 0 }}
+                primary="Firebash"
                 primaryTypographyProps={{
                   fontSize: 20,
                   fontWeight: 'medium',
@@ -75,13 +75,13 @@ export default function CustomizedList() {
               />
             </ListItemButton>
             <Divider />
-            <ListItem component='div' disablePadding>
-              <ListItemButton sx={{height: 56}}>
+            <ListItem component="div" disablePadding>
+              <ListItemButton sx={{ height: 56 }}>
                 <ListItemIcon>
-                  <Home color='primary' />
+                  <Home color="primary" />
                 </ListItemIcon>
                 <ListItemText
-                  primary='Project Overview'
+                  primary="Project Overview"
                   primaryTypographyProps={{
                     color: 'primary',
                     fontWeight: 'medium',
@@ -89,9 +89,9 @@ export default function CustomizedList() {
                   }}
                 />
               </ListItemButton>
-              <Tooltip title='Project Settings'>
+              <Tooltip title="Project Settings">
                 <IconButton
-                  size='large'
+                  size="large"
                   sx={{
                     '& svg': {
                       color: 'rgba(255,255,255,0.8)',
@@ -121,7 +121,7 @@ export default function CustomizedList() {
                 >
                   <Settings />
                   <ArrowRight
-                    sx={{position: 'absolute', right: 4, opacity: 0}}
+                    sx={{ position: 'absolute', right: 4, opacity: 0 }}
                   />
                 </IconButton>
               </Tooltip>
@@ -134,31 +134,31 @@ export default function CustomizedList() {
               }}
             >
               <ListItemButton
-                alignItems='flex-start'
+                alignItems="flex-start"
                 onClick={() => setOpen(!open)}
                 sx={{
                   px: 3,
                   pt: 2.5,
                   pb: open ? 0 : 2.5,
-                  '&:hover, &:focus': {'& svg': {opacity: open ? 1 : 0}},
+                  '&:hover, &:focus': { '& svg': { opacity: open ? 1 : 0 } },
                 }}
               >
                 <ListItemText
-                  primary='Build'
+                  primary="Build"
                   primaryTypographyProps={{
                     fontSize: 15,
                     fontWeight: 'medium',
                     lineHeight: '20px',
                     mb: '2px',
                   }}
-                  secondary='Authentication, Firestore Database, Realtime Database, Storage, Hosting, Functions, and Machine Learning'
+                  secondary="Authentication, Firestore Database, Realtime Database, Storage, Hosting, Functions, and Machine Learning"
                   secondaryTypographyProps={{
                     noWrap: true,
                     fontSize: 12,
                     lineHeight: '16px',
                     color: open ? 'rgba(0,0,0,0)' : 'rgba(255,255,255,0.5)',
                   }}
-                  sx={{my: 0}}
+                  sx={{ my: 0 }}
                 />
                 <KeyboardArrowDown
                   sx={{
@@ -173,9 +173,9 @@ export default function CustomizedList() {
                 data.map((item) => (
                   <ListItemButton
                     key={item.label}
-                    sx={{py: 0, minHeight: 32, color: 'rgba(255,255,255,.8)'}}
+                    sx={{ py: 0, minHeight: 32, color: 'rgba(255,255,255,.8)' }}
                   >
-                    <ListItemIcon sx={{color: 'inherit'}}>
+                    <ListItemIcon sx={{ color: 'inherit' }}>
                       {item.icon}
                     </ListItemIcon>
                     <ListItemText

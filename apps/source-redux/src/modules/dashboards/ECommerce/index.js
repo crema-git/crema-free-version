@@ -1,8 +1,8 @@
-import React, {useEffect} from 'react';
-import {Grid} from '@mui/material';
+import React, { useEffect } from 'react';
+import { Grid } from '@mui/material';
 import AppGridContainer from '@crema/components/AppGridContainer';
 import AppAnimate from '@crema/components/AppAnimate';
-import {useGetDataApi} from '@crema/utility/APIHooks';
+import { useGetDataApi } from '@crema/utility/APIHooks';
 import {
   Application,
   Browser,
@@ -15,11 +15,11 @@ import {
   Revenue,
   SalesState,
   SaleStatics,
-  SiteVisitors
+  SiteVisitors,
 } from '@crema/modules/dashboards/ECommerce';
-import AppLoader from "@crema/components/AppLoader";
-import {onGetECommerceData} from "@crema/redux/actions";
-import {useDispatch, useSelector} from "react-redux";
+import AppLoader from '@crema/components/AppLoader';
+import { onGetECommerceData } from '@crema/redux/actions';
+import { useDispatch, useSelector } from 'react-redux';
 
 const ECommerce = () => {
   const dispatch = useDispatch();
@@ -28,12 +28,12 @@ const ECommerce = () => {
     dispatch(onGetECommerceData());
   }, [dispatch]);
 
-  const ecommerceData = useSelector(({dashboard}) => dashboard.ecommerceData);
+  const ecommerceData = useSelector(({ dashboard }) => dashboard.ecommerceData);
 
   return (
     <>
       {ecommerceData ? (
-        <AppAnimate animation='transition.slideUpIn' delay={200}>
+        <AppAnimate animation="transition.slideUpIn" delay={200}>
           <AppGridContainer>
             {ecommerceData.salesState.map((state, index) => (
               <Grid item xs={12} sm={6} md={3} key={index}>
@@ -84,9 +84,9 @@ const ECommerce = () => {
             </Grid>
           </AppGridContainer>
         </AppAnimate>
-      ): (
+      ) : (
         <AppLoader />
-        )}
+      )}
     </>
   );
 };

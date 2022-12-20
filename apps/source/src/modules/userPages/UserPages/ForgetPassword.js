@@ -1,2 +1,2 @@
-import {ForgetPassword} from '@crema/modules/userPages';
+import { ForgetPassword } from '@crema/modules/userPages';
 export default ForgetPassword;
