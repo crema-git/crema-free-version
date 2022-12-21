@@ -3249,7 +3249,7 @@
     csstype "^3.1.1"
     prop-types "^15.8.1"
 
-"@mui/styles@^5.11.1":
+"@mui/styles@5.11.1":
   version "5.11.1"
   resolved "https://registry.yarnpkg.com/@mui/styles/-/styles-5.11.1.tgz#21b19106838bd130ee79bd070811303670064f6b"
   integrity sha512-iZgKBqaXzVMKn1WYHUV4RNAnrT/AyJ9jrYSBufjGPF9GgWpJYOj+NGrX04Qgx87kFXSzA/vMRK/tdaK/QgoDbQ==
