@@ -8,19 +8,21 @@ import AddCardForm from './AddCardForm';
 import { useAuthUser } from '@crema/utility/AuthHooks';
 import Drawer from '@mui/material/Drawer';
 import Box from '@mui/material/Box';
-import { useInfoViewActionsContext } from '@crema/context/InfoViewContextProvider';
-import { postDataApi, putDataApi } from '@crema/utility/APIHooks';
 import { CardHeader } from '@crema/modules/apps/ScrumBoard';
+import { useDispatch } from 'react-redux';
+import {
+  onAddNewCard,
+  onDeleteSelectedCard,
+  onEditCardDetails,
+} from '@crema/redux-toolkit/actions';
 
 const validationSchema = yup.object({
   title: yup.string().required(<IntlMessages id="validation.titleRequired" />),
 });
 
 const AddCard = (props) => {
-  const { isAddCardOpen, onCloseAddCard, board, list, selectedCard, setData } =
-    props;
-
-  const infoViewActionsContext = useInfoViewActionsContext();
+  const { isAddCardOpen, onCloseAddCard, board, list, selectedCard } = props;
+  const dispatch = useDispatch();
 
   const { user } = useAuthUser();
   console.log('selectedCard: ', selectedCard);
@@ -64,20 +66,9 @@ const AddCard = (props) => {
     const boardId = board.id;
     const listId = list.id;
     const cardId = selectedCard.id;
-    postDataApi('/api/scrumboard/delete/card', infoViewActionsContext, {
-      boardId,
-      listId,
-      cardId,
-    })
-      .then((data) => {
-        setData(data);
-        setDeleteDialogOpen(false);
-        onCloseAddCard();
-        infoViewActionsContext.showMessage('Card Deleted Successfully!');
-      })
-      .catch((error) => {
-        infoViewActionsContext.fetchError(error.message);
-      });
+    dispatch(onDeleteSelectedCard(boardId, listId, cardId));
+    setDeleteDialogOpen(false);
+    onCloseAddCard();
   };
 
   const onClickDeleteIcon = () => {
@@ -124,18 +115,7 @@ const AddCard = (props) => {
               label: selectedLabels,
               checkedList: checkedList.filter((item) => item.title !== ''),
             };
-            putDataApi('/api/scrumboard/edit/card', infoViewActionsContext, {
-              board,
-              list,
-              card: editedCard,
-            })
-              .then((data) => {
-                setData(data);
-                infoViewActionsContext.showMessage('Card Edited Successfully!');
-              })
-              .catch((error) => {
-                infoViewActionsContext.fetchError(error.message);
-              });
+            dispatch(onEditCardDetails(board, list, editedCard));
           } else {
             const newCard = {
               id: Math.floor(Math.random() * 1000),
@@ -146,18 +126,7 @@ const AddCard = (props) => {
               label: selectedLabels,
               members: selectedMembers,
             };
-            postDataApi('/api/scrumboard/add/card', infoViewActionsContext, {
-              board,
-              list,
-              card: newCard,
-            })
-              .then((data) => {
-                setData(data);
-                infoViewActionsContext.showMessage('Card Added Successfully!');
-              })
-              .catch((error) => {
-                infoViewActionsContext.fetchError(error.message);
-              });
+            dispatch(onAddNewCard(board, list, newCard));
           }
           onCloseAddCard();
           resetForm();
@@ -225,7 +194,6 @@ AddCard.defaultProps = {
 AddCard.propTypes = {
   isAddCardOpen: PropTypes.bool.isRequired,
   onCloseAddCard: PropTypes.func.isRequired,
-  setData: PropTypes.func,
   board: PropTypes.object,
   list: PropTypes.object,
   selectedCard: PropTypes.object,

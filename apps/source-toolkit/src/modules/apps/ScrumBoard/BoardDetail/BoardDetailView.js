@@ -3,8 +3,6 @@ import AppsContent from '@crema/components/AppsContent';
 import Board from 'react-trello';
 import PropTypes from 'prop-types';
 import { Box, useTheme } from '@mui/material';
-import { useInfoViewActionsContext } from '@crema/context/InfoViewContextProvider';
-import { postDataApi, putDataApi } from '@crema/utility/APIHooks';
 import {
   AddCardButton,
   AddNewList,
@@ -13,6 +11,13 @@ import {
   NewListButton,
 } from '@crema/modules/apps/ScrumBoard';
 import AddCard from './List/AddCard';
+import { useDispatch } from 'react-redux';
+import {
+  onAddNewList,
+  onDeleteSelectedList,
+  onEditBoardList,
+  onUpdateCardCategory,
+} from '@crema/redux-toolkit/actions';
 
 const BoardWrapper = ({ children }) => {
   return (
@@ -34,14 +39,14 @@ BoardWrapper.propTypes = {
   children: PropTypes.node,
 };
 const BoardDetailView = (props) => {
-  const infoViewActionsContext = useInfoViewActionsContext();
+  const dispatch = useDispatch();
   const theme = useTheme();
   const [list, setList] = useState(null);
 
   const [isAddCardOpen, setAddCardOpen] = useState(false);
 
   const [selectedCard, setSelectedCard] = useState(null);
-  const { boardDetail, setData } = props;
+  const { boardDetail } = props;
 
   const getBoardData = useCallback(() => {
     return {
@@ -71,19 +76,7 @@ const BoardDetailView = (props) => {
   };
 
   const onAddList = (name) => {
-    postDataApi('/api/scrumboard/add/list', infoViewActionsContext, {
-      boardId: boardDetail?.id,
-      list: {
-        name: name,
-      },
-    })
-      .then((data) => {
-        setData(data);
-        infoViewActionsContext.showMessage('List Added Successfully!');
-      })
-      .catch((error) => {
-        infoViewActionsContext.fetchError(error.message);
-      });
+    dispatch(onAddNewList(boardDetail.id, { name }));
   };
 
   const getCardById = (lane, cardId) =>
@@ -111,49 +104,16 @@ const BoardDetailView = (props) => {
   ) => {
     if (sourceLaneId !== targetLaneId) {
       const boardId = boardDetail.id;
-      putDataApi('/api/cards/update/category', infoViewActionsContext, {
-        cardId: cardDetails.id,
-        sourceLaneId: sourceLaneId,
-        categoryId: targetLaneId,
-        position: position,
-        boardId: boardId,
-      })
-        .then((data) => {
-          setData(data);
-          infoViewActionsContext.showMessage('Card Updated Successfully!');
-        })
-        .catch((error) => {
-          infoViewActionsContext.fetchError(error.message);
-        });
+      dispatch(
+        onUpdateCardCategory(
+          cardDetails.id,
+          sourceLaneId,
+          targetLaneId,
+          position,
+          boardId
+        )
+      );
     }
-  };
-
-  const onEditBoardList = (boardId, list) => {
-    putDataApi('/api/scrumboard/edit/list', infoViewActionsContext, {
-      boardId: boardId,
-      list: list,
-    })
-      .then((data) => {
-        setData(data);
-        infoViewActionsContext.showMessage('List Edited Successfully!');
-      })
-      .catch((error) => {
-        infoViewActionsContext.fetchError(error.message);
-      });
-  };
-
-  const onDeleteSelectedList = (boardId, laneId) => {
-    postDataApi('/api/scrumboard/delete/list', infoViewActionsContext, {
-      boardId: boardId,
-      listId: laneId,
-    })
-      .then((data) => {
-        setData(data);
-        infoViewActionsContext.showMessage('List Deleted Successfully!');
-      })
-      .catch((error) => {
-        infoViewActionsContext.fetchError(error.message);
-      });
   };
 
   return (
@@ -192,9 +152,13 @@ const BoardDetailView = (props) => {
         onLaneAdd={(name) => onAddList(name)}
         onLaneUpdate={(laneId, data) => {
           const lane = boardData.lanes.find((item) => item.id === laneId);
-          onEditBoardList(boardDetail.id, { ...lane, name: data.title });
+          dispatch(
+            onEditBoardList(boardDetail.id, { ...lane, name: data.title })
+          );
         }}
-        onLaneDelete={(laneId) => onDeleteSelectedList(boardDetail.id, laneId)}
+        onLaneDelete={(laneId) =>
+          dispatch(onDeleteSelectedList(boardDetail.id, laneId))
+        }
         t={(listId) => onClickAddCard(listId)}
         components={{
           BoardWrapper: BoardWrapper,
@@ -213,7 +177,6 @@ const BoardDetailView = (props) => {
         board={boardDetail}
         selectedCard={selectedCard}
         setSelectedCard={setSelectedCard}
-        setData={setData}
       />
     </AppsContent>
   );
@@ -223,5 +186,4 @@ export default BoardDetailView;
 
 BoardDetailView.propTypes = {
   boardDetail: PropTypes.object,
-  setData: PropTypes.func,
 };

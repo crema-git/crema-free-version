@@ -24,9 +24,6 @@ const wallReducer = createReducer(initialState, (builder) => {
     })
     .addCase(UPDATE_POST, (state, action) => {
       state.postList = action.payload;
-    })
-    .addCase(UPDATE_POST, (state, action) => {
-      state.postList = action.payload;
     });
 });
 

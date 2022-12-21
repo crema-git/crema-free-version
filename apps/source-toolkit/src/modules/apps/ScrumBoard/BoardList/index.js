@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import IntlMessages from '@crema/utility/IntlMessages';
 import Box from '@mui/material/Box';
@@ -6,31 +6,31 @@ import AppGridContainer from '@crema/components/AppGridContainer';
 import { Fonts } from '@crema/constants/AppEnums';
 import AppInfoView from '@crema/components/AppInfoView';
 import { Zoom } from '@mui/material';
-import { useInfoViewActionsContext } from '@crema/context/InfoViewContextProvider';
-import {
-  postDataApi,
-  putDataApi,
-  useGetDataApi,
-} from '@crema/utility/APIHooks';
 import {
   AddBoardButton,
   AddNewBoard,
   BoardItem,
 } from '@crema/modules/apps/ScrumBoard';
+import { useDispatch, useSelector } from 'react-redux';
+import {
+  onAddNewBoard,
+  onEditBoardDetail,
+  onGetBoardList,
+} from '@crema/redux-toolkit/actions';
 
 const BoardList = () => {
+  const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const infoViewActionsContext = useInfoViewActionsContext();
-
-  const [{ apiData: boardList }, { setData }] = useGetDataApi(
-    '/api/scrumboard/board/list',
-    []
-  );
+  const boardList = useSelector(({ scrumboardApp }) => scrumboardApp.boardList);
 
   const [isAddBoardOpen, setAddBoardOpen] = useState(false);
 
   const [selectedBoard, setSelectedBoard] = useState(null);
+
+  useEffect(() => {
+    dispatch(onGetBoardList());
+  }, [dispatch]);
 
   const onCloseAddBoardModal = () => {
     setAddBoardOpen(false);
@@ -49,26 +49,9 @@ const BoardList = () => {
   const onAddBoard = (name) => {
     if (selectedBoard) {
       const board = { ...selectedBoard, name };
-      putDataApi('/api/scrumboard/edit/board', infoViewActionsContext, {
-        board,
-      })
-        .then(() => {
-          infoViewActionsContext.showMessage('Board Edited Successfully!');
-        })
-        .catch((error) => {
-          infoViewActionsContext.fetchError(error.message);
-        });
+      dispatch(onEditBoardDetail(board));
     } else {
-      postDataApi('/api/scrumboard/add/board', infoViewActionsContext, {
-        board: { name },
-      })
-        .then((data) => {
-          setData(data);
-          infoViewActionsContext.showMessage('Board Added Successfully!');
-        })
-        .catch((error) => {
-          infoViewActionsContext.fetchError(error.message);
-        });
+      dispatch(onAddNewBoard({ name }));
     }
   };
 

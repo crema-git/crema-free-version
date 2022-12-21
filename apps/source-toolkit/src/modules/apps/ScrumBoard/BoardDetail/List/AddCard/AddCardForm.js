@@ -14,12 +14,12 @@ import PropTypes from 'prop-types';
 import { Autocomplete, DatePicker } from '@mui/lab';
 import AppTextField from '@crema/components/AppTextField';
 import AppScrollbar from '@crema/components/AppScrollbar';
-import { useGetDataApi } from '@crema/utility/APIHooks';
 import {
   CardCheckedList,
   CardComments,
   CardAttachments,
 } from '@crema/modules/apps/ScrumBoard';
+import { useSelector } from 'react-redux';
 
 const AddCardForm = (props) => {
   const {
@@ -43,15 +43,12 @@ const AddCardForm = (props) => {
 
   const { messages } = useIntl();
 
-  const [{ apiData: labelList }] = useGetDataApi(
-    '/api/scrumboard/label/list',
-    []
+  const labelList = useSelector(({ scrumboardApp }) => scrumboardApp.labelList);
+
+  const memberList = useSelector(
+    ({ scrumboardApp }) => scrumboardApp.memberList
   );
-  const [{ apiData: memberList }] = useGetDataApi(
-    '/api/scrumboard/member/list',
-    []
-  );
-  console.log('memberList', memberList);
+
   const onDeleteCheckedItem = (id) => {
     const updatedList = checkedList.filter((item) => item.id !== id);
     setCheckedList(updatedList);
@@ -214,23 +211,18 @@ const AddCardForm = (props) => {
                 multiple
                 id="tags-outlined"
                 options={memberList}
-                autoHighlight
                 getOptionLabel={(option) => option.name}
                 value={selectedMembers}
                 onChange={(event, value) => setMembersList(value)}
-                renderOption={(props, option) => (
-                  <Box
-                    component="li"
-                    sx={{ display: 'flex', alignItems: 'center' }}
-                    {...props}
-                  >
+                renderOption={(option) => (
+                  <React.Fragment>
                     {option.image ? (
                       <Avatar src={option.image} />
                     ) : (
                       <Avatar>{option?.name?.toUpperCase()}</Avatar>
                     )}
                     <Box ml={4}>{option?.name}</Box>
-                  </Box>
+                  </React.Fragment>
                 )}
                 filterSelectedOptions
                 renderInput={(params) => (
