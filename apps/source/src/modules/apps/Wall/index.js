@@ -4,7 +4,6 @@ import { Grid } from '@mui/material';
 import AppsContainer from '@crema/components/AppsContainer';
 import AppScrollbar from '@crema/components/AppScrollbar';
 import { useIntl } from 'react-intl';
-import Stories from './Stories';
 import { styled } from '@mui/material/styles';
 import { useGetDataApi } from '@crema/utility/APIHooks';
 import {
@@ -17,6 +16,7 @@ import {
   Suggestions,
   SuggestTeam,
   VideoCall,
+  Stories,
   WhatsHappen,
   WhoToFollow,
 } from '@crema/modules/apps/Wall';

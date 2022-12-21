@@ -1,20 +1,27 @@
-import React from 'react';
-import BoardDetail from './BoardDetail';
-import BoardList from './BoardList';
-import { useParams } from 'react-router-dom';
+import BoardItem from './BoardList/BoardItem';
+import AddNewBoard from './BoardList/AddNewBoard';
+import AddBoardButton from './BoardList/AddBoardButton';
+import NewListButton from './BoardDetail/NewListButton';
+import AddNewList from './BoardDetail/AddNewList';
+import ListHeader from './BoardDetail/List/ListHeader';
+import AddCardButton from './BoardDetail/List/AddCardButton';
+import CardDetail from './BoardDetail/List/CardDetail';
+import CardAttachments from './BoardDetail/List/AddCard/CardAttachments';
+import CardCheckedList from './BoardDetail/List/AddCard/CardCheckedList';
+import CardComments from './BoardDetail/List/AddCard/CardComments';
+import CardHeader from './BoardDetail/List/AddCard/CardHeader';
 
-const ScrumBoard = () => {
-  const params = useParams();
-
-  const onGetMainComponent = () => {
-    if (params.id) {
-      return <BoardDetail />;
-    } else {
-      return <BoardList />;
-    }
-  };
-
-  return <>{onGetMainComponent()}</>;
+export {
+  BoardItem,
+  AddNewBoard,
+  AddBoardButton,
+  NewListButton,
+  AddNewList,
+  ListHeader,
+  AddCardButton,
+  CardDetail,
+  CardAttachments,
+  CardCheckedList,
+  CardComments,
+  CardHeader,
 };
-
-export default ScrumBoard;
