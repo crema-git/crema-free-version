@@ -1,4 +1,6 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
+import { onUpdateSelectedTask } from '@crema/redux-toolkit/actions';
 import { useNavigate } from 'react-router-dom';
 import IntlMessages from '@crema/utility/IntlMessages';
 import Box from '@mui/material/Box';
@@ -8,12 +10,10 @@ import StatusToggleButton from './StatusToggleButton';
 import AppsDeleteIcon from '@crema/components/AppsDeleteIcon';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import AppTooltip from '@crema/components/AppTooltip';
-import { useInfoViewActionsContext } from '@crema/context/InfoViewContextProvider';
-import { putDataApi } from '@crema/utility/APIHooks';
 
 const TaskDetailHeader = (props) => {
-  const { selectedTask, onUpdateSelectedTask } = props;
-  const infoViewActionsContext = useInfoViewActionsContext();
+  const { selectedTask } = props;
+  const dispatch = useDispatch();
 
   const navigate = useNavigate();
 
@@ -22,37 +22,12 @@ const TaskDetailHeader = (props) => {
   };
 
   const onChangeStarred = (checked) => {
-    putDataApi('/api/todo/update/starred', infoViewActionsContext, {
-      taskIds: [selectedTask.id],
-      status: checked,
-    })
-      .then((data) => {
-        onUpdateSelectedTask(data[0]);
-        infoViewActionsContext.showMessage(
-          data[0].isStarred
-            ? 'Task Marked as Starred Successfully'
-            : 'Task Marked as Unstarred Successfully'
-        );
-      })
-      .catch((error) => {
-        infoViewActionsContext.fetchError(error.message);
-      });
+    dispatch(onUpdateSelectedTask({ ...selectedTask, isStarred: checked }));
   };
 
   const onDeleteTask = () => {
-    const task = selectedTask;
-    task.folderValue = 126;
-    putDataApi('/api/todoApp/task/', infoViewActionsContext, {
-      task,
-    })
-      .then((data) => {
-        onUpdateSelectedTask(data);
-        navigate(-1);
-        infoViewActionsContext.showMessage('Task Deleted Successfully');
-      })
-      .catch((error) => {
-        infoViewActionsContext.fetchError(error.message);
-      });
+    dispatch(onUpdateSelectedTask({ ...selectedTask, folderValue: 126 }));
+    navigate(-1);
   };
 
   return (
@@ -74,10 +49,7 @@ const TaskDetailHeader = (props) => {
         </AppTooltip>
       </Box>
 
-      <StatusToggleButton
-        selectedTask={selectedTask}
-        onUpdateSelectedTask={onUpdateSelectedTask}
-      />
+      <StatusToggleButton selectedTask={selectedTask} />
 
       <Box
         component="span"
@@ -87,7 +59,7 @@ const TaskDetailHeader = (props) => {
         }}
         onChange={onChangeStarred}
       >
-        <AppsStarredIcon item={selectedTask} />
+        <AppsStarredIcon item={selectedTask} onChange={onChangeStarred} />
       </Box>
 
       <AppsDeleteIcon
@@ -105,5 +77,4 @@ export default TaskDetailHeader;
 
 TaskDetailHeader.propTypes = {
   selectedTask: PropTypes.object.isRequired,
-  onUpdateSelectedTask: PropTypes.func,
 };

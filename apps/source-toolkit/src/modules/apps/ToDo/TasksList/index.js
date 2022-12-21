@@ -1,5 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import PropTypes from 'prop-types';
+import { useDispatch, useSelector } from 'react-redux';
+import {
+  onDeleteSelectedTasks,
+  onGetTaskList,
+  onUpdateSelectedTask,
+  onUpdateTaskStarredStatus,
+} from '@crema/redux-toolkit/actions';
 import TaskContentHeader from './TaskContentHeader';
 import { useParams } from 'react-router-dom';
 import AddNewTask from '../AddNewTask';
@@ -11,8 +17,6 @@ import AppsFooter from '@crema/components/AppsFooter';
 import ListEmptyResult from '@crema/components/AppList/ListEmptyResult';
 import TodoListSkeleton from '@crema/components/TodoListSkeleton';
 import AppList from '@crema/components/AppList';
-import { putDataApi, useGetDataApi } from '@crema/utility/APIHooks';
-import { useInfoViewActionsContext } from '@crema/context/InfoViewContextProvider';
 import {
   TaskCalender,
   TaskListItem,
@@ -23,12 +27,18 @@ export const ViewMode = {
   List: 'list',
   Calendar: 'calendar',
 };
-const TasksList = ({ taskLists, loading, setQueryParams, setData }) => {
-  const infoViewActionsContext = useInfoViewActionsContext();
+const TasksList = () => {
+  const dispatch = useDispatch();
 
-  const params = useParams();
+  const { folder, label } = useParams();
 
-  const [{ apiData: labelList }] = useGetDataApi('/api/todo/labels/list', []);
+  const taskList = useSelector(({ todoApp }) => todoApp.taskList);
+
+  const totalTasks = useSelector(({ todoApp }) => todoApp.totalTasks);
+
+  const labelList = useSelector(({ todoApp }) => todoApp.labelList);
+
+  const loading = useSelector(({ common }) => common.loading);
 
   const [filterText, onSetFilterText] = useState('');
   const [viewMode, setViewMode] = useState(ViewMode.List);
@@ -41,12 +51,9 @@ const TasksList = ({ taskLists, loading, setQueryParams, setData }) => {
 
   useEffect(() => {
     setPage(0);
-    setQueryParams({
-      type: params?.folder ? 'folder' : 'label',
-      name: params?.folder || params?.label,
-      page: page,
-    });
-  }, [page, params]);
+    if (folder) dispatch(onGetTaskList('folder', folder, page));
+    if (label) dispatch(onGetTaskList('label', label, page));
+  }, [dispatch, page, folder, label]);
 
   const onOpenAddTask = () => {
     setAddTaskOpen(true);
@@ -69,64 +76,23 @@ const TasksList = ({ taskLists, loading, setQueryParams, setData }) => {
   };
 
   const onChangeStarred = (checked, task) => {
-    putDataApi('/api/todo/update/starred', infoViewActionsContext, {
-      taskIds: [task.id],
-      status: checked,
-    })
-      .then((data) => {
-        onUpdateSelectedTask(data[0]);
-        infoViewActionsContext.showMessage(
-          data[0].isStarred
-            ? 'Todo Marked as Starred Successfully'
-            : 'Todo Marked as Unstarred Successfully'
-        );
-      })
-      .catch((error) => {
-        infoViewActionsContext.fetchError(error.message);
-      });
+    if (folder) dispatch(onUpdateTaskStarredStatus([task.id], checked, folder));
+    if (label) dispatch(onUpdateTaskStarredStatus([task.id], checked, label));
   };
 
   const onGetFilteredItems = () => {
     if (filterText === '') {
-      return taskLists?.data;
+      return taskList;
     } else {
-      return taskLists?.data.filter((task) =>
+      return taskList.filter((task) =>
         task.title.toUpperCase().includes(filterText.toUpperCase())
       );
     }
   };
-
-  const onUpdateSelectedTask = (task) => {
-    setData({
-      data: taskLists?.data.map((item) => {
-        if (item.id === task.id) {
-          return task;
-        }
-        return item;
-      }),
-      count: taskLists?.count,
-    });
-  };
-
-  const onUpdateTasks = (tasks) => {
-    setData({
-      data: taskLists?.data.map((item) => {
-        const contact = tasks.find((contact) => contact.id === item.id);
-        if (contact) {
-          return contact;
-        }
-        return item;
-      }),
-      count: taskLists?.count,
-    });
-  };
-
   const onDeleteTask = (task) => {
-    task.folderValue = 126;
-    setData({
-      data: taskLists?.data.filter((item) => item.id !== task.id),
-      count: taskLists?.count - 1,
-    });
+    if (folder)
+      dispatch(onDeleteSelectedTasks([task.id], 'folder', folder, page));
+    if (label) dispatch(onDeleteSelectedTasks([task.id], 'label', label, page));
   };
 
   const list = onGetFilteredItems();
@@ -135,10 +101,6 @@ const TasksList = ({ taskLists, loading, setQueryParams, setData }) => {
     <>
       <AppsHeader>
         <TaskContentHeader
-          taskLists={taskLists?.data}
-          totalTasks={taskLists?.count}
-          onUpdateTasks={onUpdateTasks}
-          setData={setData}
           checkedTasks={checkedTasks}
           setCheckedTasks={setCheckedTasks}
           filterText={filterText}
@@ -210,10 +172,10 @@ const TasksList = ({ taskLists, loading, setQueryParams, setData }) => {
       </AppsContent>
 
       <Hidden smUp>
-        {taskLists?.data?.length > 0 ? (
+        {taskList.length > 0 ? (
           <AppsFooter>
             <AppsPagination
-              count={taskLists?.count}
+              count={totalTasks}
               page={page}
               onPageChange={onPageChange}
             />
@@ -232,9 +194,3 @@ const TasksList = ({ taskLists, loading, setQueryParams, setData }) => {
 };
 
 export default TasksList;
-TasksList.propTypes = {
-  taskLists: PropTypes.array,
-  loading: PropTypes.bool,
-  setQueryParams: PropTypes.func,
-  setData: PropTypes.func,
-};

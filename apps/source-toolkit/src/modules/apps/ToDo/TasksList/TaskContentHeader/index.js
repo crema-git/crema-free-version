@@ -1,5 +1,6 @@
 import React from 'react';
 import Checkbox from '@mui/material/Checkbox/index';
+import { useSelector } from 'react-redux';
 import Box from '@mui/material/Box';
 import { useIntl } from 'react-intl';
 import AppSearchBar from '@crema/components/AppSearchBar';
@@ -14,10 +15,6 @@ import {
 
 const TaskContentHeader = (props) => {
   const {
-    taskLists,
-    totalTasks,
-    onUpdateTasks,
-    setData,
     checkedTasks,
     setCheckedTasks,
     onViewModeSelect,
@@ -28,9 +25,13 @@ const TaskContentHeader = (props) => {
     page,
   } = props;
 
+  const taskList = useSelector(({ todoApp }) => todoApp.taskList);
+
+  const totalTasks = useSelector(({ todoApp }) => todoApp.totalTasks);
+
   const onHandleMasterCheckbox = (event) => {
     if (event.target.checked) {
-      const taskIds = taskLists?.map((task) => task.id);
+      const taskIds = taskList.map((task) => task.id);
       setCheckedTasks(taskIds);
     } else {
       setCheckedTasks([]);
@@ -40,7 +41,7 @@ const TaskContentHeader = (props) => {
   const onSelectTasks = (value) => {
     switch (value) {
       case 0:
-        setCheckedTasks(taskLists?.map((task) => task.id));
+        setCheckedTasks(taskList.map((task) => task.id));
         break;
       case 1:
         setCheckedTasks([]);
@@ -48,13 +49,13 @@ const TaskContentHeader = (props) => {
 
       case 2:
         setCheckedTasks(
-          taskLists?.filter((task) => task.isStarred).map((task) => task.id)
+          taskList.filter((task) => task.isStarred).map((task) => task.id)
         );
         break;
 
       case 3:
         setCheckedTasks(
-          taskLists?.filter((task) => task.isAttachment).map((task) => task.id)
+          taskList.filter((task) => task.isAttachment).map((task) => task.id)
         );
         break;
 
@@ -81,12 +82,10 @@ const TaskContentHeader = (props) => {
               color: 'text.disabled',
             }}
             indeterminate={
-              checkedTasks.length > 0 &&
-              checkedTasks?.length < taskLists?.length
+              checkedTasks.length > 0 && checkedTasks.length < taskList.length
             }
             checked={
-              taskLists?.length > 0 &&
-              checkedTasks?.length === taskLists?.length
+              taskList.length > 0 && checkedTasks.length === taskList.length
             }
             onChange={onHandleMasterCheckbox}
           />
@@ -115,8 +114,6 @@ const TaskContentHeader = (props) => {
             <CheckedTasksActions
               checkedTasks={checkedTasks}
               setCheckedTasks={setCheckedTasks}
-              setData={setData}
-              onUpdateTasks={onUpdateTasks}
               page={page}
             />
           </Box>
@@ -135,7 +132,7 @@ const TaskContentHeader = (props) => {
       </Box>
 
       <Hidden smDown>
-        {taskLists?.length > 0 ? (
+        {taskList.length > 0 ? (
           <AppsPagination
             sx={{
               paddingRight: 2,
@@ -170,11 +167,7 @@ TaskContentHeader.defaultProps = {
 
 TaskContentHeader.propTypes = {
   checkedTasks: PropTypes.array,
-  taskLists: PropTypes.array,
-  totalTasks: PropTypes.number,
   setCheckedTasks: PropTypes.func,
-  onUpdateTasks: PropTypes.func,
-  setData: PropTypes.func,
   viewMode: PropTypes.string,
   onViewModeSelect: PropTypes.func,
   filterText: PropTypes.string,

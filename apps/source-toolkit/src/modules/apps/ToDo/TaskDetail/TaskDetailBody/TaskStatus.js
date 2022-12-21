@@ -3,28 +3,20 @@ import InputLabel from '@mui/material/InputLabel';
 import IntlMessages from '@crema/utility/IntlMessages';
 import Select from '@mui/material/Select';
 import FormControl from '@mui/material/FormControl';
+import { useDispatch, useSelector } from 'react-redux';
+import { onUpdateSelectedTask } from '@crema/redux-toolkit/actions';
 import PropTypes from 'prop-types';
 import { MenuItem } from '@mui/material';
-import { putDataApi, useGetDataApi } from '@crema/utility/APIHooks';
-import { useInfoViewActionsContext } from '@crema/context/InfoViewContextProvider';
 
-const TaskStatus = ({ selectedTask, onUpdateSelectedTask }) => {
-  const [{ apiData: statusList }] = useGetDataApi('/api/todo/status/list', []);
-  const infoViewActionsContext = useInfoViewActionsContext();
+const TaskStatus = ({ selectedTask }) => {
+  const statusList = useSelector(({ todoApp }) => todoApp.statusList);
+
+  const dispatch = useDispatch();
 
   const onChangeStatus = (event) => {
-    const task = selectedTask;
-    task.status = event.target.value;
-    putDataApi('/api/todoApp/task/', infoViewActionsContext, {
-      task: selectedTask,
-    })
-      .then((data) => {
-        onUpdateSelectedTask(data[0]);
-        infoViewActionsContext.showMessage('Task Updated Successfully');
-      })
-      .catch((error) => {
-        infoViewActionsContext.fetchError(error.message);
-      });
+    dispatch(
+      onUpdateSelectedTask({ ...selectedTask, status: event.target.value })
+    );
   };
 
   return (
@@ -68,5 +60,4 @@ export default TaskStatus;
 
 TaskStatus.propTypes = {
   selectedTask: PropTypes.object.isRequired,
-  onUpdateSelectedTask: PropTypes.func,
 };

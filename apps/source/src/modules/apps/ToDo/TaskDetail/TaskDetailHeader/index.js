@@ -46,7 +46,7 @@ const TaskDetailHeader = (props) => {
       task,
     })
       .then((data) => {
-        onUpdateSelectedTask(data);
+        onUpdateSelectedTask(data[0]);
         navigate(-1);
         infoViewActionsContext.showMessage('Task Deleted Successfully');
       })

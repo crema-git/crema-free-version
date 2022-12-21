@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { onUpdateSelectedTask } from '@crema/redux-toolkit/actions';
 import Divider from '@mui/material/Divider';
 import Button from '@mui/material/Button';
 import moment from 'moment';
@@ -16,8 +18,6 @@ import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 import { useAuthUser } from '@crema/utility/AuthHooks';
 import SendOutlinedIcon from '@mui/icons-material/SendOutlined';
 import { Fonts } from '@crema/constants/AppEnums';
-import { useInfoViewActionsContext } from '@crema/context/InfoViewContextProvider';
-import { putDataApi, useGetDataApi } from '@crema/utility/APIHooks';
 import {
   AssignedStaff,
   CommentsLists,
@@ -28,12 +28,13 @@ import {
 } from '@crema/modules/apps/ToDo';
 
 const TaskDetailBody = (props) => {
-  const { selectedTask, onUpdateSelectedTask } = props;
-  const infoViewActionsContext = useInfoViewActionsContext();
+  const { selectedTask } = props;
+
+  const dispatch = useDispatch();
 
   const { user } = useAuthUser();
 
-  const [{ apiData: staffList }] = useGetDataApi('/api/todo/staff/list', []);
+  const staffList = useSelector(({ todoApp }) => todoApp.staffList);
 
   const [isEdit, setEdit] = useState(false);
 
@@ -52,41 +53,26 @@ const TaskDetailBody = (props) => {
   };
 
   const onDoneEditing = () => {
-    const task = selectedTask;
-    task.content = content;
-    task.startDate = scheduleDate;
-    task.assignedTo = selectedStaff;
-    putDataApi('/api/todoApp/task/', infoViewActionsContext, {
-      task,
-    })
-      .then((data) => {
-        onUpdateSelectedTask(data[0]);
-        setEdit(!isEdit);
-        infoViewActionsContext.showMessage('Task Updated Successfully');
+    dispatch(
+      onUpdateSelectedTask({
+        ...selectedTask,
+        content,
+        startDate: scheduleDate,
+        assignedTo: selectedStaff,
       })
-      .catch((error) => {
-        infoViewActionsContext.fetchError(error.message);
-      });
+    );
+    setEdit(!isEdit);
   };
 
   const onAddComments = () => {
     let task = selectedTask;
-    task.comments = task.comments.concat({
+    const comments = task.comments.concat({
       comment: comment,
       name: user.displayName ? user.displayName : 'User',
       image: user.photoURL,
       date: moment().format('ll'),
     });
-    putDataApi('/api/todoApp/task/', infoViewActionsContext, {
-      task,
-    })
-      .then((data) => {
-        onUpdateSelectedTask(data[0]);
-        infoViewActionsContext.showMessage('Task Updated Successfully');
-      })
-      .catch((error) => {
-        infoViewActionsContext.fetchError(error.message);
-      });
+    dispatch(onUpdateSelectedTask({ ...selectedTask, comments }));
     setComment('');
   };
 
@@ -250,17 +236,11 @@ const TaskDetailBody = (props) => {
           sx={{ display: 'flex', alignItems: 'center', mb: { xs: 3, sm: 0 } }}
         >
           <Box mr={5}>
-            <TaskStatus
-              selectedTask={selectedTask}
-              onUpdateSelectedTask={onUpdateSelectedTask}
-            />
+            <TaskStatus selectedTask={selectedTask} />
           </Box>
 
           <Box mr={5}>
-            <TaskPriority
-              selectedTask={selectedTask}
-              onUpdateSelectedTask={onUpdateSelectedTask}
-            />
+            <TaskPriority selectedTask={selectedTask} />
           </Box>
         </Box>
 
@@ -329,5 +309,4 @@ export default TaskDetailBody;
 
 TaskDetailBody.propTypes = {
   selectedTask: PropTypes.object.isRequired,
-  onUpdateSelectedTask: PropTypes.func,
 };

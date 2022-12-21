@@ -2,7 +2,7 @@ import React from 'react';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import List from '@mui/material/List';
-import PropTypes from 'prop-types';
+import { useSelector } from 'react-redux';
 import AddNewTask from '../AddNewTask';
 import IntlMessages from '@crema/utility/IntlMessages';
 import AppScrollbar from '@crema/components/AppScrollbar';
@@ -14,7 +14,6 @@ import SidebarPlaceholder from '@crema/components/SidebarListSkeleton';
 import AddIcon from '@mui/icons-material/Add';
 import { Zoom } from '@mui/material';
 import { styled } from '@mui/material/styles';
-import { useGetDataApi } from '@crema/utility/APIHooks';
 import { TaskLabelItem } from '@crema/modules/apps/ToDo';
 
 const ListWrapper = styled(List)(({ theme }) => ({
@@ -24,9 +23,10 @@ const ListWrapper = styled(List)(({ theme }) => ({
   },
 }));
 
-const TaskSideBar = ({ reCallAPI }) => {
-  const [{ apiData: labelList }] = useGetDataApi('/api/todo/labels/list', []);
-  const [{ apiData: folderList }] = useGetDataApi('/api/todo/folders/list', []);
+const TaskSideBar = () => {
+  const labelList = useSelector(({ todoApp }) => todoApp.labelList);
+
+  const folderList = useSelector(({ todoApp }) => todoApp.folderList);
 
   const [isAddTaskOpen, setAddTaskOpen] = React.useState(false);
 
@@ -125,14 +125,9 @@ const TaskSideBar = ({ reCallAPI }) => {
       <AddNewTask
         isAddTaskOpen={isAddTaskOpen}
         onCloseAddTask={onCloseAddTask}
-        reCallAPI={reCallAPI}
       />
     </>
   );
 };
 
 export default TaskSideBar;
-
-TaskSideBar.propTypes = {
-  reCallAPI: PropTypes.func,
-};

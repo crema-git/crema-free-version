@@ -1,35 +1,53 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import TaskSideBar from './TaskSideBar/index';
 import TasksList from './TasksList';
 import TaskDetail from './TaskDetail';
+import { useDispatch } from 'react-redux';
+import {
+  onGetToDoFolderList,
+  onGetToDoLabelList,
+  onGetToDoPriorityList,
+  onGetToDoStaffList,
+  onGetToDoStatusList,
+} from '@crema/redux-toolkit/actions';
 import PropTypes from 'prop-types';
 import { useIntl } from 'react-intl';
 import AppsContainer from '@crema/components/AppsContainer';
 import clsx from 'clsx';
 import { useParams } from 'react-router-dom';
 import { Box } from '@mui/material';
-import { useGetDataApi } from '@crema/utility/APIHooks';
 
 const ToDo = () => {
+  const dispatch = useDispatch();
   const { id } = useParams();
 
-  const [
-    { apiData: taskLists, loading },
-    { setQueryParams, setData, reCallAPI },
-  ] = useGetDataApi('/api/todo/task/list', {}, {}, false);
+  useEffect(() => {
+    dispatch(onGetToDoLabelList());
+  }, [dispatch]);
+
+  useEffect(() => {
+    dispatch(onGetToDoFolderList());
+  }, [dispatch]);
+
+  useEffect(() => {
+    dispatch(onGetToDoPriorityList());
+  }, [dispatch]);
+
+  useEffect(() => {
+    dispatch(onGetToDoStaffList());
+  }, [dispatch]);
+
+  useEffect(() => {
+    dispatch(onGetToDoStatusList());
+  }, [dispatch]);
 
   const { messages } = useIntl();
   return (
     <AppsContainer
       title={messages['todo.todoApp']}
-      sidebarContent={<TaskSideBar reCallAPI={reCallAPI} />}
+      sidebarContent={<TaskSideBar />}
     >
-      <TasksList
-        taskLists={taskLists}
-        loading={loading}
-        setQueryParams={setQueryParams}
-        setData={setData}
-      />
+      <TasksList />
       <Box
         sx={{
           transition: 'all 0.5s ease',

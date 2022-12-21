@@ -1,11 +1,11 @@
 import React from 'react';
 import DoneIcon from '@mui/icons-material/Done';
 import IntlMessages from '@crema/utility/IntlMessages';
+import { onUpdateSelectedTask } from '@crema/redux-toolkit/actions';
+import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
 import Button from '@mui/material/Button';
 import { styled } from '@mui/material/styles';
-import { useInfoViewActionsContext } from '@crema/context/InfoViewContextProvider';
-import { putDataApi } from '@crema/utility/APIHooks';
 
 const StatusButton = styled(Button)(({ theme }) => ({
   fontSize: 12,
@@ -23,22 +23,11 @@ const StyledDoneIcon = styled(DoneIcon)(({ theme }) => ({
   },
 }));
 
-const StatusToggleButton = ({ selectedTask, onUpdateSelectedTask }) => {
-  const infoViewActionsContext = useInfoViewActionsContext();
+const StatusToggleButton = ({ selectedTask }) => {
+  const dispatch = useDispatch();
 
   const onChangeTaskStatus = (status) => {
-    const task = selectedTask;
-    task.status = status;
-    putDataApi('/api/todoApp/task/', infoViewActionsContext, {
-      task,
-    })
-      .then((data) => {
-        onUpdateSelectedTask(data[0]);
-        infoViewActionsContext.showMessage('Task Updated Successfully');
-      })
-      .catch((error) => {
-        infoViewActionsContext.fetchError(error.message);
-      });
+    dispatch(onUpdateSelectedTask({ ...selectedTask, status }));
   };
 
   return (
@@ -70,5 +59,4 @@ export default StatusToggleButton;
 
 StatusToggleButton.propTypes = {
   selectedTask: PropTypes.object.isRequired,
-  onUpdateSelectedTask: PropTypes.func,
 };

@@ -12,6 +12,7 @@ import Autocomplete from '@mui/material/Autocomplete';
 import TextField from '@mui/material/TextField';
 import Divider from '@mui/material/Divider';
 import Button from '@mui/material/Button';
+import { useSelector } from 'react-redux';
 import { useIntl } from 'react-intl';
 import PropTypes from 'prop-types';
 import AppGridContainer from '@crema/components/AppGridContainer';
@@ -19,7 +20,6 @@ import Grid from '@mui/material/Grid';
 import AppTextField from '@crema/components/AppTextField';
 import { Fonts } from '@crema/constants/AppEnums';
 import { styled } from '@mui/material/styles';
-import { useGetDataApi } from '@crema/utility/APIHooks';
 
 const StyledDivider = styled(Divider)(({ theme }) => ({
   marginTop: 20,
@@ -33,12 +33,11 @@ const AddTaskForm = (props) => {
   const { values, setFieldValue, isSubmitting, setTaskLabels, taskLabels } =
     props;
 
-  const [{ apiData: labelList }] = useGetDataApi('/api/todo/labels/list', []);
-  const [{ apiData: priorityList }] = useGetDataApi(
-    '/api/todo/priority/list',
-    []
-  );
-  const [{ apiData: staffList }] = useGetDataApi('/api/todo/staff/list', []);
+  const labelList = useSelector(({ todoApp }) => todoApp.labelList);
+
+  const priorityList = useSelector(({ todoApp }) => todoApp.priorityList);
+
+  const staffList = useSelector(({ todoApp }) => todoApp.staffList);
 
   const inputLabel = React.useRef(null);
 

@@ -6,11 +6,11 @@ import MenuItem from '@mui/material/MenuItem';
 import Box from '@mui/material/Box';
 import Avatar from '@mui/material/Avatar';
 import FormControl from '@mui/material/FormControl';
+import { useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
-import { useGetDataApi } from '@crema/utility/APIHooks';
 
 const ChangeStaff = ({ selectedStaff, handleStaffChange }) => {
-  const [{ apiData: staffList }] = useGetDataApi('/api/todo/staff/list', []);
+  const staffList = useSelector(({ todoApp }) => todoApp.staffList);
 
   return (
     <FormControl

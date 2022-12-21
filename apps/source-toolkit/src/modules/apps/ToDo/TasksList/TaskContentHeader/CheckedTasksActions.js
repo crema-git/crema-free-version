@@ -4,27 +4,24 @@ import LabelOutlinedIcon from '@mui/icons-material/LabelOutlined';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import Box from '@mui/material/Box';
+import {
+  onDeleteSelectedTasks,
+  onUpdateTaskLabels,
+} from '@crema/redux-toolkit/actions';
+import { useDispatch, useSelector } from 'react-redux';
 import AppsDeleteIcon from '@crema/components/AppsDeleteIcon';
 import PropTypes from 'prop-types';
 import { useParams } from 'react-router-dom';
 import IconButton from '@mui/material/IconButton';
 import AppTooltip from '@crema/components/AppTooltip';
 import { StyledBox } from './index.style';
-import { useInfoViewActionsContext } from '@crema/context/InfoViewContextProvider';
-import { putDataApi, useGetDataApi } from '@crema/utility/APIHooks';
 
-const CheckedTasksActions = ({
-  checkedTasks,
-  setCheckedTasks,
-  setData,
-  onUpdateTasks,
-  page,
-}) => {
-  const params = useParams();
-  const infoViewActionsContext = useInfoViewActionsContext();
-  const [{ apiData: labelList }] = useGetDataApi('/api/todo/labels/list', []);
-
+const CheckedTasksActions = ({ checkedTasks, setCheckedTasks, page }) => {
+  const { folder, label } = useParams();
+  const dispatch = useDispatch();
   const [isLabelOpen, onOpenLabel] = React.useState(null);
+
+  const labelList = useSelector(({ todoApp }) => todoApp.labelList);
 
   const onLabelOpen = (event) => {
     onOpenLabel(event.currentTarget);
@@ -35,37 +32,19 @@ const CheckedTasksActions = ({
   };
 
   const onDeleteTasks = () => {
-    putDataApi('/api/todo/update/folder', infoViewActionsContext, {
-      taskIds: checkedTasks,
-      type: params?.folder ? 'folder' : 'label',
-      name: params?.folder || params?.label,
-      page,
-    })
-      .then((data) => {
-        setData(data);
-        setCheckedTasks([]);
-        infoViewActionsContext.showMessage('Task Deleted Successfully');
-      })
-      .catch((error) => {
-        infoViewActionsContext.fetchError(error.message);
-      });
+    if (folder)
+      dispatch(onDeleteSelectedTasks(checkedTasks, 'folder', folder, page));
+    if (label)
+      dispatch(onDeleteSelectedTasks(checkedTasks, 'label', label, page));
+
+    setCheckedTasks([]);
   };
 
   const onSelectLabel = (event) => {
     const labelType = event.target.value;
-    putDataApi('/api/todo/update/label', infoViewActionsContext, {
-      taskIds: checkedTasks,
-      type: +labelType,
-    })
-      .then((data) => {
-        onUpdateTasks(data);
-        setCheckedTasks([]);
-        onLabelClose();
-        infoViewActionsContext.showMessage('Task Updated Successfully');
-      })
-      .catch((error) => {
-        infoViewActionsContext.fetchError(error.message);
-      });
+    dispatch(onUpdateTaskLabels(checkedTasks, labelType));
+    setCheckedTasks([]);
+    onLabelClose();
   };
 
   return (
@@ -130,7 +109,5 @@ export default CheckedTasksActions;
 CheckedTasksActions.propTypes = {
   checkedTasks: PropTypes.array.isRequired,
   setCheckedTasks: PropTypes.func,
-  setData: PropTypes.func,
-  onUpdateTasks: PropTypes.func,
   page: PropTypes.number.isRequired,
 };

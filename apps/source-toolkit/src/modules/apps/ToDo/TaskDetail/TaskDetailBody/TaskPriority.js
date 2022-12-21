@@ -3,18 +3,14 @@ import InputLabel from '@mui/material/InputLabel';
 import IntlMessages from '@crema/utility/IntlMessages';
 import Select from '@mui/material/Select';
 import FormControl from '@mui/material/FormControl';
-
+import { useDispatch, useSelector } from 'react-redux';
+import { onUpdateSelectedTask } from '@crema/redux-toolkit/actions';
 import PropTypes from 'prop-types';
 import { MenuItem } from '@mui/material';
-import { useInfoViewActionsContext } from '@crema/context/InfoViewContextProvider';
-import { putDataApi, useGetDataApi } from '@crema/utility/APIHooks';
 
-const TaskPriority = ({ selectedTask, onUpdateSelectedTask }) => {
-  const infoViewActionsContext = useInfoViewActionsContext();
-  const [{ apiData: priorityList }] = useGetDataApi(
-    '/api/todo/priority/list',
-    []
-  );
+const TaskPriority = ({ selectedTask }) => {
+  const dispatch = useDispatch();
+  const priorityList = useSelector(({ todoApp }) => todoApp.priorityList);
 
   const [priority, setPriority] = useState(selectedTask.priority.type);
 
@@ -24,18 +20,7 @@ const TaskPriority = ({ selectedTask, onUpdateSelectedTask }) => {
       (data) => data.type.toString() === event.target.value.toString()
     );
     console.log('priority: ', priority, event.target.value);
-    const task = selectedTask;
-    task.priority = priority;
-    putDataApi('/api/todoApp/task/', infoViewActionsContext, {
-      task: selectedTask,
-    })
-      .then((data) => {
-        onUpdateSelectedTask(data[0]);
-        infoViewActionsContext.showMessage('Task Updated Successfully');
-      })
-      .catch((error) => {
-        infoViewActionsContext.fetchError(error.message);
-      });
+    dispatch(onUpdateSelectedTask({ ...selectedTask, priority }));
   };
 
   return (
@@ -80,5 +65,4 @@ export default TaskPriority;
 
 TaskPriority.propTypes = {
   selectedTask: PropTypes.object.isRequired,
-  onUpdateSelectedTask: PropTypes.func,
 };

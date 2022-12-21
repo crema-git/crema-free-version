@@ -1,27 +1,24 @@
 import React, { useState } from 'react';
 import { Formik } from 'formik';
 import * as yup from 'yup';
+import { onCreateTask } from '@crema/redux-toolkit/actions';
+import { useDispatch } from 'react-redux';
 import moment from 'moment';
 import IntlMessages from '@crema/utility/IntlMessages';
 import AddTaskForm from './AddTaskForm';
 import PropTypes from 'prop-types';
 import AppDialog from '@crema/components/AppDialog';
 import { useAuthUser } from '@crema/utility/AuthHooks';
-import { postDataApi } from '@crema/utility/APIHooks';
-import { useInfoViewActionsContext } from '@crema/context/InfoViewContextProvider';
 
 const validationSchema = yup.object({
   title: yup.string().required(<IntlMessages id="validation.titleRequired" />),
 });
 
-const AddNewTask = ({
-  isAddTaskOpen,
-  onCloseAddTask,
-  selectedDate,
-  reCallAPI,
-}) => {
+const AddNewTask = ({ isAddTaskOpen, onCloseAddTask, selectedDate }) => {
+  const dispatch = useDispatch();
+
   const { user } = useAuthUser();
-  const infoViewActionsContext = useInfoViewActionsContext();
+
   const [taskLabels, setTaskLabels] = useState([]);
 
   return (
@@ -66,19 +63,7 @@ const AddNewTask = ({
             label: taskLabels,
           };
           console.log('newTask:***********', newTask);
-          postDataApi('/api/todoApp/compose', infoViewActionsContext, {
-            task: newTask,
-          })
-            .then(() => {
-              reCallAPI();
-              infoViewActionsContext.showMessage(
-                'New Task has been created successfully!'
-              );
-            })
-            .catch((error) => {
-              infoViewActionsContext.fetchError(error.message);
-            });
-
+          dispatch(onCreateTask(newTask));
           onCloseAddTask();
           resetForm();
           setSubmitting(false);
@@ -90,7 +75,6 @@ const AddNewTask = ({
             values={values}
             setFieldValue={setFieldValue}
             setTaskLabels={setTaskLabels}
-            reCallAPI={reCallAPI}
             taskLabels={taskLabels}
           />
         )}
@@ -104,6 +88,5 @@ export default AddNewTask;
 AddNewTask.propTypes = {
   isAddTaskOpen: PropTypes.bool.isRequired,
   onCloseAddTask: PropTypes.func.isRequired,
-  reCallAPI: PropTypes.func,
   selectedDate: PropTypes.string,
 };

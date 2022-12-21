@@ -14,15 +14,14 @@ const MailDetailBody = (props) => {
   const onSubmitMail = (message, index) => {
     let messages = selectedMail.messages;
     messages.splice(index + 1, 0, message);
-    selectedMail.messages = messages;
-    dispatch(onUpdateSelectedMail(selectedMail));
+    dispatch(onUpdateSelectedMail({ ...selectedMail, messages }));
   };
 
   const onChangeStarred = (message, isStarred) => {
-    selectedMail.messages = selectedMail.messages.map((data) =>
+    const messages = selectedMail.messages.map((data) =>
       data.messageId === message.messageId ? { ...message, isStarred } : data
     );
-    dispatch(onUpdateSelectedMail(selectedMail));
+    dispatch(onUpdateSelectedMail({ ...selectedMail, messages }));
   };
   return (
     <Box sx={{ px: 5, py: 1 }}>
