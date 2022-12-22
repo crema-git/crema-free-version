@@ -8,13 +8,13 @@ import { useParams } from 'react-router-dom';
 import AppInfoView from '@crema/components/AppInfoView';
 import {
   Header,
-  ProductImageSlide,
   ProductView,
   SimilarProduct,
 } from '@crema/modules/ecommerce/ProductDetail';
 import AppLoader from '@crema/components/AppLoader';
 import { useDispatch, useSelector } from 'react-redux';
 import { getProductDetail } from '@crema/redux/actions';
+import ProductImageSlide from './ProductImageSlide';
 
 const ProductDetail = () => {
   const dispatch = useDispatch();

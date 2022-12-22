@@ -3,7 +3,7 @@ import { ChatSideBar } from '@crema/modules/apps/Chat';
 import { useDispatch, useSelector } from 'react-redux';
 import { useIntl } from 'react-intl';
 import AppsContainer from '@crema/components/AppsContainer';
-import { getConnectionList, onSelectUser } from '@crema/redux/actions';
+import { getConnectionList, onSelectUser } from '@crema/redux-toolkit/actions';
 import ChatContent from './ChatContent';
 
 const Chat = () => {

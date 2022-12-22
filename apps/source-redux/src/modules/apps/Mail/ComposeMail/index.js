@@ -19,7 +19,7 @@ import { Fonts } from '@crema/constants/AppEnums';
 import { styled } from '@mui/material/styles';
 import AppInfoView from '@crema/components/AppInfoView';
 import { useDispatch } from 'react-redux';
-import { onComposeMail } from '@crema/redux-toolkit/actions';
+import { onComposeMail } from '@crema/redux/actions';
 import { useLocation } from 'react-router-dom';
 
 const ReactQuillWrapper = styled(ReactQuill)(() => {

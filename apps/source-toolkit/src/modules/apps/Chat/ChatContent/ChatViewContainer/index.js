@@ -17,7 +17,7 @@ import {
   onDeleteMessage,
   onEditMessage,
   onSendMessage,
-} from '@crema/redux/actions';
+} from '@crema/redux-toolkit/actions';
 import { useDispatch, useSelector } from 'react-redux';
 
 const ScrollbarWrapper = styled(SimpleBarReact)(() => {
