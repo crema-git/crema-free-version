@@ -211,18 +211,23 @@ const AddCardForm = (props) => {
                 multiple
                 id="tags-outlined"
                 options={memberList}
+                autoHighlight
                 getOptionLabel={(option) => option.name}
                 value={selectedMembers}
                 onChange={(event, value) => setMembersList(value)}
-                renderOption={(option) => (
-                  <React.Fragment>
+                renderOption={(props, option) => (
+                  <Box
+                    component="li"
+                    sx={{ display: 'flex', alignItems: 'center' }}
+                    {...props}
+                  >
                     {option.image ? (
                       <Avatar src={option.image} />
                     ) : (
                       <Avatar>{option?.name?.toUpperCase()}</Avatar>
                     )}
                     <Box ml={4}>{option?.name}</Box>
-                  </React.Fragment>
+                  </Box>
                 )}
                 filterSelectedOptions
                 renderInput={(params) => (

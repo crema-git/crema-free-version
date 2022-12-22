@@ -1,29 +1,25 @@
-import React from 'react';
-import ContactListing from './ContactListing';
-import { useIntl } from 'react-intl';
-import AppsContainer from '@crema/components/AppsContainer';
-import SideBarContent from './ContactSideBar';
-import { useGetDataApi } from '@crema/utility/APIHooks';
+import ContactActions from './ContactDetail/ContactActions';
+import ContactNotes from './ContactDetail/Notes';
+import OtherDetails from './ContactDetail/OtherDetails';
+import PersonalDetails from './ContactDetail/PersonalDetails';
+import SocialMedia from './ContactDetail/SocialMedia';
+import ViewSelectButtons from './ContactListing/ContactHeader/ViewSelectButtons';
+import ContactGridItem from './ContactListing/ContactView/ContactGridItem';
+import ContactItemMenu from './ContactListing/ContactView/ItemMenu';
+import ContactListItem from './ContactListing/ContactView/ContactListItem';
+import ContactListItemMobile from './ContactListing/ContactView/ContactListItem/ContactListItemMobile';
+import ContactListLabelItem from './ContactSideBar/LabelItem';
 
-const Contact = () => {
-  const [{ apiData, loading }, { setQueryParams, setData, reCallAPI }] =
-    useGetDataApi('/api/contactApp/contact/List', {}, {}, false);
-
-  const { messages } = useIntl();
-  return (
-    <AppsContainer
-      title={messages['contactApp.contact']}
-      sidebarContent={<SideBarContent reCallAPI={reCallAPI} />}
-    >
-      <ContactListing
-        apiData={apiData}
-        loading={loading}
-        setQueryParams={setQueryParams}
-        setData={setData}
-        reCallAPI={reCallAPI}
-      />
-    </AppsContainer>
-  );
+export {
+  ContactActions,
+  ContactNotes,
+  OtherDetails,
+  PersonalDetails,
+  SocialMedia,
+  ViewSelectButtons,
+  ContactGridItem,
+  ContactItemMenu,
+  ContactListItem,
+  ContactListItemMobile,
+  ContactListLabelItem,
 };
-
-export default Contact;
