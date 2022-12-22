@@ -17,7 +17,7 @@ import AppTextField from '@crema/components/AppTextField';
 import AppDateFiled from '@crema/components/AppDateFiled';
 
 import { styled } from '@mui/material/styles';
-import { useGetDataApi } from '@crema/utility/APIHooks';
+import { useSelector } from 'react-redux';
 
 const HeaderWrapper = styled('div')(({ theme }) => {
   return {
@@ -66,10 +66,7 @@ const AvatarViewWrapper = styled('div')(({ theme }) => {
 
 const AddContactForm = (props) => {
   const { values, userImage, setUserImage, setFieldValue } = props;
-  const [{ apiData: labelList }] = useGetDataApi(
-    '/api/contactApp/labels/list',
-    []
-  );
+  const labelList = useSelector(({ contactApp }) => contactApp.labelList);
 
   const { getRootProps, getInputProps } = useDropzone({
     accept: 'image/*',

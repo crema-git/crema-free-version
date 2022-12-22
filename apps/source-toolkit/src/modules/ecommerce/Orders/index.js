@@ -8,17 +8,15 @@ import AppsPagination from '@crema/components/AppsPagination';
 import Box from '@mui/material/Box';
 import AppInfoView from '@crema/components/AppInfoView';
 import AppSearchBar from '@crema/components/AppSearchBar';
-import { useGetDataApi } from '@crema/utility/APIHooks';
 import { OrderTable } from '@crema/modules/ecommerce/Orders';
+import { useDispatch, useSelector } from 'react-redux';
+import { getRecentOrders } from '@crema/redux-toolkit/actions';
 
 const Orders = () => {
   const { messages } = useIntl();
-  const [{ apiData }, { setQueryParams }] = useGetDataApi(
-    '/api/ecommerce/orders',
-    {},
-    {},
-    false
-  );
+  const dispatch = useDispatch();
+  const recentOrders = useSelector(({ ecommerce }) => ecommerce.recentOrders);
+  const orderCount = useSelector(({ ecommerce }) => ecommerce.orderCount);
   const [page, setPage] = useState(0);
   const [search, setSearchQuery] = useState('');
 
@@ -26,11 +24,11 @@ const Orders = () => {
     setPage(value);
   };
   useEffect(() => {
-    setQueryParams({ search, page });
-  }, [search, page]);
+    dispatch(getRecentOrders(search, page));
+  }, [dispatch, search, page]);
 
-  const onSearchOrder = (value) => {
-    setSearchQuery(value);
+  const onSearchOrder = (e) => {
+    setSearchQuery(e.target.value);
     setPage(0);
   };
   return (
@@ -58,7 +56,7 @@ const Orders = () => {
               <Hidden smDown>
                 <AppsPagination
                   rowsPerPage={10}
-                  count={apiData?.count}
+                  count={orderCount}
                   page={page}
                   onPageChange={onPageChange}
                 />
@@ -73,13 +71,13 @@ const Orders = () => {
             paddingBottom: 2.5,
           }}
         >
-          <OrderTable orderData={apiData?.data || []} />
+          <OrderTable orderData={recentOrders} />
         </AppsContent>
 
         <Hidden smUp>
           <AppsPagination
             rowsPerPage={10}
-            count={apiData?.count}
+            count={orderCount}
             page={page}
             onPageChange={onPageChange}
           />

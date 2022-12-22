@@ -1,19 +1,14 @@
 import { GET_USER_LIST } from '@crema/constants/ActionTypes';
+import { createReducer } from '@reduxjs/toolkit';
 
 const initialState = {
   usersList: [],
 };
 
-const userListReducer = (state = initialState, action) => {
-  switch (action.type) {
-    case GET_USER_LIST:
-      return {
-        ...state,
-        usersList: action.payload,
-      };
+const userListReducer = createReducer(initialState, (builder) => {
+  builder.addCase(GET_USER_LIST, (state, action) => {
+    state.usersList = action.payload;
+  });
+});
 
-    default:
-      return state;
-  }
-};
 export default userListReducer;

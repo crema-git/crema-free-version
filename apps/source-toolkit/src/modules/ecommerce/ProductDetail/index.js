@@ -6,22 +6,21 @@ import AppAnimate from '@crema/components/AppAnimate';
 import PropTypes from 'prop-types';
 import { useParams } from 'react-router-dom';
 import AppInfoView from '@crema/components/AppInfoView';
-import { useGetDataApi } from '@crema/utility/APIHooks';
-import {
-  Header,
-  ProductImageSlide,
-  ProductView,
-  SimilarProduct,
-} from '@crema/modules/ecommerce/ProductDetail';
+import { Header, ProductView } from '@crema/modules/ecommerce/ProductDetail';
+import { useDispatch, useSelector } from 'react-redux';
+import { getProductDetail } from '@crema/redux-toolkit/actions';
+import ProductImageSlide from './ProductImageSlide';
+import SimilarProduct from './SimilarProduct';
 
 const ProductDetail = () => {
+  const dispatch = useDispatch();
   const { id } = useParams();
-  const [{ apiData: currentProduct }, { setQueryParams }] =
-    useGetDataApi('/api/ecommerce/get');
-
+  const currentProduct = useSelector(
+    ({ ecommerce }) => ecommerce.currentProduct
+  );
   useEffect(() => {
-    setQueryParams({ id: id });
-  }, [id]);
+    dispatch(getProductDetail(id));
+  }, [dispatch, id]);
 
   return (
     <>

@@ -8,18 +8,15 @@ import AppsPagination from '@crema/components/AppsPagination';
 import Box from '@mui/material/Box';
 import AppInfoView from '@crema/components/AppInfoView';
 import AppSearchBar from '@crema/components/AppSearchBar';
-import { useGetDataApi } from '@crema/utility/APIHooks';
 import { CustomerTable } from '@crema/modules/ecommerce/Customers';
+import { useDispatch, useSelector } from 'react-redux';
+import { getCustomers } from '@crema/redux-toolkit/actions';
 
 const Customers = () => {
   const { messages } = useIntl();
-  const [
-    {
-      apiData: { customers, customerCount },
-    },
-    { setQueryParams },
-  ] = useGetDataApi('/api/ecommerce/customers', {}, {}, false);
-
+  const dispatch = useDispatch();
+  const customers = useSelector(({ ecommerce }) => ecommerce.customers);
+  const customerCount = useSelector(({ ecommerce }) => ecommerce.customerCount);
   const [page, setPage] = useState(0);
   const [search, setSearchQuery] = useState('');
 
@@ -27,8 +24,8 @@ const Customers = () => {
     setPage(value);
   };
   useEffect(() => {
-    setQueryParams({ search, page });
-  }, [search, page]);
+    dispatch(getCustomers(search, page));
+  }, [dispatch, search, page]);
 
   const onSearchCustomer = (e) => {
     setSearchQuery(e.target.value);

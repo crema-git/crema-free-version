@@ -7,12 +7,12 @@ import ListEmptyResult from '@crema/components/AppList/ListEmptyResult';
 import IntlMessages from '@crema/utility/IntlMessages';
 import ContactListSkeleton from '@crema/components/ContactListSkeleton';
 import { Hidden } from '@mui/material';
-import { useGetDataApi } from '@crema/utility/APIHooks';
 import {
   ContactGridItem,
   ContactListItem,
   ContactListItemMobile,
 } from '@crema/modules/apps/Contact';
+import { useSelector } from 'react-redux';
 
 const ContactView = (props) => {
   const {
@@ -27,10 +27,7 @@ const ContactView = (props) => {
     onOpenEditContact,
     onViewContactDetail,
   } = props;
-  const [{ apiData: labelList }] = useGetDataApi(
-    '/api/contactApp/labels/list',
-    []
-  );
+  const labelList = useSelector(({ contactApp }) => contactApp.labelList);
 
   return (
     <>

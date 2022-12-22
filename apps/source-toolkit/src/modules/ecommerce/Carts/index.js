@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Box, Grid } from '@mui/material';
 import Button from '@mui/material/Button';
 import { useNavigate } from 'react-router-dom';
@@ -7,12 +7,37 @@ import IntlMessages from '@crema/utility/IntlMessages';
 import { Fonts } from '@crema/constants/AppEnums';
 import AppAnimate from '@crema/components/AppAnimate';
 import AppGridContainer from '@crema/components/AppGridContainer';
-import { useGetDataApi } from '@crema/utility/APIHooks';
 import { OrderSummary, CartTable } from '@crema/modules/ecommerce/Carts';
+import { useDispatch, useSelector } from 'react-redux';
+import {
+  getCartItems,
+  removeCartItem,
+  updateCartItem,
+} from '@crema/redux-toolkit/actions';
 
 const Carts = () => {
+  const dispatch = useDispatch();
   const navigate = useNavigate();
-  const [{ apiData }, { setData }] = useGetDataApi('/api/cart/get', [], {});
+  const cartItems = useSelector(({ ecommerce }) => ecommerce.cartItems);
+
+  useEffect(() => {
+    dispatch(getCartItems());
+  }, [dispatch]);
+
+  const onRemoveItem = (data) => {
+    dispatch(removeCartItem(data));
+  };
+
+  const onDecrement = (data) => {
+    if (data.count > 1) {
+      dispatch(updateCartItem({ ...data, count: data.count - 1 }));
+    } else {
+      dispatch(removeCartItem(data));
+    }
+  };
+  const onIncrement = (data) => {
+    dispatch(updateCartItem({ ...data, count: data.count + 1 }));
+  };
 
   return (
     <AppAnimate animation="transition.slideUpIn" delay={200}>
@@ -62,11 +87,16 @@ const Carts = () => {
                 </Box>
               }
             >
-              <CartTable cartItems={apiData} setTableData={setData} />
+              <CartTable
+                cartItems={cartItems}
+                onRemoveItem={onRemoveItem}
+                onDecrement={onDecrement}
+                onIncrement={onIncrement}
+              />
             </AppCard>
           </Grid>
           <Grid item xs={12} md={4}>
-            <OrderSummary cartItems={apiData} />
+            <OrderSummary cartItems={cartItems} />
           </Grid>
         </AppGridContainer>
       </Box>

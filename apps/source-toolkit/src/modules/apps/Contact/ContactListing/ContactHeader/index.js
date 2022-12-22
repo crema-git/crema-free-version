@@ -8,6 +8,7 @@ import CheckBox from './CheckBox';
 import ContactCheckedActions from './ContactCheckedActions';
 import AppsPagination from '@crema/components/AppsPagination';
 import { ViewSelectButtons } from '@crema/modules/apps/Contact';
+import { useSelector } from 'react-redux';
 
 const ContactHeader = (props) => {
   const {
@@ -15,14 +16,18 @@ const ContactHeader = (props) => {
     setCheckedContacts,
     filterText,
     onSetFilterText,
-    apiData,
-    onUpdateContacts,
     onChangePageView,
     onSelectContactsForDelete,
     page,
     onPageChange,
     pageView,
   } = props;
+
+  const contactList = useSelector(({ contactApp }) => contactApp.contactList);
+
+  const totalContacts = useSelector(
+    ({ contactApp }) => contactApp.totalContacts
+  );
 
   const { messages } = useIntl();
 
@@ -37,7 +42,6 @@ const ContactHeader = (props) => {
         }}
       >
         <CheckBox
-          contactList={apiData?.data || []}
           checkedContacts={checkedContacts}
           setCheckedContacts={setCheckedContacts}
         />
@@ -54,7 +58,6 @@ const ContactHeader = (props) => {
             onSelectContactsForDelete={onSelectContactsForDelete}
             checkedContacts={checkedContacts}
             setCheckedContacts={setCheckedContacts}
-            onUpdateContacts={onUpdateContacts}
           />
         ) : null}
 
@@ -64,10 +67,10 @@ const ContactHeader = (props) => {
         />
       </Box>
       <Hidden smDown>
-        {apiData?.data?.length > 0 ? (
+        {contactList.length > 0 ? (
           <AppsPagination
             sx={{ ml: 2 }}
-            count={apiData?.count}
+            count={totalContacts}
             page={page}
             onPageChange={onPageChange}
           />
@@ -90,8 +93,6 @@ ContactHeader.propTypes = {
   setCheckedContacts: PropTypes.func,
   filterText: PropTypes.string,
   onSetFilterText: PropTypes.func,
-  apiData: PropTypes.object,
-  onUpdateContacts: PropTypes.func,
   onSelectContactsForDelete: PropTypes.func,
   page: PropTypes.number,
   onPageChange: PropTypes.func,

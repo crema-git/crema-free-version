@@ -1,5 +1,4 @@
 import Box from '@mui/material/Box';
-import PropTypes from 'prop-types';
 import Button from '@mui/material/Button';
 import List from '@mui/material/List';
 import React, { useState } from 'react';
@@ -13,18 +12,13 @@ import ListEmptyResult from '@crema/components/AppList/ListEmptyResult';
 import SidebarPlaceholder from '@crema/components/SidebarListSkeleton';
 import AddIcon from '@mui/icons-material/Add';
 import { Zoom } from '@mui/material';
-import { useGetDataApi } from '@crema/utility/APIHooks';
+import { useSelector } from 'react-redux';
 import { ContactListLabelItem } from '@crema/modules/apps/Contact';
 
-const SideBarContent = ({ reCallAPI }) => {
-  const [{ apiData: labelList }] = useGetDataApi(
-    '/api/contactApp/labels/list',
-    []
-  );
-  const [{ apiData: folderList }] = useGetDataApi(
-    '/api/contactApp/folders/list',
-    []
-  );
+const SideBarContent = () => {
+  const labelList = useSelector(({ contactApp }) => contactApp.labelList);
+
+  const folderList = useSelector(({ contactApp }) => contactApp.folderList);
 
   const [isAddContact, onSetIsAddContact] = useState(false);
 
@@ -143,7 +137,6 @@ const SideBarContent = ({ reCallAPI }) => {
           <CreateContact
             isAddContact={isAddContact}
             handleAddContactClose={handleAddContactClose}
-            reCallAPI={reCallAPI}
           />
         </Box>
       </AppScrollbar>
@@ -152,7 +145,3 @@ const SideBarContent = ({ reCallAPI }) => {
 };
 
 export default SideBarContent;
-
-SideBarContent.propTypes = {
-  reCallAPI: PropTypes.func,
-};

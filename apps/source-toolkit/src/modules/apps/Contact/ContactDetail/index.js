@@ -12,22 +12,31 @@ import {
   OtherDetails,
   PersonalDetails,
 } from '@crema/modules/apps/Contact';
+import { useDispatch } from 'react-redux';
+import { onUpdateSelectedContact } from '@crema/redux-toolkit/actions';
 
 const ContactDetail = (props) => {
   const {
     isShowDetail,
     selectedContact,
     onShowDetail,
-    onChangeStarred,
     onSelectContactsForDelete,
     onOpenEditContact,
   } = props;
+  const dispatch = useDispatch();
 
   const [contact, setContact] = useState(selectedContact);
 
   useEffect(() => {
     setContact(selectedContact);
   }, [selectedContact]);
+
+  const onChangeStarred = (checked) => {
+    const updatedContact = contact;
+    contact.isStarred = checked;
+    setContact(updatedContact);
+    dispatch(onUpdateSelectedContact(contact));
+  };
 
   const onDeleteContact = () => {
     onSelectContactsForDelete([contact.id]);
@@ -143,6 +152,5 @@ ContactDetail.propTypes = {
   onShowDetail: PropTypes.func.isRequired,
   selectedContact: PropTypes.object,
   onSelectContactsForDelete: PropTypes.func,
-  onChangeStarred: PropTypes.func,
   onOpenEditContact: PropTypes.func,
 };

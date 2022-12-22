@@ -24,8 +24,8 @@ const initialState = {
 const contactReducer = createReducer(initialState, (builder) => {
   builder
     .addCase(GET_CONTACT_LIST, (state, action) => {
-      state.contactList = action.payload.list;
-      state.totalContacts = action.payload.total;
+      state.contactList = action.payload.data;
+      state.totalContacts = action.payload.count;
     })
     .addCase(GET_CONTACT_FOLDER_LIST, (state, action) => {
       state.folderList = action.payload;
@@ -41,8 +41,8 @@ const contactReducer = createReducer(initialState, (builder) => {
       state.totalContacts = state.totalContacts + 1;
     })
     .addCase(DELETE_CONTACT, (state, action) => {
-      state.contactList = action.payload.list;
-      state.totalContacts = action.payload.total;
+      state.contactList = action.payload.data;
+      state.totalContacts = action.payload.count;
     })
     .addCase(UPDATE_CONTACT_LABEL, (state, action) => {
       let contactIds = action.payload.data.map((contact) => contact.id);

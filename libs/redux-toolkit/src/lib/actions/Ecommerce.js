@@ -14,12 +14,12 @@ import {
 } from '@crema/constants/ActionTypes';
 import jwtAxios from '@crema/services/auth/JWT';
 
-export const onGetEcommerceData = (filterData) => {
+export const onGetEcommerceData = (filterData, page) => {
   return (dispatch) => {
     dispatch({ type: FETCH_START });
     jwtAxios
       .get('/api/ecommerce/list', {
-        params: { filterData },
+        params: { filterData, page },
       })
       .then((data) => {
         if (data.status === 200) {

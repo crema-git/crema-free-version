@@ -5,8 +5,11 @@ import IntlMessages from '@crema/utility/IntlMessages';
 import PropTypes from 'prop-types';
 import AddContactForm from './AddContactForm';
 import AppDialog from '@crema/components/AppDialog';
-import { useInfoViewActionsContext } from '@crema/context/InfoViewContextProvider';
-import { postDataApi, putDataApi } from '@crema/utility/APIHooks';
+import { useDispatch } from 'react-redux';
+import {
+  onCreateContact,
+  onUpdateSelectedContact,
+} from '@crema/redux-toolkit/actions';
 
 const validationSchema = yup.object({
   name: yup.string().required(<IntlMessages id="validation.nameRequired" />),
@@ -25,9 +28,8 @@ const CreateContact = (props) => {
     handleAddContactClose,
     selectContact,
     onUpdateContact,
-    reCallAPI,
   } = props;
-  const infoViewActionsContext = useInfoViewActionsContext();
+  const dispatch = useDispatch();
 
   const [userImage, setUserImage] = useState(
     selectContact && selectContact.image
@@ -88,18 +90,7 @@ const CreateContact = (props) => {
               image: userImage,
               ...data,
             };
-            putDataApi('/api/contactApp/contact/', infoViewActionsContext, {
-              contact: newContact,
-            })
-              .then(() => {
-                reCallAPI();
-                infoViewActionsContext.showMessage(
-                  'Contact updated successfully!'
-                );
-              })
-              .catch((error) => {
-                infoViewActionsContext.fetchError(error.message);
-              });
+            dispatch(onUpdateSelectedContact(newContact));
             onUpdateContact(newContact);
           } else {
             const newContact = {
@@ -109,18 +100,7 @@ const CreateContact = (props) => {
               image: userImage,
               ...data,
             };
-            postDataApi('/api/contactApp/compose', infoViewActionsContext, {
-              contact: newContact,
-            })
-              .then(() => {
-                reCallAPI();
-                infoViewActionsContext.showMessage(
-                  'Contact created successfully!'
-                );
-              })
-              .catch((error) => {
-                infoViewActionsContext.fetchError(error.message);
-              });
+            dispatch(onCreateContact(newContact));
           }
           handleAddContactClose();
           resetForm();
@@ -152,5 +132,4 @@ CreateContact.propTypes = {
   handleAddContactClose: PropTypes.func.isRequired,
   selectContact: PropTypes.object,
   onUpdateContact: PropTypes.func,
-  reCallAPI: PropTypes.func,
 };

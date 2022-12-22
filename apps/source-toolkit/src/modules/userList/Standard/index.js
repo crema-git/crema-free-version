@@ -1,12 +1,19 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import AppInfoView from '@crema/components/AppInfoView';
 import Box from '@mui/material/Box';
 import AppList from '@crema/components/AppList';
-import { useGetDataApi } from '@crema/utility/APIHooks';
 import { ListItem } from '@crema/modules/userList/Standard';
+import { useDispatch, useSelector } from 'react-redux';
+import { onGetUserList } from '@crema/redux-toolkit/actions';
 
 const Standard = () => {
-  const [{ apiData: usersList }] = useGetDataApi('/api/user/list', []);
+  const dispatch = useDispatch();
+
+  const usersList = useSelector(({ userList }) => userList.usersList);
+
+  useEffect(() => {
+    dispatch(onGetUserList());
+  }, [dispatch]);
 
   return (
     <Box flex={1}>

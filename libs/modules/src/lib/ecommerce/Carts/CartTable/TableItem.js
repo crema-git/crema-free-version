@@ -25,7 +25,7 @@ const TableItem = ({ data, onRemoveItem, onIncrement, onDecrement }) => {
     <TableRow key={data.name} className="item-hover">
       <StyledTableCell>
         <Box display="flex">
-          <Avatar sx={{ mr: 3.5 }} src={data.image} />
+          <Avatar sx={{ mr: 3.5 }} src={data.image.src || data.image} />
           <Box>
             <Box fontSize={14} fontWeight={Fonts.MEDIUM}>
               {data.title}

@@ -9,18 +9,17 @@ import PropTypes from 'prop-types';
 import IconButton from '@mui/material/IconButton';
 import { Hidden } from '@mui/material';
 import AppTooltip from '@crema/components/AppTooltip';
-import { putDataApi } from '@crema/utility/APIHooks';
-import { useInfoViewActionsContext } from '@crema/context/InfoViewContextProvider';
+import { useDispatch } from 'react-redux';
+import { useLocation } from 'react-router-dom';
+import { onUpdateContactLabel } from '@crema/redux-toolkit/actions';
 
 const ContactCheckedActions = (props) => {
-  const {
-    checkedContacts,
-    setCheckedContacts,
-    onSelectContactsForDelete,
-    onUpdateContacts,
-  } = props;
+  const { checkedContacts, setCheckedContacts, onSelectContactsForDelete } =
+    props;
 
-  const infoViewActionsContext = useInfoViewActionsContext();
+  const dispatch = useDispatch();
+
+  const { pathname } = useLocation();
 
   const [isLabelOpen, onOpenLabel] = React.useState(null);
 
@@ -33,20 +32,13 @@ const ContactCheckedActions = (props) => {
   };
 
   const onSelectLabel = (event) => {
+    const path = pathname.split('/');
     const labelType = event.target.value;
-    putDataApi('/api/contactApp/update/label', infoViewActionsContext, {
-      contactIds: checkedContacts,
-      type: +labelType,
-    })
-      .then((data) => {
-        onUpdateContacts(data);
-        setCheckedContacts([]);
-        onLabelClose();
-        infoViewActionsContext.showMessage('Contact Updated Successfully');
-      })
-      .catch((error) => {
-        infoViewActionsContext.fetchError(error.message);
-      });
+    dispatch(
+      onUpdateContactLabel(checkedContacts, labelType, path[path.length - 2])
+    );
+    setCheckedContacts([]);
+    onLabelClose();
   };
 
   return (
@@ -122,5 +114,4 @@ ContactCheckedActions.propTypes = {
   checkedContacts: PropTypes.array.isRequired,
   setCheckedContacts: PropTypes.func,
   onSelectContactsForDelete: PropTypes.func,
-  onUpdateContacts: PropTypes.func,
 };

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Box, Grid } from '@mui/material';
 import AppCard from '@crema/components/AppCard';
 import IntlMessages from '@crema/utility/IntlMessages';
@@ -6,15 +6,21 @@ import { Fonts } from '@crema/constants/AppEnums';
 
 import AppAnimate from '@crema/components/AppAnimate';
 import AppGridContainer from '@crema/components/AppGridContainer';
-import { useGetDataApi } from '@crema/utility/APIHooks';
 import {
   OrderSummary,
   DeliveryAddress,
   PaymentInfo,
 } from '@crema/modules/ecommerce/Checkout';
+import { useDispatch, useSelector } from 'react-redux';
+import { getCartItems } from '@crema/redux-toolkit/actions';
 
 const Checkout = () => {
-  const [{ apiData: cartItems }] = useGetDataApi('/api/cart/get', []);
+  const dispatch = useDispatch();
+  const cartItems = useSelector(({ ecommerce }) => ecommerce.cartItems);
+
+  useEffect(() => {
+    dispatch(getCartItems());
+  }, [dispatch]);
 
   return (
     <AppAnimate animation="transition.slideUpIn" delay={200}>

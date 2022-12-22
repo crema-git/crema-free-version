@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import PropTypes from 'prop-types';
 import { useLocation } from 'react-router-dom';
 import ContactHeader from './ContactHeader';
 import AppConfirmDialog from '@crema/components/AppConfirmDialog';
@@ -12,18 +11,22 @@ import AppsPagination from '@crema/components/AppsPagination';
 import AppsHeader from '@crema/components/AppsHeader';
 import AppsContent from '@crema/components/AppsContent';
 import AppsFooter from '@crema/components/AppsFooter';
-import { useInfoViewActionsContext } from '@crema/context/InfoViewContextProvider';
-import { postDataApi, putDataApi } from '@crema/utility/APIHooks';
+import { useDispatch, useSelector } from 'react-redux';
+import {
+  onDeleteContacts,
+  onGetContactList,
+  onUpdateStarredStatus,
+} from '@crema/redux-toolkit/actions';
 
-const ContactListing = ({
-  apiData,
-  loading,
-  setQueryParams,
-  setData,
-  reCallAPI,
-}) => {
+const ContactListing = () => {
+  const dispatch = useDispatch();
   const { pathname } = useLocation();
-  const infoViewActionsContext = useInfoViewActionsContext();
+
+  const contactList = useSelector(({ contactApp }) => contactApp.contactList);
+
+  const totalContacts = useSelector(
+    ({ contactApp }) => contactApp.totalContacts
+  );
 
   const [filterText, onSetFilterText] = useState('');
 
@@ -43,18 +46,18 @@ const ContactListing = ({
 
   const [selectedContact, setSelectedContact] = useState(null);
 
+  const loading = useSelector(({ common }) => common.loading);
+
   useEffect(() => {
     setPage(0);
   }, [pathname]);
 
   useEffect(() => {
     const path = pathname.split('/');
-    setQueryParams({
-      type: path[path.length - 2],
-      name: path[path.length - 1],
-      page: page,
-    });
-  }, [pathname, pageView, page]);
+    dispatch(
+      onGetContactList(path[path.length - 2], path[path.length - 1], page)
+    );
+  }, [pathname, pageView, page, dispatch]);
 
   const handleAddContactOpen = () => {
     onSetIsAddContact(true);
@@ -94,46 +97,10 @@ const ContactListing = ({
 
   const onChangeStarred = (status, contact) => {
     const selectedIdList = [contact.id];
-    putDataApi('/api/contactApp/update/starred', infoViewActionsContext, {
-      contactIds: selectedIdList,
-      status: status,
-    })
-      .then((data) => {
-        onUpdateSelectedContact(data[0]);
-        infoViewActionsContext.showMessage(
-          data[0].isStarred
-            ? 'Contact Marked as Starred Successfully'
-            : 'Contact Marked as Unstarred Successfully'
-        );
-      })
-      .catch((error) => {
-        infoViewActionsContext.fetchError(error.message);
-      });
-  };
-
-  const onUpdateSelectedContact = (contact) => {
-    setData({
-      data: apiData?.data.map((item) => {
-        if (item.id === contact.id) {
-          return contact;
-        }
-        return item;
-      }),
-      count: apiData?.count,
-    });
-  };
-
-  const onUpdateContacts = (contacts) => {
-    setData({
-      data: apiData?.data.map((item) => {
-        const contact = contacts.find((contact) => contact.id === item.id);
-        if (contact) {
-          return contact;
-        }
-        return item;
-      }),
-      count: apiData?.count,
-    });
+    const path = pathname.split('/');
+    dispatch(
+      onUpdateStarredStatus(selectedIdList, status, path[path.length - 1])
+    );
   };
 
   const onUpdateContact = (contact) => {
@@ -143,9 +110,9 @@ const ContactListing = ({
 
   const onGetFilteredItems = () => {
     if (filterText === '') {
-      return apiData?.data;
+      return contactList;
     } else {
-      return apiData?.data.filter((contact) =>
+      return contactList.filter((contact) =>
         contact.name.toUpperCase().includes(filterText.toUpperCase())
       );
     }
@@ -153,19 +120,14 @@ const ContactListing = ({
 
   const onDeleteSelectedContacts = () => {
     const path = pathname.split('/');
-    postDataApi('/api/contactApp/delete/contact', infoViewActionsContext, {
-      type: path[path.length - 2],
-      name: path[path.length - 1],
-      contactIds: toDeleteContacts,
-      page,
-    })
-      .then((data) => {
-        setData(data);
-        infoViewActionsContext.showMessage('Contact Deleted Successfully');
-      })
-      .catch((error) => {
-        infoViewActionsContext.fetchError(error.message);
-      });
+    dispatch(
+      onDeleteContacts(
+        path[path.length - 2],
+        path[path.length - 1],
+        toDeleteContacts,
+        page
+      )
+    );
     setDeleteDialogOpen(false);
     setCheckedContacts([]);
   };
@@ -184,8 +146,6 @@ const ContactListing = ({
           checkedContacts={checkedContacts}
           setCheckedContacts={setCheckedContacts}
           filterText={filterText}
-          apiData={apiData}
-          onUpdateContacts={onUpdateContacts}
           onSelectContactsForDelete={onSelectContactsForDelete}
           onSetFilterText={onSetFilterText}
           onPageChange={onPageChange}
@@ -210,10 +170,10 @@ const ContactListing = ({
       </AppsContent>
 
       <Hidden smUp>
-        {apiData?.data?.length > 0 ? (
+        {contactList.length > 0 ? (
           <AppsFooter>
             <AppsPagination
-              count={apiData?.count}
+              count={totalContacts}
               page={page}
               onPageChange={onPageChange}
             />
@@ -226,14 +186,12 @@ const ContactListing = ({
         handleAddContactClose={handleAddContactClose}
         selectContact={selectedContact}
         onUpdateContact={onUpdateContact}
-        reCallAPI={reCallAPI}
       />
 
       <ContactDetail
         selectedContact={selectedContact}
         isShowDetail={isShowDetail}
         onShowDetail={onShowDetail}
-        onChangeStarred={onChangeStarred}
         onSelectContactsForDelete={onSelectContactsForDelete}
         onOpenEditContact={onOpenEditContact}
       />
@@ -250,11 +208,3 @@ const ContactListing = ({
 };
 
 export default ContactListing;
-
-ContactListing.propTypes = {
-  apiData: PropTypes.object,
-  loading: PropTypes.bool,
-  setQueryParams: PropTypes.func,
-  setData: PropTypes.func,
-  reCallAPI: PropTypes.func,
-};
