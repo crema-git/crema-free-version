@@ -1,5 +1,5 @@
-import mock from './lib/MockConfig';
-import './lib/index';
+import mock from './apis/MockConfig';
+import './apis/index';
 
 export * from './fakedb/account';
 export * from './fakedb/account/countries';

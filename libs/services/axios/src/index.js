@@ -1,3 +1,3 @@
-import axios from './lib/ApiConfig';
+import axios from './ApiConfig';
 
 export default axios;

@@ -1,9 +1,9 @@
 // ForJWT Auth
-/*import { getUserFromJwtAuth } from "./helper/AuthHelper";
+/*import { getUserFromJwtAuth } from '@crema/helpers';
 import {
   useJWTAuth,
   useJWTAuthActions,
-} from "../services/auth/jwt-auth/JWTAuthProvider";
+} from "@crema/services/auth/JWTAuthProvider";
 
 export const useAuthUser = () => {
   const { user, isAuthenticated, isLoading } = useJWTAuth();
@@ -57,11 +57,11 @@ export const useAuthMethod = () => {
 };
 /*
 // For AWS Auth
-import {getUserFromAWS} from './helper/AuthHelper';
+import {getUserFromAWS} from '@crema/helpers';
 import {
   useAwsCognito,
   useAwsCognitoActions,
-} from '../services/auth/aws-cognito/AWSAuthProvider';
+} from '@crema/services/auth/AWSAuthProvider';
 
 export const useAuthUser = () => {
   const {auth, user, isAuthenticated, isLoading} = useAwsCognito();

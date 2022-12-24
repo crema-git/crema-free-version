@@ -3,7 +3,7 @@ import {
   MenuStyle,
   NavStyle,
   ThemeMode,
-} from '@crema/constants/AppEnums';
+} from "@crema/constants";
 
 export const navStyles = [
   {
