@@ -12,3 +12,4 @@ export * from './useCopyToClipboard';
 export * from './useDebounce';
 export * from './useToggler';
 export * from './usePrevious';
+export * from './withRouter';
