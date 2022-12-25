@@ -1,5 +1,6 @@
 import React from 'react';
 import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
 import PropTypes from 'prop-types';
 import { Typography } from '@mui/material';
 import ErrorIcon from './ErrorIcon';
@@ -54,6 +55,11 @@ class AppErrorBoundary extends React.Component {
           <Typography style={{ fontSize: 18 }}>
             You may also refresh the page or try again latter
           </Typography>
+          <Button color='primary' variant="contained" sx={{
+            marginTop: 16,
+          }} onClick={()=>this.setState({
+            hasError: false
+          })}> Try again</Button>
         </Box>
       );
     } else {

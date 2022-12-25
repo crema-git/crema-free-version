@@ -36,7 +36,7 @@ const validationSchema = yup.object({
   cc: yup.string().email(<IntlMessages id="validation.emailFormat" />),
 });
 
-const MailForward = ({ onSubmitForwardedMail }) => {
+const ForwardMail = ({ onSubmitForwardedMail }) => {
   const [isShowCC, onShowCC] = useState(false);
 
   const onShowCcInput = () => {
@@ -172,9 +172,9 @@ const MailForward = ({ onSubmitForwardedMail }) => {
   );
 };
 
-export default MailForward;
+export default ForwardMail;
 
-MailForward.propTypes = {
+ForwardMail.propTypes = {
   onSubmitForwardedMail: PropTypes.func,
   selectedMail: PropTypes.object.isRequired,
 };

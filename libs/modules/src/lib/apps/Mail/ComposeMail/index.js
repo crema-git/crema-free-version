@@ -89,6 +89,7 @@ const ComposeMail = (props) => {
       sxStyle={{
         '& .MuiDialog-paperWidthSm': {
           maxWidth: 600,
+          minHeight: 520,
           width: '100%',
         },
         '& .MuiTypography-h6': {
