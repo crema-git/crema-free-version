@@ -4,7 +4,6 @@ import Button from '@mui/material/Button';
 import PropTypes from 'prop-types';
 import { Typography } from '@mui/material';
 import ErrorIcon from './ErrorIcon';
-import {withRouter} from "@crema/hooks";
 
 class AppErrorBoundary extends React.Component {
   constructor(props) {
@@ -16,16 +15,6 @@ class AppErrorBoundary extends React.Component {
     console.log('error: ', error);
     // Update state so the next render will show the fallback UI.
     return { hasError: true };
-  }
-
-  static getDerivedStateFromProps(props, state) {
-    if(props?.location?.pathname !== this.props?.location?.pathname){
-      this.setState({
-      hasError: false
-    })
-      return props;
-    }
-    return null; // No change to state
   }
 
   componentDidCatch(error, errorInfo) {
@@ -79,7 +68,7 @@ class AppErrorBoundary extends React.Component {
   }
 }
 
-export default withRouter(AppErrorBoundary);
+export default AppErrorBoundary;
 
 AppErrorBoundary.propTypes = {
   children: PropTypes.node,
