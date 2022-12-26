@@ -1,6 +1,6 @@
 import React from 'react';
 import { FormattedMessage, injectIntl } from 'react-intl';
-import { allowMultiLanguage } from '@crema/constants';
+import { allowMultiLanguage } from '@crema/constants/AppConst';
 
 const InjectMassage = (props) => {
   if (allowMultiLanguage) {

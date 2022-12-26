@@ -8,7 +8,7 @@ import { useSidebarContext } from '@crema/context/SidebarContextProvider';
 import VerticalNavGroupItem from './VerticalNavGroupItem';
 import { useAuthUser } from '@crema/utility/AuthHooks';
 import { checkPermission } from '@crema/helpers';
-import { allowMultiLanguage } from '@crema/constants';
+import { allowMultiLanguage } from '@crema/constants/AppConst';
 
 const VerticalNavGroup = ({ item, level }) => {
   const { sidebarTextColor } = useSidebarContext();

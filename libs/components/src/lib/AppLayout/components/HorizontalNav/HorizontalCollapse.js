@@ -19,7 +19,7 @@ import { useThemeContext } from '@crema/context/ThemeContextProvider';
 import List from '@mui/material/List';
 import { useSidebarContext } from '@crema/context/SidebarContextProvider';
 import { useLocation } from 'react-router-dom';
-import { allowMultiLanguage } from '@crema/constants';
+import { allowMultiLanguage } from '@crema/constants/AppConst';
 
 function HorizontalCollapse(props) {
   const [opened, setOpened] = useState(false);

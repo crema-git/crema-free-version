@@ -4,7 +4,7 @@ import { IntlProvider } from 'react-intl';
 import { IntlGlobalProvider } from '@crema/helpers';
 import AppLocale from '@crema/services/localization';
 import { useLocaleContext } from '../AppContextProvider/LocaleContextProvider';
-import { allowMultiLanguage } from '@crema/constants';
+import { allowMultiLanguage } from '@crema/constants/AppConst';
 
 const AppLocaleProvider = (props) => {
   const { locale } = useLocaleContext();

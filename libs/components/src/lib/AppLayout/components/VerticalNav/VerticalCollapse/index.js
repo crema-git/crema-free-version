@@ -11,7 +11,7 @@ import { useAuthUser } from '@crema/utility/AuthHooks';
 import { useThemeContext } from '@crema/context/ThemeContextProvider';
 import { useSidebarContext } from '@crema/context/SidebarContextProvider';
 import VerticalCollapseItem from './VerticalCollapseItem';
-import { allowMultiLanguage } from '@crema/constants';
+import { allowMultiLanguage } from '@crema/constants/AppConst';
 
 const needsToBeOpened = (pathname, item) => {
   return pathname && isUrlInChildren(item, pathname);

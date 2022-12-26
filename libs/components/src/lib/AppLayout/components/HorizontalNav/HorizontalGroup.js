@@ -19,7 +19,7 @@ import HorizontalCollapse from './HorizontalCollapse';
 import HorizontalItem from './HorizontalItem';
 import IntlMessages from '@crema/utility/IntlMessages';
 import { Fonts } from '@crema/constants/AppEnums';
-import { allowMultiLanguage } from '@crema/constants';
+import { allowMultiLanguage } from '@crema/constants/AppConst';
 
 function HorizontalGroup(props) {
   const [opened, setOpened] = useState(false);

@@ -8,7 +8,7 @@ import AppNavLink from '../../../AppNavLink';
 import Badge from '@mui/material/Badge';
 import { useSidebarContext } from '@crema/context/SidebarContextProvider';
 import { useLocation } from 'react-router-dom';
-import { allowMultiLanguage } from '@crema/constants';
+import { allowMultiLanguage } from '@crema/constants/AppConst';
 
 function HorizontalItem(props) {
   const { item, dense } = props;

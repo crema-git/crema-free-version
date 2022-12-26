@@ -9,7 +9,7 @@ import IntlMessages from '@crema/utility/IntlMessages';
 import { checkPermission } from '@crema/helpers';
 import { useAuthUser } from '@crema/utility/AuthHooks';
 import VerticalNavItem from './VerticalNavItem';
-import { allowMultiLanguage } from '@crema/constants';
+import { allowMultiLanguage } from '@crema/constants/AppConst';
 
 const VerticalItem = ({ level, item }) => {
   const { user } = useAuthUser();
