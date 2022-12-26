@@ -9,6 +9,7 @@ import IntlMessages from '@crema/utility/IntlMessages';
 import { checkPermission } from '@crema/helpers';
 import { useAuthUser } from '@crema/utility/AuthHooks';
 import VerticalNavItem from './VerticalNavItem';
+import { allowMultiLanguage } from '@crema/constants';
 
 const VerticalItem = ({ level, item }) => {
   const { user } = useAuthUser();
@@ -46,7 +47,9 @@ const VerticalItem = ({ level, item }) => {
       )}
       <ListItemText
         className="nav-item-content"
-        primary={<IntlMessages id={item.messageId} />}
+        primary={
+          allowMultiLanguage ? <IntlMessages id={item.messageId} /> : item.title
+        }
         classes={{ primary: 'nav-item-text' }}
       />
       {item.count && (

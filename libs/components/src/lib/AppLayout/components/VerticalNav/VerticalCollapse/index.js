@@ -11,6 +11,7 @@ import { useAuthUser } from '@crema/utility/AuthHooks';
 import { useThemeContext } from '@crema/context/ThemeContextProvider';
 import { useSidebarContext } from '@crema/context/SidebarContextProvider';
 import VerticalCollapseItem from './VerticalCollapseItem';
+import { allowMultiLanguage } from '@crema/constants';
 
 const needsToBeOpened = (pathname, item) => {
   return pathname && isUrlInChildren(item, pathname);
@@ -95,7 +96,13 @@ const VerticalCollapse = ({ item, level }) => {
           }}
           className="nav-item-content"
           classes={{ primary: clsx('nav-item-text') }}
-          primary={<IntlMessages id={item.messageId} />}
+          primary={
+            allowMultiLanguage ? (
+              <IntlMessages id={item.messageId} />
+            ) : (
+              item.title
+            )
+          }
         />
         <IconButton
           className="nav-item-icon-arrow-btn"

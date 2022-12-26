@@ -8,6 +8,7 @@ import { useSidebarContext } from '@crema/context/SidebarContextProvider';
 import VerticalNavGroupItem from './VerticalNavGroupItem';
 import { useAuthUser } from '@crema/utility/AuthHooks';
 import { checkPermission } from '@crema/helpers';
+import { allowMultiLanguage } from '@crema/constants';
 
 const VerticalNavGroup = ({ item, level }) => {
   const { sidebarTextColor } = useSidebarContext();
@@ -28,7 +29,7 @@ const VerticalNavGroup = ({ item, level }) => {
         component="div"
         className={clsx('nav-item nav-item-header')}
       >
-        {<IntlMessages id={item.messageId} />}
+        {allowMultiLanguage ? <IntlMessages id={item.messageId} /> : item.title}
       </VerticalNavGroupItem>
 
       {item.children && (

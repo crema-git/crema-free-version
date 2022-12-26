@@ -8,6 +8,7 @@ import AppNavLink from '../../../AppNavLink';
 import Badge from '@mui/material/Badge';
 import { useSidebarContext } from '@crema/context/SidebarContextProvider';
 import { useLocation } from 'react-router-dom';
+import { allowMultiLanguage } from '@crema/constants';
 
 function HorizontalItem(props) {
   const { item, dense } = props;
@@ -89,7 +90,9 @@ function HorizontalItem(props) {
       )}
       <ListItemText
         className="AppNavLinkTextSubmenu"
-        primary={<IntlMessages id={item.messageId} />}
+        primary={
+          allowMultiLanguage ? <IntlMessages id={item.messageId} /> : item.title
+        }
       />
       {item.count && (
         <Box ml={4}>

@@ -17,6 +17,7 @@ const App = () => (
     <AppThemeProvider>
       <AppStyleProvider>
         <AppLocaleProvider>
+          S
           <BrowserRouter>
             <InfoViewContextProvider>
               <FirebaseAuthProvider>
