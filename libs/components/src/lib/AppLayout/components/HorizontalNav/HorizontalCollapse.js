@@ -14,7 +14,7 @@ import * as ReactDOM from 'react-dom';
 import HorizontalItem from './HorizontalItem';
 import HorizontalGroup from './HorizontalGroup';
 import Box from '@mui/material/Box';
-import IntlMessages from '@crema/utility/IntlMessages';
+import IntlMessages from '@crema/helpers/IntlMessages';
 import { useThemeContext } from '@crema/context/ThemeContextProvider';
 import List from '@mui/material/List';
 import { useSidebarContext } from '@crema/context/SidebarContextProvider';

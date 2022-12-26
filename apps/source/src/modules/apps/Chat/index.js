@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useIntl } from 'react-intl';
 import { ChatSideBar } from '@crema/modules/apps/Chat';
-import { useGetDataApi } from '@crema/utility/APIHooks';
+import { useGetDataApi } from '@crema/hooks/APIHooks';
 import AppsContainer from '@crema/components/AppsContainer';
 
 import ChatContent from './ChatContent';

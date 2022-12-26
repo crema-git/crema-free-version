@@ -1,6 +1,6 @@
 import React from 'react';
 import Slider from 'react-slick';
-import IntlMessages from '@crema/utility/IntlMessages';
+import IntlMessages from '@crema/helpers/IntlMessages';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import { Fonts } from '@crema/constants/AppEnums';

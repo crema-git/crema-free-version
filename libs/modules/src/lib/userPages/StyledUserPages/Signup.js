@@ -5,7 +5,7 @@ import { Checkbox, useTheme } from '@mui/material';
 import { Form, Formik } from 'formik';
 import * as yup from 'yup';
 import Grid from '@mui/material/Grid';
-import IntlMessages from '@crema/utility/IntlMessages';
+import IntlMessages from '@crema/helpers/IntlMessages';
 import Box from '@mui/material/Box';
 import { Fonts } from '@crema/constants/AppEnums';
 import AppAnimate from '@crema/components/AppAnimate';

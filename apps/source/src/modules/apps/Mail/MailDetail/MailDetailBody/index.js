@@ -3,7 +3,7 @@ import Box from '@mui/material/Box';
 import PropTypes from 'prop-types';
 import LabelOutlinedIcon from '@mui/icons-material/LabelOutlined';
 import AppTooltip from '@crema/components/AppTooltip';
-import { putDataApi } from '@crema/utility/APIHooks';
+import { putDataApi } from '@crema/hooks/APIHooks';
 import { useInfoViewActionsContext } from '@crema/context/InfoViewContextProvider';
 import { MessageItem } from '@crema/modules/apps/Mail';
 

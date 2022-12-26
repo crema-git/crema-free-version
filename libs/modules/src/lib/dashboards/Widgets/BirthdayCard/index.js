@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box } from '@mui/material';
-import IntlMessages from '@crema/utility/IntlMessages';
+import IntlMessages from '@crema/helpers/IntlMessages';
 import { blue } from '@mui/material/colors';
 import { Fonts } from '@crema/constants/AppEnums';
 import AppCard from '@crema/components/AppCard';

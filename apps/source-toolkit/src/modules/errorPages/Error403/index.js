@@ -6,7 +6,7 @@ import Typography from '@mui/material/Typography';
 import { grey } from '@mui/material/colors';
 import { Fonts } from '@crema/constants/AppEnums';
 import AppAnimate from '@crema/components/AppAnimate';
-import IntlMessages from '@crema/utility/IntlMessages';
+import IntlMessages from '@crema/helpers/IntlMessages';
 import { useTheme } from '@mui/material';
 import { initialUrl } from '@crema/constants/AppConst';
 

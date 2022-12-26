@@ -2,7 +2,7 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 import { onUpdateSelectedTask } from '@crema/redux/actions';
 import { useNavigate } from 'react-router-dom';
-import IntlMessages from '@crema/utility/IntlMessages';
+import IntlMessages from '@crema/helpers/IntlMessages';
 import Box from '@mui/material/Box';
 import PropTypes from 'prop-types';
 import AppsStarredIcon from '@crema/components/AppsStarredIcon';

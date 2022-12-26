@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import AppGridContainer from '@crema/components/AppGridContainer';
 import Grid from '@mui/material/Grid';
-import IntlMessages from '@crema/utility/IntlMessages';
+import IntlMessages from '@crema/helpers/IntlMessages';
 import Box from '@mui/material/Box';
 import { blue, green, grey, indigo, red } from '@mui/material/colors';
 import { Fonts } from '@crema/constants/AppEnums';

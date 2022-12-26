@@ -2,7 +2,7 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import List from '@mui/material/List';
 import React, { useState } from 'react';
-import IntlMessages from '@crema/utility/IntlMessages';
+import IntlMessages from '@crema/helpers/IntlMessages';
 import AppScrollbar from '@crema/components/AppScrollbar';
 import CreateContact from '../CreateContact';
 import AppsSideBarFolderItem from '@crema/components/AppsSideBarFolderItem';

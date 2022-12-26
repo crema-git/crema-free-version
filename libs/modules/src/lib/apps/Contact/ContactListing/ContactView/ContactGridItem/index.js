@@ -4,7 +4,7 @@ import Checkbox from '@mui/material/Checkbox';
 import Avatar from '@mui/material/Avatar';
 import PhoneOutlinedIcon from '@mui/icons-material/PhoneOutlined';
 import BusinessIcon from '@mui/icons-material/Business';
-import IntlMessages from '@crema/utility/IntlMessages';
+import IntlMessages from '@crema/helpers/IntlMessages';
 import Box from '@mui/material/Box';
 import PropTypes from 'prop-types';
 import { blue } from '@mui/material/colors';

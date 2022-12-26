@@ -1,6 +1,6 @@
 import React from 'react';
 import Box from '@mui/material/Box';
-import IntlMessages from '@crema/utility/IntlMessages';
+import IntlMessages from '@crema/helpers/IntlMessages';
 import moment from 'moment';
 import DeleteOutlinedIcon from '@mui/icons-material/DeleteOutlined';
 import PropTypes from 'prop-types';

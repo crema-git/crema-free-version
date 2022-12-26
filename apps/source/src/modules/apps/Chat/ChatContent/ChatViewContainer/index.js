@@ -2,18 +2,14 @@ import React, { useEffect, useRef, useState } from 'react';
 import Box from '@mui/material/Box';
 import moment from 'moment';
 import PropTypes from 'prop-types';
-import IntlMessages from '@crema/utility/IntlMessages';
+import IntlMessages from '@crema/helpers/IntlMessages';
 import AppsHeader from '@crema/components/AppsHeader';
 import AppsFooter from '@crema/components/AppsFooter';
-import { useAuthUser } from '@crema/utility/AuthHooks';
+import { useAuthUser } from '@crema/hooks/AuthHooks';
 import SimpleBarReact from 'simplebar-react';
 
 import { styled } from '@mui/material/styles';
-import {
-  postDataApi,
-  putDataApi,
-  useGetDataApi,
-} from '@crema/utility/APIHooks';
+import { postDataApi, putDataApi, useGetDataApi } from '@crema/hooks/APIHooks';
 import { useInfoViewActionsContext } from '@crema/context/InfoViewContextProvider';
 import { MessageType } from '@crema/fakedb/chat/connectionList';
 import { Header, MessagesList, SendMessage } from '@crema/modules/apps/Chat';

@@ -3,7 +3,7 @@ import { alpha, Box, Button, Typography } from '@mui/material';
 import Avatar from '@mui/material/Avatar';
 import AppGridContainer from '@crema/components/AppGridContainer';
 import Grid from '@mui/material/Grid';
-import IntlMessages from '@crema/utility/IntlMessages';
+import IntlMessages from '@crema/helpers/IntlMessages';
 import { useDropzone } from 'react-dropzone';
 import { Form } from 'formik';
 import PropTypes from 'prop-types';

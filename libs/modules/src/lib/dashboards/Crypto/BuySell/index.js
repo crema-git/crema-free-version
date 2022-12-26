@@ -2,7 +2,7 @@ import React from 'react';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import TabForm from './TabForm';
-import IntlMessages from '@crema/utility/IntlMessages';
+import IntlMessages from '@crema/helpers/IntlMessages';
 import PropTypes from 'prop-types';
 import { Fonts } from '@crema/constants/AppEnums';
 import AppCard from '@crema/components/AppCard';

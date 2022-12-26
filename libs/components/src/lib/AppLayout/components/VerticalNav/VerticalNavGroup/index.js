@@ -3,10 +3,10 @@ import clsx from 'clsx';
 import PropTypes from 'prop-types';
 import VerticalCollapse from '../VerticalCollapse';
 import VerticalItem from '../VerticalItem';
-import IntlMessages from '@crema/utility/IntlMessages';
+import IntlMessages from '@crema/helpers/IntlMessages';
 import { useSidebarContext } from '@crema/context/SidebarContextProvider';
 import VerticalNavGroupItem from './VerticalNavGroupItem';
-import { useAuthUser } from '@crema/utility/AuthHooks';
+import { useAuthUser } from '@crema/hooks/AuthHooks';
 import { checkPermission } from '@crema/helpers';
 import { allowMultiLanguage } from '@crema/constants/AppConst';
 

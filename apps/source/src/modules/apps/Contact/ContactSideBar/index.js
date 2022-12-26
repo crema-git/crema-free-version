@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Button from '@mui/material/Button';
 import List from '@mui/material/List';
 import React, { useState } from 'react';
-import IntlMessages from '@crema/utility/IntlMessages';
+import IntlMessages from '@crema/helpers/IntlMessages';
 import AppScrollbar from '@crema/components/AppScrollbar';
 import CreateContact from '../CreateContact';
 import AppsSideBarFolderItem from '@crema/components/AppsSideBarFolderItem';
@@ -13,7 +13,7 @@ import ListEmptyResult from '@crema/components/AppList/ListEmptyResult';
 import SidebarPlaceholder from '@crema/components/SidebarListSkeleton';
 import AddIcon from '@mui/icons-material/Add';
 import { Zoom } from '@mui/material';
-import { useGetDataApi } from '@crema/utility/APIHooks';
+import { useGetDataApi } from '@crema/hooks/APIHooks';
 import { ContactListLabelItem } from '@crema/modules/apps/Contact';
 
 const SideBarContent = ({ reCallAPI }) => {

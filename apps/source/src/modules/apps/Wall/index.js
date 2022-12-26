@@ -5,7 +5,7 @@ import AppsContainer from '@crema/components/AppsContainer';
 import AppScrollbar from '@crema/components/AppScrollbar';
 import { useIntl } from 'react-intl';
 import { styled } from '@mui/material/styles';
-import { useGetDataApi } from '@crema/utility/APIHooks';
+import { useGetDataApi } from '@crema/hooks/APIHooks';
 import {
   About,
   CreatePost,

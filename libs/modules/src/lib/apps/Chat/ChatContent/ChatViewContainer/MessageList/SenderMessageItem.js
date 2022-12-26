@@ -8,7 +8,7 @@ import Avatar from '@mui/material/Avatar';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import EditIcon from '@mui/icons-material/Edit';
 import PlayCircleOutlineIcon from '@mui/icons-material/PlayCircleOutline';
-import IntlMessages from '@crema/utility/IntlMessages';
+import IntlMessages from '@crema/helpers/IntlMessages';
 import DescriptionOutlinedIcon from '@mui/icons-material/DescriptionOutlined';
 import IconButton from '@mui/material/IconButton';
 import MediaViewer from '@crema/components/AppMedialViewer';

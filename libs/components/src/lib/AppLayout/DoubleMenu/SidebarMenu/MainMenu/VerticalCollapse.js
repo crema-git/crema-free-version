@@ -11,7 +11,7 @@ import clsx from 'clsx';
 import PropTypes from 'prop-types';
 import VerticalItem from './VerticalItem';
 import Box from '@mui/material/Box';
-import IntlMessages from '@crema/utility/IntlMessages';
+import IntlMessages from '@crema/helpers/IntlMessages';
 import useStyles from './VerticalCollapase.style';
 import { useSelector } from 'react-redux';
 import { checkPermission } from '@crema/helpers';

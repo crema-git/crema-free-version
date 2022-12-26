@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import IntlMessages from '@crema/utility/IntlMessages';
+import IntlMessages from '@crema/helpers/IntlMessages';
 import Box from '@mui/material/Box';
 import PropTypes from 'prop-types';
 import AppsStarredIcon from '@crema/components/AppsStarredIcon';
@@ -9,7 +9,7 @@ import AppsDeleteIcon from '@crema/components/AppsDeleteIcon';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import AppTooltip from '@crema/components/AppTooltip';
 import { useInfoViewActionsContext } from '@crema/context/InfoViewContextProvider';
-import { putDataApi } from '@crema/utility/APIHooks';
+import { putDataApi } from '@crema/hooks/APIHooks';
 
 const TaskDetailHeader = (props) => {
   const { selectedTask, onUpdateSelectedTask } = props;

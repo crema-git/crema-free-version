@@ -3,7 +3,7 @@ import Grid from '@mui/material/Grid';
 import AppGridContainer from '@crema/components/AppGridContainer';
 import AppInfoView from '@crema/components/AppInfoView';
 
-import IntlMessages from '@crema/utility/IntlMessages';
+import IntlMessages from '@crema/helpers/IntlMessages';
 import Box from '@mui/material/Box';
 import { blue } from '@mui/material/colors';
 import { Fonts } from '@crema/constants/AppEnums';

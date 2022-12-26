@@ -1,6 +1,6 @@
 import React from 'react';
 import ProfileViewsGraph from './ProfileViewsGraph';
-import IntlMessages from '@crema/utility/IntlMessages';
+import IntlMessages from '@crema/helpers/IntlMessages';
 import Box from '@mui/material/Box';
 import PropTypes from 'prop-types';
 import { Fonts } from '@crema/constants/AppEnums';

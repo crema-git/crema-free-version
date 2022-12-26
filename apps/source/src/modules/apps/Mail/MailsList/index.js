@@ -11,7 +11,7 @@ import ListEmptyResult from '@crema/components/AppList/ListEmptyResult';
 import EmailListSkeleton from '@crema/components/EmailListSkeleton';
 import MailListItem from './MailListItem';
 import { useInfoViewActionsContext } from '@crema/context/InfoViewContextProvider';
-import { putDataApi, useGetDataApi } from '@crema/utility/APIHooks';
+import { putDataApi, useGetDataApi } from '@crema/hooks/APIHooks';
 import { MailListItemMobile } from '@crema/modules/apps/Mail';
 
 const MailsList = () => {

@@ -5,7 +5,7 @@ import Avatar from '@mui/material/Avatar';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
 import ChatIcon from '@mui/icons-material/Chat';
-import IntlMessages from '@crema/utility/IntlMessages';
+import IntlMessages from '@crema/helpers/IntlMessages';
 import Box from '@mui/material/Box';
 import { Fonts } from '@crema/constants/AppEnums';
 import ImageCardWrapper from './ImageCardWrapper';

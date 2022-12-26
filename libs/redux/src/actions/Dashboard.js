@@ -12,7 +12,7 @@ import {
   GET_METRICS_DATA,
   GET_WIDGETS_DATA,
 } from '@crema/constants/ActionTypes';
-import IntlMessages from '../../../utility/src/IntlMessages';
+import IntlMessages from '@crema/helpers/IntlMessages';
 import jwtAxios from '@crema/services/auth/JWT';
 
 export const onGetAnalyticsData = () => {

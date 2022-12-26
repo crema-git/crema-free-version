@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box } from '@mui/material';
 import AppAnimate from '@crema/components/AppAnimate';
-import { useGetDataApi } from '@crema/utility/APIHooks';
+import { useGetDataApi } from '@crema/hooks/APIHooks';
 import {
   AddressInfo,
   ItemsList,

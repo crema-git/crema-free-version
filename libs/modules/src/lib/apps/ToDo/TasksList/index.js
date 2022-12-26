@@ -14,7 +14,7 @@ import TodoListSkeleton from '@crema/components/TodoListSkeleton';
 import AppList from '@crema/components/AppList';
 import TaskListItemMobile from './TaskListItemMobile';
 import TaskCalender from './TaskCalendar';
-import { putDataApi, useGetDataApi } from '@crema/utility/APIHooks';
+import { putDataApi, useGetDataApi } from '@crema/hooks/APIHooks';
 import { useInfoViewActionsContext } from '@crema/context/InfoViewContextProvider';
 
 export const ViewMode = {

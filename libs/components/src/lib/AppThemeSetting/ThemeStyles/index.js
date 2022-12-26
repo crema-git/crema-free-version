@@ -1,7 +1,7 @@
 import React from 'react';
 import { CustomizerItemWrapper, StyledToggleButton } from '../index.style';
 import Box from '@mui/material/Box';
-import IntlMessages from '@crema/utility/IntlMessages';
+import IntlMessages from '@crema/helpers/IntlMessages';
 import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
 import { ThemeStyle } from '@crema/constants/AppEnums';
 import clsx from 'clsx';

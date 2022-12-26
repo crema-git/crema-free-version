@@ -11,7 +11,7 @@ import AppsFooter from '@crema/components/AppsFooter';
 import ListEmptyResult from '@crema/components/AppList/ListEmptyResult';
 import TodoListSkeleton from '@crema/components/TodoListSkeleton';
 import AppList from '@crema/components/AppList';
-import { putDataApi, useGetDataApi } from '@crema/utility/APIHooks';
+import { putDataApi, useGetDataApi } from '@crema/hooks/APIHooks';
 import { useInfoViewActionsContext } from '@crema/context/InfoViewContextProvider';
 import {
   TaskCalender,

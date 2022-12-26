@@ -2,7 +2,7 @@ import React from 'react';
 import { Icon, ListItem, ListItemText } from '@mui/material';
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
-import IntlMessages from '@crema/utility/IntlMessages';
+import IntlMessages from '@crema/helpers/IntlMessages';
 import Box from '@mui/material/Box';
 import AppNavLink from '../../../AppNavLink';
 import Badge from '@mui/material/Badge';

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Typography } from '@mui/material';
-import IntlMessages from '@crema/utility/IntlMessages';
+import IntlMessages from '@crema/helpers/IntlMessages';
 import { Fonts } from '@crema/constants/AppEnums';
 import { invoiceData } from '@crema/fakedb/extraPages';
 

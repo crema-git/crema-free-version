@@ -7,7 +7,7 @@ import {
   GET_WALL_DATA,
   UPDATE_POST,
 } from '@crema/constants/ActionTypes';
-import IntlMessages from '../../../utility/src/IntlMessages';
+import IntlMessages from '@crema/helpers/IntlMessages';
 import React from 'react';
 import jwtAxios from '@crema/services/auth/JWT';
 

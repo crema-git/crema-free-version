@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import DeleteOutlinedIcon from '@mui/icons-material/DeleteOutlined';
-import IntlMessages from '@crema/utility/IntlMessages';
+import IntlMessages from '@crema/helpers/IntlMessages';
 import AppConfirmDialog from '../AppConfirmDialog';
 import IconButton from '@mui/material/IconButton';
 import PropTypes from 'prop-types';

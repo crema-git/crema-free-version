@@ -9,7 +9,7 @@ import Typography from '@mui/material/Typography';
 import PhoneOutlinedIcon from '@mui/icons-material/PhoneOutlined';
 import VideocamOutlinedIcon from '@mui/icons-material/VideocamOutlined';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
-import IntlMessages from '@crema/utility/IntlMessages';
+import IntlMessages from '@crema/helpers/IntlMessages';
 import { styled } from '@mui/material/styles';
 import { Fonts } from '@crema/constants/AppEnums';
 

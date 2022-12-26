@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import MessageItem from './MessageItem';
 import LabelOutlinedIcon from '@mui/icons-material/LabelOutlined';
 import AppTooltip from '@crema/components/AppTooltip';
-import { putDataApi } from '@crema/utility/APIHooks';
+import { putDataApi } from '@crema/hooks/APIHooks';
 import { useInfoViewActionsContext } from '@crema/context/InfoViewContextProvider';
 
 const MailDetailBody = (props) => {

@@ -1,6 +1,6 @@
 import React from 'react';
 import Button from '@mui/material/Button';
-import IntlMessages from '@crema/utility/IntlMessages';
+import IntlMessages from '@crema/helpers/IntlMessages';
 import PropTypes from 'prop-types';
 import {
   Dialog,

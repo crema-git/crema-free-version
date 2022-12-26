@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import InputLabel from '@mui/material/InputLabel';
-import IntlMessages from '@crema/utility/IntlMessages';
+import IntlMessages from '@crema/helpers/IntlMessages';
 import Select from '@mui/material/Select';
 import FormControl from '@mui/material/FormControl';
 import { useDispatch, useSelector } from 'react-redux';

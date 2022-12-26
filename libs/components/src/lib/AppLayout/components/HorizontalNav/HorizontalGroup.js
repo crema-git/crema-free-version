@@ -17,7 +17,7 @@ import { useLocation } from 'react-router-dom';
 
 import HorizontalCollapse from './HorizontalCollapse';
 import HorizontalItem from './HorizontalItem';
-import IntlMessages from '@crema/utility/IntlMessages';
+import IntlMessages from '@crema/helpers/IntlMessages';
 import { Fonts } from '@crema/constants/AppEnums';
 import { allowMultiLanguage } from '@crema/constants/AppConst';
 

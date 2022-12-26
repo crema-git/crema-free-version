@@ -1,5 +1,5 @@
 import React from 'react';
-import IntlMessages from '@crema/utility/IntlMessages';
+import IntlMessages from '@crema/helpers/IntlMessages';
 import Box from '@mui/material/Box';
 import PropTypes from 'prop-types';
 import UserSocialMediaInfo from './UserSocialMediaInfo';

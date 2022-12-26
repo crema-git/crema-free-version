@@ -4,7 +4,7 @@ import Button from '@mui/material/Button';
 import List from '@mui/material/List';
 import { useSelector } from 'react-redux';
 import AddNewTask from '../AddNewTask';
-import IntlMessages from '@crema/utility/IntlMessages';
+import IntlMessages from '@crema/helpers/IntlMessages';
 import AppScrollbar from '@crema/components/AppScrollbar';
 import AppsSideBarFolderItem from '@crema/components/AppsSideBarFolderItem';
 import { Fonts } from '@crema/constants/AppEnums';

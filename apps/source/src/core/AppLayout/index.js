@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
 import { useUrlSearchParams } from 'use-url-search-params';
 import AppContentView from '@crema/components/AppContentView';
-import generateRoutes from '@crema/utility/RouteGenerator';
+import generateRoutes from '@crema/helpers/RouteGenerator';
 import { Layouts } from '@crema/components/AppLayout';
-import { useAuthUser } from '@crema/utility/AuthHooks';
+import { useAuthUser } from '@crema/hooks/AuthHooks';
 import {
   useLayoutActionsContext,
   useLayoutContext,

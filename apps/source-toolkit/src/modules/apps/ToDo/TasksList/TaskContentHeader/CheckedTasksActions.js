@@ -1,5 +1,5 @@
 import React from 'react';
-import IntlMessages from '@crema/utility/IntlMessages';
+import IntlMessages from '@crema/helpers/IntlMessages';
 import LabelOutlinedIcon from '@mui/icons-material/LabelOutlined';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';

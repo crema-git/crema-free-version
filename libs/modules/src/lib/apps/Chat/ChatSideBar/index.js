@@ -7,7 +7,7 @@ import moment from 'moment';
 import { Zoom } from '@mui/material';
 import { useIntl } from 'react-intl';
 import AppSearchBar from '@crema/components/AppSearchBar';
-import { useAuthUser } from '@crema/utility/AuthHooks';
+import { useAuthUser } from '@crema/hooks/AuthHooks';
 
 const ChatSideBar = ({
   selectedUser,

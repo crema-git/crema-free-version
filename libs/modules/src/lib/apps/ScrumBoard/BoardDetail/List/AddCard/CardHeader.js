@@ -3,7 +3,7 @@ import Box from '@mui/material/Box';
 import AttachFileIcon from '@mui/icons-material/AttachFile';
 import DeleteOutlinedIcon from '@mui/icons-material/DeleteOutlined';
 import CloseOutlinedIcon from '@mui/icons-material/CloseOutlined';
-import IntlMessages from '@crema/utility/IntlMessages';
+import IntlMessages from '@crema/helpers/IntlMessages';
 import { useDropzone } from 'react-dropzone';
 import PropTypes from 'prop-types';
 import { Fonts } from '@crema/constants/AppEnums';

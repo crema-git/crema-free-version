@@ -1,6 +1,6 @@
 import React from 'react';
 import Box from '@mui/material/Box';
-import IntlMessages from '@crema/utility/IntlMessages';
+import IntlMessages from '@crema/helpers/IntlMessages';
 import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
 import PhoneOutlinedIcon from '@mui/icons-material/PhoneOutlined';
 import LanguageIcon from '@mui/icons-material/Language';

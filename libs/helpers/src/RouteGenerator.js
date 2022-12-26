@@ -1,6 +1,6 @@
 import { Navigate } from 'react-router-dom';
-import { authRole, RoutePermittedRole } from "@crema/constants";
-import { checkPermission } from '@crema/helpers';
+import { authRole, RoutePermittedRole } from '@crema/constants';
+import { checkPermission } from './RouteHelper';
 
 /**
  * @param {Object} structure - The passed object that defines the routes.

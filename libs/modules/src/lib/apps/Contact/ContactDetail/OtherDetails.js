@@ -1,6 +1,6 @@
 import React from 'react';
 import Box from '@mui/material/Box';
-import IntlMessages from '@crema/utility/IntlMessages';
+import IntlMessages from '@crema/helpers/IntlMessages';
 import BusinessIcon from '@mui/icons-material/Business';
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import PropTypes from 'prop-types';

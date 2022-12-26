@@ -2,14 +2,14 @@ import React, { useEffect, useState } from 'react';
 import { Formik } from 'formik';
 import * as yup from 'yup';
 import AppConfirmDialog from '@crema/components/AppConfirmDialog';
-import IntlMessages from '@crema/utility/IntlMessages';
+import IntlMessages from '@crema/helpers/IntlMessages';
 import PropTypes from 'prop-types';
 import AddCardForm from './AddCardForm';
-import { useAuthUser } from '@crema/utility/AuthHooks';
+import { useAuthUser } from '@crema/hooks/AuthHooks';
 import Drawer from '@mui/material/Drawer';
 import Box from '@mui/material/Box';
 import { useInfoViewActionsContext } from '@crema/context/InfoViewContextProvider';
-import { postDataApi, putDataApi } from '@crema/utility/APIHooks';
+import { postDataApi, putDataApi } from '@crema/hooks/APIHooks';
 import { CardHeader } from '@crema/modules/apps/ScrumBoard';
 
 const validationSchema = yup.object({

@@ -1,7 +1,7 @@
 import React from 'react';
 import { CustomizerItemWrapper } from '../index.style';
 import Box from '@mui/material/Box';
-import IntlMessages from '@crema/utility/IntlMessages';
+import IntlMessages from '@crema/helpers/IntlMessages';
 import Switch from '@mui/material/Switch';
 import { LayoutDirection } from '@crema/constants/AppEnums';
 import {

@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import AppInfoView from '@crema/components/AppInfoView';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
-import IntlMessages from '@crema/utility/IntlMessages';
+import IntlMessages from '@crema/helpers/IntlMessages';
 import AppTextField from '@crema/components/AppTextField';
 import { Fonts } from '@crema/constants/AppEnums';
 import AuthWrapper from '../AuthWrapper';

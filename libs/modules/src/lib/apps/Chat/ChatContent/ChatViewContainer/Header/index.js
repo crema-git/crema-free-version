@@ -3,7 +3,7 @@ import { styled } from '@mui/material/styles';
 import Index from '../../../ChatSideBar/UserInfo';
 import Box from '@mui/material/Box';
 import { alpha, Checkbox, IconButton } from '@mui/material';
-import IntlMessages from '@crema/utility/IntlMessages';
+import IntlMessages from '@crema/helpers/IntlMessages';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';

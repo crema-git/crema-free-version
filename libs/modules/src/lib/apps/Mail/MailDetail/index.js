@@ -7,13 +7,13 @@ import AppsHeader from '@crema/components/AppsHeader';
 import AppAnimate from '@crema/components/AppAnimate';
 import { MailDetailSkeleton } from '@crema/components/MailDetailSkeleton';
 import Box from '@mui/material/Box';
-import { useGetDataApi } from '@crema/utility/APIHooks';
+import { useGetDataApi } from '@crema/hooks/APIHooks';
 
 const MailDetail = () => {
   const contentRef = createRef();
 
   const { id } = useParams();
-  console.log(id)
+  console.log(id);
   const [{ apiData: selectedMail }, { setQueryParams, setData }] =
     useGetDataApi('/api/mailApp/mail/', undefined, { id: id }, false);
 

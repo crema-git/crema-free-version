@@ -5,7 +5,7 @@ import { useParams } from 'react-router-dom';
 import AppsHeader from '@crema/components/AppsHeader';
 import AppsContent from '@crema/components/AppsContent';
 import { MailDetailSkeleton } from '@crema/components/MailDetailSkeleton';
-import { useGetDataApi } from '@crema/utility/APIHooks';
+import { useGetDataApi } from '@crema/hooks/APIHooks';
 
 const TaskDetail = () => {
   const { id } = useParams();

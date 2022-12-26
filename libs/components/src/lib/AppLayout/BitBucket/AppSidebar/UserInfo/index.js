@@ -6,7 +6,7 @@ import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import { Fonts } from '@crema/constants/AppEnums';
 import { useNavigate } from 'react-router-dom';
-import { useAuthMethod, useAuthUser } from '@crema/utility/AuthHooks';
+import { useAuthMethod, useAuthUser } from '@crema/hooks/AuthHooks';
 
 const UserInfo = () => {
   const { logout } = useAuthMethod();

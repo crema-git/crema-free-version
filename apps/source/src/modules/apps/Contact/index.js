@@ -3,7 +3,7 @@ import ContactListing from './ContactListing';
 import { useIntl } from 'react-intl';
 import AppsContainer from '@crema/components/AppsContainer';
 import SideBarContent from './ContactSideBar';
-import { useGetDataApi } from '@crema/utility/APIHooks';
+import { useGetDataApi } from '@crema/hooks/APIHooks';
 
 const Contact = () => {
   const [{ apiData, loading }, { setQueryParams, setData, reCallAPI }] =

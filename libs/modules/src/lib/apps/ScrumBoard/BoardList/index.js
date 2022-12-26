@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import AddNewBoard from './AddNewBoard';
-import IntlMessages from '@crema/utility/IntlMessages';
+import IntlMessages from '@crema/helpers/IntlMessages';
 import Box from '@mui/material/Box';
 import AppGridContainer from '@crema/components/AppGridContainer';
 import BoardItem from './BoardItem';
@@ -10,11 +10,7 @@ import { Fonts } from '@crema/constants/AppEnums';
 import AppInfoView from '@crema/components/AppInfoView';
 import { Zoom } from '@mui/material';
 import { useInfoViewActionsContext } from '@crema/context/InfoViewContextProvider';
-import {
-  postDataApi,
-  putDataApi,
-  useGetDataApi,
-} from '@crema/utility/APIHooks';
+import { postDataApi, putDataApi, useGetDataApi } from '@crema/hooks/APIHooks';
 
 const BoardList = () => {
   const navigate = useNavigate();

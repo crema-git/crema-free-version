@@ -1,7 +1,7 @@
 import React from 'react';
 import Card from '@mui/material/Card';
 import Box from '@mui/material/Box';
-import IntlMessages from '@crema/utility/IntlMessages';
+import IntlMessages from '@crema/helpers/IntlMessages';
 import { Fonts } from '@crema/constants/AppEnums';
 import AppTableContainer from '@crema/components/AppTableContainer';
 import AppAnimate from '@crema/components/AppAnimate';

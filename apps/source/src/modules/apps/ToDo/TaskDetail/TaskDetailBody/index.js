@@ -13,11 +13,11 @@ import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
 import EditOutlinedIcon from '@mui/icons-material/EditOutlined';
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
-import { useAuthUser } from '@crema/utility/AuthHooks';
+import { useAuthUser } from '@crema/hooks/AuthHooks';
 import SendOutlinedIcon from '@mui/icons-material/SendOutlined';
 import { Fonts } from '@crema/constants/AppEnums';
 import { useInfoViewActionsContext } from '@crema/context/InfoViewContextProvider';
-import { putDataApi, useGetDataApi } from '@crema/utility/APIHooks';
+import { putDataApi, useGetDataApi } from '@crema/hooks/APIHooks';
 import {
   AssignedStaff,
   CommentsLists,

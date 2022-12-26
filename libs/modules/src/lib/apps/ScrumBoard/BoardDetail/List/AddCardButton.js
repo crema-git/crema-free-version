@@ -6,7 +6,7 @@ import Card from '@mui/material/Card';
 import PropTypes from 'prop-types';
 import { grey } from '@mui/material/colors';
 import { Fonts } from '@crema/constants/AppEnums';
-import IntlMessages from '@crema/utility/IntlMessages';
+import IntlMessages from '@crema/helpers/IntlMessages';
 
 const AddCardButton = (props) => {
   return (

@@ -1,6 +1,6 @@
 import React from 'react';
 import WebTrafficGraph from './WebTrafficGraph';
-import IntlMessages from '@crema/utility/IntlMessages';
+import IntlMessages from '@crema/helpers/IntlMessages';
 import Box from '@mui/material/Box';
 import PropTypes from 'prop-types';
 import { blue, red } from '@mui/material/colors';

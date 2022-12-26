@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 import { orange } from '@mui/material/colors';
 import { TextField } from '@mui/material';
 import { styled } from '@mui/material/styles';
-import IntlMessages from '@crema/utility/IntlMessages';
+import IntlMessages from '@crema/helpers/IntlMessages';
 import IconButton from '@mui/material/IconButton';
 import SendOutlinedIcon from '@mui/icons-material/SendOutlined';
 import AppScrollbar from '@crema/components/AppScrollbar';

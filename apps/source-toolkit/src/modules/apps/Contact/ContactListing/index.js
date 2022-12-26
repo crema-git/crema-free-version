@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import ContactHeader from './ContactHeader';
 import AppConfirmDialog from '@crema/components/AppConfirmDialog';
-import IntlMessages from '@crema/utility/IntlMessages';
+import IntlMessages from '@crema/helpers/IntlMessages';
 import CreateContact from '../CreateContact';
 import { Hidden } from '@mui/material';
 import ContactView from './ContactView';

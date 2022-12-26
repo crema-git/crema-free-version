@@ -4,7 +4,7 @@ import AppList from '@crema/components/AppList';
 import CommentItem from './CommentItem';
 import { Fonts } from '@crema/constants/AppEnums';
 import PropTypes from 'prop-types';
-import IntlMessages from '@crema/utility/IntlMessages';
+import IntlMessages from '@crema/helpers/IntlMessages';
 import { styled } from '@mui/material/styles';
 
 const CommentsListWrapper = styled('div')(({ theme }) => ({

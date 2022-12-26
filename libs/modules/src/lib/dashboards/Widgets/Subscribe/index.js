@@ -4,7 +4,7 @@ import * as yup from 'yup';
 import Button from '@mui/material/Button';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import { useInfoViewActionsContext } from '@crema/context/InfoViewContextProvider';
-import IntlMessages from '@crema/utility/IntlMessages';
+import IntlMessages from '@crema/helpers/IntlMessages';
 import { useIntl } from 'react-intl';
 import Box from '@mui/material/Box';
 import { red } from '@mui/material/colors';

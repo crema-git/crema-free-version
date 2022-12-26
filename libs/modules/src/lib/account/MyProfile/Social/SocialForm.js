@@ -2,7 +2,7 @@ import React from 'react';
 import { Button } from '@mui/material';
 import AppGridContainer from '@crema/components/AppGridContainer';
 import Grid from '@mui/material/Grid';
-import IntlMessages from '@crema/utility/IntlMessages';
+import IntlMessages from '@crema/helpers/IntlMessages';
 import Box from '@mui/material/Box';
 import ProfileConnection from './ProfileConnection';
 import { Form } from 'formik';

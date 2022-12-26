@@ -1,11 +1,11 @@
 import React from 'react';
 import DoneIcon from '@mui/icons-material/Done';
-import IntlMessages from '@crema/utility/IntlMessages';
+import IntlMessages from '@crema/helpers/IntlMessages';
 import PropTypes from 'prop-types';
 import Button from '@mui/material/Button';
 import { styled } from '@mui/material/styles';
 import { useInfoViewActionsContext } from '@crema/context/InfoViewContextProvider';
-import { putDataApi } from '@crema/utility/APIHooks';
+import { putDataApi } from '@crema/hooks/APIHooks';
 
 const StatusButton = styled(Button)(({ theme }) => ({
   fontSize: 12,

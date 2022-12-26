@@ -5,7 +5,7 @@ import Box from '@mui/material/Box';
 import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
 import ColorLensIcon from '@mui/icons-material/ColorLens';
 
-import IntlMessages from '@crema/utility/IntlMessages';
+import IntlMessages from '@crema/helpers/IntlMessages';
 import { LayoutType } from '@crema/constants/AppEnums';
 import { useLayoutContext } from '@crema/context/LayoutContextProvider';
 import AppScrollbar from '../AppScrollbar';

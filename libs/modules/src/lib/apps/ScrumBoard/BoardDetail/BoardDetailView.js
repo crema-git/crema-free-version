@@ -10,7 +10,7 @@ import NewListButton from './NewListButton';
 import PropTypes from 'prop-types';
 import { Box, useTheme } from '@mui/material';
 import { useInfoViewActionsContext } from '@crema/context/InfoViewContextProvider';
-import { postDataApi, putDataApi } from '@crema/utility/APIHooks';
+import { postDataApi, putDataApi } from '@crema/hooks/APIHooks';
 
 const BoardWrapper = ({ children }) => {
   return (

@@ -5,9 +5,9 @@ import PropTypes from 'prop-types';
 import AppBadge from '@crema/components/AppBadge';
 import AppNavLink from '@crema/components/AppNavLink';
 import Box from '@mui/material/Box';
-import IntlMessages from '@crema/utility/IntlMessages';
+import IntlMessages from '@crema/helpers/IntlMessages';
 import { checkPermission } from '@crema/helpers';
-import { useAuthUser } from '@crema/utility/AuthHooks';
+import { useAuthUser } from '@crema/hooks/AuthHooks';
 import VerticalNavItem from './VerticalNavItem';
 import { allowMultiLanguage } from '@crema/constants/AppConst';
 

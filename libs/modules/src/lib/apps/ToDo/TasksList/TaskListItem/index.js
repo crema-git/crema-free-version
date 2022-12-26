@@ -1,7 +1,7 @@
 import React from 'react';
 import { Checkbox, Hidden } from '@mui/material';
 import { useNavigate, useParams } from 'react-router-dom';
-import IntlMessages from '@crema/utility/IntlMessages';
+import IntlMessages from '@crema/helpers/IntlMessages';
 import Box from '@mui/material/Box';
 import clsx from 'clsx';
 import PropTypes from 'prop-types';

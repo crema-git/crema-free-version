@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from '@mui/material/Button';
 import PropTypes from 'prop-types';
-import IntlMessages from '@crema/utility/IntlMessages';
+import IntlMessages from '@crema/helpers/IntlMessages';
 import { Typography } from '@mui/material';
 import Box from '@mui/material/Box';
 import { Fonts } from '@crema/constants/AppEnums';

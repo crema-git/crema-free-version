@@ -1,6 +1,6 @@
 import React from 'react';
 import Box from '@mui/material/Box';
-import IntlMessages from '@crema/utility/IntlMessages';
+import IntlMessages from '@crema/helpers/IntlMessages';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import DeleteOutlinedIcon from '@mui/icons-material/DeleteOutlined';
@@ -9,7 +9,7 @@ import PropTypes from 'prop-types';
 import IconButton from '@mui/material/IconButton';
 import { Hidden } from '@mui/material';
 import AppTooltip from '@crema/components/AppTooltip';
-import { putDataApi } from '@crema/utility/APIHooks';
+import { putDataApi } from '@crema/hooks/APIHooks';
 import { useInfoViewActionsContext } from '@crema/context/InfoViewContextProvider';
 
 const ContactCheckedActions = (props) => {

@@ -12,7 +12,7 @@ import EmailListSkeleton from '@crema/components/EmailListSkeleton';
 import MailListItemMobile from './MailListItemMobile';
 import MailListItem from './MailListItem';
 import { useInfoViewActionsContext } from '@crema/context/InfoViewContextProvider';
-import { putDataApi, useGetDataApi } from '@crema/utility/APIHooks';
+import { putDataApi, useGetDataApi } from '@crema/hooks/APIHooks';
 
 const MailsList = () => {
   const navigate = useNavigate();

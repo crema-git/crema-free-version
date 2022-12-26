@@ -8,7 +8,7 @@ import ArchiveOutlinedIcon from '@mui/icons-material/ArchiveOutlined';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import MarkunreadOutlinedIcon from '@mui/icons-material/MarkunreadOutlined';
-import IntlMessages from '@crema/utility/IntlMessages';
+import IntlMessages from '@crema/helpers/IntlMessages';
 import { Box } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import PropTypes from 'prop-types';

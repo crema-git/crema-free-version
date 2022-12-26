@@ -2,7 +2,7 @@ import React, { useMemo } from 'react';
 import { Icon, ListItem } from '@mui/material';
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
-import IntlMessages from '@crema/utility/IntlMessages';
+import IntlMessages from '@crema/helpers/IntlMessages';
 import useStyles from './GroupItem.style';
 import { useSelector } from 'react-redux';
 import Box from '@mui/material/Box';

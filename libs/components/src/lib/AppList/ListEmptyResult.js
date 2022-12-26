@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Button, CircularProgress, Typography } from '@mui/material';
-import IntlMessages from '@crema/utility/IntlMessages';
+import IntlMessages from '@crema/helpers/IntlMessages';
 import PropTypes from 'prop-types';
 import { Fonts } from '@crema/constants/AppEnums';
 

@@ -6,11 +6,11 @@ import PropTypes from 'prop-types';
 import AppList from '@crema/components/AppList';
 import AppGrid from '@crema/components/AppGrid';
 import ListEmptyResult from '@crema/components/AppList/ListEmptyResult';
-import IntlMessages from '@crema/utility/IntlMessages';
+import IntlMessages from '@crema/helpers/IntlMessages';
 import ContactListSkeleton from '@crema/components/ContactListSkeleton';
 import { Hidden } from '@mui/material';
 import ContactListItemMobile from './ContactListItem/ContactListItemMobile';
-import { useGetDataApi } from '@crema/utility/APIHooks';
+import { useGetDataApi } from '@crema/hooks/APIHooks';
 
 const ContactView = (props) => {
   const {

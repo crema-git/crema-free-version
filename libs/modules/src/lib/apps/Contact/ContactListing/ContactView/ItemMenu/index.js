@@ -1,5 +1,5 @@
 import React from 'react';
-import IntlMessages from '@crema/utility/IntlMessages';
+import IntlMessages from '@crema/helpers/IntlMessages';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import PropTypes from 'prop-types';
 import IconButton from '@mui/material/IconButton';
