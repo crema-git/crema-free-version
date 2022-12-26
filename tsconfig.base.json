@@ -445,7 +445,8 @@
       "@crema/hooks/APIHooks": ["libs/hooks/src/APIHooks.js"],
       "@crema/hooks/AuthHooks": ["libs/hooks/src/AuthHooks.js"],
       "@crema/helpers/IntlMessages": ["libs/helpers/src/IntlMessages.js"],
-      "@crema/helpers/RouteGenerator": ["libs/helpers/src/RouteGenerator.js"]
+      "@crema/helpers/RouteGenerator": ["libs/helpers/src/RouteGenerator.js"],
+      "@crema/helpers/AuthHelper": ["libs/helpers/src/AuthHelper.js"]
     }
   },
   "exclude": ["node_modules", "tmp"]
