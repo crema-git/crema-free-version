@@ -4,7 +4,9 @@
   "overrides": [
     {
       "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
-      "rules": {}
+      "rules": {
+        "import/no-webpack-loader-syntax": "off"
+      }
     },
     {
       "files": ["*.ts", "*.tsx"],

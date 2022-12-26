@@ -1,5 +1,5 @@
 import React from 'react';
-import { RoutePermittedRole } from '@crema/constants/AppConst';
+import {RoutePermittedRole} from '@crema/constants/AppConst';
 
 const HealthCare = React.lazy(() =>
   import('../../modules/dashboards/HealthCare')
@@ -17,6 +17,11 @@ const Metrics = React.lazy(() => import('../../modules/dashboards/Metrics'));
 const Widgets = React.lazy(() => import('../../modules/dashboards/Widgets'));
 
 export const dashBoardConfigs = [
+  {
+    permittedRole: [RoutePermittedRole.User, RoutePermittedRole.Admin],
+    path: '/dashboards/crypto',
+    element: <Crypto />,
+  },
   {
     permittedRole: RoutePermittedRole.User,
     path: '/dashboards/academy',
@@ -41,11 +46,6 @@ export const dashBoardConfigs = [
     permittedRole: RoutePermittedRole.User,
     path: '/dashboards/health-care',
     element: <HealthCare />,
-  },
-  {
-    permittedRole: RoutePermittedRole.User,
-    path: '/dashboards/crypto',
-    element: <Crypto />,
   },
   {
     permittedRole: RoutePermittedRole.User,
