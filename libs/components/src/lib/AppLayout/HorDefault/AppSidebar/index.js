@@ -13,33 +13,31 @@ const AppSidebar = (props) => {
   const { sidebarTextColor } = useSidebarContext();
 
   return (
-    <>
-      <Drawer
-        anchor={props.position}
-        open={props.isNavCollapsed}
-        onClose={props.toggleNavCollapsed}
-        classes={{
-          root: clsx(props.variant),
-          paper: clsx(props.variant),
-        }}
-        style={{ position: 'absolute' }}
-      >
-        <StandardSidebarWrapper className="standard-sidebar">
-          <MainSidebar>
-            <UserInfo color={sidebarTextColor} />
-            <AppScrollbar
-              sx={{
-                py: 2,
-                height: 'calc(100vh - 70px) !important',
-              }}
-              scrollToTop={false}
-            >
-              <VerticalNav routesConfig={props.routesConfig} />
-            </AppScrollbar>
-          </MainSidebar>
-        </StandardSidebarWrapper>
-      </Drawer>
-    </>
+    <Drawer
+      anchor={props.position}
+      open={props.isNavCollapsed}
+      onClose={props.toggleNavCollapsed}
+      classes={{
+        root: clsx(props.variant),
+        paper: clsx(props.variant),
+      }}
+      style={{ position: 'absolute' }}
+    >
+      <StandardSidebarWrapper className='standard-sidebar'>
+        <MainSidebar>
+          <UserInfo color={sidebarTextColor} />
+          <AppScrollbar
+            sx={{
+              py: 2,
+              height: 'calc(100vh - 70px) !important',
+            }}
+            scrollToTop={false}
+          >
+            <VerticalNav routesConfig={props.routesConfig} />
+          </AppScrollbar>
+        </MainSidebar>
+      </StandardSidebarWrapper>
+    </Drawer>
   );
 };
 export default AppSidebar;

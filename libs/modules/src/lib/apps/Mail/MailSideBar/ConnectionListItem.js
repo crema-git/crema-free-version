@@ -29,47 +29,45 @@ const ConnectionListItem = (props) => {
   const { connection } = props;
 
   return (
-    <>
-      <ListItem
-        key={connection.id}
+    <ListItem
+      key={connection.id}
+      sx={{
+        px: 0,
+        cursor: 'pointer',
+      }}
+      alignItems='flex-start'
+    >
+      <ListItemAvatar
         sx={{
-          px: 0,
-          cursor: 'pointer',
+          mt: 0,
+          minWidth: 10,
+          mr: 3.5,
         }}
-        alignItems="flex-start"
       >
-        <ListItemAvatar
+        <Avatar
           sx={{
-            mt: 0,
-            minWidth: 10,
-            mr: 3.5,
+            width: 36,
+            height: 36,
           }}
-        >
-          <Avatar
-            sx={{
-              width: 36,
-              height: 36,
-            }}
-            alt={connection.name}
-            src={connection.image}
-          />
-        </ListItemAvatar>
-        <ListItemTextWrapper
-          primary={
-            <Box
-              component="span"
-              sx={{
-                mb: 0,
-                fontWeight: Fonts.MEDIUM,
-              }}
-            >
-              {connection.name}
-            </Box>
-          }
-          secondary={connection.status}
+          alt={connection.name}
+          src={connection.image}
         />
-      </ListItem>
-    </>
+      </ListItemAvatar>
+      <ListItemTextWrapper
+        primary={
+          <Box
+            component='span'
+            sx={{
+              mb: 0,
+              fontWeight: Fonts.MEDIUM,
+            }}
+          >
+            {connection.name}
+          </Box>
+        }
+        secondary={connection.status}
+      />
+    </ListItem>
   );
 };
 
