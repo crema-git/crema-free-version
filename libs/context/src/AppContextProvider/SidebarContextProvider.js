@@ -1,4 +1,4 @@
-import React, { createContext, useCallback, useContext, useState } from 'react';
+import React, {createContext, useCallback, useContext, useState} from 'react';
 import PropTypes from 'prop-types';
 import defaultConfig from '@crema/constants/defaultConfig';
 
@@ -9,26 +9,26 @@ export const useSidebarContext = () => useContext(SidebarContext);
 
 export const useSidebarActionsContext = () => useContext(SidebarActionsContext);
 
-const SidebarContextProvider = ({ children }) => {
+const SidebarContextProvider = ({children}) => {
   const [menuStyle, updateMenuStyle] = useState(
-    defaultConfig.sidebar.menuStyle
+    defaultConfig.sidebar.menuStyle,
   );
   const [sidebarColorSet, updateSidebarColorSet] = useState(
-    defaultConfig.sidebar.colorSet
+    defaultConfig.sidebar.colorSet,
   );
-  const [isSidebarBgImage, updateImage] = useState(
-    defaultConfig.sidebar.isSidebarBgImage
+  const [allowSidebarBgImage, updateImage] = useState(
+    defaultConfig.sidebar.allowSidebarBgImage,
   );
-  const [sidebarBgImage, setSidebarImage] = useState(
-    defaultConfig.sidebar.sidebarBgImage
+  const [sidebarBgImageId, setSidebarImage] = useState(
+    defaultConfig.sidebar.sidebarBgImageId,
   );
 
-  const setSidebarBgImage = useCallback((isSidebarBgImage) => {
-    updateImage(isSidebarBgImage);
+  const setSidebarBgImage = useCallback((allowSidebarBgImage) => {
+    updateImage(allowSidebarBgImage);
   }, []);
 
-  const updateSidebarBgImage = useCallback((sidebarBgImage) => {
-    setSidebarImage(sidebarBgImage);
+  const updateSidebarBgImage = useCallback((sidebarBgImageId) => {
+    setSidebarImage(sidebarBgImageId);
   }, []);
 
   return (
@@ -36,8 +36,8 @@ const SidebarContextProvider = ({ children }) => {
       value={{
         ...sidebarColorSet,
         menuStyle,
-        isSidebarBgImage,
-        sidebarBgImage,
+        allowSidebarBgImage,
+        sidebarBgImageId,
         borderColor: defaultConfig.sidebar.borderColor,
       }}
     >

@@ -6,7 +6,7 @@ import {
 } from '@crema/services/auth/JWTAuthProvider';
 
 export const useAuthUser = () => {
-  const { user, isAuthenticated, isLoading } = useJWTAuth();
+  const {user, isAuthenticated, isLoading} = useJWTAuth();
   return {
     isLoading,
     isAuthenticated,
@@ -15,7 +15,7 @@ export const useAuthUser = () => {
 };
 
 export const useAuthMethod = () => {
-  const { signInUser, signUpUser, logout } = useJWTAuthActions();
+  const {signInUser, signUpUser, logout} = useJWTAuthActions();
 
   return {
     signInUser,
@@ -29,10 +29,10 @@ import {
   useFirebase,
   useFirebaseActions,
 } from '@crema/services/auth/FirebaseAuthProvider';
-import { getUserFromFirebase } from '@crema/helpers/AuthHelper';
+import {getUserFromFirebase} from '@crema/helpers/AuthHelper';
 
 export const useAuthUser = () => {
-  const { user, isAuthenticated, isLoading } = useFirebase();
+  const {user, isAuthenticated, isLoading} = useFirebase();
   return {
     isLoading,
     isAuthenticated,

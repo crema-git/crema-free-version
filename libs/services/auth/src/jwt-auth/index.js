@@ -1,7 +1,7 @@
 import axios from '@crema/services/axios';
 
 const jwtAxios = axios.create({
-  baseURL: 'https://crema-mongo-api.herokuapp.com/api/', //YOUR_API_URL HERE
+  baseURL: 'https://cremaapi.pythonanywhere.com/api/', //YOUR_API_URL HERE
   headers: {
     'Content-Type': 'application/json',
   },
@@ -14,7 +14,7 @@ jwtAxios.interceptors.response.use(
       // store.dispatch({type: LOGOUT});
     }
     return Promise.reject(err);
-  }
+  },
 );
 export const setAuthToken = (token) => {
   if (token) {

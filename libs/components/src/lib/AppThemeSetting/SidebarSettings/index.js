@@ -1,7 +1,7 @@
 import React from 'react';
 import Box from '@mui/material/Box';
 import Switch from '@mui/material/Switch';
-import { CustomizerItemWrapper } from '../index.style';
+import {CustomizerItemWrapper} from '../index.style';
 import {
   useSidebarActionsContext,
   useSidebarContext,
@@ -10,16 +10,15 @@ import CheckIcon from '@mui/icons-material/Check';
 import NavMenuStyle from './NavMenuStyle';
 import MenuColorCell from './MenuColorCell';
 import AppGrid from '../../AppGrid';
-import { sidebarBgImages, sidebarColors } from '@crema/fakedb/navigationStyle';
+import {sidebarBgImages, sidebarColors} from '@crema/fakedb/navigationStyle';
 
 const SidebarSettings = () => {
-  const { sidebarBgImage, isSidebarBgImage } = useSidebarContext();
+  const {sidebarBgImageId, allowSidebarBgImage} = useSidebarContext();
 
-  const { updateSidebarBgImage, setSidebarBgImage } =
-    useSidebarActionsContext();
+  const {updateSidebarBgImage, setSidebarBgImage} = useSidebarActionsContext();
 
   const onToggleSidebarImage = () => {
-    setSidebarBgImage(!isSidebarBgImage);
+    setSidebarBgImage(!allowSidebarBgImage);
   };
 
   return (
@@ -33,17 +32,17 @@ const SidebarSettings = () => {
           mb: 2.5,
         }}
       >
-        <Box component="h4">Sidebar Images</Box>
-        <Box component="span" sx={{ ml: 'auto' }}>
+        <Box component='h4'>Sidebar Images</Box>
+        <Box component='span' sx={{ml: 'auto'}}>
           <Switch
-            className="customize-switch"
-            checked={isSidebarBgImage}
+            className='customize-switch'
+            checked={allowSidebarBgImage}
             onChange={onToggleSidebarImage}
-            value="checkedA"
+            value='checkedA'
           />
         </Box>
       </Box>
-      {isSidebarBgImage ? (
+      {allowSidebarBgImage ? (
         <Box
           sx={{
             display: 'flex',
@@ -76,8 +75,8 @@ const SidebarSettings = () => {
                   }}
                   onClick={() => updateSidebarBgImage(imagesObj.id)}
                 >
-                  <img src={imagesObj.image} alt="nav" />
-                  {sidebarBgImage === imagesObj.id ? (
+                  <img src={imagesObj.image} alt='nav' />
+                  {sidebarBgImageId === imagesObj.id ? (
                     <Box
                       sx={{
                         position: 'absolute',
@@ -108,7 +107,7 @@ const SidebarSettings = () => {
           })}
         </Box>
       ) : null}
-      <Box component="h4" sx={{ mb: 3 }}>
+      <Box component='h4' sx={{mb: 3}}>
         Sidebar Colors
       </Box>
       <AppGrid

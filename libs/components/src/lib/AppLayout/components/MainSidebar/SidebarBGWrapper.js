@@ -1,17 +1,17 @@
 import React from 'react';
 import PropsTypes from 'prop-types';
 import Box from '@mui/material/Box';
-import { alpha } from '@mui/material';
-import { ThemeMode } from '@crema/constants/AppEnums';
-import { useSidebarContext } from '@crema/context/SidebarContextProvider';
+import {alpha} from '@mui/material';
+import {ThemeMode} from '@crema/constants/AppEnums';
+import {useSidebarContext} from '@crema/context/SidebarContextProvider';
 
-const SidebarBgWrapper = ({ children }) => {
+const SidebarBgWrapper = ({children}) => {
   const {
     sidebarBgColor,
     sidebarTextColor,
     mode,
-    isSidebarBgImage,
-    sidebarBgImage,
+    allowSidebarBgImage,
+    sidebarBgImageId,
   } = useSidebarContext();
   return (
     <Box
@@ -21,17 +21,17 @@ const SidebarBgWrapper = ({ children }) => {
         width: '100%',
         overflow: 'hidden',
         backgroundColor: sidebarBgColor,
-        backgroundImage: isSidebarBgImage
-          ? `url(/assets/images/sidebar/images/${sidebarBgImage}.png)`
+        backgroundImage: allowSidebarBgImage
+          ? `url(/assets/images/sidebar/images/${sidebarBgImageId}.png)`
           : '',
-        backgroundRepeat: isSidebarBgImage ? 'no-repeat' : '',
-        backgroundPosition: isSidebarBgImage ? 'center center' : '',
-        backgroundSize: isSidebarBgImage ? 'cover' : '',
+        backgroundRepeat: allowSidebarBgImage ? 'no-repeat' : '',
+        backgroundPosition: allowSidebarBgImage ? 'center center' : '',
+        backgroundSize: allowSidebarBgImage ? 'cover' : '',
         color: sidebarTextColor,
         // boxShadow: '3px 3px 4px rgba(0, 0, 0, 0.04)',
         '&:before': {
           content: '""',
-          display: isSidebarBgImage ? 'block' : 'none',
+          display: allowSidebarBgImage ? 'block' : 'none',
           position: 'absolute',
           left: 0,
           top: 0,
@@ -58,8 +58,11 @@ export default SidebarBgWrapper;
 
 SidebarBgWrapper.propTypes = {
   children: PropsTypes.node,
-  isSidebarBgImage: PropsTypes.bool,
+  allowSidebarBgImage: PropsTypes.bool,
   themeMode: PropsTypes.string,
   sidebarBgColor: PropsTypes.oneOfType([PropsTypes.string, PropsTypes.number]),
-  sidebarBgImage: PropsTypes.oneOfType([PropsTypes.string, PropsTypes.number]),
+  sidebarBgImageId: PropsTypes.oneOfType([
+    PropsTypes.string,
+    PropsTypes.number,
+  ]),
 };
