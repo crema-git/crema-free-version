@@ -9,7 +9,7 @@ import { Form, Formik } from 'formik';
 import * as yup from 'yup';
 import Grid from '@mui/material/Grid';
 import IconButton from '@mui/material/IconButton';
-import IntlMessages from '@crema/utility/IntlMessages';
+import IntlMessages from '@crema/helpers/IntlMessages';
 import { useIntl } from 'react-intl';
 import Box from '@mui/material/Box';
 import { grey } from '@mui/material/colors';

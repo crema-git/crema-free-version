@@ -1,25 +1,25 @@
-import React, {useState} from 'react';
-import {Form, Formik} from 'formik';
+import React, { useState } from 'react';
+import { Form, Formik } from 'formik';
 import * as yup from 'yup';
 import moment from 'moment';
 import Chip from '@mui/material/Chip';
-import IntlMessages from '@crema/utility/IntlMessages';
-import {useIntl} from 'react-intl';
+import IntlMessages from '@crema/helpers/IntlMessages';
+import { useIntl } from 'react-intl';
 import Box from '@mui/material/Box';
 import PropTypes from 'prop-types';
 import Button from '@mui/material/Button';
-import {useAuthUser} from '@crema/utility/AuthHooks';
+import { useAuthUser } from '@crema/hooks/AuthHooks';
 import AppTextField from '@crema/components/AppTextField';
 import AppDialog from '@crema/components/AppDialog';
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
-import {blue} from '@mui/material/colors';
-import {Fonts} from '@crema/constants/AppEnums'
+import { blue } from '@mui/material/colors';
+import { Fonts } from '@crema/constants/AppEnums';
 
-import {styled} from '@mui/material/styles';
+import { styled } from '@mui/material/styles';
 import AppInfoView from '@crema/components/AppInfoView';
-import {postDataApi} from '@crema/utility/APIHooks';
-import {useInfoViewActionsContext} from '@crema/context/InfoViewContextProvider';
+import { postDataApi } from '@crema/hooks/APIHooks';
+import { useInfoViewActionsContext } from '@crema/context/InfoViewContextProvider';
 
 const ReactQuillWrapper = styled(ReactQuill)(() => {
   return {
@@ -59,14 +59,14 @@ export const isValidEmail = (value) => {
 const validationSchema = yup.object({
   to: yup
     .string()
-    .email(<IntlMessages id='validation.emailFormat' />)
-    .required(<IntlMessages id='validation.emailRequired' />),
-  cc: yup.string().email(<IntlMessages id='validation.emailFormat' />),
-  bcc: yup.string().email(<IntlMessages id='validation.emailFormat' />),
+    .email(<IntlMessages id="validation.emailFormat" />)
+    .required(<IntlMessages id="validation.emailRequired" />),
+  cc: yup.string().email(<IntlMessages id="validation.emailFormat" />),
+  bcc: yup.string().email(<IntlMessages id="validation.emailFormat" />),
 });
 
 const ComposeMail = (props) => {
-  const {isComposeMail, onCloseComposeMail} = props;
+  const { isComposeMail, onCloseComposeMail } = props;
   const infoViewActionsContext = useInfoViewActionsContext();
   const [isShowBcc, onShowBcc] = useState(false);
 
@@ -80,9 +80,9 @@ const ComposeMail = (props) => {
     }
   };
 
-  const {user} = useAuthUser();
+  const { user } = useAuthUser();
 
-  const {messages} = useIntl();
+  const { messages } = useIntl();
 
   return (
     <AppDialog
@@ -98,7 +98,7 @@ const ComposeMail = (props) => {
       dividers
       open={isComposeMail}
       onClose={() => onCloseComposeMail(false)}
-      title={<IntlMessages id='mailApp.compose' />}
+      title={<IntlMessages id="mailApp.compose" />}
     >
       <Formik
         initialValues={{
@@ -109,7 +109,7 @@ const ComposeMail = (props) => {
           content: '',
         }}
         validationSchema={validationSchema}
-        onSubmit={(data, {setSubmitting, resetForm}) => {
+        onSubmit={(data, { setSubmitting, resetForm }) => {
           const mail = {
             id: Math.floor(Math.random()) * 1000,
             isChecked: false,
@@ -150,7 +150,7 @@ const ComposeMail = (props) => {
             subject: data.subject !== '' ? data.subject : 'No Subject',
           };
           console.log('Success:', mail);
-          postDataApi('/api/mailApp/compose', infoViewActionsContext, {mail})
+          postDataApi('/api/mailApp/compose', infoViewActionsContext, { mail })
             .then(() => {
               infoViewActionsContext.showMessage('Mail Sent Successfully');
               onCloseComposeMail(false);
@@ -163,7 +163,7 @@ const ComposeMail = (props) => {
             });
         }}
       >
-        {({isSubmitting, values, setFieldValue}) => (
+        {({ isSubmitting, values, setFieldValue }) => (
           <Form
             style={{
               width: '100%',
@@ -171,7 +171,7 @@ const ComposeMail = (props) => {
               flexDirection: 'column',
             }}
             noValidate
-            autoComplete='off'
+            autoComplete="off"
           >
             <Box
               sx={{
@@ -181,12 +181,12 @@ const ComposeMail = (props) => {
               <CcBccFieldWrapper>
                 {!isShowChip ? (
                   <AppTextField
-                    className='ccBccTextField'
+                    className="ccBccTextField"
                     fullWidth
                     label={messages['common.to']}
-                    variant='outlined'
-                    margin='normal'
-                    name='to'
+                    variant="outlined"
+                    margin="normal"
+                    name="to"
                     onBlur={() => handleBlur(values.to)}
                   />
                 ) : (
@@ -194,31 +194,31 @@ const ComposeMail = (props) => {
                     label={values.to}
                     color={isValidEmail(values.to) ? '' : 'secondary'}
                     onDelete={() => onShowChip(false)}
-                    variant='outlined'
+                    variant="outlined"
                   />
                 )}
 
-                <div className='ccBccView'>
+                <div className="ccBccView">
                   <Box
-                    component='span'
+                    component="span"
                     sx={{
                       ml: 4,
                       cursor: 'pointer',
                     }}
                     onClick={() => onShowCC(!isShowCC)}
                   >
-                    <IntlMessages id='common.cc' />
+                    <IntlMessages id="common.cc" />
                   </Box>
 
                   <Box
-                    component='span'
+                    component="span"
                     sx={{
                       ml: 4,
                       cursor: 'pointer',
                     }}
                     onClick={() => onShowBcc(!isShowBcc)}
                   >
-                    <IntlMessages id='common.bcc' />
+                    <IntlMessages id="common.bcc" />
                   </Box>
                 </div>
               </CcBccFieldWrapper>
@@ -230,12 +230,12 @@ const ComposeMail = (props) => {
                   }}
                 >
                   <AppTextField
-                    variant='outlined'
+                    variant="outlined"
                     label={messages['common.cc']}
                     placeholder={messages['common.cc']}
                     fullWidth
-                    margin='normal'
-                    name='cc'
+                    margin="normal"
+                    name="cc"
                   />
                 </Box>
               ) : null}
@@ -247,12 +247,12 @@ const ComposeMail = (props) => {
                   }}
                 >
                   <AppTextField
-                    variant='outlined'
+                    variant="outlined"
                     label={messages['common.bcc']}
                     placeholder={messages['common.bcc']}
                     fullWidth
-                    margin='normal'
-                    name='bcc'
+                    margin="normal"
+                    name="bcc"
                   />
                 </Box>
               ) : null}
@@ -262,12 +262,12 @@ const ComposeMail = (props) => {
                 }}
               >
                 <AppTextField
-                  variant='outlined'
+                  variant="outlined"
                   placeholder={messages['common.subject']}
                   label={messages['common.subject']}
                   fullWidth
-                  margin='normal'
-                  name='subject'
+                  margin="normal"
+                  name="subject"
                 />
               </Box>
 
@@ -277,7 +277,7 @@ const ComposeMail = (props) => {
                 }}
               >
                 <ReactQuillWrapper
-                  theme='snow'
+                  theme="snow"
                   placeholder={messages['common.writeContent']}
                   onChange={(value) => setFieldValue('content', value)}
                 />
@@ -295,12 +295,12 @@ const ComposeMail = (props) => {
                   position: 'relative',
                   minWidth: 100,
                 }}
-                variant='outlined'
-                color='primary'
-                type='submit'
+                variant="outlined"
+                color="primary"
+                type="submit"
                 disabled={isSubmitting}
               >
-                <IntlMessages id='common.send' />
+                <IntlMessages id="common.send" />
               </Button>
             </Box>
           </Form>

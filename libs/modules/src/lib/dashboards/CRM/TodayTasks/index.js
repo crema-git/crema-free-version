@@ -3,7 +3,7 @@ import TaskList from './TaskList';
 import Link from '@mui/material/Link';
 import Grid from '@mui/material/Grid';
 import DateSelector from './DateSelector';
-import IntlMessages from '@crema/utility/IntlMessages';
+import IntlMessages from '@crema/helpers/IntlMessages';
 import Hidden from '@mui/material/Hidden';
 import Box from '@mui/material/Box';
 import PropTypes from 'prop-types';

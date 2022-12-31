@@ -3,7 +3,7 @@ import TextField from '@mui/material/TextField';
 import Divider from '@mui/material/Divider';
 import InputAdornment from '@mui/material/InputAdornment';
 import SearchIcon from '@mui/icons-material/Search';
-import IntlMessages from '@crema/utility/IntlMessages';
+import IntlMessages from '@crema/helpers/IntlMessages';
 import { useIntl } from 'react-intl';
 import Box from '@mui/material/Box';
 import { Fonts } from '@crema/constants/AppEnums';

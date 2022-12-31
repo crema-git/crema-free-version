@@ -12,7 +12,7 @@ import { styled } from '@mui/material/styles';
 import { darken } from '@mui/material';
 import { generateUniqueID } from '@crema/helpers';
 import { useInfoViewActionsContext } from '@crema/context/InfoViewContextProvider';
-import { postDataApi } from '@crema/utility/APIHooks';
+import { postDataApi } from '@crema/hooks/APIHooks';
 import { MessageType } from '@crema/fakedb/chat/connectionList';
 
 const AddCommentWrapper = styled('div')(({ theme }) => ({

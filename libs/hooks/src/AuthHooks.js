@@ -1,12 +1,12 @@
-// ForJWT Auth
-/*import { getUserFromJwtAuth } from '@crema/helpers';
+/*// ForJWT Auth
+import { getUserFromJwtAuth } from '@crema/helpers/AuthHelper';
 import {
   useJWTAuth,
   useJWTAuthActions,
-} from "@crema/services/auth/JWTAuthProvider";
+} from '@crema/services/auth/JWTAuthProvider';
 
 export const useAuthUser = () => {
-  const { user, isAuthenticated, isLoading } = useJWTAuth();
+  const {user, isAuthenticated, isLoading} = useJWTAuth();
   return {
     isLoading,
     isAuthenticated,
@@ -15,7 +15,7 @@ export const useAuthUser = () => {
 };
 
 export const useAuthMethod = () => {
-  const { signInUser, signUpUser, logout } = useJWTAuthActions();
+  const {signInUser, signUpUser, logout} = useJWTAuthActions();
 
   return {
     signInUser,
@@ -29,10 +29,10 @@ import {
   useFirebase,
   useFirebaseActions,
 } from '@crema/services/auth/FirebaseAuthProvider';
-import { getUserFromFirebase } from '@crema/helpers';
+import {getUserFromFirebase} from '@crema/helpers/AuthHelper';
 
 export const useAuthUser = () => {
-  const { user, isAuthenticated, isLoading } = useFirebase();
+  const {user, isAuthenticated, isLoading} = useFirebase();
   return {
     isLoading,
     isAuthenticated,
@@ -57,14 +57,14 @@ export const useAuthMethod = () => {
 };
 /*
 // For AWS Auth
-import {getUserFromAWS} from '@crema/helpers';
+import { getUserFromAWS } from '@crema/helpers/AuthHelper';
 import {
   useAwsCognito,
   useAwsCognitoActions,
 } from '@crema/services/auth/AWSAuthProvider';
 
 export const useAuthUser = () => {
-  const {auth, user, isAuthenticated, isLoading} = useAwsCognito();
+  const { auth, user, isAuthenticated, isLoading } = useAwsCognito();
   return {
     auth,
     isLoading,
@@ -74,12 +74,8 @@ export const useAuthUser = () => {
 };
 
 export const useAuthMethod = () => {
-  const {
-    signIn,
-    signUpCognitoUser,
-    confirmCognitoUserSignup,
-    logout,
-  } = useAwsCognitoActions();
+  const { signIn, signUpCognitoUser, confirmCognitoUserSignup, logout } =
+    useAwsCognitoActions();
 
   return {
     signIn,
@@ -91,9 +87,9 @@ export const useAuthMethod = () => {
 /*
 
 //For Auth0
-import { useAuth0 } from "@auth0/auth0-react";
-import { useMemo } from "react";
-import { getUserFromAuth0 } from "./helper/AuthHelper";
+import { useAuth0 } from '@auth0/auth0-react';
+import { useMemo } from 'react';
+import { getUserFromAuth0 } from '@crema/helpers/AuthHelper';
 
 export const useAuthUser = () => {
   const { user, isAuthenticated, isLoading } = useAuth0();

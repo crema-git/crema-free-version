@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import DealsTable from './DealsTable';
-import IntlMessages from '@crema/utility/IntlMessages';
+import IntlMessages from '@crema/helpers/IntlMessages';
 import { useIntl } from 'react-intl';
 import Box from '@mui/material/Box';
 import PropTypes from 'prop-types';

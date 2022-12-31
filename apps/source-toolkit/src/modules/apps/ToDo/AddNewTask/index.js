@@ -4,11 +4,11 @@ import * as yup from 'yup';
 import { onCreateTask } from '@crema/redux-toolkit/actions';
 import { useDispatch } from 'react-redux';
 import moment from 'moment';
-import IntlMessages from '@crema/utility/IntlMessages';
+import IntlMessages from '@crema/helpers/IntlMessages';
 import AddTaskForm from './AddTaskForm';
 import PropTypes from 'prop-types';
 import AppDialog from '@crema/components/AppDialog';
-import { useAuthUser } from '@crema/utility/AuthHooks';
+import { useAuthUser } from '@crema/hooks/AuthHooks';
 
 const validationSchema = yup.object({
   title: yup.string().required(<IntlMessages id="validation.titleRequired" />),

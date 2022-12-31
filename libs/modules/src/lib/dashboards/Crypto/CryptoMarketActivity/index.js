@@ -1,6 +1,6 @@
 import React from 'react';
 import MarketGraph from './MarketGraph';
-import IntlMessages from '@crema/utility/IntlMessages';
+import IntlMessages from '@crema/helpers/IntlMessages';
 import { Box } from '@mui/material';
 import PropTypes from 'prop-types';
 import { indigo, red, teal } from '@mui/material/colors';

@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Box, Grid } from '@mui/material';
 import AppCard from '@crema/components/AppCard';
-import IntlMessages from '@crema/utility/IntlMessages';
+import IntlMessages from '@crema/helpers/IntlMessages';
 import { Fonts } from '@crema/constants/AppEnums';
 
 import AppAnimate from '@crema/components/AppAnimate';

@@ -5,14 +5,14 @@ import Box from '@mui/material/Box';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import AppsStarredIcon from '@crema/components/AppsStarredIcon';
-import { Fonts } from '@crema/constants/AppEnums';
+import {Fonts} from '@crema/constants/AppEnums';
 import LabelOutlinedIcon from '@mui/icons-material/LabelOutlined';
-import { blue } from '@mui/material/colors';
+import {blue} from '@mui/material/colors';
 
-import { styled } from '@mui/material/styles';
-import { alpha } from '@mui/material';
+import {styled} from '@mui/material/styles';
+import {alpha} from '@mui/material';
 
-const ContactListItemWrapper = styled(ListItem)(({ theme }) => {
+const ContactListItemWrapper = styled(ListItem)(({theme}) => {
   return {
     display: 'flex',
     flexDirection: 'row',
@@ -52,101 +52,99 @@ const ContactListItemMobile = ({
   };
 
   return (
-    <>
-      <ContactListItemWrapper
-        dense
-        button
-        key={contact.id}
-        className={clsx('item-hover', {
-          rootCheck: checkedContacts.includes(contact.id),
-        })}
-        onClick={() => onViewContactDetail(contact)}
+    <ContactListItemWrapper
+      dense
+      button
+      key={contact.id}
+      className={clsx('item-hover', {
+        rootCheck: checkedContacts.includes(contact.id),
+      })}
+      onClick={() => onViewContactDetail(contact)}
+    >
+      <Box
+        sx={{
+          width: {xs: '75%', sm: '80%', md: '50%'},
+          display: 'flex',
+          alignItems: 'center',
+        }}
+        className='contactViewLeft'
       >
         <Box
           sx={{
-            width: { xs: '75%', sm: '80%', md: '50%' },
-            display: 'flex',
-            alignItems: 'center',
+            mr: 3,
+            mt: 1,
           }}
-          className="contactViewLeft"
+          component='span'
         >
+          {contact.image ? (
+            <Avatar
+              sx={{
+                backgroundColor: blue[500],
+                width: 36,
+                height: 36,
+              }}
+              src={contact.image}
+            />
+          ) : (
+            <Avatar
+              sx={{
+                backgroundColor: blue[500],
+                width: 36,
+                height: 36,
+              }}
+            >
+              {contact.name[0].toUpperCase()}
+            </Avatar>
+          )}
+        </Box>
+        <Box sx={{mr: 3, overflow: 'hidden'}}>
           <Box
             sx={{
-              mr: 3,
-              mt: 1,
+              fontWeight: Fonts.MEDIUM,
+              overflow: 'hidden',
+              textOverflow: 'ellipsis',
+              whiteSpace: 'nowrap',
             }}
-            component="span"
+            component='p'
           >
-            {contact.image ? (
-              <Avatar
-                sx={{
-                  backgroundColor: blue[500],
-                  width: 36,
-                  height: 36,
-                }}
-                src={contact.image}
-              />
-            ) : (
-              <Avatar
-                sx={{
-                  backgroundColor: blue[500],
-                  width: 36,
-                  height: 36,
-                }}
-              >
-                {contact.name[0].toUpperCase()}
-              </Avatar>
-            )}
+            {contact.name}
           </Box>
-          <Box sx={{ mr: 3, overflow: 'hidden' }}>
-            <Box
-              sx={{
-                fontWeight: Fonts.MEDIUM,
-                overflow: 'hidden',
-                textOverflow: 'ellipsis',
-                whiteSpace: 'nowrap',
-              }}
-              component="p"
-            >
-              {contact.name}
-            </Box>
 
-            <Box
-              component="p"
-              sx={{
-                color: 'text.secondary',
-                overflow: 'hidden',
-                textOverflow: 'ellipsis',
-                whiteSpace: 'nowrap',
-              }}
-            >
-              {contact.contact}
-            </Box>
+          <Box
+            component='p'
+            sx={{
+              color: 'text.secondary',
+              overflow: 'hidden',
+              textOverflow: 'ellipsis',
+              whiteSpace: 'nowrap',
+            }}
+          >
+            {contact.contact}
           </Box>
         </Box>
+      </Box>
 
-        <Box
-          sx={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'flex-end',
-            width: { xs: '25%', sm: '20%', md: '50%' },
-          }}
-        >
-          <span>
-            <LabelOutlinedIcon
-              style={{ color: `${onGetLabelColor(contact.label)}` }}
-              sx={{
-                ml: 2,
-              }}
-            />
-          </span>
-          <span onClick={(event) => event.stopPropagation()}>
-            <AppsStarredIcon item={contact} onChange={onChangeStarred} />
-          </span>
-        </Box>
-      </ContactListItemWrapper>
-    </>
+      <Box
+        sx={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'flex-end',
+          width: {xs: '25%', sm: '20%', md: '50%'},
+        }}
+      >
+        <span>
+          <LabelOutlinedIcon
+            style={{color: `${onGetLabelColor(contact.label)}`}}
+            sx={{
+              ml: 2,
+            }}
+          />
+        </span>
+        <span onClick={(event) => event.stopPropagation()}>
+          <AppsStarredIcon item={contact} onChange={onChangeStarred} />
+        </span>
+      </Box>
+    </ContactListItemWrapper>
   );
 };
 

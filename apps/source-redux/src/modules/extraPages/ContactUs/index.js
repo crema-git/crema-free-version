@@ -5,7 +5,7 @@ import AppAnimate from '@crema/components/AppAnimate';
 import Box from '@mui/material/Box';
 import { Formik } from 'formik';
 import * as yup from 'yup';
-import IntlMessages from '@crema/utility/IntlMessages';
+import IntlMessages from '@crema/helpers/IntlMessages';
 import AppCard from '@crema/components/AppCard';
 import {
   ContactUsForm,

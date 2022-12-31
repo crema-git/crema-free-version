@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import AppBadge from '@crema/components/AppBadge';
 import AppNavLink from '@crema/components/AppNavLink';
 import Box from '@mui/material/Box';
-import IntlMessages from '@crema/utility/IntlMessages';
+import IntlMessages from '@crema/helpers/IntlMessages';
 import useStyles from './VerticalItem.style';
 import { useSelector } from 'react-redux';
 import { checkPermission } from '@crema/helpers';

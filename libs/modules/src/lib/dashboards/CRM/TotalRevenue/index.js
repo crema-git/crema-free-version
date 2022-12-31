@@ -1,6 +1,6 @@
 import React from 'react';
 import RevenueGraph from './RevenueGraph';
-import IntlMessages from '@crema/utility/IntlMessages';
+import IntlMessages from '@crema/helpers/IntlMessages';
 import { alpha, Box } from '@mui/material';
 import PropTypes from 'prop-types';
 import { Fonts } from '@crema/constants/AppEnums';

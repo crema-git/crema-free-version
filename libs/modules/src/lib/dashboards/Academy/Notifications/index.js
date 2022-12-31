@@ -3,7 +3,6 @@ import AppCard from '@crema/components/AppCard';
 import AppList from '@crema/components/AppList';
 import Box from '@mui/material/Box';
 import { Fonts } from '@crema/constants/AppEnums';
-//import {timeFromNow} from '@crema/utility/utils';
 import { useIntl } from 'react-intl';
 import PropTypes from 'prop-types';
 

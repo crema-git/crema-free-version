@@ -5,12 +5,13 @@ import clsx from 'clsx';
 import PropTypes from 'prop-types';
 import VerticalItem from '../VerticalItem';
 import Box from '@mui/material/Box';
-import IntlMessages from '@crema/utility/IntlMessages';
+import IntlMessages from '@crema/helpers/IntlMessages';
 import { checkPermission } from '@crema/helpers';
-import { useAuthUser } from '@crema/utility/AuthHooks';
+import { useAuthUser } from '@crema/hooks/AuthHooks';
 import { useThemeContext } from '@crema/context/ThemeContextProvider';
 import { useSidebarContext } from '@crema/context/SidebarContextProvider';
 import VerticalCollapseItem from './VerticalCollapseItem';
+import { allowMultiLanguage } from '@crema/constants/AppConst';
 
 const needsToBeOpened = (pathname, item) => {
   return pathname && isUrlInChildren(item, pathname);
@@ -95,7 +96,13 @@ const VerticalCollapse = ({ item, level }) => {
           }}
           className="nav-item-content"
           classes={{ primary: clsx('nav-item-text') }}
-          primary={<IntlMessages id={item.messageId} />}
+          primary={
+            allowMultiLanguage ? (
+              <IntlMessages id={item.messageId} />
+            ) : (
+              item.title
+            )
+          }
         />
         <IconButton
           className="nav-item-icon-arrow-btn"

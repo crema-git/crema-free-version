@@ -6,9 +6,9 @@ import * as yup from 'yup';
 
 import AppInfoView from '@crema/components/AppInfoView';
 import Box from '@mui/material/Box';
-import IntlMessages from '@crema/utility/IntlMessages';
+import IntlMessages from '@crema/helpers/IntlMessages';
 import AppTextField from '@crema/components/AppTextField';
-import { useAuthMethod } from '@crema/utility/AuthHooks';
+import { useAuthMethod } from '@crema/hooks/AuthHooks';
 import { Fonts } from '@crema/constants/AppEnums';
 import { Link } from 'react-router-dom';
 import AuthWrapper from '../AuthWrapper';

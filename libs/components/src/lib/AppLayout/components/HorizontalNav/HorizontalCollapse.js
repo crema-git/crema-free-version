@@ -14,11 +14,12 @@ import * as ReactDOM from 'react-dom';
 import HorizontalItem from './HorizontalItem';
 import HorizontalGroup from './HorizontalGroup';
 import Box from '@mui/material/Box';
-import IntlMessages from '@crema/utility/IntlMessages';
+import IntlMessages from '@crema/helpers/IntlMessages';
 import { useThemeContext } from '@crema/context/ThemeContextProvider';
 import List from '@mui/material/List';
 import { useSidebarContext } from '@crema/context/SidebarContextProvider';
 import { useLocation } from 'react-router-dom';
+import { allowMultiLanguage } from '@crema/constants/AppConst';
 
 function HorizontalCollapse(props) {
   const [opened, setOpened] = useState(false);
@@ -113,7 +114,13 @@ function HorizontalCollapse(props) {
               )}
               <ListItemText
                 className="navLinkTextSubmenu"
-                primary={<IntlMessages id={item.messageId} />}
+                primary={
+                  allowMultiLanguage ? (
+                    <IntlMessages id={item.messageId} />
+                  ) : (
+                    item.title
+                  )
+                }
               />
               <Box p={0}>
                 <IconButton disableRipple>

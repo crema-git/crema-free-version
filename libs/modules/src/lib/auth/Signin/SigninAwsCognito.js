@@ -4,14 +4,14 @@ import * as yup from 'yup';
 import { Link, useNavigate } from 'react-router-dom';
 import { useIntl } from 'react-intl';
 import AppTextField from '@crema/components/AppTextField';
-import IntlMessages from '@crema/utility/IntlMessages';
+import IntlMessages from '@crema/helpers/IntlMessages';
 import Box from '@mui/material/Box';
 import Checkbox from '@mui/material/Checkbox';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import AppInfoView from '@crema/components/AppInfoView';
 
-import { useAuthMethod, useAuthUser } from '@crema/utility/AuthHooks';
+import { useAuthMethod, useAuthUser } from '@crema/hooks/AuthHooks';
 import { Fonts } from '@crema/constants/AppEnums';
 import { AiOutlineGoogle } from 'react-icons/ai';
 import { FaFacebookF } from 'react-icons/fa';

@@ -7,7 +7,7 @@ import { useIntl } from 'react-intl';
 import { Fonts } from '@crema/constants/AppEnums';
 import PropTypes from 'prop-types';
 import AppTextField from '@crema/components/AppTextField';
-import IntlMessages from '@crema/utility/IntlMessages';
+import IntlMessages from '@crema/helpers/IntlMessages';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';

@@ -3,7 +3,7 @@ import Box from '@mui/material/Box';
 import AppsContainer from '@crema/components/AppsContainer';
 import BoardDetailView from './BoardDetailView';
 import { useNavigate, useParams } from 'react-router-dom';
-import { useGetDataApi } from '@crema/utility/APIHooks';
+import { useGetDataApi } from '@crema/hooks/APIHooks';
 
 const BoardDetail = () => {
   const navigate = useNavigate();

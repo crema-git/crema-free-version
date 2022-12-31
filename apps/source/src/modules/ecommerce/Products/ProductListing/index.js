@@ -6,7 +6,7 @@ import { alpha, Box, Hidden } from '@mui/material';
 import { useThemeContext } from '@crema/context/ThemeContextProvider';
 import AppsFooter from '@crema/components/AppsFooter';
 import AppsPagination from '@crema/components/AppsPagination';
-import { useGetDataApi } from '@crema/utility/APIHooks';
+import { useGetDataApi } from '@crema/hooks/APIHooks';
 import {
   ProductGrid,
   ProductHeader,

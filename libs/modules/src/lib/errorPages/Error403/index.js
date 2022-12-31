@@ -7,7 +7,7 @@ import { grey } from '@mui/material/colors';
 import { Fonts } from '@crema/constants/AppEnums';
 import { initialUrl } from '@crema/constants/AppConst';
 import AppAnimate from '@crema/components/AppAnimate';
-import IntlMessages from '@crema/utility/IntlMessages';
+import IntlMessages from '@crema/helpers/IntlMessages';
 import { ReactComponent as Logo } from '../../../assets/icon/403.svg';
 import { useTheme } from '@mui/material';
 

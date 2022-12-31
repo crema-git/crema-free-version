@@ -2,7 +2,7 @@ import React from 'react';
 import EditOutlinedIcon from '@mui/icons-material/EditOutlined';
 import PhotoCameraOutlinedIcon from '@mui/icons-material/PhotoCameraOutlined';
 import SearchIcon from '@mui/icons-material/Search';
-import IntlMessages from '../../../../../utility/src/IntlMessages';
+import IntlMessages from '@crema/helpers/IntlMessages';
 import { blue, red, teal } from '@mui/material/colors';
 
 export const aboutUsData = [

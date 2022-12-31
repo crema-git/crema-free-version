@@ -6,7 +6,7 @@ import AppAnimate from '@crema/components/AppAnimate';
 import PropTypes from 'prop-types';
 import { useParams } from 'react-router-dom';
 import AppInfoView from '@crema/components/AppInfoView';
-import { useGetDataApi } from '@crema/utility/APIHooks';
+import { useGetDataApi } from '@crema/hooks/APIHooks';
 import {
   Header,
   ProductImageSlide,

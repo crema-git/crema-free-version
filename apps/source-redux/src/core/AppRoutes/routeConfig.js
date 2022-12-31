@@ -33,6 +33,7 @@ import {
   AiOutlineLayout,
   AiOutlineUnorderedList,
 } from 'react-icons/ai';
+import { RoutePermittedRole } from '@crema/constants/AppConst';
 
 const routesConfig = [
   {
@@ -46,6 +47,7 @@ const routesConfig = [
         title: 'Crypto',
         messageId: 'sidebar.app.dashboard.crypto',
         type: 'item',
+        permittedRole: [RoutePermittedRole.Admin, RoutePermittedRole.User],
         icon: <BsCurrencyBitcoin />,
         url: '/dashboards/crypto',
       },
@@ -54,6 +56,7 @@ const routesConfig = [
         title: 'CRM',
         messageId: 'sidebar.app.dashboard.crm',
         type: 'item',
+        permittedRole: [RoutePermittedRole.User],
         icon: <RiCustomerService2Line />,
         url: '/dashboards/crm',
       },
@@ -62,6 +65,7 @@ const routesConfig = [
         title: 'Analytics',
         messageId: 'sidebar.app.dashboard.analytics',
         type: 'item',
+        permittedRole: [RoutePermittedRole.User],
         icon: <MdOutlineAnalytics />,
         url: '/dashboards/analytics',
       },
@@ -70,6 +74,7 @@ const routesConfig = [
         title: 'Health Care',
         messageId: 'sidebar.healthCare',
         type: 'item',
+        permittedRole: [RoutePermittedRole.User],
         icon: <FaRegHospital />,
         url: '/dashboards/health-care',
       },
@@ -78,6 +83,7 @@ const routesConfig = [
         title: 'E-Commerce',
         messageId: 'sidebar.app.dashboard.eCommerce',
         type: 'item',
+        permittedRole: [RoutePermittedRole.User],
         icon: <BsCart4 />,
         url: '/dashboards/e-commerce',
       },
@@ -86,6 +92,7 @@ const routesConfig = [
         title: 'Academy',
         messageId: 'sidebar.app.dashboard.academy',
         type: 'item',
+        permittedRole: [RoutePermittedRole.User],
         icon: <HiOutlineAcademicCap />,
         url: '/dashboards/academy',
       },
@@ -94,6 +101,7 @@ const routesConfig = [
         title: 'Metrics',
         messageId: 'sidebar.app.metrics',
         type: 'item',
+        permittedRole: [RoutePermittedRole.User],
         icon: <HiOutlineChartSquareBar />,
         url: '/dashboards/metrics',
       },
@@ -102,6 +110,7 @@ const routesConfig = [
         title: 'Widgets',
         messageId: 'sidebar.app.widgets',
         type: 'item',
+        permittedRole: [RoutePermittedRole.User],
         icon: <RiDashboardLine />,
         url: '/dashboards/widgets',
       },
@@ -118,6 +127,7 @@ const routesConfig = [
         title: 'Mail',
         messageId: 'sidebar.apps.mail',
         type: 'item',
+        permittedRole: [RoutePermittedRole.User],
         count: 4,
         icon: 'mail_outline',
         url: '/apps/mail',
@@ -127,6 +137,7 @@ const routesConfig = [
         title: 'ToDo',
         messageId: 'sidebar.apps.todo',
         type: 'item',
+        permittedRole: [RoutePermittedRole.User],
         count: 6,
         icon: <RiTodoLine />,
         color: '#48bb78',
@@ -137,6 +148,7 @@ const routesConfig = [
         title: 'Contact',
         messageId: 'sidebar.apps.contact',
         type: 'item',
+        permittedRole: [RoutePermittedRole.User],
         icon: <MdOutlineContactPhone />,
         url: '/apps/contact',
       },
@@ -145,6 +157,7 @@ const routesConfig = [
         title: 'Chat',
         messageId: 'sidebar.apps.chat',
         type: 'item',
+        permittedRole: [RoutePermittedRole.User],
         icon: <BsChatDots />,
         url: '/apps/chat',
       },
@@ -153,6 +166,7 @@ const routesConfig = [
         title: 'Scrum Board',
         messageId: 'sidebar.apps.scrumboard',
         type: 'item',
+        permittedRole: [RoutePermittedRole.User],
         icon: <MdOutlineDns />,
         url: '/apps/scrum-board',
       },
@@ -161,6 +175,7 @@ const routesConfig = [
         title: 'Wall',
         messageId: 'sidebar.apps.wall',
         type: 'item',
+        permittedRole: [RoutePermittedRole.User],
         icon: <CgFeed />,
         url: '/apps/wall',
       },
@@ -176,6 +191,7 @@ const routesConfig = [
             title: 'Products',
             messageId: 'sidebar.ecommerce.products',
             type: 'item',
+            permittedRole: [RoutePermittedRole.User],
             url: '/ecommerce/products',
           },
           {
@@ -183,6 +199,7 @@ const routesConfig = [
             title: 'Product Detail',
             messageId: 'sidebar.ecommerce.productDetail',
             type: 'item',
+            permittedRole: [RoutePermittedRole.User],
             url: '/ecommerce/product_detail',
           },
           {
@@ -190,6 +207,7 @@ const routesConfig = [
             title: 'Orders',
             messageId: 'sidebar.ecommerce.orders',
             type: 'item',
+            permittedRole: [RoutePermittedRole.User],
             url: '/ecommerce/orders',
           },
           {
@@ -197,6 +215,7 @@ const routesConfig = [
             title: 'Customers',
             messageId: 'sidebar.ecommerce.customers',
             type: 'item',
+            permittedRole: [RoutePermittedRole.User],
             url: '/ecommerce/customers',
           },
           {
@@ -204,6 +223,7 @@ const routesConfig = [
             title: 'Cart',
             messageId: 'sidebar.ecommerce.cart',
             type: 'item',
+            permittedRole: [RoutePermittedRole.User],
             url: '/ecommerce/cart',
           },
           {
@@ -211,6 +231,7 @@ const routesConfig = [
             title: 'Checkout',
             messageId: 'sidebar.ecommerce.checkout',
             type: 'item',
+            permittedRole: [RoutePermittedRole.User],
             url: '/ecommerce/checkout',
           },
           {
@@ -218,6 +239,7 @@ const routesConfig = [
             title: 'Confirmation',
             messageId: 'sidebar.ecommerce.confirmation',
             type: 'item',
+            permittedRole: [RoutePermittedRole.User],
             url: '/ecommerce/confirmation',
           },
           {
@@ -225,6 +247,7 @@ const routesConfig = [
             title: 'Invoice 1',
             messageId: 'sidebar.ecommerce.invoice1',
             type: 'item',
+            permittedRole: [RoutePermittedRole.User],
             url: '/ecommerce/invoice-1',
           },
           {
@@ -232,6 +255,7 @@ const routesConfig = [
             title: 'Invoice 2',
             messageId: 'sidebar.ecommerce.invoice2',
             type: 'item',
+            permittedRole: [RoutePermittedRole.User],
             url: '/ecommerce/invoice-2',
           },
         ],
@@ -256,6 +280,7 @@ const routesConfig = [
             title: 'Autocomplete',
             messageId: 'sidebar.mui.inputs.autocomplete',
             type: 'item',
+            permittedRole: [RoutePermittedRole.User],
             url: '/mui/inputs/autocomplete',
           },
           {
@@ -263,6 +288,7 @@ const routesConfig = [
             title: 'Buttons',
             messageId: 'sidebar.mui.inputs.buttons',
             type: 'item',
+            permittedRole: [RoutePermittedRole.User],
             url: '/mui/inputs/buttons',
           },
           {
@@ -270,6 +296,7 @@ const routesConfig = [
             title: 'Button Group',
             messageId: 'sidebar.mui.inputs.buttonGroup',
             type: 'item',
+            permittedRole: [RoutePermittedRole.User],
             url: '/mui/inputs/button-group',
           },
           {
@@ -277,6 +304,7 @@ const routesConfig = [
             title: 'Checkboxes',
             messageId: 'sidebar.mui.inputs.checkboxes',
             type: 'item',
+            permittedRole: [RoutePermittedRole.User],
             url: '/mui/inputs/checkboxes',
           },
           {
@@ -284,6 +312,7 @@ const routesConfig = [
             title: 'Fab',
             messageId: 'sidebar.mui.inputs.fab',
             type: 'item',
+            permittedRole: [RoutePermittedRole.User],
             url: '/mui/inputs/floating-action-button',
           },
           {
@@ -291,6 +320,7 @@ const routesConfig = [
             title: 'Radio Button',
             messageId: 'sidebar.mui.inputs.radio',
             type: 'item',
+            permittedRole: [RoutePermittedRole.User],
             url: '/mui/inputs/radios',
           },
           {
@@ -298,6 +328,7 @@ const routesConfig = [
             title: 'Rating',
             messageId: 'sidebar.mui.util.rating',
             type: 'item',
+            permittedRole: [RoutePermittedRole.User],
             url: '/mui/inputs/rating',
           },
           {
@@ -305,6 +336,7 @@ const routesConfig = [
             title: 'Selects',
             messageId: 'sidebar.mui.inputs.selects',
             type: 'item',
+            permittedRole: [RoutePermittedRole.User],
             url: '/mui/inputs/selects',
           },
           {
@@ -312,6 +344,7 @@ const routesConfig = [
             title: 'Slider',
             messageId: 'sidebar.mui.inputs.slider',
             type: 'item',
+            permittedRole: [RoutePermittedRole.User],
             url: '/mui/inputs/slider',
           },
           {
@@ -319,6 +352,7 @@ const routesConfig = [
             title: 'Switches',
             messageId: 'sidebar.mui.inputs.switches',
             type: 'item',
+            permittedRole: [RoutePermittedRole.User],
             url: '/mui/inputs/switches',
           },
           {
@@ -326,6 +360,7 @@ const routesConfig = [
             title: 'Text Field',
             messageId: 'sidebar.mui.inputs.textField',
             type: 'item',
+            permittedRole: [RoutePermittedRole.User],
             url: '/mui/inputs/text-fields',
           },
           {
@@ -333,6 +368,7 @@ const routesConfig = [
             title: 'Transfer List',
             messageId: 'sidebar.mui.inputs.transfer',
             type: 'item',
+            permittedRole: [RoutePermittedRole.User],
             url: '/mui/inputs/transfer-list',
           },
           {
@@ -340,6 +376,7 @@ const routesConfig = [
             title: 'Toggle Buttons',
             messageId: 'sidebar.mui.util.toggleButtons',
             type: 'item',
+            permittedRole: [RoutePermittedRole.User],
             url: '/mui/inputs/toggle-buttons',
           },
         ],
@@ -356,6 +393,7 @@ const routesConfig = [
             title: 'Avatars',
             messageId: 'sidebar.mui.dataDisplay.avatars',
             type: 'item',
+            permittedRole: [RoutePermittedRole.User],
             url: '/mui/data-display/avatars',
           },
           {
@@ -363,6 +401,7 @@ const routesConfig = [
             title: 'Badges',
             messageId: 'sidebar.mui.dataDisplay.badges',
             type: 'item',
+            permittedRole: [RoutePermittedRole.User],
             url: '/mui/data-display/badges',
           },
           {
@@ -370,6 +409,7 @@ const routesConfig = [
             title: 'Chips',
             messageId: 'sidebar.mui.dataDisplay.chips',
             type: 'item',
+            permittedRole: [RoutePermittedRole.User],
             url: '/mui/data-display/chips',
           },
           {
@@ -377,6 +417,7 @@ const routesConfig = [
             title: 'Divider',
             messageId: 'sidebar.mui.dataDisplay.divider',
             type: 'item',
+            permittedRole: [RoutePermittedRole.User],
             url: '/mui/data-display/divider',
           },
           {
@@ -384,6 +425,7 @@ const routesConfig = [
             title: 'Lists',
             messageId: 'sidebar.mui.dataDisplay.lists',
             type: 'item',
+            permittedRole: [RoutePermittedRole.User],
             url: '/mui/data-display/lists',
           },
           {
@@ -391,6 +433,7 @@ const routesConfig = [
             title: 'Tables',
             messageId: 'sidebar.mui.dataDisplay.tables',
             type: 'item',
+            permittedRole: [RoutePermittedRole.User],
             url: '/mui/data-display/tables',
           },
           {
@@ -398,6 +441,7 @@ const routesConfig = [
             title: 'Tooltip',
             messageId: 'sidebar.mui.dataDisplay.tooltip',
             type: 'item',
+            permittedRole: [RoutePermittedRole.User],
             url: '/mui/data-display/tooltip',
           },
           {
@@ -405,6 +449,7 @@ const routesConfig = [
             title: 'Typography',
             messageId: 'sidebar.mui.dataDisplay.typography',
             type: 'item',
+            permittedRole: [RoutePermittedRole.User],
             url: '/mui/data-display/typography',
           },
         ],
@@ -421,6 +466,7 @@ const routesConfig = [
             title: 'Bottom Navigation',
             messageId: 'sidebar.mui.navigation.bottom',
             type: 'item',
+            permittedRole: [RoutePermittedRole.User],
             url: '/mui/navigation/bottom-navigation',
           },
           {
@@ -428,6 +474,7 @@ const routesConfig = [
             title: 'Breadcrumbs',
             messageId: 'sidebar.mui.navigation.breadcrumbs',
             type: 'item',
+            permittedRole: [RoutePermittedRole.User],
             url: '/mui/navigation/breadcrumbs',
           },
           {
@@ -435,6 +482,7 @@ const routesConfig = [
             title: 'Drawers',
             messageId: 'sidebar.mui.navigation.drawers',
             type: 'item',
+            permittedRole: [RoutePermittedRole.User],
             url: '/mui/navigation/drawers',
           },
           {
@@ -442,6 +490,7 @@ const routesConfig = [
             title: 'Links',
             messageId: 'sidebar.mui.navigation.links',
             type: 'item',
+            permittedRole: [RoutePermittedRole.User],
             url: '/mui/navigation/links',
           },
           {
@@ -449,6 +498,7 @@ const routesConfig = [
             title: 'Menus',
             messageId: 'sidebar.mui.navigation.menus',
             type: 'item',
+            permittedRole: [RoutePermittedRole.User],
             url: '/mui/navigation/menus',
           },
           {
@@ -456,6 +506,7 @@ const routesConfig = [
             title: 'Pagination',
             messageId: 'sidebar.mui.navigation.pagination',
             type: 'item',
+            permittedRole: [RoutePermittedRole.User],
             url: '/mui/navigation/pagination',
           },
           {
@@ -463,6 +514,7 @@ const routesConfig = [
             title: 'Speed Dial',
             messageId: 'sidebar.mui.navigation.speedDial',
             type: 'item',
+            permittedRole: [RoutePermittedRole.User],
             url: '/mui/navigation/speed-dial',
           },
           {
@@ -470,6 +522,7 @@ const routesConfig = [
             title: 'Steppers',
             messageId: 'sidebar.mui.navigation.steppers',
             type: 'item',
+            permittedRole: [RoutePermittedRole.User],
             url: '/mui/navigation/steppers',
           },
           {
@@ -477,6 +530,7 @@ const routesConfig = [
             title: 'Tabs',
             messageId: 'sidebar.mui.navigation.tabs',
             type: 'item',
+            permittedRole: [RoutePermittedRole.User],
             url: '/mui/navigation/tabs',
           },
         ],
@@ -493,6 +547,7 @@ const routesConfig = [
             title: 'App Bar',
             messageId: 'sidebar.mui.surface.appBar',
             type: 'item',
+            permittedRole: [RoutePermittedRole.User],
             url: '/mui/surface/appbar',
           },
           {
@@ -500,6 +555,7 @@ const routesConfig = [
             title: 'Accordion',
             messageId: 'sidebar.mui.surface.accordion',
             type: 'item',
+            permittedRole: [RoutePermittedRole.User],
             url: '/mui/surface/accordion',
           },
           {
@@ -507,6 +563,7 @@ const routesConfig = [
             title: 'Cards',
             messageId: 'sidebar.mui.surface.cards',
             type: 'item',
+            permittedRole: [RoutePermittedRole.User],
             url: '/mui/surface/cards',
           },
           {
@@ -514,6 +571,7 @@ const routesConfig = [
             title: 'Paper',
             messageId: 'sidebar.mui.surface.paper',
             type: 'item',
+            permittedRole: [RoutePermittedRole.User],
             url: '/mui/surface/paper',
           },
         ],
@@ -530,6 +588,7 @@ const routesConfig = [
             title: 'Alert',
             messageId: 'sidebar.mui.feedback.alert',
             type: 'item',
+            permittedRole: [RoutePermittedRole.User],
             url: '/mui/feedback/alert',
           },
           {
@@ -537,6 +596,7 @@ const routesConfig = [
             title: 'Backdrop',
             messageId: 'sidebar.mui.feedback.backdrop',
             type: 'item',
+            permittedRole: [RoutePermittedRole.User],
             url: '/mui/feedback/backdrop',
           },
           {
@@ -544,6 +604,7 @@ const routesConfig = [
             title: 'Dialog',
             messageId: 'sidebar.mui.feedback.dialog',
             type: 'item',
+            permittedRole: [RoutePermittedRole.User],
             url: '/mui/feedback/dialog',
           },
           {
@@ -551,6 +612,7 @@ const routesConfig = [
             title: 'Progress',
             messageId: 'sidebar.mui.feedback.progress',
             type: 'item',
+            permittedRole: [RoutePermittedRole.User],
             url: '/mui/feedback/progress',
           },
           {
@@ -558,6 +620,7 @@ const routesConfig = [
             title: 'Skeleton',
             messageId: 'sidebar.mui.feedback.skeleton',
             type: 'item',
+            permittedRole: [RoutePermittedRole.User],
             url: '/mui/feedback/skeleton',
           },
           {
@@ -565,6 +628,7 @@ const routesConfig = [
             title: 'Snackbars',
             messageId: 'sidebar.mui.feedback.snackbars',
             type: 'item',
+            permittedRole: [RoutePermittedRole.User],
             url: '/mui/feedback/snackbars',
           },
         ],
@@ -581,6 +645,7 @@ const routesConfig = [
             title: 'Box',
             messageId: 'sidebar.mui.layout.box',
             type: 'item',
+            permittedRole: [RoutePermittedRole.User],
             url: '/mui/layout/box',
           },
           {
@@ -588,6 +653,7 @@ const routesConfig = [
             title: 'Container',
             messageId: 'sidebar.mui.layout.container',
             type: 'item',
+            permittedRole: [RoutePermittedRole.User],
             url: '/mui/layout/container',
           },
           {
@@ -595,6 +661,7 @@ const routesConfig = [
             title: 'Grid',
             messageId: 'sidebar.mui.layout.grid',
             type: 'item',
+            permittedRole: [RoutePermittedRole.User],
             url: '/mui/layout/grid',
           },
           {
@@ -602,6 +669,7 @@ const routesConfig = [
             title: 'Stack',
             messageId: 'sidebar.mui.layout.stack',
             type: 'item',
+            permittedRole: [RoutePermittedRole.User],
             url: '/mui/layout/stack',
           },
           {
@@ -609,6 +677,7 @@ const routesConfig = [
             title: 'Image List',
             messageId: 'sidebar.mui.layout.imageList',
             type: 'item',
+            permittedRole: [RoutePermittedRole.User],
             url: '/mui/layout/image-list',
           },
         ],
@@ -625,6 +694,7 @@ const routesConfig = [
             title: 'Click away listener',
             messageId: 'sidebar.mui.util.clickAwayListener',
             type: 'item',
+            permittedRole: [RoutePermittedRole.User],
             url: '/mui/utility/click-away-listener',
           },
           {
@@ -632,6 +702,7 @@ const routesConfig = [
             title: 'Modal',
             messageId: 'sidebar.mui.util.modal',
             type: 'item',
+            permittedRole: [RoutePermittedRole.User],
             url: '/mui/utility/modal',
           },
           {
@@ -639,6 +710,7 @@ const routesConfig = [
             title: 'Popover',
             messageId: 'sidebar.mui.util.popover',
             type: 'item',
+            permittedRole: [RoutePermittedRole.User],
             url: '/mui/utility/popover',
           },
           {
@@ -646,6 +718,7 @@ const routesConfig = [
             title: 'NO SSR1',
             messageId: 'sidebar.mui.util.nossr1',
             type: 'item',
+            permittedRole: [RoutePermittedRole.User],
             url: '/mui/utility/nossr1',
           },
           {
@@ -653,6 +726,7 @@ const routesConfig = [
             title: 'Popper',
             messageId: 'sidebar.mui.util.popper',
             type: 'item',
+            permittedRole: [RoutePermittedRole.User],
             url: '/mui/utility/popper',
           },
           {
@@ -660,6 +734,7 @@ const routesConfig = [
             title: 'Portal',
             messageId: 'sidebar.mui.util.portal',
             type: 'item',
+            permittedRole: [RoutePermittedRole.User],
             url: '/mui/utility/portal',
           },
           {
@@ -667,6 +742,7 @@ const routesConfig = [
             title: 'Textarea Autosize',
             messageId: 'sidebar.mui.util.textareaAutosize',
             type: 'item',
+            permittedRole: [RoutePermittedRole.User],
             url: '/mui/utility/textarea-autosize',
           },
           {
@@ -674,6 +750,7 @@ const routesConfig = [
             title: 'Transitions',
             messageId: 'sidebar.mui.util.transitions',
             type: 'item',
+            permittedRole: [RoutePermittedRole.User],
             url: '/mui/utility/transitions',
           },
           {
@@ -681,6 +758,7 @@ const routesConfig = [
             title: 'Media query',
             messageId: 'sidebar.mui.util.mediaquery',
             type: 'item',
+            permittedRole: [RoutePermittedRole.User],
             url: '/mui/utility/media-query',
           },
         ],
@@ -697,6 +775,7 @@ const routesConfig = [
             title: 'Overview',
             messageId: 'sidebar.mui.dataGrid.overview',
             type: 'item',
+            permittedRole: [RoutePermittedRole.User],
             url: '/mui/data-grid/overview',
           },
           {
@@ -704,6 +783,7 @@ const routesConfig = [
             title: 'Layout',
             messageId: 'sidebar.mui.dataGrid.layout',
             type: 'item',
+            permittedRole: [RoutePermittedRole.User],
             url: '/mui/data-grid/layout',
           },
           {
@@ -711,6 +791,7 @@ const routesConfig = [
             title: 'Columns',
             messageId: 'sidebar.mui.dataGrid.columns',
             type: 'item',
+            permittedRole: [RoutePermittedRole.User],
             url: '/mui/data-grid/columns',
           },
           {
@@ -718,6 +799,7 @@ const routesConfig = [
             title: 'Rows',
             messageId: 'sidebar.mui.dataGrid.rows',
             type: 'item',
+            permittedRole: [RoutePermittedRole.User],
             url: '/mui/data-grid/rows',
           },
           {
@@ -725,6 +807,7 @@ const routesConfig = [
             title: 'Editing',
             messageId: 'sidebar.mui.dataGrid.editing',
             type: 'item',
+            permittedRole: [RoutePermittedRole.User],
             url: '/mui/data-grid/editing',
           },
           {
@@ -732,6 +815,7 @@ const routesConfig = [
             title: 'Sorting',
             messageId: 'sidebar.mui.dataGrid.sorting',
             type: 'item',
+            permittedRole: [RoutePermittedRole.User],
             url: '/mui/data-grid/sorting',
           },
           {
@@ -739,6 +823,7 @@ const routesConfig = [
             title: 'Filtering',
             messageId: 'sidebar.mui.dataGrid.filtering',
             type: 'item',
+            permittedRole: [RoutePermittedRole.User],
             url: '/mui/data-grid/filtering',
           },
           {
@@ -746,6 +831,7 @@ const routesConfig = [
             title: 'Pagination',
             messageId: 'sidebar.mui.dataGrid.pagination',
             type: 'item',
+            permittedRole: [RoutePermittedRole.User],
             url: '/mui/data-grid/pagination',
           },
           {
@@ -753,6 +839,7 @@ const routesConfig = [
             title: 'Selection',
             messageId: 'sidebar.mui.dataGrid.selection',
             type: 'item',
+            permittedRole: [RoutePermittedRole.User],
             url: '/mui/data-grid/selection',
           },
           {
@@ -760,6 +847,7 @@ const routesConfig = [
             title: 'Events',
             messageId: 'sidebar.mui.dataGrid.events',
             type: 'item',
+            permittedRole: [RoutePermittedRole.User],
             url: '/mui/data-grid/events',
           },
           {
@@ -767,6 +855,7 @@ const routesConfig = [
             title: 'Export',
             messageId: 'sidebar.mui.dataGrid.export',
             type: 'item',
+            permittedRole: [RoutePermittedRole.User],
             url: '/mui/data-grid/export',
           },
           {
@@ -774,6 +863,7 @@ const routesConfig = [
             title: 'Components',
             messageId: 'sidebar.mui.dataGrid.components',
             type: 'item',
+            permittedRole: [RoutePermittedRole.User],
             url: '/mui/data-grid/components',
           },
           {
@@ -781,6 +871,7 @@ const routesConfig = [
             title: 'Styling',
             messageId: 'sidebar.mui.dataGrid.styling',
             type: 'item',
+            permittedRole: [RoutePermittedRole.User],
             url: '/mui/data-grid/styling',
           },
           {
@@ -788,6 +879,7 @@ const routesConfig = [
             title: 'localization',
             messageId: 'sidebar.mui.dataGrid.localization',
             type: 'item',
+            permittedRole: [RoutePermittedRole.User],
             url: '/mui/data-grid/localization',
           },
           {
@@ -795,6 +887,7 @@ const routesConfig = [
             title: 'Scrolling',
             messageId: 'sidebar.mui.dataGrid.scrolling',
             type: 'item',
+            permittedRole: [RoutePermittedRole.User],
             url: '/mui/data-grid/scrolling',
           },
           {
@@ -802,6 +895,7 @@ const routesConfig = [
             title: 'Virtualization',
             messageId: 'sidebar.mui.dataGrid.virtualization',
             type: 'item',
+            permittedRole: [RoutePermittedRole.User],
             url: '/mui/data-grid/virtualization',
           },
           {
@@ -809,6 +903,7 @@ const routesConfig = [
             title: 'Accessibility',
             messageId: 'sidebar.mui.dataGrid.accessibility',
             type: 'item',
+            permittedRole: [RoutePermittedRole.User],
             url: '/mui/data-grid/accessibility',
           },
         ],
@@ -825,6 +920,7 @@ const routesConfig = [
             title: 'Date Time',
             messageId: 'sidebar.mui.lab.dateTime',
             type: 'item',
+            permittedRole: [RoutePermittedRole.User],
             url: '/mui/lab/date-picker',
           },
           {
@@ -832,6 +928,7 @@ const routesConfig = [
             title: 'Date Range Picker',
             messageId: 'sidebar.mui.lab.dateRangePicker',
             type: 'item',
+            permittedRole: [RoutePermittedRole.User],
             url: '/mui/lab/date-range-picker',
           },
           {
@@ -839,6 +936,7 @@ const routesConfig = [
             title: 'Date Time Picker',
             messageId: 'sidebar.mui.lab.dateTimePicker',
             type: 'item',
+            permittedRole: [RoutePermittedRole.User],
             url: '/mui/lab/date-time-picker',
           },
           {
@@ -846,6 +944,7 @@ const routesConfig = [
             title: 'Time Picker',
             messageId: 'sidebar.mui.lab.timePicker',
             type: 'item',
+            permittedRole: [RoutePermittedRole.User],
             url: '/mui/lab/time-picker',
           },
           {
@@ -853,6 +952,7 @@ const routesConfig = [
             title: 'Masonry',
             messageId: 'sidebar.mui.lab.masonry',
             type: 'item',
+            permittedRole: [RoutePermittedRole.User],
             url: '/mui/lab/masonry',
           },
           {
@@ -860,6 +960,7 @@ const routesConfig = [
             title: 'Time Line',
             messageId: 'sidebar.mui.lab.timeline',
             type: 'item',
+            permittedRole: [RoutePermittedRole.User],
             url: '/mui/lab/timeline',
           },
           {
@@ -867,6 +968,7 @@ const routesConfig = [
             title: 'Trap Focus',
             messageId: 'sidebar.mui.lab.trapFocus',
             type: 'item',
+            permittedRole: [RoutePermittedRole.User],
             url: '/mui/lab/trap-focus',
           },
           {
@@ -874,6 +976,7 @@ const routesConfig = [
             title: 'Tree View',
             messageId: 'sidebar.mui.lab.treeView',
             type: 'item',
+            permittedRole: [RoutePermittedRole.User],
             url: '/mui/lab/tree-view',
           },
         ],
@@ -891,6 +994,7 @@ const routesConfig = [
         title: 'Google Map',
         messageId: 'sidebar.googleMap',
         type: 'item',
+        permittedRole: [RoutePermittedRole.User],
         icon: <FiMap />,
         url: '/third-party/google-map',
       },
@@ -906,6 +1010,7 @@ const routesConfig = [
             title: 'Area Chart',
             messageId: 'sidebar.recharts.areaChart',
             type: 'item',
+            permittedRole: [RoutePermittedRole.User],
             url: '/recharts/area',
           },
           {
@@ -913,6 +1018,7 @@ const routesConfig = [
             title: 'Bar Chart',
             messageId: 'sidebar.recharts.barChart',
             type: 'item',
+            permittedRole: [RoutePermittedRole.User],
             url: '/recharts/bar',
           },
           {
@@ -920,6 +1026,7 @@ const routesConfig = [
             title: 'Composed Chart',
             messageId: 'sidebar.recharts.composedChart',
             type: 'item',
+            permittedRole: [RoutePermittedRole.User],
             url: '/recharts/composed',
           },
           {
@@ -927,6 +1034,7 @@ const routesConfig = [
             title: 'Line Chart',
             messageId: 'sidebar.recharts.lineChart',
             type: 'item',
+            permittedRole: [RoutePermittedRole.User],
             url: '/recharts/line',
           },
           {
@@ -934,6 +1042,7 @@ const routesConfig = [
             title: 'Pie Chart',
             messageId: 'sidebar.recharts.pieChart',
             type: 'item',
+            permittedRole: [RoutePermittedRole.User],
             url: '/recharts/pie',
           },
           {
@@ -941,6 +1050,7 @@ const routesConfig = [
             title: 'Radar Chart',
             messageId: 'sidebar.recharts.radarChart',
             type: 'item',
+            permittedRole: [RoutePermittedRole.User],
             url: '/recharts/radar',
           },
           {
@@ -948,6 +1058,7 @@ const routesConfig = [
             title: 'Radial Chart',
             messageId: 'sidebar.recharts.radialChart',
             type: 'item',
+            permittedRole: [RoutePermittedRole.User],
             url: '/recharts/radial',
           },
           {
@@ -955,6 +1066,7 @@ const routesConfig = [
             title: 'Scatter Chart',
             messageId: 'sidebar.recharts.scatterChart',
             type: 'item',
+            permittedRole: [RoutePermittedRole.User],
             url: '/recharts/scatter',
           },
           {
@@ -962,6 +1074,7 @@ const routesConfig = [
             title: 'Funnel Chart',
             messageId: 'sidebar.recharts.funnelChart',
             type: 'item',
+            permittedRole: [RoutePermittedRole.User],
             url: '/recharts/funnel',
           },
           {
@@ -969,6 +1082,7 @@ const routesConfig = [
             title: 'Treemap Chart',
             messageId: 'sidebar.recharts.treeChart',
             type: 'item',
+            permittedRole: [RoutePermittedRole.User],
             url: '/recharts/treemap',
           },
         ],
@@ -978,6 +1092,7 @@ const routesConfig = [
         title: 'Filestack',
         messageId: 'sidebar.filestack',
         type: 'item',
+        permittedRole: [RoutePermittedRole.User],
         icon: <RiFileUploadLine />,
         url: '/third-party/filestack',
       },
@@ -986,6 +1101,7 @@ const routesConfig = [
         title: 'Froala Editor',
         messageId: 'sidebar.froalaEditor',
         type: 'item',
+        permittedRole: [RoutePermittedRole.User],
         icon: <AiOutlineEdit />,
         url: '/third-party/froala-editor',
       },
@@ -994,6 +1110,7 @@ const routesConfig = [
         title: 'Fusion Charts',
         messageId: 'sidebar.fusionCharts',
         type: 'item',
+        permittedRole: [RoutePermittedRole.User],
         icon: 'bar_chart',
         url: '/third-party/fusion-charts',
       },
@@ -1003,6 +1120,7 @@ const routesConfig = [
         messageId: 'sidebar.bigCalender',
         icon: <FaRegCalendarAlt />,
         type: 'item',
+        permittedRole: [RoutePermittedRole.User],
         url: '/third-party/calendar',
       },
       {
@@ -1011,6 +1129,7 @@ const routesConfig = [
         messageId: 'sidebar.reactSlick',
         icon: <BiCarousel />,
         type: 'item',
+        permittedRole: [RoutePermittedRole.User],
         url: '/third-party/slider',
       },
       {
@@ -1018,6 +1137,7 @@ const routesConfig = [
         title: 'React Color',
         messageId: 'sidebar.reactColor',
         type: 'item',
+        permittedRole: [RoutePermittedRole.User],
         icon: 'invert_colors',
         url: '/third-party/react-color',
       },
@@ -1026,6 +1146,7 @@ const routesConfig = [
         title: 'React Dropzone',
         messageId: 'sidebar.reactDropzone',
         type: 'item',
+        permittedRole: [RoutePermittedRole.User],
         icon: 'attach_file',
         url: '/third-party/react-dropzone',
       },
@@ -1034,6 +1155,7 @@ const routesConfig = [
         title: 'Player',
         messageId: 'sidebar.player',
         type: 'item',
+        permittedRole: [RoutePermittedRole.User],
         icon: <DiHtml5Multimedia />,
         url: '/third-party/react-player',
       },
@@ -1042,6 +1164,7 @@ const routesConfig = [
         title: 'Time Line',
         messageId: 'sidebar.pages.timeLine',
         type: 'item',
+        permittedRole: [RoutePermittedRole.User],
         icon: 'timeline',
         url: '/third-party/time-line',
       },
@@ -1058,6 +1181,7 @@ const routesConfig = [
         title: 'Account',
         messageId: 'sidebar.pages.extraPages.account',
         type: 'item',
+        permittedRole: [RoutePermittedRole.User, RoutePermittedRole.Admin],
         icon: <MdOutlineManageAccounts />,
         url: '/my-profile',
       },
@@ -1066,6 +1190,7 @@ const routesConfig = [
         title: 'About Us',
         messageId: 'sidebar.pages.extraPages.aboutUs',
         type: 'item',
+        permittedRole: [RoutePermittedRole.User],
         icon: <FiUsers />,
         url: '/extra-pages/about-us',
       },
@@ -1074,6 +1199,7 @@ const routesConfig = [
         title: 'Contact Us',
         messageId: 'sidebar.pages.extraPages.contactUs',
         type: 'item',
+        permittedRole: [RoutePermittedRole.User],
         icon: <MdOutlineContactSupport />,
         url: '/extra-pages/contact-us',
       },
@@ -1082,6 +1208,7 @@ const routesConfig = [
         title: 'Portfolio',
         messageId: 'sidebar.pages.extraPages.portfolio',
         type: 'item',
+        permittedRole: [RoutePermittedRole.User],
         icon: <BsBriefcase />,
         url: '/extra-pages/portfolio',
       },
@@ -1090,6 +1217,7 @@ const routesConfig = [
         title: 'FAQ',
         messageId: 'sidebar.pages.extraPages.faq',
         type: 'item',
+        permittedRole: [RoutePermittedRole.User],
         icon: <BsQuestionDiamond />,
         url: '/extra-pages/faq',
       },
@@ -1098,6 +1226,7 @@ const routesConfig = [
         title: 'Pricing',
         messageId: 'sidebar.pages.extraPages.pricing',
         type: 'item',
+        permittedRole: [RoutePermittedRole.User],
         icon: 'attach_money',
         url: '/extra-pages/pricing',
       },
@@ -1113,6 +1242,7 @@ const routesConfig = [
             title: 'SignIn-1',
             messageId: 'sidebar.pages.userPages.signIn1',
             type: 'item',
+            permittedRole: [RoutePermittedRole.User],
             url: '/user/sign-in-1',
           },
           {
@@ -1120,6 +1250,7 @@ const routesConfig = [
             title: 'SignIn-2',
             messageId: 'sidebar.pages.userPages.signIn2',
             type: 'item',
+            permittedRole: [RoutePermittedRole.User],
             url: '/user/sign-in-2',
           },
           {
@@ -1127,6 +1258,7 @@ const routesConfig = [
             title: 'SignUp-1',
             messageId: 'sidebar.pages.userPages.signUp1',
             type: 'item',
+            permittedRole: [RoutePermittedRole.User],
             url: '/user/sign-up-1',
           },
           {
@@ -1134,6 +1266,7 @@ const routesConfig = [
             title: 'SignUp-2',
             messageId: 'sidebar.pages.userPages.signUp2',
             type: 'item',
+            permittedRole: [RoutePermittedRole.User],
             url: '/user/sign-up-2',
           },
           {
@@ -1141,6 +1274,7 @@ const routesConfig = [
             title: 'Forgot Password-1',
             messageId: 'sidebar.pages.userPages.forgetPassword1',
             type: 'item',
+            permittedRole: [RoutePermittedRole.User],
             url: '/user/forgot-password-1',
           },
           {
@@ -1148,6 +1282,7 @@ const routesConfig = [
             title: 'Forgot Password-2',
             messageId: 'sidebar.pages.userPages.forgetPassword2',
             type: 'item',
+            permittedRole: [RoutePermittedRole.User],
             url: '/user/forgot-password-2',
           },
           {
@@ -1155,6 +1290,7 @@ const routesConfig = [
             title: 'Reset Password-1',
             messageId: 'sidebar.pages.userPages.resetPassword1',
             type: 'item',
+            permittedRole: [RoutePermittedRole.User],
             url: '/user/reset-password-1',
           },
           {
@@ -1162,6 +1298,7 @@ const routesConfig = [
             title: 'Reset Password-2',
             messageId: 'sidebar.pages.userPages.resetPassword2',
             type: 'item',
+            permittedRole: [RoutePermittedRole.User],
             url: '/user/reset-password-2',
           },
           {
@@ -1169,6 +1306,7 @@ const routesConfig = [
             title: 'Lock Screen-1',
             messageId: 'sidebar.pages.userPages.lockScreen1',
             type: 'item',
+            permittedRole: [RoutePermittedRole.User],
             url: '/user/lock-1',
           },
           {
@@ -1176,6 +1314,7 @@ const routesConfig = [
             title: 'Lock Screen-2',
             messageId: 'sidebar.pages.userPages.lockScreen2',
             type: 'item',
+            permittedRole: [RoutePermittedRole.User],
             url: '/user/lock-2',
           },
         ],
@@ -1192,6 +1331,7 @@ const routesConfig = [
             title: 'Modern',
             messageId: 'sidebar.pages.userList.modern',
             type: 'item',
+            permittedRole: [RoutePermittedRole.User],
             url: '/list-type/morden',
           },
           {
@@ -1199,6 +1339,7 @@ const routesConfig = [
             title: 'Standard',
             messageId: 'sidebar.pages.userList.standard',
             type: 'item',
+            permittedRole: [RoutePermittedRole.User],
             url: '/list-type/standard',
           },
           {
@@ -1206,6 +1347,7 @@ const routesConfig = [
             title: 'Flat',
             messageId: 'sidebar.pages.userList.flat',
             type: 'item',
+            permittedRole: [RoutePermittedRole.User],
             url: '/list-type/flat',
           },
         ],
@@ -1222,6 +1364,7 @@ const routesConfig = [
             title: '402',
             messageId: 'sidebar.pages.errorPages.401',
             type: 'item',
+            permittedRole: [RoutePermittedRole.User],
             url: '/error-pages/error-401',
           },
           {
@@ -1229,6 +1372,7 @@ const routesConfig = [
             title: '403',
             messageId: 'sidebar.pages.errorPages.403',
             type: 'item',
+            permittedRole: [RoutePermittedRole.User],
             url: '/error-pages/error-403',
           },
           {
@@ -1236,6 +1380,7 @@ const routesConfig = [
             title: '404',
             messageId: 'sidebar.pages.errorPages.404',
             type: 'item',
+            permittedRole: [RoutePermittedRole.User],
             url: '/error-pages/error-404',
           },
           {
@@ -1243,6 +1388,7 @@ const routesConfig = [
             title: '500',
             messageId: 'sidebar.pages.errorPages.500',
             type: 'item',
+            permittedRole: [RoutePermittedRole.User],
             url: '/error-pages/error-500',
           },
           {
@@ -1250,6 +1396,7 @@ const routesConfig = [
             title: '503',
             messageId: 'sidebar.pages.errorPages.503',
             type: 'item',
+            permittedRole: [RoutePermittedRole.User],
             url: '/error-pages/error-503',
           },
           {
@@ -1257,6 +1404,7 @@ const routesConfig = [
             title: 'Maintenance',
             messageId: 'sidebar.pages.errorPages.maintenance',
             type: 'item',
+            permittedRole: [RoutePermittedRole.User],
             url: '/error-pages/maintenance',
           },
           {
@@ -1264,6 +1412,7 @@ const routesConfig = [
             title: 'Coming Soon',
             messageId: 'sidebar.pages.errorPages.comingSoon',
             type: 'item',
+            permittedRole: [RoutePermittedRole.User],
             url: '/error-pages/coming-soon',
           },
         ],

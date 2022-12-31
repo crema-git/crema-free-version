@@ -1,6 +1,6 @@
 import React from 'react';
 import DoneIcon from '@mui/icons-material/Done';
-import IntlMessages from '@crema/utility/IntlMessages';
+import IntlMessages from '@crema/helpers/IntlMessages';
 import { onUpdateSelectedTask } from '@crema/redux-toolkit/actions';
 import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';

@@ -523,6 +523,7 @@
   "common.pressEnter": "Press enter to comment...",
   "customizer.extension": "extension",
   "customizer.customiseTheme": "Customize the theme",
+  "customizer.sidebarMenuStyle": "Customize Menu style",
   "customizer.customiseText": "Customize your theme with these options.",
   "customizer.themeStyle": "Theme Style",
   "customizer.themeMode": "Theme Mode",

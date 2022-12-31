@@ -16,7 +16,7 @@ import IconButton from '@mui/material/IconButton';
 import SendOutlinedIcon from '@mui/icons-material/SendOutlined';
 import { darken } from '@mui/material';
 import { useInfoViewActionsContext } from '@crema/context/InfoViewContextProvider';
-import { postDataApi } from '@crema/utility/APIHooks';
+import { postDataApi } from '@crema/hooks/APIHooks';
 
 const CreateView = styled('div')(({ theme }) => ({
   flex: 1,

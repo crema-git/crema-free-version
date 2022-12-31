@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box } from '@mui/material';
-import IntlMessages from '@crema/utility/IntlMessages';
+import IntlMessages from '@crema/helpers/IntlMessages';
 import Typography from '@mui/material/Typography';
 import AppCircularProgress from '@crema/components/AppCircularProgress';
 import AppCard from '@crema/components/AppCard';

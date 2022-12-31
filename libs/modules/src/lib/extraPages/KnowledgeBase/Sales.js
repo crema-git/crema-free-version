@@ -1,6 +1,6 @@
 import React from 'react';
 import Box from '@mui/material/Box';
-import IntlMessages from '@crema/utility/IntlMessages';
+import IntlMessages from '@crema/helpers/IntlMessages';
 import KBItem from './KBItem';
 import AppGridContainer from '@crema/components/AppGridContainer';
 import PropTypes from 'prop-types';

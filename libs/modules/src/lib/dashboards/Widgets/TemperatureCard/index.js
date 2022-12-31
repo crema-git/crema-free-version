@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
-import IntlMessages from '@crema/utility/IntlMessages';
+import IntlMessages from '@crema/helpers/IntlMessages';
 import PropTypes from 'prop-types';
 import DayTemperature from './DayTemperature';
 import { teal } from '@mui/material/colors';

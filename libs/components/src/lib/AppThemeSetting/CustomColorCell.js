@@ -1,7 +1,7 @@
 import React from 'react';
 import Box from '@mui/material/Box';
 import CheckIcon from '@mui/icons-material/Check';
-import IntlMessages from '@crema/utility/IntlMessages';
+import IntlMessages from '@crema/helpers/IntlMessages';
 import PropTypes from 'prop-types';
 import { useThemeContext } from '@crema/context/ThemeContextProvider';
 import AddOutlinedIcon from '@mui/icons-material/AddOutlined';

@@ -3,7 +3,7 @@ import Box from '@mui/material/Box';
 import AppAnimate from '@crema/components/AppAnimate';
 import AppGridContainer from '@crema/components/AppGridContainer';
 import { Grid } from '@mui/material';
-import { useGetDataApi } from '@crema/utility/APIHooks';
+import { useGetDataApi } from '@crema/hooks/APIHooks';
 import {
   AverageGrades,
   CourseCategories,

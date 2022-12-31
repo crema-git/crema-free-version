@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import IntlMessages from '@crema/utility/IntlMessages';
+import IntlMessages from '@crema/helpers/IntlMessages';
 import Box from '@mui/material/Box';
 import ArchiveOutlinedIcon from '@mui/icons-material/ArchiveOutlined';
 import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';

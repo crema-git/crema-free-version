@@ -1,8 +1,8 @@
-import React from "react";
-import AppList from "@crema/components/AppList";
-import { ListItem } from "@crema/modules/userList/Flat";
-import AppLoader from "@crema/components/AppLoader";
-import { useGetDataApi } from "@crema/utility";
+import React from 'react';
+import AppList from '@crema/components/AppList';
+import { ListItem } from '@crema/modules/userList/Flat';
+import AppLoader from '@crema/components/AppLoader';
+import { useGetDataApi } from '@crema/hooks/APIHooks';
 
 const Flat = () => {
   const [{ apiData: usersList, loading }] = useGetDataApi('/api/user/list', []);

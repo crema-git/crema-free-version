@@ -206,9 +206,7 @@
       "@crema/constants/db/navigationStyle": [
         "libs/mockapi/src/fakedb/navigationStyle.js"
       ],
-      "@crema/constants/defaultConfig": [
-        "libs/constants/src/defaultConfig.js"
-      ],
+      "@crema/constants/defaultConfig": ["libs/constants/src/defaultConfig.js"],
       "@crema/context": ["libs/context/src/index.js"],
       "@crema/context/AppContextProvider": [
         "libs/context/src/AppContextProvider/index.js"
@@ -416,8 +414,12 @@
       "@crema/modules/userPages": ["libs/modules/src/lib/userPages/index.js"],
       "@crema/redux": ["libs/redux/src/index.js"],
       "@crema/redux-toolkit": ["libs/redux-toolkit/src/index.js"],
-      "@crema/redux-toolkit/actions": ["libs/redux-toolkit/src/actions/index.js"],
-      "@crema/redux-toolkit/reducers": ["libs/redux-toolkit/src/reducers/index.js"],
+      "@crema/redux-toolkit/actions": [
+        "libs/redux-toolkit/src/actions/index.js"
+      ],
+      "@crema/redux-toolkit/reducers": [
+        "libs/redux-toolkit/src/reducers/index.js"
+      ],
       "@crema/redux-toolkit/store": ["libs/redux-toolkit/src/store/index.js"],
       "@crema/redux/actions": ["libs/redux/src/actions/index.js"],
       "@crema/redux/reducers": ["libs/redux/src/reducers/index.js"],
@@ -432,9 +434,7 @@
       "@crema/services/auth/FirebaseAuthProvider": [
         "libs/services/auth/src/firebase/FirebaseAuthProvider.js"
       ],
-      "@crema/services/auth/JWT": [
-        "libs/services/auth/src/jwt-auth/index.js"
-      ],
+      "@crema/services/auth/JWT": ["libs/services/auth/src/jwt-auth/index.js"],
       "@crema/services/auth/JWTAuthProvider": [
         "libs/services/auth/src/jwt-auth/JWTAuthProvider.js"
       ],
@@ -442,15 +442,11 @@
       "@crema/services/localization": [
         "libs/services/localization/src/index.js"
       ],
-      "@crema/svg-icons": ["libs/svg-icons/src/index.js"],
-      "@crema/utility": ["libs/utility/src/index.js"],
-      "@crema/utility/APIHooks": ["libs/utility/src/APIHooks.js"],
-      "@crema/utility/AuthHooks": ["libs/utility/src/AuthHooks.js"],
-      "@crema/utility/IntlMessages": ["libs/utility/src/IntlMessages.js"],
-      "@crema/utility/RouteGenerator": [
-        "libs/utility/src/RouteGenerator.js"
-      ],
-      "@crema/utility/Utils": ["libs/utility/src/Utils.js"]
+      "@crema/hooks/APIHooks": ["libs/hooks/src/APIHooks.js"],
+      "@crema/hooks/AuthHooks": ["libs/hooks/src/AuthHooks.js"],
+      "@crema/helpers/IntlMessages": ["libs/helpers/src/IntlMessages.js"],
+      "@crema/helpers/RouteGenerator": ["libs/helpers/src/RouteGenerator.js"],
+      "@crema/helpers/AuthHelper": ["libs/helpers/src/AuthHelper.js"]
     }
   },
   "exclude": ["node_modules", "tmp"]

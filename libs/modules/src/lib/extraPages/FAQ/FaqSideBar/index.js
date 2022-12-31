@@ -6,7 +6,7 @@ import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
 import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
 import DescriptionOutlinedIcon from '@mui/icons-material/DescriptionOutlined';
 import InsertEmoticonIcon from '@mui/icons-material/InsertEmoticon';
-import IntlMessages from '@crema/utility/IntlMessages';
+import IntlMessages from '@crema/helpers/IntlMessages';
 import Box from '@mui/material/Box';
 import PropTypes from 'prop-types';
 import SideBarItem from './SideBarItem';

@@ -10,7 +10,7 @@ import {
 } from '@crema/context/ThemeContextProvider';
 import { useSidebarActionsContext } from '@crema/context/SidebarContextProvider';
 import { DarkSidebar, LightSidebar } from '@crema/constants/defaultConfig';
-import IntlMessages from '@crema/utility/IntlMessages';
+import IntlMessages from '@crema/helpers/IntlMessages';
 
 const ThemeModes = () => {
   const { updateThemeMode } = useThemeActionsContext();

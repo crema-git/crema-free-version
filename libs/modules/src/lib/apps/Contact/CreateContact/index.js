@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { Formik } from 'formik';
 import * as yup from 'yup';
-import IntlMessages from '@crema/utility/IntlMessages';
+import IntlMessages from '@crema/helpers/IntlMessages';
 import PropTypes from 'prop-types';
 import AddContactForm from './AddContactForm';
 import AppDialog from '@crema/components/AppDialog';
 import { useInfoViewActionsContext } from '@crema/context/InfoViewContextProvider';
-import { postDataApi, putDataApi } from '@crema/utility/APIHooks';
+import { postDataApi, putDataApi } from '@crema/hooks/APIHooks';
 
 const validationSchema = yup.object({
   name: yup.string().required(<IntlMessages id="validation.nameRequired" />),

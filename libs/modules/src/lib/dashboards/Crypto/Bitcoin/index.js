@@ -2,7 +2,7 @@ import React, { useCallback, useEffect, useState } from 'react';
 import BitcoinGraph from './BitcoinGraph';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
-import IntlMessages from '@crema/utility/IntlMessages';
+import IntlMessages from '@crema/helpers/IntlMessages';
 import { useIntl } from 'react-intl';
 import { Box } from '@mui/material';
 import PropTypes from 'prop-types';

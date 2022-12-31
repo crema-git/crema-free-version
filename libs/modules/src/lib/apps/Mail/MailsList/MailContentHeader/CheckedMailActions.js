@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import IntlMessages from '@crema/utility/IntlMessages';
+import IntlMessages from '@crema/helpers/IntlMessages';
 import Box from '@mui/material/Box';
 import ArchiveOutlinedIcon from '@mui/icons-material/ArchiveOutlined';
 import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
@@ -11,7 +11,7 @@ import ShopTwoOutlinedIcon from '@mui/icons-material/ShopTwoOutlined';
 import PropTypes from 'prop-types';
 import IconButton from '@mui/material/IconButton';
 import AppTooltip from '@crema/components/AppTooltip';
-import { putDataApi, useGetDataApi } from '@crema/utility/APIHooks';
+import { putDataApi, useGetDataApi } from '@crema/hooks/APIHooks';
 import { useInfoViewActionsContext } from '@crema/context/InfoViewContextProvider';
 
 const CheckedMailActions = (props) => {

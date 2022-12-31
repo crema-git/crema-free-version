@@ -7,10 +7,10 @@ import * as yup from 'yup';
 import AppInfoView from '@crema/components/AppInfoView';
 import { Link, useNavigate } from 'react-router-dom';
 import Box from '@mui/material/Box';
-import IntlMessages from '@crema/utility/IntlMessages';
+import IntlMessages from '@crema/helpers/IntlMessages';
 import { useIntl } from 'react-intl';
 import AppTextField from '@crema/components/AppTextField';
-import { useAuthMethod } from '@crema/utility/AuthHooks';
+import { useAuthMethod } from '@crema/hooks/AuthHooks';
 import { Fonts } from '@crema/constants/AppEnums';
 import AuthWrapper from '../AuthWrapper';
 

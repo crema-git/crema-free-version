@@ -5,7 +5,7 @@ import { Field, Form } from 'formik';
 import { useDropzone } from 'react-dropzone';
 import { useIntl } from 'react-intl';
 import PropTypes from 'prop-types';
-import IntlMessages from '@crema/utility/IntlMessages';
+import IntlMessages from '@crema/helpers/IntlMessages';
 import FormControl from '@mui/material/FormControl';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
@@ -17,7 +17,7 @@ import AppTextField from '@crema/components/AppTextField';
 import AppDateFiled from '@crema/components/AppDateFiled';
 
 import { styled } from '@mui/material/styles';
-import { useGetDataApi } from '@crema/utility/APIHooks';
+import { useGetDataApi } from '@crema/hooks/APIHooks';
 
 const HeaderWrapper = styled('div')(({ theme }) => {
   return {

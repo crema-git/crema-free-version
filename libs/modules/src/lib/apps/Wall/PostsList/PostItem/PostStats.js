@@ -6,7 +6,7 @@ import CommentOutlinedIcon from '@mui/icons-material/CommentOutlined';
 import PropTypes from 'prop-types';
 import { Fonts } from '@crema/constants/AppEnums';
 import { useInfoViewActionsContext } from '@crema/context/InfoViewContextProvider';
-import { putDataApi } from '@crema/utility/APIHooks';
+import { putDataApi } from '@crema/hooks/APIHooks';
 
 const PostStats = ({ post, setPostList }) => {
   const infoViewActionsContext = useInfoViewActionsContext();

@@ -3,10 +3,7 @@ import {
   FooterType,
   HeaderType,
   LayoutDirection,
-  LayoutType,
   MenuStyle,
-  NavStyle,
-  RouteTransition,
   ThemeMode,
   ThemeStyle,
   ThemeStyleRadius,
@@ -41,17 +38,17 @@ export const defaultTheme = {
     cardRadius: cardRadius,
     direction: LayoutDirection.LTR, //ltr, rtl
     palette: {
-      mode: ThemeMode.LIGHT,
+      mode: process.env.NX_THEME_MODE,
       background: {
         paper: '#FFFFFF',
         default: '#F4F7FE',
       },
       primary: {
-        main: '#0A8FDC',
+        main: process.env.NX_PRIMARY_COLOR,
         contrastText: '#fff',
       },
       secondary: {
-        main: '#F04F47',
+        main: process.env.NX_SECONDARY_COLOR,
       },
       success: {
         main: '#11C15B',
@@ -214,17 +211,16 @@ const defaultConfig = {
   sidebar: {
     borderColor: '#757575',
     menuStyle: MenuStyle.DEFAULT,
-    isSidebarBgImage: false,
-    sidebarBgImage: 1,
+    allowSidebarBgImage: false,
+    sidebarBgImageId: 1,
     colorSet: LightSidebar,
   },
   themeStyle: ThemeStyle.STANDARD,
-  themeMode: ThemeMode.LIGHT,
-  navStyle: NavStyle.DEFAULT,
-  layoutType: LayoutType.FULL_WIDTH,
+  themeMode: process.env.NX_THEME_MODE,
+  navStyle: process.env.NX_NAV_STYLE,
+  layoutType: process.env.NX_LAYOUT_TYPE,
   footerType: FooterType.FLUID,
   headerType: HeaderType.FIXED,
-  rtAnim: RouteTransition.NONE,
   footer: false,
   locale: {
     languageId: 'english',

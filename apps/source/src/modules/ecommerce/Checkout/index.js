@@ -1,12 +1,12 @@
 import React from 'react';
 import { Box, Grid } from '@mui/material';
 import AppCard from '@crema/components/AppCard';
-import IntlMessages from '@crema/utility/IntlMessages';
+import IntlMessages from '@crema/helpers/IntlMessages';
 import { Fonts } from '@crema/constants/AppEnums';
 
 import AppAnimate from '@crema/components/AppAnimate';
 import AppGridContainer from '@crema/components/AppGridContainer';
-import { useGetDataApi } from '@crema/utility/APIHooks';
+import { useGetDataApi } from '@crema/hooks/APIHooks';
 import {
   DeliveryAddress,
   OrderSummary,

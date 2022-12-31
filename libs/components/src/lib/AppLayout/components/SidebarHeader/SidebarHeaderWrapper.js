@@ -1,17 +1,19 @@
 import React from 'react';
-import { Box } from '@mui/material';
+import {Box} from '@mui/material';
 import PropsTypes from 'prop-types';
-import { useSidebarContext } from '@crema/context/SidebarContextProvider';
+import {useSidebarContext} from '@crema/context/SidebarContextProvider';
 
-const SidebarHeaderWrapper = ({ children }) => {
-  const { sidebarHeaderColor, isSidebarBgImage } = useSidebarContext();
+const SidebarHeaderWrapper = ({children}) => {
+  const {sidebarHeaderColor, allowSidebarBgImage} = useSidebarContext();
   return (
     <Box
       sx={{
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
-        backgroundColor: isSidebarBgImage ? 'transparent' : sidebarHeaderColor,
+        backgroundColor: allowSidebarBgImage
+          ? 'transparent'
+          : sidebarHeaderColor,
         '&:hover': {
           '& .arrowIcon': {
             opacity: 1,

@@ -3,7 +3,7 @@ import Chip from '@mui/material/Chip';
 import Divider from '@mui/material/Divider';
 import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
 import ChatOutlinedIcon from '@mui/icons-material/ChatOutlined';
-import IntlMessages from '@crema/utility/IntlMessages';
+import IntlMessages from '@crema/helpers/IntlMessages';
 import Box from '@mui/material/Box';
 import { Fonts } from '@crema/constants/AppEnums';
 import AppCard from '@crema/components/AppCard';

@@ -4,7 +4,7 @@ import Button from '@mui/material/Button';
 import { Checkbox } from '@mui/material';
 import { Form, Formik } from 'formik';
 import * as yup from 'yup';
-import IntlMessages from '@crema/utility/IntlMessages';
+import IntlMessages from '@crema/helpers/IntlMessages';
 import Box from '@mui/material/Box';
 import { Fonts } from '@crema/constants/AppEnums';
 import { grey } from '@mui/material/colors/index';

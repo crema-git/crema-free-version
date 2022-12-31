@@ -17,8 +17,9 @@ import { useLocation } from 'react-router-dom';
 
 import HorizontalCollapse from './HorizontalCollapse';
 import HorizontalItem from './HorizontalItem';
-import IntlMessages from '@crema/utility/IntlMessages';
+import IntlMessages from '@crema/helpers/IntlMessages';
 import { Fonts } from '@crema/constants/AppEnums';
+import { allowMultiLanguage } from '@crema/constants/AppConst';
 
 function HorizontalGroup(props) {
   const [opened, setOpened] = useState(false);
@@ -71,7 +72,13 @@ function HorizontalGroup(props) {
               </Icon>
             )}
             <ListItemText
-              primary={<IntlMessages id={item.messageId} />}
+              primary={
+                allowMultiLanguage ? (
+                  <IntlMessages id={item.messageId} />
+                ) : (
+                  item.title
+                )
+              }
               sx={{
                 fontWeight: Fonts.MEDIUM,
               }}

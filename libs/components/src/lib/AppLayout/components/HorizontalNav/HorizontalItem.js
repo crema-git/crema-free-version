@@ -2,12 +2,13 @@ import React from 'react';
 import { Icon, ListItem, ListItemText } from '@mui/material';
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
-import IntlMessages from '@crema/utility/IntlMessages';
+import IntlMessages from '@crema/helpers/IntlMessages';
 import Box from '@mui/material/Box';
 import AppNavLink from '../../../AppNavLink';
 import Badge from '@mui/material/Badge';
 import { useSidebarContext } from '@crema/context/SidebarContextProvider';
 import { useLocation } from 'react-router-dom';
+import { allowMultiLanguage } from '@crema/constants/AppConst';
 
 function HorizontalItem(props) {
   const { item, dense } = props;
@@ -89,7 +90,9 @@ function HorizontalItem(props) {
       )}
       <ListItemText
         className="AppNavLinkTextSubmenu"
-        primary={<IntlMessages id={item.messageId} />}
+        primary={
+          allowMultiLanguage ? <IntlMessages id={item.messageId} /> : item.title
+        }
       />
       {item.count && (
         <Box ml={4}>

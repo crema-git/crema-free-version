@@ -4,7 +4,7 @@ import Avatar from '@mui/material/Avatar';
 import Box from '@mui/material/Box';
 import AddIcon from '@mui/icons-material/Add';
 
-import IntlMessages from '@crema/utility/IntlMessages';
+import IntlMessages from '@crema/helpers/IntlMessages';
 import Grid from '@mui/material/Grid';
 import PropTypes from 'prop-types';
 import { Fonts } from '@crema/constants/AppEnums';

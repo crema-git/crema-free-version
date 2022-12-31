@@ -1,6 +1,6 @@
 import React from 'react';
 import Box from '@mui/material/Box';
-import IntlMessages from '@crema/utility/IntlMessages';
+import IntlMessages from '@crema/helpers/IntlMessages';
 import { FiFacebook, FiTwitter } from 'react-icons/fi';
 import PropTypes from 'prop-types';
 import { Fonts } from '@crema/constants/AppEnums';

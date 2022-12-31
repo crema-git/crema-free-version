@@ -9,7 +9,7 @@ import Box from '@mui/material/Box';
 import PropTypes from 'prop-types';
 import { grey } from '@mui/material/colors';
 import { Fonts } from '@crema/constants/AppEnums';
-import IntlMessages from '@crema/utility/IntlMessages';
+import IntlMessages from '@crema/helpers/IntlMessages';
 import IconButton from '@mui/material/IconButton';
 
 const AddNewList = (props) => {

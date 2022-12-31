@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { useLocation } from 'react-router-dom';
 import ContactHeader from './ContactHeader';
 import AppConfirmDialog from '@crema/components/AppConfirmDialog';
-import IntlMessages from '@crema/utility/IntlMessages';
+import IntlMessages from '@crema/helpers/IntlMessages';
 import CreateContact from '../CreateContact';
 import { Hidden } from '@mui/material';
 import ContactView from './ContactView';
@@ -13,7 +13,7 @@ import AppsHeader from '@crema/components/AppsHeader';
 import AppsContent from '@crema/components/AppsContent';
 import AppsFooter from '@crema/components/AppsFooter';
 import { useInfoViewActionsContext } from '@crema/context/InfoViewContextProvider';
-import { postDataApi, putDataApi } from '@crema/utility/APIHooks';
+import { postDataApi, putDataApi } from '@crema/hooks/APIHooks';
 
 const ContactListing = ({
   apiData,
