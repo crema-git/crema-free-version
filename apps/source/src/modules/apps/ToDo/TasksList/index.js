@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import TaskContentHeader from './TaskContentHeader';
 import { useParams } from 'react-router-dom';
@@ -11,24 +11,22 @@ import AppsFooter from '@crema/components/AppsFooter';
 import ListEmptyResult from '@crema/components/AppList/ListEmptyResult';
 import TodoListSkeleton from '@crema/components/TodoListSkeleton';
 import AppList from '@crema/components/AppList';
-import { putDataApi, useGetDataApi } from '@crema/hooks/APIHooks';
+import { putDataApi } from '@crema/hooks/APIHooks';
 import { useInfoViewActionsContext } from '@crema/context/InfoViewContextProvider';
 import {
   TaskCalender,
   TaskListItem,
   TaskListItemMobile,
 } from '@crema/modules/apps/ToDo';
+import { useTodo } from '@crema/context/AppContextProvider/Apps';
 
 export const ViewMode = {
   List: 'list',
   Calendar: 'calendar',
 };
-const TasksList = ({ taskLists, loading, setQueryParams, setData }) => {
+const TasksList = ({ taskLists, loading, setData }) => {
   const infoViewActionsContext = useInfoViewActionsContext();
-
-  const params = useParams();
-
-  const [{ apiData: labelList }] = useGetDataApi('/api/todo/labels/list', []);
+  const { labelList } = useTodo();
 
   const [filterText, onSetFilterText] = useState('');
   const [viewMode, setViewMode] = useState(ViewMode.List);
@@ -38,15 +36,6 @@ const TasksList = ({ taskLists, loading, setQueryParams, setData }) => {
   const [checkedTasks, setCheckedTasks] = useState([]);
 
   const [isAddTaskOpen, setAddTaskOpen] = React.useState(false);
-
-  useEffect(() => {
-    setPage(0);
-    setQueryParams({
-      type: params?.folder ? 'folder' : 'label',
-      name: params?.folder || params?.label,
-      page: page,
-    });
-  }, [page, params]);
 
   const onOpenAddTask = () => {
     setAddTaskOpen(true);
@@ -78,7 +67,7 @@ const TasksList = ({ taskLists, loading, setQueryParams, setData }) => {
         infoViewActionsContext.showMessage(
           data[0].isStarred
             ? 'Todo Marked as Starred Successfully'
-            : 'Todo Marked as Unstarred Successfully'
+            : 'Todo Marked as Unstarred Successfully',
         );
       })
       .catch((error) => {
@@ -91,7 +80,7 @@ const TasksList = ({ taskLists, loading, setQueryParams, setData }) => {
       return taskLists?.data;
     } else {
       return taskLists?.data.filter((task) =>
-        task.title.toUpperCase().includes(filterText.toUpperCase())
+        task.title.toUpperCase().includes(filterText.toUpperCase()),
       );
     }
   };
@@ -171,7 +160,7 @@ const TasksList = ({ taskLists, loading, setQueryParams, setData }) => {
                 ListEmptyComponent={
                   <ListEmptyResult
                     loading={loading}
-                    actionTitle="Add Task"
+                    actionTitle='Add Task'
                     onAction={onOpenAddTask}
                     placeholder={<TodoListSkeleton />}
                   />
@@ -198,7 +187,7 @@ const TasksList = ({ taskLists, loading, setQueryParams, setData }) => {
                 ListEmptyComponent={
                   <ListEmptyResult
                     loading={loading}
-                    actionTitle="Add Task"
+                    actionTitle='Add Task'
                     onAction={onOpenAddTask}
                     placeholder={<TodoListSkeleton />}
                   />

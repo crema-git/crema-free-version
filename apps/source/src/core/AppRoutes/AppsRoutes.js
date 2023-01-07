@@ -1,6 +1,7 @@
 import React from 'react';
-import {Navigate} from 'react-router-dom';
-import {RoutePermittedRole} from '@crema/constants/AppConst';
+import { Navigate } from 'react-router-dom';
+import { RoutePermittedRole } from '@crema/constants/AppConst';
+import { TodoAuthProvider } from '@crema/context/AppContextProvider/Apps';
 const Mail = React.lazy(() => import('../../modules/apps/Mail'));
 const ToDo = React.lazy(() => import('../../modules/apps/ToDo'));
 const Contact = React.lazy(() => import('../../modules/apps/Contact'));
@@ -32,7 +33,11 @@ export const appsConfig = [
       '/apps/todo/:folder',
       '/apps/todo/:folder/:id',
     ],
-    element: <ToDo />,
+    element: (
+      <TodoAuthProvider>
+        <ToDo />
+      </TodoAuthProvider>
+    ),
   },
   {
     permittedRole: RoutePermittedRole.User,

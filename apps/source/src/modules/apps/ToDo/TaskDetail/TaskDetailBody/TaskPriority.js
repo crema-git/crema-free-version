@@ -7,21 +7,19 @@ import FormControl from '@mui/material/FormControl';
 import PropTypes from 'prop-types';
 import { MenuItem } from '@mui/material';
 import { useInfoViewActionsContext } from '@crema/context/InfoViewContextProvider';
-import { putDataApi, useGetDataApi } from '@crema/hooks/APIHooks';
+import { putDataApi } from '@crema/hooks/APIHooks';
+import { useTodo } from '@crema/context/AppContextProvider/Apps';
 
 const TaskPriority = ({ selectedTask, onUpdateSelectedTask }) => {
   const infoViewActionsContext = useInfoViewActionsContext();
-  const [{ apiData: priorityList }] = useGetDataApi(
-    '/api/todo/priority/list',
-    []
-  );
+  const { priorityList } = useTodo();
 
   const [priority, setPriority] = useState(selectedTask.priority.type);
 
   const onChangePriority = (event) => {
     setPriority(event.target.value);
     const priority = priorityList.find(
-      (data) => data.type.toString() === event.target.value.toString()
+      (data) => data.type.toString() === event.target.value.toString(),
     );
     console.log('priority: ', priority, event.target.value);
     const task = selectedTask;
@@ -39,14 +37,14 @@ const TaskPriority = ({ selectedTask, onUpdateSelectedTask }) => {
   };
 
   return (
-    <FormControl variant="outlined">
-      <InputLabel id="priority-select-outlined-label">
-        <IntlMessages id="common.priority" />
+    <FormControl variant='outlined'>
+      <InputLabel id='priority-select-outlined-label'>
+        <IntlMessages id='common.priority' />
       </InputLabel>
       <Select
-        labelId="priority-select-outlined-label"
-        label={<IntlMessages id="common.priority" />}
-        name="priority"
+        labelId='priority-select-outlined-label'
+        label={<IntlMessages id='common.priority' />}
+        name='priority'
         value={priority}
         onChange={(event) => onChangePriority(event)}
         sx={{

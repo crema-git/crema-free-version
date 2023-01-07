@@ -14,8 +14,8 @@ import SidebarPlaceholder from '@crema/components/SidebarListSkeleton';
 import AddIcon from '@mui/icons-material/Add';
 import { Zoom } from '@mui/material';
 import { styled } from '@mui/material/styles';
-import { useGetDataApi } from '@crema/hooks/APIHooks';
 import { TaskLabelItem } from '@crema/modules/apps/ToDo';
+import { useTodo } from '@crema/context/AppContextProvider/Apps';
 
 const ListWrapper = styled(List)(({ theme }) => ({
   marginBottom: 8,
@@ -25,8 +25,7 @@ const ListWrapper = styled(List)(({ theme }) => ({
 }));
 
 const TaskSideBar = ({ reCallAPI }) => {
-  const [{ apiData: labelList }] = useGetDataApi('/api/todo/labels/list', []);
-  const [{ apiData: folderList }] = useGetDataApi('/api/todo/folders/list', []);
+  const { labelList, folderList } = useTodo();
 
   const [isAddTaskOpen, setAddTaskOpen] = React.useState(false);
 
@@ -43,8 +42,8 @@ const TaskSideBar = ({ reCallAPI }) => {
       <Box sx={{ px: { xs: 4, md: 5 }, pt: { xs: 4, md: 5 }, pb: 2.5 }}>
         <Zoom in style={{ transitionDelay: '300ms' }}>
           <Button
-            variant="outlined"
-            color="primary"
+            variant='outlined'
+            color='primary'
             sx={{
               padding: '8px 28px',
               borderRadius: 30,
@@ -55,7 +54,7 @@ const TaskSideBar = ({ reCallAPI }) => {
             startIcon={<AddIcon />}
             onClick={onOpenAddTask}
           >
-            <IntlMessages id="todo.addNewTask" />
+            <IntlMessages id='todo.addNewTask' />
           </Button>
         </Zoom>
       </Box>
@@ -70,7 +69,7 @@ const TaskSideBar = ({ reCallAPI }) => {
             pb: { xs: 4, md: 5, lg: 6.2 },
           }}
         >
-          <ListWrapper component="nav" aria-label="main task folders">
+          <ListWrapper component='nav' aria-label='main task folders'>
             <AppList
               data={folderList}
               ListEmptyComponent={
@@ -94,7 +93,7 @@ const TaskSideBar = ({ reCallAPI }) => {
           </ListWrapper>
 
           <Box
-            component="h4"
+            component='h4'
             mt={{ xs: 4, xl: 5 }}
             px={{ xs: 4, md: 5, lg: 6.2 }}
             fontWeight={Fonts.SEMI_BOLD}
@@ -102,7 +101,7 @@ const TaskSideBar = ({ reCallAPI }) => {
             Labels
           </Box>
 
-          <List component="nav" aria-label="main mailbox folders">
+          <List component='nav' aria-label='main mailbox folders'>
             <AppList
               data={labelList}
               ListEmptyComponent={

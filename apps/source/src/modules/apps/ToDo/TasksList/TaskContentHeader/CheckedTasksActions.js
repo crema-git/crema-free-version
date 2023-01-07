@@ -11,7 +11,8 @@ import IconButton from '@mui/material/IconButton';
 import AppTooltip from '@crema/components/AppTooltip';
 import { StyledBox } from './index.style';
 import { useInfoViewActionsContext } from '@crema/context/InfoViewContextProvider';
-import { putDataApi, useGetDataApi } from '@crema/hooks/APIHooks';
+import { putDataApi } from '@crema/hooks/APIHooks';
+import { useTodo } from '@crema/context/AppContextProvider/Apps';
 
 const CheckedTasksActions = ({
   checkedTasks,
@@ -22,7 +23,7 @@ const CheckedTasksActions = ({
 }) => {
   const params = useParams();
   const infoViewActionsContext = useInfoViewActionsContext();
-  const [{ apiData: labelList }] = useGetDataApi('/api/todo/labels/list', []);
+  const { labelList } = useTodo();
 
   const [isLabelOpen, onOpenLabel] = React.useState(null);
 
@@ -70,11 +71,11 @@ const CheckedTasksActions = ({
 
   return (
     <>
-      <StyledBox component="span">
-        <Box component="span">
+      <StyledBox component='span'>
+        <Box component='span'>
           <AppsDeleteIcon
             deleteAction={onDeleteTasks}
-            deleteTitle={<IntlMessages id="todo.deleteMessage" />}
+            deleteTitle={<IntlMessages id='todo.deleteMessage' />}
             sx={{
               cursor: 'pointer',
               color: 'text.disabled',
@@ -82,13 +83,13 @@ const CheckedTasksActions = ({
           />
         </Box>
 
-        <Box component="span">
-          <AppTooltip title={<IntlMessages id="common.label" />}>
+        <Box component='span'>
+          <AppTooltip title={<IntlMessages id='common.label' />}>
             <IconButton
               sx={{
                 color: 'text.disabled',
               }}
-              size="large"
+              size='large'
             >
               <LabelOutlinedIcon
                 sx={{
