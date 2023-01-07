@@ -211,6 +211,9 @@
       "@crema/context/AppContextProvider": [
         "libs/context/src/AppContextProvider/index.js"
       ],
+      "@crema/context/AppContextProvider/Apps": [
+        "libs/context/src/AppContextProvider/Apps/index.js"
+      ],
       "@crema/context/AppLocaleProvider": [
         "libs/context/src/AppLocaleProvider/index.js"
       ],

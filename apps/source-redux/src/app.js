@@ -8,7 +8,7 @@ import AppLocaleProvider from '@crema/context/AppLocaleProvider';
 import { BrowserRouter } from 'react-router-dom';
 import FirebaseAuthProvider from '@crema/services/auth/FirebaseAuthProvider';
 import AuthRoutes from '@crema/components/AuthRoutes';
-import configureStore from '@crema/redux-toolkit/store';
+import configureStore from '@crema/redux/store';
 import AppLayout from './core/AppLayout';
 import '@crema/mockapi';
 import './assets/styles/maps.css';

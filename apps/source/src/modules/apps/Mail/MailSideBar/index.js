@@ -12,16 +12,11 @@ import ListEmptyResult from '@crema/components/AppList/ListEmptyResult';
 import SidebarPlaceholder from '@crema/components/SidebarListSkeleton';
 import AddIcon from '@mui/icons-material/Add';
 import { Zoom } from '@mui/material';
-import { useGetDataApi } from '@crema/hooks/APIHooks';
 import { ConnectionListItem, LabelItem } from '@crema/modules/apps/Mail';
+import { useMail } from '@crema/context/AppContextProvider/Apps';
 
 const MailSidebar = () => {
-  const [{ apiData: labelList }] = useGetDataApi('/api/mailApp/labels/list');
-  const [{ apiData: connectionList }] = useGetDataApi(
-    '/api/mailApp/connection/list'
-  );
-  const [{ apiData: folderList }] = useGetDataApi('/api/mailApp/folders/list');
-
+  const { connectionList, labelList, folderList } = useMail();
   const [isComposeMail, setComposeMail] = useState(false);
 
   const onOpenComposeMail = () => {
@@ -45,8 +40,8 @@ const MailSidebar = () => {
           >
             <Zoom in style={{ transitionDelay: '300ms' }}>
               <Button
-                variant="outlined"
-                color="primary"
+                variant='outlined'
+                color='primary'
                 sx={{
                   padding: '8px 28px',
                   borderRadius: 30,
@@ -57,7 +52,7 @@ const MailSidebar = () => {
                 startIcon={<AddIcon />}
                 onClick={onOpenComposeMail}
               >
-                <IntlMessages id="common.compose" />
+                <IntlMessages id='common.compose' />
               </Button>
             </Zoom>
           </Box>
@@ -77,8 +72,8 @@ const MailSidebar = () => {
                 sx={{
                   mb: { xs: 2, xl: 5 },
                 }}
-                component="nav"
-                aria-label="main mailbox folders"
+                component='nav'
+                aria-label='main mailbox folders'
               >
                 <AppList
                   data={folderList}
@@ -107,22 +102,22 @@ const MailSidebar = () => {
               </List>
 
               <Box
-                component="h4"
+                component='h4'
                 sx={{
                   mt: { xs: 4, xl: 5 },
                   px: { xs: 4, md: 5, lg: 6.2 },
                   fontWeight: Fonts.SEMI_BOLD,
                 }}
               >
-                <IntlMessages id="common.labels" />
+                <IntlMessages id='common.labels' />
               </Box>
 
               <List
                 sx={{
                   mb: { xs: 2, xl: 5 },
                 }}
-                component="nav"
-                aria-label="main mailbox folders"
+                component='nav'
+                aria-label='main mailbox folders'
               >
                 <AppList
                   data={labelList}
@@ -147,14 +142,14 @@ const MailSidebar = () => {
               </List>
 
               <Box
-                component="h4"
+                component='h4'
                 sx={{
                   mt: { xs: 4, xl: 5 },
                   px: { xs: 4, md: 5, lg: 6.2 },
                   fontWeight: Fonts.SEMI_BOLD,
                 }}
               >
-                <IntlMessages id="common.connections" />
+                <IntlMessages id='common.connections' />
               </Box>
 
               <List style={{ paddingBottom: 0 }}>
