@@ -37,13 +37,16 @@ export const MailAuthProvider = ({ children }) => {
   useEffect(() => {
     setPage(0);
   }, [pathname]);
-
-  const updateMailList = (type, name, page) => {
+  useEffect(() => {
     setQueryParams({
-      type,
-      name,
+      type: params?.folder ? 'folder' : 'label',
+      name: params?.folder || params?.label,
       page,
     });
+  }, [page, pathname]);
+
+  const onPageChange = (event, value) => {
+    setPage(value);
   };
 
   return (
@@ -54,12 +57,13 @@ export const MailAuthProvider = ({ children }) => {
         folderList,
         mailList,
         loading,
+        page,
       }}
     >
       <MailActionsContext.Provider
         value={{
-          updateMailList,
           setMailData,
+          onPageChange,
         }}
       >
         {children}

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import MailContentHeader from './MailContentHeader';
 import { Hidden } from '@mui/material';
@@ -22,31 +22,14 @@ const MailsList = () => {
   const navigate = useNavigate();
   const params = useParams();
   const infoViewActionsContext = useInfoViewActionsContext();
-  const { mailList, loading, labelList } = useMail();
-  const { updateMailList, setMailData } = useMailActions();
+  const { page, mailList, loading, labelList } = useMail();
+  const { onPageChange, setMailData } = useMailActions();
   const { pathname } = useLocation();
   const path = pathname.split('/');
-  const [page, setPage] = useState(0);
 
   const [checkedMails, setCheckedMails] = useState([]);
 
   const [filterText, onSetFilterText] = useState('');
-
-  useEffect(() => {
-    setPage(0);
-  }, [pathname]);
-
-  useEffect(() => {
-    updateMailList(
-      params?.folder ? 'folder' : 'label',
-      params?.folder || params?.label,
-      page,
-    );
-  }, [page, pathname]);
-
-  const onPageChange = (event, value) => {
-    setPage(value);
-  };
 
   const onChangeCheckedMails = (checked, id) => {
     if (checked) {
