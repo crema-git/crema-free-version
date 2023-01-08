@@ -35,6 +35,7 @@ const MailListItem = (props) => {
     onRemoveItem,
     onUpdateItem,
   } = props;
+
   const infoViewActionsContext = useInfoViewActionsContext();
   const messages = mail.messages.length;
   const onGetMailDate = (date) => {
@@ -74,7 +75,7 @@ const MailListItem = (props) => {
         infoViewActionsContext.showMessage(
           data.isRead
             ? 'Mail Marked as Read Successfully'
-            : 'Mail Marked as Unread Successfully'
+            : 'Mail Marked as Unread Successfully',
         );
       })
       .catch((error) => {
@@ -163,7 +164,7 @@ const MailListItem = (props) => {
         }}
       >
         <Box
-          component="span"
+          component='span'
           sx={{
             display: 'inline-block',
           }}
@@ -177,7 +178,7 @@ const MailListItem = (props) => {
             onChange={(event) =>
               onChangeCheckedMails(event.target.checked, mail.id)
             }
-            color="primary"
+            color='primary'
           />
         </Box>
         <Box
@@ -188,7 +189,7 @@ const MailListItem = (props) => {
               color: (theme) => theme.palette.warning.main,
             },
           }}
-          component="span"
+          component='span'
           onClick={(event) => event.stopPropagation()}
         >
           <AppsStarredIcon item={mail} onChange={onChangeStarred} />
@@ -200,7 +201,7 @@ const MailListItem = (props) => {
           }}
         >
           <Avatar
-            className="avatar"
+            className='avatar'
             alt={getSenderName()}
             src={getSenderImage()}
           />
@@ -225,7 +226,7 @@ const MailListItem = (props) => {
 
       <MailInfoWrapper>
         <Box
-          className="mail-info-content"
+          className='mail-info-content'
           sx={{
             display: 'flex',
             flexDirection: 'row',
@@ -242,14 +243,14 @@ const MailListItem = (props) => {
               mr: 3,
               mb: 0,
             }}
-            component="p"
+            component='p'
             className={clsx(!mail.isRead ? 'fontBold' : '')}
           >
             {mail.subject}
           </Box>
           {mail.isAttachment ? (
             <Box
-              component="p"
+              component='p'
               sx={{
                 color: 'text.secondary',
                 position: 'relative',
@@ -263,7 +264,7 @@ const MailListItem = (props) => {
             </Box>
           ) : null}
           <Box
-            component="p"
+            component='p'
             sx={{
               overflow: 'hidden',
               textOverflow: 'ellipsis',
@@ -276,8 +277,8 @@ const MailListItem = (props) => {
         </Box>
 
         <Box
-          className="mail-time"
-          component="span"
+          className='mail-time'
+          component='span'
           sx={{
             px: 2.5,
             minWidth: 110,
@@ -292,7 +293,7 @@ const MailListItem = (props) => {
             sx={{
               color: mail.label.color,
             }}
-            component="span"
+            component='span'
           >
             <LabelOutlinedIcon
               sx={{
@@ -301,7 +302,7 @@ const MailListItem = (props) => {
             />
           </Box>
           <Box
-            component="span"
+            component='span'
             sx={{
               whiteSpace: 'pre',
               fontWeight: Fonts.MEDIUM,
@@ -312,13 +313,13 @@ const MailListItem = (props) => {
           </Box>
         </Box>
 
-        <MainActionWrapper className="main-action-wrapper">
+        <MainActionWrapper className='main-action-wrapper'>
           <IconButton
             sx={{
               color: (theme) => theme.palette.text.disabled,
             }}
             onClick={onArchive}
-            size="large"
+            size='large'
           >
             <ArchiveOutlinedIcon />
           </IconButton>
@@ -327,7 +328,7 @@ const MailListItem = (props) => {
               color: (theme) => theme.palette.text.disabled,
             }}
             onClick={onDelete}
-            size="large"
+            size='large'
           >
             <DeleteOutlinedIcon />
           </IconButton>
@@ -336,7 +337,7 @@ const MailListItem = (props) => {
               color: (theme) => theme.palette.text.disabled,
             }}
             onClick={onUpdateReadStatus}
-            size="large"
+            size='large'
           >
             {mail.isRead ? <MailOutlinedIcon /> : <DraftsOutlinedIcon />}
           </IconButton>
@@ -345,7 +346,7 @@ const MailListItem = (props) => {
               color: (theme) => theme.palette.text.disabled,
             }}
             onClick={onReportSpam}
-            size="large"
+            size='large'
           >
             <InfoOutlinedIcon />
           </IconButton>

@@ -3,6 +3,11 @@ import PropTypes from 'prop-types';
 import { useGetDataApi } from '@crema/hooks/APIHooks';
 import { useLocation, useParams } from 'react-router-dom';
 
+export const ViewMode = {
+  List: 'list',
+  Calendar: 'calendar',
+};
+
 const TodoContext = createContext();
 const TodoActionsContext = createContext();
 
@@ -12,6 +17,7 @@ export const useTodoActionsContext = () => useContext(TodoActionsContext);
 
 export const TodoContextProvider = ({ children }) => {
   const params = useParams();
+  const [viewMode, setViewMode] = useState(ViewMode.List);
   const { pathname } = useLocation();
   const [{ apiData: labelList }] = useGetDataApi('/api/todo/labels/list');
   const [{ apiData: priorityList }] = useGetDataApi('/api/todo/priority/list');
@@ -27,6 +33,9 @@ export const TodoContextProvider = ({ children }) => {
 
   useEffect(() => {
     setPage(0);
+  }, [pathname]);
+
+  useEffect(() => {
     setQueryParams({
       type: params?.folder ? 'folder' : 'label',
       name: params?.folder || params?.label,
@@ -49,6 +58,7 @@ export const TodoContextProvider = ({ children }) => {
         taskLists,
         loading,
         page,
+        viewMode,
       }}
     >
       <TodoActionsContext.Provider
@@ -57,6 +67,8 @@ export const TodoContextProvider = ({ children }) => {
           onPageChange,
           setQueryParams,
           reCallAPI,
+          setPage,
+          setViewMode,
         }}
       >
         {children}

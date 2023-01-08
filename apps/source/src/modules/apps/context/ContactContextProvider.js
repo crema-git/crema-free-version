@@ -42,7 +42,7 @@ export const ContactContextProvider = ({ children }) => {
       name: path[path.length - 1],
       page: page,
     });
-  }, [pathname, pageView, page]);
+  }, [pathname, page]);
 
   const onPageChange = (event, value) => {
     setPage(value);

@@ -1,20 +1,20 @@
 import React from 'react';
 import Checkbox from '@mui/material/Checkbox/index';
 import Box from '@mui/material/Box';
-import {Hidden} from '@mui/material';
+import { Hidden } from '@mui/material';
 import PropTypes from 'prop-types';
 import CheckedMailActions from './CheckedMailActions';
 import MoreOptions from './MoreOptions';
 import AppsPagination from '@crema/components/AppsPagination';
 import AppSearchBar from '@crema/components/AppSearchBar';
-import {useIntl} from 'react-intl';
+import { useIntl } from 'react-intl';
+import { useMailContext } from '../../../context/MailContextProvider';
 
 const MailContentHeader = (props) => {
   const {
     path,
     checkedMails,
     setCheckedMails,
-    page,
     mailList,
     totalMails,
     setData,
@@ -23,7 +23,8 @@ const MailContentHeader = (props) => {
     onSetFilterText,
   } = props;
 
-  const {messages} = useIntl();
+  const { messages } = useIntl();
+  const { page } = useMailContext();
 
   const onHandleMasterCheckbox = (event) => {
     if (event.target.checked) {
@@ -40,7 +41,7 @@ const MailContentHeader = (props) => {
         sx={{
           display: 'flex',
           alignItems: 'center',
-          width: {xs: '100%', sm: 'auto'},
+          width: { xs: '100%', sm: 'auto' },
         }}
       >
         <Box component='span'>
@@ -59,7 +60,7 @@ const MailContentHeader = (props) => {
             onChange={onHandleMasterCheckbox}
           />
         </Box>
-        <Box sx={{mr: 5}}>
+        <Box sx={{ mr: 5 }}>
           <AppSearchBar
             iconPosition='right'
             overlap={false}
@@ -89,7 +90,7 @@ const MailContentHeader = (props) => {
           <Box
             component='span'
             sx={{
-              ml: {sm: 'auto'},
+              ml: { sm: 'auto' },
             }}
           >
             <AppsPagination

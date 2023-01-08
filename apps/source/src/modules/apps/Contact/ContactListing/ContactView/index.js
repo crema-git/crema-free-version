@@ -17,8 +17,6 @@ import { useContactContext } from '../../../context/ContactContextProvider';
 const ContactView = (props) => {
   const {
     list,
-    pageView,
-    loading,
     handleAddContactOpen,
     onChangeStarred,
     onChangeCheckedContacts,
@@ -28,7 +26,7 @@ const ContactView = (props) => {
     onViewContactDetail,
   } = props;
 
-  const { labelList } = useContactContext();
+  const { pageView, loading, labelList } = useContactContext();
 
   return (
     <>

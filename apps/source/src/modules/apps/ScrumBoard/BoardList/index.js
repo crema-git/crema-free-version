@@ -7,22 +7,23 @@ import { Fonts } from '@crema/constants/AppEnums';
 import AppInfoView from '@crema/components/AppInfoView';
 import { Zoom } from '@mui/material';
 import { useInfoViewActionsContext } from '@crema/context/InfoViewContextProvider';
-import { postDataApi, putDataApi, useGetDataApi } from '@crema/hooks/APIHooks';
+import { postDataApi, putDataApi } from '@crema/hooks/APIHooks';
 import {
   AddBoardButton,
   AddNewBoard,
   BoardItem,
 } from '@crema/modules/apps/ScrumBoard';
+import {
+  useScrumContext,
+  useScrumActionsContext,
+} from '../../context/ScrumContextProvider';
 
 const BoardList = () => {
   const navigate = useNavigate();
+  const { boardList } = useScrumContext();
+  const { setData } = useScrumActionsContext();
 
   const infoViewActionsContext = useInfoViewActionsContext();
-
-  const [{ apiData: boardList }, { setData }] = useGetDataApi(
-    '/api/scrumboard/board/list',
-    []
-  );
 
   const [isAddBoardOpen, setAddBoardOpen] = useState(false);
 
@@ -74,7 +75,7 @@ const BoardList = () => {
 
   return (
     <>
-      <Zoom direction="up" in mountOnEnter unmountOnExit>
+      <Zoom direction='up' in mountOnEnter unmountOnExit>
         <Box
           sx={{
             pt: 4,
@@ -84,7 +85,7 @@ const BoardList = () => {
           }}
         >
           <Box
-            component="h2"
+            component='h2'
             sx={{
               my: { xs: 5, sm: 5, xl: 8 },
               color: 'text.primary',
@@ -93,7 +94,7 @@ const BoardList = () => {
               fontSize: 16,
             }}
           >
-            <IntlMessages id="scrumboard.scrumboardApp" />
+            <IntlMessages id='scrumboard.scrumboardApp' />
           </Box>
           <AppGridContainer
             sx={{

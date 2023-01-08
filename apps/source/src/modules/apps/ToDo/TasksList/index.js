@@ -21,19 +21,12 @@ import {
   useTodoActionsContext,
 } from '../../context/TodoContextProvider';
 
-export const ViewMode = {
-  List: 'list',
-  Calendar: 'calendar',
-};
 const TasksList = () => {
   const infoViewActionsContext = useInfoViewActionsContext();
-  const { taskLists, loading, labelList } = useTodoContext();
-  const { setTodoData } = useTodoActionsContext();
+  const { taskLists, loading, page, viewMode } = useTodoContext();
+  const { setTodoData, onPageChange } = useTodoActionsContext();
 
   const [filterText, onSetFilterText] = useState('');
-  const [viewMode, setViewMode] = useState(ViewMode.List);
-
-  const [page, setPage] = useState(0);
 
   const [checkedTasks, setCheckedTasks] = useState([]);
 
@@ -45,10 +38,6 @@ const TasksList = () => {
 
   const onCloseAddTask = () => {
     setAddTaskOpen(false);
-  };
-
-  const onPageChange = (event, value) => {
-    setPage(value);
   };
 
   const onChangeCheckedTasks = (event, id) => {
@@ -126,21 +115,15 @@ const TasksList = () => {
     <>
       <AppsHeader>
         <TaskContentHeader
-          taskLists={taskLists?.data}
-          totalTasks={taskLists?.count}
           onUpdateTasks={onUpdateTasks}
           checkedTasks={checkedTasks}
           setCheckedTasks={setCheckedTasks}
           filterText={filterText}
           onSetFilterText={onSetFilterText}
-          viewMode={viewMode}
-          onViewModeSelect={setViewMode}
-          onPageChange={onPageChange}
-          page={page}
         />
       </AppsHeader>
       <AppsContent>
-        {viewMode === ViewMode.Calendar ? (
+        {viewMode === 'calendar' ? (
           <TaskCalender taskList={list} />
         ) : (
           <>
@@ -151,7 +134,6 @@ const TasksList = () => {
                   <TaskListItem
                     key={task.id}
                     task={task}
-                    labelList={labelList}
                     onChangeCheckedTasks={onChangeCheckedTasks}
                     checkedTasks={checkedTasks}
                     onChangeStarred={onChangeStarred}
@@ -180,7 +162,6 @@ const TasksList = () => {
                   <TaskListItemMobile
                     key={task.id}
                     task={task}
-                    labelList={labelList}
                     checkedTasks={checkedTasks}
                     onChangeStarred={onChangeStarred}
                   />

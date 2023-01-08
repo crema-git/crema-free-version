@@ -13,14 +13,10 @@ import SidebarPlaceholder from '@crema/components/SidebarListSkeleton';
 import AddIcon from '@mui/icons-material/Add';
 import { Zoom } from '@mui/material';
 import { ContactListLabelItem } from '@crema/modules/apps/Contact';
-import {
-  useContactContext,
-  useContactActionsContext,
-} from '../../context/ContactContextProvider';
+import { useContactContext } from '../../context/ContactContextProvider';
 
 const SideBarContent = () => {
   const { folderList, labelList } = useContactContext();
-  const { reCallAPI } = useContactActionsContext();
   const [isAddContact, onSetIsAddContact] = useState(false);
 
   const handleAddContactOpen = () => {
@@ -138,7 +134,6 @@ const SideBarContent = () => {
           <CreateContact
             isAddContact={isAddContact}
             handleAddContactClose={handleAddContactClose}
-            reCallAPI={reCallAPI}
           />
         </Box>
       </AppScrollbar>

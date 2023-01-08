@@ -8,6 +8,10 @@ import CheckBox from './CheckBox';
 import ContactCheckedActions from './ContactCheckedActions';
 import AppsPagination from '@crema/components/AppsPagination';
 import { ViewSelectButtons } from '@crema/modules/apps/Contact';
+import {
+  useContactActionsContext,
+  useContactContext,
+} from '../../../context/ContactContextProvider';
 
 const ContactHeader = (props) => {
   const {
@@ -15,14 +19,11 @@ const ContactHeader = (props) => {
     setCheckedContacts,
     filterText,
     onSetFilterText,
-    apiData,
     onUpdateContacts,
-    onChangePageView,
     onSelectContactsForDelete,
-    page,
-    onPageChange,
-    pageView,
   } = props;
+  const { page, pageView, contactList } = useContactContext();
+  const { onPageChange, setPageView } = useContactActionsContext();
 
   const { messages } = useIntl();
 
@@ -37,13 +38,12 @@ const ContactHeader = (props) => {
         }}
       >
         <CheckBox
-          contactList={apiData?.data || []}
           checkedContacts={checkedContacts}
           setCheckedContacts={setCheckedContacts}
         />
 
         <AppSearchBar
-          iconPosition="right"
+          iconPosition='right'
           overlap={false}
           value={filterText}
           onChange={(event) => onSetFilterText(event.target.value)}
@@ -58,16 +58,13 @@ const ContactHeader = (props) => {
           />
         ) : null}
 
-        <ViewSelectButtons
-          pageView={pageView}
-          onChangePageView={onChangePageView}
-        />
+        <ViewSelectButtons pageView={pageView} onChangePageView={setPageView} />
       </Box>
       <Hidden smDown>
-        {apiData?.data?.length > 0 ? (
+        {contactList?.data?.length > 0 ? (
           <AppsPagination
             sx={{ ml: 2 }}
-            count={apiData?.count}
+            count={contactList?.count}
             page={page}
             onPageChange={onPageChange}
           />

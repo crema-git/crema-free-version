@@ -9,17 +9,14 @@ import AppDialog from '@crema/components/AppDialog';
 import { useAuthUser } from '@crema/hooks/AuthHooks';
 import { postDataApi } from '@crema/hooks/APIHooks';
 import { useInfoViewActionsContext } from '@crema/context/InfoViewContextProvider';
+import { useTodoActionsContext } from '../../context/TodoContextProvider';
 
 const validationSchema = yup.object({
-  title: yup.string().required(<IntlMessages id="validation.titleRequired" />),
+  title: yup.string().required(<IntlMessages id='validation.titleRequired' />),
 });
 
-const AddNewTask = ({
-  isAddTaskOpen,
-  onCloseAddTask,
-  selectedDate,
-  reCallAPI,
-}) => {
+const AddNewTask = ({ isAddTaskOpen, onCloseAddTask, selectedDate }) => {
+  const { reCallAPI } = useTodoActionsContext();
   const { user } = useAuthUser();
   const infoViewActionsContext = useInfoViewActionsContext();
   const [taskLabels, setTaskLabels] = useState([]);
@@ -27,10 +24,10 @@ const AddNewTask = ({
   return (
     <AppDialog
       dividers
-      maxWidth="md"
+      maxWidth='md'
       open={isAddTaskOpen}
       onClose={() => onCloseAddTask()}
-      title={<IntlMessages id="todo.addNewTask" />}
+      title={<IntlMessages id='todo.addNewTask' />}
     >
       <Formik
         validateOnChange={true}
@@ -72,7 +69,7 @@ const AddNewTask = ({
             .then(() => {
               reCallAPI();
               infoViewActionsContext.showMessage(
-                'New Task has been created successfully!'
+                'New Task has been created successfully!',
               );
             })
             .catch((error) => {

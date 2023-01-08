@@ -22,7 +22,7 @@ const MailsList = () => {
   const navigate = useNavigate();
   const params = useParams();
   const infoViewActionsContext = useInfoViewActionsContext();
-  const { page, mailList, loading, labelList } = useMailContext();
+  const { page, mailList, loading } = useMailContext();
   const { onPageChange, setMailData } = useMailActionsContext();
   const { pathname } = useLocation();
   const path = pathname.split('/');
@@ -124,7 +124,6 @@ const MailsList = () => {
           onPageChange={onPageChange}
           filterText={filterText}
           onSetFilterText={onSetFilterText}
-          page={page}
           path={path}
           setData={setMailData}
           mailList={list}
@@ -149,7 +148,6 @@ const MailsList = () => {
               <MailListItem
                 key={mail.id}
                 mail={mail}
-                labelList={labelList}
                 onChangeCheckedMails={onChangeCheckedMails}
                 checkedMails={checkedMails}
                 onViewMailDetail={onViewMailDetail}
@@ -177,7 +175,6 @@ const MailsList = () => {
               <MailListItemMobile
                 key={mail.id}
                 mail={mail}
-                labelList={labelList}
                 checkedMails={checkedMails}
                 onChangeCheckedMails={onChangeCheckedMails}
                 onViewMailDetail={onViewMailDetail}

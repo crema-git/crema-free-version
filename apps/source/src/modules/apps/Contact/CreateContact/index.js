@@ -7,16 +7,17 @@ import AddContactForm from './AddContactForm';
 import AppDialog from '@crema/components/AppDialog';
 import { useInfoViewActionsContext } from '@crema/context/InfoViewContextProvider';
 import { postDataApi, putDataApi } from '@crema/hooks/APIHooks';
+import { useContactActionsContext } from '../../context/ContactContextProvider';
 
 const validationSchema = yup.object({
-  name: yup.string().required(<IntlMessages id="validation.nameRequired" />),
+  name: yup.string().required(<IntlMessages id='validation.nameRequired' />),
   email: yup
     .string()
-    .email(<IntlMessages id="validation.emailFormat" />)
-    .required(<IntlMessages id="validation.emailRequired" />),
+    .email(<IntlMessages id='validation.emailFormat' />)
+    .required(<IntlMessages id='validation.emailRequired' />),
   contact: yup
     .string()
-    .required(<IntlMessages id="validation.phoneNumberRequired" />),
+    .required(<IntlMessages id='validation.phoneNumberRequired' />),
 });
 
 const CreateContact = (props) => {
@@ -25,20 +26,20 @@ const CreateContact = (props) => {
     handleAddContactClose,
     selectContact,
     onUpdateContact,
-    reCallAPI,
   } = props;
   const infoViewActionsContext = useInfoViewActionsContext();
+  const { reCallAPI } = useContactActionsContext();
 
   const [userImage, setUserImage] = useState(
     selectContact && selectContact.image
       ? selectContact.image
-      : '/assets/images/placeholder.jpg'
+      : '/assets/images/placeholder.jpg',
   );
   useEffect(() => {
     setUserImage(
       selectContact && selectContact.image
         ? selectContact.image
-        : '/assets/images/placeholder.jpg'
+        : '/assets/images/placeholder.jpg',
     );
   }, [selectContact]);
 
@@ -94,7 +95,7 @@ const CreateContact = (props) => {
               .then(() => {
                 reCallAPI();
                 infoViewActionsContext.showMessage(
-                  'Contact updated successfully!'
+                  'Contact updated successfully!',
                 );
               })
               .catch((error) => {
@@ -115,7 +116,7 @@ const CreateContact = (props) => {
               .then(() => {
                 reCallAPI();
                 infoViewActionsContext.showMessage(
-                  'Contact created successfully!'
+                  'Contact created successfully!',
                 );
               })
               .catch((error) => {
@@ -152,5 +153,4 @@ CreateContact.propTypes = {
   handleAddContactClose: PropTypes.func.isRequired,
   selectContact: PropTypes.object,
   onUpdateContact: PropTypes.func,
-  reCallAPI: PropTypes.func,
 };

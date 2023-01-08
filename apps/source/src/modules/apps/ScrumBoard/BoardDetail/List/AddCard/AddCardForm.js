@@ -14,12 +14,12 @@ import PropTypes from 'prop-types';
 import { Autocomplete, DatePicker } from '@mui/lab';
 import AppTextField from '@crema/components/AppTextField';
 import AppScrollbar from '@crema/components/AppScrollbar';
-import { useGetDataApi } from '@crema/hooks/APIHooks';
 import {
   CardCheckedList,
   CardComments,
   CardAttachments,
 } from '@crema/modules/apps/ScrumBoard';
+import { useScrumContext } from '../../../../context/ScrumContextProvider';
 
 const AddCardForm = (props) => {
   const {
@@ -42,16 +42,8 @@ const AddCardForm = (props) => {
   } = props;
 
   const { messages } = useIntl();
+  const { labelList, memberList } = useScrumContext();
 
-  const [{ apiData: labelList }] = useGetDataApi(
-    '/api/scrumboard/label/list',
-    []
-  );
-  const [{ apiData: memberList }] = useGetDataApi(
-    '/api/scrumboard/member/list',
-    []
-  );
-  console.log('memberList', memberList);
   const onDeleteCheckedItem = (id) => {
     const updatedList = checkedList.filter((item) => item.id !== id);
     setCheckedList(updatedList);
@@ -88,13 +80,13 @@ const AddCardForm = (props) => {
         },
         comment: comment,
         date: moment().format('ll'),
-      })
+      }),
     );
   };
 
   const onDeleteAttachment = (id) => {
     const updatedAttachments = attachments.filter(
-      (attachment) => attachment.id !== id
+      (attachment) => attachment.id !== id,
     );
     setAttachments(updatedAttachments);
   };
@@ -106,7 +98,7 @@ const AddCardForm = (props) => {
         height: '100%',
       }}
       noValidate
-      autoComplete="off"
+      autoComplete='off'
     >
       <AppScrollbar
         sx={{
@@ -136,9 +128,9 @@ const AddCardForm = (props) => {
               sx={{
                 width: '100%',
               }}
-              variant="outlined"
-              label={<IntlMessages id="common.title" />}
-              name="title"
+              variant='outlined'
+              label={<IntlMessages id='common.title' />}
+              name='title'
             />
           </Box>
 
@@ -154,11 +146,11 @@ const AddCardForm = (props) => {
           >
             <DatePicker
               autoOk
-              format="YYYY/MM/DD"
-              variant="outlined"
-              inputVariant="outlined"
-              label={<IntlMessages id="common.date" />}
-              name="date"
+              format='YYYY/MM/DD'
+              variant='outlined'
+              inputVariant='outlined'
+              label={<IntlMessages id='common.date' />}
+              name='date'
               value={values.date}
               onChange={(value) => setFieldValue('date', value)}
               renderInput={(params) => <TextField {...params} />}
@@ -173,14 +165,14 @@ const AddCardForm = (props) => {
           }}
         >
           <AppTextField
-            name="desc"
+            name='desc'
             multiline
             sx={{
               width: '100%',
               mb: 5,
             }}
-            rows="3"
-            variant="outlined"
+            rows='3'
+            variant='outlined'
             placeholder={messages['common.description']}
           />
 
@@ -192,7 +184,7 @@ const AddCardForm = (props) => {
             <Grid item xs={12} md={6}>
               <Autocomplete
                 multiple
-                id="tags-outlined"
+                id='tags-outlined'
                 options={labelList}
                 getOptionLabel={(option) => option.name}
                 value={selectedLabels}
@@ -201,8 +193,8 @@ const AddCardForm = (props) => {
                 renderInput={(params) => (
                   <TextField
                     {...params}
-                    variant="outlined"
-                    label={<IntlMessages id="common.label" />}
+                    variant='outlined'
+                    label={<IntlMessages id='common.label' />}
                     fullWidth
                   />
                 )}
@@ -212,7 +204,7 @@ const AddCardForm = (props) => {
             <Grid item xs={12} md={6}>
               <Autocomplete
                 multiple
-                id="tags-outlined"
+                id='tags-outlined'
                 options={memberList}
                 autoHighlight
                 getOptionLabel={(option) => option.name}
@@ -220,7 +212,7 @@ const AddCardForm = (props) => {
                 onChange={(event, value) => setMembersList(value)}
                 renderOption={(props, option) => (
                   <Box
-                    component="li"
+                    component='li'
                     sx={{ display: 'flex', alignItems: 'center' }}
                     {...props}
                   >
@@ -236,8 +228,8 @@ const AddCardForm = (props) => {
                 renderInput={(params) => (
                   <TextField
                     {...params}
-                    variant="outlined"
-                    label={<IntlMessages id="common.members" />}
+                    variant='outlined'
+                    label={<IntlMessages id='common.members' />}
                     fullWidth
                   />
                 )}
@@ -281,23 +273,23 @@ const AddCardForm = (props) => {
           sx={{
             px: 8,
           }}
-          color="primary"
-          variant="outlined"
+          color='primary'
+          variant='outlined'
           disabled={isSubmitting}
-          type="submit"
+          type='submit'
         >
-          <IntlMessages id="common.done" />
+          <IntlMessages id='common.done' />
         </Button>
         <Button
           sx={{
             px: 8,
             ml: 2.5,
           }}
-          color="primary"
-          variant="outlined"
+          color='primary'
+          variant='outlined'
           onClick={onCloseAddCard}
         >
-          <IntlMessages id="common.cancel" />
+          <IntlMessages id='common.cancel' />
         </Button>
       </Box>
     </Form>

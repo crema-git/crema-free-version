@@ -19,9 +19,8 @@ import {
 } from '../../context/ContactContextProvider';
 
 const ContactListing = () => {
-  const { page, pageView, loading, contactList } = useContactContext();
-  const { onPageChange, setPageView, reCallAPI, setContactData } =
-    useContactActionsContext();
+  const { page, contactList } = useContactContext();
+  const { onPageChange, setContactData } = useContactActionsContext();
 
   const { pathname } = useLocation();
   const infoViewActionsContext = useInfoViewActionsContext();
@@ -160,21 +159,14 @@ const ContactListing = () => {
           checkedContacts={checkedContacts}
           setCheckedContacts={setCheckedContacts}
           filterText={filterText}
-          apiData={contactList}
           onUpdateContacts={onUpdateContacts}
           onSelectContactsForDelete={onSelectContactsForDelete}
           onSetFilterText={onSetFilterText}
-          onPageChange={onPageChange}
-          page={page}
-          onChangePageView={setPageView}
-          pageView={pageView}
         />
       </AppsHeader>
       <AppsContent>
         <ContactView
           list={list}
-          loading={loading}
-          pageView={pageView}
           handleAddContactOpen={handleAddContactOpen}
           onChangeCheckedContacts={onChangeCheckedContacts}
           onChangeStarred={onChangeStarred}
@@ -202,7 +194,6 @@ const ContactListing = () => {
         handleAddContactClose={handleAddContactClose}
         selectContact={selectedContact}
         onUpdateContact={onUpdateContact}
-        reCallAPI={reCallAPI}
       />
 
       <ContactDetail
