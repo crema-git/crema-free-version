@@ -36,7 +36,7 @@ mock.onGet('/api/mailApp/folder/mail/List').reply((config) => {
       folderMailList = mailList.filter((mail) => mail.isStarred);
     } else {
       const folderId = folderList.find(
-        (folder) => folder.alias === params.name
+        (folder) => folder.alias === params.name,
       ).id;
       folderMailList = mailList.filter((mail) => mail.folderValue === folderId);
     }
@@ -87,15 +87,17 @@ mock.onPut('/api/mailApp/update/folder').reply((request) => {
 
 mock.onPut('/api/mailApp/update/label').reply((request) => {
   const { mailIds, type } = JSON.parse(request.data);
+  let labelType = 0;
   mailList = mailList.map((mail) => {
     if (mailIds.includes(mail.id)) {
+      labelType = mail.label.id;
       mail.label = type;
       return mail;
     } else {
       return mail;
     }
   });
-  return [200, mailList];
+  return [200, mailList.filter((mail) => mail.label.id === labelType)];
 });
 
 mock.onPut('/api/mailApp/mail/').reply((request) => {

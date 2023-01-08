@@ -15,7 +15,11 @@ import defaultConfig, {
 import PropTypes from 'prop-types';
 import { LayoutDirection, ThemeMode } from '@crema/constants/AppEnums';
 
-const ThemeContext = createContext();
+const ThemeContext = createContext({
+  theme: defaultTheme.theme,
+  themeStyle: defaultConfig.themeStyle,
+  themeMode: defaultConfig.themeMode,
+});
 const ThemeActionsContext = createContext();
 
 export const useThemeContext = () => useContext(ThemeContext);

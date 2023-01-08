@@ -11,7 +11,6 @@ import { LocalizationProvider } from '@mui/x-date-pickers';
 
 const AppThemeProvider = (props) => {
   const { theme } = useThemeContext();
-
   return (
     <StyledEngineProvider injectFirst>
       <ThemeProvider theme={createTheme(theme)}>

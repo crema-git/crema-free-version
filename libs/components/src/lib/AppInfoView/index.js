@@ -1,29 +1,29 @@
 import React from 'react';
-// import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import AppMessageView from '../AppMessageView';
 import AppLoader from '../AppLoader';
-// import { hideMessage } from "@crema/redux-toolkit/actions";
-import {
-  useInfoViewActionsContext,
-  useInfoViewContext,
-} from '@crema/context/InfoViewContextProvider';
+import { hideMessage } from '@crema/redux-toolkit/actions';
+// import {
+//   useInfoViewActionsContext,
+//   useInfoViewContext,
+// } from '@crema/context/InfoViewContextProvider';
 
 const AppInfoView = () => {
-  // Only for Context APIs
-  const { error, loading, message } = useInfoViewContext();
-  const { clearInfoView } = useInfoViewActionsContext();
+  // // Only for Context APIs
+  // const { error, loading, message } = useInfoViewContext();
+  // const { clearInfoView } = useInfoViewActionsContext();
 
-  // // Only for redux
-  // const { error, loading, message } = useSelector(({ common }) => common);
-  // const dispatch = useDispatch();
-  // const clearInfoView = () => {
-  //   dispatch(hideMessage());
-  // };
+  // Only for redux
+  const { error, loading, message } = useSelector(({ common }) => common);
+  const dispatch = useDispatch();
+  const clearInfoView = () => {
+    dispatch(hideMessage());
+  };
 
   const showMessage = () => {
     return (
       <AppMessageView
-        variant="success"
+        variant='success'
         message={message.toString()}
         clearInfoView={clearInfoView}
       />
@@ -33,7 +33,7 @@ const AppInfoView = () => {
   const showError = () => {
     return (
       <AppMessageView
-        variant="error"
+        variant='error'
         message={error.toString()}
         clearInfoView={clearInfoView}
       />

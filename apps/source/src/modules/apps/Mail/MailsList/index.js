@@ -30,7 +30,7 @@ const MailsList = () => {
       name: params?.folder || params?.label,
       page: page,
     },
-    false
+    false,
   );
 
   const [{ apiData: labelList }] = useGetDataApi('/api/mailApp/labels/list');
@@ -47,9 +47,8 @@ const MailsList = () => {
       type: params?.folder ? 'folder' : 'label',
       name: params?.folder || params?.label,
       page: page,
-      checkedMails: checkedMails,
     });
-  }, [page, pathname, checkedMails]);
+  }, [page, pathname]);
 
   const onPageChange = (event, value) => {
     setPage(value);
@@ -80,7 +79,7 @@ const MailsList = () => {
           infoViewActionsContext.showMessage(
             mail.isRead
               ? 'Mail Marked as Read Successfully'
-              : 'Mail Marked as Unread Successfully'
+              : 'Mail Marked as Unread Successfully',
           );
         })
         .catch((error) => {
@@ -99,7 +98,7 @@ const MailsList = () => {
         infoViewActionsContext.showMessage(
           checked
             ? 'Mail Marked as Starred Successfully'
-            : 'Mail Marked as Unstarred Successfully'
+            : 'Mail Marked as Unstarred Successfully',
         );
       })
       .catch((error) => {
@@ -126,7 +125,7 @@ const MailsList = () => {
       return apiData?.data.filter(
         (mail) =>
           mail?.subject?.toLowerCase()?.includes(filterText.toLowerCase()) ||
-          mail?.detail?.toLowerCase()?.includes(filterText.toLowerCase())
+          mail?.detail?.toLowerCase()?.includes(filterText.toLowerCase()),
       );
     }
   };
