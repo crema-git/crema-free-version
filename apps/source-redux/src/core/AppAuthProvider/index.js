@@ -1,6 +1,11 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { FETCH_ERROR, FETCH_START, FETCH_SUCCESS } from '@crema/constants';
+import {
+  FETCH_ERROR,
+  FETCH_START,
+  FETCH_SUCCESS,
+  SHOW_MESSAGE,
+} from '@crema/constants';
 import FirebaseAuthProvider from '@crema/services/auth/FirebaseAuthProvider';
 
 const AppAuthProvider = ({ children }) => {
@@ -15,12 +20,16 @@ const AppAuthProvider = ({ children }) => {
   const fetchSuccess = () => {
     dispatch({ type: FETCH_SUCCESS });
   };
+  const showMessage = (message) => {
+    dispatch({ type: SHOW_MESSAGE, payload: message });
+  };
 
   return (
     <FirebaseAuthProvider
       fetchStart={fetchStart}
       fetchError={fetchError}
       fetchSuccess={fetchSuccess}
+      showMessage={showMessage}
     >
       {children}
     </FirebaseAuthProvider>

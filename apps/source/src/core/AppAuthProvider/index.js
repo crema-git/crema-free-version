@@ -3,13 +3,15 @@ import { useInfoViewActionsContext } from '@crema/context/InfoViewContextProvide
 import FirebaseAuthProvider from '@crema/services/auth/FirebaseAuthProvider';
 
 const AppAuthProvider = ({ children }) => {
-  const { fetchStart, fetchSuccess, fetchError } = useInfoViewActionsContext();
+  const { fetchStart, fetchSuccess, fetchError, showMessage } =
+    useInfoViewActionsContext();
 
   return (
     <FirebaseAuthProvider
       fetchStart={fetchStart}
       fetchError={fetchError}
       fetchSuccess={fetchSuccess}
+      showMessage={showMessage}
     >
       {children}
     </FirebaseAuthProvider>
