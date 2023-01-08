@@ -14,7 +14,6 @@ import {
   twitterAuthProvider,
   updateProfile,
 } from './firebase';
-import { useInfoViewActionsContext } from '@crema/context/InfoViewContextProvider';
 
 const FirebaseContext = createContext();
 const FirebaseActionsContext = createContext();
@@ -23,15 +22,20 @@ export const useFirebase = () => useContext(FirebaseContext);
 
 export const useFirebaseActions = () => useContext(FirebaseActionsContext);
 
-const FirebaseAuthProvider = ({ children }) => {
+const FirebaseAuthProvider = ({
+  children,
+  fetchStart,
+  fetchSuccess,
+  fetchError,
+}) => {
   const [firebaseData, setFirebaseData] = useState({
     user: undefined,
     isLoading: true,
     isAuthenticated: false,
   });
-  const infoViewActionsContext = useInfoViewActionsContext();
 
   useEffect(() => {
+    fetchStart();
     const getAuthUser = onAuthStateChanged(
       auth,
       (user) => {
@@ -40,8 +44,10 @@ const FirebaseAuthProvider = ({ children }) => {
           isAuthenticated: Boolean(user),
           isLoading: false,
         });
+        fetchSuccess();
       },
       () => {
+        fetchSuccess();
         setFirebaseData({
           user: undefined,
           isLoading: false,
@@ -49,12 +55,13 @@ const FirebaseAuthProvider = ({ children }) => {
         });
       },
       (completed) => {
+        fetchSuccess();
         setFirebaseData({
           user: undefined,
           isLoading: false,
           isAuthenticated: completed,
         });
-      }
+      },
     );
 
     return () => {
@@ -82,7 +89,7 @@ const FirebaseAuthProvider = ({ children }) => {
   };
 
   const logInWithPopup = async (providerName) => {
-    infoViewActionsContext.fetchStart();
+    fetchStart();
     try {
       const { user } = await signInWithPopup(auth, getProvider(providerName));
       setFirebaseData({
@@ -90,30 +97,30 @@ const FirebaseAuthProvider = ({ children }) => {
         isAuthenticated: true,
         isLoading: false,
       });
-      infoViewActionsContext.fetchSuccess();
+      fetchSuccess();
     } catch (error) {
       setFirebaseData({
         ...firebaseData,
         isAuthenticated: false,
         isLoading: false,
       });
-      infoViewActionsContext.fetchError(error.message);
+      fetchError(error.message);
     }
   };
 
   const logInWithEmailAndPassword = async ({ email, password }) => {
-    infoViewActionsContext.fetchStart();
+    fetchStart();
     try {
       const { user } = await signInWithEmailAndPassword(auth, email, password);
       setFirebaseData({ user, isAuthenticated: true, isLoading: false });
-      infoViewActionsContext.fetchSuccess();
+      fetchSuccess();
     } catch (error) {
       setFirebaseData({
         ...firebaseData,
         isAuthenticated: false,
         isLoading: false,
       });
-      infoViewActionsContext.fetchError(error.message);
+      fetchError(error.message);
     }
   };
   const registerUserWithEmailAndPassword = async ({
@@ -121,12 +128,12 @@ const FirebaseAuthProvider = ({ children }) => {
     email,
     password,
   }) => {
-    infoViewActionsContext.fetchStart();
+    fetchStart();
     try {
       const { user } = await createUserWithEmailAndPassword(
         auth,
         email,
-        password
+        password,
       );
       await sendEmailVerification(auth.currentUser, {
         url: window.location.href,
@@ -140,14 +147,14 @@ const FirebaseAuthProvider = ({ children }) => {
         isAuthenticated: true,
         isLoading: false,
       });
-      infoViewActionsContext.fetchSuccess();
+      fetchSuccess();
     } catch (error) {
       setFirebaseData({
         ...firebaseData,
         isAuthenticated: false,
         isLoading: false,
       });
-      infoViewActionsContext.fetchError(error.message);
+      fetchError(error.message);
     }
   };
 

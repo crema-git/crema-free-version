@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 
 const AppInfoViewRedux = () => {
   const { error, loading, message } = useSelector(({ common }) => common);
+  console.log('error, loading, message', error, loading, message);
   const dispatch = useDispatch();
   const clearInfoView = () => {
     dispatch(dispatch({ type: HIDE_MESSAGE }));

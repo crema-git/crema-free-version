@@ -1,6 +1,5 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
-import { useInfoViewActionsContext } from '@crema/context/InfoViewContextProvider';
 import jwtAxios, { setAuthToken } from './index';
 
 const JWTAuthContext = createContext();
@@ -10,20 +9,25 @@ export const useJWTAuth = () => useContext(JWTAuthContext);
 
 export const useJWTAuthActions = () => useContext(JWTAuthActionsContext);
 
-const JWTAuthAuthProvider = ({ children }) => {
+const JWTAuthAuthProvider = ({
+  children,
+  fetchStart,
+  fetchSuccess,
+  fetchError,
+}) => {
   const [firebaseData, setJWTAuthData] = useState({
     user: null,
     isAuthenticated: false,
     isLoading: true,
   });
 
-  const infoViewActionsContext = useInfoViewActionsContext();
-
   useEffect(() => {
     const getAuthUser = () => {
+      fetchStart();
       const token = localStorage.getItem('token');
 
       if (!token) {
+        fetchSuccess();
         setJWTAuthData({
           user: undefined,
           isLoading: false,
@@ -34,27 +38,29 @@ const JWTAuthAuthProvider = ({ children }) => {
       setAuthToken(token);
       jwtAxios
         .get('/auth')
-        .then(({ data }) =>
+        .then(({ data }) => {
+          fetchSuccess();
           setJWTAuthData({
             user: data,
             isLoading: false,
             isAuthenticated: true,
-          })
-        )
-        .catch(() =>
+          });
+        })
+        .catch(() => {
           setJWTAuthData({
             user: undefined,
             isLoading: false,
             isAuthenticated: false,
-          })
-        );
+          });
+          fetchSuccess();
+        });
     };
 
     getAuthUser();
   }, []);
 
   const signInUser = async ({ email, password }) => {
-    infoViewActionsContext.fetchStart();
+    fetchStart();
     try {
       const { data } = await jwtAxios.post('auth', { email, password });
       localStorage.setItem('token', data.token);
@@ -65,21 +71,19 @@ const JWTAuthAuthProvider = ({ children }) => {
         isAuthenticated: true,
         isLoading: false,
       });
-      infoViewActionsContext.fetchSuccess();
+      fetchSuccess();
     } catch (error) {
       setJWTAuthData({
         ...firebaseData,
         isAuthenticated: false,
         isLoading: false,
       });
-      infoViewActionsContext.fetchError(
-        error?.response?.data?.error || 'Something went wrong'
-      );
+      fetchError(error?.response?.data?.error || 'Something went wrong');
     }
   };
 
   const signUpUser = async ({ name, email, password }) => {
-    infoViewActionsContext.fetchStart();
+    fetchStart();
     try {
       const { data } = await jwtAxios.post('users', { name, email, password });
       localStorage.setItem('token', data.token);
@@ -90,7 +94,7 @@ const JWTAuthAuthProvider = ({ children }) => {
         isAuthenticated: true,
         isLoading: false,
       });
-      infoViewActionsContext.fetchSuccess();
+      fetchSuccess();
     } catch (error) {
       setJWTAuthData({
         ...firebaseData,
@@ -98,9 +102,7 @@ const JWTAuthAuthProvider = ({ children }) => {
         isLoading: false,
       });
       console.log('error:', error.response.data.error);
-      infoViewActionsContext.fetchError(
-        error?.response?.data?.error || 'Something went wrong'
-      );
+      fetchError(error?.response?.data?.error || 'Something went wrong');
     }
   };
 

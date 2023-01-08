@@ -6,12 +6,12 @@ import AppThemeProvider from '@crema/context/AppThemeProvider';
 import AppStyleProvider from '@crema/context/AppStyleProvider';
 import AppLocaleProvider from '@crema/context/AppLocaleProvider';
 import { BrowserRouter } from 'react-router-dom';
-import FirebaseAuthProvider from '@crema/services/auth/FirebaseAuthProvider';
 import AuthRoutes from '@crema/components/AuthRoutes';
 import configureStore from './redux/store';
 import AppLayout from './core/AppLayout';
-import '@crema/mockapi';
+import AppAuthProvider from './core/AppAuthProvider';
 import './assets/styles/maps.css';
+import '@crema/mockapi';
 
 const store = configureStore();
 
@@ -22,12 +22,12 @@ const App = () => (
         <AppStyleProvider>
           <AppLocaleProvider>
             <BrowserRouter>
-              <FirebaseAuthProvider>
+              <AppAuthProvider>
                 <AuthRoutes>
                   <CssBaseline />
                   <AppLayout />
                 </AuthRoutes>
-              </FirebaseAuthProvider>
+              </AppAuthProvider>
             </BrowserRouter>
           </AppLocaleProvider>
         </AppStyleProvider>
