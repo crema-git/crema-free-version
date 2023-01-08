@@ -9,10 +9,12 @@ import IconButton from '@mui/material/IconButton';
 import AppTooltip from '@crema/components/AppTooltip';
 import { useInfoViewActionsContext } from '@crema/context/InfoViewContextProvider';
 import { putDataApi } from '@crema/hooks/APIHooks';
+import { useMailActionsContext } from '../../../context/MailContextProvider';
 
 const MoreOptions = (props) => {
-  const { checkedMails, setCheckedMails, mailList, setData } = props;
+  const { checkedMails, setCheckedMails, mailList } = props;
   const infoViewActionsContext = useInfoViewActionsContext();
+  const { setMailData } = useMailActionsContext();
 
   let unReadOption;
   let readOption;
@@ -52,7 +54,7 @@ const MoreOptions = (props) => {
       status: status,
     })
       .then((data) => {
-        setData(data);
+        setMailData(data);
         setCheckedMails([]);
         onOpenMoreIcon(null);
         infoViewActionsContext.showMessage(
@@ -72,7 +74,7 @@ const MoreOptions = (props) => {
       status: status,
     })
       .then((data) => {
-        setData(data);
+        setMailData(data);
         onOpenMoreIcon(null);
         setCheckedMails([]);
         infoViewActionsContext.showMessage(
@@ -91,7 +93,7 @@ const MoreOptions = (props) => {
       status: status,
     })
       .then((data) => {
-        setData(data);
+        setMailData(data);
         setCheckedMails([]);
         onOpenMoreIcon(null);
         infoViewActionsContext.showMessage(
@@ -109,7 +111,7 @@ const MoreOptions = (props) => {
       status: status,
     })
       .then((data) => {
-        setData(data);
+        setMailData(data);
         setCheckedMails([]);
         onOpenMoreIcon(null);
         infoViewActionsContext.showMessage(

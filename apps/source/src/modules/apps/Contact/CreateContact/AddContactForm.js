@@ -66,7 +66,7 @@ const AvatarViewWrapper = styled('div')(({ theme }) => {
 
 const AddContactForm = (props) => {
   const { values, userImage, setUserImage, setFieldValue } = props;
-  const { folderList, labelList } = useContactContext();
+  const { labelList } = useContactContext();
 
   const { getRootProps, getInputProps } = useDropzone({
     accept: 'image/*',
