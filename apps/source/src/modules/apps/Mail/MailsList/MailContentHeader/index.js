@@ -8,7 +8,10 @@ import MoreOptions from './MoreOptions';
 import AppsPagination from '@crema/components/AppsPagination';
 import AppSearchBar from '@crema/components/AppSearchBar';
 import { useIntl } from 'react-intl';
-import { useMailContext } from '../../../context/MailContextProvider';
+import {
+  useMailActionsContext,
+  useMailContext,
+} from '../../../context/MailContextProvider';
 
 const MailContentHeader = (props) => {
   const {
@@ -17,14 +20,13 @@ const MailContentHeader = (props) => {
     setCheckedMails,
     mailList,
     totalMails,
-    setData,
-    onPageChange,
     filterText,
     onSetFilterText,
   } = props;
 
   const { messages } = useIntl();
   const { page } = useMailContext();
+  const { onPageChange } = useMailActionsContext();
 
   const onHandleMasterCheckbox = (event) => {
     if (event.target.checked) {
@@ -73,7 +75,6 @@ const MailContentHeader = (props) => {
           <CheckedMailActions
             checkedMails={checkedMails}
             setCheckedMails={setCheckedMails}
-            setData={setData}
           />
         ) : null}
 
@@ -82,7 +83,6 @@ const MailContentHeader = (props) => {
           path={path}
           setCheckedMails={setCheckedMails}
           mailList={mailList || []}
-          setData={setData}
         />
       </Box>
       <Hidden smDown>

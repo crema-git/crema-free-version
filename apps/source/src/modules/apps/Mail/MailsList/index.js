@@ -121,11 +121,9 @@ const MailsList = () => {
         <MailContentHeader
           checkedMails={checkedMails}
           setCheckedMails={setCheckedMails}
-          onPageChange={onPageChange}
           filterText={filterText}
           onSetFilterText={onSetFilterText}
           path={path}
-          setData={setMailData}
           mailList={list}
           totalMails={mailList?.count}
         />

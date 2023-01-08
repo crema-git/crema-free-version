@@ -13,16 +13,20 @@ import IconButton from '@mui/material/IconButton';
 import AppTooltip from '@crema/components/AppTooltip';
 import { putDataApi } from '@crema/hooks/APIHooks';
 import { useInfoViewActionsContext } from '@crema/context/InfoViewContextProvider';
-import { useMailContext } from '../../../context/MailContextProvider';
+import {
+  useMailActionsContext,
+  useMailContext,
+} from '../../../context/MailContextProvider';
 
 const CheckedMailActions = (props) => {
   const infoViewActionsContext = useInfoViewActionsContext();
-  const { checkedMails, setCheckedMails, setData } = props;
+  const { checkedMails, setCheckedMails } = props;
+  const { setMailData } = useMailActionsContext();
+  const { labelList, folderList } = useMailContext();
+
   const [isLabelOpen, onOpenLabel] = useState(null);
 
   const [isMoveToOpen, onOpenMoveToIcon] = useState(null);
-
-  const { labelList, folderList } = useMailContext();
 
   const onLabelOpen = (event) => {
     onOpenLabel(event.currentTarget);
@@ -46,7 +50,7 @@ const CheckedMailActions = (props) => {
       type,
     })
       .then((data) => {
-        setData(data);
+        setMailData(data);
         infoViewActionsContext.showMessage('Mail moved to folder successfully');
         setCheckedMails([]);
       })
@@ -64,7 +68,7 @@ const CheckedMailActions = (props) => {
       type: labelType,
     })
       .then((data) => {
-        setData(data);
+        setMailData(data);
         setCheckedMails([]);
         onOpenLabel(null);
         infoViewActionsContext.showMessage('Mail moved to folder successfully');
