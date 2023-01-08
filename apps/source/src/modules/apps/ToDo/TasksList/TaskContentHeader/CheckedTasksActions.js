@@ -12,7 +12,7 @@ import AppTooltip from '@crema/components/AppTooltip';
 import { StyledBox } from './index.style';
 import { useInfoViewActionsContext } from '@crema/context/InfoViewContextProvider';
 import { putDataApi } from '@crema/hooks/APIHooks';
-import { useTodo } from '@crema/context/AppContextProvider/Apps';
+import { useTodo } from '@crema/apicontext/TodoContextProvider';
 
 const CheckedTasksActions = ({
   checkedTasks,

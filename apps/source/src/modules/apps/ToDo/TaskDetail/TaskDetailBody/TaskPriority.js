@@ -8,7 +8,7 @@ import PropTypes from 'prop-types';
 import { MenuItem } from '@mui/material';
 import { useInfoViewActionsContext } from '@crema/context/InfoViewContextProvider';
 import { putDataApi } from '@crema/hooks/APIHooks';
-import { useTodo } from '@crema/context/AppContextProvider/Apps';
+import { useTodo } from '@crema/apicontext/TodoContextProvider';
 
 const TaskPriority = ({ selectedTask, onUpdateSelectedTask }) => {
   const infoViewActionsContext = useInfoViewActionsContext();

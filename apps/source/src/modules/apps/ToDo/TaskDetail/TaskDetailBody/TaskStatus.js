@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
 import { MenuItem } from '@mui/material';
 import { putDataApi } from '@crema/hooks/APIHooks';
 import { useInfoViewActionsContext } from '@crema/context/InfoViewContextProvider';
-import { useTodo } from '@crema/context/AppContextProvider/Apps';
+import { useTodo } from '@crema/apicontext/TodoContextProvider';
 
 const TaskStatus = ({ selectedTask, onUpdateSelectedTask }) => {
   const { statusList } = useTodo();
