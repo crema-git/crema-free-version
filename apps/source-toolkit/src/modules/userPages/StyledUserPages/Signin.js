@@ -21,11 +21,11 @@ import { ReactComponent as Logo } from '../../../assets/user/login.svg';
 const validationSchema = yup.object({
   email: yup
     .string()
-    .email(<IntlMessages id="validation.emailFormat" />)
-    .required(<IntlMessages id="validation.emailRequired" />),
+    .email(<IntlMessages id='validation.emailFormat' />)
+    .required(<IntlMessages id='validation.emailRequired' />),
   password: yup
     .string()
-    .required(<IntlMessages id="validation.passwordRequired" />),
+    .required(<IntlMessages id='validation.passwordRequired' />),
 });
 
 const Signin = () => {

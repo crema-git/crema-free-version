@@ -14,8 +14,8 @@ import { useInfoViewActionsContext } from '@crema/context/InfoViewContextProvide
 import { putDataApi } from '@crema/hooks/APIHooks';
 import { MailListItemMobile } from '@crema/modules/apps/Mail';
 import {
-  useMailContext,
   useMailActionsContext,
+  useMailContext,
 } from '../../context/MailContextProvider';
 
 const MailsList = () => {

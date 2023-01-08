@@ -17,8 +17,8 @@ import ArchiveOutlinedIcon from '@mui/icons-material/ArchiveOutlined';
 import MailOutlinedIcon from '@mui/icons-material/MailOutlined';
 import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
 import {
-  MailItemWrapper,
   MailInfoWrapper,
+  MailItemWrapper,
   MainActionWrapper,
 } from './index.styles';
 import { useDispatch } from 'react-redux';

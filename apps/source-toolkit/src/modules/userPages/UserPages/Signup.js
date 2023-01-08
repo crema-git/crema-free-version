@@ -12,17 +12,17 @@ import AppAnimate from '@crema/components/AppAnimate';
 import AppTextField from '@crema/components/AppTextField';
 
 const validationSchema = yup.object({
-  name: yup.string().required(<IntlMessages id="validation.nameRequired" />),
+  name: yup.string().required(<IntlMessages id='validation.nameRequired' />),
   email: yup
     .string()
-    .email(<IntlMessages id="validation.emailFormat" />)
-    .required(<IntlMessages id="validation.emailRequired" />),
+    .email(<IntlMessages id='validation.emailFormat' />)
+    .required(<IntlMessages id='validation.emailRequired' />),
   password: yup
     .string()
-    .required(<IntlMessages id="validation.passwordRequired" />),
+    .required(<IntlMessages id='validation.passwordRequired' />),
   confirmPassword: yup
     .string()
-    .required(<IntlMessages id="validation.reTypePassword" />),
+    .required(<IntlMessages id='validation.reTypePassword' />),
 });
 
 const Signup = () => {

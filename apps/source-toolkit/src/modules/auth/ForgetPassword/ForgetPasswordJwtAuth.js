@@ -15,8 +15,8 @@ import AppLogo from '@crema/components/AppLogo';
 const validationSchema = yup.object({
   email: yup
     .string()
-    .email(<IntlMessages id="validation.emailFormat" />)
-    .required(<IntlMessages id="validation.emailRequired" />),
+    .email(<IntlMessages id='validation.emailFormat' />)
+    .required(<IntlMessages id='validation.emailRequired' />),
 });
 
 const ForgetPasswordJwtAuth = () => {

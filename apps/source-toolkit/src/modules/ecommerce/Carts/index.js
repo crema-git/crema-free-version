@@ -7,7 +7,7 @@ import IntlMessages from '@crema/helpers/IntlMessages';
 import { Fonts } from '@crema/constants/AppEnums';
 import AppAnimate from '@crema/components/AppAnimate';
 import AppGridContainer from '@crema/components/AppGridContainer';
-import { OrderSummary, CartTable } from '@crema/modules/ecommerce/Carts';
+import { CartTable, OrderSummary } from '@crema/modules/ecommerce/Carts';
 import { useDispatch, useSelector } from 'react-redux';
 import {
   getCartItems,

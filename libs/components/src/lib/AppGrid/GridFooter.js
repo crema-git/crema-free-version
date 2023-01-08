@@ -18,7 +18,7 @@ const GridFooter = ({ loading, footerText }) => {
         }}
       >
         <CircularProgress size={16} />
-        <span className="loading">Loading...</span>
+        <span className='loading'>Loading...</span>
       </Box>
     );
   } else {

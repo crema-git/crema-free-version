@@ -14,8 +14,8 @@ import {
   BoardItem,
 } from '@crema/modules/apps/ScrumBoard';
 import {
-  useScrumContext,
   useScrumActionsContext,
+  useScrumContext,
 } from '../../context/ScrumContextProvider';
 
 const BoardList = () => {

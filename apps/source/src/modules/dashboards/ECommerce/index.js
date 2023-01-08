@@ -21,7 +21,7 @@ import AppLoader from '@crema/components/AppLoader';
 
 const ECommerce = () => {
   const [{ apiData: ecommerceData, loading }] = useGetDataApi(
-    '/dashboard/ecommerce'
+    '/dashboard/ecommerce',
   );
 
   return (
@@ -29,7 +29,7 @@ const ECommerce = () => {
       {loading ? (
         <AppLoader />
       ) : (
-        <AppAnimate animation="transition.slideUpIn" delay={200}>
+        <AppAnimate animation='transition.slideUpIn' delay={200}>
           <AppGridContainer>
             {ecommerceData.salesState.map((state, index) => (
               <Grid item xs={12} sm={6} md={3} key={index}>

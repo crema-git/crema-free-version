@@ -9,11 +9,13 @@ import { blue } from '@mui/material/colors';
 import { Fonts } from '@crema/constants/AppEnums';
 import AppAnimate from '@crema/components/AppAnimate';
 import { FaqList, FaqSideBar } from '@crema/modules/extraPages/FAQ';
-import { generalFaq } from '@crema/fakedb/extraPages';
-import { installationFaq } from '@crema/fakedb/extraPages';
-import { pricingFaq } from '@crema/fakedb/extraPages';
-import { licenseFaq } from '@crema/fakedb/extraPages';
-import { supportFaq } from '@crema/fakedb/extraPages';
+import {
+  generalFaq,
+  installationFaq,
+  licenseFaq,
+  pricingFaq,
+  supportFaq,
+} from '@crema/fakedb/extraPages';
 
 const FAQ = () => {
   const [dataValue, setDataValue] = useState(generalFaq);
@@ -48,7 +50,7 @@ const FAQ = () => {
   };
 
   return (
-    <AppAnimate animation="transition.slideUpIn" delay={200}>
+    <AppAnimate animation='transition.slideUpIn' delay={200}>
       <Box sx={{ flex: 1 }}>
         <Box
           sx={{
@@ -65,13 +67,13 @@ const FAQ = () => {
           }}
         >
           <Box
-            component="h2"
+            component='h2'
             sx={{ mb: 5, fontSize: 20, fontWeight: Fonts.MEDIUM }}
           >
-            <IntlMessages id="faq.heading" />
+            <IntlMessages id='faq.heading' />
           </Box>
-          <Box component="p" sx={{ fontSize: 16 }}>
-            <IntlMessages id="faq.content" />
+          <Box component='p' sx={{ fontSize: 16 }}>
+            <IntlMessages id='faq.content' />
           </Box>
         </Box>
 

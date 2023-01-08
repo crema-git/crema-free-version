@@ -30,7 +30,7 @@ const MailDetailBody = (props) => {
   const onChangeStarred = (message, isStarred) => {
     message.isStarred = isStarred;
     selectedMail.messages = selectedMail.messages.map((data) =>
-      data.messageId === message.messageId ? message : data
+      data.messageId === message.messageId ? message : data,
     );
     putDataApi('/api/mailApp/mail/', infoViewActionsContext, {
       mail: selectedMail,
@@ -56,7 +56,7 @@ const MailDetailBody = (props) => {
             }}
           >
             <Box
-              component="span"
+              component='span'
               sx={{
                 fontSize: { xs: 16, sm: 18 },
                 marginRight: 3,

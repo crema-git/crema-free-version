@@ -8,7 +8,6 @@ import { Fonts } from '@crema/constants/AppEnums';
 import AppAnimate from '@crema/components/AppAnimate';
 import { useIntl } from 'react-intl';
 import AppLoader from '@crema/components/AppLoader';
-import { useGetDataApi } from '@crema/hooks/APIHooks';
 import {
   ComparisonCard,
   EarningInMonth,

@@ -13,10 +13,10 @@ import {
   Photos,
   PostsList,
   RecentNews,
+  Stories,
   Suggestions,
   SuggestTeam,
   VideoCall,
-  Stories,
   WhatsHappen,
   WhoToFollow,
 } from '@crema/modules/apps/Wall';

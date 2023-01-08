@@ -44,7 +44,7 @@ const MailDetail = () => {
         />
       </AppsHeader>
       <AppsContent isDetailView>
-        <AppAnimate animatoin="transition.slideUpIn">
+        <AppAnimate animatoin='transition.slideUpIn'>
           <MailDetailBody
             selectedMail={selectedMail}
             key={'mail_detail'}

@@ -35,7 +35,7 @@ const ListEmptyResult = ({
             }}
           >
             <CircularProgress size={16} />
-            <Box component="span" sx={{ ml: 2 }}>
+            <Box component='span' sx={{ ml: 2 }}>
               Loading...
             </Box>
           </Box>
@@ -68,8 +68,8 @@ const ListEmptyResult = ({
               fontWeight: Fonts.MEDIUM,
               mb: 2,
             }}
-            component="h4"
-            variant="h4"
+            component='h4'
+            variant='h4'
           >
             {title}
           </Typography>
@@ -85,8 +85,8 @@ const ListEmptyResult = ({
 
         {actionTitle ? (
           <Button
-            color="primary"
-            variant="contained"
+            color='primary'
+            variant='contained'
             style={{ mt: 7.5, height: 45, minWidth: 150 }}
             onClick={onClick}
           >

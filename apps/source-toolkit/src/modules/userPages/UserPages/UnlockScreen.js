@@ -13,7 +13,7 @@ import AppTextField from '@crema/components/AppTextField';
 const validationSchema = yup.object({
   password: yup
     .string()
-    .required(<IntlMessages id="validation.passwordRequired" />),
+    .required(<IntlMessages id='validation.passwordRequired' />),
 });
 
 const UnlockScreen = () => {

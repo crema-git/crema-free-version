@@ -1,4 +1,5 @@
 import { getGreeting } from '../support/app.po';
+
 describe('source-redux', () => {
   beforeEach(() => cy.visit('/'));
   it('should display welcome message', () => {

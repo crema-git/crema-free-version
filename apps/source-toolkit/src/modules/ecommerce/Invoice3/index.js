@@ -14,7 +14,7 @@ import { invoiceData } from '@crema/fakedb/extraPages';
 
 const Invoice3 = () => {
   return (
-    <AppAnimate animation="transition.slideUpIn" delay={200}>
+    <AppAnimate animation='transition.slideUpIn' delay={200}>
       <Box
         sx={{
           flex: 1,
@@ -57,7 +57,7 @@ const Invoice3 = () => {
                 }}
               >
                 <Box
-                  component="h4"
+                  component='h4'
                   sx={{
                     mb: 5,
                     color: 'text.secondary',
@@ -65,7 +65,7 @@ const Invoice3 = () => {
                     fontWeight: Fonts.MEDIUM,
                   }}
                 >
-                  <IntlMessages id="invoice.thankYou" />
+                  <IntlMessages id='invoice.thankYou' />
                 </Box>
                 <Box
                   sx={{
@@ -77,14 +77,14 @@ const Invoice3 = () => {
                   }}
                 >
                   <Typography
-                    component="h3"
+                    component='h3'
                     sx={{
                       fontSize: 16,
                       fontWeight: Fonts.BOLD,
                       mb: 3,
                     }}
                   >
-                    <IntlMessages id="invoice.paymentInfo" />
+                    <IntlMessages id='invoice.paymentInfo' />
                   </Typography>
                   <Box>
                     <Box
@@ -95,14 +95,14 @@ const Invoice3 = () => {
                       }}
                     >
                       <Box
-                        component="span"
+                        component='span'
                         sx={{
                           minWidth: 120,
                         }}
                       >
-                        <IntlMessages id="invoice.accountNumber" />:
+                        <IntlMessages id='invoice.accountNumber' />:
                       </Box>
-                      <Box component="span">{invoiceData.accountNumber}</Box>
+                      <Box component='span'>{invoiceData.accountNumber}</Box>
                     </Box>
                     <Box
                       sx={{
@@ -112,14 +112,14 @@ const Invoice3 = () => {
                       }}
                     >
                       <Box
-                        component="span"
+                        component='span'
                         sx={{
                           minWidth: 120,
                         }}
                       >
-                        <IntlMessages id="invoice.accountName" />:
+                        <IntlMessages id='invoice.accountName' />:
                       </Box>
-                      <Box component="span">{invoiceData.accountName}</Box>
+                      <Box component='span'>{invoiceData.accountName}</Box>
                     </Box>
                     <Box
                       sx={{
@@ -129,14 +129,14 @@ const Invoice3 = () => {
                       }}
                     >
                       <Box
-                        component="span"
+                        component='span'
                         sx={{
                           minWidth: 120,
                         }}
                       >
-                        <IntlMessages id="invoice.ifscCode" />:
+                        <IntlMessages id='invoice.ifscCode' />:
                       </Box>
-                      <Box component="span">{invoiceData.ifscCode}</Box>
+                      <Box component='span'>{invoiceData.ifscCode}</Box>
                     </Box>
                   </Box>
                 </Box>
@@ -156,8 +156,8 @@ const Invoice3 = () => {
                   <TableBody>
                     <TableRow>
                       <TableCell
-                        component="th"
-                        scope="row"
+                        component='th'
+                        scope='row'
                         sx={{ border: '0 none', px: { xs: 6, xl: 8 }, py: 1 }}
                       >
                         <Box
@@ -169,7 +169,7 @@ const Invoice3 = () => {
                             fontWeight: Fonts.REGULAR,
                           }}
                         >
-                          <IntlMessages id="invoice.subTotal" />:
+                          <IntlMessages id='invoice.subTotal' />:
                         </Box>
                       </TableCell>
                       <TableCell
@@ -189,8 +189,8 @@ const Invoice3 = () => {
 
                     <TableRow>
                       <TableCell
-                        component="th"
-                        scope="row"
+                        component='th'
+                        scope='row'
                         sx={{ border: '0 none', px: { xs: 6, xl: 8 }, py: 1 }}
                       >
                         <Box
@@ -202,7 +202,7 @@ const Invoice3 = () => {
                             fontWeight: Fonts.REGULAR,
                           }}
                         >
-                          <IntlMessages id="invoice.discountAmount" />:
+                          <IntlMessages id='invoice.discountAmount' />:
                         </Box>
                       </TableCell>
                       <TableCell
@@ -222,8 +222,8 @@ const Invoice3 = () => {
 
                     <TableRow>
                       <TableCell
-                        component="th"
-                        scope="row"
+                        component='th'
+                        scope='row'
                         sx={{
                           border: '0 none',
                           px: { xs: 6, xl: 8 },
@@ -240,7 +240,7 @@ const Invoice3 = () => {
                             fontWeight: Fonts.REGULAR,
                           }}
                         >
-                          <IntlMessages id="invoice.gSTTaxVAT" />:
+                          <IntlMessages id='invoice.gSTTaxVAT' />:
                         </Box>
                       </TableCell>
                       <TableCell
@@ -265,8 +265,8 @@ const Invoice3 = () => {
 
                     <TableRow>
                       <TableCell
-                        component="th"
-                        scope="row"
+                        component='th'
+                        scope='row'
                         sx={{
                           border: '0 none',
                           px: { xs: 6, xl: 8 },
@@ -281,7 +281,7 @@ const Invoice3 = () => {
                             fontWeight: Fonts.REGULAR,
                           }}
                         >
-                          <IntlMessages id="invoice.grandTotal" />:
+                          <IntlMessages id='invoice.grandTotal' />:
                         </Box>
                       </TableCell>
                       <TableCell

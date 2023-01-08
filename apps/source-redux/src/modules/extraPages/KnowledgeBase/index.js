@@ -8,9 +8,8 @@ import { useIntl } from 'react-intl';
 import Box from '@mui/material/Box';
 import { Fonts } from '@crema/constants/AppEnums';
 import AppAnimate from '@crema/components/AppAnimate';
-import { Sales, Installation } from '@crema/modules/extraPages/KnowledgeBase';
-import { salesData } from '@crema/fakedb/extraPages';
-import { installationData } from '@crema/fakedb/extraPages';
+import { Installation, Sales } from '@crema/modules/extraPages/KnowledgeBase';
+import { installationData, salesData } from '@crema/fakedb/extraPages';
 
 const KnowledgeBase = () => {
   const { messages } = useIntl();
@@ -28,28 +27,28 @@ const KnowledgeBase = () => {
       : installationData;
 
   return (
-    <AppAnimate animation="transition.slideUpIn" delay={200}>
+    <AppAnimate animation='transition.slideUpIn' delay={200}>
       <Box flex={1}>
-        <Box mx="auto" textAlign="center" maxWidth={768}>
+        <Box mx='auto' textAlign='center' maxWidth={768}>
           <Box
-            component="h2"
-            color="text.primary"
+            component='h2'
+            color='text.primary'
             mb={6}
             fontSize={20}
             fontWeight={Fonts.MEDIUM}
           >
-            <IntlMessages id="knowledge.howHelp" />
+            <IntlMessages id='knowledge.howHelp' />
           </Box>
 
           <TextField
-            id="outlined-with-placeholder"
+            id='outlined-with-placeholder'
             placeholder={messages['knowledge.AppSkeleton']}
             style={{ width: '100%' }}
-            variant="outlined"
+            variant='outlined'
             InputProps={{
               startAdornment: (
                 <InputAdornment
-                  position="start"
+                  position='start'
                   sx={{
                     fontWeight: Fonts.MEDIUM,
                   }}

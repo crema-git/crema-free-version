@@ -1,5 +1,5 @@
 import React from 'react';
-import {rechartsConfigs} from './RechartRoutes';
+import { rechartsConfigs } from './RechartRoutes';
 import ColorPicker from '../../modules/thirdParty/reactColor';
 import GoogleMap from '../../modules/thirdParty/googleMap';
 import ReactNotificationEx from '../../modules/thirdParty/reactNotification';
@@ -11,7 +11,7 @@ import Timeline from '../../modules/thirdParty/timeLine';
 import FroalaEditor from '../../modules/thirdParty/froalaEditor';
 import FileStack from '../../modules/thirdParty/filestack';
 import FusionCharts from '../../modules/thirdParty/fusionCharts';
-import {RoutePermittedRole} from '@crema/constants';
+import { RoutePermittedRole } from '@crema/constants';
 
 export const thirdPartyConfigs = [
   ...rechartsConfigs,

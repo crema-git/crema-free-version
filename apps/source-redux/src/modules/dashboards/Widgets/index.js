@@ -8,7 +8,6 @@ import { blue, indigo } from '@mui/material/colors';
 import { Fonts } from '@crema/constants/AppEnums';
 import AppAnimate from '@crema/components/AppAnimate';
 import AppLoader from '@crema/components/AppLoader';
-import { useGetDataApi } from '@crema/hooks/APIHooks';
 import {
   AddTags,
   BirthdayCard,

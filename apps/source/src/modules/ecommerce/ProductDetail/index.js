@@ -29,7 +29,7 @@ const ProductDetail = () => {
       {loading ? (
         <AppLoader />
       ) : (
-        <AppAnimate animation="transition.slideUpIn" delay={200}>
+        <AppAnimate animation='transition.slideUpIn' delay={200}>
           <AppCard>
             <Header product={currentProduct} />
             <AppGridContainer>

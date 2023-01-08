@@ -21,7 +21,7 @@ import AppLoader from '@crema/components/AppLoader';
 
 const Analytics = () => {
   const [{ apiData: analyticsData, loading }] = useGetDataApi(
-    '/dashboard/analytics'
+    '/dashboard/analytics',
   );
 
   return (
@@ -29,7 +29,7 @@ const Analytics = () => {
       {loading ? (
         <AppLoader />
       ) : (
-        <AppAnimate animation="transition.slideUpIn" delay={200}>
+        <AppAnimate animation='transition.slideUpIn' delay={200}>
           <AppGridContainer>
             <Grid item xs={12} lg={6}>
               <WelcomeCard data={analyticsData.welcomeCard} />

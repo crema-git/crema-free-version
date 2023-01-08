@@ -8,9 +8,9 @@ import * as yup from 'yup';
 import IntlMessages from '@crema/helpers/IntlMessages';
 import AppCard from '@crema/components/AppCard';
 import {
+  Address,
   ContactUsForm,
   SendMessage,
-  Address,
   SimpleMap,
 } from '@crema/modules/extraPages/ContactUs';
 import { contactUsData } from '@crema/fakedb/extraPages';
@@ -18,12 +18,12 @@ import { contactUsData } from '@crema/fakedb/extraPages';
 const validationSchema = yup.object({
   fullName: yup
     .string()
-    .required(<IntlMessages id="validation.nameRequired" />),
+    .required(<IntlMessages id='validation.nameRequired' />),
   email: yup
     .string()
-    .email(<IntlMessages id="validation.emailFormat" />)
-    .required(<IntlMessages id="validation.emailRequired" />),
-  message: yup.string().required(<IntlMessages id="validation.message" />),
+    .email(<IntlMessages id='validation.emailFormat' />)
+    .required(<IntlMessages id='validation.emailRequired' />),
+  message: yup.string().required(<IntlMessages id='validation.message' />),
 });
 
 const ContactUs = () => {

@@ -19,7 +19,7 @@ const Error403 = () => {
   };
 
   return (
-    <AppAnimate animation="transition.slideUpIn" delay={200}>
+    <AppAnimate animation='transition.slideUpIn' delay={200}>
       <Box
         sx={{
           py: { xl: 8 },
@@ -42,11 +42,11 @@ const Error403 = () => {
             },
           }}
         >
-          <img src={'/assets/icon/403.svg'} alt="403" />
+          <img src={'/assets/icon/403.svg'} alt='403' />
         </Box>
         <Box sx={{ mb: { xs: 4, xl: 5 } }}>
           <Box
-            variant="h3"
+            variant='h3'
             sx={{
               mb: { xs: 3, xl: 4 },
               fontSize: { xs: 20, md: 24 },
@@ -66,8 +66,8 @@ const Error403 = () => {
             <Typography>You are not authorized for this page</Typography>
           </Box>
           <Button
-            variant="contained"
-            color="primary"
+            variant='contained'
+            color='primary'
             sx={{
               fontWeight: Fonts.MEDIUM,
               fontSize: 16,
@@ -75,7 +75,7 @@ const Error403 = () => {
             }}
             onClick={onGoBackToHome}
           >
-            <IntlMessages id="error.goBackToHome" />
+            <IntlMessages id='error.goBackToHome' />
           </Button>
         </Box>
       </Box>

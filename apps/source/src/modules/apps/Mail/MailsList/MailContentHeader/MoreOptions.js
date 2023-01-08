@@ -56,7 +56,7 @@ const MoreOptions = (props) => {
         setCheckedMails([]);
         onOpenMoreIcon(null);
         infoViewActionsContext.showMessage(
-          `Email marked as ${status ? 'read' : 'unread'}`
+          `Email marked as ${status ? 'read' : 'unread'}`,
         );
       })
       .catch((error) => {
@@ -76,7 +76,7 @@ const MoreOptions = (props) => {
         onOpenMoreIcon(null);
         setCheckedMails([]);
         infoViewActionsContext.showMessage(
-          `Email marked as ${status ? 'read' : 'unread'}`
+          `Email marked as ${status ? 'read' : 'unread'}`,
         );
       })
       .catch((error) => {
@@ -95,7 +95,7 @@ const MoreOptions = (props) => {
         setCheckedMails([]);
         onOpenMoreIcon(null);
         infoViewActionsContext.showMessage(
-          `Email(s) marked as ${status ? 'stared' : 'unread'}`
+          `Email(s) marked as ${status ? 'stared' : 'unread'}`,
         );
       })
       .catch((error) => {
@@ -113,7 +113,7 @@ const MoreOptions = (props) => {
         setCheckedMails([]);
         onOpenMoreIcon(null);
         infoViewActionsContext.showMessage(
-          `Email(s) marked as ${status ? 'stared' : 'unread'}`
+          `Email(s) marked as ${status ? 'stared' : 'unread'}`,
         );
       })
       .catch((error) => {
@@ -124,14 +124,14 @@ const MoreOptions = (props) => {
   return (
     <>
       {checkedMails.length > 0 ? (
-        <Box component="span" sx={{ ml: { xs: 'auto', sm: 0 } }}>
-          <AppTooltip title={<IntlMessages id="common.more" />}>
+        <Box component='span' sx={{ ml: { xs: 'auto', sm: 0 } }}>
+          <AppTooltip title={<IntlMessages id='common.more' />}>
             <IconButton
               sx={{
                 color: (theme) => theme.palette.text.disabled,
               }}
               onClick={onViewMoreOpen}
-              size="large"
+              size='large'
             >
               <MoreVertIcon />
             </IconButton>
@@ -144,35 +144,35 @@ const MoreOptions = (props) => {
           >
             {readOption ? (
               <MenuItem onClick={() => onChangeReadStatus(1)}>
-                <IntlMessages id="mailApp.markAsRead" />
+                <IntlMessages id='mailApp.markAsRead' />
               </MenuItem>
             ) : null}
             {unReadOption ? (
               <MenuItem onClick={() => onChangeReadStatus(0)}>
-                <IntlMessages id="mailApp.markAsUnread" />
+                <IntlMessages id='mailApp.markAsUnread' />
               </MenuItem>
             ) : null}
             {starredOption ? (
               <MenuItem onClick={() => onChangeStarredStatus(1)}>
-                <IntlMessages id="mailApp.markAsImportant" />
+                <IntlMessages id='mailApp.markAsImportant' />
               </MenuItem>
             ) : null}
             {unStarredOption ? (
               <MenuItem onClick={() => onChangeStarredStatus(0)}>
-                <IntlMessages id="mailApp.markAsNotImportant" />
+                <IntlMessages id='mailApp.markAsNotImportant' />
               </MenuItem>
             ) : null}
           </Menu>
         </Box>
       ) : (
-        <Box component="span" sx={{ ml: { xs: 'auto', sm: 0 } }}>
-          <AppTooltip title={<IntlMessages id="common.more" />}>
+        <Box component='span' sx={{ ml: { xs: 'auto', sm: 0 } }}>
+          <AppTooltip title={<IntlMessages id='common.more' />}>
             <IconButton
               sx={{
                 color: (theme) => theme.palette.text.disabled,
               }}
               onClick={onViewMoreOpen}
-              size="large"
+              size='large'
             >
               <MoreVertIcon />
             </IconButton>
@@ -184,16 +184,16 @@ const MoreOptions = (props) => {
             onClose={onViewMoreClose}
           >
             <MenuItem onClick={() => onChangeAllReadStatus(1)}>
-              <IntlMessages id="mailApp.markAllAsRead" />
+              <IntlMessages id='mailApp.markAllAsRead' />
             </MenuItem>
             <MenuItem onClick={() => onChangeAllReadStatus(0)}>
-              <IntlMessages id="mailApp.markAllAsUnread" />
+              <IntlMessages id='mailApp.markAllAsUnread' />
             </MenuItem>
             <MenuItem onClick={() => onChangeAllStarred(1)}>
-              <IntlMessages id="mailApp.markAllAsImportant" />
+              <IntlMessages id='mailApp.markAllAsImportant' />
             </MenuItem>
             <MenuItem onClick={() => onChangeAllStarred(0)}>
-              <IntlMessages id="mailApp.markAllAsNotImportant" />
+              <IntlMessages id='mailApp.markAllAsNotImportant' />
             </MenuItem>
           </Menu>
         </Box>

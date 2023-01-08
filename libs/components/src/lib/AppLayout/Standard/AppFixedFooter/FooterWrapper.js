@@ -17,7 +17,7 @@ const FooterWrapper = ({ children, ...rest }) => {
         backgroundImage: (theme) =>
           `linear-gradient(${alpha(theme.palette.common.white, 0.05)}, ${alpha(
             theme.palette.common.white,
-            0.05
+            0.05,
           )})`,
         color: (theme) => theme.palette.text.primary,
         margin: '0',

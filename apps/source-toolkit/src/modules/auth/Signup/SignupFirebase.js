@@ -16,14 +16,14 @@ import { BsGithub } from 'react-icons/bs';
 import { FaFacebookF } from 'react-icons/fa';
 
 const validationSchema = yup.object({
-  name: yup.string().required(<IntlMessages id="validation.nameRequired" />),
+  name: yup.string().required(<IntlMessages id='validation.nameRequired' />),
   email: yup
     .string()
-    .email(<IntlMessages id="validation.emailFormat" />)
-    .required(<IntlMessages id="validation.emailRequired" />),
+    .email(<IntlMessages id='validation.emailFormat' />)
+    .required(<IntlMessages id='validation.emailRequired' />),
   password: yup
     .string()
-    .required(<IntlMessages id="validation.passwordRequired" />),
+    .required(<IntlMessages id='validation.passwordRequired' />),
 });
 
 const SignupFirebase = () => {

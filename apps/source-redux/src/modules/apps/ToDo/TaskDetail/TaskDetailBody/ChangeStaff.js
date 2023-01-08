@@ -14,17 +14,17 @@ const ChangeStaff = ({ selectedStaff, handleStaffChange }) => {
 
   return (
     <FormControl
-      variant="outlined"
+      variant='outlined'
       sx={{
         minWidth: 100,
         width: '100%',
       }}
     >
-      <InputLabel id="selected-staff-select-outlined-label">
-        <IntlMessages id="common.staff" />
+      <InputLabel id='selected-staff-select-outlined-label'>
+        <IntlMessages id='common.staff' />
       </InputLabel>
       <Select
-        labelId="selected-staff-select-outlined-label"
+        labelId='selected-staff-select-outlined-label'
         sx={{
           cursor: 'pointer',
           '& .MuiOutlinedInput-input': {
@@ -33,7 +33,7 @@ const ChangeStaff = ({ selectedStaff, handleStaffChange }) => {
           },
         }}
         value={selectedStaff.id}
-        label={<IntlMessages id="common.staff" />}
+        label={<IntlMessages id='common.staff' />}
         onChange={handleStaffChange}
       >
         {staffList.map((staff) => {
@@ -45,7 +45,7 @@ const ChangeStaff = ({ selectedStaff, handleStaffChange }) => {
                 cursor: 'pointer',
               }}
             >
-              <Box display="flex" alignItems="center">
+              <Box display='flex' alignItems='center'>
                 {staff.image ? (
                   <Avatar
                     sx={{
@@ -66,7 +66,7 @@ const ChangeStaff = ({ selectedStaff, handleStaffChange }) => {
                     {staff.name.toUpperCase()}
                   </Avatar>
                 )}
-                <Box component="span">{staff.name}</Box>
+                <Box component='span'>{staff.name}</Box>
               </Box>
             </MenuItem>
           );

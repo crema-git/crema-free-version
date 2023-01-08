@@ -26,7 +26,7 @@ const CRM = () => {
       {loading ? (
         <AppLoader />
       ) : (
-        <AppAnimate animation="transition.slideUpIn" delay={200}>
+        <AppAnimate animation='transition.slideUpIn' delay={200}>
           <AppGridContainer>
             <Grid item xs={12} md={5}>
               <TotalRevenue revenueData={crmData.revenueData} />

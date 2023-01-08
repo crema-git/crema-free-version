@@ -17,7 +17,7 @@ const ListFooter = ({ loading, footerText }) => {
       }}
     >
       <CircularProgress size={16} />
-      <Box component="span" sx={{ ml: 2 }}>
+      <Box component='span' sx={{ ml: 2 }}>
         Loading...
       </Box>
     </Box>

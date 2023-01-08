@@ -13,7 +13,7 @@ import { postDataApi, putDataApi } from '@crema/hooks/APIHooks';
 import { CardHeader } from '@crema/modules/apps/ScrumBoard';
 
 const validationSchema = yup.object({
-  title: yup.string().required(<IntlMessages id="validation.titleRequired" />),
+  title: yup.string().required(<IntlMessages id='validation.titleRequired' />),
 });
 
 const AddCard = (props) => {

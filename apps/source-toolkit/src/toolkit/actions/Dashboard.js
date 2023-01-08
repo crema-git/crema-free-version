@@ -27,7 +27,7 @@ export const onGetAnalyticsData = () => {
         } else {
           dispatch({
             type: FETCH_ERROR,
-            payload: <IntlMessages id="message.somethingWentWrong" />,
+            payload: <IntlMessages id='message.somethingWentWrong' />,
           });
         }
       })

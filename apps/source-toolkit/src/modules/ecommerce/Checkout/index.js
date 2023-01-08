@@ -7,8 +7,8 @@ import { Fonts } from '@crema/constants/AppEnums';
 import AppAnimate from '@crema/components/AppAnimate';
 import AppGridContainer from '@crema/components/AppGridContainer';
 import {
-  OrderSummary,
   DeliveryAddress,
+  OrderSummary,
   PaymentInfo,
 } from '@crema/modules/ecommerce/Checkout';
 import { useDispatch, useSelector } from 'react-redux';

@@ -6,11 +6,9 @@ import AppsHeader from '@crema/components/AppsHeader';
 import AppsContent from '@crema/components/AppsContent';
 import AppsPagination from '@crema/components/AppsPagination';
 import Box from '@mui/material/Box';
-import AppInfoView from '@crema/components/AppInfoView';
 import AppSearchBar from '@crema/components/AppSearchBar';
 import { useGetDataApi } from '@crema/hooks/APIHooks';
 import { CustomerTable } from '@crema/modules/ecommerce/Customers';
-import AppLoader from '@crema/components/AppLoader';
 
 const Customers = () => {
   const { messages } = useIntl();

@@ -15,9 +15,9 @@ import { Autocomplete, DatePicker } from '@mui/lab';
 import AppTextField from '@crema/components/AppTextField';
 import AppScrollbar from '@crema/components/AppScrollbar';
 import {
+  CardAttachments,
   CardCheckedList,
   CardComments,
-  CardAttachments,
 } from '@crema/modules/apps/ScrumBoard';
 import { useScrumContext } from '../../../../context/ScrumContextProvider';
 

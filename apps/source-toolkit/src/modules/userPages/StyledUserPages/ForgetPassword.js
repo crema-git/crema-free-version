@@ -15,8 +15,8 @@ import { ReactComponent as Logo } from '../../../assets/user/forgot-password.svg
 const validationSchema = yup.object({
   email: yup
     .string()
-    .email(<IntlMessages id="validation.emailFormat" />)
-    .required(<IntlMessages id="validation.emailRequired" />),
+    .email(<IntlMessages id='validation.emailFormat' />)
+    .required(<IntlMessages id='validation.emailRequired' />),
 });
 
 const ForgetPassword = () => {

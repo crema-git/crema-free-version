@@ -1,4 +1,4 @@
-import { configureStore } from '@reduxjs/toolkit';
+import {configureStore} from '@reduxjs/toolkit';
 import reducers from '../reducers';
 // import { routerMiddleware } from 'connected-react-router';
 // import thunk from 'redux-thunk';

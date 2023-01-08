@@ -15,7 +15,7 @@ import { ReactComponent as Logo } from '../../../assets/user/lock-screen.svg';
 const validationSchema = yup.object({
   password: yup
     .string()
-    .required(<IntlMessages id="validation.passwordRequired" />),
+    .required(<IntlMessages id='validation.passwordRequired' />),
 });
 
 const UnlockScreen = () => {

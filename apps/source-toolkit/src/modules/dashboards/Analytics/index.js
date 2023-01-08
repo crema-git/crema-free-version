@@ -3,18 +3,18 @@ import { Grid } from '@mui/material';
 import AppGridContainer from '@crema/components/AppGridContainer';
 import AppAnimate from '@crema/components/AppAnimate';
 import {
-  TicketsSupport,
-  InfoWidget,
   ActiveVisitors,
-  WelcomeCard,
-  StateCard,
-  SalesState,
-  VisitorPageView,
   EarningByCountry,
-  TopSelling,
-  TrafficSource,
+  InfoWidget,
   OrderNTransaction,
   PageVisits,
+  SalesState,
+  StateCard,
+  TicketsSupport,
+  TopSelling,
+  TrafficSource,
+  VisitorPageView,
+  WelcomeCard,
 } from '@crema/modules/dashboards/Analytics';
 import { onGetAnalyticsData } from '../../../toolkit/actions';
 import { useDispatch, useSelector } from 'react-redux';

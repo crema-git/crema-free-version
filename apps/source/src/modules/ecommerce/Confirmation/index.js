@@ -17,7 +17,7 @@ const Confirmation = () => {
       {loading ? (
         <AppLoader />
       ) : (
-        <AppAnimate animation="transition.slideUpIn" delay={200}>
+        <AppAnimate animation='transition.slideUpIn' delay={200}>
           <Box>
             <OrderPlaced cartItems={cartItems} />
             <AddressInfo address={addresses[0]} />

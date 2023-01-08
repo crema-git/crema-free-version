@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import {
   onDeleteSelectedTasks,
   onGetTaskList,
-  onUpdateSelectedTask,
   onUpdateTaskStarredStatus,
 } from '../../../../redux/actions';
 import TaskContentHeader from './TaskContentHeader';

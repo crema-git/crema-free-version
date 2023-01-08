@@ -24,7 +24,7 @@ import AppLoader from '@crema/components/AppLoader';
 
 const HealthCare = () => {
   const [{ apiData: healthCare, loading }] = useGetDataApi(
-    '/dashboard/health_care'
+    '/dashboard/health_care',
   );
 
   return (
@@ -32,7 +32,7 @@ const HealthCare = () => {
       {loading ? (
         <AppLoader />
       ) : (
-        <AppAnimate animation="transition.slideUpIn" delay={200}>
+        <AppAnimate animation='transition.slideUpIn' delay={200}>
           <AppGridContainer>
             {healthCare.salesState.map((data, index) => (
               <Grid item xs={12} sm={6} lg={3} key={index}>

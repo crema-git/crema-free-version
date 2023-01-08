@@ -31,7 +31,7 @@ const TaskDetailHeader = (props) => {
         infoViewActionsContext.showMessage(
           data[0].isStarred
             ? 'Task Marked as Starred Successfully'
-            : 'Task Marked as Unstarred Successfully'
+            : 'Task Marked as Unstarred Successfully',
         );
       })
       .catch((error) => {
@@ -61,11 +61,11 @@ const TaskDetailHeader = (props) => {
         sx={{
           cursor: 'pointer',
         }}
-        component="span"
+        component='span'
         mr={{ xs: 2, sm: 4 }}
         onClick={onClickBackButton}
       >
-        <AppTooltip title={<IntlMessages id="common.back" />}>
+        <AppTooltip title={<IntlMessages id='common.back' />}>
           <ArrowBackIcon
             sx={{
               color: 'text.secondary',
@@ -80,7 +80,7 @@ const TaskDetailHeader = (props) => {
       />
 
       <Box
-        component="span"
+        component='span'
         sx={{
           marginLeft: 'auto',
           display: { xs: 'none', sm: 'block' },
@@ -92,7 +92,7 @@ const TaskDetailHeader = (props) => {
 
       <AppsDeleteIcon
         deleteAction={onDeleteTask}
-        deleteTitle={<IntlMessages id="todo.deleteMessage" />}
+        deleteTitle={<IntlMessages id='todo.deleteMessage' />}
         sx={{
           color: 'text.disabled',
         }}

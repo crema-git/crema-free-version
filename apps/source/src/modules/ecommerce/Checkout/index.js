@@ -22,7 +22,7 @@ const Checkout = () => {
       {loading ? (
         <AppLoader />
       ) : (
-        <AppAnimate animation="transition.slideUpIn" delay={200}>
+        <AppAnimate animation='transition.slideUpIn' delay={200}>
           <Box>
             <Box
               sx={{
@@ -33,7 +33,7 @@ const Checkout = () => {
                 fontSize: 16,
               }}
             >
-              <IntlMessages id="sidebar.ecommerce.checkout" />
+              <IntlMessages id='sidebar.ecommerce.checkout' />
             </Box>
             <AppGridContainer>
               <Grid item xs={12} md={8}>

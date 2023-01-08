@@ -13,7 +13,7 @@ const BoardDetail = () => {
     '/api/scrumboard/board/',
     undefined,
     { id: id },
-    false
+    false,
   );
 
   useEffect(() => {
@@ -37,7 +37,7 @@ const BoardDetail = () => {
       title={
         <>
           <Box
-            component="span"
+            component='span'
             sx={{
               cursor: 'pointer',
               mr: 2,
