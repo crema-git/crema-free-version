@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import AppInfoView from '@crema/components/AppInfoView';
+import AppInfoView from '../AppInfoView';
 import { Box, Slide, Zoom } from '@mui/material';
 import Hidden from '@mui/material/Hidden';
 import IconButton from '@mui/material/IconButton';
@@ -57,14 +57,14 @@ const AppsContainer = (props) => {
         {fullView ? null : (
           <Hidden lgUp>
             <IconButton
-              edge="start"
+              edge='start'
               sx={{
                 marginRight: (theme) => theme.spacing(2),
               }}
-              color="inherit"
-              aria-label="open drawer"
+              color='inherit'
+              aria-label='open drawer'
               onClick={toggleNavCollapsed}
-              size="large"
+              size='large'
             >
               <MenuIcon
                 sx={{
@@ -77,8 +77,8 @@ const AppsContainer = (props) => {
         )}
         <Zoom in style={{ transitionDelay: '300ms' }}>
           <Box
-            component="h2"
-            variant="h2"
+            component='h2'
+            variant='h2'
             sx={{
               fontSize: 16,
               color: 'text.primary',
@@ -115,7 +115,7 @@ const AppsContainer = (props) => {
             },
           }}
         >
-          <Slide direction="left" in mountOnEnter unmountOnExit>
+          <Slide direction='left' in mountOnEnter unmountOnExit>
             <Card
               style={{
                 height: '100%',

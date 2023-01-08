@@ -6,18 +6,21 @@ import PropTypes from 'prop-types';
 import TableHeading from './TableHeading';
 import TableItem from './TableItem';
 import AppTableContainer from '@crema/components/AppTableContainer';
+import AppLoader from '@crema/components/AppLoader';
 
-const CustomerTable = ({ customers }) => {
+const CustomerTable = ({ customers, loading }) => {
   return (
     <AppTableContainer>
-      <Table stickyHeader className="table">
+      <Table stickyHeader className='table'>
         <TableHead>
           <TableHeading />
         </TableHead>
         <TableBody>
-          {customers.map((data) => (
-            <TableItem data={data} key={data.id} />
-          ))}
+          {loading ? (
+            <AppLoader />
+          ) : (
+            customers.map((data) => <TableItem data={data} key={data.id} />)
+          )}
         </TableBody>
       </Table>
     </AppTableContainer>
@@ -32,4 +35,5 @@ CustomerTable.defaultProps = {
 
 CustomerTable.propTypes = {
   customers: PropTypes.array,
+  loading: PropTypes.bool,
 };

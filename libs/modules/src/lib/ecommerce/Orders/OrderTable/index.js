@@ -6,18 +6,21 @@ import PropTypes from 'prop-types';
 import TableHeading from './TableHeading';
 import TableItem from './TableItem';
 import AppTableContainer from '@crema/components/AppTableContainer';
+import AppLoader from '@crema/components/AppLoader';
 
-const OrderTable = ({ orderData }) => {
+const OrderTable = ({ orderData, loading }) => {
   return (
     <AppTableContainer>
-      <Table stickyHeader className="table">
+      <Table stickyHeader className='table'>
         <TableHead>
           <TableHeading />
         </TableHead>
         <TableBody>
-          {orderData.map((data) => (
-            <TableItem data={data} key={data.id} />
-          ))}
+          {loading ? (
+            <AppLoader />
+          ) : (
+            orderData.map((data) => <TableItem data={data} key={data.id} />)
+          )}
         </TableBody>
       </Table>
     </AppTableContainer>
@@ -32,4 +35,5 @@ OrderTable.defaultProps = {
 
 OrderTable.propTypes = {
   orderData: PropTypes.array,
+  loading: PropTypes.bool,
 };
