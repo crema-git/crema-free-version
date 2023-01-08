@@ -10,7 +10,7 @@ import AppInfoView from '@crema/components/AppInfoView';
 import AppSearchBar from '@crema/components/AppSearchBar';
 import { CustomerTable } from '@crema/modules/ecommerce/Customers';
 import { useDispatch, useSelector } from 'react-redux';
-import { getCustomers } from '@crema/redux-toolkit/actions';
+import { getCustomers } from '../../../toolkit/actions';
 
 const Customers = () => {
   const { messages } = useIntl();
@@ -45,7 +45,7 @@ const Customers = () => {
             }}
           >
             <AppSearchBar
-              iconPosition="right"
+              iconPosition='right'
               overlap={false}
               onChange={(event) => onSearchCustomer(event.target.value)}
               placeholder={messages['common.searchHere']}
@@ -58,7 +58,7 @@ const Customers = () => {
                 ml: 'auto',
               }}
             >
-              <Button variant="contained" color="primary">
+              <Button variant='contained' color='primary'>
                 Add Customer
               </Button>
 

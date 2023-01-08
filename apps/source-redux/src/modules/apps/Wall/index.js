@@ -18,7 +18,7 @@ import {
   WhoToFollow,
 } from '@crema/modules/apps/Wall';
 import { useDispatch, useSelector } from 'react-redux';
-import { onGetWallData } from '@crema/redux/actions';
+import { onGetWallData } from '../../../redux/actions';
 import CreatePost from './CreatePost';
 import PostsList from './PostsList';
 

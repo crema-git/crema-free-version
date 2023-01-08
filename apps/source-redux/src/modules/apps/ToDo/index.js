@@ -9,7 +9,7 @@ import {
   onGetToDoPriorityList,
   onGetToDoStaffList,
   onGetToDoStatusList,
-} from '@crema/redux/actions';
+} from '../../../redux/actions';
 import PropTypes from 'prop-types';
 import { useIntl } from 'react-intl';
 import AppsContainer from '@crema/components/AppsContainer';

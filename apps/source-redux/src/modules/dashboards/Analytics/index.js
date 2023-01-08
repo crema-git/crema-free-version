@@ -19,7 +19,7 @@ import {
 } from '@crema/modules/dashboards/Analytics';
 import AppLoader from '@crema/components/AppLoader';
 import { useDispatch, useSelector } from 'react-redux';
-import { onGetAnalyticsData } from '@crema/redux/actions';
+import { onGetAnalyticsData } from '../../../redux/actions';
 
 const Analytics = () => {
   const dispatch = useDispatch();
@@ -33,7 +33,7 @@ const Analytics = () => {
   return (
     <>
       {analyticsData ? (
-        <AppAnimate animation="transition.slideUpIn" delay={200}>
+        <AppAnimate animation='transition.slideUpIn' delay={200}>
           <AppGridContainer>
             <Grid item xs={12} lg={6}>
               <WelcomeCard data={analyticsData.welcomeCard} />

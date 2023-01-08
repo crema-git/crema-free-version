@@ -4,7 +4,7 @@ import IntlMessages from '@crema/helpers/IntlMessages';
 import Select from '@mui/material/Select';
 import FormControl from '@mui/material/FormControl';
 import { useDispatch, useSelector } from 'react-redux';
-import { onUpdateSelectedTask } from '@crema/redux/actions';
+import { onUpdateSelectedTask } from '../../../../../redux/actions';
 import PropTypes from 'prop-types';
 import { MenuItem } from '@mui/material';
 
@@ -15,18 +15,18 @@ const TaskStatus = ({ selectedTask }) => {
 
   const onChangeStatus = (event) => {
     dispatch(
-      onUpdateSelectedTask({ ...selectedTask, status: event.target.value })
+      onUpdateSelectedTask({ ...selectedTask, status: event.target.value }),
     );
   };
 
   return (
-    <FormControl variant="outlined">
-      <InputLabel id="status-select-outlined-label">
-        <IntlMessages id="common.status" />
+    <FormControl variant='outlined'>
+      <InputLabel id='status-select-outlined-label'>
+        <IntlMessages id='common.status' />
       </InputLabel>
       <Select
-        labelId="status-select-outlined-label"
-        label={<IntlMessages id="common.status" />}
+        labelId='status-select-outlined-label'
+        label={<IntlMessages id='common.status' />}
         value={selectedTask.status}
         onChange={(event) => onChangeStatus(event)}
         sx={{

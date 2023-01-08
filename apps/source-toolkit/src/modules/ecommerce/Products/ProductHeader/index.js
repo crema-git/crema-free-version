@@ -9,7 +9,7 @@ import { styled } from '@mui/material/styles';
 import clsx from 'clsx';
 import AppsPagination from '@crema/components/AppsPagination';
 import { useDispatch } from 'react-redux';
-import { setViewType } from '@crema/redux-toolkit/actions';
+import { setViewType } from '../../../../toolkit/actions';
 import { VIEW_TYPE } from '@crema/modules/ecommerce/Products';
 
 const IconBtn = styled(IconButton)(({ theme }) => {
@@ -45,14 +45,14 @@ const ProductHeader = ({
     >
       <Box sx={{ mr: 3 }}>
         <AppSearch
-          placeholder="Search here"
+          placeholder='Search here'
           onChange={(e) => onSearch(e.target.value)}
         />
       </Box>
 
       <Stack
         spacing={2}
-        direction="row"
+        direction='row'
         sx={{
           display: 'flex',
           alignItems: 'center',
@@ -78,7 +78,7 @@ const ProductHeader = ({
         <Hidden smDown>
           {list.length > 0 ? (
             <Box
-              component="span"
+              component='span'
               sx={{
                 ml: { sm: 'auto' },
               }}

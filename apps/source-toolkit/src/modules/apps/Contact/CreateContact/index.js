@@ -9,17 +9,17 @@ import { useDispatch } from 'react-redux';
 import {
   onCreateContact,
   onUpdateSelectedContact,
-} from '@crema/redux-toolkit/actions';
+} from '../../../../toolkit/actions';
 
 const validationSchema = yup.object({
-  name: yup.string().required(<IntlMessages id="validation.nameRequired" />),
+  name: yup.string().required(<IntlMessages id='validation.nameRequired' />),
   email: yup
     .string()
-    .email(<IntlMessages id="validation.emailFormat" />)
-    .required(<IntlMessages id="validation.emailRequired" />),
+    .email(<IntlMessages id='validation.emailFormat' />)
+    .required(<IntlMessages id='validation.emailRequired' />),
   contact: yup
     .string()
-    .required(<IntlMessages id="validation.phoneNumberRequired" />),
+    .required(<IntlMessages id='validation.phoneNumberRequired' />),
 });
 
 const CreateContact = (props) => {
@@ -34,13 +34,13 @@ const CreateContact = (props) => {
   const [userImage, setUserImage] = useState(
     selectContact && selectContact.image
       ? selectContact.image
-      : '/assets/images/placeholder.jpg'
+      : '/assets/images/placeholder.jpg',
   );
   useEffect(() => {
     setUserImage(
       selectContact && selectContact.image
         ? selectContact.image
-        : '/assets/images/placeholder.jpg'
+        : '/assets/images/placeholder.jpg',
     );
   }, [selectContact]);
 

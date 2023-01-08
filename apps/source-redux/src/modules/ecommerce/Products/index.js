@@ -5,7 +5,7 @@ import AppsContainer from '@crema/components/AppsContainer';
 import { ProductsSidebar, VIEW_TYPE } from '@crema/modules/ecommerce/Products';
 import ProductListing from './ProductListing';
 import { useDispatch, useSelector } from 'react-redux';
-import { setFilters } from '@crema/redux/actions';
+import { setFilters } from '../../../redux/actions';
 
 const Products = () => {
   const { messages } = useIntl();

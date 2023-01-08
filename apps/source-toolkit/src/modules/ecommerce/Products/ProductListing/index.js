@@ -4,7 +4,7 @@ import ProductGrid from './ProductGrid';
 
 import ProductList from './ProductList';
 import { alpha, Box, Hidden } from '@mui/material';
-import { onGetEcommerceData, setFilters } from '@crema/redux-toolkit/actions';
+import { onGetEcommerceData, setFilters } from '../../../../toolkit/actions';
 import { useThemeContext } from '@crema/context/ThemeContextProvider';
 import AppsHeader from '@crema/components/AppsHeader';
 import ProductHeader from '../ProductHeader';

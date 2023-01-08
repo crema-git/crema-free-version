@@ -5,7 +5,7 @@ import LabelOutlinedIcon from '@mui/icons-material/LabelOutlined';
 import AppTooltip from '@crema/components/AppTooltip';
 import { MessageItem } from '@crema/modules/apps/Mail';
 import { useDispatch } from 'react-redux';
-import { onUpdateSelectedMail } from '@crema/redux-toolkit/actions';
+import { onUpdateSelectedMail } from '../../../../../toolkit/actions';
 
 const MailDetailBody = (props) => {
   const dispatch = useDispatch();
@@ -19,7 +19,7 @@ const MailDetailBody = (props) => {
 
   const onChangeStarred = (message, isStarred) => {
     const messages = selectedMail.messages.map((data) =>
-      data.messageId === message.messageId ? { ...message, isStarred } : data
+      data.messageId === message.messageId ? { ...message, isStarred } : data,
     );
     dispatch(onUpdateSelectedMail({ ...selectedMail, messages }));
   };
@@ -36,7 +36,7 @@ const MailDetailBody = (props) => {
             }}
           >
             <Box
-              component="span"
+              component='span'
               sx={{
                 fontSize: { xs: 16, sm: 18 },
                 marginRight: 3,

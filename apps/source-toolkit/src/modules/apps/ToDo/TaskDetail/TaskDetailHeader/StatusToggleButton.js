@@ -1,7 +1,7 @@
 import React from 'react';
 import DoneIcon from '@mui/icons-material/Done';
 import IntlMessages from '@crema/helpers/IntlMessages';
-import { onUpdateSelectedTask } from '@crema/redux-toolkit/actions';
+import { onUpdateSelectedTask } from '../../../../../toolkit/actions';
 import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
 import Button from '@mui/material/Button';
@@ -34,21 +34,21 @@ const StatusToggleButton = ({ selectedTask }) => {
     <>
       {selectedTask.status === 3 ? (
         <StatusButton
-          variant="contained"
-          color="primary"
+          variant='contained'
+          color='primary'
           startIcon={<StyledDoneIcon />}
           onClick={() => onChangeTaskStatus(1)}
         >
-          <IntlMessages id="todo.completed" />
+          <IntlMessages id='todo.completed' />
         </StatusButton>
       ) : (
         <StatusButton
-          variant="outlined"
-          color="primary"
+          variant='outlined'
+          color='primary'
           startIcon={<StyledDoneIcon />}
           onClick={() => onChangeTaskStatus(3)}
         >
-          <IntlMessages id="todo.markAsCompleted" />
+          <IntlMessages id='todo.markAsCompleted' />
         </StatusButton>
       )}
     </>

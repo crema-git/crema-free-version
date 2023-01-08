@@ -16,7 +16,7 @@ import {
   onAddNewBoard,
   onEditBoardDetail,
   onGetBoardList,
-} from '@crema/redux-toolkit/actions';
+} from '../../../../toolkit/actions';
 
 const BoardList = () => {
   const dispatch = useDispatch();
@@ -61,7 +61,7 @@ const BoardList = () => {
 
   return (
     <>
-      <Zoom direction="up" in mountOnEnter unmountOnExit>
+      <Zoom direction='up' in mountOnEnter unmountOnExit>
         <Box
           sx={{
             pt: 4,
@@ -71,7 +71,7 @@ const BoardList = () => {
           }}
         >
           <Box
-            component="h2"
+            component='h2'
             sx={{
               my: { xs: 5, sm: 5, xl: 8 },
               color: 'text.primary',
@@ -80,7 +80,7 @@ const BoardList = () => {
               fontSize: 16,
             }}
           >
-            <IntlMessages id="scrumboard.scrumboardApp" />
+            <IntlMessages id='scrumboard.scrumboardApp' />
           </Box>
           <AppGridContainer
             sx={{

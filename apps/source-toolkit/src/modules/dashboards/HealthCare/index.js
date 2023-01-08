@@ -21,7 +21,7 @@ import {
   YourActivity,
 } from '@crema/modules/dashboards/HealthCare';
 import { useDispatch, useSelector } from 'react-redux';
-import { onGetHCData } from '@crema/redux-toolkit/actions';
+import { onGetHCData } from '../../../toolkit/actions';
 
 const HealthCare = () => {
   const dispatch = useDispatch();
@@ -33,7 +33,7 @@ const HealthCare = () => {
   const { healthCare } = useSelector(({ dashboard }) => dashboard);
 
   return healthCare ? (
-    <AppAnimate animation="transition.slideUpIn" delay={200}>
+    <AppAnimate animation='transition.slideUpIn' delay={200}>
       <AppGridContainer>
         {healthCare.salesState.map((data, index) => (
           <Grid item xs={12} sm={6} lg={3} key={index}>

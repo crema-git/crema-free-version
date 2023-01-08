@@ -14,7 +14,7 @@ import {
   TotalBalance,
 } from '@crema/modules/dashboards/Crypto';
 import AppLoader from '@crema/components/AppLoader';
-import { onGetCryptoData } from '@crema/redux/actions';
+import { onGetCryptoData } from '../../../redux/actions';
 import { useDispatch, useSelector } from 'react-redux';
 
 const Crypto = () => {
@@ -29,7 +29,7 @@ const Crypto = () => {
   return (
     <>
       {cryptoData ? (
-        <AppAnimate animation="transition.slideUpIn" delay={200}>
+        <AppAnimate animation='transition.slideUpIn' delay={200}>
           <AppGridContainer>
             <Grid item xs={12} md={5}>
               <TotalBalance totalBalanceData={cryptoData.totalBalanceData} />

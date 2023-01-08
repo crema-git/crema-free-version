@@ -29,7 +29,7 @@ import {
   YourAccount,
 } from '@crema/modules/dashboards/Metrics';
 import { useDispatch, useSelector } from 'react-redux';
-import { onGetMetricsData } from '@crema/redux-toolkit/actions';
+import { onGetMetricsData } from '../../../toolkit/actions';
 
 const Metrics = () => {
   const dispatch = useDispatch();
@@ -45,7 +45,7 @@ const Metrics = () => {
     <AppAnimate>
       <>
         <Box
-          component="h2"
+          component='h2'
           sx={{
             color: 'text.primary',
             mb: { xs: 4, sm: 4, xl: 6 },
@@ -53,7 +53,7 @@ const Metrics = () => {
             fontWeight: Fonts.BOLD,
           }}
         >
-          <IntlMessages id="dashboard.metrics" />
+          <IntlMessages id='dashboard.metrics' />
         </Box>
 
         <AppGridContainer>
@@ -97,9 +97,9 @@ const Metrics = () => {
             <StatsCardWithGraph
               text={messages['dashboard.incomeLastYear']}
               data={metricsData.incomeLastYear}
-              type="incomeGraph"
-              headingColor="text.primary"
-              valueColor="#FFA940"
+              type='incomeGraph'
+              headingColor='text.primary'
+              valueColor='#FFA940'
             />
           </Grid>
 
@@ -107,9 +107,9 @@ const Metrics = () => {
             <StatsCardWithGraph
               text={messages['dashboard.webTraffic']}
               data={metricsData.websiteTrafficData}
-              bgColor="background.paper"
-              type="trafficGraph"
-              headingColor="text.primary"
+              bgColor='background.paper'
+              type='trafficGraph'
+              headingColor='text.primary'
               valueColor={red[600]}
             />
           </Grid>
@@ -118,9 +118,9 @@ const Metrics = () => {
             <StatsCardWithGraph
               text={messages['dashboard.growthInRevenue']}
               data={metricsData.revenueGrowthData}
-              bgColor="background.paper"
-              type="revenueGrowth"
-              headingColor="text.primary"
+              bgColor='background.paper'
+              type='revenueGrowth'
+              headingColor='text.primary'
               valueColor={blue[500]}
             />
           </Grid>
@@ -129,10 +129,10 @@ const Metrics = () => {
             <ComparisonCard
               text={messages['dashboard.incrementInUsers']}
               data={metricsData.incrementActiveUsers}
-              bgColor="background.paper"
-              type="activeUsers"
-              headingColor="text.primary"
-              valueColor="#4299E1"
+              bgColor='background.paper'
+              type='activeUsers'
+              headingColor='text.primary'
+              valueColor='#4299E1'
             />
           </Grid>
 
@@ -140,10 +140,10 @@ const Metrics = () => {
             <ComparisonCard
               text={messages['dashboard.extraRevenue']}
               data={metricsData.extraRevenue}
-              bgColor="background.paper"
-              type="extraRevenue"
-              headingColor="text.primary"
-              valueColor="#4C51BF"
+              bgColor='background.paper'
+              type='extraRevenue'
+              headingColor='text.primary'
+              valueColor='#4C51BF'
             />
           </Grid>
 
@@ -151,9 +151,9 @@ const Metrics = () => {
             <ComparisonCard
               text={messages['dashboard.trafficRaise']}
               data={metricsData.trafficRaise}
-              bgColor="background.paper"
-              type="trafficRaise"
-              headingColor="text.primary"
+              bgColor='background.paper'
+              type='trafficRaise'
+              headingColor='text.primary'
               valueColor={blue[500]}
             />
           </Grid>
@@ -162,9 +162,9 @@ const Metrics = () => {
             <ComparisonCard
               text={messages['dashboard.lessOrders']}
               data={metricsData.lessOrders}
-              bgColor="background.paper"
-              type="lessOrders"
-              headingColor="text.primary"
+              bgColor='background.paper'
+              type='lessOrders'
+              headingColor='text.primary'
               valueColor={red[500]}
             />
           </Grid>
@@ -194,11 +194,11 @@ const Metrics = () => {
               <MetricTitleLineGraphCard
                 data={metricsData.metricsLineGraphData}
                 title={messages['dashboard.rides']}
-                titleColor="rgb(73, 80, 87)"
+                titleColor='rgb(73, 80, 87)'
                 valueColor={grey[500]}
                 differenceColor={red[500]}
-                bgColor="white"
-                graphColor="#4299E1"
+                bgColor='white'
+                graphColor='#4299E1'
               />
             </Box>
 
@@ -206,11 +206,11 @@ const Metrics = () => {
               <MetricTitleLineGraphCard
                 data={metricsData.metricsLineGraphData}
                 title={messages['dashboard.visits']}
-                titleColor="white"
+                titleColor='white'
                 valueColor={indigo[300]}
-                differenceColor="white"
+                differenceColor='white'
                 bgColor={indigo[500]}
-                graphColor="#FFFFFF"
+                graphColor='#FFFFFF'
               />
             </Box>
           </Grid>

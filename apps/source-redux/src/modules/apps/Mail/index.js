@@ -15,7 +15,7 @@ import {
   onGetConnectionList,
   onGetMailFolderList,
   onGetMailLabelList,
-} from '@crema/redux/actions';
+} from '../../../redux/actions';
 
 const MailDetailViewWrapper = styled(Box)(({ theme }) => {
   return {

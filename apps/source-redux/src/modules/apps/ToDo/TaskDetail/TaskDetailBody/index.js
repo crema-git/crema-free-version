@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { onUpdateSelectedTask } from '@crema/redux/actions';
+import { onUpdateSelectedTask } from '../../../../../redux/actions';
 import Divider from '@mui/material/Divider';
 import Button from '@mui/material/Button';
 import moment from 'moment';
@@ -43,7 +43,7 @@ const TaskDetailBody = (props) => {
   const [comment, setComment] = useState('');
 
   const [scheduleDate, setScheduleDate] = useState(
-    moment(selectedTask.startDate).format('YYYY/MM/DD')
+    moment(selectedTask.startDate).format('YYYY/MM/DD'),
   );
 
   const [selectedStaff, setStaff] = useState(selectedTask.assignedTo);
@@ -59,7 +59,7 @@ const TaskDetailBody = (props) => {
         content,
         startDate: scheduleDate,
         assignedTo: selectedStaff,
-      })
+      }),
     );
     setEdit(!isEdit);
   };
@@ -102,8 +102,8 @@ const TaskDetailBody = (props) => {
       >
         <Box sx={{ display: 'flex', alignItems: 'center' }}>
           <Typography
-            component="h2"
-            variant="h2"
+            component='h2'
+            variant='h2'
             sx={{
               overflow: 'hidden',
               textOverflow: 'ellipsis',
@@ -119,7 +119,7 @@ const TaskDetailBody = (props) => {
 
           <Box mr={1} mb={{ xs: 3, sm: 0 }}>
             <Box
-              component="span"
+              component='span'
               sx={{
                 px: 3,
                 py: 1,
@@ -135,17 +135,17 @@ const TaskDetailBody = (props) => {
           </Box>
         </Box>
 
-        <Box display="flex" alignItems="center" ml={{ sm: 'auto' }}>
+        <Box display='flex' alignItems='center' ml={{ sm: 'auto' }}>
           <TaskLabels labels={selectedTask.label} />
-          <Box component="span" color="text.secondary" fontSize={14} ml={2}>
+          <Box component='span' color='text.secondary' fontSize={14} ml={2}>
             Nov 21, 2020, 9:46 AM
           </Box>
         </Box>
       </Box>
 
-      <Box mb={0.5} display="flex">
+      <Box mb={0.5} display='flex'>
         <Box
-          display="flex"
+          display='flex'
           flexDirection={{ xs: 'column', sm: 'row' }}
           mr={2}
           alignItems={{ sm: 'center' }}
@@ -169,7 +169,7 @@ const TaskDetailBody = (props) => {
           )}
         </Box>
 
-        <Box ml="auto">
+        <Box ml='auto'>
           {!isEdit ? (
             <EditButton
               action={onClickEditButton}
@@ -214,10 +214,10 @@ const TaskDetailBody = (props) => {
               padding: '10px 15px',
             },
           }}
-          rows="6"
-          variant="outlined"
+          rows='6'
+          variant='outlined'
           placeholder={messages['common.description']}
-          name="content"
+          name='content'
           value={content}
           onChange={(event) => setContent(event.target.value)}
         />
@@ -275,8 +275,8 @@ const TaskDetailBody = (props) => {
               padding: '10px 15px',
             },
           }}
-          rows="1"
-          variant="outlined"
+          rows='1'
+          variant='outlined'
           placeholder={messages['common.writeComment']}
           value={comment}
           onChange={(event) => setComment(event.target.value)}
@@ -293,8 +293,8 @@ const TaskDetailBody = (props) => {
               marginLeft: 0.75,
             },
           }}
-          variant="contained"
-          color="primary"
+          variant='contained'
+          color='primary'
           disabled={!comment}
           onClick={onAddComments}
         >

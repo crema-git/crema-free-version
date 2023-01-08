@@ -13,7 +13,7 @@ import {
   getCartItems,
   removeCartItem,
   updateCartItem,
-} from '@crema/redux-toolkit/actions';
+} from '../../../toolkit/actions';
 
 const Carts = () => {
   const dispatch = useDispatch();
@@ -40,10 +40,10 @@ const Carts = () => {
   };
 
   return (
-    <AppAnimate animation="transition.slideUpIn" delay={200}>
+    <AppAnimate animation='transition.slideUpIn' delay={200}>
       <Box>
         <Box
-          component="h2"
+          component='h2'
           sx={{
             color: 'text.primary',
             fontWeight: Fonts.BOLD,
@@ -51,7 +51,7 @@ const Carts = () => {
             fontSize: 16,
           }}
         >
-          <IntlMessages id="sidebar.ecommerce.cart" />
+          <IntlMessages id='sidebar.ecommerce.cart' />
         </Box>
         <AppGridContainer>
           <Grid item xs={12} md={8}>
@@ -67,8 +67,8 @@ const Carts = () => {
                   }}
                 >
                   <Button
-                    variant="contained"
-                    color="primary"
+                    variant='contained'
+                    color='primary'
                     onClick={() => {
                       navigate('/ecommerce/products');
                     }}
@@ -76,8 +76,8 @@ const Carts = () => {
                     Continue Shopping
                   </Button>
                   <Button
-                    variant="contained"
-                    color="secondary"
+                    variant='contained'
+                    color='secondary'
                     onClick={() => {
                       navigate('/ecommerce/checkout');
                     }}

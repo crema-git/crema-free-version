@@ -14,7 +14,7 @@ import { useNavigate } from 'react-router-dom';
 import MediaSlider from './MediaSlider';
 import AddShoppingCartOutlinedIcon from '@mui/icons-material/AddShoppingCartOutlined';
 import { useDispatch } from 'react-redux';
-import { setCurrentProduct } from '@crema/redux-toolkit/actions';
+import { setCurrentProduct } from '../../../../../toolkit/actions';
 
 const settings = {
   dots: true,
@@ -38,7 +38,7 @@ const ListItem = (props) => {
         mb: 4,
         cursor: 'pointer',
       }}
-      className="item-hover"
+      className='item-hover'
       onClick={() => {
         dispatch(setCurrentProduct(item));
         navigate('/ecommerce/product_detail/' + item.id);
@@ -84,7 +84,7 @@ const ListItem = (props) => {
                         height: '100%',
                       }}
                     >
-                      <img src={img.src} alt="watch" />
+                      <img src={img.src} alt='watch' />
                     </Box>
                   </Box>
                 );
@@ -113,7 +113,7 @@ const ListItem = (props) => {
             }}
           >
             <Box
-              component="h3"
+              component='h3'
               sx={{
                 fontWeight: Fonts.BOLD,
                 fontSize: 16,
@@ -127,7 +127,7 @@ const ListItem = (props) => {
             </Box>
 
             <Box
-              component="span"
+              component='span'
               sx={{
                 ml: 'auto',
                 display: 'block',
@@ -145,7 +145,7 @@ const ListItem = (props) => {
           </Box>
 
           <Box
-            component="p"
+            component='p'
             sx={{
               color: 'text.secondary',
               mb: 5,
@@ -173,17 +173,17 @@ const ListItem = (props) => {
               }}
             >
               <Box
-                component="span"
+                component='span'
                 sx={{
                   color: 'text.secondary',
                   fontWeight: Fonts.MEDIUM,
                   textTransform: 'uppercase',
                 }}
               >
-                <IntlMessages id="ecommerce.exclusivePrice" />:
+                <IntlMessages id='ecommerce.exclusivePrice' />:
               </Box>
               <Box
-                component="span"
+                component='span'
                 sx={{
                   ml: 2,
                   fontWeight: Fonts.MEDIUM,
@@ -202,9 +202,9 @@ const ListItem = (props) => {
                 borderColor: 'primary.main',
               }}
             >
-              <IntlMessages id="ecommerce.mrp" />:
+              <IntlMessages id='ecommerce.mrp' />:
               <Box
-                component="span"
+                component='span'
                 sx={{
                   textDecoration: 'line-through',
                 }}
@@ -219,7 +219,7 @@ const ListItem = (props) => {
                 color: green[600],
               }}
             >
-              {item.discount}% <IntlMessages id="ecommerce.off" />
+              {item.discount}% <IntlMessages id='ecommerce.off' />
             </Box>
           </Box>
 
@@ -250,12 +250,12 @@ const ListItem = (props) => {
                 <AddShoppingCartOutlinedIcon sx={{ fontSize: 16, mt: 1 }} />
               </Box>
               <Box
-                component="span"
+                component='span'
                 sx={{
                   fontSize: 14,
                 }}
               >
-                <IntlMessages id="ecommerce.addToCart" />
+                <IntlMessages id='ecommerce.addToCart' />
               </Box>
             </Box>
             <Box
@@ -267,7 +267,7 @@ const ListItem = (props) => {
               }}
             >
               <Box sx={{ mt: 1.5 }}>
-                <Rating size="small" value={item.rating} readOnly />
+                <Rating size='small' value={item.rating} readOnly />
               </Box>
               <Box
                 sx={{

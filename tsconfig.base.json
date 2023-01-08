@@ -426,18 +426,6 @@
         "libs/modules/src/lib/userList/Standard/index.js"
       ],
       "@crema/modules/userPages": ["libs/modules/src/lib/userPages/index.js"],
-      "@crema/redux": ["libs/redux/src/index.js"],
-      "@crema/redux-toolkit": ["libs/redux-toolkit/src/index.js"],
-      "@crema/redux-toolkit/actions": [
-        "libs/redux-toolkit/src/actions/index.js"
-      ],
-      "@crema/redux-toolkit/reducers": [
-        "libs/redux-toolkit/src/reducers/index.js"
-      ],
-      "@crema/redux-toolkit/store": ["libs/redux-toolkit/src/store/index.js"],
-      "@crema/redux/actions": ["libs/redux/src/actions/index.js"],
-      "@crema/redux/reducers": ["libs/redux/src/reducers/index.js"],
-      "@crema/redux/store": ["libs/redux/src/store/index.js"],
       "@crema/services/auth": ["libs/services/auth/src/index.js"],
       "@crema/services/auth/AWSAuthProvider": [
         "libs/services/auth/src/aws-cognito/AWSAuthProvider.js"

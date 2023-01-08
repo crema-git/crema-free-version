@@ -8,7 +8,7 @@ import { useParams } from 'react-router-dom';
 import AppInfoView from '@crema/components/AppInfoView';
 import { Header, ProductView } from '@crema/modules/ecommerce/ProductDetail';
 import { useDispatch, useSelector } from 'react-redux';
-import { getProductDetail } from '@crema/redux-toolkit/actions';
+import { getProductDetail } from '../../../toolkit/actions';
 import ProductImageSlide from './ProductImageSlide';
 import SimilarProduct from './SimilarProduct';
 
@@ -16,7 +16,7 @@ const ProductDetail = () => {
   const dispatch = useDispatch();
   const { id } = useParams();
   const currentProduct = useSelector(
-    ({ ecommerce }) => ecommerce.currentProduct
+    ({ ecommerce }) => ecommerce.currentProduct,
   );
   useEffect(() => {
     dispatch(getProductDetail(id));
@@ -25,7 +25,7 @@ const ProductDetail = () => {
   return (
     <>
       {currentProduct ? (
-        <AppAnimate animation="transition.slideUpIn" delay={200}>
+        <AppAnimate animation='transition.slideUpIn' delay={200}>
           <AppCard>
             <Header product={currentProduct} />
             <AppGridContainer>

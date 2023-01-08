@@ -20,7 +20,7 @@ import {
   VideoPromo,
 } from '@crema/modules/dashboards/Academy';
 import { useDispatch, useSelector } from 'react-redux';
-import { onGetAcademyData } from '@crema/redux-toolkit/actions';
+import { onGetAcademyData } from '../../../toolkit/actions';
 import AppLoader from '@crema/components/AppLoader';
 
 const Academy = () => {
@@ -33,7 +33,7 @@ const Academy = () => {
   const { academyData } = useSelector(({ dashboard }) => dashboard);
   console.log('academyData', academyData);
   return academyData ? (
-    <AppAnimate animation="transition.slideUpIn" delay={200}>
+    <AppAnimate animation='transition.slideUpIn' delay={200}>
       <Box>
         <Box
           sx={{

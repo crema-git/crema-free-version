@@ -4,12 +4,15 @@ import AppsContainer from '@crema/components/AppsContainer';
 import BoardDetailView from './BoardDetailView';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { onGetBoardDetail, onNullifyBoardDetail } from '@crema/redux/actions';
+import {
+  onGetBoardDetail,
+  onNullifyBoardDetail,
+} from '../../../../redux/actions';
 
 const BoardDetail = () => {
   const navigate = useNavigate();
   const boardDetail = useSelector(
-    ({ scrumboardApp }) => scrumboardApp.boardDetail
+    ({ scrumboardApp }) => scrumboardApp.boardDetail,
   );
   const dispatch = useDispatch();
   const { pathname } = useLocation();
@@ -37,7 +40,7 @@ const BoardDetail = () => {
       title={
         <>
           <Box
-            component="span"
+            component='span'
             sx={{
               cursor: 'pointer',
               mr: 2,

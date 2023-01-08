@@ -16,7 +16,7 @@ import {
   onDeleteContacts,
   onGetContactList,
   onUpdateStarredStatus,
-} from '@crema/redux/actions';
+} from '../../../../redux/actions';
 
 const ContactListing = () => {
   const dispatch = useDispatch();
@@ -25,7 +25,7 @@ const ContactListing = () => {
   const contactList = useSelector(({ contactApp }) => contactApp.contactList);
 
   const totalContacts = useSelector(
-    ({ contactApp }) => contactApp.totalContacts
+    ({ contactApp }) => contactApp.totalContacts,
   );
 
   const [filterText, onSetFilterText] = useState('');
@@ -55,7 +55,7 @@ const ContactListing = () => {
   useEffect(() => {
     const path = pathname.split('/');
     dispatch(
-      onGetContactList(path[path.length - 2], path[path.length - 1], page)
+      onGetContactList(path[path.length - 2], path[path.length - 1], page),
     );
   }, [pathname, pageView, page, dispatch]);
 
@@ -90,7 +90,7 @@ const ContactListing = () => {
       setCheckedContacts(checkedContacts.concat(id));
     } else {
       setCheckedContacts(
-        checkedContacts.filter((contactId) => contactId !== id)
+        checkedContacts.filter((contactId) => contactId !== id),
       );
     }
   };
@@ -99,7 +99,7 @@ const ContactListing = () => {
     const selectedIdList = [contact.id];
     const path = pathname.split('/');
     dispatch(
-      onUpdateStarredStatus(selectedIdList, status, path[path.length - 1])
+      onUpdateStarredStatus(selectedIdList, status, path[path.length - 1]),
     );
   };
 
@@ -113,7 +113,7 @@ const ContactListing = () => {
       return contactList;
     } else {
       return contactList.filter((contact) =>
-        contact.name.toUpperCase().includes(filterText.toUpperCase())
+        contact.name.toUpperCase().includes(filterText.toUpperCase()),
       );
     }
   };
@@ -125,8 +125,8 @@ const ContactListing = () => {
         path[path.length - 2],
         path[path.length - 1],
         toDeleteContacts,
-        page
-      )
+        page,
+      ),
     );
     setDeleteDialogOpen(false);
     setCheckedContacts([]);
@@ -200,8 +200,8 @@ const ContactListing = () => {
         open={isDeleteDialogOpen}
         onDeny={setDeleteDialogOpen}
         onConfirm={onDeleteSelectedContacts}
-        title={<IntlMessages id="contactApp.deleteContact" />}
-        dialogTitle={<IntlMessages id="common.deleteItem" />}
+        title={<IntlMessages id='contactApp.deleteContact' />}
+        dialogTitle={<IntlMessages id='common.deleteItem' />}
       />
     </>
   );

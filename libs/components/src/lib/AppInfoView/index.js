@@ -2,7 +2,7 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import AppMessageView from '../AppMessageView';
 import AppLoader from '../AppLoader';
-import { hideMessage } from '@crema/redux-toolkit/actions';
+import { HIDE_MESSAGE } from '@crema/constants';
 // import {
 //   useInfoViewActionsContext,
 //   useInfoViewContext,
@@ -17,7 +17,7 @@ const AppInfoView = () => {
   const { error, loading, message } = useSelector(({ common }) => common);
   const dispatch = useDispatch();
   const clearInfoView = () => {
-    dispatch(hideMessage());
+    dispatch(dispatch({ type: HIDE_MESSAGE }));
   };
 
   const showMessage = () => {

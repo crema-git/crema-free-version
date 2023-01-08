@@ -34,7 +34,7 @@ import {
   WallPaper,
 } from '@crema/modules/dashboards/Widgets';
 import { useDispatch, useSelector } from 'react-redux';
-import { onGetWidgetsData } from '@crema/redux/actions';
+import { onGetWidgetsData } from '../../../redux/actions';
 
 const Widgets = () => {
   const dispatch = useDispatch();
@@ -48,10 +48,10 @@ const Widgets = () => {
   return (
     <>
       {widgetsData ? (
-        <AppAnimate animation="transition.slideUpIn" delay={200}>
+        <AppAnimate animation='transition.slideUpIn' delay={200}>
           <>
             <Box
-              component="h3"
+              component='h3'
               sx={{
                 color: 'text.primary',
                 mb: { xs: 4, sm: 4, xl: 6 },
@@ -59,7 +59,7 @@ const Widgets = () => {
                 fontWeight: Fonts.BOLD,
               }}
             >
-              <IntlMessages id="dashboard.widgets" />
+              <IntlMessages id='dashboard.widgets' />
             </Box>
 
             <AppGridContainer>
@@ -151,7 +151,7 @@ const Widgets = () => {
                 <CremaCard
                   data={widgetsData.mateInfo.facebookInfo}
                   bgColor={indigo[600]}
-                  color="white"
+                  color='white'
                   icon={
                     <Box
                       sx={{
@@ -171,7 +171,7 @@ const Widgets = () => {
                 <CremaCard
                   data={widgetsData.mateInfo.twitterInfo}
                   bgColor={blue[600]}
-                  color="white"
+                  color='white'
                   icon={
                     <Box
                       sx={{

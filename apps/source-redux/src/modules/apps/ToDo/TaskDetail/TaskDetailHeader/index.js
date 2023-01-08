@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { onUpdateSelectedTask } from '@crema/redux/actions';
+import { onUpdateSelectedTask } from '../../../../../redux/actions';
 import { useNavigate } from 'react-router-dom';
 import IntlMessages from '@crema/helpers/IntlMessages';
 import Box from '@mui/material/Box';
@@ -36,11 +36,11 @@ const TaskDetailHeader = (props) => {
         sx={{
           cursor: 'pointer',
         }}
-        component="span"
+        component='span'
         mr={{ xs: 2, sm: 4 }}
         onClick={onClickBackButton}
       >
-        <AppTooltip title={<IntlMessages id="common.back" />}>
+        <AppTooltip title={<IntlMessages id='common.back' />}>
           <ArrowBackIcon
             sx={{
               color: 'text.secondary',
@@ -52,7 +52,7 @@ const TaskDetailHeader = (props) => {
       <StatusToggleButton selectedTask={selectedTask} />
 
       <Box
-        component="span"
+        component='span'
         sx={{
           marginLeft: 'auto',
           display: { xs: 'none', sm: 'block' },
@@ -64,7 +64,7 @@ const TaskDetailHeader = (props) => {
 
       <AppsDeleteIcon
         deleteAction={onDeleteTask}
-        deleteTitle={<IntlMessages id="todo.deleteMessage" />}
+        deleteTitle={<IntlMessages id='todo.deleteMessage' />}
         sx={{
           color: 'text.disabled',
         }}

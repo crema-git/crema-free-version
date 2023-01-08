@@ -11,7 +11,7 @@ import PropTypes from 'prop-types';
 
 import { styled } from '@mui/material/styles';
 import { useDispatch } from 'react-redux';
-import { addItemToCart } from '@crema/redux-toolkit/actions';
+import { addItemToCart } from '../../../../toolkit/actions';
 
 const BrainHubSliderRoot = styled(Box)(({ theme }) => {
   return {
@@ -55,7 +55,7 @@ const ProductImageSlide = ({ product }) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const slides = product.image.map((data) => (
-    <img src={data.src} alt="" key={data.src} />
+    <img src={data.src} alt='' key={data.src} />
   ));
   const onChange = (value) => {
     setValue(value);
@@ -73,14 +73,14 @@ const ProductImageSlide = ({ product }) => {
     <Grid item sm={12} md={4}>
       <BrainHubSliderRoot>
         <Dots
-          position="left"
+          position='left'
           thumbnails={slides}
           value={value}
           onChange={onChange}
           number={slides.length}
         />
         <Carousel
-          position="left"
+          position='left'
           value={value}
           slides={slides}
           onChange={onChange}
@@ -114,8 +114,8 @@ const ProductImageSlide = ({ product }) => {
         }}
       >
         <Button
-          variant="contained"
-          color="primary"
+          variant='contained'
+          color='primary'
           onClick={onAddToCard}
           style={{ marginRight: 20, width: 140 }}
         >
@@ -123,8 +123,8 @@ const ProductImageSlide = ({ product }) => {
         </Button>
         <Button
           style={{ width: 140 }}
-          variant="contained"
-          color="secondary"
+          variant='contained'
+          color='secondary'
           onClick={onButNowToCard}
         >
           Buy now

@@ -4,7 +4,7 @@ import AppAnimate from '@crema/components/AppAnimate';
 import AppGridContainer from '@crema/components/AppGridContainer';
 import { Grid } from '@mui/material';
 import { useDispatch, useSelector } from 'react-redux';
-import { onGetAcademyData } from '@crema/redux/actions';
+import { onGetAcademyData } from '../../../redux/actions';
 
 import {
   AverageGrades,
@@ -36,7 +36,7 @@ const Academy = () => {
   return (
     <>
       {academyData ? (
-        <AppAnimate animation="transition.slideUpIn" delay={200}>
+        <AppAnimate animation='transition.slideUpIn' delay={200}>
           <Box>
             <Box
               sx={{

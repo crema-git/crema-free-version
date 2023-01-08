@@ -13,7 +13,7 @@ import {
   VIEW_TYPE,
 } from '@crema/modules/ecommerce/Products';
 import { useDispatch, useSelector } from 'react-redux';
-import { onGetEcommerceData } from '@crema/redux/actions';
+import { onGetEcommerceData } from '../../../../redux/actions';
 
 const ProductListing = ({
   filterData,

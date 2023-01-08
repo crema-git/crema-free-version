@@ -14,10 +14,10 @@ import {
   onAddNewCard,
   onDeleteSelectedCard,
   onEditCardDetails,
-} from '@crema/redux-toolkit/actions';
+} from '../../../../../../toolkit/actions';
 
 const validationSchema = yup.object({
-  title: yup.string().required(<IntlMessages id="validation.titleRequired" />),
+  title: yup.string().required(<IntlMessages id='validation.titleRequired' />),
 });
 
 const AddCard = (props) => {
@@ -27,25 +27,25 @@ const AddCard = (props) => {
   const { user } = useAuthUser();
   console.log('selectedCard: ', selectedCard);
   const [checkedList, setCheckedList] = useState(() =>
-    selectedCard ? selectedCard.checkedList : []
+    selectedCard ? selectedCard.checkedList : [],
   );
 
   const [isDeleteDialogOpen, setDeleteDialogOpen] = useState(false);
 
   const [selectedMembers, setMembersList] = useState(() =>
-    selectedCard ? selectedCard.members : []
+    selectedCard ? selectedCard.members : [],
   );
 
   const [selectedLabels, setSelectedLabels] = useState(() =>
-    selectedCard ? selectedCard.label : []
+    selectedCard ? selectedCard.label : [],
   );
 
   const [comments, setComments] = useState(() =>
-    selectedCard ? selectedCard.comments : []
+    selectedCard ? selectedCard.comments : [],
   );
 
   const [attachments, setAttachments] = useState(() =>
-    selectedCard ? selectedCard.attachments : []
+    selectedCard ? selectedCard.attachments : [],
   );
 
   const onAddAttachments = (files) => {
@@ -88,7 +88,7 @@ const AddCard = (props) => {
           boxSizing: 'border-box',
         },
       }}
-      anchor="right"
+      anchor='right'
       open={isAddCardOpen}
       onClose={onCloseAddCard}
     >
@@ -175,8 +175,8 @@ const AddCard = (props) => {
           open={isDeleteDialogOpen}
           onDeny={setDeleteDialogOpen}
           onConfirm={onDeleteCard}
-          title={<IntlMessages id="scrumboard.deleteCard" />}
-          dialogTitle={<IntlMessages id="common.deleteItem" />}
+          title={<IntlMessages id='scrumboard.deleteCard' />}
+          dialogTitle={<IntlMessages id='common.deleteItem' />}
         />
       ) : null}
     </Drawer>

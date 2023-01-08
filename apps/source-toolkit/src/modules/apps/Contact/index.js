@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { onGetFolderList, onGetLabelList } from '@crema/redux-toolkit/actions';
+import { onGetFolderList, onGetLabelList } from '../../../toolkit/actions';
 import ContactListing from './ContactListing';
 import { useIntl } from 'react-intl';
 import AppsContainer from '@crema/components/AppsContainer';

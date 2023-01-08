@@ -12,7 +12,7 @@ import {
   PaymentInfo,
 } from '@crema/modules/ecommerce/Checkout';
 import { useDispatch, useSelector } from 'react-redux';
-import { getCartItems } from '@crema/redux-toolkit/actions';
+import { getCartItems } from '../../../toolkit/actions';
 
 const Checkout = () => {
   const dispatch = useDispatch();
@@ -23,7 +23,7 @@ const Checkout = () => {
   }, [dispatch]);
 
   return (
-    <AppAnimate animation="transition.slideUpIn" delay={200}>
+    <AppAnimate animation='transition.slideUpIn' delay={200}>
       <Box>
         <Box
           sx={{
@@ -34,7 +34,7 @@ const Checkout = () => {
             fontSize: 16,
           }}
         >
-          <IntlMessages id="sidebar.ecommerce.checkout" />
+          <IntlMessages id='sidebar.ecommerce.checkout' />
         </Box>
         <AppGridContainer>
           <Grid item xs={12} md={8}>

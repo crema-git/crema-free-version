@@ -4,7 +4,7 @@ import IntlMessages from '@crema/helpers/IntlMessages';
 import Select from '@mui/material/Select';
 import FormControl from '@mui/material/FormControl';
 import { useDispatch, useSelector } from 'react-redux';
-import { onUpdateSelectedTask } from '@crema/redux-toolkit/actions';
+import { onUpdateSelectedTask } from '../../../../../toolkit/actions';
 import PropTypes from 'prop-types';
 import { MenuItem } from '@mui/material';
 
@@ -17,21 +17,21 @@ const TaskPriority = ({ selectedTask }) => {
   const onChangePriority = (event) => {
     setPriority(event.target.value);
     const priority = priorityList.find(
-      (data) => data.type.toString() === event.target.value.toString()
+      (data) => data.type.toString() === event.target.value.toString(),
     );
     console.log('priority: ', priority, event.target.value);
     dispatch(onUpdateSelectedTask({ ...selectedTask, priority }));
   };
 
   return (
-    <FormControl variant="outlined">
-      <InputLabel id="priority-select-outlined-label">
-        <IntlMessages id="common.priority" />
+    <FormControl variant='outlined'>
+      <InputLabel id='priority-select-outlined-label'>
+        <IntlMessages id='common.priority' />
       </InputLabel>
       <Select
-        labelId="priority-select-outlined-label"
-        label={<IntlMessages id="common.priority" />}
-        name="priority"
+        labelId='priority-select-outlined-label'
+        label={<IntlMessages id='common.priority' />}
+        name='priority'
         value={priority}
         onChange={(event) => onChangePriority(event)}
         sx={{

@@ -10,7 +10,7 @@ import Button from '@mui/material/Button';
 import AppInfoView from '@crema/components/AppInfoView';
 import { useAuthMethod } from '@crema/hooks/AuthHooks';
 import ReactCodeInput from 'react-code-input';
-import AuthWrapper from './AuthWrapper';
+import AuthWrapper from '../AuthWrapper';
 import AppLogo from '@crema/components/AppLogo';
 import { useInfoViewActionsContext } from '@crema/context/InfoViewContextProvider';
 
@@ -49,8 +49,8 @@ const ConfirmSignupAwsCognito = (props) => {
           <AppLogo />
         </Box>
         <Typography
-          variant="h2"
-          component="h2"
+          variant='h2'
+          component='h2'
           sx={{
             mb: 1.5,
             color: (theme) => theme.palette.text.primary,
@@ -58,7 +58,7 @@ const ConfirmSignupAwsCognito = (props) => {
             fontSize: { xs: 14, xl: 16 },
           }}
         >
-          <IntlMessages id="common.emailVerification" />
+          <IntlMessages id='common.emailVerification' />
         </Typography>
         <Box
           sx={{
@@ -67,7 +67,7 @@ const ConfirmSignupAwsCognito = (props) => {
           }}
         >
           <Typography>
-            <IntlMessages id="common.verificationMessage" />
+            <IntlMessages id='common.verificationMessage' />
           </Typography>
         </Box>
 
@@ -77,7 +77,7 @@ const ConfirmSignupAwsCognito = (props) => {
           }}
         >
           <ReactCodeInput
-            type="password"
+            type='password'
             value={pin}
             fields={6}
             onChange={(value) => setPin(value)}
@@ -85,9 +85,9 @@ const ConfirmSignupAwsCognito = (props) => {
         </Box>
 
         <Button
-          variant="contained"
-          color="primary"
-          type="submit"
+          variant='contained'
+          color='primary'
+          type='submit'
           sx={{
             fontWeight: Fonts.REGULAR,
             textTransform: 'capitalize',
@@ -96,7 +96,7 @@ const ConfirmSignupAwsCognito = (props) => {
           }}
           onClick={handleSubmit}
         >
-          <IntlMessages id="common.submit" />
+          <IntlMessages id='common.submit' />
         </Button>
         <AppInfoView />
       </Box>

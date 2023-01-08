@@ -13,14 +13,14 @@ import {
 } from '@crema/modules/ecommerce/ProductDetail';
 import AppLoader from '@crema/components/AppLoader';
 import { useDispatch, useSelector } from 'react-redux';
-import { getProductDetail } from '@crema/redux/actions';
+import { getProductDetail } from '../../../redux/actions';
 import ProductImageSlide from './ProductImageSlide';
 
 const ProductDetail = () => {
   const dispatch = useDispatch();
   const { id } = useParams();
   const currentProduct = useSelector(
-    ({ ecommerce }) => ecommerce.currentProduct
+    ({ ecommerce }) => ecommerce.currentProduct,
   );
   useEffect(() => {
     dispatch(getProductDetail(id));
@@ -29,7 +29,7 @@ const ProductDetail = () => {
   return (
     <>
       {currentProduct ? (
-        <AppAnimate animation="transition.slideUpIn" delay={200}>
+        <AppAnimate animation='transition.slideUpIn' delay={200}>
           <AppCard>
             <Header product={currentProduct} />
             <AppGridContainer>

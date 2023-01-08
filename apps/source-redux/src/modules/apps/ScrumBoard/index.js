@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { onGetMemberList, onGetScrumLabelList } from '@crema/redux/actions';
+import { onGetMemberList, onGetScrumLabelList } from '../../../redux/actions';
 import BoardDetail from './BoardDetail';
 import BoardList from './BoardList';
 import { useParams } from 'react-router-dom';

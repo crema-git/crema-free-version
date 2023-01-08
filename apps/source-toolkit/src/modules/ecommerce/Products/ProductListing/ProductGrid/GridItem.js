@@ -12,7 +12,7 @@ import { Fonts } from '@crema/constants/AppEnums';
 import { useNavigate } from 'react-router-dom';
 import AddShoppingCartOutlinedIcon from '@mui/icons-material/AddShoppingCartOutlined';
 import { useDispatch } from 'react-redux';
-import { setCurrentProduct } from '@crema/redux-toolkit/actions';
+import { setCurrentProduct } from '../../../../../toolkit/actions';
 
 const GridItem = (props) => {
   const { item } = props;
@@ -28,7 +28,7 @@ const GridItem = (props) => {
         display: 'flex',
         flexDirection: 'column',
       }}
-      className="item-hover"
+      className='item-hover'
       onClick={() => {
         dispatch(setCurrentProduct(item));
         navigate('/ecommerce/product_detail/' + item.id);
@@ -43,7 +43,7 @@ const GridItem = (props) => {
         }}
       >
         <Box
-          component="span"
+          component='span'
           sx={{
             maxHeight: 28,
             width: 48,
@@ -60,11 +60,11 @@ const GridItem = (props) => {
             fontSize: 14,
           }}
         >
-          <Box component="span" sx={{ pb: 1.25 }}>
+          <Box component='span' sx={{ pb: 1.25 }}>
             {item.rating}
           </Box>
           <Box
-            component="span"
+            component='span'
             sx={{
               ml: 1,
             }}
@@ -91,7 +91,7 @@ const GridItem = (props) => {
             },
           }}
         >
-          <img src={item.image[0].src} alt="watch" />
+          <img src={item.image[0].src} alt='watch' />
         </Box>
         <Box
           sx={{
@@ -115,13 +115,13 @@ const GridItem = (props) => {
           textOverflow: 'ellipsis',
           whiteSpace: 'nowrap',
         }}
-        component="h3"
+        component='h3'
       >
         {item.title}
       </Box>
 
       <Box
-        component="p"
+        component='p'
         sx={{
           mb: 3,
           color: 'text.secondary',
@@ -147,7 +147,7 @@ const GridItem = (props) => {
       >
         <Box>
           <Box
-            component="span"
+            component='span'
             sx={{
               px: 1,
               mb: 2,
@@ -157,7 +157,7 @@ const GridItem = (props) => {
             $ {+item.mrp - Math.round((+item.mrp * +item.discount) / 100)}
           </Box>
           <Box
-            component="span"
+            component='span'
             sx={{
               px: 1,
               mb: 2,
@@ -168,14 +168,14 @@ const GridItem = (props) => {
             ${item.mrp}
           </Box>
           <Box
-            component="span"
+            component='span'
             sx={{
               px: 1,
               mb: 2,
               color: green[500],
             }}
           >
-            {item.discount}% <IntlMessages id="ecommerce.off" />
+            {item.discount}% <IntlMessages id='ecommerce.off' />
           </Box>
         </Box>
         <Box sx={{ ml: 2 }}>

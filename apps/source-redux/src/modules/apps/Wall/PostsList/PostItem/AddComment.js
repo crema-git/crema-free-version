@@ -13,7 +13,7 @@ import { darken } from '@mui/material';
 import { generateUniqueID } from '@crema/helpers';
 import { MessageType } from '@crema/fakedb/chat/connectionList';
 import { useDispatch } from 'react-redux';
-import { onAddNewComment } from '@crema/redux/actions';
+import { onAddNewComment } from '../../../../../redux/actions';
 
 const AddCommentWrapper = styled('div')(({ theme }) => ({
   borderTop: `solid 1px ${theme.palette.divider}`,
@@ -110,14 +110,14 @@ const AddComment = ({ postId, wallData }) => {
         }}
       >
         <CommentTextField
-          placeholder="Write a comment"
+          placeholder='Write a comment'
           fullWidth
           value={comment}
           onChange={(e) => setComment(e.target.value)}
           onKeyPress={submitComment}
         />
 
-        <Box display="flex" alignItems="center">
+        <Box display='flex' alignItems='center'>
           {comment === '' ? (
             <>
               <IconButton

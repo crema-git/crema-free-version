@@ -16,7 +16,7 @@ import {
   OrderNTransaction,
   PageVisits,
 } from '@crema/modules/dashboards/Analytics';
-import { onGetAnalyticsData } from '@crema/redux-toolkit/actions';
+import { onGetAnalyticsData } from '../../../toolkit/actions';
 import { useDispatch, useSelector } from 'react-redux';
 import AppLoader from '@crema/components/AppLoader';
 
@@ -30,7 +30,7 @@ const Analytics = () => {
   const { analyticsData } = useSelector(({ dashboard }) => dashboard);
 
   return analyticsData ? (
-    <AppAnimate animation="transition.slideUpIn" delay={200}>
+    <AppAnimate animation='transition.slideUpIn' delay={200}>
       <AppGridContainer>
         <Grid item xs={12} lg={6}>
           <WelcomeCard data={analyticsData.welcomeCard} />

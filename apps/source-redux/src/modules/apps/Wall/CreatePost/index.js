@@ -15,7 +15,7 @@ import IconButton from '@mui/material/IconButton';
 import SendOutlinedIcon from '@mui/icons-material/SendOutlined';
 import { darken } from '@mui/material';
 import { useDispatch, useSelector } from 'react-redux';
-import { onCreateNewPost } from '@crema/redux/actions';
+import { onCreateNewPost } from '../../../../redux/actions';
 
 const CreateView = styled('div')(({ theme }) => ({
   flex: 1,
@@ -120,7 +120,7 @@ const CreatePost = () => {
       headerStyle={{ paddingTop: 5 }}
       title={messages['wall.createPost']}
     >
-      <Box display="flex" mb={1}>
+      <Box display='flex' mb={1}>
         <Avatar
           sx={{
             marginRight: 3.5,
@@ -137,27 +137,27 @@ const CreatePost = () => {
             value={message}
             onChange={(e) => setMessage(e.target.value)}
           />
-          <Box display="flex" flexWrap="wrap">
-            <Box display="flex" alignItems="center">
+          <Box display='flex' flexWrap='wrap'>
+            <Box display='flex' alignItems='center'>
               <span {...getRootProps()}>
                 <input {...getInputProps()} />
-                <StyledIconButton size="large">
+                <StyledIconButton size='large'>
                   <PhotoOutlinedIcon />
                 </StyledIconButton>
               </span>
-              <StyledIconButton size="large">
+              <StyledIconButton size='large'>
                 <VideocamOutlinedIcon />
               </StyledIconButton>
-              <StyledIconButton size="large">
+              <StyledIconButton size='large'>
                 <EmojiEmotionsOutlinedIcon />
               </StyledIconButton>
-              <StyledIconButton size="large">
+              <StyledIconButton size='large'>
                 <PersonOutlinedIcon />
               </StyledIconButton>
               <StyledIconButton
                 disabled={!message.trim() && attachments.length === 0}
                 onClick={handlePostSubmit}
-                size="large"
+                size='large'
               >
                 <SendOutlinedIcon />
               </StyledIconButton>
@@ -170,7 +170,7 @@ const CreatePost = () => {
         containerStyle={{ display: 'flex', flexWrap: 'wrap' }}
         renderRow={(item, index) => (
           <Box p={1} key={index}>
-            <StyledImage src={item.preview} alt="upload" />
+            <StyledImage src={item.preview} alt='upload' />
           </Box>
         )}
       />

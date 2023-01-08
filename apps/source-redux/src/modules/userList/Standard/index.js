@@ -4,7 +4,7 @@ import AppList from '@crema/components/AppList';
 import { ListItem } from '@crema/modules/userList/Standard';
 import AppLoader from '@crema/components/AppLoader';
 import { useDispatch, useSelector } from 'react-redux';
-import { onGetUserList } from '@crema/redux/actions';
+import { onGetUserList } from '../../../redux/actions';
 
 const Standard = () => {
   const dispatch = useDispatch();

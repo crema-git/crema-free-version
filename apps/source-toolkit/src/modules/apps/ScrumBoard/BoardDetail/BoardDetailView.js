@@ -17,7 +17,7 @@ import {
   onDeleteSelectedList,
   onEditBoardList,
   onUpdateCardCategory,
-} from '@crema/redux-toolkit/actions';
+} from '../../../../toolkit/actions';
 
 const BoardWrapper = ({ children }) => {
   return (
@@ -100,7 +100,7 @@ const BoardDetailView = (props) => {
     sourceLaneId,
     targetLaneId,
     position,
-    cardDetails
+    cardDetails,
   ) => {
     if (sourceLaneId !== targetLaneId) {
       const boardId = boardDetail.id;
@@ -110,8 +110,8 @@ const BoardDetailView = (props) => {
           sourceLaneId,
           targetLaneId,
           position,
-          boardId
-        )
+          boardId,
+        ),
       );
     }
   };
@@ -153,7 +153,7 @@ const BoardDetailView = (props) => {
         onLaneUpdate={(laneId, data) => {
           const lane = boardData.lanes.find((item) => item.id === laneId);
           dispatch(
-            onEditBoardList(boardDetail.id, { ...lane, name: data.title })
+            onEditBoardList(boardDetail.id, { ...lane, name: data.title }),
           );
         }}
         onLaneDelete={(laneId) =>

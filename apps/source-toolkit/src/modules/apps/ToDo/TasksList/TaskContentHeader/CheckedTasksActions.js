@@ -7,7 +7,7 @@ import Box from '@mui/material/Box';
 import {
   onDeleteSelectedTasks,
   onUpdateTaskLabels,
-} from '@crema/redux-toolkit/actions';
+} from '../../../../../toolkit/actions';
 import { useDispatch, useSelector } from 'react-redux';
 import AppsDeleteIcon from '@crema/components/AppsDeleteIcon';
 import PropTypes from 'prop-types';
@@ -49,11 +49,11 @@ const CheckedTasksActions = ({ checkedTasks, setCheckedTasks, page }) => {
 
   return (
     <>
-      <StyledBox component="span">
-        <Box component="span">
+      <StyledBox component='span'>
+        <Box component='span'>
           <AppsDeleteIcon
             deleteAction={onDeleteTasks}
-            deleteTitle={<IntlMessages id="todo.deleteMessage" />}
+            deleteTitle={<IntlMessages id='todo.deleteMessage' />}
             sx={{
               cursor: 'pointer',
               color: 'text.disabled',
@@ -61,13 +61,13 @@ const CheckedTasksActions = ({ checkedTasks, setCheckedTasks, page }) => {
           />
         </Box>
 
-        <Box component="span">
-          <AppTooltip title={<IntlMessages id="common.label" />}>
+        <Box component='span'>
+          <AppTooltip title={<IntlMessages id='common.label' />}>
             <IconButton
               sx={{
                 color: 'text.disabled',
               }}
-              size="large"
+              size='large'
             >
               <LabelOutlinedIcon
                 sx={{

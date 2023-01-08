@@ -10,7 +10,7 @@ import AppSearchBar from '@crema/components/AppSearchBar';
 import { OrderTable } from '@crema/modules/ecommerce/Orders';
 import AppLoader from '@crema/components/AppLoader';
 import { useDispatch, useSelector } from 'react-redux';
-import { getRecentOrders } from '@crema/redux/actions';
+import { getRecentOrders } from '../../../redux/actions';
 
 const Orders = () => {
   const { messages } = useIntl();
@@ -38,20 +38,20 @@ const Orders = () => {
         <AppsContainer title={messages['eCommerce.recentOrders']} fullView>
           <AppsHeader>
             <Box
-              display="flex"
-              flexDirection="row"
-              alignItems="center"
+              display='flex'
+              flexDirection='row'
+              alignItems='center'
               width={1}
-              justifyContent="space-between"
+              justifyContent='space-between'
             >
               <AppSearchBar
-                iconPosition="right"
+                iconPosition='right'
                 overlap={false}
                 onChange={(event) => onSearchOrder(event.target.value)}
                 placeholder={messages['common.searchHere']}
               />
-              <Box display="flex" flexDirection="row" alignItems="center">
-                <Button variant="contained" color="primary">
+              <Box display='flex' flexDirection='row' alignItems='center'>
+                <Button variant='contained' color='primary'>
                   Add Order
                 </Button>
 

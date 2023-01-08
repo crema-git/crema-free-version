@@ -7,12 +7,12 @@ import { useDispatch, useSelector } from 'react-redux';
 import {
   onGetBoardDetail,
   onNullifyBoardDetail,
-} from '@crema/redux-toolkit/actions';
+} from '../../../../toolkit/actions';
 
 const BoardDetail = () => {
   const navigate = useNavigate();
   const boardDetail = useSelector(
-    ({ scrumboardApp }) => scrumboardApp.boardDetail
+    ({ scrumboardApp }) => scrumboardApp.boardDetail,
   );
   const dispatch = useDispatch();
   const { pathname } = useLocation();
@@ -40,7 +40,7 @@ const BoardDetail = () => {
       title={
         <>
           <Box
-            component="span"
+            component='span'
             sx={{
               cursor: 'pointer',
               mr: 2,

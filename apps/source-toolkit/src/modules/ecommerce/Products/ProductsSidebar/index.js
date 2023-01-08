@@ -19,7 +19,7 @@ import {
   ProductsCategory,
   RatingCell,
 } from '@crema/modules/ecommerce/Products';
-import { setFilters } from '@crema/redux-toolkit/actions';
+import { setFilters } from '../../../../toolkit/actions';
 import { useDispatch, useSelector } from 'react-redux';
 
 const ProductSidebar = () => {
@@ -40,7 +40,7 @@ const ProductSidebar = () => {
         discount: selectedDiscount,
         color: selectedColor,
         rating: customerRating,
-      })
+      }),
     );
   }, [
     dispatch,
@@ -100,7 +100,7 @@ const ProductSidebar = () => {
         }}
       >
         <Box
-          component="h5"
+          component='h5'
           sx={{
             mb: 2,
             fontWeight: Fonts.MEDIUM,

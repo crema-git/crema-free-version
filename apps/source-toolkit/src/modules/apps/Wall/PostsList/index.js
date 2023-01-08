@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import AppList from '@crema/components/AppList';
 import PostItem from './PostItem';
 import { useDispatch, useSelector } from 'react-redux';
-import { onGetPostsList } from '@crema/redux-toolkit/actions';
+import { onGetPostsList } from '../../../../toolkit/actions';
 
 const PostsList = () => {
   const dispatch = useDispatch();

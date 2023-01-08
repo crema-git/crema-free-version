@@ -4,7 +4,7 @@ import Box from '@mui/material/Box';
 import AppList from '@crema/components/AppList';
 import { ListItem } from '@crema/modules/userList/Standard';
 import { useDispatch, useSelector } from 'react-redux';
-import { onGetUserList } from '@crema/redux-toolkit/actions';
+import { onGetUserList } from '../../../toolkit/actions';
 
 const Standard = () => {
   const dispatch = useDispatch();

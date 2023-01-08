@@ -17,7 +17,7 @@ import {
   onDeleteMessage,
   onEditMessage,
   onSendMessage,
-} from '@crema/redux/actions';
+} from '../../../../../redux/actions';
 import { useDispatch, useSelector } from 'react-redux';
 
 const ScrollbarWrapper = styled(SimpleBarReact)(() => {
@@ -144,13 +144,13 @@ const ChatViewContainer = ({ selectedUser }) => {
       ) : (
         <ScrollChatNoMainWrapper>
           <Box
-            component="span"
+            component='span'
             sx={{
               fontSize: 18,
               color: 'grey.500',
             }}
           >
-            <IntlMessages id="chatApp.sayHi" /> {selectedUser.name}
+            <IntlMessages id='chatApp.sayHi' /> {selectedUser.name}
           </Box>
         </ScrollChatNoMainWrapper>
       )}

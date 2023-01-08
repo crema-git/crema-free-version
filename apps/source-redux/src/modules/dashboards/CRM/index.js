@@ -17,7 +17,7 @@ import {
   WebTraffic,
 } from '@crema/modules/dashboards/CRM';
 import AppLoader from '@crema/components/AppLoader';
-import { onGetCrmData } from '@crema/redux/actions';
+import { onGetCrmData } from '../../../redux/actions';
 import { useDispatch, useSelector } from 'react-redux';
 
 const CRM = () => {
@@ -32,7 +32,7 @@ const CRM = () => {
   return (
     <>
       {crmData ? (
-        <AppAnimate animation="transition.slideUpIn" delay={200}>
+        <AppAnimate animation='transition.slideUpIn' delay={200}>
           <AppGridContainer>
             <Grid item xs={12} md={5}>
               <TotalRevenue revenueData={crmData.revenueData} />

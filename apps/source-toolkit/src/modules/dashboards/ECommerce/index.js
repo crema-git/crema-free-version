@@ -17,7 +17,7 @@ import {
   SiteVisitors,
 } from '@crema/modules/dashboards/ECommerce';
 import { useDispatch, useSelector } from 'react-redux';
-import { onGetECommerceData } from '@crema/redux-toolkit/actions';
+import { onGetECommerceData } from '../../../toolkit/actions';
 import AppLoader from '@crema/components/AppLoader';
 
 const ECommerce = () => {
@@ -29,7 +29,7 @@ const ECommerce = () => {
 
   const { ecommerceData } = useSelector(({ dashboard }) => dashboard);
   return ecommerceData ? (
-    <AppAnimate animation="transition.slideUpIn" delay={200}>
+    <AppAnimate animation='transition.slideUpIn' delay={200}>
       <AppGridContainer>
         {ecommerceData.salesState.map((state, index) => (
           <Grid item xs={12} sm={6} md={3} key={index}>

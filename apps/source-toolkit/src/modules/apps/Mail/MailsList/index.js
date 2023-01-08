@@ -5,7 +5,7 @@ import MailContentHeader from './MailContentHeader';
 import {
   onGetMailList,
   onUpdateMailStarredStatus,
-} from '@crema/redux-toolkit/actions';
+} from '../../../../toolkit/actions';
 import { Hidden } from '@mui/material';
 import AppsPagination from '@crema/components/AppsPagination';
 import AppsContent from '@crema/components/AppsContent';
@@ -71,7 +71,7 @@ const MailsList = () => {
 
   const onChangeStarred = (checked, mail) => {
     dispatch(
-      onUpdateMailStarredStatus([mail.id], checked, path[path.length - 1])
+      onUpdateMailStarredStatus([mail.id], checked, path[path.length - 1]),
     );
   };
   const onGetFilteredMails = () => {
@@ -81,7 +81,7 @@ const MailsList = () => {
       return mailList.filter(
         (mail) =>
           mail.subject.toLowerCase().includes(filterText.toLowerCase()) ||
-          mail.detail.toLowerCase().includes(filterText.toLowerCase())
+          mail.detail.toLowerCase().includes(filterText.toLowerCase()),
       );
     }
   };

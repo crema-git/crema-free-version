@@ -5,7 +5,7 @@ import {
   onGetTaskList,
   onUpdateSelectedTask,
   onUpdateTaskStarredStatus,
-} from '@crema/redux/actions';
+} from '../../../../redux/actions';
 import TaskContentHeader from './TaskContentHeader';
 import { useParams } from 'react-router-dom';
 import AddNewTask from '../AddNewTask';
@@ -85,7 +85,7 @@ const TasksList = () => {
       return taskList;
     } else {
       return taskList.filter((task) =>
-        task.title.toUpperCase().includes(filterText.toUpperCase())
+        task.title.toUpperCase().includes(filterText.toUpperCase()),
       );
     }
   };
@@ -133,7 +133,7 @@ const TasksList = () => {
                 ListEmptyComponent={
                   <ListEmptyResult
                     loading={loading}
-                    actionTitle="Add Task"
+                    actionTitle='Add Task'
                     onAction={onOpenAddTask}
                     placeholder={<TodoListSkeleton />}
                   />
@@ -160,7 +160,7 @@ const TasksList = () => {
                 ListEmptyComponent={
                   <ListEmptyResult
                     loading={loading}
-                    actionTitle="Add Task"
+                    actionTitle='Add Task'
                     onAction={onOpenAddTask}
                     placeholder={<TodoListSkeleton />}
                   />

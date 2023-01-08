@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Formik } from 'formik';
 import * as yup from 'yup';
-import { onCreateTask } from '@crema/redux-toolkit/actions';
+import { onCreateTask } from '../../../../toolkit/actions';
 import { useDispatch } from 'react-redux';
 import moment from 'moment';
 import IntlMessages from '@crema/helpers/IntlMessages';
@@ -11,7 +11,7 @@ import AppDialog from '@crema/components/AppDialog';
 import { useAuthUser } from '@crema/hooks/AuthHooks';
 
 const validationSchema = yup.object({
-  title: yup.string().required(<IntlMessages id="validation.titleRequired" />),
+  title: yup.string().required(<IntlMessages id='validation.titleRequired' />),
 });
 
 const AddNewTask = ({ isAddTaskOpen, onCloseAddTask, selectedDate }) => {
@@ -24,10 +24,10 @@ const AddNewTask = ({ isAddTaskOpen, onCloseAddTask, selectedDate }) => {
   return (
     <AppDialog
       dividers
-      maxWidth="md"
+      maxWidth='md'
       open={isAddTaskOpen}
       onClose={() => onCloseAddTask()}
-      title={<IntlMessages id="todo.addNewTask" />}
+      title={<IntlMessages id='todo.addNewTask' />}
     >
       <Formik
         validateOnChange={true}

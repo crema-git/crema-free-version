@@ -1,19 +1,19 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import Avatar from '@mui/material/Avatar';
 import Box from '@mui/material/Box';
 import PropTypes from 'prop-types';
 import AppDialog from '@crema/components/AppDialog';
 import AppGridContainer from '@crema/components/AppGridContainer';
 import Grid from '@mui/material/Grid';
-import {DialogActions} from '@mui/material';
+import { DialogActions } from '@mui/material';
 import Button from '@mui/material/Button';
 import {
   ContactActions,
   OtherDetails,
   PersonalDetails,
 } from '@crema/modules/apps/Contact';
-import {useDispatch} from 'react-redux';
-import {onUpdateSelectedContact} from '@crema/redux-toolkit/actions';
+import { useDispatch } from 'react-redux';
+import { onUpdateSelectedContact } from '../../../../toolkit/actions';
 
 const ContactDetail = (props) => {
   const {
@@ -133,7 +133,7 @@ const ContactDetail = (props) => {
           variant='outlined'
           color='primary'
           type='submit'
-          sx={{width: 100}}
+          sx={{ width: 100 }}
           onClick={() => onShowDetail(false)}
         >
           Close

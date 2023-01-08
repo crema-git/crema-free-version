@@ -12,7 +12,7 @@ import {
   onGetSelectedMail,
   onNullifyMail,
   onUpdateMailReadStatus,
-} from '@crema/redux-toolkit/actions';
+} from '../../../../toolkit/actions';
 
 const MailDetail = () => {
   const dispatch = useDispatch();
@@ -51,7 +51,7 @@ const MailDetail = () => {
         <MailDetailHeader selectedMail={selectedMail} />
       </AppsHeader>
       <AppsContent isDetailView>
-        <AppAnimate animatoin="transition.slideUpIn">
+        <AppAnimate animatoin='transition.slideUpIn'>
           <MailDetailBody selectedMail={selectedMail} />
         </AppAnimate>
       </AppsContent>
