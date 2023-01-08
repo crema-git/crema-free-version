@@ -17,7 +17,6 @@ const TaskContentHeader = (props) => {
     taskLists,
     totalTasks,
     onUpdateTasks,
-    setData,
     checkedTasks,
     setCheckedTasks,
     onViewModeSelect,
@@ -48,13 +47,13 @@ const TaskContentHeader = (props) => {
 
       case 2:
         setCheckedTasks(
-          taskLists?.filter((task) => task.isStarred).map((task) => task.id)
+          taskLists?.filter((task) => task.isStarred).map((task) => task.id),
         );
         break;
 
       case 3:
         setCheckedTasks(
-          taskLists?.filter((task) => task.isAttachment).map((task) => task.id)
+          taskLists?.filter((task) => task.isAttachment).map((task) => task.id),
         );
         break;
 
@@ -93,7 +92,7 @@ const TaskContentHeader = (props) => {
         </span>
         <Box sx={{ mr: 3 }}>
           <AppSearchBar
-            iconPosition="right"
+            iconPosition='right'
             overlap={false}
             value={filterText}
             onChange={(event) => onSetFilterText(event.target.value)}
@@ -106,7 +105,7 @@ const TaskContentHeader = (props) => {
         />
         {checkedTasks.length > 0 ? (
           <Box
-            component="span"
+            component='span'
             sx={{
               mr: { sm: 4 },
               display: 'flex',
@@ -115,7 +114,6 @@ const TaskContentHeader = (props) => {
             <CheckedTasksActions
               checkedTasks={checkedTasks}
               setCheckedTasks={setCheckedTasks}
-              setData={setData}
               onUpdateTasks={onUpdateTasks}
               page={page}
             />
@@ -174,7 +172,6 @@ TaskContentHeader.propTypes = {
   totalTasks: PropTypes.number,
   setCheckedTasks: PropTypes.func,
   onUpdateTasks: PropTypes.func,
-  setData: PropTypes.func,
   viewMode: PropTypes.string,
   onViewModeSelect: PropTypes.func,
   filterText: PropTypes.string,

@@ -2,7 +2,6 @@ import React from 'react';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import List from '@mui/material/List';
-import PropTypes from 'prop-types';
 import AddNewTask from '../AddNewTask';
 import IntlMessages from '@crema/helpers/IntlMessages';
 import AppScrollbar from '@crema/components/AppScrollbar';
@@ -15,7 +14,10 @@ import AddIcon from '@mui/icons-material/Add';
 import { Zoom } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import { TaskLabelItem } from '@crema/modules/apps/ToDo';
-import { useTodoContext } from '../../context/TodoContextProvider';
+import {
+  useTodoContext,
+  useTodoActionsContext,
+} from '../../context/TodoContextProvider';
 
 const ListWrapper = styled(List)(({ theme }) => ({
   marginBottom: 8,
@@ -24,7 +26,8 @@ const ListWrapper = styled(List)(({ theme }) => ({
   },
 }));
 
-const TaskSideBar = ({ reCallAPI }) => {
+const TaskSideBar = () => {
+  const { reCallAPI } = useTodoActionsContext();
   const { labelList, folderList } = useTodoContext();
 
   const [isAddTaskOpen, setAddTaskOpen] = React.useState(false);
@@ -131,7 +134,3 @@ const TaskSideBar = ({ reCallAPI }) => {
 };
 
 export default TaskSideBar;
-
-TaskSideBar.propTypes = {
-  reCallAPI: PropTypes.func,
-};

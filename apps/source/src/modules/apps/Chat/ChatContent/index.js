@@ -36,14 +36,13 @@ const ScrollChatNoUser = styled('div')(({ theme }) => {
   };
 });
 
-const ChatContent = ({ selectedUser, setConnectionData, setSelectedUser }) => {
+const ChatContent = ({ selectedUser, setSelectedUser }) => {
   return (
     <>
       {selectedUser ? (
         <MessagesScreen>
           <ChatViewContainer
             selectedUser={selectedUser}
-            setConnectionData={setConnectionData}
             setSelectedUser={setSelectedUser}
           />
         </MessagesScreen>
@@ -59,6 +58,5 @@ const ChatContent = ({ selectedUser, setConnectionData, setSelectedUser }) => {
 export default ChatContent;
 ChatContent.propTypes = {
   selectedUser: PropTypes.object,
-  setConnectionData: PropTypes.func,
   setSelectedUser: PropTypes.func,
 };

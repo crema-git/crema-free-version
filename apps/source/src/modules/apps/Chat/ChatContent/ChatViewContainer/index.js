@@ -13,6 +13,7 @@ import { postDataApi, putDataApi, useGetDataApi } from '@crema/hooks/APIHooks';
 import { useInfoViewActionsContext } from '@crema/context/InfoViewContextProvider';
 import { MessageType } from '@crema/fakedb/chat/connectionList';
 import { Header, MessagesList, SendMessage } from '@crema/modules/apps/Chat';
+import { useChatActionsContext } from '../../../context/ChatContextProvider';
 
 const ScrollbarWrapper = styled(SimpleBarReact)(() => {
   return {
@@ -31,11 +32,8 @@ const ScrollChatNoMainWrapper = styled('div')(() => {
   };
 });
 
-const ChatViewContainer = ({
-  selectedUser,
-  setConnectionData,
-  setSelectedUser,
-}) => {
+const ChatViewContainer = ({ selectedUser, setSelectedUser }) => {
+  const { setConnectionData } = useChatActionsContext();
   const [message, setMessage] = useState('');
   const [isEdit, setIsEdit] = useState(false);
   const infoViewActionsContext = useInfoViewActionsContext();
@@ -195,13 +193,13 @@ const ChatViewContainer = ({
       ) : (
         <ScrollChatNoMainWrapper>
           <Box
-            component="span"
+            component='span'
             sx={{
               fontSize: 18,
               color: 'grey.500',
             }}
           >
-            <IntlMessages id="chatApp.sayHi" /> {selectedUser.name}
+            <IntlMessages id='chatApp.sayHi' /> {selectedUser.name}
           </Box>
         </ScrollChatNoMainWrapper>
       )}

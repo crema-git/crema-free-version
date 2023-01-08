@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
 import TaskContentHeader from './TaskContentHeader';
-import { useParams } from 'react-router-dom';
 import AddNewTask from '../AddNewTask';
 import { Hidden } from '@mui/material';
 import AppsPagination from '@crema/components/AppsPagination';
@@ -18,15 +16,19 @@ import {
   TaskListItem,
   TaskListItemMobile,
 } from '@crema/modules/apps/ToDo';
-import { useTodoContext } from '../../context/TodoContextProvider';
+import {
+  useTodoContext,
+  useTodoActionsContext,
+} from '../../context/TodoContextProvider';
 
 export const ViewMode = {
   List: 'list',
   Calendar: 'calendar',
 };
-const TasksList = ({ taskLists, loading, setData }) => {
+const TasksList = () => {
   const infoViewActionsContext = useInfoViewActionsContext();
-  const { labelList } = useTodoContext();
+  const { taskLists, loading, labelList } = useTodoContext();
+  const { setTodoData } = useTodoActionsContext();
 
   const [filterText, onSetFilterText] = useState('');
   const [viewMode, setViewMode] = useState(ViewMode.List);
@@ -86,7 +88,7 @@ const TasksList = ({ taskLists, loading, setData }) => {
   };
 
   const onUpdateSelectedTask = (task) => {
-    setData({
+    setTodoData({
       data: taskLists?.data.map((item) => {
         if (item.id === task.id) {
           return task;
@@ -98,7 +100,7 @@ const TasksList = ({ taskLists, loading, setData }) => {
   };
 
   const onUpdateTasks = (tasks) => {
-    setData({
+    setTodoData({
       data: taskLists?.data.map((item) => {
         const contact = tasks.find((contact) => contact.id === item.id);
         if (contact) {
@@ -112,7 +114,7 @@ const TasksList = ({ taskLists, loading, setData }) => {
 
   const onDeleteTask = (task) => {
     task.folderValue = 126;
-    setData({
+    setTodoData({
       data: taskLists?.data.filter((item) => item.id !== task.id),
       count: taskLists?.count - 1,
     });
@@ -127,7 +129,6 @@ const TasksList = ({ taskLists, loading, setData }) => {
           taskLists={taskLists?.data}
           totalTasks={taskLists?.count}
           onUpdateTasks={onUpdateTasks}
-          setData={setData}
           checkedTasks={checkedTasks}
           setCheckedTasks={setCheckedTasks}
           filterText={filterText}
@@ -221,9 +222,3 @@ const TasksList = ({ taskLists, loading, setData }) => {
 };
 
 export default TasksList;
-TasksList.propTypes = {
-  taskLists: PropTypes.array,
-  loading: PropTypes.bool,
-  setQueryParams: PropTypes.func,
-  setData: PropTypes.func,
-};

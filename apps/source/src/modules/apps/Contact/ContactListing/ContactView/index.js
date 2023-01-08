@@ -7,12 +7,12 @@ import ListEmptyResult from '@crema/components/AppList/ListEmptyResult';
 import IntlMessages from '@crema/helpers/IntlMessages';
 import ContactListSkeleton from '@crema/components/ContactListSkeleton';
 import { Hidden } from '@mui/material';
-import { useGetDataApi } from '@crema/hooks/APIHooks';
 import {
   ContactGridItem,
   ContactListItem,
   ContactListItemMobile,
 } from '@crema/modules/apps/Contact';
+import { useContactContext } from '../../../context/ContactContextProvider';
 
 const ContactView = (props) => {
   const {
@@ -27,10 +27,8 @@ const ContactView = (props) => {
     onOpenEditContact,
     onViewContactDetail,
   } = props;
-  const [{ apiData: labelList }] = useGetDataApi(
-    '/api/contactApp/labels/list',
-    []
-  );
+
+  const { labelList } = useContactContext();
 
   return (
     <>
@@ -39,7 +37,7 @@ const ContactView = (props) => {
           <Hidden smDown>
             <AppList
               data={list}
-              animation="transition.slideUpIn"
+              animation='transition.slideUpIn'
               sx={{
                 pt: 0,
                 pb: 0,
@@ -50,7 +48,7 @@ const ContactView = (props) => {
               ListEmptyComponent={
                 <ListEmptyResult
                   loading={loading}
-                  actionTitle={<IntlMessages id="contactApp.createContact" />}
+                  actionTitle={<IntlMessages id='contactApp.createContact' />}
                   onClick={handleAddContactOpen}
                   placeholder={<ContactListSkeleton />}
                 />
@@ -74,7 +72,7 @@ const ContactView = (props) => {
           <Hidden smUp>
             <AppList
               data={list}
-              animation="transition.slideUpIn"
+              animation='transition.slideUpIn'
               sx={{
                 pt: 0,
                 pb: 0,
@@ -85,7 +83,7 @@ const ContactView = (props) => {
               ListEmptyComponent={
                 <ListEmptyResult
                   loading={loading}
-                  actionTitle={<IntlMessages id="contactApp.createContact" />}
+                  actionTitle={<IntlMessages id='contactApp.createContact' />}
                   onClick={handleAddContactOpen}
                   placeholder={<ContactListSkeleton />}
                 />

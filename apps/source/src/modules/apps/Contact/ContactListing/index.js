@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from 'react';
-import PropTypes from 'prop-types';
+import React, { useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import ContactHeader from './ContactHeader';
 import AppConfirmDialog from '@crema/components/AppConfirmDialog';
@@ -14,22 +13,20 @@ import AppsContent from '@crema/components/AppsContent';
 import AppsFooter from '@crema/components/AppsFooter';
 import { useInfoViewActionsContext } from '@crema/context/InfoViewContextProvider';
 import { postDataApi, putDataApi } from '@crema/hooks/APIHooks';
+import {
+  useContactActionsContext,
+  useContactContext,
+} from '../../context/ContactContextProvider';
 
-const ContactListing = ({
-  apiData,
-  loading,
-  setQueryParams,
-  setData,
-  reCallAPI,
-}) => {
+const ContactListing = () => {
+  const { page, pageView, loading, contactList } = useContactContext();
+  const { onPageChange, setPageView, reCallAPI, setContactData } =
+    useContactActionsContext();
+
   const { pathname } = useLocation();
   const infoViewActionsContext = useInfoViewActionsContext();
 
   const [filterText, onSetFilterText] = useState('');
-
-  const [page, setPage] = useState(0);
-
-  const [pageView, setPageView] = useState('list');
 
   const [isDeleteDialogOpen, setDeleteDialogOpen] = useState(false);
 
@@ -42,19 +39,6 @@ const ContactListing = ({
   const [isShowDetail, onShowDetail] = useState(false);
 
   const [selectedContact, setSelectedContact] = useState(null);
-
-  useEffect(() => {
-    setPage(0);
-  }, [pathname]);
-
-  useEffect(() => {
-    const path = pathname.split('/');
-    setQueryParams({
-      type: path[path.length - 2],
-      name: path[path.length - 1],
-      page: page,
-    });
-  }, [pathname, pageView, page]);
 
   const handleAddContactOpen = () => {
     onSetIsAddContact(true);
@@ -74,20 +58,12 @@ const ContactListing = ({
     handleAddContactOpen();
   };
 
-  const onPageChange = (event, value) => {
-    setPage(value);
-  };
-
-  const onChangePageView = (view) => {
-    setPageView(view);
-  };
-
   const onChangeCheckedContacts = (event, id) => {
     if (event.target.checked) {
       setCheckedContacts(checkedContacts.concat(id));
     } else {
       setCheckedContacts(
-        checkedContacts.filter((contactId) => contactId !== id)
+        checkedContacts.filter((contactId) => contactId !== id),
       );
     }
   };
@@ -103,7 +79,7 @@ const ContactListing = ({
         infoViewActionsContext.showMessage(
           data[0].isStarred
             ? 'Contact Marked as Starred Successfully'
-            : 'Contact Marked as Unstarred Successfully'
+            : 'Contact Marked as Unstarred Successfully',
         );
       })
       .catch((error) => {
@@ -112,27 +88,27 @@ const ContactListing = ({
   };
 
   const onUpdateSelectedContact = (contact) => {
-    setData({
-      data: apiData?.data.map((item) => {
+    setContactData({
+      data: contactList?.data.map((item) => {
         if (item.id === contact.id) {
           return contact;
         }
         return item;
       }),
-      count: apiData?.count,
+      count: contactList?.count,
     });
   };
 
   const onUpdateContacts = (contacts) => {
-    setData({
-      data: apiData?.data.map((item) => {
+    setContactData({
+      data: contactList?.data.map((item) => {
         const contact = contacts.find((contact) => contact.id === item.id);
         if (contact) {
           return contact;
         }
         return item;
       }),
-      count: apiData?.count,
+      count: contactList?.count,
     });
   };
 
@@ -143,10 +119,10 @@ const ContactListing = ({
 
   const onGetFilteredItems = () => {
     if (filterText === '') {
-      return apiData?.data;
+      return contactList?.data;
     } else {
-      return apiData?.data.filter((contact) =>
-        contact.name.toUpperCase().includes(filterText.toUpperCase())
+      return contactList?.data.filter((contact) =>
+        contact.name.toUpperCase().includes(filterText.toUpperCase()),
       );
     }
   };
@@ -160,7 +136,7 @@ const ContactListing = ({
       page,
     })
       .then((data) => {
-        setData(data);
+        setContactData(data);
         infoViewActionsContext.showMessage('Contact Deleted Successfully');
       })
       .catch((error) => {
@@ -184,13 +160,13 @@ const ContactListing = ({
           checkedContacts={checkedContacts}
           setCheckedContacts={setCheckedContacts}
           filterText={filterText}
-          apiData={apiData}
+          apiData={contactList}
           onUpdateContacts={onUpdateContacts}
           onSelectContactsForDelete={onSelectContactsForDelete}
           onSetFilterText={onSetFilterText}
           onPageChange={onPageChange}
           page={page}
-          onChangePageView={onChangePageView}
+          onChangePageView={setPageView}
           pageView={pageView}
         />
       </AppsHeader>
@@ -210,10 +186,10 @@ const ContactListing = ({
       </AppsContent>
 
       <Hidden smUp>
-        {apiData?.data?.length > 0 ? (
+        {contactList?.data?.length > 0 ? (
           <AppsFooter>
             <AppsPagination
-              count={apiData?.count}
+              count={contactList?.count}
               page={page}
               onPageChange={onPageChange}
             />
@@ -242,19 +218,11 @@ const ContactListing = ({
         open={isDeleteDialogOpen}
         onDeny={setDeleteDialogOpen}
         onConfirm={onDeleteSelectedContacts}
-        title={<IntlMessages id="contactApp.deleteContact" />}
-        dialogTitle={<IntlMessages id="common.deleteItem" />}
+        title={<IntlMessages id='contactApp.deleteContact' />}
+        dialogTitle={<IntlMessages id='common.deleteItem' />}
       />
     </>
   );
 };
 
 export default ContactListing;
-
-ContactListing.propTypes = {
-  apiData: PropTypes.object,
-  loading: PropTypes.bool,
-  setQueryParams: PropTypes.func,
-  setData: PropTypes.func,
-  reCallAPI: PropTypes.func,
-};

@@ -1,36 +1,32 @@
 import React, { useState } from 'react';
 import { useIntl } from 'react-intl';
-import { ChatSideBar } from '@crema/modules/apps/Chat';
-import { useGetDataApi } from '@crema/hooks/APIHooks';
 import AppsContainer from '@crema/components/AppsContainer';
 
 import ChatContent from './ChatContent';
+import ChatContextProvider from '../context/ChatContextProvider';
+import ChatSideBar from './ChatSideBar';
 
 const Chat = () => {
   const [selectedUser, setSelectedUser] = useState(undefined);
 
-  const [{ apiData: connectionList, loading }, { setData: setConnectionData }] =
-    useGetDataApi('/api/chatApp/connections', []);
-
   const { messages } = useIntl();
   return (
-    <AppsContainer
-      title={messages['chatApp.chat'].toString()}
-      sidebarContent={
-        <ChatSideBar
+    <ChatContextProvider>
+      <AppsContainer
+        title={messages['chatApp.chat'].toString()}
+        sidebarContent={
+          <ChatSideBar
+            selectedUser={selectedUser}
+            setSelectedUser={setSelectedUser}
+          />
+        }
+      >
+        <ChatContent
           selectedUser={selectedUser}
           setSelectedUser={setSelectedUser}
-          connectionList={connectionList}
-          loading={loading}
         />
-      }
-    >
-      <ChatContent
-        selectedUser={selectedUser}
-        setSelectedUser={setSelectedUser}
-        setConnectionData={setConnectionData}
-      />
-    </AppsContainer>
+      </AppsContainer>
+    </ChatContextProvider>
   );
 };
 

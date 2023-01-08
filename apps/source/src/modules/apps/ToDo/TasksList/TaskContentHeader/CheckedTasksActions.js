@@ -12,18 +12,21 @@ import AppTooltip from '@crema/components/AppTooltip';
 import { StyledBox } from './index.style';
 import { useInfoViewActionsContext } from '@crema/context/InfoViewContextProvider';
 import { putDataApi } from '@crema/hooks/APIHooks';
-import { useTodoContext } from '../../../context/TodoContextProvider';
+import {
+  useTodoActionsContext,
+  useTodoContext,
+} from '../../../context/TodoContextProvider';
 
 const CheckedTasksActions = ({
   checkedTasks,
   setCheckedTasks,
-  setData,
   onUpdateTasks,
   page,
 }) => {
   const params = useParams();
   const infoViewActionsContext = useInfoViewActionsContext();
   const { labelList } = useTodoContext();
+  const { setTodoData } = useTodoActionsContext();
 
   const [isLabelOpen, onOpenLabel] = React.useState(null);
 
@@ -43,7 +46,7 @@ const CheckedTasksActions = ({
       page,
     })
       .then((data) => {
-        setData(data);
+        setTodoData(data);
         setCheckedTasks([]);
         infoViewActionsContext.showMessage('Task Deleted Successfully');
       })
