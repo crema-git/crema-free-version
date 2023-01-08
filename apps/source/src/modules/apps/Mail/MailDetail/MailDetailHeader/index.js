@@ -14,8 +14,9 @@ import { useNavigate } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import AppTooltip from '@crema/components/AppTooltip';
 import IconButton from '@mui/material/IconButton';
-import { putDataApi, useGetDataApi } from '@crema/hooks/APIHooks';
+import { putDataApi } from '@crema/hooks/APIHooks';
 import { useInfoViewActionsContext } from '@crema/context/InfoViewContextProvider';
+import { useMail } from '@crema/context/AppContextProvider/Apps';
 
 const MailDetailHeader = (props) => {
   const { selectedMail, onUpdateSelectedMail } = props;
@@ -23,10 +24,7 @@ const MailDetailHeader = (props) => {
 
   const navigate = useNavigate();
 
-  const [{ apiData: labelList }] = useGetDataApi(
-    '/api/mailApp/labels/list',
-    []
-  );
+  const { labelList } = useMail();
 
   const [isLabelOpen, onOpenLabel] = React.useState(null);
 
@@ -94,7 +92,7 @@ const MailDetailHeader = (props) => {
         infoViewActionsContext.showMessage(
           mail.isRead
             ? 'Mail Marked as Read Successfully'
-            : 'Mail Marked as Unread Successfully'
+            : 'Mail Marked as Unread Successfully',
         );
       })
       .catch((error) => {
@@ -114,7 +112,7 @@ const MailDetailHeader = (props) => {
         infoViewActionsContext.showMessage(
           mail.isStarred
             ? 'Mail Marked as Starred Successfully'
-            : 'Mail Marked as Unstarred Successfully'
+            : 'Mail Marked as Unstarred Successfully',
         );
       })
       .catch((error) => {
@@ -126,7 +124,7 @@ const MailDetailHeader = (props) => {
   if (!selectedMail) return null;
   return (
     <>
-      <AppTooltip title={<IntlMessages id="common.back" />}>
+      <AppTooltip title={<IntlMessages id='common.back' />}>
         <IconButton
           sx={{
             color: (theme) => theme.palette.text.disabled,
@@ -142,7 +140,7 @@ const MailDetailHeader = (props) => {
           alignItems: 'center',
         }}
       >
-        <AppTooltip title={<IntlMessages id="common.archive" />}>
+        <AppTooltip title={<IntlMessages id='common.archive' />}>
           <IconButton
             sx={{
               color: (theme) => theme.palette.text.disabled,
@@ -153,7 +151,7 @@ const MailDetailHeader = (props) => {
           </IconButton>
         </AppTooltip>
 
-        <AppTooltip title={<IntlMessages id="common.reportSpam" />}>
+        <AppTooltip title={<IntlMessages id='common.reportSpam' />}>
           <IconButton
             sx={{
               color: (theme) => theme.palette.text.disabled,
@@ -164,7 +162,7 @@ const MailDetailHeader = (props) => {
           </IconButton>
         </AppTooltip>
 
-        <AppTooltip title={<IntlMessages id="common.trash" />}>
+        <AppTooltip title={<IntlMessages id='common.trash' />}>
           <IconButton
             sx={{
               color: (theme) => theme.palette.text.disabled,
@@ -175,7 +173,7 @@ const MailDetailHeader = (props) => {
           </IconButton>
         </AppTooltip>
 
-        <AppTooltip title={<IntlMessages id="mailApp.markAsUnread" />}>
+        <AppTooltip title={<IntlMessages id='mailApp.markAsUnread' />}>
           <IconButton
             sx={{
               color: (theme) => theme.palette.text.disabled,
@@ -186,7 +184,7 @@ const MailDetailHeader = (props) => {
           </IconButton>
         </AppTooltip>
 
-        <AppTooltip title={<IntlMessages id="common.label" />}>
+        <AppTooltip title={<IntlMessages id='common.label' />}>
           <IconButton
             sx={{
               color: (theme) => theme.palette.text.disabled,
@@ -220,7 +218,7 @@ const MailDetailHeader = (props) => {
           alignItems: 'center',
         }}
       >
-        <AppTooltip title={<IntlMessages id="common.more" />}>
+        <AppTooltip title={<IntlMessages id='common.more' />}>
           <IconButton
             sx={{
               color: (theme) => theme.palette.text.disabled,
@@ -237,13 +235,13 @@ const MailDetailHeader = (props) => {
           onClose={onViewMoreClose}
         >
           <MenuItem onClick={onChangeReadStatus}>
-            <IntlMessages id="mailApp.markAsUnread" />
+            <IntlMessages id='mailApp.markAsUnread' />
           </MenuItem>
           <MenuItem onClick={onChangeStarredStatus}>
             {selectedMail.isStarred ? (
-              <IntlMessages id="mailApp.markAsNotImportant" />
+              <IntlMessages id='mailApp.markAsNotImportant' />
             ) : (
-              <IntlMessages id="mailApp.markAsImportant" />
+              <IntlMessages id='mailApp.markAsImportant' />
             )}
           </MenuItem>
         </Menu>

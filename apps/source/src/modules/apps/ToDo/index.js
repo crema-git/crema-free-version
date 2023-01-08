@@ -8,15 +8,16 @@ import AppsContainer from '@crema/components/AppsContainer';
 import clsx from 'clsx';
 import { useParams } from 'react-router-dom';
 import { Box } from '@mui/material';
-import { useGetDataApi } from '@crema/hooks/APIHooks';
+import {
+  useTodo,
+  useTodoActions,
+} from '@crema/context/AppContextProvider/Apps';
 
 const ToDo = () => {
   const { id } = useParams();
 
-  const [
-    { apiData: taskLists, loading },
-    { setQueryParams, setData, reCallAPI },
-  ] = useGetDataApi('/api/todo/task/list', {}, {}, false);
+  const { taskLists, loading } = useTodo();
+  const { setQueryParams, reCallAPI, setTodoData } = useTodoActions();
 
   const { messages } = useIntl();
   return (
@@ -28,7 +29,7 @@ const ToDo = () => {
         taskLists={taskLists}
         loading={loading}
         setQueryParams={setQueryParams}
-        setData={setData}
+        setData={setTodoData}
       />
       <Box
         sx={{

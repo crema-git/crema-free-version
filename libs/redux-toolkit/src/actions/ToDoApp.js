@@ -318,7 +318,10 @@ export const onUpdateSelectedTask = (task) => {
       .then((data) => {
         if (data.status === 200) {
           dispatch({ type: FETCH_SUCCESS });
-          dispatch({ type: UPDATE_TASK_DETAIL, payload: data.data });
+          dispatch({
+            type: UPDATE_TASK_DETAIL,
+            payload: { data: data.data, task },
+          });
           dispatch({
             type: SHOW_MESSAGE,
             payload:

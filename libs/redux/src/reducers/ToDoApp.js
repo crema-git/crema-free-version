@@ -138,7 +138,8 @@ const todoReducer = (state = initialState, action) => {
     case UPDATE_TASK_DETAIL:
       return {
         ...state,
-        selectedTask: action.payload,
+        selectedTask: action.payload.task,
+        taskList: action.payload.data,
       };
 
     default:

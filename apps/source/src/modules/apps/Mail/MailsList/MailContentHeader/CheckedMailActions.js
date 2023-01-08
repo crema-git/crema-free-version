@@ -11,8 +11,9 @@ import ShopTwoOutlinedIcon from '@mui/icons-material/ShopTwoOutlined';
 import PropTypes from 'prop-types';
 import IconButton from '@mui/material/IconButton';
 import AppTooltip from '@crema/components/AppTooltip';
-import { putDataApi, useGetDataApi } from '@crema/hooks/APIHooks';
+import { putDataApi } from '@crema/hooks/APIHooks';
 import { useInfoViewActionsContext } from '@crema/context/InfoViewContextProvider';
+import { useMail } from '@crema/context/AppContextProvider/Apps';
 
 const CheckedMailActions = (props) => {
   const infoViewActionsContext = useInfoViewActionsContext();
@@ -21,15 +22,7 @@ const CheckedMailActions = (props) => {
 
   const [isMoveToOpen, onOpenMoveToIcon] = useState(null);
 
-  const [{ apiData: labelList }] = useGetDataApi(
-    '/api/mailApp/labels/list',
-    [],
-  );
-
-  const [{ apiData: folderList }] = useGetDataApi(
-    '/api/mailApp/folders/list',
-    [],
-  );
+  const { labelList, folderList } = useMail();
 
   const onLabelOpen = (event) => {
     onOpenLabel(event.currentTarget);
@@ -53,7 +46,7 @@ const CheckedMailActions = (props) => {
       type,
     })
       .then((data) => {
-        setData({ data: data, count: data.length });
+        setData(data);
         infoViewActionsContext.showMessage('Mail moved to folder successfully');
         setCheckedMails([]);
       })
@@ -71,7 +64,7 @@ const CheckedMailActions = (props) => {
       type: labelType,
     })
       .then((data) => {
-        setData({ data: data, count: data.length });
+        setData(data);
         setCheckedMails([]);
         onOpenLabel(null);
         infoViewActionsContext.showMessage('Mail moved to folder successfully');

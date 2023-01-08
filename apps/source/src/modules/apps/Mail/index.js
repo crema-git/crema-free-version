@@ -8,25 +8,28 @@ import { useIntl } from 'react-intl';
 import { useParams } from 'react-router-dom';
 import clsx from 'clsx';
 import { MailDetailViewWrapper } from './index.styled';
+import { MailAuthProvider } from '@crema/context/AppContextProvider/Apps';
 
 const Mail = () => {
   const { id } = useParams();
   const { messages } = useIntl();
 
   return (
-    <AppsContainer
-      title={messages['mailApp.mail']}
-      sidebarContent={<MailSidebar />}
-    >
-      <MailsList />
-      <MailDetailViewWrapper
-        className={clsx({
-          show: id,
-        })}
+    <MailAuthProvider>
+      <AppsContainer
+        title={messages['mailApp.mail']}
+        sidebarContent={<MailSidebar />}
       >
-        <MailDetail />
-      </MailDetailViewWrapper>
-    </AppsContainer>
+        <MailsList />
+        <MailDetailViewWrapper
+          className={clsx({
+            show: id,
+          })}
+        >
+          <MailDetail />
+        </MailDetailViewWrapper>
+      </AppsContainer>
+    </MailAuthProvider>
   );
 };
 

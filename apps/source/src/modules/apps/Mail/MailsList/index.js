@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import MailContentHeader from './MailContentHeader';
 import { Hidden } from '@mui/material';
@@ -11,48 +11,25 @@ import ListEmptyResult from '@crema/components/AppList/ListEmptyResult';
 import EmailListSkeleton from '@crema/components/EmailListSkeleton';
 import MailListItem from './MailListItem';
 import { useInfoViewActionsContext } from '@crema/context/InfoViewContextProvider';
-import { putDataApi, useGetDataApi } from '@crema/hooks/APIHooks';
+import { putDataApi } from '@crema/hooks/APIHooks';
 import { MailListItemMobile } from '@crema/modules/apps/Mail';
+import {
+  useMail,
+  useMailActions,
+} from '@crema/context/AppContextProvider/Apps';
 
 const MailsList = () => {
   const navigate = useNavigate();
   const params = useParams();
   const infoViewActionsContext = useInfoViewActionsContext();
+  const { page, mailList, loading, labelList } = useMail();
+  const { onPageChange, setMailData } = useMailActions();
   const { pathname } = useLocation();
   const path = pathname.split('/');
-  const [page, setPage] = useState(0);
 
-  const [{ apiData, loading }, { setQueryParams, setData }] = useGetDataApi(
-    '/api/mailApp/folder/mail/List',
-    undefined,
-    {
-      type: params?.folder ? 'folder' : 'label',
-      name: params?.folder || params?.label,
-      page: page,
-    },
-    false,
-  );
-
-  const [{ apiData: labelList }] = useGetDataApi('/api/mailApp/labels/list');
   const [checkedMails, setCheckedMails] = useState([]);
 
   const [filterText, onSetFilterText] = useState('');
-
-  useEffect(() => {
-    setPage(0);
-  }, [pathname]);
-
-  useEffect(() => {
-    setQueryParams({
-      type: params?.folder ? 'folder' : 'label',
-      name: params?.folder || params?.label,
-      page: page,
-    });
-  }, [page, pathname]);
-
-  const onPageChange = (event, value) => {
-    setPage(value);
-  };
 
   const onChangeCheckedMails = (checked, id) => {
     if (checked) {
@@ -107,22 +84,22 @@ const MailsList = () => {
   };
 
   const onUpdateItem = (data) => {
-    setData({
-      data: apiData.data.map((item) => {
+    setMailData({
+      data: mailList.data.map((item) => {
         if (item.id === data.id) {
           return data;
         }
         return item;
       }),
-      count: apiData.count,
+      count: mailList.count,
     });
   };
 
   const onGetFilteredMails = () => {
     if (filterText === '') {
-      return apiData?.data;
+      return mailList?.data;
     } else {
-      return apiData?.data.filter(
+      return mailList?.data.filter(
         (mail) =>
           mail?.subject?.toLowerCase()?.includes(filterText.toLowerCase()) ||
           mail?.detail?.toLowerCase()?.includes(filterText.toLowerCase()),
@@ -131,9 +108,9 @@ const MailsList = () => {
   };
 
   const onRemoveItem = (data) => {
-    setData({
-      data: apiData?.data.filter((item) => item.id !== data.id),
-      count: apiData?.count - 1,
+    setMailData({
+      data: mailList?.data.filter((item) => item.id !== data.id),
+      count: mailList?.count - 1,
     });
   };
 
@@ -149,9 +126,9 @@ const MailsList = () => {
           onSetFilterText={onSetFilterText}
           page={page}
           path={path}
-          setData={setData}
+          setData={setMailData}
           mailList={list}
-          totalMails={apiData?.count}
+          totalMails={mailList?.count}
         />
       </AppsHeader>
       <AppsContent>
@@ -214,7 +191,7 @@ const MailsList = () => {
         {list?.length > 0 ? (
           <AppsFooter>
             <AppsPagination
-              count={apiData?.count}
+              count={mailList?.count}
               page={page}
               onPageChange={onPageChange}
             />
