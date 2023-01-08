@@ -14,16 +14,16 @@ import { useInfoViewActionsContext } from '@crema/context/InfoViewContextProvide
 import { putDataApi } from '@crema/hooks/APIHooks';
 import { MailListItemMobile } from '@crema/modules/apps/Mail';
 import {
-  useMail,
-  useMailActions,
+  useMailContext,
+  useMailActionsContext,
 } from '@crema/context/AppContextProvider/Apps';
 
 const MailsList = () => {
   const navigate = useNavigate();
   const params = useParams();
   const infoViewActionsContext = useInfoViewActionsContext();
-  const { page, mailList, loading, labelList } = useMail();
-  const { onPageChange, setMailData } = useMailActions();
+  const { page, mailList, loading, labelList } = useMailContext();
+  const { onPageChange, setMailData } = useMailActionsContext();
   const { pathname } = useLocation();
   const path = pathname.split('/');
 

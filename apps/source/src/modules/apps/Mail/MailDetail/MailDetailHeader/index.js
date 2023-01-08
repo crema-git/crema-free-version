@@ -16,7 +16,7 @@ import AppTooltip from '@crema/components/AppTooltip';
 import IconButton from '@mui/material/IconButton';
 import { putDataApi } from '@crema/hooks/APIHooks';
 import { useInfoViewActionsContext } from '@crema/context/InfoViewContextProvider';
-import { useMail } from '@crema/context/AppContextProvider/Apps';
+import { useMailContext } from '@crema/context/AppContextProvider/Apps';
 
 const MailDetailHeader = (props) => {
   const { selectedMail, onUpdateSelectedMail } = props;
@@ -24,7 +24,7 @@ const MailDetailHeader = (props) => {
 
   const navigate = useNavigate();
 
-  const { labelList } = useMail();
+  const { labelList } = useMailContext();
 
   const [isLabelOpen, onOpenLabel] = React.useState(null);
 

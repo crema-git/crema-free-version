@@ -13,10 +13,10 @@ import SidebarPlaceholder from '@crema/components/SidebarListSkeleton';
 import AddIcon from '@mui/icons-material/Add';
 import { Zoom } from '@mui/material';
 import { ConnectionListItem, LabelItem } from '@crema/modules/apps/Mail';
-import { useMail } from '@crema/context/AppContextProvider/Apps';
+import { useMailContext } from '@crema/context/AppContextProvider/Apps';
 
 const MailSidebar = () => {
-  const { connectionList, labelList, folderList } = useMail();
+  const { connectionList, labelList, folderList } = useMailContext();
   const [isComposeMail, setComposeMail] = useState(false);
 
   const onOpenComposeMail = () => {

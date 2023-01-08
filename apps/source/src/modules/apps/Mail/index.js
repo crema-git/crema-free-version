@@ -8,14 +8,14 @@ import { useIntl } from 'react-intl';
 import { useParams } from 'react-router-dom';
 import clsx from 'clsx';
 import { MailDetailViewWrapper } from './index.styled';
-import { MailAuthProvider } from '@crema/context/AppContextProvider/Apps';
+import { MailContextProvider } from '@crema/context/AppContextProvider/Apps';
 
 const Mail = () => {
   const { id } = useParams();
   const { messages } = useIntl();
 
   return (
-    <MailAuthProvider>
+    <MailContextProvider>
       <AppsContainer
         title={messages['mailApp.mail']}
         sidebarContent={<MailSidebar />}
@@ -29,7 +29,7 @@ const Mail = () => {
           <MailDetail />
         </MailDetailViewWrapper>
       </AppsContainer>
-    </MailAuthProvider>
+    </MailContextProvider>
   );
 };
 

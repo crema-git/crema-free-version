@@ -13,7 +13,7 @@ import IconButton from '@mui/material/IconButton';
 import AppTooltip from '@crema/components/AppTooltip';
 import { putDataApi } from '@crema/hooks/APIHooks';
 import { useInfoViewActionsContext } from '@crema/context/InfoViewContextProvider';
-import { useMail } from '@crema/context/AppContextProvider/Apps';
+import { useMailContext } from '@crema/context/AppContextProvider/Apps';
 
 const CheckedMailActions = (props) => {
   const infoViewActionsContext = useInfoViewActionsContext();
@@ -22,7 +22,7 @@ const CheckedMailActions = (props) => {
 
   const [isMoveToOpen, onOpenMoveToIcon] = useState(null);
 
-  const { labelList, folderList } = useMail();
+  const { labelList, folderList } = useMailContext();
 
   const onLabelOpen = (event) => {
     onOpenLabel(event.currentTarget);

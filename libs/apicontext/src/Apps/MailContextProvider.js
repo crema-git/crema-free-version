@@ -6,11 +6,11 @@ import { useLocation, useParams } from 'react-router-dom';
 const MailContext = createContext();
 const MailActionsContext = createContext();
 
-export const useMail = () => useContext(MailContext);
+export const useMailContext = () => useContext(MailContext);
 
-export const useMailActions = () => useContext(MailActionsContext);
+export const useMailActionsContext = () => useContext(MailActionsContext);
 
-export const MailAuthProvider = ({ children }) => {
+export const MailContextProvider = ({ children }) => {
   const params = useParams();
   const { pathname } = useLocation();
   const [{ apiData: labelList }] = useGetDataApi('/api/mailApp/labels/list');
@@ -71,8 +71,8 @@ export const MailAuthProvider = ({ children }) => {
     </MailContext.Provider>
   );
 };
-export default MailAuthProvider;
+export default MailContextProvider;
 
-MailAuthProvider.propTypes = {
+MailContextProvider.propTypes = {
   children: PropTypes.node.isRequired,
 };

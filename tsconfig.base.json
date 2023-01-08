@@ -11,10 +11,16 @@
     "target": "es2015",
     "module": "esnext",
     "lib": ["es2017", "dom"],
-    "skipLibCheck": true,
+    "skipLibCheck": true,ō
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@crema/apicontext/MailContextProvider": [
+        "libs/apicontext/src/Apps/MailContextProvider.js"
+      ],
+      "@crema/apicontext/TodoContextProvider": [
+        "libs/apicontext/src/Apps/TodoContextProvider.js"
+      ],
       "@crema/components": ["libs/components/src/index.js"],
       "@crema/components/AppAnimate": [
         "libs/components/src/lib/AppAnimate/index.js"
@@ -238,7 +244,6 @@
       "@crema/context/ThemeContextProvider": [
         "libs/context/src/AppContextProvider/ThemeContextProvider.js"
       ],
-      "@crema/hooks": ["libs/hooks/src/index.js"],
       "@crema/fakedb": ["libs/fakedb/src/index.js"],
       "@crema/fakedb/chat/connectionList": [
         "libs/mockapi/src/fakedb/apps/chat/connectionList.js"
@@ -257,6 +262,12 @@
         "libs/mockapi/src/fakedb/navigationStyle.js"
       ],
       "@crema/helpers": ["libs/helpers/src/index.js"],
+      "@crema/helpers/AuthHelper": ["libs/helpers/src/AuthHelper.js"],
+      "@crema/helpers/IntlMessages": ["libs/helpers/src/IntlMessages.js"],
+      "@crema/helpers/RouteGenerator": ["libs/helpers/src/RouteGenerator.js"],
+      "@crema/hooks": ["libs/hooks/src/index.js"],
+      "@crema/hooks/APIHooks": ["libs/hooks/src/APIHooks.js"],
+      "@crema/hooks/AuthHooks": ["libs/hooks/src/AuthHooks.js"],
       "@crema/mockapi": ["libs/mockapi/src/index.js"],
       "@crema/modules": ["libs/modules/src/index.js"],
       "@crema/modules/ErrorPages/ComingSoon": [
@@ -444,12 +455,7 @@
       "@crema/services/axios": ["libs/services/axios/src/index.js"],
       "@crema/services/localization": [
         "libs/services/localization/src/index.js"
-      ],
-      "@crema/hooks/APIHooks": ["libs/hooks/src/APIHooks.js"],
-      "@crema/hooks/AuthHooks": ["libs/hooks/src/AuthHooks.js"],
-      "@crema/helpers/IntlMessages": ["libs/helpers/src/IntlMessages.js"],
-      "@crema/helpers/RouteGenerator": ["libs/helpers/src/RouteGenerator.js"],
-      "@crema/helpers/AuthHelper": ["libs/helpers/src/AuthHelper.js"]
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]
