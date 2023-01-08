@@ -1,4 +1,4 @@
-export const BrandData = [
+export const brandData = [
   {
     id: 1,
     name: 'FastTrack',
@@ -24,7 +24,7 @@ export const ProductColors = {
   PINK: '#F69679',
 };
 
-export const IdealFor = [
+export const idealFor = [
   {
     id: 1,
     name: 'Couple',
@@ -70,7 +70,7 @@ export const addresses = [
   },
 ];
 
-export const DiscountList = [
+export const discountList = [
   {
     id: 1,
     name: '60% or more',

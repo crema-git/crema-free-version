@@ -1,6 +1,6 @@
 import React from 'react';
 import { Navigate } from 'react-router-dom';
-import { RoutePermittedRole } from '@crema/constants/AppConst';
+import { RoutePermittedRole } from '@crema/constants/AppEnums';
 import TodoContextProvider from '../../modules/apps/context/TodoContextProvider';
 const Mail = React.lazy(() => import('../../modules/apps/Mail'));
 const ToDo = React.lazy(() => import('../../modules/apps/ToDo'));

@@ -1,16 +1,16 @@
 import React from 'react';
-import {RoutePermittedRole} from '@crema/constants/AppConst';
+import { RoutePermittedRole } from '@crema/constants/AppEnums';
 
 const HealthCare = React.lazy(() =>
-  import('../../modules/dashboards/HealthCare')
+  import('../../modules/dashboards/HealthCare'),
 );
 const ECommerce = React.lazy(() =>
-  import('../../modules/dashboards/ECommerce')
+  import('../../modules/dashboards/ECommerce'),
 );
 const CRM = React.lazy(() => import('../../modules/dashboards/CRM'));
 const Crypto = React.lazy(() => import('../../modules/dashboards/Crypto'));
 const Analytics = React.lazy(() =>
-  import('../../modules/dashboards/Analytics')
+  import('../../modules/dashboards/Analytics'),
 );
 const Academy = React.lazy(() => import('../../modules/dashboards/Academy'));
 const Metrics = React.lazy(() => import('../../modules/dashboards/Metrics'));

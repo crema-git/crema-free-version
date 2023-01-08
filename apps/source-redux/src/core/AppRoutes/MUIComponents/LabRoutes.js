@@ -1,4 +1,4 @@
-import { RoutePermittedRole } from '@crema/constants/AppConst';
+import { RoutePermittedRole } from '@crema/constants/AppEnums';
 import React from 'react';
 
 import Masonry from '../../../modules/muiComponents/lab/Masonry';

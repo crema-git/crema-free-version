@@ -3,10 +3,6 @@ export const authRole = {
   User: ['user'],
 };
 
-export const RoutePermittedRole = {
-  Admin: 'admin',
-  User: 'user',
-};
 export const defaultUser = {
   displayName: 'John Alex',
   email: 'demo@example.com',

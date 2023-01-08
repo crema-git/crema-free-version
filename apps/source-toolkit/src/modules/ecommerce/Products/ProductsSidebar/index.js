@@ -6,9 +6,9 @@ import AppScrollbar from '@crema/components/AppScrollbar';
 import AppList from '@crema/components/AppList';
 import AppGrid from '@crema/components/AppGrid';
 import {
-  BrandData,
-  DiscountList,
-  IdealFor,
+  brandData,
+  discountList,
+  idealFor,
   ProductColors,
 } from '@crema/fakedb/data';
 
@@ -147,7 +147,7 @@ const ProductSidebar = () => {
         >
           BRAND
           <AppList
-            data={BrandData}
+            data={brandData}
             renderRow={(data) => (
               <CheckedCell
                 key={data.id}
@@ -172,7 +172,7 @@ const ProductSidebar = () => {
         >
           IDEAL FOR
           <AppList
-            data={IdealFor}
+            data={idealFor}
             renderRow={(data) => (
               <CheckedCell
                 key={data.id}
@@ -197,7 +197,7 @@ const ProductSidebar = () => {
         >
           DISCOUNT
           <AppList
-            data={DiscountList}
+            data={discountList}
             renderRow={(data) => (
               <CheckedCell
                 key={data.id}

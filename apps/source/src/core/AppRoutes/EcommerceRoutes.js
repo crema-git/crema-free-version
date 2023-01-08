@@ -1,16 +1,16 @@
 import React from 'react';
-import { RoutePermittedRole } from '@crema/constants/AppConst';
+import { RoutePermittedRole } from '@crema/constants/AppEnums';
 
 const Products = React.lazy(() => import('../../modules/ecommerce/Products'));
 const ProductDetail = React.lazy(() =>
-  import('../../modules/ecommerce/ProductDetail')
+  import('../../modules/ecommerce/ProductDetail'),
 );
 const Customers = React.lazy(() => import('../../modules/ecommerce/Customers'));
 const Checkout = React.lazy(() => import('../../modules/ecommerce/Checkout'));
 const Carts = React.lazy(() => import('../../modules/ecommerce/Carts'));
 const Orders = React.lazy(() => import('../../modules/ecommerce/Orders'));
 const Confirmation = React.lazy(() =>
-  import('../../modules/ecommerce/Confirmation')
+  import('../../modules/ecommerce/Confirmation'),
 );
 const Invoice1 = React.lazy(() => import('../../modules/ecommerce/Invoice1'));
 const Invoice2 = React.lazy(() => import('../../modules/ecommerce/Invoice2'));

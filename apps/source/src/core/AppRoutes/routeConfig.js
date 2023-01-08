@@ -33,7 +33,7 @@ import {
   AiOutlineLayout,
   AiOutlineUnorderedList,
 } from 'react-icons/ai';
-import { RoutePermittedRole } from '@crema/constants/AppConst';
+import { RoutePermittedRole } from '@crema/constants/AppEnums';
 
 const routesConfig = [
   {

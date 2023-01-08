@@ -6,11 +6,11 @@ import countries from './account/countries';
 import { aboutUsData } from './extraPages/aboutUs';
 import ecommerce, {
   addresses,
-  BrandData,
+  brandData,
   cartItems,
   customersData,
-  DiscountList,
-  IdealFor,
+  discountList,
+  idealFor,
   ProductColors,
   recentOrders,
 } from './ecommerce/ecommerceData';
@@ -25,10 +25,10 @@ export {
   countries,
   aboutUsData,
   addresses,
-  BrandData,
+  brandData,
   ProductColors,
-  IdealFor,
-  DiscountList,
+  idealFor,
+  discountList,
   cartItems,
   recentOrders,
   customersData,

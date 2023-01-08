@@ -69,3 +69,8 @@ export const AuthType = {
   AUTH0: 'auth0',
   JWT_AUTH: 'jwt_auth',
 };
+
+export const RoutePermittedRole = {
+  Admin: 'admin',
+  User: 'user',
+};

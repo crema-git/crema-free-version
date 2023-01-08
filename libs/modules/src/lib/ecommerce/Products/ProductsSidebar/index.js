@@ -12,9 +12,9 @@ import AppGrid from '@crema/components/AppGrid';
 import ColorCell from './ColorCell';
 import RatingCell from './RatingCell';
 import {
-  BrandData,
-  DiscountList,
-  IdealFor,
+  brandData,
+  discountList,
+  idealFor,
   ProductColors,
 } from '@crema/fakedb/data';
 
@@ -91,7 +91,7 @@ const ProductSidebar = ({ filterData, setFilterData }) => {
         }}
       >
         <Box
-          component="h5"
+          component='h5'
           sx={{
             mb: 2,
             fontWeight: Fonts.MEDIUM,
@@ -138,7 +138,7 @@ const ProductSidebar = ({ filterData, setFilterData }) => {
         >
           BRAND
           <AppList
-            data={BrandData}
+            data={brandData}
             renderRow={(data) => (
               <CheckedCell
                 key={data.id}
@@ -163,7 +163,7 @@ const ProductSidebar = ({ filterData, setFilterData }) => {
         >
           IDEAL FOR
           <AppList
-            data={IdealFor}
+            data={idealFor}
             renderRow={(data) => (
               <CheckedCell
                 key={data.id}
@@ -188,7 +188,7 @@ const ProductSidebar = ({ filterData, setFilterData }) => {
         >
           DISCOUNT
           <AppList
-            data={DiscountList}
+            data={discountList}
             renderRow={(data) => (
               <CheckedCell
                 key={data.id}

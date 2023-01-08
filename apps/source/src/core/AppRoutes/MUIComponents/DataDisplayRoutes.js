@@ -1,5 +1,5 @@
 import React from 'react';
-import { RoutePermittedRole } from '@crema/constants/AppConst';
+import { RoutePermittedRole } from '@crema/constants/AppEnums';
 import Avatar from '../../../modules/muiComponents/dataDisplay/Avatar';
 import Badges from '../../../modules/muiComponents/dataDisplay/Badges';
 import Chips from '../../../modules/muiComponents/dataDisplay/Chips';

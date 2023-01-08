@@ -1,21 +1,21 @@
 import ecommerceData, {
   addresses,
-  BrandData,
+  brandData,
   cartItems,
   customersData,
-  DiscountList,
-  IdealFor,
+  discountList,
+  idealFor,
   ProductColors,
   recentOrders,
 } from './ecommerceData';
 
 export {
   ecommerceData,
-  BrandData,
+  brandData,
   ProductColors,
-  IdealFor,
+  idealFor,
   addresses,
-  DiscountList,
+  discountList,
   cartItems,
   recentOrders,
   customersData,
