@@ -15,7 +15,7 @@ import AddIcon from '@mui/icons-material/Add';
 import { Zoom } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import { TaskLabelItem } from '@crema/modules/apps/ToDo';
-import { useTodo } from '@crema/apicontext/TodoContextProvider';
+import { useTodoContext } from '../../../AppContext/TodoContextProvider';
 
 const ListWrapper = styled(List)(({ theme }) => ({
   marginBottom: 8,
@@ -25,7 +25,7 @@ const ListWrapper = styled(List)(({ theme }) => ({
 }));
 
 const TaskSideBar = ({ reCallAPI }) => {
-  const { labelList, folderList } = useTodo();
+  const { labelList, folderList } = useTodoContext();
 
   const [isAddTaskOpen, setAddTaskOpen] = React.useState(false);
 

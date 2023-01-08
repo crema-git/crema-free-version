@@ -13,7 +13,7 @@ import IconButton from '@mui/material/IconButton';
 import AppTooltip from '@crema/components/AppTooltip';
 import { putDataApi } from '@crema/hooks/APIHooks';
 import { useInfoViewActionsContext } from '@crema/context/InfoViewContextProvider';
-import { useMailContext } from '@crema/apicontext/MailContextProvider';
+import { useMailContext } from '../../../../AppContext/MailContextProvider';
 
 const CheckedMailActions = (props) => {
   const infoViewActionsContext = useInfoViewActionsContext();

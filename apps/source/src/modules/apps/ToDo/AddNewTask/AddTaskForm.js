@@ -19,7 +19,7 @@ import Grid from '@mui/material/Grid';
 import AppTextField from '@crema/components/AppTextField';
 import { Fonts } from '@crema/constants/AppEnums';
 import { styled } from '@mui/material/styles';
-import { useTodo } from '@crema/apicontext/TodoContextProvider';
+import { useTodoContext } from '../../../AppContext/TodoContextProvider';
 
 const StyledDivider = styled(Divider)(({ theme }) => ({
   marginTop: 20,
@@ -33,7 +33,7 @@ const AddTaskForm = (props) => {
   const { values, setFieldValue, isSubmitting, setTaskLabels, taskLabels } =
     props;
 
-  const { labelList, priorityList, staffList } = useTodo();
+  const { labelList, priorityList, staffList } = useTodoContext();
 
   const inputLabel = React.useRef(null);
 
