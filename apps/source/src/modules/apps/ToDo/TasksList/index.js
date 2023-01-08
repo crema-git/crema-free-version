@@ -18,7 +18,7 @@ import {
   TaskListItem,
   TaskListItemMobile,
 } from '@crema/modules/apps/ToDo';
-import { useTodoContext } from '../../../AppContext/TodoContextProvider';
+import { useTodoContext } from '../../context/TodoContextProvider';
 
 export const ViewMode = {
   List: 'list',

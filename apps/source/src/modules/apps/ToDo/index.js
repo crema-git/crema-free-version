@@ -11,7 +11,7 @@ import { Box } from '@mui/material';
 import {
   useTodoContext,
   useTodoActionsContext,
-} from '../../AppContext/TodoContextProvider';
+} from '../context/TodoContextProvider';
 
 const ToDo = () => {
   const { id } = useParams();

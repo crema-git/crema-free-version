@@ -10,7 +10,7 @@ export const useTodoContext = () => useContext(TodoContext);
 
 export const useTodoActionsContext = () => useContext(TodoActionsContext);
 
-export const TodoAuthProvider = ({ children }) => {
+export const TodoContextProvider = ({ children }) => {
   const params = useParams();
   const { pathname } = useLocation();
   const [{ apiData: labelList }] = useGetDataApi('/api/todo/labels/list');
@@ -64,8 +64,8 @@ export const TodoAuthProvider = ({ children }) => {
     </TodoContext.Provider>
   );
 };
-export default TodoAuthProvider;
+export default TodoContextProvider;
 
-TodoAuthProvider.propTypes = {
+TodoContextProvider.propTypes = {
   children: PropTypes.node.isRequired,
 };

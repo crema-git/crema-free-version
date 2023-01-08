@@ -26,7 +26,7 @@ import {
   TaskLabels,
   TodoDatePicker,
 } from '@crema/modules/apps/ToDo';
-import { useTodoContext } from '../../../../AppContext/TodoContextProvider';
+import { useTodoContext } from '../../../context/TodoContextProvider';
 
 const TaskDetailBody = (props) => {
   const { selectedTask, onUpdateSelectedTask } = props;

@@ -19,7 +19,7 @@ import Grid from '@mui/material/Grid';
 import AppTextField from '@crema/components/AppTextField';
 import { Fonts } from '@crema/constants/AppEnums';
 import { styled } from '@mui/material/styles';
-import { useTodoContext } from '../../../AppContext/TodoContextProvider';
+import { useTodoContext } from '../../context/TodoContextProvider';
 
 const StyledDivider = styled(Divider)(({ theme }) => ({
   marginTop: 20,

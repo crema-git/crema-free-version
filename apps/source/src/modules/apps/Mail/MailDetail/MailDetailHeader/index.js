@@ -16,7 +16,7 @@ import AppTooltip from '@crema/components/AppTooltip';
 import IconButton from '@mui/material/IconButton';
 import { putDataApi } from '@crema/hooks/APIHooks';
 import { useInfoViewActionsContext } from '@crema/context/InfoViewContextProvider';
-import { useMailContext } from '../../../../AppContext/MailContextProvider';
+import { useMailContext } from '../../../context/MailContextProvider';
 
 const MailDetailHeader = (props) => {
   const { selectedMail, onUpdateSelectedMail } = props;

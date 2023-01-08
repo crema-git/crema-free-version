@@ -8,7 +8,7 @@ import { useIntl } from 'react-intl';
 import { useParams } from 'react-router-dom';
 import clsx from 'clsx';
 import { MailDetailViewWrapper } from './index.styled';
-import MailContextProvider from '../../AppContext/MailContextProvider';
+import MailContextProvider from '../context/MailContextProvider';
 
 const Mail = () => {
   const { id } = useParams();

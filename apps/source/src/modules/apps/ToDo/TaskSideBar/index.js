@@ -15,7 +15,7 @@ import AddIcon from '@mui/icons-material/Add';
 import { Zoom } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import { TaskLabelItem } from '@crema/modules/apps/ToDo';
-import { useTodoContext } from '../../../AppContext/TodoContextProvider';
+import { useTodoContext } from '../../context/TodoContextProvider';
 
 const ListWrapper = styled(List)(({ theme }) => ({
   marginBottom: 8,
