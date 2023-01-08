@@ -6,9 +6,9 @@ import { useLocation, useParams } from 'react-router-dom';
 const TodoContext = createContext();
 const TodoActionsContext = createContext();
 
-export const useTodo = () => useContext(TodoContext);
+export const useTodoContext = () => useContext(TodoContext);
 
-export const useTodoActions = () => useContext(TodoActionsContext);
+export const useTodoActionsContext = () => useContext(TodoActionsContext);
 
 export const TodoAuthProvider = ({ children }) => {
   const params = useParams();
@@ -37,8 +37,6 @@ export const TodoAuthProvider = ({ children }) => {
   const onPageChange = (event, value) => {
     setPage(value);
   };
-
-  console.log('taskListssdssd', taskLists);
 
   return (
     <TodoContext.Provider

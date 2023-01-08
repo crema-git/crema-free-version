@@ -16,7 +16,7 @@ import { MailListItemMobile } from '@crema/modules/apps/Mail';
 import {
   useMailContext,
   useMailActionsContext,
-} from '@crema/apicontext/MailContextProvider';
+} from '../../../AppContext/MailContextProvider';
 
 const MailsList = () => {
   const navigate = useNavigate();

@@ -18,7 +18,7 @@ import {
   TaskListItem,
   TaskListItemMobile,
 } from '@crema/modules/apps/ToDo';
-import { useTodo } from '@crema/apicontext/TodoContextProvider';
+import { useTodoContext } from '../../../AppContext/TodoContextProvider';
 
 export const ViewMode = {
   List: 'list',
@@ -26,7 +26,7 @@ export const ViewMode = {
 };
 const TasksList = ({ taskLists, loading, setData }) => {
   const infoViewActionsContext = useInfoViewActionsContext();
-  const { labelList } = useTodo();
+  const { labelList } = useTodoContext();
 
   const [filterText, onSetFilterText] = useState('');
   const [viewMode, setViewMode] = useState(ViewMode.List);

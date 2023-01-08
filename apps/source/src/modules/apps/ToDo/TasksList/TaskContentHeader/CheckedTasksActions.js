@@ -12,7 +12,7 @@ import AppTooltip from '@crema/components/AppTooltip';
 import { StyledBox } from './index.style';
 import { useInfoViewActionsContext } from '@crema/context/InfoViewContextProvider';
 import { putDataApi } from '@crema/hooks/APIHooks';
-import { useTodo } from '@crema/apicontext/TodoContextProvider';
+import { useTodoContext } from '../../../../AppContext/TodoContextProvider';
 
 const CheckedTasksActions = ({
   checkedTasks,
@@ -23,7 +23,7 @@ const CheckedTasksActions = ({
 }) => {
   const params = useParams();
   const infoViewActionsContext = useInfoViewActionsContext();
-  const { labelList } = useTodo();
+  const { labelList } = useTodoContext();
 
   const [isLabelOpen, onOpenLabel] = React.useState(null);
 

@@ -8,13 +8,16 @@ import AppsContainer from '@crema/components/AppsContainer';
 import clsx from 'clsx';
 import { useParams } from 'react-router-dom';
 import { Box } from '@mui/material';
-import { useTodo, useTodoActions } from '@crema/apicontext/TodoContextProvider';
+import {
+  useTodoContext,
+  useTodoActionsContext,
+} from '../../AppContext/TodoContextProvider';
 
 const ToDo = () => {
   const { id } = useParams();
 
-  const { taskLists, loading } = useTodo();
-  const { setQueryParams, reCallAPI, setTodoData } = useTodoActions();
+  const { taskLists, loading } = useTodoContext();
+  const { setQueryParams, reCallAPI, setTodoData } = useTodoActionsContext();
 
   const { messages } = useIntl();
   return (

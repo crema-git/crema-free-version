@@ -26,14 +26,14 @@ import {
   TaskLabels,
   TodoDatePicker,
 } from '@crema/modules/apps/ToDo';
-import { useTodo } from '@crema/apicontext/TodoContextProvider';
+import { useTodoContext } from '../../../../AppContext/TodoContextProvider';
 
 const TaskDetailBody = (props) => {
   const { selectedTask, onUpdateSelectedTask } = props;
   const infoViewActionsContext = useInfoViewActionsContext();
 
   const { user } = useAuthUser();
-  const { staffList } = useTodo();
+  const { staffList } = useTodoContext();
 
   const [isEdit, setEdit] = useState(false);
 

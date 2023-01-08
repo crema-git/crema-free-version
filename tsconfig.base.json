@@ -15,12 +15,6 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@crema/apicontext/MailContextProvider": [
-        "libs/apicontext/src/Apps/MailContextProvider.js"
-      ],
-      "@crema/apicontext/TodoContextProvider": [
-        "libs/apicontext/src/Apps/TodoContextProvider.js"
-      ],
       "@crema/components": ["libs/components/src/index.js"],
       "@crema/components/AppAnimate": [
         "libs/components/src/lib/AppAnimate/index.js"
@@ -216,9 +210,6 @@
       "@crema/context": ["libs/context/src/index.js"],
       "@crema/context/AppContextProvider": [
         "libs/context/src/AppContextProvider/index.js"
-      ],
-      "@crema/context/AppContextProvider/Apps": [
-        "libs/context/src/AppContextProvider/Apps/index.js"
       ],
       "@crema/context/AppLocaleProvider": [
         "libs/context/src/AppLocaleProvider/index.js"
