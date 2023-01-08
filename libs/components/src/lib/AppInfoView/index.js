@@ -1,6 +1,7 @@
 import React from 'react';
-import AppInfoViewContext from './ContextView';
-import AppInfoViewRedux from './ReduxView';
+
+const AppInfoViewContext = React.lazy(() => import('./ContextView'));
+const AppInfoViewRedux = React.lazy(() => import('./ReduxView'));
 
 const AppInfoView = () => {
   if (process.env.NX_STATE_TYPE === 'context') {
