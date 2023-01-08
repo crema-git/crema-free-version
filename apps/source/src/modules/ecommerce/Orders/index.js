@@ -17,7 +17,7 @@ const Orders = () => {
     '/api/ecommerce/orders',
     {},
     {},
-    false
+    false,
   );
   const [page, setPage] = useState(0);
   const [search, setSearchQuery] = useState('');
@@ -34,62 +34,56 @@ const Orders = () => {
     setPage(0);
   };
   return (
-    <>
-      {loading ? (
-        <AppLoader />
-      ) : (
-        <AppsContainer title={messages['eCommerce.recentOrders']} fullView>
-          <AppsHeader>
-            <Box
-              display="flex"
-              flexDirection="row"
-              alignItems="center"
-              width={1}
-              justifyContent="space-between"
-            >
-              <AppSearchBar
-                iconPosition="right"
-                overlap={false}
-                onChange={(event) => onSearchOrder(event.target.value)}
-                placeholder={messages['common.searchHere']}
+    <AppsContainer title={messages['eCommerce.recentOrders']} fullView>
+      <AppsHeader>
+        <Box
+          display='flex'
+          flexDirection='row'
+          alignItems='center'
+          width={1}
+          justifyContent='space-between'
+        >
+          <AppSearchBar
+            iconPosition='right'
+            overlap={false}
+            onChange={(event) => onSearchOrder(event.target.value)}
+            placeholder={messages['common.searchHere']}
+          />
+          <Box display='flex' flexDirection='row' alignItems='center'>
+            <Button variant='contained' color='primary'>
+              Add Order
+            </Button>
+
+            <Hidden smDown>
+              <AppsPagination
+                rowsPerPage={10}
+                count={apiData?.count}
+                page={page}
+                onPageChange={onPageChange}
               />
-              <Box display="flex" flexDirection="row" alignItems="center">
-                <Button variant="contained" color="primary">
-                  Add Order
-                </Button>
+            </Hidden>
+          </Box>
+        </Box>
+      </AppsHeader>
 
-                <Hidden smDown>
-                  <AppsPagination
-                    rowsPerPage={10}
-                    count={apiData?.count}
-                    page={page}
-                    onPageChange={onPageChange}
-                  />
-                </Hidden>
-              </Box>
-            </Box>
-          </AppsHeader>
+      <AppsContent
+        sx={{
+          paddingTop: 2.5,
+          paddingBottom: 2.5,
+        }}
+      >
+        <OrderTable orderData={apiData?.data || []} loading={loading} />
+      </AppsContent>
 
-          <AppsContent
-            sx={{
-              paddingTop: 2.5,
-              paddingBottom: 2.5,
-            }}
-          >
-            <OrderTable orderData={apiData?.data || []} />
-          </AppsContent>
-
-          <Hidden smUp>
-            <AppsPagination
-              rowsPerPage={10}
-              count={apiData?.count}
-              page={page}
-              onPageChange={onPageChange}
-            />
-          </Hidden>
-        </AppsContainer>
-      )}
-    </>
+      <Hidden smUp>
+        <AppsPagination
+          rowsPerPage={10}
+          count={apiData?.count}
+          page={page}
+          onPageChange={onPageChange}
+        />
+      </Hidden>
+    </AppsContainer>
   );
 };
 

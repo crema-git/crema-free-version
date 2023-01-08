@@ -34,74 +34,69 @@ const Customers = () => {
 
   const onSearchCustomer = (e) => {
     setSearchQuery(e.target.value);
+    console.log('onSearchCustomer: ', e.target.value);
     setPage(0);
   };
 
   return (
-    <>
-      {loading ? (
-        <AppLoader />
-      ) : (
-        <AppsContainer title={messages['sidebar.ecommerce.customers']} fullView>
-          <AppsHeader>
-            <Box
-              sx={{
-                display: 'flex',
-                flexDirection: 'row',
-                alignItems: 'center',
-                width: 1,
-              }}
-            >
-              <AppSearchBar
-                iconPosition="right"
-                overlap={false}
-                onChange={(event) => onSearchCustomer(event.target.value)}
-                placeholder={messages['common.searchHere']}
-              />
-              <Box
-                sx={{
-                  display: 'flex',
-                  flexDirection: 'row',
-                  alignItems: 'center',
-                  ml: 'auto',
-                }}
-              >
-                <Button variant="contained" color="primary">
-                  Add Customer
-                </Button>
-
-                <Hidden smDown>
-                  <AppsPagination
-                    rowsPerPage={10}
-                    count={customerCount}
-                    page={page}
-                    onPageChange={onPageChange}
-                  />
-                </Hidden>
-              </Box>
-            </Box>
-          </AppsHeader>
-
-          <AppsContent
+    <AppsContainer title={messages['sidebar.ecommerce.customers']} fullView>
+      <AppsHeader>
+        <Box
+          sx={{
+            display: 'flex',
+            flexDirection: 'row',
+            alignItems: 'center',
+            width: 1,
+          }}
+        >
+          <AppSearchBar
+            iconPosition='right'
+            overlap={false}
+            onChange={onSearchCustomer}
+            placeholder={messages['common.searchHere']}
+          />
+          <Box
             sx={{
-              paddingTop: 2.5,
-              paddingBottom: 2.5,
+              display: 'flex',
+              flexDirection: 'row',
+              alignItems: 'center',
+              ml: 'auto',
             }}
           >
-            <CustomerTable customers={customers} />
-          </AppsContent>
+            <Button variant='contained' color='primary'>
+              Add Customer
+            </Button>
 
-          <Hidden smUp>
-            <AppsPagination
-              rowsPerPage={10}
-              count={customerCount}
-              page={page}
-              onPageChange={onPageChange}
-            />
-          </Hidden>
-        </AppsContainer>
-      )}
-    </>
+            <Hidden smDown>
+              <AppsPagination
+                rowsPerPage={10}
+                count={customerCount}
+                page={page}
+                onPageChange={onPageChange}
+              />
+            </Hidden>
+          </Box>
+        </Box>
+      </AppsHeader>
+
+      <AppsContent
+        sx={{
+          paddingTop: 2.5,
+          paddingBottom: 2.5,
+        }}
+      >
+        <CustomerTable customers={customers} loading={loading} />
+      </AppsContent>
+
+      <Hidden smUp>
+        <AppsPagination
+          rowsPerPage={10}
+          count={customerCount}
+          page={page}
+          onPageChange={onPageChange}
+        />
+      </Hidden>
+    </AppsContainer>
   );
 };
 
