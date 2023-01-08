@@ -1,6 +1,7 @@
-import { Navigate } from 'react-router-dom';
-import { authRole, RoutePermittedRole } from '@crema/constants';
-import { checkPermission } from './RouteHelper';
+import {Navigate} from 'react-router-dom';
+import {authRole} from '@crema/constants/AppConst';
+import {RoutePermittedRole} from '@crema/constants/AppEnums';
+import {checkPermission} from './RouteHelper';
 
 /**
  * @param {Object} structure - The passed object that defines the routes.
@@ -27,7 +28,7 @@ const generateRoutes = (structure) => {
 
   if (anonymousStructure) {
     dynamicRoutes.push(
-      ...routesGenerator(isAuthenticated, anonymousStructure, 'anonymous')
+      ...routesGenerator(isAuthenticated, anonymousStructure, 'anonymous'),
     );
   }
 
@@ -37,14 +38,18 @@ const generateRoutes = (structure) => {
         isAuthenticated,
         authorizedStructure,
         'authorized',
-        isAuthenticated ? userRole : null
-      )
+        isAuthenticated ? userRole : null,
+      ),
     );
   }
 
   if (unAuthorizedStructure) {
     dynamicRoutes.push(
-      ...routesGenerator(isAuthenticated, unAuthorizedStructure, 'unAuthorized')
+      ...routesGenerator(
+        isAuthenticated,
+        unAuthorizedStructure,
+        'unAuthorized',
+      ),
     );
   }
   return dynamicRoutes;
@@ -62,7 +67,7 @@ const routesGenerator = (
   isAuthenticated = false,
   routeSet = {},
   type = 'anonymous',
-  userRole
+  userRole,
 ) => {
   const generatedRoutes = [];
   const { fallbackPath = '' } = routeSet || {};
@@ -87,7 +92,7 @@ const routesGenerator = (
           if (!path) {
             console.log(
               `A [route] is skipped because one of the following, No valid [path] prop provided for the route`,
-              isAuthenticated
+              isAuthenticated,
             );
           } else {
             if (isAnonymous) {
@@ -120,7 +125,7 @@ const routesGenerator = (
                               replace
                             />
                           ),
-                        }
+                        },
                   );
                 });
               } else {
@@ -137,7 +142,7 @@ const routesGenerator = (
                         element: (
                           <Navigate to={redirectPath || fallbackPath} replace />
                         ),
-                      }
+                      },
                 );
               }
               return generatedRoutes;
@@ -159,7 +164,7 @@ const routesGenerator = (
                         element: (
                           <Navigate to={redirectPath || fallbackPath} replace />
                         ),
-                      }
+                      },
                 );
               });
             } else {
@@ -171,7 +176,7 @@ const routesGenerator = (
                       element: (
                         <Navigate to={redirectPath || fallbackPath} replace />
                       ),
-                    }
+                    },
               );
             }
             return generatedRoutes;
