@@ -28,11 +28,11 @@ const CheckBox = ({ checkedContacts, setCheckedContacts }) => {
         color='primary'
         indeterminate={
           checkedContacts.length > 0 &&
-          checkedContacts.length < contactList?.data.length
+          checkedContacts.length < contactList?.data?.length
         }
         checked={
-          contactList?.data.length > 0 &&
-          checkedContacts.length === contactList?.data.length
+          contactList?.data?.length > 0 &&
+          checkedContacts.length === contactList?.data?.length
         }
         onChange={onHandleMasterCheckbox}
       />
