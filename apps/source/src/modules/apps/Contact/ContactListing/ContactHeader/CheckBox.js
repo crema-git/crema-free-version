@@ -8,7 +8,7 @@ const CheckBox = ({ checkedContacts, setCheckedContacts }) => {
   const { contactList } = useContactContext();
   const onHandleMasterCheckbox = (event) => {
     if (event.target.checked) {
-      const contactIds = contactList.map((contact) => contact.id);
+      const contactIds = contactList?.data.map((contact) => contact.id);
       setCheckedContacts(contactIds);
     } else {
       setCheckedContacts([]);
@@ -28,11 +28,11 @@ const CheckBox = ({ checkedContacts, setCheckedContacts }) => {
         color='primary'
         indeterminate={
           checkedContacts.length > 0 &&
-          checkedContacts.length < contactList.length
+          checkedContacts.length < contactList?.data.length
         }
         checked={
-          contactList.length > 0 &&
-          checkedContacts.length === contactList.length
+          contactList?.data.length > 0 &&
+          checkedContacts.length === contactList?.data.length
         }
         onChange={onHandleMasterCheckbox}
       />
