@@ -10,7 +10,7 @@ import AppAuthProvider from './core/AppAuthProvider';
 import AuthRoutes from '@crema/components/AuthRoutes';
 import AppLayout from './core/AppLayout';
 import '@crema/mockapi';
-import './assets/styles/maps.css';
+import './assets/styles/index.css';
 
 const App = () => (
   <AppContextProvider>
