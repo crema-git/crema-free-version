@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import React from 'react';
 import { GoogleMap, withGoogleMap } from 'react-google-maps';
 
@@ -38,9 +39,9 @@ const StyledMap = () => {
   return (
     <StyledMapExampleGoogleMap
       containerElement={
-        <div className="cr-embed-responsive cr-embed-responsive-21by9" />
+        <div className='cr-embed-responsive cr-embed-responsive-21by9' />
       }
-      mapElement={<div className="cr-embed-responsive-item" />}
+      mapElement={<div className='cr-embed-responsive-item' />}
       center={new google.maps.LatLng(44.8799929, 21.3190073)}
       onClickFromChildrenOfInfoBox={handleClickFromChildrenOfInfoBox}
     />

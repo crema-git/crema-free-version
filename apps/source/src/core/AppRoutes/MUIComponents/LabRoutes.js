@@ -6,7 +6,6 @@ import Timeline from '../../../modules/muiComponents/lab/Timeline';
 import TrapFocus from '../../../modules/muiComponents/lab/TrapFocus';
 import TreeView from '../../../modules/muiComponents/lab/TreeView';
 import DatePicker from '../../../modules/muiComponents/lab/DatePicker';
-import DateRangePicker from '../../../modules/muiComponents/lab/DateRangePicker';
 import DateTimePicker from '../../../modules/muiComponents/lab/DateTimePicker';
 import TimePicker from '../../../modules/muiComponents/lab/TimePicker';
 
@@ -35,11 +34,6 @@ export const labConfigs = [
     permittedRole: RoutePermittedRole.User,
     path: '/mui/lab/date-picker',
     element: <DatePicker />,
-  },
-  {
-    permittedRole: RoutePermittedRole.User,
-    path: '/mui/lab/date-range-picker',
-    element: <DateRangePicker />,
   },
   {
     permittedRole: RoutePermittedRole.User,

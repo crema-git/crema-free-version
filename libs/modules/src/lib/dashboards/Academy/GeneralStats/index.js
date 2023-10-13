@@ -6,30 +6,40 @@ import Avatar from '@mui/material/Avatar';
 import { Fonts } from '@crema/constants/AppEnums';
 import PropTypes from 'prop-types';
 
-import { BiBasket } from 'react-icons/bi';
-import { FcGraduationCap, FcReading } from 'react-icons/fc';
+import { FcGraduationCap, FcReading, FcViewDetails } from 'react-icons/fc';
 import { GiBookshelf } from 'react-icons/gi';
 
 const getIcon = (iconType) => {
   switch (iconType) {
     case 'BiBasket':
-      return <BiBasket color="#9E49E6" className="icon" />;
+      return <FcViewDetails color='#9E49E6' className='icon' />;
     case 'FcGraduationCap':
-      return <FcGraduationCap color="#0A8FDC" className="icon" />;
+      return <FcGraduationCap color='#0A8FDC' className='icon' />;
     case 'GiBookshelf':
-      return <GiBookshelf color="#49BD65" className="icon" />;
+      return <GiBookshelf color='#49BD65' className='icon' />;
     default:
-      return <FcReading color="#9E49E6" className="icon" />;
+      return <FcReading color='#9E49E6' className='icon' />;
   }
 };
 
 const GeneralStats = ({ stats }) => {
   return (
-    <AppCard sxStyle={{ height: 1 }} className="card-hover">
+    <AppCard
+      sxStyle={{ height: 1 }}
+      className='card-hover'
+      contentStyle={{
+        p: 0,
+        '&:last-of-type': {
+          pb: 0,
+        },
+        mb: 0,
+      }}
+    >
       <Box
         sx={{
           display: 'flex',
           alignItems: 'center',
+          padding: 4,
         }}
       >
         <Box
@@ -39,13 +49,14 @@ const GeneralStats = ({ stats }) => {
         >
           <Avatar
             sx={{
-              width: { xs: 46, lg: 54, xl: 60 },
-              height: { xs: 46, lg: 54, xl: 60 },
+              width: 46,
+              height: 46,
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
+              fontSize: 32,
               backgroundColor: stats.bgcolor,
-              padding: 2.5,
+              padding: 2,
             }}
           >
             {getIcon(stats.icon)}
@@ -64,9 +75,9 @@ const GeneralStats = ({ stats }) => {
           }}
         >
           <Box sx={{ overflow: 'hidden' }}>
-            <Box component="h3">{stats.count}</Box>
+            <Box component='h3'>{stats.count}</Box>
             <Box
-              component="p"
+              component='p'
               sx={{
                 color: 'text.secondary',
                 fontSize: 14,
@@ -79,7 +90,7 @@ const GeneralStats = ({ stats }) => {
             </Box>
           </Box>
           <Box
-            component="span"
+            component='span'
             sx={{
               backgroundColor: stats.bgcolor,
               borderRadius: 30,

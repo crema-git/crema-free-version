@@ -54,7 +54,11 @@ const MoreOptions = (props) => {
       status: status,
     })
       .then((data) => {
-        setMailData(data);
+        setMailData({
+          data,
+          count: data.length,
+        });
+
         setCheckedMails([]);
         onOpenMoreIcon(null);
         infoViewActionsContext.showMessage(
@@ -74,7 +78,10 @@ const MoreOptions = (props) => {
       status: status,
     })
       .then((data) => {
-        setMailData(data);
+        setMailData({
+          data,
+          count: data.length,
+        });
         onOpenMoreIcon(null);
         setCheckedMails([]);
         infoViewActionsContext.showMessage(
@@ -93,7 +100,10 @@ const MoreOptions = (props) => {
       status: status,
     })
       .then((data) => {
-        setMailData(data);
+        setMailData({
+          data,
+          count: data.length,
+        });
         setCheckedMails([]);
         onOpenMoreIcon(null);
         infoViewActionsContext.showMessage(
@@ -111,7 +121,10 @@ const MoreOptions = (props) => {
       status: status,
     })
       .then((data) => {
-        setMailData(data);
+        setMailData({
+          data,
+          count: data.length,
+        });
         setCheckedMails([]);
         onOpenMoreIcon(null);
         infoViewActionsContext.showMessage(

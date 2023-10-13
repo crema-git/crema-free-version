@@ -1,9 +1,9 @@
 import React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
-import AppLngSwitcher from '@crema/components/AppLngSwitcher';
+import AppLngSwitcher from '../../../AppLngSwitcher';
 import Box from '@mui/material/Box';
-import AppSearchBar from '@crema/components/AppSearchBar';
+import AppSearchBar from '../../../AppSearchBar';
 import Hidden from '@mui/material/Hidden';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
@@ -32,8 +32,8 @@ const AppHeader = (props) => {
 
   return (
     <AppBar
-      position="relative"
-      color="inherit"
+      position='relative'
+      color='inherit'
       sx={{
         boxShadow: 'none',
         borderBottom: (theme) => `1px solid ${theme.palette.divider}`,
@@ -41,7 +41,7 @@ const AppHeader = (props) => {
         transition: 'width 0.5s ease',
         width: '100%',
       }}
-      className="app-bar"
+      className='app-bar'
     >
       <Toolbar
         sx={{
@@ -54,12 +54,12 @@ const AppHeader = (props) => {
         <Hidden lgDown>
           <IconButton
             sx={{ color: 'text.secondary' }}
-            edge="start"
-            className="menu-btn"
-            color="inherit"
-            aria-label="open drawer"
+            edge='start'
+            className='menu-btn'
+            color='inherit'
+            aria-label='open drawer'
             onClick={() => setCollapsed(!isCollapsed)}
-            size="large"
+            size='large'
           >
             <MenuIcon
               sx={{
@@ -72,12 +72,12 @@ const AppHeader = (props) => {
         <Hidden lgUp>
           <IconButton
             sx={{ color: 'text.secondary' }}
-            edge="start"
-            className="menu-btn"
-            color="inherit"
-            aria-label="open drawer"
+            edge='start'
+            className='menu-btn'
+            color='inherit'
+            aria-label='open drawer'
             onClick={toggleNavCollapsed}
-            size="large"
+            size='large'
           >
             <MenuIcon
               sx={{
@@ -112,11 +112,11 @@ const AppHeader = (props) => {
             },
           }}
         >
-          <AppSearchBar iconPosition="right" placeholder="Search…" />
+          <AppSearchBar iconPosition='right' placeholder='Search…' />
         </Box>
 
         <Box sx={{ ml: 4 }}>
-          <AppLngSwitcher iconOnly={true} tooltipPosition="bottom" />
+          <AppLngSwitcher iconOnly={true} tooltipPosition='bottom' />
         </Box>
 
         <Box sx={{ ml: 4 }}>
@@ -162,7 +162,7 @@ const AppHeader = (props) => {
                   px: 1.85,
                 }}
               >
-                <AppTooltip title="More">
+                <AppTooltip title='More'>
                   <IconButton
                     sx={{
                       borderRadius: '50%',
@@ -182,7 +182,7 @@ const AppHeader = (props) => {
                       },
                     }}
                     onClick={handleClick}
-                    size="large"
+                    size='large'
                   >
                     <MoreVertIcon />
                   </IconButton>
@@ -191,7 +191,7 @@ const AppHeader = (props) => {
             </Box>
           </Hidden>
           <Menu
-            id="simple-menu"
+            id='simple-menu'
             anchorEl={anchorEl}
             keepMounted
             open={Boolean(anchorEl)}

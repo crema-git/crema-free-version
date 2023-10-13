@@ -13,13 +13,13 @@ const ActiveUsersGraph = ({ data }) => {
         },
       }}
     >
-      <ResponsiveContainer height={200} className="containerGraph">
+      <ResponsiveContainer height={200} className='containerGraph'>
         <LineChart data={data}>
           <Line
-            type="monotone"
-            dataKey="activeUsers"
-            stroke="#4299E1"
-            strokeWidth={4}
+            type='monotone'
+            dataKey='activeUsers'
+            stroke='#4299E1'
+            strokeWidth={2}
             dot={{ r: 0 }}
           />
         </LineChart>

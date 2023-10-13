@@ -22,7 +22,7 @@ export const MailContextProvider = ({ children }) => {
 
   const [
     { apiData: mailList, loading },
-    { setQueryParams, setData: setMailData },
+    { setQueryParams, setData: setMailData, reCallAPI },
   ] = useGetDataApi(
     '/api/mailApp/folder/mail/List',
     undefined,
@@ -64,6 +64,7 @@ export const MailContextProvider = ({ children }) => {
         value={{
           setMailData,
           onPageChange,
+          reCallAPI,
         }}
       >
         {children}

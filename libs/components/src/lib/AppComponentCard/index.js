@@ -3,12 +3,11 @@ import { Card } from '@mui/material';
 import CardHeader from '@mui/material/CardHeader';
 import CardContent from '@mui/material/CardContent';
 import CodeIcon from '@mui/icons-material/Code';
-import Highlight, { defaultProps } from 'prism-react-renderer';
+import { Highlight, themes } from 'prism-react-renderer';
 import PropTypes from 'prop-types';
 import IconButton from '@mui/material/IconButton';
 import Collapse from '@mui/material/Collapse';
 import AppScrollbar from '../AppScrollbar';
-import { highlightTheme } from './highlightTheme';
 import Box from '@mui/material/Box';
 import AppAnimate from '../AppAnimate';
 import { Fonts } from '@crema/constants/AppEnums';
@@ -25,7 +24,7 @@ const AppComponentCard = ({
   const [animation, setAnimation] = useState(false);
 
   return (
-    <AppAnimate animation="transition.slideUpIn" delay={200}>
+    <AppAnimate animation='transition.slideUpIn' delay={200}>
       <Card>
         <CardHeader
           sx={{
@@ -53,7 +52,7 @@ const AppComponentCard = ({
             source ? (
               <Box>
                 <IconButton
-                  aria-label="view code"
+                  aria-label='view code'
                   onClick={() => {
                     if (animation) {
                       setAnimation(!animation);
@@ -63,7 +62,7 @@ const AppComponentCard = ({
                       setToggleViewSource(!viewSource);
                     }
                   }}
-                  size="large"
+                  size='large'
                 >
                   <CodeIcon />
                 </IconButton>
@@ -82,10 +81,9 @@ const AppComponentCard = ({
                 }}
               >
                 <Highlight
-                  {...defaultProps}
                   code={source}
-                  language="jsx"
-                  theme={highlightTheme}
+                  language='jsx'
+                  theme={themes.shadesOfPurple}
                 >
                   {({ style, tokens, getLineProps, getTokenProps }) => (
                     <pre

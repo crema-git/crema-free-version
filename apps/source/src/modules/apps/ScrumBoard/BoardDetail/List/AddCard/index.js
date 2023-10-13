@@ -11,6 +11,7 @@ import Box from '@mui/material/Box';
 import { useInfoViewActionsContext } from '@crema/context/InfoViewContextProvider';
 import { postDataApi, putDataApi } from '@crema/hooks/APIHooks';
 import { CardHeader } from '@crema/modules/apps/ScrumBoard';
+import { generateRandomUniqueNumber, getDateObject } from '@crema/helpers';
 
 const validationSchema = yup.object({
   title: yup.string().required(<IntlMessages id='validation.titleRequired' />),
@@ -25,25 +26,25 @@ const AddCard = (props) => {
   const { user } = useAuthUser();
   console.log('selectedCard: ', selectedCard);
   const [checkedList, setCheckedList] = useState(() =>
-    selectedCard ? selectedCard.checkedList : []
+    selectedCard ? selectedCard.checkedList : [],
   );
 
   const [isDeleteDialogOpen, setDeleteDialogOpen] = useState(false);
 
   const [selectedMembers, setMembersList] = useState(() =>
-    selectedCard ? selectedCard.members : []
+    selectedCard ? selectedCard.members : [],
   );
 
   const [selectedLabels, setSelectedLabels] = useState(() =>
-    selectedCard ? selectedCard.label : []
+    selectedCard ? selectedCard.label : [],
   );
 
   const [comments, setComments] = useState(() =>
-    selectedCard ? selectedCard.comments : []
+    selectedCard ? selectedCard.comments : [],
   );
 
   const [attachments, setAttachments] = useState(() =>
-    selectedCard ? selectedCard.attachments : []
+    selectedCard ? selectedCard.attachments : [],
   );
 
   const onAddAttachments = (files) => {
@@ -97,7 +98,7 @@ const AddCard = (props) => {
           boxSizing: 'border-box',
         },
       }}
-      anchor="right"
+      anchor='right'
       open={isAddCardOpen}
       onClose={onCloseAddCard}
     >
@@ -109,7 +110,10 @@ const AddCard = (props) => {
           label: selectedCard && selectedCard.label ? selectedCard.label : [],
           members:
             selectedCard && selectedCard.members ? selectedCard.members : [],
-          date: selectedCard && selectedCard.date ? selectedCard.date : null,
+          date:
+            selectedCard && selectedCard.date
+              ? getDateObject(selectedCard.date)
+              : getDateObject(),
         }}
         validationSchema={validationSchema}
         onSubmit={(data, { setSubmitting, resetForm }) => {
@@ -138,7 +142,7 @@ const AddCard = (props) => {
               });
           } else {
             const newCard = {
-              id: Math.floor(Math.random() * 1000),
+              id: generateRandomUniqueNumber(),
               attachments: attachments,
               checkedList: [],
               comments: comments,
@@ -206,8 +210,8 @@ const AddCard = (props) => {
           open={isDeleteDialogOpen}
           onDeny={setDeleteDialogOpen}
           onConfirm={onDeleteCard}
-          title={<IntlMessages id="scrumboard.deleteCard" />}
-          dialogTitle={<IntlMessages id="common.deleteItem" />}
+          title={<IntlMessages id='scrumboard.deleteCard' />}
+          dialogTitle={<IntlMessages id='common.deleteItem' />}
         />
       ) : null}
     </Drawer>

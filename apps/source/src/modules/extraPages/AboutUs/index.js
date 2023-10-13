@@ -4,45 +4,36 @@ import AppGridContainer from '@crema/components/AppGridContainer';
 import AppAnimate from '@crema/components/AppAnimate';
 
 import {
+  Clients,
   Introduction,
+  OfficeCultureCard,
   Sections,
   Team,
 } from '@crema/modules/extraPages/AboutUs';
 import { aboutUsData } from '@crema/fakedb/extraPages';
-import Box from '@mui/material/Box';
 
 const AboutUs = () => {
-  const brandingData = aboutUsData.find((about) => about.alias === 'branding');
-  const photoGraphyData = aboutUsData.find(
-    (about) => about.alias === 'photography'
-  );
-  const seoData = aboutUsData.find((about) => about.alias === 'seo');
-
   return (
-    <AppAnimate animation="transition.slideUpIn" delay={200}>
-      <Box flex={1}>
-        <AppGridContainer>
-          <Grid item xs={12} md={12}>
-            <Introduction />
+    <AppAnimate animation='transition.slideUpIn' delay={200}>
+      <AppGridContainer>
+        <Grid item xs={12} md={6} lg={9}>
+          <Introduction introduction={aboutUsData.introduction} />
+        </Grid>
+        <Grid item xs={12} md={6} lg={3}>
+          <OfficeCultureCard officeCulture={aboutUsData.officeCulture} />
+        </Grid>
+        {aboutUsData.aboutUsSection.map((data, index) => (
+          <Grid item xs={12} sm={6} lg={3} key={'section-' + index}>
+            <Sections data={data} />
           </Grid>
-
-          <Grid item xs={12} md={4}>
-            <Sections data={brandingData} />
-          </Grid>
-
-          <Grid item xs={12} md={4}>
-            <Sections data={photoGraphyData} />
-          </Grid>
-
-          <Grid item xs={12} md={4}>
-            <Sections data={seoData} />
-          </Grid>
-
-          <Grid item xs={12} md={12}>
-            <Team />
-          </Grid>
-        </AppGridContainer>
-      </Box>
+        ))}
+        <Grid item xs={12}>
+          <Team team={aboutUsData.team} />
+        </Grid>
+        <Grid item xs={12}>
+          <Clients client={aboutUsData.client} />
+        </Grid>
+      </AppGridContainer>
     </AppAnimate>
   );
 };

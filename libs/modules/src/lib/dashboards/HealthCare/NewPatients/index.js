@@ -1,17 +1,19 @@
 import React from 'react';
-import AppCard from '@crema/components/AppCard';
-import { useIntl } from 'react-intl';
+import AppCard from "@crema/components/AppCard";
+import {useIntl} from 'react-intl';
 import PatientGraph from './PatientGraph';
-import { Box } from '@mui/material';
-import AppMenu from '@crema/components/AppMenu';
-import { Fonts } from '@crema/constants/AppEnums';
+import {Box} from '@mui/material';
+import {Fonts} from "@crema/constants";
 import PropTypes from 'prop-types';
 
-const NewPatients = ({ data }) => {
-  const { messages } = useIntl();
+const NewPatients = ({data}) => {
+  const {messages} = useIntl();
 
   return (
-    <AppCard title={messages['healthCare.newPatient']} action={<AppMenu />}>
+    <AppCard
+      title={messages['healthCare.newPatient']}
+      action={messages['common.viewAll']}
+    >
       <Box>
         <Box
           sx={{
@@ -21,7 +23,7 @@ const NewPatients = ({ data }) => {
           }}
         >
           <Box
-            component="span"
+            component='span'
             sx={{
               mr: 2,
               fontSize: 20,
@@ -30,16 +32,11 @@ const NewPatients = ({ data }) => {
           >
             214
           </Box>
-          <Box
-            sx={{
-              '& img': {
-                height: 12,
-              },
-            }}
-          >
+          <Box>
             <img
-              src={'/assets/images/dashboard/metrics_icon_active.png'}
-              alt="down"
+              src={'/assets/images/dashboard/growth_icon.svg'}
+              alt='down'
+              style={{height: 12}}
             />
           </Box>
         </Box>

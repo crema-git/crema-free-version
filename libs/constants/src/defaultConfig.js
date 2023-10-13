@@ -39,10 +39,7 @@ export const defaultTheme = {
     direction: LayoutDirection.LTR, //ltr, rtl
     palette: {
       mode: process.env.NX_THEME_MODE,
-      background: {
-        paper: '#FFFFFF',
-        default: '#F4F7FE',
-      },
+      background: process.env.NX_THEME_MODE ? backgroundDark : backgroundLight,
       primary: {
         main: process.env.NX_PRIMARY_COLOR,
         contrastText: '#fff',
@@ -58,7 +55,7 @@ export const defaultTheme = {
         main: '#FF5252',
         light: '#FFECDC',
       },
-      text: textLight,
+      text: process.env.NX_THEME_MODE ? textDark : textLight,
       gray: {
         50: '#fafafa',
         100: '#F5F6FA',
@@ -81,7 +78,7 @@ export const defaultTheme = {
     },
     divider: 'rgba(224, 224, 224, 1)',
     typography: {
-      fontFamily: ['Poppins', 'sans-serif'].join(','),
+      fontFamily: ['Be Vietnam', 'sans-serif'].join(','),
       fontSize: 14,
       fontWeight: 400,
       h1: {
@@ -145,9 +142,9 @@ export const defaultTheme = {
           root: {
             borderRadius: cardRadius,
             boxShadow: '0px 10px 10px 4px rgba(0, 0, 0, 0.04)',
-            '& .MuiCardContent-root:last-of-type': {
-              paddingBottom: 16,
-            },
+            // '& .MuiCardContent-root:last-of-type': {
+            //   paddingBottom: 16,
+            // },
           },
         },
       },

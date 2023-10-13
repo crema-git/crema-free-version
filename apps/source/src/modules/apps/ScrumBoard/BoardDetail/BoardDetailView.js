@@ -107,7 +107,7 @@ const BoardDetailView = (props) => {
     sourceLaneId,
     targetLaneId,
     position,
-    cardDetails
+    cardDetails,
   ) => {
     if (sourceLaneId !== targetLaneId) {
       const boardId = boardDetail.id;

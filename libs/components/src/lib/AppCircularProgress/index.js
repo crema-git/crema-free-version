@@ -29,7 +29,7 @@ const AppCircularProgress = ({
     >
       <Box sx={{ position: 'relative' }}>
         <CircularProgress
-          variant="determinate"
+          variant='determinate'
           value={100}
           sx={{
             color: pathColor,
@@ -52,7 +52,7 @@ const AppCircularProgress = ({
               strokeLinecap: 'round',
             },
           }}
-          variant="determinate"
+          variant='determinate'
           value={value}
           thickness={thickness}
           {...props}
@@ -74,7 +74,7 @@ const AppCircularProgress = ({
         {centerNode}
         {hidePercentage ? null : (
           <Box
-            component="p"
+            component='p'
             sx={{
               fontSize: 30,
               fontWeight: Fonts.MEDIUM,
@@ -93,8 +93,8 @@ export default AppCircularProgress;
 AppCircularProgress.propTypes = {
   hidePercentage: ProtoTypes.bool,
   centerNode: ProtoTypes.node,
-  minWidth: ProtoTypes.number,
-  maxWidth: ProtoTypes.number,
+  minWidth: ProtoTypes.oneOfType([ProtoTypes.number, ProtoTypes.object]),
+  maxWidth: ProtoTypes.oneOfType([ProtoTypes.number, ProtoTypes.object]),
   pathColor: ProtoTypes.string,
   activeColor: ProtoTypes.string,
   value: ProtoTypes.number,

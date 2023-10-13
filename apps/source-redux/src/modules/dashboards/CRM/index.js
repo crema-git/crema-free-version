@@ -3,21 +3,25 @@ import { Grid } from '@mui/material';
 import AppGridContainer from '@crema/components/AppGridContainer';
 import AppAnimate from '@crema/components/AppAnimate';
 import {
-  Deals,
-  GoalProgress,
-  MonthlyEarning,
-  QuickStats,
-  Reviews,
   SocialMediaAdvertise,
-  Statistics,
   TicketSupport,
-  TodayTasks,
-  TotalRevenue,
-  WebTraffic,
+  GoalProgress,
+  DealsNew,
+  EmailMarketing,
+  OpportunitiesWon,
+  RecentActivities,
+  Report,
+  TeamState,
+  Timesheet,
+  ToDoLists,
+  TopLeaders,
+  TotalVisitor,
+  VisitorsPageViews,
 } from '@crema/modules/dashboards/CRM';
 import AppLoader from '@crema/components/AppLoader';
 import { onGetCrmData } from '../../../redux/actions';
 import { useDispatch, useSelector } from 'react-redux';
+import { StatsDirCard } from '@crema/modules/dashboards/CommonComponents';
 
 const CRM = () => {
   const dispatch = useDispatch();
@@ -33,48 +37,69 @@ const CRM = () => {
       {crmData ? (
         <AppAnimate animation='transition.slideUpIn' delay={200}>
           <AppGridContainer>
-            <Grid item xs={12} md={5}>
-              <TotalRevenue revenueData={crmData.revenueData} />
-            </Grid>
-            <Grid item xs={12} md={7}>
-              <QuickStats quickStatsData={crmData.quickStatsData} />
-            </Grid>
-
+            {crmData.stateData.map((data) => (
+              <Grid key={data.id} item xs={12} sm={6} lg={3}>
+                <StatsDirCard data={data} />
+              </Grid>
+            ))}
             <Grid item xs={12} md={8}>
-              <Statistics
-                clientsData={crmData.statisticsGraph.clientsData}
-                incomeData={crmData.statisticsGraph.incomeData}
-                projectData={crmData.statisticsGraph.projectData}
-              />
+              <VisitorsPageViews data={crmData.visitorPageView} />
             </Grid>
-
             <Grid item xs={12} md={4}>
-              <MonthlyEarning earningGraphData={crmData.earningGraphData} />
+              <OpportunitiesWon data={crmData.opportunitiesWonGraphData} />
+            </Grid>
+            {crmData.teamStateData.map((data) => (
+              <Grid key={data.id} item xs={12} md={6} lg={3}>
+                <TeamState data={data} />
+              </Grid>
+            ))}
+            <Grid item xs={12} md={7} xl={9}>
+              <TopLeaders topLeaders={crmData.topLeaders} />
+            </Grid>
+            <Grid item xs={12} md={5} xl={3}>
+              <EmailMarketing emailMarketing={crmData.emailMarketing} />
             </Grid>
 
-            <Grid item xs={12} md={4}>
-              <SocialMediaAdvertise socialMediaData={crmData.socialMediaData} />
+            <Grid item xs={12} md={12} lg={12} xl={9}>
+              <AppGridContainer>
+                <Grid item xs={12} md={12} lg={8}>
+                  <AppGridContainer>
+                    <Grid item xs={12} md={12} lg={12}>
+                      <Timesheet timesheet={crmData.timesheet} />
+                    </Grid>
+                    <Grid item xs={12} md={12} lg={12}>
+                      <ToDoLists data={crmData.todoLists} />
+                    </Grid>
+                  </AppGridContainer>
+                </Grid>
+                <Grid item xs={12} md={12} lg={4}>
+                  <AppGridContainer>
+                    <Grid item xs={12} sm={6} lg={12}>
+                      <Report />
+                    </Grid>
+                    <Grid item xs={12} sm={6} lg={12}>
+                      <SocialMediaAdvertise
+                        socialMediaData={crmData.socialMediaData}
+                      />
+                    </Grid>
+                  </AppGridContainer>
+                </Grid>
+              </AppGridContainer>
             </Grid>
-
-            <Grid item xs={12} md={8}>
-              <TodayTasks todayTaskData={crmData.todayTaskData} />
+            <Grid item xs={12} md={12} lg={12} xl={3}>
+              <RecentActivities data={crmData.recentActivities} />
             </Grid>
-
-            <Grid item xs={12} md={8}>
-              <Deals dealsTableData={crmData.dealsTableData} />
+            <Grid item xs={12} md={12} lg={12} xl={8}>
+              <DealsNew dealsTableData={crmData.dealsTableData} />
             </Grid>
-
-            <Grid item xs={12} md={4}>
-              <GoalProgress progressGraphData={crmData.progressGraphData} />
+            <Grid item xs={12} md={12} lg={12} xl={4}>
+              <TotalVisitor totalVisitors={crmData.totalVisitors} />
             </Grid>
-
-            <Grid item xs={12} md={5}>
-              <WebTraffic websiteTrafficData={crmData.websiteTrafficData} />
-              <Reviews reviewGraphData={crmData.reviewGraphData} />
-            </Grid>
-
-            <Grid item xs={12} md={7}>
+            <Grid item xs={12} md={12} lg={12} xl={8}>
               <TicketSupport ticketSupportData={crmData.ticketSupportData} />
+            </Grid>
+            <Grid item xs={12} md={12} lg={12} xl={4}>
+              <GoalProgress progressGraphData={crmData.progressGraphData} />
             </Grid>
           </AppGridContainer>
         </AppAnimate>

@@ -260,7 +260,7 @@ export const onCreateTask = (task) => {
   return (dispatch) => {
     dispatch({ type: FETCH_START });
     jwtAxios
-      .post('/api/todoApp/compose', { task })
+      .post('/api/todo/compose', { task })
       .then((data) => {
         if (data.status === 200) {
           dispatch({ type: FETCH_SUCCESS });
@@ -287,7 +287,7 @@ export const onGetSelectedTask = (id) => {
   return (dispatch) => {
     dispatch({ type: FETCH_START });
     jwtAxios
-      .get(`/api/todoApp/task/`, {
+      .get(`/api/todo/task/`, {
         params: {
           id: id,
         },
@@ -314,7 +314,7 @@ export const onUpdateSelectedTask = (task) => {
   return (dispatch) => {
     dispatch({ type: FETCH_START });
     jwtAxios
-      .put('/api/todoApp/task/', { task })
+      .put('/api/todo/task/', { task })
       .then((data) => {
         if (data.status === 200) {
           dispatch({ type: FETCH_SUCCESS });

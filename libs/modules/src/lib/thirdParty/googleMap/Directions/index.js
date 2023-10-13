@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import React, { useEffect, useState } from 'react';
 import {
   DirectionsRenderer,
@@ -40,16 +41,16 @@ const MapDirections = () => {
         } else {
           console.error(`error fetching directions ${result}`);
         }
-      }
+      },
     );
   }, []);
 
   return (
     <DirectionsExampleGoogleMap
       containerElement={
-        <div className="cr-embed-responsive cr-embed-responsive-21by9" />
+        <div className='cr-embed-responsive cr-embed-responsive-21by9' />
       }
-      mapElement={<div className="cr-embed-responsive-item" />}
+      mapElement={<div className='cr-embed-responsive-item' />}
       center={state.origin}
       directions={state.directions}
     />

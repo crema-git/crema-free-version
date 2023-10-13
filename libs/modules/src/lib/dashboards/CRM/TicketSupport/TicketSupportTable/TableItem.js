@@ -36,8 +36,8 @@ const TableItem = (props) => {
           {row.image ? (
             <Avatar
               sx={{
-                width: { xs: 40, xl: 50 },
-                height: { xs: 40, xl: 50 },
+                width: { xs: 30, xl: 40 },
+                height: { xs: 30, xl: 40 },
                 backgroundColor: red[500],
               }}
               src={row.image}
@@ -45,8 +45,8 @@ const TableItem = (props) => {
           ) : (
             <Avatar
               sx={{
-                width: { xs: 40, xl: 50 },
-                height: { xs: 40, xl: 50 },
+                width: { xs: 30, xl: 40 },
+                height: { xs: 30, xl: 40 },
                 backgroundColor: red[500],
               }}
             >

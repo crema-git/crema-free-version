@@ -20,7 +20,7 @@ const onGetTaskList = (name, data) => {
 
     case 'priority': {
       return data.filter(
-        (task) => task.folderValue !== 126 && task.priority === 1
+        (task) => task.folderValue !== 126 && task.priority === 1,
       );
     }
 
@@ -36,7 +36,7 @@ const onGetTaskList = (name, data) => {
 
     case 'completed': {
       return data.filter(
-        (task) => task.folderValue !== 126 && task.status === 3
+        (task) => task.folderValue !== 126 && task.status === 3,
       );
     }
 
@@ -72,17 +72,17 @@ mock.onGet('/api/todo/task/list').reply((config) => {
   return [200, { data, count }];
 });
 
-mock.onGet('/api/todoApp/task/').reply((config) => {
+mock.onGet('/api/todo/task/').reply((config) => {
   const params = config.params;
   const response = todoData.find((task) => task.id === parseInt(params.id));
   return [200, response];
 });
 
-mock.onPut('/api/todoApp/task/').reply((request) => {
+mock.onPut('/api/todo/task/').reply((request) => {
   const { task } = JSON.parse(request.data);
   // task.assignedTo = staffList.find(staff => staff.id === task.assignedTo);
   todoData = todoData.map((item) => (item.id === task.id ? task : item));
-  return [200, todoData];
+  return [200, task];
 });
 
 mock.onGet('/api/todo/folders/list').reply(200, folderList);
@@ -159,11 +159,11 @@ mock.onPut('/api/todo/update/starred').reply((request) => {
   return [200, updatedTasks];
 });
 
-mock.onPost('/api/todoApp/compose').reply((request) => {
+mock.onPost('/api/todo/compose').reply((request) => {
   const { task } = JSON.parse(request.data);
   task.assignedTo = staffList.find((staff) => staff.id === task.assignedTo);
   task.priority = priorityList.find(
-    (priority) => priority.type === task.priority
+    (priority) => priority.type === task.priority,
   );
   todoData = [task, ...todoData];
   return [200, task];

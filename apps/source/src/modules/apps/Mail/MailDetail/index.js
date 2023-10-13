@@ -17,7 +17,7 @@ const MailDetail = () => {
     useGetDataApi('/api/mailApp/mail/', undefined, { id: id }, false);
 
   useEffect(() => {
-    setQueryParams({ id });
+    if (id) setQueryParams({ id });
   }, [id]);
 
   const onUpdateSelectedMail = (data) => {

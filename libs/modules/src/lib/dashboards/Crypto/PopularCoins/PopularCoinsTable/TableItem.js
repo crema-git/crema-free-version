@@ -22,17 +22,17 @@ const TableItem = (props) => {
           '&:first-of-type': {
             pl: 5,
           },
-          '&:last-of-type': {
+          '&:last-child': {
             pr: 5,
           },
         },
       }}
-      className="item-hover"
+      className='item-hover'
     >
-      <TableCell scope="row" className="tableCell">
+      <TableCell scope='row' className='tableCell'>
         {row.id}.
       </TableCell>
-      <TableCell align="left" className="tableCell">
+      <TableCell align='left' className='tableCell'>
         <Box
           sx={{
             display: 'flex',
@@ -53,7 +53,7 @@ const TableItem = (props) => {
                   backgroundColor: row.image ? row.color : red[500],
                 }}
               >
-                <img src={row.image} alt="" />
+                <img src={row.image} alt='' />
               </Avatar>
             ) : (
               <Avatar
@@ -69,7 +69,7 @@ const TableItem = (props) => {
             )}
           </Box>
           <Box
-            component="span"
+            component='span'
             sx={{
               mr: 1,
               fontWeight: Fonts.MEDIUM,
@@ -87,18 +87,18 @@ const TableItem = (props) => {
           </Box>
         </Box>
       </TableCell>
-      <TableCell align="left" className="tableCell">
+      <TableCell align='left' className='tableCell'>
         ${row.marketCap}
       </TableCell>
-      <TableCell align="left" className="tableCell">
+      <TableCell align='left' className='tableCell'>
         ${row.volume}
       </TableCell>
       <TableCell
-        align="right"
+        align='right'
         sx={{
           color: green[600],
         }}
-        className="tableCell"
+        className='tableCell'
       >
         {row.h} %
       </TableCell>

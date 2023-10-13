@@ -29,11 +29,11 @@ const StatusToggleButton = ({ selectedTask, onUpdateSelectedTask }) => {
   const onChangeTaskStatus = (status) => {
     const task = selectedTask;
     task.status = status;
-    putDataApi('/api/todoApp/task/', infoViewActionsContext, {
+    putDataApi('/api/todo/task/', infoViewActionsContext, {
       task,
     })
       .then((data) => {
-        onUpdateSelectedTask(data[0]);
+        onUpdateSelectedTask(data);
         infoViewActionsContext.showMessage('Task Updated Successfully');
       })
       .catch((error) => {
@@ -43,23 +43,23 @@ const StatusToggleButton = ({ selectedTask, onUpdateSelectedTask }) => {
 
   return (
     <>
-      {selectedTask.status === 3 ? (
+      {selectedTask.status === 1003 ? (
         <StatusButton
-          variant="contained"
-          color="primary"
+          variant='contained'
+          color='primary'
           startIcon={<StyledDoneIcon />}
-          onClick={() => onChangeTaskStatus(1)}
+          onClick={() => onChangeTaskStatus(1001)}
         >
-          <IntlMessages id="todo.completed" />
+          <IntlMessages id='todo.completed' />
         </StatusButton>
       ) : (
         <StatusButton
-          variant="outlined"
-          color="primary"
+          variant='outlined'
+          color='primary'
           startIcon={<StyledDoneIcon />}
-          onClick={() => onChangeTaskStatus(3)}
+          onClick={() => onChangeTaskStatus(1003)}
         >
-          <IntlMessages id="todo.markAsCompleted" />
+          <IntlMessages id='todo.markAsCompleted' />
         </StatusButton>
       )}
     </>

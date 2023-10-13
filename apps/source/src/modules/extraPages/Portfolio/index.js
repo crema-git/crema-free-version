@@ -1,9 +1,9 @@
 import React from 'react';
-import Portfolio from '@crema/modules/extraPages/Portfolio';
-import { photos } from '@crema/fakedb/data';
+import { portfolioData } from '@crema/fakedb/extraPages';
+import { PortfolioTabs } from '@crema/modules/extraPages/Portfolio';
 
 const PortFolioPage = () => {
-  return <Portfolio photos={photos} />;
+  return <PortfolioTabs portfolio={portfolioData.portfolio} />;
 };
 
 export default PortFolioPage;

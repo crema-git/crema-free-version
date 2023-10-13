@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
-import AppCard from '@crema/components/AppCard';
-import AppSelect from '@crema/components/AppSelect';
-import { useIntl } from 'react-intl';
+import React, {useState} from 'react';
+import AppCard from "@crema/components/AppCard";
+import AppSelect from "@crema/components/AppSelect";
+import {useIntl} from 'react-intl';
 import StaticsGraph from './StaticsGraph';
-import { Box } from '@mui/material';
+import {Box} from '@mui/material';
 import PropTypes from 'prop-types';
 
-const HealthStatics = ({ data }) => {
+const HealthStatics = ({data}) => {
   const [graphData, setGraphData] = useState(data.dataOne);
   const handleYearChange = (value) => {
     switch (value) {
@@ -40,7 +40,7 @@ const HealthStatics = ({ data }) => {
     }
   };
 
-  const { messages } = useIntl();
+  const {messages} = useIntl();
   return (
     <AppCard
       title={messages['healthCare.staticsHealthCare']}
@@ -69,7 +69,14 @@ const HealthStatics = ({ data }) => {
         </Box>
       }
     >
-      <StaticsGraph data={graphData} />
+      <Box
+        sx={{
+          position: 'relative',
+          height: {xs: 245, xl: 155},
+        }}
+      >
+        <StaticsGraph data={graphData} />
+      </Box>
     </AppCard>
   );
 };

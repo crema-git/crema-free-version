@@ -16,11 +16,11 @@ const TaskStatus = ({ selectedTask, onUpdateSelectedTask }) => {
   const onChangeStatus = (event) => {
     const task = selectedTask;
     task.status = event.target.value;
-    putDataApi('/api/todoApp/task/', infoViewActionsContext, {
+    putDataApi('/api/todo/task/', infoViewActionsContext, {
       task: selectedTask,
     })
       .then((data) => {
-        onUpdateSelectedTask(data[0]);
+        onUpdateSelectedTask(data);
         infoViewActionsContext.showMessage('Task Updated Successfully');
       })
       .catch((error) => {
@@ -50,7 +50,7 @@ const TaskStatus = ({ selectedTask, onUpdateSelectedTask }) => {
           return (
             <MenuItem
               key={status.type}
-              value={status.type}
+              value={status.id}
               sx={{
                 padding: 2,
                 cursor: 'pointer',

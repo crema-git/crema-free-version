@@ -1,10 +1,10 @@
 import React from 'react';
-import { momentLocalizer } from 'react-big-calendar';
+import { dayjsLocalizer } from 'react-big-calendar';
 import events from '../events';
-import moment from 'moment';
+import dayjs from 'dayjs';
 import { StyledCalendar } from '../calandar.style';
 
-const localizer = momentLocalizer(moment);
+const localizer = dayjsLocalizer(dayjs);
 
 const Timeslots = (props) => {
   return (
@@ -14,7 +14,7 @@ const Timeslots = (props) => {
       localizer={localizer}
       step={15}
       timeslots={8}
-      defaultView="week"
+      defaultView='week'
       defaultDate={new Date(2019, 10, 12)}
     />
   );

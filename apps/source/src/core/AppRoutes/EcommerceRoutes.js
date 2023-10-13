@@ -15,6 +15,16 @@ const Confirmation = React.lazy(() =>
 const Invoice1 = React.lazy(() => import('../../modules/ecommerce/Invoice1'));
 const Invoice2 = React.lazy(() => import('../../modules/ecommerce/Invoice2'));
 
+const ProductListing = React.lazy(() =>
+  import('../../modules/ecommerce/Admin/Listing'),
+);
+const AddProduct = React.lazy(() =>
+  import('../../modules/ecommerce/Admin/AddEditProduct'),
+);
+const EditProduct = React.lazy(() =>
+  import('../../modules/ecommerce/Admin/EditProduct'),
+);
+
 export const ecommerceConfig = [
   {
     permittedRole: RoutePermittedRole.User,
@@ -68,5 +78,20 @@ export const ecommerceConfig = [
     permittedRole: RoutePermittedRole.User,
     path: '/ecommerce/confirmation',
     element: <Confirmation />,
+  },
+  {
+    permittedRole: RoutePermittedRole.User,
+    path: '/ecommerce/product-listing',
+    element: <ProductListing />,
+  },
+  {
+    permittedRole: RoutePermittedRole.User,
+    path: '/ecommerce/add-products',
+    element: <AddProduct />,
+  },
+  {
+    permittedRole: RoutePermittedRole.User,
+    path: '/ecommerce/edit-products/:id',
+    element: <EditProduct />,
   },
 ];

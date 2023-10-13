@@ -16,6 +16,7 @@ const ThemeModes = () => {
   const { updateThemeMode } = useThemeActionsContext();
   const { updateSidebarColorSet } = useSidebarActionsContext();
   const { themeMode, theme } = useThemeContext();
+  console.log('themeMode: ', themeMode);
 
   const onModeChange = (event, themeMode) => {
     if (themeMode) {
@@ -44,23 +45,23 @@ const ThemeModes = () => {
 
   return (
     <CustomizerItemWrapper>
-      <Box component="h4" sx={{ mb: 2 }}>
-        <IntlMessages id="customizer.themeMode" />
+      <Box component='h4' sx={{ mb: 2 }}>
+        <IntlMessages id='customizer.themeMode' />
       </Box>
       <ToggleButtonGroup
         value={themeMode}
         exclusive
         onChange={onModeChange}
-        aria-label="text alignment"
+        aria-label='text alignment'
       >
         <StyledToggleButton
           value={ThemeMode.LIGHT}
           className={clsx({
             active: themeMode === ThemeMode.LIGHT,
           })}
-          aria-label="left aligned"
+          aria-label='left aligned'
         >
-          <IntlMessages id="customizer.light" />
+          <IntlMessages id='customizer.light' />
         </StyledToggleButton>
 
         <StyledToggleButton
@@ -70,9 +71,9 @@ const ThemeModes = () => {
               themeMode === ThemeMode.DARK ||
               theme.palette.type === ThemeMode.DARK,
           })}
-          aria-label="centered"
+          aria-label='centered'
         >
-          <IntlMessages id="customizer.dark" />
+          <IntlMessages id='customizer.dark' />
         </StyledToggleButton>
       </ToggleButtonGroup>
     </CustomizerItemWrapper>

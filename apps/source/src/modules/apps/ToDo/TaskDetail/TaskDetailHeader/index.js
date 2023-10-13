@@ -42,11 +42,11 @@ const TaskDetailHeader = (props) => {
   const onDeleteTask = () => {
     const task = selectedTask;
     task.folderValue = 126;
-    putDataApi('/api/todoApp/task/', infoViewActionsContext, {
+    putDataApi('/api/todo/task/', infoViewActionsContext, {
       task,
     })
       .then((data) => {
-        onUpdateSelectedTask(data[0]);
+        onUpdateSelectedTask(data);
         navigate(-1);
         infoViewActionsContext.showMessage('Task Deleted Successfully');
       })

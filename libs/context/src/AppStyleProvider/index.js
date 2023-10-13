@@ -5,11 +5,12 @@ import { CacheProvider } from '@emotion/react';
 import createCache from '@emotion/cache';
 import { useThemeContext } from '../AppContextProvider/ThemeContextProvider';
 import { LayoutDirection } from '@crema/constants/AppEnums';
+import { prefixer } from 'stylis';
 
 // Create rtl cache
 const cacheRtl = createCache({
   key: 'muirtl',
-  stylisPlugins: [rtlPlugin],
+  stylisPlugins: [prefixer, rtlPlugin],
 });
 
 const AppStyleProvider = (props) => {

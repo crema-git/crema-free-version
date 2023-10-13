@@ -142,6 +142,7 @@ export default ContactView;
 
 ContactView.defaultProps = {
   list: [],
+  pageView: 'list',
   checkedContacts: [],
 };
 

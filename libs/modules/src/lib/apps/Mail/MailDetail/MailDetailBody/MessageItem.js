@@ -10,7 +10,7 @@ import IconButton from '@mui/material/IconButton';
 import { IoArrowUndoOutline } from 'react-icons/io5';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import ForwardMail from './ForwardMail';
-import moment from 'moment';
+import dayjs from 'dayjs';
 import PropTypes from 'prop-types';
 import { BiChevronDown } from 'react-icons/bi';
 import renderHTML from 'react-render-html';
@@ -80,11 +80,11 @@ const MessageItem = ({
   };
 
   const onGetMailDate = (date) => {
-    return moment(date).format('ddd, MMM DD, YYYY');
+    return dayjs(date).format('ddd, MMM DD, YYYY');
   };
 
   const onGetMailTime = (date) => {
-    return moment(date).format('LT');
+    return dayjs(date).format('LT');
   };
 
   const getSenderName = () => {
@@ -121,22 +121,22 @@ const MessageItem = ({
         }}
       >
         <MailDescriptionItem>
-          <span className="mail-description-name">from:</span>
+          <span className='mail-description-name'>from:</span>
           <span>
             <strong>{message.sender.name}</strong>
             <span style={{ fontSize: 12 }}> {`<${message.sender.email}>`}</span>
           </span>
         </MailDescriptionItem>
         <MailDescriptionItem>
-          <span className="mail-description-name">reply-to:</span>
+          <span className='mail-description-name'>reply-to:</span>
           <span>{message.to[0].email}</span>
         </MailDescriptionItem>
         <MailDescriptionItem>
-          <span className="mail-description-name">date:</span>
+          <span className='mail-description-name'>date:</span>
           <span>{onGetMailDate()}</span>
         </MailDescriptionItem>
         <MailDescriptionItem>
-          <span className="mail-description-name">subject:</span>
+          <span className='mail-description-name'>subject:</span>
           <span>how you get new orders easily</span>
         </MailDescriptionItem>
       </Box>
@@ -157,7 +157,7 @@ const MessageItem = ({
           >
             <AppTooltip
               title={message.to.map((user) => user.name)}
-              placement="bottom"
+              placement='bottom'
             >
               <>
                 {`to ${message.to.map((user) => user.email).toString()}`}
@@ -237,7 +237,7 @@ const MessageItem = ({
             }}
           >
             <Typography
-              component="h3"
+              component='h3'
               sx={{
                 mb: 0.5,
                 color: (theme) => theme.palette.primary.main,
@@ -259,7 +259,7 @@ const MessageItem = ({
               )}
             </Typography>
             <Box
-              component="span"
+              component='span'
               sx={{
                 color: 'text.secondary',
                 wordBreak: 'break-all',
@@ -287,9 +287,9 @@ const MessageItem = ({
               justifyContent: { md: 'flex-end' },
             }}
           >
-            <Box component="span">{onGetMailDate(message.sentOn)}</Box>,
+            <Box component='span'>{onGetMailDate(message.sentOn)}</Box>,
             <Box
-              component="span"
+              component='span'
               sx={{
                 ml: 1,
               }}
@@ -304,7 +304,7 @@ const MessageItem = ({
                 mr: -3,
               }}
             >
-              <AppTooltip title={<IntlMessages id="common.starred" />}>
+              <AppTooltip title={<IntlMessages id='common.starred' />}>
                 <Checkbox
                   sx={{
                     color: (theme) => theme.palette.warning.main,
@@ -320,7 +320,7 @@ const MessageItem = ({
                 />
               </AppTooltip>
 
-              <AppTooltip title={<IntlMessages id="common.reply" />}>
+              <AppTooltip title={<IntlMessages id='common.reply' />}>
                 <IconButton
                   sx={{
                     padding: 1.75,
@@ -329,13 +329,13 @@ const MessageItem = ({
                     },
                   }}
                   onClick={onReplyToMail}
-                  size="large"
+                  size='large'
                 >
-                  <IoArrowUndoOutline className="pointer" />
+                  <IoArrowUndoOutline className='pointer' />
                 </IconButton>
               </AppTooltip>
 
-              <AppTooltip title={<IntlMessages id="common.more" />}>
+              <AppTooltip title={<IntlMessages id='common.more' />}>
                 <IconButton
                   sx={{
                     padding: 1.75,
@@ -343,9 +343,9 @@ const MessageItem = ({
                       fontSize: 22,
                     },
                   }}
-                  size="large"
+                  size='large'
                 >
-                  <MoreVertIcon className="pointer" />
+                  <MoreVertIcon className='pointer' />
                 </IconButton>
               </AppTooltip>
             </Box>

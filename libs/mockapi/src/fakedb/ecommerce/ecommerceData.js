@@ -1,3 +1,25 @@
+export const productCategory = [
+  {
+    id: 1,
+    name: 'Laptop',
+  },
+  {
+    id: 2,
+    name: 'Camera',
+  },
+  {
+    id: 3,
+    name: 'Headphone',
+  },
+  {
+    id: 4,
+    name: 'Watch',
+  },
+  {
+    id: 5,
+    name: 'Mobile',
+  },
+];
 export const brandData = [
   {
     id: 1,
@@ -101,7 +123,7 @@ export const cartItems = [
   {
     id: 1,
     title: "Mens's Exclusive Watch",
-    mrp: '120',
+    mrp: 120,
     discount: '25',
     brand: 'FastTrack',
     image: '/assets/images/ecommerce/watch1.png',
@@ -110,7 +132,7 @@ export const cartItems = [
   {
     id: 2,
     title: 'HP Pavilion Gaming Ryzen 7 Octa Core 4800H',
-    mrp: '1250',
+    mrp: 1250,
     discount: '20',
     brand: 'FastTrack',
     image: '/assets/images/ecommerce/item-2.png',
@@ -119,7 +141,7 @@ export const cartItems = [
   {
     id: 3,
     title: 'NIKON Z6 II Body Mirrorless Camera with 64GB SD Card',
-    mrp: '1199',
+    mrp: 1199,
     discount: '30',
     brand: 'FastTrack',
     image: '/assets/images/ecommerce/item-4.png',
@@ -127,13 +149,127 @@ export const cartItems = [
   },
 ];
 
+const productInfo = [
+  {
+    id: 1,
+    title: 'Sweat Proof',
+    desc: 'Yes',
+  },
+  {
+    id: 2,
+    title: 'Deep Bass',
+    desc: 'Yes',
+  },
+  {
+    id: 3,
+    title: 'Water Resistant',
+    desc: 'Yes',
+  },
+  {
+    id: 4,
+    title: 'Designed For',
+    desc: 'MOBILE, iPHONE, LAPTOP, ALL ANDRIOD PHONE',
+  },
+  {
+    id: 5,
+    title: 'Series',
+    desc: 'SH12',
+  },
+  {
+    id: 6,
+    title: 'System Requirements',
+    desc: 'BLUETOOTH',
+  },
+  {
+    id: 7,
+    title: 'Circumaural/ Supraaural',
+    desc: 'Circumaural',
+  },
+  {
+    id: 8,
+    title: 'Open/Closed Back',
+    desc: 'OPEN',
+  },
+  {
+    id: 9,
+    title: 'indicators',
+    desc: 'Connection Indicator, Power Indicator',
+  },
+  {
+    id: 10,
+    title: 'Controls',
+    desc: 'PLAY/PAUSE',
+  },
+  {
+    id: 11,
+    title: 'Theme',
+    desc: 'NA',
+  },
+  {
+    id: 12,
+    title: 'Total Harmonic Distortion',
+    desc: '0.%',
+  },
+  {
+    id: 13,
+    title: 'Number of Pins',
+    desc: '1',
+  },
+  {
+    id: 14,
+    title: 'With Microphone',
+    desc: 'Yes',
+  },
+];
+
+const productSpec = [
+  {
+    id: 1,
+    title: 'Brand',
+    desc: 'JBL',
+  },
+  {
+    id: 2,
+    title: 'Model Number',
+    desc: 'SH12',
+  },
+  {
+    id: 3,
+    title: 'Color',
+    desc: 'Red',
+  },
+  {
+    id: 4,
+    title: 'Headphone Type',
+    desc: 'Wireless over the head',
+  },
+  {
+    id: 5,
+    title: 'Inline Remote',
+    desc: 'No',
+  },
+  {
+    id: 6,
+    title: 'Sales Package',
+    desc: '1 SH12 HEADPHONE',
+  },
+  {
+    id: 7,
+    title: 'Connectivity',
+    desc: 'Bluetooth',
+  },
+];
+
 const ecommerceData = [
   {
     id: 2,
+    createdAt: '19 Dec 2022',
+    inStock: true,
+    category: 1,
     title: 'HP Pavilion Gaming Ryzen 7 Octa Core 4800H',
     description:
       'Microsoft Office 2019 Home and Student, HP Documentation, HP e-service, HP BIOS Recovery, HP SSRM, HP Smart, HP Jumpstarts, Dropbox, HP Audio Switch, HP Audio Boost',
-    mrp: '1250',
+    mrp: 1250,
     brand: 4,
     ideaFor: 3,
     discount: '20',
@@ -158,13 +294,19 @@ const ecommerceData = [
         src: '/assets/images/ecommerce/item-2.png',
       },
     ],
+    SKU: 'MB023',
+    productInfo,
+    productSpec,
   },
   {
     id: 3,
+    createdAt: '19 Dec 2022',
+    inStock: true,
+    category: 2,
     title: 'NIKON Z6 II Body Mirrorless Camera with 64GB SD Card',
     description:
       'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters',
-    mrp: '1199',
+    mrp: 1199,
     ideaFor: 4,
     brand: 1,
     discount: '30',
@@ -189,6 +331,9 @@ const ecommerceData = [
         src: '/assets/images/ecommerce/item-4.png',
       },
     ],
+    SKU: 'MB023',
+    productInfo,
+    productSpec,
   },
   {
     id: 4,
@@ -196,7 +341,10 @@ const ecommerceData = [
       'SONY WH-CH510 Google Assistant enabled Bluetooth Headset  (Black, On the Ear)',
     description:
       'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters',
-    mrp: '100',
+    mrp: 100,
+    createdAt: '19 Dec 2022',
+    inStock: true,
+    category: 3,
     discount: '35',
     rating: 4,
     ideaFor: 2,
@@ -221,13 +369,19 @@ const ecommerceData = [
         src: '/assets/images/ecommerce/item-3.png',
       },
     ],
+    SKU: 'MB023',
+    productInfo,
+    productSpec,
   },
   {
     id: 5,
     title: 'APPLE iPhone 12 (Blue, 64 GB)',
     description:
       'Super Retina XDR Display, 6.1 inch (Diagonal) All Screen OLED Display, HDR Display, True Tone, Wide Colour (P3), Haptic Touch, 2000000:1 Contrast Ratio (Typical)',
-    mrp: '820',
+    mrp: 820,
+    createdAt: '19 Dec 2022',
+    inStock: true,
+    category: 5,
     ideaFor: 1,
     brand: 1,
     discount: '25',
@@ -252,13 +406,19 @@ const ecommerceData = [
         src: '/assets/images/ecommerce/item-1.png',
       },
     ],
+    SKU: 'MB023',
+    productInfo,
+    productSpec,
   },
   {
     id: 6,
     title: 'HP Pavilion Gaming Ryzen 7 Octa Core 4800H',
     description:
       'Microsoft Office 2019 Home and Student, HP Documentation, HP e-service, HP BIOS Recovery, HP SSRM, HP Smart, HP Jumpstarts, Dropbox, HP Audio Switch, HP Audio Boost',
-    mrp: '1250',
+    mrp: 1250,
+    createdAt: '19 Dec 2022',
+    inStock: false,
+    category: 1,
     discount: '20',
     ideaFor: 3,
     brand: 3,
@@ -283,14 +443,20 @@ const ecommerceData = [
         src: '/assets/images/ecommerce/item-2.png',
       },
     ],
+    SKU: 'MB023',
+    productInfo,
+    productSpec,
   },
   {
     id: 7,
     title: 'NIKON Z6 II Body Mirrorless Camera with 64GB SD Card',
     description:
       'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters',
-    mrp: '1199',
+    mrp: 1199,
     ideaFor: 4,
+    createdAt: '19 Dec 2022',
+    inStock: true,
+    category: 2,
     brand: 2,
     discount: '30',
     rating: 4,
@@ -314,6 +480,9 @@ const ecommerceData = [
         src: '/assets/images/ecommerce/item-4.png',
       },
     ],
+    SKU: 'MB023',
+    productInfo,
+    productSpec,
   },
   {
     id: 8,
@@ -321,7 +490,10 @@ const ecommerceData = [
       'SONY WH-CH510 Google Assistant enabled Bluetooth Headset  (Black, On the Ear)',
     description:
       'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters',
-    mrp: '100',
+    mrp: 100,
+    createdAt: '19 Dec 2022',
+    inStock: true,
+    category: 3,
     discount: '35',
     ideaFor: 2,
     brand: 1,
@@ -346,14 +518,20 @@ const ecommerceData = [
         src: '/assets/images/ecommerce/item-3.png',
       },
     ],
+    SKU: 'MB023',
+    productInfo,
+    productSpec,
   },
   {
     id: 9,
     title: 'APPLE iPhone 12 (Blue, 64 GB)',
     description:
       'Super Retina XDR Display, 6.1 inch (Diagonal) All Screen OLED Display, HDR Display, True Tone, Wide Colour (P3), Haptic Touch, 2000000:1 Contrast Ratio (Typical)',
-    mrp: '820',
+    mrp: 820,
     discount: '25',
+    createdAt: '19 Dec 2022',
+    inStock: false,
+    category: 5,
     brand: 2,
     ideaFor: 1,
     rating: 5,
@@ -377,14 +555,20 @@ const ecommerceData = [
         src: '/assets/images/ecommerce/item-1.png',
       },
     ],
+    SKU: 'MB023',
+    productInfo,
+    productSpec,
   },
   {
     id: 1,
     title: "Mens's Exclusive Watch",
     description:
       'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters',
-    mrp: '120',
+    mrp: 120,
     discount: '25',
+    createdAt: '19 Dec 2022',
+    inStock: true,
+    category: 4,
     rating: 5,
     ideaFor: 1,
     brand: 1,
@@ -408,14 +592,20 @@ const ecommerceData = [
         src: '/assets/images/ecommerce/watch1.png',
       },
     ],
+    SKU: 'MB023',
+    productInfo,
+    productSpec,
   },
   {
     id: 10,
     title: 'HP Pavilion Gaming Ryzen 7 Octa Core 4800H',
     description:
       'Microsoft Office 2019 Home and Student, HP Documentation, HP e-service, HP BIOS Recovery, HP SSRM, HP Smart, HP Jumpstarts, Dropbox, HP Audio Switch, HP Audio Boost',
-    mrp: '1250',
+    mrp: 1250,
     discount: '20',
+    createdAt: '19 Dec 2022',
+    inStock: true,
+    category: 1,
     ideaFor: 2,
     brand: 3,
     rating: 4,
@@ -439,14 +629,20 @@ const ecommerceData = [
         src: '/assets/images/ecommerce/item-2.png',
       },
     ],
+    SKU: 'MB023',
+    productInfo,
+    productSpec,
   },
   {
     id: 11,
     title: 'NIKON Z6 II Body Mirrorless Camera with 64GB SD Card',
     description:
       'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters',
-    mrp: '1199',
+    mrp: 1199,
     discount: '30',
+    createdAt: '19 Dec 2022',
+    inStock: false,
+    category: 2,
     rating: 3,
     ideaFor: 3,
     brand: 2,
@@ -470,6 +666,9 @@ const ecommerceData = [
         src: '/assets/images/ecommerce/item-4.png',
       },
     ],
+    SKU: 'MB023',
+    productInfo,
+    productSpec,
   },
   {
     id: 12,
@@ -477,7 +676,10 @@ const ecommerceData = [
       'SONY WH-CH510 Google Assistant enabled Bluetooth Headset  (Black, On the Ear)',
     description:
       'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters',
-    mrp: '100',
+    mrp: 100,
+    createdAt: '19 Dec 2022',
+    inStock: true,
+    category: 3,
     discount: '35',
     rating: 4,
     ideaFor: 2,
@@ -502,6 +704,9 @@ const ecommerceData = [
         src: '/assets/images/ecommerce/item-3.png',
       },
     ],
+    SKU: 'MB023',
+    productInfo,
+    productSpec,
   },
 ];
 export const recentOrders = [

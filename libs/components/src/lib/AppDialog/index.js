@@ -10,7 +10,7 @@ import AppScrollbar from '../AppScrollbar';
 import { Fonts } from '@crema/constants/AppEnums';
 
 const Transition = React.forwardRef(function Transition(props, ref) {
-  return <Slide direction="up" ref={ref} {...props} />;
+  return <Slide direction='up' ref={ref} {...props} />;
 });
 
 const AppDialog = ({
@@ -23,6 +23,7 @@ const AppDialog = ({
   dividers,
   title,
   actionTitle,
+  maxScrollHeight,
   fullHeight,
 }) => {
   return (
@@ -48,12 +49,12 @@ const AppDialog = ({
           fontSize: 14,
           fontWeight: Fonts.MEDIUM,
         }}
-        id="app-dialog-title"
+        id='app-dialog-title'
       >
         {title}
         {hideClose ? null : (
           <IconButton
-            aria-label="close"
+            aria-label='close'
             sx={{
               position: 'absolute',
               right: 4,
@@ -61,7 +62,7 @@ const AppDialog = ({
               color: 'grey.500',
             }}
             onClick={onClose}
-            size="large"
+            size='large'
           >
             <CloseIcon />
           </IconButton>
@@ -73,7 +74,7 @@ const AppDialog = ({
             paddingTop: 1,
             height: fullHeight ? '70vh' : '100%',
             minHeight: '300px',
-            maxHeight: '400px',
+            maxHeight: maxScrollHeight ? maxScrollHeight : '400px',
             paddingRight: 6,
             paddingLeft: 6,
           }}
@@ -83,7 +84,7 @@ const AppDialog = ({
       </DialogContent>
       {actionTitle ? (
         <DialogActions>
-          <Button color="primary" variant="contained" type="submit">
+          <Button color='primary' variant='contained' type='submit'>
             {actionTitle}
           </Button>
         </DialogActions>
@@ -95,6 +96,7 @@ export default AppDialog;
 
 AppDialog.propTypes = {
   maxWidth: PropTypes.string,
+  maxScrollHeight: PropTypes.number,
   open: PropTypes.bool,
   onClose: PropTypes.func,
   children: PropTypes.node,

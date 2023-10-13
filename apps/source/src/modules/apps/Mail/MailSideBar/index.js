@@ -4,7 +4,6 @@ import Button from '@mui/material/Button';
 import List from '@mui/material/List';
 import IntlMessages from '@crema/helpers/IntlMessages';
 import AppScrollbar from '@crema/components/AppScrollbar';
-import ComposeMail from '../ComposeMail';
 import AppsSideBarFolderItem from '@crema/components/AppsSideBarFolderItem';
 import { Fonts } from '@crema/constants/AppEnums';
 import AppList from '@crema/components/AppList';
@@ -14,6 +13,7 @@ import AddIcon from '@mui/icons-material/Add';
 import { Zoom } from '@mui/material';
 import { ConnectionListItem, LabelItem } from '@crema/modules/apps/Mail';
 import { useMailContext } from '../../context/MailContextProvider';
+import ComposeMail from '../ComposeMail';
 
 const MailSidebar = () => {
   const { connectionList, labelList, folderList } = useMailContext();

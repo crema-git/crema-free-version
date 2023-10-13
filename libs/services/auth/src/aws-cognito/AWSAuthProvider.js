@@ -21,6 +21,7 @@ const AwsAuthProvider = ({
   children,
   fetchStart,
   fetchSuccess,
+  showMessage,
   fetchError,
 }) => {
   const [awsCognitoData, setAwsCognitoData] = useState({
@@ -91,7 +92,7 @@ const AwsAuthProvider = ({
       showMessage(
         'A code has been sent to your registered email address, Enter the code to complete the signup process!',
       );
-      navigate('/confirm-signup', { email: email });
+      navigate('/confirm-signup', { state: email });
     } catch (error) {
       setAwsCognitoData({
         user: null,
@@ -107,7 +108,9 @@ const AwsAuthProvider = ({
       await Auth.confirmSignUp(username, code, {
         forceAliasCreation: false,
       });
-      history.replace('/signin');
+      navigate('/signin', {
+        replace: true,
+      });
       showMessage(
         'Congratulations, Signup process is complete, You can now Sign in by entering correct credentials!',
       );
@@ -126,7 +129,9 @@ const AwsAuthProvider = ({
       await Auth.confirmSignUp(username, code, {
         forceAliasCreation: false,
       });
-      history.replace('/signin');
+      navigate('/signin', {
+        replace: true,
+      });
       showMessage(
         'Congratulations, Signup process is complete, You can now Sign in by entering correct credentials!',
       );

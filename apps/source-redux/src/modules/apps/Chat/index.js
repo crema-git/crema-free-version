@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react';
-import { ChatSideBar } from '@crema/modules/apps/Chat';
 import { useDispatch, useSelector } from 'react-redux';
 import { useIntl } from 'react-intl';
 import AppsContainer from '@crema/components/AppsContainer';
 import { getConnectionList, onSelectUser } from '../../../redux/actions';
 import ChatContent from './ChatContent';
+import ChatSideBar from './ChatSideBar';
 
 const Chat = () => {
   const selectedUser = useSelector(({ chatApp }) => chatApp.selectedUser);

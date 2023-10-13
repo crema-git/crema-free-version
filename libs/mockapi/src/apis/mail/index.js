@@ -87,17 +87,15 @@ mock.onPut('/api/mailApp/update/folder').reply((request) => {
 
 mock.onPut('/api/mailApp/update/label').reply((request) => {
   const { mailIds, type } = JSON.parse(request.data);
-  let labelType = 0;
   mailList = mailList.map((mail) => {
     if (mailIds.includes(mail.id)) {
-      labelType = mail.label.id;
       mail.label = type;
       return mail;
     } else {
       return mail;
     }
   });
-  return [200, mailList.filter((mail) => mail.label.id === labelType)];
+  return [200, mailList];
 });
 
 mock.onPut('/api/mailApp/mail/').reply((request) => {

@@ -1,31 +1,26 @@
 import React from 'react';
-import AppCard from '@crema/components/AppCard';
+import AppCard from "@crema/components/AppCard";
 import { Box, Typography } from '@mui/material';
 import PropTypes from 'prop-types';
+import {Fonts} from "@crema/constants";
 
 const HospitalStatics = ({ data }) => {
   const { bgColor, icon, value, name } = data;
+
   return (
     <AppCard
-      sxStyle={{
-        height: 1,
-        backgroundColor: bgColor,
-      }}
-      className="card-hover"
+      sxStyle={{ height: 1 }}
+      style={{ backgroundColor: bgColor }}
+      className='card-hover'
     >
-      <Box
-        sx={{
-          display: 'flex',
-          alignItems: 'center',
-        }}
-      >
+      <Box sx={{ display: 'flex', alignItems: 'center' }}>
         <Box
           sx={{
             mr: 4,
             alignSelf: 'flex-start',
           }}
         >
-          <img src={icon} alt="icon" />
+          <img src={icon} alt='icon' />
         </Box>
         <Box
           sx={{
@@ -33,21 +28,22 @@ const HospitalStatics = ({ data }) => {
           }}
         >
           <Typography
-            component="h5"
-            variant="inherit"
-            color="inherit"
+            component='h5'
+            variant='inherit'
             sx={{
-              fontSize: 16,
               overflow: 'hidden',
               textOverflow: 'ellipsis',
               whiteSpace: 'nowrap',
               width: '100%',
+              fontSize: 16,
+              color: 'inherit',
+              fontWeight: Fonts.SEMI_BOLD,
             }}
           >
             {value}
           </Typography>
           <Box
-            component="p"
+            component='p'
             sx={{
               pt: 0.5,
               color: 'text.secondary',

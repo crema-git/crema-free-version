@@ -78,11 +78,11 @@ const AddContactForm = (props) => {
   const { messages } = useIntl();
 
   return (
-    <Form noValidate autoComplete="off">
+    <Form noValidate autoComplete='off'>
       <HeaderWrapper>
         <div {...getRootProps({ className: 'dropzone' })}>
           <input {...getInputProps()} />
-          <label htmlFor="icon-button-file">
+          <label htmlFor='icon-button-file'>
             <AvatarViewWrapper>
               <Avatar
                 sx={{
@@ -91,14 +91,14 @@ const AddContactForm = (props) => {
                 }}
                 src={userImage ? userImage : ''}
               />
-              <Box className="edit-icon">
+              <Box className='edit-icon'>
                 <EditIcon />
               </Box>
             </AvatarViewWrapper>
           </label>
         </div>
         {values.name ? (
-          <Box component="h4" fontWeight={Fonts.SEMI_BOLD} mt={2}>
+          <Box component='h4' fontWeight={Fonts.SEMI_BOLD} mt={2}>
             {values.name}
           </Box>
         ) : null}
@@ -121,14 +121,14 @@ const AddContactForm = (props) => {
           }}
         >
           <Box
-            component="h6"
+            component='h6'
             sx={{
               mb: { xs: 4, xl: 6 },
               fontSize: 14,
               fontWeight: Fonts.SEMI_BOLD,
             }}
           >
-            <IntlMessages id="contactApp.personalDetails" />
+            <IntlMessages id='contactApp.personalDetails' />
           </Box>
 
           <div>
@@ -137,9 +137,9 @@ const AddContactForm = (props) => {
                 width: '100%',
                 mb: { xs: 4, xl: 6 },
               }}
-              variant="outlined"
-              label={<IntlMessages id="common.name" />}
-              name="name"
+              variant='outlined'
+              label={<IntlMessages id='common.name' />}
+              name='name'
             />
 
             <AppTextField
@@ -147,9 +147,9 @@ const AddContactForm = (props) => {
                 width: '100%',
                 mb: { xs: 4, xl: 6 },
               }}
-              variant="outlined"
-              label={<IntlMessages id="common.email" />}
-              name="email"
+              variant='outlined'
+              label={<IntlMessages id='common.email' />}
+              name='email'
             />
 
             <AppTextField
@@ -157,9 +157,9 @@ const AddContactForm = (props) => {
                 width: '100%',
                 mb: { xs: 4, xl: 6 },
               }}
-              variant="outlined"
-              label={<IntlMessages id="common.phone" />}
-              name="contact"
+              variant='outlined'
+              label={<IntlMessages id='common.phone' />}
+              name='contact'
             />
             <AppGridContainer spacing={5}>
               <Grid item xs={12} md={6}>
@@ -170,29 +170,26 @@ const AddContactForm = (props) => {
                     width: '100%',
                     mb: { xs: 4, xl: 6 },
                   }}
-                  format="MM/DD/YYYY"
-                  variant="outlined"
-                  inputVariant="outlined"
-                  label={<IntlMessages id="common.birthday" />}
-                  name="birthday"
+                  label={<IntlMessages id='common.birthday' />}
+                  name='birthday'
                   value={values.birthday}
                   onChange={(value) => setFieldValue('birthday', value)}
                 />
               </Grid>
               <Grid item xs={12} md={6}>
                 <FormControl
-                  variant="outlined"
+                  variant='outlined'
                   sx={{
                     width: '100%',
                   }}
                 >
-                  <InputLabel id="label-select-outlined-label">
-                    <IntlMessages id="common.selectLabel" />
+                  <InputLabel id='label-select-outlined-label'>
+                    <IntlMessages id='common.selectLabel' />
                   </InputLabel>
                   <Field
-                    name="label"
-                    label={<IntlMessages id="common.selectLabel" />}
-                    labelId="label-select-outlined-label"
+                    name='label'
+                    label={<IntlMessages id='common.selectLabel' />}
+                    labelId='label-select-outlined-label'
                     as={Select}
                     sx={{
                       width: '100%',
@@ -221,9 +218,9 @@ const AddContactForm = (props) => {
               sx={{
                 width: '100%',
               }}
-              variant="outlined"
-              label={<IntlMessages id="common.website" />}
-              name="website"
+              variant='outlined'
+              label={<IntlMessages id='common.website' />}
+              name='website'
             />
           </div>
         </Box>
@@ -238,14 +235,14 @@ const AddContactForm = (props) => {
           }}
         >
           <Box
-            component="h6"
+            component='h6'
             sx={{
               mb: { xs: 4, xl: 6 },
               fontSize: 14,
               fontWeight: Fonts.SEMI_BOLD,
             }}
           >
-            <IntlMessages id="common.otherDetails" />
+            <IntlMessages id='common.otherDetails' />
           </Box>
 
           <div>
@@ -254,18 +251,18 @@ const AddContactForm = (props) => {
                 width: '100%',
                 mb: { xs: 4, xl: 6 },
               }}
-              variant="outlined"
-              label={<IntlMessages id="common.company" />}
-              name="company"
+              variant='outlined'
+              label={<IntlMessages id='common.company' />}
+              name='company'
             />
 
             <AppTextField
               sx={{
                 width: '100%',
               }}
-              variant="outlined"
-              label={<IntlMessages id="common.address" />}
-              name="address"
+              variant='outlined'
+              label={<IntlMessages id='common.address' />}
+              name='address'
             />
           </div>
         </Box>
@@ -280,14 +277,14 @@ const AddContactForm = (props) => {
           }}
         >
           <Box
-            component="h6"
+            component='h6'
             sx={{
               mb: { xs: 4, xl: 6 },
               fontSize: 14,
               fontWeight: Fonts.SEMI_BOLD,
             }}
           >
-            <IntlMessages id="common.socialMedia" />
+            <IntlMessages id='common.socialMedia' />
           </Box>
 
           <div>
@@ -296,42 +293,42 @@ const AddContactForm = (props) => {
                 width: '100%',
                 mb: { xs: 4, xl: 6 },
               }}
-              variant="outlined"
-              label={<IntlMessages id="common.facebookId" />}
-              name="facebookId"
+              variant='outlined'
+              label={<IntlMessages id='common.facebookId' />}
+              name='facebookId'
             />
 
             <AppTextField
               sx={{
                 width: '100%',
               }}
-              variant="outlined"
-              label={<IntlMessages id="common.twitterId" />}
-              name="twitterId"
+              variant='outlined'
+              label={<IntlMessages id='common.twitterId' />}
+              name='twitterId'
             />
           </div>
         </Box>
 
         <div>
           <Box
-            component="h6"
+            component='h6'
             sx={{
               mb: { xs: 4, xl: 6 },
               fontSize: 14,
               fontWeight: Fonts.SEMI_BOLD,
             }}
           >
-            <IntlMessages id="common.notes" />
+            <IntlMessages id='common.notes' />
           </Box>
 
           <AppTextField
-            name="notes"
+            name='notes'
             multiline
             sx={{
               width: '100%',
             }}
-            rows="4"
-            variant="outlined"
+            rows='4'
+            variant='outlined'
             placeholder={messages['common.notes']}
           />
         </div>
@@ -349,11 +346,11 @@ const AddContactForm = (props) => {
             position: 'relative',
             minWidth: 100,
           }}
-          color="primary"
-          variant="outlined"
-          type="submit"
+          color='primary'
+          variant='outlined'
+          type='submit'
         >
-          <IntlMessages id="common.save" />
+          <IntlMessages id='common.save' />
         </Button>
       </Box>
     </Form>

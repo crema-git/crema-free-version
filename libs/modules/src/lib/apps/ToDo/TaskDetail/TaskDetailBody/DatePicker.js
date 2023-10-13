@@ -1,10 +1,8 @@
 import React from 'react';
 import { DatePicker } from '@mui/x-date-pickers';
 import IntlMessages from '@crema/helpers/IntlMessages';
-import moment from 'moment';
 import Box from '@mui/material/Box';
 import PropTypes from 'prop-types';
-import { TextField } from '@mui/material';
 
 const AppDatePicker = ({ date, setDate }) => {
   return (
@@ -15,18 +13,9 @@ const AppDatePicker = ({ date, setDate }) => {
       }}
     >
       <DatePicker
-        autoOk
-        format="YYYY/MM/DD"
-        variant="inline"
-        inputVariant="outlined"
-        label={<IntlMessages id="common.startDate" />}
-        name="date"
-        sx={{
-          marginTop: 0,
-        }}
+        label={<IntlMessages id='common.startDate' />}
         value={date}
-        renderInput={(params) => <TextField {...params} />}
-        onChange={(value) => setDate(moment(value).format('lll'))}
+        onChange={(newValue) => setDate(newValue)}
       />
     </Box>
   );

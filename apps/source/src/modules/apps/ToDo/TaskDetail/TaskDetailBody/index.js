@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import Divider from '@mui/material/Divider';
 import Button from '@mui/material/Button';
-import moment from 'moment';
 import { alpha } from '@mui/material';
 import Box from '@mui/material/Box';
 import { useIntl } from 'react-intl';
@@ -27,6 +26,7 @@ import {
   TodoDatePicker,
 } from '@crema/modules/apps/ToDo';
 import { useTodoContext } from '../../../context/TodoContextProvider';
+import { getDateObject, getFormattedDate } from '@crema/helpers';
 
 const TaskDetailBody = (props) => {
   const { selectedTask, onUpdateSelectedTask } = props;
@@ -42,7 +42,7 @@ const TaskDetailBody = (props) => {
   const [comment, setComment] = useState('');
 
   const [scheduleDate, setScheduleDate] = useState(
-    moment(selectedTask.startDate).format('YYYY/MM/DD'),
+    getDateObject(selectedTask.startDate),
   );
 
   const [selectedStaff, setStaff] = useState(selectedTask.assignedTo);
@@ -54,13 +54,13 @@ const TaskDetailBody = (props) => {
   const onDoneEditing = () => {
     const task = selectedTask;
     task.content = content;
-    task.startDate = scheduleDate;
+    task.startDate = getFormattedDate(scheduleDate);
     task.assignedTo = selectedStaff;
-    putDataApi('/api/todoApp/task/', infoViewActionsContext, {
+    putDataApi('/api/todo/task/', infoViewActionsContext, {
       task,
     })
       .then((data) => {
-        onUpdateSelectedTask(data[0]);
+        onUpdateSelectedTask(data);
         setEdit(!isEdit);
         infoViewActionsContext.showMessage('Task Updated Successfully');
       })
@@ -75,13 +75,13 @@ const TaskDetailBody = (props) => {
       comment: comment,
       name: user.displayName ? user.displayName : 'User',
       image: user.photoURL,
-      date: moment().format('ll'),
+      date: getDateObject().format('ll'),
     });
-    putDataApi('/api/todoApp/task/', infoViewActionsContext, {
+    putDataApi('/api/todo/task/', infoViewActionsContext, {
       task,
     })
       .then((data) => {
-        onUpdateSelectedTask(data[0]);
+        onUpdateSelectedTask(data);
         infoViewActionsContext.showMessage('Task Updated Successfully');
       })
       .catch((error) => {
@@ -172,11 +172,7 @@ const TaskDetailBody = (props) => {
                   handleStaffChange={handleStaffChange}
                 />
               </Box>
-              <TodoDatePicker
-                date={scheduleDate}
-                setDate={setScheduleDate}
-                renderInput={(params) => <TextField {...params} />}
-              />
+              <TodoDatePicker date={scheduleDate} setDate={setScheduleDate} />
             </>
           ) : (
             <AssignedStaff assignedStaff={selectedTask.assignedTo} />
@@ -295,7 +291,8 @@ const TaskDetailBody = (props) => {
               padding: '10px 15px',
             },
           }}
-          rows='1'
+          minRows={2}
+          maxRows={4}
           variant='outlined'
           placeholder={messages['common.writeComment']}
           value={comment}

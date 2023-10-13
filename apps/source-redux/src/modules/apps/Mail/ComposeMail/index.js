@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Form, Formik } from 'formik';
 import * as yup from 'yup';
-import moment from 'moment';
+import dayjs from 'dayjs';
 import Chip from '@mui/material/Chip';
 import IntlMessages from '@crema/helpers/IntlMessages';
 import { useIntl } from 'react-intl';
@@ -21,6 +21,7 @@ import AppInfoView from '@crema/components/AppInfoView';
 import { useDispatch } from 'react-redux';
 import { onComposeMail } from '../../../../redux/actions';
 import { useLocation } from 'react-router-dom';
+import { generateRandomUniqueNumber } from '@crema/helpers';
 
 const ReactQuillWrapper = styled(ReactQuill)(() => {
   return {
@@ -113,7 +114,7 @@ const ComposeMail = (props) => {
         validationSchema={validationSchema}
         onSubmit={(data, { setSubmitting, resetForm }) => {
           const mail = {
-            id: Math.floor(Math.random()) * 1000,
+            id: generateRandomUniqueNumber(),
             isChecked: false,
             isStarred: false,
             label: {
@@ -126,14 +127,15 @@ const ComposeMail = (props) => {
             hasAttachments: false,
             isRead: true,
             folderValue: 122,
-            sentOn: moment().format('llll'),
+            sentOn: dayjs().format('llll'),
             messages: [
               {
                 messageId: 1,
                 sender: {
+                  id: user.id,
                   name: user.displayName ? user.displayName : user.username,
-                  email: user.username,
-                  profilePic: '',
+                  email: user.email,
+                  profilePic: user.photoURL ? user.photoURL : '',
                 },
                 to: [
                   {

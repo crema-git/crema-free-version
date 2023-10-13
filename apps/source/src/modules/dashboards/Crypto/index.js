@@ -4,14 +4,16 @@ import AppGridContainer from '@crema/components/AppGridContainer';
 import AppAnimate from '@crema/components/AppAnimate';
 import { useGetDataApi } from '@crema/hooks/APIHooks';
 import {
-  Bitcoin,
-  BtcVolumeCurrency,
+  ATCStatics,
   BuySell,
+  CardDetails,
   Coins,
-  CryptoMarketActivity,
-  LatestNews,
-  PopularCoins,
+  GainerLooser,
+  OrdersActivities,
+  QuickTransfer,
+  TopStories,
   TotalBalance,
+  TradingChart,
 } from '@crema/modules/dashboards/Crypto';
 import AppLoader from '@crema/components/AppLoader';
 
@@ -32,31 +34,31 @@ const Crypto = () => {
             <Grid item xs={12} md={7}>
               <Coins coinsData={cryptoData.coinsData} />
             </Grid>
-
-            <Grid item xs={12} md={8}>
-              <Bitcoin coinGraphData={cryptoData.coinGraphData} />
+            <Grid item xs={12} md={8} lg={9}>
+              <TradingChart />
             </Grid>
-
-            <Grid item xs={12} md={4}>
+            <Grid item xs={12} md={4} lg={3}>
               <BuySell buySell={cryptoData.buySell} />
             </Grid>
-
-            <Grid item xs={12} md={4}>
-              <BtcVolumeCurrency data={cryptoData.btcChartData} />
-            </Grid>
-
-            <Grid item xs={12} md={8}>
-              <PopularCoins popularCoins={cryptoData.popularCoins} />
-            </Grid>
-
-            <Grid item xs={12} md={6}>
-              <LatestNews newsData={cryptoData.newsData} />
-            </Grid>
-
-            <Grid item xs={12} md={6}>
-              <CryptoMarketActivity
-                marketGraphData={cryptoData.marketGraphData}
+            <Grid item xs={12} md={6} lg={8}>
+              <OrdersActivities
+                ordersActivities={cryptoData.ordersActivities}
               />
+            </Grid>
+            <Grid item xs={12} md={6} lg={4}>
+              <TopStories stories={cryptoData.stories} />
+            </Grid>
+            <Grid item xs={12} md={6}>
+              <GainerLooser data={cryptoData.gainerLooser} />
+            </Grid>
+            <Grid item xs={12} md={6}>
+              <ATCStatics data={cryptoData.atcStatics} />
+            </Grid>
+            <Grid item xs={12} md={6}>
+              <CardDetails cardDetails={cryptoData.cardDetails} />
+            </Grid>
+            <Grid item xs={12} md={6}>
+              <QuickTransfer quickTransfer={cryptoData.quickTransfer} />
             </Grid>
           </AppGridContainer>
         </AppAnimate>

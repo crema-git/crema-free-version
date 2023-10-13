@@ -13,7 +13,7 @@ import AppGrid from '../../AppGrid';
 const ThemeColors = () => {
   const { theme } = useThemeContext();
 
-  const { updateTheme } = useThemeActionsContext();
+  const { updateTheme, updateThemeMode } = useThemeActionsContext();
 
   const updateThemeColors = (colorSet) => {
     theme.palette.primary.main = colorSet.primary.main;
@@ -22,11 +22,12 @@ const ThemeColors = () => {
     theme.palette.mode = colorSet.mode;
     theme.palette.text = colorSet.text;
     updateTheme({ ...theme });
+    updateThemeMode(colorSet.mode);
   };
   return (
     <CustomizerItemWrapper>
-      <Box component="h4" sx={{ mb: 2 }}>
-        <IntlMessages id="customizer.themeColors" />
+      <Box component='h4' sx={{ mb: 2 }}>
+        <IntlMessages id='customizer.themeColors' />
       </Box>
       <Box mt={4}>
         <AppGrid

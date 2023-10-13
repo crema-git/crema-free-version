@@ -71,6 +71,12 @@ const analyticsData = {
       type: 'Commissions',
       icon: '/assets/images/dashboard/commission_sale.svg',
     },
+    // {
+    //   id: 5,
+    //   amount: '3510',
+    //   type: 'Invoices',
+    //   icon: '/assets/images/dashboard/icon_revenue.svg',
+    // },
   ],
 
   salesChartData: [

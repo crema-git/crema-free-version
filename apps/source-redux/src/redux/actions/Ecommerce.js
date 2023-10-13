@@ -11,6 +11,8 @@ import {
   SET_PRODUCT_DATA,
   SET_PRODUCT_VIEW_TYPE,
   UPDATE_CART_ITEM,
+  ADD_PRODUCT_ITEM,
+  UPDATE_PRODUCT_ITEM,
 } from '@crema/constants/ActionTypes';
 import jwtAxios from '@crema/services/auth/JWT';
 
@@ -125,6 +127,51 @@ export const getCartItems = () => {
     //     .catch((error) => {
     //       dispatch({type: FETCH_ERROR, payload: error.message});
     //     });
+  };
+};
+
+export const onCreateProduct = (product) => {
+  return (dispatch) => {
+    dispatch({ type: FETCH_START });
+    jwtAxios
+      .post('/api/ecommerce/list/add', { product })
+      .then((data) => {
+        if (data.status === 200) {
+          console.log('onCreateProduct', data.data);
+          dispatch({ type: FETCH_SUCCESS });
+          dispatch({ type: ADD_PRODUCT_ITEM, payload: data.data });
+        } else {
+          dispatch({
+            type: FETCH_ERROR,
+            payload: 'Something went wrong, Please try again!',
+          });
+        }
+      })
+      .catch((error) => {
+        dispatch({ type: FETCH_ERROR, payload: error.message });
+      });
+  };
+};
+
+export const onUpdateProduct = (product) => {
+  return (dispatch) => {
+    dispatch({ type: FETCH_START });
+    jwtAxios
+      .put('/api/ecommerce/list/update', { product })
+      .then((data) => {
+        if (data.status === 200) {
+          dispatch({ type: FETCH_SUCCESS });
+          dispatch({ type: UPDATE_PRODUCT_ITEM, payload: data.data });
+        } else {
+          dispatch({
+            type: FETCH_ERROR,
+            payload: 'Something went wrong, Please try again!',
+          });
+        }
+      })
+      .catch((error) => {
+        dispatch({ type: FETCH_ERROR, payload: error.message });
+      });
   };
 };
 

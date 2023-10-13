@@ -13,14 +13,14 @@ const TrafficRaiseGraph = ({ data }) => {
         },
       }}
     >
-      <ResponsiveContainer height={200} className="containerGraph">
+      <ResponsiveContainer height={200} className='containerGraph'>
         <LineChart data={data}>
           <Line
-            type="monotone"
-            dataKey="traffic"
-            stroke="#4299E1"
-            strokeWidth={4}
-            dot={{ r: 4 }}
+            type='monotone'
+            dataKey='traffic'
+            stroke='#4299E1'
+            strokeWidth={2}
+            dot={{ r: 0 }}
           />
         </LineChart>
       </ResponsiveContainer>

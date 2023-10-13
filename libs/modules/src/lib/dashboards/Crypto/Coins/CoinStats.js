@@ -15,7 +15,7 @@ const CoinStats = (props) => {
         borderRadius: (theme) =>
           theme.components.MuiCard.styleOverrides.root.borderRadius / 4,
       }}
-      className="card-hover"
+      className='card-hover'
     >
       <Box
         sx={{
@@ -26,13 +26,13 @@ const CoinStats = (props) => {
         <Avatar
           sx={{
             p: 3,
-            fontSize: { xs: 30, md: 48 },
-            height: { xs: 46, md: 50, xl: 60 },
-            width: { xs: 46, md: 50, xl: 60 },
+            fontSize: { xs: 30, md: 42 },
+            height: { xs: 44, md: 48, xl: 52 },
+            width: { xs: 44, md: 48, xl: 52 },
             backgroundColor: bgColor,
           }}
         >
-          <img alt="" src={icon} />
+          <img alt='' src={icon} />
         </Avatar>
 
         <Box
@@ -42,35 +42,46 @@ const CoinStats = (props) => {
           }}
         >
           <Box
-            component="p"
+            component='p'
             sx={{
               fontSize: 14,
               color: 'text.secondary',
-              mb: 2,
+              // mb: 2,
             }}
           >
             {heading}
           </Box>
           <Box
-            component="h3"
+            component='h3'
             sx={{
               display: 'inline-block',
               fontWeight: Fonts.MEDIUM,
-              fontSize: 17,
+              fontSize: 18,
               mr: 3,
             }}
           >
             ${data.price}
           </Box>
+        </Box>
+        <Box sx={{ ml: 'auto' }}>
           <Box
-            component="span"
+            component='p'
             sx={{
               fontSize: 16,
               fontWeight: Fonts.MEDIUM,
               color: data.increment > 0.0 ? green[500] : red[500],
+              textAlign: 'right',
             }}
           >
             {data.increment}%
+          </Box>
+          <Box
+            sx={{
+              fontSize: 14,
+              color: 'text.secondary',
+            }}
+          >
+            vs last 30 days
           </Box>
         </Box>
       </Box>

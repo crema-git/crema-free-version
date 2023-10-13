@@ -2,9 +2,10 @@ import React from 'react';
 import Box from '@mui/material/Box';
 import Avatar from '@mui/material/Avatar';
 import PropTypes from 'prop-types';
-import { Fonts } from '@crema/constants/AppEnums';
+import {Fonts} from "@crema/constants";
+import {Typography} from '@mui/material';
 
-const AppointmentCell = ({ appointment }) => {
+const AppointmentCell = ({appointment}) => {
   return (
     <Box
       sx={{
@@ -12,23 +13,24 @@ const AppointmentCell = ({ appointment }) => {
         alignItems: 'center',
         padding: '8px 20px',
       }}
-      className="item-hover"
+      className='item-hover'
     >
-      <Avatar
-        sx={{
-          mr: 4,
-          width: 48,
-          height: 48,
-        }}
-        src={appointment.profile_pic}
-      />
+      <Box sx={{mr: 4}}>
+        <Avatar
+          sx={{
+            width: 48,
+            height: 48,
+          }}
+          src={appointment.profile_pic}
+        />
+      </Box>
       <Box
         sx={{
           fontSize: 14,
         }}
       >
         <Box
-          component="h5"
+          component='h5'
           sx={{
             fontWeight: Fonts.MEDIUM,
             mb: 0.5,
@@ -36,12 +38,7 @@ const AppointmentCell = ({ appointment }) => {
         >
           {appointment.name}
         </Box>
-        <Box
-          component="p"
-          sx={{
-            color: 'primary.main',
-          }}
-        >
+        <Box component='p' sx={{color: 'primary.main'}}>
           {appointment.speciality}
         </Box>
       </Box>
@@ -54,7 +51,7 @@ const AppointmentCell = ({ appointment }) => {
         }}
       >
         <Box
-          component="p"
+          component='p'
           sx={{
             color: 'primary.main',
             my: 1,
@@ -64,7 +61,7 @@ const AppointmentCell = ({ appointment }) => {
         >
           {appointment.appointmentTime}
         </Box>
-        <Box component="p">{appointment.appointmentDate}</Box>
+        <Typography>{appointment.appointmentDate}</Typography>
       </Box>
     </Box>
   );

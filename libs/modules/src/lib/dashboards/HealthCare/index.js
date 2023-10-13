@@ -1,4 +1,5 @@
 import DrCard from './DrCard';
+import Activities from './Activities';
 import HealthStatics from './HealthStatics';
 import NewPatients from './NewPatients';
 import CancelVisits from './CancelVisits';
@@ -15,6 +16,7 @@ import HeartRate from './HeartRate';
 import YourActivity from './YourActivity';
 
 export {
+  Activities,
   DrCard,
   HealthStatics,
   NewPatients,

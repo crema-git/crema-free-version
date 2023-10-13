@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import React from 'react';
 import { GoogleMap, withGoogleMap } from 'react-google-maps';
 import DrawingManager from 'react-google-maps/lib/components/drawing/DrawingManager';
@@ -57,9 +58,9 @@ const DrawingExampleGoogleMap = withGoogleMap(() => (
 const DrawingView = () => (
   <DrawingExampleGoogleMap
     containerElement={
-      <div className="cr-embed-responsive cr-embed-responsive-21by9" />
+      <div className='cr-embed-responsive cr-embed-responsive-21by9' />
     }
-    mapElement={<div className="cr-embed-responsive-item" />}
+    mapElement={<div className='cr-embed-responsive-item' />}
   />
 );
 export default DrawingView;

@@ -124,6 +124,8 @@ export const SET_PRODUCT_DATA = 'set_product_data';
 export const GET_RECENT_ORDER = 'get_recent_order';
 export const GET_CUSTOMERS = 'get_customers';
 export const ADD_CART_ITEM = 'add_cart_item';
+export const ADD_PRODUCT_ITEM = 'add_product_item';
+export const UPDATE_PRODUCT_ITEM = 'update_product_item';
 export const REMOVE_CART_ITEM = 'remove_cart_item';
 export const UPDATE_CART_ITEM = 'update_cart_item';
 export const SET_CART_ITEMS = 'set_cart_items';
@@ -144,3 +146,22 @@ export const UPDATE_CUSTOM_DATA = 'update_custom_data';
 
 //GALLERY
 export const GET_GALLERY_PHOTO = 'get_gallery_photo';
+
+// BLOGS
+export const GET_BLOGS_LIST = 'get_blogs_list';
+export const GET_BLOGS_DETAIL = 'get_blogs_detail';
+export const ADD_NEW_BLOG = 'add_new_blog';
+export const EDIT_BLOG = 'edit_blog';
+
+// INVOICE
+export const GET_INVOICE_LIST = 'get_invoice_list';
+export const GET_INVOICE_DETAIL = 'get_invoice_detail';
+export const GET_CLIENT_DETAIL = 'get_client_detail';
+export const GET_INVOICE_FOLDER_LIST = 'get_invoice_folder_list';
+export const GET_INVOICE_SETTINGS = 'get_invoice_settings';
+export const GET_CLIENT_LIST = 'get_client_list';
+export const ADD_NEW_CLIENTS = 'add_new_clients';
+export const UPDATE_CLIENTS = 'update_clients';
+export const ADD_NEW_INVOICE = 'add_new_invoice';
+export const UPDATE_INVOICE_SETTINGS = 'update_invoice_settings';
+export const UPDATE_INVOICE = 'update_invoice';

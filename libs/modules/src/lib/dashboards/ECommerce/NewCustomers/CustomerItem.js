@@ -30,8 +30,8 @@ const CustomerItem = ({ item }) => {
       <Avatar
         sx={{
           mr: 4,
-          width: 48,
-          height: 48,
+          width: 42,
+          height: 42,
         }}
         src={item.image}
       />

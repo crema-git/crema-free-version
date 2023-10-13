@@ -3,7 +3,7 @@ import AppGridContainer from '@crema/components/AppGridContainer';
 import Grid from '@mui/material/Grid';
 import IntlMessages from '@crema/helpers/IntlMessages';
 import Box from '@mui/material/Box';
-import { blue, green, grey, indigo, red } from '@mui/material/colors';
+import { blue, grey, indigo, red } from '@mui/material/colors';
 import { Fonts } from '@crema/constants/AppEnums';
 import AppAnimate from '@crema/components/AppAnimate';
 import { useIntl } from 'react-intl';
@@ -13,15 +13,10 @@ import {
   EarningInMonth,
   FloatingGraphs,
   MetricTitleLineGraphCard,
-  Orders,
   ProfileViews,
   Sales,
-  Share,
-  SocialDataCard,
   SocialVisitors,
   Stats,
-  StatsCard,
-  StatsCardSecond,
   StatsCardWithGraph,
   Subscriptions,
   Visits,
@@ -30,6 +25,13 @@ import {
 } from '@crema/modules/dashboards/Metrics';
 import { useDispatch, useSelector } from 'react-redux';
 import { onGetMetricsData } from '../../../toolkit/actions';
+import {
+  StatsDirCard,
+  StatsItemCard,
+} from '@crema/modules/dashboards/CommonComponents';
+import { ReportCard } from '@crema/modules/dashboards/ECommerce';
+import { VisitorPageView } from '@crema/modules/dashboards/Analytics';
+import { HeartRate, YourActivity } from '@crema/modules/dashboards/HealthCare';
 
 const Metrics = () => {
   const dispatch = useDispatch();
@@ -57,42 +59,49 @@ const Metrics = () => {
         </Box>
 
         <AppGridContainer>
-          <Grid item xs={12} sm={6} md={3}>
-            <StatsCard
-              text={messages['dashboard.ordersThisYear']}
-              value={metricsData.ordersThisYear}
-              bgColor={red[500]}
-              icon={'/assets/images/metricsIcons/order.svg'}
+          {metricsData.metricsStats.map((item, index) => (
+            <Grid item xs={12} sm={6} lg={3} key={index}>
+              <StatsItemCard stats={item} />
+            </Grid>
+          ))}
+
+          {metricsData.stateData.map((data) => (
+            <Grid key={data.id} item xs={12} sm={6} lg={3}>
+              <StatsDirCard data={data} />
+            </Grid>
+          ))}
+          {metricsData.reportData.map((data) => (
+            <Grid key={data.id} item xs={12} sm={6} lg={3}>
+              <ReportCard data={data} />
+            </Grid>
+          ))}
+          <Grid item xs={12} md={3}>
+            <FloatingGraphs
+              title={messages['dashboard.sales']}
+              data={metricsData.metricsFloatingGraphData.salesData}
             />
           </Grid>
 
-          <Grid item xs={12} sm={6} md={3}>
-            <StatsCard
-              text={messages['dashboard.revenueThisYear']}
-              value={metricsData.revenueThisYear}
-              bgColor={blue[300]}
-              icon={'/assets/images/metricsIcons/revenue.svg'}
+          <Grid item xs={12} md={3}>
+            <FloatingGraphs
+              title={messages['dashboard.clients']}
+              data={metricsData.metricsFloatingGraphData.clientsData}
             />
           </Grid>
 
-          <Grid item xs={12} sm={6} md={3}>
-            <StatsCard
-              text={messages['dashboard.visitsThisYear']}
-              value={metricsData.visitsThisYear}
-              bgColor={indigo[400]}
-              icon={'/assets/images/metricsIcons/visits.svg'}
+          <Grid item xs={12} md={3}>
+            <FloatingGraphs
+              title={messages['dashboard.revenue']}
+              data={metricsData.metricsFloatingGraphData.revenueData}
             />
           </Grid>
 
-          <Grid item xs={12} sm={6} md={3}>
-            <StatsCard
-              text={messages['dashboard.queriesThisYear']}
-              value={metricsData.queriesThisYear}
-              bgColor={green[500]}
-              icon={'/assets/images/metricsIcons/querries.svg'}
+          <Grid item xs={12} md={3}>
+            <FloatingGraphs
+              title={messages['dashboard.newUser']}
+              data={metricsData.metricsFloatingGraphData.newUserData}
             />
           </Grid>
-
           <Grid item xs={12} md={4}>
             <StatsCardWithGraph
               text={messages['dashboard.incomeLastYear']}
@@ -215,76 +224,12 @@ const Metrics = () => {
             </Box>
           </Grid>
 
-          <Grid item xs={12} sm={6} md={3}>
-            <StatsCardSecond
-              text={messages['dashboard.revenueThisYear']}
-              value={metricsData.revenueThisYear}
-              bgColor={blue[500]}
-              icon={'/assets/images/metricsIcons/revenue.svg'}
-            />
-          </Grid>
-
-          <Grid item xs={12} sm={6} md={3}>
-            <StatsCardSecond
-              text={messages['dashboard.ordersThisYear']}
-              value={metricsData.ordersThisYear}
-              bgColor={red[500]}
-              icon={'/assets/images/metricsIcons/order.svg'}
-            />
-          </Grid>
-
-          <Grid item xs={12} sm={6} md={3}>
-            <StatsCardSecond
-              text={messages['dashboard.visitsThisYear']}
-              value={metricsData.visitsThisYear}
-              bgColor={indigo[500]}
-              icon={'/assets/images/metricsIcons/visits.svg'}
-            />
-          </Grid>
-
-          <Grid item xs={12} sm={6} md={3}>
-            <StatsCardSecond
-              text={messages['dashboard.queriesThisYear']}
-              value={metricsData.queriesThisYear}
-              bgColor={green[500]}
-              icon={'/assets/images/metricsIcons/querries.svg'}
-            />
-          </Grid>
-
-          <Grid item xs={12} md={3}>
-            <FloatingGraphs
-              title={messages['dashboard.sales']}
-              data={metricsData.metricsFloatingGraphData.salesData}
-            />
-          </Grid>
-
-          <Grid item xs={12} md={3}>
-            <FloatingGraphs
-              title={messages['dashboard.clients']}
-              data={metricsData.metricsFloatingGraphData.clientsData}
-            />
-          </Grid>
-
-          <Grid item xs={12} md={3}>
-            <FloatingGraphs
-              title={messages['dashboard.revenue']}
-              data={metricsData.metricsFloatingGraphData.revenueData}
-            />
-          </Grid>
-
-          <Grid item xs={12} md={3}>
-            <FloatingGraphs
-              title={messages['dashboard.newUser']}
-              data={metricsData.metricsFloatingGraphData.newUserData}
-            />
-          </Grid>
-
           <Grid item xs={12} md={6}>
             <Visits data={metricsData.visitsData} />
           </Grid>
 
           <Grid item xs={12} md={6}>
-            <Orders data={metricsData.ordersData} />
+            <VisitorPageView data={metricsData.visitorsPageView} />
           </Grid>
 
           <Grid item xs={12} md={6} lg={3}>
@@ -295,12 +240,11 @@ const Metrics = () => {
             <WorkViews data={metricsData.workViewsData} />
           </Grid>
 
-          <Grid item xs={12} md={6} lg={3}>
-            <SocialDataCard data={metricsData.socialData} />
+          <Grid item xs={12} sm={6} md={3}>
+            <HeartRate data={metricsData.heartCard} />
           </Grid>
-
-          <Grid item xs={12} md={6} lg={3}>
-            <Share data={metricsData.shareData} />
+          <Grid item xs={12} sm={6} md={3}>
+            <YourActivity data={metricsData.yourActivity} />
           </Grid>
 
           <Grid item xs={12} md={6}>

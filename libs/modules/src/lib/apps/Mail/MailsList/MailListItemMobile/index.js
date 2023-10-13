@@ -1,7 +1,7 @@
 import React from 'react';
 import AttachFileIcon from '@mui/icons-material/AttachFile';
 
-import moment from 'moment';
+import dayjs from 'dayjs';
 import clsx from 'clsx';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
@@ -29,10 +29,10 @@ const MailListItemMobile = (props) => {
   const messages = mail.messages.length;
   const onGetMailDate = (date) => {
     if (
-      moment(date, 'ddd, MMM DD, YYYY').format() ===
-      moment('ddd, MMM DD, YYYY').format()
+      dayjs(date, 'ddd, MMM DD, YYYY').format() ===
+      dayjs('ddd, MMM DD, YYYY').format()
     ) {
-      return moment(date).format('LT');
+      return dayjs(date).format('LT');
     } else {
       return date.split(',')[1];
     }
@@ -68,11 +68,9 @@ const MailListItemMobile = (props) => {
     if (messages === 1) {
       return mail.messages[0].sender.profilePic;
     } else if (messages === 2) {
-      return `${mail.messages[0].sender.name}, ${mail.messages[1].sender.name}(2)`;
+      return mail.messages[1].sender.profilePic;
     } else {
-      return `${mail.messages[0].sender.name}, ${
-        mail.messages[messages - 2].sender.name
-      }, ${mail.messages[messages - 1].sender.name}(${messages})`;
+      return mail.messages[2].sender.profilePic;
     }
   };
 
@@ -106,7 +104,7 @@ const MailListItemMobile = (props) => {
             <CheckOutlinedIcon />
           ) : (
             <Avatar
-              className="avatar"
+              className='avatar'
               alt={getSenderName()}
               src={getSenderImage()}
             />
@@ -161,7 +159,7 @@ const MailListItemMobile = (props) => {
           >
             {getLastMessage()}
           </Typography>
-          {mail.isAttachment ? (
+          {mail.hasAttachments ? (
             <AttachmentWrapper>
               <AttachFileIcon />
             </AttachmentWrapper>
@@ -179,7 +177,7 @@ const MailListItemMobile = (props) => {
           }}
         >
           <Box
-            component="span"
+            component='span'
             sx={{
               fontWeight: Fonts.MEDIUM,
               fontSize: 12,
@@ -190,7 +188,7 @@ const MailListItemMobile = (props) => {
           </Box>
 
           <Box
-            component="span"
+            component='span'
             sx={{
               mt: 'auto',
             }}

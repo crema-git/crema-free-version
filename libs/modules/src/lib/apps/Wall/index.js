@@ -4,8 +4,6 @@ import Photos from './Photos';
 import RecentNews from './RecentNews';
 import WhoToFollow from './WhoToFollow';
 import Suggestions from './Suggestions';
-import CreatePost from './CreatePost';
-import PostsList from './PostsList';
 import CommentsList from './PostsList/PostItem/CommentsList';
 import About from './About';
 import SuggestTeam from './SuggestTeam';
@@ -19,8 +17,6 @@ export {
   RecentNews,
   WhoToFollow,
   Suggestions,
-  CreatePost,
-  PostsList,
   About,
   SuggestTeam,
   Stories,

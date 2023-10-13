@@ -1,21 +1,20 @@
 import React from 'react';
-import AppCard from '@crema/components/AppCard';
-import { useIntl } from 'react-intl';
-import AppMenu from '@crema/components/AppMenu';
-import AppScrollbar from '@crema/components/AppScrollbar';
-import AppList from '@crema/components/AppList';
+import AppCard from "@crema/components/AppCard";
+import {useIntl} from 'react-intl';
+import AppScrollbar from "@crema/components/AppScrollbar";
+import AppList from "@crema/components/AppList";
 import NotificationCell from './NotificationCell';
 import PropTypes from 'prop-types';
 
-const Notifications = ({ data }) => {
-  const { messages } = useIntl();
+const Notifications = ({data}) => {
+  const {messages} = useIntl();
   return (
     <AppCard
-      contentStyle={{ px: 0 }}
+      contentStyle={{paddingLeft: 0, paddingRight: 0}}
       title={messages['healthCare.notification']}
-      action={<AppMenu />}
+      action={messages['common.viewAll']}
     >
-      <AppScrollbar sx={{ maxHeight: 280 }}>
+      <AppScrollbar style={{maxHeight: 280}}>
         <AppList
           data={data}
           renderRow={(notification) => (
@@ -33,5 +32,5 @@ const Notifications = ({ data }) => {
 export default Notifications;
 
 Notifications.propTypes = {
-  data: PropTypes.array,
+  data: PropTypes.array.isRequired,
 };

@@ -9,6 +9,8 @@ import {
   SET_PRODUCT_DATA,
   SET_PRODUCT_VIEW_TYPE,
   UPDATE_CART_ITEM,
+  ADD_PRODUCT_ITEM,
+  UPDATE_PRODUCT_ITEM,
 } from '@crema/constants/ActionTypes';
 import { cartItems } from '@crema/fakedb/data';
 import { createReducer } from '@reduxjs/toolkit';
@@ -38,6 +40,12 @@ const ecommerceReducer = createReducer(initialState, (builder) => {
     .addCase(GET_ECOMMERCE_LIST, (state, action) => {
       state.ecommerceList = action.payload;
     })
+    .addCase(ADD_PRODUCT_ITEM, (state, action) => {
+      state.ecommerceList = action.payload;
+    })
+    .addCase(UPDATE_PRODUCT_ITEM, (state, action) => {
+      state.ecommerceList = action.payload;
+    })
     .addCase(SET_PRODUCT_VIEW_TYPE, (state, action) => {
       state.viewType = action.payload;
     })
@@ -56,7 +64,7 @@ const ecommerceReducer = createReducer(initialState, (builder) => {
     })
     .addCase(UPDATE_CART_ITEM, (state, action) => {
       state.cartItems = state.cartItems.map((item) =>
-        item.id === action.payload.id ? action.payload : item
+        item.id === action.payload.id ? action.payload : item,
       );
     })
     .addCase(ADD_CART_ITEM, (state, action) => {
@@ -84,7 +92,7 @@ const ecommerceReducer = createReducer(initialState, (builder) => {
     })
     .addCase(REMOVE_CART_ITEM, (state, action) => {
       state.cartItems = state.cartItems.filter(
-        (item) => item.id !== action.payload.id
+        (item) => item.id !== action.payload.id,
       );
     })
     .addCase(GET_CUSTOMERS, (state, action) => {

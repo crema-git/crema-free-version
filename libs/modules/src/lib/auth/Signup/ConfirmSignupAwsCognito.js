@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { useIntl } from 'react-intl';
 import { Fonts } from '@crema/constants/AppEnums';
 import PropTypes from 'prop-types';
@@ -11,7 +11,6 @@ import AppInfoView from '@crema/components/AppInfoView';
 import { useAuthMethod } from '@crema/hooks/AuthHooks';
 import ReactCodeInput from 'react-code-input';
 import AuthWrapper from '../AuthWrapper';
-import AppLogo from '@crema/components/AppLogo';
 import { useInfoViewActionsContext } from '@crema/context/InfoViewContextProvider';
 
 const ConfirmSignupAwsCognito = (props) => {
@@ -19,13 +18,14 @@ const ConfirmSignupAwsCognito = (props) => {
   const { confirmCognitoUserSignup } = useAuthMethod();
 
   const navigate = useNavigate();
+  const location = useLocation();
 
   const [pin, setPin] = useState('');
 
   const { messages } = useIntl();
 
   const handleSubmit = () => {
-    const { email } = props.location.state || {};
+    const email = location.state;
     if (email && pin.length === 6) {
       confirmCognitoUserSignup(email, pin);
     } else if (!email) {
@@ -39,18 +39,9 @@ const ConfirmSignupAwsCognito = (props) => {
   return (
     <AuthWrapper>
       <Box sx={{ width: '100%' }}>
-        <Box
-          sx={{
-            mb: 5,
-            display: 'flex',
-            alignItems: 'center',
-          }}
-        >
-          <AppLogo />
-        </Box>
         <Typography
-          variant="h2"
-          component="h2"
+          variant='h2'
+          component='h2'
           sx={{
             mb: 1.5,
             color: (theme) => theme.palette.text.primary,
@@ -58,7 +49,7 @@ const ConfirmSignupAwsCognito = (props) => {
             fontSize: { xs: 14, xl: 16 },
           }}
         >
-          <IntlMessages id="common.emailVerification" />
+          <IntlMessages id='common.emailVerification' />
         </Typography>
         <Box
           sx={{
@@ -67,7 +58,7 @@ const ConfirmSignupAwsCognito = (props) => {
           }}
         >
           <Typography>
-            <IntlMessages id="common.verificationMessage" />
+            <IntlMessages id='common.verificationMessage' />
           </Typography>
         </Box>
 
@@ -77,7 +68,7 @@ const ConfirmSignupAwsCognito = (props) => {
           }}
         >
           <ReactCodeInput
-            type="password"
+            type='password'
             value={pin}
             fields={6}
             onChange={(value) => setPin(value)}
@@ -85,9 +76,9 @@ const ConfirmSignupAwsCognito = (props) => {
         </Box>
 
         <Button
-          variant="contained"
-          color="primary"
-          type="submit"
+          variant='contained'
+          color='primary'
+          type='submit'
           sx={{
             fontWeight: Fonts.REGULAR,
             textTransform: 'capitalize',
@@ -96,7 +87,7 @@ const ConfirmSignupAwsCognito = (props) => {
           }}
           onClick={handleSubmit}
         >
-          <IntlMessages id="common.submit" />
+          <IntlMessages id='common.submit' />
         </Button>
         <AppInfoView />
       </Box>

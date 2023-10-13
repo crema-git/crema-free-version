@@ -24,11 +24,11 @@ const TaskPriority = ({ selectedTask, onUpdateSelectedTask }) => {
     console.log('priority: ', priority, event.target.value);
     const task = selectedTask;
     task.priority = priority;
-    putDataApi('/api/todoApp/task/', infoViewActionsContext, {
+    putDataApi('/api/todo/task/', infoViewActionsContext, {
       task: selectedTask,
     })
       .then((data) => {
-        onUpdateSelectedTask(data[0]);
+        onUpdateSelectedTask(data);
         infoViewActionsContext.showMessage('Task Updated Successfully');
       })
       .catch((error) => {

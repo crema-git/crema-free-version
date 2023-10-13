@@ -3,10 +3,6 @@ import PropTypes from 'prop-types';
 import { useGetDataApi } from '@crema/hooks/APIHooks';
 import { useLocation, useParams } from 'react-router-dom';
 
-export const ViewMode = {
-  List: 'list',
-  Calendar: 'calendar',
-};
 
 const TodoContext = createContext();
 const TodoActionsContext = createContext();
@@ -17,7 +13,6 @@ export const useTodoActionsContext = () => useContext(TodoActionsContext);
 
 export const TodoContextProvider = ({ children }) => {
   const params = useParams();
-  const [viewMode, setViewMode] = useState(ViewMode.List);
   const { pathname } = useLocation();
   const [{ apiData: labelList }] = useGetDataApi('/api/todo/labels/list');
   const [{ apiData: priorityList }] = useGetDataApi('/api/todo/priority/list');
@@ -58,7 +53,6 @@ export const TodoContextProvider = ({ children }) => {
         taskLists,
         loading,
         page,
-        viewMode,
       }}
     >
       <TodoActionsContext.Provider
@@ -68,7 +62,6 @@ export const TodoContextProvider = ({ children }) => {
           setQueryParams,
           reCallAPI,
           setPage,
-          setViewMode,
         }}
       >
         {children}

@@ -133,7 +133,7 @@ const getMediaMessage = (item) => {
           },
         }}
       >
-        <img alt="" src={item.url} />
+        <img alt='' src={item.url} />
       </Box>
     );
   } else if (item.mime_type.startsWith('video')) {
@@ -162,15 +162,15 @@ const getMediaMessage = (item) => {
       >
         <DescriptionOutlinedIcon />
         <Box
-          component="p"
+          component='p'
           sx={{
             ml: 2,
           }}
         >
-          <Box component="span" sx={{ display: 'block' }}>
+          <Box component='span' sx={{ display: 'block' }}>
             {item.file_name}
           </Box>
-          <Box component="span" sx={{ display: 'block' }}>
+          <Box component='span' sx={{ display: 'block' }}>
             {getFileSize(item.file_size)}
           </Box>
         </Box>
@@ -181,7 +181,7 @@ const getMediaMessage = (item) => {
 
 const getMessage = (item, setIndex) => {
   if (item.message_type === MessageType.TEXT) {
-    return <Box component="p">{item.message}</Box>;
+    return <Box component='p'>{item.message}</Box>;
   } else {
     return (
       <Box
@@ -279,7 +279,7 @@ const SenderMessageItem = ({
     <SenderMessageWrapper
       className={clsx(
         isPreviousSender ? 'hideUser-info' : '',
-        isLast ? 'last-chat-message' : ''
+        isLast ? 'last-chat-message' : '',
       )}
     >
       <Box
@@ -293,7 +293,7 @@ const SenderMessageItem = ({
           sx={{
             position: 'relative',
           }}
-          className="message-chat-item"
+          className='message-chat-item'
         >
           <Box
             sx={{
@@ -304,8 +304,8 @@ const SenderMessageItem = ({
               display: 'block',
               mb: 1.5,
             }}
-            component="span"
-            className="message-time"
+            component='span'
+            className='message-time'
           >
             {item.time}
           </Box>
@@ -327,7 +327,7 @@ const SenderMessageItem = ({
                     fontSize: 16,
                   },
                 }}
-                className="edit-view"
+                className='edit-view'
               >
                 <EditIcon />
               </Box>
@@ -341,7 +341,7 @@ const SenderMessageItem = ({
             mb: 5.5,
             ml: 2.5,
           }}
-          className="message-chat-sender"
+          className='message-chat-sender'
         >
           {authUser.photoURL ? (
             <Avatar
@@ -352,7 +352,7 @@ const SenderMessageItem = ({
                 mr: 2.5,
                 mb: 5.5,
               }}
-              className="message-chat-avatar"
+              className='message-chat-avatar'
               src={authUser.photoURL}
             />
           ) : (
@@ -364,7 +364,7 @@ const SenderMessageItem = ({
                 mr: 2.5,
                 mb: 5.5,
               }}
-              className="message-chat-avatar"
+              className='message-chat-avatar'
             >
               {getUserAvatar()}
             </Avatar>
@@ -383,9 +383,10 @@ const SenderMessageItem = ({
                 color: (theme) => theme.palette.text.disabled,
               },
             }}
-            className="message-more-dropdown-link"
+            onClick={onViewMoreOpen}
+            className='message-more-dropdown-link'
           >
-            <IconButton size="large" onClick={onViewMoreOpen}>
+            <IconButton size='large'>
               <MoreVertIcon />
             </IconButton>
 
@@ -401,7 +402,7 @@ const SenderMessageItem = ({
                     onClickEditMessage(item);
                   }}
                 >
-                  <IntlMessages id="common.edit" />
+                  <IntlMessages id='common.edit' />
                 </MenuItem>
               ) : null}
               <MenuItem
@@ -410,7 +411,7 @@ const SenderMessageItem = ({
                   deleteMessage(item.id);
                 }}
               >
-                <IntlMessages id="common.delete" />
+                <IntlMessages id='common.delete' />
               </MenuItem>
             </Menu>
           </Box>

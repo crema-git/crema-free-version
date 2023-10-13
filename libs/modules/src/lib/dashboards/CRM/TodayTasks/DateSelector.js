@@ -1,7 +1,7 @@
 import React from 'react';
 import DatePickerWrapper from './DatePickerWrapper';
 import TextField from '@mui/material/TextField';
-import { StaticDatePicker } from '@mui/x-date-pickers';
+import { StaticDatePicker } from '@mui/lab';
 
 const DateSelector = () => {
   const [value, setValue] = React.useState(new Date());
@@ -9,8 +9,8 @@ const DateSelector = () => {
   return (
     <DatePickerWrapper>
       <StaticDatePicker
-        orientation="landscape"
-        openTo="day"
+        orientation='landscape'
+        openTo='day'
         value={value}
         onChange={(newValue) => {
           setValue(newValue);

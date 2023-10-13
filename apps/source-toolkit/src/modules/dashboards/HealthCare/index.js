@@ -1,18 +1,18 @@
 import React, { useEffect } from 'react';
-import AppLoader from '@crema/components/AppInfoView';
 import { Grid } from '@mui/material';
 import AppGridContainer from '@crema/components/AppGridContainer';
 import AppAnimate from '@crema/components/AppAnimate';
 import {
   AppointmentCard,
-  CancelVisits,
+  // CancelVisits,
+  Activities,
   DrCard,
   HealthStatics,
   HeartRate,
   HospitalActivity,
   HospitalStatics,
   InfoWidget,
-  NewPatients,
+  // NewPatients,
   Notifications,
   ProfileCard,
   RecentPatients,
@@ -22,6 +22,7 @@ import {
 } from '@crema/modules/dashboards/HealthCare';
 import { useDispatch, useSelector } from 'react-redux';
 import { onGetHCData } from '../../../toolkit/actions';
+import AppLoader from '@crema/components/AppLoader';
 
 const HealthCare = () => {
   const dispatch = useDispatch();
@@ -56,6 +57,15 @@ const HealthCare = () => {
             ))}
           </AppGridContainer>
         </Grid>
+        <Grid item xs={12} sm={12} lg={4}>
+          <TopDoctors data={healthCare.topDoctors} />
+        </Grid>
+        <Grid item xs={12} sm={6} lg={4}>
+          <UpcomingAppointments data={healthCare.upcomingAppointment} />
+        </Grid>
+        <Grid item xs={12} sm={6} lg={4}>
+          <Notifications data={healthCare.notifications} />
+        </Grid>
         <Grid item xs={12} sm={6} md={3}>
           <HeartRate data={healthCare.heartCard} />
         </Grid>
@@ -74,23 +84,11 @@ const HealthCare = () => {
             ))}
           </AppGridContainer>
         </Grid>
-        <Grid item xs={12} sm={12} lg={4}>
-          <TopDoctors data={healthCare.topDoctors} />
-        </Grid>
-        <Grid item xs={12} sm={6} lg={4}>
-          <UpcomingAppointments data={healthCare.upcomingAppointment} />
-        </Grid>
-        <Grid item xs={12} sm={6} lg={4}>
-          <Notifications data={healthCare.notifications} />
-        </Grid>
         <Grid item xs={12} md={6}>
           <HealthStatics data={healthCare.heathStatics} />
         </Grid>
-        <Grid item xs={12} sm={6} md={3}>
-          <NewPatients data={healthCare.newPatients} />
-        </Grid>
-        <Grid item xs={12} sm={6} md={3}>
-          <CancelVisits data={healthCare.cancelVisits} />
+        <Grid item xs={12} md={6}>
+          <Activities activities={healthCare.activities} />
         </Grid>
 
         {healthCare.hospitalStatics.map((data, index) => (
@@ -98,10 +96,10 @@ const HealthCare = () => {
             <HospitalStatics data={data} />
           </Grid>
         ))}
-        <Grid item xs={12} sm={12} md={8}>
+        <Grid item xs={12} sm={12} md={8} lg={7} xl={8}>
           <RecentPatients recentPatients={healthCare.recentPatients} />
         </Grid>
-        <Grid item xs={12} sm={12} md={4}>
+        <Grid item xs={12} sm={12} md={4} lg={5} xl={4}>
           <AppGridContainer>
             {healthCare.bloodCard.map((data, index) => (
               <Grid item xs={12} sm={6} key={'grid-' + index}>

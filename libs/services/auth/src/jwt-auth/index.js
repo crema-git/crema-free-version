@@ -1,6 +1,6 @@
 import axios from '@crema/services/axios';
 
-const jwtAxios = axios.create({
+const jwtAxios = axios?.create({
   baseURL: 'https://cremaapi.pythonanywhere.com/api/', //YOUR_API_URL HERE
   headers: {
     'Content-Type': 'application/json',

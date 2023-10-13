@@ -9,7 +9,7 @@ import AppTableContainer from '@crema/components/AppTableContainer';
 
 const TicketSupportTable = ({ ticketSupportData }) => {
   return (
-    <AppTableContainer sxStyle={{ maxHeight: 480 }}>
+    <AppTableContainer sxStyle={{ maxHeight: 380 }}>
       <Table>
         <TableHead
           sx={{

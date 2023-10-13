@@ -2,8 +2,8 @@ import React, { useMemo } from 'react';
 import { Icon, ListItem, ListItemText } from '@mui/material';
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
-import AppBadge from '@crema/components/AppBadge';
-import AppNavLink from '@crema/components/AppNavLink';
+import AppBadge from '../../../../AppBadge';
+import AppNavLink from '../../../../AppNavLink';
 import Box from '@mui/material/Box';
 import IntlMessages from '@crema/helpers/IntlMessages';
 import useStyles from './VerticalItem.style';
@@ -17,7 +17,7 @@ const VerticalItem = ({ level, item }) => {
   const { user } = useSelector(({ auth }) => auth);
   const hasPermission = useMemo(
     () => checkPermission(item.auth, user.role),
-    [item.auth, user.role]
+    [item.auth, user.role],
   );
   if (!hasPermission) {
     return null;
@@ -27,15 +27,15 @@ const VerticalItem = ({ level, item }) => {
       button
       component={AppNavLink}
       to={item.url}
-      activeClassName="active"
+      activeClassName='active'
       className={clsx(classes.navItem, 'nav-item')}
       exact={item.exact}
     >
       {item.icon && (
-        <Box component="span" mr={4}>
+        <Box component='span' mr={4}>
           <Icon
             className={clsx(classes.listIcon, 'nav-item-icon')}
-            color="action"
+            color='action'
           >
             {item.icon}
           </Icon>

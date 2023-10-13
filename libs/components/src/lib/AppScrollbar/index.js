@@ -2,7 +2,7 @@ import React from 'react';
 import { styled } from '@mui/material/styles';
 import PropTypes from 'prop-types';
 import SimpleBarReact from 'simplebar-react';
-import 'simplebar/src/simplebar.css';
+import 'simplebar-react/dist/simplebar.min.css';
 
 const StyledSimpleBarReact = styled(SimpleBarReact)(() => ({
   height: '100%',

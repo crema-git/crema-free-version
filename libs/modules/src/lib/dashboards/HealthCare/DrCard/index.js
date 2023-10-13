@@ -1,31 +1,46 @@
 import React from 'react';
 import AppCard from '@crema/components/AppCard';
-import { Box, Typography } from '@mui/material';
+import { Box } from '@mui/material';
 import { Fonts } from '@crema/constants/AppEnums';
 import PropTypes from 'prop-types';
 
+import { styled } from '@mui/material/styles';
+const DrTime = styled('div')(({ theme }) => {
+  return {
+    marginLeft: 'auto',
+    display: 'flex',
+    alignItems: 'center',
+    borderRadius: '50%',
+    justifyContent: 'center',
+    height: 50,
+    width: 50,
+    fontWeight: Fonts.BOLD,
+    color: theme.palette.text.secondary,
+    backgroundColor: theme.palette.background.paper,
+    '@media only screen and (min-width: 1200px) and (max-width: 1535px)': {
+      display: 'none',
+    },
+  };
+});
+
 const DrCard = ({ data }) => {
-  const { bgColor, icon, time, category, name } = data;
+  const { icon, time, category, name } = data;
+
   return (
     <AppCard
-      sxStyle={{
-        backgroundColor: bgColor,
-        height: 1,
+      sxStyle={{ height: 1 }}
+      className='card-hover'
+      contentStyle={{
+        p: 0,
+        '&:last-of-type': {
+          pb: 0,
+        },
+        mb: 0,
       }}
-      className="card-hover"
     >
-      <Box
-        sx={{
-          display: 'flex',
-        }}
-      >
-        <Box
-          sx={{
-            mr: 3,
-            alignSelf: 'center',
-          }}
-        >
-          <img src={icon} alt="icon" />
+      <Box sx={{ display: 'flex', padding: 4 }}>
+        <Box sx={{ mr: 3, alignSelf: 'center', minWidth: 46 }}>
+          <img src={icon} alt='icon' />
         </Box>
         <Box
           sx={{
@@ -37,57 +52,37 @@ const DrCard = ({ data }) => {
           <Box
             sx={{
               flex: 1,
-              color: 'white',
               overflow: 'hidden',
               mr: 2,
             }}
           >
-            <Typography
+            <Box
               sx={{
-                fontWeight: Fonts.BOLD,
                 overflow: 'hidden',
                 textOverflow: 'ellipsis',
                 whiteSpace: 'nowrap',
                 width: '100%',
+                fontWeight: Fonts.SEMI_BOLD,
+                color: 'text.primary',
               }}
-              component="h5"
-              variant="inherit"
-              color="inherit"
+              component='h5'
             >
               {category}
-            </Typography>
+            </Box>
             <Box
-              component="p"
               sx={{
-                pt: 1.5,
                 overflow: 'hidden',
                 textOverflow: 'ellipsis',
                 whiteSpace: 'nowrap',
                 width: '100%',
+                color: 'text.secondary',
               }}
+              component='p'
             >
               {name}
             </Box>
           </Box>
-          <Box
-            sx={{
-              height: 50,
-              width: 50,
-              ml: 'auto',
-              display: 'flex',
-              alignItems: 'center',
-              borderRadius: '50%',
-              justifyContent: 'center',
-              fontWeight: Fonts.BOLD,
-              color: (theme) => theme.palette.text.secondary,
-              backgroundColor: (theme) => theme.palette.background.paper,
-              '@media screen and (max-width: 1600px) and (min-width: 1200px)': {
-                display: 'none',
-              },
-            }}
-          >
-            {time}
-          </Box>
+          <DrTime>{time}</DrTime>
         </Box>
       </Box>
     </AppCard>

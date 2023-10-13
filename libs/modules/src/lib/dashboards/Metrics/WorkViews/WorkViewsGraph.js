@@ -13,13 +13,13 @@ const WorkViewsGraph = ({ data }) => {
         objectPosition: 'bottom',
       }}
     >
-      <ResponsiveContainer height={100} width="100%">
+      <ResponsiveContainer height={100} width='100%'>
         <LineChart data={data}>
           <Line
-            type="monotone"
-            dataKey="value"
-            stroke="#E2E8F0"
-            strokeWidth={3}
+            type='monotone'
+            dataKey='value'
+            stroke='#F04F47'
+            strokeWidth={2}
             dot={false}
           />
         </LineChart>

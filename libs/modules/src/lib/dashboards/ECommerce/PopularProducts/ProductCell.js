@@ -1,79 +1,63 @@
 import React from 'react';
-import Box from '@mui/material/Box';
 import Avatar from '@mui/material/Avatar';
-import { Fonts } from '@crema/constants/AppEnums';
 import PropTypes from 'prop-types';
+import {Typography} from '@mui/material';
+import Box from '@mui/material/Box';
+import {Fonts} from "@crema/constants";
 
-const ProductCell = ({ data }) => {
+const ProductCell = ({data}) => {
   return (
     <Box
-      key={data.id}
       sx={{
+        padding: '8px 20px',
         display: 'flex',
         alignItems: 'center',
-        py: 2,
-        px: 5,
       }}
-      className="item-hover"
+      key={data.id}
+      className='item-hover'
     >
       <Avatar
-        sx={{
-          mr: 4,
-          height: 70,
-          width: 70,
-        }}
-        variant="rounded"
-        alt=""
+        variant='rounded'
+        alt=''
         src={data.icon}
+        sx={{
+          height: 60,
+          width: 60,
+          mr: 4,
+        }}
       />
 
-      <Box
-        sx={{
-          flex: 1,
-        }}
-      >
-        <Box
-          component="h3"
+      <Box sx={{flex: 1}}>
+        <Typography
           sx={{
-            color: 'primary.main',
-            fontWeight: Fonts.MEDIUM,
+            color: (theme) => theme.palette.primary.main,
             mb: 0.5,
-            fontSize: 14,
           }}
+          component='h5'
+          variant='h5'
         >
           {data.name}
-        </Box>
-        <Box
-          component="p"
+        </Typography>
+        <Typography
           sx={{
-            fontSize: 14,
-            color: 'text.secondary',
-            mb: 1,
-          }}
-        >
-          {data.description}
-        </Box>
-        <Box
-          component="p"
-          sx={{
-            fontSize: 14,
             fontWeight: Fonts.MEDIUM,
+            '& span': {
+              display: 'inline-block',
+            },
           }}
         >
-          ${data.price}
+          <span>${data.price}</span>
           <Box
-            component="span"
+            component='span'
             sx={{
-              textDecoration: 'line-through',
-              mb: 1,
-              fontSize: 14,
               ml: 3,
-              color: 'text.secondary',
+              color: (theme) => theme.palette.text.secondary,
+              textDecoration: 'line-through',
             }}
           >
             ${data.mrp}
           </Box>
-        </Box>
+        </Typography>
       </Box>
     </Box>
   );

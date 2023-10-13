@@ -4,11 +4,11 @@ const academyData = {
   academicStats: [
     {
       id: 1,
-      title: 'Total Sales',
-      count: '$350',
+      title: 'Resources',
+      count: '45',
       new: 'New $50',
-      badgeColor: '#9E49E6',
-      bgcolor: '#F5EDFC',
+      badgeColor: '#0A8FDC',
+      bgcolor: '#E7F4FB',
       icon: 'BiBasket',
     },
     {
@@ -16,27 +16,27 @@ const academyData = {
       title: 'Total Enroll',
       count: '1500',
       new: 'New 125',
-      badgeColor: '#0A8FDC',
-      bgcolor: '#E7F4FB',
+      badgeColor: '#9E49E6',
+      bgcolor: '#F5EDFC',
       icon: 'FcGraduationCap',
-    },
-    {
-      id: 3,
-      title: 'Total Courses',
-      count: '130',
-      new: 'New 5',
-      badgeColor: '#F44D50',
-      bgcolor: '#EDF8F0',
-      icon: 'GiBookshelf',
     },
     {
       id: 4,
       title: 'Total Students',
       count: '2650',
       new: 'New 245',
+      badgeColor: '#F44D50',
+      bgcolor: '#F04F4733',
+      icon: 'FcReading',
+    },
+    {
+      id: 3,
+      title: 'Total Courses',
+      count: '130',
+      new: 'New 5',
       badgeColor: '#49BD65',
       bgcolor: '#EAF7EE',
-      icon: 'FcReading',
+      icon: 'GiBookshelf',
     },
   ],
   courseCategories: [
@@ -48,15 +48,15 @@ const academyData = {
       xp: 45,
       images: [
         {
-          image: '/assets/images/dashboard/academy/design.png',
+          image: '/assets/images/dashboard/academy/design.jpg',
           title: 'image 1',
         },
         {
-          image: '/assets/images/dashboard/academy/design.png',
+          image: '/assets/images/dashboard/academy/design.jpg',
           title: 'image 2',
         },
         {
-          image: '/assets/images/dashboard/academy/design.png',
+          image: '/assets/images/dashboard/academy/design.jpg',
           title: 'image 3',
         },
       ],
@@ -69,15 +69,15 @@ const academyData = {
       xp: 45,
       images: [
         {
-          image: '/assets/images/dashboard/academy/development.png',
+          image: '/assets/images/dashboard/academy/development.jpg',
           title: 'image 1',
         },
         {
-          image: '/assets/images/dashboard/academy/development.png',
+          image: '/assets/images/dashboard/academy/development.jpg',
           title: 'image 2',
         },
         {
-          image: '/assets/images/dashboard/academy/development.png',
+          image: '/assets/images/dashboard/academy/development.jpg',
           title: 'image 3',
         },
       ],
@@ -90,15 +90,15 @@ const academyData = {
       xp: 45,
       images: [
         {
-          image: '/assets/images/dashboard/academy/marketing.png',
+          image: '/assets/images/dashboard/academy/marketing.jpg',
           title: 'image 1',
         },
         {
-          image: '/assets/images/dashboard/academy/marketing.png',
+          image: '/assets/images/dashboard/academy/marketing.jpg',
           title: 'image 2',
         },
         {
-          image: '/assets/images/dashboard/academy/marketing.png',
+          image: '/assets/images/dashboard/academy/marketing.jpg',
           title: 'image 3',
         },
       ],
@@ -111,15 +111,15 @@ const academyData = {
       xp: 45,
       images: [
         {
-          image: '/assets/images/dashboard/academy/it.png',
+          image: '/assets/images/dashboard/academy/it.jpg',
           title: 'image 1',
         },
         {
-          image: '/assets/images/dashboard/academy/it.png',
+          image: '/assets/images/dashboard/academy/it.jpg',
           title: 'image 2',
         },
         {
-          image: '/assets/images/dashboard/academy/it.png',
+          image: '/assets/images/dashboard/academy/it.jpg',
           title: 'image 3',
         },
       ],
@@ -156,7 +156,7 @@ const academyData = {
         duration: '4 Mar 2020 - 22 Mar 2020',
         rating: 8.7,
         isCompleted: false,
-        thumb: '/assets/images/dashboard/academy/logoDsign.png',
+        thumb: '/assets/images/dashboard/academy/logoDesign.jpg',
       },
       {
         id: 3,
@@ -164,7 +164,7 @@ const academyData = {
         duration: '4 Apr 2020 - 22 Apr 2020',
         rating: 8.7,
         isCompleted: true,
-        thumb: '/assets/images/dashboard/academy/digitalMarketing.png',
+        thumb: '/assets/images/dashboard/academy/digitalmarketing.jpg',
       },
       {
         id: 4,
@@ -172,7 +172,7 @@ const academyData = {
         duration: '4 May 2020 - 22 May 2020',
         rating: 8.7,
         isCompleted: false,
-        thumb: '/assets/images/dashboard/academy/webDevelopment.png',
+        thumb: '/assets/images/dashboard/academy/webdevelopment.jpg',
       },
     ],
   },
@@ -244,7 +244,7 @@ const academyData = {
     {
       id: 2,
       title: 'Logo Design',
-      thumb: '/assets/images/dashboard/academy/logoDsign.png',
+      thumb: '/assets/images/dashboard/academy/logoDesign.jpg',
       level: 'Elementary level',
       coveredDuration: '35 hours',
       totalDuration: '75 hours',
@@ -266,7 +266,7 @@ const academyData = {
     {
       id: 3,
       title: 'Typography',
-      thumb: '/assets/images/dashboard/academy/digitalMarketing.png',
+      thumb: '/assets/images/dashboard/academy/digitalmarketing.jpg',
       level: 'Elementary level',
       coveredDuration: '35 hours',
       totalDuration: '75 hours',

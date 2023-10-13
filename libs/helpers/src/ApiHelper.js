@@ -1,5 +1,5 @@
 import sanitizeHtml from 'sanitize-html';
-import moment from 'moment';
+import dayjs from 'dayjs';
 
 /**
  * Sanitize Content
@@ -30,7 +30,7 @@ const sanitizeArrayObject = (arrayOrObject) => {
     } else if (
       typeof item === 'object' &&
       item !== null &&
-      moment.isMoment(item)
+      dayjs.isDayjs(item)
     ) {
       output[key] = item;
     } else if (
@@ -73,4 +73,14 @@ export const sanitizeData = (inputVal) => {
 
 export const isRequestSuccessful = (code) => {
   return code >= 200 && code <= 204;
+};
+
+export const isEmptyObject = (obj = {}) => {
+  for (const key in obj) {
+    // eslint-disable-next-line no-prototype-builtins
+    if (obj?.hasOwnProperty(key)) {
+      return false;
+    }
+  }
+  return true;
 };

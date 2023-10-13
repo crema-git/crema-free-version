@@ -16,17 +16,17 @@ import { AiOutlineGoogle } from 'react-icons/ai';
 import AuthWrapper from '../AuthWrapper';
 
 const validationSchema = yup.object({
-  name: yup.string().required(<IntlMessages id="validation.nameRequired" />),
+  name: yup.string().required(<IntlMessages id='validation.nameRequired' />),
   email: yup
     .string()
-    .email(<IntlMessages id="validation.emailFormat" />)
-    .required(<IntlMessages id="validation.emailRequired" />),
+    .email(<IntlMessages id='validation.emailFormat' />)
+    .required(<IntlMessages id='validation.emailRequired' />),
   password: yup
     .string()
-    .required(<IntlMessages id="validation.passwordRequired" />),
+    .required(<IntlMessages id='validation.passwordRequired' />),
   confirmPassword: yup
     .string()
-    .required(<IntlMessages id="validation.reTypePassword" />),
+    .required(<IntlMessages id='validation.reTypePassword' />),
 });
 
 const SignupAwsCognito = () => {
@@ -50,7 +50,7 @@ const SignupAwsCognito = () => {
               if (data.password !== data.confirmPassword) {
                 setErrors({
                   confirmPassword: (
-                    <IntlMessages id="validation.passwordMisMatch" />
+                    <IntlMessages id='validation.passwordMisMatch' />
                   ),
                 });
               } else {
@@ -65,12 +65,12 @@ const SignupAwsCognito = () => {
             }}
           >
             {({ isSubmitting }) => (
-              <Form style={{ textAlign: 'left' }} noValidate autoComplete="off">
+              <Form style={{ textAlign: 'left' }} noValidate autoComplete='off'>
                 <Box sx={{ mb: { xs: 4, xl: 5 } }}>
                   <AppTextField
-                    label={<IntlMessages id="common.name" />}
-                    name="name"
-                    variant="outlined"
+                    label={<IntlMessages id='common.name' />}
+                    name='name'
+                    variant='outlined'
                     sx={{
                       width: '100%',
                       '& .MuiInputBase-input': {
@@ -79,12 +79,11 @@ const SignupAwsCognito = () => {
                     }}
                   />
                 </Box>
-
                 <Box sx={{ mb: { xs: 4, xl: 5 } }}>
                   <AppTextField
-                    label={<IntlMessages id="common.email" />}
-                    name="email"
-                    variant="outlined"
+                    label={<IntlMessages id='common.email' />}
+                    name='email'
+                    variant='outlined'
                     sx={{
                       width: '100%',
                       '& .MuiInputBase-input': {
@@ -93,13 +92,12 @@ const SignupAwsCognito = () => {
                     }}
                   />
                 </Box>
-
                 <Box sx={{ mb: { xs: 4, xl: 5 } }}>
                   <AppTextField
-                    label={<IntlMessages id="common.password" />}
-                    name="password"
-                    type="password"
-                    variant="outlined"
+                    label={<IntlMessages id='common.password' />}
+                    name='password'
+                    type='password'
+                    variant='outlined'
                     sx={{
                       width: '100%',
                       '& .MuiInputBase-input': {
@@ -108,7 +106,20 @@ const SignupAwsCognito = () => {
                     }}
                   />
                 </Box>
-
+                <Box sx={{ mb: { xs: 4, xl: 5 } }}>
+                  <AppTextField
+                    label={<IntlMessages id='common.retypePassword' />}
+                    name='confirmPassword'
+                    type='password'
+                    variant='outlined'
+                    sx={{
+                      width: '100%',
+                      '& .MuiInputBase-input': {
+                        fontSize: 14,
+                      },
+                    }}
+                  />
+                </Box>
                 <Box
                   sx={{
                     mb: { xs: 3, xl: 4 },
@@ -129,30 +140,29 @@ const SignupAwsCognito = () => {
                       }}
                     />
                     <Box
-                      component="span"
+                      component='span'
                       sx={{
                         mr: 2,
                         color: 'grey.500',
                       }}
                     >
-                      <IntlMessages id="common.iAgreeTo" />
+                      <IntlMessages id='common.iAgreeTo' />
                     </Box>
                   </Box>
                   <Box
-                    component="span"
+                    component='span'
                     sx={{
                       color: (theme) => theme.palette.primary.main,
                       cursor: 'pointer',
                     }}
                   >
-                    <IntlMessages id="common.termConditions" />
+                    <IntlMessages id='common.termConditions' />
                   </Box>
                 </Box>
-
                 <div>
                   <Button
-                    variant="contained"
-                    color="primary"
+                    variant='contained'
+                    color='primary'
                     disabled={isSubmitting}
                     sx={{
                       minWidth: 160,
@@ -161,9 +171,9 @@ const SignupAwsCognito = () => {
                       textTransform: 'capitalize',
                       padding: '4px 16px 8px',
                     }}
-                    type="submit"
+                    type='submit'
                   >
-                    <IntlMessages id="common.signup" />
+                    <IntlMessages id='common.signup' />
                   </Button>
                 </div>
               </Form>
@@ -178,10 +188,10 @@ const SignupAwsCognito = () => {
           }}
         >
           <span style={{ marginRight: 4 }}>
-            <IntlMessages id="common.alreadyHaveAccount" />
+            <IntlMessages id='common.alreadyHaveAccount' />
           </span>
           <Box
-            component="span"
+            component='span'
             sx={{
               fontWeight: Fonts.MEDIUM,
               '& a': {
@@ -190,8 +200,8 @@ const SignupAwsCognito = () => {
               },
             }}
           >
-            <Link to="/signIn">
-              <IntlMessages id="common.signIn" />
+            <Link to='/signIn'>
+              <IntlMessages id='common.signIn' />
             </Link>
           </Box>
         </Box>
@@ -214,7 +224,7 @@ const SignupAwsCognito = () => {
               color: (theme) => theme.palette.text.secondary,
             }}
           >
-            <IntlMessages id="auth.orSignupWith" />
+            <IntlMessages id='auth.orSignupWith' />
           </Box>
           <Box
             sx={{

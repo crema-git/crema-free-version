@@ -1,50 +1,13 @@
 import React from 'react';
 import { Box } from '@mui/material';
 import Grid from '@mui/material/Grid';
+import PropTypes from 'prop-types';
 
-const productSpecification = [
-  {
-    id: 1,
-    title: 'Brand',
-    desc: 'JBL',
-  },
-  {
-    id: 2,
-    title: 'Model Number',
-    desc: 'SH12',
-  },
-  {
-    id: 3,
-    title: 'Color',
-    desc: 'Red',
-  },
-  {
-    id: 4,
-    title: 'Headphone Type',
-    desc: 'Wireless over the head',
-  },
-  {
-    id: 5,
-    title: 'Inline Remote',
-    desc: 'No',
-  },
-  {
-    id: 6,
-    title: 'Sales Package',
-    desc: '1 SH12 HEADPHONE',
-  },
-  {
-    id: 7,
-    title: 'Connectivity',
-    desc: 'Bluetooth',
-  },
-];
-
-const ProductSpecification = () => {
+const productSpec = ({ productSpec }) => {
   return (
     <>
       <Box
-        component="h3"
+        component='h3'
         sx={{
           color: 'text.primary',
           fontSize: 16,
@@ -55,7 +18,7 @@ const ProductSpecification = () => {
         Specification
       </Box>
       <Grid container spacing={3}>
-        {productSpecification.map((data) => (
+        {productSpec?.map((data) => (
           <React.Fragment key={data.id}>
             <Grid item xs={4}>
               <Box
@@ -76,4 +39,8 @@ const ProductSpecification = () => {
   );
 };
 
-export default ProductSpecification;
+export default productSpec;
+
+productSpec.propTypes = {
+  productSpec: PropTypes.object,
+};

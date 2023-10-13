@@ -7,6 +7,7 @@ import ecommerceData, {
   idealFor,
   ProductColors,
   recentOrders,
+  productCategory,
 } from './ecommerceData';
 
 export {
@@ -19,4 +20,5 @@ export {
   cartItems,
   recentOrders,
   customersData,
+  productCategory,
 };

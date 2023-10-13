@@ -13,7 +13,7 @@ const ExtraRevenueGraph = ({ data }) => {
         },
       }}
     >
-      <ResponsiveContainer height={200} className="containerGraph">
+      <ResponsiveContainer height={200} className='containerGraph'>
         <AreaChart
           width={500}
           height={100}
@@ -26,11 +26,11 @@ const ExtraRevenueGraph = ({ data }) => {
           }}
         >
           <Area
-            type="monotone"
-            dataKey="revenue"
-            stroke="#4C51BF"
-            fill="#4C51BF"
-            strokeWidth={4}
+            type='monotone'
+            dataKey='revenue'
+            stroke='#4C51BF'
+            fill='#4C51BF'
+            strokeWidth={2}
           />
         </AreaChart>
       </ResponsiveContainer>

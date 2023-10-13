@@ -1,7 +1,24 @@
 import React from 'react';
-import AppCard from '@crema/components/AppCard';
+import AppCard from "@crema/components/AppCard";
 import Avatar from '@mui/material/Avatar';
-import { Box } from '@mui/material';
+import { alpha, Box } from '@mui/material';
+
+import { styled } from '@mui/material/styles';
+
+const ProfilePic = styled('div')(({ theme }) => {
+  return {
+    position: 'relative',
+    border: `solid 2px ${alpha(theme.palette.primary.main, 0.7)}`,
+    padding: 4,
+    borderRadius: '50%',
+    marginBottom: 10,
+    marginTop: 10,
+    '& .avatar-pic': {
+      height: 84,
+      width: 84,
+    },
+  };
+});
 
 const ProfileCard = () => {
   return (
@@ -14,19 +31,20 @@ const ProfileCard = () => {
           justifyContent: 'center',
         }}
       >
-        <Avatar
-          sx={{ height: 80, width: 80 }}
-          src={'/assets/images/avatar/A10.jpg'}
-        />
+        <ProfilePic>
+          <Avatar className='avatar-pic' src={'/assets/images/avatar/A5.jpg'} />
+        </ProfilePic>
+        <Box sx={{ mb: 0.5 }} component='h5'>
+          Talan Phips
+        </Box>
         <Box
           sx={{
-            p: 3,
             mb: 4,
-            mt: 2,
+            fontSize: 12,
+            color: 'text.secondary',
           }}
-          component="h5"
         >
-          Talan Phips
+          Heart Specialist
         </Box>
 
         <Box
@@ -45,34 +63,26 @@ const ProfileCard = () => {
           >
             <Box
               sx={{
-                py: 5,
+                py: 3.5,
                 px: 2,
                 width: 1 / 2,
                 borderRight: (theme) => `solid 1px ${theme.palette.grey[200]}`,
               }}
             >
-              <Box component="h5">24</Box>
-              <Box
-                sx={{
-                  color: 'text.secondary',
-                }}
-              >
+              <Box component='h5'>24</Box>
+              <Box component='p' color='text.secondary'>
                 Years
               </Box>
             </Box>
             <Box
               sx={{
-                py: 5,
+                py: 3.5,
                 px: 2,
                 width: 1 / 2,
               }}
             >
-              <Box component="h5">A+</Box>
-              <Box
-                sx={{
-                  color: 'text.secondary',
-                }}
-              >
+              <Box component='h5'>A+</Box>
+              <Box component='p' sx={{ color: 'text.secondary' }}>
                 Blood
               </Box>
             </Box>
@@ -87,34 +97,26 @@ const ProfileCard = () => {
           >
             <Box
               sx={{
-                py: 5,
+                py: 3.5,
                 px: 2,
                 width: 1 / 2,
                 borderRight: (theme) => `solid 1px ${theme.palette.grey[200]}`,
               }}
             >
-              <Box component="h5">185 cm</Box>
-              <Box
-                sx={{
-                  color: 'text.secondary',
-                }}
-              >
+              <Box component='h5'>185 cm</Box>
+              <Box component='p' sx={{ color: 'text.secondary' }}>
                 Height
               </Box>
             </Box>
             <Box
               sx={{
-                py: 5,
+                py: 3.5,
                 px: 2,
                 width: 1 / 2,
               }}
             >
-              <Box component="h5">84 kg</Box>
-              <Box
-                sx={{
-                  color: 'text.secondary',
-                }}
-              >
+              <Box component='h5'>84 kg</Box>
+              <Box component='p' sx={{ color: 'text.secondary' }}>
                 Weight
               </Box>
             </Box>

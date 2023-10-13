@@ -13,11 +13,11 @@ import AppScrollbar from '@crema/components/AppScrollbar';
 const getWelcomeIcon = (iconType) => {
   switch (iconType) {
     case 'HiOutlineMailOpen':
-      return <HiOutlineMailOpen color="#0A8FDC" className="icon" />;
+      return <HiOutlineMailOpen color='#0A8FDC' className='icon' />;
     case 'BiMessageDetail':
-      return <BiMessageDetail color="#0A8FDC" className="icon" />;
+      return <BiMessageDetail color='#0A8FDC' className='icon' />;
     default:
-      return <CgFileDocument color="#0A8FDC" className="icon" />;
+      return <CgFileDocument color='#0A8FDC' className='icon' />;
   }
 };
 
@@ -51,7 +51,7 @@ const WelcomeCard = ({ data }) => {
             }}
           >
             <Box
-              component="h5"
+              component='h5'
               sx={{
                 color: 'text.secondary',
                 fontWeight: Fonts.REGULAR,
@@ -62,7 +62,7 @@ const WelcomeCard = ({ data }) => {
               {messages['dashboard.analytics.welcome']}
             </Box>
             <Box
-              component="h3"
+              component='h3'
               sx={{
                 color: 'text.primary',
                 fontWeight: Fonts.MEDIUM,
@@ -80,7 +80,7 @@ const WelcomeCard = ({ data }) => {
           >
             <AppScrollbar
               sx={{
-                maxWidth: '100%',
+                maxWidth: 500,
                 px: 3,
               }}
             >
@@ -134,12 +134,12 @@ const WelcomeCard = ({ data }) => {
                           lineHeight: 1,
                           marginBottom: 0.5,
                         }}
-                        component="h5"
+                        component='h5'
                       >
                         {item.counts}
                       </Box>
 
-                      <Box component="p">{item.type}</Box>
+                      <Box component='p'>{item.type}</Box>
                     </Box>
                   </Box>
                 ))}
@@ -161,7 +161,7 @@ const WelcomeCard = ({ data }) => {
             },
           }}
         >
-          <img alt="welcome" src={'/assets/images/dashboard/welcomImage.svg'} />
+          <img alt='welcome' src={'/assets/images/dashboard/welcomImage.svg'} />
         </Box>
       </Box>
     </AppCard>

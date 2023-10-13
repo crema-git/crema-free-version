@@ -1,5 +1,5 @@
 export const authRole = {
-  Admin: ['admin'],
+  Admin: ['admin', 'user'],
   User: ['user'],
 };
 

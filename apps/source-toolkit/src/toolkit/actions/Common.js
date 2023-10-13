@@ -5,6 +5,7 @@ import {
   HIDE_MESSAGE,
   SHOW_MESSAGE,
   TOGGLE_APP_DRAWER,
+  UPDATING_CONTENT,
 } from '@crema/constants/ActionTypes';
 
 export const fetchStart = () => {
@@ -13,6 +14,9 @@ export const fetchStart = () => {
 
 export const fetchSuccess = () => {
   return (dispatch) => dispatch({ type: FETCH_SUCCESS });
+};
+export const updatingContent = () => {
+  return (dispatch) => dispatch({ type: UPDATING_CONTENT });
 };
 
 export const fetchError = (error) => {

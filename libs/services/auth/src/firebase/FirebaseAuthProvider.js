@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useEffect, useState } from 'react';
+import React, {createContext, useContext, useEffect, useState} from 'react';
 import PropTypes from 'prop-types';
 import {
   auth,
@@ -14,6 +14,7 @@ import {
   twitterAuthProvider,
   updateProfile,
 } from './firebase';
+import {defaultUser} from "@crema/constants";
 
 const FirebaseContext = createContext();
 const FirebaseActionsContext = createContext();
@@ -29,9 +30,9 @@ const FirebaseAuthProvider = ({
   fetchError,
 }) => {
   const [firebaseData, setFirebaseData] = useState({
-    user: undefined,
+    user: defaultUser,
     isLoading: true,
-    isAuthenticated: false,
+    isAuthenticated: true,
   });
 
   useEffect(() => {
@@ -40,8 +41,8 @@ const FirebaseAuthProvider = ({
       auth,
       (user) => {
         setFirebaseData({
-          user: user,
-          isAuthenticated: Boolean(user),
+          user: user?user:firebaseData.user,
+          isAuthenticated: Boolean(user?user:firebaseData.user),
           isLoading: false,
         });
         fetchSuccess();
@@ -49,17 +50,17 @@ const FirebaseAuthProvider = ({
       () => {
         fetchSuccess();
         setFirebaseData({
-          user: undefined,
+          user: firebaseData.user,
           isLoading: false,
-          isAuthenticated: false,
+          isAuthenticated: firebaseData.isAuthenticated,
         });
       },
       (completed) => {
         fetchSuccess();
         setFirebaseData({
-          user: undefined,
+          user: firebaseData.user,
           isLoading: false,
-          isAuthenticated: completed,
+          isAuthenticated: firebaseData.isAuthenticated,
         });
       },
     );

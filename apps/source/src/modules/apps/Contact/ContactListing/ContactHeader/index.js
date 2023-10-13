@@ -79,6 +79,7 @@ export default ContactHeader;
 ContactHeader.defaultProps = {
   checkedContacts: [],
   filterText: '',
+  pageView: 'list',
   page: 0,
 };
 

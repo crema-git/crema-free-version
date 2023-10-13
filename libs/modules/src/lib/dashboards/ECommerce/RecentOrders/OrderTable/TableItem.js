@@ -2,11 +2,51 @@ import React from 'react';
 import TableCell from '@mui/material/TableCell';
 import TableRow from '@mui/material/TableRow';
 import PropTypes from 'prop-types';
-import Box from '@mui/material/Box';
 import IconButton from '@mui/material/IconButton';
-import MoreVertIcon from '@mui/icons-material/MoreVert';
+import {Typography} from '@mui/material';
+import {BiArchiveIn} from 'react-icons/bi';
+import {AiOutlineEye} from 'react-icons/ai';
 
-const TableItem = ({ data }) => {
+import {alpha, styled} from '@mui/material/styles';
+import Box from '@mui/material/Box';
+
+const TableCellWrapper = styled(TableCell)(({theme}) => {
+  return {
+    padding: 16,
+    fontSize: 14,
+    '&:first-of-type': {
+      paddingLeft: 20,
+    },
+    '&:last-of-type': {
+      paddingRight: 20,
+    },
+    '& .icon-btn': {
+      border: `solid 1px ${alpha('#F84E4E', 0.5)}`,
+      color: alpha('#F84E4E', 0.5),
+      padding: 3,
+      fontSize: 16,
+      '&:not(:first-of-type)': {
+        marginLeft: 8,
+      },
+    },
+    '& .icon-btn-eye': {
+      border: `solid 1px ${alpha(theme.palette.primary.main, 0.5)}`,
+      color: alpha(theme.palette.primary.main, 0.5),
+    },
+    '&:hover': {
+      '& .icon-btn': {
+        border: `solid 1px #F84E4E`,
+        color: '#F84E4E',
+      },
+      '& .icon-btn-eye': {
+        border: `solid 1px ${theme.palette.primary.main}`,
+        color: theme.palette.primary.main,
+      },
+    },
+  };
+});
+
+const TableItem = ({data}) => {
   const getPaymentStatusColor = () => {
     switch (data.status) {
       case 'Pending': {
@@ -22,68 +62,45 @@ const TableItem = ({ data }) => {
   };
 
   return (
-    <TableRow
-      sx={{
-        '& .tableCell': {
-          fontSize: 13,
-          padding: 2,
-          '&:first-of-type': {
-            pl: 5,
-          },
-          '&:last-of-type': {
-            pr: 5,
-          },
-        },
-      }}
-      key={data.name}
-      className="item-hover"
-    >
-      <TableCell component="th" scope="row" className="tableCell">
-        <Box
+    <TableRow key={data.name} className='item-hover'>
+      <TableCellWrapper component='th' scope='row'>
+        <Typography
           sx={{
             color: (theme) => theme.palette.primary.main,
-            borderBottom: (theme) => `1px solid ${theme.palette.primary.main}`,
             display: 'inline-block',
           }}
+          component='h5'
+          variant='h5'
         >
           {data.id}
-        </Box>
-      </TableCell>
-      <TableCell align="left" className="tableCell">
-        {data.product}
-      </TableCell>
-      <TableCell align="left" className="tableCell">
-        {data.customer}
-      </TableCell>
-      <TableCell align="left" className="tableCell">
-        {data.date}
-      </TableCell>
-      <TableCell align="left" className="tableCell">
-        {data.price}
-      </TableCell>
-      <TableCell align="left" className="tableCell">
+        </Typography>
+      </TableCellWrapper>
+      <TableCellWrapper align='left'>{data.product}</TableCellWrapper>
+      <TableCellWrapper align='left'>{data.customer}</TableCellWrapper>
+      <TableCellWrapper align='left'>{data.date}</TableCellWrapper>
+      <TableCellWrapper align='left'>{data.price}</TableCellWrapper>
+      <TableCellWrapper align='left'>
         <Box
+          component='span'
           sx={{
+            padding: '4px 10px',
+            borderRadius: 30,
+            display: 'inline-block',
             color: getPaymentStatusColor(),
             backgroundColor: getPaymentStatusColor() + '44',
-            padding: '3px 10px',
-            borderRadius: 1,
-            display: 'inline-block',
           }}
         >
           {data.status}
         </Box>
-      </TableCell>
-      <TableCell align="right" className="tableCell">
-        <IconButton
-          aria-label="more"
-          aria-controls="long-menu"
-          aria-haspopup="true"
-          onClick={null}
-        >
-          <MoreVertIcon />
+      </TableCellWrapper>
+      <TableCellWrapper align='right'>
+        <IconButton size='small' className='icon-btn icon-btn-eye'>
+          <AiOutlineEye />
         </IconButton>
-      </TableCell>
+        <IconButton size='small' className='icon-btn'>
+          <BiArchiveIn />
+        </IconButton>
+      </TableCellWrapper>
     </TableRow>
   );
 };

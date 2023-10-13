@@ -1,19 +1,23 @@
 import TotalBalance from './TotalBalance';
 import Coins from './Coins';
-import Bitcoin from './Bitcoin';
 import BuySell from './BuySell';
-import BtcVolumeCurrency from './BtcVolumeCurrency';
-import PopularCoins from './PopularCoins';
-import LatestNews from './LatestNews';
-import CryptoMarketActivity from './CryptoMarketActivity';
+import TradingChart from './TradingChart';
+import OrdersActivities from './OrdersActivities';
+import TopStories from './TopStories';
+import GainerLooser from './GainerLooser';
+import ATCStatics from './ATCStatics';
+import CardDetails from './CardDetails';
+import QuickTransfer from './QuickTransfer';
 
 export {
   TotalBalance,
   Coins,
-  Bitcoin,
   BuySell,
-  BtcVolumeCurrency,
-  PopularCoins,
-  LatestNews,
-  CryptoMarketActivity,
+  TradingChart,
+  OrdersActivities,
+  TopStories,
+  GainerLooser,
+  ATCStatics,
+  CardDetails,
+  QuickTransfer,
 };

@@ -32,16 +32,15 @@ export default function MultipleSelectNative() {
   return (
     <div>
       <FormControl sx={{ m: 1, minWidth: 120, maxWidth: 300 }}>
-        <InputLabel shrink htmlFor="select-multiple-native">
+        <InputLabel shrink htmlFor='select-multiple-native'>
           Native
         </InputLabel>
         <Select
           multiple
           native
           value={personName}
-          // @ts-ignore Typings are not considering `native`
           onChange={handleChangeMultiple}
-          label="Native"
+          label='Native'
           inputProps={{
             id: 'select-multiple-native',
           }}

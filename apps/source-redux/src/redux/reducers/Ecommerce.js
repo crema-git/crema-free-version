@@ -9,6 +9,8 @@ import {
   SET_PRODUCT_DATA,
   SET_PRODUCT_VIEW_TYPE,
   UPDATE_CART_ITEM,
+  ADD_PRODUCT_ITEM,
+  UPDATE_PRODUCT_ITEM,
 } from '@crema/constants/ActionTypes';
 import { cartItems } from '@crema/fakedb/data';
 
@@ -35,6 +37,16 @@ const initialState = {
 const ecommerceReducer = (state = initialState, action) => {
   switch (action.type) {
     case GET_ECOMMERCE_LIST:
+      return {
+        ...state,
+        ecommerceList: action.payload,
+      };
+    case ADD_PRODUCT_ITEM:
+      return {
+        ...state,
+        ecommerceList: action.payload,
+      };
+    case UPDATE_PRODUCT_ITEM:
       return {
         ...state,
         ecommerceList: action.payload,
@@ -74,7 +86,7 @@ const ecommerceReducer = (state = initialState, action) => {
       return {
         ...state,
         cartItems: state.cartItems.map((item) =>
-          item.id === action.payload.id ? action.payload : item
+          item.id === action.payload.id ? action.payload : item,
         ),
       };
 
@@ -116,7 +128,7 @@ const ecommerceReducer = (state = initialState, action) => {
       return {
         ...state,
         cartItems: state.cartItems.filter(
-          (item) => item.id !== action.payload.id
+          (item) => item.id !== action.payload.id,
         ),
       };
 

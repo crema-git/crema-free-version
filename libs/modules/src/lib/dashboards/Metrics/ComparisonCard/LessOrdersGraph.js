@@ -13,7 +13,7 @@ const LessOrdersGraph = ({ data }) => {
         },
       }}
     >
-      <ResponsiveContainer height={200} className="containerGraph">
+      <ResponsiveContainer height={200} className='containerGraph'>
         <AreaChart
           width={500}
           height={100}
@@ -26,11 +26,11 @@ const LessOrdersGraph = ({ data }) => {
           }}
         >
           <Area
-            type="monotone"
-            dataKey="orders"
-            stroke="#E53E3E"
-            fill="#E53E3E"
-            strokeWidth={4}
+            type='monotone'
+            dataKey='orders'
+            stroke='#E53E3E'
+            fill='#E53E3E'
+            strokeWidth={2}
           />
         </AreaChart>
       </ResponsiveContainer>

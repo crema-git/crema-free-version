@@ -3,7 +3,7 @@ import { Fonts } from '@crema/constants/AppEnums';
 export const highlightTheme = {
   plain: {
     color: '#F8F8F2',
-    fontFamily: 'Poppins',
+    fontFamily: 'Be Vietnam',
     fontWeight: Fonts.REGULAR,
     backgroundColor: '#333333',
   },

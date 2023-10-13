@@ -101,6 +101,145 @@ export const pricingData = {
       ],
     },
   ],
+  pricingOneNew: [
+    {
+      id: 1,
+      tag: 'Free',
+      tagColor: '#0A8FDC',
+      title: 'Free',
+      btnText: 'Try Now',
+      price: 0,
+      pricingList: [
+        {
+          id: 1,
+          title: 'All features from previous plan',
+        },
+        {
+          id: 2,
+          title: 'Memberships and bundles',
+        },
+        {
+          id: 3,
+          title: 'Advanced quizzes',
+        },
+        {
+          id: 4,
+          title: 'Private & hidden courses',
+        },
+        {
+          id: 5,
+          title: '2 Site admin accounts',
+        },
+        {
+          id: 6,
+          title: '5 Course admins/authors',
+        },
+      ],
+    },
+    {
+      id: 2,
+      tag: 'Basic',
+      tagColor: '#11C15B',
+      title: 'Basic',
+      btnText: 'Buy Now',
+      price: 69,
+      pricingList: [
+        {
+          id: 1,
+          title: 'All features from previous plan',
+        },
+        {
+          id: 2,
+          title: 'Memberships and bundles',
+        },
+        {
+          id: 3,
+          title: 'Advanced quizzes',
+        },
+        {
+          id: 4,
+          title: 'Private & hidden courses',
+        },
+        {
+          id: 5,
+          title: '2 Site admin accounts',
+        },
+        {
+          id: 6,
+          title: '5 Course admins/authors',
+        },
+      ],
+    },
+    {
+      id: 3,
+      tag: 'Pro',
+      tagColor: '#FF8B26',
+      title: 'Pro',
+      btnText: 'Buy Now',
+      price: 349,
+      popular: 'Most popular!',
+      pricingList: [
+        {
+          id: 1,
+          title: 'All features from previous plan',
+        },
+        {
+          id: 2,
+          title: 'Memberships and bundles',
+        },
+        {
+          id: 3,
+          title: 'Advanced quizzes',
+        },
+        {
+          id: 4,
+          title: 'Private & hidden courses',
+        },
+        {
+          id: 5,
+          title: '2 Site admin accounts',
+        },
+        {
+          id: 6,
+          title: '5 Course admins/authors',
+        },
+      ],
+    },
+    {
+      id: 4,
+      tag: 'Growth',
+      tagColor: '#F77568',
+      title: 'Growth',
+      btnText: 'Contact Sales',
+      price: 149,
+      pricingList: [
+        {
+          id: 1,
+          title: 'All features from previous plan',
+        },
+        {
+          id: 2,
+          title: 'Memberships and bundles',
+        },
+        {
+          id: 3,
+          title: 'Advanced quizzes',
+        },
+        {
+          id: 4,
+          title: 'Private & hidden courses',
+        },
+        {
+          id: 5,
+          title: '2 Site admin accounts',
+        },
+        {
+          id: 6,
+          title: '5 Course admins/authors',
+        },
+      ],
+    },
+  ],
   pricingFour: [
     {
       id: 1,
@@ -305,6 +444,67 @@ export const pricingData = {
         },
       ],
     },
+  ],
+  gitPackage: [
+    {
+      id: 1,
+      src: '/assets/images/githeart.svg',
+      title: 'Open Source Teams',
+      description:
+        'If you manage multiple contributors, there’s a free option. We also run GitHub Sponsors, where we help fund your work',
+    },
+    {
+      id: 2,
+      src: '/assets/images/gitswag.svg',
+      title: 'Students and teachers',
+      description:
+        'We’ve partnered with industry leaders to give students and teachers free access to the best developer tools—for the school year and beyond.',
+    },
+    {
+      id: 3,
+      src: '/assets/images/community.svg',
+      title: 'Non-Profits',
+      description:
+        'Work for a government-recognized nonprofit, association, or 501(c)(3)? Get a discounted Organization account on us.',
+    },
+  ],
+  tableData: [
+    { title: 'Overview' },
+    { title: 'Basic Features', free: 'Y', basic: 'Y', pro: 'Y' },
+    { title: 'Users', free: '10GB', basic: '20GB', pro: 'Unlimited' },
+    {
+      title: 'Individual Support',
+      free: '20GB',
+      basic: '40GB',
+      pro: 'Unlimited',
+    },
+    { title: 'Support', free: 'Y', basic: 'Y', pro: 'Y' },
+    { title: 'Automated workflows', free: 'N', basic: 'Y', pro: 'Y' },
+    { title: '200+ Integrations', free: 'N', basic: 'Y', pro: 'Y' },
+    { title: 'Reporting And Analytics' },
+    { title: 'Analytics', free: 'Y', basic: 'Y', pro: 'Y' },
+    { title: 'Export Reports', free: 'Y', basic: 'Y', pro: 'Y' },
+    {
+      title: 'Scheduled Reports',
+      free: 'N',
+      basic: 'Y',
+      pro: 'Y',
+    },
+    { title: 'API Access', free: 'N', basic: 'Y', pro: 'Y' },
+    { title: 'Advanced Reports', free: 'N', basic: 'Y', pro: 'Y' },
+    { title: 'Saved Reports', free: 'N', basic: 'Y', pro: 'Y' },
+    { title: 'Customer Properties', free: 'N', basic: 'N', pro: 'Y' },
+    { title: 'Custom Fields', free: 'N', basic: 'N', pro: 'Y' },
+    { title: 'User Access' },
+    { title: 'SSO/SAML Authentication', free: 'Y', basic: 'Y', pro: 'Y' },
+    { title: 'Advanced Permissions', free: 'N', basic: 'Y', pro: 'Y' },
+    {
+      title: 'Audit Log',
+      free: 'N',
+      basic: 'N',
+      pro: 'Y',
+    },
+    { title: 'Data History', free: 'N', basic: 'N', pro: 'Y' },
   ],
 };
 

@@ -7,10 +7,7 @@ import PropTypes from 'prop-types';
 import CheckedTasksActions from './CheckedTasksActions';
 import AppsPagination from '@crema/components/AppsPagination';
 import Hidden from '@mui/material/Hidden';
-import {
-  SelectTasksDropdown,
-  ViewSelectButtons,
-} from '@crema/modules/apps/ToDo';
+import { SelectTasksDropdown } from '@crema/modules/apps/ToDo';
 import {
   useTodoActionsContext,
   useTodoContext,
@@ -25,8 +22,8 @@ const TaskContentHeader = (props) => {
     onSetFilterText,
   } = props;
 
-  const { taskLists, page, viewMode } = useTodoContext();
-  const { onPageChange, setViewMode } = useTodoActionsContext();
+  const { taskLists, page } = useTodoContext();
+  const { onPageChange } = useTodoActionsContext();
 
   const onHandleMasterCheckbox = (event) => {
     if (event.target.checked) {
@@ -57,7 +54,7 @@ const TaskContentHeader = (props) => {
       case 3:
         setCheckedTasks(
           taskLists?.data
-            ?.filter((task) => task.isAttachment)
+            ?.filter((task) => task.hasAttachments)
             .map((task) => task.id),
         );
         break;
@@ -124,14 +121,6 @@ const TaskContentHeader = (props) => {
             />
           </Box>
         ) : null}
-      </Box>
-
-      <Box
-        sx={{
-          mr: { xs: 3, xl: 4 },
-        }}
-      >
-        <ViewSelectButtons viewMode={viewMode} onViewModeSelect={setViewMode} />
       </Box>
 
       <Hidden smDown>

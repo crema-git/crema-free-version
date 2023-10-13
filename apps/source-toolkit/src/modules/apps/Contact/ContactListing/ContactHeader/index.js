@@ -26,7 +26,7 @@ const ContactHeader = (props) => {
   const contactList = useSelector(({ contactApp }) => contactApp.contactList);
 
   const totalContacts = useSelector(
-    ({ contactApp }) => contactApp.totalContacts
+    ({ contactApp }) => contactApp.totalContacts,
   );
 
   const { messages } = useIntl();
@@ -47,7 +47,7 @@ const ContactHeader = (props) => {
         />
 
         <AppSearchBar
-          iconPosition="right"
+          iconPosition='right'
           overlap={false}
           value={filterText}
           onChange={(event) => onSetFilterText(event.target.value)}
@@ -85,6 +85,7 @@ export default ContactHeader;
 ContactHeader.defaultProps = {
   checkedContacts: [],
   filterText: '',
+  pageView: 'list',
   page: 0,
 };
 

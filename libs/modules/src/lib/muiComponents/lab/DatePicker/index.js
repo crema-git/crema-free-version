@@ -25,9 +25,6 @@ import ViewsDatePickerSource from '!raw-loader!./ViewsDatePicker';
 import StaticDatePickerLandscape from './StaticDatePickerLandscape';
 import StaticDatePickerLandscapeSource from '!raw-loader!./StaticDatePickerLandscape';
 
-import SubComponentsPickers from './SubComponentsPickers';
-import SubComponentsPickersSource from '!raw-loader!./SubComponentsPickers';
-
 import CustomInput from './CustomInput';
 import CustomInputSource from '!raw-loader!./CustomInput';
 
@@ -44,15 +41,15 @@ const DatePicker = () => {
   return (
     <>
       <AppComponentHeader
-        title="DatePicker"
-        description="Date pickers let the user select a date."
-        refUrl="https://material.io/components/date-pickers"
+        title='DatePicker'
+        description='Date pickers let the user select a date.'
+        refUrl='https://material.io/components/date-pickers'
       />
 
       <AppGridContainer>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title="BasicDatePicker"
+            title='BasicDatePicker'
             component={BasicDatePicker}
             source={BasicDatePickerSource}
             noScrollbar
@@ -60,7 +57,7 @@ const DatePicker = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title="ServerRequestDatePicker"
+            title='ServerRequestDatePicker'
             component={ServerRequestDatePicker}
             source={ServerRequestDatePickerSource}
             noScrollbar
@@ -68,7 +65,7 @@ const DatePicker = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title="HelperText"
+            title='HelperText'
             component={HelperText}
             source={HelperTextSource}
             noScrollbar
@@ -76,7 +73,7 @@ const DatePicker = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title="CustomInput"
+            title='CustomInput'
             component={CustomInput}
             source={CustomInputSource}
             noScrollbar
@@ -84,7 +81,7 @@ const DatePicker = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title="FormPropsDatePickers"
+            title='FormPropsDatePickers'
             component={FormPropsDatePickers}
             source={FormPropsDatePickersSource}
             noScrollbar
@@ -92,7 +89,7 @@ const DatePicker = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title="LocalizedDatePicker"
+            title='LocalizedDatePicker'
             component={LocalizedDatePicker}
             source={LocalizedDatePickerSource}
             noScrollbar
@@ -101,7 +98,7 @@ const DatePicker = () => {
 
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title="ResponsiveDatePickers"
+            title='ResponsiveDatePickers'
             component={ResponsiveDatePickers}
             source={ResponsiveDatePickersSource}
             noScrollbar
@@ -110,7 +107,7 @@ const DatePicker = () => {
 
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title="ViewsDatePicker"
+            title='ViewsDatePicker'
             component={ViewsDatePicker}
             source={ViewsDatePickerSource}
             noScrollbar
@@ -118,7 +115,7 @@ const DatePicker = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title="StaticDatePickerDemo"
+            title='StaticDatePickerDemo'
             component={StaticDatePickerDemo}
             source={StaticDatePickerDemoSource}
             noScrollbar
@@ -126,7 +123,7 @@ const DatePicker = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title="CustomDay"
+            title='CustomDay'
             component={CustomDay}
             source={CustomDaySource}
             noScrollbar
@@ -134,17 +131,9 @@ const DatePicker = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title="StaticDatePickerLandscape"
+            title='StaticDatePickerLandscape'
             component={StaticDatePickerLandscape}
             source={StaticDatePickerLandscapeSource}
-            noScrollbar
-          />
-        </Grid>
-        <Grid item xs={12} md={6}>
-          <AppComponentCard
-            title="SubComponentsPickers"
-            component={SubComponentsPickers}
-            source={SubComponentsPickersSource}
             noScrollbar
           />
         </Grid>

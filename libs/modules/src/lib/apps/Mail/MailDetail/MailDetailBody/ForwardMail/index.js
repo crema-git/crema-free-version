@@ -7,13 +7,14 @@ import IntlMessages from '@crema/helpers/IntlMessages';
 import { useIntl } from 'react-intl';
 import { Box } from '@mui/material';
 import PropTypes from 'prop-types';
-import moment from 'moment';
+import dayjs from 'dayjs';
 import { useAuthUser } from '@crema/hooks/AuthHooks';
 import AppTextField from '@crema/components/AppTextField';
 import ReactQuill from 'react-quill';
 import { Fonts } from '@crema/constants/AppEnums';
 
 import { styled } from '@mui/material/styles';
+import { generateRandomUniqueNumber } from '@crema/helpers';
 
 const ReactQuillWrapper = styled(ReactQuill)(() => {
   return {
@@ -31,9 +32,9 @@ const ReactQuillWrapper = styled(ReactQuill)(() => {
 const validationSchema = yup.object({
   to: yup
     .string()
-    .email(<IntlMessages id="validation.emailFormat" />)
-    .required(<IntlMessages id="validation.emailRequired" />),
-  cc: yup.string().email(<IntlMessages id="validation.emailFormat" />),
+    .email(<IntlMessages id='validation.emailFormat' />)
+    .required(<IntlMessages id='validation.emailRequired' />),
+  cc: yup.string().email(<IntlMessages id='validation.emailFormat' />),
 });
 
 const ForwardMail = ({ onSubmitForwardedMail }) => {
@@ -71,11 +72,12 @@ const ForwardMail = ({ onSubmitForwardedMail }) => {
           console.log('data: ', data);
           setSubmitting(true);
           const mail = {
-            messageId: Math.floor(Math.random()) * 1000,
+            messageId: generateRandomUniqueNumber(),
             sender: {
+              id: user.id,
               name: user.displayName ? user.displayName : user.username,
               email: user.email,
-              profilePic: '',
+              profilePic: user.photoURL ? user.photoURL : '',
             },
             to: [
               {
@@ -88,7 +90,7 @@ const ForwardMail = ({ onSubmitForwardedMail }) => {
             bcc: [],
             description: data.content ? data.content : 'No Message',
             isStarred: false,
-            sentOn: moment().format('llll'),
+            sentOn: dayjs().format('llll'),
           };
           console.log('mail: ', mail);
           onSubmitForwardedMail(mail);
@@ -110,27 +112,27 @@ const ForwardMail = ({ onSubmitForwardedMail }) => {
                 InputProps={{
                   startAdornment: (
                     <InputAdornment
-                      position="start"
+                      position='start'
                       sx={{
                         fontWeight: Fonts.MEDIUM,
                       }}
                     >
-                      <IntlMessages id="common.to" />
+                      <IntlMessages id='common.to' />
                     </InputAdornment>
                   ),
                 }}
-                name="to"
+                name='to'
               />
 
               <Box
-                component="span"
+                component='span'
                 sx={{
                   ml: 4,
                   cursor: 'pointer',
                 }}
                 onClick={onShowCcInput}
               >
-                <IntlMessages id="common.cc" />
+                <IntlMessages id='common.cc' />
               </Box>
             </Box>
 
@@ -143,7 +145,7 @@ const ForwardMail = ({ onSubmitForwardedMail }) => {
                 <AppTextField
                   placeholder={messages['common.cc']}
                   fullWidth
-                  name="cc"
+                  name='cc'
                 />
               </Box>
             ) : null}
@@ -154,15 +156,15 @@ const ForwardMail = ({ onSubmitForwardedMail }) => {
               }}
             >
               <ReactQuillWrapper
-                theme="snow"
+                theme='snow'
                 placeholder={messages['common.writeContent']}
                 onChange={(value) => setFieldValue('content', value)}
               />
             </Box>
 
             <div style={{ textAlign: 'right' }}>
-              <Button type="submit" color="primary" variant="outlined">
-                <IntlMessages id="common.send" />
+              <Button type='submit' color='primary' variant='outlined'>
+                <IntlMessages id='common.send' />
               </Button>
             </div>
           </Form>

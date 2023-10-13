@@ -1,113 +1,80 @@
+import AppCard from "@crema/components/AppCard";
+import AppList from "@crema/components/AppList";
 import React from 'react';
-import AppCard from '@crema/components/AppCard';
-import { useIntl } from 'react-intl';
-import { Box } from '@mui/material';
-import { Fonts } from '@crema/constants/AppEnums';
-import AppCircularProgress from '@crema/components/AppCircularProgress';
+import AppScrollbar from "@crema/components/AppScrollbar";
+import PropTypes from 'prop-types';
+import useIntl from 'react-intl/lib/src/components/useIntl';
+import {Typography} from '@mui/material';
+import Box from '@mui/material/Box';
+import AppLinearProgress from "@crema/components/AppLinearProgress";
 
-const Revenue = () => {
-  const { messages } = useIntl();
-
+const RevenueItem = ({item}) => {
   return (
-    <AppCard title={messages['eCommerce.revenue']}>
-      <Box
-        sx={{
-          mb: 6,
-          py: 3,
-        }}
-      >
-        <AppCircularProgress
-          activeColor="#0A8FDC"
-          value={70}
-          hidePercentage
-          centerNode={
-            <Box>
-              <Box
-                sx={{
-                  display: 'flex',
-                  flexDirection: 'row',
-                }}
-              >
-                <Box
-                  component="span"
-                  sx={{
-                    fontSize: 14,
-                    fontWeight: Fonts.MEDIUM,
-                  }}
-                >
-                  $
-                </Box>
-                <Box
-                  component="h3"
-                  sx={{
-                    color: 'text.primary',
-                    fontSize: 18,
-                    fontWeight: Fonts.MEDIUM,
-                  }}
-                >
-                  600
-                </Box>
-              </Box>
-              <Box
-                component="p"
-                sx={{
-                  ml: 2,
-                  fontSize: 14,
-                  color: 'text.secondary',
-                }}
-              >
-                Sales
-              </Box>
-            </Box>
-          }
-          thickness={2}
-        />
-      </Box>
+    <Box
+      sx={{
+        padding: '10px 20px',
+      }}
+      key={item.id}
+      className='item-hover'
+    >
       <Box
         sx={{
           display: 'flex',
-          justifyContent: 'space-around',
+          alignItems: 'center',
+          mb: 1.5,
         }}
       >
-        <Box>
-          <Box
-            sx={{
-              fontSize: 18,
-              mb: 0.5,
-              fontWeight: Fonts.BOLD,
-            }}
-          >
-            $ 2,000
-          </Box>
-          <Box
-            sx={{
-              color: 'text.secondary',
-            }}
-          >
-            Target
-          </Box>
-        </Box>
-        <Box>
-          <Box
-            sx={{
-              fontSize: 18,
-              mb: 0.5,
-              fontWeight: Fonts.BOLD,
-            }}
-          >
-            $ 1,500
-          </Box>
-          <Box
-            sx={{
-              color: 'text.secondary',
-            }}
-          >
-            Current
-          </Box>
+        <Typography
+          variant='h5'
+          component='h5'
+          sx={{
+            display: 'inline-block',
+            mr: 1,
+          }}
+        >
+          {item.name}
+        </Typography>
+        <Box
+          component='span'
+          sx={{
+            color: (theme) => theme.palette.text.secondary,
+            ml: 'auto',
+          }}
+        >
+          {item.value}%
         </Box>
       </Box>
+      <AppLinearProgress value={item.value} activeColor='#0A8FDC' />
+    </Box>
+  );
+};
+
+RevenueItem.propTypes = {
+  item: PropTypes.object,
+};
+
+const Revenue = ({revenueData}) => {
+  const {messages} = useIntl();
+  return (
+    <AppCard
+      sxStyle={{height: 1}}
+      title={messages['dashboard.eCommerce.revenue']}
+      action={messages['common.viewAll']}
+      contentStyle={{paddingLeft: 0, paddingRight: 0}}
+    >
+      <AppScrollbar style={{maxHeight: 200}}>
+        <AppList
+          animation='transition.slideRightBigIn'
+          data={revenueData}
+          renderRow={(data, index) => <RevenueItem key={index} item={data} />}
+        />
+      </AppScrollbar>
     </AppCard>
   );
 };
 
 export default Revenue;
+
+Revenue.propTypes = {
+  revenueData: PropTypes.array,
+};

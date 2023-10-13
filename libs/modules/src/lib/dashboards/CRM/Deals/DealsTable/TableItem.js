@@ -43,22 +43,21 @@ const TableItem = (props) => {
           },
         },
       }}
-      className="item-hover"
+      className='item-hover'
     >
-      <TableCell scope="row" className="tableCell">
+      <TableCell scope='row' className='tableCell'>
         {row.id}.
       </TableCell>
       <TableCell
-        align="left"
+        align='left'
         sx={{
           whiteSpace: 'no-wrap',
         }}
-        className="tableCell"
+        className='tableCell'
       >
         <Box
           sx={{
             display: 'flex',
-            alignItems: 'center',
           }}
         >
           {row.logo ? (
@@ -67,7 +66,7 @@ const TableItem = (props) => {
             <Avatar>{row.name[0].toUpperCase()}</Avatar>
           )}
           <Box
-            component="span"
+            component='span'
             sx={{
               ml: 3.5,
               fontWeight: Fonts.MEDIUM,
@@ -78,14 +77,14 @@ const TableItem = (props) => {
         </Box>
       </TableCell>
       <TableCell
-        align="left"
+        align='left'
         sx={{
           color: getProgressColor(row.progress),
         }}
-        className="tableCell"
+        className='tableCell'
       >
         <Box
-          component="span"
+          component='span'
           sx={{
             fontWeight: Fonts.REGULAR,
           }}
@@ -93,18 +92,18 @@ const TableItem = (props) => {
           {row.progress}
         </Box>
       </TableCell>
-      <TableCell align="left" className="tableCell">
+      <TableCell align='left' className='tableCell'>
         {row.type}
       </TableCell>
-      <TableCell align="left" className="tableCell" fontWeight={Fonts.MEDIUM}>
+      <TableCell align='left' className='tableCell' fontWeight={Fonts.MEDIUM}>
         {row.amount}
       </TableCell>
       <TableCell
-        align="left"
+        align='left'
         sx={{
           whiteSpace: 'no-wrap',
         }}
-        className="tableCell"
+        className='tableCell'
       >
         {row.created}
       </TableCell>

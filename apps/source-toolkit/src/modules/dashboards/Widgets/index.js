@@ -69,30 +69,6 @@ const Widgets = () => {
           </Grid>
 
           <Grid item xs={12} md={4}>
-            <TemperatureCard temperatures={widgetsData.temperatures} />
-          </Grid>
-
-          <Grid item xs={12} md={4}>
-            <DateSelector />
-          </Grid>
-
-          <Grid item xs={12} md={4}>
-            <VisitorAnalysis />
-          </Grid>
-
-          <Grid item xs={12} md={4}>
-            <BirthdayCard />
-          </Grid>
-
-          <Grid item xs={12} md={4}>
-            <CountryMap />
-          </Grid>
-
-          <Grid item xs={12} md={4}>
-            <RecentActivity data={widgetsData.recentActivity} />
-          </Grid>
-
-          <Grid item xs={12} md={4}>
             <IllustrationDesign />
           </Grid>
 
@@ -186,6 +162,29 @@ const Widgets = () => {
 
           <Grid item xs={12} md={4}>
             <Formats data={widgetsData.formatList} />
+          </Grid>
+          <Grid item xs={12} md={4}>
+            <TemperatureCard temperatures={widgetsData.temperatures} />
+          </Grid>
+
+          <Grid item xs={12} md={4}>
+            <DateSelector />
+          </Grid>
+
+          <Grid item xs={12} md={4}>
+            <VisitorAnalysis />
+          </Grid>
+
+          <Grid item xs={12} md={4}>
+            <BirthdayCard />
+          </Grid>
+
+          <Grid item xs={12} md={4}>
+            <CountryMap />
+          </Grid>
+
+          <Grid item xs={12} md={4}>
+            <RecentActivity data={widgetsData.recentActivity} />
           </Grid>
         </AppGridContainer>
       </>

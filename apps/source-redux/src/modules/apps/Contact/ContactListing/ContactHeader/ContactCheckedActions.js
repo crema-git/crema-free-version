@@ -56,13 +56,13 @@ const ContactCheckedActions = (props) => {
             color: (theme) => theme.palette.text.disabled,
           }}
           size='large'
+          onClick={() => onSelectContactsForDelete(checkedContacts)}
         >
           <DeleteOutlinedIcon
             sx={{
               cursor: 'pointer',
               display: 'block',
             }}
-            onClick={() => onSelectContactsForDelete(checkedContacts)}
           />
         </IconButton>
       </AppTooltip>
@@ -74,6 +74,7 @@ const ContactCheckedActions = (props) => {
               color: (theme) => theme.palette.text.disabled,
             }}
             size='large'
+            onClick={onLabelOpen}
           >
             <LabelOutlinedIcon
               sx={{
@@ -81,7 +82,6 @@ const ContactCheckedActions = (props) => {
                 display: 'block',
               }}
               value={1}
-              onClick={onLabelOpen}
             />
           </IconButton>
         </AppTooltip>

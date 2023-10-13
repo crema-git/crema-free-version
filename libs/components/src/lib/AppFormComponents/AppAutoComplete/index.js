@@ -7,6 +7,7 @@ import { Chip } from '@mui/material';
 
 export default function AppAutoComplete({
   options = [],
+  // eslint-disable-next-line @typescript-eslint/no-empty-function
   onType = () => {},
   keyName,
   idField = 'id',
@@ -79,14 +80,14 @@ export default function AppAutoComplete({
           name={name}
           placeholder={placeholder}
           {...params}
-          variant="outlined"
+          variant='outlined'
           onChange={(ev) => onType(ev.target.value)}
           InputProps={{
             ...params.InputProps,
             endAdornment: (
               <React.Fragment>
                 {loading ? (
-                  <CircularProgress color="inherit" size={20} />
+                  <CircularProgress color='inherit' size={20} />
                 ) : null}
                 {params.InputProps.endAdornment}
               </React.Fragment>

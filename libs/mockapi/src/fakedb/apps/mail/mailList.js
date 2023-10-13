@@ -9,33 +9,33 @@ const emailDescription = [
 export const senders = [
   {
     id: 1,
-    name: 'Verily',
+    name: 'Crema',
     email: 'info@cremawork.com',
-    profilePic: '',
+    profilePic: './assets/images/logo/vcs.png',
   },
   {
     id: 2,
     name: 'Paytm',
-    email: 'paytm.help@paytm.com',
-    profilePic: '',
+    email: 'support@paytm.com',
+    profilePic: './assets/images/logo/paytm.png',
   },
   {
     id: 3,
     name: 'Bitcoins Support',
-    email: 'bitcoin.help@bitcoin.com',
-    profilePic: '',
+    email: 'support@bitcoin.com',
+    profilePic: './assets/images/logo/bitcoin.png',
   },
   {
     id: 4,
     name: 'Symu Freebies',
     email: 'noReply@flipkart.com',
-    profilePic: '',
+    profilePic: './assets/images/logo/flipkart.jpg',
   },
   {
     id: 5,
-    name: 'Flipkart',
-    email: 'dribbble.help@dribbble.com',
-    profilePic: '',
+    name: 'Dribbble',
+    email: 'support@dribbble.com',
+    profilePic: './assets/images/logo/dribble.png',
   },
   {
     id: 6,
@@ -53,13 +53,13 @@ export const senders = [
     id: 8,
     name: 'Naukri.com',
     email: 'noreply@nokri.com',
-    profilePic: '',
+    profilePic: './assets/images/logo/bitcoin.png',
   },
   {
     id: 9,
     name: 'Dribble',
-    email: 'dribbble.help@dribbble.com',
-    profilePic: '',
+    email: 'support@dribbble.com',
+    profilePic: './assets/images/logo/dribble.png',
   },
 ];
 
@@ -250,8 +250,8 @@ const mailList = [
     isChecked: false,
     label: {
       id: 211,
-      name: 'Verily',
-      alias: 'verily',
+      name: 'Crema',
+      alias: 'Crema',
       color: red[500],
     },
     subject: 'Work Enquiry - Website Development',
@@ -457,8 +457,8 @@ const mailList = [
     isChecked: false,
     label: {
       id: 211,
-      name: 'Verily',
-      alias: 'verily',
+      name: 'Crema',
+      alias: 'Crema',
       color: red[500],
     },
     subject: 'Your Movie Tickets for Sahoo',
@@ -510,8 +510,8 @@ const mailList = [
     isChecked: false,
     label: {
       id: 211,
-      name: 'Verily',
-      alias: 'verily',
+      name: 'Crema',
+      alias: 'Crema',
       color: red[500],
     },
     subject: 'Download freebie Hello Tune plugin',

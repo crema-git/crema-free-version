@@ -15,24 +15,24 @@ const LineGraph = (props) => {
         },
       }}
     >
-      <LineChart className="lineChart" width={300} height={40} data={data}>
+      <LineChart className='lineChart' width={300} height={40} data={data}>
         <Line
-          type="monotone"
-          dataKey="value"
+          type='monotone'
+          dataKey='value'
           stroke={graphColor}
-          strokeWidth={5}
+          strokeWidth={2}
           dot={false}
         />
       </LineChart>
 
       <LineChart width={300} height={40} data={data}>
         <Line
-          type="monotone"
-          dataKey="value"
+          type='monotone'
+          dataKey='value'
           stroke={graphColor}
-          strokeWidth={5}
+          strokeWidth={2}
           dot={false}
-          strokeDasharray="5 5"
+          strokeDasharray='5 5'
         />
       </LineChart>
     </Box>

@@ -8,10 +8,8 @@ import { styled } from '@mui/material/styles';
 import { useGetDataApi } from '@crema/hooks/APIHooks';
 import {
   About,
-  CreatePost,
   FriendRequests,
   Photos,
-  PostsList,
   RecentNews,
   Stories,
   Suggestions,
@@ -20,6 +18,8 @@ import {
   WhatsHappen,
   WhoToFollow,
 } from '@crema/modules/apps/Wall';
+import PostsList from './PostsList';
+import CreatePost from './CreatePost';
 
 const LeftSidebar = styled(Grid)(({ theme }) => ({
   '@media screen and (min-width: 600px) and (max-width: 1023px)': {
@@ -59,7 +59,7 @@ const Wall = () => {
   const [{ apiData: wallData }] = useGetDataApi('/wall', undefined);
   const [{ apiData: postList }, { setData: setPostList }] = useGetDataApi(
     '/wall/posts',
-    []
+    [],
   );
   const { messages } = useIntl();
 

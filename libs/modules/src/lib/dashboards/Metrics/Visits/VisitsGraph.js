@@ -5,14 +5,14 @@ import PropTypes from 'prop-types';
 
 const VisitsGraph = ({ data }) => {
   return (
-    <ResponsiveContainer width="100%" height={220}>
+    <ResponsiveContainer width='100%' height={220}>
       <LineChart data={data}>
         <Line
-          type="monotone"
-          dataKey="value"
-          stroke="#4299E1"
-          strokeWidth={3}
-          dot={{ r: 5 }}
+          type='monotone'
+          dataKey='value'
+          stroke='#4299E1'
+          strokeWidth={2}
+          dot={{ r: 0 }}
         />
         <Tooltip
           labelStyle={{ color: 'black' }}
@@ -20,7 +20,7 @@ const VisitsGraph = ({ data }) => {
           content={(data) => {
             return data.payload[0] ? (
               <Box
-                component="span"
+                component='span'
                 sx={{
                   p: 4,
                   color: 'primary.contrastText',

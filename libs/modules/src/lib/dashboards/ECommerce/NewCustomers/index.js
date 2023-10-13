@@ -13,7 +13,7 @@ const NewCustomers = (props) => {
       title={messages['eCommerce.newCustomers']}
       contentStyle={{ px: 0 }}
     >
-      <AppScrollbar sx={{ maxHeight: 280 }}>
+      <AppScrollbar sx={{ maxHeight: 300 }}>
         <AppList
           data={props.newCustomers}
           renderRow={(item) => (

@@ -16,11 +16,7 @@ import AppsFooter from '@crema/components/AppsFooter';
 import ListEmptyResult from '@crema/components/AppList/ListEmptyResult';
 import TodoListSkeleton from '@crema/components/TodoListSkeleton';
 import AppList from '@crema/components/AppList';
-import {
-  TaskCalender,
-  TaskListItem,
-  TaskListItemMobile,
-} from '@crema/modules/apps/ToDo';
+import { TaskListItem, TaskListItemMobile } from '@crema/modules/apps/ToDo';
 
 export const ViewMode = {
   List: 'list',
@@ -111,63 +107,59 @@ const TasksList = () => {
         />
       </AppsHeader>
       <AppsContent>
-        {viewMode === ViewMode.Calendar ? (
-          <TaskCalender taskList={list} />
-        ) : (
-          <>
-            <Hidden smDown>
-              <AppList
-                data={list}
-                renderRow={(task) => (
-                  <TaskListItem
-                    key={task.id}
-                    task={task}
-                    labelList={labelList}
-                    onChangeCheckedTasks={onChangeCheckedTasks}
-                    checkedTasks={checkedTasks}
-                    onChangeStarred={onChangeStarred}
-                    onDeleteTask={onDeleteTask}
-                  />
-                )}
-                ListEmptyComponent={
-                  <ListEmptyResult
-                    loading={loading}
-                    actionTitle='Add Task'
-                    onAction={onOpenAddTask}
-                    placeholder={<TodoListSkeleton />}
-                  />
-                }
-              />
-            </Hidden>
+        <>
+          <Hidden smDown>
+            <AppList
+              data={list}
+              renderRow={(task) => (
+                <TaskListItem
+                  key={task.id}
+                  task={task}
+                  labelList={labelList}
+                  onChangeCheckedTasks={onChangeCheckedTasks}
+                  checkedTasks={checkedTasks}
+                  onChangeStarred={onChangeStarred}
+                  onDeleteTask={onDeleteTask}
+                />
+              )}
+              ListEmptyComponent={
+                <ListEmptyResult
+                  loading={loading}
+                  actionTitle='Add Task'
+                  onAction={onOpenAddTask}
+                  placeholder={<TodoListSkeleton />}
+                />
+              }
+            />
+          </Hidden>
 
-            <Hidden smUp>
-              <AppList
-                sx={{
-                  paddingTop: 0,
-                  paddingBottom: 0,
-                }}
-                data={list}
-                renderRow={(task) => (
-                  <TaskListItemMobile
-                    key={task.id}
-                    task={task}
-                    labelList={labelList}
-                    checkedTasks={checkedTasks}
-                    onChangeStarred={onChangeStarred}
-                  />
-                )}
-                ListEmptyComponent={
-                  <ListEmptyResult
-                    loading={loading}
-                    actionTitle='Add Task'
-                    onAction={onOpenAddTask}
-                    placeholder={<TodoListSkeleton />}
-                  />
-                }
-              />
-            </Hidden>
-          </>
-        )}
+          <Hidden smUp>
+            <AppList
+              sx={{
+                paddingTop: 0,
+                paddingBottom: 0,
+              }}
+              data={list}
+              renderRow={(task) => (
+                <TaskListItemMobile
+                  key={task.id}
+                  task={task}
+                  labelList={labelList}
+                  checkedTasks={checkedTasks}
+                  onChangeStarred={onChangeStarred}
+                />
+              )}
+              ListEmptyComponent={
+                <ListEmptyResult
+                  loading={loading}
+                  actionTitle='Add Task'
+                  onAction={onOpenAddTask}
+                  placeholder={<TodoListSkeleton />}
+                />
+              }
+            />
+          </Hidden>
+        </>
       </AppsContent>
 
       <Hidden smUp>

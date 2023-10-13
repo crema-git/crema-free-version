@@ -1,16 +1,20 @@
 import React from 'react';
 import TableCell from '@mui/material/TableCell';
-import TableRow from '@mui/material/TableRow';
-import { Fonts } from '@crema/constants/AppEnums';
+import TableHeader from '@crema/components/TableHeader';
+import { grey } from '@mui/material/colors';
+import { Fonts } from '@crema/constants';
 
 const TableHeading = () => {
   return (
-    <TableRow
+    <TableHeader
       sx={{
-        '& th': {
+        borderBottom: '0 none',
+        color: grey[500],
+        '& .tableCell': {
           fontSize: 13,
           padding: 2,
           fontWeight: Fonts.BOLD,
+          backgroundColor: (theme) => theme.palette.background.paper,
           '&:first-of-type': {
             pl: 5,
           },
@@ -20,14 +24,16 @@ const TableHeading = () => {
         },
       }}
     >
-      <TableCell>Order ID</TableCell>
-      <TableCell>Product</TableCell>
-      <TableCell>Customer</TableCell>
-      <TableCell>Delivery Date</TableCell>
-      <TableCell>Price</TableCell>
-      <TableCell>Status</TableCell>
-      <TableCell>Actions</TableCell>
-    </TableRow>
+      <TableCell className='tableCell'>Order ID</TableCell>
+      <TableCell className='tableCell'>Product</TableCell>
+      <TableCell className='tableCell'>Customer</TableCell>
+      <TableCell className='tableCell'>Delivery Date</TableCell>
+      <TableCell className='tableCell'>Price</TableCell>
+      <TableCell className='tableCell'>Status</TableCell>
+      <TableCell className='tableCell' align='right'>
+        Actions
+      </TableCell>
+    </TableHeader>
   );
 };
 

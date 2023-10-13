@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import TaskContentHeader from './TaskContentHeader';
-import AddNewTask from '../AddNewTask';
 import { Hidden } from '@mui/material';
 import AppsPagination from '@crema/components/AppsPagination';
 import AppsHeader from '@crema/components/AppsHeader';
@@ -11,19 +10,16 @@ import TodoListSkeleton from '@crema/components/TodoListSkeleton';
 import AppList from '@crema/components/AppList';
 import { putDataApi } from '@crema/hooks/APIHooks';
 import { useInfoViewActionsContext } from '@crema/context/InfoViewContextProvider';
-import {
-  TaskCalender,
-  TaskListItem,
-  TaskListItemMobile,
-} from '@crema/modules/apps/ToDo';
+import { TaskListItem, TaskListItemMobile } from '@crema/modules/apps/ToDo';
 import {
   useTodoActionsContext,
   useTodoContext,
 } from '../../context/TodoContextProvider';
+import AddNewTask from '../AddNewTask';
 
 const TasksList = () => {
   const infoViewActionsContext = useInfoViewActionsContext();
-  const { taskLists, loading, page, viewMode } = useTodoContext();
+  const { taskLists, loading, page } = useTodoContext();
   const { setTodoData, onPageChange } = useTodoActionsContext();
 
   const [filterText, onSetFilterText] = useState('');
@@ -100,6 +96,12 @@ const TasksList = () => {
       count: taskLists?.count,
     });
   };
+  const onUpdateTask = (task) => {
+    setTodoData({
+      data: taskLists?.data.map((item) => (item.id === task.id ? task : item)),
+      count: taskLists?.count,
+    });
+  };
 
   const onDeleteTask = (task) => {
     task.folderValue = 126;
@@ -108,7 +110,6 @@ const TasksList = () => {
       count: taskLists?.count - 1,
     });
   };
-
   const list = onGetFilteredItems();
 
   return (
@@ -123,61 +124,54 @@ const TasksList = () => {
         />
       </AppsHeader>
       <AppsContent>
-        {viewMode === 'calendar' ? (
-          <TaskCalender taskList={list} />
-        ) : (
-          <>
-            <Hidden smDown>
-              <AppList
-                data={list}
-                renderRow={(task) => (
-                  <TaskListItem
-                    key={task.id}
-                    task={task}
-                    onChangeCheckedTasks={onChangeCheckedTasks}
-                    checkedTasks={checkedTasks}
-                    onChangeStarred={onChangeStarred}
-                    onDeleteTask={onDeleteTask}
-                  />
-                )}
-                ListEmptyComponent={
-                  <ListEmptyResult
-                    loading={loading}
-                    actionTitle='Add Task'
-                    onAction={onOpenAddTask}
-                    placeholder={<TodoListSkeleton />}
-                  />
-                }
+        <Hidden smDown>
+          <AppList
+            data={list}
+            renderRow={(task) => (
+              <TaskListItem
+                key={task.id}
+                task={task}
+                onChangeCheckedTasks={onChangeCheckedTasks}
+                checkedTasks={checkedTasks}
+                onChangeStarred={onChangeStarred}
+                onDeleteTask={onDeleteTask}
               />
-            </Hidden>
-
-            <Hidden smUp>
-              <AppList
-                sx={{
-                  paddingTop: 0,
-                  paddingBottom: 0,
-                }}
-                data={list}
-                renderRow={(task) => (
-                  <TaskListItemMobile
-                    key={task.id}
-                    task={task}
-                    checkedTasks={checkedTasks}
-                    onChangeStarred={onChangeStarred}
-                  />
-                )}
-                ListEmptyComponent={
-                  <ListEmptyResult
-                    loading={loading}
-                    actionTitle='Add Task'
-                    onAction={onOpenAddTask}
-                    placeholder={<TodoListSkeleton />}
-                  />
-                }
+            )}
+            ListEmptyComponent={
+              <ListEmptyResult
+                loading={loading}
+                actionTitle='Add Task'
+                onAction={onOpenAddTask}
+                placeholder={<TodoListSkeleton />}
               />
-            </Hidden>
-          </>
-        )}
+            }
+          />
+        </Hidden>
+        <Hidden smUp>
+          <AppList
+            sx={{
+              paddingTop: 0,
+              paddingBottom: 0,
+            }}
+            data={list}
+            renderRow={(task) => (
+              <TaskListItemMobile
+                key={task.id}
+                task={task}
+                checkedTasks={checkedTasks}
+                onChangeStarred={onChangeStarred}
+              />
+            )}
+            ListEmptyComponent={
+              <ListEmptyResult
+                loading={loading}
+                actionTitle='Add Task'
+                onAction={onOpenAddTask}
+                placeholder={<TodoListSkeleton />}
+              />
+            }
+          />
+        </Hidden>
       </AppsContent>
 
       <Hidden smUp>

@@ -6,6 +6,8 @@ import { Fonts } from '@crema/constants/AppEnums';
 import PropTypes from 'prop-types';
 import CourseSlider from './CourseSlider';
 
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 const settings = {
   dots: true,
   infinite: true,
@@ -34,7 +36,7 @@ const CourseCategories = ({ course }) => {
         }}
       >
         <Box
-          component="h5"
+          component='h5'
           sx={{
             mb: 1,
             fontSize: 16,
@@ -44,7 +46,7 @@ const CourseCategories = ({ course }) => {
           {title}
         </Box>
         <Box
-          component="p"
+          component='p'
           sx={{
             mb: 4,
             color: 'text.secondary',
@@ -76,7 +78,7 @@ const CourseCategories = ({ course }) => {
           >
             <img
               src={'/assets/images/dashboard/academy/lessons.svg'}
-              alt="lessons"
+              alt='lessons'
             />
             {lessons} Lessons
           </Box>
@@ -96,7 +98,7 @@ const CourseCategories = ({ course }) => {
               },
             }}
           >
-            <img src={'/assets/images/dashboard/academy/xp.svg'} alt="xp" />
+            <img src={'/assets/images/dashboard/academy/xp.svg'} alt='xp' />
             {xp} XP
           </Box>
         </Box>

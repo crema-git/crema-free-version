@@ -5,21 +5,24 @@ import TableBody from '@mui/material/TableBody';
 import PropTypes from 'prop-types';
 import TableHeading from './TableHeading';
 import TableItem from './TableItem';
-import AppTableContainer from '@crema/components/AppTableContainer';
+import AppTableContainer from "@crema/components/AppTableContainer";
+import AppScrollbar from "@crema/components/AppScrollbar";
 
-const PatientsTable = ({ recentPatients }) => {
+const PatientsTable = ({recentPatients}) => {
   return (
     <AppTableContainer>
-      <Table className="table">
-        <TableHead>
-          <TableHeading />
-        </TableHead>
-        <TableBody>
-          {recentPatients.map((data) => (
-            <TableItem data={data} key={data.id} />
-          ))}
-        </TableBody>
-      </Table>
+      <AppScrollbar>
+        <Table>
+          <TableHead>
+            <TableHeading />
+          </TableHead>
+          <TableBody>
+            {recentPatients.map((data) => (
+              <TableItem data={data} key={data.id} />
+            ))}
+          </TableBody>
+        </Table>
+      </AppScrollbar>
     </AppTableContainer>
   );
 };

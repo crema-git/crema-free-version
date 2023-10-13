@@ -1,70 +1,97 @@
 import React from 'react';
-import Box from '@mui/material/Box';
-import StaticsGraph from './StaticsGraph';
-import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
-import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
-import { Fonts } from '@crema/constants/AppEnums';
 import AppCard from '@crema/components/AppCard';
+import { alpha, Icon, IconButton } from '@mui/material';
 import PropTypes from 'prop-types';
+import Typography from '@mui/material/Typography';
+import StatGraphs from './StatGraphs';
+import Box from '@mui/material/Box';
+import { Fonts } from '@crema/constants/AppEnums';
 
 const ReportCard = ({ data }) => {
   return (
-    <AppCard className="card-hover">
+    <AppCard
+      footer={
+        <StatGraphs
+          id={data.id}
+          data={data.graphData}
+          strokeColor={data.color}
+        />
+      }
+    >
       <Box
         sx={{
+          paddingTop: 1,
           display: 'flex',
+          alignItems: 'center',
         }}
       >
         <Box
           sx={{
-            flex: 1,
-            pr: 3,
+            width: 'calc(100% - 46px)',
+            paddingRight: 1.25,
           }}
         >
           <Box
-            component="h3"
             sx={{
-              mb: 0.5,
-              fontSize: 20,
+              display: 'flex',
+              alignItems: 'center',
             }}
           >
-            {data.value}
+            <Typography
+              sx={{ fontWeight: Fonts.SEMI_BOLD }}
+              variant='h2'
+              component='h2'
+            >
+              {data.value}
+            </Typography>
+            {data?.percentageChange && (
+              <Box
+                sx={{
+                  color: (theme) => theme.palette.success.main,
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'flex-end',
+                  ml: 4,
+                }}
+              >
+                <Box
+                  component='span'
+                  sx={{
+                    ml: 0.25,
+                    mt: '3px',
+                    fontSize: 14,
+                    fontWeight: Fonts.SEMI_BOLD,
+                    color: data.percentageChange > 0 ? '#11C15B' : '#F04F47',
+                  }}
+                >
+                  {data.percentageChange > 0 ? '+' : ''}
+                  {data.percentageChange}%
+                </Box>
+              </Box>
+            )}
           </Box>
-          <Box
-            component="p"
+          <Typography
             sx={{
-              color: '#737989',
+              color: (theme) => theme.palette.text.secondary,
+              overflow: 'hidden',
+              textOverflow: 'ellipsis',
+              whiteSpace: 'nowrap',
+              width: '100%',
             }}
           >
             {data.type}
-          </Box>
+          </Typography>
         </Box>
-        <Box
-          sx={{
-            minWidth: 160,
+        <IconButton
+          style={{
+            color: data.color,
+            padding: 8,
+            backgroundColor: alpha(data.color, 0.1),
           }}
+          size='large'
         >
-          <StaticsGraph
-            id={data.id}
-            graphData={data.graphData}
-            growth={data.growth}
-            strokeColor={data.strokeColor}
-          />
-          <Box
-            display="flex"
-            alignItems="center"
-            justifyContent="center"
-            fontWeight={Fonts.BOLD}
-            color={data.strokeColor}
-          >
-            {data.growth > 0 ? (
-              <ArrowUpwardIcon style={{ color: data.strokeColor }} />
-            ) : (
-              <ArrowDownwardIcon style={{ color: data.strokeColor }} />
-            )}
-            {data.growth}
-          </Box>
-        </Box>
+          <Icon style={{ fontSize: 30 }}>{data.icon}</Icon>
+        </IconButton>
       </Box>
     </AppCard>
   );

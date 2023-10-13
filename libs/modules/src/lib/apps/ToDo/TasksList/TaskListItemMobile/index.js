@@ -10,7 +10,7 @@ import Avatar from '@mui/material/Avatar';
 import Typography from '@mui/material/Typography';
 import { alpha } from '@mui/material';
 import { styled } from '@mui/material/styles';
-import moment from 'moment';
+import { getFormattedDate } from '@crema/helpers';
 
 const StyledListItem = styled(ListItem)(({ theme }) => ({
   padding: '8px 20px 4px 20px',
@@ -102,7 +102,7 @@ const TaskListItemMobile = ({ task, checkedTasks, onChangeStarred }) => {
                 textOverflow: 'ellipsis',
                 whiteSpace: 'nowrap',
               }}
-              component="p"
+              component='p'
             >
               {task.title}
             </Box>
@@ -125,7 +125,7 @@ const TaskListItemMobile = ({ task, checkedTasks, onChangeStarred }) => {
 
       <TaskActionView>
         <Box
-          component="span"
+          component='span'
           sx={{
             color: 'text.secondary',
             fontSize: 12,
@@ -135,11 +135,11 @@ const TaskListItemMobile = ({ task, checkedTasks, onChangeStarred }) => {
             transition: 'all 0.5s ease',
           }}
         >
-          {moment(task.startDate).format('HH:mm A')}
+          {getFormattedDate(task.startDate, 'DD MMM, YY')}
         </Box>
         <Box
-          mt="auto"
-          component="span"
+          mt='auto'
+          component='span'
           onClick={(event) => event.stopPropagation()}
         >
           <AppsStarredIcon item={task} onChange={onChangeStarred} />

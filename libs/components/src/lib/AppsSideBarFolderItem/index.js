@@ -14,12 +14,13 @@ import AutorenewOutlinedIcon from '@mui/icons-material/AutorenewOutlined';
 import ScheduleOutlinedIcon from '@mui/icons-material/ScheduleOutlined';
 import TodayOutlinedIcon from '@mui/icons-material/TodayOutlined';
 import CheckCircleOutlinedIcon from '@mui/icons-material/CheckCircleOutlined';
-import SendOutlinedIcon from '@mui/icons-material/SendOutlined';
 import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
 import LabelImportantIcon from '@mui/icons-material/LabelImportant';
 import { alpha, styled } from '@mui/material/styles';
 import { Fonts } from '@crema/constants/AppEnums';
 import AppNavLink from '../AppNavLink';
+import { AiOutlineSend, AiOutlineStop } from 'react-icons/ai';
+import { MdOutlineCancel, MdOutlinePayment } from 'react-icons/md';
 
 const AppsSideBarFolderList = styled(ListItem)(({ theme }) => {
   return {
@@ -69,7 +70,13 @@ const getIconByName = (name) => {
     case 'inbox':
       return <EmailOutlinedIcon />;
     case 'sent':
-      return <SendOutlinedIcon />;
+      return <AiOutlineSend />;
+    case 'paid':
+      return <MdOutlinePayment />;
+    case 'declined':
+      return <AiOutlineStop />;
+    case 'cancelled':
+      return <MdOutlineCancel />;
     case 'draft':
       return <DraftsOutlinedIcon />;
     case 'starred':
@@ -106,7 +113,7 @@ const AppsSideBarFolderItem = ({ item, path }) => {
       key={item.id}
       to={path}
       component={AppNavLink}
-      activeClassName="active"
+      activeClassName='active'
     >
       <ListItemIcon
         sx={{
@@ -129,7 +136,7 @@ const AppsSideBarFolderItem = ({ item, path }) => {
             mb: 0.5,
           },
         }}
-        className="list-item-text"
+        className='list-item-text'
       />
     </AppsSideBarFolderList>
   );

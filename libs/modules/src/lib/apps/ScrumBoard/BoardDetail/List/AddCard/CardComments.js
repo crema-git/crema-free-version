@@ -62,8 +62,8 @@ const CardComments = (props) => {
   const { messages } = useIntl();
   return (
     <Box>
-      <Box component="h4">
-        <IntlMessages id="common.comments" />
+      <Box component='h4'>
+        <IntlMessages id='common.comments' />
       </Box>
 
       <Box
@@ -86,7 +86,7 @@ const CardComments = (props) => {
                   {item.sender.image ? (
                     <Avatar
                       src={item.sender.image}
-                      className="avatar"
+                      className='avatar'
                       sx={{
                         width: 40,
                         height: 40,
@@ -95,7 +95,7 @@ const CardComments = (props) => {
                     />
                   ) : (
                     <Avatar
-                      className="avatar"
+                      className='avatar'
                       sx={{
                         width: 40,
                         height: 40,
@@ -107,10 +107,10 @@ const CardComments = (props) => {
                   )}
 
                   <CommentItemWrapper isPreviousSender={isPreviousSender}>
-                    <CommentDateWrapper className="date">
+                    <CommentDateWrapper className='date'>
                       {item.date}
                     </CommentDateWrapper>
-                    <CommentTextWrapper component="p">
+                    <CommentTextWrapper component='p'>
                       {item.comment}
                     </CommentTextWrapper>
                   </CommentItemWrapper>
@@ -131,11 +131,17 @@ const CardComments = (props) => {
           multiline
           value={comment}
           onChange={(e) => setComment(e.target.value)}
+          onKeyDown={(event) => {
+            if (event.key === 'Enter') {
+              onAddComment();
+              setComment('');
+            }
+          }}
           sx={{
             width: '100%',
           }}
-          rows="1"
-          variant="outlined"
+          maxRows={1}
+          variant='outlined'
           placeholder={messages['common.pressEnter']}
         />
         <IconButton
@@ -147,9 +153,9 @@ const CardComments = (props) => {
               pl: 1,
             },
           }}
-          aria-label="send"
+          aria-label='send'
         >
-          <SendOutlinedIcon fontSize="inherit" />
+          <SendOutlinedIcon fontSize='inherit' />
         </IconButton>
       </Box>
     </Box>

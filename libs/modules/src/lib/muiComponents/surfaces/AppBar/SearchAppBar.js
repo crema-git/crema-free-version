@@ -54,21 +54,21 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 export default function SearchAppBar() {
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
+      <AppBar position='static'>
         <Toolbar>
           <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="open drawer"
+            size='large'
+            edge='start'
+            color='inherit'
+            aria-label='open drawer'
             sx={{ mr: 2 }}
           >
             <MenuIcon />
           </IconButton>
           <Typography
-            variant="h6"
+            variant='h6'
             noWrap
-            component="div"
+            component='div'
             sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
           >
             MUI
@@ -78,7 +78,7 @@ export default function SearchAppBar() {
               <SearchIcon />
             </SearchIconWrapper>
             <StyledInputBase
-              placeholder="Search…"
+              placeholder='Search…'
               inputProps={{ 'aria-label': 'search' }}
             />
           </Search>

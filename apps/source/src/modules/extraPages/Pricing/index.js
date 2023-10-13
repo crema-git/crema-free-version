@@ -10,7 +10,7 @@ import {
 } from '@crema/modules/extraPages/Pricing';
 import { pricingData } from '@crema/fakedb/extraPages';
 
-const Pricing = () => {
+const PricingListing = () => {
   return (
     <AppGridContainer>
       <Grid item xs={12}>
@@ -29,4 +29,4 @@ const Pricing = () => {
   );
 };
 
-export default Pricing;
+export default PricingListing;

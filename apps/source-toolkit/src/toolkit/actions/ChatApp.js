@@ -73,14 +73,13 @@ export const onSendMessage = (channelId, message) => {
         if (data.status === 200) {
           dispatch({ type: FETCH_SUCCESS });
           if (
-            data.data.userMessages &&
-            data.data.userMessages.messageData.length === 1 &&
+            data?.data?.userMessages?.messageData?.length === 1 &&
             getState().chatApp.userMessages &&
-            getState().chatApp.userMessages.messageData
+            getState().chatApp?.userMessages?.messageData
           ) {
             console.log(
               'getState().chatApp.userMessages.messageData',
-              getState().chatApp.userMessages.messageData
+              getState().chatApp.userMessages.messageData,
             );
             dispatch({
               type: ADD_NEW_MESSAGE,
@@ -88,16 +87,16 @@ export const onSendMessage = (channelId, message) => {
                 data: {
                   ...data.data,
                   userMessages: {
-                    ...data.userMessages,
+                    ...data?.userMessages,
                     messageData:
-                      getState().chatApp.userMessages.messageData.concat(
-                        data.data.userMessages.messageData
+                      getState().chatApp?.userMessages?.messageData?.concat(
+                        data?.data?.userMessages?.messageData,
                       ),
                   },
                 },
               },
             });
-            console.log(getState().chatApp.userMessages);
+            console.log(getState().chatApp?.userMessages);
           } else {
             dispatch({
               type: ADD_NEW_MESSAGE,

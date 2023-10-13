@@ -10,6 +10,11 @@ import {
   onCreateContact,
   onUpdateSelectedContact,
 } from '../../../../redux/actions';
+import {
+  generateRandomUniqueNumber,
+  getDateObject,
+  getFormattedDate,
+} from '@crema/helpers';
 
 const validationSchema = yup.object({
   name: yup.string().required(<IntlMessages id='validation.nameRequired' />),
@@ -46,7 +51,13 @@ const CreateContact = (props) => {
 
   return (
     <AppDialog
-      fullHeight
+      sxStyle={{
+        '& .MuiDialog-paperWidthSm': {
+          maxWidth: 900,
+          height: 600,
+        },
+      }}
+      maxScrollHeight={600}
       open={isAddContact}
       onClose={() => handleAddContactClose()}
     >
@@ -58,8 +69,8 @@ const CreateContact = (props) => {
           contact: selectContact ? selectContact.contact : '',
           birthday:
             selectContact && selectContact.birthday
-              ? selectContact.birthday
-              : null,
+              ? getDateObject(selectContact.birthday)
+              : getDateObject(),
           website:
             selectContact && selectContact.website ? selectContact.website : '',
           company:
@@ -84,21 +95,23 @@ const CreateContact = (props) => {
           setSubmitting(true);
           if (selectContact) {
             const newContact = {
+              ...data,
               id: selectContact.id,
               isStarred: selectContact.isStarred,
               isFrequent: selectContact.isFrequent,
               image: userImage,
-              ...data,
+              birthday: getFormattedDate(data.birthday),
             };
             dispatch(onUpdateSelectedContact(newContact));
             onUpdateContact(newContact);
           } else {
             const newContact = {
-              id: Math.floor(Math.random() * 1000),
+              ...data,
+              id: generateRandomUniqueNumber(),
               isStarred: false,
               isFrequent: Math.random() > 0.5,
               image: userImage,
-              ...data,
+              birthday: getFormattedDate(data.birthday),
             };
             dispatch(onCreateContact(newContact));
           }

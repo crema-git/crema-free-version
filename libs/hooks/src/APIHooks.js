@@ -70,7 +70,7 @@ export const useGetDataApi = (
           }
         })
         .catch((error) => {
-          if (error.response.data.message) {
+          if (error?.response?.data?.message) {
             console.log(initialUrl, error.response.data.message);
             if (callbackFun) callbackFun(error.response.data);
             fetchError(error.response.data.message);
@@ -127,7 +127,7 @@ const handleApiResponse = (url, fetchSuccess, data, resolve, reject) => {
 const handleAPIError = (url, fetchSuccess, error, reject) => {
   console.log(url, error.response.data.message);
   fetchSuccess();
-  if (error.response.data.message) {
+  if (error?.response?.data?.message) {
     return reject(error.response.data);
   } else {
     return reject(error);

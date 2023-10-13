@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useBottomScrollListener } from 'react-bottom-scroll-listener';
 import PropTypes from 'prop-types';
 import { Box, useTheme } from '@mui/material';
-import AppAnimateGroup from '../AppAnimateGroup';
+// import AppAnimateGroup from '../AppAnimateGroup';
 import { useWidth } from '@crema/helpers';
 
 const getEmptyContainer = (ListEmptyComponent) => {
@@ -50,6 +50,7 @@ const GridView = ({
 
   const [displayColumn, setColumn] = useState(column);
   if (!onEndReached) {
+    // eslint-disable-next-line @typescript-eslint/no-empty-function
     onEndReached = () => {};
   }
 
@@ -103,10 +104,7 @@ const GridView = ({
         ...sx,
       }}
     >
-      <AppAnimateGroup
-        enter={{
-          animation,
-        }}
+      <Box
         style={{
           display: 'flex',
           flexDirection: 'row',
@@ -131,7 +129,7 @@ const GridView = ({
               </Box>
             ))
           : null}
-      </AppAnimateGroup>
+      </Box>
       {data.length === 0 ? getEmptyContainer(ListEmptyComponent) : null}
       {getFooterContainer(ListFooterComponent)}
     </Box>

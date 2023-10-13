@@ -1,15 +1,15 @@
 import React from 'react';
-import AppCard from '@crema/components/AppCard';
+import AppCard from "@crema/components/AppCard";
 import { Box } from '@mui/material';
-import { Fonts } from '@crema/constants/AppEnums';
+import {Fonts} from "@crema/constants";
 import PropTypes from 'prop-types';
 
 const InfoWidget = ({ data }) => {
   return (
     <AppCard
       sxStyle={{ height: 1 }}
-      className="card-hover"
-      contentStyle={{ px: 2 }}
+      className='card-hover'
+      contentStyle={{ paddingLeft: 8, paddingRight: 8 }}
     >
       <Box
         sx={{
@@ -26,7 +26,7 @@ const InfoWidget = ({ data }) => {
             mb: 3,
           }}
         >
-          <img src={data.icon} alt="icon" style={{ height: 60, width: 60 }} />
+          <img src={data.icon} alt='icon' style={{ height: 60, width: 60 }} />
         </Box>
         <Box
           sx={{
@@ -42,11 +42,11 @@ const InfoWidget = ({ data }) => {
             {data.name}
           </Box>
           <Box
-            component="p"
+            component='p'
             sx={{
-              color: data.color,
               fontSize: 14,
               fontWeight: Fonts.BOLD,
+              color: data.color,
             }}
           >
             {data.measurement}

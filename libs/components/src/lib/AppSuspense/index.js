@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import AppLoader from '@crema/components/AppLoader';
+import AppLoader from '../AppLoader';
 
 const AppSuspense = (props) => {
   return (

@@ -5,7 +5,7 @@ import clsx from 'clsx';
 import Box from '@mui/material/Box';
 import PropTypes from 'prop-types';
 import useStyles from './AppSidebarMenu.style';
-import AppScrollbar from '@crema/components/AppScrollbar';
+import AppScrollbar from '../../AppScrollbar';
 import MenuGroup from './SidebarMenu/MenuGroup';
 import { useThemeContext } from '@crema/context/ThemeContextProvider';
 
@@ -41,7 +41,7 @@ const AppSidebarMenu = (props) => {
       </Hidden>
       <Hidden mdDown>
         <Box
-          height="100%"
+          height='100%'
           className={clsx(classes.appSidebarMenuRoot, 'app-sidebar-menu')}
         >
           <Box className={clsx(classes.sidebarBg, sidebarClasses)}>

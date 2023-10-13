@@ -15,6 +15,7 @@ import {
   onDeleteSelectedCard,
   onEditCardDetails,
 } from '../../../../../../toolkit/actions';
+import { generateRandomUniqueNumber, getDateObject } from '@crema/helpers';
 
 const validationSchema = yup.object({
   title: yup.string().required(<IntlMessages id='validation.titleRequired' />),
@@ -100,7 +101,10 @@ const AddCard = (props) => {
           label: selectedCard && selectedCard.label ? selectedCard.label : [],
           members:
             selectedCard && selectedCard.members ? selectedCard.members : [],
-          date: selectedCard && selectedCard.date ? selectedCard.date : null,
+          date:
+            selectedCard && selectedCard.date
+              ? getDateObject(selectedCard.date)
+              : getDateObject(),
         }}
         validationSchema={validationSchema}
         onSubmit={(data, { setSubmitting, resetForm }) => {
@@ -118,7 +122,7 @@ const AddCard = (props) => {
             dispatch(onEditCardDetails(board, list, editedCard));
           } else {
             const newCard = {
-              id: Math.floor(Math.random() * 1000),
+              id: generateRandomUniqueNumber(),
               attachments: attachments,
               checkedList: [],
               comments: comments,

@@ -170,9 +170,6 @@ const AddContactForm = (props) => {
                     width: '100%',
                     mb: { xs: 4, xl: 6 },
                   }}
-                  format='MM/DD/YYYY'
-                  variant='outlined'
-                  inputVariant='outlined'
                   label={<IntlMessages id='common.birthday' />}
                   name='birthday'
                   value={values.birthday}

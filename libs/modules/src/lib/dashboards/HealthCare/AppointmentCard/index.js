@@ -1,29 +1,18 @@
 import React from 'react';
-import AppCard from '@crema/components/AppCard';
-import { Box } from '@mui/material';
-import Graph from './Graph';
+import {Box} from '@mui/material';
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
-import { Fonts } from '@crema/constants/AppEnums';
 import PropTypes from 'prop-types';
+import Graph from './Graph';
+import AppCard from "@crema/components/AppCard";
+import {Fonts} from "@crema/constants";
+import {FormattedNumber} from 'react-intl';
 
-const AppointmentCard = ({ data }) => {
+const AppointmentCard = ({data}) => {
   return (
-    <AppCard sxStyle={{ backgroundColor: data.color }} className="card-hover">
-      <Box
-        sx={{
-          display: 'flex',
-          flexDirection: 'row',
-          color: 'white',
-        }}
-      >
-        <Box
-          sx={{
-            width: 1 / 2,
-            display: 'flex',
-            flexDirection: 'column',
-          }}
-        >
-          <Box>
+    <AppCard className='card-hover'>
+      <Box sx={{display: 'flex', flexDirection: 'row'}}>
+        <Box sx={{width: '45%', display: 'flex', flexDirection: 'column'}}>
+          <Box sx={{boxShadow: 2, height: 46, width: 46, borderRadius: '50%'}}>
             <img src={data.icon} alt={data.name} />
           </Box>
           <Box
@@ -33,22 +22,20 @@ const AppointmentCard = ({ data }) => {
               textOverflow: 'ellipsis',
               whiteSpace: 'nowrap',
               width: '100%',
+              color: 'text.secondary',
             }}
           >
             {data.name}
           </Box>
           <Box
-            sx={{
-              fontSize: 20,
-              fontWeight: Fonts.BOLD,
-            }}
+            sx={{fontSize: 20, fontWeight: Fonts.BOLD, color: 'text.primary'}}
           >
-            {data.value}
+            <FormattedNumber value={+data.value} />
           </Box>
         </Box>
         <Box
           sx={{
-            width: 1 / 2,
+            width: '55%',
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'flex-end',
@@ -58,31 +45,28 @@ const AppointmentCard = ({ data }) => {
             sx={{
               display: 'flex',
               alignItems: 'center',
+              color: 'text.primary',
+              fontWeight: Fonts.BOLD,
             }}
           >
-            <ArrowUpwardIcon
-              sx={{
-                fontSize: 18,
-                marginRight: 2,
-              }}
-            />
+            <ArrowUpwardIcon sx={{fontSize: 18, mr: 0.5}} />
             <Box>{data.chartValue}</Box>
           </Box>
           <Box
             sx={{
-              fontSize: 12,
-              mb: 3,
-              fontWeight: Fonts.BOLD,
-              textAlign: 'right',
               overflow: 'hidden',
               textOverflow: 'ellipsis',
               whiteSpace: 'nowrap',
               width: '100%',
+              fontSize: 12,
+              mb: 3,
+              textAlign: 'right',
+              color: 'text.secondary',
             }}
           >
             {data.chartTime}
           </Box>
-          <Graph data={data.chartData} />
+          <Graph data={data.chartData} color={data.color} />
         </Box>
       </Box>
     </AppCard>

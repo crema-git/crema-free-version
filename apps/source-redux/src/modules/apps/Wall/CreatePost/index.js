@@ -16,6 +16,7 @@ import SendOutlinedIcon from '@mui/icons-material/SendOutlined';
 import { darken } from '@mui/material';
 import { useDispatch, useSelector } from 'react-redux';
 import { onCreateNewPost } from '../../../../redux/actions';
+import { generateRandomUniqueNumber } from '@crema/helpers';
 
 const CreateView = styled('div')(({ theme }) => ({
   flex: 1,
@@ -83,7 +84,7 @@ const CreatePost = () => {
     onDrop: (acceptedFiles) => {
       const files = acceptedFiles.map((file) => {
         return {
-          id: Math.floor(Math.random() * 10000),
+          id: generateRandomUniqueNumber(),
           path: file.path,
           metaData: { type: file.type, size: file.size },
           preview: URL.createObjectURL(file),

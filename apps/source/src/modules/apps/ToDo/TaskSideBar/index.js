@@ -2,7 +2,6 @@ import React from 'react';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import List from '@mui/material/List';
-import AddNewTask from '../AddNewTask';
 import IntlMessages from '@crema/helpers/IntlMessages';
 import AppScrollbar from '@crema/components/AppScrollbar';
 import AppsSideBarFolderItem from '@crema/components/AppsSideBarFolderItem';
@@ -15,6 +14,7 @@ import { Zoom } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import { TaskLabelItem } from '@crema/modules/apps/ToDo';
 import { useTodoContext } from '../../context/TodoContextProvider';
+import AddNewTask from '../AddNewTask';
 
 const ListWrapper = styled(List)(({ theme }) => ({
   marginBottom: 8,

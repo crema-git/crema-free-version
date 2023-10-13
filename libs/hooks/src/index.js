@@ -7,7 +7,6 @@ export * from './useAsync';
 export * from './useUnload';
 export * from './useClickInside';
 export * from './useClickOutside';
-export * from './useMediaQuery';
 export * from './useCopyToClipboard';
 export * from './useDebounce';
 export * from './useToggler';

@@ -15,7 +15,6 @@ const ActiveVisitors = ({ data }) => {
       <Box
         sx={{
           pt: { xs: 5, sm: 5, xl: 5 },
-          backgroundColor: '#49bd65',
         }}
       >
         <Box
@@ -25,18 +24,18 @@ const ActiveVisitors = ({ data }) => {
         >
           <Box
             sx={{
-              color: '#FFFFFF',
-              mb: 2,
+              color: '#49bd65',
+              mb: 1,
               fontWeight: Fonts.BOLD,
               fontSize: 16,
             }}
-            component="h3"
+            component='h3'
           >
             {messages['dashboard.analytics.activeVisitors']}
           </Box>
           <Box
             sx={{
-              color: '#FFF8',
+              color: '#49bd65AA',
             }}
           >
             {messages['dashboard.analytics.pageViewPerMinutes']}
@@ -73,7 +72,7 @@ const ActiveVisitors = ({ data }) => {
                 fontWeight: Fonts.MEDIUM,
                 fontSize: 18,
               }}
-              component="h3"
+              component='h3'
             >
               {data.value}
             </Box>
@@ -84,13 +83,13 @@ const ActiveVisitors = ({ data }) => {
                 fontWeight: Fonts.MEDIUM,
                 color: data.growth > 0.0 ? green[500] : red[500],
               }}
-              component="span"
+              component='span'
             >
               {data.growth}% Then yesterday
             </Box>
           </Box>
           <Box
-            component="p"
+            component='p'
             sx={{
               fontSize: 14,
               color: 'text.secondary',
@@ -106,7 +105,7 @@ const ActiveVisitors = ({ data }) => {
           }}
         >
           <Link
-            component="button"
+            component='button'
             sx={{
               color: 'secondary.main',
               fontSize: 16,

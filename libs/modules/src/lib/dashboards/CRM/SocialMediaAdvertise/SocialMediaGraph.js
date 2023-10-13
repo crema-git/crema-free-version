@@ -23,7 +23,7 @@ const SocialMediaGraph = ({ socialMediaData }) => {
         },
       }}
     >
-      <ResponsiveContainer width="100%" height={300}>
+      <ResponsiveContainer width="100%" height={235}>
         <BarChart
           barSize={8}
           data={socialMediaData}

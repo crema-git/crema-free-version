@@ -91,7 +91,7 @@ const SendMessage = ({
               className: clsx('dropzone'),
             })}
             style={{ height: 40, width: 40 }}
-            size="large"
+            size='large'
           >
             <input {...getInputProps()} />
             <AttachFileIcon />
@@ -108,7 +108,7 @@ const SendMessage = ({
           },
         }}
         multiline
-        variant="outlined"
+        variant='outlined'
         placeholder={messages['chatApp.sendMessagePlaceholder']}
         value={message}
         onChange={(event) => {
@@ -117,11 +117,12 @@ const SendMessage = ({
         onKeyPress={onKeyPress}
       />
       <Box
+        onClick={onClickSendMessage}
         sx={{
           ml: 2,
         }}
       >
-        <SendBtn onClick={onClickSendMessage} size="large">
+        <SendBtn size='large'>
           <SendOutlinedIcon />
         </SendBtn>
       </Box>

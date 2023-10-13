@@ -26,6 +26,11 @@ const BrainHubSliderRoot = styled(Box)(({ theme }) => {
       },
       '& .BrainhubCarousel': {
         height: '100%',
+        maxHeight: 600,
+        img: {
+          width: '100%',
+          height: '100%',
+        },
       },
     },
     '& .BrainhubCarousel__dots': {

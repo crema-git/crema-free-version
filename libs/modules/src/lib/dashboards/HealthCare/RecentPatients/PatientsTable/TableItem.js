@@ -3,78 +3,72 @@ import TableCell from '@mui/material/TableCell';
 import TableRow from '@mui/material/TableRow';
 import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
-import AppMenu from '@crema/components/AppMenu';
-import Avatar from '@mui/material/Avatar';
-import { Fonts } from '@crema/constants/AppEnums';
 
-const TableItem = ({ data }) => {
+import Avatar from '@mui/material/Avatar';
+import {Typography} from '@mui/material';
+import {styled} from '@mui/material/styles';
+import AppMenu from "@crema/components/AppMenu";
+
+const TableCellWrapper = styled(TableCell)(() => {
+  return {
+    fontSize: 14,
+    padding: 8,
+    whiteSpace: 'nowrap',
+    '&:first-of-type': {
+      paddingLeft: 20,
+    },
+    '&:last-of-type': {
+      paddingRight: 20,
+    },
+  };
+});
+
+const TableItem = ({data}) => {
   return (
-    <TableRow
-      key={data.name}
-      sx={{
-        '& .tableCell': {
-          fontSize: 13,
-          padding: 2,
-          whiteSpace: 'nowrap',
-          '&:first-of-type': {
-            pl: 5,
-          },
-          '&:last-of-type': {
-            pr: 5,
-          },
-        },
-      }}
-      className="item-hover"
-    >
-      <TableCell component="th" scope="row" className="tableCell">
+    <TableRow key={data.name} className='item-hover'>
+      <TableCellWrapper component='th' scope='row'>
         <Box
           sx={{
             display: 'flex',
             alignItems: 'center',
           }}
         >
-          <Avatar
-            sx={{
-              mr: 3.5,
-            }}
-            src={data.profile_pic}
-          />
           <Box
             sx={{
-              fontWeight: Fonts.MEDIUM,
+              mr: 3,
             }}
           >
-            {data.name}
+            <Avatar src={data.profile_pic} />
           </Box>
+          <Typography variant='h5' component='h5'>
+            {data.name}
+          </Typography>
         </Box>
-      </TableCell>
-      <TableCell align="left" className="tableCell">
-        {data.gender}
-      </TableCell>
-      <TableCell align="left" className="tableCell">
-        {data.weight}
-      </TableCell>
-      <TableCell align="left" className="tableCell">
-        {data.assignedDr}
-      </TableCell>
-      <TableCell align="left">{data.date}</TableCell>
-      <TableCell align="left">
+      </TableCellWrapper>
+      <TableCellWrapper align='left'>{data.gender}</TableCellWrapper>
+      <TableCellWrapper align='left'>{data.weight}</TableCellWrapper>
+      <TableCellWrapper align='left'>{data.assignedDr}</TableCellWrapper>
+      <TableCellWrapper align='left' sx={{fontSize: 12}}>
+        {data.date}
+      </TableCellWrapper>
+      <TableCellWrapper align='left'>
         <Box
+          component='span'
           sx={{
+            padding: '3px 10px 4px',
+            borderRadius: 4,
+            display: 'inline-block',
             color: data.color,
             backgroundColor: data.color + '44',
-            padding: '3px 10px',
-            borderRadius: 1,
-            display: 'inline-block',
-            fontSize: 13,
+            fontSize: 12,
           }}
         >
           {data.status}
         </Box>
-      </TableCell>
-      <TableCell align="right">
+      </TableCellWrapper>
+      <TableCellWrapper align='right'>
         <AppMenu />
-      </TableCell>
+      </TableCellWrapper>
     </TableRow>
   );
 };

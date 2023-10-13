@@ -1,7 +1,6 @@
 import React from 'react';
 
 const DatePicker = React.lazy(() => import('./DatePicker'));
-const DateRangePicker = React.lazy(() => import('./DateRangePicker'));
 const DateTimePicker = React.lazy(() => import('./DateTimePicker'));
 const Masonry = React.lazy(() => import('./Masonry'));
 const Timeline = React.lazy(() => import('./Timeline'));
@@ -16,6 +15,5 @@ export {
   TrapFocus,
   TreeView,
   DatePicker,
-  DateRangePicker,
   DateTimePicker,
 };

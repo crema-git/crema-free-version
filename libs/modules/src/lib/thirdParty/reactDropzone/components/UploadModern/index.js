@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { TiFolderOpen } from 'react-icons/ti';
 import { useThemeContext } from '@crema/context/ThemeContextProvider';
 
-const UploadModern = ({ uploadText, dropzone }) => {
+const UploadModern = ({ customContent, uploadText, dropzone }) => {
   const { theme } = useThemeContext();
   return (
     <Box
@@ -30,14 +30,20 @@ const UploadModern = ({ uploadText, dropzone }) => {
         }}
       >
         <input {...dropzone.getInputProps()} />
-        <TiFolderOpen
-          style={{
-            fontSize: 40,
-            marginBottom: 4,
-            color: theme.palette.primary.main,
-          }}
-        />
-        <p>{uploadText}</p>
+        {customContent ? (
+          customContent
+        ) : (
+          <>
+            <TiFolderOpen
+              style={{
+                fontSize: 40,
+                marginBottom: 4,
+                color: theme.palette.primary.main,
+              }}
+            />
+            <p>{uploadText}</p>
+          </>
+        )}
       </Box>
     </Box>
   );
@@ -46,6 +52,7 @@ const UploadModern = ({ uploadText, dropzone }) => {
 export default UploadModern;
 
 UploadModern.propTypes = {
+  customContent: PropTypes.node,
   uploadText: PropTypes.string,
   dropzone: PropTypes.object,
 };

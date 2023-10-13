@@ -7,19 +7,24 @@ import PropTypes from 'prop-types';
 
 const HeartRate = ({ data }) => {
   return (
-    <AppCard sxStyle={{ backgroundColor: data.color }}>
+    <AppCard>
       <Box
         sx={{
-          color: 'white',
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'space-between',
         }}
       >
         <Box
+          component='h3'
           sx={{
+            color: 'text.primary',
+            fontWeight: Fonts.MEDIUM,
             fontSize: 16,
-            fontWeight: Fonts.BOLD,
+            overflow: 'hidden',
+            textOverflow: 'ellipsis',
+            whiteSpace: 'nowrap',
+            width: '100%',
           }}
         >
           {data.title}
@@ -34,29 +39,23 @@ const HeartRate = ({ data }) => {
         >
           <Box
             sx={{
-              width: { xs: 3 / 4, xl: 1 / 2 },
+              width: '90%',
             }}
           >
-            <ViewGraph data={data.graphData} />
+            <ViewGraph data={data.graphData} color={data.color} />
           </Box>
         </Box>
         <Box
           sx={{
             backgroundColor: (theme) => alpha(theme.palette.common.black, 0.04),
             margin: '0 -24px -20px',
-            padding: { xs: '12px 24px', xl: '8px 24px' },
+            padding: { xs: '8px 24px 14px', xl: '4px 24px 14px' },
             fontSize: { xs: 20, xl: 24 },
             fontWeight: Fonts.BOLD,
           }}
         >
           {data.measurement}
-          <Box
-            sx={{
-              fontSize: 16,
-              ml: 2,
-            }}
-            component="span"
-          >
+          <Box sx={{ fontSize: 16, ml: 2 }} component='span'>
             {data.unit}
           </Box>
         </Box>

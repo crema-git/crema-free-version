@@ -5,8 +5,10 @@ import Fade from '@mui/material/Fade';
 import IconButton from '@mui/material/IconButton';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import Box from '@mui/material/Box';
+import { useNavigate } from 'react-router-dom';
 
 const OrderActions = () => {
+  const navigate = useNavigate();
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
 
@@ -21,21 +23,24 @@ const OrderActions = () => {
   return (
     <Box>
       <IconButton
-        aria-controls="alpha-menu"
-        aria-haspopup="true"
+        aria-controls='alpha-menu'
+        aria-haspopup='true'
         onClick={handleClick}
       >
         <MoreVertIcon />
       </IconButton>
       <Menu
-        id="alpha-menu"
+        id='alpha-menu'
         anchorEl={anchorEl}
         keepMounted
         open={open}
         onClose={handleClose}
         TransitionComponent={Fade}
       >
-        <MenuItem style={{ fontSize: 14 }} onClick={handleClose}>
+        <MenuItem
+          style={{ fontSize: 14 }}
+          onClick={() => navigate('/ecommerce/orders')}
+        >
           View Order
         </MenuItem>
         <MenuItem style={{ fontSize: 14 }} onClick={handleClose}>

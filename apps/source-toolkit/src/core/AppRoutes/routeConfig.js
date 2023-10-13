@@ -8,7 +8,7 @@ import {
   RiShieldUserLine,
   RiTodoLine,
 } from 'react-icons/ri';
-import { BiCarousel, BiCartAlt, BiErrorAlt } from 'react-icons/bi';
+import { BiCarousel, BiCartAlt, BiErrorAlt, BiTask } from 'react-icons/bi';
 import {
   BsBriefcase,
   BsCart4,
@@ -26,7 +26,7 @@ import {
 } from 'react-icons/md';
 import { CgFeed } from 'react-icons/cg';
 import { ImFeed, ImLab } from 'react-icons/im';
-import { GrDatabase, GrNavigate } from 'react-icons/gr';
+import { GrDatabase, GrNavigate, GrUserAdmin } from 'react-icons/gr';
 import { VscTable, VscTools } from 'react-icons/vsc';
 import {
   AiOutlineEdit,
@@ -34,6 +34,7 @@ import {
   AiOutlineUnorderedList,
 } from 'react-icons/ai';
 import { RoutePermittedRole } from '@crema/constants/AppEnums';
+import { TbFileInvoice } from 'react-icons/tb';
 
 const routesConfig = [
   {
@@ -133,15 +134,13 @@ const routesConfig = [
         url: '/apps/mail',
       },
       {
-        id: 'todo',
-        title: 'ToDo',
-        messageId: 'sidebar.apps.todo',
+        id: 'calender',
+        title: 'Calender',
+        messageId: 'sidebar.apps.calender',
         type: 'item',
         permittedRole: [RoutePermittedRole.User],
-        count: 6,
-        icon: <RiTodoLine />,
-        color: '#48bb78',
-        url: '/apps/todo',
+        icon: <BiTask />,
+        url: '/apps/calender',
       },
       {
         id: 'contact',
@@ -151,6 +150,17 @@ const routesConfig = [
         permittedRole: [RoutePermittedRole.User],
         icon: <MdOutlineContactPhone />,
         url: '/apps/contact',
+      },
+      {
+        id: 'todo',
+        title: 'ToDo',
+        messageId: 'sidebar.apps.todo',
+        type: 'item',
+        permittedRole: [RoutePermittedRole.User],
+        count: 6,
+        icon: <RiTodoLine />,
+        color: '#48bb78',
+        url: '/apps/todo',
       },
       {
         id: 'chat',
@@ -211,14 +221,6 @@ const routesConfig = [
             url: '/ecommerce/orders',
           },
           {
-            id: 'customers',
-            title: 'Customers',
-            messageId: 'sidebar.ecommerce.customers',
-            type: 'item',
-            permittedRole: [RoutePermittedRole.User],
-            url: '/ecommerce/customers',
-          },
-          {
             id: 'cart',
             title: 'Cart',
             messageId: 'sidebar.ecommerce.cart',
@@ -257,6 +259,113 @@ const routesConfig = [
             type: 'item',
             permittedRole: [RoutePermittedRole.User],
             url: '/ecommerce/invoice-2',
+          },
+        ],
+      },
+      {
+        id: 'admin-ecommerce',
+        title: 'Ecommerce Admin',
+        messageId: 'sidebar.ecommerceAdmin',
+        type: 'collapse',
+        icon: <GrUserAdmin />,
+        children: [
+          {
+            id: 'productListing',
+            title: 'Product Listing',
+            messageId: 'sidebar.ecommerceAdmin.productListing',
+            type: 'item',
+            permittedRole: [RoutePermittedRole.User],
+            url: '/ecommerce/product-listing',
+          },
+          {
+            id: 'addProducts',
+            title: 'Add Products',
+            messageId: 'sidebar.ecommerceAdmin.addProducts',
+            type: 'item',
+            permittedRole: [RoutePermittedRole.User],
+            url: '/ecommerce/add-products',
+          },
+          {
+            id: 'customers',
+            title: 'Customers',
+            messageId: 'sidebar.ecommerce.customers',
+            type: 'item',
+            permittedRole: [RoutePermittedRole.User],
+            url: '/ecommerce/customers',
+          },
+        ],
+      },
+      {
+        id: 'invoice',
+        title: 'Invoice',
+        messageId: 'sidebar.invoice',
+        type: 'collapse',
+        icon: <TbFileInvoice />,
+        children: [
+          {
+            id: 'addInvoice',
+            title: 'Add Invoices',
+            messageId: 'sidebar.invoice.addInvoice',
+            type: 'item',
+            permittedRole: [RoutePermittedRole.User],
+            url: '/invoice/list/add',
+          },
+          {
+            id: 'invoices',
+            title: 'Invoices',
+            messageId: 'sidebar.invoice.home',
+            type: 'item',
+            permittedRole: [RoutePermittedRole.User],
+            url: '/invoice/home',
+          },
+          {
+            id: 'clients',
+            title: 'Clients',
+            messageId: 'sidebar.invoice.clients',
+            type: 'item',
+            permittedRole: [RoutePermittedRole.User],
+            url: '/invoice/clients',
+          },
+          {
+            id: 'settings',
+            title: 'Settings',
+            messageId: 'sidebar.invoice.settings',
+            type: 'item',
+            permittedRole: [RoutePermittedRole.User],
+            url: '/invoice/settings',
+          },
+        ],
+      },
+      {
+        id: 'blog',
+        title: 'Blog',
+        messageId: 'sidebar.pages.extraPages.blog',
+        type: 'collapse',
+        icon: 'rss_feed',
+        children: [
+          {
+            id: 'blogcreate',
+            title: 'Create Blog',
+            messageId: 'sidebar.pages.extraPages.blogCreate',
+            type: 'item',
+            permittedRole: [RoutePermittedRole.User],
+            url: '/extra-pages/create/blog',
+          },
+          {
+            id: 'bloglist',
+            title: 'Blog List',
+            messageId: 'sidebar.pages.extraPages.blogList',
+            type: 'item',
+            permittedRole: [RoutePermittedRole.User],
+            url: '/extra-pages/blog',
+          },
+          {
+            id: 'blogdetail',
+            title: 'Blog Detail',
+            messageId: 'sidebar.pages.extraPages.blogDetail',
+            type: 'item',
+            permittedRole: [RoutePermittedRole.User],
+            url: '/extra-pages/blog-details',
           },
         ],
       },
@@ -1225,10 +1334,28 @@ const routesConfig = [
         id: 'pricing',
         title: 'Pricing',
         messageId: 'sidebar.pages.extraPages.pricing',
-        type: 'item',
+        type: 'collapse',
         permittedRole: [RoutePermittedRole.User],
         icon: 'attach_money',
         url: '/extra-pages/pricing',
+        children: [
+          {
+            id: 'pricingListing',
+            title: 'Pricing Listing',
+            messageId: 'sidebar.pages.extraPages.pricingListing',
+            type: 'item',
+            permittedRole: [RoutePermittedRole.User],
+            url: '/extra-pages/pricing-listing',
+          },
+          {
+            id: 'pricingDetail',
+            title: 'Pricing Detail',
+            messageId: 'sidebar.pages.extraPages.pricingDetail',
+            type: 'item',
+            permittedRole: [RoutePermittedRole.User],
+            url: '/extra-pages/pricing-detail',
+          },
+        ],
       },
       {
         id: 'user',

@@ -1,8 +1,8 @@
 import React from 'react';
 import { useBottomScrollListener } from 'react-bottom-scroll-listener';
 import PropTypes from 'prop-types';
-import { useTheme } from '@mui/material';
-import AppAnimateGroup from '../AppAnimateGroup';
+import { Box, useTheme } from '@mui/material';
+// import AppAnimateGroup from '../AppAnimateGroup';
 
 const getEmptyContainer = (ListEmptyComponent) => {
   if (ListEmptyComponent)
@@ -45,6 +45,7 @@ const ListView = ({
   };
 
   if (!onEndReached) {
+    // eslint-disable-next-line @typescript-eslint/no-empty-function
     onEndReached = () => {};
   }
 
@@ -54,16 +55,16 @@ const ListView = ({
   }
   useBottomScrollListener(onEndReached, 200);
   return (
-    <AppAnimateGroup
+    <Box
       style={{ ...style }}
       {...rest}
-      enter={{ delay, duration, animation }}
+      // enter={{ delay, duration, animation }}
     >
       {data.length > 0
         ? data.map((item, index) => renderRow(item, index))
         : getEmptyContainer(ListEmptyComponent)}
       {getFooterContainer(ListFooterComponent)}
-    </AppAnimateGroup>
+    </Box>
   );
 };
 
@@ -73,7 +74,7 @@ ListView.propTypes = {
   renderRow: PropTypes.func,
   delay: PropTypes.number,
   duration: PropTypes.number,
-  animation: PropTypes.string,
+  // animation: PropTypes.string,
   containerStyle: PropTypes.object,
   ListEmptyComponent: PropTypes.node,
   ListFooterComponent: PropTypes.node,
@@ -82,7 +83,8 @@ ListView.propTypes = {
 };
 ListView.defaultProps = {
   border: false,
-  animation: 'transition.slideUpIn',
+  // animation: 'transition.slideUpIn',
   data: [],
+  // eslint-disable-next-line @typescript-eslint/no-empty-function
   onEndReached: () => {},
 };

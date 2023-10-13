@@ -93,6 +93,7 @@ const CheckedTasksActions = ({
                 color: 'text.disabled',
               }}
               size='large'
+              onClick={onLabelOpen}
             >
               <LabelOutlinedIcon
                 sx={{
@@ -101,7 +102,6 @@ const CheckedTasksActions = ({
                   display: 'block',
                 }}
                 value={1}
-                onClick={onLabelOpen}
               />
             </IconButton>
           </AppTooltip>

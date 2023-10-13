@@ -13,7 +13,7 @@ const ProductView = ({ product }) => {
   return (
     <Grid item sm={12} md={8}>
       <Box
-        component="h3"
+        component='h3'
         sx={{
           color: 'text.primary',
           fontSize: 20,
@@ -22,7 +22,7 @@ const ProductView = ({ product }) => {
       >
         ${+product.mrp - Math.round((+product.mrp * +product.discount) / 100)}
         <Box
-          component="span"
+          component='span'
           sx={{
             textDecoration: 'line-through',
             color: 'text.secondary',
@@ -40,27 +40,23 @@ const ProductView = ({ product }) => {
           mb: 4,
         }}
       >
-        In stoke
+        In stock
       </Box>
       <Box
-        component="p"
+        component='p'
         sx={{
           color: 'text.secondary',
         }}
       >
-        It is a long established fact that a reader will be distracted by the
-        readable content of a page looking at its layout. The point of using
-        Lorem Ipsum is that it has a more-or-less normal distribution of
-        letters, as opposed to using Content here, making it look like readable
-        English. Many desktop publishing packages and web page editors now use..
+        {product.description || 'No description found'}
       </Box>
       <Divider style={{ marginTop: 15, marginBottom: 15 }} />
       <AvailableOffers />
       <DeliveryInfo />
       <Divider style={{ marginTop: 15, marginBottom: 15 }} />
-      <ProductSpecification />
+      <ProductSpecification productSpec={product.productSpec || []} />
       <Divider style={{ marginTop: 15, marginBottom: 15 }} />
-      <ProductInfo />
+      <ProductInfo productInfo={product.productInfo || []} />
       <Divider style={{ marginTop: 15, marginBottom: 15 }} />
       <Reviews />
     </Grid>

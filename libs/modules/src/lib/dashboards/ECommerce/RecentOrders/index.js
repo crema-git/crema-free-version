@@ -1,18 +1,19 @@
 import React from 'react';
-import AppCard from '@crema/components/AppCard';
-import { useIntl } from 'react-intl';
-import AppSelect from '@crema/components/AppSelect';
+import AppCard from "@crema/components/AppCard";
+import {useIntl} from 'react-intl';
+import AppSelect from "@crema/components/AppSelect";
+
 import OrderTable from './OrderTable';
 import PropTypes from 'prop-types';
 
-const RecentOrders = ({ recentOrders }) => {
-  const { messages } = useIntl();
+const RecentOrders = ({recentOrders}) => {
+  const {messages} = useIntl();
   const handleSelectionType = (data) => {
     console.log('data: ', data);
   };
   return (
     <AppCard
-      contentStyle={{ px: 0 }}
+      contentStyle={{paddingLeft: 0, paddingRight: 0}}
       title={messages['eCommerce.recentOrders']}
       action={
         <AppSelect
@@ -32,7 +33,6 @@ const RecentOrders = ({ recentOrders }) => {
 };
 
 export default RecentOrders;
-
 RecentOrders.propTypes = {
   recentOrders: PropTypes.array,
 };

@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
-import AppLngSwitcher from '@crema/components/AppLngSwitcher';
+import AppLngSwitcher from '../../AppLngSwitcher';
 import Box from '@mui/material/Box';
-import AppSearchBar from '@crema/components/AppSearchBar';
+import AppSearchBar from '../../AppSearchBar';
 import useStyles from './AppHeader.style';
 import clsx from 'clsx';
 import Hidden from '@mui/material/Hidden';
@@ -41,18 +41,18 @@ const AppHeader = ({
   const classes = useStyles();
 
   return (
-    <AppBar color="inherit" className={clsx(classes.appBar, 'app-bar')}>
+    <AppBar color='inherit' className={clsx(classes.appBar, 'app-bar')}>
       <Toolbar className={classes.appToolbar}>
         <Hidden mdDown>
           <IconButton
-            edge="start"
+            edge='start'
             className={clsx(classes.menuBarButton, 'menu-bar-btn')}
-            color="inherit"
-            aria-label="open drawer"
+            color='inherit'
+            aria-label='open drawer'
             onClick={updateNavState}
           >
             <Box
-              component="span"
+              component='span'
               className={clsx(classes.menuBarIcon, 'main', {
                 active: sidebarMenuState > 0,
               })}
@@ -60,7 +60,7 @@ const AppHeader = ({
               <MenuIcon />
             </Box>
             <Box
-              component="span"
+              component='span'
               className={clsx(classes.menuBarIcon, 'sub', {
                 active: sidebarMenuState > 1 && sidebarMenuState < 3,
               })}
@@ -71,10 +71,10 @@ const AppHeader = ({
         </Hidden>
         <Hidden lgUp>
           <IconButton
-            edge="start"
+            edge='start'
             className={clsx(classes.menuButton, 'menu-btn')}
-            color="inherit"
-            aria-label="open drawer"
+            color='inherit'
+            aria-label='open drawer'
             onClick={toggleNavCollapsed}
           >
             <MenuIcon className={classes.menuIcon} />
@@ -82,8 +82,8 @@ const AppHeader = ({
         </Hidden>
         <AppSearchBar
           className={classes.appSearch}
-          iconPosition="right"
-          placeholder="Search…"
+          iconPosition='right'
+          placeholder='Search…'
         />
         <Box className={classes.grow} />
         <AppLngSwitcher />
@@ -92,9 +92,9 @@ const AppHeader = ({
           <Hidden xsDown>
             <Box className={classes.hsHeaderAction}>
               <Box className={classes.hsHeaderActionItem}>
-                <Tooltip title="Notification">
+                <Tooltip title='Notification'>
                   <IconButton
-                    className="iconBtn"
+                    className='iconBtn'
                     onClick={() => setShowNotification(true)}
                   >
                     <NotificationsNoneIcon />
@@ -102,9 +102,9 @@ const AppHeader = ({
                 </Tooltip>
               </Box>
               <Box className={classes.hsHeaderActionItem}>
-                <Tooltip title="Message">
+                <Tooltip title='Message'>
                   <IconButton
-                    className="iconBtn"
+                    className='iconBtn'
                     onClick={() => setShowMessage(true)}
                   >
                     <ChatBubbleOutlineIcon />
@@ -112,8 +112,8 @@ const AppHeader = ({
                 </Tooltip>
               </Box>
               <Box className={classes.hsHeaderActionItem}>
-                <Tooltip title="Setting">
-                  <IconButton className="iconBtn">
+                <Tooltip title='Setting'>
+                  <IconButton className='iconBtn'>
                     <SettingsOutlinedIcon />
                   </IconButton>
                 </Tooltip>
@@ -123,15 +123,15 @@ const AppHeader = ({
 
           <Hidden smUp>
             <Box className={classes.hsHeaderActionItem}>
-              <Tooltip title="More">
-                <IconButton className="iconBtn" onClick={handleClick}>
+              <Tooltip title='More'>
+                <IconButton className='iconBtn' onClick={handleClick}>
                   <MoreVertIcon />
                 </IconButton>
               </Tooltip>
             </Box>
           </Hidden>
           <Menu
-            id="simple-menu"
+            id='simple-menu'
             anchorEl={anchorEl}
             keepMounted
             open={Boolean(anchorEl)}
@@ -146,14 +146,14 @@ const AppHeader = ({
         </Box>
 
         <Drawer
-          anchor="right"
+          anchor='right'
           open={showMessage}
           onClose={() => setShowMessage(false)}
         >
           <AppMessages onClose={() => setShowMessage(false)} />
         </Drawer>
         <Drawer
-          anchor="right"
+          anchor='right'
           open={showNotification}
           onClose={() => setShowNotification(false)}
         >

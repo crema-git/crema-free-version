@@ -1,7 +1,7 @@
 import React from 'react';
 import Box from '@mui/material/Box';
 import IntlMessages from '@crema/helpers/IntlMessages';
-import moment from 'moment';
+import dayjs from 'dayjs';
 import DeleteOutlinedIcon from '@mui/icons-material/DeleteOutlined';
 import PropTypes from 'prop-types';
 import { Fonts } from '@crema/constants/AppEnums';
@@ -85,8 +85,8 @@ const CardAttachments = (props) => {
               mb: { xs: 3, sm: 5 },
             }}
           >
-            <Box component="h4">
-              <IntlMessages id="common.attachments" />
+            <Box component='h4'>
+              <IntlMessages id='common.attachments' />
             </Box>
           </Box>
 
@@ -108,23 +108,23 @@ const CardAttachments = (props) => {
                   }}
                 >
                   <CardAttachmentWrapper>
-                    <Box className="attachment-thumb">
-                      <img src={attachment.preview} alt="attachment" />
+                    <Box className='attachment-thumb'>
+                      <img src={attachment.preview} alt='attachment' />
 
-                      <Box className="attachment-action">
+                      <Box className='attachment-action'>
                         <IconButton
-                          className="icon-btn"
-                          color="primary"
-                          variant="outlined"
-                          aria-label="edit"
+                          className='icon-btn'
+                          color='primary'
+                          variant='outlined'
+                          aria-label='edit'
                         >
                           <CloudDownloadOutlinedIcon />
                         </IconButton>
                         <IconButton
-                          className="icon-btn"
-                          color="primary"
-                          variant="outlined"
-                          aria-label="delete"
+                          className='icon-btn'
+                          color='primary'
+                          variant='outlined'
+                          aria-label='delete'
                           onClick={() => onDeleteAttachment(attachment.id)}
                         >
                           <DeleteOutlinedIcon />
@@ -153,23 +153,23 @@ const CardAttachments = (props) => {
                         }}
                       >
                         <Box
-                          component="span"
+                          component='span'
                           sx={{
                             mr: 1,
                           }}
                         >
-                          {moment(file.lastModified).format('ll').split(',')[0]}
+                          {dayjs(file.lastModified).format('ll').split(',')[0]}
                         </Box>
                         <Box
-                          component="span"
+                          component='span'
                           sx={{
                             mr: 1,
                           }}
                         >
-                          <IntlMessages id="common.at" />
+                          <IntlMessages id='common.at' />
                         </Box>
-                        <Box component="span">
-                          {moment(file.lastModified).format('LT')}
+                        <Box component='span'>
+                          {dayjs(file.lastModified).format('LT')}
                         </Box>
                       </Box>
                     </Box>

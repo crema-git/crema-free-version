@@ -1,5 +1,5 @@
 import React from 'react';
-import Slider from 'react-slick/lib';
+import Slider from 'react-slick';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import PropTypes from 'prop-types';
@@ -25,7 +25,7 @@ const CityInfo = (props) => {
       contentStyle={{ p: 0, pb: '0 !important' }}
     >
       <ImageCardSlideWrapper>
-        <Slider className="imageCardSlide" {...settings}>
+        <Slider className='imageCardSlide' {...settings}>
           {cityData.map((city) => {
             return (
               <Box
@@ -51,14 +51,14 @@ const CityInfo = (props) => {
                   }}
                 >
                   <img
-                    className="imageSlideFull"
+                    className='imageSlideFull'
                     src={city.image}
-                    alt="building"
+                    alt='building'
                   />
                 </Box>
                 <SlideContentWrapper>
                   <Box
-                    component="h3"
+                    component='h3'
                     sx={{
                       mb: 4,
                       fontWeight: Fonts.BOLD,
@@ -73,7 +73,7 @@ const CityInfo = (props) => {
                       mt: 'auto',
                     }}
                   >
-                    <Typography component="p">{city.desc}</Typography>
+                    <Typography component='p'>{city.desc}</Typography>
                   </Box>
                 </SlideContentWrapper>
               </Box>

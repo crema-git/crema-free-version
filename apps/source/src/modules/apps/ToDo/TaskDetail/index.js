@@ -10,7 +10,7 @@ import { useGetDataApi } from '@crema/hooks/APIHooks';
 const TaskDetail = () => {
   const { id } = useParams();
   const [{ apiData: selectedTask }, { setQueryParams, setData }] =
-    useGetDataApi('/api/todoApp/task/', undefined, { id: id }, false);
+    useGetDataApi('/api/todo/task/', undefined, { id: id }, false);
 
   useEffect(() => {
     setQueryParams({ id });

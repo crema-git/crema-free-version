@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
-import moment from 'moment';
+import dayjs from 'dayjs';
 import { Zoom } from '@mui/material';
 import { useIntl } from 'react-intl';
 import AppSearchBar from '@crema/components/AppSearchBar';
@@ -31,9 +31,9 @@ const ChatSideBar = ({ selectedUser, setSelectedUser }) => {
       );
     }
     chatsList.sort((a, b) => {
-      let momentA = moment(a.lastMessage.time).format('X');
-      let momentB = moment(b.lastMessage.time).format('X');
-      return momentB - momentA;
+      let dayjsA = dayjs(a.lastMessage.time).format('X');
+      let dayjsB = dayjs(b.lastMessage.time).format('X');
+      return dayjsB - dayjsA;
     });
     return chatsList;
   };

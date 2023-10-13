@@ -8,6 +8,7 @@ import { useDropzone } from 'react-dropzone';
 import PropTypes from 'prop-types';
 import { Fonts } from '@crema/constants/AppEnums';
 import IconButton from '@mui/material/IconButton';
+import { generateRandomUniqueNumber } from '@crema/helpers';
 
 const CardHeader = (props) => {
   const { onClickDeleteIcon, onCloseAddCard, onAddAttachments } = props;
@@ -16,7 +17,7 @@ const CardHeader = (props) => {
     onDrop: (acceptedFiles) => {
       const files = acceptedFiles.map((file) => {
         return {
-          id: Math.floor(Math.random() * 10000),
+          id: generateRandomUniqueNumber(),
           file,
           preview: URL.createObjectURL(file),
         };
@@ -37,14 +38,14 @@ const CardHeader = (props) => {
       }}
     >
       <Box
-        component="h5"
+        component='h5'
         sx={{
           pr: 2,
           fontWeight: Fonts.BOLD,
           fontSize: 16,
         }}
       >
-        <IntlMessages id="scrumboard.board" />
+        <IntlMessages id='scrumboard.board' />
       </Box>
       <Box
         sx={{

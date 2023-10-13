@@ -9,16 +9,17 @@ import AppInfoView from '@crema/components/AppInfoView';
 import { useGetDataApi } from '@crema/hooks/APIHooks';
 import {
   Header,
-  ProductImageSlide,
   ProductView,
   SimilarProduct,
 } from '@crema/modules/ecommerce/ProductDetail';
 import AppLoader from '@crema/components/AppLoader';
+import { isEmptyObject } from '@crema/helpers';
+import ProductImageSlide from './ProductImageSlide';
 
 const ProductDetail = () => {
   const { id } = useParams();
   const [{ apiData: currentProduct, loading }, { setQueryParams }] =
-    useGetDataApi('/api/ecommerce/get');
+    useGetDataApi('/api/ecommerce/get', {}, {}, false);
 
   useEffect(() => {
     setQueryParams({ id: id });
@@ -26,7 +27,7 @@ const ProductDetail = () => {
 
   return (
     <>
-      {loading ? (
+      {loading || isEmptyObject(currentProduct) ? (
         <AppLoader />
       ) : (
         <AppAnimate animation='transition.slideUpIn' delay={200}>

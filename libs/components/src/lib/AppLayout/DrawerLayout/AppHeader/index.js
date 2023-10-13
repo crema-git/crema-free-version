@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
-import AppLngSwitcher from '@crema/components/AppLngSwitcher';
+import AppLngSwitcher from '../../../AppLngSwitcher';
 import Box from '@mui/material/Box';
-import AppSearchBar from '@crema/components/AppSearchBar';
+import AppSearchBar from '../../../AppSearchBar';
 import Hidden from '@mui/material/Hidden';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
@@ -30,15 +30,15 @@ const AppHeader = ({ toggleNavCollapsed }) => {
 
   return (
     <AppBar
-      position="relative"
-      color="inherit"
+      position='relative'
+      color='inherit'
       sx={{
         boxShadow: 'none',
         borderBottom: (theme) => `solid 1px ${theme.palette.divider}`,
         backgroundColor: 'background.paper',
         width: '100%',
       }}
-      className="app-bar"
+      className='app-bar'
     >
       <Toolbar
         sx={{
@@ -52,12 +52,12 @@ const AppHeader = ({ toggleNavCollapsed }) => {
           sx={{
             color: 'text.secondary',
           }}
-          edge="start"
-          className="menu-btn"
-          color="inherit"
-          aria-label="open drawer"
+          edge='start'
+          className='menu-btn'
+          color='inherit'
+          aria-label='open drawer'
           onClick={toggleNavCollapsed}
-          size="large"
+          size='large'
         >
           <MenuIcon
             sx={{
@@ -92,11 +92,11 @@ const AppHeader = ({ toggleNavCollapsed }) => {
             },
           }}
         >
-          <AppSearchBar iconPosition="right" placeholder="Search…" />
+          <AppSearchBar iconPosition='right' placeholder='Search…' />
         </Box>
 
         <Box sx={{ ml: 4 }}>
-          <AppLngSwitcher iconOnly={true} tooltipPosition="bottom" />
+          <AppLngSwitcher iconOnly={true} tooltipPosition='bottom' />
         </Box>
 
         <Box sx={{ ml: 4 }}>
@@ -142,7 +142,7 @@ const AppHeader = ({ toggleNavCollapsed }) => {
                   px: 1.85,
                 }}
               >
-                <AppTooltip title="More">
+                <AppTooltip title='More'>
                   <IconButton
                     sx={{
                       borderRadius: '50%',
@@ -162,7 +162,7 @@ const AppHeader = ({ toggleNavCollapsed }) => {
                       },
                     }}
                     onClick={handleClick}
-                    size="large"
+                    size='large'
                   >
                     <MoreVertIcon />
                   </IconButton>
@@ -171,7 +171,7 @@ const AppHeader = ({ toggleNavCollapsed }) => {
             </Box>
           </Hidden>
           <Menu
-            id="simple-menu"
+            id='simple-menu'
             anchorEl={anchorEl}
             keepMounted
             open={Boolean(anchorEl)}

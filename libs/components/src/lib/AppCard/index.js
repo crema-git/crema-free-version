@@ -8,19 +8,19 @@ import CardContent from '@mui/material/CardContent';
 import CardActions from '@mui/material/CardActions';
 
 const AppCard = ({
-  sxStyle,
-  title,
-  titleStyle,
-  headerStyle,
-  contentStyle,
-  action,
-  actionStyle,
-  footer,
-  footerPosition,
-  footerStyle,
-  children,
-  ...rest
-}) => {
+                   sxStyle,
+                   title,
+                   titleStyle,
+                   headerStyle,
+                   contentStyle,
+                   action,
+                   actionStyle,
+                   footer,
+                   footerPosition,
+                   footerStyle,
+                   children,
+                   ...rest
+                 }) => {
   return (
     <Card
       sx={{ display: 'flex', flexDirection: 'column', ...sxStyle }}

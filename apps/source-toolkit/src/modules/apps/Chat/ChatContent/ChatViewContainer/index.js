@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Box from '@mui/material/Box';
-import moment from 'moment';
+import dayjs from 'dayjs';
 import PropTypes from 'prop-types';
 import IntlMessages from '@crema/helpers/IntlMessages';
 import AppsHeader from '@crema/components/AppsHeader';
@@ -68,7 +68,7 @@ const ChatViewContainer = ({ selectedUser }) => {
     const data = {
       ...fileMessage,
       sender: user.id,
-      time: moment().format('llll'),
+      time: dayjs().format('llll'),
     };
 
     dispatch(onSendMessage(selectedUser.channelId, data));
@@ -80,7 +80,7 @@ const ChatViewContainer = ({ selectedUser }) => {
       message,
       message_type: MessageType.TEXT,
       sender: user.id,
-      time: moment().format('llll'),
+      time: dayjs().format('llll'),
     };
 
     if (isEdit) {

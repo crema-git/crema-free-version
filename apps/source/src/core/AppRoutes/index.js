@@ -13,39 +13,44 @@ import { muiComponentConfigs } from './MUIComponents';
 import { thirdPartyConfigs } from './ThirdPartyRoutes';
 import { appsConfig } from './AppsRoutes';
 import { accountPagesConfigs } from './AccountRoutes';
-import { initialUrl } from '@crema/constants/AppConst';
+import { invoiceConfig } from './InvoiceRoutes';
 
-const authorizedStructure = {
-  fallbackPath: '/signin',
-  unAuthorizedComponent: <Error403 />,
-  routes: [
-    ...dashBoardConfigs,
-    ...accountPagesConfigs,
-    ...appsConfig,
-    ...thirdPartyConfigs,
-    ...extraPagesConfigs,
-    ...ecommerceConfig,
-    ...muiComponentConfigs,
-    ...userPagesConfig,
-    ...userListConfig,
-  ],
+export const authorizedStructure = (loginUrl) => {
+  return {
+    fallbackPath: loginUrl,
+    unAuthorizedComponent: <Error403 />,
+    routes: [
+      ...dashBoardConfigs,
+      ...accountPagesConfigs,
+      ...appsConfig,
+      ...thirdPartyConfigs,
+      ...extraPagesConfigs,
+      ...ecommerceConfig,
+      ...muiComponentConfigs,
+      ...userPagesConfig,
+      ...userListConfig,
+      ...invoiceConfig,
+    ],
+  };
 };
 
-const unAuthorizedStructure = {
-  fallbackPath: initialUrl,
-  routes: authRouteConfig,
+export const unAuthorizedStructure = (initialUrl) => {
+  return {
+    fallbackPath: initialUrl,
+    routes: authRouteConfig,
+  };
 };
-const anonymousStructure = {
-  routes: errorPagesConfigs.concat([
-    {
-      path: '/',
-      element: <Navigate to={initialUrl} />,
-    },
-    {
-      path: '*',
-      element: <Navigate to="/error-pages/error-404" />,
-    },
-  ]),
+export const anonymousStructure = (initialUrl) => {
+  return {
+    routes: errorPagesConfigs.concat([
+      {
+        path: '/',
+        element: <Navigate to={initialUrl} />,
+      },
+      {
+        path: '*',
+        element: <Navigate to='/error-pages/error-404' />,
+      },
+    ]),
+  };
 };
-
-export { authorizedStructure, unAuthorizedStructure, anonymousStructure };

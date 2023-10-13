@@ -36,14 +36,14 @@ const ThemeContextProvider = ({ children }) => {
   }, []);
 
   useEffect(() => {
-    theme.palette = {
-      ...theme.palette,
-      mode: themeMode === ThemeMode.DARK ? ThemeMode.DARK : ThemeMode.LIGHT,
-      background:
-        themeMode === ThemeMode.DARK ? backgroundDark : backgroundLight,
-      text: themeMode === ThemeMode.DARK ? textDark : textLight,
-    };
-    updateTheme(theme);
+    if (theme.palette.mode !== themeMode) {
+      theme.palette.mode =
+        themeMode === ThemeMode.DARK ? ThemeMode.DARK : ThemeMode.LIGHT;
+      theme.palette.background =
+        themeMode === ThemeMode.DARK ? backgroundDark : backgroundLight;
+      theme.palette.text = themeMode === ThemeMode.DARK ? textDark : textLight;
+      updateTheme({ ...theme });
+    }
   }, [themeMode, theme, updateTheme]);
 
   useEffect(() => {

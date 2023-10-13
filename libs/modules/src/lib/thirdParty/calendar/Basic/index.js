@@ -1,7 +1,7 @@
 import React from 'react';
-import { momentLocalizer, Views } from 'react-big-calendar';
+import { dayjsLocalizer, Views } from 'react-big-calendar';
 import events from '../events';
-import moment from 'moment';
+import dayjs from 'dayjs';
 import { StyledCalendar } from '../calandar.style';
 
 let allViews = Object.keys(Views).map((k) => Views[k]);
@@ -12,7 +12,7 @@ const ColoredDateCellWrapper = ({ children }) =>
       backgroundColor: 'lightblue',
     },
   });
-const localizer = momentLocalizer(moment);
+const localizer = dayjsLocalizer(dayjs);
 const BasicCalendar = () => {
   return (
     <StyledCalendar

@@ -19,7 +19,7 @@ import Grid from '@mui/material/Grid';
 import AppTextField from '@crema/components/AppTextField';
 import { Fonts } from '@crema/constants/AppEnums';
 import { styled } from '@mui/material/styles';
-import { useTodoContext } from '../../context/TodoContextProvider';
+import { useGetDataApi } from '@crema/hooks/APIHooks';
 
 const StyledDivider = styled(Divider)(({ theme }) => ({
   marginTop: 20,
@@ -33,7 +33,12 @@ const AddTaskForm = (props) => {
   const { values, setFieldValue, isSubmitting, setTaskLabels, taskLabels } =
     props;
 
-  const { labelList, priorityList, staffList } = useTodoContext();
+  const [{ apiData: labelList }] = useGetDataApi('/api/todo/labels/list', []);
+  const [{ apiData: priorityList }] = useGetDataApi(
+    '/api/todo/priority/list',
+    [],
+  );
+  const [{ apiData: staffList }] = useGetDataApi('/api/todo/staff/list', []);
 
   const inputLabel = React.useRef(null);
 
@@ -130,15 +135,9 @@ const AddTaskForm = (props) => {
             <Grid item xs={12} sm={6} md={3}>
               <Box width={1}>
                 <DatePicker
-                  autoOk
-                  format='YYYY/MM/DD'
-                  variant='inline'
-                  inputVariant='outlined'
                   label={<IntlMessages id='common.startDate' />}
-                  name='date'
-                  value={values.date}
-                  renderInput={(params) => <TextField {...params} />}
-                  onChange={(value) => setFieldValue('date', value)}
+                  value={values.startDate}
+                  onChange={(value) => setFieldValue('startDate', value)}
                 />
               </Box>
             </Grid>

@@ -1,16 +1,20 @@
 import React from 'react';
 import TableCell from '@mui/material/TableCell';
-import TableRow from '@mui/material/TableRow';
-import { Fonts } from '@crema/constants/AppEnums';
+import TableHeader from '@crema/components/TableHeader';
+import { grey } from '@mui/material/colors';
+import { Fonts } from '@crema/constants';
 
 const TableHeading = () => {
   return (
-    <TableRow
+    <TableHeader
       sx={{
-        '& th': {
+        borderBottom: '0 none',
+        color: grey[500],
+        '& .tableCell': {
           fontSize: 13,
           padding: 2,
           fontWeight: Fonts.BOLD,
+          backgroundColor: (theme) => theme.palette.background.paper,
           '&:first-of-type': {
             pl: 5,
           },
@@ -20,10 +24,12 @@ const TableHeading = () => {
         },
       }}
     >
-      <TableCell>Name</TableCell>
-      <TableCell>Spend</TableCell>
-      <TableCell>Graph</TableCell>
-    </TableRow>
+      <TableCell className='tableCell'>Name</TableCell>
+      <TableCell className='tableCell'>Duration</TableCell>
+      <TableCell className='tableCell'>Spend</TableCell>
+      <TableCell className='tableCell'>Budget</TableCell>
+      <TableCell className='tableCell'>Graph</TableCell>
+    </TableHeader>
   );
 };
 

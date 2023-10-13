@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import { onUpdateSelectedTask } from '../../../../../toolkit/actions';
 import Divider from '@mui/material/Divider';
 import Button from '@mui/material/Button';
-import moment from 'moment';
 import { alpha } from '@mui/material';
 import Box from '@mui/material/Box';
 import { useIntl } from 'react-intl';
@@ -26,6 +25,7 @@ import {
   TaskLabels,
   TodoDatePicker,
 } from '@crema/modules/apps/ToDo';
+import { getDateObject, getFormattedDate } from '@crema/helpers';
 
 const TaskDetailBody = (props) => {
   const { selectedTask } = props;
@@ -43,7 +43,7 @@ const TaskDetailBody = (props) => {
   const [comment, setComment] = useState('');
 
   const [scheduleDate, setScheduleDate] = useState(
-    moment(selectedTask.startDate).format('YYYY/MM/DD'),
+    getDateObject(selectedTask.startDate),
   );
 
   const [selectedStaff, setStaff] = useState(selectedTask.assignedTo);
@@ -57,7 +57,7 @@ const TaskDetailBody = (props) => {
       onUpdateSelectedTask({
         ...selectedTask,
         content,
-        startDate: scheduleDate,
+        startDate: getFormattedDate(scheduleDate),
         assignedTo: selectedStaff,
       }),
     );
@@ -70,7 +70,7 @@ const TaskDetailBody = (props) => {
       comment: comment,
       name: user.displayName ? user.displayName : 'User',
       image: user.photoURL,
-      date: moment().format('ll'),
+      date: getDateObject().format('ll'),
     });
     dispatch(onUpdateSelectedTask({ ...selectedTask, comments }));
     setComment('');
@@ -158,11 +158,7 @@ const TaskDetailBody = (props) => {
                   handleStaffChange={handleStaffChange}
                 />
               </Box>
-              <TodoDatePicker
-                date={scheduleDate}
-                setDate={setScheduleDate}
-                renderInput={(params) => <TextField {...params} />}
-              />
+              <TodoDatePicker date={scheduleDate} setDate={setScheduleDate} />
             </>
           ) : (
             <AssignedStaff assignedStaff={selectedTask.assignedTo} />
@@ -275,7 +271,8 @@ const TaskDetailBody = (props) => {
               padding: '10px 15px',
             },
           }}
-          rows='1'
+          minRows={2}
+          maxRows={4}
           variant='outlined'
           placeholder={messages['common.writeComment']}
           value={comment}

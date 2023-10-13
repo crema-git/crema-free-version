@@ -12,7 +12,7 @@ const StyledTable = styled(Table)(({ theme }) => ({
     {
       padding: '12px 16px',
       fontSize: 14,
-      '&:first-child': {
+      '&:first-of-type': {
         paddingLeft: 24,
         [theme.breakpoints.up('xl')]: {
           paddingLeft: 32,

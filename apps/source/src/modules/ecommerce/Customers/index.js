@@ -61,10 +61,6 @@ const Customers = () => {
               ml: 'auto',
             }}
           >
-            <Button variant='contained' color='primary'>
-              Add Customer
-            </Button>
-
             <Hidden smDown>
               <AppsPagination
                 rowsPerPage={10}

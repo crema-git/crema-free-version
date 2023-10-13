@@ -8,18 +8,13 @@ import PropTypes from 'prop-types';
 import CheckedTasksActions from './CheckedTasksActions';
 import AppsPagination from '@crema/components/AppsPagination';
 import Hidden from '@mui/material/Hidden';
-import {
-  SelectTasksDropdown,
-  ViewSelectButtons,
-} from '@crema/modules/apps/ToDo';
+import { SelectTasksDropdown } from '@crema/modules/apps/ToDo';
 
 const TaskContentHeader = (props) => {
   const {
     checkedTasks,
     setCheckedTasks,
-    onViewModeSelect,
     filterText,
-    viewMode,
     onSetFilterText,
     onPageChange,
     page,
@@ -49,13 +44,13 @@ const TaskContentHeader = (props) => {
 
       case 2:
         setCheckedTasks(
-          taskList.filter((task) => task.isStarred).map((task) => task.id)
+          taskList.filter((task) => task.isStarred).map((task) => task.id),
         );
         break;
 
       case 3:
         setCheckedTasks(
-          taskList.filter((task) => task.isAttachment).map((task) => task.id)
+          taskList.filter((task) => task.hasAttachments).map((task) => task.id),
         );
         break;
 
@@ -92,7 +87,7 @@ const TaskContentHeader = (props) => {
         </span>
         <Box sx={{ mr: 3 }}>
           <AppSearchBar
-            iconPosition="right"
+            iconPosition='right'
             overlap={false}
             value={filterText}
             onChange={(event) => onSetFilterText(event.target.value)}
@@ -105,7 +100,7 @@ const TaskContentHeader = (props) => {
         />
         {checkedTasks.length > 0 ? (
           <Box
-            component="span"
+            component='span'
             sx={{
               mr: { sm: 4 },
               display: 'flex',
@@ -118,17 +113,6 @@ const TaskContentHeader = (props) => {
             />
           </Box>
         ) : null}
-      </Box>
-
-      <Box
-        sx={{
-          mr: { xs: 3, xl: 4 },
-        }}
-      >
-        <ViewSelectButtons
-          viewMode={viewMode}
-          onViewModeSelect={onViewModeSelect}
-        />
       </Box>
 
       <Hidden smDown>

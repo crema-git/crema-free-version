@@ -4,3 +4,5 @@ export * from './Common';
 export * from './DateHelper';
 export * from './RouteHelper';
 export * from './StringHelper';
+export * from './UrlHelper';
+export * from './FileHelper';

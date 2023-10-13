@@ -51,8 +51,11 @@ const MailsList = () => {
       mail.isRead = true;
       putDataApi('/api/mailApp/mail/', infoViewActionsContext, { mail })
         .then((data) => {
+          console.log('onViewMailDetail', data, mailList);
           onNavigatePage(mail);
-          onUpdateItem(data);
+          onUpdateItem(
+            mailList?.data?.map((data) => (data.id === mail.id ? mail : data)),
+          );
           infoViewActionsContext.showMessage(
             mail.isRead
               ? 'Mail Marked as Read Successfully'
@@ -71,7 +74,7 @@ const MailsList = () => {
       status: checked,
     })
       .then((data) => {
-        onUpdateItem(data[0]);
+        onUpdateItem(data);
         infoViewActionsContext.showMessage(
           checked
             ? 'Mail Marked as Starred Successfully'
@@ -83,14 +86,9 @@ const MailsList = () => {
       });
   };
 
-  const onUpdateItem = (data) => {
+  const onUpdateItem = (allData) => {
     setMailData({
-      data: mailList.data.map((item) => {
-        if (item.id === data.id) {
-          return data;
-        }
-        return item;
-      }),
+      data: allData,
       count: mailList.count,
     });
   };

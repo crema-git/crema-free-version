@@ -6,6 +6,7 @@ export const useWidth = () => {
   const keys = [...theme.breakpoints.keys].reverse();
   return (
     keys.reduce((output, key) => {
+      // eslint-disable-next-line react-hooks/rules-of-hooks
       const matches = useMediaQuery(theme.breakpoints.up(key));
       return !output && matches ? key : output;
     }, null) || 'xs'
@@ -43,12 +44,25 @@ export const multiPropsFilter = (products, filters, stringKey = 'title') => {
   const filterKeys = Object.keys(filters);
   return products.filter((product) => {
     return filterKeys.every((key) => {
-      if (!filters[key].length) return true;
+      if (filters[key].length === 0) return true;
       // Loops again if product[key] is an array (for material attribute).
       if (Array.isArray(product[key])) {
         return product[key].some((keyEle) => filters[key].includes(keyEle));
       }
-      console.log('key', key, filters[key], product[key]);
+      if (filters[key]?.start || filters[key]?.end) {
+        if (key === 'mrp') {
+          return (
+            product[key] >= filters[key].start &&
+            product[key] < filters[key].end
+          );
+        } else {
+          const start = new Date(filters[key].start).getTime();
+          const end = new Date(filters[key].end).getTime();
+          const productDate = new Date(product[key]).getTime();
+
+          return productDate >= start && productDate <= end;
+        }
+      }
       if (key === stringKey) {
         return product[key].toLowerCase().includes(filters[key].toLowerCase());
       }
@@ -68,4 +82,16 @@ export function IntlGlobalProvider({ children }) {
 
 export const appIntl = () => {
   return intl;
+};
+
+export const generateRandomUniqueNumber = () => {
+  const numbers = [];
+  const number = Math.floor(Math.random() * 100000000);
+
+  if (numbers.includes(number)) {
+    return generateRandomUniqueNumber();
+  } else {
+    numbers.push(number);
+    return number;
+  }
 };

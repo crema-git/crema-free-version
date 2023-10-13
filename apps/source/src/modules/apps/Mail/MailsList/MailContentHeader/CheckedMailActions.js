@@ -21,7 +21,7 @@ import {
 const CheckedMailActions = (props) => {
   const infoViewActionsContext = useInfoViewActionsContext();
   const { checkedMails, setCheckedMails } = props;
-  const { setMailData } = useMailActionsContext();
+  const { setMailData, reCallAPI } = useMailActionsContext();
   const { labelList, folderList } = useMailContext();
 
   const [isLabelOpen, onOpenLabel] = useState(null);
@@ -50,7 +50,11 @@ const CheckedMailActions = (props) => {
       type,
     })
       .then((data) => {
-        setMailData(data);
+        setMailData({
+          data,
+          count: data.length,
+        });
+        reCallAPI();
         infoViewActionsContext.showMessage('Mail moved to folder successfully');
         setCheckedMails([]);
       })
@@ -68,7 +72,11 @@ const CheckedMailActions = (props) => {
       type: labelType,
     })
       .then((data) => {
-        setMailData(data);
+        setMailData({
+          data,
+          count: data.length,
+        });
+        reCallAPI();
         setCheckedMails([]);
         onOpenLabel(null);
         infoViewActionsContext.showMessage('Mail moved to folder successfully');
