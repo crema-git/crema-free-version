@@ -1,3 +1,4 @@
+/*
 import React from 'react';
 import {Box} from '@mui/material';
 import CheckIcon from '@mui/icons-material/Check';
@@ -41,3 +42,4 @@ ColorCell.propTypes = {
   selected: PropTypes.array,
   onChange: PropTypes.func,
 };
+*/

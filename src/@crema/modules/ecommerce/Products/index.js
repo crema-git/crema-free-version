@@ -1,3 +1,4 @@
+/*
 import ProductsSidebar from './ProductsSidebar';
 import ProductHeader from './ProductHeader';
 import ProductGrid from './ProductListing/ProductGrid';
@@ -24,3 +25,4 @@ export {
   ProductsCategory,
   RatingCell,
 };
+*/

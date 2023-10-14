@@ -1,3 +1,4 @@
+/*
 import React from 'react';
 import {Box, Typography} from '@mui/material';
 import IntlMessages from '@crema/helpers/IntlMessages';
@@ -222,3 +223,4 @@ const Header = () => {
 };
 
 export default Header;
+*/

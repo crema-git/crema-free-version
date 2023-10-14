@@ -1,3 +1,4 @@
+/*
 import React, {useEffect, useState} from 'react';
 import PropTypes from 'prop-types';
 import ProductsCategory from './ProductsCategory';
@@ -262,3 +263,4 @@ ProductSidebar.propTypes = {
   filterData: PropTypes.object.isRequired,
   setFilterData: PropTypes.func.isRequired,
 };
+*/

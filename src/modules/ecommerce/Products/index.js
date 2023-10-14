@@ -2,9 +2,13 @@ import React, {useState} from 'react';
 import {useIntl} from 'react-intl';
 import AppsContainer from '@crema/components/AppsContainer';
 
-import {ProductsSidebar, VIEW_TYPE} from '@crema/modules/ecommerce/Products';
+import ProductsSidebar from './ProductsSidebar';
 import ProductListing from './ProductListing';
 
+export const VIEW_TYPE = {
+  GRID: 'grid',
+  LIST: 'list',
+};
 const Products = () => {
   const {messages} = useIntl();
   const [filterData, setFilterData] = useState({

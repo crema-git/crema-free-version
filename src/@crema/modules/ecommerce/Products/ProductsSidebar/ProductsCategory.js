@@ -1,3 +1,4 @@
+/*
 import React from 'react';
 import TreeView from '@mui/lab/TreeView';
 import TreeItem from '@mui/lab/TreeItem';
@@ -27,3 +28,4 @@ const ProductsCategory = () => {
 };
 
 export default ProductsCategory;
+*/

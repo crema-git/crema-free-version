@@ -2,11 +2,9 @@ import React from 'react';
 import {Box} from '@mui/material';
 import AppAnimate from '@crema/components/AppAnimate';
 import {useGetDataApi} from '@crema/hooks/APIHooks';
-import {
-  AddressInfo,
-  ItemsList,
-  OrderPlaced,
-} from '@crema/modules/ecommerce/Confirmation';
+import OrderPlaced from './OrderPlaced';
+import AddressInfo from './AddressInfo';
+import ItemsList from './ItemsList';
 import {addresses} from '@crema/mockapi/fakedb/ecommerce/ecommerceData';
 import AppLoader from '@crema/components/AppLoader';
 

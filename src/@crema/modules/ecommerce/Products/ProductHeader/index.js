@@ -1,3 +1,4 @@
+/*
 import React from 'react';
 import {alpha, Box, Hidden, Stack} from '@mui/material';
 import AppSearch from '@crema/components/AppSearchBar';
@@ -105,3 +106,4 @@ ProductHeader.propTypes = {
   onPageChange: PropTypes.func,
   setViewType: PropTypes.func,
 };
+*/

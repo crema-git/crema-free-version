@@ -1,3 +1,4 @@
+/*
 import React from 'react';
 import PropsTypes from 'prop-types';
 import {Box, lighten} from '@mui/material';
@@ -44,3 +45,4 @@ export default MediaSlider;
 MediaSlider.propTypes = {
   children: PropsTypes.node,
 };
+*/

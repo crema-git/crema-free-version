@@ -1,3 +1,4 @@
+/*
 import React from 'react';
 import TableCell from '@mui/material/TableCell';
 import IntlMessages from '@crema/helpers/IntlMessages';
@@ -60,3 +61,4 @@ const TableHeading = () => {
 };
 
 export default TableHeading;
+*/

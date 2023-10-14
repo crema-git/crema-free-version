@@ -1,3 +1,4 @@
+/*
 import React, {useState} from 'react';
 import AppList from '@crema/components/AppList';
 import AddressCell from './AddressCell';
@@ -22,3 +23,4 @@ const DeliveryAddress = () => {
 };
 
 export default DeliveryAddress;
+*/

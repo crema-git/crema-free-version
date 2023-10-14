@@ -1,3 +1,4 @@
+/*
 export const getTotalPrice = (cartItems) => {
   let total = 0;
   cartItems.map((data) => {
@@ -6,3 +7,4 @@ export const getTotalPrice = (cartItems) => {
   });
   return total;
 };
+*/

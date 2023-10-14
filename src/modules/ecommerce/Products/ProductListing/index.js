@@ -7,12 +7,10 @@ import {useThemeContext} from '@crema/context/AppContextProvider/ThemeContextPro
 import AppsFooter from '@crema/components/AppsContainer/AppsFooter';
 import AppsPagination from '@crema/components/AppsPagination';
 import {useGetDataApi} from '@crema/hooks/APIHooks';
-import {
-  ProductGrid,
-  ProductHeader,
-  ProductList,
-  VIEW_TYPE,
-} from '@crema/modules/ecommerce/Products';
+import ProductHeader from '../ProductHeader';
+import ProductGrid from './ProductGrid';
+import {VIEW_TYPE} from '../index';
+import ProductList from './ProductList';
 
 const ProductListing = ({filterData, viewType, setViewType, setFilterData}) => {
   const {theme} = useThemeContext();

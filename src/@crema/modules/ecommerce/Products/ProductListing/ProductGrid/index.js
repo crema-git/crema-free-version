@@ -1,3 +1,4 @@
+/*
 import React from 'react';
 import AppGrid from '@crema/components/AppGrid';
 import GridItem from './GridItem';
@@ -25,3 +26,4 @@ ProductGrid.propTypes = {
   ecommerceList: PropTypes.array,
   loading: PropTypes.bool,
 };
+*/

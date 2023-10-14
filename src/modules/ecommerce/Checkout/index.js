@@ -7,12 +7,15 @@ import {Fonts} from '@crema/constants/AppEnums';
 import AppAnimate from '@crema/components/AppAnimate';
 import AppGridContainer from '@crema/components/AppGridContainer';
 import {useGetDataApi} from '@crema/hooks/APIHooks';
-import {
-  DeliveryAddress,
-  OrderSummary,
-  PaymentInfo,
-} from '@crema/modules/ecommerce/Checkout';
+// import {
+//   DeliveryAddress,
+//   OrderSummary,
+//   PaymentInfo,
+// } from '@crema/modules/ecommerce/Checkout';
 import AppLoader from '@crema/components/AppLoader';
+import DeliveryAddress from './DeliveryAddress';
+import OrderSummary from '../OrderSummary';
+import PaymentInfo from './PaymentInfo';
 
 const Checkout = () => {
   const [{apiData: cartItems, loading}] = useGetDataApi('/api/cart/get', []);

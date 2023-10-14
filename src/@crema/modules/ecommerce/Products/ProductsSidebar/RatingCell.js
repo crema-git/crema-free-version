@@ -1,3 +1,4 @@
+/*
 import React from 'react';
 import {Box} from '@mui/material';
 import StarIcon from '@mui/icons-material/Star';
@@ -37,3 +38,4 @@ RatingCell.propTypes = {
   selected: PropTypes.array,
   onChange: PropTypes.func,
 };
+*/

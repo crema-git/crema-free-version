@@ -1,3 +1,4 @@
+/*
 import React from 'react';
 import AppCard from '@crema/components/AppCard';
 import Grid from '@mui/material/Grid';
@@ -55,3 +56,4 @@ export default OrderPlaced;
 OrderPlaced.propTypes = {
   cartItems: PropTypes.array,
 };
+*/

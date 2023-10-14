@@ -1,3 +1,4 @@
+/*
 import React, {useState} from 'react';
 import AppCard from '@crema/components/AppCard';
 import {Box} from '@mui/material';
@@ -121,3 +122,4 @@ const PaymentInfo = () => {
 };
 
 export default PaymentInfo;
+*/

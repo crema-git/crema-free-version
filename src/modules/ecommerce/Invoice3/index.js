@@ -9,7 +9,8 @@ import TableBody from '@mui/material/TableBody';
 import TableRow from '@mui/material/TableRow';
 import TableCell from '@mui/material/TableCell';
 import {Typography} from '@mui/material';
-import {Header, ItemList} from '@crema/modules/ecommerce/Invoice3';
+import Header from './Header';
+import ItemList from './ItemList';
 import {invoiceData} from '@crema/mockapi/fakedb/extraPages';
 
 const Invoice3 = () => {

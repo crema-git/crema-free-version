@@ -8,9 +8,13 @@ import {Fonts} from '@crema/constants/AppEnums';
 import AppAnimate from '@crema/components/AppAnimate';
 import AppGridContainer from '@crema/components/AppGridContainer';
 import {postDataApi, putDataApi, useGetDataApi} from '@crema/hooks/APIHooks';
-import {CartTable, OrderSummary} from '@crema/modules/ecommerce/Carts';
+
 import AppLoader from '@crema/components/AppLoader';
 import {useInfoViewActionsContext} from '@crema/context/AppContextProvider/InfoViewContextProvider';
+import CartTable from './CartTable';
+import OrderSummary from '../OrderSummary';
+
+// import OrderSummary from "../OrderSummary";
 
 const Carts = () => {
   const infoViewActionsContext = useInfoViewActionsContext();

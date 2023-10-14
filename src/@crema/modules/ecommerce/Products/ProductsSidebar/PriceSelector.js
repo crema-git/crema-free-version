@@ -1,3 +1,4 @@
+/*
 import React from 'react';
 import Slider from '@mui/material/Slider';
 import {Box} from '@mui/material';
@@ -91,3 +92,4 @@ const PriceSelector = () => {
 };
 
 export default PriceSelector;
+*/

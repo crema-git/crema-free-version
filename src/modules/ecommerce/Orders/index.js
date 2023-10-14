@@ -8,8 +8,7 @@ import AppsPagination from '@crema/components/AppsPagination';
 import Box from '@mui/material/Box';
 import AppSearchBar from '@crema/components/AppSearchBar';
 import {useGetDataApi} from '@crema/hooks/APIHooks';
-import {OrderTable} from '@crema/modules/ecommerce/Orders';
-
+import OrderTable from './OrderTable';
 const Orders = () => {
   const {messages} = useIntl();
   const [{apiData, loading}, {setQueryParams}] = useGetDataApi(

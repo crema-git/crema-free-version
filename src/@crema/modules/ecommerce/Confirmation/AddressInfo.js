@@ -1,3 +1,4 @@
+/*
 import React from 'react';
 import AppCard from '@crema/components/AppCard';
 import {Box, Button, Grid} from '@mui/material';
@@ -127,3 +128,4 @@ export default AddressInfo;
 AddressInfo.propTypes = {
   address: PropTypes.object,
 };
+*/

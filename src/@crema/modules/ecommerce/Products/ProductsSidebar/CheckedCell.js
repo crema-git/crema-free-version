@@ -1,3 +1,4 @@
+/*
 import React from 'react';
 import {Box} from '@mui/material';
 import Checkbox from '@mui/material/Checkbox';
@@ -31,3 +32,4 @@ CheckedCell.propTypes = {
   selected: PropTypes.array,
   onChange: PropTypes.func,
 };
+*/

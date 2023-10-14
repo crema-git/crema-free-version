@@ -1,3 +1,4 @@
+/*
 import React from 'react';
 import Table from '@mui/material/Table';
 import TableHead from '@mui/material/TableHead';
@@ -37,3 +38,4 @@ CustomerTable.propTypes = {
   customers: PropTypes.array,
   loading: PropTypes.bool,
 };
+*/

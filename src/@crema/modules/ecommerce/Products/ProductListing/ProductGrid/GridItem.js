@@ -1,3 +1,4 @@
+/*
 import React from 'react';
 import Card from '@mui/material/Card';
 import StarBorderIcon from '@mui/icons-material/StarBorder';
@@ -187,3 +188,4 @@ export default GridItem;
 GridItem.propTypes = {
   item: PropTypes.object.isRequired,
 };
+*/
