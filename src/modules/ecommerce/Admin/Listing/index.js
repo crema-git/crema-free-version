@@ -6,11 +6,12 @@ import {useIntl} from 'react-intl';
 import AppsContent from '@crema/components/AppsContainer/AppsContent';
 import AppsPagination from '@crema/components/AppsPagination';
 import AppSearchBar from '@crema/components/AppSearchBar';
-import {FilterItem, ListingTable} from '@crema/modules/ecommerce/Admin';
 import AppGridContainer from '@crema/components/AppGridContainer';
 import {Fonts} from '@crema/constants/AppEnums';
 import AppCard from '@crema/components/AppCard';
 import Slide from '@mui/material/Slide';
+import FilterItem from './FilterItem';
+import ListingTable from './ListingTable';
 
 const ProductListing = () => {
   const {messages} = useIntl();
