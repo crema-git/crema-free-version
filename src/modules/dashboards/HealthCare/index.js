@@ -3,22 +3,20 @@ import {Grid} from '@mui/material';
 import AppGridContainer from '@crema/components/AppGridContainer';
 import AppAnimate from '@crema/components/AppAnimate';
 import {useGetDataApi} from '@crema/hooks/APIHooks';
-import {
-  Activities,
-  AppointmentCard,
-  DrCard,
-  HealthStatics,
-  HeartRate,
-  HospitalActivity,
-  HospitalStatics,
-  InfoWidget,
-  Notifications,
-  ProfileCard,
-  RecentPatients,
-  TopDoctors,
-  UpcomingAppointments,
-  YourActivity,
-} from '@crema/modules/dashboards/HealthCare';
+import DrCard from './DrCard';
+import Activities from './Activities';
+import HealthStatics from './HealthStatics';
+import TopDoctors from './TopDoctors';
+import UpcomingAppointments from './UpcomingAppointments';
+import Notifications from './Notifications';
+import HospitalStatics from './HospitalStatics';
+import RecentPatients from './RecentPatients';
+import InfoWidget from './InfoWidget';
+import HospitalActivity from './HospitalActivity';
+import ProfileCard from './ProfileCard';
+import AppointmentCard from './AppointmentCard';
+import HeartRate from './HeartRate';
+import YourActivity from './YourActivity';
 import AppLoader from '@crema/components/AppLoader';
 
 const HealthCare = () => {

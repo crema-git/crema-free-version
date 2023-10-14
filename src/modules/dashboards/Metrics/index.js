@@ -9,29 +9,25 @@ import AppAnimate from '@crema/components/AppAnimate';
 import {useIntl} from 'react-intl';
 import AppLoader from '@crema/components/AppLoader';
 import {useGetDataApi} from '@crema/hooks/APIHooks';
-import {
-  ComparisonCard,
-  EarningInMonth,
-  FloatingGraphs,
-  MetricTitleLineGraphCard,
-  ProfileViews,
-  Sales,
-  SocialVisitors,
-  Stats,
-  StatsCardWithGraph,
-  Subscriptions,
-  Visits,
-  WorkViews,
-  YourAccount,
-} from '@crema/modules/dashboards/Metrics';
+import StatsCardWithGraph from './StatsCardWithGraph';
+import ComparisonCard from './ComparisonCard';
+import Sales from './Sales';
+import YourAccount from './YourAccount';
+import EarningInMonth from './EarningInMonth';
+import MetricTitleLineGraphCard from './MetricTitleLineGraphCard';
+import FloatingGraphs from './FloatingGraphs';
+import Visits from './Visits';
+import ProfileViews from './ProfileViews';
+import WorkViews from './WorkViews';
+import Stats from './Stats';
+import SocialVisitors from './SocialVisitors';
+import Subscriptions from './Subscriptions';
 
-import {
-  StatsDirCard,
-  StatsItemCard,
-} from '@crema/modules/dashboards/CommonComponents';
-import {ReportCard} from '@crema/modules/dashboards/ECommerce';
-import {VisitorPageView} from '@crema/modules/dashboards/Analytics';
-import {HeartRate, YourActivity} from '@crema/modules/dashboards/HealthCare';
+import {StatsDirCard, StatsItemCard} from '../CommonComponents';
+import ReportCard from '../ECommerce/ReportCard';
+import VisitorPageView from '../Analytics/VisitorPageView';
+import HeartRate from '../HealthCare/HeartRate';
+import YourActivity from '../HealthCare/YourActivity';
 
 const Metrics = () => {
   const [{apiData: metricsData, loading}] = useGetDataApi('/dashboard/metrics');

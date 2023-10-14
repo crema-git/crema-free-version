@@ -3,24 +3,22 @@ import {Grid} from '@mui/material';
 import AppGridContainer from '@crema/components/AppGridContainer';
 import AppAnimate from '@crema/components/AppAnimate';
 import {useGetDataApi} from '@crema/hooks/APIHooks';
-import {
-  DealsNew,
-  EmailMarketing,
-  GoalProgress,
-  OpportunitiesWon,
-  RecentActivities,
-  Report,
-  SocialMediaAdvertise,
-  TeamState,
-  TicketSupport,
-  Timesheet,
-  ToDoLists,
-  TopLeaders,
-  TotalVisitor,
-  VisitorsPageViews,
-} from '@crema/modules/dashboards/CRM';
+import SocialMediaAdvertise from './SocialMediaAdvertise';
+import GoalProgress from './GoalProgress';
+import TicketSupport from './TicketSupport';
+import VisitorsPageViews from './VisitorsPageViews';
+import EmailMarketing from './EmailMarketing';
+import OpportunitiesWon from './OpportunitiesWon';
+import DealsNew from './DealsNew';
+import RecentActivities from './RecentActivities';
+import Report from './Report';
+import TeamState from './TeamState';
+import Timesheet from './Timesheet';
+import ToDoLists from './ToDoLists';
+import TopLeaders from './TopLeaders';
+import TotalVisitor from './TotalVisitor';
 import AppLoader from '@crema/components/AppLoader';
-import {StatsDirCard} from '@crema/modules/dashboards/CommonComponents';
+import {StatsDirCard} from '../CommonComponents';
 
 const CRM = () => {
   const [{apiData: crmData, loading}] = useGetDataApi('/dashboard/crm');

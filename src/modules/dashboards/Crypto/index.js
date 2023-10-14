@@ -3,18 +3,16 @@ import Grid from '@mui/material/Grid';
 import AppGridContainer from '@crema/components/AppGridContainer';
 import AppAnimate from '@crema/components/AppAnimate';
 import {useGetDataApi} from '@crema/hooks/APIHooks';
-import {
-  ATCStatics,
-  BuySell,
-  CardDetails,
-  Coins,
-  GainerLooser,
-  OrdersActivities,
-  QuickTransfer,
-  TopStories,
-  TotalBalance,
-  TradingChart,
-} from '@crema/modules/dashboards/Crypto';
+import TotalBalance from './TotalBalance';
+import Coins from './Coins';
+import BuySell from './BuySell';
+import TradingChart from './TradingChart';
+import OrdersActivities from './OrdersActivities';
+import TopStories from './TopStories';
+import GainerLooser from './GainerLooser';
+import ATCStatics from './ATCStatics';
+import CardDetails from './CardDetails';
+import QuickTransfer from './QuickTransfer';
 import AppLoader from '@crema/components/AppLoader';
 
 const Crypto = () => {

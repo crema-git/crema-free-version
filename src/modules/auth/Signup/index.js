@@ -1,3 +1,3 @@
-import {SignupFirebase} from '@crema/modules/auth/Signup';
+import SignupFirebase from './SignupFirebase';
 
 export default SignupFirebase;

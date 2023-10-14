@@ -3,22 +3,20 @@ import {Grid} from '@mui/material';
 import AppGridContainer from '@crema/components/AppGridContainer';
 import AppAnimate from '@crema/components/AppAnimate';
 import {useGetDataApi} from '@crema/hooks/APIHooks';
-import {
-  AgeOfAudience,
-  Browser,
-  BudgetStatistic,
-  MarketingCampaign,
-  NewCustomers,
-  PopularProducts,
-  RecentOrders,
-  ReportCard,
-  Revenue,
-  RevenueGraph,
-  SalesReport,
-  StateCard,
-  TopInquiries,
-  WeeklyBestSellers,
-} from '@crema/modules/dashboards/ECommerce';
+import StateCard from './StateCard';
+import SalesReport from './SalesReport';
+import BudgetStatistic from './BudgetStatistic';
+import TopInquiries from './TopInquiries';
+import WeeklyBestSellers from './WeeklyBestSellers';
+import AgeOfAudience from './AgeOfAudience';
+import ReportCard from './ReportCard';
+import RecentOrders from './RecentOrders';
+import Revenue from './Revenue';
+import RevenueGraph from './RevenueGraph';
+import MarketingCampaign from './MarketingCampaign';
+import NewCustomers from './NewCustomers';
+import PopularProducts from './PopularProducts';
+import Browser from './Browser';
 import AppLoader from '@crema/components/AppLoader';
 
 const ECommerce = () => {

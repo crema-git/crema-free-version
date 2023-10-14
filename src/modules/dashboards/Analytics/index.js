@@ -3,20 +3,18 @@ import {Grid} from '@mui/material';
 import AppGridContainer from '@crema/components/AppGridContainer';
 import AppAnimate from '@crema/components/AppAnimate';
 import {useGetDataApi} from '@crema/hooks/APIHooks';
-import {
-  ActiveVisitors,
-  EarningByCountry,
-  InfoWidget,
-  OrderNTransaction,
-  PageVisits,
-  SalesState,
-  StateCard,
-  TicketsSupport,
-  TopSelling,
-  TrafficSource,
-  VisitorPageView,
-  WelcomeCard,
-} from '@crema/modules/dashboards/Analytics';
+import TicketsSupport from './TicketsSupport';
+import InfoWidget from './InfoWidget';
+import PageVisits from './PageVisits';
+import OrderNTransaction from './OrderNTransaction';
+import TrafficSource from './TrafficSource';
+import TopSelling from './TopSelling';
+import EarningByCountry from './EarningByCountry';
+import VisitorPageView from './VisitorPageView';
+import SalesState from './SalesState';
+import StateCard from './StateCards';
+import WelcomeCard from './WelcomeCard';
+import ActiveVisitors from './ActiveVisitors';
 import AppLoader from '@crema/components/AppLoader';
 
 const Analytics = () => {

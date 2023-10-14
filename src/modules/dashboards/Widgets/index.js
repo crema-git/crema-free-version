@@ -9,30 +9,28 @@ import {Fonts} from '@crema/constants/AppEnums';
 import AppAnimate from '@crema/components/AppAnimate';
 import AppLoader from '@crema/components/AppLoader';
 import {useGetDataApi} from '@crema/hooks/APIHooks';
-import {
-  AddTags,
-  BirthdayCard,
-  Categories,
-  CityInfo,
-  Colors,
-  CountryMap,
-  CremaCard,
-  DateSelector,
-  Formats,
-  Header,
-  HollywoodMovie,
-  IllustrationDesign,
-  Messages,
-  Price,
-  Profile,
-  RecentActivity,
-  Reviews,
-  Subscribe,
-  TaskList,
-  TemperatureCard,
-  VisitorAnalysis,
-  WallPaper,
-} from '@crema/modules/dashboards/Widgets';
+import WallPaper from './WallPaper';
+import TemperatureCard from './TemperatureCard';
+import VisitorAnalysis from './VisitorAnalysis';
+import BirthdayCard from './BirthdayCard';
+import RecentActivity from './RecentActivity';
+import IllustrationDesign from './IllustrationDesign';
+import Categories from './Categories';
+import Header from './Header';
+import Subscribe from './Subscribe';
+import Profile from './Profile';
+import Messages from './Messages';
+import TaskList from './TaskList';
+import HollywoodMovie from './HollywoodMovie';
+import CountryMap from './CountryMap';
+import Colors from './Colors';
+import AddTags from './AddTags';
+import Reviews from './Reviews';
+import CremaCard from './CremaCard';
+import Formats from './Formats';
+import Price from './Price';
+import CityInfo from './CityInfo';
+import DateSelector from './DatePicker';
 
 const Widgets = () => {
   const [{apiData: widgetsData, loading}] = useGetDataApi('/dashboard/widgets');
