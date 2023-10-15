@@ -1,15 +1,15 @@
 import React from 'react';
 import {RoutePermittedRole} from '@crema/constants/AppEnums';
 
-import ClickawayListener from '../../../modules/muiComponents/utils/ClickawayListener';
-import Modal from '../../../modules/muiComponents/utils/Modal';
-import NoSSR1 from '../../../modules/muiComponents/utils/NoSSR1';
-import Popover from '../../../modules/muiComponents/utils/Popover';
-import Popper from '../../../modules/muiComponents/utils/Popper';
-import Portal from '../../../modules/muiComponents/utils/Portal';
-import Text from '../../../modules/muiComponents/utils/Text';
-import Transitions from '../../../modules/muiComponents/utils/Transitions';
-import MediaQuery from '../../../modules/muiComponents/utils/MediaQuery';
+import ClickawayListener from '../../../../modules/muiComponents/utils/ClickawayListener';
+import Modal from '../../../../modules/muiComponents/utils/Modal';
+import NoSSR1 from '../../../../modules/muiComponents/utils/NoSSR1';
+import Popover from '../../../../modules/muiComponents/utils/Popover';
+import Popper from '../../../../modules/muiComponents/utils/Popper';
+import Portal from '../../../../modules/muiComponents/utils/Portal';
+import Text from '../../../../modules/muiComponents/utils/Text';
+import Transitions from '../../../../modules/muiComponents/utils/Transitions';
+import MediaQuery from '../../../../modules/muiComponents/utils/MediaQuery';
 
 export const utilConfigs = [
   {

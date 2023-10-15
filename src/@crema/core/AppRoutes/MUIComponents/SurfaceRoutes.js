@@ -1,10 +1,10 @@
 import React from 'react';
 import {RoutePermittedRole} from '@crema/constants/AppEnums';
 
-import AppBar from '../../../modules/muiComponents/surfaces/AppBar';
-import Accordion from '../../../modules/muiComponents/surfaces/Accordion';
-import Card from '../../../modules/muiComponents/surfaces/Card';
-import Paper from '../../../modules/muiComponents/surfaces/Paper';
+import AppBar from '../../../../modules/muiComponents/surfaces/AppBar';
+import Accordion from '../../../../modules/muiComponents/surfaces/Accordion';
+import Card from '../../../../modules/muiComponents/surfaces/Card';
+import Paper from '../../../../modules/muiComponents/surfaces/Paper';
 
 export const surfaceConfigs = [
   {

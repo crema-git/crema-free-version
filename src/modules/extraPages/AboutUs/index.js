@@ -2,14 +2,11 @@ import React from 'react';
 import Grid from '@mui/material/Grid';
 import AppGridContainer from '@crema/components/AppGridContainer';
 import AppAnimate from '@crema/components/AppAnimate';
-
-import {
-  Clients,
-  Introduction,
-  OfficeCultureCard,
-  Sections,
-  Team,
-} from '@crema/modules/extraPages/AboutUs';
+import Introduction from './Introduction';
+import OfficeCultureCard from './OfficeCultureCard';
+import Sections from './Sections';
+import Team from './Team';
+import Clients from './Clients';
 import {aboutUsData} from '@crema/mockapi/fakedb/extraPages';
 
 const AboutUs = () => {

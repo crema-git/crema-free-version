@@ -8,7 +8,8 @@ import {useIntl} from 'react-intl';
 import Box from '@mui/material/Box';
 import {Fonts} from '@crema/constants/AppEnums';
 import AppAnimate from '@crema/components/AppAnimate';
-import {Installation, Sales} from '@crema/modules/extraPages/KnowledgeBase';
+import Sales from './Sales';
+import Installation from './Installation';
 import {installationData, salesData} from '@crema/mockapi/fakedb/extraPages';
 
 const KnowledgeBase = () => {

@@ -1,13 +1,13 @@
 import React, {useEffect} from 'react';
 import {useDropzone} from 'react-dropzone';
 import AppGrid from '@crema/components/AppGrid';
-import {
-  PreviewThumb,
-  UploadModern,
-} from '@crema/modules/thirdParty/reactDropzone/components';
 import {Box} from '@mui/material';
 import {Fonts} from '@crema/constants/AppEnums';
 import PropTypes from 'prop-types';
+import {
+  PreviewThumb,
+  UploadModern,
+} from '../../../../thirdParty/reactDropzone/components';
 const ImgUpload = ({uploadedFiles, setUploadedFiles}) => {
   const dropzone = useDropzone({
     accept: {

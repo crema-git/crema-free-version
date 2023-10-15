@@ -1,7 +1,7 @@
 import React from 'react';
 import {useGetDataApi} from '@crema/hooks/APIHooks';
 import AppLoader from '@crema/components/AppLoader';
-import {BlogContent} from '@crema/modules/extraPages/Blog';
+import BlogContent from './BlogContent';
 import {isEmptyObject} from '@crema/helpers/ApiHelper';
 import AppAnimate from '@crema/components/AppAnimate';
 

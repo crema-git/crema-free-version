@@ -1,19 +1,19 @@
 import React from 'react';
 import {RoutePermittedRole} from '@crema/constants/AppEnums';
 
-import AutoComplete from '../../../modules/muiComponents/inputs/AutoComplete';
-import Buttons from '../../../modules/muiComponents/inputs/Buttons';
-import ButtonGroup from '../../../modules/muiComponents/inputs/ButtonGroup';
-import Checkboxes from '../../../modules/muiComponents/inputs/Checkboxes';
-import FloatingActionButton from '../../../modules/muiComponents/inputs/FloatingActionButton';
-import Radio from '../../../modules/muiComponents/inputs/Radio';
-import Rating from '../../../modules/muiComponents/inputs/Rating';
-import Selects from '../../../modules/muiComponents/inputs/Selects';
-import Slider from '../../../modules/muiComponents/inputs/Slider';
-import Switches from '../../../modules/muiComponents/inputs/Switches';
-import TextField from '../../../modules/muiComponents/inputs/TextField';
-import TransferList from '../../../modules/muiComponents/inputs/TransferList';
-import ToggleButtons from '../../../modules/muiComponents/inputs/ToggleButtons';
+import AutoComplete from '../../../../modules/muiComponents/inputs/AutoComplete';
+import Buttons from '../../../../modules/muiComponents/inputs/Buttons';
+import ButtonGroup from '../../../../modules/muiComponents/inputs/ButtonGroup';
+import Checkboxes from '../../../../modules/muiComponents/inputs/Checkboxes';
+import FloatingActionButton from '../../../../modules/muiComponents/inputs/FloatingActionButton';
+import Radio from '../../../../modules/muiComponents/inputs/Radio';
+import Rating from '../../../../modules/muiComponents/inputs/Rating';
+import Selects from '../../../../modules/muiComponents/inputs/Selects';
+import Slider from '../../../../modules/muiComponents/inputs/Slider';
+import Switches from '../../../../modules/muiComponents/inputs/Switches';
+import TextField from '../../../../modules/muiComponents/inputs/TextField';
+import TransferList from '../../../../modules/muiComponents/inputs/TransferList';
+import ToggleButtons from '../../../../modules/muiComponents/inputs/ToggleButtons';
 
 export const inputsConfigs = [
   {

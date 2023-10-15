@@ -11,15 +11,12 @@ import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone';
 import {accountData} from '@crema/mockapi';
 import AppAnimate from '@crema/components/AppAnimate';
 import {Fonts} from '@crema/constants/AppEnums';
-import {
-  AccountTabsWrapper,
-  ChangePassword,
-  Information,
-  Notification,
-  PersonalInfo,
-  Social,
-} from '@crema/modules/account/MyProfile';
-
+import Social from './Social';
+import Notification from './Notification';
+import ChangePassword from './ChangePassword';
+import Information from './Information';
+import AccountTabsWrapper from './AccountTabsWrapper';
+import PersonalInfo from './PersonalInfo';
 function a11yProps(index) {
   return {
     id: `simple-tab-${index}`,

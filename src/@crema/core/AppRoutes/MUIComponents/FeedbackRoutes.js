@@ -1,12 +1,12 @@
 import React from 'react';
 import {RoutePermittedRole} from '@crema/constants/AppEnums';
 
-import Alert from '../../../modules/muiComponents/feedback/Alert';
-import Backdrop from '../../../modules/muiComponents/feedback/Backdrop';
-import Dialog from '../../../modules/muiComponents/feedback/Dialog';
-import Progress from '../../../modules/muiComponents/feedback/Progress';
-import Skeleton from '../../../modules/muiComponents/feedback/Skeleton';
-import Snackbar from '../../../modules/muiComponents/feedback/Snackbar';
+import Alert from '../../../../modules/muiComponents/feedback/Alert';
+import Backdrop from '../../../../modules/muiComponents/feedback/Backdrop';
+import Dialog from '../../../../modules/muiComponents/feedback/Dialog';
+import Progress from '../../../../modules/muiComponents/feedback/Progress';
+import Skeleton from '../../../../modules/muiComponents/feedback/Skeleton';
+import Snackbar from '../../../../modules/muiComponents/feedback/Snackbar';
 
 export const feedbackConfigs = [
   {

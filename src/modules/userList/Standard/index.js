@@ -1,6 +1,6 @@
 import React from 'react';
 import AppList from '@crema/components/AppList';
-import {ListItem} from '@crema/modules/userList/Standard';
+import ListItem from './ListItem';
 import AppLoader from '@crema/components/AppLoader';
 import {useGetDataApi} from '@crema/hooks/APIHooks';
 

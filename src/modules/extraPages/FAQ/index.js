@@ -8,7 +8,8 @@ import Box from '@mui/material/Box';
 import {blue} from '@mui/material/colors';
 import {Fonts} from '@crema/constants/AppEnums';
 import AppAnimate from '@crema/components/AppAnimate';
-import {FaqList, FaqSideBar} from '@crema/modules/extraPages/FAQ';
+import FaqSideBar from './FaqSideBar/index';
+import FaqList from './FaqList';
 import {
   generalFaq,
   installationFaq,

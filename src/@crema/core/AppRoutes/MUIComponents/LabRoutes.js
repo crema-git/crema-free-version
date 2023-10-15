@@ -1,13 +1,13 @@
 import {RoutePermittedRole} from '@crema/constants/AppEnums';
 import React from 'react';
 
-import Masonry from '../../../modules/muiComponents/lab/Masonry';
-import Timeline from '../../../modules/muiComponents/lab/Timeline';
-import TrapFocus from '../../../modules/muiComponents/lab/TrapFocus';
-import TreeView from '../../../modules/muiComponents/lab/TreeView';
-import DatePicker from '../../../modules/muiComponents/lab/DatePicker';
-import DateTimePicker from '../../../modules/muiComponents/lab/DateTimePicker';
-import TimePicker from '../../../modules/muiComponents/lab/TimePicker';
+import Masonry from '../../../../modules/muiComponents/lab/Masonry';
+import Timeline from '../../../../modules/muiComponents/lab/Timeline';
+import TrapFocus from '../../../../modules/muiComponents/lab/TrapFocus';
+import TreeView from '../../../../modules/muiComponents/lab/TreeView';
+import DatePicker from '../../../../modules/muiComponents/lab/DatePicker';
+import DateTimePicker from '../../../../modules/muiComponents/lab/DateTimePicker';
+import TimePicker from '../../../../modules/muiComponents/lab/TimePicker';
 
 export const labConfigs = [
   {

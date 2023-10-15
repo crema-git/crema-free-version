@@ -1,12 +1,10 @@
 import React from 'react';
 import {Box, Grid, Typography} from '@mui/material';
 import AppGridContainer from '@crema/components/AppGridContainer';
-import {
-  GitPackage,
-  PackageOneNew,
-  PackageTable,
-  PricingFaq,
-} from '@crema/modules/extraPages/Pricing';
+import PackageOneNew from './PackageOneNew';
+import PackageTable from './PackageTable';
+import GitPackage from './GitPackage';
+import PricingFaq from './Faq';
 import {pricingData, pricingFaq} from '@crema/mockapi/fakedb/extraPages';
 
 const PricingDetail = () => {

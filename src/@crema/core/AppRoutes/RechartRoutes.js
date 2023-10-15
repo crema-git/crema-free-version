@@ -1,14 +1,14 @@
 import React from 'react';
-import AreaChart from '../../modules/thirdParty/recharts/Area';
-import BarChart from '../../modules/thirdParty/recharts/Bar';
-import ComposedChart from '../../modules/thirdParty/recharts/Composed';
-import LineChart from '../../modules/thirdParty/recharts/Line';
-import PieChart from '../../modules/thirdParty/recharts/Pie';
-import Radial from '../../modules/thirdParty/recharts/Radial';
-import Treemap from '../../modules/thirdParty/recharts/Treemap';
-import Scatter from '../../modules/thirdParty/recharts/Scatter';
-import Radar from '../../modules/thirdParty/recharts/Radar';
-import FunnelChart from '../../modules/thirdParty/recharts/Funnel';
+import AreaChart from '../../../modules/thirdParty/recharts/Area';
+import BarChart from '../../../modules/thirdParty/recharts/Bar';
+import ComposedChart from '../../../modules/thirdParty/recharts/Composed';
+import LineChart from '../../../modules/thirdParty/recharts/Line';
+import PieChart from '../../../modules/thirdParty/recharts/Pie';
+import Radial from '../../../modules/thirdParty/recharts/Radial';
+import Treemap from '../../../modules/thirdParty/recharts/Treemap';
+import Scatter from '../../../modules/thirdParty/recharts/Scatter';
+import Radar from '../../../modules/thirdParty/recharts/Radar';
+import FunnelChart from '../../../modules/thirdParty/recharts/Funnel';
 import {RoutePermittedRole} from '@crema/constants/AppEnums';
 
 export const rechartsConfigs = [

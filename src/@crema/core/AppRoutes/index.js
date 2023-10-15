@@ -2,7 +2,7 @@ import React from 'react';
 import {Navigate} from 'react-router-dom';
 
 import {authRouteConfig} from './AuthRoutes';
-import Error403 from '../../modules/errorPages/Error403';
+import Error403 from '../../../modules/errorPages/Error403';
 import {errorPagesConfigs} from './ErrorPagesRoutes';
 import {dashBoardConfigs} from './DashboardsRoutes';
 import {extraPagesConfigs} from './ExtraPagesRoutes';

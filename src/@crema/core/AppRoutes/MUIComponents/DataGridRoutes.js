@@ -1,23 +1,23 @@
 import React from 'react';
 import {RoutePermittedRole} from '@crema/constants/AppEnums';
 
-import Overview from '../../../modules/muiComponents/datagrid/Overview';
-import Layout from '../../../modules/muiComponents/datagrid/Layout';
-import Columns from '../../../modules/muiComponents/datagrid/Columns';
-import Rows from '../../../modules/muiComponents/datagrid/Rows';
-import Editing from '../../../modules/muiComponents/datagrid/Editing';
-import Sorting from '../../../modules/muiComponents/datagrid/Sorting';
-import Filtering from '../../../modules/muiComponents/datagrid/Filtering';
-import Pagination from '../../../modules/muiComponents/datagrid/Pagination';
-import Selection from '../../../modules/muiComponents/datagrid/Selection';
-import Events from '../../../modules/muiComponents/datagrid/Events';
-import Export from '../../../modules/muiComponents/datagrid/Export';
-import Components from '../../../modules/muiComponents/datagrid/Components';
-import Styling from '../../../modules/muiComponents/datagrid/Styling';
-import Localization from '../../../modules/muiComponents/datagrid/Localization';
-import Scrolling from '../../../modules/muiComponents/datagrid/Scrolling';
-import Virtualization from '../../../modules/muiComponents/datagrid/Virtualization';
-import Accessibility from '../../../modules/muiComponents/datagrid/Accessibility';
+import Overview from '../../../../modules/muiComponents/datagrid/Overview';
+import Layout from '../../../../modules/muiComponents/datagrid/Layout';
+import Columns from '../../../../modules/muiComponents/datagrid/Columns';
+import Rows from '../../../../modules/muiComponents/datagrid/Rows';
+import Editing from '../../../../modules/muiComponents/datagrid/Editing';
+import Sorting from '../../../../modules/muiComponents/datagrid/Sorting';
+import Filtering from '../../../../modules/muiComponents/datagrid/Filtering';
+import Pagination from '../../../../modules/muiComponents/datagrid/Pagination';
+import Selection from '../../../../modules/muiComponents/datagrid/Selection';
+import Events from '../../../../modules/muiComponents/datagrid/Events';
+import Export from '../../../../modules/muiComponents/datagrid/Export';
+import Components from '../../../../modules/muiComponents/datagrid/Components';
+import Styling from '../../../../modules/muiComponents/datagrid/Styling';
+import Localization from '../../../../modules/muiComponents/datagrid/Localization';
+import Scrolling from '../../../../modules/muiComponents/datagrid/Scrolling';
+import Virtualization from '../../../../modules/muiComponents/datagrid/Virtualization';
+import Accessibility from '../../../../modules/muiComponents/datagrid/Accessibility';
 
 export const dataGridConfigs = [
   {

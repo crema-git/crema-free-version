@@ -7,12 +7,10 @@ import {Formik} from 'formik';
 import * as yup from 'yup';
 import IntlMessages from '@crema/helpers/IntlMessages';
 import AppCard from '@crema/components/AppCard';
-import {
-  Address,
-  ContactUsForm,
-  SendMessage,
-  SimpleMap,
-} from '@crema/modules/extraPages/ContactUs';
+import ContactUsForm from '../../../modules/extraPages/ContactUs/ContactUsForm';
+import SendMessage from '../../../modules/extraPages/ContactUs/SendMessage';
+import Address from '../../../modules/extraPages/ContactUs/Address';
+import SimpleMap from '../../../modules/extraPages/ContactUs/SimpleMap';
 import {contactUsData} from '@crema/mockapi/fakedb/extraPages';
 
 const validationSchema = yup.object({

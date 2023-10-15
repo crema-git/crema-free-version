@@ -14,6 +14,7 @@ import AppLoader from '@crema/components/AppLoader';
 import {isEmptyObject} from '@crema/helpers/ApiHelper';
 import ProductImageSlide from './ProductImageSlide';
 
+ProductImageSlide.propTypes = {product: PropTypes.any};
 const ProductDetail = () => {
   const {id} = useParams();
   const [{apiData: currentProduct, loading}, {setQueryParams}] = useGetDataApi(
