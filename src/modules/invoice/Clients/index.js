@@ -2,7 +2,7 @@ import AppGrid from '@crema/components/AppGrid';
 import AppLoader from '@crema/components/AppLoader';
 import {isEmptyObject} from '@crema/helpers/ApiHelper';
 import {useGetDataApi} from '@crema/hooks/APIHooks';
-import ClientItem from '@crema/modules/invoice/Clients/ClientItem';
+import ClientItem from './ClientItem';
 import {Box, Button} from '@mui/material';
 import React from 'react';
 import {useNavigate} from 'react-router-dom';

@@ -1,8 +1,8 @@
 import React from 'react';
-import InvoicePdf from '@crema/modules/invoice/InvoicePdf';
 import {useGetDataApi} from '@crema/hooks/APIHooks';
 import {useParams} from 'react-router-dom';
 import {isEmptyObject} from '@crema/helpers/ApiHelper';
+import InvoicePdf from './InvoicePdf';
 
 const InvoicePdfPage = () => {
   const {id} = useParams();

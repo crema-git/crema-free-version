@@ -1,5 +1,5 @@
 import React from 'react';
-import AddInvoice from '@crema/modules/invoice/AddInvoice';
+import AddInvoice from '../AddInvoice/AddInvoice';
 import {putDataApi, useGetDataApi} from '@crema/hooks/APIHooks';
 import {useNavigate, useParams} from 'react-router-dom';
 import {useInfoViewActionsContext} from '@crema/context/AppContextProvider/InfoViewContextProvider';

@@ -1,7 +1,7 @@
 import React from 'react';
 import {useNavigate, useParams} from 'react-router-dom';
 import {useInfoViewActionsContext} from '@crema/context/AppContextProvider/InfoViewContextProvider';
-import AddClient from '@crema/modules/invoice/Clients/AddClient';
+import AddClient from './AddClient';
 import {putDataApi, useGetDataApi} from '@crema/hooks/APIHooks';
 import {isEmptyObject} from '@crema/helpers/ApiHelper';
 

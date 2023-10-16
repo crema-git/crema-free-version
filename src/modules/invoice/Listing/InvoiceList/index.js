@@ -3,7 +3,7 @@ import InvContentHeader from './InvContentHeader';
 import AppsHeader from '@crema/components/AppsContainer/AppsHeader';
 import AppsContent from '@crema/components/AppsContainer/AppsContent';
 import {putDataApi, useGetDataApi} from '@crema/hooks/APIHooks';
-import InvoiceTable from '@crema/modules/invoice/InvoiceTable';
+import InvoiceTable from './InvoiceTable';
 import {useLocation, useParams} from 'react-router-dom';
 import {useInfoViewActionsContext} from '@crema/context/AppContextProvider/InfoViewContextProvider';
 import {isEmptyObject} from '@crema/helpers/ApiHelper';
