@@ -13,13 +13,13 @@ import AppTextField from '@crema/components/AppFormComponents/AppTextField';
 import {ReactComponent as Logo} from '../../../assets/user/signup.svg';
 
 const validationSchema = yup.object({
-    name: yup.string().required(<IntlMessages id='validation.nameRequired'/>),
-    email: yup
-        .string()
-        .email(<IntlMessages id='validation.emailFormat'/>)
-        .required(<IntlMessages id='validation.emailRequired'/>),
-    password: yup
-        .string()
+  name: yup.string().required(<IntlMessages id='validation.nameRequired' />),
+  email: yup
+    .string()
+    .email(<IntlMessages id='validation.emailFormat' />)
+    .required(<IntlMessages id='validation.emailRequired' />),
+  password: yup
+    .string()
     .required(<IntlMessages id='validation.passwordRequired' />),
   confirmPassword: yup
     .string()

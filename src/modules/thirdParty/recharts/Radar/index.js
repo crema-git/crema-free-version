@@ -10,14 +10,14 @@ import AppComponentHeader from '@crema/components/AppComponentHeader';
 import AppGridContainer from '@crema/components/AppGridContainer';
 
 const Radar = () => {
-    return (
-        <>
-            <AppComponentHeader
-                title='Radar Chart'
-                refUrl='http://recharts.org/en-US/api/RadarChart'
-            />
+  return (
+    <>
+      <AppComponentHeader
+        title='Radar Chart'
+        refUrl='http://recharts.org/en-US/api/RadarChart'
+      />
 
-            <AppGridContainer>
+      <AppGridContainer>
         <Grid item xs={12} lg={6}>
           <AppComponentCard
             title='Simple Radar Chart'

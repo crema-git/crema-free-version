@@ -7,11 +7,11 @@ import PropTypes from 'prop-types';
 import FormControlLabel from '@mui/material/FormControlLabel';
 
 const Activity = ({activity}) => {
-    return (
-        <Box sx={{mb: 5}}>
-            <Typography
-                component='h3'
-                sx={{
+  return (
+    <Box sx={{mb: 5}}>
+      <Typography
+        component='h3'
+        sx={{
           fontSize: 16,
           fontWeight: Fonts.BOLD,
           mb: {xs: 3, lg: 4},

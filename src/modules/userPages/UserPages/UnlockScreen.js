@@ -11,14 +11,14 @@ import AppAnimate from '@crema/components/AppAnimate';
 import AppTextField from '@crema/components/AppFormComponents/AppTextField';
 
 const validationSchema = yup.object({
-    password: yup
-        .string()
-        .required(<IntlMessages id='validation.passwordRequired'/>),
+  password: yup
+    .string()
+    .required(<IntlMessages id='validation.passwordRequired' />),
 });
 
 const UnlockScreen = () => {
-    return (
-        <AppAnimate animation='transition.slideUpIn' delay={200}>
+  return (
+    <AppAnimate animation='transition.slideUpIn' delay={200}>
       <Box
         sx={{
           pb: 6,

@@ -10,14 +10,14 @@ import AppAnimate from '@crema/components/AppAnimate';
 import AppTextField from '@crema/components/AppFormComponents/AppTextField';
 
 const validationSchema = yup.object({
-    oldPassword: yup
-        .string()
-        .required(<IntlMessages id='validation.enterOldPassword'/>),
-    newPassword: yup
-        .string()
-        .required(<IntlMessages id='validation.enterNewPassword'/>),
-    confirmPassword: yup
-        .string()
+  oldPassword: yup
+    .string()
+    .required(<IntlMessages id='validation.enterOldPassword' />),
+  newPassword: yup
+    .string()
+    .required(<IntlMessages id='validation.enterNewPassword' />),
+  confirmPassword: yup
+    .string()
     .required(<IntlMessages id='validation.reTypePassword' />),
 });
 

@@ -13,13 +13,13 @@ import AppTextField from '@crema/components/AppFormComponents/AppTextField';
 import {ReactComponent as Logo} from '../../../assets/user/lock-screen.svg';
 
 const validationSchema = yup.object({
-    password: yup
-        .string()
-        .required(<IntlMessages id='validation.passwordRequired'/>),
+  password: yup
+    .string()
+    .required(<IntlMessages id='validation.passwordRequired' />),
 });
 
 const UnlockScreen = () => {
-    const theme = useTheme();
+  const theme = useTheme();
   return (
     <AppAnimate animation='transition.slideUpIn' delay={200}>
       <Box

@@ -10,7 +10,7 @@ import DensitySelectorGridSource from '!raw-loader!./DensitySelectorGrid';
 import DensitySelectorSmallGridSource from '!raw-loader!./DensitySelectorSmallGrid';
 
 const Accessibility = () => {
-    return (
+  return (
     <>
       <AppComponentHeader
         title='Accessibility'

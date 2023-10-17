@@ -8,9 +8,9 @@ import SimplePortal from './SimplePortal';
 import SimplePortalSource from '!raw-loader!./SimplePortal';
 
 const Portal = () => {
-    return (
-        <>
-            <AppComponentHeader
+  return (
+    <>
+      <AppComponentHeader
         title='Portal'
         description='The portal component renders its children into a new "subtree" outside of current DOM hierarchy.'
         refUrl='https://mui.com/components/portal/'

@@ -22,15 +22,15 @@ import AppComponentHeader from '@crema/components/AppComponentHeader';
 import AppGridContainer from '@crema/components/AppGridContainer';
 
 const LineChart = () => {
-    return (
-        <>
-            <AppComponentHeader
-                title='Line Chart'
-                description='All svg elements can be added into the LineChart component, such as defs.'
-                refUrl='http://recharts.org/en-US/api/LineChart'
-            />
+  return (
+    <>
+      <AppComponentHeader
+        title='Line Chart'
+        description='All svg elements can be added into the LineChart component, such as defs.'
+        refUrl='http://recharts.org/en-US/api/LineChart'
+      />
 
-            <AppGridContainer>
+      <AppGridContainer>
         <Grid item xs={12} lg={6}>
           <AppComponentCard
             title='Simple Line Chart'

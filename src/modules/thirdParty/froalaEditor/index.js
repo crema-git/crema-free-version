@@ -6,11 +6,11 @@ import Grid from '@mui/material/Grid';
 // import SampleEditor from './Simple';
 
 const FroalaEditor = () => {
-    return (
-        <>
-            <AppComponentHeader
-                title='Froala WYSIWYG Editor'
-                description='React JS Froala WYSIWYG Editor'
+  return (
+    <>
+      <AppComponentHeader
+        title='Froala WYSIWYG Editor'
+        description='React JS Froala WYSIWYG Editor'
         refUrl='https://froala.com/wysiwyg-editor/docs/framework-plugins/react/'
       />
 
