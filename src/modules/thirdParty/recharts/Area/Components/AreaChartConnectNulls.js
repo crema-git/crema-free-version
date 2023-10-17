@@ -1,15 +1,7 @@
 import React from 'react';
-import {
-  Area,
-  AreaChart,
-  CartesianGrid,
-  ResponsiveContainer,
-  Tooltip,
-  XAxis,
-  YAxis,
-} from 'recharts';
+import {Area, AreaChart, CartesianGrid, ResponsiveContainer, Tooltip, XAxis, YAxis,} from 'recharts';
 import Box from '@mui/material/Box';
-import {useThemeContext} from '../../../../../@crema/context/AppContextProvider/ThemeContextProvider';
+import {useThemeContext} from '@crema/context/AppContextProvider/ThemeContextProvider';
 
 const data = [
   {name: 'Page A', uv: 4000},

@@ -1,16 +1,16 @@
 import React from 'react';
-import AppCard from '../../../../@crema/components/AppCard';
-import AppList from '../../../../@crema/components/AppList';
+import AppCard from '@crema/components/AppCard';
+import AppList from '@crema/components/AppList';
 import Box from '@mui/material/Box';
-import {Fonts} from '../../../../@crema/constants/AppEnums';
+import {Fonts} from '@crema/constants/AppEnums';
 import {useIntl} from 'react-intl';
 import PropTypes from 'prop-types';
 
 const NotificationItem = ({notification}) => {
-  return (
-    <Box
-      sx={{
-        display: 'flex',
+    return (
+        <Box
+            sx={{
+                display: 'flex',
         alignItems: 'center',
         px: 5,
         py: 2,

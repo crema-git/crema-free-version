@@ -1,6 +1,6 @@
 import React from 'react';
 import Box from '@mui/material/Box';
-import IntlMessages from '../../../../@crema/helpers/IntlMessages';
+import IntlMessages from '@crema/helpers/IntlMessages';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import PropTypes from 'prop-types';

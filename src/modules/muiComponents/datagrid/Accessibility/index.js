@@ -1,8 +1,8 @@
 import React from 'react';
-import AppComponentHeader from '../../../../@crema/components/AppComponentHeader';
-import AppGridContainer from '../../../../@crema/components/AppGridContainer';
+import AppComponentHeader from '@crema/components/AppComponentHeader';
+import AppGridContainer from '@crema/components/AppGridContainer';
 import Grid from '@mui/material/Grid';
-import AppComponentCard from '../../../../@crema/components/AppComponentCard';
+import AppComponentCard from '@crema/components/AppComponentCard';
 
 import DensitySelectorGrid from './DensitySelectorGrid';
 import DensitySelectorSmallGrid from './DensitySelectorGrid';
@@ -10,7 +10,7 @@ import DensitySelectorGridSource from '!raw-loader!./DensitySelectorGrid';
 import DensitySelectorSmallGridSource from '!raw-loader!./DensitySelectorSmallGrid';
 
 const Accessibility = () => {
-  return (
+    return (
     <>
       <AppComponentHeader
         title='Accessibility'

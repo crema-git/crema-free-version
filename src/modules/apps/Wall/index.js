@@ -6,18 +6,16 @@ import AppScrollbar from '@crema/components/AppScrollbar';
 import {useIntl} from 'react-intl';
 import {styled} from '@mui/material/styles';
 import {useGetDataApi} from '@crema/hooks/APIHooks';
-import {
-  About,
-  FriendRequests,
-  Photos,
-  RecentNews,
-  Stories,
-  Suggestions,
-  SuggestTeam,
-  VideoCall,
-  WhatsHappen,
-  WhoToFollow,
-} from '@crema/modules/apps/Wall';
+import About from './About';
+import RecentNews from './RecentNews';
+import Photos from './Photos';
+import FriendRequests from './FriendRequests';
+import Stories from './Stories';
+import Suggestions from './Suggestions';
+import SuggestTeam from './SuggestTeam';
+import VideoCall from './VideoCall';
+import WhatsHappen from './WhatsHappen';
+import WhoToFollow from './WhoToFollow';
 import PostsList from './PostsList';
 import CreatePost from './CreatePost';
 

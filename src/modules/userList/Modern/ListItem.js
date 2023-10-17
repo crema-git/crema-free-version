@@ -6,11 +6,11 @@ import BookmarkBorderIcon from '@mui/icons-material/BookmarkBorder';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import Chip from '@mui/material/Chip';
 import Button from '@mui/material/Button';
-import IntlMessages from '../../../@crema/helpers/IntlMessages';
+import IntlMessages from '@crema/helpers/IntlMessages';
 import Box from '@mui/material/Box';
 import PropTypes from 'prop-types';
 import {grey} from '@mui/material/colors';
-import {Fonts} from '../../../@crema/constants/AppEnums';
+import {Fonts} from '@crema/constants/AppEnums';
 
 const ListItem = (props) => {
   const {user} = props;

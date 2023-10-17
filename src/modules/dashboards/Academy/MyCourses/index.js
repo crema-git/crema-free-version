@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
-import AppCard from '../../../../@crema/components/AppCard';
+import AppCard from '@crema/components/AppCard';
 import Box from '@mui/material/Box';
 import Chip from '@mui/material/Chip';
-import AppList from '../../../../@crema/components/AppList';
+import AppList from '@crema/components/AppList';
 import CourseCell from './CourseCell';
 import {useIntl} from 'react-intl';
 import PropTypes from 'prop-types';

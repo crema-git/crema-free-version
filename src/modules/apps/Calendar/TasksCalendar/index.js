@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import AppsContent from '@crema/components/AppsContainer/AppsContent';
-import {TaskCalender} from '@crema/modules/apps/Calendar';
+import TaskCalender from './TasksCalendar';
 import {
   useCalendarActionsContext,
   useCalendarContext,

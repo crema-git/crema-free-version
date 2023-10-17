@@ -8,15 +8,14 @@ import AppInfoView from '@crema/components/AppInfoView';
 import {Zoom} from '@mui/material';
 import {useInfoViewActionsContext} from '@crema/context/AppContextProvider/InfoViewContextProvider';
 import {postDataApi, putDataApi} from '@crema/hooks/APIHooks';
-import {
-  AddBoardButton,
-  AddNewBoard,
-  BoardItem,
-} from '@crema/modules/apps/ScrumBoard';
+
 import {
   useScrumActionsContext,
   useScrumContext,
 } from '../../context/ScrumContextProvider';
+import AddNewBoard from './AddNewBoard';
+import AddBoardButton from './AddBoardButton';
+import BoardItem from './BoardItem';
 
 const BoardList = () => {
   const navigate = useNavigate();

@@ -1,10 +1,10 @@
 import React from 'react';
-import AppCard from '../../../../@crema/components/AppCard';
+import AppCard from '@crema/components/AppCard';
 import Box from '@mui/material/Box';
 import Avatar from '@mui/material/Avatar';
 import PersonIcon from '@mui/icons-material/Person';
 import {useIntl} from 'react-intl';
-import {Fonts} from '../../../../@crema/constants/AppEnums';
+import {Fonts} from '@crema/constants/AppEnums';
 import PropTypes from 'prop-types';
 
 const MyProfile = ({profile}) => {

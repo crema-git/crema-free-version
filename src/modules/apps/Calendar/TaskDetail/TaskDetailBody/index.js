@@ -17,27 +17,25 @@ import SendOutlinedIcon from '@mui/icons-material/SendOutlined';
 import {Fonts} from '@crema/constants/AppEnums';
 import {useInfoViewActionsContext} from '@crema/context/AppContextProvider/InfoViewContextProvider';
 import {putDataApi} from '@crema/hooks/APIHooks';
-import {
-  AssignedStaff,
-  CommentsLists,
-  EditButton,
-  TaskCreatedByInfo,
-  TaskLabels,
-  TodoDatePicker,
-} from '@crema/modules/apps/Calendar';
+import TaskLabels from './Labels';
 import {useCalendarContext} from '../../../context/CalendarContextProvider';
 import {getDateObject, getFormattedDate} from '@crema/helpers/DateHelper';
+import AssignedStaff from './AssignedStaff';
+import EditButton from './EditButton';
+import TaskCreatedByInfo from './TaskCreatedByInfo';
+import TodoDatePicker from './DatePicker';
+import CommentsLists from './CommentsList';
 
 const TaskDetailBody = (props) => {
-  const {selectedTask, onUpdateSelectedTask} = props;
-  const infoViewActionsContext = useInfoViewActionsContext();
+    const {selectedTask, onUpdateSelectedTask} = props;
+    const infoViewActionsContext = useInfoViewActionsContext();
 
-  const {user} = useAuthUser();
-  const {staffList} = useCalendarContext();
+    const {user} = useAuthUser();
+    const {staffList} = useCalendarContext();
 
-  const [isEdit, setEdit] = useState(false);
+    const [isEdit, setEdit] = useState(false);
 
-  const [content, setContent] = useState(selectedTask.content);
+    const [content, setContent] = useState(selectedTask.content);
 
   const [comment, setComment] = useState('');
 

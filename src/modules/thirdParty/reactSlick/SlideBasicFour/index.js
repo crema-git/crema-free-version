@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import AppCard from '../../../../@crema/components/AppCard';
+import AppCard from '@crema/components/AppCard';
 import Slider from 'react-slick';
 import Box from '@mui/material/Box';
 import SlideItem from './SlideItem';

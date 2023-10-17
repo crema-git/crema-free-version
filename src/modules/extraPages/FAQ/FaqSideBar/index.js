@@ -1,17 +1,17 @@
 import React from 'react';
-import AppScrollbar from '../../../../@crema/components/AppScrollbar';
+import AppScrollbar from '@crema/components/AppScrollbar';
 import List from '@mui/material/List';
 import CachedIcon from '@mui/icons-material/Cached';
 import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
 import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
 import DescriptionOutlinedIcon from '@mui/icons-material/DescriptionOutlined';
 import InsertEmoticonIcon from '@mui/icons-material/InsertEmoticon';
-import IntlMessages from '../../../../@crema/helpers/IntlMessages';
+import IntlMessages from '@crema/helpers/IntlMessages';
 import Box from '@mui/material/Box';
 import PropTypes from 'prop-types';
 import SideBarItem from './SideBarItem';
-import {Fonts} from '../../../../@crema/constants/AppEnums';
-import AppCard from '../../../../@crema/components/AppCard';
+import {Fonts} from '@crema/constants/AppEnums';
+import AppCard from '@crema/components/AppCard';
 
 const faqFolderList = [
   {id: 101, name: <IntlMessages id='faq.general' />, icon: <CachedIcon />},

@@ -10,7 +10,7 @@ import {
   XAxis,
   YAxis,
 } from 'recharts';
-import {useThemeContext} from '../../../../../@crema/context/AppContextProvider/ThemeContextProvider';
+import {useThemeContext} from '@crema/context/AppContextProvider/ThemeContextProvider';
 
 const data = [
   {name: 'Page A', uv: 4000, pv: 2400, amt: 2400},

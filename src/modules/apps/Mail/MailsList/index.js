@@ -12,7 +12,8 @@ import EmailListSkeleton from '@crema/components/AppSkeleton/EmailListSkeleton';
 import MailListItem from './MailListItem';
 import {useInfoViewActionsContext} from '@crema/context/AppContextProvider/InfoViewContextProvider';
 import {putDataApi} from '@crema/hooks/APIHooks';
-import {MailListItemMobile} from '@crema/modules/apps/Mail';
+import MailListItemMobile from './MailListItemMobile';
+
 import {
   useMailActionsContext,
   useMailContext,

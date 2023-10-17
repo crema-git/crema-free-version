@@ -1,16 +1,16 @@
 import React from 'react';
-import AppComponentHeader from '../../../../@crema/components/AppComponentHeader';
-import AppGridContainer from '../../../../@crema/components/AppGridContainer';
+import AppComponentHeader from '@crema/components/AppComponentHeader';
+import AppGridContainer from '@crema/components/AppGridContainer';
 import Grid from '@mui/material/Grid';
-import AppComponentCard from '../../../../@crema/components/AppComponentCard';
+import AppComponentCard from '@crema/components/AppComponentCard';
 
 import SimplePortal from './SimplePortal';
 import SimplePortalSource from '!raw-loader!./SimplePortal';
 
 const Portal = () => {
-  return (
-    <>
-      <AppComponentHeader
+    return (
+        <>
+            <AppComponentHeader
         title='Portal'
         description='The portal component renders its children into a new "subtree" outside of current DOM hierarchy.'
         refUrl='https://mui.com/components/portal/'

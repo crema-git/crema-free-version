@@ -5,9 +5,9 @@ import ThreeDimScatterChart from './Components/ThreeDimScatterChart';
 import ThreeDimScatterChartSource from '!raw-loader!./Components/ThreeDimScatterChart';
 import Grid from '@mui/material/Grid';
 
-import AppComponentCard from '../../../../@crema/components/AppComponentCard';
-import AppComponentHeader from '../../../../@crema/components/AppComponentHeader';
-import AppGridContainer from '../../../../@crema/components/AppGridContainer';
+import AppComponentCard from '@crema/components/AppComponentCard';
+import AppComponentHeader from '@crema/components/AppComponentHeader';
+import AppGridContainer from '@crema/components/AppGridContainer';
 
 const Scatter = () => {
   return (

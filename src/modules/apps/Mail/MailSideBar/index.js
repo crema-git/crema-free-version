@@ -11,9 +11,10 @@ import ListEmptyResult from '@crema/components/AppList/ListEmptyResult';
 import SidebarPlaceholder from '@crema/components/AppSkeleton/SidebarListSkeleton';
 import AddIcon from '@mui/icons-material/Add';
 import {Zoom} from '@mui/material';
-import {ConnectionListItem, LabelItem} from '@crema/modules/apps/Mail';
 import {useMailContext} from '../../context/MailContextProvider';
 import ComposeMail from '../ComposeMail';
+import ConnectionListItem from './ConnectionListItem';
+import LabelItem from './LabelItem';
 
 const MailSidebar = () => {
   const {connectionList, labelList, folderList} = useMailContext();

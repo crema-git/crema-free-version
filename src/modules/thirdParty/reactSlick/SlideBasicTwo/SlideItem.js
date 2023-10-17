@@ -2,7 +2,7 @@ import React from 'react';
 import Box from '@mui/material/Box';
 import PropTypes from 'prop-types';
 import {Typography} from '@mui/material';
-import {Fonts} from '../../../../@crema/constants/AppEnums';
+import {Fonts} from '@crema/constants/AppEnums';
 
 const SlideItem = ({slide}) => {
   return (

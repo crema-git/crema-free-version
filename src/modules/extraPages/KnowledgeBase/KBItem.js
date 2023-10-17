@@ -2,10 +2,10 @@ import React from 'react';
 import Grid from '@mui/material/Grid';
 import Chip from '@mui/material/Chip';
 import Box from '@mui/material/Box';
-import AppScrollbar from '../../../@crema/components/AppScrollbar';
-import {Fonts} from '../../../@crema/constants/AppEnums';
+import AppScrollbar from '@crema/components/AppScrollbar';
+import {Fonts} from '@crema/constants/AppEnums';
 import PropTypes from 'prop-types';
-import AppCard from '../../../@crema/components/AppCard';
+import AppCard from '@crema/components/AppCard';
 
 const KbItem = ({data}) => {
   return (

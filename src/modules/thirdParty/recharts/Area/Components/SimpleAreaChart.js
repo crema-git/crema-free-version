@@ -9,7 +9,7 @@ import {
   YAxis,
 } from 'recharts';
 import data from './data';
-import {useThemeContext} from '../../../../../@crema/context/AppContextProvider/ThemeContextProvider';
+import {useThemeContext} from '@crema/context/AppContextProvider/ThemeContextProvider';
 
 const SimpleAreaChart = () => {
   const {theme} = useThemeContext();

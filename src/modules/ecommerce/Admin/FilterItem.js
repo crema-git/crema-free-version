@@ -1,16 +1,8 @@
-import AppCard from '../../../@crema/components/AppCard';
+import AppCard from '@crema/components/AppCard';
 import React from 'react';
 import FormControl from '@mui/material/FormControl';
-import {
-  Box,
-  Grid,
-  InputLabel,
-  MenuItem,
-  Select,
-  Switch,
-  TextField,
-} from '@mui/material';
-import AppGridContainer from '../../../@crema/components/AppGridContainer';
+import {Box, Grid, InputLabel, MenuItem, Select, Switch, TextField,} from '@mui/material';
+import AppGridContainer from '@crema/components/AppGridContainer';
 import {DatePicker} from '@mui/x-date-pickers';
 import PropTypes from 'prop-types';
 import dayjs from 'dayjs';

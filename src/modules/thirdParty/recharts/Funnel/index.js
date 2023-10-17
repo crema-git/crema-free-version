@@ -3,9 +3,9 @@ import SimpleFunnel from './Components/SimpleFunnel';
 import SimpleFunnelSource from '!raw-loader!./Components/SimpleFunnel';
 import Grid from '@mui/material/Grid';
 
-import AppComponentCard from '../../../../@crema/components/AppComponentCard';
-import AppComponentHeader from '../../../../@crema/components/AppComponentHeader';
-import AppGridContainer from '../../../../@crema/components/AppGridContainer';
+import AppComponentCard from '@crema/components/AppComponentCard';
+import AppComponentHeader from '@crema/components/AppComponentHeader';
+import AppGridContainer from '@crema/components/AppGridContainer';
 
 const FunnelChart = () => {
   return (

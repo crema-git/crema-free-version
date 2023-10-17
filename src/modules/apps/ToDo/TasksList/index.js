@@ -10,12 +10,11 @@ import TodoListSkeleton from '@crema/components/AppSkeleton/TodoListSkeleton';
 import AppList from '@crema/components/AppList';
 import {putDataApi} from '@crema/hooks/APIHooks';
 import {useInfoViewActionsContext} from '@crema/context/AppContextProvider/InfoViewContextProvider';
-import {TaskListItem, TaskListItemMobile} from '@crema/modules/apps/ToDo';
-import {
-  useTodoActionsContext,
-  useTodoContext,
-} from '../../context/TodoContextProvider';
+
+import {useTodoActionsContext, useTodoContext,} from '../../context/TodoContextProvider';
 import AddNewTask from '../AddNewTask';
+import TaskListItem from './TaskListItem';
+import TaskListItemMobile from './TaskListItemMobile';
 
 const TasksList = () => {
   const infoViewActionsContext = useInfoViewActionsContext();

@@ -5,14 +5,13 @@ import PropTypes from 'prop-types';
 import {Box, useTheme} from '@mui/material';
 import {useInfoViewActionsContext} from '@crema/context/AppContextProvider/InfoViewContextProvider';
 import {postDataApi, putDataApi} from '@crema/hooks/APIHooks';
-import {
-  AddCardButton,
-  AddNewList,
-  CardDetail,
-  ListHeader,
-  NewListButton,
-} from '@crema/modules/apps/ScrumBoard';
+
 import AddCard from './List/AddCard';
+import CardDetail from './List/CardDetail';
+import AddCardButton from './List/AddCardButton';
+import ListHeader from './List/ListHeader';
+import AddNewList from './AddNewList';
+import NewListButton from './NewListButton';
 
 const BoardWrapper = ({children}) => {
   return (

@@ -5,8 +5,8 @@ import TableBody from '@mui/material/TableBody';
 import PropTypes from 'prop-types';
 import TableHeading from './TableHeading';
 import TableItem from './TableItem';
-import AppTableContainer from '../../../../@crema/components/AppTableContainer';
-import AppLoader from '../../../../@crema/components/AppLoader';
+import AppTableContainer from '@crema/components/AppTableContainer';
+import AppLoader from '@crema/components/AppLoader';
 
 const ProductTable = ({productData, loading}) => {
   return (

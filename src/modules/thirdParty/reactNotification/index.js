@@ -1,9 +1,9 @@
 import React from 'react';
 import Grid from '@mui/material/Grid';
 
-import AppComponentCard from '../../../@crema/components/AppComponentCard';
-import AppComponentHeader from '../../../@crema/components/AppComponentHeader';
-import AppGridContainer from '../../../@crema/components/AppGridContainer';
+import AppComponentCard from '@crema/components/AppComponentCard';
+import AppComponentHeader from '@crema/components/AppComponentHeader';
+import AppGridContainer from '@crema/components/AppGridContainer';
 import AnimationEntrance from './AnimationEntrance';
 import AnimationEntranceSource from '!raw-loader!./AnimationEntrance';
 import AnimationExit from './AnimationExit';

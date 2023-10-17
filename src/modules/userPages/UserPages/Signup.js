@@ -4,12 +4,12 @@ import Button from '@mui/material/Button';
 import {Checkbox} from '@mui/material';
 import {Form, Formik} from 'formik';
 import * as yup from 'yup';
-import IntlMessages from '../../../@crema/helpers/IntlMessages';
+import IntlMessages from '@crema/helpers/IntlMessages';
 import Box from '@mui/material/Box';
-import {Fonts} from '../../../@crema/constants/AppEnums';
+import {Fonts} from '@crema/constants/AppEnums';
 import {grey} from '@mui/material/colors/index';
-import AppAnimate from '../../../@crema/components/AppAnimate';
-import AppTextField from '../../../@crema/components/AppFormComponents/AppTextField';
+import AppAnimate from '@crema/components/AppAnimate';
+import AppTextField from '@crema/components/AppFormComponents/AppTextField';
 
 const validationSchema = yup.object({
   name: yup.string().required(<IntlMessages id='validation.nameRequired' />),

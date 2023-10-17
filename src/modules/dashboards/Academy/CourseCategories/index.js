@@ -1,8 +1,8 @@
 import React from 'react';
-import AppCard from '../../../../@crema/components/AppCard';
+import AppCard from '@crema/components/AppCard';
 import Box from '@mui/material/Box';
 import Slider from 'react-slick';
-import {Fonts} from '../../../../@crema/constants/AppEnums';
+import {Fonts} from '@crema/constants/AppEnums';
 import PropTypes from 'prop-types';
 import CourseSlider from './CourseSlider';
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import {useAuthUser} from '../../../../@crema/hooks/AuthHooks';
+import {useAuthUser} from '@crema/hooks/AuthHooks';
 import {Formik} from 'formik';
 import * as yup from 'yup';
 import PersonalInfoForm from './PersonalInfoForm';

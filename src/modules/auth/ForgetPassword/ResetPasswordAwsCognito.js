@@ -2,22 +2,23 @@ import React, {useState} from 'react';
 import {Form, Formik} from 'formik';
 import * as yup from 'yup';
 import ReactCodeInput from 'react-code-input';
-import {useInfoViewActionsContext} from '../../../@crema/context/AppContextProvider/InfoViewContextProvider';
+import {useInfoViewActionsContext} from '@crema/context/AppContextProvider/InfoViewContextProvider';
 import {useIntl} from 'react-intl';
-import {Fonts} from '../../../@crema/constants/AppEnums';
+import {Fonts} from '@crema/constants/AppEnums';
 import PropTypes from 'prop-types';
-import AppTextField from '../../../@crema/components/AppFormComponents/AppTextField';
-import IntlMessages from '../../../@crema/helpers/IntlMessages';
+import AppTextField from '@crema/components/AppFormComponents/AppTextField';
+import IntlMessages from '@crema/helpers/IntlMessages';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
-import AppInfoView from '../../../@crema/components/AppInfoView';
+import AppInfoView from '@crema/components/AppInfoView';
 import AuthWrapper from '../AuthWrapper';
-import AppLogo from '../../../@crema/components/AppLayout/components/AppLogo';
+import AppLogo from '@crema/components/AppLayout/components/AppLogo';
+
 const validationSchema = yup.object({
-  newPassword: yup
-    .string()
-    .required(<IntlMessages id='validation.enterNewPassword' />),
+    newPassword: yup
+        .string()
+        .required(<IntlMessages id='validation.enterNewPassword'/>),
   confirmPassword: yup
     .string()
     .required(<IntlMessages id='validation.reTypePassword' />),

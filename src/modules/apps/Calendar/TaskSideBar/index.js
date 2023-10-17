@@ -12,16 +12,15 @@ import SidebarPlaceholder from '@crema/components/AppSkeleton/SidebarListSkeleto
 import AddIcon from '@mui/icons-material/Add';
 import {Zoom} from '@mui/material';
 import {styled} from '@mui/material/styles';
-import {FilterItem, TaskLabelItem} from '@crema/modules/apps/Calendar';
-import {
-  useCalendarActionsContext,
-  useCalendarContext,
-} from '../../context/CalendarContextProvider';
+import TaskLabelItem from './LabelItem';
+import FilterItem from './FilterItem';
+
+import {useCalendarActionsContext, useCalendarContext,} from '../../context/CalendarContextProvider';
 import AddNewTask from '../AddNewTask';
 
 const ListWrapper = styled(List)(({theme}) => ({
-  marginBottom: 8,
-  [theme.breakpoints.up('xl')]: {
+    marginBottom: 8,
+    [theme.breakpoints.up('xl')]: {
     marginBottom: 20,
   },
 }));

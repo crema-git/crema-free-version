@@ -1,16 +1,16 @@
 import React from 'react';
 import {alpha, Box, Button, Typography} from '@mui/material';
 import Avatar from '@mui/material/Avatar';
-import AppGridContainer from '../../../../@crema/components/AppGridContainer';
+import AppGridContainer from '@crema/components/AppGridContainer';
 import Grid from '@mui/material/Grid';
-import IntlMessages from '../../../../@crema/helpers/IntlMessages';
+import IntlMessages from '@crema/helpers/IntlMessages';
 import {useDropzone} from 'react-dropzone';
 import {Form} from 'formik';
 import PropTypes from 'prop-types';
-import AppTextField from '../../../../@crema/components/AppFormComponents/AppTextField';
+import AppTextField from '@crema/components/AppFormComponents/AppTextField';
 import EditIcon from '@mui/icons-material/Edit';
 import {styled} from '@mui/material/styles';
-import {Fonts} from '../../../../@crema/constants/AppEnums';
+import {Fonts} from '@crema/constants/AppEnums';
 
 const AvatarViewWrapper = styled('div')(({theme}) => {
   return {

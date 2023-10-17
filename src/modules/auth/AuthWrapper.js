@@ -3,18 +3,18 @@ import Card from '@mui/material/Card';
 import Box from '@mui/material/Box';
 import PropTypes from 'prop-types';
 import {Typography} from '@mui/material';
-import {Fonts} from '../../@crema/constants/AppEnums';
-import AppLogo from '../../@crema/components/AppLayout/components/AppLogo';
+import {Fonts} from '@crema/constants/AppEnums';
+import AppLogo from '@crema/components/AppLayout/components/AppLogo';
 
 const AuthWrapper = ({children}) => {
-  return (
-    <Box
-      sx={{
-        flex: 1,
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
-        alignItems: 'center',
+    return (
+        <Box
+            sx={{
+                flex: 1,
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'center',
+                alignItems: 'center',
       }}
     >
       <Card

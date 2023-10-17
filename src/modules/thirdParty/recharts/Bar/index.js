@@ -15,9 +15,9 @@ import BiaxialBarChart from './Components/BiaxialBarChart';
 import BiaxialBarChartSource from '!raw-loader!./Components/BiaxialBarChart';
 import Grid from '@mui/material/Grid';
 
-import AppComponentCard from '../../../../@crema/components/AppComponentCard';
-import AppComponentHeader from '../../../../@crema/components/AppComponentHeader';
-import AppGridContainer from '../../../../@crema/components/AppGridContainer';
+import AppComponentCard from '@crema/components/AppComponentCard';
+import AppComponentHeader from '@crema/components/AppComponentHeader';
+import AppGridContainer from '@crema/components/AppGridContainer';
 
 const BarChart = () => {
   return (

@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import AppCard from '../../../../@crema/components/AppCard';
+import AppCard from '@crema/components/AppCard';
 import Box from '@mui/material/Box';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import CloudDownloadIcon from '@mui/icons-material/CloudDownload';
@@ -7,7 +7,7 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Button from '@mui/material/Button';
 import ReactPlayer from 'react-player';
-import {Fonts} from '../../../../@crema/constants/AppEnums';
+import {Fonts} from '@crema/constants/AppEnums';
 import PropTypes from 'prop-types';
 
 const tabs = [

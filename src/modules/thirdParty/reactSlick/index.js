@@ -1,8 +1,8 @@
 import React from 'react';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import AppComponentHeader from '../../../@crema/components/AppComponentHeader';
-import AppGridContainer from '../../../@crema/components/AppGridContainer';
+import AppComponentHeader from '@crema/components/AppComponentHeader';
+import AppGridContainer from '@crema/components/AppGridContainer';
 import Grid from '@mui/material/Grid';
 import ProfileSlider from './ProfileSlider';
 import SlideBasic from './SlideBasic';
@@ -11,7 +11,7 @@ import SlideBasicThree from './SlideBasicThree';
 import SlideBasicArrow from './SlideBasicArrow';
 import SlideBasicFour from './SlideBasicFour';
 import SlideBasicFive from './SlideBasicFive';
-import {reactSlickData} from '../../../@crema/mockapi/fakedb/thirdParty/reactSlick';
+import {reactSlickData} from '@crema/mockapi/fakedb/thirdParty/reactSlick';
 
 const ReactSlick = () => {
   return (

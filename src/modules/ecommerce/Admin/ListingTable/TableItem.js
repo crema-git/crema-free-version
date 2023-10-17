@@ -6,7 +6,7 @@ import Box from '@mui/material/Box';
 import OrderActions from './OrderActions';
 import {styled} from '@mui/material/styles';
 import {useNavigate} from 'react-router-dom';
-import {ellipsisLines} from '../../../../@crema/helpers/StringHelper';
+import {ellipsisLines} from '@crema/helpers/StringHelper';
 
 const StyledTableCell = styled(TableCell)(() => ({
   fontSize: 14,

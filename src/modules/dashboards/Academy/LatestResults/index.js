@@ -1,11 +1,11 @@
 import React from 'react';
-import AppCard from '../../../../@crema/components/AppCard';
-import AppList from '../../../../@crema/components/AppList';
+import AppCard from '@crema/components/AppCard';
+import AppList from '@crema/components/AppList';
 import Box from '@mui/material/Box';
-import AppLinearProgress from '../../../../@crema/components/AppLinearProgress';
+import AppLinearProgress from '@crema/components/AppLinearProgress';
 import {useIntl} from 'react-intl';
 
-import {Fonts} from '../../../../@crema/constants/AppEnums';
+import {Fonts} from '@crema/constants/AppEnums';
 import PropTypes from 'prop-types';
 
 const getColor = (percentage) => {

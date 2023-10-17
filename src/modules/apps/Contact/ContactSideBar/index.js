@@ -12,9 +12,9 @@ import ListEmptyResult from '@crema/components/AppList/ListEmptyResult';
 import SidebarPlaceholder from '@crema/components/AppSkeleton/SidebarListSkeleton';
 import AddIcon from '@mui/icons-material/Add';
 import {Zoom} from '@mui/material';
-import {ContactListLabelItem} from '@crema/modules/apps/Contact';
-import {useContactContext} from '../../context/ContactContextProvider';
 
+import {useContactContext} from '../../context/ContactContextProvider';
+import ContactListLabelItem from './LabelItem';
 const SideBarContent = () => {
   const {folderList, labelList} = useContactContext();
   const [isAddContact, onSetIsAddContact] = useState(false);

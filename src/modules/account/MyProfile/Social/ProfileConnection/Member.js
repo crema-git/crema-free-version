@@ -2,8 +2,8 @@ import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import {alpha, Avatar, Box, Typography} from '@mui/material';
 import Button from '@mui/material/Button';
-import {Fonts} from '../../../../../@crema/constants/AppEnums';
-import AppCard from '../../../../../@crema/components/AppCard';
+import {Fonts} from '@crema/constants/AppEnums';
+import AppCard from '@crema/components/AppCard';
 
 const Member = ({member}) => {
   const [connect, setConnect] = useState(false);

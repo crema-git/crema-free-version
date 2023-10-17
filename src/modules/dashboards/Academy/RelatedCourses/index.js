@@ -1,5 +1,5 @@
 import React from 'react';
-import AppCard from '../../../../@crema/components/AppCard';
+import AppCard from '@crema/components/AppCard';
 import {useIntl} from 'react-intl';
 import Slider from 'react-slick';
 import CourseItem from './CourseItem';

@@ -8,11 +8,7 @@ import Box from '@mui/material/Box';
 import PropTypes from 'prop-types';
 import AppsStarredIcon from '@crema/components/AppsStarredIcon';
 import Avatar from '@mui/material/Avatar';
-import {
-  AttachmentWrapper,
-  AvatarWrapper,
-  MailMobileItemWrapper,
-} from './index.styles';
+import {AttachmentWrapper, AvatarWrapper, MailMobileItemWrapper,} from './index.styles';
 import CheckOutlinedIcon from '@mui/icons-material/CheckOutlined';
 import {Fonts} from '@crema/constants/AppEnums';
 import {getStringFromHtml} from '@crema/helpers/StringHelper';

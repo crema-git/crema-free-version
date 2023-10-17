@@ -3,12 +3,12 @@ import Button from '@mui/material/Button';
 import {Form, Formik} from 'formik';
 import * as yup from 'yup';
 import {Link} from 'react-router-dom';
-import AppInfoView from '../../../@crema/components/AppInfoView';
+import AppInfoView from '@crema/components/AppInfoView';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
-import IntlMessages from '../../../@crema/helpers/IntlMessages';
-import AppTextField from '../../../@crema/components/AppFormComponents/AppTextField';
-import {Fonts} from '../../../@crema/constants/AppEnums';
+import IntlMessages from '@crema/helpers/IntlMessages';
+import AppTextField from '@crema/components/AppFormComponents/AppTextField';
+import {Fonts} from '@crema/constants/AppEnums';
 import AuthWrapper from '../AuthWrapper';
 
 const validationSchema = yup.object({

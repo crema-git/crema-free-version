@@ -1,9 +1,9 @@
 import React from 'react';
-import IntlMessages from '../../../../@crema/helpers/IntlMessages';
+import IntlMessages from '@crema/helpers/IntlMessages';
 import Box from '@mui/material/Box';
 import PropTypes from 'prop-types';
 import UserSocialMediaInfo from './UserSocialMediaInfo';
-import {Fonts} from '../../../../@crema/constants/AppEnums';
+import {Fonts} from '@crema/constants/AppEnums';
 
 const ListItem = (props) => {
   const {user} = props;

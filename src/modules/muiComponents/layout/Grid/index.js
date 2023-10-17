@@ -1,8 +1,8 @@
 import React from 'react';
-import AppComponentHeader from '../../../../@crema/components/AppComponentHeader';
+import AppComponentHeader from '@crema/components/AppComponentHeader';
 import Grid from '@mui/material/Grid';
-import AppComponentCard from '../../../../@crema/components/AppComponentCard';
-import AppGridContainer from '../../../../@crema/components/AppGridContainer';
+import AppComponentCard from '@crema/components/AppComponentCard';
+import AppGridContainer from '@crema/components/AppGridContainer';
 
 import BasicGrid from './BasicGrid';
 import BasicGridSource from '!raw-loader!./BasicGrid';

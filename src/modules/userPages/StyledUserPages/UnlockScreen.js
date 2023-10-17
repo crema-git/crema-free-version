@@ -4,22 +4,22 @@ import Button from '@mui/material/Button';
 import {Form, Formik} from 'formik';
 import * as yup from 'yup';
 import Grid from '@mui/material/Grid';
-import IntlMessages from '../../../@crema/helpers/IntlMessages';
+import IntlMessages from '@crema/helpers/IntlMessages';
 import Box from '@mui/material/Box';
 import {Typography, useTheme} from '@mui/material';
-import {Fonts} from '../../../@crema/constants/AppEnums';
-import AppAnimate from '../../../@crema/components/AppAnimate';
-import AppTextField from '../../../@crema/components/AppFormComponents/AppTextField';
+import {Fonts} from '@crema/constants/AppEnums';
+import AppAnimate from '@crema/components/AppAnimate';
+import AppTextField from '@crema/components/AppFormComponents/AppTextField';
 import {ReactComponent as Logo} from '../../../assets/user/lock-screen.svg';
 
 const validationSchema = yup.object({
-  password: yup
-    .string()
-    .required(<IntlMessages id='validation.passwordRequired' />),
+    password: yup
+        .string()
+        .required(<IntlMessages id='validation.passwordRequired'/>),
 });
 
 const UnlockScreen = () => {
-  const theme = useTheme();
+    const theme = useTheme();
   return (
     <AppAnimate animation='transition.slideUpIn' delay={200}>
       <Box

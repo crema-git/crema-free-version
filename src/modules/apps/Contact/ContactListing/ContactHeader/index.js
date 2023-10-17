@@ -7,11 +7,9 @@ import {useIntl} from 'react-intl';
 import CheckBox from './CheckBox';
 import ContactCheckedActions from './ContactCheckedActions';
 import AppsPagination from '@crema/components/AppsPagination';
-import {ViewSelectButtons} from '@crema/modules/apps/Contact';
-import {
-  useContactActionsContext,
-  useContactContext,
-} from '../../../context/ContactContextProvider';
+
+import {useContactActionsContext, useContactContext,} from '../../../context/ContactContextProvider';
+import ViewSelectButtons from './ViewSelectButtons';
 
 const ContactHeader = (props) => {
   const {

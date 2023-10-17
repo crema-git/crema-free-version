@@ -2,9 +2,9 @@ import React from 'react';
 
 import {Box, Icon, Typography} from '@mui/material';
 import PropTypes from 'prop-types';
-import {Fonts} from '../../../../@crema/constants/AppEnums';
-import AppCard from '../../../../@crema/components/AppCard';
-import {getAssetsUrl} from '../../../../@crema/helpers/UrlHelper';
+import {Fonts} from '@crema/constants/AppEnums';
+import AppCard from '@crema/components/AppCard';
+import {getAssetsUrl} from '@crema/helpers/UrlHelper';
 
 const StatsDirCard = ({data}) => {
   return (

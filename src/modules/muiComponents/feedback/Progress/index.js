@@ -1,8 +1,8 @@
 import React from 'react';
-import AppComponentHeader from '../../../../@crema/components/AppComponentHeader';
-import AppGridContainer from '../../../../@crema/components/AppGridContainer';
+import AppComponentHeader from '@crema/components/AppComponentHeader';
+import AppGridContainer from '@crema/components/AppGridContainer';
 import Grid from '@mui/material/Grid';
-import AppComponentCard from '../../../../@crema/components/AppComponentCard';
+import AppComponentCard from '@crema/components/AppComponentCard';
 
 import CircularIndeterminate from './CircularIndeterminate';
 import CircularIndeterminateSource from '!raw-loader!./CircularIndeterminate';

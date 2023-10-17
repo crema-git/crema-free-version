@@ -14,9 +14,9 @@ import CustomPicker from './CustomPicker';
 import CustomPickerSource from '!raw-loader!./CustomPicker';
 // import WithRedux from './WithRedux';
 // import WithReduxSource from '!raw-loader!./WithRedux';
-import AppComponentCard from '../../../@crema/components/AppComponentCard';
-import AppComponentHeader from '../../../@crema/components/AppComponentHeader';
-import AppGridContainer from '../../../@crema/components/AppGridContainer';
+import AppComponentCard from '@crema/components/AppComponentCard';
+import AppComponentHeader from '@crema/components/AppComponentHeader';
+import AppGridContainer from '@crema/components/AppGridContainer';
 import Grid from '@mui/material/Grid';
 
 const ColorPicker = () => {

@@ -11,19 +11,19 @@ import PieChartWithPaddingAngle from './Components/PieChartWithPaddingAngle';
 import PieChartWithPaddingAngleSource from '!raw-loader!./Components/PieChartWithPaddingAngle';
 import Grid from '@mui/material/Grid';
 
-import AppComponentCard from '../../../../@crema/components/AppComponentCard';
-import AppComponentHeader from '../../../../@crema/components/AppComponentHeader';
-import AppGridContainer from '../../../../@crema/components/AppGridContainer';
+import AppComponentCard from '@crema/components/AppComponentCard';
+import AppComponentHeader from '@crema/components/AppComponentHeader';
+import AppGridContainer from '@crema/components/AppGridContainer';
 
 const PieChart = () => {
-  return (
-    <>
-      <AppComponentHeader
-        title='Pie Chart'
-        refUrl='http://recharts.org/en-US/api/PieChart/'
-      />
+    return (
+        <>
+            <AppComponentHeader
+                title='Pie Chart'
+                refUrl='http://recharts.org/en-US/api/PieChart/'
+            />
 
-      <AppGridContainer>
+            <AppGridContainer>
         <Grid item xs={12} lg={6}>
           <AppComponentCard
             title='Two Level Pie Chart'

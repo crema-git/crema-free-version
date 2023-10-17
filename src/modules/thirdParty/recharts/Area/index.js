@@ -11,9 +11,9 @@ import SynchronizedAreaChart from './Components/SynchronizedAreaChart';
 import SynchronizedAreaChartSource from '!raw-loader!./Components/SynchronizedAreaChart';
 import Grid from '@mui/material/Grid';
 
-import AppComponentCard from '../../../../@crema/components/AppComponentCard';
-import AppComponentHeader from '../../../../@crema/components/AppComponentHeader';
-import AppGridContainer from '../../../../@crema/components/AppGridContainer';
+import AppComponentCard from '@crema/components/AppComponentCard';
+import AppComponentHeader from '@crema/components/AppComponentHeader';
+import AppGridContainer from '@crema/components/AppGridContainer';
 
 const AreaChart = () => {
   return (

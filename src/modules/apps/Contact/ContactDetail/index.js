@@ -7,11 +7,9 @@ import AppGridContainer from '@crema/components/AppGridContainer';
 import Grid from '@mui/material/Grid';
 import {DialogActions} from '@mui/material';
 import Button from '@mui/material/Button';
-import {
-  ContactActions,
-  OtherDetails,
-  PersonalDetails,
-} from '@crema/modules/apps/Contact';
+import ContactActions from './ContactActions';
+import PersonalDetails from './PersonalDetails';
+import OtherDetails from './OtherDetails';
 
 const ContactDetail = (props) => {
   const {

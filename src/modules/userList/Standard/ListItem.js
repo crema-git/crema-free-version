@@ -13,18 +13,18 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import LanguageIcon from '@mui/icons-material/Language';
 
-import {Fonts} from '../../../@crema/constants/AppEnums';
-import IntlMessages from '../../../@crema/helpers/IntlMessages';
+import {Fonts} from '@crema/constants/AppEnums';
+import IntlMessages from '@crema/helpers/IntlMessages';
 import PropTypes from 'prop-types';
 
 const ListItem = (props) => {
-  const {user} = props;
-  return (
-    <Box sx={{mb: 8}} className='item-hover'>
-      <Card>
-        <Box
-          sx={{
-            display: 'flex',
+    const {user} = props;
+    return (
+        <Box sx={{mb: 8}} className='item-hover'>
+            <Card>
+                <Box
+                    sx={{
+                        display: 'flex',
             flexDirection: {xs: 'column', sm: 'row'},
           }}
         >

@@ -1,10 +1,10 @@
 import React from 'react';
 import {Button} from '@mui/material';
 import Grid from '@mui/material/Grid';
-import IntlMessages from '../../../../@crema/helpers/IntlMessages';
-import AppGridContainer from '../../../../@crema/components/AppGridContainer';
+import IntlMessages from '@crema/helpers/IntlMessages';
+import AppGridContainer from '@crema/components/AppGridContainer';
 import {Form} from 'formik';
-import AppTextField from '../../../../@crema/components/AppFormComponents/AppTextField';
+import AppTextField from '@crema/components/AppFormComponents/AppTextField';
 
 const ContactUsForm = () => {
   return (

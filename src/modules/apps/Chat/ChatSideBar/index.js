@@ -7,7 +7,8 @@ import {useIntl} from 'react-intl';
 import AppSearchBar from '@crema/components/AppSearchBar';
 import {useAuthUser} from '@crema/hooks/AuthHooks';
 import {useChatContext} from '../../context/ChatContextProvider';
-import {ChatTabs, ChatUserInfo} from '@crema/modules/apps/Chat';
+import ChatTabs from './ChatTabs';
+import ChatUserInfo from './UserInfo';
 
 const ChatSideBar = ({selectedUser, setSelectedUser}) => {
   const {connectionList, loading} = useChatContext();

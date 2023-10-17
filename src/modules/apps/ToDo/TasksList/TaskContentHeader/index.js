@@ -7,11 +7,12 @@ import PropTypes from 'prop-types';
 import CheckedTasksActions from './CheckedTasksActions';
 import AppsPagination from '@crema/components/AppsPagination';
 import Hidden from '@mui/material/Hidden';
-import {SelectTasksDropdown} from '@crema/modules/apps/ToDo';
+
 import {
   useTodoActionsContext,
   useTodoContext,
 } from '../../../context/TodoContextProvider';
+import SelectTasksDropdown from './SelectTasksDropdown';
 
 const TaskContentHeader = (props) => {
   const {

@@ -7,12 +7,11 @@ import ListEmptyResult from '@crema/components/AppList/ListEmptyResult';
 import IntlMessages from '@crema/helpers/IntlMessages';
 import ContactListSkeleton from '@crema/components/AppSkeleton/ContactListSkeleton';
 import {Hidden} from '@mui/material';
-import {
-  ContactGridItem,
-  ContactListItem,
-  ContactListItemMobile,
-} from '@crema/modules/apps/Contact';
+
 import {useContactContext} from '../../../context/ContactContextProvider';
+import ContactListItem from './ContactListItem';
+import ContactListItemMobile from './ContactListItem/ContactListItemMobile';
+import ContactGridItem from './ContactGridItem';
 
 const ContactView = (props) => {
   const {

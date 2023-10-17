@@ -1,10 +1,10 @@
 import React from 'react';
 import Box from '@mui/material/Box';
-import IntlMessages from '../../../@crema/helpers/IntlMessages';
+import IntlMessages from '@crema/helpers/IntlMessages';
 import KBItem from './KBItem';
-import AppGridContainer from '../../../@crema/components/AppGridContainer';
+import AppGridContainer from '@crema/components/AppGridContainer';
 import PropTypes from 'prop-types';
-import {Fonts} from '../../../@crema/constants/AppEnums';
+import {Fonts} from '@crema/constants/AppEnums';
 
 const Sales = ({saleQueries}) => {
   return (

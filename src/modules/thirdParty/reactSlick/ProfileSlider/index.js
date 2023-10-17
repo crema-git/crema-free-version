@@ -1,5 +1,5 @@
 import React from 'react';
-import AppCard from '../../../../@crema/components/AppCard';
+import AppCard from '@crema/components/AppCard';
 import PropTypes from 'prop-types';
 import Slider from 'react-slick';
 import ProfileItem from './ProfileItem';

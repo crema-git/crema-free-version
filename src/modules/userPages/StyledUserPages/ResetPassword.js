@@ -4,21 +4,21 @@ import Button from '@mui/material/Button';
 import {Form, Formik} from 'formik';
 import * as yup from 'yup';
 import Grid from '@mui/material/Grid';
-import IntlMessages from '../../../@crema/helpers/IntlMessages';
+import IntlMessages from '@crema/helpers/IntlMessages';
 import Box from '@mui/material/Box';
-import {Fonts} from '../../../@crema/constants/AppEnums';
-import AppAnimate from '../../../@crema/components/AppAnimate';
-import AppTextField from '../../../@crema/components/AppFormComponents/AppTextField';
+import {Fonts} from '@crema/constants/AppEnums';
+import AppAnimate from '@crema/components/AppAnimate';
+import AppTextField from '@crema/components/AppFormComponents/AppTextField';
 import {ReactComponent as Logo} from '../../../assets/user/reset-password.svg';
 import {useTheme} from '@mui/material';
 
 const validationSchema = yup.object({
-  oldPassword: yup
-    .string()
-    .required(<IntlMessages id='validation.enterOldPassword' />),
-  newPassword: yup
-    .string()
-    .required(<IntlMessages id='validation.enterNewPassword' />),
+    oldPassword: yup
+        .string()
+        .required(<IntlMessages id='validation.enterOldPassword'/>),
+    newPassword: yup
+        .string()
+        .required(<IntlMessages id='validation.enterNewPassword'/>),
   confirmPassword: yup
     .string()
     .required(<IntlMessages id='validation.reTypePassword' />),

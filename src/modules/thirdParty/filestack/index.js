@@ -1,16 +1,16 @@
 import React from 'react';
-import AppComponentHeader from '../../../@crema/components/AppComponentHeader';
-import AppGridContainer from '../../../@crema/components/AppGridContainer';
+import AppComponentHeader from '@crema/components/AppComponentHeader';
+import AppGridContainer from '@crema/components/AppGridContainer';
 import Grid from '@mui/material/Grid';
-import AppComponentCard from '../../../@crema/components/AppComponentCard';
+import AppComponentCard from '@crema/components/AppComponentCard';
 import InlinePicker from './Inline';
 import InlinePickerSource from '!raw-loader!./Inline';
 import InlineSource from '!raw-loader!./Inline';
 import DNDPicker from './DNDPicker';
 
 const FileStack = () => {
-  return (
-    <>
+    return (
+        <>
       <AppComponentHeader
         title='Filestack File Uploader & File Upload API'
         description='Simple file uploader & powerful APIs to upload, transform & deliver any file into your app.'

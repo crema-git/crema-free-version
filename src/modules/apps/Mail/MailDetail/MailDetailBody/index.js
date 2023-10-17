@@ -5,7 +5,7 @@ import LabelOutlinedIcon from '@mui/icons-material/LabelOutlined';
 import AppTooltip from '@crema/components/AppTooltip';
 import {putDataApi} from '@crema/hooks/APIHooks';
 import {useInfoViewActionsContext} from '@crema/context/AppContextProvider/InfoViewContextProvider';
-import {MessageItem} from '@crema/modules/apps/Mail';
+import MessageItem from './MessageItem';
 
 const MailDetailBody = (props) => {
   const infoViewActionsContext = useInfoViewActionsContext();

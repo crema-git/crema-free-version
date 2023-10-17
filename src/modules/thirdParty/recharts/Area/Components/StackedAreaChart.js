@@ -1,15 +1,7 @@
 import React from 'react';
-import {
-  Area,
-  AreaChart,
-  CartesianGrid,
-  ResponsiveContainer,
-  Tooltip,
-  XAxis,
-  YAxis,
-} from 'recharts';
+import {Area, AreaChart, CartesianGrid, ResponsiveContainer, Tooltip, XAxis, YAxis,} from 'recharts';
 import data from './data';
-import {useThemeContext} from '../../../../../@crema/context/AppContextProvider/ThemeContextProvider';
+import {useThemeContext} from '@crema/context/AppContextProvider/ThemeContextProvider';
 
 const StackedAreaChart = () => {
   const {theme} = useThemeContext();

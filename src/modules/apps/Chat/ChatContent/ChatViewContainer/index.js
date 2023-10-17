@@ -12,18 +12,20 @@ import {styled} from '@mui/material/styles';
 import {postDataApi, putDataApi, useGetDataApi} from '@crema/hooks/APIHooks';
 import {useInfoViewActionsContext} from '@crema/context/AppContextProvider/InfoViewContextProvider';
 import {MessageType} from '@crema/mockapi/fakedb/apps/chat/connectionList';
-import {Header, MessagesList, SendMessage} from '@crema/modules/apps/Chat';
 import {useChatActionsContext} from '../../../context/ChatContextProvider';
+import Header from './Header';
+import SendMessage from './SendMessage';
+import MessagesList from './MessageList';
 
 const ScrollbarWrapper = styled(SimpleBarReact)(() => {
-  return {
-    display: 'flex',
-    flexDirection: 'column',
-    height: `calc(100% - 132px)`,
-  };
+    return {
+        display: 'flex',
+        flexDirection: 'column',
+        height: `calc(100% - 132px)`,
+    };
 });
 const ScrollChatNoMainWrapper = styled('div')(() => {
-  return {
+    return {
     flex: 1,
     display: 'flex',
     flexDirection: 'column',
@@ -32,6 +34,12 @@ const ScrollChatNoMainWrapper = styled('div')(() => {
   };
 });
 
+MessagesList.propTypes = {
+    onClickEditMessage: PropTypes.func,
+    userMessages: PropTypes.any,
+    deleteMessage: PropTypes.func,
+    authUser: PropTypes.func,
+};
 const ChatViewContainer = ({selectedUser, setSelectedUser}) => {
   const {setConnectionData} = useChatActionsContext();
   const [message, setMessage] = useState('');

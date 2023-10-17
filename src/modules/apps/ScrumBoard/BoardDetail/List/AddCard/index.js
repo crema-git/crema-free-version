@@ -10,9 +10,10 @@ import Drawer from '@mui/material/Drawer';
 import Box from '@mui/material/Box';
 import {useInfoViewActionsContext} from '@crema/context/AppContextProvider/InfoViewContextProvider';
 import {postDataApi, putDataApi} from '@crema/hooks/APIHooks';
-import {CardHeader} from '@crema/modules/apps/ScrumBoard';
+
 import {getDateObject} from '@crema/helpers/DateHelper';
 import {generateRandomUniqueNumber} from '@crema/helpers/Common';
+import CardHeader from './CardHeader';
 
 const validationSchema = yup.object({
   title: yup.string().required(<IntlMessages id='validation.titleRequired' />),

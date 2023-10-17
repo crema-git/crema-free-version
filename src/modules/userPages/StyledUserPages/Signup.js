@@ -5,21 +5,21 @@ import {Checkbox, useTheme} from '@mui/material';
 import {Form, Formik} from 'formik';
 import * as yup from 'yup';
 import Grid from '@mui/material/Grid';
-import IntlMessages from '../../../@crema/helpers/IntlMessages';
+import IntlMessages from '@crema/helpers/IntlMessages';
 import Box from '@mui/material/Box';
-import {Fonts} from '../../../@crema/constants/AppEnums';
-import AppAnimate from '../../../@crema/components/AppAnimate';
-import AppTextField from '../../../@crema/components/AppFormComponents/AppTextField';
+import {Fonts} from '@crema/constants/AppEnums';
+import AppAnimate from '@crema/components/AppAnimate';
+import AppTextField from '@crema/components/AppFormComponents/AppTextField';
 import {ReactComponent as Logo} from '../../../assets/user/signup.svg';
 
 const validationSchema = yup.object({
-  name: yup.string().required(<IntlMessages id='validation.nameRequired' />),
-  email: yup
-    .string()
-    .email(<IntlMessages id='validation.emailFormat' />)
-    .required(<IntlMessages id='validation.emailRequired' />),
-  password: yup
-    .string()
+    name: yup.string().required(<IntlMessages id='validation.nameRequired'/>),
+    email: yup
+        .string()
+        .email(<IntlMessages id='validation.emailFormat'/>)
+        .required(<IntlMessages id='validation.emailRequired'/>),
+    password: yup
+        .string()
     .required(<IntlMessages id='validation.passwordRequired' />),
   confirmPassword: yup
     .string()

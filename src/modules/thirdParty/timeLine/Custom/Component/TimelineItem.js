@@ -1,5 +1,5 @@
 import React from 'react';
-import {Fonts} from '../../../../../@crema/constants/AppEnums';
+import {Fonts} from '@crema/constants/AppEnums';
 import TimelineItemWrapper from './TimelineItemWrapper';
 import TimelineItemContentWrapper from './TimelineItemContentWrapper';
 import grey from '@mui/material/colors/grey';

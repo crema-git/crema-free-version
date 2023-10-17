@@ -17,17 +17,19 @@ import SendOutlinedIcon from '@mui/icons-material/SendOutlined';
 import {Fonts} from '@crema/constants/AppEnums';
 import {useInfoViewActionsContext} from '@crema/context/AppContextProvider/InfoViewContextProvider';
 import {putDataApi} from '@crema/hooks/APIHooks';
-import {
-  AssignedStaff,
-  CommentsLists,
-  EditButton,
-  TaskCreatedByInfo,
-  TaskLabels,
-  TodoDatePicker,
-} from '@crema/modules/apps/ToDo';
+
 import {useTodoContext} from '../../../context/TodoContextProvider';
 import {getDateObject, getFormattedDate} from '@crema/helpers/DateHelper';
+import TaskCreatedByInfo from './TaskCreatedByInfo';
+import EditButton from './EditButton';
+import AssignedStaff from './AssignedStaff';
+import TodoDatePicker from './DatePicker';
+import TaskLabels from '../../TasksList/TaskListItem/Labels';
+function CommentsLists(props) {
+  return null;
+}
 
+CommentsLists.propTypes = {};
 const TaskDetailBody = (props) => {
   const {selectedTask, onUpdateSelectedTask} = props;
   const infoViewActionsContext = useInfoViewActionsContext();

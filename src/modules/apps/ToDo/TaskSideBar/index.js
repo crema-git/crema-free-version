@@ -12,7 +12,7 @@ import SidebarPlaceholder from '@crema/components/AppSkeleton/SidebarListSkeleto
 import AddIcon from '@mui/icons-material/Add';
 import {Zoom} from '@mui/material';
 import {styled} from '@mui/material/styles';
-import {TaskLabelItem} from '@crema/modules/apps/ToDo';
+import TaskLabelItem from './LabelItem';
 import {useTodoContext} from '../../context/TodoContextProvider';
 import AddNewTask from '../AddNewTask';
 

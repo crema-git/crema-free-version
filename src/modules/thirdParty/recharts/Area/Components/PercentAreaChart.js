@@ -8,7 +8,7 @@ import {
   XAxis,
   YAxis,
 } from 'recharts';
-import {useThemeContext} from '../../../../../@crema/context/AppContextProvider/ThemeContextProvider';
+import {useThemeContext} from '@crema/context/AppContextProvider/ThemeContextProvider';
 
 const data = [
   {month: '2015.01', a: 4000, b: 2400, c: 2400},

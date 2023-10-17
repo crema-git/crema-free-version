@@ -1,18 +1,18 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
 import React from 'react';
 import {Box} from '@mui/material';
-import AppSelect from '../../../../@crema/components/AppSelect';
-import AppCard from '../../../../@crema/components/AppCard';
+import AppSelect from '@crema/components/AppSelect';
+import AppCard from '@crema/components/AppCard';
 import GradeGraph from './GradeGraph';
 import {useIntl} from 'react-intl';
 import PropTypes from 'prop-types';
 
 const AverageGrades = ({grades}) => {
-  const {messages} = useIntl();
-  return (
-    <AppCard
-      sxStyle={{
-        height: 1,
+    const {messages} = useIntl();
+    return (
+        <AppCard
+            sxStyle={{
+                height: 1,
         display: 'flex',
         flexDirection: 'column',
       }}
