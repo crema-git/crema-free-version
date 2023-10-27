@@ -1,9 +1,9 @@
 /*// ForJWT Auth
-import { getUserFromJwtAuth } from '@crema/helpers/AuthHelper';
+import {getUserFromJwtAuth} from '@crema/helpers/AuthHelper';
 import {
   useJWTAuth,
   useJWTAuthActions,
-} from '@crema/services/auth/JWTAuthProvider';
+} from '@crema/services/auth/jwt-auth/JWTAuthProvider';
 
 export const useAuthUser = () => {
   const {user, isAuthenticated, isLoading} = useJWTAuth();
@@ -55,16 +55,14 @@ export const useAuthMethod = () => {
     logout,
   };
 };
-/*
-// For AWS Auth
-import { getUserFromAWS } from '@crema/helpers/AuthHelper';
-import {
-  useAwsCognito,
-  useAwsCognitoActions,
-} from '@crema/services/auth/AWSAuthProvider';
+
+/*// For AWS Auth
+import {getUserFromAWS} from '@crema/helpers/AuthHelper';
+import {useAwsCognito, useAwsCognitoActions} from '../services/auth';
 
 export const useAuthUser = () => {
-  const { auth, user, isAuthenticated, isLoading } = useAwsCognito();
+  // eslint-disable-next-line no-undef
+  const {auth, user, isAuthenticated, isLoading} = useAwsCognito();
   return {
     auth,
     isLoading,
@@ -74,7 +72,7 @@ export const useAuthUser = () => {
 };
 
 export const useAuthMethod = () => {
-  const { signIn, signUpCognitoUser, confirmCognitoUserSignup, logout } =
+  const {signIn, signUpCognitoUser, confirmCognitoUserSignup, logout} =
     useAwsCognitoActions();
 
   return {
@@ -87,12 +85,12 @@ export const useAuthMethod = () => {
 /*
 
 //For Auth0
-import { useAuth0 } from '@auth0/auth0-react';
-import { useMemo } from 'react';
-import { getUserFromAuth0 } from '@crema/helpers/AuthHelper';
+import {useAuth0} from '@auth0/auth0-react';
+import {useMemo} from 'react';
+import {getUserFromAuth0} from '@crema/helpers/AuthHelper';
 
 export const useAuthUser = () => {
-  const { user, isAuthenticated, isLoading } = useAuth0();
+  const {user, isAuthenticated, isLoading} = useAuth0();
   return {
     isLoading,
     isAuthenticated,
@@ -101,7 +99,7 @@ export const useAuthUser = () => {
 };
 
 export const useAuthMethod = () => {
-  const { loginWithRedirect, logout } = useAuth0();
-  return { loginWithRedirect, logout };
+  const {loginWithRedirect, logout} = useAuth0();
+  return {loginWithRedirect, logout};
 };
 */

@@ -13,12 +13,12 @@ import {ReactComponent as Logo} from '../../../assets/user/reset-password.svg';
 import {useTheme} from '@mui/material';
 
 const validationSchema = yup.object({
-    oldPassword: yup
-        .string()
-        .required(<IntlMessages id='validation.enterOldPassword'/>),
-    newPassword: yup
-        .string()
-        .required(<IntlMessages id='validation.enterNewPassword'/>),
+  oldPassword: yup
+    .string()
+    .required(<IntlMessages id='validation.enterOldPassword' />),
+  newPassword: yup
+    .string()
+    .required(<IntlMessages id='validation.enterNewPassword' />),
   confirmPassword: yup
     .string()
     .required(<IntlMessages id='validation.reTypePassword' />),
