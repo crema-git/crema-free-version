@@ -143,5 +143,5 @@ const StatsDirCard = ({data}) => {
 export default StatsDirCard;
 
 StatsDirCard.propTypes = {
-  data: PropTypes.object,
+    data: PropTypes.object,
 };

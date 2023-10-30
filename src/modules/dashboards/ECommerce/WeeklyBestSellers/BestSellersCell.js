@@ -96,5 +96,5 @@ const BestSellersCell = ({bestSeller}) => {
 export default BestSellersCell;
 
 BestSellersCell.propTypes = {
-  bestSeller: PropTypes.object.isRequired,
+    bestSeller: PropTypes.object.isRequired,
 };

@@ -88,5 +88,5 @@ const StoriesItem = ({data}) => {
 export default StoriesItem;
 
 StoriesItem.propTypes = {
-  data: PropTypes.object,
+    data: PropTypes.object,
 };

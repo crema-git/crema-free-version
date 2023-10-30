@@ -10,10 +10,10 @@ import {alpha} from '@mui/material';
 import PropTypes from 'prop-types';
 
 const ClassItem = ({item}) => {
-    return (
-        <Box
-            key={item.id}
-            sx={{
+  return (
+    <Box
+      key={item.id}
+      sx={{
         px: 5,
         py: 2,
         display: 'flex',
@@ -104,5 +104,5 @@ const MyClass = ({classData}) => {
 export default MyClass;
 
 MyClass.propTypes = {
-  classData: PropTypes.array,
+    classData: PropTypes.array,
 };

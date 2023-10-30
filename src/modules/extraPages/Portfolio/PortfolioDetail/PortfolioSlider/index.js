@@ -73,5 +73,5 @@ const PortfolioSlider = ({slide}) => {
 export default PortfolioSlider;
 
 PortfolioSlider.propTypes = {
-  slide: PropTypes.array,
+    slide: PropTypes.array,
 };

@@ -187,10 +187,10 @@ const CardAttachments = (props) => {
 export default CardAttachments;
 
 CardAttachments.defaultProps = {
-  attachments: [],
+    attachments: [],
 };
 
 CardAttachments.propTypes = {
-  attachments: PropTypes.array,
-  onDeleteAttachment: PropTypes.func,
+    attachments: PropTypes.array,
+    onDeleteAttachment: PropTypes.func,
 };

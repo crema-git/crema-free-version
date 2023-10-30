@@ -120,5 +120,5 @@ const SocialForm = ({social}) => {
 export default SocialForm;
 
 SocialForm.propTypes = {
-  social: PropTypes.array,
+    social: PropTypes.array,
 };

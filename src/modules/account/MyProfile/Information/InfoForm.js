@@ -135,6 +135,6 @@ const InfoForm = ({values, setFieldValue}) => {
 
 export default InfoForm;
 InfoForm.propTypes = {
-  setFieldValue: PropTypes.func,
-  values: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+    setFieldValue: PropTypes.func,
+    values: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
 };

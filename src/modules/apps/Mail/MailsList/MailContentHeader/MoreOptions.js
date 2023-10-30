@@ -224,9 +224,9 @@ MoreOptions.defaultProps = {
 };
 
 MoreOptions.propTypes = {
-  checkedMails: PropTypes.array.isRequired,
-  mailList: PropTypes.array,
-  setCheckedMails: PropTypes.func,
-  setData: PropTypes.func,
-  path: PropTypes.any.isRequired,
+    checkedMails: PropTypes.array.isRequired,
+    mailList: PropTypes.array,
+    setCheckedMails: PropTypes.func,
+    setData: PropTypes.func,
+    path: PropTypes.any.isRequired,
 };

@@ -56,5 +56,5 @@ StatsGraph.defaultProps = {
 };
 
 StatsGraph.propTypes = {
-  data: PropTypes.object,
+    data: PropTypes.object,
 };

@@ -65,5 +65,5 @@ const AudienceChart = ({audienceData}) => {
 export default AudienceChart;
 
 AudienceChart.propTypes = {
-  audienceData: PropTypes.array,
+    audienceData: PropTypes.array,
 };

@@ -192,8 +192,8 @@ const AddComment = ({postId, wallData, setPostList}) => {
 export default AddComment;
 
 AddComment.propTypes = {
-  sendFileMessage: PropTypes.func,
-  setPostList: PropTypes.func,
-  postId: PropTypes.number,
-  wallData: PropTypes.object,
+    sendFileMessage: PropTypes.func,
+    setPostList: PropTypes.func,
+    postId: PropTypes.number,
+    wallData: PropTypes.object,
 };

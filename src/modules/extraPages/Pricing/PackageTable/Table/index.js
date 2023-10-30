@@ -274,10 +274,10 @@ const PricingTable = ({billingFormat, tableData}) => {
 export default PricingTable;
 
 PricingTable.defaultProps = {
-  tableData: [],
+    tableData: [],
 };
 
 PricingTable.propTypes = {
-  billingFormat: PropTypes.string,
-  tableData: PropTypes.array,
+    billingFormat: PropTypes.string,
+    tableData: PropTypes.array,
 };

@@ -59,5 +59,5 @@ const VisitsGraph = ({data}) => {
 export default VisitsGraph;
 
 VisitsGraph.propTypes = {
-  data: PropTypes.array,
+    data: PropTypes.array,
 };

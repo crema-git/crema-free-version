@@ -77,5 +77,5 @@ SocialMediaAdvertise.defaultProps = {
 };
 
 SocialMediaAdvertise.propTypes = {
-  socialMediaData: PropTypes.array,
+    socialMediaData: PropTypes.array,
 };

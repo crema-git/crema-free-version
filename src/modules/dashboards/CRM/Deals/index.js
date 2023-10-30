@@ -74,5 +74,5 @@ Deals.defaultProps = {
 };
 
 Deals.propTypes = {
-  dealsTableData: PropTypes.array,
+    dealsTableData: PropTypes.array,
 };

@@ -124,6 +124,6 @@ const AddNewList = (props) => {
 export default AddNewList;
 
 AddNewList.propTypes = {
-  onCancel: PropTypes.func,
-  onAdd: PropTypes.func,
+    onCancel: PropTypes.func,
+    onAdd: PropTypes.func,
 };

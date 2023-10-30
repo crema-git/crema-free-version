@@ -76,5 +76,5 @@ const MyCourses = ({courses}) => {
 export default MyCourses;
 
 MyCourses.propTypes = {
-  courses: PropTypes.object,
+    courses: PropTypes.object,
 };

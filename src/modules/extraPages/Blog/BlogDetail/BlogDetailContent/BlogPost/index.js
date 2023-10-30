@@ -82,5 +82,5 @@ const BlogPost = ({post}) => {
 export default BlogPost;
 
 BlogPost.propTypes = {
-  post: PropTypes.object,
+    post: PropTypes.object,
 };

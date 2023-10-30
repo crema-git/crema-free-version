@@ -177,6 +177,6 @@ const ForwardMail = ({onSubmitForwardedMail}) => {
 export default ForwardMail;
 
 ForwardMail.propTypes = {
-  onSubmitForwardedMail: PropTypes.func,
-  selectedMail: PropTypes.object.isRequired,
+    onSubmitForwardedMail: PropTypes.func,
+    selectedMail: PropTypes.object.isRequired,
 };

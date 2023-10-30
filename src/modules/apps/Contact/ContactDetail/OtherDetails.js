@@ -137,5 +137,5 @@ const OtherDetails = (props) => {
 export default OtherDetails;
 
 OtherDetails.propTypes = {
-  contact: PropTypes.object.isRequired,
+    contact: PropTypes.object.isRequired,
 };

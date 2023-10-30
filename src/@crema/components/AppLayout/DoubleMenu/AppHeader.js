@@ -162,7 +162,7 @@ const AppHeader = ({updateNavState, sidebarMenuState, toggleNavCollapsed}) => {
 export default AppHeader;
 
 AppHeader.propTypes = {
-  updateNavState: PropTypes.func,
-  toggleNavCollapsed: PropTypes.func,
-  sidebarMenuState: PropTypes.number,
+    updateNavState: PropTypes.func,
+    toggleNavCollapsed: PropTypes.func,
+    sidebarMenuState: PropTypes.number,
 };

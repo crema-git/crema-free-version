@@ -12,7 +12,7 @@ import {useSidebarActionsContext} from '@crema/context/AppContextProvider/Sideba
 import {
   anonymousStructure,
   authorizedStructure,
-  unAuthorizedStructure,
+  publicStructure,
 } from '../AppRoutes';
 import {useRoutes} from 'react-router-dom';
 import routesConfig from '../AppRoutes/routeConfig';
@@ -34,7 +34,7 @@ const AppLayout = () => {
     userRole: user?.role,
     anonymousStructure: anonymousStructure(initURL),
     authorizedStructure: authorizedStructure(loginUrl),
-    unAuthorizedStructure: unAuthorizedStructure(initURL),
+    publicStructure: publicStructure(initURL),
   });
 
   const routes = useRoutes(generatedRoutes);

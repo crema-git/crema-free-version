@@ -93,5 +93,5 @@ TaskList.defaultProps = {
 };
 
 TaskList.propTypes = {
-  todayTaskData: PropTypes.array,
+    todayTaskData: PropTypes.array,
 };

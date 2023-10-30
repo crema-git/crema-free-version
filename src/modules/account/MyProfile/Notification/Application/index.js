@@ -7,11 +7,11 @@ import Switch from '@mui/material/Switch';
 import PropTypes from 'prop-types';
 
 const Application = ({application}) => {
-    return (
-        <Box sx={{mb: {xs: 5, lg: 6}}}>
-            <Typography
-                component='h3'
-                sx={{
+  return (
+    <Box sx={{mb: {xs: 5, lg: 6}}}>
+      <Typography
+        component='h3'
+        sx={{
           fontSize: 16,
           fontWeight: Fonts.BOLD,
           mb: {xs: 3, lg: 4},

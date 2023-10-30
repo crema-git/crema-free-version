@@ -143,5 +143,5 @@ AppCard.propTypes = {
 };
 
 AppCard.defaultProps = {
-  footerPosition: 'left',
+    footerPosition: 'left',
 };

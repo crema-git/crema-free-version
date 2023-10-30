@@ -89,5 +89,5 @@ CityInfo.defaultProps = {
 };
 
 CityInfo.propTypes = {
-  cityData: PropTypes.array,
+    cityData: PropTypes.array,
 };

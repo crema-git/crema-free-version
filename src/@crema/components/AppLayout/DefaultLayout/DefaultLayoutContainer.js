@@ -94,5 +94,5 @@ const DefaultLayoutContainer = ({children, ...rest}) => {
 export default DefaultLayoutContainer;
 
 DefaultLayoutContainer.propTypes = {
-  children: PropsTypes.node,
+    children: PropsTypes.node,
 };

@@ -100,5 +100,5 @@ const MiniSidebarToggleWrapper = ({children, ...rest}) => {
 export default MiniSidebarToggleWrapper;
 
 MiniSidebarToggleWrapper.propTypes = {
-  children: PropsTypes.node,
+    children: PropsTypes.node,
 };

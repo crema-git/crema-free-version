@@ -110,5 +110,5 @@ const UserHeaderContainer = ({children, ...rest}) => {
 export default UserHeaderContainer;
 
 UserHeaderContainer.propTypes = {
-  children: PropsTypes.node,
+    children: PropsTypes.node,
 };

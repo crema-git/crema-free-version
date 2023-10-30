@@ -34,7 +34,7 @@ export const authorizedStructure = (loginUrl) => {
   };
 };
 
-export const unAuthorizedStructure = (initialUrl) => {
+export const publicStructure = (initialUrl) => {
   return {
     fallbackPath: initialUrl,
     routes: authRouteConfig,

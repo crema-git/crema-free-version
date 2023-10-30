@@ -73,5 +73,5 @@ const DateSelector = ({schedules}) => {
 export default DateSelector;
 
 DateSelector.propTypes = {
-  schedules: PropTypes.array,
+    schedules: PropTypes.array,
 };

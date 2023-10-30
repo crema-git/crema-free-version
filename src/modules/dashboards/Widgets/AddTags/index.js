@@ -77,5 +77,5 @@ AddTags.defaultProps = {
 };
 
 AddTags.propTypes = {
-  data: PropTypes.array,
+    data: PropTypes.array,
 };

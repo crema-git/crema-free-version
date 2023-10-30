@@ -119,6 +119,6 @@ const UserInfo = ({user, showStatus}) => {
 export default UserInfo;
 
 UserInfo.propTypes = {
-  user: PropTypes.object.isRequired,
-  showStatus: PropTypes.bool,
+    user: PropTypes.object.isRequired,
+    showStatus: PropTypes.bool,
 };

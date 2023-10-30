@@ -74,5 +74,5 @@ const NewListButton = (props) => {
 export default NewListButton;
 
 NewListButton.propTypes = {
-  onClick: PropTypes.func,
+    onClick: PropTypes.func,
 };

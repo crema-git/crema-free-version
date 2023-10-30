@@ -73,5 +73,5 @@ const BlogCommentItem = ({comment}) => {
 export default BlogCommentItem;
 
 BlogCommentItem.propTypes = {
-  comment: PropTypes.object,
+    comment: PropTypes.object,
 };

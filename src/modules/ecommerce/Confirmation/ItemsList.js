@@ -82,5 +82,5 @@ const ItemsList = ({cartItems}) => {
 export default ItemsList;
 
 ItemsList.propTypes = {
-  cartItems: PropTypes.array,
+    cartItems: PropTypes.array,
 };

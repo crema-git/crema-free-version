@@ -97,5 +97,5 @@ const Header = ({product}) => {
 export default Header;
 
 Header.propTypes = {
-  product: PropTypes.object,
+    product: PropTypes.object,
 };

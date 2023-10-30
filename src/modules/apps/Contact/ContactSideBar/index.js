@@ -15,6 +15,7 @@ import {Zoom} from '@mui/material';
 
 import {useContactContext} from '../../context/ContactContextProvider';
 import ContactListLabelItem from './LabelItem';
+
 const SideBarContent = () => {
   const {folderList, labelList} = useContactContext();
   const [isAddContact, onSetIsAddContact] = useState(false);

@@ -10,7 +10,7 @@ import {checkPermission} from './RouteHelper';
  * @param {string} structure.userRole - [Optional] in order to differentiate between admin and normal users
  * @param {object} [structure.anonymousStructure] - it's an object that has only [ routes ] array, [ these routes available for All personas ]
  * @param {object} [structure.authorizedStructure] - it's an object that has [ fallbackPath: {string}, routes: {array} ], fallbackPath: is used for redirect when a logged [in] user tried to access unAuthorized route, routes: only The Logged [in] Routes Available
- * @param {object} [structure.unAuthorizedStructure] - it's an object that has [ fallbackPath: {string}, routes: {array} ], fallbackPath: is used for redirect when a logged [out] user tried to access route that requires [Authorization] , routes: only The Logged [out] Routes Available
+ * @param {object} [structure.publicStructure] - it's an object that has [ fallbackPath: {string}, routes: {array} ], fallbackPath: is used for redirect when a logged [out] user tried to access route that requires [Authorization] , routes: only The Logged [out] Routes Available
  * @param {component} [structure.component fallbackComponent] - in order to redirect in all cases if the route doesn't match.
  * @param {unAuthorizedComponent} [structure.unAuthorizedComponent] - in order to show not permitted route.
  * @returns {Array} - [Array of routes]
@@ -21,7 +21,7 @@ const generateRoutes = (structure) => {
     isAuthenticated = false,
     anonymousStructure = {},
     authorizedStructure = {},
-    unAuthorizedStructure = {},
+    publicStructure = {},
     userRole = authRole.User,
   } = structure || {};
 
@@ -44,13 +44,9 @@ const generateRoutes = (structure) => {
     );
   }
 
-  if (unAuthorizedStructure) {
+  if (publicStructure) {
     dynamicRoutes.push(
-      ...routesGenerator(
-        isAuthenticated,
-        unAuthorizedStructure,
-        'unAuthorized',
-      ),
+      ...routesGenerator(isAuthenticated, publicStructure, 'public'),
     );
   }
   return dynamicRoutes;

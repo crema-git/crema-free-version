@@ -420,9 +420,9 @@ const AddInvoice = ({
 export default AddInvoice;
 
 AddInvoice.propTypes = {
-  selectedInv: PropTypes.object,
-  totalCount: PropTypes.number,
-  clientsList: PropTypes.array,
-  invoiceSettings: PropTypes.object,
-  onSave: PropTypes.func,
+    selectedInv: PropTypes.object,
+    totalCount: PropTypes.number,
+    clientsList: PropTypes.array,
+    invoiceSettings: PropTypes.object,
+    onSave: PropTypes.func,
 };

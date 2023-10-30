@@ -60,5 +60,5 @@ Categories.defaultProps = {
 };
 
 Categories.propTypes = {
-  data: PropTypes.array,
+    data: PropTypes.array,
 };

@@ -8,7 +8,10 @@ import CheckBox from './CheckBox';
 import ContactCheckedActions from './ContactCheckedActions';
 import AppsPagination from '@crema/components/AppsPagination';
 
-import {useContactActionsContext, useContactContext,} from '../../../context/ContactContextProvider';
+import {
+  useContactActionsContext,
+  useContactContext,
+} from '../../../context/ContactContextProvider';
 import ViewSelectButtons from './ViewSelectButtons';
 
 const ContactHeader = (props) => {

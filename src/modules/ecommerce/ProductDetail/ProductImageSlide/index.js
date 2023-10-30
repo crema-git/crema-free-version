@@ -159,5 +159,5 @@ const ProductImageSlide = ({product}) => {
 export default ProductImageSlide;
 
 ProductImageSlide.propTypes = {
-  product: PropTypes.object,
+    product: PropTypes.object,
 };

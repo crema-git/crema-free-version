@@ -64,5 +64,5 @@ const HospitalStatics = ({data}) => {
 export default HospitalStatics;
 
 HospitalStatics.propTypes = {
-  data: PropTypes.object,
+    data: PropTypes.object,
 };

@@ -9,6 +9,7 @@ import Box from '@mui/material/Box';
 import AppSearchBar from '@crema/components/AppSearchBar';
 import {useGetDataApi} from '@crema/hooks/APIHooks';
 import CustomerTable from './CustomerTable';
+
 const Customers = () => {
   const {messages} = useIntl();
   const [

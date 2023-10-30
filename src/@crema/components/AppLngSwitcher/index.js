@@ -153,6 +153,6 @@ AppLngSwitcher.defaultProps = {
 };
 
 AppLngSwitcher.propTypes = {
-  iconOnly: PropsTypes.bool,
-  tooltipPosition: PropsTypes.string,
+    iconOnly: PropsTypes.bool,
+    tooltipPosition: PropsTypes.string,
 };

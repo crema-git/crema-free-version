@@ -77,5 +77,5 @@ const CommentItem = ({item}) => {
 export default CommentItem;
 
 CommentItem.propTypes = {
-  item: PropTypes.object,
+    item: PropTypes.object,
 };

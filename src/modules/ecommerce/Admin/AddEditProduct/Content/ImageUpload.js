@@ -8,6 +8,7 @@ import {
   PreviewThumb,
   UploadModern,
 } from '../../../../thirdParty/reactDropzone/components';
+
 const ImgUpload = ({uploadedFiles, setUploadedFiles}) => {
   const dropzone = useDropzone({
     accept: {

@@ -17,6 +17,7 @@ import ChangePassword from './ChangePassword';
 import Information from './Information';
 import AccountTabsWrapper from './AccountTabsWrapper';
 import PersonalInfo from './PersonalInfo';
+
 function a11yProps(index) {
   return {
     id: `simple-tab-${index}`,

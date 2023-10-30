@@ -8,9 +8,9 @@ import SimpleBackdrop from './SimpleBackdrop';
 import SimpleBackdropSource from '!raw-loader!./SimpleBackdrop';
 
 const Backdrop = () => {
-    return (
-        <>
-            <AppComponentHeader
+  return (
+    <>
+      <AppComponentHeader
         title='Backdrop'
         description='The backdrop component is used to provide emphasis on a particular element or parts of it.'
         refUrl='https://mui.com/components/backdrop/'

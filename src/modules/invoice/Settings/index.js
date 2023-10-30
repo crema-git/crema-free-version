@@ -7,6 +7,7 @@ import Accounting from './Accounting';
 import AppCard from '@crema/components/AppCard';
 import {putDataApi, useGetDataApi} from '@crema/hooks/APIHooks';
 import {useInfoViewActionsContext} from '@crema/context/AppContextProvider/InfoViewContextProvider';
+
 const InvoiceSettingsPage = () => {
   const [{apiData}, {reCallAPI}] = useGetDataApi(
     '/api/invoice/settings',

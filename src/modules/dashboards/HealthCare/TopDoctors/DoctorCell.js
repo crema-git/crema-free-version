@@ -75,5 +75,5 @@ const DoctorCell = ({doctor}) => {
 export default DoctorCell;
 
 DoctorCell.propTypes = {
-  doctor: PropTypes.object.isRequired,
+    doctor: PropTypes.object.isRequired,
 };

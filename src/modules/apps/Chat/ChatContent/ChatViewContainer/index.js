@@ -18,14 +18,14 @@ import SendMessage from './SendMessage';
 import MessagesList from './MessageList';
 
 const ScrollbarWrapper = styled(SimpleBarReact)(() => {
-    return {
-        display: 'flex',
-        flexDirection: 'column',
-        height: `calc(100% - 132px)`,
-    };
+  return {
+    display: 'flex',
+    flexDirection: 'column',
+    height: `calc(100% - 132px)`,
+  };
 });
 const ScrollChatNoMainWrapper = styled('div')(() => {
-    return {
+  return {
     flex: 1,
     display: 'flex',
     flexDirection: 'column',
@@ -35,10 +35,10 @@ const ScrollChatNoMainWrapper = styled('div')(() => {
 });
 
 MessagesList.propTypes = {
-    onClickEditMessage: PropTypes.func,
-    userMessages: PropTypes.any,
-    deleteMessage: PropTypes.func,
-    authUser: PropTypes.func,
+  onClickEditMessage: PropTypes.func,
+  userMessages: PropTypes.any,
+  deleteMessage: PropTypes.func,
+  authUser: PropTypes.func,
 };
 const ChatViewContainer = ({selectedUser, setSelectedUser}) => {
   const {setConnectionData} = useChatActionsContext();
@@ -232,7 +232,7 @@ export default ChatViewContainer;
 ChatViewContainer.defaultProps = {};
 
 ChatViewContainer.propTypes = {
-  selectedUser: PropTypes.object.isRequired,
-  setConnectionData: PropTypes.func,
-  setSelectedUser: PropTypes.func,
+    selectedUser: PropTypes.object.isRequired,
+    setConnectionData: PropTypes.func,
+    setSelectedUser: PropTypes.func,
 };

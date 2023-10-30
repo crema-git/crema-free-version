@@ -62,5 +62,5 @@ const InfoWidget = ({data}) => {
 export default InfoWidget;
 
 InfoWidget.propTypes = {
-  data: PropTypes.object,
+    data: PropTypes.object,
 };

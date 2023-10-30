@@ -128,5 +128,5 @@ const ProjectDescription = ({projectDescription}) => {
 export default ProjectDescription;
 
 ProjectDescription.propTypes = {
-  projectDescription: PropTypes.object,
+    projectDescription: PropTypes.object,
 };

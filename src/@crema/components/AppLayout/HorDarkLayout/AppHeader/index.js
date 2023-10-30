@@ -255,6 +255,6 @@ const AppHeader = ({toggleNavCollapsed, routesConfig}) => {
 };
 export default AppHeader;
 AppHeader.propTypes = {
-  toggleNavCollapsed: PropTypes.func,
-  routesConfig: PropTypes.array,
+    toggleNavCollapsed: PropTypes.func,
+    routesConfig: PropTypes.array,
 };

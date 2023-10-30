@@ -107,5 +107,5 @@ const PackageItem = ({pricing}) => {
 export default PackageItem;
 
 PackageItem.propTypes = {
-  pricing: PropTypes.object,
+    pricing: PropTypes.object,
 };

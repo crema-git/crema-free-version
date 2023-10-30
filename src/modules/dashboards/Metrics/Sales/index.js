@@ -57,5 +57,5 @@ Sales.defaultProps = {
 };
 
 Sales.propTypes = {
-  data: PropTypes.object,
+    data: PropTypes.object,
 };

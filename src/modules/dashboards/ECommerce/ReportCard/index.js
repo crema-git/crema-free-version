@@ -100,5 +100,5 @@ const ReportCard = ({data}) => {
 export default ReportCard;
 
 ReportCard.propTypes = {
-  data: PropTypes.object,
+    data: PropTypes.object,
 };

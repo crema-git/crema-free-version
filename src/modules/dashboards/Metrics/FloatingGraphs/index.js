@@ -133,6 +133,6 @@ FloatingGraphs.defaultProps = {
 };
 
 FloatingGraphs.propTypes = {
-  data: PropTypes.object,
-  title: PropTypes.string,
+    data: PropTypes.object,
+    title: PropTypes.string,
 };

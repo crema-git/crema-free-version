@@ -102,5 +102,5 @@ const CustomerItem = ({item}) => {
 export default CustomerItem;
 
 CustomerItem.propTypes = {
-  item: PropTypes.object.isRequired,
+    item: PropTypes.object.isRequired,
 };

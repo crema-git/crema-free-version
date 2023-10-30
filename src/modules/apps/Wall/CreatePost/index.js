@@ -189,6 +189,6 @@ const CreatePost = ({wallData, setPostList}) => {
 
 export default CreatePost;
 CreatePost.propTypes = {
-  wallData: PropTypes.object,
-  setPostList: PropTypes.func,
+    wallData: PropTypes.object,
+    setPostList: PropTypes.func,
 };

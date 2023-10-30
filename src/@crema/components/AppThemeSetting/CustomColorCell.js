@@ -117,6 +117,6 @@ const CustomColorCell = ({themeColorSet, updateThemeColors}) => {
 export default CustomColorCell;
 
 CustomColorCell.propTypes = {
-  themeColorSet: PropTypes.object,
-  updateThemeColors: PropTypes.func,
+    themeColorSet: PropTypes.object,
+    updateThemeColors: PropTypes.func,
 };

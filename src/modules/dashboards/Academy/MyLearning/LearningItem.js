@@ -94,5 +94,5 @@ const LearningItem = ({course}) => {
 export default LearningItem;
 
 LearningItem.propTypes = {
-  course: PropTypes.object,
+    course: PropTypes.object,
 };

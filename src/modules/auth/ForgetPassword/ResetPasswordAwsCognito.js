@@ -16,9 +16,9 @@ import AuthWrapper from '../AuthWrapper';
 import AppLogo from '@crema/components/AppLayout/components/AppLogo';
 
 const validationSchema = yup.object({
-    newPassword: yup
-        .string()
-        .required(<IntlMessages id='validation.enterNewPassword'/>),
+  newPassword: yup
+    .string()
+    .required(<IntlMessages id='validation.enterNewPassword' />),
   confirmPassword: yup
     .string()
     .required(<IntlMessages id='validation.reTypePassword' />),
@@ -165,5 +165,5 @@ const ResetPasswordAwsCognito = () => {
 export default ResetPasswordAwsCognito;
 
 ResetPasswordAwsCognito.propTypes = {
-  location: PropTypes.object,
+    location: PropTypes.object,
 };

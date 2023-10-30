@@ -126,5 +126,5 @@ export default ActiveVisitors;
 ActiveVisitors.defaultProps = {};
 
 ActiveVisitors.propTypes = {
-  data: PropTypes.object,
+    data: PropTypes.object,
 };

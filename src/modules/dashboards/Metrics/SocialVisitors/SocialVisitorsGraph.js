@@ -67,5 +67,5 @@ SocialVisitorsGraph.defaultProps = {
 };
 
 SocialVisitorsGraph.propTypes = {
-  data: PropTypes.array,
+    data: PropTypes.array,
 };

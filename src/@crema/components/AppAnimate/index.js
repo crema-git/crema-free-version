@@ -4,18 +4,18 @@ import React, {memo} from 'react';
 // import 'velocity-animate/velocity.ui';
 
 const AppAnimate = ({children}) => {
-  // const children = React.cloneElement(props.children, {
-  //   style: {
-  //     ...props.children.style,
-  //     visibility: 'hidden',
-  //   },
-  // });
-  //  return <VelocityComponent {...props}>{children}</VelocityComponent>;
-  return <>{children}</>;
+    // const children = React.cloneElement(props.children, {
+    //   style: {
+    //     ...props.children.style,
+    //     visibility: 'hidden',
+    //   },
+    // });
+    //  return <VelocityComponent {...props}>{children}</VelocityComponent>;
+    return <>{children}</>;
 };
 
 AppAnimate.propTypes = {
-  children: PropTypes.element.isRequired,
+    children: PropTypes.element.isRequired,
 };
 
 // AppAnimate.defaultProps = {

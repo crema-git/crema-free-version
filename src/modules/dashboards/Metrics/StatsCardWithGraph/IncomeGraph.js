@@ -57,5 +57,5 @@ IncomeGraph.defaultProps = {
 };
 
 IncomeGraph.propTypes = {
-  data: PropTypes.array,
+    data: PropTypes.array,
 };

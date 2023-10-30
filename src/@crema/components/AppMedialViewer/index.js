@@ -119,7 +119,7 @@ const AppMedialViewer = ({index, medias, onClose}) => {
 
 export default AppMedialViewer;
 AppMedialViewer.propTypes = {
-  index: PropTypes.number,
-  medias: PropTypes.array,
-  onClose: PropTypes.func,
+    index: PropTypes.number,
+    medias: PropTypes.array,
+    onClose: PropTypes.func,
 };

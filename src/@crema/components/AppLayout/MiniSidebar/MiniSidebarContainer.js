@@ -119,5 +119,5 @@ const MiniSidebarContainer = ({children, ...rest}) => {
 export default MiniSidebarContainer;
 
 MiniSidebarContainer.propTypes = {
-  children: PropsTypes.node,
+    children: PropsTypes.node,
 };

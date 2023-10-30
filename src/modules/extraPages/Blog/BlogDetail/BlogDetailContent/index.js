@@ -79,5 +79,5 @@ const BlogDetailContent = ({blogDetailContent}) => {
 export default BlogDetailContent;
 
 BlogDetailContent.propTypes = {
-  blogDetailContent: PropTypes.object,
+    blogDetailContent: PropTypes.object,
 };

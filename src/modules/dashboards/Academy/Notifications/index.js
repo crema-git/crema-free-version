@@ -5,6 +5,7 @@ import Box from '@mui/material/Box';
 import {Fonts} from '@crema/constants/AppEnums';
 import {useIntl} from 'react-intl';
 import PropTypes from 'prop-types';
+
 const NotificationItem = ({notification}) => {
   return (
     <Box
@@ -94,5 +95,5 @@ const Notifications = ({notifications}) => {
 export default Notifications;
 
 Notifications.propTypes = {
-  notifications: PropTypes.array,
+    notifications: PropTypes.array,
 };

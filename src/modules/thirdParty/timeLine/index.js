@@ -11,12 +11,12 @@ import Grid from '@mui/material/Grid';
 import AppComponentCard from '@crema/components/AppComponentCard';
 
 const Timeline = () => {
-    return (
-        <>
-            <AppComponentHeader
-                title='Timeline'
-                description='A React component for playing a variety of URLs, including file paths, YouTube, Facebook, Twitch, SoundCloud, Streamable, Vimeo, Wistia, Mixcloud, and DailyMotion.'
-                refUrl='https://cookpete.com/react-player/'
+  return (
+    <>
+      <AppComponentHeader
+        title='Timeline'
+        description='A React component for playing a variety of URLs, including file paths, YouTube, Facebook, Twitch, SoundCloud, Streamable, Vimeo, Wistia, Mixcloud, and DailyMotion.'
+        refUrl='https://cookpete.com/react-player/'
       />
 
       <AppGridContainer>

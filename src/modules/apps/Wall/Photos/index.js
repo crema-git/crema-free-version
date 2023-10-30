@@ -68,5 +68,5 @@ const Photos = ({photos}) => {
 export default Photos;
 
 Photos.propTypes = {
-  photos: PropTypes.array.isRequired,
+    photos: PropTypes.array.isRequired,
 };

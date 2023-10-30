@@ -126,6 +126,6 @@ const PackageCard = ({billingFormat, pricing}) => {
 export default PackageCard;
 
 PackageCard.propTypes = {
-  billingFormat: PropTypes.string,
-  pricing: PropTypes.object,
+    billingFormat: PropTypes.string,
+    pricing: PropTypes.object,
 };

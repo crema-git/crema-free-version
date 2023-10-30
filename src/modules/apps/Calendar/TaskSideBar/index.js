@@ -15,12 +15,15 @@ import {styled} from '@mui/material/styles';
 import TaskLabelItem from './LabelItem';
 import FilterItem from './FilterItem';
 
-import {useCalendarActionsContext, useCalendarContext,} from '../../context/CalendarContextProvider';
+import {
+  useCalendarActionsContext,
+  useCalendarContext,
+} from '../../context/CalendarContextProvider';
 import AddNewTask from '../AddNewTask';
 
 const ListWrapper = styled(List)(({theme}) => ({
-    marginBottom: 8,
-    [theme.breakpoints.up('xl')]: {
+  marginBottom: 8,
+  [theme.breakpoints.up('xl')]: {
     marginBottom: 20,
   },
 }));

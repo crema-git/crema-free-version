@@ -45,6 +45,7 @@ class CustomizedDot extends Component {
     );
   }
 }
+
 CustomizedDot.propTypes = {
   cx: propTypess.number,
   cy: propTypess.number,

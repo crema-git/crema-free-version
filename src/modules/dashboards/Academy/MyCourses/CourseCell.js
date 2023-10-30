@@ -185,5 +185,5 @@ const CourseCell = ({course}) => {
 export default CourseCell;
 
 CourseCell.propTypes = {
-  course: PropTypes.object,
+    course: PropTypes.object,
 };

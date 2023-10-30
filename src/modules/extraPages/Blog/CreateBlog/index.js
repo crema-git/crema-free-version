@@ -140,5 +140,5 @@ export const CreateBlog = ({selectedBlog}) => {
 export default CreateBlog;
 
 CreateBlog.propTypes = {
-  selectedBlog: PropTypes.object,
+    selectedBlog: PropTypes.object,
 };

@@ -154,6 +154,6 @@ const FilterItem = ({filterData, setFilterData}) => {
 export default FilterItem;
 
 FilterItem.propTypes = {
-  filterData: PropTypes.object.isRequired,
-  setFilterData: PropTypes.func.isRequired,
+    filterData: PropTypes.object.isRequired,
+    setFilterData: PropTypes.func.isRequired,
 };

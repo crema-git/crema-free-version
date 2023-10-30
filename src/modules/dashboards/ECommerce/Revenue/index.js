@@ -76,5 +76,5 @@ const Revenue = ({revenueData}) => {
 export default Revenue;
 
 Revenue.propTypes = {
-  revenueData: PropTypes.array,
+    revenueData: PropTypes.array,
 };

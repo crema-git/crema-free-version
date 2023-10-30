@@ -98,5 +98,5 @@ const ConfirmSignupAwsCognito = () => {
 export default ConfirmSignupAwsCognito;
 
 ConfirmSignupAwsCognito.propTypes = {
-  location: PropTypes.object,
+    location: PropTypes.object,
 };

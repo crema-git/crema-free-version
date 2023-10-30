@@ -60,5 +60,5 @@ const FollowItem = ({item}) => {
 export default FollowItem;
 
 FollowItem.propTypes = {
-  item: PropTypes.object,
+    item: PropTypes.object,
 };

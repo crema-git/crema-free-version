@@ -239,5 +239,5 @@ const TicketsSupport = ({tickets}) => {
 export default TicketsSupport;
 
 TicketsSupport.propTypes = {
-  tickets: PropTypes.array,
+    tickets: PropTypes.array,
 };

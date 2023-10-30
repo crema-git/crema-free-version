@@ -281,5 +281,5 @@ const ListItem = (props) => {
 export default ListItem;
 
 ListItem.propTypes = {
-  item: PropTypes.object.isRequired,
+    item: PropTypes.object.isRequired,
 };

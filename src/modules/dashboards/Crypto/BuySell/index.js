@@ -104,5 +104,5 @@ const BuySell = ({buySell}) => {
 export default BuySell;
 
 BuySell.propTypes = {
-  buySell: PropTypes.object,
+    buySell: PropTypes.object,
 };

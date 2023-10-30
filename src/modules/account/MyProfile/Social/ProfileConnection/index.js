@@ -7,11 +7,11 @@ import PropTypes from 'prop-types';
 import AppGridContainer from '@crema/components/AppGridContainer';
 
 const ProfileConnection = ({profileConnection}) => {
-    return (
-        <Box sx={{position: 'relative'}}>
-            <Typography
-                component='h3'
-                sx={{
+  return (
+    <Box sx={{position: 'relative'}}>
+      <Typography
+        component='h3'
+        sx={{
           fontSize: 16,
           fontWeight: Fonts.BOLD,
           mb: {xs: 3, lg: 5},

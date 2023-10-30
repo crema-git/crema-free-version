@@ -18,13 +18,13 @@ import IntlMessages from '@crema/helpers/IntlMessages';
 import PropTypes from 'prop-types';
 
 const ListItem = (props) => {
-    const {user} = props;
-    return (
-        <Box sx={{mb: 8}} className='item-hover'>
-            <Card>
-                <Box
-                    sx={{
-                        display: 'flex',
+  const {user} = props;
+  return (
+    <Box sx={{mb: 8}} className='item-hover'>
+      <Card>
+        <Box
+          sx={{
+            display: 'flex',
             flexDirection: {xs: 'column', sm: 'row'},
           }}
         >
@@ -310,5 +310,5 @@ const ListItem = (props) => {
 export default ListItem;
 
 ListItem.propTypes = {
-  user: PropTypes.object.isRequired,
+    user: PropTypes.object.isRequired,
 };

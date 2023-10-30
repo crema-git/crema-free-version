@@ -56,5 +56,5 @@ CoinsInfo.defaultProps = {
 };
 
 CoinsInfo.propTypes = {
-  coins: PropTypes.array,
+    coins: PropTypes.array,
 };

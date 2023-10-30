@@ -70,5 +70,5 @@ BtcVolumeCurrency.defaultProps = {
 };
 
 BtcVolumeCurrency.propTypes = {
-  data: PropTypes.array,
+    data: PropTypes.array,
 };

@@ -80,5 +80,5 @@ export const ContactContextProvider = ({children}) => {
 export default ContactContextProvider;
 
 ContactContextProvider.propTypes = {
-  children: PropTypes.node.isRequired,
+    children: PropTypes.node.isRequired,
 };

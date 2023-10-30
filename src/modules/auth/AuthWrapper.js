@@ -7,14 +7,14 @@ import {Fonts} from '@crema/constants/AppEnums';
 import AppLogo from '@crema/components/AppLayout/components/AppLogo';
 
 const AuthWrapper = ({children}) => {
-    return (
-        <Box
-            sx={{
-                flex: 1,
-                display: 'flex',
-                flexDirection: 'column',
-                justifyContent: 'center',
-                alignItems: 'center',
+  return (
+    <Box
+      sx={{
+        flex: 1,
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
       }}
     >
       <Card
@@ -94,5 +94,5 @@ const AuthWrapper = ({children}) => {
 export default AuthWrapper;
 
 AuthWrapper.propTypes = {
-  children: PropTypes.node,
+    children: PropTypes.node,
 };

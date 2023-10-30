@@ -360,10 +360,10 @@ const AddContactForm = (props) => {
 export default AddContactForm;
 
 AddContactForm.propTypes = {
-  values: PropTypes.object.isRequired,
-  userImage: PropTypes.oneOfType([PropTypes.string, PropTypes.object])
-    .isRequired,
-  setUserImage: PropTypes.func,
-  setFieldValue: PropTypes.func,
-  handleAddContactClose: PropTypes.func,
+    values: PropTypes.object.isRequired,
+    userImage: PropTypes.oneOfType([PropTypes.string, PropTypes.object])
+        .isRequired,
+    setUserImage: PropTypes.func,
+    setFieldValue: PropTypes.func,
+    handleAddContactClose: PropTypes.func,
 };

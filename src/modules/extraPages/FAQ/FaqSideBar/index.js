@@ -101,6 +101,6 @@ const FaqSideBar = ({onGetFaqData, selectionId}) => {
 export default FaqSideBar;
 
 FaqSideBar.propTypes = {
-  selectionId: PropTypes.number,
-  onGetFaqData: PropTypes.func,
+    selectionId: PropTypes.number,
+    onGetFaqData: PropTypes.func,
 };

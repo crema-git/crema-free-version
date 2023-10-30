@@ -147,5 +147,5 @@ const CourseDetail = ({course}) => {
 export default CourseDetail;
 
 CourseDetail.propTypes = {
-  course: PropTypes.object,
+    course: PropTypes.object,
 };

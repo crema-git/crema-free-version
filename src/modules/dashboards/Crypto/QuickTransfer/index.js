@@ -123,5 +123,5 @@ const QuickTransfer = ({quickTransfer}) => {
 export default QuickTransfer;
 
 QuickTransfer.propTypes = {
-  quickTransfer: PropTypes.object.isRequired,
+    quickTransfer: PropTypes.object.isRequired,
 };

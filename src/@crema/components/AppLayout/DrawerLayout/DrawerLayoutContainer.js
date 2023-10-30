@@ -79,5 +79,5 @@ const DrawerLayoutContainer = ({children, ...rest}) => {
 export default DrawerLayoutContainer;
 
 DrawerLayoutContainer.propTypes = {
-  children: PropsTypes.node,
+    children: PropsTypes.node,
 };

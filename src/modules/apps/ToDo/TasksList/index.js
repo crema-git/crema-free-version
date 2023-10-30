@@ -11,7 +11,10 @@ import AppList from '@crema/components/AppList';
 import {putDataApi} from '@crema/hooks/APIHooks';
 import {useInfoViewActionsContext} from '@crema/context/AppContextProvider/InfoViewContextProvider';
 
-import {useTodoActionsContext, useTodoContext,} from '../../context/TodoContextProvider';
+import {
+  useTodoActionsContext,
+  useTodoContext,
+} from '../../context/TodoContextProvider';
 import AddNewTask from '../AddNewTask';
 import TaskListItem from './TaskListItem';
 import TaskListItemMobile from './TaskListItemMobile';

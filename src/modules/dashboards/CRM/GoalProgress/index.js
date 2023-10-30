@@ -83,5 +83,5 @@ GoalProgress.defaultProps = {
 };
 
 GoalProgress.propTypes = {
-  progressGraphData: PropTypes.array,
+    progressGraphData: PropTypes.array,
 };

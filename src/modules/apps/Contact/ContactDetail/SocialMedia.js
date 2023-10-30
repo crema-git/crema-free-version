@@ -90,5 +90,5 @@ const SocialMedia = (props) => {
 export default SocialMedia;
 
 SocialMedia.propTypes = {
-  contact: PropTypes.object.isRequired,
+    contact: PropTypes.object.isRequired,
 };

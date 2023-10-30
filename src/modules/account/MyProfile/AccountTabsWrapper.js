@@ -74,5 +74,5 @@ const AccountTabsWrapper = ({children}) => {
 export default AccountTabsWrapper;
 
 AccountTabsWrapper.propTypes = {
-  children: PropTypes.node,
+    children: PropTypes.node,
 };

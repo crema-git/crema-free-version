@@ -140,6 +140,6 @@ const BlogSidebar = ({selectedTags, setSelectedTags}) => {
 export default BlogSidebar;
 
 BlogSidebar.propTypes = {
-  selectedTags: PropTypes.array,
-  setSelectedTags: PropTypes.func,
+    selectedTags: PropTypes.array,
+    setSelectedTags: PropTypes.func,
 };

@@ -152,5 +152,5 @@ const PortfolioTabs = ({portfolio}) => {
 export default PortfolioTabs;
 
 PortfolioTabs.propTypes = {
-  portfolio: PropTypes.object,
+    portfolio: PropTypes.object,
 };

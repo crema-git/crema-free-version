@@ -23,14 +23,14 @@ import CardCheckedList from './CardCheckedList';
 import CardComments from './CardComments';
 
 const AddCardForm = (props) => {
-    const {
-        values,
-        setFieldValue,
-        checkedList,
-        setCheckedList,
-        comments,
-        setComments,
-        authUser,
+  const {
+    values,
+    setFieldValue,
+    checkedList,
+    setCheckedList,
+    comments,
+    setComments,
+    authUser,
     attachments,
     setAttachments,
     selectedLabels,

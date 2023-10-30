@@ -27,15 +27,15 @@ import TodoDatePicker from './DatePicker';
 import CommentsLists from './CommentsList';
 
 const TaskDetailBody = (props) => {
-    const {selectedTask, onUpdateSelectedTask} = props;
-    const infoViewActionsContext = useInfoViewActionsContext();
+  const {selectedTask, onUpdateSelectedTask} = props;
+  const infoViewActionsContext = useInfoViewActionsContext();
 
-    const {user} = useAuthUser();
-    const {staffList} = useCalendarContext();
+  const {user} = useAuthUser();
+  const {staffList} = useCalendarContext();
 
-    const [isEdit, setEdit] = useState(false);
+  const [isEdit, setEdit] = useState(false);
 
-    const [content, setContent] = useState(selectedTask.content);
+  const [content, setContent] = useState(selectedTask.content);
 
   const [comment, setComment] = useState('');
 
@@ -330,6 +330,6 @@ const TaskDetailBody = (props) => {
 export default TaskDetailBody;
 
 TaskDetailBody.propTypes = {
-  selectedTask: PropTypes.object.isRequired,
-  onUpdateSelectedTask: PropTypes.func,
+    selectedTask: PropTypes.object.isRequired,
+    onUpdateSelectedTask: PropTypes.func,
 };

@@ -131,5 +131,5 @@ const TrafficSource = ({trafficData}) => {
 export default TrafficSource;
 
 TrafficSource.propTypes = {
-  trafficData: PropTypes.array,
+    trafficData: PropTypes.array,
 };

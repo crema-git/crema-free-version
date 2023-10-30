@@ -66,5 +66,5 @@ const ProductView = ({product}) => {
 export default ProductView;
 
 ProductView.propTypes = {
-  product: PropTypes.object,
+    product: PropTypes.object,
 };

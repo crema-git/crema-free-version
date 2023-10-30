@@ -74,5 +74,5 @@ const HorHeaderFixedContainer = ({children, ...rest}) => {
 export default HorHeaderFixedContainer;
 
 HorHeaderFixedContainer.propTypes = {
-  children: PropsTypes.node,
+    children: PropsTypes.node,
 };

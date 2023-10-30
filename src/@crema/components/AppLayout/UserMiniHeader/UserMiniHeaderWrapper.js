@@ -85,5 +85,5 @@ const UserMiniHeaderWrapper = ({children, ...rest}) => {
 export default UserMiniHeaderWrapper;
 
 UserMiniHeaderWrapper.propTypes = {
-  children: PropsTypes.node,
+    children: PropsTypes.node,
 };

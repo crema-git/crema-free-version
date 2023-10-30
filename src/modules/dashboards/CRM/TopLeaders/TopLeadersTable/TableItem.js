@@ -94,5 +94,5 @@ const TableItem = ({data}) => {
 export default TableItem;
 
 TableItem.propTypes = {
-  data: PropTypes.object.isRequired,
+    data: PropTypes.object.isRequired,
 };

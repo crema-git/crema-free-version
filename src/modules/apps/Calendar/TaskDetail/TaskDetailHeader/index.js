@@ -86,7 +86,7 @@ const TaskDetailHeader = (props) => {
           display: {xs: 'none', sm: 'block'},
         }}
       >
-        <AppsStarredIcon item={selectedTask} onChange={onChangeStarred}/>
+        <AppsStarredIcon item={selectedTask} onChange={onChangeStarred} />
       </Box>
 
       <AppsDeleteIcon

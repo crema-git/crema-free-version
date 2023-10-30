@@ -24,6 +24,7 @@ const useStyles = makeStyles(
 );
 
 let promiseTimeout;
+
 function validateName(username) {
   const existingUsers = rows.map((row) => row.name.toLowerCase());
 

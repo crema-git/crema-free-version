@@ -317,10 +317,10 @@ const ComposeMail = (props) => {
 export default ComposeMail;
 
 ComposeMail.defaultProps = {
-  connection: null,
+    connection: null,
 };
 
 ComposeMail.propTypes = {
-  isComposeMail: PropTypes.bool.isRequired,
-  onCloseComposeMail: PropTypes.func.isRequired,
+    isComposeMail: PropTypes.bool.isRequired,
+    onCloseComposeMail: PropTypes.func.isRequired,
 };

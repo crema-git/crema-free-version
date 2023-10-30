@@ -117,5 +117,5 @@ const MiniSidebarToggleContainer = ({children, ...rest}) => {
 export default MiniSidebarToggleContainer;
 
 MiniSidebarToggleContainer.propTypes = {
-  children: PropsTypes.node,
+    children: PropsTypes.node,
 };

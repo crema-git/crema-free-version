@@ -73,5 +73,5 @@ const Browser = ({browserData}) => {
 export default Browser;
 
 Browser.propTypes = {
-  browserData: PropTypes.array,
+    browserData: PropTypes.array,
 };

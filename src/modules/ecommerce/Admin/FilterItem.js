@@ -1,7 +1,15 @@
 import AppCard from '@crema/components/AppCard';
 import React from 'react';
 import FormControl from '@mui/material/FormControl';
-import {Box, Grid, InputLabel, MenuItem, Select, Switch, TextField,} from '@mui/material';
+import {
+  Box,
+  Grid,
+  InputLabel,
+  MenuItem,
+  Select,
+  Switch,
+  TextField,
+} from '@mui/material';
 import AppGridContainer from '@crema/components/AppGridContainer';
 import {DatePicker} from '@mui/x-date-pickers';
 import PropTypes from 'prop-types';
@@ -146,6 +154,6 @@ const FilterItem = ({filterData, setFilterData}) => {
 export default FilterItem;
 
 FilterItem.propTypes = {
-  filterData: PropTypes.object.isRequired,
-  setFilterData: PropTypes.func.isRequired,
+    filterData: PropTypes.object.isRequired,
+    setFilterData: PropTypes.func.isRequired,
 };

@@ -132,5 +132,5 @@ const ProductCell = ({data}) => {
 export default ProductCell;
 
 ProductCell.propTypes = {
-  data: PropTypes.object,
+    data: PropTypes.object,
 };

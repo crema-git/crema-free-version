@@ -54,10 +54,10 @@ const CustomToolbar = (props) => {
   }
 
   /*
-  const goToDayView = () => {
-    props.onView('day');
-    setViewState('day');
-  };*/
+    const goToDayView = () => {
+      props.onView('day');
+      setViewState('day');
+    };*/
 
   const goToAgenda = () => {
     props.onView('agenda');

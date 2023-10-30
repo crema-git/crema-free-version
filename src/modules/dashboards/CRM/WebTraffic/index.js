@@ -92,5 +92,5 @@ WebTraffic.defaultProps = {
 };
 
 WebTraffic.propTypes = {
-  websiteTrafficData: PropTypes.array,
+    websiteTrafficData: PropTypes.array,
 };

@@ -134,5 +134,5 @@ const PackageCard = ({pricing}) => {
 export default PackageCard;
 
 PackageCard.propTypes = {
-  pricing: PropTypes.object,
+    pricing: PropTypes.object,
 };

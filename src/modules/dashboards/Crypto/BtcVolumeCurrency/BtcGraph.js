@@ -121,9 +121,9 @@ const BtcGraph = (props) => {
 export default BtcGraph;
 
 BtcGraph.defaultProps = {
-  data: [],
+    data: [],
 };
 
 BtcGraph.propTypes = {
-  data: PropTypes.array,
+    data: PropTypes.array,
 };

@@ -107,5 +107,5 @@ const StandardContainer = ({children, ...rest}) => {
 export default StandardContainer;
 
 StandardContainer.propTypes = {
-  children: PropsTypes.node,
+    children: PropsTypes.node,
 };

@@ -202,5 +202,5 @@ Bitcoin.defaultProps = {
 };
 
 Bitcoin.propTypes = {
-  coinGraphData: PropTypes.object,
+    coinGraphData: PropTypes.object,
 };

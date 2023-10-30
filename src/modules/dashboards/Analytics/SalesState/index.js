@@ -157,10 +157,10 @@ const SalesState = ({salesState, chartData}) => {
 export default SalesState;
 
 SalesState.defaultProps = {
-  salesState: [],
+    salesState: [],
 };
 
 SalesState.propTypes = {
-  salesState: PropTypes.array,
-  chartData: PropTypes.array,
+    salesState: PropTypes.array,
+    chartData: PropTypes.array,
 };

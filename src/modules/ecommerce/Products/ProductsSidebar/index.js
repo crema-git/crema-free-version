@@ -259,6 +259,6 @@ const ProductSidebar = ({filterData, setFilterData}) => {
 
 export default ProductSidebar;
 ProductSidebar.propTypes = {
-  filterData: PropTypes.object.isRequired,
-  setFilterData: PropTypes.func.isRequired,
+    filterData: PropTypes.object.isRequired,
+    setFilterData: PropTypes.func.isRequired,
 };

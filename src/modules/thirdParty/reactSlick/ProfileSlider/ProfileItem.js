@@ -128,5 +128,5 @@ const ProfileItem = ({profile}) => {
 export default ProfileItem;
 
 ProfileItem.propTypes = {
-  profile: PropTypes.object,
+    profile: PropTypes.object,
 };

@@ -144,6 +144,6 @@ const AppsSideBarFolderItem = ({item, path}) => {
 
 export default AppsSideBarFolderItem;
 AppsSideBarFolderItem.propTypes = {
-  item: PropTypes.object.isRequired,
-  path: PropTypes.string.isRequired,
+    item: PropTypes.object.isRequired,
+    path: PropTypes.string.isRequired,
 };

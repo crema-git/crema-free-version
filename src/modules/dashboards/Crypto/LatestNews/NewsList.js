@@ -100,5 +100,5 @@ NewsList.defaultProps = {
 };
 
 NewsList.propTypes = {
-  newsData: PropTypes.array,
+    newsData: PropTypes.array,
 };
