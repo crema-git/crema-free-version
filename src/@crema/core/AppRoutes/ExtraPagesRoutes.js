@@ -23,7 +23,7 @@ const PricingDetail = React.lazy(() =>
 );
 const Blog = React.lazy(() => import('../../../modules/extraPages/Blog'));
 const BlogDetail = React.lazy(() =>
-  import('../../../modules/extraPages/Blog/BlogDetail'),
+  import('../../../modules/extraPages/Blog/BlogDetailPage'),
 );
 const BlogCreate = React.lazy(() =>
   import('../../../modules/extraPages/Blog/CreateBlog'),
