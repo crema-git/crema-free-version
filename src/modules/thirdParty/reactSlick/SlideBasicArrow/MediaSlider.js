@@ -91,5 +91,5 @@ const MediaSlider = ({children}) => {
 export default MediaSlider;
 
 MediaSlider.propTypes = {
-    children: PropsTypes.node,
+  children: PropsTypes.node,
 };

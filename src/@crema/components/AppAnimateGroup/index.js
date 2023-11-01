@@ -22,20 +22,20 @@ import React, {memo} from 'react';
 // };
 
 const AppAnimateGroup = ({children}) => {
-    return <>{children}</>;
-    // return (
-    //   <VelocityTransitionGroup
-    //     {...props}
-    //     enter={{ ...enterAnimationDefaults, ...props.enter }}
-    //     leave={{ ...leaveAnimationDefaults, ...props.leave }}
-    //   />
-    // );
+  return <>{children}</>;
+  // return (
+  //   <VelocityTransitionGroup
+  //     {...props}
+  //     enter={{ ...enterAnimationDefaults, ...props.enter }}
+  //     leave={{ ...leaveAnimationDefaults, ...props.leave }}
+  //   />
+  // );
 };
 
 AppAnimateGroup.propTypes = {
-    children: PropTypes.any,
-    //   enter: PropTypes.any,
-    //   leave: PropTypes.any,
+  children: PropTypes.any,
+  //   enter: PropTypes.any,
+  //   leave: PropTypes.any,
 };
 
 // AppAnimateGroup.defaultProps = {

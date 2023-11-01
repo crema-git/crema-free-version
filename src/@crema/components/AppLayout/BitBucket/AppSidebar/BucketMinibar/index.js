@@ -7,6 +7,7 @@ import AppLngSwitcher from '../../../../AppLngSwitcher';
 import AppMessages from '../../../../AppMessages';
 import AppNotifications from '../../../../AppNotifications';
 import UserInfo from '../UserInfo';
+import {allowMultiLanguage} from '../../../../../constants/AppConst';
 
 const BucketMinibar = () => {
   return (
@@ -36,7 +37,9 @@ const BucketMinibar = () => {
         >
           <SearchIcon />
         </IconButton>
-        <AppLngSwitcher iconOnly={true} tooltipPosition='right' />
+        {allowMultiLanguage && (
+          <AppLngSwitcher iconOnly={true} tooltipPosition='right' />
+        )}
 
         <AppNotifications
           drawerPosition='left'

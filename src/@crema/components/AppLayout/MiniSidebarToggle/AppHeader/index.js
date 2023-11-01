@@ -16,6 +16,7 @@ import AppTooltip from '../../../AppTooltip';
 import PropTypes from 'prop-types';
 import {alpha} from '@mui/material/styles';
 import AppLogo from '../../components/AppLogo';
+import {allowMultiLanguage} from '../../../../constants/AppConst';
 
 const AppHeader = (props) => {
   const {isCollapsed, setCollapsed, toggleNavCollapsed} = props;
@@ -115,9 +116,11 @@ const AppHeader = (props) => {
           <AppSearchBar iconPosition='right' placeholder='Search…' />
         </Box>
 
-        <Box sx={{ml: 4}}>
-          <AppLngSwitcher iconOnly={true} tooltipPosition='bottom' />
-        </Box>
+        {allowMultiLanguage && (
+          <Box sx={{ml: 4}}>
+            <AppLngSwitcher iconOnly={true} tooltipPosition='bottom' />
+          </Box>
+        )}
 
         <Box sx={{ml: 4}}>
           <Hidden smDown>
@@ -213,7 +216,7 @@ const AppHeader = (props) => {
 export default AppHeader;
 
 AppHeader.propTypes = {
-    isCollapsed: PropTypes.bool,
-    setCollapsed: PropTypes.func,
-    toggleNavCollapsed: PropTypes.func,
+  isCollapsed: PropTypes.bool,
+  setCollapsed: PropTypes.func,
+  toggleNavCollapsed: PropTypes.func,
 };

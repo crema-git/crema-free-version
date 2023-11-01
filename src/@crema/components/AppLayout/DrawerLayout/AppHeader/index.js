@@ -16,6 +16,7 @@ import MoreVertIcon from '@mui/icons-material/MoreVert';
 import AppTooltip from '../../../AppTooltip';
 import {alpha} from '@mui/material/styles';
 import AppLogo from '../../components/AppLogo';
+import {allowMultiLanguage} from '../../../../constants/AppConst';
 
 const AppHeader = ({toggleNavCollapsed}) => {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -95,9 +96,11 @@ const AppHeader = ({toggleNavCollapsed}) => {
           <AppSearchBar iconPosition='right' placeholder='Search…' />
         </Box>
 
-        <Box sx={{ml: 4}}>
-          <AppLngSwitcher iconOnly={true} tooltipPosition='bottom' />
-        </Box>
+        {allowMultiLanguage && (
+          <Box sx={{ml: 4}}>
+            <AppLngSwitcher iconOnly={true} tooltipPosition='bottom' />
+          </Box>
+        )}
 
         <Box sx={{ml: 4}}>
           <Hidden smDown>
@@ -192,5 +195,5 @@ const AppHeader = ({toggleNavCollapsed}) => {
 };
 export default AppHeader;
 AppHeader.propTypes = {
-    toggleNavCollapsed: PropTypes.func,
+  toggleNavCollapsed: PropTypes.func,
 };

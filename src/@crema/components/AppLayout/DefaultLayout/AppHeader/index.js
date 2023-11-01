@@ -16,6 +16,7 @@ import AppLogo from '../../components/AppLogo';
 import PropTypes from 'prop-types';
 import AppLngSwitcher from '../../../AppLngSwitcher';
 import AppSearchBar from '../../../AppSearchBar';
+import {allowMultiLanguage} from '../../../../constants/AppConst';
 
 const AppHeader = ({toggleNavCollapsed}) => {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -75,7 +76,9 @@ const AppHeader = ({toggleNavCollapsed}) => {
             flexGrow: 1,
           }}
         />
-        <AppLngSwitcher iconOnly={true} tooltipPosition='bottom' />
+        {allowMultiLanguage && (
+          <AppLngSwitcher iconOnly={true} tooltipPosition='bottom' />
+        )}
 
         <Box sx={{ml: 4}}>
           <Hidden smDown>
@@ -170,5 +173,5 @@ const AppHeader = ({toggleNavCollapsed}) => {
 };
 export default AppHeader;
 AppHeader.propTypes = {
-    toggleNavCollapsed: PropTypes.func,
+  toggleNavCollapsed: PropTypes.func,
 };

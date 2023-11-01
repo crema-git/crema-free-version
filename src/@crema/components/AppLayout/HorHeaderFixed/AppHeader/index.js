@@ -20,6 +20,7 @@ import AppLogo from '../../components/AppLogo';
 import UserInfo from '../../components/UserInfo';
 import HorizontalNav from '../../components/HorizontalNav';
 import {useSidebarContext} from '@crema/context/AppContextProvider/SidebarContextProvider';
+import {allowMultiLanguage} from '../../../../constants/AppConst';
 
 const AppHeader = ({toggleNavCollapsed, routesConfig}) => {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -153,9 +154,11 @@ const AppHeader = ({toggleNavCollapsed, routesConfig}) => {
           >
             <AppSearchBar iconPosition='right' placeholder='Search…' />
           </Box>
-          <Box sx={{ml: 4}}>
-            <AppLngSwitcher iconOnly={true} tooltipPosition='bottom' />
-          </Box>
+          {allowMultiLanguage && (
+            <Box sx={{ml: 4}}>
+              <AppLngSwitcher iconOnly={true} tooltipPosition='bottom' />
+            </Box>
+          )}
 
           <Box
             sx={{
@@ -273,6 +276,6 @@ const AppHeader = ({toggleNavCollapsed, routesConfig}) => {
 export default AppHeader;
 
 AppHeader.propTypes = {
-    toggleNavCollapsed: PropTypes.func,
-    routesConfig: PropsTypes.array.isRequired,
+  toggleNavCollapsed: PropTypes.func,
+  routesConfig: PropsTypes.array.isRequired,
 };

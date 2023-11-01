@@ -26,7 +26,7 @@ import AssignedStaff from './AssignedStaff';
 import TodoDatePicker from './DatePicker';
 import TaskLabels from '../../TasksList/TaskListItem/Labels';
 
-function CommentsLists(props) {
+function CommentsLists() {
   return null;
 }
 
@@ -326,6 +326,6 @@ const TaskDetailBody = (props) => {
 export default TaskDetailBody;
 
 TaskDetailBody.propTypes = {
-    selectedTask: PropTypes.object.isRequired,
-    onUpdateSelectedTask: PropTypes.func,
+  selectedTask: PropTypes.object.isRequired,
+  onUpdateSelectedTask: PropTypes.func,
 };

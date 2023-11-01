@@ -32,7 +32,7 @@
 import React from 'react';
 
 const IntegrationNotistack = () => {
-    return <div></div>;
+  return <div></div>;
 };
 
 export default IntegrationNotistack;
