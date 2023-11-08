@@ -76,5 +76,5 @@ const AppointmentCard = ({data}) => {
 export default AppointmentCard;
 
 AppointmentCard.propTypes = {
-    data: PropTypes.object,
+  data: PropTypes.object,
 };

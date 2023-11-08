@@ -82,5 +82,5 @@ const CardDetails = ({cardDetails}) => {
 export default CardDetails;
 
 CardDetails.propTypes = {
-    cardDetails: PropTypes.object.isRequired,
+  cardDetails: PropTypes.object.isRequired,
 };

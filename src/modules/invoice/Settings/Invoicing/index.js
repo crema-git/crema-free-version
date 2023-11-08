@@ -396,7 +396,7 @@ const Invoicing = ({settings, onUpdateSettings}) => {
 };
 
 Invoicing.propTypes = {
-    settings: PropTypes.object,
-    onUpdateSettings: PropTypes.func,
+  settings: PropTypes.object,
+  onUpdateSettings: PropTypes.func,
 };
 export default Invoicing;

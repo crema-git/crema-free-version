@@ -78,5 +78,5 @@ ConnectionListItem.defaultProps = {
 };
 
 ConnectionListItem.propTypes = {
-    connection: PropTypes.object,
+  connection: PropTypes.object,
 };

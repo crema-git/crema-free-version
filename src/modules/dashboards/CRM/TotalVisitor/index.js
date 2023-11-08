@@ -92,5 +92,5 @@ TotalVisitor.defaultProps = {
 };
 
 TotalVisitor.propTypes = {
-    totalVisitors: PropTypes.array,
+  totalVisitors: PropTypes.array,
 };

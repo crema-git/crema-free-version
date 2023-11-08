@@ -195,7 +195,7 @@ GraphTabs.defaultProps = {
 };
 
 GraphTabs.propTypes = {
-    clientsData: PropTypes.array,
-    incomeData: PropTypes.array,
-    projectData: PropTypes.array,
+  clientsData: PropTypes.array,
+  incomeData: PropTypes.array,
+  projectData: PropTypes.array,
 };

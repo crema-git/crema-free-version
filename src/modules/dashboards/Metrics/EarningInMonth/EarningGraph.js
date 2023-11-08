@@ -71,5 +71,5 @@ EarningGraph.defaultProps = {
 };
 
 EarningGraph.propTypes = {
-    data: PropTypes.array,
+  data: PropTypes.array,
 };

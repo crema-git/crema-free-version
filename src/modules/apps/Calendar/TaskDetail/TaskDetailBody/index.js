@@ -330,6 +330,6 @@ const TaskDetailBody = (props) => {
 export default TaskDetailBody;
 
 TaskDetailBody.propTypes = {
-    selectedTask: PropTypes.object.isRequired,
-    onUpdateSelectedTask: PropTypes.func,
+  selectedTask: PropTypes.object.isRequired,
+  onUpdateSelectedTask: PropTypes.func,
 };

@@ -95,5 +95,5 @@ const Notifications = ({notifications}) => {
 export default Notifications;
 
 Notifications.propTypes = {
-    notifications: PropTypes.array,
+  notifications: PropTypes.array,
 };

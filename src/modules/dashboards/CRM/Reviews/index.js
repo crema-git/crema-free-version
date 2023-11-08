@@ -65,5 +65,5 @@ Reviews.defaultProps = {
 };
 
 Reviews.propTypes = {
-    reviewGraphData: PropTypes.array,
+  reviewGraphData: PropTypes.array,
 };

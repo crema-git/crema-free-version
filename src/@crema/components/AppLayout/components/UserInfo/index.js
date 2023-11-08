@@ -154,9 +154,9 @@ const UserInfo = ({color}) => {
 export default UserInfo;
 
 UserInfo.defaultProps = {
-    color: 'text.secondary',
+  color: 'text.secondary',
 };
 
 UserInfo.propTypes = {
-    color: PropTypes.string,
+  color: PropTypes.string,
 };

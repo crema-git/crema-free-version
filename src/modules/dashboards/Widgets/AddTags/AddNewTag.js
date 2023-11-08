@@ -80,5 +80,5 @@ const AddNewTag = (props) => {
 export default AddNewTag;
 
 AddNewTag.propTypes = {
-    onAddNewTag: PropTypes.func,
+  onAddNewTag: PropTypes.func,
 };

@@ -92,5 +92,5 @@ const StatsItemCard = ({stats}) => {
 export default StatsItemCard;
 
 StatsItemCard.propTypes = {
-    stats: PropTypes.object,
+  stats: PropTypes.object,
 };

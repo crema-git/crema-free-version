@@ -61,5 +61,5 @@ const SlideItem = ({slide}) => {
 export default SlideItem;
 
 SlideItem.propTypes = {
-    slide: PropTypes.object,
+  slide: PropTypes.object,
 };

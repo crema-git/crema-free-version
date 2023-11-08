@@ -187,9 +187,9 @@ const CryptoMarketActivity = (props) => {
 export default CryptoMarketActivity;
 
 CryptoMarketActivity.defaultProps = {
-    marketGraphData: [],
+  marketGraphData: [],
 };
 
 CryptoMarketActivity.propTypes = {
-    marketGraphData: PropTypes.array,
+  marketGraphData: PropTypes.array,
 };

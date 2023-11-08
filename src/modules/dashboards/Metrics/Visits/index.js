@@ -115,5 +115,5 @@ Visits.defaultProps = {
 };
 
 Visits.propTypes = {
-    data: PropTypes.object,
+  data: PropTypes.object,
 };

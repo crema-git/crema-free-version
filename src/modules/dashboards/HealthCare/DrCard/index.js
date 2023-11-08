@@ -93,5 +93,5 @@ const DrCard = ({data}) => {
 export default DrCard;
 
 DrCard.propTypes = {
-    data: PropTypes.object,
+  data: PropTypes.object,
 };

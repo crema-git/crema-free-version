@@ -64,5 +64,5 @@ const SalesState = (props) => {
 export default SalesState;
 
 SalesState.propTypes = {
-    state: PropTypes.object,
+  state: PropTypes.object,
 };

@@ -253,6 +253,6 @@ const MailDetailHeader = (props) => {
 export default MailDetailHeader;
 
 MailDetailHeader.propTypes = {
-    selectedMail: PropTypes.object.isRequired,
-    onUpdateSelectedMail: PropTypes.func,
+  selectedMail: PropTypes.object.isRequired,
+  onUpdateSelectedMail: PropTypes.func,
 };

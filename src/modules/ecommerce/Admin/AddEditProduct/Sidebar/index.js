@@ -367,13 +367,13 @@ const BlogSidebar = ({
 export default BlogSidebar;
 
 BlogSidebar.propTypes = {
-    isEdit: PropTypes.bool,
-    inStock: PropTypes.bool,
-    productInfo: PropTypes.array,
-    productSpec: PropTypes.array,
-    setProductSpec: PropTypes.func,
-    setFieldValue: PropTypes.func,
-    setProductInfo: PropTypes.func,
-    selectedTags: PropTypes.array,
-    setSelectedTags: PropTypes.func,
+  isEdit: PropTypes.bool,
+  inStock: PropTypes.bool,
+  productInfo: PropTypes.array,
+  productSpec: PropTypes.array,
+  setProductSpec: PropTypes.func,
+  setFieldValue: PropTypes.func,
+  setProductInfo: PropTypes.func,
+  selectedTags: PropTypes.array,
+  setSelectedTags: PropTypes.func,
 };

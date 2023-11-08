@@ -121,5 +121,5 @@ const TimelineImageWrapper = ({children}) => {
 export default TimelineImageWrapper;
 
 TimelineImageWrapper.propTypes = {
-    children: PropTypes.node.isRequired,
+  children: PropTypes.node.isRequired,
 };

@@ -427,11 +427,11 @@ export default SenderMessageItem;
 SenderMessageItem.defaultProps = {};
 
 SenderMessageItem.propTypes = {
-    selectedUser: PropTypes.object,
-    authUser: PropTypes.object,
-    item: PropTypes.object.isRequired,
-    onClickEditMessage: PropTypes.func,
-    deleteMessage: PropTypes.func,
-    isPreviousSender: PropTypes.bool,
-    isLast: PropTypes.bool,
+  selectedUser: PropTypes.object,
+  authUser: PropTypes.object,
+  item: PropTypes.object.isRequired,
+  onClickEditMessage: PropTypes.func,
+  deleteMessage: PropTypes.func,
+  isPreviousSender: PropTypes.bool,
+  isLast: PropTypes.bool,
 };

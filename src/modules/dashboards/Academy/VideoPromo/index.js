@@ -299,5 +299,5 @@ const VideoPromo = ({videoPromo}) => {
 export default VideoPromo;
 
 VideoPromo.propTypes = {
-    videoPromo: PropTypes.object,
+  videoPromo: PropTypes.object,
 };

@@ -378,9 +378,9 @@ const MessageItem = ({
 export default MessageItem;
 
 MessageItem.propTypes = {
-    message: PropTypes.object.isRequired,
-    mailLength: PropTypes.number.isRequired,
-    index: PropTypes.number.isRequired,
-    onSubmitMail: PropTypes.func.isRequired,
-    onChangeStarred: PropTypes.func.isRequired,
+  message: PropTypes.object.isRequired,
+  mailLength: PropTypes.number.isRequired,
+  index: PropTypes.number.isRequired,
+  onSubmitMail: PropTypes.func.isRequired,
+  onChangeStarred: PropTypes.func.isRequired,
 };

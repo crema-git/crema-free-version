@@ -112,5 +112,5 @@ const TaskItem = ({item}) => {
 
 export default TaskItem;
 TaskItem.propTypes = {
-    item: PropTypes.object,
+  item: PropTypes.object,
 };

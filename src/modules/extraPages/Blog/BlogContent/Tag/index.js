@@ -46,5 +46,5 @@ const Tag = ({tag}) => {
 export default Tag;
 
 Tag.propTypes = {
-    tag: PropTypes.array,
+  tag: PropTypes.array,
 };

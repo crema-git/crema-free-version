@@ -252,9 +252,9 @@ AddTaskForm.defaultProps = {
 };
 
 AddTaskForm.propTypes = {
-    values: PropTypes.object.isRequired,
-    taskLabels: PropTypes.array.isRequired,
-    setTaskLabels: PropTypes.func,
-    setFieldValue: PropTypes.func,
-    isSubmitting: PropTypes.bool,
+  values: PropTypes.object.isRequired,
+  taskLabels: PropTypes.array.isRequired,
+  setTaskLabels: PropTypes.func,
+  setFieldValue: PropTypes.func,
+  isSubmitting: PropTypes.bool,
 };

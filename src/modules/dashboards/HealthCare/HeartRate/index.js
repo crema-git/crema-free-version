@@ -67,5 +67,5 @@ const HeartRate = ({data}) => {
 export default HeartRate;
 
 HeartRate.propTypes = {
-    data: PropTypes.object,
+  data: PropTypes.object,
 };

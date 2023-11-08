@@ -16,7 +16,7 @@ export default function LongTextSnackbar() {
       <SnackbarContent
         message={
           'I love candy. I love cookies. I love cupcakes. \
-                    I love cheesecake. I love chocolate.'
+                              I love cheesecake. I love chocolate.'
         }
       />
       <SnackbarContent
@@ -26,7 +26,7 @@ export default function LongTextSnackbar() {
       <SnackbarContent
         message={
           'I love candy. I love cookies. I love cupcakes. \
-                    I love cheesecake. I love chocolate.'
+                              I love cheesecake. I love chocolate.'
         }
         action={action}
       />

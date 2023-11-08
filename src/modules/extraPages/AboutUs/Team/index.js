@@ -66,5 +66,5 @@ const Team = ({team}) => {
 export default Team;
 
 Team.propTypes = {
-    team: PropTypes.array,
+  team: PropTypes.array,
 };

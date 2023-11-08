@@ -72,5 +72,5 @@ const BucketMinibarWrapper = ({children, ...rest}) => {
 export default BucketMinibarWrapper;
 
 BucketMinibarWrapper.propTypes = {
-    children: PropsTypes.node,
+  children: PropsTypes.node,
 };

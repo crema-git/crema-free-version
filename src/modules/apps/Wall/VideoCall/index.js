@@ -170,5 +170,5 @@ const VideoCall = ({data}) => {
 export default VideoCall;
 
 VideoCall.propTypes = {
-    data: PropTypes.object,
+  data: PropTypes.object,
 };

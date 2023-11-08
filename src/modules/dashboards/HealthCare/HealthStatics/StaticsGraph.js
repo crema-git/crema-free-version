@@ -64,5 +64,5 @@ const StaticsGraph = ({data}) => {
 export default StaticsGraph;
 
 StaticsGraph.propTypes = {
-    data: PropTypes.array,
+  data: PropTypes.array,
 };

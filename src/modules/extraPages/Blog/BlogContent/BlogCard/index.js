@@ -150,6 +150,6 @@ const BlogCard = ({blog, onViewBlogDetail}) => {
 export default BlogCard;
 
 BlogCard.propTypes = {
-    blog: PropTypes.object,
-    onViewBlogDetail: PropTypes.func,
+  blog: PropTypes.object,
+  onViewBlogDetail: PropTypes.func,
 };

@@ -54,5 +54,5 @@ const Calendar = () => {
 export default Calendar;
 
 Calendar.propTypes = {
-    match: PropTypes.object,
+  match: PropTypes.object,
 };

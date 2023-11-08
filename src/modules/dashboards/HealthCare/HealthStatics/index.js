@@ -84,5 +84,5 @@ const HealthStatics = ({data}) => {
 export default HealthStatics;
 
 HealthStatics.propTypes = {
-    data: PropTypes.object,
+  data: PropTypes.object,
 };

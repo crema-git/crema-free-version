@@ -116,5 +116,5 @@ const LatestResults = ({latestResults}) => {
 export default LatestResults;
 
 LatestResults.propTypes = {
-    latestResults: PropTypes.array,
+  latestResults: PropTypes.array,
 };

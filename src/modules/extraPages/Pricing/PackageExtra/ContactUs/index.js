@@ -60,5 +60,5 @@ const ContactUs = ({contactList}) => {
 export default ContactUs;
 
 ContactUs.propTypes = {
-    contactList: PropTypes.array,
+  contactList: PropTypes.array,
 };

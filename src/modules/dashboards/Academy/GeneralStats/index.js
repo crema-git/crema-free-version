@@ -118,5 +118,5 @@ const GeneralStats = ({stats}) => {
 export default GeneralStats;
 
 GeneralStats.propTypes = {
-    stats: PropTypes.object,
+  stats: PropTypes.object,
 };

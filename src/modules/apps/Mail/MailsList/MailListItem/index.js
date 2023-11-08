@@ -361,12 +361,12 @@ MailListItem.defaultProps = {
 };
 
 MailListItem.propTypes = {
-    mail: PropTypes.object.isRequired,
-    labelList: PropTypes.array,
-    checkedMails: PropTypes.array,
-    onChangeCheckedMails: PropTypes.func,
-    onChangeStarred: PropTypes.func,
-    onViewMailDetail: PropTypes.func,
-    onRemoveItem: PropTypes.func,
-    onUpdateItem: PropTypes.func,
+  mail: PropTypes.object.isRequired,
+  labelList: PropTypes.array,
+  checkedMails: PropTypes.array,
+  onChangeCheckedMails: PropTypes.func,
+  onChangeStarred: PropTypes.func,
+  onViewMailDetail: PropTypes.func,
+  onRemoveItem: PropTypes.func,
+  onUpdateItem: PropTypes.func,
 };

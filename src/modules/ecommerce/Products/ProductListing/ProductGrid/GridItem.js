@@ -185,5 +185,5 @@ const GridItem = (props) => {
 export default GridItem;
 
 GridItem.propTypes = {
-    item: PropTypes.object.isRequired,
+  item: PropTypes.object.isRequired,
 };

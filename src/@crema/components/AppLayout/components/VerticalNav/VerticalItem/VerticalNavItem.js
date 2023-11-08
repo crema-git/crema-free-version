@@ -161,6 +161,6 @@ const VerticalNavItem = ({children, level, ...rest}) => {
 export default VerticalNavItem;
 
 VerticalNavItem.propTypes = {
-    children: PropsTypes.node,
-    level: PropsTypes.number,
+  children: PropsTypes.node,
+  level: PropsTypes.number,
 };

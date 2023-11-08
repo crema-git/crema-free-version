@@ -60,5 +60,5 @@ const OrderActions = ({id}) => {
 export default OrderActions;
 
 OrderActions.propTypes = {
-    id: PropTypes.string,
+  id: PropTypes.string,
 };

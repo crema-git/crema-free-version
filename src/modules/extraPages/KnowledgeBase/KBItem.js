@@ -53,5 +53,5 @@ const KbItem = ({data}) => {
 export default KbItem;
 
 KbItem.propTypes = {
-    data: PropTypes.object,
+  data: PropTypes.object,
 };

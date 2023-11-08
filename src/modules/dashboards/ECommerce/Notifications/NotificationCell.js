@@ -81,5 +81,5 @@ const NotificationCell = ({item}) => {
 export default NotificationCell;
 
 NotificationCell.propTypes = {
-    item: PropTypes.object.isRequired,
+  item: PropTypes.object.isRequired,
 };

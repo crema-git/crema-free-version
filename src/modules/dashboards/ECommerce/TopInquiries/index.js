@@ -147,5 +147,5 @@ const TopInquiries = ({topInquiries}) => {
 export default TopInquiries;
 
 TopInquiries.propTypes = {
-    topInquiries: PropTypes.array,
+  topInquiries: PropTypes.array,
 };

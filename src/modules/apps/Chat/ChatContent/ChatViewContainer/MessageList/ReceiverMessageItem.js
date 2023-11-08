@@ -316,8 +316,8 @@ export default ReceiverMessageItem;
 ReceiverMessageItem.defaultProps = {};
 
 ReceiverMessageItem.propTypes = {
-    selectedUser: PropTypes.object.isRequired,
-    item: PropTypes.object.isRequired,
-    isPreviousSender: PropTypes.bool,
-    isLast: PropTypes.bool,
+  selectedUser: PropTypes.object.isRequired,
+  item: PropTypes.object.isRequired,
+  isPreviousSender: PropTypes.bool,
+  isLast: PropTypes.bool,
 };

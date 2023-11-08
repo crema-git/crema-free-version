@@ -112,5 +112,5 @@ export default SocialDataCard;
 SocialDataCard.defaultProps = {};
 
 SocialDataCard.propTypes = {
-    data: PropTypes.object.isRequired,
+  data: PropTypes.object.isRequired,
 };

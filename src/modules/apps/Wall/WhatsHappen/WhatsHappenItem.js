@@ -97,5 +97,5 @@ const WhatsHappenItem = ({data}) => {
 export default WhatsHappenItem;
 
 WhatsHappenItem.propTypes = {
-    data: PropTypes.object,
+  data: PropTypes.object,
 };

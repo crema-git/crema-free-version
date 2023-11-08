@@ -123,5 +123,5 @@ About.propTypes = {
   about: PropTypes.array.isRequired,
 };
 AboutItem.propTypes = {
-    item: PropTypes.object.isRequired,
+  item: PropTypes.object.isRequired,
 };

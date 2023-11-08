@@ -68,5 +68,5 @@ TodayTasks.defaultProps = {
 };
 
 TodayTasks.propTypes = {
-    todayTaskData: PropTypes.array,
+  todayTaskData: PropTypes.array,
 };

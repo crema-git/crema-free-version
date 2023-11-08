@@ -111,5 +111,5 @@ const CourseCategories = ({course}) => {
 export default CourseCategories;
 
 CourseCategories.propTypes = {
-    course: PropTypes.object,
+  course: PropTypes.object,
 };

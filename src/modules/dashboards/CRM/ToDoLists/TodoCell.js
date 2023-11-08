@@ -108,5 +108,5 @@ const TodoCell = ({todo}) => {
 export default TodoCell;
 
 TodoCell.propTypes = {
-    todo: PropTypes.object.isRequired,
+  todo: PropTypes.object.isRequired,
 };

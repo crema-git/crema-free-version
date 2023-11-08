@@ -201,7 +201,7 @@ const InvoicePdf = ({selectedInv, clientsList, invoiceSettings}) => {
 export default InvoicePdf;
 
 InvoicePdf.propTypes = {
-    selectedInv: PropTypes.object,
-    clientsList: PropTypes.array,
-    invoiceSettings: PropTypes.object,
+  selectedInv: PropTypes.object,
+  clientsList: PropTypes.array,
+  invoiceSettings: PropTypes.object,
 };

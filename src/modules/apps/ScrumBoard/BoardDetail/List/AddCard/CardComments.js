@@ -165,10 +165,10 @@ const CardComments = (props) => {
 export default CardComments;
 
 CardComments.defaultProps = {
-    comments: [],
+  comments: [],
 };
 
 CardComments.propTypes = {
-    comments: PropTypes.array,
-    onAddNewComment: PropTypes.func,
+  comments: PropTypes.array,
+  onAddNewComment: PropTypes.func,
 };

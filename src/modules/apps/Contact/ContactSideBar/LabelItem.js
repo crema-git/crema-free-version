@@ -71,5 +71,5 @@ const LabelItem = ({label}) => {
 export default LabelItem;
 
 LabelItem.propTypes = {
-    label: PropTypes.object.isRequired,
+  label: PropTypes.object.isRequired,
 };

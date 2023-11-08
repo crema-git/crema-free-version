@@ -67,5 +67,5 @@ const CourseItem = ({data}) => {
 export default CourseItem;
 
 CourseItem.propTypes = {
-    data: PropTypes.object,
+  data: PropTypes.object,
 };

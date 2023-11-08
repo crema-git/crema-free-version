@@ -106,5 +106,5 @@ const EarningByCountry = ({earningData}) => {
 export default EarningByCountry;
 
 EarningByCountry.propTypes = {
-    earningData: PropTypes.array,
+  earningData: PropTypes.array,
 };

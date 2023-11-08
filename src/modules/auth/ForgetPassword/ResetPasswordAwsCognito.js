@@ -165,5 +165,5 @@ const ResetPasswordAwsCognito = () => {
 export default ResetPasswordAwsCognito;
 
 ResetPasswordAwsCognito.propTypes = {
-    location: PropTypes.object,
+  location: PropTypes.object,
 };

@@ -125,5 +125,5 @@ const PersonalDetails = (props) => {
 
 export default PersonalDetails;
 PersonalDetails.propTypes = {
-    contact: PropTypes.object.isRequired,
+  contact: PropTypes.object.isRequired,
 };

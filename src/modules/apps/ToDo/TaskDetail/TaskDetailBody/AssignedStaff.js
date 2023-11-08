@@ -77,5 +77,5 @@ AssignedStaff.defaultProps = {
 };
 
 AssignedStaff.propTypes = {
-    assignedStaff: PropTypes.object,
+  assignedStaff: PropTypes.object,
 };

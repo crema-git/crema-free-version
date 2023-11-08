@@ -215,10 +215,10 @@ function HorizontalCollapse(props) {
 export default React.memo(HorizontalCollapse);
 
 HorizontalCollapse.propTypes = {
-    item: PropTypes.object,
-    nestedLevel: PropTypes.number,
-    location: PropTypes.object,
-    dense: PropTypes.number,
+  item: PropTypes.object,
+  nestedLevel: PropTypes.number,
+  location: PropTypes.object,
+  dense: PropTypes.number,
 };
 
 HorizontalCollapse.defaultProps = {};

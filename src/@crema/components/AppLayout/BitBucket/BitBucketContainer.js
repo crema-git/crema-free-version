@@ -94,5 +94,5 @@ const BitBucketContainer = ({children, ...rest}) => {
 export default BitBucketContainer;
 
 BitBucketContainer.propTypes = {
-    children: PropsTypes.node,
+  children: PropsTypes.node,
 };

@@ -100,5 +100,5 @@ const MiniSidebarWrapper = ({children, ...rest}) => {
 export default MiniSidebarWrapper;
 
 MiniSidebarWrapper.propTypes = {
-    children: PropsTypes.node,
+  children: PropsTypes.node,
 };

@@ -134,5 +134,5 @@ TotalBalance.defaultProps = {
 };
 
 TotalBalance.propTypes = {
-    totalBalanceData: PropTypes.object,
+  totalBalanceData: PropTypes.object,
 };

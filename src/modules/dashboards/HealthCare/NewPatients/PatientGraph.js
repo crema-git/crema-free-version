@@ -59,5 +59,5 @@ const PatientGraph = ({data}) => {
 export default PatientGraph;
 
 PatientGraph.propTypes = {
-    data: PropTypes.array,
+  data: PropTypes.array,
 };

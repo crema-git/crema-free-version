@@ -125,5 +125,5 @@ const TimelineItem = ({data}) => {
 export default TimelineItem;
 
 TimelineItem.propTypes = {
-    data: PropTypes.object,
+  data: PropTypes.object,
 };

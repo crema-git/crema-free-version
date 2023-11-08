@@ -54,5 +54,5 @@ const ToDo = () => {
 export default ToDo;
 
 ToDo.propTypes = {
-    match: PropTypes.object,
+  match: PropTypes.object,
 };

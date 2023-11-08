@@ -158,5 +158,5 @@ const Profile = (props) => {
 export default Profile;
 
 Profile.propTypes = {
-    data: PropTypes.object.isRequired,
+  data: PropTypes.object.isRequired,
 };

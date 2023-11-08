@@ -91,5 +91,5 @@ Stats.defaultProps = {
 };
 
 Stats.propTypes = {
-    data: PropTypes.object,
+  data: PropTypes.object,
 };

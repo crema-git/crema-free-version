@@ -154,5 +154,5 @@ TotalRevenue.defaultProps = {
 };
 
 TotalRevenue.propTypes = {
-    revenueData: PropTypes.object,
+  revenueData: PropTypes.object,
 };

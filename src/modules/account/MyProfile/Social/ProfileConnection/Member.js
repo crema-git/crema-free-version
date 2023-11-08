@@ -114,5 +114,5 @@ const Member = ({member}) => {
 export default Member;
 
 Member.propTypes = {
-    member: PropTypes.object,
+  member: PropTypes.object,
 };

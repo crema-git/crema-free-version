@@ -78,5 +78,5 @@ const ThemeContextProvider = ({children}) => {
 export default ThemeContextProvider;
 
 ThemeContextProvider.propTypes = {
-    children: PropTypes.node.isRequired,
+  children: PropTypes.node.isRequired,
 };

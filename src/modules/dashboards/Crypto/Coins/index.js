@@ -86,5 +86,5 @@ Coins.defaultProps = {
 };
 
 Coins.propTypes = {
-    coinsData: PropTypes.object,
+  coinsData: PropTypes.object,
 };

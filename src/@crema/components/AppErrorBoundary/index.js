@@ -81,5 +81,5 @@ class AppErrorBoundary extends React.Component {
 export default AppErrorBoundary;
 
 AppErrorBoundary.propTypes = {
-    children: PropTypes.node,
+  children: PropTypes.node,
 };

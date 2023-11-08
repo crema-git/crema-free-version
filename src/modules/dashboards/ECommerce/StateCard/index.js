@@ -182,5 +182,5 @@ const StateCard = ({data}) => {
 export default StateCard;
 
 StateCard.propTypes = {
-    data: PropTypes.object,
+  data: PropTypes.object,
 };

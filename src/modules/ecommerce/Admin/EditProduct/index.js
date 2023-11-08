@@ -1,9 +1,8 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {useGetDataApi} from '@crema/hooks/APIHooks';
 import AppLoader from '@crema/components/AppLoader';
 import AppAnimate from '@crema/components/AppAnimate';
 import {useParams} from 'react-router-dom';
-import {useEffect} from 'react';
 import {isEmptyObject} from '@crema/helpers/ApiHelper';
 import AddEditProduct from '../AddEditProduct';
 

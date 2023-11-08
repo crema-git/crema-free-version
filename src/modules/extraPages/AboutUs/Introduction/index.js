@@ -74,5 +74,5 @@ const Introduction = ({introduction}) => {
 export default Introduction;
 
 Introduction.propTypes = {
-    introduction: PropTypes.object,
+  introduction: PropTypes.object,
 };

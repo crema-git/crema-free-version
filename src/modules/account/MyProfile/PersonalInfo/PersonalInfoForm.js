@@ -177,6 +177,6 @@ const PersonalInfoForm = ({values, setFieldValue}) => {
 
 export default PersonalInfoForm;
 PersonalInfoForm.propTypes = {
-    setFieldValue: PropTypes.func,
-    values: PropTypes.object,
+  setFieldValue: PropTypes.func,
+  values: PropTypes.object,
 };

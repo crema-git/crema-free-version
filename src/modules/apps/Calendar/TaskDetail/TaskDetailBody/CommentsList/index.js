@@ -76,5 +76,5 @@ CommentsList.defaultProps = {
 };
 
 CommentsList.propTypes = {
-    comments: PropTypes.array,
+  comments: PropTypes.array,
 };

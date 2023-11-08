@@ -246,7 +246,7 @@ export const blogDetail = {
 };
 
 export const blogContent = Array.from({length: 7}, (_, index) => index + 1).map(
-    (item) => {
-        return {...blogDetail, id: item};
-    },
+  (item) => {
+    return {...blogDetail, id: item};
+  },
 );

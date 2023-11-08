@@ -221,6 +221,6 @@ const BoardDetailView = (props) => {
 export default BoardDetailView;
 
 BoardDetailView.propTypes = {
-    boardDetail: PropTypes.object,
-    setData: PropTypes.func,
+  boardDetail: PropTypes.object,
+  setData: PropTypes.func,
 };

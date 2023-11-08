@@ -85,5 +85,5 @@ const Attachments = ({attachments}) => {
 export default Attachments;
 
 Attachments.propTypes = {
-    attachments: PropTypes.array.isRequired,
+  attachments: PropTypes.array.isRequired,
 };

@@ -108,5 +108,5 @@ VisitorsPageViews.defaultProps = {
 };
 
 VisitorsPageViews.propTypes = {
-    data: PropTypes.array,
+  data: PropTypes.array,
 };

@@ -195,8 +195,8 @@ const FirebaseAuthProvider = ({
 export default FirebaseAuthProvider;
 
 FirebaseAuthProvider.propTypes = {
-    children: PropTypes.node.isRequired,
-    fetchStart: PropTypes.func,
-    fetchSuccess: PropTypes.func,
-    fetchError: PropTypes.func,
+  children: PropTypes.node.isRequired,
+  fetchStart: PropTypes.func,
+  fetchSuccess: PropTypes.func,
+  fetchError: PropTypes.func,
 };

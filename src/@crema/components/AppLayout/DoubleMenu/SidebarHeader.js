@@ -165,6 +165,6 @@ const SidebarHeader = () => {
 
 export default SidebarHeader;
 SidebarHeader.propTypes = {
-    setShowMessage: PropTypes.func,
-    setShowNotification: PropTypes.func,
+  setShowMessage: PropTypes.func,
+  setShowNotification: PropTypes.func,
 };

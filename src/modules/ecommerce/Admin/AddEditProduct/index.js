@@ -153,5 +153,5 @@ export const AddEditProduct = ({selectedProd}) => {
 export default AddEditProduct;
 
 AddEditProduct.propTypes = {
-    selectedProd: PropTypes.object,
+  selectedProd: PropTypes.object,
 };

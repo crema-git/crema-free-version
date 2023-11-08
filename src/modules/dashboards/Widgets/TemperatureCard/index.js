@@ -119,5 +119,5 @@ TemperatureCard.defaultProps = {
 };
 
 TemperatureCard.propTypes = {
-    temperatures: PropTypes.array,
+  temperatures: PropTypes.array,
 };

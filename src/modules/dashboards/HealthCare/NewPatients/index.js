@@ -56,5 +56,5 @@ const NewPatients = ({data}) => {
 export default NewPatients;
 
 NewPatients.propTypes = {
-    data: PropTypes.array,
+  data: PropTypes.array,
 };

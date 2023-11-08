@@ -125,5 +125,5 @@ const AddressInfo = ({address}) => {
 export default AddressInfo;
 
 AddressInfo.propTypes = {
-    address: PropTypes.object,
+  address: PropTypes.object,
 };

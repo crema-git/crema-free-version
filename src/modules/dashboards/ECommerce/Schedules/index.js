@@ -104,5 +104,5 @@ const Schedules = ({schedules}) => {
 export default Schedules;
 
 Schedules.propTypes = {
-    schedules: PropTypes.array,
+  schedules: PropTypes.array,
 };

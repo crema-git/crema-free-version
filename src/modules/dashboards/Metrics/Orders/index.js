@@ -125,5 +125,5 @@ Orders.defaultProps = {
 };
 
 Orders.propTypes = {
-    data: PropTypes.object,
+  data: PropTypes.object,
 };

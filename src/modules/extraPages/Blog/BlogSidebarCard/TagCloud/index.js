@@ -68,5 +68,5 @@ const TagCloud = ({tag}) => {
 export default TagCloud;
 
 TagCloud.propTypes = {
-    tag: PropTypes.array,
+  tag: PropTypes.array,
 };

@@ -84,5 +84,5 @@ const Innovation = ({innovation}) => {
 export default Innovation;
 
 Innovation.propTypes = {
-    innovation: PropTypes.object,
+  innovation: PropTypes.object,
 };

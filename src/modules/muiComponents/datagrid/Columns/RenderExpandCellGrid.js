@@ -197,9 +197,9 @@ const rows = [
 ];
 
 export default function RenderExpandCellGrid() {
-    return (
-        <div style={{height: 300, width: '100%'}}>
-            <DataGrid rows={rows} columns={columns}/>
-        </div>
-    );
+  return (
+    <div style={{height: 300, width: '100%'}}>
+      <DataGrid rows={rows} columns={columns} />
+    </div>
+  );
 }

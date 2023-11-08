@@ -66,5 +66,5 @@ QuickStats.defaultProps = {
 };
 
 QuickStats.propTypes = {
-    quickStatsData: PropTypes.object,
+  quickStatsData: PropTypes.object,
 };

@@ -232,7 +232,7 @@ export default ChatViewContainer;
 ChatViewContainer.defaultProps = {};
 
 ChatViewContainer.propTypes = {
-    selectedUser: PropTypes.object.isRequired,
-    setConnectionData: PropTypes.func,
-    setSelectedUser: PropTypes.func,
+  selectedUser: PropTypes.object.isRequired,
+  setConnectionData: PropTypes.func,
+  setSelectedUser: PropTypes.func,
 };

@@ -183,6 +183,6 @@ export default Header;
 Header.defaultProps = {};
 
 Header.propTypes = {
-    selectedUser: PropTypes.object.isRequired,
-    deleteConversation: PropTypes.func,
+  selectedUser: PropTypes.object.isRequired,
+  deleteConversation: PropTypes.func,
 };

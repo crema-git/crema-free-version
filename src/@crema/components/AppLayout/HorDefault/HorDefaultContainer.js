@@ -70,5 +70,5 @@ const HorDefaultContainer = ({children, ...rest}) => {
 export default HorDefaultContainer;
 
 HorDefaultContainer.propTypes = {
-    children: PropsTypes.node,
+  children: PropsTypes.node,
 };

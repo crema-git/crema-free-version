@@ -171,5 +171,5 @@ const WelcomeCard = ({data}) => {
 export default WelcomeCard;
 
 WelcomeCard.propTypes = {
-    data: PropTypes.array,
+  data: PropTypes.array,
 };

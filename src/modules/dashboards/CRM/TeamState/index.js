@@ -221,5 +221,5 @@ const TeamState = ({data}) => {
 export default TeamState;
 
 TeamState.propTypes = {
-    data: PropTypes.object,
+  data: PropTypes.object,
 };

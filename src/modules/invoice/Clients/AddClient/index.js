@@ -232,6 +232,6 @@ const AddClient = ({selectedClient, onSave}) => {
 export default AddClient;
 
 AddClient.propTypes = {
-    selectedClient: PropTypes.object,
-    onSave: PropTypes.func,
+  selectedClient: PropTypes.object,
+  onSave: PropTypes.func,
 };

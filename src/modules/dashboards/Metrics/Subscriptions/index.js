@@ -86,5 +86,5 @@ Subscriptions.defaultProps = {
 };
 
 Subscriptions.propTypes = {
-    data: PropTypes.object,
+  data: PropTypes.object,
 };

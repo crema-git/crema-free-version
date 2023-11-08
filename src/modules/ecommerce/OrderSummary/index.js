@@ -100,5 +100,5 @@ const OrderSummary = ({cartItems}) => {
 export default OrderSummary;
 
 OrderSummary.propTypes = {
-    cartItems: PropTypes.array,
+  cartItems: PropTypes.array,
 };

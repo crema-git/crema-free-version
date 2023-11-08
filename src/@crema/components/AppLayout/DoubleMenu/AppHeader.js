@@ -20,7 +20,7 @@ import MenuItem from '@mui/material/MenuItem';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import Tooltip from '@mui/material/Tooltip';
 import PropTypes from 'prop-types';
-import {allowMultiLanguage} from "../../../constants/AppConst";
+import {allowMultiLanguage} from '../../../constants/AppConst';
 
 const AppHeader = ({updateNavState, sidebarMenuState, toggleNavCollapsed}) => {
   const [showMessage, setShowMessage] = useState(false);
@@ -83,9 +83,7 @@ const AppHeader = ({updateNavState, sidebarMenuState, toggleNavCollapsed}) => {
           placeholder='Search…'
         />
         <Box className={classes.grow} />
-        {allowMultiLanguage && (
-            <AppLngSwitcher />
-        )}
+        {allowMultiLanguage && <AppLngSwitcher />}
 
         <Box ml={{xs: 2, sm: 4}}>
           <Hidden xsDown>
@@ -165,7 +163,7 @@ const AppHeader = ({updateNavState, sidebarMenuState, toggleNavCollapsed}) => {
 export default AppHeader;
 
 AppHeader.propTypes = {
-    updateNavState: PropTypes.func,
-    toggleNavCollapsed: PropTypes.func,
-    sidebarMenuState: PropTypes.number,
+  updateNavState: PropTypes.func,
+  toggleNavCollapsed: PropTypes.func,
+  sidebarMenuState: PropTypes.number,
 };

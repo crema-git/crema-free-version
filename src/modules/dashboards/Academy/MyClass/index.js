@@ -104,5 +104,5 @@ const MyClass = ({classData}) => {
 export default MyClass;
 
 MyClass.propTypes = {
-    classData: PropTypes.array,
+  classData: PropTypes.array,
 };

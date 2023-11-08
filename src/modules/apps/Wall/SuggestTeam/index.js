@@ -66,5 +66,5 @@ const SuggestTeam = ({data}) => {
 export default SuggestTeam;
 
 SuggestTeam.propTypes = {
-    data: PropTypes.object,
+  data: PropTypes.object,
 };

@@ -58,5 +58,5 @@ Colors.defaultProps = {
 };
 
 Colors.propTypes = {
-    data: PropTypes.array,
+  data: PropTypes.array,
 };

@@ -216,11 +216,11 @@ const CheckedMailActions = (props) => {
 export default CheckedMailActions;
 
 CheckedMailActions.defaultProps = {
-    checkedMails: [],
+  checkedMails: [],
 };
 
 CheckedMailActions.propTypes = {
-    checkedMails: PropTypes.array.isRequired,
-    setCheckedMails: PropTypes.func,
-    setData: PropTypes.func,
+  checkedMails: PropTypes.array.isRequired,
+  setCheckedMails: PropTypes.func,
+  setData: PropTypes.func,
 };

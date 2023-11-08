@@ -55,5 +55,5 @@ WorkViews.defaultProps = {
 };
 
 WorkViews.propTypes = {
-    data: PropTypes.object,
+  data: PropTypes.object,
 };

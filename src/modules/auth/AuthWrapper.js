@@ -94,5 +94,5 @@ const AuthWrapper = ({children}) => {
 export default AuthWrapper;
 
 AuthWrapper.propTypes = {
-    children: PropTypes.node,
+  children: PropTypes.node,
 };

@@ -215,9 +215,9 @@ const TableItem = ({
 export default TableItem;
 
 TableItem.propTypes = {
-    data: PropTypes.object.isRequired,
-    index: PropTypes.number,
-    currencyData: PropTypes.object,
-    onChangeLineItems: PropTypes.func,
-    onDeleteLineItem: PropTypes.func,
+  data: PropTypes.object.isRequired,
+  index: PropTypes.number,
+  currencyData: PropTypes.object,
+  onChangeLineItems: PropTypes.func,
+  onDeleteLineItem: PropTypes.func,
 };

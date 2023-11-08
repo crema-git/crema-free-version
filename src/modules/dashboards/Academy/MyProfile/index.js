@@ -170,5 +170,5 @@ const MyProfile = ({profile}) => {
 export default MyProfile;
 
 MyProfile.propTypes = {
-    profile: PropTypes.object,
+  profile: PropTypes.object,
 };
