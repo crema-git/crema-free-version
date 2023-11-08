@@ -27,3 +27,5 @@ yarn-error.log*
 /.idea/crema-dev-mui.iml
 /.idea/modules.xml
 /.idea/prettier.xml
+/.idea/dictionaries/yogi0.xml
+/.idea/jsLinters/eslint.xml
