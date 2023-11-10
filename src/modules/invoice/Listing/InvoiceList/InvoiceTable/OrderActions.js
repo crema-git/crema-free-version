@@ -105,7 +105,7 @@ const OrderActions = ({id, data, status, onChangeStatus}) => {
 };
 
 OrderActions.propTypes = {
-  id: PropTypes.string,
+  id: PropTypes.number,
   data: PropTypes.object,
   status: PropTypes.number,
   onChangeStatus: PropTypes.func,

@@ -20,7 +20,7 @@ const TableCellWrapper = styled(TableCell)(() => {
     },
   };
 });
-const NumberWrapper = styled(TableCell)(({theme}) => {
+const NumberWrapper = styled('span')(({theme}) => {
   return {
     width: 26,
     height: 26,

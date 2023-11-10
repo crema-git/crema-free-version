@@ -11,18 +11,20 @@ import AppLoader from '@crema/components/AppLoader';
 const OrderTable = ({orderData, loading}) => {
   return (
     <AppTableContainer>
-      <Table stickyHeader className='table'>
-        <TableHead>
-          <TableHeading />
-        </TableHead>
-        <TableBody>
-          {loading ? (
-            <AppLoader />
-          ) : (
-            orderData.map((data) => <TableItem data={data} key={data.id} />)
-          )}
-        </TableBody>
-      </Table>
+      {loading ? (
+        <AppLoader />
+      ) : (
+        <Table stickyHeader className='table'>
+          <TableHead>
+            <TableHeading />
+          </TableHead>
+          <TableBody>
+            {orderData.map((data) => (
+              <TableItem data={data} key={data.id} />
+            ))}
+          </TableBody>
+        </Table>
+      )}
     </AppTableContainer>
   );
 };

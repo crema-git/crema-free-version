@@ -112,7 +112,7 @@ const AddTaskForm = (props) => {
                               sx={{
                                 marginRight: 2,
                               }}
-                              src={staff.image}
+                              src={staff?.image}
                             />
                           ) : (
                             <Avatar

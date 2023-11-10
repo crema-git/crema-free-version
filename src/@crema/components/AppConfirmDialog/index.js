@@ -24,9 +24,8 @@ const AppConfirmDialog = ({open, onDeny, onConfirm, title, dialogTitle}) => {
     >
       <DialogTitle>
         <Typography
-          component='h4'
-          variant='h4'
           sx={{
+            fontSize: 16,
             mb: 3,
             fontWeight: Fonts.SEMI_BOLD,
           }}

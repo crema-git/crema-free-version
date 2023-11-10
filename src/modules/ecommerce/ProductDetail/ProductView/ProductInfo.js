@@ -43,5 +43,5 @@ const ProductInfo = ({productInfo}) => {
 export default ProductInfo;
 
 ProductInfo.propTypes = {
-  productInfo: PropTypes.object,
+  productInfo: PropTypes.array,
 };

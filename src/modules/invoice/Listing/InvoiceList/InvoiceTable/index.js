@@ -11,24 +11,24 @@ import AppLoader from '@crema/components/AppLoader';
 const InvoiceTable = ({invoiceData, loading, onChangeStatus}) => {
   return (
     <AppTableContainer>
-      <Table stickyHeader className='table'>
-        <TableHead>
-          <TableHeading />
-        </TableHead>
-        <TableBody>
-          {loading ? (
-            <AppLoader />
-          ) : (
-            invoiceData.map((data) => (
+      {loading ? (
+        <AppLoader />
+      ) : (
+        <Table stickyHeader className='table'>
+          <TableHead>
+            <TableHeading />
+          </TableHead>
+          <TableBody>
+            {invoiceData.map((data) => (
               <TableItem
                 data={data}
                 key={data.id}
                 onChangeStatus={onChangeStatus}
               />
-            ))
-          )}
-        </TableBody>
-      </Table>
+            ))}
+          </TableBody>
+        </Table>
+      )}
     </AppTableContainer>
   );
 };

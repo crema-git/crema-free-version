@@ -11,18 +11,20 @@ import AppLoader from '@crema/components/AppLoader';
 const CustomerTable = ({customers, loading}) => {
   return (
     <AppTableContainer>
-      <Table stickyHeader className='table'>
-        <TableHead>
-          <TableHeading />
-        </TableHead>
-        <TableBody>
-          {loading ? (
-            <AppLoader />
-          ) : (
-            customers.map((data) => <TableItem data={data} key={data.id} />)
-          )}
-        </TableBody>
-      </Table>
+      {loading ? (
+        <AppLoader />
+      ) : (
+        <Table stickyHeader className='table'>
+          <TableHead>
+            <TableHeading />
+          </TableHead>
+          <TableBody>
+            {customers.map((data) => (
+              <TableItem data={data} key={data.id} />
+            ))}
+          </TableBody>
+        </Table>
+      )}
     </AppTableContainer>
   );
 };

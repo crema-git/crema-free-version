@@ -23,7 +23,6 @@ const ChatItem = (props) => {
           backgroundColor: (theme) => alpha(theme.palette.primary.main, 0.07),
         },
       }}
-      button
       className={clsx('item-hover', {
         active: selectedUser && selectedUser.id === item.id,
       })}

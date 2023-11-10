@@ -274,7 +274,6 @@ const SenderMessageItem = ({
   const onClose = () => {
     setIndex(-1);
   };
-
   return (
     <SenderMessageWrapper
       className={clsx(

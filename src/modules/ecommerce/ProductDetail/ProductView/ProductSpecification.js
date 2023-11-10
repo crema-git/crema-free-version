@@ -42,5 +42,5 @@ const productSpec = ({productSpec}) => {
 export default productSpec;
 
 productSpec.propTypes = {
-  productSpec: PropTypes.object,
+  productSpec: PropTypes.array,
 };
