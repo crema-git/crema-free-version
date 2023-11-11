@@ -14,7 +14,6 @@ import {
   twitterAuthProvider,
   updateProfile,
 } from './firebase';
-import { defaultUser } from '@crema/constants/AppConst';
 
 const FirebaseContext = createContext();
 const FirebaseActionsContext = createContext();
@@ -30,9 +29,9 @@ const FirebaseAuthProvider = ({
   fetchError,
 }) => {
   const [firebaseData, setFirebaseData] = useState({
-    user: defaultUser,
+    user: null,
     isLoading: true,
-    isAuthenticated: true,
+    isAuthenticated: false,
   });
 
   useEffect(() => {
