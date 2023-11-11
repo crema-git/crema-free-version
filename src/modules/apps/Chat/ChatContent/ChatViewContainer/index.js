@@ -34,12 +34,6 @@ const ScrollChatNoMainWrapper = styled('div')(() => {
   };
 });
 
-MessagesList.propTypes = {
-  onClickEditMessage: PropTypes.func,
-  userMessages: PropTypes.any,
-  deleteMessage: PropTypes.func,
-  authUser: PropTypes.func,
-};
 const ChatViewContainer = ({selectedUser, setSelectedUser}) => {
   const {setConnectionData} = useChatActionsContext();
   const [message, setMessage] = useState('');
@@ -172,7 +166,7 @@ const ChatViewContainer = ({selectedUser, setSelectedUser}) => {
         infoViewActionsContext.fetchError(error.message);
       });
   };
-
+  console.log('authUser', user);
   return (
     <Box
       sx={{

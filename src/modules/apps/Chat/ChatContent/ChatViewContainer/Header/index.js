@@ -134,7 +134,6 @@ const Header = ({selectedUser, deleteConversation}) => {
               ml: {xs: 2, md: 3.5},
               color: 'text.disabled',
             }}
-            onClick={onViewMoreOpen}
           >
             <IconButton
               sx={{
@@ -144,6 +143,7 @@ const Header = ({selectedUser, deleteConversation}) => {
                 padding: 2,
               }}
               size='large'
+              onClick={onViewMoreOpen}
             >
               <MoreVertIcon />
             </IconButton>

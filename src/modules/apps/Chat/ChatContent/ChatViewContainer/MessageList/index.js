@@ -70,10 +70,8 @@ const MessageList = ({
 
 export default MessageList;
 
-MessageList.defaultProps = {};
-
 MessageList.propTypes = {
-  userMessages: PropTypes.object.isRequired,
+  userMessages: PropTypes.object,
   authUser: PropTypes.object.isRequired,
   selectedUser: PropTypes.object.isRequired,
   onClickEditMessage: PropTypes.func,

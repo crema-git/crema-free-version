@@ -52,6 +52,6 @@ const PreviewThumb = ({file, onDeleteUploadFile}) => {
 
 export default PreviewThumb;
 PreviewThumb.propTypes = {
-  file: PropsTypes.object,
+  file: PropsTypes.string,
   onDeleteUploadFile: PropsTypes.func,
 };

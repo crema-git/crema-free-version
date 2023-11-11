@@ -113,12 +113,11 @@ const SendMessage = ({sendFileMessage, onSendMessage, currentMessage = ''}) => {
         onKeyPress={onKeyPress}
       />
       <Box
-        onClick={onClickSendMessage}
         sx={{
           ml: 2,
         }}
       >
-        <SendBtn size='large'>
+        <SendBtn size='large' onClick={onClickSendMessage}>
           <SendOutlinedIcon />
         </SendBtn>
       </Box>

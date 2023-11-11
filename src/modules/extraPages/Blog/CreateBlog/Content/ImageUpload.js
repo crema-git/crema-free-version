@@ -49,7 +49,7 @@ const ImgUpload = ({uploadedFiles, setUploadedFiles}) => {
           <PreviewThumb
             file={file}
             onDeleteUploadFile={onDeleteUploadFile}
-            key={index + file.path}
+            key={index + file}
           />
         )}
       />

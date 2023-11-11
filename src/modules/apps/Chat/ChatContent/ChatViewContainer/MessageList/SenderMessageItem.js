@@ -382,10 +382,9 @@ const SenderMessageItem = ({
                 color: (theme) => theme.palette.text.disabled,
               },
             }}
-            onClick={onViewMoreOpen}
             className='message-more-dropdown-link'
           >
-            <IconButton size='large'>
+            <IconButton size='large' onClick={onViewMoreOpen}>
               <MoreVertIcon />
             </IconButton>
 

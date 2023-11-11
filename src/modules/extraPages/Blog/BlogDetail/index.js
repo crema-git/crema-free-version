@@ -71,5 +71,5 @@ export default BlogDetail;
 
 BlogContent.propTypes = {
   blogSidebar: PropTypes.object.isRequired,
-  blogDetail: PropTypes.object.isRequired,
+  blogDetail: PropTypes.object,
 };
