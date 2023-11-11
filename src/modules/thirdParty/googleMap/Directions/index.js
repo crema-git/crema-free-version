@@ -6,7 +6,7 @@ import {
   withGoogleMap,
 } from 'react-google-maps';
 
-// const google = window.google;
+const google = window.google;
 
 const DirectionsExampleGoogleMap = withGoogleMap((props) => (
   <GoogleMap defaultZoom={7} defaultCenter={props.center}>

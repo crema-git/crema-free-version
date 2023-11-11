@@ -15,7 +15,7 @@ import DrawingManager from 'react-google-maps/lib/components/drawing/DrawingMana
  * Credits: thanks @idolize for the contribution!
  */
 
-// const google = window.google;
+const google = window.google;
 
 const DrawingExampleGoogleMap = withGoogleMap(() => (
   <GoogleMap

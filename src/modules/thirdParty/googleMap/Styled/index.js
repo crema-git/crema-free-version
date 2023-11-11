@@ -6,7 +6,7 @@ import InfoBox from 'react-google-maps/lib/components/addons/InfoBox';
 
 import fancyMapStyles from './fancyMapStyles.json';
 
-// const google = window.google;
+const google = window.google;
 
 const StyledMapExampleGoogleMap = withGoogleMap((props) => (
   <GoogleMap
