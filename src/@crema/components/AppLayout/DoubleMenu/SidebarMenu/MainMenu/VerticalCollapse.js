@@ -103,7 +103,7 @@ const VerticalCollapse = ({ item, level }) => {
         </IconButton>
       </ListItem>
 
-      {item.children && (
+      {item.children && open && (
         <Collapse in={open} className='collapse-children'>
           {item.children.map((item) => (
             <React.Fragment key={item.id}>
