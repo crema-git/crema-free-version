@@ -40,8 +40,8 @@ const FirebaseAuthProvider = ({
       auth,
       (user) => {
         setFirebaseData({
-          user: user ? user : firebaseData.user,
-          isAuthenticated: Boolean(user ? user : firebaseData.user),
+          user: user,
+          isAuthenticated: Boolean(user),
           isLoading: false,
         });
         fetchSuccess();
@@ -49,17 +49,17 @@ const FirebaseAuthProvider = ({
       () => {
         fetchSuccess();
         setFirebaseData({
-          user: firebaseData.user,
+          user: null,
           isLoading: false,
-          isAuthenticated: firebaseData.isAuthenticated,
+          isAuthenticated: false,
         });
       },
       () => {
         fetchSuccess();
         setFirebaseData({
-          user: firebaseData.user,
+          user: null,
           isLoading: false,
-          isAuthenticated: firebaseData.isAuthenticated,
+          isAuthenticated: false,
         });
       },
     );
