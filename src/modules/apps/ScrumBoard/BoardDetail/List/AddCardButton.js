@@ -34,7 +34,7 @@ const AddCardButton = (props) => {
           <AddIcon
             sx={{
               fontWeight: Fonts.LIGHT,
-              color: 'grey.500',
+              color: 'grey.700',
             }}
           />
         </Avatar>

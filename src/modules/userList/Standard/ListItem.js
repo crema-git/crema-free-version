@@ -286,10 +286,10 @@ const ListItem = (props) => {
                   sx={{
                     backgroundColor: (theme) =>
                       theme.palette.primary.contrastText,
-                    color: 'grey.500',
+                    color: 'grey.700',
                     marginTop: 2,
                     border: '1px solid',
-                    borderColor: 'grey.500',
+                    borderColor: 'grey.700',
                     width: 96,
                     fontWeight: Fonts.MEDIUM,
                     padding: '9px 12px',

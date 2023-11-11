@@ -198,7 +198,7 @@ const ChatViewContainer = ({ selectedUser, setSelectedUser }) => {
             component='span'
             sx={{
               fontSize: 18,
-              color: 'grey.500',
+              color: 'grey.700',
             }}
           >
             <IntlMessages id='chatApp.sayHi' /> {selectedUser.name}

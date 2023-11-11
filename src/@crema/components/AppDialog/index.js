@@ -59,7 +59,7 @@ const AppDialog = ({
               position: 'absolute',
               right: 4,
               top: 4,
-              color: 'grey.500',
+              color: 'grey.700',
             }}
             onClick={onClose}
             size='large'

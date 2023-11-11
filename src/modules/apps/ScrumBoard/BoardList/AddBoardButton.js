@@ -32,7 +32,7 @@ const AddBoardButton = ({ onAddButtonClick }) => {
       >
         <Avatar
           sx={{
-            backgroundColor: 'grey.500',
+            backgroundColor: 'grey.700',
             marginBottom: 5,
           }}
         >

@@ -118,7 +118,7 @@ const SignupJwtAuth = () => {
                       component='span'
                       sx={{
                         mr: 2,
-                        color: 'grey.500',
+                        color: 'grey.700',
                       }}
                     >
                       <IntlMessages id='common.iAgreeTo' />
@@ -159,7 +159,7 @@ const SignupJwtAuth = () => {
 
         <Box
           sx={{
-            color: 'grey.500',
+            color: 'grey.700',
           }}
         >
           <span style={{ marginRight: 4 }}>

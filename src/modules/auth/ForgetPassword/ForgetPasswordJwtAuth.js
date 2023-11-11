@@ -40,7 +40,7 @@ const ForgetPasswordJwtAuth = () => {
             sx={{
               pt: 3,
               fontSize: 15,
-              color: 'grey.500',
+              color: 'grey.700',
             }}
           >
             <span style={{ marginRight: 4 }}>

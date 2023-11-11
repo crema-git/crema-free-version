@@ -106,7 +106,7 @@ const SigninAwsCognito = () => {
                     <Box
                       component='span'
                       sx={{
-                        color: 'grey.500',
+                        color: 'grey.700',
                       }}
                     >
                       <IntlMessages id='common.rememberMe' />
@@ -151,7 +151,7 @@ const SigninAwsCognito = () => {
 
         <Box
           sx={{
-            color: 'grey.500',
+            color: 'grey.700',
             mb: { xs: 5, md: 7 },
           }}
         >

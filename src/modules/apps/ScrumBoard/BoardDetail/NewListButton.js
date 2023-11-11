@@ -44,7 +44,7 @@ const NewListButton = (props) => {
           >
             <AddIcon
               sx={{
-                color: 'grey.500',
+                color: 'grey.700',
                 fontWeight: Fonts.LIGHT,
               }}
             />

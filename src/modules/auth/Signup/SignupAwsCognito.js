@@ -143,7 +143,7 @@ const SignupAwsCognito = () => {
                       component='span'
                       sx={{
                         mr: 2,
-                        color: 'grey.500',
+                        color: 'grey.700',
                       }}
                     >
                       <IntlMessages id='common.iAgreeTo' />
@@ -183,7 +183,7 @@ const SignupAwsCognito = () => {
 
         <Box
           sx={{
-            color: 'grey.500',
+            color: 'grey.700',
             mb: { xs: 5, md: 7 },
           }}
         >

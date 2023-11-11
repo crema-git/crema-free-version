@@ -31,7 +31,7 @@ export const labelList = [
     alias: 'node',
     label: 'Node.js',
     value: 'Node.js',
-    color: 'grey.500',
+    color: 'grey.700',
   },
 ];
 

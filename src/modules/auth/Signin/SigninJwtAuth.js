@@ -101,7 +101,7 @@ const SigninJwtAuth = () => {
                     <Box
                       component='span'
                       sx={{
-                        color: 'grey.500',
+                        color: 'grey.700',
                       }}
                     >
                       <IntlMessages id='common.rememberMe' />
@@ -146,7 +146,7 @@ const SigninJwtAuth = () => {
 
         <Box
           sx={{
-            color: 'grey.500',
+            color: 'grey.700',
           }}
         >
           <span style={{ marginRight: 4 }}>
