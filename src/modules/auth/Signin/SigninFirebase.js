@@ -98,11 +98,12 @@ const SigninFirebase = () => {
                       alignItems: 'center',
                     }}
                   >
-                    <Checkbox sx={{ ml: -3 }} />
+                    <Checkbox sx={{ ml: -3 }} id='rememberMe' />
                     <Box
+                      aria-labelledby='rememberMe'
                       component='span'
                       sx={{
-                        color: 'grey.500',
+                        color: 'grey.700',
                       }}
                     >
                       <IntlMessages id='common.rememberMe' />
@@ -112,7 +113,7 @@ const SigninFirebase = () => {
                     component='span'
                     sx={{
                       color: (theme) => theme.palette.primary.main,
-                      fontWeight: Fonts.MEDIUM,
+                      fontWeight: Fonts.SEMI_BOLD,
                       cursor: 'pointer',
                       display: 'block',
                       textAlign: 'right',
@@ -147,7 +148,7 @@ const SigninFirebase = () => {
 
         <Box
           sx={{
-            color: 'grey.500',
+            color: 'grey.700',
             mb: { xs: 5, md: 7 },
           }}
         >
@@ -157,7 +158,7 @@ const SigninFirebase = () => {
           <Box
             component='span'
             sx={{
-              fontWeight: Fonts.MEDIUM,
+              fontWeight: Fonts.SEMI_BOLD,
               '& a': {
                 color: (theme) => theme.palette.primary.main,
                 textDecoration: 'none',
@@ -197,9 +198,10 @@ const SigninFirebase = () => {
             }}
           >
             <IconButton
+              aria-label='Google'
               sx={{
                 p: 2,
-                '& svg': { fontSize: 18 },
+                '& svg': { fontSize: 20 },
                 color: (theme) => theme.palette.text.secondary,
               }}
               onClick={() => logInWithPopup('google')}
@@ -207,9 +209,10 @@ const SigninFirebase = () => {
               <AiOutlineGoogle />
             </IconButton>
             <IconButton
+              aria-label='Facebook'
               sx={{
                 p: 1.5,
-                '& svg': { fontSize: 18 },
+                '& svg': { fontSize: 20 },
                 color: (theme) => theme.palette.text.secondary,
               }}
               onClick={() => logInWithPopup('facebook')}
@@ -217,9 +220,10 @@ const SigninFirebase = () => {
               <FaFacebookF />
             </IconButton>
             <IconButton
+              aria-label='Github'
               sx={{
                 p: 1.5,
-                '& svg': { fontSize: 18 },
+                '& svg': { fontSize: 20 },
                 color: (theme) => theme.palette.text.secondary,
               }}
               onClick={() => logInWithPopup('github')}
@@ -227,9 +231,10 @@ const SigninFirebase = () => {
               <BsGithub />
             </IconButton>
             <IconButton
+              aria-label='Twitter'
               sx={{
                 p: 1.5,
-                '& svg': { fontSize: 18 },
+                '& svg': { fontSize: 20 },
                 color: (theme) => theme.palette.text.secondary,
               }}
               onClick={() => logInWithPopup('twitter')}
