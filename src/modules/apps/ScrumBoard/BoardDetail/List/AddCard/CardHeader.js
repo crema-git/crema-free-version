@@ -4,15 +4,15 @@ import AttachFileIcon from '@mui/icons-material/AttachFile';
 import DeleteOutlinedIcon from '@mui/icons-material/DeleteOutlined';
 import CloseOutlinedIcon from '@mui/icons-material/CloseOutlined';
 import IntlMessages from '@crema/helpers/IntlMessages';
-import {useDropzone} from 'react-dropzone';
+import { useDropzone } from 'react-dropzone';
 import PropTypes from 'prop-types';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Fonts } from '@crema/constants/AppEnums';
 import IconButton from '@mui/material/IconButton';
-import {generateRandomUniqueNumber} from '@crema/helpers/Common';
+import { generateRandomUniqueNumber } from '@crema/helpers/Common';
 
 const CardHeader = (props) => {
-  const {onClickDeleteIcon, onCloseAddCard, onAddAttachments} = props;
-  const {getRootProps, getInputProps} = useDropzone({
+  const { onClickDeleteIcon, onCloseAddCard, onAddAttachments } = props;
+  const { getRootProps, getInputProps } = useDropzone({
     accept: 'image/*',
     onDrop: (acceptedFiles) => {
       const files = acceptedFiles.map((file) => {
@@ -30,7 +30,7 @@ const CardHeader = (props) => {
     <Box
       sx={{
         py: 2,
-        px: {xs: 5, lg: 8, xl: 10},
+        px: { xs: 5, lg: 8, xl: 10 },
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between',
@@ -50,12 +50,12 @@ const CardHeader = (props) => {
       <Box
         sx={{
           pl: 2,
-          mr: {xs: -2, lg: -3, xl: -4},
+          mr: { xs: -2, lg: -3, xl: -4 },
           display: 'flex',
           alignItems: 'center',
         }}
       >
-        <Box {...getRootProps({className: 'dropzone'})}>
+        <Box {...getRootProps({ className: 'dropzone' })}>
           <input {...getInputProps()} />
           <IconButton>
             <AttachFileIcon />

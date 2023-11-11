@@ -2,13 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
 import Avatar from '@mui/material/Avatar';
-import {Fonts} from '@crema/constants/AppEnums';
-import {Typography} from '@mui/material';
+import { Fonts } from '@crema/constants/AppEnums';
+import { Typography } from '@mui/material';
 import AppCard from '@crema/components/AppCard';
 
-const Sections = ({data}) => {
+const Sections = ({ data }) => {
   return (
-    <AppCard sx={{height: '100%'}}>
+    <AppCard sx={{ height: '100%' }}>
       <Box
         sx={{
           mb: 3,

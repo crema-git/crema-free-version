@@ -1,26 +1,26 @@
-import React, {useState} from 'react';
-import {Formik} from 'formik';
+import React, { useState } from 'react';
+import { Formik } from 'formik';
 import * as yup from 'yup';
 import IntlMessages from '@crema/helpers/IntlMessages';
 import AddTaskForm from './AddTaskForm';
 import PropTypes from 'prop-types';
 import AppDialog from '@crema/components/AppDialog';
-import {useAuthUser} from '@crema/hooks/AuthHooks';
-import {postDataApi} from '@crema/hooks/APIHooks';
-import {useInfoViewActionsContext} from '@crema/context/AppContextProvider/InfoViewContextProvider';
-import {useTodoActionsContext} from '../../context/TodoContextProvider';
-import {getDateObject, getFormattedDate} from '@crema/helpers/DateHelper';
-import {generateRandomUniqueNumber} from '@crema/helpers/Common';
+import { useAuthUser } from '@crema/hooks/AuthHooks';
+import { postDataApi } from '@crema/hooks/APIHooks';
+import { useInfoViewActionsContext } from '@crema/context/AppContextProvider/InfoViewContextProvider';
+import { useTodoActionsContext } from '../../context/TodoContextProvider';
+import { getDateObject, getFormattedDate } from '@crema/helpers/DateHelper';
+import { generateRandomUniqueNumber } from '@crema/helpers/Common';
 
 const validationSchema = yup.object({
   title: yup.string().required(<IntlMessages id='validation.titleRequired' />),
 });
 
-const AddNewTask = ({isAddTaskOpen, onCloseAddTask, selectedDate}) => {
-  const {user} = useAuthUser();
+const AddNewTask = ({ isAddTaskOpen, onCloseAddTask, selectedDate }) => {
+  const { user } = useAuthUser();
   const infoViewActionsContext = useInfoViewActionsContext();
   const [taskLabels, setTaskLabels] = useState([]);
-  const {reCallAPI} = useTodoActionsContext();
+  const { reCallAPI } = useTodoActionsContext();
 
   return (
     <AppDialog
@@ -43,7 +43,7 @@ const AddNewTask = ({isAddTaskOpen, onCloseAddTask, selectedDate}) => {
           content: '',
         }}
         validationSchema={validationSchema}
-        onSubmit={(data, {setSubmitting, resetForm}) => {
+        onSubmit={(data, { setSubmitting, resetForm }) => {
           setSubmitting(true);
           const newTask = {
             id: generateRandomUniqueNumber(),
@@ -81,7 +81,7 @@ const AddNewTask = ({isAddTaskOpen, onCloseAddTask, selectedDate}) => {
           setSubmitting(false);
         }}
       >
-        {({isSubmitting, values, setFieldValue}) => (
+        {({ isSubmitting, values, setFieldValue }) => (
           <AddTaskForm
             isSubmitting={isSubmitting}
             values={values}

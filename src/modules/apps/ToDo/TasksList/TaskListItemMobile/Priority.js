@@ -1,9 +1,9 @@
 import React from 'react';
 import Box from '@mui/material/Box';
 import PropTypes from 'prop-types';
-import {alpha} from '@mui/material';
+import { alpha } from '@mui/material';
 
-const Priority = ({priority}) => {
+const Priority = ({ priority }) => {
   return (
     <Box
       component='span'

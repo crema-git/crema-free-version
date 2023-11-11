@@ -1,15 +1,15 @@
 import IntlMessages from '@crema/helpers/IntlMessages';
-import {Box, Tab, Tabs} from '@mui/material';
-import React, {useState} from 'react';
+import { Box, Tab, Tabs } from '@mui/material';
+import React, { useState } from 'react';
 import Invoicing from './Invoicing';
 import General from './General';
 import Accounting from './Accounting';
 import AppCard from '@crema/components/AppCard';
-import {putDataApi, useGetDataApi} from '@crema/hooks/APIHooks';
-import {useInfoViewActionsContext} from '@crema/context/AppContextProvider/InfoViewContextProvider';
+import { putDataApi, useGetDataApi } from '@crema/hooks/APIHooks';
+import { useInfoViewActionsContext } from '@crema/context/AppContextProvider/InfoViewContextProvider';
 
 const InvoiceSettingsPage = () => {
-  const [{apiData}, {reCallAPI}] = useGetDataApi(
+  const [{ apiData }, { reCallAPI }] = useGetDataApi(
     '/api/invoice/settings',
     {},
     {},

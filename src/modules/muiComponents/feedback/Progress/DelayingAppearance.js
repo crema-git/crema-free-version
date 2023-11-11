@@ -38,8 +38,10 @@ export default function DelayingAppearance() {
   };
 
   return (
-    <Box sx={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
-      <Box sx={{height: 40}}>
+    <Box
+      sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
+    >
+      <Box sx={{ height: 40 }}>
         <Fade
           in={loading}
           style={{
@@ -50,10 +52,10 @@ export default function DelayingAppearance() {
           <CircularProgress />
         </Fade>
       </Box>
-      <Button onClick={handleClickLoading} sx={{m: 2}}>
+      <Button onClick={handleClickLoading} sx={{ m: 2 }}>
         {loading ? 'Stop loading' : 'Loading'}
       </Button>
-      <Box sx={{height: 40}}>
+      <Box sx={{ height: 40 }}>
         {query === 'success' ? (
           <Typography>Success!</Typography>
         ) : (
@@ -68,7 +70,7 @@ export default function DelayingAppearance() {
           </Fade>
         )}
       </Box>
-      <Button onClick={handleClickQuery} sx={{m: 2}}>
+      <Button onClick={handleClickQuery} sx={{ m: 2 }}>
         {query !== 'idle' ? 'Reset' : 'Simulate a load'}
       </Button>
     </Box>

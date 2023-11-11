@@ -14,7 +14,7 @@ export default function SelectOtherProps() {
 
   return (
     <div>
-      <FormControl sx={{m: 1, minWidth: 120}} disabled>
+      <FormControl sx={{ m: 1, minWidth: 120 }} disabled>
         <InputLabel id='demo-simple-select-disabled-label'>Age</InputLabel>
         <Select
           labelId='demo-simple-select-disabled-label'
@@ -32,7 +32,7 @@ export default function SelectOtherProps() {
         </Select>
         <FormHelperText>Disabled</FormHelperText>
       </FormControl>
-      <FormControl sx={{m: 1, minWidth: 120}} error>
+      <FormControl sx={{ m: 1, minWidth: 120 }} error>
         <InputLabel id='demo-simple-select-error-label'>Age</InputLabel>
         <Select
           labelId='demo-simple-select-error-label'
@@ -51,7 +51,7 @@ export default function SelectOtherProps() {
         </Select>
         <FormHelperText>Error</FormHelperText>
       </FormControl>
-      <FormControl sx={{m: 1, minWidth: 120}}>
+      <FormControl sx={{ m: 1, minWidth: 120 }}>
         <InputLabel id='demo-simple-select-readonly-label'>Age</InputLabel>
         <Select
           labelId='demo-simple-select-readonly-label'
@@ -59,7 +59,7 @@ export default function SelectOtherProps() {
           value={age}
           label='Age'
           onChange={handleChange}
-          inputProps={{readOnly: true}}
+          inputProps={{ readOnly: true }}
         >
           <MenuItem value=''>
             <em>None</em>
@@ -70,7 +70,7 @@ export default function SelectOtherProps() {
         </Select>
         <FormHelperText>Read only</FormHelperText>
       </FormControl>
-      <FormControl required sx={{m: 1, minWidth: 120}}>
+      <FormControl required sx={{ m: 1, minWidth: 120 }}>
         <InputLabel id='demo-simple-select-required-label'>Age</InputLabel>
         <Select
           labelId='demo-simple-select-required-label'

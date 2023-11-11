@@ -1,5 +1,5 @@
 import React from 'react';
-import {alpha, Box} from '@mui/material';
+import { alpha, Box } from '@mui/material';
 
 import clsx from 'clsx';
 import AppList from '@crema/components/AppList';

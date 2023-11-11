@@ -1,4 +1,4 @@
-import {Fonts} from '@crema/constants/AppEnums';
+import { Fonts } from '@crema/constants/AppEnums';
 
 export const highlightTheme = {
   plain: {

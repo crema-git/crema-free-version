@@ -3,9 +3,9 @@ import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import Paper from '@mui/material/Paper';
 import Masonry from '@mui/lab/Masonry';
-import {styled} from '@mui/material/styles';
+import { styled } from '@mui/material/styles';
 
-const Label = styled(Paper)(({theme}) => ({
+const Label = styled(Paper)(({ theme }) => ({
   ...theme.typography.body2,
   color: theme.palette.text.secondary,
   border: '1px solid black',
@@ -18,7 +18,7 @@ const Label = styled(Paper)(({theme}) => ({
 
 export default function ImageMasonry() {
   return (
-    <Box sx={{width: 500, minHeight: 829}}>
+    <Box sx={{ width: 500, minHeight: 829 }}>
       <Masonry columns={3} spacing={1}>
         {itemData.map((item, index) => (
           <Stack key={index}>
@@ -28,7 +28,7 @@ export default function ImageMasonry() {
               srcSet={`${item.img}?w=162&auto=format&dpr=2 2x`}
               alt={item.title}
               loading='lazy'
-              style={{borderBottomLeftRadius: 4, borderBottomRightRadius: 4}}
+              style={{ borderBottomLeftRadius: 4, borderBottomRightRadius: 4 }}
             />
           </Stack>
         ))}

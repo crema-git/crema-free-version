@@ -8,13 +8,13 @@ import PropTypes from 'prop-types';
 import CallMadeOutlinedIcon from '@mui/icons-material/CallMadeOutlined';
 import IconButton from '@mui/material/IconButton';
 import EditIcon from '@mui/icons-material/Edit';
-import {alpha} from '@mui/material';
+import { alpha } from '@mui/material';
 import Box from '@mui/material/Box';
 
-import {styled} from '@mui/material/styles';
-import {Fonts} from '@crema/constants/AppEnums';
+import { styled } from '@mui/material/styles';
+import { Fonts } from '@crema/constants/AppEnums';
 
-const AvatarGroupRoot = styled(AvatarGroup)(({theme}) => {
+const AvatarGroupRoot = styled(AvatarGroup)(({ theme }) => {
   return {
     '& .MuiAvatar-root': {
       fontSize: 14,
@@ -36,7 +36,7 @@ const AvatarGroupRoot = styled(AvatarGroup)(({theme}) => {
   };
 });
 
-const IconBtnRoot = styled(IconButton)(({theme}) => {
+const IconBtnRoot = styled(IconButton)(({ theme }) => {
   return {
     border: `solid 1px ${theme.palette.primary.main}`,
     color: theme.palette.primary.main,
@@ -61,7 +61,7 @@ const IconBtnRoot = styled(IconButton)(({theme}) => {
 
 const IOSSwitch = styled((props) => (
   <Switch focusVisibleClassName='.Mui-focusVisible' disableRipple {...props} />
-))(({theme}) => ({
+))(({ theme }) => ({
   width: 36,
   height: 20,
   padding: 0,
@@ -110,7 +110,7 @@ const IOSSwitch = styled((props) => (
   },
 }));
 
-const TeamState = ({data}) => {
+const TeamState = ({ data }) => {
   return (
     <AppCard>
       <Box
@@ -162,7 +162,7 @@ const TeamState = ({data}) => {
               borderRadius: 30,
             }}
             key={'team-' + index}
-            style={{backgroundColor: data.color + '21', color: data.color}}
+            style={{ backgroundColor: data.color + '21', color: data.color }}
           >
             <Typography component='span' variant='h6'>
               {data.title}

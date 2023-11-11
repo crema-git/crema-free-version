@@ -1,17 +1,17 @@
-import React, {useEffect, useId, useState} from 'react';
+import React, { useEffect, useId, useState } from 'react';
 import AppGridContainer from '@crema/components/AppGridContainer';
-import {Fonts} from '@crema/constants/AppEnums';
-import {Box} from '@mui/material';
+import { Fonts } from '@crema/constants/AppEnums';
+import { Box } from '@mui/material';
 import BlogSidebar from './Sidebar';
 import BlogContent from './Content';
-import {Form, Formik} from 'formik';
-import {useInfoViewActionsContext} from '@crema/context/AppContextProvider/InfoViewContextProvider';
-import {postDataApi, putDataApi} from '@crema/hooks/APIHooks';
-import {CreateNewBlog} from './NewBlogTemplete';
-import {useNavigate} from 'react-router-dom';
+import { Form, Formik } from 'formik';
+import { useInfoViewActionsContext } from '@crema/context/AppContextProvider/InfoViewContextProvider';
+import { postDataApi, putDataApi } from '@crema/hooks/APIHooks';
+import { CreateNewBlog } from './NewBlogTemplete';
+import { useNavigate } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-export const CreateBlog = ({selectedBlog}) => {
+export const CreateBlog = ({ selectedBlog }) => {
   const id = useId();
   const [selectedTags, setSelectedTags] = useState([]);
   const [uploadedFiles, setUploadedFiles] = useState([]);
@@ -53,7 +53,7 @@ export const CreateBlog = ({selectedBlog}) => {
           metadesc: selectedBlog?.blogDetailContent?.meta?.metadesc || '',
           keywords: selectedBlog?.blogDetailContent?.meta?.keywords || '',
         }}
-        onSubmit={(data, {setSubmitting, resetForm}) => {
+        onSubmit={(data, { setSubmitting, resetForm }) => {
           setSubmitting(true);
           if (selectedBlog) {
             const newBlog = {
@@ -116,7 +116,7 @@ export const CreateBlog = ({selectedBlog}) => {
           resetForm();
         }}
       >
-        {({setFieldValue}) => (
+        {({ setFieldValue }) => (
           <Form noValidate autoComplete='off'>
             <AppGridContainer>
               <BlogContent

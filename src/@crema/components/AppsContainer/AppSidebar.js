@@ -2,11 +2,11 @@ import React from 'react';
 import Hidden from '@mui/material/Hidden';
 import Drawer from '@mui/material/Drawer';
 import Card from '@mui/material/Card';
-import {Box, drawerClasses, Slide} from '@mui/material';
+import { Box, drawerClasses, Slide } from '@mui/material';
 import PropTypes from 'prop-types';
 
 const AppSidebar = (props) => {
-  const {isAppDrawerOpen, sidebarContent, toggleNavCollapsed} = props;
+  const { isAppDrawerOpen, sidebarContent, toggleNavCollapsed } = props;
   return (
     <Slide direction='right' in mountOnEnter unmountOnExit>
       <Box
@@ -35,7 +35,7 @@ const AppSidebar = (props) => {
           </Drawer>
         </Hidden>
         <Hidden lgDown>
-          <Card style={{height: '100%'}}>{sidebarContent}</Card>
+          <Card style={{ height: '100%' }}>{sidebarContent}</Card>
         </Hidden>
       </Box>
     </Slide>

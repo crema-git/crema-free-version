@@ -15,8 +15,8 @@ const AppsPagination = ({
       count={count}
       rowsPerPage={rowsPerPage}
       page={page}
-      backIconButtonProps={{'aria-label': 'Previous Page'}}
-      nextIconButtonProps={{'aria-label': 'Next Page'}}
+      backIconButtonProps={{ 'aria-label': 'Previous Page' }}
+      nextIconButtonProps={{ 'aria-label': 'Next Page' }}
       onPageChange={onPageChange}
       rowsPerPageOptions={[]}
       {...rest}

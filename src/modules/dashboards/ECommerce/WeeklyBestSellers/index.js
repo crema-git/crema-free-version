@@ -5,18 +5,18 @@ import AppScrollbar from '@crema/components/AppScrollbar';
 
 import BestSellersCell from './BestSellersCell';
 import PropTypes from 'prop-types';
-import {useIntl} from 'react-intl';
+import { useIntl } from 'react-intl';
 
-const WeeklyBestSellers = ({data}) => {
-  const {messages} = useIntl();
+const WeeklyBestSellers = ({ data }) => {
+  const { messages } = useIntl();
   return (
     <AppCard
-      sxStyle={{height: 1}}
-      contentStyle={{paddingLeft: 0, paddingRight: 0}}
+      sxStyle={{ height: 1 }}
+      contentStyle={{ paddingLeft: 0, paddingRight: 0 }}
       title={messages['dashboard.eCommerce.weeklyBestSellers']}
       action={messages['common.viewAll']}
     >
-      <AppScrollbar style={{maxHeight: 200}}>
+      <AppScrollbar style={{ maxHeight: 200 }}>
         <AppList
           data={data}
           renderRow={(bestSeller) => (

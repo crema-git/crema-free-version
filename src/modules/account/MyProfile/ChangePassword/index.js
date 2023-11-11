@@ -1,9 +1,9 @@
 import React from 'react';
-import {Box, Typography} from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import IntlMessages from '@crema/helpers/IntlMessages';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Fonts } from '@crema/constants/AppEnums';
 import ChangePasswordForm from './ChangePasswordForm';
-import {Formik} from 'formik';
+import { Formik } from 'formik';
 import * as yup from 'yup';
 
 const validationSchema = yup.object({
@@ -35,7 +35,7 @@ const ChangePassword = () => {
         sx={{
           fontSize: 16,
           fontWeight: Fonts.BOLD,
-          mb: {xs: 3, lg: 5},
+          mb: { xs: 3, lg: 5 },
         }}
       >
         <IntlMessages id='common.changePassword' />
@@ -49,7 +49,7 @@ const ChangePassword = () => {
           retypeNewPassword: 'us',
         }}
         validationSchema={validationSchema}
-        onSubmit={(data, {setSubmitting}) => {
+        onSubmit={(data, { setSubmitting }) => {
           setSubmitting(true);
           console.log('data: ', data);
           setSubmitting(false);

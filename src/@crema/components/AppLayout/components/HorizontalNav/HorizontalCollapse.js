@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import {
   Grow,
   Icon,
@@ -9,25 +9,25 @@ import {
 } from '@mui/material';
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
-import {Manager, Popper, Reference} from 'react-popper';
+import { Manager, Popper, Reference } from 'react-popper';
 import * as ReactDOM from 'react-dom';
 import HorizontalItem from './HorizontalItem';
 import HorizontalGroup from './HorizontalGroup';
 import Box from '@mui/material/Box';
 import IntlMessages from '@crema/helpers/IntlMessages';
-import {useThemeContext} from '@crema/context/AppContextProvider/ThemeContextProvider';
+import { useThemeContext } from '@crema/context/AppContextProvider/ThemeContextProvider';
 import List from '@mui/material/List';
-import {useSidebarContext} from '@crema/context/AppContextProvider/SidebarContextProvider';
-import {useLocation} from 'react-router-dom';
-import {allowMultiLanguage} from '@crema/constants/AppConst';
+import { useSidebarContext } from '@crema/context/AppContextProvider/SidebarContextProvider';
+import { useLocation } from 'react-router-dom';
+import { allowMultiLanguage } from '@crema/constants/AppConst';
 
 function HorizontalCollapse(props) {
   const [opened, setOpened] = useState(false);
-  const {theme} = useThemeContext();
+  const { theme } = useThemeContext();
   const location = useLocation();
-  const {item, nestedLevel, dense} = props;
+  const { item, nestedLevel, dense } = props;
   const active = isUrlInChildren(item, location.pathname);
-  const {sidebarMenuSelectedBgColor, sidebarMenuSelectedTextColor} =
+  const { sidebarMenuSelectedBgColor, sidebarMenuSelectedTextColor } =
     useSidebarContext();
 
   const handleToggle = (open) => {
@@ -69,7 +69,7 @@ function HorizontalCollapse(props) {
     >
       <Manager>
         <Reference>
-          {({ref}) => (
+          {({ ref }) => (
             <ListItem
               ref={ref}
               button
@@ -106,7 +106,7 @@ function HorizontalCollapse(props) {
                   sx={{
                     color: active ? sidebarMenuSelectedTextColor : 'action',
                     mr: 3.5,
-                    fontSize: {xs: 16, xl: 18},
+                    fontSize: { xs: 16, xl: 18 },
                   }}
                 >
                   {item.icon}
@@ -140,7 +140,7 @@ function HorizontalCollapse(props) {
         </Reference>
         {ReactDOM.createPortal(
           <Popper placement='right' eventsEnabled={opened} positionFixed>
-            {({ref, style, placement}) =>
+            {({ ref, style, placement }) =>
               opened && (
                 <Box
                   ref={ref}
@@ -160,7 +160,7 @@ function HorizontalCollapse(props) {
                   <Grow
                     in={opened}
                     id='menu-list-grow'
-                    sx={{transformOrigin: '0 0 0'}}
+                    sx={{ transformOrigin: '0 0 0' }}
                   >
                     <Paper
                       onMouseEnter={() => handleToggle(true)}

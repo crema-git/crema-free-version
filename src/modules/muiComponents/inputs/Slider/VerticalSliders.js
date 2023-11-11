@@ -27,7 +27,7 @@ const marks = [
 
 export default function VerticalSlider() {
   return (
-    <Stack sx={{height: 300}} spacing={1} direction='row'>
+    <Stack sx={{ height: 300 }} spacing={1} direction='row'>
       <Slider
         aria-label='Temperature'
         orientation='vertical'

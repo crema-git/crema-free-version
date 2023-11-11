@@ -1,5 +1,5 @@
-import React, {useEffect} from 'react';
-import {styled} from '@mui/material/styles';
+import React, { useEffect } from 'react';
+import { styled } from '@mui/material/styles';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
@@ -10,8 +10,8 @@ import IconButton from '@mui/material/IconButton';
 import SnackbarContent from '@mui/material/SnackbarContent';
 import WarningIcon from '@mui/icons-material/Warning';
 import Snackbar from '@mui/material/Snackbar';
-import {Slide} from '@mui/material';
-import {amber, green} from '@mui/material/colors';
+import { Slide } from '@mui/material';
+import { amber, green } from '@mui/material/colors';
 
 const PREFIX = 'AppMessageView';
 
@@ -25,7 +25,7 @@ const classes = {
   message: `${PREFIX}-message`,
 };
 
-const StyledSnackbar = styled(Snackbar)(({theme}) => ({
+const StyledSnackbar = styled(Snackbar)(({ theme }) => ({
   [`& .${classes.success}`]: {
     backgroundColor: green[600],
   },
@@ -70,7 +70,7 @@ function TransitionLeft(props) {
 
 const AppMessageView = (props) => {
   const [open, setOpen] = React.useState(false);
-  const {clearInfoView, className, message, variant, ...other} = props;
+  const { clearInfoView, className, message, variant, ...other } = props;
   const Icon = variantIcon[variant];
   const onClose = () => {
     setOpen(false);

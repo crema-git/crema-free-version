@@ -1,16 +1,16 @@
 import React from 'react';
 import Card from '@mui/material/Card';
 import Button from '@mui/material/Button';
-import {Checkbox, useTheme} from '@mui/material';
-import {Form, Formik} from 'formik';
+import { Checkbox, useTheme } from '@mui/material';
+import { Form, Formik } from 'formik';
 import * as yup from 'yup';
 import Grid from '@mui/material/Grid';
 import IntlMessages from '@crema/helpers/IntlMessages';
 import Box from '@mui/material/Box';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Fonts } from '@crema/constants/AppEnums';
 import AppAnimate from '@crema/components/AppAnimate';
 import AppTextField from '@crema/components/AppFormComponents/AppTextField';
-import {ReactComponent as Logo} from '../../../assets/user/signup.svg';
+import { ReactComponent as Logo } from '../../../assets/user/signup.svg';
 
 const validationSchema = yup.object({
   name: yup.string().required(<IntlMessages id='validation.nameRequired' />),
@@ -33,7 +33,7 @@ const Signup = () => {
       <Box
         sx={{
           pb: 6,
-          py: {xl: 8},
+          py: { xl: 8 },
           display: 'flex',
           flex: 1,
           flexDirection: 'column',
@@ -46,7 +46,7 @@ const Signup = () => {
             maxWidth: 1024,
             width: '100%',
             padding: 8,
-            paddingLeft: {xs: 8, md: 2},
+            paddingLeft: { xs: 8, md: 2 },
             overflow: 'hidden',
             boxShadow:
               '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
@@ -56,7 +56,7 @@ const Signup = () => {
             container
             spacing={5}
             sx={{
-              alignItems: {lg: 'center'},
+              alignItems: { lg: 'center' },
             }}
           >
             <Grid
@@ -67,7 +67,7 @@ const Signup = () => {
                 textAlign: 'center',
                 '& svg': {
                   display: 'inline-block',
-                  paddingRight: {xs: 0, lg: 10},
+                  paddingRight: { xs: 0, lg: 10 },
                 },
               }}
             >
@@ -84,7 +84,7 @@ const Signup = () => {
             >
               <Box
                 sx={{
-                  mb: {xs: 6, xl: 8},
+                  mb: { xs: 6, xl: 8 },
                   fontWeight: Fonts.BOLD,
                   fontSize: 20,
                 }}
@@ -101,7 +101,7 @@ const Signup = () => {
                   confirmPassword: '',
                 }}
                 validationSchema={validationSchema}
-                onSubmit={(data, {setErrors, resetForm}) => {
+                onSubmit={(data, { setErrors, resetForm }) => {
                   if (data.password !== data.confirmPassword) {
                     setErrors({
                       confirmPassword: (
@@ -113,9 +113,9 @@ const Signup = () => {
                   }
                 }}
               >
-                {({isSubmitting}) => (
+                {({ isSubmitting }) => (
                   <Form noValidate autoComplete='off'>
-                    <Box sx={{mb: {xs: 3, xl: 4}}}>
+                    <Box sx={{ mb: { xs: 3, xl: 4 } }}>
                       <AppTextField
                         label={<IntlMessages id='common.name' />}
                         name='name'
@@ -126,7 +126,7 @@ const Signup = () => {
                       />
                     </Box>
 
-                    <Box sx={{mb: {xs: 3, xl: 4}}}>
+                    <Box sx={{ mb: { xs: 3, xl: 4 } }}>
                       <AppTextField
                         label={<IntlMessages id='common.email' />}
                         name='email'
@@ -137,7 +137,7 @@ const Signup = () => {
                       />
                     </Box>
 
-                    <Box sx={{mb: {xs: 3, xl: 4}}}>
+                    <Box sx={{ mb: { xs: 3, xl: 4 } }}>
                       <AppTextField
                         label={<IntlMessages id='common.password' />}
                         name='password'
@@ -149,7 +149,7 @@ const Signup = () => {
                       />
                     </Box>
 
-                    <Box sx={{mb: {xs: 3, xl: 4}}}>
+                    <Box sx={{ mb: { xs: 3, xl: 4 } }}>
                       <AppTextField
                         label={<IntlMessages id='common.retypePassword' />}
                         name='confirmPassword'
@@ -163,13 +163,13 @@ const Signup = () => {
 
                     <Box
                       sx={{
-                        mb: {xs: 5, xl: 6},
+                        mb: { xs: 5, xl: 6 },
                         display: 'flex',
                         flexWrap: 'wrap',
                         alignItems: 'center',
                       }}
                     >
-                      <Box sx={{ml: -3}}>
+                      <Box sx={{ ml: -3 }}>
                         <Checkbox />
                       </Box>
                       <Box
@@ -215,10 +215,10 @@ const Signup = () => {
                   color: 'grey.700',
                   fontSize: 14,
                   fontWeight: Fonts.BOLD,
-                  mt: {xs: 3, xl: 4},
+                  mt: { xs: 3, xl: 4 },
                 }}
               >
-                <Box component='span' sx={{mr: 1}}>
+                <Box component='span' sx={{ mr: 1 }}>
                   <IntlMessages id='common.alreadyHaveAccount' />
                 </Box>
                 <Box

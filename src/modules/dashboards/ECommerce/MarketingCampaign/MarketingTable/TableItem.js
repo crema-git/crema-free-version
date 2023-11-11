@@ -3,8 +3,8 @@ import TableCell from '@mui/material/TableCell';
 import TableRow from '@mui/material/TableRow';
 import PropTypes from 'prop-types';
 import Avatar from '@mui/material/Avatar';
-import {Typography} from '@mui/material';
-import {styled} from '@mui/material/styles';
+import { Typography } from '@mui/material';
+import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 
 const TableRowWrapper = styled(TableRow)(() => {

@@ -1,16 +1,16 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import AppCard from '@crema/components/AppCard';
 import RecentContact from './RecentContact';
 import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
-import {Typography} from '@mui/material';
+import { Typography } from '@mui/material';
 import AppScrollbar from '@crema/components/AppScrollbar';
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 import CoinDropdown from './CoinDropdown';
-import {useIntl} from 'react-intl';
+import { useIntl } from 'react-intl';
 
-const QuickTransfer = ({quickTransfer}) => {
+const QuickTransfer = ({ quickTransfer }) => {
   const [selectedCoinId, setSelectedCoinID] = useState(
     quickTransfer.coinList[0].id,
   );
@@ -22,7 +22,7 @@ const QuickTransfer = ({quickTransfer}) => {
     setSelectedCoinID(event.target.value);
   };
   const coin = selectedCoin();
-  const {messages} = useIntl();
+  const { messages } = useIntl();
   return (
     <AppCard
       title={messages['dashboard.crypto.quickTransfer']}

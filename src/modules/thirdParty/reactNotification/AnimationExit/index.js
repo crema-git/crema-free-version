@@ -1,8 +1,8 @@
 import React from 'react';
-import {store} from 'react-notifications-component';
+import { store } from 'react-notifications-component';
 import Button from '@mui/material/Button';
 
-import {getContainer, getMessage, getType} from '../helpers/randomize';
+import { getContainer, getMessage, getType } from '../helpers/randomize';
 import notification from '../helpers/notification';
 import Box from '@mui/material/Box';
 
@@ -11,7 +11,7 @@ const AnimationExit = () => {
     const type = getType();
     return store.addNotification(
       Object.assign({}, notification, {
-        slidingExit: {delay: 300},
+        slidingExit: { delay: 300 },
         animationOut: htmlClasses,
         container: getContainer(),
         message: getMessage(type),

@@ -1,5 +1,10 @@
 import React from 'react';
-import {Legend, RadialBar, RadialBarChart, ResponsiveContainer} from 'recharts';
+import {
+  Legend,
+  RadialBar,
+  RadialBarChart,
+  ResponsiveContainer,
+} from 'recharts';
 import data from './data';
 import style from './style';
 

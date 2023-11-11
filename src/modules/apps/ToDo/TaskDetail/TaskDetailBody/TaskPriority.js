@@ -1,18 +1,18 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import InputLabel from '@mui/material/InputLabel';
 import IntlMessages from '@crema/helpers/IntlMessages';
 import Select from '@mui/material/Select';
 import FormControl from '@mui/material/FormControl';
 
 import PropTypes from 'prop-types';
-import {MenuItem} from '@mui/material';
-import {useInfoViewActionsContext} from '@crema/context/AppContextProvider/InfoViewContextProvider';
-import {putDataApi} from '@crema/hooks/APIHooks';
-import {useTodoContext} from '../../../context/TodoContextProvider';
+import { MenuItem } from '@mui/material';
+import { useInfoViewActionsContext } from '@crema/context/AppContextProvider/InfoViewContextProvider';
+import { putDataApi } from '@crema/hooks/APIHooks';
+import { useTodoContext } from '../../../context/TodoContextProvider';
 
-const TaskPriority = ({selectedTask, onUpdateSelectedTask}) => {
+const TaskPriority = ({ selectedTask, onUpdateSelectedTask }) => {
   const infoViewActionsContext = useInfoViewActionsContext();
-  const {priorityList} = useTodoContext();
+  const { priorityList } = useTodoContext();
 
   const [priority, setPriority] = useState(selectedTask.priority.type);
 

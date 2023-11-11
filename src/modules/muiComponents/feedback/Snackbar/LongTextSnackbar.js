@@ -11,7 +11,7 @@ const action = (
 
 export default function LongTextSnackbar() {
   return (
-    <Stack spacing={2} sx={{maxWidth: 600}}>
+    <Stack spacing={2} sx={{ maxWidth: 600 }}>
       <SnackbarContent message='I love snacks.' action={action} />
       <SnackbarContent
         message={

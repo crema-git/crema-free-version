@@ -1,11 +1,11 @@
 import React from 'react';
-import {Cell, Pie, PieChart, ResponsiveContainer, Tooltip} from 'recharts';
+import { Cell, Pie, PieChart, ResponsiveContainer, Tooltip } from 'recharts';
 import PropTypes from 'prop-types';
-import {Fonts} from '@crema/constants/AppEnums';
-import {useIntl} from 'react-intl';
+import { Fonts } from '@crema/constants/AppEnums';
+import { useIntl } from 'react-intl';
 
-const VisitorGraph = ({totalVisitors}) => {
-  const {messages} = useIntl();
+const VisitorGraph = ({ totalVisitors }) => {
+  const { messages } = useIntl();
   return (
     <ResponsiveContainer>
       <PieChart>
@@ -44,7 +44,7 @@ const VisitorGraph = ({totalVisitors}) => {
           ))}
         </Pie>
         <Tooltip
-          labelStyle={{color: 'black'}}
+          labelStyle={{ color: 'black' }}
           contentStyle={{
             borderRadius: 12,
             borderColor: '#31354188',

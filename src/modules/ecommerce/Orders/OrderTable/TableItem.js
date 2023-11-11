@@ -4,7 +4,7 @@ import TableRow from '@mui/material/TableRow';
 import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
 import OrderActions from './OrderActions';
-import {styled} from '@mui/material/styles';
+import { styled } from '@mui/material/styles';
 
 const StyledTableCell = styled(TableCell)(() => ({
   fontSize: 14,
@@ -16,7 +16,7 @@ const StyledTableCell = styled(TableCell)(() => ({
     paddingRight: 20,
   },
 }));
-const TableItem = ({data}) => {
+const TableItem = ({ data }) => {
   const getPaymentStatusColor = () => {
     switch (data.status) {
       case 'Pending': {

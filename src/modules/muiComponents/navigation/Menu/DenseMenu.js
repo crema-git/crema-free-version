@@ -9,7 +9,7 @@ import Check from '@mui/icons-material/Check';
 
 export default function DenseMenu() {
   return (
-    <Paper sx={{width: 320}}>
+    <Paper sx={{ width: 320 }}>
       <MenuList dense>
         <MenuItem>
           <ListItemText inset>Single</ListItemText>

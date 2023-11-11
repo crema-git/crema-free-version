@@ -19,12 +19,12 @@ export default function PositionedPopper() {
   };
 
   return (
-    <Box sx={{width: 500}}>
+    <Box sx={{ width: 500 }}>
       <Popper open={open} anchorEl={anchorEl} placement={placement} transition>
-        {({TransitionProps}) => (
+        {({ TransitionProps }) => (
           <Fade {...TransitionProps} timeout={350}>
             <Paper>
-              <Typography sx={{p: 2}}>The content of the Popper.</Typography>
+              <Typography sx={{ p: 2 }}>The content of the Popper.</Typography>
             </Paper>
           </Fade>
         )}

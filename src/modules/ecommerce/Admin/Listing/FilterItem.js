@@ -11,7 +11,7 @@ import {
   TextField,
 } from '@mui/material';
 import AppGridContainer from '@crema/components/AppGridContainer';
-import {DatePicker} from '@mui/x-date-pickers';
+import { DatePicker } from '@mui/x-date-pickers';
 import PropTypes from 'prop-types';
 import dayjs from 'dayjs';
 
@@ -28,7 +28,7 @@ const statusList = [
   },
 ];
 
-const FilterItem = ({filterData, setFilterData}) => {
+const FilterItem = ({ filterData, setFilterData }) => {
   const inputLabel = React.useRef(null);
 
   return (
@@ -77,7 +77,7 @@ const FilterItem = ({filterData, setFilterData}) => {
             onChange={(e) => {
               setFilterData((prev) => ({
                 ...prev,
-                mrp: {start: +e.target.value, end: filterData.mrp.end},
+                mrp: { start: +e.target.value, end: filterData.mrp.end },
               }));
             }}
             sx={{
@@ -95,7 +95,7 @@ const FilterItem = ({filterData, setFilterData}) => {
             onChange={(e) => {
               setFilterData((prev) => ({
                 ...prev,
-                mrp: {start: filterData.mrp.start, end: +e.target.value},
+                mrp: { start: filterData.mrp.start, end: +e.target.value },
               }));
             }}
             sx={{
@@ -142,7 +142,7 @@ const FilterItem = ({filterData, setFilterData}) => {
         <Grid item xs={12}>
           <Switch
             value='checkedA'
-            inputProps={{'aria-label': 'secondary checkbox'}}
+            inputProps={{ 'aria-label': 'secondary checkbox' }}
           />
           <Box component='span'>Notifications</Box>
         </Grid>

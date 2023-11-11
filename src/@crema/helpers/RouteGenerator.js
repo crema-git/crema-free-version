@@ -1,8 +1,8 @@
 import React from 'react';
-import {Navigate} from 'react-router-dom';
-import {authRole} from '@crema/constants/AppConst';
-import {RoutePermittedRole} from '@crema/constants/AppEnums';
-import {checkPermission} from './RouteHelper';
+import { Navigate } from 'react-router-dom';
+import { authRole } from '@crema/constants/AppConst';
+import { RoutePermittedRole } from '@crema/constants/AppEnums';
+import { checkPermission } from './RouteHelper';
 
 /**
  * @param {Object} structure - The passed object that defines the routes.
@@ -67,13 +67,13 @@ const routesGenerator = (
   userRole,
 ) => {
   const generatedRoutes = [];
-  const {fallbackPath = ''} = routeSet || {};
+  const { fallbackPath = '' } = routeSet || {};
 
   const isAnonymous = type === 'anonymous';
   const isAuthorized = type === 'authorized';
 
   if (routeSet?.routes) {
-    const {routes} = routeSet;
+    const { routes } = routeSet;
     if (Array.isArray(routes) && routes.length > 0) {
       routes.forEach((route /* index */) => {
         const {

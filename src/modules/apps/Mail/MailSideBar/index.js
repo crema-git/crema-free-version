@@ -1,23 +1,23 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import List from '@mui/material/List';
 import IntlMessages from '@crema/helpers/IntlMessages';
 import AppScrollbar from '@crema/components/AppScrollbar';
 import AppsSideBarFolderItem from '@crema/components/AppsSideBarFolderItem';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Fonts } from '@crema/constants/AppEnums';
 import AppList from '@crema/components/AppList';
 import ListEmptyResult from '@crema/components/AppList/ListEmptyResult';
 import SidebarPlaceholder from '@crema/components/AppSkeleton/SidebarListSkeleton';
 import AddIcon from '@mui/icons-material/Add';
-import {Zoom} from '@mui/material';
-import {useMailContext} from '../../context/MailContextProvider';
+import { Zoom } from '@mui/material';
+import { useMailContext } from '../../context/MailContextProvider';
 import ComposeMail from '../ComposeMail';
 import ConnectionListItem from './ConnectionListItem';
 import LabelItem from './LabelItem';
 
 const MailSidebar = () => {
-  const {connectionList, labelList, folderList} = useMailContext();
+  const { connectionList, labelList, folderList } = useMailContext();
   const [isComposeMail, setComposeMail] = useState(false);
 
   const onOpenComposeMail = () => {
@@ -34,12 +34,12 @@ const MailSidebar = () => {
         <>
           <Box
             sx={{
-              px: {xs: 4, md: 5},
-              pt: {xs: 4, md: 5},
+              px: { xs: 4, md: 5 },
+              pt: { xs: 4, md: 5 },
               pb: 2.5,
             }}
           >
-            <Zoom in style={{transitionDelay: '300ms'}}>
+            <Zoom in style={{ transitionDelay: '300ms' }}>
               <Button
                 variant='outlined'
                 color='primary'
@@ -66,12 +66,12 @@ const MailSidebar = () => {
             <Box
               sx={{
                 pr: 4,
-                pb: {xs: 4, md: 5, lg: 6.2},
+                pb: { xs: 4, md: 5, lg: 6.2 },
               }}
             >
               <List
                 sx={{
-                  mb: {xs: 2, xl: 5},
+                  mb: { xs: 2, xl: 5 },
                 }}
                 component='nav'
                 aria-label='main mailbox folders'
@@ -84,7 +84,7 @@ const MailSidebar = () => {
                       placeholder={
                         <Box
                           sx={{
-                            px: {xs: 4, md: 5, lg: 6.2},
+                            px: { xs: 4, md: 5, lg: 6.2 },
                           }}
                         >
                           <SidebarPlaceholder />
@@ -105,8 +105,8 @@ const MailSidebar = () => {
               <Box
                 component='h4'
                 sx={{
-                  mt: {xs: 4, xl: 5},
-                  px: {xs: 4, md: 5, lg: 6.2},
+                  mt: { xs: 4, xl: 5 },
+                  px: { xs: 4, md: 5, lg: 6.2 },
                   fontWeight: Fonts.SEMI_BOLD,
                 }}
               >
@@ -115,7 +115,7 @@ const MailSidebar = () => {
 
               <List
                 sx={{
-                  mb: {xs: 2, xl: 5},
+                  mb: { xs: 2, xl: 5 },
                 }}
                 component='nav'
                 aria-label='main mailbox folders'
@@ -128,7 +128,7 @@ const MailSidebar = () => {
                       placeholder={
                         <Box
                           sx={{
-                            px: {xs: 4, md: 5, lg: 6.2},
+                            px: { xs: 4, md: 5, lg: 6.2 },
                           }}
                         >
                           <SidebarPlaceholder />
@@ -145,15 +145,15 @@ const MailSidebar = () => {
               <Box
                 component='h4'
                 sx={{
-                  mt: {xs: 4, xl: 5},
-                  px: {xs: 4, md: 5, lg: 6.2},
+                  mt: { xs: 4, xl: 5 },
+                  px: { xs: 4, md: 5, lg: 6.2 },
                   fontWeight: Fonts.SEMI_BOLD,
                 }}
               >
                 <IntlMessages id='common.connections' />
               </Box>
 
-              <List style={{paddingBottom: 0}}>
+              <List style={{ paddingBottom: 0 }}>
                 <AppList
                   data={connectionList}
                   ListEmptyComponent={
@@ -162,7 +162,7 @@ const MailSidebar = () => {
                       placeholder={
                         <Box
                           sx={{
-                            px: {xs: 4, md: 5, lg: 6.2},
+                            px: { xs: 4, md: 5, lg: 6.2 },
                           }}
                         >
                           <SidebarPlaceholder />
@@ -174,7 +174,7 @@ const MailSidebar = () => {
                     <Box
                       key={connection.id}
                       sx={{
-                        px: {xs: 4, md: 5, lg: 6.2},
+                        px: { xs: 4, md: 5, lg: 6.2 },
                       }}
                     >
                       <ConnectionListItem connection={connection} />

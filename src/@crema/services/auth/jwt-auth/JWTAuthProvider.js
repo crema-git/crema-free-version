@@ -1,6 +1,6 @@
-import React, {createContext, useContext, useEffect, useState} from 'react';
+import React, { createContext, useContext, useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
-import jwtAxios, {setAuthToken} from './index';
+import jwtAxios, { setAuthToken } from './index';
 
 const JWTAuthContext = createContext();
 const JWTAuthActionsContext = createContext();
@@ -38,7 +38,7 @@ const JWTAuthAuthProvider = ({
       setAuthToken(token);
       jwtAxios
         .get('/auth')
-        .then(({data}) => {
+        .then(({ data }) => {
           fetchSuccess();
           setJWTAuthData({
             user: data,
@@ -59,10 +59,10 @@ const JWTAuthAuthProvider = ({
     getAuthUser();
   }, []);
 
-  const signInUser = async ({email, password}) => {
+  const signInUser = async ({ email, password }) => {
     fetchStart();
     try {
-      const {data} = await jwtAxios.post('auth', {email, password});
+      const { data } = await jwtAxios.post('auth', { email, password });
       localStorage.setItem('token', data.token);
       setAuthToken(data.token);
       const res = await jwtAxios.get('/auth');
@@ -82,10 +82,10 @@ const JWTAuthAuthProvider = ({
     }
   };
 
-  const signUpUser = async ({name, email, password}) => {
+  const signUpUser = async ({ name, email, password }) => {
     fetchStart();
     try {
-      const {data} = await jwtAxios.post('users', {name, email, password});
+      const { data } = await jwtAxios.post('users', { name, email, password });
       localStorage.setItem('token', data.token);
       setAuthToken(data.token);
       const res = await jwtAxios.get('/auth');

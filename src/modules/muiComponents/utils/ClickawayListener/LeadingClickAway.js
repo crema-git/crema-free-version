@@ -30,7 +30,7 @@ export default function LeadingClickAway() {
       touchEvent='onTouchStart'
       onClickAway={handleClickAway}
     >
-      <Box sx={{position: 'relative'}}>
+      <Box sx={{ position: 'relative' }}>
         <button type='button' onClick={handleClick}>
           Open menu dropdown
         </button>

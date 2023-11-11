@@ -1,16 +1,16 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import DealsTable from './DealsTable';
-import {useIntl} from 'react-intl';
+import { useIntl } from 'react-intl';
 import Box from '@mui/material/Box';
 import PropTypes from 'prop-types';
 import AppCard from '@crema/components/AppCard';
-import {Typography} from '@mui/material';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Typography } from '@mui/material';
+import { Fonts } from '@crema/constants/AppEnums';
 import IntlMessages from '@crema/helpers/IntlMessages';
 import AppSelect from '@crema/components/AppSelect';
 
 const Deals = (props) => {
-  const {dealsTableData} = props;
+  const { dealsTableData } = props;
   const [tableData, setTableData] = useState(dealsTableData);
 
   const onDealChange = (value) => {
@@ -27,16 +27,16 @@ const Deals = (props) => {
     }
   };
 
-  const {messages} = useIntl();
+  const { messages } = useIntl();
 
   return (
     <AppCard
-      sxStyle={{height: 1}}
+      sxStyle={{ height: 1 }}
       title={
-        <Box sx={{display: 'flex', alignItems: 'center'}}>
+        <Box sx={{ display: 'flex', alignItems: 'center' }}>
           <Typography
             sx={{
-              mr: {xs: 4, lg: 5},
+              mr: { xs: 4, lg: 5 },
               fontWeight: Fonts.MEDIUM,
               fontSize: 16,
             }}
@@ -47,7 +47,7 @@ const Deals = (props) => {
           </Typography>
         </Box>
       }
-      contentStyle={{paddingLeft: 0, paddingRight: 0}}
+      contentStyle={{ paddingLeft: 0, paddingRight: 0 }}
       action={
         <AppSelect
           menus={[

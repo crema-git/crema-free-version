@@ -9,11 +9,11 @@ import AppTableContainer from '@crema/components/AppTableContainer';
 import AppScrollbar from '@crema/components/AppScrollbar';
 
 const DealsTable = (props) => {
-  const {dealsTableData} = props;
+  const { dealsTableData } = props;
 
   return (
     <AppTableContainer>
-      <AppScrollbar style={{maxHeight: 250}}>
+      <AppScrollbar style={{ maxHeight: 250 }}>
         <Table className='table' stickyHeader>
           <TableHead>
             <TableHeading />

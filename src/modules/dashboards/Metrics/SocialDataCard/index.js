@@ -4,13 +4,13 @@ import SpeakerNotesOutlinedIcon from '@mui/icons-material/SpeakerNotesOutlined';
 import IntlMessages from '@crema/helpers/IntlMessages';
 import Box from '@mui/material/Box';
 import PropTypes from 'prop-types';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Fonts } from '@crema/constants/AppEnums';
 import AppCard from '@crema/components/AppCard';
 
-const SocialDataCard = ({data}) => {
+const SocialDataCard = ({ data }) => {
   return (
     <AppCard
-      sxStyle={{height: 1}}
+      sxStyle={{ height: 1 }}
       contentStyle={{
         display: 'flex',
         flexDirection: 'column',
@@ -20,7 +20,7 @@ const SocialDataCard = ({data}) => {
       <Box
         sx={{
           width: '100%',
-          py: {xs: 4, xl: 8},
+          py: { xs: 4, xl: 8 },
           display: 'flex',
           textAlign: 'center',
         }}
@@ -36,7 +36,7 @@ const SocialDataCard = ({data}) => {
           <Box
             sx={{
               color: 'secondary.main',
-              fontSize: {xs: 24, sm: 30, xl: 36},
+              fontSize: { xs: 24, sm: 30, xl: 36 },
               mb: 2,
             }}
           >
@@ -74,7 +74,7 @@ const SocialDataCard = ({data}) => {
           <Box
             sx={{
               color: 'primary.main',
-              fontSize: {xs: 24, sm: 30, xl: 36},
+              fontSize: { xs: 24, sm: 30, xl: 36 },
               mb: 2,
             }}
           >

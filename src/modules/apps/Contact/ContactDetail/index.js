@@ -1,11 +1,11 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import Avatar from '@mui/material/Avatar';
 import Box from '@mui/material/Box';
 import PropTypes from 'prop-types';
 import AppDialog from '@crema/components/AppDialog';
 import AppGridContainer from '@crema/components/AppGridContainer';
 import Grid from '@mui/material/Grid';
-import {DialogActions} from '@mui/material';
+import { DialogActions } from '@mui/material';
 import Button from '@mui/material/Button';
 import ContactActions from './ContactActions';
 import PersonalDetails from './PersonalDetails';
@@ -122,7 +122,7 @@ const ContactDetail = (props) => {
           variant='outlined'
           color='primary'
           type='submit'
-          sx={{width: 100}}
+          sx={{ width: 100 }}
           onClick={() => onShowDetail(false)}
         >
           Close

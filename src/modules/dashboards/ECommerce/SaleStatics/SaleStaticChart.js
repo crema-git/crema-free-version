@@ -89,7 +89,7 @@ const SaleStaticChart = () => {
           vertical={false}
         />
         <XAxis dataKey='month' />
-        <Tooltip labelStyle={{color: 'black'}} />
+        <Tooltip labelStyle={{ color: 'black' }} />
         <Bar dataKey='return' fill='#F44D50' barSize={8} />
         <Bar dataKey='order' fill='#0A8FDC' barSize={8} />
       </BarChart>

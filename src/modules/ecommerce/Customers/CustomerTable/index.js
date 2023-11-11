@@ -8,7 +8,7 @@ import TableItem from './TableItem';
 import AppTableContainer from '@crema/components/AppTableContainer';
 import AppLoader from '@crema/components/AppLoader';
 
-const CustomerTable = ({customers, loading}) => {
+const CustomerTable = ({ customers, loading }) => {
   return (
     <AppTableContainer>
       {loading ? (

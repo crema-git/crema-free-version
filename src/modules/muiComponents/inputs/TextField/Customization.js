@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {alpha, styled} from '@mui/material/styles';
+import { alpha, styled } from '@mui/material/styles';
 import InputBase from '@mui/material/InputBase';
 import Box from '@mui/material/Box';
 import InputLabel from '@mui/material/InputLabel';
@@ -26,7 +26,7 @@ const CssTextField = styled(TextField)({
   },
 });
 
-const BootstrapInput = styled(InputBase)(({theme}) => ({
+const BootstrapInput = styled(InputBase)(({ theme }) => ({
   'label + &': {
     marginTop: theme.spacing(3),
   },
@@ -64,8 +64,8 @@ const BootstrapInput = styled(InputBase)(({theme}) => ({
 }));
 
 const RedditTextField = styled((props) => (
-  <TextField InputProps={{disableUnderline: true}} {...props} />
-))(({theme}) => ({
+  <TextField InputProps={{ disableUnderline: true }} {...props} />
+))(({ theme }) => ({
   '& .MuiFilledInput-root': {
     border: '1px solid #e2e2e1',
     overflow: 'hidden',
@@ -109,7 +109,7 @@ export default function CustomizedInputs() {
       noValidate
       sx={{
         display: 'grid',
-        gridTemplateColumns: {sm: '1fr 1fr'},
+        gridTemplateColumns: { sm: '1fr 1fr' },
         gap: 2,
       }}
     >
@@ -124,7 +124,7 @@ export default function CustomizedInputs() {
         defaultValue='react-reddit'
         id='reddit-input'
         variant='filled'
-        style={{marginTop: 11}}
+        style={{ marginTop: 11 }}
       />
       <CssTextField label='Custom CSS' id='custom-css-outlined-input' />
       <ValidationTextField

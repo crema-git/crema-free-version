@@ -12,8 +12,8 @@ import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 import BitBucketSidebarWrapper from './BitBucketSidebarWrapper';
 import AppSidebarContainer from './AppSidebarContainer';
 import BucketMinibar from './BucketMinibar';
-import {Typography} from '@mui/material';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Typography } from '@mui/material';
+import { Fonts } from '@crema/constants/AppEnums';
 
 const AppSidebar = (props) => {
   const {
@@ -79,7 +79,7 @@ const AppSidebar = (props) => {
             root: clsx(props.variant),
             paper: clsx(props.variant),
           }}
-          style={{position: 'absolute'}}
+          style={{ position: 'absolute' }}
         >
           {sideBarComponent()}
         </Drawer>

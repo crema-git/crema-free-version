@@ -11,7 +11,7 @@ import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
 
 const GoalProgressGraph = (props) => {
-  const {progressGraphData} = props;
+  const { progressGraphData } = props;
 
   return (
     <Box
@@ -27,11 +27,11 @@ const GoalProgressGraph = (props) => {
           barGap={5}
           barSize={8}
           data={progressGraphData}
-          margin={{top: 50}}
+          margin={{ top: 50 }}
         >
           <XAxis dataKey='name' axisLine={false} tickLine={false} />
           <YAxis hide />
-          <Tooltip labelStyle={{color: 'black'}} />
+          <Tooltip labelStyle={{ color: 'black' }} />
           <Bar dataKey='progress' stackId='a' fill='#3182CE' />
           <Bar dataKey='actual' stackId='a' fill='#E53E3E' />
         </BarChart>

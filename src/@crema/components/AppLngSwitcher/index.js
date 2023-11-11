@@ -4,19 +4,19 @@ import Menu from '@mui/material/Menu';
 import IconButton from '@mui/material/IconButton';
 import MenuItem from '@mui/material/MenuItem';
 import TranslateOutlinedIcon from '@mui/icons-material/TranslateOutlined';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Fonts } from '@crema/constants/AppEnums';
 import {
   useLocaleActionsContext,
   useLocaleContext,
 } from '@crema/context/AppContextProvider/LocaleContextProvider';
 import Typography from '@mui/material/Typography';
-import {alpha, Box} from '@mui/material';
+import { alpha, Box } from '@mui/material';
 import PropsTypes from 'prop-types';
 import AppTooltip from '../AppTooltip';
 
-const AppLngSwitcher = ({iconOnly, tooltipPosition}) => {
-  const {locale} = useLocaleContext();
-  const {updateLocale} = useLocaleActionsContext();
+const AppLngSwitcher = ({ iconOnly, tooltipPosition }) => {
+  const { locale } = useLocaleContext();
+  const { updateLocale } = useLocaleActionsContext();
   const [anchorElLng, setAnchorElLng] = React.useState(null);
 
   const onClickMenu = (event) => {
@@ -55,7 +55,7 @@ const AppLngSwitcher = ({iconOnly, tooltipPosition}) => {
               ml: 2.5,
               fontSize: 16,
               fontWeight: Fonts.REGULAR,
-              display: {xs: 'none', sm: 'inline-block'},
+              display: { xs: 'none', sm: 'inline-block' },
             },
             '& svg': {
               fontSize: 20,
@@ -95,7 +95,7 @@ const AppLngSwitcher = ({iconOnly, tooltipPosition}) => {
                 ml: 2.5,
                 fontSize: 16,
                 fontWeight: Fonts.REGULAR,
-                display: {xs: 'none', sm: 'inline-block'},
+                display: { xs: 'none', sm: 'inline-block' },
               },
               '& svg': {
                 fontSize: 20,
@@ -130,7 +130,7 @@ const AppLngSwitcher = ({iconOnly, tooltipPosition}) => {
               <Typography
                 sx={{
                   mb: 0,
-                  fontSize: {xs: 14, sm: 16},
+                  fontSize: { xs: 14, sm: 16 },
                   fontWeight: Fonts.MEDIUM,
                 }}
                 component='h4'

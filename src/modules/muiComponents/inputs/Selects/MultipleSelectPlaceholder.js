@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {useTheme} from '@mui/material/styles';
+import { useTheme } from '@mui/material/styles';
 import OutlinedInput from '@mui/material/OutlinedInput';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
@@ -44,7 +44,7 @@ export default function MultipleSelectPlaceholder() {
 
   const handleChange = (event) => {
     const {
-      target: {value},
+      target: { value },
     } = event;
     setPersonName(
       // On autofill we get a the stringified value.
@@ -54,7 +54,7 @@ export default function MultipleSelectPlaceholder() {
 
   return (
     <div>
-      <FormControl sx={{m: 1, width: 300, mt: 3}}>
+      <FormControl sx={{ m: 1, width: 300, mt: 3 }}>
         <Select
           multiple
           displayEmpty
@@ -69,7 +69,7 @@ export default function MultipleSelectPlaceholder() {
             return selected.join(', ');
           }}
           MenuProps={MenuProps}
-          inputProps={{'aria-label': 'Without label'}}
+          inputProps={{ 'aria-label': 'Without label' }}
         >
           <MenuItem disabled value=''>
             <em>Placeholder</em>

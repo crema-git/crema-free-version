@@ -9,7 +9,7 @@ import {
 } from 'recharts';
 import PropTypes from 'prop-types';
 
-const AccountGraph = ({data}) => {
+const AccountGraph = ({ data }) => {
   return (
     <ResponsiveContainer width='100%' height={320}>
       <AreaChart
@@ -24,7 +24,7 @@ const AccountGraph = ({data}) => {
         <CartesianGrid strokeDasharray='3 3' />
         <XAxis dataKey='name' />
 
-        <Tooltip labelStyle={{color: 'black'}} />
+        <Tooltip labelStyle={{ color: 'black' }} />
         <Area
           type='monotone'
           dataKey='complete'

@@ -1,17 +1,17 @@
 import React from 'react';
-import {Box, Grid, Typography} from '@mui/material';
+import { Box, Grid, Typography } from '@mui/material';
 import AppGridContainer from '@crema/components/AppGridContainer';
 import PropTypes from 'prop-types';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Fonts } from '@crema/constants/AppEnums';
 import Button from '@mui/material/Button';
 import InnovationImgWrapper from './InnovationImgWrapper';
 
-const Innovation = ({innovation}) => {
+const Innovation = ({ innovation }) => {
   return (
     <Box
       sx={{
-        mb: {xs: 7.5, md: 15},
-        px: {xs: 7.5, md: 15, lg: 20},
+        mb: { xs: 7.5, md: 15 },
+        px: { xs: 7.5, md: 15, lg: 20 },
       }}
     >
       <AppGridContainer
@@ -37,7 +37,7 @@ const Innovation = ({innovation}) => {
               <Typography
                 component='h3'
                 sx={{
-                  fontSize: {xs: 18, md: 20, lg: 22},
+                  fontSize: { xs: 18, md: 20, lg: 22 },
                   fontWeight: Fonts.BOLD,
                   textTransform: 'uppercase',
                 }}
@@ -50,14 +50,14 @@ const Innovation = ({innovation}) => {
         <Grid item xs={12} md={6}>
           <Box
             sx={{
-              maxWidth: {lg: 400},
-              ml: {lg: 7.5},
+              maxWidth: { lg: 400 },
+              ml: { lg: 7.5 },
             }}
           >
             <Typography
               component='h5'
               sx={{
-                fontSize: {xs: 18, md: 20},
+                fontSize: { xs: 18, md: 20 },
                 fontWeight: Fonts.BOLD,
                 mb: 5,
               }}
@@ -68,7 +68,7 @@ const Innovation = ({innovation}) => {
               sx={{
                 fontSize: 12,
                 color: (theme) => theme.palette.text.secondary,
-                mb: {xs: 5, md: 7.5},
+                mb: { xs: 5, md: 7.5 },
               }}
             >
               {innovation.description}

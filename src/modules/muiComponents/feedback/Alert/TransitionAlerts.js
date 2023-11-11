@@ -10,7 +10,7 @@ export default function TransitionAlerts() {
   const [open, setOpen] = React.useState(true);
 
   return (
-    <Box sx={{width: '100%'}}>
+    <Box sx={{ width: '100%' }}>
       <Collapse in={open}>
         <Alert
           action={
@@ -25,7 +25,7 @@ export default function TransitionAlerts() {
               <CloseIcon fontSize='inherit' />
             </IconButton>
           }
-          sx={{mb: 2}}
+          sx={{ mb: 2 }}
         >
           Close me!
         </Alert>

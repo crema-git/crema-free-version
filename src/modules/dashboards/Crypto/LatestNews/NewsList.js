@@ -3,13 +3,13 @@ import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
 import List from '@mui/material/List';
 import PropTypes from 'prop-types';
-import {Box} from '@mui/material';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Box } from '@mui/material';
+import { Fonts } from '@crema/constants/AppEnums';
 import AppScrollbar from '@crema/components/AppScrollbar';
 import AppList from '@crema/components/AppList';
 
 const NewsList = (props) => {
-  const {newsData} = props;
+  const { newsData } = props;
 
   return (
     <AppScrollbar>
@@ -25,7 +25,7 @@ const NewsList = (props) => {
                   px: 5,
                   display: 'flex',
                   alignItems: 'flex-start',
-                  flexDirection: {xs: 'column', sm: 'row'},
+                  flexDirection: { xs: 'column', sm: 'row' },
                 }}
               >
                 <ListItemText
@@ -74,10 +74,10 @@ const NewsList = (props) => {
                 />
                 <Box
                   sx={{
-                    ml: {sm: 3, xl: 5},
-                    width: {xs: '100%', sm: 'auto'},
+                    ml: { sm: 3, xl: 5 },
+                    width: { xs: '100%', sm: 'auto' },
                     '& .newsImg': {
-                      width: {xs: '100%', sm: '10rem'},
+                      width: { xs: '100%', sm: '10rem' },
                       display: 'block',
                     },
                   }}

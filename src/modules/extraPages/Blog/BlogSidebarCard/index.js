@@ -1,6 +1,6 @@
 import React from 'react';
 import Box from '@mui/material/Box';
-import {useIntl} from 'react-intl';
+import { useIntl } from 'react-intl';
 import RecentPost from './RecentPost';
 import PropTypes from 'prop-types';
 import Categories from './Categories';
@@ -8,8 +8,8 @@ import TagCloud from './TagCloud';
 import AppCard from '@crema/components/AppCard';
 import AppSearchBar from '@crema/components/AppSearchBar';
 
-const BlogSidebarCard = ({blogSidebar}) => {
-  const {messages} = useIntl();
+const BlogSidebarCard = ({ blogSidebar }) => {
+  const { messages } = useIntl();
 
   return (
     <AppCard>

@@ -29,17 +29,17 @@ const onGetDataKey = (value) => {
   }
 };
 
-const BitcoinGraph = ({data, value}) => {
+const BitcoinGraph = ({ data, value }) => {
   return (
     <ResponsiveContainer width='100%' height={360}>
-      <AreaChart data={data} margin={{top: 50, right: 0, left: 0, bottom: 0}}>
+      <AreaChart data={data} margin={{ top: 50, right: 0, left: 0, bottom: 0 }}>
         <XAxis
           dataKey={onGetDataKey(value)}
           tickLine={false}
           axisLine={false}
-          padding={{left: 20, right: 20}}
+          padding={{ left: 20, right: 20 }}
         />
-        <Tooltip labelStyle={{color: 'black'}} />
+        <Tooltip labelStyle={{ color: 'black' }} />
         <YAxis
           tickLine={false}
           axisLine={false}

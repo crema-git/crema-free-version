@@ -1,13 +1,13 @@
 import React from 'react';
 import Box from '@mui/material/Box';
-import {Fonts} from '@crema/constants/AppEnums';
-import {green, red} from '@mui/material/colors';
+import { Fonts } from '@crema/constants/AppEnums';
+import { green, red } from '@mui/material/colors';
 import IconButton from '@mui/material/IconButton';
 import StatGraphs from './StatGraphs';
 import AppCard from '@crema/components/AppCard';
 import PropTypes from 'prop-types';
 
-const StateCard = ({data}) => {
+const StateCard = ({ data }) => {
   return (
     <AppCard>
       <Box

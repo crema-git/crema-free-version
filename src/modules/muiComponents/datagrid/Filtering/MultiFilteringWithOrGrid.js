@@ -1,17 +1,17 @@
 import * as React from 'react';
-import {DataGridPro, GridToolbar} from '@mui/x-data-grid-pro';
-import {useDemoData} from '@mui/x-data-grid-generator';
+import { DataGridPro, GridToolbar } from '@mui/x-data-grid-pro';
+import { useDemoData } from '@mui/x-data-grid-generator';
 
 const VISIBLE_FIELDS = ['name', 'rating', 'country', 'dateCreated', 'isAdmin'];
 
 export default function DisableMultiFiltersDataGridPro() {
-  const {data} = useDemoData({
+  const { data } = useDemoData({
     dataSet: 'Employee',
     visibleFields: VISIBLE_FIELDS,
     rowLength: 100,
   });
 
-  const filterColumns = ({field, columns, currentFilters}) => {
+  const filterColumns = ({ field, columns, currentFilters }) => {
     // remove already filtered fields from list of columns
     const filteredFields = currentFilters?.map((item) => item.field);
     return columns
@@ -23,8 +23,8 @@ export default function DisableMultiFiltersDataGridPro() {
       .map((column) => column.field);
   };
 
-  const getColumnForNewFilter = ({currentFilters, columns}) => {
-    const filteredFields = currentFilters?.map(({field}) => field);
+  const getColumnForNewFilter = ({ currentFilters, columns }) => {
+    const filteredFields = currentFilters?.map(({ field }) => field);
     const columnForNewFilter = columns
       .filter(
         (colDef) => colDef.filterable && !filteredFields.includes(colDef.field),
@@ -34,10 +34,10 @@ export default function DisableMultiFiltersDataGridPro() {
   };
 
   return (
-    <div style={{height: 400, width: '100%'}}>
+    <div style={{ height: 400, width: '100%' }}>
       <DataGridPro
         {...data}
-        slots={{toolbar: GridToolbar}}
+        slots={{ toolbar: GridToolbar }}
         slotProps={{
           filterPanel: {
             filterFormProps: {

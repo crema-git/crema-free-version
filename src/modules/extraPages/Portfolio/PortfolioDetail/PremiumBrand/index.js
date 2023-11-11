@@ -1,10 +1,10 @@
 import React from 'react';
-import {Box, Typography} from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import PropTypes from 'prop-types';
 import PremiumBrandWrapper from './PremiumBrandWrapper';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Fonts } from '@crema/constants/AppEnums';
 
-const PremiumBrand = ({premiumBrand}) => {
+const PremiumBrand = ({ premiumBrand }) => {
   return (
     <PremiumBrandWrapper>
       <img src={premiumBrand.srcImg} alt={premiumBrand.subTitle} />
@@ -12,7 +12,7 @@ const PremiumBrand = ({premiumBrand}) => {
         <Typography
           component='h5'
           sx={{
-            fontSize: {xs: 16, md: 18},
+            fontSize: { xs: 16, md: 18 },
             fontWeight: Fonts.BOLD,
             textTransform: 'uppercase',
           }}
@@ -22,7 +22,7 @@ const PremiumBrand = ({premiumBrand}) => {
         <Typography
           component='h2'
           sx={{
-            fontSize: {xs: 26, sm: 30, md: 36, lg: 44, xl: 50},
+            fontSize: { xs: 26, sm: 30, md: 36, lg: 44, xl: 50 },
             fontWeight: Fonts.BOLD,
             textTransform: 'uppercase',
           }}

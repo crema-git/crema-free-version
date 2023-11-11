@@ -1,7 +1,7 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import SwipeableViews from 'react-swipeable-views';
-import {useTheme} from '@mui/material/styles';
+import { useTheme } from '@mui/material/styles';
 import AppBar from '@mui/material/AppBar';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
@@ -11,11 +11,11 @@ import Fab from '@mui/material/Fab';
 import AddIcon from '@mui/icons-material/Add';
 import EditIcon from '@mui/icons-material/Edit';
 import UpIcon from '@mui/icons-material/KeyboardArrowUp';
-import {green} from '@mui/material/colors';
+import { green } from '@mui/material/colors';
 import Box from '@mui/material/Box';
 
 function TabPanel(props) {
-  const {children, value, index, ...other} = props;
+  const { children, value, index, ...other } = props;
 
   return (
     <Typography
@@ -26,7 +26,7 @@ function TabPanel(props) {
       aria-labelledby={`action-tab-${index}`}
       {...other}
     >
-      {value === index && <Box sx={{p: 3}}>{children}</Box>}
+      {value === index && <Box sx={{ p: 3 }}>{children}</Box>}
     </Typography>
   );
 }
@@ -90,7 +90,7 @@ export default function FloatingActionButtonZoom() {
     },
     {
       color: 'inherit',
-      sx: {...fabStyle, ...fabGreenStyle},
+      sx: { ...fabStyle, ...fabGreenStyle },
       icon: <UpIcon />,
       label: 'Expand',
     },

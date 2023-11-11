@@ -2,11 +2,11 @@ import React from 'react';
 import Avatar from '@mui/material/Avatar';
 import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Fonts } from '@crema/constants/AppEnums';
 import AppCard from '@crema/components/AppCard';
 
 const StatsCard = (props) => {
-  const {icon, data, heading} = props;
+  const { icon, data, heading } = props;
 
   return (
     <AppCard
@@ -16,12 +16,12 @@ const StatsCard = (props) => {
           theme.components.MuiCard.styleOverrides.root.borderRadius / 4,
       }}
     >
-      <Box sx={{display: 'flex', alignItems: 'center'}}>
-        <Box sx={{fontSize: {xs: 36, md: 48}}}>
+      <Box sx={{ display: 'flex', alignItems: 'center' }}>
+        <Box sx={{ fontSize: { xs: 36, md: 48 } }}>
           <Avatar
             sx={{
-              height: {xs: 50, md: 60},
-              width: {xs: 50, md: 60},
+              height: { xs: 50, md: 60 },
+              width: { xs: 50, md: 60 },
               backgroundColor: 'transparent',
             }}
           >

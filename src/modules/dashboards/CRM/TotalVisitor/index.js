@@ -4,11 +4,11 @@ import List from '@mui/material/List';
 import PropTypes from 'prop-types';
 import Categories from './Categories';
 import AppCard from '@crema/components/AppCard';
-import {useIntl} from 'react-intl';
+import { useIntl } from 'react-intl';
 
-import {styled} from '@mui/material/styles';
+import { styled } from '@mui/material/styles';
 
-const EarningGraphWrapper = styled('div')(({theme}) => {
+const EarningGraphWrapper = styled('div')(({ theme }) => {
   return {
     position: 'relative',
     display: 'flex',
@@ -57,12 +57,12 @@ const EarningGraphWrapper = styled('div')(({theme}) => {
   };
 });
 
-export const TotalVisitor = ({totalVisitors}) => {
-  const {messages} = useIntl();
+export const TotalVisitor = ({ totalVisitors }) => {
+  const { messages } = useIntl();
 
   return (
     <AppCard
-      sxStyle={{height: 1}}
+      sxStyle={{ height: 1 }}
       title={messages['dashboard.crm.totalVisitor']}
       action={messages['common.viewAll']}
     >

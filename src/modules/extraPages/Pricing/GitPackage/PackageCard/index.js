@@ -1,12 +1,12 @@
 import React from 'react';
-import {Typography} from '@mui/material';
+import { Typography } from '@mui/material';
 import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Fonts } from '@crema/constants/AppEnums';
 import Card from '@mui/material/Card';
-import {AiOutlineArrowRight} from 'react-icons/ai';
+import { AiOutlineArrowRight } from 'react-icons/ai';
 
-const PackageCard = ({pricing}) => {
+const PackageCard = ({ pricing }) => {
   return (
     <Card
       sx={{
@@ -48,7 +48,7 @@ const PackageCard = ({pricing}) => {
         }}
       >
         Learn more
-        <AiOutlineArrowRight style={{marginLeft: '10px'}} size={20} />
+        <AiOutlineArrowRight style={{ marginLeft: '10px' }} size={20} />
       </Box>
     </Card>
   );

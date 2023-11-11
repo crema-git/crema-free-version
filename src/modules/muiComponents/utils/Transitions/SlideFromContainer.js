@@ -7,8 +7,8 @@ import Slide from '@mui/material/Slide';
 import FormControlLabel from '@mui/material/FormControlLabel';
 
 const icon = (
-  <Paper sx={{m: 1, width: 100, height: 100}} elevation={4}>
-    <Box component='svg' sx={{width: 100, height: 100}}>
+  <Paper sx={{ m: 1, width: 100, height: 100 }} elevation={4}>
+    <Box component='svg' sx={{ width: 100, height: 100 }}>
       <Box
         component='polygon'
         sx={{
@@ -44,7 +44,7 @@ export default function SlideFromContainer() {
       }}
       ref={containerRef}
     >
-      <Box sx={{width: 200}}>
+      <Box sx={{ width: 200 }}>
         <FormControlLabel
           control={<Switch checked={checked} onChange={handleChange} />}
           label='Show from target'

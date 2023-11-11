@@ -13,7 +13,7 @@ import defaultConfig, {
   textLight,
 } from '@crema/constants/defaultConfig';
 import PropTypes from 'prop-types';
-import {LayoutDirection, ThemeMode} from '@crema/constants/AppEnums';
+import { LayoutDirection, ThemeMode } from '@crema/constants/AppEnums';
 
 const ThemeContext = createContext({
   theme: defaultTheme.theme,
@@ -26,7 +26,7 @@ export const useThemeContext = () => useContext(ThemeContext);
 
 export const useThemeActionsContext = () => useContext(ThemeActionsContext);
 
-const ThemeContextProvider = ({children}) => {
+const ThemeContextProvider = ({ children }) => {
   const [theme, setTheme] = useState(defaultTheme.theme);
   const [themeMode, updateThemeMode] = useState(defaultConfig.themeMode);
   const [themeStyle, updateThemeStyle] = useState(defaultConfig.themeStyle);
@@ -42,7 +42,7 @@ const ThemeContextProvider = ({children}) => {
       theme.palette.background =
         themeMode === ThemeMode.DARK ? backgroundDark : backgroundLight;
       theme.palette.text = themeMode === ThemeMode.DARK ? textDark : textLight;
-      updateTheme({...theme});
+      updateTheme({ ...theme });
     }
   }, [themeMode, theme, updateTheme]);
 

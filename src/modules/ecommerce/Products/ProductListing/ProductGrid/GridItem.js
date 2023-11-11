@@ -3,17 +3,17 @@ import Card from '@mui/material/Card';
 import StarBorderIcon from '@mui/icons-material/StarBorder';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import FavoriteOutlinedIcon from '@mui/icons-material/FavoriteOutlined';
-import {Checkbox} from '@mui/material';
+import { Checkbox } from '@mui/material';
 import IntlMessages from '@crema/helpers/IntlMessages';
 import Box from '@mui/material/Box';
 import PropTypes from 'prop-types';
-import {green} from '@mui/material/colors';
-import {Fonts} from '@crema/constants/AppEnums';
-import {useNavigate} from 'react-router-dom';
+import { green } from '@mui/material/colors';
+import { Fonts } from '@crema/constants/AppEnums';
+import { useNavigate } from 'react-router-dom';
 import AddShoppingCartOutlinedIcon from '@mui/icons-material/AddShoppingCartOutlined';
 
 const GridItem = (props) => {
-  const {item} = props;
+  const { item } = props;
   const navigate = useNavigate();
 
   return (
@@ -56,7 +56,7 @@ const GridItem = (props) => {
             fontSize: 14,
           }}
         >
-          <Box component='span' sx={{pb: 1.25}}>
+          <Box component='span' sx={{ pb: 1.25 }}>
             {item.rating}
           </Box>
           <Box
@@ -75,8 +75,8 @@ const GridItem = (props) => {
         <Box
           sx={{
             mx: 2,
-            maxHeight: {xs: 140, sm: 200, md: 260},
-            minHeight: {xs: 140, sm: 200, md: 260},
+            maxHeight: { xs: 140, sm: 200, md: 260 },
+            minHeight: { xs: 140, sm: 200, md: 260 },
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
@@ -138,7 +138,7 @@ const GridItem = (props) => {
           alignItems: 'center',
           fontWeight: Fonts.MEDIUM,
           justifyContent: 'space-between',
-          fontSize: {xs: 12, xl: 14},
+          fontSize: { xs: 12, xl: 14 },
         }}
       >
         <Box>
@@ -174,8 +174,8 @@ const GridItem = (props) => {
             {item.discount}% <IntlMessages id='ecommerce.off' />
           </Box>
         </Box>
-        <Box sx={{ml: 2}}>
-          <AddShoppingCartOutlinedIcon sx={{fontSize: 16, mt: 1}} />
+        <Box sx={{ ml: 2 }}>
+          <AddShoppingCartOutlinedIcon sx={{ fontSize: 16, mt: 1 }} />
         </Box>
       </Box>
     </Card>

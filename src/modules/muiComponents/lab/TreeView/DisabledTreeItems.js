@@ -14,8 +14,8 @@ export default function DisabledTreeItems() {
   };
 
   return (
-    <Box sx={{height: 270, flexGrow: 1, maxWidth: 400, overflowY: 'auto'}}>
-      <Box sx={{mb: 1}}>
+    <Box sx={{ height: 270, flexGrow: 1, maxWidth: 400, overflowY: 'auto' }}>
+      <Box sx={{ mb: 1 }}>
         <FormControlLabel
           control={
             <Switch

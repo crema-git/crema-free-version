@@ -1,12 +1,12 @@
 import React from 'react';
-import {dayjsLocalizer, Views} from 'react-big-calendar';
+import { dayjsLocalizer, Views } from 'react-big-calendar';
 import events from '../events';
 import dayjs from 'dayjs';
-import {StyledCalendar} from '../calandar.style';
+import { StyledCalendar } from '../calandar.style';
 
 let allViews = Object.keys(Views).map((k) => Views[k]);
 
-const ColoredDateCellWrapper = ({children}) =>
+const ColoredDateCellWrapper = ({ children }) =>
   React.cloneElement(React.Children.only(children), {
     style: {
       backgroundColor: 'lightblue',

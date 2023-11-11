@@ -10,7 +10,7 @@ export default function AccessibleTabs2() {
   };
 
   return (
-    <Box sx={{width: '100%'}}>
+    <Box sx={{ width: '100%' }}>
       <Tabs
         onChange={handleChange}
         value={value}

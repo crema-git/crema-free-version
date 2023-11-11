@@ -2,7 +2,7 @@ import React from 'react';
 import FusionCharts from 'fusioncharts';
 import charts from 'fusioncharts/fusioncharts.charts';
 import ReactFusioncharts from 'react-fusioncharts';
-import {stackChartData} from './data';
+import { stackChartData } from './data';
 
 charts(FusionCharts);
 

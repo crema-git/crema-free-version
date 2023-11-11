@@ -4,11 +4,11 @@ import ThumbUpAltOutlinedIcon from '@mui/icons-material/ThumbUpAltOutlined';
 import ShareOutlinedIcon from '@mui/icons-material/ShareOutlined';
 import CommentOutlinedIcon from '@mui/icons-material/CommentOutlined';
 import PropTypes from 'prop-types';
-import {Fonts} from '@crema/constants/AppEnums';
-import {useInfoViewActionsContext} from '@crema/context/AppContextProvider/InfoViewContextProvider';
-import {putDataApi} from '@crema/hooks/APIHooks';
+import { Fonts } from '@crema/constants/AppEnums';
+import { useInfoViewActionsContext } from '@crema/context/AppContextProvider/InfoViewContextProvider';
+import { putDataApi } from '@crema/hooks/APIHooks';
 
-const PostStats = ({post, setPostList}) => {
+const PostStats = ({ post, setPostList }) => {
   const infoViewActionsContext = useInfoViewActionsContext();
 
   const toggleLikeStatus = () => {
@@ -27,7 +27,7 @@ const PostStats = ({post, setPostList}) => {
 
   return (
     <Box
-      mb={{xs: 4, xl: 6}}
+      mb={{ xs: 4, xl: 6 }}
       fontWeight={Fonts.MEDIUM}
       color='text.secondary'
       display='flex'
@@ -46,7 +46,7 @@ const PostStats = ({post, setPostList}) => {
             fontSize: 18,
           }}
         />
-        <Box fontSize={{xs: 12, md: 14}} component='span' ml={1.5}>
+        <Box fontSize={{ xs: 12, md: 14 }} component='span' ml={1.5}>
           {post.likes} likes
         </Box>
       </Box>
@@ -57,7 +57,7 @@ const PostStats = ({post, setPostList}) => {
               fontSize: 18,
             }}
           />
-          <Box fontSize={{xs: 12, md: 14}} component='span' ml={1.5}>
+          <Box fontSize={{ xs: 12, md: 14 }} component='span' ml={1.5}>
             {post.comments.length} Comments
           </Box>
         </Box>
@@ -68,7 +68,7 @@ const PostStats = ({post, setPostList}) => {
             fontSize: 18,
           }}
         />
-        <Box fontSize={{xs: 12, md: 14}} component='span' ml={1.5}>
+        <Box fontSize={{ xs: 12, md: 14 }} component='span' ml={1.5}>
           {post.shares} Shares
         </Box>
       </Box>

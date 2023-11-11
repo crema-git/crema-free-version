@@ -1,15 +1,15 @@
 import React from 'react';
-import {Box} from '@mui/material';
+import { Box } from '@mui/material';
 import AppAnimate from '@crema/components/AppAnimate';
-import {useGetDataApi} from '@crema/hooks/APIHooks';
+import { useGetDataApi } from '@crema/hooks/APIHooks';
 import OrderPlaced from './OrderPlaced';
 import AddressInfo from './AddressInfo';
 import ItemsList from './ItemsList';
-import {addresses} from '@crema/mockapi/fakedb/ecommerce/ecommerceData';
+import { addresses } from '@crema/mockapi/fakedb/ecommerce/ecommerceData';
 import AppLoader from '@crema/components/AppLoader';
 
 const Confirmation = () => {
-  const [{apiData: cartItems, loading}] = useGetDataApi('/api/cart/get', []);
+  const [{ apiData: cartItems, loading }] = useGetDataApi('/api/cart/get', []);
   return (
     <>
       {loading ? (

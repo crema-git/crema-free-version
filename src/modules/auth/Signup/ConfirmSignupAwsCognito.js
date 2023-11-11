@@ -1,28 +1,28 @@
-import React, {useState} from 'react';
-import {useLocation, useNavigate} from 'react-router-dom';
-import {useIntl} from 'react-intl';
-import {Fonts} from '@crema/constants/AppEnums';
+import React, { useState } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
+import { useIntl } from 'react-intl';
+import { Fonts } from '@crema/constants/AppEnums';
 import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import IntlMessages from '@crema/helpers/IntlMessages';
 import Button from '@mui/material/Button';
 import AppInfoView from '@crema/components/AppInfoView';
-import {useAuthMethod} from '@crema/hooks/AuthHooks';
+import { useAuthMethod } from '@crema/hooks/AuthHooks';
 import ReactCodeInput from 'react-code-input';
 import AuthWrapper from '../AuthWrapper';
-import {useInfoViewActionsContext} from '@crema/context/AppContextProvider/InfoViewContextProvider';
+import { useInfoViewActionsContext } from '@crema/context/AppContextProvider/InfoViewContextProvider';
 
 const ConfirmSignupAwsCognito = () => {
   const infoViewActionsContext = useInfoViewActionsContext();
-  const {confirmCognitoUserSignup} = useAuthMethod();
+  const { confirmCognitoUserSignup } = useAuthMethod();
 
   const navigate = useNavigate();
   const location = useLocation();
 
   const [pin, setPin] = useState('');
 
-  const {messages} = useIntl();
+  const { messages } = useIntl();
 
   const handleSubmit = () => {
     const email = location.state;
@@ -38,7 +38,7 @@ const ConfirmSignupAwsCognito = () => {
 
   return (
     <AuthWrapper>
-      <Box sx={{width: '100%'}}>
+      <Box sx={{ width: '100%' }}>
         <Typography
           variant='h2'
           component='h2'
@@ -46,14 +46,14 @@ const ConfirmSignupAwsCognito = () => {
             mb: 1.5,
             color: (theme) => theme.palette.text.primary,
             fontWeight: Fonts.SEMI_BOLD,
-            fontSize: {xs: 14, xl: 16},
+            fontSize: { xs: 14, xl: 16 },
           }}
         >
           <IntlMessages id='common.emailVerification' />
         </Typography>
         <Box
           sx={{
-            mb: {xs: 5, xl: 10},
+            mb: { xs: 5, xl: 10 },
             fontSize: 18,
           }}
         >
@@ -64,7 +64,7 @@ const ConfirmSignupAwsCognito = () => {
 
         <Box
           sx={{
-            mb: {xs: 6, xl: 10},
+            mb: { xs: 6, xl: 10 },
           }}
         >
           <ReactCodeInput

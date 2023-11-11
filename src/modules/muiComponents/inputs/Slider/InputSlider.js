@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {styled} from '@mui/material/styles';
+import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
@@ -31,7 +31,7 @@ export default function InputSlider() {
   };
 
   return (
-    <Box sx={{width: 250}}>
+    <Box sx={{ width: 250 }}>
       <Typography id='input-slider' gutterBottom>
         Volume
       </Typography>

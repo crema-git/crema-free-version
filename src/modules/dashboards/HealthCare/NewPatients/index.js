@@ -1,13 +1,13 @@
 import React from 'react';
 import AppCard from '@crema/components/AppCard';
-import {useIntl} from 'react-intl';
+import { useIntl } from 'react-intl';
 import PatientGraph from './PatientGraph';
-import {Box} from '@mui/material';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Box } from '@mui/material';
+import { Fonts } from '@crema/constants/AppEnums';
 import PropTypes from 'prop-types';
 
-const NewPatients = ({data}) => {
-  const {messages} = useIntl();
+const NewPatients = ({ data }) => {
+  const { messages } = useIntl();
 
   return (
     <AppCard
@@ -36,7 +36,7 @@ const NewPatients = ({data}) => {
             <img
               src={'/assets/images/dashboard/growth_icon.svg'}
               alt='down'
-              style={{height: 12}}
+              style={{ height: 12 }}
             />
           </Box>
         </Box>

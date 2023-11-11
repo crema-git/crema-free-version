@@ -1,5 +1,5 @@
 import React from 'react';
-import {Box} from '@mui/material';
+import { Box } from '@mui/material';
 import Grid from '@mui/material/Grid';
 import Divider from '@mui/material/Divider';
 import ProductSpecification from './ProductSpecification';
@@ -9,7 +9,7 @@ import Reviews from './Reviews';
 import AvailableOffers from './AvailableOffers';
 import PropTypes from 'prop-types';
 
-const ProductView = ({product}) => {
+const ProductView = ({ product }) => {
   return (
     <Grid item sm={12} md={8}>
       <Box
@@ -50,14 +50,14 @@ const ProductView = ({product}) => {
       >
         {product.description || 'No description found'}
       </Box>
-      <Divider style={{marginTop: 15, marginBottom: 15}} />
+      <Divider style={{ marginTop: 15, marginBottom: 15 }} />
       <AvailableOffers />
       <DeliveryInfo />
-      <Divider style={{marginTop: 15, marginBottom: 15}} />
+      <Divider style={{ marginTop: 15, marginBottom: 15 }} />
       <ProductSpecification productSpec={product.productSpec || []} />
-      <Divider style={{marginTop: 15, marginBottom: 15}} />
+      <Divider style={{ marginTop: 15, marginBottom: 15 }} />
       <ProductInfo productInfo={product.productInfo || []} />
-      <Divider style={{marginTop: 15, marginBottom: 15}} />
+      <Divider style={{ marginTop: 15, marginBottom: 15 }} />
       <Reviews />
     </Grid>
   );

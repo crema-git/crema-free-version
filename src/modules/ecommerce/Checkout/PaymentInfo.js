@@ -1,7 +1,7 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import AppCard from '@crema/components/AppCard';
-import {Box} from '@mui/material';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Box } from '@mui/material';
+import { Fonts } from '@crema/constants/AppEnums';
 import Checkbox from '@mui/material/Checkbox';
 import RadioButtonUncheckedIcon from '@mui/icons-material/RadioButtonUnchecked';
 import RadioButtonCheckedIcon from '@mui/icons-material/RadioButtonChecked';
@@ -12,10 +12,10 @@ const PaymentInfo = () => {
   const [paymentMode, setPaymentMode] = useState('CARD');
   return (
     <AppCard
-      sxStyle={{mt: 6}}
-      footerStyle={{marginTop: 2.5}}
+      sxStyle={{ mt: 6 }}
+      footerStyle={{ marginTop: 2.5 }}
       title={
-        <Box sx={{fontSize: 16, fontWeight: Fonts.BOLD}}>Payment Info</Box>
+        <Box sx={{ fontSize: 16, fontWeight: Fonts.BOLD }}>Payment Info</Box>
       }
       footer={
         <Button variant='contained' color='primary' fullWidth>
@@ -31,12 +31,12 @@ const PaymentInfo = () => {
             checkedIcon={<RadioButtonCheckedIcon />}
             color='primary'
           />
-          <Box component='span' sx={{fontSize: 14, fontWeight: Fonts.MEDIUM}}>
+          <Box component='span' sx={{ fontSize: 14, fontWeight: Fonts.MEDIUM }}>
             COD
           </Box>
         </Box>
         {paymentMode === 'COD' ? (
-          <Box sx={{ml: 3, mb: 4, color: 'text.secondary'}}>
+          <Box sx={{ ml: 3, mb: 4, color: 'text.secondary' }}>
             Cash on delivery
           </Box>
         ) : null}
@@ -49,12 +49,12 @@ const PaymentInfo = () => {
             checkedIcon={<RadioButtonCheckedIcon />}
             color='primary'
           />
-          <Box component='span' sx={{fontSize: 14, fontWeight: Fonts.MEDIUM}}>
+          <Box component='span' sx={{ fontSize: 14, fontWeight: Fonts.MEDIUM }}>
             CARD
           </Box>
         </Box>
         {paymentMode === 'CARD' ? (
-          <Box sx={{ml: 3, color: 'text.secondary'}}>
+          <Box sx={{ ml: 3, color: 'text.secondary' }}>
             <TextField
               margin='dense'
               fullWidth
@@ -71,13 +71,13 @@ const PaymentInfo = () => {
               type='search'
               variant='outlined'
             />
-            <Box sx={{display: 'flex'}}>
+            <Box sx={{ display: 'flex' }}>
               <TextField
                 margin='dense'
                 id='expiry-date'
                 label='Expiry Date'
                 type='search'
-                style={{marginRight: 20}}
+                style={{ marginRight: 20 }}
                 variant='outlined'
               />
               <TextField
@@ -99,12 +99,12 @@ const PaymentInfo = () => {
             checkedIcon={<RadioButtonCheckedIcon />}
             color='primary'
           />
-          <Box component='span' sx={{fontSize: 14, fontWeight: Fonts.MEDIUM}}>
+          <Box component='span' sx={{ fontSize: 14, fontWeight: Fonts.MEDIUM }}>
             PAYPAL
           </Box>
         </Box>
         {paymentMode === 'PAYPAL' ? (
-          <Box sx={{ml: 2, color: 'text.secondary'}}>
+          <Box sx={{ ml: 2, color: 'text.secondary' }}>
             <TextField
               margin='dense'
               fullWidth

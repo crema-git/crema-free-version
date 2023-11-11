@@ -1,14 +1,14 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import VisitsGraph from './VisitsGraph';
 import IntlMessages from '@crema/helpers/IntlMessages';
-import {useIntl} from 'react-intl';
+import { useIntl } from 'react-intl';
 import Box from '@mui/material/Box';
 import PropTypes from 'prop-types';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Fonts } from '@crema/constants/AppEnums';
 import AppSelect from '@crema/components/AppSelect';
 import AppCard from '@crema/components/AppCard';
 
-const Visits = ({data}) => {
+const Visits = ({ data }) => {
   const [graphData, setGraphData] = useState(data.graphData.dataOne);
 
   const handleWeekChange = (value) => {
@@ -27,7 +27,7 @@ const Visits = ({data}) => {
     }
   };
 
-  const {messages} = useIntl();
+  const { messages } = useIntl();
 
   return (
     <AppCard
@@ -43,7 +43,7 @@ const Visits = ({data}) => {
           onChange={handleWeekChange}
         />
       }
-      sxStyle={{height: 1}}
+      sxStyle={{ height: 1 }}
       footer={
         <Box
           sx={{

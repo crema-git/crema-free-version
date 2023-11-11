@@ -1,32 +1,33 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import AppsHeader from '@crema/components/AppsContainer/AppsHeader';
 import PropTypes from 'prop-types';
 import AppsContent from '@crema/components/AppsContainer/AppsContent';
-import {alpha, Box, Hidden} from '@mui/material';
-import {useThemeContext} from '@crema/context/AppContextProvider/ThemeContextProvider';
+import { alpha, Box, Hidden } from '@mui/material';
+import { useThemeContext } from '@crema/context/AppContextProvider/ThemeContextProvider';
 import AppsFooter from '@crema/components/AppsContainer/AppsFooter';
 import AppsPagination from '@crema/components/AppsPagination';
-import {useGetDataApi} from '@crema/hooks/APIHooks';
+import { useGetDataApi } from '@crema/hooks/APIHooks';
 import ProductHeader from '../ProductHeader';
 import ProductGrid from './ProductGrid';
-import {VIEW_TYPE} from '../index';
+import { VIEW_TYPE } from '../index';
 import ProductList from './ProductList';
 
-const ProductListing = ({filterData, viewType, setViewType, setFilterData}) => {
-  const {theme} = useThemeContext();
+const ProductListing = ({
+  filterData,
+  viewType,
+  setViewType,
+  setFilterData,
+}) => {
+  const { theme } = useThemeContext();
   const [page, setPage] = useState(0);
 
-  const [{apiData: ecommerceList, loading}, {setQueryParams}] = useGetDataApi(
-    '/api/ecommerce/list',
-    [],
-    {},
-    false,
-  );
+  const [{ apiData: ecommerceList, loading }, { setQueryParams }] =
+    useGetDataApi('/api/ecommerce/list', [], {}, false);
 
-  const {list, total} = ecommerceList;
+  const { list, total } = ecommerceList;
 
   useEffect(() => {
-    setQueryParams({page, filterData});
+    setQueryParams({ page, filterData });
   }, [page, filterData]);
 
   const onPageChange = (event, value) => {
@@ -34,7 +35,7 @@ const ProductListing = ({filterData, viewType, setViewType, setFilterData}) => {
   };
 
   const searchProduct = (title) => {
-    setFilterData({...filterData, title});
+    setFilterData({ ...filterData, title });
   };
   return (
     <>

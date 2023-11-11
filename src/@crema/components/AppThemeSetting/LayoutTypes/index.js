@@ -1,5 +1,5 @@
 import React from 'react';
-import {CustomizerItemWrapper} from '../index.style';
+import { CustomizerItemWrapper } from '../index.style';
 import Box from '@mui/material/Box';
 import IntlMessages from '@crema/helpers/IntlMessages';
 import {
@@ -7,18 +7,18 @@ import {
   useLayoutContext,
 } from '@crema/context/AppContextProvider/LayoutContextProvider';
 import AppSelectedIcon from '../../AppSelectedIcon';
-import {layoutTypes} from '@crema/mockapi/fakedb/navigationStyle';
+import { layoutTypes } from '@crema/mockapi/fakedb/navigationStyle';
 
 const LayoutTypes = () => {
-  const {updateLayoutType} = useLayoutActionsContext();
-  const {layoutType} = useLayoutContext();
+  const { updateLayoutType } = useLayoutActionsContext();
+  const { layoutType } = useLayoutContext();
 
   const onLayoutChange = (layoutType) => {
     updateLayoutType(layoutType);
   };
   return (
     <CustomizerItemWrapper pb={1}>
-      <Box component='h4' sx={{mb: 3}}>
+      <Box component='h4' sx={{ mb: 3 }}>
         <IntlMessages id='customizer.layoutTypes' />
       </Box>
       <Box

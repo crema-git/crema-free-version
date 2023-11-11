@@ -1,11 +1,11 @@
 import React from 'react';
-import {Box, inputBaseClasses, lighten} from '@mui/material';
-import {Fonts} from '@crema/constants/AppEnums';
-import {styled} from '@mui/material/styles';
+import { Box, inputBaseClasses, lighten } from '@mui/material';
+import { Fonts } from '@crema/constants/AppEnums';
+import { styled } from '@mui/material/styles';
 import InputBase from '@mui/material/InputBase';
 import PropTypes from 'prop-types';
 
-export const SearchWrapper = ({iconPosition, children}) => {
+export const SearchWrapper = ({ iconPosition, children }) => {
   return (
     <Box
       sx={{
@@ -27,7 +27,7 @@ SearchWrapper.propTypes = {
   children: PropTypes.node,
 };
 
-export const SearchInputBase = styled(InputBase)(({theme}) => ({
+export const SearchInputBase = styled(InputBase)(({ theme }) => ({
   fontWeight: Fonts.MEDIUM,
 
   [`& .${inputBaseClasses.root}`]: {
@@ -89,7 +89,7 @@ export const SearchIconBox = styled('div')((props) => ({
     },
   },
 }));
-export const SearchIconWrapper = styled('div')(({theme}) => ({
+export const SearchIconWrapper = styled('div')(({ theme }) => ({
   height: '100%',
   position: 'absolute',
   top: 0,

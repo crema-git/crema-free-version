@@ -16,11 +16,11 @@ import {
 import AppTextField from '@crema/components/AppFormComponents/AppTextField';
 import AppCard from '@crema/components/AppCard';
 import IntlMessages from '@crema/helpers/IntlMessages';
-import {productCategory} from '@crema/mockapi/fakedb/ecommerce/ecommerceData';
-import {useNavigate} from 'react-router-dom';
+import { productCategory } from '@crema/mockapi/fakedb/ecommerce/ecommerceData';
+import { useNavigate } from 'react-router-dom';
 import AppGridContainer from '@crema/components/AppGridContainer';
 import AppScrollbar from '@crema/components/AppScrollbar';
-import {Field} from 'formik';
+import { Field } from 'formik';
 import Slide from '@mui/material/Slide';
 import PropTypes from 'prop-types';
 
@@ -55,7 +55,7 @@ const BlogSidebar = ({
   return (
     <Slide direction='left' in mountOnEnter unmountOnExit>
       <Grid item xs={12} lg={4}>
-        <AppScrollbar style={{height: '700px'}}>
+        <AppScrollbar style={{ height: '700px' }}>
           <AppCard title='Product Details'>
             <FormControlLabel
               control={
@@ -133,7 +133,7 @@ const BlogSidebar = ({
               renderOption={(props, option) => (
                 <Box
                   component='li'
-                  sx={{display: 'flex', alignItems: 'center'}}
+                  sx={{ display: 'flex', alignItems: 'center' }}
                   {...props}
                 >
                   <Box ml={4}>{option?.name}</Box>
@@ -151,7 +151,7 @@ const BlogSidebar = ({
             />
           </AppCard>
 
-          <AppCard title='Product Pricing' sxStyle={{mt: 7}}>
+          <AppCard title='Product Pricing' sxStyle={{ mt: 7 }}>
             <AppTextField
               name='mrp'
               type='number'
@@ -188,7 +188,7 @@ const BlogSidebar = ({
               control={
                 <Switch
                   value='checkedA'
-                  inputProps={{'aria-label': 'secondary checkbox'}}
+                  inputProps={{ 'aria-label': 'secondary checkbox' }}
                   name='inStock'
                 />
               }
@@ -209,7 +209,7 @@ const BlogSidebar = ({
 
           <AppCard
             title='Product Specification'
-            sxStyle={{mt: 7}}
+            sxStyle={{ mt: 7 }}
             action={
               <Button
                 variant='contained'
@@ -217,7 +217,7 @@ const BlogSidebar = ({
                 onClick={() => {
                   setProductSpec([
                     ...productSpec,
-                    {id: productSpec.length + 1, title: '', desc: ''},
+                    { id: productSpec.length + 1, title: '', desc: '' },
                   ]);
                 }}
               >
@@ -238,7 +238,7 @@ const BlogSidebar = ({
                           my: 2,
                         }}
                         onChange={(event) => {
-                          const {value} = event.target;
+                          const { value } = event.target;
                           const newProductInfo = [...productSpec];
                           newProductInfo[index].title = value;
                           setProductInfo(newProductInfo);
@@ -255,7 +255,7 @@ const BlogSidebar = ({
                           my: 2,
                         }}
                         onChange={(event) => {
-                          const {value} = event.target;
+                          const { value } = event.target;
                           const newProductInfo = [...productSpec];
                           newProductInfo[index].desc = value;
                           setProductInfo(newProductInfo);
@@ -271,7 +271,7 @@ const BlogSidebar = ({
 
           <AppCard
             title='Product Details'
-            sxStyle={{mt: 7}}
+            sxStyle={{ mt: 7 }}
             action={
               <Button
                 variant='contained'
@@ -279,7 +279,7 @@ const BlogSidebar = ({
                 onClick={() => {
                   setProductInfo([
                     ...productInfo,
-                    {id: productInfo.length + 1, title: '', desc: ''},
+                    { id: productInfo.length + 1, title: '', desc: '' },
                   ]);
                 }}
               >
@@ -300,7 +300,7 @@ const BlogSidebar = ({
                           my: 2,
                         }}
                         onChange={(event) => {
-                          const {value} = event.target;
+                          const { value } = event.target;
                           const newProductInfo = [...productInfo];
                           newProductInfo[index].title = value;
                           setProductInfo(newProductInfo);
@@ -317,7 +317,7 @@ const BlogSidebar = ({
                           my: 2,
                         }}
                         onChange={(event) => {
-                          const {value} = event.target;
+                          const { value } = event.target;
                           const newProductInfo = [...productInfo];
                           newProductInfo[index].desc = value;
                           setProductInfo(newProductInfo);
@@ -334,7 +334,7 @@ const BlogSidebar = ({
         <Stack
           spacing={3}
           direction='row'
-          sx={{justifyContent: 'flex-end', mt: 4}}
+          sx={{ justifyContent: 'flex-end', mt: 4 }}
         >
           <Button
             sx={{

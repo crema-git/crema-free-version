@@ -1,19 +1,19 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import TextField from '@mui/material/TextField';
 import Divider from '@mui/material/Divider';
 import InputAdornment from '@mui/material/InputAdornment';
 import SearchIcon from '@mui/icons-material/Search';
 import IntlMessages from '@crema/helpers/IntlMessages';
-import {useIntl} from 'react-intl';
+import { useIntl } from 'react-intl';
 import Box from '@mui/material/Box';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Fonts } from '@crema/constants/AppEnums';
 import AppAnimate from '@crema/components/AppAnimate';
 import Sales from './Sales';
 import Installation from './Installation';
-import {installationData, salesData} from '@crema/mockapi/fakedb/extraPages';
+import { installationData, salesData } from '@crema/mockapi/fakedb/extraPages';
 
 const KnowledgeBase = () => {
-  const {messages} = useIntl();
+  const { messages } = useIntl();
 
   const [filterText, setFilterText] = useState('');
 
@@ -44,7 +44,7 @@ const KnowledgeBase = () => {
           <TextField
             id='outlined-with-placeholder'
             placeholder={messages['knowledge.AppSkeleton']}
-            style={{width: '100%'}}
+            style={{ width: '100%' }}
             variant='outlined'
             InputProps={{
               startAdornment: (
@@ -65,8 +65,8 @@ const KnowledgeBase = () => {
 
         <Divider
           sx={{
-            marginTop: {xs: 4, sm: 6, lg: 8, xl: 10},
-            marginBottom: {xs: 4, sm: 6, lg: 8, xl: 10},
+            marginTop: { xs: 4, sm: 6, lg: 8, xl: 10 },
+            marginBottom: { xs: 4, sm: 6, lg: 8, xl: 10 },
           }}
         />
 

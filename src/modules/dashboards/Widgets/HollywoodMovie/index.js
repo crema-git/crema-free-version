@@ -1,7 +1,7 @@
 import React from 'react';
 import IntlMessages from '@crema/helpers/IntlMessages';
 import Box from '@mui/material/Box';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Fonts } from '@crema/constants/AppEnums';
 import AppCard from '@crema/components/AppCard';
 
 const HollywoodMovie = () => {
@@ -51,8 +51,8 @@ const HollywoodMovie = () => {
           <Box
             component='span'
             sx={{
-              width: {xs: 50, sm: 70, md: 90, xl: 110},
-              height: {xs: 50, sm: 70, md: 90, xl: 110},
+              width: { xs: 50, sm: 70, md: 90, xl: 110 },
+              height: { xs: 50, sm: 70, md: 90, xl: 110 },
               cursor: 'pointer',
             }}
           >
@@ -69,7 +69,7 @@ const HollywoodMovie = () => {
             sx={{
               color: 'primary.contrastText',
               fontWeight: Fonts.MEDIUM,
-              fontSize: {xs: 20, sm: 24, xl: 30},
+              fontSize: { xs: 20, sm: 24, xl: 30 },
             }}
           >
             <IntlMessages id='dashboard.hollywoodMovie' />

@@ -1,8 +1,8 @@
 import React from 'react';
 import Box from '@mui/material/Box';
 import AppGridContainer from '@crema/components/AppGridContainer';
-import {Grid} from '@mui/material';
-import {useGetDataApi} from '@crema/hooks/APIHooks';
+import { Grid } from '@mui/material';
+import { useGetDataApi } from '@crema/hooks/APIHooks';
 import GeneralStats from './GeneralStats';
 import CourseCategories from './CourseCategories';
 import MyProfile from './MyProfile';
@@ -20,7 +20,8 @@ import VideoPromo from './VideoPromo';
 import AppLoader from '@crema/components/AppLoader';
 
 const Academy = () => {
-  const [{apiData: academyData, loading}] = useGetDataApi('/dashboard/academy');
+  const [{ apiData: academyData, loading }] =
+    useGetDataApi('/dashboard/academy');
 
   return (
     <>
@@ -30,7 +31,7 @@ const Academy = () => {
         <Box>
           <Box
             sx={{
-              pb: {xs: 5, md: 8},
+              pb: { xs: 5, md: 8 },
             }}
           >
             <AppGridContainer>
@@ -50,7 +51,7 @@ const Academy = () => {
 
           <Box
             sx={{
-              pb: {xs: 5, md: 8},
+              pb: { xs: 5, md: 8 },
             }}
           >
             <AppGridContainer>
@@ -64,7 +65,7 @@ const Academy = () => {
                 sm={6}
                 lg={3}
                 sx={{
-                  order: {lg: 2},
+                  order: { lg: 2 },
                 }}
               >
                 <Notifications notifications={academyData.notifications} />
@@ -76,7 +77,7 @@ const Academy = () => {
                 sm={12}
                 lg={6}
                 sx={{
-                  order: {lg: 1},
+                  order: { lg: 1 },
                 }}
               >
                 <MyCourses courses={academyData.courses} />

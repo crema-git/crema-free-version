@@ -1,7 +1,7 @@
 import React from 'react';
 import Checkbox from '@mui/material/Checkbox/index';
 import Box from '@mui/material/Box';
-import {useIntl} from 'react-intl';
+import { useIntl } from 'react-intl';
 import AppSearchBar from '@crema/components/AppSearchBar';
 import PropTypes from 'prop-types';
 import CheckedTasksActions from './CheckedTasksActions';
@@ -23,8 +23,8 @@ const TaskContentHeader = (props) => {
     onSetFilterText,
   } = props;
 
-  const {taskLists, page} = useTodoContext();
-  const {onPageChange} = useTodoActionsContext();
+  const { taskLists, page } = useTodoContext();
+  const { onPageChange } = useTodoActionsContext();
 
   const onHandleMasterCheckbox = (event) => {
     if (event.target.checked) {
@@ -65,7 +65,7 @@ const TaskContentHeader = (props) => {
     }
   };
 
-  const {messages} = useIntl();
+  const { messages } = useIntl();
 
   return (
     <>
@@ -93,7 +93,7 @@ const TaskContentHeader = (props) => {
             onChange={onHandleMasterCheckbox}
           />
         </span>
-        <Box sx={{mr: 3}}>
+        <Box sx={{ mr: 3 }}>
           <AppSearchBar
             iconPosition='right'
             overlap={false}
@@ -110,7 +110,7 @@ const TaskContentHeader = (props) => {
           <Box
             component='span'
             sx={{
-              mr: {sm: 4},
+              mr: { sm: 4 },
               display: 'flex',
             }}
           >

@@ -1,24 +1,24 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import InvContentHeader from './InvContentHeader';
 import AppsHeader from '@crema/components/AppsContainer/AppsHeader';
 import AppsContent from '@crema/components/AppsContainer/AppsContent';
-import {putDataApi, useGetDataApi} from '@crema/hooks/APIHooks';
+import { putDataApi, useGetDataApi } from '@crema/hooks/APIHooks';
 import InvoiceTable from './InvoiceTable';
-import {useLocation, useParams} from 'react-router-dom';
-import {useInfoViewActionsContext} from '@crema/context/AppContextProvider/InfoViewContextProvider';
-import {isEmptyObject} from '@crema/helpers/ApiHelper';
+import { useLocation, useParams } from 'react-router-dom';
+import { useInfoViewActionsContext } from '@crema/context/AppContextProvider/InfoViewContextProvider';
+import { isEmptyObject } from '@crema/helpers/ApiHelper';
 import AppLoader from '@crema/components/AppLoader';
 
 const InvoiceList = () => {
   const params = useParams();
-  const {pathname} = useLocation();
+  const { pathname } = useLocation();
   const infoViewActionsContext = useInfoViewActionsContext();
 
-  const [{apiData: invoiceList, loading}, {setQueryParams, reCallAPI}] =
+  const [{ apiData: invoiceList, loading }, { setQueryParams, reCallAPI }] =
     useGetDataApi(
       '/api/invoice/list',
       {},
-      {folder: params?.folder || 'all'},
+      { folder: params?.folder || 'all' },
       true,
     );
 
@@ -41,7 +41,7 @@ const InvoiceList = () => {
   const onChangeStatus = (invoice, status) => {
     invoice.folderValue = status;
 
-    putDataApi('/api/invoice/list/update', infoViewActionsContext, {invoice})
+    putDataApi('/api/invoice/list/update', infoViewActionsContext, { invoice })
       .then(() => {
         reCallAPI();
         infoViewActionsContext.showMessage(

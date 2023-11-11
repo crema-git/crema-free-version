@@ -4,7 +4,7 @@ import Button from '@mui/material/Button';
 
 export default function ButtonSizes() {
   return (
-    <Box sx={{'& button': {m: 1}}}>
+    <Box sx={{ '& button': { m: 1 } }}>
       <div>
         <Button size='small'>Small</Button>
         <Button size='medium'>Medium</Button>

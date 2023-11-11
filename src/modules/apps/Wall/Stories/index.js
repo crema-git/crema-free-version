@@ -2,15 +2,15 @@ import React from 'react';
 import AppCard from '@crema/components/AppCard';
 import PropTypes from 'prop-types';
 import StoriesItem from './StoriesItem';
-import {useIntl} from 'react-intl';
-import {Box} from '@mui/material';
+import { useIntl } from 'react-intl';
+import { Box } from '@mui/material';
 
-const Stories = ({stories}) => {
-  const {messages} = useIntl();
+const Stories = ({ stories }) => {
+  const { messages } = useIntl();
 
   return (
     <AppCard
-      sxStyle={{mb: 8}}
+      sxStyle={{ mb: 8 }}
       title={messages['wall.stories']}
       action={messages['common.viewAll']}
     >

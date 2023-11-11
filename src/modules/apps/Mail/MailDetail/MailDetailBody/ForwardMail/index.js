@@ -1,20 +1,20 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import Button from '@mui/material/Button/index';
 import InputAdornment from '@mui/material/InputAdornment/index';
-import {Form, Formik} from 'formik';
+import { Form, Formik } from 'formik';
 import * as yup from 'yup';
 import IntlMessages from '@crema/helpers/IntlMessages';
-import {useIntl} from 'react-intl';
-import {Box} from '@mui/material';
+import { useIntl } from 'react-intl';
+import { Box } from '@mui/material';
 import PropTypes from 'prop-types';
 import dayjs from 'dayjs';
-import {useAuthUser} from '@crema/hooks/AuthHooks';
+import { useAuthUser } from '@crema/hooks/AuthHooks';
 import AppTextField from '@crema/components/AppFormComponents/AppTextField';
 import ReactQuill from 'react-quill';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Fonts } from '@crema/constants/AppEnums';
 
-import {styled} from '@mui/material/styles';
-import {generateRandomUniqueNumber} from '@crema/helpers/Common';
+import { styled } from '@mui/material/styles';
+import { generateRandomUniqueNumber } from '@crema/helpers/Common';
 
 const ReactQuillWrapper = styled(ReactQuill)(() => {
   return {
@@ -37,16 +37,16 @@ const validationSchema = yup.object({
   cc: yup.string().email(<IntlMessages id='validation.emailFormat' />),
 });
 
-const ForwardMail = ({onSubmitForwardedMail}) => {
+const ForwardMail = ({ onSubmitForwardedMail }) => {
   const [isShowCC, onShowCC] = useState(false);
 
   const onShowCcInput = () => {
     onShowCC(true);
   };
 
-  const {user} = useAuthUser();
+  const { user } = useAuthUser();
 
-  const {messages} = useIntl();
+  const { messages } = useIntl();
 
   return (
     <Box
@@ -54,7 +54,7 @@ const ForwardMail = ({onSubmitForwardedMail}) => {
         border: 1,
         borderColor: 'grey.300',
         borderRadius: 2,
-        ml: {md: 12.5},
+        ml: { md: 12.5 },
         mt: 4,
         mb: 3,
         p: 5,
@@ -68,7 +68,7 @@ const ForwardMail = ({onSubmitForwardedMail}) => {
           content: '',
         }}
         validationSchema={validationSchema}
-        onSubmit={(data, {setSubmitting, resetForm}) => {
+        onSubmit={(data, { setSubmitting, resetForm }) => {
           console.log('data: ', data);
           setSubmitting(true);
           const mail = {
@@ -98,7 +98,7 @@ const ForwardMail = ({onSubmitForwardedMail}) => {
           resetForm();
         }}
       >
-        {({setFieldValue}) => (
+        {({ setFieldValue }) => (
           <Form>
             <Box
               sx={{
@@ -162,7 +162,7 @@ const ForwardMail = ({onSubmitForwardedMail}) => {
               />
             </Box>
 
-            <div style={{textAlign: 'right'}}>
+            <div style={{ textAlign: 'right' }}>
               <Button type='submit' color='primary' variant='outlined'>
                 <IntlMessages id='common.send' />
               </Button>

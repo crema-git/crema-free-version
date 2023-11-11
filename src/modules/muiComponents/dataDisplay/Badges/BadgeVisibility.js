@@ -59,7 +59,7 @@ export default function BadgeVisibility() {
           <MailIcon />
         </Badge>
         <FormControlLabel
-          sx={{color: 'text.primary'}}
+          sx={{ color: 'text.primary' }}
           control={
             <Switch checked={!invisible} onChange={handleBadgeVisibility} />
           }

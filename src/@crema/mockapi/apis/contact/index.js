@@ -32,11 +32,11 @@ mock.onGet('/api/contactApp/contact/List').reply((config) => {
     folderContactList.length > 15
       ? folderContactList.slice(index, index + 15)
       : folderContactList;
-  return [200, {data, count}];
+  return [200, { data, count }];
 });
 
 mock.onPut('/api/contactApp/update/starred').reply((request) => {
-  const {contactIds, status} = JSON.parse(request.data);
+  const { contactIds, status } = JSON.parse(request.data);
   contactList = contactList.map((contact) => {
     if (contactIds.includes(contact.id)) {
       contact.isStarred = !!status;
@@ -52,7 +52,7 @@ mock.onPut('/api/contactApp/update/starred').reply((request) => {
 });
 
 mock.onPost('/api/contactApp/delete/contact').reply((request) => {
-  const {contactIds, type, name, page} = JSON.parse(request.data);
+  const { contactIds, type, name, page } = JSON.parse(request.data);
   let folderContactList = [];
   if (type === 'folder') {
     if (name === 'starred') {
@@ -86,11 +86,11 @@ mock.onPost('/api/contactApp/delete/contact').reply((request) => {
     folderContactList.length > 15
       ? folderContactList.slice(index, index + 15)
       : folderContactList;
-  return [200, {data, count}];
+  return [200, { data, count }];
 });
 
 mock.onPut('/api/contactApp/update/label').reply((request) => {
-  const {contactIds, type} = JSON.parse(request.data);
+  const { contactIds, type } = JSON.parse(request.data);
   contactList = contactList.map((contact) => {
     if (contactIds.includes(contact.id)) {
       contact.label = type;
@@ -106,7 +106,7 @@ mock.onPut('/api/contactApp/update/label').reply((request) => {
 });
 
 mock.onPut('/api/contactApp/contact/').reply((request) => {
-  const {contact} = JSON.parse(request.data);
+  const { contact } = JSON.parse(request.data);
   contactList = contactList.map((item) =>
     item.id === contact.id ? contact : item,
   );
@@ -114,7 +114,7 @@ mock.onPut('/api/contactApp/contact/').reply((request) => {
 });
 
 mock.onPost('/api/contactApp/compose').reply((request) => {
-  const {contact} = JSON.parse(request.data);
+  const { contact } = JSON.parse(request.data);
   contactList = [contact, ...contactList];
   return [200, contact];
 });

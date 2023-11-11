@@ -4,7 +4,7 @@ import IntlMessages from '@crema/helpers/IntlMessages';
 import Box from '@mui/material/Box';
 import PropTypes from 'prop-types';
 
-const AppSelectedIcon = ({backgroundColor, isCenter = true, color}) => {
+const AppSelectedIcon = ({ backgroundColor, isCenter = true, color }) => {
   let centerStyle = isCenter
     ? {
         position: 'absolute',

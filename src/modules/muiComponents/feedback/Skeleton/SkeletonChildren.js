@@ -1,6 +1,6 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
-import {styled} from '@mui/material/styles';
+import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Avatar from '@mui/material/Avatar';
@@ -12,12 +12,12 @@ const Image = styled('img')({
 });
 
 function SkeletonChildrenDemo(props) {
-  const {loading = false} = props;
+  const { loading = false } = props;
 
   return (
     <div>
-      <Box sx={{display: 'flex', alignItems: 'center'}}>
-        <Box sx={{margin: 1}}>
+      <Box sx={{ display: 'flex', alignItems: 'center' }}>
+        <Box sx={{ margin: 1 }}>
           {loading ? (
             <Skeleton variant='circular'>
               <Avatar />
@@ -26,7 +26,7 @@ function SkeletonChildrenDemo(props) {
             <Avatar src='https://pbs.twimg.com/profile_images/877631054525472768/Xp5FAPD5_reasonably_small.jpg' />
           )}
         </Box>
-        <Box sx={{width: '100%'}}>
+        <Box sx={{ width: '100%' }}>
           {loading ? (
             <Skeleton width='100%'>
               <Typography>.</Typography>
@@ -38,7 +38,7 @@ function SkeletonChildrenDemo(props) {
       </Box>
       {loading ? (
         <Skeleton variant='rectangular' width='100%'>
-          <div style={{paddingTop: '57%'}} />
+          <div style={{ paddingTop: '57%' }} />
         </Skeleton>
       ) : (
         <Image

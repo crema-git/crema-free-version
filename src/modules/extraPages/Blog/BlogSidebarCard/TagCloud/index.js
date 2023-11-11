@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {Box, Typography} from '@mui/material';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Box, Typography } from '@mui/material';
+import { Fonts } from '@crema/constants/AppEnums';
 import IntlMessages from '@crema/helpers/IntlMessages';
 
-const TagCloud = ({tag}) => {
+const TagCloud = ({ tag }) => {
   return (
     <Box
       sx={{

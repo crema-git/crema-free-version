@@ -1,15 +1,15 @@
 import React from 'react';
 import Avatar from '@mui/material/Avatar';
-import {alpha, makeStyles} from '@mui/material';
+import { alpha, makeStyles } from '@mui/material';
 import Box from '@mui/material/Box';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Fonts } from '@crema/constants/AppEnums';
 import Typography from '@mui/material/Typography';
 import PropTypes from 'prop-types';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
-import {useThemeContext} from '@crema/context/AppContextProvider/ThemeContextProvider';
-import {useAuthMethod, useAuthUser} from '../../../utility/AuthHooks';
+import { useThemeContext } from '@crema/context/AppContextProvider/ThemeContextProvider';
+import { useAuthMethod, useAuthUser } from '../../../utility/AuthHooks';
 import AppLogo from '../components/AppLogo';
 
 const useStyles = makeStyles((theme) => {
@@ -101,7 +101,7 @@ const useStyles = makeStyles((theme) => {
 });
 
 const SidebarHeader = () => {
-  const {themeMode} = useThemeContext();
+  const { themeMode } = useThemeContext();
 
   const [anchorEl, setAnchorEl] = React.useState(null);
 
@@ -112,8 +112,8 @@ const SidebarHeader = () => {
   const handleClose = () => {
     setAnchorEl(null);
   };
-  const {user} = useAuthUser();
-  const {logout} = useAuthMethod();
+  const { user } = useAuthUser();
+  const { logout } = useAuthMethod();
   const getUserAvatar = () => {
     if (user.displayName) {
       return user.displayName.charAt(0).toUpperCase();
@@ -123,7 +123,7 @@ const SidebarHeader = () => {
     }
   };
 
-  const classes = useStyles({themeMode});
+  const classes = useStyles({ themeMode });
 
   return (
     <Box className={classes.sidebarHeaderRoot}>

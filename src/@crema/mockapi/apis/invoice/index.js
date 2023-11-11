@@ -1,6 +1,6 @@
 import mock from '../MockConfig';
 import folderList from '../../fakedb/invoice/folderList';
-import {clientList, invoiceList, invoiceSettings} from '../../fakedb/invoice';
+import { clientList, invoiceList, invoiceSettings } from '../../fakedb/invoice';
 
 let invoiceData = invoiceList;
 let clientsData = clientList;
@@ -55,13 +55,13 @@ mock.onGet('/api/invoice/detail').reply((config) => {
 });
 
 mock.onPost('/api/invoice/list/add').reply((request) => {
-  const {invoice} = JSON.parse(request.data);
+  const { invoice } = JSON.parse(request.data);
   invoiceData = [invoice, ...invoiceData];
   return [200, invoice];
 });
 
 mock.onPut('/api/invoice/list/update').reply((request) => {
-  const {invoice} = JSON.parse(request.data);
+  const { invoice } = JSON.parse(request.data);
 
   invoiceData = invoiceData.map((item) => {
     if (item.id === invoice.id) {
@@ -83,13 +83,13 @@ mock.onGet('/api/clients/detail').reply((config) => {
 });
 
 mock.onPost('/api/invoice/clients/add').reply((request) => {
-  const {client} = JSON.parse(request.data);
+  const { client } = JSON.parse(request.data);
   clientsData = [client, ...clientsData];
   return [200, client];
 });
 
 mock.onPut('/api/invoice/clients/update').reply((request) => {
-  const {client} = JSON.parse(request.data);
+  const { client } = JSON.parse(request.data);
 
   clientsData = clientsData.map((item) => {
     if (item.id === client.id) {

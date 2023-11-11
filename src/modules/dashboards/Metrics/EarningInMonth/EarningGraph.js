@@ -1,7 +1,7 @@
 import React from 'react';
-import {Cell, Pie, PieChart} from 'recharts';
+import { Cell, Pie, PieChart } from 'recharts';
 import PropTypes from 'prop-types';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Fonts } from '@crema/constants/AppEnums';
 
 // const RADIAN = Math.PI / 180;
 
@@ -30,7 +30,7 @@ import {Fonts} from '@crema/constants/AppEnums';
 //   );
 // };
 
-const EarningGraph = ({data}) => {
+const EarningGraph = ({ data }) => {
   return (
     <PieChart width={400} height={400}>
       <text

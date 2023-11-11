@@ -1,5 +1,5 @@
 import React from 'react';
-import {RoutePermittedRole} from '@crema/constants/AppEnums';
+import { RoutePermittedRole } from '@crema/constants/AppEnums';
 
 import Box from '../../../../modules/muiComponents/layout/Box';
 import Container from '../../../../modules/muiComponents/layout/Container';

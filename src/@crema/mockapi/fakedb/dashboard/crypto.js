@@ -1,4 +1,4 @@
-import {blue, orange} from '@mui/material/colors';
+import { blue, orange } from '@mui/material/colors';
 
 const cryptoData = {
   // coinGraphData: {
@@ -370,10 +370,10 @@ const cryptoData = {
   totalBalanceData: {
     balance: '33692.00',
     coins: [
-      {id: 32423, name: 'Bitcoin', value: 9.654},
-      {id: 3333, name: 'Monero', value: 76.184},
-      {id: 44334, name: 'Ripple', value: 1567.5},
-      {id: 54323, name: 'Litecoin', value: 56.78},
+      { id: 32423, name: 'Bitcoin', value: 9.654 },
+      { id: 3333, name: 'Monero', value: 76.184 },
+      { id: 44334, name: 'Ripple', value: 1567.5 },
+      { id: 54323, name: 'Litecoin', value: 56.78 },
     ],
   },
   stories: [
@@ -741,18 +741,18 @@ const cryptoData = {
   ],
 
   atcStatics: [
-    {name: 'Jan', Buy: 15670, Sell: 27456},
-    {name: 'Feb', Buy: 35767, Sell: 20123},
-    {name: 'Mar', Buy: 18567, Sell: 28546},
-    {name: 'Apr', Buy: 52568, Sell: 25123},
-    {name: 'May', Buy: 25898, Sell: 40896},
-    {name: 'Jun', Buy: 45234, Sell: 25585},
-    {name: 'Jul', Buy: 30785, Sell: 40568},
-    {name: 'Aug', Buy: 54568, Sell: 24458},
-    {name: 'Sep', Buy: 28980, Sell: 50457},
-    {name: 'Oct', Buy: 50344, Sell: 27458},
-    {name: 'Nov', Buy: 25089, Sell: 54546},
-    {name: 'Dec', Buy: 40780, Sell: 37345},
+    { name: 'Jan', Buy: 15670, Sell: 27456 },
+    { name: 'Feb', Buy: 35767, Sell: 20123 },
+    { name: 'Mar', Buy: 18567, Sell: 28546 },
+    { name: 'Apr', Buy: 52568, Sell: 25123 },
+    { name: 'May', Buy: 25898, Sell: 40896 },
+    { name: 'Jun', Buy: 45234, Sell: 25585 },
+    { name: 'Jul', Buy: 30785, Sell: 40568 },
+    { name: 'Aug', Buy: 54568, Sell: 24458 },
+    { name: 'Sep', Buy: 28980, Sell: 50457 },
+    { name: 'Oct', Buy: 50344, Sell: 27458 },
+    { name: 'Nov', Buy: 25089, Sell: 54546 },
+    { name: 'Dec', Buy: 40780, Sell: 37345 },
   ],
   cardDetails: {
     cardDetail: [

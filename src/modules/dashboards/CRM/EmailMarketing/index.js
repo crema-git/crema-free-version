@@ -3,15 +3,15 @@ import AppCard from '@crema/components/AppCard';
 import Categories from './Categories';
 import PropTypes from 'prop-types';
 import List from '@mui/material/List';
-import {useIntl} from 'react-intl';
+import { useIntl } from 'react-intl';
 import ChartView from './ChartView';
-import {Box} from '@mui/material';
+import { Box } from '@mui/material';
 
-export const EmailMarking = ({emailMarketing}) => {
-  const {messages} = useIntl();
+export const EmailMarking = ({ emailMarketing }) => {
+  const { messages } = useIntl();
   return (
     <AppCard
-      sxStyle={{height: 1}}
+      sxStyle={{ height: 1 }}
       title={messages['dashboard.crm.emailMarketing']}
       contentStyle={{
         display: 'flex',

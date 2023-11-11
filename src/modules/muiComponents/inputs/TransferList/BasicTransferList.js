@@ -60,7 +60,7 @@ export default function TransferList() {
   };
 
   const customList = (items) => (
-    <Paper sx={{width: 200, height: 230, overflow: 'auto'}}>
+    <Paper sx={{ width: 200, height: 230, overflow: 'auto' }}>
       <List dense component='div' role='list'>
         {items.map((value) => {
           const labelId = `transfer-list-item-${value}-label`;
@@ -97,7 +97,7 @@ export default function TransferList() {
       <Grid item>
         <Grid container direction='column' alignItems='center'>
           <Button
-            sx={{my: 0.5}}
+            sx={{ my: 0.5 }}
             variant='outlined'
             size='small'
             onClick={handleAllRight}
@@ -107,7 +107,7 @@ export default function TransferList() {
             ≫
           </Button>
           <Button
-            sx={{my: 0.5}}
+            sx={{ my: 0.5 }}
             variant='outlined'
             size='small'
             onClick={handleCheckedRight}
@@ -117,7 +117,7 @@ export default function TransferList() {
             &gt;
           </Button>
           <Button
-            sx={{my: 0.5}}
+            sx={{ my: 0.5 }}
             variant='outlined'
             size='small'
             onClick={handleCheckedLeft}
@@ -127,7 +127,7 @@ export default function TransferList() {
             &lt;
           </Button>
           <Button
-            sx={{my: 0.5}}
+            sx={{ my: 0.5 }}
             variant='outlined'
             size='small'
             onClick={handleAllLeft}

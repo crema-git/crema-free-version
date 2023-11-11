@@ -4,9 +4,9 @@ import TableRow from '@mui/material/TableRow';
 import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
 import OrderActions from './OrderActions';
-import {styled} from '@mui/material/styles';
-import {useNavigate} from 'react-router-dom';
-import {Checkbox} from '@mui/material';
+import { styled } from '@mui/material/styles';
+import { useNavigate } from 'react-router-dom';
+import { Checkbox } from '@mui/material';
 
 const StyledTableCell = styled(TableCell)(() => ({
   fontSize: 14,
@@ -18,7 +18,7 @@ const StyledTableCell = styled(TableCell)(() => ({
     paddingRight: 20,
   },
 }));
-const TableItem = ({data, onChangeStatus}) => {
+const TableItem = ({ data, onChangeStatus }) => {
   const navigate = useNavigate();
   const statusName = {
     120: 'Sent',
@@ -60,8 +60,8 @@ const TableItem = ({data, onChangeStatus}) => {
           {data.inum}
         </Box>
       </StyledTableCell>
-      <StyledTableCell align='left' sx={{width: 400}}>
-        <Box sx={{display: 'flex', alignItems: 'center'}}>
+      <StyledTableCell align='left' sx={{ width: 400 }}>
+        <Box sx={{ display: 'flex', alignItems: 'center' }}>
           {data.clientName}
         </Box>
       </StyledTableCell>

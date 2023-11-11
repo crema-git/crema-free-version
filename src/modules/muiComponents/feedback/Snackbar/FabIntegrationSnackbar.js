@@ -18,7 +18,7 @@ export default function FabIntegrationSnackbar() {
       {/* TODO: Fix theme type in GlobalStyles */}
       <GlobalStyles
         styles={(theme) => ({
-          body: {backgroundColor: theme.palette.background.paper},
+          body: { backgroundColor: theme.palette.background.paper },
         })}
       />
       <div>
@@ -26,7 +26,7 @@ export default function FabIntegrationSnackbar() {
           <Toolbar>
             <IconButton
               edge='start'
-              sx={{mr: 2}}
+              sx={{ mr: 2 }}
               color='inherit'
               aria-label='menu'
             >
@@ -56,7 +56,7 @@ export default function FabIntegrationSnackbar() {
               Undo
             </Button>
           }
-          sx={{bottom: {xs: 90, sm: 0}}}
+          sx={{ bottom: { xs: 90, sm: 0 } }}
         />
       </div>
     </React.Fragment>

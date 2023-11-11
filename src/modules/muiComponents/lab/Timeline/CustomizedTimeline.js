@@ -17,7 +17,7 @@ export default function CustomizedTimeline() {
     <Timeline position='alternate'>
       <TimelineItem>
         <TimelineOppositeContent
-          sx={{m: 'auto 0'}}
+          sx={{ m: 'auto 0' }}
           align='right'
           variant='body2'
           color='text.secondary'
@@ -31,7 +31,7 @@ export default function CustomizedTimeline() {
           </TimelineDot>
           <TimelineConnector />
         </TimelineSeparator>
-        <TimelineContent sx={{py: '12px', px: 2}}>
+        <TimelineContent sx={{ py: '12px', px: 2 }}>
           <Typography variant='h6' component='span'>
             Eat
           </Typography>
@@ -40,7 +40,7 @@ export default function CustomizedTimeline() {
       </TimelineItem>
       <TimelineItem>
         <TimelineOppositeContent
-          sx={{m: 'auto 0'}}
+          sx={{ m: 'auto 0' }}
           variant='body2'
           color='text.secondary'
         >
@@ -53,7 +53,7 @@ export default function CustomizedTimeline() {
           </TimelineDot>
           <TimelineConnector />
         </TimelineSeparator>
-        <TimelineContent sx={{py: '12px', px: 2}}>
+        <TimelineContent sx={{ py: '12px', px: 2 }}>
           <Typography variant='h6' component='span'>
             Code
           </Typography>
@@ -66,9 +66,9 @@ export default function CustomizedTimeline() {
           <TimelineDot color='primary' variant='outlined'>
             <HotelIcon />
           </TimelineDot>
-          <TimelineConnector sx={{bgcolor: 'secondary.main'}} />
+          <TimelineConnector sx={{ bgcolor: 'secondary.main' }} />
         </TimelineSeparator>
-        <TimelineContent sx={{py: '12px', px: 2}}>
+        <TimelineContent sx={{ py: '12px', px: 2 }}>
           <Typography variant='h6' component='span'>
             Sleep
           </Typography>
@@ -77,13 +77,13 @@ export default function CustomizedTimeline() {
       </TimelineItem>
       <TimelineItem>
         <TimelineSeparator>
-          <TimelineConnector sx={{bgcolor: 'secondary.main'}} />
+          <TimelineConnector sx={{ bgcolor: 'secondary.main' }} />
           <TimelineDot color='secondary'>
             <RepeatIcon />
           </TimelineDot>
           <TimelineConnector />
         </TimelineSeparator>
-        <TimelineContent sx={{py: '12px', px: 2}}>
+        <TimelineContent sx={{ py: '12px', px: 2 }}>
           <Typography variant='h6' component='span'>
             Repeat
           </Typography>

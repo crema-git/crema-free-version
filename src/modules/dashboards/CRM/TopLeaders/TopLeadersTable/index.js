@@ -8,10 +8,10 @@ import TableItem from './TableItem';
 import AppTableContainer from '@crema/components/AppTableContainer';
 import AppScrollbar from '@crema/components/AppScrollbar';
 
-const TopLeadersTable = ({topLeaders}) => {
+const TopLeadersTable = ({ topLeaders }) => {
   return (
     <AppTableContainer>
-      <AppScrollbar style={{maxHeight: 340}}>
+      <AppScrollbar style={{ maxHeight: 340 }}>
         <Table stickyHeader>
           <TableHead>
             <TableHeading />

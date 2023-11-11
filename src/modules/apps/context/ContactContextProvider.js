@@ -1,7 +1,7 @@
-import React, {createContext, useContext, useEffect, useState} from 'react';
+import React, { createContext, useContext, useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
-import {useGetDataApi} from '@crema/hooks/APIHooks';
-import {useLocation} from 'react-router-dom';
+import { useGetDataApi } from '@crema/hooks/APIHooks';
+import { useLocation } from 'react-router-dom';
 
 const ContactContext = createContext();
 const ContactActionsContext = createContext();
@@ -10,25 +10,25 @@ export const useContactContext = () => useContext(ContactContext);
 
 export const useContactActionsContext = () => useContext(ContactActionsContext);
 
-export const ContactContextProvider = ({children}) => {
-  const [{apiData: labelList}] = useGetDataApi(
+export const ContactContextProvider = ({ children }) => {
+  const [{ apiData: labelList }] = useGetDataApi(
     '/api/contactApp/labels/list',
     [],
   );
 
-  const [{apiData: folderList}] = useGetDataApi(
+  const [{ apiData: folderList }] = useGetDataApi(
     '/api/contactApp/folders/list',
     [],
   );
 
   const [pageView, setPageView] = useState('list');
-  const {pathname} = useLocation();
+  const { pathname } = useLocation();
 
   const [page, setPage] = useState(0);
 
   const [
-    {apiData: contactList, loading},
-    {setQueryParams, setData: setContactData, reCallAPI},
+    { apiData: contactList, loading },
+    { setQueryParams, setData: setContactData, reCallAPI },
   ] = useGetDataApi('/api/contactApp/contact/List', {}, {}, false);
 
   useEffect(() => {

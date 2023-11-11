@@ -1,13 +1,13 @@
 import React from 'react';
 import Card from '@mui/material/Card';
 import Button from '@mui/material/Button';
-import {Checkbox} from '@mui/material';
-import {Form, Formik} from 'formik';
+import { Checkbox } from '@mui/material';
+import { Form, Formik } from 'formik';
 import * as yup from 'yup';
 import IntlMessages from '@crema/helpers/IntlMessages';
 import Box from '@mui/material/Box';
-import {Fonts} from '@crema/constants/AppEnums';
-import {grey} from '@mui/material/colors/index';
+import { Fonts } from '@crema/constants/AppEnums';
+import { grey } from '@mui/material/colors/index';
 import AppAnimate from '@crema/components/AppAnimate';
 import AppTextField from '@crema/components/AppFormComponents/AppTextField';
 
@@ -31,7 +31,7 @@ const Signup = () => {
       <Box
         sx={{
           pb: 6,
-          py: {xl: 8},
+          py: { xl: 8 },
           display: 'flex',
           flex: 1,
           flexDirection: 'column',
@@ -44,7 +44,7 @@ const Signup = () => {
             maxWidth: 576,
             width: '100%',
             textAlign: 'center',
-            padding: {xs: 8, lg: 12, xl: '48px 64px'},
+            padding: { xs: 8, lg: 12, xl: '48px 64px' },
             overflow: 'hidden',
             boxShadow:
               '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
@@ -52,7 +52,7 @@ const Signup = () => {
         >
           <Box
             sx={{
-              mb: {xs: 3, xl: 4},
+              mb: { xs: 3, xl: 4 },
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
@@ -93,7 +93,7 @@ const Signup = () => {
               confirmPassword: '',
             }}
             validationSchema={validationSchema}
-            onSubmit={(data, {setErrors, resetForm}) => {
+            onSubmit={(data, { setErrors, resetForm }) => {
               if (data.password !== data.confirmPassword) {
                 setErrors({
                   confirmPassword: (
@@ -105,7 +105,7 @@ const Signup = () => {
               }
             }}
           >
-            {({isSubmitting}) => (
+            {({ isSubmitting }) => (
               <Form
                 sx={{
                   textAlign: 'left',
@@ -115,7 +115,7 @@ const Signup = () => {
               >
                 <Box
                   sx={{
-                    mb: {xs: 3, xl: 4},
+                    mb: { xs: 3, xl: 4 },
                   }}
                 >
                   <AppTextField
@@ -130,7 +130,7 @@ const Signup = () => {
 
                 <Box
                   sx={{
-                    mb: {xs: 3, xl: 4},
+                    mb: { xs: 3, xl: 4 },
                   }}
                 >
                   <AppTextField
@@ -145,7 +145,7 @@ const Signup = () => {
 
                 <Box
                   sx={{
-                    mb: {xs: 3, xl: 4},
+                    mb: { xs: 3, xl: 4 },
                   }}
                 >
                   <AppTextField
@@ -161,7 +161,7 @@ const Signup = () => {
 
                 <Box
                   sx={{
-                    mb: {xs: 3, xl: 4},
+                    mb: { xs: 3, xl: 4 },
                   }}
                 >
                   <AppTextField
@@ -177,7 +177,7 @@ const Signup = () => {
 
                 <Box
                   sx={{
-                    mb: {xs: 5, xl: 6},
+                    mb: { xs: 5, xl: 6 },
                     display: 'flex',
                     flexWrap: 'wrap',
                     alignItems: 'center',
@@ -229,14 +229,14 @@ const Signup = () => {
 
           <Box
             sx={{
-              mt: {xs: 3, xl: 4},
+              mt: { xs: 3, xl: 4 },
               textAlign: 'center',
               color: grey[700],
               fontSize: 14,
               fontWeight: Fonts.BOLD,
             }}
           >
-            <Box component='span' sx={{mr: 1}}>
+            <Box component='span' sx={{ mr: 1 }}>
               <IntlMessages id='common.alreadyHaveAccount' />
             </Box>
             <Box

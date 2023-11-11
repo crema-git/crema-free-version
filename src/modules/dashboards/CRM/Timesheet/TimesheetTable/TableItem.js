@@ -2,11 +2,11 @@ import React from 'react';
 import TableCell from '@mui/material/TableCell';
 import TableRow from '@mui/material/TableRow';
 import PropTypes from 'prop-types';
-import {alpha, Typography} from '@mui/material';
+import { alpha, Typography } from '@mui/material';
 
-import {styled} from '@mui/material/styles';
+import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Fonts } from '@crema/constants/AppEnums';
 
 const TableCellWrapper = styled(TableCell)(() => {
   return {
@@ -20,7 +20,7 @@ const TableCellWrapper = styled(TableCell)(() => {
     },
   };
 });
-const NumberWrapper = styled('span')(({theme}) => {
+const NumberWrapper = styled('span')(({ theme }) => {
   return {
     width: 26,
     height: 26,
@@ -36,7 +36,7 @@ const NumberWrapper = styled('span')(({theme}) => {
   };
 });
 
-const TableItem = ({data}) => {
+const TableItem = ({ data }) => {
   return (
     <TableRow key={data.name} className='item-hover'>
       <TableCellWrapper component='th' scope='row'>

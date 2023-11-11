@@ -4,11 +4,11 @@ import React from 'react';
 import AppScrollbar from '@crema/components/AppScrollbar';
 import PropTypes from 'prop-types';
 import useIntl from 'react-intl/lib/src/components/useIntl';
-import {Typography} from '@mui/material';
+import { Typography } from '@mui/material';
 import Box from '@mui/material/Box';
 import AppLinearProgress from '@crema/components/AppLinearProgress';
 
-const RevenueItem = ({item}) => {
+const RevenueItem = ({ item }) => {
   return (
     <Box
       sx={{
@@ -53,16 +53,16 @@ RevenueItem.propTypes = {
   item: PropTypes.object,
 };
 
-const Revenue = ({revenueData}) => {
-  const {messages} = useIntl();
+const Revenue = ({ revenueData }) => {
+  const { messages } = useIntl();
   return (
     <AppCard
-      sxStyle={{height: 1}}
+      sxStyle={{ height: 1 }}
       title={messages['dashboard.eCommerce.revenue']}
       action={messages['common.viewAll']}
-      contentStyle={{paddingLeft: 0, paddingRight: 0}}
+      contentStyle={{ paddingLeft: 0, paddingRight: 0 }}
     >
-      <AppScrollbar style={{maxHeight: 200}}>
+      <AppScrollbar style={{ maxHeight: 200 }}>
         <AppList
           animation='transition.slideRightBigIn'
           data={revenueData}

@@ -2,9 +2,9 @@ import * as React from 'react';
 import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
 import Box from '@mui/material/Box';
-import {createTheme, styled, ThemeProvider} from '@mui/material/styles';
+import { createTheme, styled, ThemeProvider } from '@mui/material/styles';
 
-const Item = styled(Paper)(({theme}) => ({
+const Item = styled(Paper)(({ theme }) => ({
   ...theme.typography.body2,
   textAlign: 'center',
   color: theme.palette.text.secondary,
@@ -12,8 +12,8 @@ const Item = styled(Paper)(({theme}) => ({
   lineHeight: '60px',
 }));
 
-const darkTheme = createTheme({palette: {mode: 'dark'}});
-const lightTheme = createTheme({palette: {mode: 'light'}});
+const darkTheme = createTheme({ palette: { mode: 'dark' } });
+const lightTheme = createTheme({ palette: { mode: 'light' } });
 
 export default function Elevation() {
   return (
@@ -26,7 +26,7 @@ export default function Elevation() {
                 p: 2,
                 bgcolor: 'background.default',
                 display: 'grid',
-                gridTemplateColumns: {md: '1fr 1fr'},
+                gridTemplateColumns: { md: '1fr 1fr' },
                 gap: 2,
               }}
             >

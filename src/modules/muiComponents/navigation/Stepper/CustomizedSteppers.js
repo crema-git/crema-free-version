@@ -1,6 +1,6 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
-import {styled} from '@mui/material/styles';
+import { styled } from '@mui/material/styles';
 import Stack from '@mui/material/Stack';
 import Stepper from '@mui/material/Stepper';
 import Step from '@mui/material/Step';
@@ -9,9 +9,11 @@ import Check from '@mui/icons-material/Check';
 import SettingsIcon from '@mui/icons-material/Settings';
 import GroupAddIcon from '@mui/icons-material/GroupAdd';
 import VideoLabelIcon from '@mui/icons-material/VideoLabel';
-import StepConnector, {stepConnectorClasses} from '@mui/material/StepConnector';
+import StepConnector, {
+  stepConnectorClasses,
+} from '@mui/material/StepConnector';
 
-const QontoConnector = styled(StepConnector)(({theme}) => ({
+const QontoConnector = styled(StepConnector)(({ theme }) => ({
   [`&.${stepConnectorClasses.alternativeLabel}`]: {
     top: 10,
     left: 'calc(-50% + 16px)',
@@ -35,7 +37,7 @@ const QontoConnector = styled(StepConnector)(({theme}) => ({
   },
 }));
 
-const QontoStepIconRoot = styled('div')(({theme, ownerState}) => ({
+const QontoStepIconRoot = styled('div')(({ theme, ownerState }) => ({
   color: theme.palette.mode === 'dark' ? theme.palette.grey[700] : '#eaeaf0',
   display: 'flex',
   height: 22,
@@ -57,10 +59,10 @@ const QontoStepIconRoot = styled('div')(({theme, ownerState}) => ({
 }));
 
 function QontoStepIcon(props) {
-  const {active, completed, className} = props;
+  const { active, completed, className } = props;
 
   return (
-    <QontoStepIconRoot ownerState={{active}} className={className}>
+    <QontoStepIconRoot ownerState={{ active }} className={className}>
       {completed ? (
         <Check className='QontoStepIcon-completedIcon' />
       ) : (
@@ -84,7 +86,7 @@ QontoStepIcon.propTypes = {
   completed: PropTypes.bool,
 };
 
-const ColorlibConnector = styled(StepConnector)(({theme}) => ({
+const ColorlibConnector = styled(StepConnector)(({ theme }) => ({
   [`&.${stepConnectorClasses.alternativeLabel}`]: {
     top: 22,
   },
@@ -109,7 +111,7 @@ const ColorlibConnector = styled(StepConnector)(({theme}) => ({
   },
 }));
 
-const ColorlibStepIconRoot = styled('div')(({theme, ownerState}) => ({
+const ColorlibStepIconRoot = styled('div')(({ theme, ownerState }) => ({
   backgroundColor:
     theme.palette.mode === 'dark' ? theme.palette.grey[700] : '#ccc',
   zIndex: 1,
@@ -132,7 +134,7 @@ const ColorlibStepIconRoot = styled('div')(({theme, ownerState}) => ({
 }));
 
 function ColorlibStepIcon(props) {
-  const {active, completed, className} = props;
+  const { active, completed, className } = props;
 
   const icons = {
     1: <SettingsIcon />,
@@ -142,7 +144,7 @@ function ColorlibStepIcon(props) {
 
   return (
     <ColorlibStepIconRoot
-      ownerState={{completed, active}}
+      ownerState={{ completed, active }}
       className={className}
     >
       {icons[String(props.icon)]}
@@ -176,7 +178,7 @@ const steps = [
 
 export default function CustomizedSteppers() {
   return (
-    <Stack sx={{width: '100%'}} spacing={4}>
+    <Stack sx={{ width: '100%' }} spacing={4}>
       <Stepper alternativeLabel activeStep={1} connector={<QontoConnector />}>
         {steps.map((label) => (
           <Step key={label}>

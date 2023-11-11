@@ -3,9 +3,9 @@ import Box from '@mui/material/Box';
 import Avatar from '@mui/material/Avatar';
 import IntlMessages from '@crema/helpers/IntlMessages';
 import PropTypes from 'prop-types';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Fonts } from '@crema/constants/AppEnums';
 
-const AssignedStaff = ({assignedStaff}) => {
+const AssignedStaff = ({ assignedStaff }) => {
   return (
     <>
       {assignedStaff ? (

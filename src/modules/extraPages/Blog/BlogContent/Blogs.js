@@ -2,9 +2,9 @@ import React from 'react';
 import BlogCard from './BlogCard';
 import PropTypes from 'prop-types';
 import AppGrid from '@crema/components/AppGrid';
-import {useNavigate} from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
-const Blogs = ({blogs}) => {
+const Blogs = ({ blogs }) => {
   const navigate = useNavigate();
   const onViewBlogDetail = (data, isEdit) => {
     if (isEdit) navigate(`/extra-pages/edit-blog/${data.id}`);

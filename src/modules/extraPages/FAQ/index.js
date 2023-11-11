@@ -1,12 +1,12 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import Grid from '@mui/material/Grid';
 import AppGridContainer from '@crema/components/AppGridContainer';
 import AppInfoView from '@crema/components/AppInfoView';
 
 import IntlMessages from '@crema/helpers/IntlMessages';
 import Box from '@mui/material/Box';
-import {blue} from '@mui/material/colors';
-import {Fonts} from '@crema/constants/AppEnums';
+import { blue } from '@mui/material/colors';
+import { Fonts } from '@crema/constants/AppEnums';
 import AppAnimate from '@crema/components/AppAnimate';
 import FaqSideBar from './FaqSideBar/index';
 import FaqList from './FaqList';
@@ -52,7 +52,7 @@ const FAQ = () => {
 
   return (
     <AppAnimate animation='transition.slideUpIn' delay={200}>
-      <Box sx={{flex: 1}}>
+      <Box sx={{ flex: 1 }}>
         <Box
           sx={{
             backgroundColor: blue[500],
@@ -69,11 +69,11 @@ const FAQ = () => {
         >
           <Box
             component='h2'
-            sx={{mb: 5, fontSize: 20, fontWeight: Fonts.MEDIUM}}
+            sx={{ mb: 5, fontSize: 20, fontWeight: Fonts.MEDIUM }}
           >
             <IntlMessages id='faq.heading' />
           </Box>
-          <Box component='p' sx={{fontSize: 16}}>
+          <Box component='p' sx={{ fontSize: 16 }}>
             <IntlMessages id='faq.content' />
           </Box>
         </Box>

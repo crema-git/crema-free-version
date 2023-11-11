@@ -1,11 +1,11 @@
 import React from 'react';
 import InvoiceSideBar from './InvoiceSideBar';
 import InvoiceList from './InvoiceList';
-import {useIntl} from 'react-intl';
+import { useIntl } from 'react-intl';
 import AppsContainer from '@crema/components/AppsContainer';
 
 const InvoiceListing = () => {
-  const {messages} = useIntl();
+  const { messages } = useIntl();
 
   return (
     <AppsContainer

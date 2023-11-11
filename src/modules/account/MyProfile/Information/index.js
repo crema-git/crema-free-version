@@ -1,11 +1,11 @@
 import React from 'react';
 import Box from '@mui/material/Box';
-import {Typography} from '@mui/material';
+import { Typography } from '@mui/material';
 import * as yup from 'yup';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Fonts } from '@crema/constants/AppEnums';
 import IntlMessages from '@crema/helpers/IntlMessages';
 import InfoForm from './InfoForm';
-import {Formik} from 'formik';
+import { Formik } from 'formik';
 
 const phoneRegExp =
   /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
@@ -26,7 +26,7 @@ const Information = () => {
         sx={{
           fontSize: 16,
           fontWeight: Fonts.BOLD,
-          mb: {xs: 3, lg: 5},
+          mb: { xs: 3, lg: 5 },
         }}
       >
         <IntlMessages id='common.information' />
@@ -41,14 +41,14 @@ const Information = () => {
           website: 'https://hipster.com',
         }}
         validationSchema={validationSchema}
-        onSubmit={(data, {setSubmitting}) => {
+        onSubmit={(data, { setSubmitting }) => {
           setSubmitting(true);
           console.log('data: ', data);
           //TODO Api Call here to save user info
           setSubmitting(false);
         }}
       >
-        {({values, setFieldValue}) => {
+        {({ values, setFieldValue }) => {
           return <InfoForm values={values} setFieldValue={setFieldValue} />;
         }}
       </Formik>

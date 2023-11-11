@@ -2,11 +2,11 @@ import React from 'react';
 import TableCell from '@mui/material/TableCell';
 import TableRow from '@mui/material/TableRow';
 import PropTypes from 'prop-types';
-import {Box} from '@mui/material';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Box } from '@mui/material';
+import { Fonts } from '@crema/constants/AppEnums';
 
 const TableItem = (props) => {
-  const {product} = props;
+  const { product } = props;
 
   return (
     <TableRow>
@@ -21,7 +21,7 @@ const TableItem = (props) => {
         >
           {product.item}
         </Box>
-        <Box component='p' sx={{color: 'text.secondary', mb: 0}}>
+        <Box component='p' sx={{ color: 'text.secondary', mb: 0 }}>
           {product.desc}
         </Box>
       </TableCell>

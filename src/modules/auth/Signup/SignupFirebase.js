@@ -1,19 +1,19 @@
 import React from 'react';
-import {Form, Formik} from 'formik';
+import { Form, Formik } from 'formik';
 import * as yup from 'yup';
 import AppTextField from '@crema/components/AppFormComponents/AppTextField';
 import IntlMessages from '@crema/helpers/IntlMessages';
-import {useAuthMethod} from '@crema/hooks/AuthHooks';
+import { useAuthMethod } from '@crema/hooks/AuthHooks';
 import Box from '@mui/material/Box';
 import Checkbox from '@mui/material/Checkbox';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import AppInfoView from '@crema/components/AppInfoView';
-import {Fonts} from '@crema/constants/AppEnums';
-import {Link} from 'react-router-dom';
-import {AiOutlineGoogle, AiOutlineTwitter} from 'react-icons/ai';
-import {BsGithub} from 'react-icons/bs';
-import {FaFacebookF} from 'react-icons/fa';
+import { Fonts } from '@crema/constants/AppEnums';
+import { Link } from 'react-router-dom';
+import { AiOutlineGoogle, AiOutlineTwitter } from 'react-icons/ai';
+import { BsGithub } from 'react-icons/bs';
+import { FaFacebookF } from 'react-icons/fa';
 import AuthWrapper from '../AuthWrapper';
 
 const validationSchema = yup.object({
@@ -28,12 +28,12 @@ const validationSchema = yup.object({
 });
 
 const SignupFirebase = () => {
-  const {registerUserWithEmailAndPassword, logInWithPopup} = useAuthMethod();
+  const { registerUserWithEmailAndPassword, logInWithPopup } = useAuthMethod();
 
   return (
     <AuthWrapper>
-      <Box sx={{flex: 1, display: 'flex', flexDirection: 'column'}}>
-        <Box sx={{flex: 1, display: 'flex', flexDirection: 'column', mb: 5}}>
+      <Box sx={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
+        <Box sx={{ flex: 1, display: 'flex', flexDirection: 'column', mb: 5 }}>
           <Formik
             validateOnChange={true}
             initialValues={{
@@ -42,7 +42,7 @@ const SignupFirebase = () => {
               password: '',
             }}
             validationSchema={validationSchema}
-            onSubmit={(data, {setSubmitting}) => {
+            onSubmit={(data, { setSubmitting }) => {
               setSubmitting(true);
               console.log('data', data);
               registerUserWithEmailAndPassword(data);
@@ -53,9 +53,9 @@ const SignupFirebase = () => {
               setSubmitting(false);
             }}
           >
-            {({isSubmitting}) => (
-              <Form style={{textAlign: 'left'}} noValidate autoComplete='off'>
-                <Box sx={{mb: {xs: 4, xl: 5}}}>
+            {({ isSubmitting }) => (
+              <Form style={{ textAlign: 'left' }} noValidate autoComplete='off'>
+                <Box sx={{ mb: { xs: 4, xl: 5 } }}>
                   <AppTextField
                     label={<IntlMessages id='common.name' />}
                     name='name'
@@ -69,7 +69,7 @@ const SignupFirebase = () => {
                   />
                 </Box>
 
-                <Box sx={{mb: {xs: 4, xl: 5}}}>
+                <Box sx={{ mb: { xs: 4, xl: 5 } }}>
                   <AppTextField
                     label={<IntlMessages id='common.email' />}
                     name='email'
@@ -83,7 +83,7 @@ const SignupFirebase = () => {
                   />
                 </Box>
 
-                <Box sx={{mb: {xs: 4, xl: 5}}}>
+                <Box sx={{ mb: { xs: 4, xl: 5 } }}>
                   <AppTextField
                     label={<IntlMessages id='common.password' />}
                     name='password'
@@ -100,7 +100,7 @@ const SignupFirebase = () => {
 
                 <Box
                   sx={{
-                    mb: {xs: 3, xl: 4},
+                    mb: { xs: 3, xl: 4 },
                     display: 'flex',
                     alignItems: 'center',
                     flexWrap: 'wrap',
@@ -163,10 +163,10 @@ const SignupFirebase = () => {
         <Box
           sx={{
             color: 'grey.500',
-            mb: {xs: 5, md: 7},
+            mb: { xs: 5, md: 7 },
           }}
         >
-          <span style={{marginRight: 4}}>
+          <span style={{ marginRight: 4 }}>
             <IntlMessages id='common.alreadyHaveAccount' />
           </span>
           <Box
@@ -191,11 +191,11 @@ const SignupFirebase = () => {
             alignItems: 'center',
             justifyContent: 'space-between',
             backgroundColor: (theme) => theme.palette.background.default,
-            mx: {xs: -5, lg: -10},
-            mb: {xs: -6, lg: -11},
+            mx: { xs: -5, lg: -10 },
+            mb: { xs: -6, lg: -11 },
             mt: 'auto',
             py: 2,
-            px: {xs: 5, lg: 10},
+            px: { xs: 5, lg: 10 },
           }}
         >
           <Box
@@ -212,7 +212,7 @@ const SignupFirebase = () => {
             }}
           >
             <IconButton
-              sx={{p: 2, '& svg': {fontSize: 18}}}
+              sx={{ p: 2, '& svg': { fontSize: 18 } }}
               onClick={() => logInWithPopup('google')}
             >
               <AiOutlineGoogle />
@@ -220,7 +220,7 @@ const SignupFirebase = () => {
             <IconButton
               sx={{
                 p: 1.5,
-                '& svg': {fontSize: 18},
+                '& svg': { fontSize: 18 },
               }}
               onClick={() => logInWithPopup('facebook')}
             >
@@ -229,7 +229,7 @@ const SignupFirebase = () => {
             <IconButton
               sx={{
                 p: 1.5,
-                '& svg': {fontSize: 18},
+                '& svg': { fontSize: 18 },
               }}
               onClick={() => logInWithPopup('github')}
             >
@@ -238,7 +238,7 @@ const SignupFirebase = () => {
             <IconButton
               sx={{
                 p: 1.5,
-                '& svg': {fontSize: 18},
+                '& svg': { fontSize: 18 },
               }}
               onClick={() => logInWithPopup('twitter')}
             >

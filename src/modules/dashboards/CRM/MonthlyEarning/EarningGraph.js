@@ -1,9 +1,9 @@
 import React from 'react';
-import {Cell, Pie, PieChart, ResponsiveContainer} from 'recharts';
+import { Cell, Pie, PieChart, ResponsiveContainer } from 'recharts';
 import PropTypes from 'prop-types';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Fonts } from '@crema/constants/AppEnums';
 
-const EarningGraph = ({earningGraphData}) => {
+const EarningGraph = ({ earningGraphData }) => {
   return (
     <ResponsiveContainer width='100%' height={250}>
       <PieChart>

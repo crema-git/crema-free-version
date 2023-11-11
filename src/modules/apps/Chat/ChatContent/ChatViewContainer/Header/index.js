@@ -1,8 +1,8 @@
-import React, {useState} from 'react';
-import {styled} from '@mui/material/styles';
+import React, { useState } from 'react';
+import { styled } from '@mui/material/styles';
 import Index from '../../../ChatSideBar/UserInfo';
 import Box from '@mui/material/Box';
-import {alpha, Checkbox, IconButton} from '@mui/material';
+import { alpha, Checkbox, IconButton } from '@mui/material';
 import IntlMessages from '@crema/helpers/IntlMessages';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import Menu from '@mui/material/Menu';
@@ -15,7 +15,7 @@ import PhoneOutlinedIcon from '@mui/icons-material/PhoneOutlined';
 import VideocamOutlinedIcon from '@mui/icons-material/VideocamOutlined';
 import AppTooltip from '@crema/components/AppTooltip';
 
-const ChatHeaderWrapper = styled(Box)(({theme}) => ({
+const ChatHeaderWrapper = styled(Box)(({ theme }) => ({
   position: 'relative',
   paddingLeft: 10,
   paddingRight: 10,
@@ -30,7 +30,7 @@ const ChatHeaderWrapper = styled(Box)(({theme}) => ({
   },
 }));
 
-const Header = ({selectedUser, deleteConversation}) => {
+const Header = ({ selectedUser, deleteConversation }) => {
   const [isMoreIcon, onOpenMoreIcon] = useState(null);
   const [isDeleteDialogOpen, setDeleteDialogOpen] = useState(false);
 
@@ -65,7 +65,7 @@ const Header = ({selectedUser, deleteConversation}) => {
           <Box
             component='span'
             sx={{
-              ml: {xs: 2, md: 3.5},
+              ml: { xs: 2, md: 3.5 },
               color: 'text.disabled',
             }}
           >
@@ -87,7 +87,7 @@ const Header = ({selectedUser, deleteConversation}) => {
           <Box
             component='span'
             sx={{
-              ml: {xs: 2, md: 3.5},
+              ml: { xs: 2, md: 3.5 },
               color: 'text.disabled',
             }}
           >
@@ -108,7 +108,7 @@ const Header = ({selectedUser, deleteConversation}) => {
         <Box
           component='span'
           sx={{
-            ml: {xs: 2, md: 3.5},
+            ml: { xs: 2, md: 3.5 },
             color: 'text.disabled',
           }}
         >
@@ -131,7 +131,7 @@ const Header = ({selectedUser, deleteConversation}) => {
           <Box
             component='span'
             sx={{
-              ml: {xs: 2, md: 3.5},
+              ml: { xs: 2, md: 3.5 },
               color: 'text.disabled',
             }}
           >

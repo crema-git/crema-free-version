@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {alpha, Box} from '@mui/material';
+import { alpha, Box } from '@mui/material';
 
 const blogBgImage = '/assets/images/extra-pages/blog/blog-detail-header.png';
 
-const BlogDetailHeaderWrapper = ({children}) => {
+const BlogDetailHeaderWrapper = ({ children }) => {
   return (
     <Box
       sx={{

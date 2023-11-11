@@ -1,6 +1,6 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import TaskContentHeader from './TaskContentHeader';
-import {Hidden} from '@mui/material';
+import { Hidden } from '@mui/material';
 import AppsPagination from '@crema/components/AppsPagination';
 import AppsHeader from '@crema/components/AppsContainer/AppsHeader';
 import AppsContent from '@crema/components/AppsContainer/AppsContent';
@@ -8,8 +8,8 @@ import AppsFooter from '@crema/components/AppsContainer/AppsFooter';
 import ListEmptyResult from '@crema/components/AppList/ListEmptyResult';
 import TodoListSkeleton from '@crema/components/AppSkeleton/TodoListSkeleton';
 import AppList from '@crema/components/AppList';
-import {putDataApi} from '@crema/hooks/APIHooks';
-import {useInfoViewActionsContext} from '@crema/context/AppContextProvider/InfoViewContextProvider';
+import { putDataApi } from '@crema/hooks/APIHooks';
+import { useInfoViewActionsContext } from '@crema/context/AppContextProvider/InfoViewContextProvider';
 
 import {
   useTodoActionsContext,
@@ -21,8 +21,8 @@ import TaskListItemMobile from './TaskListItemMobile';
 
 const TasksList = () => {
   const infoViewActionsContext = useInfoViewActionsContext();
-  const {taskLists, loading, page} = useTodoContext();
-  const {setTodoData, onPageChange} = useTodoActionsContext();
+  const { taskLists, loading, page } = useTodoContext();
+  const { setTodoData, onPageChange } = useTodoActionsContext();
 
   const [filterText, onSetFilterText] = useState('');
 

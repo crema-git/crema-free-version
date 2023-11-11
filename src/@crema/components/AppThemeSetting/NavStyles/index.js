@@ -1,5 +1,5 @@
 import React from 'react';
-import {CustomizerItemWrapper} from '../index.style';
+import { CustomizerItemWrapper } from '../index.style';
 import Box from '@mui/material/Box';
 import IntlMessages from '@crema/helpers/IntlMessages';
 import {
@@ -7,11 +7,11 @@ import {
   useLayoutContext,
 } from '@crema/context/AppContextProvider/LayoutContextProvider';
 import AppSelectedIcon from '../../AppSelectedIcon';
-import {navStyles} from '@crema/mockapi/fakedb/navigationStyle';
+import { navStyles } from '@crema/mockapi/fakedb/navigationStyle';
 
 const NavStyles = () => {
-  const {updateNavStyle} = useLayoutActionsContext();
-  const {navStyle} = useLayoutContext();
+  const { updateNavStyle } = useLayoutActionsContext();
+  const { navStyle } = useLayoutContext();
 
   const onNavStyleChange = (navStyle) => {
     updateNavStyle(navStyle);
@@ -23,7 +23,7 @@ const NavStyles = () => {
         pb: 1,
       }}
     >
-      <Box component='h4' sx={{mb: 3}}>
+      <Box component='h4' sx={{ mb: 3 }}>
         <IntlMessages id='customizer.navigationStyles' />
       </Box>
       <Box

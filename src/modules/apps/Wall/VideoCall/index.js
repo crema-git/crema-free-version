@@ -10,10 +10,10 @@ import PhoneOutlinedIcon from '@mui/icons-material/PhoneOutlined';
 import VideocamOutlinedIcon from '@mui/icons-material/VideocamOutlined';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import IntlMessages from '@crema/helpers/IntlMessages';
-import {styled} from '@mui/material/styles';
-import {Fonts} from '@crema/constants/AppEnums';
+import { styled } from '@mui/material/styles';
+import { Fonts } from '@crema/constants/AppEnums';
 
-const UserInfo = styled('div')(({theme}) => ({
+const UserInfo = styled('div')(({ theme }) => ({
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
@@ -23,7 +23,7 @@ const UserInfo = styled('div')(({theme}) => ({
     marginBottom: 30,
   },
 }));
-const UserWrapper = styled('div')(({theme}) => ({
+const UserWrapper = styled('div')(({ theme }) => ({
   position: 'relative',
   '& .MuiAvatar-root': {
     border: `solid 5px ${theme.palette.background.paper}`,
@@ -34,7 +34,7 @@ const UserWrapper = styled('div')(({theme}) => ({
   },
 }));
 
-const UserStatus = styled('div')(({theme}) => ({
+const UserStatus = styled('div')(({ theme }) => ({
   position: 'absolute',
   right: 2,
   bottom: 12,
@@ -52,13 +52,13 @@ const UserStatus = styled('div')(({theme}) => ({
     fontSize: 14,
   },
 }));
-const UserAvatar = styled(Avatar)(({theme}) => ({
+const UserAvatar = styled(Avatar)(({ theme }) => ({
   border: `2px solid ${theme.palette.primary.contrastText}`,
   marginRight: -4,
   width: 28,
   height: 28,
 }));
-const AvatarCount = styled('div')(({theme}) => ({
+const AvatarCount = styled('div')(({ theme }) => ({
   border: `2px solid ${theme.palette.primary.contrastText}`,
   width: 28,
   height: 28,
@@ -75,12 +75,12 @@ const AvatarCount = styled('div')(({theme}) => ({
   fontWeight: Fonts.BOLD,
 }));
 
-const VideoCall = ({data}) => {
-  const {users, title} = data;
+const VideoCall = ({ data }) => {
+  const { users, title } = data;
 
   return (
     <AppCard
-      sxStyle={{mb: 8}}
+      sxStyle={{ mb: 8 }}
       contentStyle={{
         p: 0,
         '&:last-of-type': {
@@ -122,7 +122,7 @@ const VideoCall = ({data}) => {
           <Box mb={2.5} component='h4'>
             {title}
           </Box>
-          <Box display='flex' alignItems='center' mb={{xs: 5, xl: 7.5}}>
+          <Box display='flex' alignItems='center' mb={{ xs: 5, xl: 7.5 }}>
             {users.slice(0, 4).map((user) => (
               <UserAvatar key={user.id} src={user.profilePic} />
             ))}

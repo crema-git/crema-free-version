@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
 import OrderActions from './OrderActions';
 import StarRateIcon from '@mui/icons-material/StarRate';
-import {styled} from '@mui/material/styles';
+import { styled } from '@mui/material/styles';
 
 const StyledTableCell = styled(TableCell)(() => ({
   fontSize: 14,
@@ -17,7 +17,7 @@ const StyledTableCell = styled(TableCell)(() => ({
     paddingRight: 20,
   },
 }));
-const TableItem = ({data}) => {
+const TableItem = ({ data }) => {
   return (
     <TableRow key={data.name} className='item-hover'>
       <StyledTableCell component='th' scope='row'>
@@ -51,7 +51,7 @@ const TableItem = ({data}) => {
             fontSize: 12,
           }}
         >
-          {data.rating} <StarRateIcon style={{fontSize: 16}} />
+          {data.rating} <StarRateIcon style={{ fontSize: 16 }} />
         </Box>
       </StyledTableCell>
       <StyledTableCell align='left'>{data.balance}</StyledTableCell>

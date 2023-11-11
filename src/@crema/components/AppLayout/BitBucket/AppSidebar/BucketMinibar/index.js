@@ -7,7 +7,7 @@ import AppLngSwitcher from '../../../../AppLngSwitcher';
 import AppMessages from '../../../../AppMessages';
 import AppNotifications from '../../../../AppNotifications';
 import UserInfo from '../UserInfo';
-import {allowMultiLanguage} from '../../../../../constants/AppConst';
+import { allowMultiLanguage } from '../../../../../constants/AppConst';
 
 const BucketMinibar = () => {
   return (
@@ -44,12 +44,12 @@ const BucketMinibar = () => {
         <AppNotifications
           drawerPosition='left'
           tooltipPosition='right'
-          sxNotificationContentStyle={{width: 320}}
+          sxNotificationContentStyle={{ width: 320 }}
         />
         <AppMessages
           drawerPosition='left'
           tooltipPosition='right'
-          sxMessageContentStyle={{width: 320}}
+          sxMessageContentStyle={{ width: 320 }}
         />
       </Box>
       <Box

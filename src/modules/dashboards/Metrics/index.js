@@ -3,12 +3,12 @@ import AppGridContainer from '@crema/components/AppGridContainer';
 import Grid from '@mui/material/Grid';
 import IntlMessages from '@crema/helpers/IntlMessages';
 import Box from '@mui/material/Box';
-import {blue, grey, indigo, red} from '@mui/material/colors';
-import {Fonts} from '@crema/constants/AppEnums';
+import { blue, grey, indigo, red } from '@mui/material/colors';
+import { Fonts } from '@crema/constants/AppEnums';
 import AppAnimate from '@crema/components/AppAnimate';
-import {useIntl} from 'react-intl';
+import { useIntl } from 'react-intl';
 import AppLoader from '@crema/components/AppLoader';
-import {useGetDataApi} from '@crema/hooks/APIHooks';
+import { useGetDataApi } from '@crema/hooks/APIHooks';
 import StatsCardWithGraph from './StatsCardWithGraph';
 import ComparisonCard from './ComparisonCard';
 import Sales from './Sales';
@@ -23,15 +23,16 @@ import Stats from './Stats';
 import SocialVisitors from './SocialVisitors';
 import Subscriptions from './Subscriptions';
 
-import {StatsDirCard, StatsItemCard} from '../CommonComponents';
+import { StatsDirCard, StatsItemCard } from '../CommonComponents';
 import ReportCard from '../ECommerce/ReportCard';
 import VisitorPageView from '../Analytics/VisitorPageView';
 import HeartRate from '../HealthCare/HeartRate';
 import YourActivity from '../HealthCare/YourActivity';
 
 const Metrics = () => {
-  const [{apiData: metricsData, loading}] = useGetDataApi('/dashboard/metrics');
-  const {messages} = useIntl();
+  const [{ apiData: metricsData, loading }] =
+    useGetDataApi('/dashboard/metrics');
+  const { messages } = useIntl();
 
   return loading ? (
     <AppLoader />
@@ -42,7 +43,7 @@ const Metrics = () => {
           component='h2'
           sx={{
             color: 'text.primary',
-            mb: {xs: 4, sm: 4, xl: 6},
+            mb: { xs: 4, sm: 4, xl: 6 },
             fontSize: 16,
             fontWeight: Fonts.BOLD,
           }}

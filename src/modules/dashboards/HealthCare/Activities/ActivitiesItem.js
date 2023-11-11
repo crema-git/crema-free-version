@@ -1,9 +1,9 @@
 import React from 'react';
-import {Box, Typography} from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import PropTypes from 'prop-types';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Fonts } from '@crema/constants/AppEnums';
 
-const ActivitiesItem = ({activities}) => {
+const ActivitiesItem = ({ activities }) => {
   return (
     <Box
       sx={{

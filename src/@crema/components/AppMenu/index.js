@@ -20,7 +20,7 @@ const AppMenu = () => {
   return (
     <>
       <IconButton
-        style={{height: 30, width: 30}}
+        style={{ height: 30, width: 30 }}
         aria-label='more'
         onClick={handleClick}
         size='large'

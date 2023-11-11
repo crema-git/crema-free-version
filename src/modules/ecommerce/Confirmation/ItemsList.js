@@ -3,14 +3,14 @@ import AppCard from '@crema/components/AppCard';
 import AppList from '@crema/components/AppList';
 import Box from '@mui/material/Box';
 import Avatar from '@mui/material/Avatar';
-import {Button, Grid} from '@mui/material';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Button, Grid } from '@mui/material';
+import { Fonts } from '@crema/constants/AppEnums';
 import PropTypes from 'prop-types';
 import AirportShuttleOutlinedIcon from '@mui/icons-material/AirportShuttleOutlined';
 import AppGridContainer from '@crema/components/AppGridContainer';
-import {getTotalPrice} from './helper';
+import { getTotalPrice } from './helper';
 
-const ItemsList = ({cartItems}) => {
+const ItemsList = ({ cartItems }) => {
   return (
     <AppCard>
       <AppGridContainer>
@@ -28,12 +28,12 @@ const ItemsList = ({cartItems}) => {
                   py: 3,
                 }}
               >
-                <Avatar sx={{mr: 3.5}} src={data.image} />
+                <Avatar sx={{ mr: 3.5 }} src={data.image} />
                 <Box>
-                  <Box sx={{fontSize: 15, fontWeight: Fonts.BOLD}}>
+                  <Box sx={{ fontSize: 15, fontWeight: Fonts.BOLD }}>
                     {data.title} ({data.count})
                   </Box>
-                  <Box sx={{color: 'text.secondary', fontSize: 14}}>
+                  <Box sx={{ color: 'text.secondary', fontSize: 14 }}>
                     Brand: {data.brand}
                   </Box>
                 </Box>
@@ -43,12 +43,12 @@ const ItemsList = ({cartItems}) => {
         </Grid>
 
         <Grid xs={12} sm={6} item>
-          <Box sx={{display: 'flex', flexDirection: 'column'}}>
-            <Box sx={{p: 4, fontSize: 16, fontWeight: Fonts.BOLD}}>
+          <Box sx={{ display: 'flex', flexDirection: 'column' }}>
+            <Box sx={{ p: 4, fontSize: 16, fontWeight: Fonts.BOLD }}>
               Total ${getTotalPrice(cartItems)}
             </Box>
-            <Box sx={{pl: 2, display: 'flex', alignItems: 'center', mb: 4}}>
-              <Box sx={{px: 2}}>
+            <Box sx={{ pl: 2, display: 'flex', alignItems: 'center', mb: 4 }}>
+              <Box sx={{ px: 2 }}>
                 <Button color='secondary' variant='contained'>
                   Cancel
                 </Button>
@@ -67,8 +67,8 @@ const ItemsList = ({cartItems}) => {
                 alignItems: 'center',
               }}
             >
-              <Box component='span' sx={{mr: 3, pt: 1.5}}>
-                <AirportShuttleOutlinedIcon sx={{color: 'primary.main'}} />
+              <Box component='span' sx={{ mr: 3, pt: 1.5 }}>
+                <AirportShuttleOutlinedIcon sx={{ color: 'primary.main' }} />
               </Box>
               <Box component='span'>Delivery expected by 27 Jul</Box>
             </Box>

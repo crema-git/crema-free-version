@@ -5,13 +5,13 @@ import TableBody from '@mui/material/TableBody';
 import TableHeading from './TableHeading';
 import TableItem from './TableItem';
 import AppTableContainer from '@crema/components/AppTableContainer';
-import {Box, Grid} from '@mui/material';
+import { Box, Grid } from '@mui/material';
 import AppGridContainer from '@crema/components/AppGridContainer';
-import {formatCurrency} from '@crema/helpers/StringHelper';
-import {taxType} from '../../AddInvoice/data';
+import { formatCurrency } from '@crema/helpers/StringHelper';
+import { taxType } from '../../AddInvoice/data';
 import PropTypes from 'prop-types';
 
-const EditInvoiceTable = ({items, currency, taxTypeData, taxRateData}) => {
+const EditInvoiceTable = ({ items, currency, taxTypeData, taxRateData }) => {
   const taxLabelType = taxType.find((tax) => tax.value === taxTypeData).label;
 
   const currencyData = currency || {
@@ -45,8 +45,8 @@ const EditInvoiceTable = ({items, currency, taxTypeData, taxRateData}) => {
           </TableBody>
         </Table>
       </AppTableContainer>
-      <AppGridContainer spacing={2} sx={{mt: 10}}>
-        <Grid item xs={12} md={5} sx={{ml: 'auto', mr: 10}}>
+      <AppGridContainer spacing={2} sx={{ mt: 10 }}>
+        <Grid item xs={12} md={5} sx={{ ml: 'auto', mr: 10 }}>
           <Box
             sx={{
               color: 'text.secondary',
@@ -55,7 +55,7 @@ const EditInvoiceTable = ({items, currency, taxTypeData, taxRateData}) => {
               alignItems: 'center',
             }}
           >
-            <Box sx={{mr: 7, width: '100%'}}>Subtotal:</Box>
+            <Box sx={{ mr: 7, width: '100%' }}>Subtotal:</Box>
             <Box>
               {formatCurrency(
                 getTotal(),
@@ -75,10 +75,10 @@ const EditInvoiceTable = ({items, currency, taxTypeData, taxRateData}) => {
               mb: 4,
             }}
           >
-            <Box sx={{mr: 7, width: '100%'}}>
+            <Box sx={{ mr: 7, width: '100%' }}>
               {taxLabelType} ({taxRateData}%):
             </Box>
-            <Box sx={{color: 'text.secondary'}}>
+            <Box sx={{ color: 'text.secondary' }}>
               {formatCurrency(
                 getTotal() * taxRateData * 0.01,
                 {
@@ -100,8 +100,8 @@ const EditInvoiceTable = ({items, currency, taxTypeData, taxRateData}) => {
                   color: 'text.secondary',
                 }}
               >
-                <Box sx={{width: '50%'}} />
-                <Box sx={{ml: 4, width: '50%'}}> CGST:</Box>
+                <Box sx={{ width: '50%' }} />
+                <Box sx={{ ml: 4, width: '50%' }}> CGST:</Box>
                 <Box sx={{}}>
                   {formatCurrency(
                     (getTotal() * (taxRateData * 0.01)) / 2,
@@ -122,8 +122,8 @@ const EditInvoiceTable = ({items, currency, taxTypeData, taxRateData}) => {
                   color: 'text.secondary',
                 }}
               >
-                <Box sx={{width: '50%'}} />
-                <Box sx={{ml: 4, width: '50%'}}> SGST:</Box>
+                <Box sx={{ width: '50%' }} />
+                <Box sx={{ ml: 4, width: '50%' }}> SGST:</Box>
                 <Box sx={{}}>
                   {formatCurrency(
                     (getTotal() * (taxRateData * 0.01)) / 2,
@@ -146,7 +146,7 @@ const EditInvoiceTable = ({items, currency, taxTypeData, taxRateData}) => {
               color: 'text.secondary',
             }}
           >
-            <Box sx={{mr: 6, width: '50%'}}>Total:</Box>
+            <Box sx={{ mr: 6, width: '50%' }}>Total:</Box>
             <Box>
               {formatCurrency(
                 getTotal() * (1 - taxRateData * 0.01),

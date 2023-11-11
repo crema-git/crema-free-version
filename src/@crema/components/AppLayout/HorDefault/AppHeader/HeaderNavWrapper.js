@@ -1,9 +1,9 @@
 import React from 'react';
 import PropsTypes from 'prop-types';
-import {alpha, Box} from '@mui/material';
-import {useSidebarContext} from '@crema/context/AppContextProvider/SidebarContextProvider';
+import { alpha, Box } from '@mui/material';
+import { useSidebarContext } from '@crema/context/AppContextProvider/SidebarContextProvider';
 
-const HeaderNavWrapper = ({children}) => {
+const HeaderNavWrapper = ({ children }) => {
   const {
     sidebarBgColor,
     sidebarTextColor,
@@ -24,7 +24,7 @@ const HeaderNavWrapper = ({children}) => {
           width: 'auto',
           cursor: 'pointer',
           py: 1,
-          px: {xs: 4, lg: 5},
+          px: { xs: 4, lg: 5 },
           borderRadius: 1,
           '&.active': {
             color: sidebarMenuSelectedTextColor,

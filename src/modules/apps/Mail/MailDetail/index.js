@@ -1,27 +1,23 @@
-import React, {createRef, useEffect} from 'react';
+import React, { createRef, useEffect } from 'react';
 import MailDetailHeader from './MailDetailHeader';
 import MailDetailBody from './MailDetailBody';
-import {useParams} from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import AppsContent from '@crema/components/AppsContainer/AppsContent';
 import AppsHeader from '@crema/components/AppsContainer/AppsHeader';
 import AppAnimate from '@crema/components/AppAnimate';
-import {MailDetailSkeleton} from '@crema/components/AppSkeleton/MailDetailSkeleton';
+import { MailDetailSkeleton } from '@crema/components/AppSkeleton/MailDetailSkeleton';
 import Box from '@mui/material/Box';
-import {useGetDataApi} from '@crema/hooks/APIHooks';
+import { useGetDataApi } from '@crema/hooks/APIHooks';
 
 const MailDetail = () => {
   const contentRef = createRef();
 
-  const {id} = useParams();
-  const [{apiData: selectedMail}, {setQueryParams, setData}] = useGetDataApi(
-    '/api/mailApp/mail/',
-    undefined,
-    {id: id},
-    false,
-  );
+  const { id } = useParams();
+  const [{ apiData: selectedMail }, { setQueryParams, setData }] =
+    useGetDataApi('/api/mailApp/mail/', undefined, { id: id }, false);
 
   useEffect(() => {
-    if (id) setQueryParams({id});
+    if (id) setQueryParams({ id });
   }, [id]);
 
   const onUpdateSelectedMail = (data) => {

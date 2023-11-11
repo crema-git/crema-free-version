@@ -3,7 +3,7 @@ import AppList from '@crema/components/AppList';
 import PostItem from './PostItem';
 import PropTypes from 'prop-types';
 
-const PostsList = ({wallData, postList, setPostList}) => {
+const PostsList = ({ wallData, postList, setPostList }) => {
   return (
     <AppList
       data={postList}

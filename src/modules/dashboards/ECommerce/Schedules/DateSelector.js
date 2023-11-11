@@ -1,14 +1,14 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import Box from '@mui/material/Box';
 import Tooltip from '@mui/material/Tooltip';
 import Zoom from '@mui/material/Zoom';
 import PropTypes from 'prop-types';
-import {TextField} from '@mui/material';
-import {StaticDatePicker} from '@mui/lab';
+import { TextField } from '@mui/material';
+import { StaticDatePicker } from '@mui/lab';
 
-import {styled} from '@mui/material/styles';
+import { styled } from '@mui/material/styles';
 
-const CalendarRoot = styled('div')(({theme}) => {
+const CalendarRoot = styled('div')(({ theme }) => {
   return {
     position: 'relative',
     width: '100%',
@@ -27,7 +27,7 @@ const CalendarRoot = styled('div')(({theme}) => {
   };
 });
 
-const DateSelector = ({schedules}) => {
+const DateSelector = ({ schedules }) => {
   const [day, setDay] = useState(null);
 
   const handleChange = (day) => {
@@ -58,7 +58,10 @@ const DateSelector = ({schedules}) => {
               arrow
               bgcolor={scheduleDate.color}
             >
-              <Box sx={{bgcolor: scheduleDate.color}} className='schedule-date'>
+              <Box
+                sx={{ bgcolor: scheduleDate.color }}
+                className='schedule-date'
+              >
                 {dayComponent}
               </Box>
             </Tooltip>

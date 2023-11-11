@@ -1,7 +1,7 @@
-import {styled} from '@mui/material/styles';
+import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 
-export const MailDetailViewWrapper = styled(Box)(({theme}) => {
+export const MailDetailViewWrapper = styled(Box)(({ theme }) => {
   return {
     transition: 'all 0.5s ease',
     transform: 'translateX(100%)',

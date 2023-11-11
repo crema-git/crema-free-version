@@ -3,17 +3,17 @@ import TaskSideBar from './TaskSideBar/index';
 import TasksList from './TasksList';
 import TaskDetail from './TaskDetail';
 import PropTypes from 'prop-types';
-import {useIntl} from 'react-intl';
+import { useIntl } from 'react-intl';
 import AppsContainer from '@crema/components/AppsContainer';
 import clsx from 'clsx';
-import {useParams} from 'react-router-dom';
-import {Box} from '@mui/material';
+import { useParams } from 'react-router-dom';
+import { Box } from '@mui/material';
 import TodoContextProvider from '../context/TodoContextProvider';
 
 const ToDo = () => {
-  const {id} = useParams();
+  const { id } = useParams();
 
-  const {messages} = useIntl();
+  const { messages } = useIntl();
   return (
     <TodoContextProvider>
       <AppsContainer

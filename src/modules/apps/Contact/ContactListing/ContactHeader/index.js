@@ -1,9 +1,9 @@
 import React from 'react';
 import Box from '@mui/material/Box';
 import AppSearchBar from '@crema/components/AppSearchBar';
-import {Hidden} from '@mui/material';
+import { Hidden } from '@mui/material';
 import PropTypes from 'prop-types';
-import {useIntl} from 'react-intl';
+import { useIntl } from 'react-intl';
 import CheckBox from './CheckBox';
 import ContactCheckedActions from './ContactCheckedActions';
 import AppsPagination from '@crema/components/AppsPagination';
@@ -23,10 +23,10 @@ const ContactHeader = (props) => {
     onUpdateContacts,
     onSelectContactsForDelete,
   } = props;
-  const {page, pageView, contactList} = useContactContext();
-  const {onPageChange, setPageView} = useContactActionsContext();
+  const { page, pageView, contactList } = useContactContext();
+  const { onPageChange, setPageView } = useContactActionsContext();
 
-  const {messages} = useIntl();
+  const { messages } = useIntl();
 
   return (
     <>
@@ -64,7 +64,7 @@ const ContactHeader = (props) => {
       <Hidden smDown>
         {contactList?.data?.length > 0 ? (
           <AppsPagination
-            sx={{ml: 2}}
+            sx={{ ml: 2 }}
             count={contactList?.count}
             page={page}
             onPageChange={onPageChange}

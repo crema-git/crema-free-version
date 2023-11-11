@@ -7,7 +7,7 @@ import Divider from '@mui/material/Divider';
 import List from '@mui/material/List';
 import PropTypes from 'prop-types';
 
-const HorizontalNav = ({routesConfig}) => {
+const HorizontalNav = ({ routesConfig }) => {
   return (
     <List className='navbarNav'>
       {routesConfig.map((item) => (
@@ -24,7 +24,7 @@ const HorizontalNav = ({routesConfig}) => {
             <HorizontalItem item={item} nestedLevel={0} />
           )}
 
-          {item.type === 'divider' && <Divider sx={{my: 5}} />}
+          {item.type === 'divider' && <Divider sx={{ my: 5 }} />}
         </React.Fragment>
       ))}
     </List>

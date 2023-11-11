@@ -12,7 +12,7 @@ export default function ConsecutiveSnackbars() {
   React.useEffect(() => {
     if (snackPack.length && !messageInfo) {
       // Set a new snack when we don't have an active one
-      setMessageInfo({...snackPack[0]});
+      setMessageInfo({ ...snackPack[0] });
       setSnackPack((prev) => prev.slice(1));
       setOpen(true);
     } else if (snackPack.length && messageInfo && open) {
@@ -22,7 +22,7 @@ export default function ConsecutiveSnackbars() {
   }, [snackPack, messageInfo, open]);
 
   const handleClick = (message) => () => {
-    setSnackPack((prev) => [...prev, {message, key: new Date().getTime()}]);
+    setSnackPack((prev) => [...prev, { message, key: new Date().getTime() }]);
   };
 
   const handleClose = (event, reason) => {
@@ -45,7 +45,7 @@ export default function ConsecutiveSnackbars() {
         open={open}
         autoHideDuration={6000}
         onClose={handleClose}
-        TransitionProps={{onExited: handleExited}}
+        TransitionProps={{ onExited: handleExited }}
         message={messageInfo ? messageInfo.message : undefined}
         action={
           <React.Fragment>
@@ -55,7 +55,7 @@ export default function ConsecutiveSnackbars() {
             <IconButton
               aria-label='close'
               color='inherit'
-              sx={{p: 0.5}}
+              sx={{ p: 0.5 }}
               onClick={handleClose}
             >
               <CloseIcon />

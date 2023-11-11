@@ -1,9 +1,9 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import Divider from '@mui/material/Divider';
 import Button from '@mui/material/Button';
-import {alpha} from '@mui/material';
+import { alpha } from '@mui/material';
 import Box from '@mui/material/Box';
-import {useIntl} from 'react-intl';
+import { useIntl } from 'react-intl';
 import PropTypes from 'prop-types';
 import ChangeStaff from './ChangeStaff';
 import TaskStatus from './TaskStatus';
@@ -12,14 +12,14 @@ import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
 import EditOutlinedIcon from '@mui/icons-material/EditOutlined';
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
-import {useAuthUser} from '@crema/hooks/AuthHooks';
+import { useAuthUser } from '@crema/hooks/AuthHooks';
 import SendOutlinedIcon from '@mui/icons-material/SendOutlined';
-import {Fonts} from '@crema/constants/AppEnums';
-import {useInfoViewActionsContext} from '@crema/context/AppContextProvider/InfoViewContextProvider';
-import {putDataApi} from '@crema/hooks/APIHooks';
+import { Fonts } from '@crema/constants/AppEnums';
+import { useInfoViewActionsContext } from '@crema/context/AppContextProvider/InfoViewContextProvider';
+import { putDataApi } from '@crema/hooks/APIHooks';
 
-import {useTodoContext} from '../../../context/TodoContextProvider';
-import {getDateObject, getFormattedDate} from '@crema/helpers/DateHelper';
+import { useTodoContext } from '../../../context/TodoContextProvider';
+import { getDateObject, getFormattedDate } from '@crema/helpers/DateHelper';
 import TaskCreatedByInfo from './TaskCreatedByInfo';
 import EditButton from './EditButton';
 import AssignedStaff from './AssignedStaff';
@@ -32,11 +32,11 @@ function CommentsLists() {
 
 CommentsLists.propTypes = {};
 const TaskDetailBody = (props) => {
-  const {selectedTask, onUpdateSelectedTask} = props;
+  const { selectedTask, onUpdateSelectedTask } = props;
   const infoViewActionsContext = useInfoViewActionsContext();
 
-  const {user} = useAuthUser();
-  const {staffList} = useTodoContext();
+  const { user } = useAuthUser();
+  const { staffList } = useTodoContext();
 
   const [isEdit, setEdit] = useState(false);
 
@@ -98,7 +98,7 @@ const TaskDetailBody = (props) => {
     setStaff(staff);
   };
 
-  const {messages} = useIntl();
+  const { messages } = useIntl();
 
   return (
     <Box
@@ -113,11 +113,11 @@ const TaskDetailBody = (props) => {
         sx={{
           mb: 5,
           display: 'flex',
-          flexDirection: {xs: 'column', sm: 'row'},
-          alignItems: {sm: 'center'},
+          flexDirection: { xs: 'column', sm: 'row' },
+          alignItems: { sm: 'center' },
         }}
       >
-        <Box sx={{display: 'flex', alignItems: 'center'}}>
+        <Box sx={{ display: 'flex', alignItems: 'center' }}>
           <Typography
             component='h2'
             variant='h2'
@@ -128,13 +128,13 @@ const TaskDetailBody = (props) => {
               marginRight: 3.5,
               fontSize: 16,
               fontWeight: Fonts.MEDIUM,
-              mb: {xs: 3, sm: 0},
+              mb: { xs: 3, sm: 0 },
             }}
           >
             {selectedTask.title}
           </Typography>
 
-          <Box mr={1} mb={{xs: 3, sm: 0}}>
+          <Box mr={1} mb={{ xs: 3, sm: 0 }}>
             <Box
               component='span'
               sx={{
@@ -152,7 +152,7 @@ const TaskDetailBody = (props) => {
           </Box>
         </Box>
 
-        <Box display='flex' alignItems='center' ml={{sm: 'auto'}}>
+        <Box display='flex' alignItems='center' ml={{ sm: 'auto' }}>
           <TaskLabels labels={selectedTask.label} />
           <Box component='span' color='text.secondary' fontSize={14} ml={2}>
             Nov 21, 2020, 9:46 AM
@@ -163,13 +163,13 @@ const TaskDetailBody = (props) => {
       <Box mb={0.5} display='flex'>
         <Box
           display='flex'
-          flexDirection={{xs: 'column', sm: 'row'}}
+          flexDirection={{ xs: 'column', sm: 'row' }}
           mr={2}
-          alignItems={{sm: 'center'}}
+          alignItems={{ sm: 'center' }}
         >
           {isEdit ? (
             <>
-              <Box mb={{xs: 3, sm: 0}}>
+              <Box mb={{ xs: 3, sm: 0 }}>
                 <ChangeStaff
                   selectedStaff={selectedStaff}
                   handleStaffChange={handleStaffChange}
@@ -217,7 +217,7 @@ const TaskDetailBody = (props) => {
       />
 
       {!isEdit ? (
-        <Typography sx={{color: 'text.secondary'}}>{content}</Typography>
+        <Typography sx={{ color: 'text.secondary' }}>{content}</Typography>
       ) : (
         <TextField
           multiline
@@ -239,13 +239,15 @@ const TaskDetailBody = (props) => {
       <Box
         sx={{
           display: 'flex',
-          flexDirection: {xs: 'column', sm: 'row'},
-          alignItems: {sm: 'center'},
+          flexDirection: { xs: 'column', sm: 'row' },
+          alignItems: { sm: 'center' },
           mb: 1,
           pt: 5,
         }}
       >
-        <Box sx={{display: 'flex', alignItems: 'center', mb: {xs: 3, sm: 0}}}>
+        <Box
+          sx={{ display: 'flex', alignItems: 'center', mb: { xs: 3, sm: 0 } }}
+        >
           <Box mr={5}>
             <TaskStatus
               selectedTask={selectedTask}

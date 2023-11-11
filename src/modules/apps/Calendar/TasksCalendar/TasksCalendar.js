@@ -1,10 +1,10 @@
-import React, {useState} from 'react';
-import {dayjsLocalizer} from 'react-big-calendar';
+import React, { useState } from 'react';
+import { dayjsLocalizer } from 'react-big-calendar';
 import dayjs from 'dayjs';
 
 import PropTypes from 'prop-types';
-import {StyledCalendar} from './Calendar.style';
-import {useNavigate, useParams} from 'react-router-dom';
+import { StyledCalendar } from './Calendar.style';
+import { useNavigate, useParams } from 'react-router-dom';
 import './calendar.css';
 import CustomToolbar from './CustomToolbar';
 import TaskItem from './TaskItem';
@@ -15,12 +15,12 @@ const DragAndDropCalendar = withDragAndDrop(StyledCalendar);
 
 const localizer = dayjsLocalizer(dayjs);
 
-const TaskCalender = ({taskList, onUpdateTask, onSetFilterText}) => {
+const TaskCalender = ({ taskList, onUpdateTask, onSetFilterText }) => {
   const navigate = useNavigate();
-  const {folder, label} = useParams();
+  const { folder, label } = useParams();
   const [selectedDate, setSelectedDate] = useState(null);
 
-  const onSelectDate = ({start}) => {
+  const onSelectDate = ({ start }) => {
     setSelectedDate(start);
     // setAddTaskOpen(true);
   };
@@ -34,16 +34,16 @@ const TaskCalender = ({taskList, onUpdateTask, onSetFilterText}) => {
       }
     }
   };
-  const resizeEvent = ({event, start, end}) => {
-    onUpdateTask({...event, startDate: start, endDate: end});
+  const resizeEvent = ({ event, start, end }) => {
+    onUpdateTask({ ...event, startDate: start, endDate: end });
   };
 
   const onViewTaskDetail = (task) => {
     if (folder) navigate(`/apps/calender/${folder}/${task.id}`);
     if (label) navigate(`/apps/calender/label/${label}/${task.id}`);
   };
-  const moveEvent = ({event, start, end}) => {
-    onUpdateTask({...event, startDate: start, endDate: end});
+  const moveEvent = ({ event, start, end }) => {
+    onUpdateTask({ ...event, startDate: start, endDate: end });
   };
 
   const getEvents = () => {

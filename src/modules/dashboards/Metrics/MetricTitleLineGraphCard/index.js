@@ -3,7 +3,7 @@ import LineGraph from './LineGraph';
 import IntlMessages from '@crema/helpers/IntlMessages';
 import Box from '@mui/material/Box';
 import PropTypes from 'prop-types';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Fonts } from '@crema/constants/AppEnums';
 import AppCard from '@crema/components/AppCard';
 
 const MetricTitleLineGraphCard = ({
@@ -16,7 +16,7 @@ const MetricTitleLineGraphCard = ({
   graphColor,
 }) => {
   return (
-    <AppCard sxStyle={{backgroundColor: bgColor}}>
+    <AppCard sxStyle={{ backgroundColor: bgColor }}>
       <Box
         component='h3'
         sx={{
@@ -32,7 +32,7 @@ const MetricTitleLineGraphCard = ({
         sx={{
           display: 'flex',
           alignItems: 'center',
-          mb: {xs: 3, xl: 0},
+          mb: { xs: 3, xl: 0 },
         }}
       >
         <Box
@@ -42,7 +42,7 @@ const MetricTitleLineGraphCard = ({
             mr: 3,
             color: valueColor,
             fontWeight: Fonts.MEDIUM,
-            fontSize: {xs: 24, md: 30, xl: 36},
+            fontSize: { xs: 24, md: 30, xl: 36 },
           }}
         >
           {data.value}

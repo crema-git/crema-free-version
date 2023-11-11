@@ -1,10 +1,10 @@
 import React from 'react';
-import {Line, LineChart} from 'recharts';
+import { Line, LineChart } from 'recharts';
 import Box from '@mui/material/Box';
 import PropTypes from 'prop-types';
 
 const LineGraph = (props) => {
-  const {data, graphColor} = props;
+  const { data, graphColor } = props;
 
   return (
     <Box

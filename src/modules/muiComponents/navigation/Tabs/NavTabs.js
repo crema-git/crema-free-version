@@ -23,7 +23,7 @@ export default function NavTabs() {
   };
 
   return (
-    <Box sx={{width: '100%'}}>
+    <Box sx={{ width: '100%' }}>
       <Tabs value={value} onChange={handleChange} aria-label='nav tabs example'>
         <LinkTab label='Page One' href='/drafts' />
         <LinkTab label='Page Two' href='/trash' />

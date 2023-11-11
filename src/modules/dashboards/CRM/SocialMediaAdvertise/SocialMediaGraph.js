@@ -10,9 +10,9 @@ import {
 } from 'recharts';
 import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Fonts } from '@crema/constants/AppEnums';
 
-const SocialMediaGraph = ({socialMediaData}) => {
+const SocialMediaGraph = ({ socialMediaData }) => {
   return (
     <Box
       sx={{
@@ -27,9 +27,9 @@ const SocialMediaGraph = ({socialMediaData}) => {
         <BarChart
           barSize={8}
           data={socialMediaData}
-          margin={{top: 0, right: 0, left: 0, bottom: 30}}
+          margin={{ top: 0, right: 0, left: 0, bottom: 30 }}
         >
-          <CartesianGrid strokeDasharray='3 3' style={{paddingTop: 20}} />
+          <CartesianGrid strokeDasharray='3 3' style={{ paddingTop: 20 }} />
           <XAxis hide />
           <YAxis hide />
           <Bar dataKey='revenue'>

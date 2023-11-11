@@ -35,13 +35,13 @@ const OrderActions = () => {
         onClose={handleClose}
         TransitionComponent={Fade}
       >
-        <MenuItem style={{fontSize: 14}} onClick={handleClose}>
+        <MenuItem style={{ fontSize: 14 }} onClick={handleClose}>
           View Order
         </MenuItem>
-        <MenuItem style={{fontSize: 14}} onClick={handleClose}>
+        <MenuItem style={{ fontSize: 14 }} onClick={handleClose}>
           Edit
         </MenuItem>
-        <MenuItem style={{fontSize: 14}} onClick={handleClose}>
+        <MenuItem style={{ fontSize: 14 }} onClick={handleClose}>
           Delete
         </MenuItem>
       </Menu>

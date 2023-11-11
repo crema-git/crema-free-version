@@ -4,7 +4,7 @@ import GridItem from './GridItem';
 import ListEmptyResult from '@crema/components/AppList/ListEmptyResult';
 import PropTypes from 'prop-types';
 
-const ProductGrid = ({ecommerceList, loading}) => (
+const ProductGrid = ({ ecommerceList, loading }) => (
   <AppGrid
     delay={200}
     responsive={{

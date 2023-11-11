@@ -1,13 +1,13 @@
 import React from 'react';
 import AppCard from '@crema/components/AppCard';
-import {alpha, Icon, IconButton} from '@mui/material';
+import { alpha, Icon, IconButton } from '@mui/material';
 import PropTypes from 'prop-types';
 import Typography from '@mui/material/Typography';
 import StatGraphs from './StatGraphs';
 import Box from '@mui/material/Box';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Fonts } from '@crema/constants/AppEnums';
 
-const ReportCard = ({data}) => {
+const ReportCard = ({ data }) => {
   return (
     <AppCard
       footer={
@@ -38,7 +38,7 @@ const ReportCard = ({data}) => {
             }}
           >
             <Typography
-              sx={{fontWeight: Fonts.SEMI_BOLD}}
+              sx={{ fontWeight: Fonts.SEMI_BOLD }}
               variant='h2'
               component='h2'
             >
@@ -90,7 +90,7 @@ const ReportCard = ({data}) => {
           }}
           size='large'
         >
-          <Icon style={{fontSize: 30}}>{data.icon}</Icon>
+          <Icon style={{ fontSize: 30 }}>{data.icon}</Icon>
         </IconButton>
       </Box>
     </AppCard>

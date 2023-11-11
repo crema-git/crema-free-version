@@ -5,8 +5,8 @@ import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
 
 import Avatar from '@mui/material/Avatar';
-import {Typography} from '@mui/material';
-import {styled} from '@mui/material/styles';
+import { Typography } from '@mui/material';
+import { styled } from '@mui/material/styles';
 import AppMenu from '@crema/components/AppMenu';
 
 const TableCellWrapper = styled(TableCell)(() => {
@@ -23,7 +23,7 @@ const TableCellWrapper = styled(TableCell)(() => {
   };
 });
 
-const TableItem = ({data}) => {
+const TableItem = ({ data }) => {
   return (
     <TableRow key={data.name} className='item-hover'>
       <TableCellWrapper component='th' scope='row'>
@@ -48,7 +48,7 @@ const TableItem = ({data}) => {
       <TableCellWrapper align='left'>{data.gender}</TableCellWrapper>
       <TableCellWrapper align='left'>{data.weight}</TableCellWrapper>
       <TableCellWrapper align='left'>{data.assignedDr}</TableCellWrapper>
-      <TableCellWrapper align='left' sx={{fontSize: 12}}>
+      <TableCellWrapper align='left' sx={{ fontSize: 12 }}>
         {data.date}
       </TableCellWrapper>
       <TableCellWrapper align='left'>

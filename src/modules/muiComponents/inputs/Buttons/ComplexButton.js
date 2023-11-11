@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {styled} from '@mui/material/styles';
+import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import ButtonBase from '@mui/material/ButtonBase';
 import Typography from '@mui/material/Typography';
@@ -22,7 +22,7 @@ const images = [
   },
 ];
 
-const ImageButton = styled(ButtonBase)(({theme}) => ({
+const ImageButton = styled(ButtonBase)(({ theme }) => ({
   position: 'relative',
   height: 200,
   [theme.breakpoints.down('sm')]: {
@@ -53,7 +53,7 @@ const ImageSrc = styled('span')({
   backgroundPosition: 'center 40%',
 });
 
-const Image = styled('span')(({theme}) => ({
+const Image = styled('span')(({ theme }) => ({
   position: 'absolute',
   left: 0,
   right: 0,
@@ -65,7 +65,7 @@ const Image = styled('span')(({theme}) => ({
   color: theme.palette.common.white,
 }));
 
-const ImageBackdrop = styled('span')(({theme}) => ({
+const ImageBackdrop = styled('span')(({ theme }) => ({
   position: 'absolute',
   left: 0,
   right: 0,
@@ -76,7 +76,7 @@ const ImageBackdrop = styled('span')(({theme}) => ({
   transition: theme.transitions.create('opacity'),
 }));
 
-const ImageMarked = styled('span')(({theme}) => ({
+const ImageMarked = styled('span')(({ theme }) => ({
   height: 3,
   width: 18,
   backgroundColor: theme.palette.common.white,
@@ -88,7 +88,9 @@ const ImageMarked = styled('span')(({theme}) => ({
 
 export default function ButtonBases() {
   return (
-    <Box sx={{display: 'flex', flexWrap: 'wrap', minWidth: 300, width: '100%'}}>
+    <Box
+      sx={{ display: 'flex', flexWrap: 'wrap', minWidth: 300, width: '100%' }}
+    >
       {images.map((image) => (
         <ImageButton
           focusRipple
@@ -97,7 +99,7 @@ export default function ButtonBases() {
             width: image.width,
           }}
         >
-          <ImageSrc style={{backgroundImage: `url(${image.url})`}} />
+          <ImageSrc style={{ backgroundImage: `url(${image.url})` }} />
           <ImageBackdrop className='MuiImageBackdrop-root' />
           <Image>
             <Typography

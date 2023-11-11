@@ -5,11 +5,11 @@ import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
 import PhoneOutlinedIcon from '@mui/icons-material/PhoneOutlined';
 import LanguageIcon from '@mui/icons-material/Language';
 import CakeOutlinedIcon from '@mui/icons-material/CakeOutlined';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Fonts } from '@crema/constants/AppEnums';
 import PropTypes from 'prop-types';
 
 const PersonalDetails = (props) => {
-  const {contact} = props;
+  const { contact } = props;
 
   return (
     <Box
@@ -30,7 +30,7 @@ const PersonalDetails = (props) => {
       <div>
         <Box
           sx={{
-            mb: {xs: 2, md: 3},
+            mb: { xs: 2, md: 3 },
             display: 'flex',
             alignItems: 'center',
           }}
@@ -51,7 +51,7 @@ const PersonalDetails = (props) => {
 
         <Box
           sx={{
-            mb: {xs: 2, md: 3},
+            mb: { xs: 2, md: 3 },
             display: 'flex',
             alignItems: 'center',
           }}
@@ -72,7 +72,7 @@ const PersonalDetails = (props) => {
 
         <Box
           sx={{
-            mb: {xs: 2, md: 3},
+            mb: { xs: 2, md: 3 },
             display: 'flex',
             alignItems: 'center',
           }}

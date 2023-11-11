@@ -1,8 +1,11 @@
-import React, {createContext, useContext, useEffect, useState} from 'react';
+import React, { createContext, useContext, useEffect, useState } from 'react';
 import defaultConfig from '@crema/constants/defaultConfig';
 import PropTypes from 'prop-types';
-import {useThemeActionsContext, useThemeContext} from './ThemeContextProvider';
-import {LayoutDirection} from '@crema/constants/AppEnums';
+import {
+  useThemeActionsContext,
+  useThemeContext,
+} from './ThemeContextProvider';
+import { LayoutDirection } from '@crema/constants/AppEnums';
 
 const LocaleContext = createContext();
 const LocaleActionsContext = createContext();
@@ -11,10 +14,10 @@ export const useLocaleContext = () => useContext(LocaleContext);
 
 export const useLocaleActionsContext = () => useContext(LocaleActionsContext);
 
-const LocaleContextProvider = ({children}) => {
+const LocaleContextProvider = ({ children }) => {
   const [locale, updateLocale] = useState(defaultConfig.locale);
-  const {theme} = useThemeContext();
-  const {updateTheme} = useThemeActionsContext();
+  const { theme } = useThemeContext();
+  const { updateTheme } = useThemeActionsContext();
 
   const updateLangDir = () => {
     if (

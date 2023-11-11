@@ -1,12 +1,12 @@
 import React from 'react';
 import AppCard from '@crema/components/AppCard';
-import {Box} from '@mui/material';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Box } from '@mui/material';
+import { Fonts } from '@crema/constants/AppEnums';
 import PropTypes from 'prop-types';
 
-import {styled} from '@mui/material/styles';
+import { styled } from '@mui/material/styles';
 
-const DrTime = styled('div')(({theme}) => {
+const DrTime = styled('div')(({ theme }) => {
   return {
     marginLeft: 'auto',
     display: 'flex',
@@ -24,12 +24,12 @@ const DrTime = styled('div')(({theme}) => {
   };
 });
 
-const DrCard = ({data}) => {
-  const {icon, time, category, name} = data;
+const DrCard = ({ data }) => {
+  const { icon, time, category, name } = data;
 
   return (
     <AppCard
-      sxStyle={{height: 1}}
+      sxStyle={{ height: 1 }}
       className='card-hover'
       contentStyle={{
         p: 0,
@@ -39,8 +39,8 @@ const DrCard = ({data}) => {
         mb: 0,
       }}
     >
-      <Box sx={{display: 'flex', padding: 4}}>
-        <Box sx={{mr: 3, alignSelf: 'center', minWidth: 46}}>
+      <Box sx={{ display: 'flex', padding: 4 }}>
+        <Box sx={{ mr: 3, alignSelf: 'center', minWidth: 46 }}>
           <img src={icon} alt='icon' />
         </Box>
         <Box

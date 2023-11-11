@@ -1,28 +1,28 @@
-import React, {useState} from 'react';
-import {useLocation} from 'react-router-dom';
+import React, { useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import ContactHeader from './ContactHeader';
 import AppConfirmDialog from '@crema/components/AppConfirmDialog';
 import IntlMessages from '@crema/helpers/IntlMessages';
 import CreateContact from '../CreateContact';
-import {Hidden} from '@mui/material';
+import { Hidden } from '@mui/material';
 import ContactView from './ContactView';
 import ContactDetail from '../ContactDetail';
 import AppsPagination from '@crema/components/AppsPagination';
 import AppsHeader from '@crema/components/AppsContainer/AppsHeader';
 import AppsContent from '@crema/components/AppsContainer/AppsContent';
 import AppsFooter from '@crema/components/AppsContainer/AppsFooter';
-import {useInfoViewActionsContext} from '@crema/context/AppContextProvider/InfoViewContextProvider';
-import {postDataApi, putDataApi} from '@crema/hooks/APIHooks';
+import { useInfoViewActionsContext } from '@crema/context/AppContextProvider/InfoViewContextProvider';
+import { postDataApi, putDataApi } from '@crema/hooks/APIHooks';
 import {
   useContactActionsContext,
   useContactContext,
 } from '../../context/ContactContextProvider';
 
 const ContactListing = () => {
-  const {page, contactList} = useContactContext();
-  const {onPageChange, setContactData} = useContactActionsContext();
+  const { page, contactList } = useContactContext();
+  const { onPageChange, setContactData } = useContactActionsContext();
 
-  const {pathname} = useLocation();
+  const { pathname } = useLocation();
   const infoViewActionsContext = useInfoViewActionsContext();
 
   const [filterText, onSetFilterText] = useState('');

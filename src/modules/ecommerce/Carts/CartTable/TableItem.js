@@ -7,8 +7,8 @@ import Avatar from '@mui/material/Avatar';
 import CancelIcon from '@mui/icons-material/Cancel';
 import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
-import {Fonts} from '@crema/constants/AppEnums';
-import {styled} from '@mui/material/styles';
+import { Fonts } from '@crema/constants/AppEnums';
+import { styled } from '@mui/material/styles';
 
 const StyledTableCell = styled(TableCell)(() => ({
   fontSize: 14,
@@ -20,12 +20,12 @@ const StyledTableCell = styled(TableCell)(() => ({
     paddingRight: 20,
   },
 }));
-const TableItem = ({data, onRemoveItem, onIncrement, onDecrement}) => {
+const TableItem = ({ data, onRemoveItem, onIncrement, onDecrement }) => {
   return (
     <TableRow key={data.name} className='item-hover'>
       <StyledTableCell>
         <Box display='flex'>
-          <Avatar sx={{mr: 3.5}} src={data.image.src || data.image} />
+          <Avatar sx={{ mr: 3.5 }} src={data.image.src || data.image} />
           <Box>
             <Box fontSize={14} fontWeight={Fonts.MEDIUM}>
               {data.title}

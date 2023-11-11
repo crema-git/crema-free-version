@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {styled} from '@mui/material/styles';
+import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import FormControl from '@mui/material/FormControl';
 import FormControlLabel from '@mui/material/FormControlLabel';
@@ -15,7 +15,7 @@ import SaveIcon from '@mui/icons-material/Save';
 import PrintIcon from '@mui/icons-material/Print';
 import ShareIcon from '@mui/icons-material/Share';
 
-const StyledSpeedDial = styled(SpeedDial)(({theme}) => ({
+const StyledSpeedDial = styled(SpeedDial)(({ theme }) => ({
   position: 'absolute',
   '&.MuiSpeedDial-directionUp, &.MuiSpeedDial-directionLeft': {
     bottom: theme.spacing(2),
@@ -28,10 +28,10 @@ const StyledSpeedDial = styled(SpeedDial)(({theme}) => ({
 }));
 
 const actions = [
-  {icon: <FileCopyIcon />, name: 'Copy'},
-  {icon: <SaveIcon />, name: 'Save'},
-  {icon: <PrintIcon />, name: 'Print'},
-  {icon: <ShareIcon />, name: 'Share'},
+  { icon: <FileCopyIcon />, name: 'Copy' },
+  { icon: <SaveIcon />, name: 'Save' },
+  { icon: <PrintIcon />, name: 'Print' },
+  { icon: <ShareIcon />, name: 'Share' },
 ];
 
 export default function PlaygroundSpeedDial() {
@@ -47,7 +47,7 @@ export default function PlaygroundSpeedDial() {
   };
 
   return (
-    <Box sx={{transform: 'translateZ(0px)', flexGrow: 1}}>
+    <Box sx={{ transform: 'translateZ(0px)', flexGrow: 1 }}>
       <FormControlLabel
         control={
           <Switch
@@ -58,7 +58,7 @@ export default function PlaygroundSpeedDial() {
         }
         label='Hidden'
       />
-      <FormControl component='fieldset' sx={{mt: 1, display: 'flex'}}>
+      <FormControl component='fieldset' sx={{ mt: 1, display: 'flex' }}>
         <FormLabel component='legend'>Direction</FormLabel>
         <RadioGroup
           aria-label='direction'
@@ -73,7 +73,7 @@ export default function PlaygroundSpeedDial() {
           <FormControlLabel value='left' control={<Radio />} label='Left' />
         </RadioGroup>
       </FormControl>
-      <Box sx={{position: 'relative', mt: 3, height: 320}}>
+      <Box sx={{ position: 'relative', mt: 3, height: 320 }}>
         <StyledSpeedDial
           ariaLabel='SpeedDial playground example'
           hidden={hidden}

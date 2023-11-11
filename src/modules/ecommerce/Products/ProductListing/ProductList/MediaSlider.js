@@ -1,8 +1,8 @@
 import React from 'react';
 import PropsTypes from 'prop-types';
-import {Box, lighten} from '@mui/material';
+import { Box, lighten } from '@mui/material';
 
-const MediaSlider = ({children}) => {
+const MediaSlider = ({ children }) => {
   return (
     <Box
       sx={{

@@ -1,22 +1,22 @@
 import React from 'react';
 import TableRow from '@mui/material/TableRow';
 import PropTypes from 'prop-types';
-import {AiOutlineCheckCircle, AiOutlineQuestionCircle} from 'react-icons/ai';
-import {StyledTableCell} from './index.styled';
-import {Box} from '@mui/material';
+import { AiOutlineCheckCircle, AiOutlineQuestionCircle } from 'react-icons/ai';
+import { StyledTableCell } from './index.styled';
+import { Box } from '@mui/material';
 
-const TableItem = ({data}) => {
+const TableItem = ({ data }) => {
   return (
     <TableRow key={data.name}>
       {data?.free ? (
         <StyledTableCell
           className={data?.free ? 'no-border' : ''}
-          sx={{color: 'text.primary', display: 'flex', alignItems: 'center'}}
+          sx={{ color: 'text.primary', display: 'flex', alignItems: 'center' }}
         >
           {data.title}
           <Box
             component='span'
-            sx={{color: 'text.secondary', ml: 2.5, mb: '-3px'}}
+            sx={{ color: 'text.secondary', ml: 2.5, mb: '-3px' }}
           >
             <AiOutlineQuestionCircle size={15} />
           </Box>
@@ -24,7 +24,7 @@ const TableItem = ({data}) => {
       ) : (
         <StyledTableCell
           className={data?.title === 'Overview' ? 'no-border' : ''}
-          sx={{color: 'primary.main'}}
+          sx={{ color: 'primary.main' }}
         >
           {data.title}
         </StyledTableCell>
@@ -38,7 +38,7 @@ const TableItem = ({data}) => {
             ? 'no-border'
             : ''
         }
-        sx={{color: data?.free === 'Y' ? 'success.main' : 'text.secondary'}}
+        sx={{ color: data?.free === 'Y' ? 'success.main' : 'text.secondary' }}
       >
         {data?.free === 'Y' ? <AiOutlineCheckCircle size={20} /> : data?.free}
       </StyledTableCell>
@@ -51,7 +51,7 @@ const TableItem = ({data}) => {
             ? 'no-border'
             : ''
         }
-        sx={{color: data?.basic === 'Y' ? 'success.main' : 'text.secondary'}}
+        sx={{ color: data?.basic === 'Y' ? 'success.main' : 'text.secondary' }}
       >
         {data?.basic === 'Y' ? <AiOutlineCheckCircle size={20} /> : data?.basic}
       </StyledTableCell>
@@ -64,7 +64,7 @@ const TableItem = ({data}) => {
             ? 'no-border'
             : ''
         }
-        sx={{color: data?.pro === 'Y' ? 'success.main' : 'text.secondary'}}
+        sx={{ color: data?.pro === 'Y' ? 'success.main' : 'text.secondary' }}
       >
         {data?.pro === 'Y' ? <AiOutlineCheckCircle size={20} /> : data?.pro}
       </StyledTableCell>

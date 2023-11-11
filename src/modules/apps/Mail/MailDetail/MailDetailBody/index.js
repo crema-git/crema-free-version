@@ -3,13 +3,13 @@ import Box from '@mui/material/Box';
 import PropTypes from 'prop-types';
 import LabelOutlinedIcon from '@mui/icons-material/LabelOutlined';
 import AppTooltip from '@crema/components/AppTooltip';
-import {putDataApi} from '@crema/hooks/APIHooks';
-import {useInfoViewActionsContext} from '@crema/context/AppContextProvider/InfoViewContextProvider';
+import { putDataApi } from '@crema/hooks/APIHooks';
+import { useInfoViewActionsContext } from '@crema/context/AppContextProvider/InfoViewContextProvider';
 import MessageItem from './MessageItem';
 
 const MailDetailBody = (props) => {
   const infoViewActionsContext = useInfoViewActionsContext();
-  const {selectedMail, onUpdateSelectedMail} = props;
+  const { selectedMail, onUpdateSelectedMail } = props;
 
   const onSubmitMail = (message, index) => {
     let messages = selectedMail.messages;
@@ -44,7 +44,7 @@ const MailDetailBody = (props) => {
       });
   };
   return (
-    <Box sx={{px: 5, py: 1}}>
+    <Box sx={{ px: 5, py: 1 }}>
       {selectedMail ? (
         <>
           <Box
@@ -58,9 +58,9 @@ const MailDetailBody = (props) => {
             <Box
               component='span'
               sx={{
-                fontSize: {xs: 16, sm: 18},
+                fontSize: { xs: 16, sm: 18 },
                 marginRight: 3,
-                paddingLeft: {xs: 0, sm: 12.5},
+                paddingLeft: { xs: 0, sm: 12.5 },
               }}
             >
               {selectedMail.subject}

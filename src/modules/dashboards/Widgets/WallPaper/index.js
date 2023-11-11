@@ -1,13 +1,13 @@
 import React from 'react';
 import Checkbox from '@mui/material/Checkbox';
-import {Favorite, FavoriteBorder} from '@mui/icons-material';
+import { Favorite, FavoriteBorder } from '@mui/icons-material';
 import Avatar from '@mui/material/Avatar';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
 import ChatIcon from '@mui/icons-material/Chat';
 import IntlMessages from '@crema/helpers/IntlMessages';
 import Box from '@mui/material/Box';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Fonts } from '@crema/constants/AppEnums';
 import ImageCardWrapper from './ImageCardWrapper';
 
 const WallPaper = () => {
@@ -17,7 +17,7 @@ const WallPaper = () => {
         sx={{
           display: 'flex',
           alignItems: 'center',
-          mb: {xs: 4, lg: 6},
+          mb: { xs: 4, lg: 6 },
         }}
       >
         <Box
@@ -37,7 +37,7 @@ const WallPaper = () => {
           }}
         >
           <Checkbox
-            icon={<FavoriteBorder style={{color: 'white'}} />}
+            icon={<FavoriteBorder style={{ color: 'white' }} />}
             checkedIcon={<Favorite />}
           />
         </Box>
@@ -66,7 +66,7 @@ const WallPaper = () => {
           component='h1'
           sx={{
             fontWeight: Fonts.MEDIUM,
-            fontSize: {xs: 20, sm: 24, xl: 30},
+            fontSize: { xs: 20, sm: 24, xl: 30 },
             lineHeight: 1.25,
           }}
         >
@@ -76,7 +76,7 @@ const WallPaper = () => {
           component='h1'
           sx={{
             fontWeight: Fonts.MEDIUM,
-            fontSize: {xs: 20, sm: 24, xl: 30},
+            fontSize: { xs: 20, sm: 24, xl: 30 },
             lineHeight: 1.25,
           }}
         >
@@ -93,7 +93,7 @@ const WallPaper = () => {
             component='h1'
             sx={{
               fontWeight: Fonts.MEDIUM,
-              fontSize: {xs: 20, sm: 24, xl: 30},
+              fontSize: { xs: 20, sm: 24, xl: 30 },
               lineHeight: 1.25,
             }}
           >
@@ -106,7 +106,7 @@ const WallPaper = () => {
               fontWeight: Fonts.MEDIUM,
               display: 'flex',
               textTransform: 'uppercase',
-              fontSize: {xs: 14, sm: 16, xl: 18},
+              fontSize: { xs: 14, sm: 16, xl: 18 },
             }}
           >
             <Box
@@ -118,8 +118,8 @@ const WallPaper = () => {
             >
               <VisibilityIcon
                 sx={{
-                  display: {xs: 'block', sm: 'inline-block'},
-                  verticalAlign: {sm: 'middle'},
+                  display: { xs: 'block', sm: 'inline-block' },
+                  verticalAlign: { sm: 'middle' },
                 }}
               />{' '}
               11.7 K
@@ -133,8 +133,8 @@ const WallPaper = () => {
             >
               <FavoriteBorderOutlinedIcon
                 sx={{
-                  display: {xs: 'block', sm: 'inline-block'},
-                  verticalAlign: {sm: 'middle'},
+                  display: { xs: 'block', sm: 'inline-block' },
+                  verticalAlign: { sm: 'middle' },
                 }}
               />{' '}
               2.6 K
@@ -148,8 +148,8 @@ const WallPaper = () => {
             >
               <ChatIcon
                 sx={{
-                  display: {xs: 'block', sm: 'inline-block'},
-                  verticalAlign: {sm: 'middle'},
+                  display: { xs: 'block', sm: 'inline-block' },
+                  verticalAlign: { sm: 'middle' },
                 }}
               />{' '}
               345

@@ -1,15 +1,15 @@
 import React from 'react';
 import TableCell from '@mui/material/TableCell';
 import TableHeader from '@crema/components/AppTable/TableHeader';
-import {Box} from '@mui/material';
+import { Box } from '@mui/material';
 
 const TableHeading = () => {
   return (
     <TableHeader>
-      <TableCell sx={{fontSize: 20}} />
-      <TableCell sx={{fontSize: 20}}>Free</TableCell>
-      <TableCell sx={{fontSize: 20}}>Basic</TableCell>
-      <TableCell sx={{fontSize: 20, display: 'flex', alignItems: 'center'}}>
+      <TableCell sx={{ fontSize: 20 }} />
+      <TableCell sx={{ fontSize: 20 }}>Free</TableCell>
+      <TableCell sx={{ fontSize: 20 }}>Basic</TableCell>
+      <TableCell sx={{ fontSize: 20, display: 'flex', alignItems: 'center' }}>
         Pro
         <Box
           sx={{

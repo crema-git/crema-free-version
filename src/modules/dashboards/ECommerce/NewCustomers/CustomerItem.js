@@ -4,9 +4,9 @@ import Avatar from '@mui/material/Avatar';
 import PropTypes from 'prop-types';
 import IconButton from '@mui/material/IconButton';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Fonts } from '@crema/constants/AppEnums';
 
-const CustomerItem = ({item}) => {
+const CustomerItem = ({ item }) => {
   const getStatusColor = () => {
     if (item.orders === 0) {
       return '#F84E4E';
@@ -19,7 +19,7 @@ const CustomerItem = ({item}) => {
     <Box
       sx={{
         display: 'flex',
-        alignItems: {xs: 'flex-start', sm: 'center'},
+        alignItems: { xs: 'flex-start', sm: 'center' },
         padding: '8px 20px',
         '&:not(:last-of-type)': {
           borderBottom: '1px solid #ECEDF1',
@@ -39,8 +39,8 @@ const CustomerItem = ({item}) => {
         sx={{
           flex: 1,
           display: 'flex',
-          alignItems: {sm: 'center'},
-          flexDirection: {xs: 'column', sm: 'row'},
+          alignItems: { sm: 'center' },
+          flexDirection: { xs: 'column', sm: 'row' },
         }}
       >
         <Box

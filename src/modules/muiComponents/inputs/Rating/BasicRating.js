@@ -9,7 +9,7 @@ export default function BasicRating() {
   return (
     <Box
       sx={{
-        '& > legend': {mt: 2},
+        '& > legend': { mt: 2 },
       }}
     >
       <Typography component='legend'>Controlled</Typography>

@@ -8,7 +8,7 @@ import IntlMessages from '@crema/helpers/IntlMessages';
 import ExchangeForm from './ExchangeForm';
 
 function TabPanel(props) {
-  const {children, value, index, ...other} = props;
+  const { children, value, index, ...other } = props;
 
   return (
     <div
@@ -19,7 +19,7 @@ function TabPanel(props) {
       {...other}
     >
       {value === index && (
-        <Box sx={{width: '100%', px: 5, py: 6}}>{children}</Box>
+        <Box sx={{ width: '100%', px: 5, py: 6 }}>{children}</Box>
       )}
     </div>
   );
@@ -39,11 +39,11 @@ function a11yProps(index) {
 }
 
 const tabs = [
-  {id: 1, name: <IntlMessages id='common.buy' />},
-  {id: 2, name: <IntlMessages id='common.sell' />},
+  { id: 1, name: <IntlMessages id='common.buy' /> },
+  { id: 2, name: <IntlMessages id='common.sell' /> },
 ];
 
-const BuySell = ({buySell}) => {
+const BuySell = ({ buySell }) => {
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {
@@ -58,8 +58,8 @@ const BuySell = ({buySell}) => {
         },
       }}
     >
-      <Box sx={{width: '100%'}}>
-        <Box sx={{borderBottom: 1, borderColor: 'divider'}}>
+      <Box sx={{ width: '100%' }}>
+        <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
           <Tabs
             sx={{
               position: 'relative',

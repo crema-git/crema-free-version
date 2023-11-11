@@ -2,17 +2,17 @@ import React from 'react';
 import OpportunitiesWonGraph from './OpportunitiesWonGraph';
 import PropTypes from 'prop-types';
 import AppCard from '@crema/components/AppCard';
-import {useIntl} from 'react-intl';
+import { useIntl } from 'react-intl';
 import AppSelect from '@crema/components/AppSelect';
 
-const OpportunitiesWon = ({data}) => {
-  const {messages} = useIntl();
+const OpportunitiesWon = ({ data }) => {
+  const { messages } = useIntl();
   const handleSelectionType = (data) => {
     console.log('data: ', data);
   };
   return (
     <AppCard
-      sxStyle={{height: 1}}
+      sxStyle={{ height: 1 }}
       title={messages['dashboard.crm.opportunitiesWon']}
       action={
         <AppSelect

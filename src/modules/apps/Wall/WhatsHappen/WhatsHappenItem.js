@@ -1,11 +1,11 @@
 import React from 'react';
 import Box from '@mui/material/Box';
-import {Fonts} from '@crema/constants/AppEnums';
-import {Typography} from '@mui/material';
+import { Fonts } from '@crema/constants/AppEnums';
+import { Typography } from '@mui/material';
 import PropTypes from 'prop-types';
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 import IconButton from '@mui/material/IconButton';
-import {styled} from '@mui/material/styles';
+import { styled } from '@mui/material/styles';
 
 const ThumbWrapper = styled('div')(() => ({
   borderRadius: 4,
@@ -28,8 +28,8 @@ const StyledBox = styled(Box)(() => ({
   mb: 0.5,
 }));
 
-const WhatsHappenItem = ({data}) => {
-  const {imgSrc, subTitle, title} = data;
+const WhatsHappenItem = ({ data }) => {
+  const { imgSrc, subTitle, title } = data;
   return (
     <Box
       className='item-hover'

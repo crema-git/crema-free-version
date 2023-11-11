@@ -18,7 +18,7 @@ const LineChartConnectNulls = () => (
         <ResponsiveContainer width='100%' height={200}>
           <LineChart
             data={data}
-            margin={{top: 10, right: 0, left: -25, bottom: 0}}
+            margin={{ top: 10, right: 0, left: -25, bottom: 0 }}
           >
             <XAxis dataKey='name' />
             <YAxis />
@@ -37,7 +37,7 @@ const LineChartConnectNulls = () => (
         <ResponsiveContainer width='100%' height={200}>
           <LineChart
             data={data}
-            margin={{top: 10, right: 0, left: -25, bottom: 0}}
+            margin={{ top: 10, right: 0, left: -25, bottom: 0 }}
           >
             <XAxis dataKey='name' />
             <YAxis />

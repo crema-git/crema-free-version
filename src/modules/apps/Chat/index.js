@@ -1,5 +1,5 @@
-import React, {useState} from 'react';
-import {useIntl} from 'react-intl';
+import React, { useState } from 'react';
+import { useIntl } from 'react-intl';
 import AppsContainer from '@crema/components/AppsContainer';
 
 import ChatContent from './ChatContent';
@@ -9,7 +9,7 @@ import ChatSideBar from './ChatSideBar';
 const Chat = () => {
   const [selectedUser, setSelectedUser] = useState(undefined);
 
-  const {messages} = useIntl();
+  const { messages } = useIntl();
   return (
     <ChatContextProvider>
       <AppsContainer

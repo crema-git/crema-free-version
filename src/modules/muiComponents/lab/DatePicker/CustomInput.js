@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
-import {AdapterDateFns} from '@mui/x-date-pickers/AdapterDateFns';
-import {DesktopDatePicker, LocalizationProvider} from '@mui/x-date-pickers';
+import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
+import { DesktopDatePicker, LocalizationProvider } from '@mui/x-date-pickers';
 
 export default function CustomInput() {
   const [value, setValue] = React.useState(new Date());
@@ -14,8 +14,8 @@ export default function CustomInput() {
         onChange={(newValue) => {
           setValue(newValue);
         }}
-        renderInput={({inputRef, inputProps, InputProps}) => (
-          <Box sx={{display: 'flex', alignItems: 'center'}}>
+        renderInput={({ inputRef, inputProps, InputProps }) => (
+          <Box sx={{ display: 'flex', alignItems: 'center' }}>
             <input ref={inputRef} {...inputProps} />
             {InputProps?.endAdornment}
           </Box>

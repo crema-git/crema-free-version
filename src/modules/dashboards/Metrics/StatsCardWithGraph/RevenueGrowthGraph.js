@@ -1,8 +1,8 @@
 import React from 'react';
-import {Area, AreaChart, ResponsiveContainer} from 'recharts';
+import { Area, AreaChart, ResponsiveContainer } from 'recharts';
 import PropTypes from 'prop-types';
 
-const RevenueGrowthGraph = ({data}) => {
+const RevenueGrowthGraph = ({ data }) => {
   return (
     <ResponsiveContainer height={200} width='100%'>
       <AreaChart

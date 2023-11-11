@@ -1,5 +1,5 @@
 import React from 'react';
-import {IconButton} from '@mui/material';
+import { IconButton } from '@mui/material';
 import List from '@mui/material/List';
 import Button from '@mui/material/Button';
 import IntlMessages from '@crema/helpers/IntlMessages';
@@ -11,7 +11,7 @@ import Box from '@mui/material/Box';
 import AppScrollbar from '../AppScrollbar';
 import notificationData from '../../mockapi/fakedb/notifications';
 
-const AppNotificationContent = ({onClose, sxStyle}) => {
+const AppNotificationContent = ({ onClose, sxStyle }) => {
   return (
     <Box
       sx={{
@@ -29,7 +29,7 @@ const AppNotificationContent = ({onClose, sxStyle}) => {
           alignItems: 'center',
           borderBottom: 1,
           borderBottomColor: (theme) => theme.palette.divider,
-          minHeight: {xs: 56, sm: 70},
+          minHeight: { xs: 56, sm: 70 },
         }}
       >
         <Typography component='h3' variant='h3'>
@@ -50,10 +50,10 @@ const AppNotificationContent = ({onClose, sxStyle}) => {
       </Box>
       <AppScrollbar
         sx={{
-          height: {xs: 'calc(100% - 96px)', sm: 'calc(100% - 110px)'},
+          height: { xs: 'calc(100% - 96px)', sm: 'calc(100% - 110px)' },
         }}
       >
-        <List sx={{py: 0}}>
+        <List sx={{ py: 0 }}>
           {notificationData.map((item) => (
             <NotificationItem key={item.id} item={item} />
           ))}

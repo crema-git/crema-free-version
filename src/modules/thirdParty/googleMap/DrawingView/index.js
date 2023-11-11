@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
 import React from 'react';
-import {GoogleMap, withGoogleMap} from 'react-google-maps';
+import { GoogleMap, withGoogleMap } from 'react-google-maps';
 import DrawingManager from 'react-google-maps/lib/components/drawing/DrawingManager';
 
 /*

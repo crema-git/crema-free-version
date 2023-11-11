@@ -9,7 +9,7 @@ import Treemap from '../../../modules/thirdParty/recharts/Treemap';
 import Scatter from '../../../modules/thirdParty/recharts/Scatter';
 import Radar from '../../../modules/thirdParty/recharts/Radar';
 import FunnelChart from '../../../modules/thirdParty/recharts/Funnel';
-import {RoutePermittedRole} from '@crema/constants/AppEnums';
+import { RoutePermittedRole } from '@crema/constants/AppEnums';
 
 export const rechartsConfigs = [
   {

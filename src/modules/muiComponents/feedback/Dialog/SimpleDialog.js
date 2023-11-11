@@ -11,12 +11,12 @@ import Dialog from '@mui/material/Dialog';
 import PersonIcon from '@mui/icons-material/Person';
 import AddIcon from '@mui/icons-material/Add';
 import Typography from '@mui/material/Typography';
-import {blue} from '@mui/material/colors';
+import { blue } from '@mui/material/colors';
 
 const emails = ['username@gmail.com', 'user02@gmail.com'];
 
 function SimpleDialog(props) {
-  const {onClose, selectedValue, open} = props;
+  const { onClose, selectedValue, open } = props;
 
   const handleClose = () => {
     onClose(selectedValue);
@@ -29,7 +29,7 @@ function SimpleDialog(props) {
   return (
     <Dialog onClose={handleClose} open={open}>
       <DialogTitle>Set backup account</DialogTitle>
-      <List sx={{pt: 0}}>
+      <List sx={{ pt: 0 }}>
         {emails.map((email) => (
           <ListItem
             button
@@ -37,7 +37,7 @@ function SimpleDialog(props) {
             key={email}
           >
             <ListItemAvatar>
-              <Avatar sx={{bgcolor: blue[100], color: blue[600]}}>
+              <Avatar sx={{ bgcolor: blue[100], color: blue[600] }}>
                 <PersonIcon />
               </Avatar>
             </ListItemAvatar>

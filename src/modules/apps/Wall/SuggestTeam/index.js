@@ -1,22 +1,22 @@
 import React from 'react';
 import AppCard from '@crema/components/AppCard';
 import Box from '@mui/material/Box';
-import {Avatar} from '@mui/material';
+import { Avatar } from '@mui/material';
 import Typography from '@mui/material/Typography';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import ThumbUpAltOutlinedIcon from '@mui/icons-material/ThumbUpAltOutlined';
 import PropTypes from 'prop-types';
 import IntlMessages from '@crema/helpers/IntlMessages';
-import {useIntl} from 'react-intl';
+import { useIntl } from 'react-intl';
 
-const SuggestTeam = ({data}) => {
-  const {icon, title, subTitle, mediaImg} = data;
-  const {messages} = useIntl();
+const SuggestTeam = ({ data }) => {
+  const { icon, title, subTitle, mediaImg } = data;
+  const { messages } = useIntl();
 
   return (
     <AppCard
-      sxStyle={{mb: 8}}
+      sxStyle={{ mb: 8 }}
       contentStyle={{
         p: 0,
         '&:last-of-type': {
@@ -38,7 +38,7 @@ const SuggestTeam = ({data}) => {
           <IntlMessages id='wall.likeTeam' />
         </Button>
       }
-      footerStyle={{padding: 0}}
+      footerStyle={{ padding: 0 }}
     >
       <Box px={5} pt={3} pb={4} display='flex' alignItems='center'>
         <Avatar src={icon} alt='Face Book' />

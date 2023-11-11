@@ -1,8 +1,8 @@
 import React from 'react';
-import {Grid} from '@mui/material';
+import { Grid } from '@mui/material';
 import AppGridContainer from '@crema/components/AppGridContainer';
 import AppAnimate from '@crema/components/AppAnimate';
-import {useGetDataApi} from '@crema/hooks/APIHooks';
+import { useGetDataApi } from '@crema/hooks/APIHooks';
 import SocialMediaAdvertise from './SocialMediaAdvertise';
 import GoalProgress from './GoalProgress';
 import TicketSupport from './TicketSupport';
@@ -18,10 +18,10 @@ import ToDoLists from './ToDoLists';
 import TopLeaders from './TopLeaders';
 import TotalVisitor from './TotalVisitor';
 import AppLoader from '@crema/components/AppLoader';
-import {StatsDirCard} from '../CommonComponents';
+import { StatsDirCard } from '../CommonComponents';
 
 const CRM = () => {
-  const [{apiData: crmData, loading}] = useGetDataApi('/dashboard/crm');
+  const [{ apiData: crmData, loading }] = useGetDataApi('/dashboard/crm');
 
   return (
     <>

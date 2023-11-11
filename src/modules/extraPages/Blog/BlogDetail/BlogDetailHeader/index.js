@@ -1,10 +1,10 @@
 import React from 'react';
-import {Box, Typography} from '@mui/material';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Box, Typography } from '@mui/material';
+import { Fonts } from '@crema/constants/AppEnums';
 import PropTypes from 'prop-types';
 import BlogDetailHeaderWrapper from './BlogDetailHeaderWrapper';
-import {BiCommentDetail, BiUserCircle} from 'react-icons/bi';
-import {AiOutlineCalendar} from 'react-icons/ai';
+import { BiCommentDetail, BiUserCircle } from 'react-icons/bi';
+import { AiOutlineCalendar } from 'react-icons/ai';
 
 const getBlogDetailHeaderIcon = (icon) => {
   switch (icon) {
@@ -16,7 +16,7 @@ const getBlogDetailHeaderIcon = (icon) => {
       return <BiCommentDetail />;
   }
 };
-const BlogDetailHeader = ({title, blogDetailHeader}) => {
+const BlogDetailHeader = ({ title, blogDetailHeader }) => {
   return (
     <BlogDetailHeaderWrapper>
       <Box
@@ -31,9 +31,9 @@ const BlogDetailHeader = ({title, blogDetailHeader}) => {
         <Typography
           component='h2'
           sx={{
-            mb: {xs: 5, md: 7.5},
+            mb: { xs: 5, md: 7.5 },
             fontWeight: Fonts.SEMI_BOLD,
-            fontSize: {xs: 24, sm: 26, md: 28, lg: 30},
+            fontSize: { xs: 24, sm: 26, md: 28, lg: 30 },
           }}
         >
           {title}
@@ -45,7 +45,7 @@ const BlogDetailHeader = ({title, blogDetailHeader}) => {
             alignItems: 'center',
             justifyContent: 'center',
             flexWrap: 'wrap',
-            mx: {xs: -2, md: -4},
+            mx: { xs: -2, md: -4 },
           }}
         >
           {blogDetailHeader?.map((data, index) => (
@@ -53,14 +53,14 @@ const BlogDetailHeader = ({title, blogDetailHeader}) => {
               sx={{
                 display: 'flex',
                 alignItems: 'center',
-                px: {xs: 2, md: 4},
+                px: { xs: 2, md: 4 },
                 mb: 2,
                 fontSize: 14,
                 fontWeight: Fonts.MEDIUM,
               }}
               key={index}
             >
-              <Box sx={{fontSize: 16, mt: 1, mr: 2}}>
+              <Box sx={{ fontSize: 16, mt: 1, mr: 2 }}>
                 {getBlogDetailHeaderIcon(data.icon)}
               </Box>
               <Box component='span'>{data.title}</Box>

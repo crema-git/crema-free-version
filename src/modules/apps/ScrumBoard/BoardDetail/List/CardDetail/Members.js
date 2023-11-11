@@ -1,11 +1,11 @@
 import React from 'react';
 import Tooltip from '@mui/material/Tooltip';
 import Avatar from '@mui/material/Avatar';
-import {Box} from '@mui/material';
+import { Box } from '@mui/material';
 import PropTypes from 'prop-types';
 
 const Members = (props) => {
-  const {members} = props;
+  const { members } = props;
 
   return (
     <Box

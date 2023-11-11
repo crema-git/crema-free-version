@@ -1,6 +1,6 @@
 import React from 'react';
-import {RoutePermittedRole} from '@crema/constants/AppEnums';
-import {Navigate} from 'react-router-dom';
+import { RoutePermittedRole } from '@crema/constants/AppEnums';
+import { Navigate } from 'react-router-dom';
 
 const AddInvoice = React.lazy(() =>
   import('../../../modules/invoice/AddInvoice'),

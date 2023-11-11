@@ -31,7 +31,7 @@ export default function NonLinearSlider() {
   };
 
   return (
-    <Box sx={{width: 250}}>
+    <Box sx={{ width: 250 }}>
       <Typography id='non-linear-slider' gutterBottom>
         Storage: {valueLabelFormat(calculateValue(value))}
       </Typography>

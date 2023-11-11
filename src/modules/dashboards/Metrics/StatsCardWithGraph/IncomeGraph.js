@@ -1,9 +1,9 @@
 import React from 'react';
-import {Area, AreaChart, ResponsiveContainer, Tooltip} from 'recharts';
+import { Area, AreaChart, ResponsiveContainer, Tooltip } from 'recharts';
 import Box from '@mui/material/Box';
 import PropTypes from 'prop-types';
 
-const IncomeGraph = ({data}) => {
+const IncomeGraph = ({ data }) => {
   return (
     <ResponsiveContainer height={200} width='100%'>
       <AreaChart data={data}>
@@ -20,10 +20,10 @@ const IncomeGraph = ({data}) => {
           stroke='#FFA940'
           strokeWidth={2}
           fill='url(#color15)'
-          dot={{r: 0}}
+          dot={{ r: 0 }}
         />
         <Tooltip
-          labelStyle={{color: 'black'}}
+          labelStyle={{ color: 'black' }}
           cursor={false}
           content={(data) => {
             return data.payload[0] ? (

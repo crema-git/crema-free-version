@@ -5,27 +5,27 @@ import Button from '@mui/material/Button';
 import LinkIcon from '@mui/icons-material/Link';
 import Box from '@mui/material/Box';
 import AppAnimate from '../AppAnimate';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Fonts } from '@crema/constants/AppEnums';
 
-const AppComponentHeader = ({title, description, refUrl}) => {
+const AppComponentHeader = ({ title, description, refUrl }) => {
   return (
     <AppAnimate animation='transition.slideDownIn' delay={300}>
       <Box
         sx={{
           display: 'flex',
-          flexDirection: {xs: 'column', sm: 'row'},
-          justifyContent: {sm: 'space-between'},
+          flexDirection: { xs: 'column', sm: 'row' },
+          justifyContent: { sm: 'space-between' },
           pb: 4,
         }}
       >
-        <Box sx={{mb: 3, pr: {sm: 3}, flex: {sm: 1}}}>
+        <Box sx={{ mb: 3, pr: { sm: 3 }, flex: { sm: 1 } }}>
           <Typography
             component='h3'
             variant='h3'
             sx={{
               color: (theme) => theme.palette.text.primary,
               fontWeight: Fonts.MEDIUM,
-              fontSize: {xs: 18, sm: 20},
+              fontSize: { xs: 18, sm: 20 },
             }}
           >
             {title}
@@ -44,14 +44,14 @@ const AppComponentHeader = ({title, description, refUrl}) => {
           ) : null}
         </Box>
         {refUrl ? (
-          <Box sx={{height: 40}}>
+          <Box sx={{ height: 40 }}>
             <Button
               variant='outlined'
               color='primary'
               href={refUrl}
               target='_blank'
             >
-              Reference <LinkIcon sx={{pl: 1}} />
+              Reference <LinkIcon sx={{ pl: 1 }} />
             </Button>
           </Box>
         ) : null}

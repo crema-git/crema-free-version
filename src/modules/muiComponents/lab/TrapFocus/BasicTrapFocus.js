@@ -18,7 +18,7 @@ export default function BasicTrapFocus() {
       </button>
       {open && (
         <FocusTrap open>
-          <Box tabIndex={-1} sx={{mt: 1, p: 1}}>
+          <Box tabIndex={-1} sx={{ mt: 1, p: 1 }}>
             <label>
               First name: <input type='text' />
             </label>

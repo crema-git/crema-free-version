@@ -1,12 +1,12 @@
 import React from 'react';
-import {Box} from '@mui/material';
-import {FaFacebook} from 'react-icons/fa';
+import { Box } from '@mui/material';
+import { FaFacebook } from 'react-icons/fa';
 import {
   AiOutlineGithub,
   AiOutlineInstagram,
   AiOutlineTwitter,
 } from 'react-icons/ai';
-import {FiGlobe} from 'react-icons/fi';
+import { FiGlobe } from 'react-icons/fi';
 
 const socialData = [
   {
@@ -36,13 +36,13 @@ const Social = () => {
       sx={{
         display: 'flex',
         alignItems: 'center',
-        mx: {xs: -2, md: -4},
+        mx: { xs: -2, md: -4 },
       }}
     >
       {socialData?.map((social, index) => (
         <Box
           sx={{
-            px: {xs: 2, md: 4},
+            px: { xs: 2, md: 4 },
             color: (theme) => theme.palette.text.primary,
           }}
           key={index}

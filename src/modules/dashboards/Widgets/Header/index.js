@@ -2,12 +2,12 @@ import React from 'react';
 import Button from '@mui/material/Button';
 import IntlMessages from '@crema/helpers/IntlMessages';
 import Box from '@mui/material/Box';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Fonts } from '@crema/constants/AppEnums';
 import AppCard from '@crema/components/AppCard';
-import {useIntl} from 'react-intl';
+import { useIntl } from 'react-intl';
 
 const Header = () => {
-  const {messages} = useIntl();
+  const { messages } = useIntl();
   return (
     <AppCard
       sxStyle={{
@@ -34,12 +34,12 @@ const Header = () => {
           zIndex: 3,
         },
       }}
-      titleStyle={{color: 'white'}}
+      titleStyle={{ color: 'white' }}
       title={messages['dashboard.jombie']}
     >
       <Box
         sx={{
-          width: {xs: '100%', lg: '70%', xl: '50%'},
+          width: { xs: '100%', lg: '70%', xl: '50%' },
           height: 1,
           display: 'flex',
           flexDirection: 'column',

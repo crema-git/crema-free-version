@@ -7,7 +7,7 @@ import NavigationIcon from '@mui/icons-material/Navigation';
 export default function FloatingActionButtonSize() {
   return (
     <Box>
-      <Box sx={{'& > :not(style)': {m: 1}}}>
+      <Box sx={{ '& > :not(style)': { m: 1 } }}>
         <Fab size='small' color='secondary' aria-label='add'>
           <AddIcon />
         </Fab>
@@ -18,17 +18,17 @@ export default function FloatingActionButtonSize() {
           <AddIcon />
         </Fab>
       </Box>
-      <Box sx={{'& > :not(style)': {m: 1}}}>
+      <Box sx={{ '& > :not(style)': { m: 1 } }}>
         <Fab variant='extended' size='small' color='primary' aria-label='add'>
-          <NavigationIcon sx={{mr: 1}} />
+          <NavigationIcon sx={{ mr: 1 }} />
           Extended
         </Fab>
         <Fab variant='extended' size='medium' color='primary' aria-label='add'>
-          <NavigationIcon sx={{mr: 1}} />
+          <NavigationIcon sx={{ mr: 1 }} />
           Extended
         </Fab>
         <Fab variant='extended' color='primary' aria-label='add'>
-          <NavigationIcon sx={{mr: 1}} />
+          <NavigationIcon sx={{ mr: 1 }} />
           Extended
         </Fab>
       </Box>

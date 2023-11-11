@@ -38,7 +38,7 @@ export default function FullScreenDialog() {
         onClose={handleClose}
         TransitionComponent={Transition}
       >
-        <AppBar sx={{position: 'relative'}}>
+        <AppBar sx={{ position: 'relative' }}>
           <Toolbar>
             <IconButton
               edge='start'
@@ -48,7 +48,7 @@ export default function FullScreenDialog() {
             >
               <CloseIcon />
             </IconButton>
-            <Typography sx={{ml: 2, flex: 1}} variant='h6' component='div'>
+            <Typography sx={{ ml: 2, flex: 1 }} variant='h6' component='div'>
               Sound
             </Typography>
             <Button autoFocus color='inherit' onClick={handleClose}>

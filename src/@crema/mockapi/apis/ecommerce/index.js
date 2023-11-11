@@ -5,22 +5,22 @@ import ecommerceData, {
   customersData,
   recentOrders,
 } from '../../fakedb/ecommerce/ecommerceData';
-import {multiPropsFilter} from '@crema/helpers/Common';
+import { multiPropsFilter } from '@crema/helpers/Common';
 
 let cartItemsData = cartItems;
 let ecommerceListingData = ecommerceData;
 
 mock.onGet('/api/ecommerce/list').reply((request) => {
-  const {filterData, page} = request.params;
+  const { filterData, page } = request.params;
   const data = multiPropsFilter(ecommerceListingData, filterData);
   const index = page * 10;
   const total = data.length;
   const list = data.length > 10 ? data.slice(index, index + 10) : data;
-  return [200, {list, total}];
+  return [200, { list, total }];
 });
 
 mock.onPost('/api/ecommerce/list/add').reply((request) => {
-  const {product} = JSON.parse(request.data);
+  const { product } = JSON.parse(request.data);
   ecommerceListingData = ecommerceListingData.concat({
     id: ecommerceListingData.length + 1,
     ...product,
@@ -29,7 +29,7 @@ mock.onPost('/api/ecommerce/list/add').reply((request) => {
 });
 
 mock.onPut('/api/ecommerce/list/update').reply((request) => {
-  const {product} = JSON.parse(request.data);
+  const { product } = JSON.parse(request.data);
   ecommerceListingData = ecommerceListingData.map((item) => {
     if (item.id === product.id) {
       return product;
@@ -40,7 +40,7 @@ mock.onPut('/api/ecommerce/list/update').reply((request) => {
 });
 
 mock.onGet('/api/ecommerce/get').reply((request) => {
-  const {id} = request.params;
+  const { id } = request.params;
   if (id >= 1) {
     const data = ecommerceListingData.filter((item) => +item.id === +id);
     if (data.length > 0) return [200, data[0]];
@@ -49,7 +49,7 @@ mock.onGet('/api/ecommerce/get').reply((request) => {
 });
 
 mock.onGet('/api/ecommerce/orders').reply((request) => {
-  const {search, page} = request.params;
+  const { search, page } = request.params;
 
   let orders = [...recentOrders];
 
@@ -70,7 +70,7 @@ mock.onGet('/api/ecommerce/orders').reply((request) => {
 });
 
 mock.onGet('/api/ecommerce/customers').reply((request) => {
-  const {search, page} = request.params;
+  const { search, page } = request.params;
 
   let customers = [...customersData];
 
@@ -96,7 +96,7 @@ mock.onGet('/api/cart/get').reply(() => {
 });
 
 mock.onPost('/api/cart/add').reply((request) => {
-  const {product} = JSON.parse(request.data);
+  const { product } = JSON.parse(request.data);
   if (cartItemsData.some((item) => +item.id === +product.id)) {
     cartItemsData = cartItemsData.map((item) => {
       if (+item.id === +product.id) {
@@ -121,7 +121,7 @@ mock.onPost('/api/cart/add').reply((request) => {
 });
 
 mock.onPut('/api/cart/update').reply((request) => {
-  const {product} = JSON.parse(request.data);
+  const { product } = JSON.parse(request.data);
   cartItemsData = cartItemsData.map((item) =>
     item.id === product.id ? product : item,
   );
@@ -129,7 +129,7 @@ mock.onPut('/api/cart/update').reply((request) => {
 });
 
 mock.onPost('/api/cart/remove').reply((request) => {
-  const {product} = JSON.parse(request.data);
+  const { product } = JSON.parse(request.data);
   cartItemsData = cartItemsData.filter((item) => item.id !== product.id);
   return [200, cartItemsData];
 });

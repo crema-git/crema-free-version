@@ -1,6 +1,6 @@
 import * as React from 'react';
 import usePagination from '@mui/material/usePagination';
-import {styled} from '@mui/material/styles';
+import { styled } from '@mui/material/styles';
 
 const List = styled('ul')({
   listStyle: 'none',
@@ -10,14 +10,14 @@ const List = styled('ul')({
 });
 
 export default function UsePagination() {
-  const {items} = usePagination({
+  const { items } = usePagination({
     count: 10,
   });
 
   return (
     <nav>
       <List>
-        {items.map(({page, type, selected, ...item}, index) => {
+        {items.map(({ page, type, selected, ...item }, index) => {
           let children = null;
 
           if (type === 'start-ellipsis' || type === 'end-ellipsis') {

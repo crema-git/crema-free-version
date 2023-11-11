@@ -1,6 +1,6 @@
 import React from 'react';
 import Card from '@mui/material/Card';
-import {Checkbox} from '@mui/material';
+import { Checkbox } from '@mui/material';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import FavoriteOutlinedIcon from '@mui/icons-material/FavoriteOutlined';
 import Rating from '@mui/material/Rating';
@@ -8,9 +8,9 @@ import Slider from 'react-slick';
 import IntlMessages from '@crema/helpers/IntlMessages';
 import Box from '@mui/material/Box';
 import PropTypes from 'prop-types';
-import {green, grey} from '@mui/material/colors';
-import {Fonts} from '@crema/constants/AppEnums';
-import {useNavigate} from 'react-router-dom';
+import { green, grey } from '@mui/material/colors';
+import { Fonts } from '@crema/constants/AppEnums';
+import { useNavigate } from 'react-router-dom';
 import MediaSlider from './MediaSlider';
 import AddShoppingCartOutlinedIcon from '@mui/icons-material/AddShoppingCartOutlined';
 
@@ -25,7 +25,7 @@ const settings = {
 };
 
 const ListItem = (props) => {
-  const {item} = props;
+  const { item } = props;
   const navigate = useNavigate();
 
   return (
@@ -43,16 +43,16 @@ const ListItem = (props) => {
       <Box
         sx={{
           display: 'flex',
-          flexDirection: {xs: 'column', sm: 'row'},
+          flexDirection: { xs: 'column', sm: 'row' },
         }}
       >
         <Box
           sx={{
-            pr: {xs: 0, sm: 4},
-            mb: {xs: 3, sm: 0},
+            pr: { xs: 0, sm: 4 },
+            mb: { xs: 3, sm: 0 },
             maxWidth: '100%',
             textAlign: 'center',
-            width: {sm: '8rem', xl: '10rem'},
+            width: { sm: '8rem', xl: '10rem' },
           }}
         >
           <MediaSlider>
@@ -153,17 +153,17 @@ const ListItem = (props) => {
 
           <Box
             sx={{
-              mb: {xs: 3, xl: 5},
+              mb: { xs: 3, xl: 5 },
               display: 'flex',
               flexWrap: 'wrap',
-              fontSize: {xs: 12, xl: 14},
+              fontSize: { xs: 12, xl: 14 },
             }}
           >
             <Box
               sx={{
-                mr: {xs: 2, xl: 4},
+                mr: { xs: 2, xl: 4 },
                 mb: 1,
-                pr: {xs: 2, xl: 4},
+                pr: { xs: 2, xl: 4 },
                 borderRight: 1,
                 borderColor: grey[200],
               }}
@@ -190,9 +190,9 @@ const ListItem = (props) => {
             </Box>
             <Box
               sx={{
-                mr: {xs: 2, xl: 4},
+                mr: { xs: 2, xl: 4 },
                 mb: 1,
-                pr: {xs: 2, xl: 4},
+                pr: { xs: 2, xl: 4 },
                 color: 'text.secondary',
                 borderRight: 1,
                 borderColor: 'primary.main',
@@ -223,7 +223,7 @@ const ListItem = (props) => {
             sx={{
               mt: 'auto',
               mb: -3,
-              mx: {xs: -2, xl: -3},
+              mx: { xs: -2, xl: -3 },
               display: 'flex',
               flexWrap: 'wrap',
               justifyContent: 'space-between',
@@ -232,7 +232,7 @@ const ListItem = (props) => {
           >
             <Box
               sx={{
-                px: {xs: 2, xl: 3},
+                px: { xs: 2, xl: 3 },
                 mb: 2,
                 display: 'flex',
                 alignItems: 'center',
@@ -243,7 +243,7 @@ const ListItem = (props) => {
                   mr: 1,
                 }}
               >
-                <AddShoppingCartOutlinedIcon sx={{fontSize: 16, mt: 1}} />
+                <AddShoppingCartOutlinedIcon sx={{ fontSize: 16, mt: 1 }} />
               </Box>
               <Box
                 component='span'
@@ -256,13 +256,13 @@ const ListItem = (props) => {
             </Box>
             <Box
               sx={{
-                px: {xs: 2, xl: 3},
+                px: { xs: 2, xl: 3 },
                 mb: 2,
                 display: 'flex',
                 alignItems: 'center',
               }}
             >
-              <Box sx={{mt: 1.5}}>
+              <Box sx={{ mt: 1.5 }}>
                 <Rating size='small' value={item.rating} readOnly />
               </Box>
               <Box

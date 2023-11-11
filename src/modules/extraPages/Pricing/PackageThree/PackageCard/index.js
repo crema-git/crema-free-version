@@ -1,5 +1,5 @@
 import React from 'react';
-import {Typography} from '@mui/material';
+import { Typography } from '@mui/material';
 import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
@@ -8,10 +8,10 @@ import ListItem from '@mui/material/ListItem';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import CheckOutlinedIcon from '@mui/icons-material/CheckOutlined';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Fonts } from '@crema/constants/AppEnums';
 import CardWrapper from './CardWrapper';
 
-const PackageCard = ({pricing}) => {
+const PackageCard = ({ pricing }) => {
   return (
     <CardWrapper>
       <Box
@@ -26,7 +26,7 @@ const PackageCard = ({pricing}) => {
             fontWeight: Fonts.BOLD,
             fontSize: 16,
             textTransform: 'uppercase',
-            mb: {xs: 5, md: 7.5},
+            mb: { xs: 5, md: 7.5 },
             letterSpacing: '0.2em',
           }}
         >
@@ -46,7 +46,7 @@ const PackageCard = ({pricing}) => {
                 mb: 2,
               }}
             >
-              <ListItemIcon sx={{minWidth: 10, mr: 3.5}}>
+              <ListItemIcon sx={{ minWidth: 10, mr: 3.5 }}>
                 <CheckOutlinedIcon
                   sx={{
                     fontSize: 16,
@@ -67,7 +67,7 @@ const PackageCard = ({pricing}) => {
           <Typography
             component='h3'
             sx={{
-              fontSize: {xs: 16, md: 18, lg: 20},
+              fontSize: { xs: 16, md: 18, lg: 20 },
               fontWeight: Fonts.MEDIUM,
             }}
           >
@@ -75,7 +75,7 @@ const PackageCard = ({pricing}) => {
               component='span'
               sx={{
                 fontWeight: Fonts.BOLD,
-                fontSize: {xs: 26, md: 32, lg: 44, xl: 54},
+                fontSize: { xs: 26, md: 32, lg: 44, xl: 54 },
               }}
             >
               ${pricing.price}
@@ -84,7 +84,7 @@ const PackageCard = ({pricing}) => {
           </Typography>
         </Box>
       </Box>
-      <Box sx={{mt: 7.5}}>
+      <Box sx={{ mt: 7.5 }}>
         <Button
           variant='contained'
           sx={{

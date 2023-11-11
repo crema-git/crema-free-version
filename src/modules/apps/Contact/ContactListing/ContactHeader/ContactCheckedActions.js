@@ -7,10 +7,10 @@ import DeleteOutlinedIcon from '@mui/icons-material/DeleteOutlined';
 import LabelOutlinedIcon from '@mui/icons-material/LabelOutlined';
 import PropTypes from 'prop-types';
 import IconButton from '@mui/material/IconButton';
-import {Hidden} from '@mui/material';
+import { Hidden } from '@mui/material';
 import AppTooltip from '@crema/components/AppTooltip';
-import {putDataApi} from '@crema/hooks/APIHooks';
-import {useInfoViewActionsContext} from '@crema/context/AppContextProvider/InfoViewContextProvider';
+import { putDataApi } from '@crema/hooks/APIHooks';
+import { useInfoViewActionsContext } from '@crema/context/AppContextProvider/InfoViewContextProvider';
 
 const ContactCheckedActions = (props) => {
   const {
@@ -55,7 +55,7 @@ const ContactCheckedActions = (props) => {
       sx={{
         display: 'flex',
         alignItems: 'center',
-        mr: {xs: 2, xl: 3},
+        mr: { xs: 2, xl: 3 },
       }}
     >
       <AppTooltip title={<IntlMessages id='common.delete' />}>

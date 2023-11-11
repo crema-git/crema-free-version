@@ -1,6 +1,6 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import AppInfoView from '../AppInfoView';
-import {Box, Slide, Zoom} from '@mui/material';
+import { Box, Slide, Zoom } from '@mui/material';
 import Hidden from '@mui/material/Hidden';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
@@ -8,17 +8,17 @@ import PropTypes from 'prop-types';
 import Card from '@mui/material/Card';
 
 import AppSidebar from './AppSidebar';
-import {useLayoutContext} from '@crema/context/AppContextProvider/LayoutContextProvider';
-import {Fonts} from '@crema/constants/AppEnums';
+import { useLayoutContext } from '@crema/context/AppContextProvider/LayoutContextProvider';
+import { Fonts } from '@crema/constants/AppEnums';
 import AppContainerWrapper from './AppContainerWrapper';
-import {useLocation} from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
 const AppsContainer = (props) => {
-  const {pathname} = useLocation();
-  const {footer} = useLayoutContext();
+  const { pathname } = useLocation();
+  const { footer } = useLayoutContext();
   const [isNavCollapsed, setNavCollapsed] = useState(false);
-  const {navStyle} = useLayoutContext();
-  const {title, sidebarContent, fullView, children} = props;
+  const { navStyle } = useLayoutContext();
+  const { title, sidebarContent, fullView, children } = props;
 
   const toggleNavCollapsed = () => {
     setNavCollapsed(!isNavCollapsed);
@@ -75,7 +75,7 @@ const AppsContainer = (props) => {
             </IconButton>
           </Hidden>
         )}
-        <Zoom in style={{transitionDelay: '300ms'}}>
+        <Zoom in style={{ transitionDelay: '300ms' }}>
           <Box
             component='h2'
             variant='h2'

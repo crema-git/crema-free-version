@@ -1,20 +1,20 @@
 import React from 'react';
-import {Box} from '@mui/material';
+import { Box } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
 import IntlMessages from '@crema/helpers/IntlMessages';
 import PropTypes from 'prop-types';
 import DayTemperature from './DayTemperature';
-import {teal} from '@mui/material/colors';
-import {Fonts} from '@crema/constants/AppEnums';
+import { teal } from '@mui/material/colors';
+import { Fonts } from '@crema/constants/AppEnums';
 import AppCard from '@crema/components/AppCard';
 
 const TemperatureCard = (props) => {
-  const {temperatures} = props;
+  const { temperatures } = props;
 
   return (
     <AppCard
-      sxStyle={{height: 1}}
-      contentStyle={{padding: 0, display: 'flex', flexDirection: 'column'}}
+      sxStyle={{ height: 1 }}
+      contentStyle={{ padding: 0, display: 'flex', flexDirection: 'column' }}
     >
       <Box
         sx={{
@@ -71,7 +71,7 @@ const TemperatureCard = (props) => {
             component='h1'
             sx={{
               fontWeight: Fonts.MEDIUM,
-              fontSize: {xs: 24, sm: 36, md: 64, xl: 96},
+              fontSize: { xs: 24, sm: 36, md: 64, xl: 96 },
             }}
           >
             -32<sup>0</sup>

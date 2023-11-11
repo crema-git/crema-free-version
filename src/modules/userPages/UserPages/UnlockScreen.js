@@ -1,12 +1,12 @@
 import React from 'react';
 import Card from '@mui/material/Card';
 import Button from '@mui/material/Button';
-import {Form, Formik} from 'formik';
+import { Form, Formik } from 'formik';
 import * as yup from 'yup';
 import IntlMessages from '@crema/helpers/IntlMessages';
 import Box from '@mui/material/Box';
-import {Typography} from '@mui/material';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Typography } from '@mui/material';
+import { Fonts } from '@crema/constants/AppEnums';
 import AppAnimate from '@crema/components/AppAnimate';
 import AppTextField from '@crema/components/AppFormComponents/AppTextField';
 
@@ -22,7 +22,7 @@ const UnlockScreen = () => {
       <Box
         sx={{
           pb: 6,
-          py: {xl: 8},
+          py: { xl: 8 },
           display: 'flex',
           flex: 1,
           flexDirection: 'column',
@@ -35,7 +35,7 @@ const UnlockScreen = () => {
             maxWidth: 576,
             width: '100%',
             textAlign: 'center',
-            padding: {xs: 8, lg: 12, xl: '48px 64px'},
+            padding: { xs: 8, lg: 12, xl: '48px 64px' },
             overflow: 'hidden',
             boxShadow:
               '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
@@ -43,7 +43,7 @@ const UnlockScreen = () => {
         >
           <Box
             sx={{
-              mb: {xs: 3, xl: 4},
+              mb: { xs: 3, xl: 4 },
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
@@ -76,7 +76,7 @@ const UnlockScreen = () => {
 
           <Box
             sx={{
-              mb: {xs: 6, xl: 10},
+              mb: { xs: 6, xl: 10 },
               fontSize: 14,
             }}
           >
@@ -94,11 +94,11 @@ const UnlockScreen = () => {
               password: '',
             }}
             validationSchema={validationSchema}
-            onSubmit={(data, {resetForm}) => {
+            onSubmit={(data, { resetForm }) => {
               resetForm();
             }}
           >
-            {({isSubmitting}) => (
+            {({ isSubmitting }) => (
               <Form
                 sx={{
                   textAlign: 'left',
@@ -106,7 +106,7 @@ const UnlockScreen = () => {
               >
                 <Box
                   sx={{
-                    mb: {xs: 3, xl: 4},
+                    mb: { xs: 3, xl: 4 },
                   }}
                 >
                   <AppTextField

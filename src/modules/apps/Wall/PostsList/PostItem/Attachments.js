@@ -1,13 +1,13 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import Box from '@mui/material/Box';
 import PropTypes from 'prop-types';
 import AppGrid from '@crema/components/AppGrid';
 import MediaViewer from '@crema/components/AppMedialViewer';
 
-import {styled} from '@mui/material/styles';
-import {alpha} from '@mui/material';
+import { styled } from '@mui/material/styles';
+import { alpha } from '@mui/material';
 
-const ImageView = styled(Box)(({theme}) => ({
+const ImageView = styled(Box)(({ theme }) => ({
   cursor: 'pointer',
   borderRadius: 4,
   overflow: 'hidden',
@@ -27,7 +27,7 @@ const ImageView = styled(Box)(({theme}) => ({
     height: 200,
   },
 }));
-const ImageCountView = styled(Box)(({theme}) => ({
+const ImageCountView = styled(Box)(({ theme }) => ({
   position: 'absolute',
   left: 0,
   top: 0,
@@ -42,7 +42,7 @@ const ImageCountView = styled(Box)(({theme}) => ({
   fontSize: 18,
 }));
 
-const Attachments = ({attachments}) => {
+const Attachments = ({ attachments }) => {
   const [index, setIndex] = useState(-1);
 
   const onClose = () => {

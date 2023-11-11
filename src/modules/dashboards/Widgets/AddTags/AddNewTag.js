@@ -1,14 +1,14 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import IntlMessages from '@crema/helpers/IntlMessages';
 import CheckIcon from '@mui/icons-material/Check';
 import CloseIcon from '@mui/icons-material/Close';
 import PropTypes from 'prop-types';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Fonts } from '@crema/constants/AppEnums';
 
 const AddNewTag = (props) => {
-  const {onAddNewTag} = props;
+  const { onAddNewTag } = props;
   const [newTag, setNewTag] = useState('');
 
   const [isAddNewTag, setAddNewTag] = useState(false);
@@ -64,7 +64,7 @@ const AddNewTag = (props) => {
             m: 2,
             ml: 3,
             color: 'secondary.main',
-            fontSize: {xs: 16, xl: 18},
+            fontSize: { xs: 16, xl: 18 },
             cursor: 'pointer',
             fontWeight: Fonts.MEDIUM,
           }}

@@ -1,5 +1,5 @@
 import React from 'react';
-import {useNavigate} from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import IntlMessages from '@crema/helpers/IntlMessages';
 import Box from '@mui/material/Box';
 import PropTypes from 'prop-types';
@@ -8,11 +8,11 @@ import StatusToggleButton from './StatusToggleButton';
 import AppsDeleteIcon from '@crema/components/AppsDeleteIcon';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import AppTooltip from '@crema/components/AppTooltip';
-import {useInfoViewActionsContext} from '@crema/context/AppContextProvider/InfoViewContextProvider';
-import {putDataApi} from '@crema/hooks/APIHooks';
+import { useInfoViewActionsContext } from '@crema/context/AppContextProvider/InfoViewContextProvider';
+import { putDataApi } from '@crema/hooks/APIHooks';
 
 const TaskDetailHeader = (props) => {
-  const {selectedTask, onUpdateSelectedTask} = props;
+  const { selectedTask, onUpdateSelectedTask } = props;
   const infoViewActionsContext = useInfoViewActionsContext();
 
   const navigate = useNavigate();
@@ -62,7 +62,7 @@ const TaskDetailHeader = (props) => {
           cursor: 'pointer',
         }}
         component='span'
-        mr={{xs: 2, sm: 4}}
+        mr={{ xs: 2, sm: 4 }}
         onClick={onClickBackButton}
       >
         <AppTooltip title={<IntlMessages id='common.back' />}>
@@ -83,7 +83,7 @@ const TaskDetailHeader = (props) => {
         component='span'
         sx={{
           marginLeft: 'auto',
-          display: {xs: 'none', sm: 'block'},
+          display: { xs: 'none', sm: 'block' },
         }}
         onChange={onChangeStarred}
       >

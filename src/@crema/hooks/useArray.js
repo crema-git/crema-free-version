@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import { useState } from 'react';
 
 export const useArray = (defaultValue) => {
   const [array, setArray] = useState(defaultValue);
@@ -30,5 +30,5 @@ export const useArray = (defaultValue) => {
     setArray([]);
   };
 
-  return {array, set: setArray, push, filter, update, remove, clear};
+  return { array, set: setArray, push, filter, update, remove, clear };
 };

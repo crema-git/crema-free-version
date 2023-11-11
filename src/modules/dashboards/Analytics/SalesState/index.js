@@ -1,29 +1,29 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Fonts } from '@crema/constants/AppEnums';
 import AppGridContainer from '@crema/components/AppGridContainer';
 import Grid from '@mui/material/Grid';
 import AppCard from '@crema/components/AppCard';
 
 import AppSelect from '@crema/components/AppSelect';
-import {useIntl} from 'react-intl';
+import { useIntl } from 'react-intl';
 import AppList from '@crema/components/AppList';
 import Avatar from '@mui/material/Avatar';
 import MixBarChart from './MixBarChart';
 
-const SalesState = ({salesState, chartData}) => {
+const SalesState = ({ salesState, chartData }) => {
   const handleSelectionType = (data) => {
     console.log('data: ', data);
   };
   const getData = (data) => {
     return data;
   };
-  const {messages} = useIntl();
+  const { messages } = useIntl();
   return (
     <AppCard
       title={messages['dashboard.analytics.salesState']}
-      sxStyle={{height: 1}}
+      sxStyle={{ height: 1 }}
       action={
         <AppSelect
           menus={[
@@ -46,7 +46,7 @@ const SalesState = ({salesState, chartData}) => {
         <Box
           component='p'
           sx={{
-            textAlign: {xs: 'center', sm: 'left'},
+            textAlign: { xs: 'center', sm: 'left' },
             color: 'text.secondary',
             mt: -3,
             mb: 2,
@@ -69,7 +69,7 @@ const SalesState = ({salesState, chartData}) => {
                   display: 'flex',
                   flexDirection: 'column',
                   justifyContent: 'center',
-                  alignItems: {xs: 'center', sm: 'flex-start'},
+                  alignItems: { xs: 'center', sm: 'flex-start' },
                 }}
               >
                 <MixBarChart data={chartData} />
@@ -90,14 +90,14 @@ const SalesState = ({salesState, chartData}) => {
                   animation='transition.slideRightBigIn'
                   delay={200}
                   duration={400}
-                  containerStyle={{width: '100%', overflow: 'hidden'}}
+                  containerStyle={{ width: '100%', overflow: 'hidden' }}
                   data={getData(salesState)}
                   renderRow={(item) => (
                     <Box
                       key={'salesState-' + item.id}
                       sx={{
-                        pl: {xl: 6},
-                        py: {xs: 2, md: 4},
+                        pl: { xl: 6 },
+                        py: { xs: 2, md: 4 },
                         display: 'flex',
                         alignItems: 'center',
                         width: '100%',
@@ -107,7 +107,7 @@ const SalesState = ({salesState, chartData}) => {
                       <Avatar
                         src={item.icon}
                         alt='icon'
-                        sx={{height: 50, width: 50}}
+                        sx={{ height: 50, width: 50 }}
                       />
 
                       <Box

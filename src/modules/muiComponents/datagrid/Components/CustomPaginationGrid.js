@@ -7,11 +7,11 @@ import {
   useGridApiContext,
   useGridSelector,
 } from '@mui/x-data-grid';
-import {useDemoData} from '@mui/x-data-grid-generator';
+import { useDemoData } from '@mui/x-data-grid-generator';
 import MuiPagination from '@mui/material/Pagination';
 import PropTypes from 'prop-types';
 
-function Pagination({page, onPageChange, className}) {
+function Pagination({ page, onPageChange, className }) {
   const apiRef = useGridApiContext();
   const pageCount = useGridSelector(apiRef, gridPageCountSelector);
 
@@ -39,14 +39,14 @@ function CustomPagination(props) {
 }
 
 export default function CustomPaginationGrid() {
-  const {data} = useDemoData({
+  const { data } = useDemoData({
     dataSet: 'Commodity',
     rowLength: 100,
     maxColumns: 6,
   });
 
   return (
-    <Box sx={{height: 400, width: '100%'}}>
+    <Box sx={{ height: 400, width: '100%' }}>
       <DataGrid
         pagination
         slots={{
@@ -55,7 +55,7 @@ export default function CustomPaginationGrid() {
         {...data}
         initialState={{
           ...data.initialState,
-          pagination: {paginationModel: {pageSize: 25}},
+          pagination: { paginationModel: { pageSize: 25 } },
         }}
       />
     </Box>

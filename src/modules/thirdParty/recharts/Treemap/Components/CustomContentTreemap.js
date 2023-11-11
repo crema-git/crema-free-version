@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import {ResponsiveContainer, Treemap} from 'recharts';
+import React, { Component } from 'react';
+import { ResponsiveContainer, Treemap } from 'recharts';
 import PropTypes from 'prop-types';
 import data from './data';
 
@@ -14,7 +14,8 @@ const COLORS = [
 
 class CustomizedContent extends Component {
   render() {
-    const {root, depth, x, y, width, height, index, colors, name} = this.props;
+    const { root, depth, x, y, width, height, index, colors, name } =
+      this.props;
 
     return (
       <g>

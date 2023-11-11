@@ -6,7 +6,7 @@ import Innovation from './Innovation';
 import PortfolioSlider from './PortfolioSlider';
 import ProjectDescription from './ProjectDescription';
 import AppAnimate from '@crema/components/AppAnimate';
-import {portfolioData} from '@crema/mockapi/fakedb/extraPages';
+import { portfolioData } from '@crema/mockapi/fakedb/extraPages';
 
 const PortfolioDetail = () => {
   return (

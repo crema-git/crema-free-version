@@ -10,7 +10,7 @@ import PriorityHighIcon from '@mui/icons-material/PriorityHigh';
 
 export default function TypographyMenu() {
   return (
-    <Paper sx={{width: 230}}>
+    <Paper sx={{ width: 230 }}>
       <MenuList>
         <MenuItem>
           <ListItemIcon>

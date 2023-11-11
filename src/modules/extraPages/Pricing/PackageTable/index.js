@@ -1,9 +1,9 @@
-import {Box, Typography} from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import React from 'react';
 import PricingTable from './Table';
 import PropTypes from 'prop-types';
 
-const PackageTable = ({billingFormat, pricing}) => {
+const PackageTable = ({ billingFormat, pricing }) => {
   return (
     <Box
       sx={{
@@ -16,11 +16,11 @@ const PackageTable = ({billingFormat, pricing}) => {
     >
       <Typography
         variant='h3'
-        sx={{mt: 8, width: '100%', fontSize: 48, textAlign: 'center'}}
+        sx={{ mt: 8, width: '100%', fontSize: 48, textAlign: 'center' }}
       >
         Compare Our Plans
       </Typography>
-      <Box sx={{mt: 4}}>
+      <Box sx={{ mt: 4 }}>
         <PricingTable billingFormat={billingFormat} tableData={pricing} />
       </Box>
     </Box>

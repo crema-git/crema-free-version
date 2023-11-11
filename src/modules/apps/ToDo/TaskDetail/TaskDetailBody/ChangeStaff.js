@@ -7,10 +7,10 @@ import Box from '@mui/material/Box';
 import Avatar from '@mui/material/Avatar';
 import FormControl from '@mui/material/FormControl';
 import PropTypes from 'prop-types';
-import {useTodoContext} from '../../../context/TodoContextProvider';
+import { useTodoContext } from '../../../context/TodoContextProvider';
 
-const ChangeStaff = ({selectedStaff, handleStaffChange}) => {
-  const {staffList} = useTodoContext();
+const ChangeStaff = ({ selectedStaff, handleStaffChange }) => {
+  const { staffList } = useTodoContext();
   return (
     <FormControl
       variant='outlined'

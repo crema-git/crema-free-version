@@ -1,5 +1,5 @@
 import React from 'react';
-import {RoutePermittedRole} from '@crema/constants/AppEnums';
+import { RoutePermittedRole } from '@crema/constants/AppEnums';
 
 const AboutUs = React.lazy(() => import('../../../modules/extraPages/AboutUs'));
 const ContactUs = React.lazy(() =>

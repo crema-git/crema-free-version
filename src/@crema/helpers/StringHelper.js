@@ -1,5 +1,5 @@
 import React from 'react';
-import {Box, Tooltip} from '@mui/material';
+import { Box, Tooltip } from '@mui/material';
 
 export const getStringFromHtml = (htmlContent) => {
   return htmlContent.replace(/(<([^>]+)>)/gi, '');

@@ -7,7 +7,7 @@ import OfficeCultureCard from './OfficeCultureCard';
 import Sections from './Sections';
 import Team from './Team';
 import Clients from './Clients';
-import {aboutUsData} from '@crema/mockapi/fakedb/extraPages';
+import { aboutUsData } from '@crema/mockapi/fakedb/extraPages';
 
 const AboutUs = () => {
   return (

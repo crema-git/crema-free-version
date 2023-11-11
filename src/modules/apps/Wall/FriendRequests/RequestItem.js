@@ -3,9 +3,9 @@ import Box from '@mui/material/Box';
 import Avatar from '@mui/material/Avatar';
 import PropTypes from 'prop-types';
 import Typography from '@mui/material/Typography';
-import {timeFromNow} from '@crema/helpers/DateHelper';
+import { timeFromNow } from '@crema/helpers/DateHelper';
 
-const RequestItem = ({request}) => {
+const RequestItem = ({ request }) => {
   return (
     <Box
       className='item-hover'

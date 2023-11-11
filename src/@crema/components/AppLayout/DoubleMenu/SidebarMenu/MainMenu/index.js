@@ -1,11 +1,11 @@
-import React, {useMemo} from 'react';
+import React, { useMemo } from 'react';
 import PropTypes from 'prop-types';
-import {useSelector} from 'react-redux';
+import { useSelector } from 'react-redux';
 import VerticalItem from './VerticalItem';
 import VerticalCollapse from './VerticalCollapse';
 import List from '@mui/material/List';
 import makeStyles from '@mui/material/styles/makeStyles';
-import {checkPermission} from '@crema/helpers/RouteHelper';
+import { checkPermission } from '@crema/helpers/RouteHelper';
 
 const useStyles = makeStyles(() => ({
   listRoot: {
@@ -15,9 +15,9 @@ const useStyles = makeStyles(() => ({
   },
 }));
 
-const MainMenu = ({item}) => {
+const MainMenu = ({ item }) => {
   const classes = useStyles();
-  const {user} = useSelector(({auth}) => auth);
+  const { user } = useSelector(({ auth }) => auth);
   const hasPermission = useMemo(
     () => checkPermission(item.auth, user.role),
     [item.auth, user.role],

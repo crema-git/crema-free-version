@@ -3,11 +3,11 @@ import Grid from '@mui/material/Grid';
 import Chip from '@mui/material/Chip';
 import Box from '@mui/material/Box';
 import AppScrollbar from '@crema/components/AppScrollbar';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Fonts } from '@crema/constants/AppEnums';
 import PropTypes from 'prop-types';
 import AppCard from '@crema/components/AppCard';
 
-const KbItem = ({data}) => {
+const KbItem = ({ data }) => {
   return (
     <Grid item xs={12} sm={6} md={4}>
       <AppCard>

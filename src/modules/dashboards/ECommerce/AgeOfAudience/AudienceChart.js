@@ -1,5 +1,5 @@
 import React from 'react';
-import {Cell, Pie, PieChart, ResponsiveContainer, Tooltip} from 'recharts';
+import { Cell, Pie, PieChart, ResponsiveContainer, Tooltip } from 'recharts';
 import PropTypes from 'prop-types';
 
 const RADIAN = Math.PI / 180;
@@ -30,7 +30,7 @@ const renderCustomizedLabel = ({
   );
 };
 
-const AudienceChart = ({audienceData}) => {
+const AudienceChart = ({ audienceData }) => {
   return (
     <ResponsiveContainer width='100%' height={200}>
       <PieChart>
@@ -51,7 +51,7 @@ const AudienceChart = ({audienceData}) => {
           ))}
         </Pie>
         <Tooltip
-          labelStyle={{color: 'black'}}
+          labelStyle={{ color: 'black' }}
           contentStyle={{
             borderRadius: 12,
             borderColor: '#31354188',

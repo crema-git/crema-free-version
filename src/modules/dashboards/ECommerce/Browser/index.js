@@ -1,12 +1,12 @@
 import React from 'react';
 import AppCard from '@crema/components/AppCard';
-import {useIntl} from 'react-intl';
+import { useIntl } from 'react-intl';
 import Box from '@mui/material/Box';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Fonts } from '@crema/constants/AppEnums';
 import AppList from '@crema/components/AppList';
 import PropTypes from 'prop-types';
 
-const BrowserCell = ({item}) => {
+const BrowserCell = ({ item }) => {
   return (
     <Box
       sx={{
@@ -22,7 +22,11 @@ const BrowserCell = ({item}) => {
           mr: 3.5,
         }}
       >
-        <img alt='' style={{maxWidth: 40, display: 'block'}} src={item.icon} />
+        <img
+          alt=''
+          style={{ maxWidth: 40, display: 'block' }}
+          src={item.icon}
+        />
       </Box>
 
       <Box
@@ -58,10 +62,10 @@ BrowserCell.propTypes = {
   item: PropTypes.object,
 };
 
-const Browser = ({browserData}) => {
-  const {messages} = useIntl();
+const Browser = ({ browserData }) => {
+  const { messages } = useIntl();
   return (
-    <AppCard title={messages['eCommerce.browser']} contentStyle={{px: 0}}>
+    <AppCard title={messages['eCommerce.browser']} contentStyle={{ px: 0 }}>
       <AppList
         data={browserData}
         renderRow={(item, index) => <BrowserCell item={item} key={index} />}

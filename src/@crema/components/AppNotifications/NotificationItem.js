@@ -2,11 +2,11 @@ import React from 'react';
 import ListItemAvatar from '@mui/material/ListItemAvatar';
 import Avatar from '@mui/material/Avatar';
 import PropTypes from 'prop-types';
-import {Box, ListItem, Typography} from '@mui/material';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Box, ListItem, Typography } from '@mui/material';
+import { Fonts } from '@crema/constants/AppEnums';
 
 const NotificationItem = (props) => {
-  const {item} = props;
+  const { item } = props;
 
   return (
     <ListItem

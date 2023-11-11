@@ -16,7 +16,7 @@ const settings = {
   slidesToScroll: 1,
 };
 
-const SlideBasicFour = ({slideBasicFour}) => {
+const SlideBasicFour = ({ slideBasicFour }) => {
   return (
     <AppCard>
       <MediaSlider>

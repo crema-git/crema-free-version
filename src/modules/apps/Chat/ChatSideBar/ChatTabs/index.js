@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import Tab from '@mui/material/Tab';
 import Tabs from '@mui/material/Tabs';
 import Box from '@mui/material/Box';
@@ -7,11 +7,11 @@ import ChatList from './ChatList';
 import AppScrollbar from '@crema/components/AppScrollbar';
 import PropTypes from 'prop-types';
 import IntlMessages from '@crema/helpers/IntlMessages';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Fonts } from '@crema/constants/AppEnums';
 import AccountBoxOutlinedIcon from '@mui/icons-material/AccountBoxOutlined';
 import ChatOutlinedIcon from '@mui/icons-material/ChatOutlined';
 
-import {styled} from '@mui/material/styles';
+import { styled } from '@mui/material/styles';
 
 const TabLabel = styled(Tab)(() => {
   return {
@@ -34,8 +34,8 @@ const TabLabel = styled(Tab)(() => {
 });
 
 const tabs = [
-  {id: 1, name: <IntlMessages id='dashboard.messages' />},
-  {id: 2, name: <IntlMessages id='chatApp.contacts' />},
+  { id: 1, name: <IntlMessages id='dashboard.messages' /> },
+  { id: 2, name: <IntlMessages id='chatApp.contacts' /> },
 ];
 
 const UserTabs = ({

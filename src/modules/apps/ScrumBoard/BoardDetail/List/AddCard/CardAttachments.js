@@ -4,13 +4,13 @@ import IntlMessages from '@crema/helpers/IntlMessages';
 import dayjs from 'dayjs';
 import DeleteOutlinedIcon from '@mui/icons-material/DeleteOutlined';
 import PropTypes from 'prop-types';
-import {Fonts} from '@crema/constants/AppEnums';
-import {alpha, IconButton} from '@mui/material';
+import { Fonts } from '@crema/constants/AppEnums';
+import { alpha, IconButton } from '@mui/material';
 import CloudDownloadOutlinedIcon from '@mui/icons-material/CloudDownloadOutlined';
 
-import {styled} from '@mui/material/styles';
+import { styled } from '@mui/material/styles';
 
-const CardAttachmentWrapper = styled('div')(({theme}) => {
+const CardAttachmentWrapper = styled('div')(({ theme }) => {
   return {
     transition: 'all 0.4s ease',
     backgroundColor: alpha(theme.palette.common.black, 0.04),
@@ -70,7 +70,7 @@ const CardAttachmentWrapper = styled('div')(({theme}) => {
 });
 
 const CardAttachments = (props) => {
-  const {attachments, onDeleteAttachment} = props;
+  const { attachments, onDeleteAttachment } = props;
 
   return (
     <>
@@ -82,7 +82,7 @@ const CardAttachments = (props) => {
         >
           <Box
             sx={{
-              mb: {xs: 3, sm: 5},
+              mb: { xs: 3, sm: 5 },
             }}
           >
             <Box component='h4'>
@@ -98,7 +98,7 @@ const CardAttachments = (props) => {
             }}
           >
             {attachments.map((attachment) => {
-              const {file} = attachment;
+              const { file } = attachment;
               return (
                 <Box
                   key={attachment.id}

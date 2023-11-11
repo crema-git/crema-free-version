@@ -1,5 +1,5 @@
 import React from 'react';
-import {GoogleMap, withGoogleMap} from 'react-google-maps';
+import { GoogleMap, withGoogleMap } from 'react-google-maps';
 import PropTypes from 'prop-types';
 //
 
@@ -13,14 +13,14 @@ const SimpleMapExampleGoogleMap = withGoogleMap(() => (
     options={{
       scrollwheel: false,
     }}
-    defaultCenter={{lat: 47.646935, lng: -122.303763}}
+    defaultCenter={{ lat: 47.646935, lng: -122.303763 }}
   />
 ));
 
 /*
  * Add <script src="https://maps.googleapis.com/maps/api/js"></script> to your HTML to provide google.maps reference
  */
-const SimpleMap = ({styleName}) => {
+const SimpleMap = ({ styleName }) => {
   if (!styleName) {
     styleName = 'cr-embed-responsive-21by9';
   }
@@ -29,7 +29,7 @@ const SimpleMap = ({styleName}) => {
       containerElement={
         <div
           className={`cr-embed-responsive ${styleName}`}
-          style={{maxHeight: 300}}
+          style={{ maxHeight: 300 }}
         />
       }
       mapElement={<div className='cr-embed-responsive-item' />}

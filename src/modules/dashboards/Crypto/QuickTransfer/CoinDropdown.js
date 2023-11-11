@@ -4,7 +4,7 @@ import FormControl from '@mui/material/FormControl';
 import PropTypes from 'prop-types';
 import CurrencyCell from './CurrencyCell';
 
-const CoinDropdown = ({handleCoinChange, coinList, selectedCoinId}) => {
+const CoinDropdown = ({ handleCoinChange, coinList, selectedCoinId }) => {
   return (
     <FormControl
       variant='outlined'

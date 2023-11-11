@@ -5,12 +5,12 @@ import {
   StyledEngineProvider,
   ThemeProvider,
 } from '@mui/material/styles';
-import {useThemeContext} from '../AppContextProvider/ThemeContextProvider';
-import {LocalizationProvider} from '@mui/x-date-pickers/LocalizationProvider';
-import {AdapterDayjs} from '@mui/x-date-pickers/AdapterDayjs';
+import { useThemeContext } from '../AppContextProvider/ThemeContextProvider';
+import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
+import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 
 const AppThemeProvider = (props) => {
-  const {theme} = useThemeContext();
+  const { theme } = useThemeContext();
   return (
     <StyledEngineProvider injectFirst>
       <ThemeProvider theme={createTheme(theme)}>

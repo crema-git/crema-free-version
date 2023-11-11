@@ -7,14 +7,14 @@ import Box from '@mui/material/Box';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import AppsStarredIcon from '@crema/components/AppsStarredIcon';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Fonts } from '@crema/constants/AppEnums';
 import ItemMenu from '../ItemMenu';
-import {blue} from '@mui/material/colors';
+import { blue } from '@mui/material/colors';
 
-import {styled} from '@mui/material/styles';
-import {alpha} from '@mui/material';
+import { styled } from '@mui/material/styles';
+import { alpha } from '@mui/material';
 
-const ContactListItemWrapper = styled(ListItem)(({theme}) => {
+const ContactListItemWrapper = styled(ListItem)(({ theme }) => {
   return {
     display: 'flex',
     flexDirection: 'row',
@@ -84,7 +84,7 @@ const ContactListItem = ({
     >
       <Box
         sx={{
-          width: {xs: '75%', sm: '80%', md: '50%'},
+          width: { xs: '75%', sm: '80%', md: '50%' },
           display: 'flex',
           alignItems: 'center',
         }}
@@ -154,7 +154,7 @@ const ContactListItem = ({
           sx={{
             mr: 4,
             flex: 1,
-            display: {xs: 'none', sm: 'block'},
+            display: { xs: 'none', sm: 'block' },
             overflow: 'hidden',
             textOverflow: 'ellipsis',
             whiteSpace: 'nowrap',
@@ -169,7 +169,7 @@ const ContactListItem = ({
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'flex-end',
-          width: {xs: '25%', sm: '20%', md: '50%'},
+          width: { xs: '25%', sm: '20%', md: '50%' },
         }}
       >
         <Box
@@ -177,7 +177,7 @@ const ContactListItem = ({
             transition: 'all 0.4s ease',
             display: 'flex',
             alignItems: 'center',
-            width: {sm: 'calc(100% - 70px)'},
+            width: { sm: 'calc(100% - 70px)' },
           }}
           className='contactViewInfo'
         >
@@ -186,7 +186,7 @@ const ContactListItem = ({
             sx={{
               mr: 4,
               flex: 1,
-              display: {xs: 'none', md: 'block'},
+              display: { xs: 'none', md: 'block' },
               overflow: 'hidden',
               textOverflow: 'ellipsis',
               whiteSpace: 'nowrap',
@@ -199,7 +199,7 @@ const ContactListItem = ({
             sx={{
               mr: 4,
               flex: 1,
-              display: {xs: 'none', md: 'block'},
+              display: { xs: 'none', md: 'block' },
               overflow: 'hidden',
               textOverflow: 'ellipsis',
               whiteSpace: 'nowrap',

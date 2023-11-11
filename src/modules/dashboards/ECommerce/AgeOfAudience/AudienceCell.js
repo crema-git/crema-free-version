@@ -1,8 +1,8 @@
 import React from 'react';
-import {Box, Typography} from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import PropTypes from 'prop-types';
 
-const AudienceCell = ({audience}) => {
+const AudienceCell = ({ audience }) => {
   return (
     <Box
       sx={{
@@ -26,7 +26,7 @@ const AudienceCell = ({audience}) => {
       <Typography variant='h5' component='h5'>
         {audience.title}
       </Typography>
-      <Box sx={{ml: 'auto'}} component='h4'>
+      <Box sx={{ ml: 'auto' }} component='h4'>
         {audience.value}%
       </Box>
     </Box>

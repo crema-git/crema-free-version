@@ -11,7 +11,7 @@ const useStyles = makeStyles(() => ({
     padding: 0,
   },
 }));
-const MenuGroup = ({selectedMenu, setSelectedMenu}) => {
+const MenuGroup = ({ selectedMenu, setSelectedMenu }) => {
   const classes = useStyles();
   return (
     <List className={classes.navRoot} component='div'>

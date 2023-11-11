@@ -1,6 +1,6 @@
 import * as React from 'react';
-import {DataGrid} from '@mui/x-data-grid';
-import {useDemoData} from '@mui/x-data-grid-generator';
+import { DataGrid } from '@mui/x-data-grid';
+import { useDemoData } from '@mui/x-data-grid-generator';
 
 function loadServerRows(page, data) {
   return new Promise((resolve) => {
@@ -14,7 +14,7 @@ function loadServerRows(page, data) {
 }
 
 export default function ServerPaginationGrid() {
-  const {data} = useDemoData({
+  const { data } = useDemoData({
     dataSet: 'Commodity',
     rowLength: 100,
     maxColumns: 6,
@@ -45,7 +45,7 @@ export default function ServerPaginationGrid() {
   }, [page, data]);
 
   return (
-    <div style={{height: 400, width: '100%'}}>
+    <div style={{ height: 400, width: '100%' }}>
       <DataGrid
         rows={rows}
         columns={data.columns}

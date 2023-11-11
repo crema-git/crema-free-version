@@ -1,13 +1,13 @@
-import React, {useState} from 'react';
-import {useNavigate} from 'react-router-dom';
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import IntlMessages from '@crema/helpers/IntlMessages';
 import Box from '@mui/material/Box';
 import AppGridContainer from '@crema/components/AppGridContainer';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Fonts } from '@crema/constants/AppEnums';
 import AppInfoView from '@crema/components/AppInfoView';
-import {Zoom} from '@mui/material';
-import {useInfoViewActionsContext} from '@crema/context/AppContextProvider/InfoViewContextProvider';
-import {postDataApi, putDataApi} from '@crema/hooks/APIHooks';
+import { Zoom } from '@mui/material';
+import { useInfoViewActionsContext } from '@crema/context/AppContextProvider/InfoViewContextProvider';
+import { postDataApi, putDataApi } from '@crema/hooks/APIHooks';
 
 import {
   useScrumActionsContext,
@@ -19,8 +19,8 @@ import BoardItem from './BoardItem';
 
 const BoardList = () => {
   const navigate = useNavigate();
-  const {boardList} = useScrumContext();
-  const {setData} = useScrumActionsContext();
+  const { boardList } = useScrumContext();
+  const { setData } = useScrumActionsContext();
 
   const infoViewActionsContext = useInfoViewActionsContext();
 
@@ -44,7 +44,7 @@ const BoardList = () => {
 
   const onAddBoard = (name) => {
     if (selectedBoard) {
-      const board = {...selectedBoard, name};
+      const board = { ...selectedBoard, name };
       putDataApi('/api/scrumboard/edit/board', infoViewActionsContext, {
         board,
       })
@@ -56,7 +56,7 @@ const BoardList = () => {
         });
     } else {
       postDataApi('/api/scrumboard/add/board', infoViewActionsContext, {
-        board: {name},
+        board: { name },
       })
         .then((data) => {
           setData(data);
@@ -86,7 +86,7 @@ const BoardList = () => {
           <Box
             component='h2'
             sx={{
-              my: {xs: 5, sm: 5, xl: 8},
+              my: { xs: 5, sm: 5, xl: 8 },
               color: 'text.primary',
               fontWeight: Fonts.BOLD,
               textAlign: 'center',

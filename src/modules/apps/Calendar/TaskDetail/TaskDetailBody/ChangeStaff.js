@@ -7,10 +7,10 @@ import Box from '@mui/material/Box';
 import Avatar from '@mui/material/Avatar';
 import FormControl from '@mui/material/FormControl';
 import PropTypes from 'prop-types';
-import {useCalendarContext} from '../../../context/CalendarContextProvider';
+import { useCalendarContext } from '../../../context/CalendarContextProvider';
 
-const ChangeStaff = ({selectedStaff, handleStaffChange}) => {
-  const {staffList} = useCalendarContext();
+const ChangeStaff = ({ selectedStaff, handleStaffChange }) => {
+  const { staffList } = useCalendarContext();
   return (
     <FormControl
       variant='outlined'

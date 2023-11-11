@@ -3,7 +3,7 @@ import Box from '@mui/material/Box';
 import Avatar from '@mui/material/Avatar';
 import PropTypes from 'prop-types';
 
-const NewsItem = ({item}) => {
+const NewsItem = ({ item }) => {
   return (
     <Box className='item-hover' display='flex' px={5} py={2}>
       <Avatar

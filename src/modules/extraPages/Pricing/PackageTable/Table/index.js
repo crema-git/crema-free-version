@@ -6,11 +6,11 @@ import PropTypes from 'prop-types';
 import TableHeading from './TableHeading';
 import TableItem from './TableItem';
 import AppTableContainer from '@crema/components/AppTableContainer';
-import {Box, Button, TableRow, Typography} from '@mui/material';
-import {StyledTableCell} from './index.styled';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Box, Button, TableRow, Typography } from '@mui/material';
+import { StyledTableCell } from './index.styled';
+import { Fonts } from '@crema/constants/AppEnums';
 
-const PricingTable = ({billingFormat, tableData}) => {
+const PricingTable = ({ billingFormat, tableData }) => {
   return (
     <AppTableContainer>
       <Table stickyHeader className='table'>
@@ -23,11 +23,11 @@ const PricingTable = ({billingFormat, tableData}) => {
 
             <StyledTableCell className='no-border'>
               <Box>
-                <Box sx={{display: 'flex', alignItems: 'flex-end'}}>
+                <Box sx={{ display: 'flex', alignItems: 'flex-end' }}>
                   <Typography
                     component='h4'
                     sx={{
-                      fontSize: {xs: 20, md: 22, lg: 48},
+                      fontSize: { xs: 20, md: 22, lg: 48 },
                     }}
                   >
                     <Box
@@ -39,7 +39,7 @@ const PricingTable = ({billingFormat, tableData}) => {
                       $0
                     </Box>
                   </Typography>
-                  <Box sx={{color: 'text.secondary', ml: 2, mb: 2}}>
+                  <Box sx={{ color: 'text.secondary', ml: 2, mb: 2 }}>
                     per {billingFormat}
                   </Box>
                 </Box>
@@ -54,7 +54,7 @@ const PricingTable = ({billingFormat, tableData}) => {
                   Basic features for up to 10 employees with everything you
                   need.
                 </Box>
-                <Box sx={{mb: 7.5, mr: 8}}>
+                <Box sx={{ mb: 7.5, mr: 8 }}>
                   <Button
                     variant='outlined'
                     sx={{
@@ -80,11 +80,11 @@ const PricingTable = ({billingFormat, tableData}) => {
             </StyledTableCell>
             <StyledTableCell className='no-border'>
               <Box>
-                <Box sx={{display: 'flex', alignItems: 'flex-end'}}>
+                <Box sx={{ display: 'flex', alignItems: 'flex-end' }}>
                   <Typography
                     component='h4'
                     sx={{
-                      fontSize: {xs: 20, md: 22, lg: 48},
+                      fontSize: { xs: 20, md: 22, lg: 48 },
                     }}
                   >
                     <Box
@@ -96,7 +96,7 @@ const PricingTable = ({billingFormat, tableData}) => {
                       $69
                     </Box>
                   </Typography>
-                  <Box sx={{color: 'text.secondary', ml: 2, mb: 2}}>
+                  <Box sx={{ color: 'text.secondary', ml: 2, mb: 2 }}>
                     per {billingFormat}
                   </Box>
                 </Box>
@@ -111,7 +111,7 @@ const PricingTable = ({billingFormat, tableData}) => {
                   Advanced features and reporting, better workflows and
                   automation.
                 </Box>
-                <Box sx={{mb: 7.5, mr: 8}}>
+                <Box sx={{ mb: 7.5, mr: 8 }}>
                   <Button
                     variant='outlined'
                     sx={{
@@ -137,11 +137,11 @@ const PricingTable = ({billingFormat, tableData}) => {
             </StyledTableCell>
             <StyledTableCell className='no-border'>
               <Box>
-                <Box sx={{display: 'flex', alignItems: 'flex-end'}}>
+                <Box sx={{ display: 'flex', alignItems: 'flex-end' }}>
                   <Typography
                     component='h4'
                     sx={{
-                      fontSize: {xs: 20, md: 22, lg: 48},
+                      fontSize: { xs: 20, md: 22, lg: 48 },
                     }}
                   >
                     <Box
@@ -153,7 +153,7 @@ const PricingTable = ({billingFormat, tableData}) => {
                       $349
                     </Box>
                   </Typography>
-                  <Box sx={{color: 'text.secondary', ml: 2, mb: 2}}>
+                  <Box sx={{ color: 'text.secondary', ml: 2, mb: 2 }}>
                     per {billingFormat}
                   </Box>
                 </Box>
@@ -167,7 +167,7 @@ const PricingTable = ({billingFormat, tableData}) => {
                 >
                   Personalised service and enterprise security for large teams.
                 </Box>
-                <Box sx={{mb: 7.5, mr: 8}}>
+                <Box sx={{ mb: 7.5, mr: 8 }}>
                   <Button
                     variant='outlined'
                     sx={{

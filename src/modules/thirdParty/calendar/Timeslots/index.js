@@ -1,8 +1,8 @@
 import React from 'react';
-import {dayjsLocalizer} from 'react-big-calendar';
+import { dayjsLocalizer } from 'react-big-calendar';
 import events from '../events';
 import dayjs from 'dayjs';
-import {StyledCalendar} from '../calandar.style';
+import { StyledCalendar } from '../calandar.style';
 
 const localizer = dayjsLocalizer(dayjs);
 

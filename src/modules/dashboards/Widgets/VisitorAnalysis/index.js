@@ -1,24 +1,24 @@
 import React from 'react';
-import {Box} from '@mui/material';
+import { Box } from '@mui/material';
 import IntlMessages from '@crema/helpers/IntlMessages';
 import Typography from '@mui/material/Typography';
 import AppCircularProgress from '@crema/components/AppCircularProgress';
 import AppCard from '@crema/components/AppCard';
-import {useIntl} from 'react-intl';
+import { useIntl } from 'react-intl';
 
 const VisitorAnalysis = () => {
-  const {messages} = useIntl();
+  const { messages } = useIntl();
   return (
     <AppCard
       title={messages['dashboard.visitorAnalysis']}
-      sxStyle={{height: 1}}
+      sxStyle={{ height: 1 }}
       footer={
         <Box color='text.secondary' display='flex' alignItems='center'>
           <Box
             sx={{
               backgroundColor: 'secondary.main',
-              height: {xs: 12, xl: 16},
-              width: {xs: 12, xl: 16},
+              height: { xs: 12, xl: 16 },
+              width: { xs: 12, xl: 16 },
               mr: 4,
               borderRadius: '50%',
             }}

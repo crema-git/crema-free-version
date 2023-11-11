@@ -5,14 +5,14 @@ import Avatar from '@mui/material/Avatar';
 import PropTypes from 'prop-types';
 import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Fonts } from '@crema/constants/AppEnums';
 
-const NotificationCell = ({item}) => {
+const NotificationCell = ({ item }) => {
   return (
     <ListItem
       disableGutters
       className='item-hover'
-      sx={{paddingLeft: 5, paddingRight: 5}}
+      sx={{ paddingLeft: 5, paddingRight: 5 }}
     >
       <ListItemAvatar
         sx={{

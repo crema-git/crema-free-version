@@ -1,11 +1,11 @@
 import React from 'react';
-import {CustomizerItemWrapper} from '../index.style';
+import { CustomizerItemWrapper } from '../index.style';
 import Box from '@mui/material/Box';
 import FormControl from '@mui/material/FormControl';
 import InputLabel from '@mui/material/InputLabel';
 import Select from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
-import {FooterType} from '@crema/constants/AppEnums';
+import { FooterType } from '@crema/constants/AppEnums';
 import {
   useLayoutActionsContext,
   useLayoutContext,
@@ -13,21 +13,21 @@ import {
 import Switch from '@mui/material/Switch';
 
 const ThemeFooter = () => {
-  const {footer} = useLayoutContext();
-  const {setFooter} = useLayoutActionsContext();
-  const {footerType} = useLayoutContext();
-  const {setFooterType} = useLayoutActionsContext();
+  const { footer } = useLayoutContext();
+  const { setFooter } = useLayoutActionsContext();
+  const { footerType } = useLayoutContext();
+  const { setFooterType } = useLayoutActionsContext();
 
   return (
     <CustomizerItemWrapper>
-      <Box sx={{display: 'flex', alignItems: 'center', mb: 4}}>
+      <Box sx={{ display: 'flex', alignItems: 'center', mb: 4 }}>
         <Box component='h4'>Footer</Box>
         <Box component='span' ml='auto'>
           <Switch
             checked={footer}
             onChange={() => setFooter(!footer)}
             value='checkedA'
-            inputProps={{'aria-label': 'secondary checkbox'}}
+            inputProps={{ 'aria-label': 'secondary checkbox' }}
           />
         </Box>
       </Box>

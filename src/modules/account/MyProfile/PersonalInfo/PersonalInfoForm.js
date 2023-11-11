@@ -1,18 +1,18 @@
 import React from 'react';
-import {alpha, Box, Button, Typography} from '@mui/material';
+import { alpha, Box, Button, Typography } from '@mui/material';
 import Avatar from '@mui/material/Avatar';
 import AppGridContainer from '@crema/components/AppGridContainer';
 import Grid from '@mui/material/Grid';
 import IntlMessages from '@crema/helpers/IntlMessages';
-import {useDropzone} from 'react-dropzone';
-import {Form} from 'formik';
+import { useDropzone } from 'react-dropzone';
+import { Form } from 'formik';
 import PropTypes from 'prop-types';
 import AppTextField from '@crema/components/AppFormComponents/AppTextField';
 import EditIcon from '@mui/icons-material/Edit';
-import {styled} from '@mui/material/styles';
-import {Fonts} from '@crema/constants/AppEnums';
+import { styled } from '@mui/material/styles';
+import { Fonts } from '@crema/constants/AppEnums';
 
-const AvatarViewWrapper = styled('div')(({theme}) => {
+const AvatarViewWrapper = styled('div')(({ theme }) => {
   return {
     position: 'relative',
     cursor: 'pointer',
@@ -45,8 +45,8 @@ const AvatarViewWrapper = styled('div')(({theme}) => {
   };
 });
 
-const PersonalInfoForm = ({values, setFieldValue}) => {
-  const {getRootProps, getInputProps} = useDropzone({
+const PersonalInfoForm = ({ values, setFieldValue }) => {
+  const { getRootProps, getInputProps } = useDropzone({
     accept: 'image/*',
     onDrop: (acceptedFiles) => {
       setFieldValue('photoURL', URL.createObjectURL(acceptedFiles[0]));
@@ -60,7 +60,7 @@ const PersonalInfoForm = ({values, setFieldValue}) => {
         sx={{
           fontSize: 16,
           fontWeight: Fonts.BOLD,
-          mb: {xs: 3, lg: 4},
+          mb: { xs: 3, lg: 4 },
         }}
       >
         <IntlMessages id='common.personalInfo' />
@@ -69,16 +69,16 @@ const PersonalInfoForm = ({values, setFieldValue}) => {
         sx={{
           display: 'flex',
           alignItems: 'center',
-          mb: {xs: 5, lg: 6},
+          mb: { xs: 5, lg: 6 },
         }}
       >
-        <AvatarViewWrapper {...getRootProps({className: 'dropzone'})}>
+        <AvatarViewWrapper {...getRootProps({ className: 'dropzone' })}>
           <input {...getInputProps()} />
           <label htmlFor='icon-button-file'>
             <Avatar
               sx={{
-                width: {xs: 50, lg: 64},
-                height: {xs: 50, lg: 64},
+                width: { xs: 50, lg: 64 },
+                height: { xs: 50, lg: 64 },
                 cursor: 'pointer',
               }}
               src={values.photoURL}

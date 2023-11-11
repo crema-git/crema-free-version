@@ -1,8 +1,8 @@
 import React from 'react';
 import PropsTypes from 'prop-types';
-import {Box} from '@mui/material';
+import { Box } from '@mui/material';
 
-const StandardSidebarWrapper = ({children, ...rest}) => {
+const StandardSidebarWrapper = ({ children, ...rest }) => {
   return (
     <Box
       sx={{

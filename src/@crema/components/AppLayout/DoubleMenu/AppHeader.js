@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import AppLngSwitcher from '../../AppLngSwitcher';
@@ -20,9 +20,13 @@ import MenuItem from '@mui/material/MenuItem';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import Tooltip from '@mui/material/Tooltip';
 import PropTypes from 'prop-types';
-import {allowMultiLanguage} from '../../../constants/AppConst';
+import { allowMultiLanguage } from '../../../constants/AppConst';
 
-const AppHeader = ({updateNavState, sidebarMenuState, toggleNavCollapsed}) => {
+const AppHeader = ({
+  updateNavState,
+  sidebarMenuState,
+  toggleNavCollapsed,
+}) => {
   const [showMessage, setShowMessage] = useState(false);
   const [showNotification, setShowNotification] = useState(false);
 
@@ -85,7 +89,7 @@ const AppHeader = ({updateNavState, sidebarMenuState, toggleNavCollapsed}) => {
         <Box className={classes.grow} />
         {allowMultiLanguage && <AppLngSwitcher />}
 
-        <Box ml={{xs: 2, sm: 4}}>
+        <Box ml={{ xs: 2, sm: 4 }}>
           <Hidden xsDown>
             <Box className={classes.hsHeaderAction}>
               <Box className={classes.hsHeaderActionItem}>

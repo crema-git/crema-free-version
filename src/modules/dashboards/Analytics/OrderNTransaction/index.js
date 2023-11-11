@@ -2,18 +2,18 @@ import React from 'react';
 import AppCard from '@crema/components/AppCard';
 import TransactionTable from './TransactionTable';
 import AppSelect from '@crema/components/AppSelect';
-import {useIntl} from 'react-intl';
+import { useIntl } from 'react-intl';
 import PropTypes from 'prop-types';
 
-const OrderNTransaction = ({transactionData}) => {
+const OrderNTransaction = ({ transactionData }) => {
   const handleSelectionType = (data) => {
     console.log('data: ', data);
   };
-  const {messages} = useIntl();
+  const { messages } = useIntl();
   return (
     <AppCard
-      sxStyle={{height: 1}}
-      contentStyle={{px: 0}}
+      sxStyle={{ height: 1 }}
+      contentStyle={{ px: 0 }}
       title={messages['dashboard.analytics.ordersTransaction']}
       action={
         <AppSelect

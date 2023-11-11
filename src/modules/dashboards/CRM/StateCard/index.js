@@ -1,11 +1,11 @@
 import React from 'react';
 
-import {Box, Icon, Typography} from '@mui/material';
+import { Box, Icon, Typography } from '@mui/material';
 import PropTypes from 'prop-types';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Fonts } from '@crema/constants/AppEnums';
 import AppCard from '@crema/components/AppCard';
 
-const StateCard = ({data}) => {
+const StateCard = ({ data }) => {
   return (
     <AppCard
       className='card-hover'
@@ -54,7 +54,7 @@ const StateCard = ({data}) => {
             </Icon>
           </Box>
 
-          <Box sx={{mr: 2, overflow: 'hidden'}}>
+          <Box sx={{ mr: 2, overflow: 'hidden' }}>
             <Typography
               variant='h2'
               component='h2'
@@ -96,7 +96,7 @@ const StateCard = ({data}) => {
               justifyContent: 'flex-end',
             }}
           >
-            <span style={{marginRight: 4}}>
+            <span style={{ marginRight: 4 }}>
               <img
                 src={
                   data.percentageChange > 0

@@ -25,7 +25,7 @@ const SynchronizedLineChart = () => (
           <LineChart
             data={data}
             syncId='anyId'
-            margin={{top: 10, right: 0, left: -25, bottom: 0}}
+            margin={{ top: 10, right: 0, left: -25, bottom: 0 }}
           >
             <XAxis dataKey='name' />
             <YAxis />
@@ -48,7 +48,7 @@ const SynchronizedLineChart = () => (
           <LineChart
             data={data}
             syncId='anyId'
-            margin={{top: 10, right: 0, left: -25, bottom: 0}}
+            margin={{ top: 10, right: 0, left: -25, bottom: 0 }}
           >
             <XAxis dataKey='name' />
             <YAxis />
@@ -68,7 +68,7 @@ const SynchronizedLineChart = () => (
           <AreaChart
             data={data}
             syncId='anyId'
-            margin={{top: 10, right: 0, left: -25, bottom: 0}}
+            margin={{ top: 10, right: 0, left: -25, bottom: 0 }}
           >
             <XAxis dataKey='name' />
             <YAxis />

@@ -9,7 +9,7 @@ import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 
 function ElevationScroll(props) {
-  const {children, window} = props;
+  const { children, window } = props;
   // Note that you normally won't need to set the window ref as useScrollTrigger
   // will default to window.
   // This is only being set here because the demo is in an iframe.
@@ -48,7 +48,7 @@ export default function ElevateAppBar(props) {
       </ElevationScroll>
       <Toolbar />
       <Container>
-        <Box sx={{my: 2}}>
+        <Box sx={{ my: 2 }}>
           {[...new Array(12)]
             .map(
               () => `Cras mattis consectetur purus sit amet fermentum.

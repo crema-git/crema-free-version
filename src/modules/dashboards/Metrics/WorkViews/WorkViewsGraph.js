@@ -1,9 +1,9 @@
 import React from 'react';
-import {Line, LineChart, ResponsiveContainer} from 'recharts';
+import { Line, LineChart, ResponsiveContainer } from 'recharts';
 import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
 
-const WorkViewsGraph = ({data}) => {
+const WorkViewsGraph = ({ data }) => {
   return (
     <Box
       sx={{

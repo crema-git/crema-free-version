@@ -1,14 +1,14 @@
 import React from 'react';
 import AppGridContainer from '@crema/components/AppGridContainer';
 import Grid from '@mui/material/Grid';
-import {FiFacebook, FiTwitter} from 'react-icons/fi';
+import { FiFacebook, FiTwitter } from 'react-icons/fi';
 import IntlMessages from '@crema/helpers/IntlMessages';
 import Box from '@mui/material/Box';
-import {blue, indigo} from '@mui/material/colors';
-import {Fonts} from '@crema/constants/AppEnums';
+import { blue, indigo } from '@mui/material/colors';
+import { Fonts } from '@crema/constants/AppEnums';
 import AppAnimate from '@crema/components/AppAnimate';
 import AppLoader from '@crema/components/AppLoader';
-import {useGetDataApi} from '@crema/hooks/APIHooks';
+import { useGetDataApi } from '@crema/hooks/APIHooks';
 import WallPaper from './WallPaper';
 import TemperatureCard from './TemperatureCard';
 import VisitorAnalysis from './VisitorAnalysis';
@@ -33,7 +33,8 @@ import CityInfo from './CityInfo';
 import DateSelector from './DatePicker';
 
 const Widgets = () => {
-  const [{apiData: widgetsData, loading}] = useGetDataApi('/dashboard/widgets');
+  const [{ apiData: widgetsData, loading }] =
+    useGetDataApi('/dashboard/widgets');
 
   return (
     <>
@@ -46,7 +47,7 @@ const Widgets = () => {
               component='h3'
               sx={{
                 color: 'text.primary',
-                mb: {xs: 4, sm: 4, xl: 6},
+                mb: { xs: 4, sm: 4, xl: 6 },
                 fontSize: 16,
                 fontWeight: Fonts.BOLD,
               }}

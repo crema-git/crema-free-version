@@ -6,11 +6,11 @@ import PropTypes from 'prop-types';
 import ListItem from '@mui/material/ListItem';
 import clsx from 'clsx';
 
-import {green, red} from '@mui/material/colors';
-import {alpha} from '@mui/material';
+import { green, red } from '@mui/material/colors';
+import { alpha } from '@mui/material';
 
 const ChatItem = (props) => {
-  const {item, selectedUser, setSelectedUser} = props;
+  const { item, selectedUser, setSelectedUser } = props;
 
   return (
     <ListItem
@@ -55,7 +55,7 @@ const ChatItem = (props) => {
                 }}
               >
                 <Avatar
-                  sx={{height: 12, width: 12}}
+                  sx={{ height: 12, width: 12 }}
                   src={item.members[0].image}
                 />
               </Box>

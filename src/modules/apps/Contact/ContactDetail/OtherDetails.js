@@ -4,11 +4,11 @@ import IntlMessages from '@crema/helpers/IntlMessages';
 import BusinessIcon from '@mui/icons-material/Business';
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import PropTypes from 'prop-types';
-import {Fonts} from '@crema/constants/AppEnums';
-import {FiFacebook, FiTwitter} from 'react-icons/fi';
+import { Fonts } from '@crema/constants/AppEnums';
+import { FiFacebook, FiTwitter } from 'react-icons/fi';
 
 const OtherDetails = (props) => {
-  const {contact} = props;
+  const { contact } = props;
 
   return (
     <Box
@@ -29,7 +29,7 @@ const OtherDetails = (props) => {
       <div>
         <Box
           sx={{
-            mb: {xs: 2, md: 3},
+            mb: { xs: 2, md: 3 },
             display: 'flex',
             alignItems: 'center',
           }}
@@ -55,7 +55,7 @@ const OtherDetails = (props) => {
 
         <Box
           sx={{
-            mb: {xs: 2, md: 3},
+            mb: { xs: 2, md: 3 },
             display: 'flex',
             alignItems: 'center',
           }}
@@ -81,7 +81,7 @@ const OtherDetails = (props) => {
 
         <Box
           sx={{
-            mb: {xs: 2, md: 3},
+            mb: { xs: 2, md: 3 },
             display: 'flex',
             alignItems: 'center',
           }}

@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
-import {styled} from '@mui/material/styles';
+import { styled } from '@mui/material/styles';
 import Button from '@mui/material/Button';
 import {
   DataGridPro,
@@ -14,24 +14,26 @@ import StarOutlineIcon from '@mui/icons-material/StarOutline';
 import PropTypes from 'prop-types';
 
 const StyledGridColumnMenuContainer = styled(GridColumnMenuContainer)(
-  ({theme, ownerState}) => ({
+  ({ theme, ownerState }) => ({
     background: theme.palette[ownerState.color].main,
   }),
 );
 
-const StyledGridColumnMenu = styled(GridColumnMenu)(({theme, ownerState}) => ({
-  background: theme.palette[ownerState.color].main,
-}));
+const StyledGridColumnMenu = styled(GridColumnMenu)(
+  ({ theme, ownerState }) => ({
+    background: theme.palette[ownerState.color].main,
+  }),
+);
 
 export function CustomColumnMenuComponent(props) {
-  const {hideMenu, colDef, color, ...other} = props;
+  const { hideMenu, colDef, color, ...other } = props;
 
   if (colDef.field === 'name') {
     return (
       <StyledGridColumnMenuContainer
         hideMenu={hideMenu}
         colDef={colDef}
-        ownerState={{color}}
+        ownerState={{ color }}
         {...other}
       >
         <GridColumnMenuSortItem onClick={hideMenu} colDef={colDef} />
@@ -44,7 +46,7 @@ export function CustomColumnMenuComponent(props) {
       <StyledGridColumnMenuContainer
         hideMenu={hideMenu}
         colDef={colDef}
-        ownerState={{color}}
+        ownerState={{ color }}
         {...other}
       >
         <Box
@@ -57,7 +59,7 @@ export function CustomColumnMenuComponent(props) {
             alignItems: 'center',
           }}
         >
-          <StarOutlineIcon sx={{fontSize: 80}} />
+          <StarOutlineIcon sx={{ fontSize: 80 }} />
         </Box>
       </StyledGridColumnMenuContainer>
     );
@@ -66,7 +68,7 @@ export function CustomColumnMenuComponent(props) {
     <StyledGridColumnMenu
       hideMenu={hideMenu}
       colDef={colDef}
-      ownerState={{color}}
+      ownerState={{ color }}
       {...other}
     />
   );
@@ -83,7 +85,7 @@ export default function CustomColumnMenu() {
   const apiRef = useGridApiRef();
 
   return (
-    <Box sx={{width: '100%'}}>
+    <Box sx={{ width: '100%' }}>
       <Button
         color={color}
         size='small'
@@ -97,13 +99,13 @@ export default function CustomColumnMenu() {
       >
         Toggle menu background
       </Button>
-      <Box sx={{height: 250, mt: 1}}>
+      <Box sx={{ height: 250, mt: 1 }}>
         <DataGridPro
           apiRef={apiRef}
           columns={[
-            {field: 'default', width: 150},
-            {field: 'name', width: 150},
-            {field: 'stars', width: 150},
+            { field: 'default', width: 150 },
+            { field: 'name', width: 150 },
+            { field: 'stars', width: 150 },
           ]}
           rows={[
             {
@@ -123,7 +125,7 @@ export default function CustomColumnMenu() {
             columnMenu: CustomColumnMenuComponent,
           }}
           slotProps={{
-            columnMenu: {color},
+            columnMenu: { color },
           }}
         />
       </Box>

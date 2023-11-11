@@ -7,10 +7,10 @@ import Hidden from '@mui/material/Hidden';
 import Drawer from '@mui/material/Drawer';
 import VerticalNav from '../../components/VerticalNav';
 import UserHeaderSidebarWrapper from './UserHeaderSidebarWrapper';
-import {useLayoutContext} from '@crema/context/AppContextProvider/LayoutContextProvider';
+import { useLayoutContext } from '@crema/context/AppContextProvider/LayoutContextProvider';
 
 const AppSidebar = (props) => {
-  const {footer, footerType} = useLayoutContext();
+  const { footer, footerType } = useLayoutContext();
 
   return (
     <>
@@ -23,7 +23,7 @@ const AppSidebar = (props) => {
             root: clsx(props.variant),
             paper: clsx(props.variant),
           }}
-          style={{position: 'absolute'}}
+          style={{ position: 'absolute' }}
         >
           <UserHeaderSidebarWrapper className='user-header-sidebar'>
             <MainSidebar>

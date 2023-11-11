@@ -3,14 +3,14 @@ import PropTypes from 'prop-types';
 import ClientLogo from './ClientLogo';
 import Box from '@mui/material/Box';
 import AppCard from '@crema/components/AppCard';
-import {useIntl} from 'react-intl';
-import {Fonts} from '@crema/constants/AppEnums';
+import { useIntl } from 'react-intl';
+import { Fonts } from '@crema/constants/AppEnums';
 
-const Clients = ({client}) => {
-  const {messages} = useIntl();
+const Clients = ({ client }) => {
+  const { messages } = useIntl();
   return (
     <AppCard
-      titleStyle={{fontWeight: Fonts.BOLD, fontSize: {xs: 18, md: 20}}}
+      titleStyle={{ fontWeight: Fonts.BOLD, fontSize: { xs: 18, md: 20 } }}
       title={messages['extraPages.client']}
     >
       <Box
@@ -30,7 +30,7 @@ const Clients = ({client}) => {
             <Box
               key={index}
               sx={{
-                width: {xs: '50%', sm: '33.33%', md: '25%', lg: '20%'},
+                width: { xs: '50%', sm: '33.33%', md: '25%', lg: '20%' },
                 borderRight: (theme) => `solid 1px ${theme.palette.divider}`,
                 borderTop: (theme) => `solid 1px ${theme.palette.divider}`,
               }}

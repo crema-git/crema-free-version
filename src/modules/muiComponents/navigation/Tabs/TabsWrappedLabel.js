@@ -11,7 +11,7 @@ export default function TabsWrappedLabel() {
   };
 
   return (
-    <Box sx={{width: '100%'}}>
+    <Box sx={{ width: '100%' }}>
       <Tabs
         value={value}
         onChange={handleChange}

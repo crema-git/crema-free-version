@@ -2,10 +2,10 @@ import React from 'react';
 import TableRow from '@mui/material/TableRow';
 import PropTypes from 'prop-types';
 
-import {styled} from '@mui/material/styles';
-import {Fonts} from '@crema/constants/AppEnums';
+import { styled } from '@mui/material/styles';
+import { Fonts } from '@crema/constants/AppEnums';
 
-const TableHeaderRow = styled(TableRow)(({theme}) => {
+const TableHeaderRow = styled(TableRow)(({ theme }) => {
   return {
     '& th': {
       fontSize: 14,
@@ -23,7 +23,7 @@ const TableHeaderRow = styled(TableRow)(({theme}) => {
   };
 });
 
-const TableHeader = ({children, ...rest}) => {
+const TableHeader = ({ children, ...rest }) => {
   return <TableHeaderRow {...rest}>{children}</TableHeaderRow>;
 };
 

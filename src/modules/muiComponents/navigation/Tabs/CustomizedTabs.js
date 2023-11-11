@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {styled} from '@mui/material/styles';
+import { styled } from '@mui/material/styles';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
@@ -12,7 +12,7 @@ const AntTabs = styled(Tabs)({
 });
 
 const AntTab = styled((props) => <Tab disableRipple {...props} />)(
-  ({theme}) => ({
+  ({ theme }) => ({
     textTransform: 'none',
     minWidth: 0,
     [theme.breakpoints.up('sm')]: {
@@ -50,7 +50,7 @@ const AntTab = styled((props) => <Tab disableRipple {...props} />)(
 const StyledTabs = styled((props) => (
   <Tabs
     {...props}
-    TabIndicatorProps={{children: <span className='MuiTabs-indicatorSpan' />}}
+    TabIndicatorProps={{ children: <span className='MuiTabs-indicatorSpan' /> }}
   />
 ))({
   '& .MuiTabs-indicator': {
@@ -66,7 +66,7 @@ const StyledTabs = styled((props) => (
 });
 
 const StyledTab = styled((props) => <Tab disableRipple {...props} />)(
-  ({theme}) => ({
+  ({ theme }) => ({
     textTransform: 'none',
     fontWeight: theme.typography.fontWeightRegular,
     fontSize: theme.typography.pxToRem(15),
@@ -89,16 +89,16 @@ export default function CustomizedTabs() {
   };
 
   return (
-    <Box sx={{width: '100%'}}>
-      <Box sx={{bgcolor: '#fff'}}>
+    <Box sx={{ width: '100%' }}>
+      <Box sx={{ bgcolor: '#fff' }}>
         <AntTabs value={value} onChange={handleChange} aria-label='ant example'>
           <AntTab label='Tab 1' />
           <AntTab label='Tab 2' />
           <AntTab label='Tab 3' />
         </AntTabs>
-        <Box sx={{p: 3}} />
+        <Box sx={{ p: 3 }} />
       </Box>
-      <Box sx={{bgcolor: '#2e1534'}}>
+      <Box sx={{ bgcolor: '#2e1534' }}>
         <StyledTabs
           value={value}
           onChange={handleChange}
@@ -108,7 +108,7 @@ export default function CustomizedTabs() {
           <StyledTab label='Datasets' />
           <StyledTab label='Connections' />
         </StyledTabs>
-        <Box sx={{p: 3}} />
+        <Box sx={{ p: 3 }} />
       </Box>
     </Box>
   );

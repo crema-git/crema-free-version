@@ -1,4 +1,4 @@
-import React, {useEffect, useMemo, useState} from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import {
   Collapse,
   Icon,
@@ -6,16 +6,16 @@ import {
   ListItem,
   ListItemText,
 } from '@mui/material';
-import {useLocation} from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
 import VerticalItem from './VerticalItem';
 import Box from '@mui/material/Box';
 import IntlMessages from '@crema/helpers/IntlMessages';
 import useStyles from './VerticalCollapase.style';
-import {useSelector} from 'react-redux';
-import {checkPermission} from '@crema/helpers/RouteHelper';
-import {useThemeContext} from '@crema/context/AppContextProvider/ThemeContextProvider';
+import { useSelector } from 'react-redux';
+import { checkPermission } from '@crema/helpers/RouteHelper';
+import { useThemeContext } from '@crema/context/AppContextProvider/ThemeContextProvider';
 
 const needsToBeOpened = (pathname, item) => {
   return pathname && isUrlInChildren(item, pathname);
@@ -44,10 +44,10 @@ const isUrlInChildren = (parent, url) => {
   return false;
 };
 
-const VerticalCollapse = ({item, level}) => {
-  const {themeMode, theme} = useThemeContext();
-  const classes = useStyles({level, themeMode});
-  const {pathname} = useLocation();
+const VerticalCollapse = ({ item, level }) => {
+  const { themeMode, theme } = useThemeContext();
+  const classes = useStyles({ level, themeMode });
+  const { pathname } = useLocation();
   const [open, setOpen] = useState(() => needsToBeOpened(pathname, item));
 
   useEffect(() => {
@@ -60,7 +60,7 @@ const VerticalCollapse = ({item, level}) => {
     setOpen(!open);
   };
 
-  const {user} = useSelector(({auth}) => auth);
+  const { user } = useSelector(({ auth }) => auth);
   const hasPermission = useMemo(
     () => checkPermission(item.auth, user.role),
     [item.auth, user.role],
@@ -75,7 +75,7 @@ const VerticalCollapse = ({item, level}) => {
       <ListItem
         button
         component='div'
-        className={clsx(classes.navItem, 'nav-item', {open: open})}
+        className={clsx(classes.navItem, 'nav-item', { open: open })}
         onClick={handleClick}
       >
         {item.icon && (
@@ -89,10 +89,10 @@ const VerticalCollapse = ({item, level}) => {
           </Box>
         )}
         <ListItemText
-          classes={{primary: clsx('nav-item-text', classes.listItemText)}}
+          classes={{ primary: clsx('nav-item-text', classes.listItemText) }}
           primary={<IntlMessages id={item.messageId} />}
         />
-        <IconButton disableRipple sx={{p: 0}}>
+        <IconButton disableRipple sx={{ p: 0 }}>
           <Icon className='nav-item-icon-arrow' color='inherit'>
             {open
               ? 'expand_more'

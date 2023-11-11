@@ -1,8 +1,8 @@
 import React from 'react';
-import {Bar, BarChart, ResponsiveContainer} from 'recharts';
+import { Bar, BarChart, ResponsiveContainer } from 'recharts';
 import PropTypes from 'prop-types';
 
-const VisitorsGraph = ({data}) => {
+const VisitorsGraph = ({ data }) => {
   return (
     <ResponsiveContainer width='100%' height={240}>
       <BarChart barSize={3} data={data}>

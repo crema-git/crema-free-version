@@ -1,13 +1,13 @@
 import React from 'react';
-import {useIntl} from 'react-intl';
+import { useIntl } from 'react-intl';
 import ActivitiesItem from './ActivitiesItem';
 import PropTypes from 'prop-types';
 import Grid from '@mui/material/Grid';
 import AppGridContainer from '@crema/components/AppGridContainer';
 import AppCard from '@crema/components/AppCard';
 
-const Activities = ({activities}) => {
-  const {messages} = useIntl();
+const Activities = ({ activities }) => {
+  const { messages } = useIntl();
   return (
     <AppCard title={messages['dashboard.crypto.activities']}>
       <AppGridContainer>

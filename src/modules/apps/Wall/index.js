@@ -1,11 +1,11 @@
 import React from 'react';
 import AppGridContainer from '@crema/components/AppGridContainer';
-import {Grid} from '@mui/material';
+import { Grid } from '@mui/material';
 import AppsContainer from '@crema/components/AppsContainer';
 import AppScrollbar from '@crema/components/AppScrollbar';
-import {useIntl} from 'react-intl';
-import {styled} from '@mui/material/styles';
-import {useGetDataApi} from '@crema/hooks/APIHooks';
+import { useIntl } from 'react-intl';
+import { styled } from '@mui/material/styles';
+import { useGetDataApi } from '@crema/hooks/APIHooks';
 import About from './About';
 import RecentNews from './RecentNews';
 import Photos from './Photos';
@@ -19,7 +19,7 @@ import WhoToFollow from './WhoToFollow';
 import PostsList from './PostsList';
 import CreatePost from './CreatePost';
 
-const LeftSidebar = styled(Grid)(({theme}) => ({
+const LeftSidebar = styled(Grid)(({ theme }) => ({
   '@media screen and (min-width: 600px) and (max-width: 1023px)': {
     flexBasis: '40%',
     maxWidth: '40%',
@@ -54,23 +54,23 @@ const ContentWrapper = styled(Grid)(() => ({
 }));
 
 const Wall = () => {
-  const [{apiData: wallData}] = useGetDataApi('/wall', undefined);
-  const [{apiData: postList}, {setData: setPostList}] = useGetDataApi(
+  const [{ apiData: wallData }] = useGetDataApi('/wall', undefined);
+  const [{ apiData: postList }, { setData: setPostList }] = useGetDataApi(
     '/wall/posts',
     [],
   );
-  const {messages} = useIntl();
+  const { messages } = useIntl();
 
   return (
     <AppsContainer
       title={messages['sidebar.apps.wall']}
-      cardStyle={{background: 'none', boxShadow: 'none', border: '0 none'}}
+      cardStyle={{ background: 'none', boxShadow: 'none', border: '0 none' }}
       fullView
     >
       {wallData && (
-        <AppGridContainer style={{height: 'calc(100% + 32px)'}}>
-          <LeftSidebar item xs={12} sm={6} md={3} style={{height: '100%'}}>
-            <AppScrollbar style={{height: '100%'}}>
+        <AppGridContainer style={{ height: 'calc(100% + 32px)' }}>
+          <LeftSidebar item xs={12} sm={6} md={3} style={{ height: '100%' }}>
+            <AppScrollbar style={{ height: '100%' }}>
               <VideoCall data={wallData.videoCall} />
               <About about={wallData.about} />
               <SuggestTeam data={wallData.suggestTeam} />
@@ -78,8 +78,8 @@ const Wall = () => {
               <Suggestions suggestions={wallData.suggestions} />
             </AppScrollbar>
           </LeftSidebar>
-          <ContentWrapper item xs={12} sm={6} md={6} style={{height: '100%'}}>
-            <AppScrollbar style={{height: '100%'}}>
+          <ContentWrapper item xs={12} sm={6} md={6} style={{ height: '100%' }}>
+            <AppScrollbar style={{ height: '100%' }}>
               <CreatePost wallData={wallData} setPostList={setPostList} />
               <PostsList
                 wallData={wallData}
@@ -88,8 +88,8 @@ const Wall = () => {
               />
             </AppScrollbar>
           </ContentWrapper>
-          <RightSidebar item xs={12} sm={6} md={3} style={{height: '100%'}}>
-            <AppScrollbar style={{height: '100%'}}>
+          <RightSidebar item xs={12} sm={6} md={3} style={{ height: '100%' }}>
+            <AppScrollbar style={{ height: '100%' }}>
               <Stories stories={wallData.stories} />
               <WhatsHappen whatsHappen={wallData.whatsHappen} />
               <WhoToFollow whoToFollow={wallData.whoToFollow} />

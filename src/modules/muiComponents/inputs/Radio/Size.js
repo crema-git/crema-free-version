@@ -12,7 +12,7 @@ export default function SizeRadioButtons() {
     onChange: handleChange,
     value: item,
     name: 'size-radio-button-demo',
-    inputProps: {'aria-label': item},
+    inputProps: { 'aria-label': item },
   });
 
   return (

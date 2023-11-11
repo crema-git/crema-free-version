@@ -1,13 +1,13 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
-import Slider, {SliderThumb} from '@mui/material/Slider';
-import {styled} from '@mui/material/styles';
+import Slider, { SliderThumb } from '@mui/material/Slider';
+import { styled } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
 import Tooltip from '@mui/material/Tooltip';
 import Box from '@mui/material/Box';
 
 function ValueLabelComponent(props) {
-  const {children, value} = props;
+  const { children, value } = props;
 
   return (
     <Tooltip enterTouchDelay={0} placement='top' title={value}>
@@ -39,7 +39,7 @@ const marks = [
   },
 ];
 
-const IOSSlider = styled(Slider)(({theme}) => ({
+const IOSSlider = styled(Slider)(({ theme }) => ({
   color: theme.palette.mode === 'dark' ? '#3880ff' : '#3880ff',
   height: 2,
   padding: '15px 0',
@@ -118,7 +118,7 @@ const PrettoSlider = styled(Slider)({
     backgroundColor: '#52af77',
     transformOrigin: 'bottom left',
     transform: 'translate(50%, -100%) rotate(-45deg) scale(0)',
-    '&:before': {display: 'none'},
+    '&:before': { display: 'none' },
     '&.MuiSlider-valueLabelOpen': {
       transform: 'translate(50%, -100%) rotate(-45deg) scale(1)',
     },
@@ -128,7 +128,7 @@ const PrettoSlider = styled(Slider)({
   },
 });
 
-const AirbnbSlider = styled(Slider)(({theme}) => ({
+const AirbnbSlider = styled(Slider)(({ theme }) => ({
   color: '#3a8589',
   height: 3,
   padding: '13px 0',
@@ -159,7 +159,7 @@ const AirbnbSlider = styled(Slider)(({theme}) => ({
 }));
 
 function AirbnbThumbComponent(props) {
-  const {children, ...other} = props;
+  const { children, ...other } = props;
   return (
     <SliderThumb {...other}>
       {children}
@@ -176,7 +176,7 @@ AirbnbThumbComponent.propTypes = {
 
 export default function CustomizedSlider() {
   return (
-    <Box sx={{width: 320}}>
+    <Box sx={{ width: 320 }}>
       <Typography gutterBottom>iOS</Typography>
       <IOSSlider
         aria-label='ios slider'
@@ -184,14 +184,14 @@ export default function CustomizedSlider() {
         marks={marks}
         valueLabelDisplay='on'
       />
-      <Box sx={{m: 3}} />
+      <Box sx={{ m: 3 }} />
       <Typography gutterBottom>pretto.fr</Typography>
       <PrettoSlider
         valueLabelDisplay='auto'
         aria-label='pretto slider'
         defaultValue={20}
       />
-      <Box sx={{m: 3}} />
+      <Box sx={{ m: 3 }} />
       <Typography gutterBottom>Tooltip value label</Typography>
       <Slider
         valueLabelDisplay='auto'
@@ -201,10 +201,10 @@ export default function CustomizedSlider() {
         aria-label='custom thumb label'
         defaultValue={20}
       />
-      <Box sx={{m: 3}} />
+      <Box sx={{ m: 3 }} />
       <Typography gutterBottom>Airbnb</Typography>
       <AirbnbSlider
-        components={{Thumb: AirbnbThumbComponent}}
+        components={{ Thumb: AirbnbThumbComponent }}
         getAriaLabel={(index) =>
           index === 0 ? 'Minimum price' : 'Maximum price'
         }

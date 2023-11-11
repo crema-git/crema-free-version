@@ -1,10 +1,10 @@
 import React from 'react';
 import PropsTypes from 'prop-types';
 import ListItem from '@mui/material/ListItem';
-import {Fonts} from '@crema/constants/AppEnums';
-import {alpha} from '@mui/material';
+import { Fonts } from '@crema/constants/AppEnums';
+import { alpha } from '@mui/material';
 
-const VerticalCollapseItem = ({children, sidebarTextColor, ...rest}) => {
+const VerticalCollapseItem = ({ children, sidebarTextColor, ...rest }) => {
   return (
     <ListItem
       sx={{

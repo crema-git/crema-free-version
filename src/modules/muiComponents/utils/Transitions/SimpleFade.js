@@ -7,8 +7,8 @@ import Fade from '@mui/material/Fade';
 import FormControlLabel from '@mui/material/FormControlLabel';
 
 const icon = (
-  <Paper sx={{m: 1}} elevation={4}>
-    <Box component='svg' sx={{width: 100, height: 100}}>
+  <Paper sx={{ m: 1 }} elevation={4}>
+    <Box component='svg' sx={{ width: 100, height: 100 }}>
       <Box
         component='polygon'
         sx={{
@@ -30,12 +30,12 @@ export default function SimpleFade() {
   };
 
   return (
-    <Box sx={{height: 180}}>
+    <Box sx={{ height: 180 }}>
       <FormControlLabel
         control={<Switch checked={checked} onChange={handleChange} />}
         label='Show'
       />
-      <Box sx={{display: 'flex'}}>
+      <Box sx={{ display: 'flex' }}>
         <Fade in={checked}>{icon}</Fade>
       </Box>
     </Box>

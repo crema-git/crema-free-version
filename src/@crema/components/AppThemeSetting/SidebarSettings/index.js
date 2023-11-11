@@ -1,7 +1,7 @@
 import React from 'react';
 import Box from '@mui/material/Box';
 import Switch from '@mui/material/Switch';
-import {CustomizerItemWrapper} from '../index.style';
+import { CustomizerItemWrapper } from '../index.style';
 import {
   useSidebarActionsContext,
   useSidebarContext,
@@ -16,9 +16,10 @@ import {
 } from '@crema/mockapi/fakedb/navigationStyle';
 
 const SidebarSettings = () => {
-  const {sidebarBgImageId, allowSidebarBgImage} = useSidebarContext();
+  const { sidebarBgImageId, allowSidebarBgImage } = useSidebarContext();
 
-  const {updateSidebarBgImage, setSidebarBgImage} = useSidebarActionsContext();
+  const { updateSidebarBgImage, setSidebarBgImage } =
+    useSidebarActionsContext();
 
   const onToggleSidebarImage = () => {
     setSidebarBgImage(!allowSidebarBgImage);
@@ -36,7 +37,7 @@ const SidebarSettings = () => {
         }}
       >
         <Box component='h4'>Sidebar Images</Box>
-        <Box component='span' sx={{ml: 'auto'}}>
+        <Box component='span' sx={{ ml: 'auto' }}>
           <Switch
             className='customize-switch'
             checked={allowSidebarBgImage}
@@ -110,7 +111,7 @@ const SidebarSettings = () => {
           })}
         </Box>
       ) : null}
-      <Box component='h4' sx={{mb: 3}}>
+      <Box component='h4' sx={{ mb: 3 }}>
         Sidebar Colors
       </Box>
       <AppGrid

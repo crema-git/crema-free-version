@@ -22,7 +22,7 @@ export default function ScrollDialog() {
   const descriptionElementRef = React.useRef(null);
   React.useEffect(() => {
     if (open) {
-      const {current: descriptionElement} = descriptionElementRef;
+      const { current: descriptionElement } = descriptionElementRef;
       if (descriptionElement !== null) {
         descriptionElement.focus();
       }

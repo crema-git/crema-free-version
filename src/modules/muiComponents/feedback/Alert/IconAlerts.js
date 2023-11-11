@@ -6,7 +6,7 @@ import Stack from '@mui/material/Stack';
 
 export default function IconAlerts() {
   return (
-    <Stack sx={{width: '100%'}} spacing={2}>
+    <Stack sx={{ width: '100%' }} spacing={2}>
       <Alert icon={<CheckIcon fontSize='inherit' />} severity='success'>
         This is a success alert — check it out!
       </Alert>

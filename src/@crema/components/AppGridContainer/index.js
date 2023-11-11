@@ -1,9 +1,9 @@
 import React from 'react';
 import Grid from '@mui/material/Grid';
 import PropTypes from 'prop-types';
-import {useMediaQuery} from '@mui/material';
+import { useMediaQuery } from '@mui/material';
 
-const AppGridContainer = ({children, ...others}) => {
+const AppGridContainer = ({ children, ...others }) => {
   const isMDDown = useMediaQuery((theme) => theme.breakpoints.down('md'));
   return (
     <Grid container spacing={isMDDown ? 5 : 8} {...others}>

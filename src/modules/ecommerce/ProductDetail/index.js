@@ -1,31 +1,27 @@
-import React, {useEffect} from 'react';
+import React, { useEffect } from 'react';
 import AppCard from '@crema/components/AppCard';
 import AppGridContainer from '@crema/components/AppGridContainer';
 
 import AppAnimate from '@crema/components/AppAnimate';
 import PropTypes from 'prop-types';
-import {useParams} from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import AppInfoView from '@crema/components/AppInfoView';
-import {useGetDataApi} from '@crema/hooks/APIHooks';
+import { useGetDataApi } from '@crema/hooks/APIHooks';
 import Header from './Header';
 import ProductView from './ProductView/index';
 import SimilarProduct from './SimilarProduct';
 import AppLoader from '@crema/components/AppLoader';
-import {isEmptyObject} from '@crema/helpers/ApiHelper';
+import { isEmptyObject } from '@crema/helpers/ApiHelper';
 import ProductImageSlide from './ProductImageSlide';
 
-ProductImageSlide.propTypes = {product: PropTypes.any};
+ProductImageSlide.propTypes = { product: PropTypes.any };
 const ProductDetail = () => {
-  const {id} = useParams();
-  const [{apiData: currentProduct, loading}, {setQueryParams}] = useGetDataApi(
-    '/api/ecommerce/get',
-    {},
-    {},
-    false,
-  );
+  const { id } = useParams();
+  const [{ apiData: currentProduct, loading }, { setQueryParams }] =
+    useGetDataApi('/api/ecommerce/get', {}, {}, false);
 
   useEffect(() => {
-    setQueryParams({id: id});
+    setQueryParams({ id: id });
   }, [id]);
 
   return (

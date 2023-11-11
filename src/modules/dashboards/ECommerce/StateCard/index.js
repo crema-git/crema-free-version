@@ -1,11 +1,11 @@
 import React from 'react';
 import AppCard from '@crema/components/AppCard';
-import {alpha, Box, Icon, Typography} from '@mui/material';
+import { alpha, Box, Icon, Typography } from '@mui/material';
 import PropTypes from 'prop-types';
-import {FormattedNumber} from 'react-intl';
+import { FormattedNumber } from 'react-intl';
 
-import {styled} from '@mui/material/styles';
-import {Fonts} from '@crema/constants/AppEnums';
+import { styled } from '@mui/material/styles';
+import { Fonts } from '@crema/constants/AppEnums';
 
 const StateWrapper = styled('div')((props) => {
   return {
@@ -85,10 +85,10 @@ const StateWrapper = styled('div')((props) => {
   };
 });
 
-const StateCard = ({data}) => {
+const StateCard = ({ data }) => {
   return (
     <AppCard
-      sxStyle={{height: 1}}
+      sxStyle={{ height: 1 }}
       contentStyle={{
         display: 'flex',
         flexDirection: 'column',
@@ -167,7 +167,7 @@ const StateCard = ({data}) => {
             <div>
               <Typography
                 variant='body2'
-                sx={{color: 'text.secondary', whiteSpace: 'nowrap'}}
+                sx={{ color: 'text.secondary', whiteSpace: 'nowrap' }}
               >
                 in 30 days
               </Typography>

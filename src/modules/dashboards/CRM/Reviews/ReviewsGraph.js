@@ -1,9 +1,9 @@
 import React from 'react';
-import {Line, LineChart, ResponsiveContainer} from 'recharts';
+import { Line, LineChart, ResponsiveContainer } from 'recharts';
 import PropTypes from 'prop-types';
-import {Box} from '@mui/material';
+import { Box } from '@mui/material';
 
-const ReviewsGraph = ({reviewGraphData}) => {
+const ReviewsGraph = ({ reviewGraphData }) => {
   return (
     <Box
       sx={{

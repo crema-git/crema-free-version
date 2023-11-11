@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {styled} from '@mui/material/styles';
+import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Rating from '@mui/material/Rating';
 import FavoriteIcon from '@mui/icons-material/Favorite';
@@ -19,7 +19,7 @@ export default function CustomizedRating() {
   return (
     <Box
       sx={{
-        '& > legend': {mt: 2},
+        '& > legend': { mt: 2 },
       }}
     >
       <Typography component='legend'>Custom icon and color</Typography>

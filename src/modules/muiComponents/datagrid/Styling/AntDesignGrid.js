@@ -6,8 +6,8 @@ import {
   useGridApiContext,
   useGridSelector,
 } from '@mui/x-data-grid';
-import {useDemoData} from '@mui/x-data-grid-generator';
-import {styled} from '@mui/material/styles';
+import { useDemoData } from '@mui/x-data-grid-generator';
+import { styled } from '@mui/material/styles';
 import Pagination from '@mui/material/Pagination';
 import PaginationItem from '@mui/material/PaginationItem';
 
@@ -56,7 +56,7 @@ function customCheckbox(theme) {
   };
 }
 
-const StyledDataGrid = styled(DataGrid)(({theme}) => ({
+const StyledDataGrid = styled(DataGrid)(({ theme }) => ({
   border: 0,
   color:
     theme.palette.mode === 'light'
@@ -125,7 +125,7 @@ function CustomPagination() {
 const PAGE_SIZE = 5;
 
 export default function AntDesignGrid() {
-  const {data} = useDemoData({
+  const { data } = useDemoData({
     dataSet: 'Commodity',
     rowLength: 10,
     maxColumns: 10,
@@ -137,7 +137,7 @@ export default function AntDesignGrid() {
   });
 
   return (
-    <div style={{height: 400, width: '100%'}}>
+    <div style={{ height: 400, width: '100%' }}>
       <StyledDataGrid
         checkboxSelection
         paginationModel={paginationModel}

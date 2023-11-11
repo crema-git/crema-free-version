@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import AppGridContainer from '@crema/components/AppGridContainer';
 import AppTextField from '@crema/components/AppFormComponents/AppTextField';
 import {
@@ -11,12 +11,12 @@ import {
   Stack,
   Typography,
 } from '@mui/material';
-import {Visibility, VisibilityOff} from '@mui/icons-material';
-import {Form, Formik} from 'formik';
+import { Visibility, VisibilityOff } from '@mui/icons-material';
+import { Form, Formik } from 'formik';
 import EditIcon from '@mui/icons-material/Edit';
 import PropTypes from 'prop-types';
 
-const Accounting = ({settings, onUpdateSettings}) => {
+const Accounting = ({ settings, onUpdateSettings }) => {
   const [showPassword, setShowPassword] = React.useState(false);
   const [swiftBic, setSwiftBic] = React.useState(false);
 
@@ -29,7 +29,7 @@ const Accounting = ({settings, onUpdateSettings}) => {
     <Formik
       validateOnChange={true}
       initialValues={settings}
-      onSubmit={(data, {setSubmitting, resetForm}) => {
+      onSubmit={(data, { setSubmitting, resetForm }) => {
         setSubmitting(true);
         onUpdateSettings('accounting', data);
 
@@ -39,28 +39,31 @@ const Accounting = ({settings, onUpdateSettings}) => {
       }}
     >
       <Form noValidate autoComplete='off'>
-        <Box sx={{display: 'flex', justifyContent: 'space-between'}}>
+        <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
           <Box>
             <Typography variant='h4'>Accounting Settings</Typography>
-            <Typography variant='body1' sx={{mt: 2, color: 'text.secondary'}}>
+            <Typography variant='body1' sx={{ mt: 2, color: 'text.secondary' }}>
               Manage your accounting settings
             </Typography>
           </Box>
           <Box>
             {!isEdit && (
               <EditIcon
-                sx={{cursor: 'pointer'}}
+                sx={{ cursor: 'pointer' }}
                 onClick={() => setIsEdit(true)}
               />
             )}
           </Box>
         </Box>
-        <Divider sx={{my: 4}} />
+        <Divider sx={{ my: 4 }} />
         <AppGridContainer>
           <Grid item xs={12} md={3}>
             <Box>
               <Typography variant='h5'>Bank Details</Typography>
-              <Typography variant='body1' sx={{mt: 1, color: 'text.secondary'}}>
+              <Typography
+                variant='body1'
+                sx={{ mt: 1, color: 'text.secondary' }}
+              >
                 View/Edit your bank details.
               </Typography>
             </Box>
@@ -188,12 +191,15 @@ const Accounting = ({settings, onUpdateSettings}) => {
             </Box>
           </Grid>
         </AppGridContainer>
-        <Divider sx={{my: 4}} />
+        <Divider sx={{ my: 4 }} />
         <AppGridContainer>
           <Grid item xs={12} md={3}>
             <Box>
               <Typography variant='h5'>Taxes</Typography>
-              <Typography variant='body1' sx={{mt: 1, color: 'text.secondary'}}>
+              <Typography
+                variant='body1'
+                sx={{ mt: 1, color: 'text.secondary' }}
+              >
                 Update your tax rates.
               </Typography>
             </Box>
@@ -242,10 +248,10 @@ const Accounting = ({settings, onUpdateSettings}) => {
             direction='row'
             justifyContent='flex-end'
             spacing={5}
-            sx={{mt: 3}}
+            sx={{ mt: 3 }}
           >
             <Button
-              sx={{color: 'text.secondary'}}
+              sx={{ color: 'text.secondary' }}
               onClick={() => setIsEdit(false)}
             >
               Cancel

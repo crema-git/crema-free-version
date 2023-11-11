@@ -5,10 +5,10 @@ import Fade from '@mui/material/Fade';
 import IconButton from '@mui/material/IconButton';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import Box from '@mui/material/Box';
-import {useNavigate} from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-const OrderActions = ({id, data, status, onChangeStatus}) => {
+const OrderActions = ({ id, data, status, onChangeStatus }) => {
   const navigate = useNavigate();
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
@@ -18,16 +18,16 @@ const OrderActions = ({id, data, status, onChangeStatus}) => {
   switch (status) {
     case 120: {
       orderList = [
-        {status: 121, label: 'Mark as Paid'},
-        {status: 122, label: 'Mark as Declined'},
-        {status: 123, label: 'Mark as Cancelled'},
+        { status: 121, label: 'Mark as Paid' },
+        { status: 122, label: 'Mark as Declined' },
+        { status: 123, label: 'Mark as Cancelled' },
       ];
       break;
     }
     case 121: {
       orderList = [
-        {status: 123, label: 'Mark as Cancelled'},
-        {status: 122, label: 'Mark as Declined'},
+        { status: 123, label: 'Mark as Cancelled' },
+        { status: 122, label: 'Mark as Declined' },
       ];
       break;
     }
@@ -85,7 +85,7 @@ const OrderActions = ({id, data, status, onChangeStatus}) => {
         TransitionComponent={Fade}
       >
         <MenuItem
-          style={{fontSize: 14}}
+          style={{ fontSize: 14 }}
           onClick={() => navigate(`/invoice/pdf/${id}`)}
         >
           View Invoice
@@ -93,7 +93,7 @@ const OrderActions = ({id, data, status, onChangeStatus}) => {
         {orderList?.map((item, index) => (
           <MenuItem
             key={index}
-            style={{fontSize: 14}}
+            style={{ fontSize: 14 }}
             onClick={() => onChangeStatus(data, item.status)}
           >
             {item.label}

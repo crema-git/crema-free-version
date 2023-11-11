@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import {Pie, PieChart, ResponsiveContainer, Sector} from 'recharts';
+import React, { Component } from 'react';
+import { Pie, PieChart, ResponsiveContainer, Sector } from 'recharts';
 import data from './data';
 
 const renderActiveShape = (props) => {
@@ -78,7 +78,7 @@ const renderActiveShape = (props) => {
 class CustomActiveShapePieChart extends Component {
   constructor() {
     super();
-    this.state = {activeIndex: 0};
+    this.state = { activeIndex: 0 };
   }
 
   onPieEnter = (data, index) => {

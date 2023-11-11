@@ -1,11 +1,11 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import Select from '@mui/material/Select';
 import PropTypes from 'prop-types';
 import MenuItem from '@mui/material/MenuItem';
-import {styled} from '@mui/material/styles';
-import {alpha} from '@mui/material';
+import { styled } from '@mui/material/styles';
+import { alpha } from '@mui/material';
 
-const SelectBox = styled(Select)(({theme}) => {
+const SelectBox = styled(Select)(({ theme }) => {
   return {
     marginLeft: 8,
     cursor: 'pointer',
@@ -37,7 +37,7 @@ const SelectBox = styled(Select)(({theme}) => {
   };
 });
 
-const AppSelect = ({menus, onChange, defaultValue, selectionKey}) => {
+const AppSelect = ({ menus, onChange, defaultValue, selectionKey }) => {
   const [selectionType, setSelectionType] = useState(defaultValue);
 
   const handleSelectionType = (event) => {

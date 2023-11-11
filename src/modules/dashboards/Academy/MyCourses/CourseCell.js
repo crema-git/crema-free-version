@@ -1,6 +1,6 @@
 import React from 'react';
 import Box from '@mui/material/Box';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Fonts } from '@crema/constants/AppEnums';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
@@ -9,7 +9,7 @@ import Fade from '@mui/material/Fade';
 import MenuItem from '@mui/material/MenuItem';
 import PropTypes from 'prop-types';
 
-const CourseCell = ({course}) => {
+const CourseCell = ({ course }) => {
   const [anchorEl, setAnchorEl] = React.useState(null);
 
   const open = Boolean(anchorEl);
@@ -27,8 +27,8 @@ const CourseCell = ({course}) => {
       key={course.id}
       sx={{
         display: 'flex',
-        flexDirection: {xs: 'column', sm: 'row'},
-        alignItems: {sm: 'center'},
+        flexDirection: { xs: 'column', sm: 'row' },
+        alignItems: { sm: 'center' },
         py: 2,
         px: 5,
         '&:not(:last-of-type)': {
@@ -45,7 +45,7 @@ const CourseCell = ({course}) => {
       >
         <Box
           sx={{
-            mr: {xs: 3, md: 4},
+            mr: { xs: 3, md: 4 },
             '& .logo': {
               height: 60,
               width: 60,
@@ -87,7 +87,7 @@ const CourseCell = ({course}) => {
 
       <Box
         sx={{
-          ml: {sm: 'auto'},
+          ml: { sm: 'auto' },
           display: 'flex',
           alignItems: 'center',
         }}
@@ -132,7 +132,7 @@ const CourseCell = ({course}) => {
             <Box
               sx={{
                 mx: 2,
-                fontSize: {xs: 14, xl: 16},
+                fontSize: { xs: 14, xl: 16 },
               }}
               component='span'
             >

@@ -1,11 +1,11 @@
 import React from 'react';
 import Box from '@mui/material/Box';
 import InsertDriveFileIcon from '@mui/icons-material/InsertDriveFile';
-import {IconButton, Typography} from '@mui/material';
+import { IconButton, Typography } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
 import PropsTypes from 'prop-types';
 
-const FileRow = ({file, onDeleteUploadFile}) => {
+const FileRow = ({ file, onDeleteUploadFile }) => {
   return (
     <Box
       sx={{
@@ -17,10 +17,10 @@ const FileRow = ({file, onDeleteUploadFile}) => {
         p: 2.5,
       }}
     >
-      <Box sx={{mr: 3}}>
+      <Box sx={{ mr: 3 }}>
         <InsertDriveFileIcon />
       </Box>
-      <Box sx={{flex: 1}}>
+      <Box sx={{ flex: 1 }}>
         <Typography>{file.path}</Typography>
         <Box
           component='span'
@@ -38,7 +38,7 @@ const FileRow = ({file, onDeleteUploadFile}) => {
         }}
         onClick={() => onDeleteUploadFile(file)}
       >
-        <CloseIcon sx={{fontSize: 18}} />
+        <CloseIcon sx={{ fontSize: 18 }} />
       </IconButton>
     </Box>
   );

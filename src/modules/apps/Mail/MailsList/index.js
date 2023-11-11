@@ -1,7 +1,7 @@
-import React, {useState} from 'react';
-import {useLocation, useNavigate, useParams} from 'react-router-dom';
+import React, { useState } from 'react';
+import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import MailContentHeader from './MailContentHeader';
-import {Hidden} from '@mui/material';
+import { Hidden } from '@mui/material';
 import AppsPagination from '@crema/components/AppsPagination';
 import AppsContent from '@crema/components/AppsContainer/AppsContent';
 import AppsHeader from '@crema/components/AppsContainer/AppsHeader';
@@ -10,8 +10,8 @@ import AppList from '@crema/components/AppList';
 import ListEmptyResult from '@crema/components/AppList/ListEmptyResult';
 import EmailListSkeleton from '@crema/components/AppSkeleton/EmailListSkeleton';
 import MailListItem from './MailListItem';
-import {useInfoViewActionsContext} from '@crema/context/AppContextProvider/InfoViewContextProvider';
-import {putDataApi} from '@crema/hooks/APIHooks';
+import { useInfoViewActionsContext } from '@crema/context/AppContextProvider/InfoViewContextProvider';
+import { putDataApi } from '@crema/hooks/APIHooks';
 import MailListItemMobile from './MailListItemMobile';
 
 import {
@@ -23,9 +23,9 @@ const MailsList = () => {
   const navigate = useNavigate();
   const params = useParams();
   const infoViewActionsContext = useInfoViewActionsContext();
-  const {page, mailList, loading} = useMailContext();
-  const {onPageChange, setMailData} = useMailActionsContext();
-  const {pathname} = useLocation();
+  const { page, mailList, loading } = useMailContext();
+  const { onPageChange, setMailData } = useMailActionsContext();
+  const { pathname } = useLocation();
   const path = pathname.split('/');
 
   const [checkedMails, setCheckedMails] = useState([]);
@@ -50,7 +50,7 @@ const MailsList = () => {
       onNavigatePage(mail);
     } else {
       mail.isRead = true;
-      putDataApi('/api/mailApp/mail/', infoViewActionsContext, {mail})
+      putDataApi('/api/mailApp/mail/', infoViewActionsContext, { mail })
         .then((data) => {
           console.log('onViewMailDetail', data, mailList);
           onNavigatePage(mail);

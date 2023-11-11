@@ -9,10 +9,10 @@ import PrintIcon from '@mui/icons-material/Print';
 import ShareIcon from '@mui/icons-material/Share';
 
 const actions = [
-  {icon: <FileCopyIcon />, name: 'Copy'},
-  {icon: <SaveIcon />, name: 'Save'},
-  {icon: <PrintIcon />, name: 'Print'},
-  {icon: <ShareIcon />, name: 'Share'},
+  { icon: <FileCopyIcon />, name: 'Copy' },
+  { icon: <SaveIcon />, name: 'Save' },
+  { icon: <PrintIcon />, name: 'Print' },
+  { icon: <ShareIcon />, name: 'Share' },
 ];
 
 export default function ControlledOpenSpeedDial() {
@@ -21,10 +21,10 @@ export default function ControlledOpenSpeedDial() {
   const handleClose = () => setOpen(false);
 
   return (
-    <Box sx={{height: 320, transform: 'translateZ(0px)', flexGrow: 1}}>
+    <Box sx={{ height: 320, transform: 'translateZ(0px)', flexGrow: 1 }}>
       <SpeedDial
         ariaLabel='SpeedDial uncontrolled open example'
-        sx={{position: 'absolute', bottom: 16, right: 16}}
+        sx={{ position: 'absolute', bottom: 16, right: 16 }}
         icon={<SpeedDialIcon />}
         onClose={handleClose}
         onOpen={handleOpen}

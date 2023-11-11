@@ -22,7 +22,7 @@ export default function LayoutTextFields() {
       sx={{
         display: 'flex',
         flexDirection: 'column',
-        '& .MuiTextField-root': {width: '25ch'},
+        '& .MuiTextField-root': { width: '25ch' },
       }}
     >
       <RedBar />

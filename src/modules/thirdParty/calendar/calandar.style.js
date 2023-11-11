@@ -1,9 +1,9 @@
-import {styled} from '@mui/material/styles';
-import {Calendar} from 'react-big-calendar';
+import { styled } from '@mui/material/styles';
+import { Calendar } from 'react-big-calendar';
 import 'react-big-calendar/lib/css/react-big-calendar.css';
 import './calendar.css';
 
-export const StyledCalendar = styled(Calendar)(({theme}) => ({
+export const StyledCalendar = styled(Calendar)(({ theme }) => ({
   '& .cr-calendar .react-daypicker-root .day.today, & .cr-calendar .react-daypicker-root .day.today:hover ':
     {
       color: theme.palette.primary.main,

@@ -1,10 +1,10 @@
 import React from 'react';
-import {Box, Typography} from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import AppCard from '@crema/components/AppCard';
 import PropTypes from 'prop-types';
 
 const SalesState = (props) => {
-  const {bgColor, icon, type, value} = props.state;
+  const { bgColor, icon, type, value } = props.state;
 
   return (
     <AppCard
@@ -26,7 +26,7 @@ const SalesState = (props) => {
             alignSelf: 'flex-start',
             '& img': {
               display: 'block',
-              width: {xs: 'auto', lg: 50, xl: 'auto'},
+              width: { xs: 'auto', lg: 50, xl: 'auto' },
             },
           }}
         >

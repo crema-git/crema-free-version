@@ -1,16 +1,16 @@
 import React from 'react';
-import {Box, Grid} from '@mui/material';
+import { Box, Grid } from '@mui/material';
 import Button from '@mui/material/Button';
-import {useNavigate} from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import AppCard from '@crema/components/AppCard';
 import IntlMessages from '@crema/helpers/IntlMessages';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Fonts } from '@crema/constants/AppEnums';
 import AppAnimate from '@crema/components/AppAnimate';
 import AppGridContainer from '@crema/components/AppGridContainer';
-import {postDataApi, putDataApi, useGetDataApi} from '@crema/hooks/APIHooks';
+import { postDataApi, putDataApi, useGetDataApi } from '@crema/hooks/APIHooks';
 
 import AppLoader from '@crema/components/AppLoader';
-import {useInfoViewActionsContext} from '@crema/context/AppContextProvider/InfoViewContextProvider';
+import { useInfoViewActionsContext } from '@crema/context/AppContextProvider/InfoViewContextProvider';
 import CartTable from './CartTable';
 import OrderSummary from '../OrderSummary';
 
@@ -20,7 +20,7 @@ const Carts = () => {
   const infoViewActionsContext = useInfoViewActionsContext();
   const navigate = useNavigate();
 
-  const [{apiData, loading}, {setData}] = useGetDataApi(
+  const [{ apiData, loading }, { setData }] = useGetDataApi(
     '/api/cart/get',
     [],
     {},
@@ -41,7 +41,7 @@ const Carts = () => {
   const onDecrement = (data) => {
     if (data.count > 1) {
       putDataApi('/api/cart/update', infoViewActionsContext, {
-        product: {...data, count: data.count - 1},
+        product: { ...data, count: data.count - 1 },
       })
         .then((data) => {
           setData(data);
@@ -63,7 +63,7 @@ const Carts = () => {
   };
   const onIncrement = (data) => {
     putDataApi('/api/cart/update', infoViewActionsContext, {
-      product: {...data, count: data.count + 1},
+      product: { ...data, count: data.count + 1 },
     })
       .then((data) => {
         setData(data);
@@ -94,7 +94,7 @@ const Carts = () => {
             <AppGridContainer>
               <Grid item xs={12} md={8}>
                 <AppCard
-                  contentStyle={{px: 0}}
+                  contentStyle={{ px: 0 }}
                   footer={
                     <Box
                       sx={{

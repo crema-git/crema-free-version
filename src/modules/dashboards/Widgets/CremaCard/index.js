@@ -1,11 +1,11 @@
 import React from 'react';
 import Box from '@mui/material/Box';
 import PropTypes from 'prop-types';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Fonts } from '@crema/constants/AppEnums';
 import AppCard from '@crema/components/AppCard';
 
 const CremaCard = (props) => {
-  const {data, bgColor, icon} = props;
+  const { data, bgColor, icon } = props;
 
   return (
     <AppCard
@@ -16,7 +16,7 @@ const CremaCard = (props) => {
     >
       <Box
         sx={{
-          mb: {xs: 4, xl: 6},
+          mb: { xs: 4, xl: 6 },
           mt: 1,
           display: 'flex',
           alignItems: 'center',
@@ -91,7 +91,7 @@ const CremaCard = (props) => {
         component='p'
         sx={{
           color: 'primary.contrastText',
-          mb: {xs: 1, xl: 4},
+          mb: { xs: 1, xl: 4 },
           fontSize: 14,
         }}
       >

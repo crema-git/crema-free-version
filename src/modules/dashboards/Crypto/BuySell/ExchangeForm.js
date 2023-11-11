@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import Box from '@mui/material/Box';
 import CoinDropdown from './CoinDropdown';
 import PropTypes from 'prop-types';
@@ -6,7 +6,7 @@ import CurrencyField from './CurrencyField';
 import IntlMessages from '@crema/helpers/IntlMessages';
 import Button from '@mui/material/Button';
 
-const ExchangeForm = ({coinList, type = 'buy'}) => {
+const ExchangeForm = ({ coinList, type = 'buy' }) => {
   const [selectedCoinId, setSelectedCoinID] = React.useState(coinList[0].id);
   const [usdValue, setUsdValue] = useState(0);
   const [coinValue, setCoinValue] = useState(0);

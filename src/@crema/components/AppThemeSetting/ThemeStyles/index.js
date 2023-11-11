@@ -1,9 +1,9 @@
 import React from 'react';
-import {CustomizerItemWrapper, StyledToggleButton} from '../index.style';
+import { CustomizerItemWrapper, StyledToggleButton } from '../index.style';
 import Box from '@mui/material/Box';
 import IntlMessages from '@crema/helpers/IntlMessages';
 import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
-import {ThemeStyle} from '@crema/constants/AppEnums';
+import { ThemeStyle } from '@crema/constants/AppEnums';
 import clsx from 'clsx';
 import {
   useThemeActionsContext,
@@ -11,15 +11,15 @@ import {
 } from '@crema/context/AppContextProvider/ThemeContextProvider';
 
 const ThemeStyles = () => {
-  const {themeStyle} = useThemeContext();
-  const {updateThemeStyle} = useThemeActionsContext();
+  const { themeStyle } = useThemeContext();
+  const { updateThemeStyle } = useThemeActionsContext();
 
   const onStyleChange = (event, themeStyle) => {
     if (themeStyle) updateThemeStyle(themeStyle);
   };
   return (
     <CustomizerItemWrapper>
-      <Box component='h4' sx={{mb: 2}}>
+      <Box component='h4' sx={{ mb: 2 }}>
         <IntlMessages id='customizer.themeStyle' />
       </Box>
       <ToggleButtonGroup

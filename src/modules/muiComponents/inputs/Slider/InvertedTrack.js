@@ -1,11 +1,11 @@
 import * as React from 'react';
-import {styled} from '@mui/material/styles';
+import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Slider from '@mui/material/Slider';
 
 const Separator = styled('div')(
-  ({theme}) => `
+  ({ theme }) => `
   height: ${theme.spacing(3)};
 `,
 );
@@ -35,7 +35,7 @@ function valuetext(value) {
 
 export default function TrackInvertedSlider() {
   return (
-    <Box sx={{width: 250}}>
+    <Box sx={{ width: 250 }}>
       <Typography id='track-inverted-slider' gutterBottom>
         Inverted track
       </Typography>

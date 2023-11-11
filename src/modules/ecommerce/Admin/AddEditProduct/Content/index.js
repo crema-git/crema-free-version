@@ -1,5 +1,5 @@
 import React from 'react';
-import {Box, Grid} from '@mui/material';
+import { Box, Grid } from '@mui/material';
 import AppTextField from '@crema/components/AppFormComponents/AppTextField';
 import AppCard from '@crema/components/AppCard';
 import ImgUpload from './ImageUpload';
@@ -35,7 +35,7 @@ const ProductContent = ({
   return (
     <Slide direction='right' in mountOnEnter unmountOnExit>
       <Grid item xs={12} lg={8}>
-        <AppScrollbar style={{height: '700px'}}>
+        <AppScrollbar style={{ height: '700px' }}>
           <AppCard>
             <AppTextField
               name='title'
@@ -47,7 +47,7 @@ const ProductContent = ({
               label='Product Name'
             />
 
-            <Box component='p' sx={{mt: 3, fontSize: 16}}>
+            <Box component='p' sx={{ mt: 3, fontSize: 16 }}>
               Description*
             </Box>
             <Box
@@ -63,7 +63,7 @@ const ProductContent = ({
                 onChange={(value) => setFieldValue('description', value)}
               />
             </Box>
-            <Box component='p' sx={{mt: 3, mb: 2, fontSize: 16}}>
+            <Box component='p' sx={{ mt: 3, mb: 2, fontSize: 16 }}>
               Images
             </Box>
             <ImgUpload

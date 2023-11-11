@@ -4,13 +4,13 @@ import IntlMessages from '@crema/helpers/IntlMessages';
 import Select from '@mui/material/Select';
 import FormControl from '@mui/material/FormControl';
 import PropTypes from 'prop-types';
-import {MenuItem} from '@mui/material';
-import {putDataApi} from '@crema/hooks/APIHooks';
-import {useInfoViewActionsContext} from '@crema/context/AppContextProvider/InfoViewContextProvider';
-import {useTodoContext} from '../../../context/TodoContextProvider';
+import { MenuItem } from '@mui/material';
+import { putDataApi } from '@crema/hooks/APIHooks';
+import { useInfoViewActionsContext } from '@crema/context/AppContextProvider/InfoViewContextProvider';
+import { useTodoContext } from '../../../context/TodoContextProvider';
 
-const TaskStatus = ({selectedTask, onUpdateSelectedTask}) => {
-  const {statusList} = useTodoContext();
+const TaskStatus = ({ selectedTask, onUpdateSelectedTask }) => {
+  const { statusList } = useTodoContext();
   const infoViewActionsContext = useInfoViewActionsContext();
 
   const onChangeStatus = (event) => {

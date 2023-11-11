@@ -1,8 +1,8 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
-import {DataGrid} from '@mui/x-data-grid';
-import {useDemoData} from '@mui/x-data-grid-generator';
-import {darken, lighten, styled} from '@mui/material/styles';
+import { DataGrid } from '@mui/x-data-grid';
+import { useDemoData } from '@mui/x-data-grid-generator';
+import { darken, lighten, styled } from '@mui/material/styles';
 
 const getBackgroundColor = (color, mode) =>
   mode === 'dark' ? darken(color, 0.7) : lighten(color, 0.7);
@@ -16,7 +16,7 @@ const getSelectedBackgroundColor = (color, mode) =>
 const getSelectedHoverBackgroundColor = (color, mode) =>
   mode === 'dark' ? darken(color, 0.4) : lighten(color, 0.4);
 
-const StyledDataGrid = styled(DataGrid)(({theme}) => ({
+const StyledDataGrid = styled(DataGrid)(({ theme }) => ({
   '& .super-app-theme--Open': {
     backgroundColor: getBackgroundColor(
       theme.palette.info.main,
@@ -116,13 +116,13 @@ const StyledDataGrid = styled(DataGrid)(({theme}) => ({
 }));
 
 export default function StylingRowsGrid() {
-  const {data} = useDemoData({
+  const { data } = useDemoData({
     dataSet: 'Commodity',
     rowLength: 100,
   });
 
   return (
-    <Box sx={{height: 400, width: '100%'}}>
+    <Box sx={{ height: 400, width: '100%' }}>
       <StyledDataGrid
         {...data}
         getRowClassName={(params) => `super-app-theme--${params.row.status}`}

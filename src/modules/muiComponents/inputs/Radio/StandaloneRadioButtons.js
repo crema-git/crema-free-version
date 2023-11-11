@@ -15,14 +15,14 @@ export default function RadioButtons() {
         onChange={handleChange}
         value='a'
         name='radio-buttons'
-        inputProps={{'aria-label': 'A'}}
+        inputProps={{ 'aria-label': 'A' }}
       />
       <Radio
         checked={selectedValue === 'b'}
         onChange={handleChange}
         value='b'
         name='radio-buttons'
-        inputProps={{'aria-label': 'B'}}
+        inputProps={{ 'aria-label': 'B' }}
       />
     </div>
   );

@@ -1,17 +1,17 @@
 import React from 'react';
 import Accordion from '@mui/material/Accordion';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import {Box} from '@mui/material';
+import { Box } from '@mui/material';
 import AccordionSummary from '@mui/material/AccordionSummary';
 
 import AppCard from '@crema/components/AppCard';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Fonts } from '@crema/constants/AppEnums';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import AppLinearProgress from '@crema/components/AppLinearProgress';
 import WatchLaterIcon from '@mui/icons-material/WatchLater';
 import PropTypes from 'prop-types';
 
-const TicketsSupport = ({tickets}) => {
+const TicketsSupport = ({ tickets }) => {
   const [expanded, setExpanded] = React.useState(1);
 
   const handleChange = (panel) => (event, isExpanded) => {
@@ -20,9 +20,9 @@ const TicketsSupport = ({tickets}) => {
   return (
     <AppCard
       sxStyle={{
-        mb: {xs: 5, md: 8},
+        mb: { xs: 5, md: 8 },
       }}
-      contentStyle={{padding: 0}}
+      contentStyle={{ padding: 0 }}
       footer={
         <Box
           sx={{
@@ -31,7 +31,7 @@ const TicketsSupport = ({tickets}) => {
             alignItems: 'center',
           }}
         >
-          <WatchLaterIcon style={{fontSize: 16}} />
+          <WatchLaterIcon style={{ fontSize: 16 }} />
           <Box
             component='span'
             sx={{

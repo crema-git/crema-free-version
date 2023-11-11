@@ -1,21 +1,21 @@
 import React from 'react';
 import AppGridContainer from '@crema/components/AppGridContainer';
-import {Grid} from '@mui/material';
+import { Grid } from '@mui/material';
 import Box from '@mui/material/Box';
 import PropTypes from 'prop-types';
 
-const Product = ({product}) => {
+const Product = ({ product }) => {
   return (
     <Box
       sx={{
         position: 'relative',
-        mb: {xs: 7.5, md: 15},
+        mb: { xs: 7.5, md: 15 },
         px: 7.5,
         '& .product-img img': {
           width: '100%',
         },
         '& .product-grid:nth-of-type(odd) .product-img': {
-          mt: {md: 25},
+          mt: { md: 25 },
         },
       }}
     >

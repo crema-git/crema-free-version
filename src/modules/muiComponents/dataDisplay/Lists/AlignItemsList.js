@@ -9,7 +9,7 @@ import Typography from '@mui/material/Typography';
 
 export default function AlignItemsList() {
   return (
-    <List sx={{width: '100%', maxWidth: 360, bgcolor: 'background.paper'}}>
+    <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
       <ListItem alignItems='flex-start'>
         <ListItemAvatar>
           <Avatar alt='Remy Sharp' src='/static/images/avatar/1.jpg' />
@@ -19,7 +19,7 @@ export default function AlignItemsList() {
           secondary={
             <React.Fragment>
               <Typography
-                sx={{display: 'inline'}}
+                sx={{ display: 'inline' }}
                 component='span'
                 variant='body2'
                 color='text.primary'
@@ -41,7 +41,7 @@ export default function AlignItemsList() {
           secondary={
             <React.Fragment>
               <Typography
-                sx={{display: 'inline'}}
+                sx={{ display: 'inline' }}
                 component='span'
                 variant='body2'
                 color='text.primary'
@@ -63,7 +63,7 @@ export default function AlignItemsList() {
           secondary={
             <React.Fragment>
               <Typography
-                sx={{display: 'inline'}}
+                sx={{ display: 'inline' }}
                 component='span'
                 variant='body2'
                 color='text.primary'

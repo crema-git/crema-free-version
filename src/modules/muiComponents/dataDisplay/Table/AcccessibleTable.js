@@ -8,7 +8,7 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 
 function createData(name, calories, fat, carbs, protein) {
-  return {name, calories, fat, carbs, protein};
+  return { name, calories, fat, carbs, protein };
 }
 
 const rows = [
@@ -20,7 +20,7 @@ const rows = [
 export default function AcccessibleTable() {
   return (
     <TableContainer component={Paper}>
-      <Table sx={{minWidth: 650}} aria-label='caption table'>
+      <Table sx={{ minWidth: 650 }} aria-label='caption table'>
         <caption>A basic table example with a caption</caption>
         <TableHead>
           <TableRow>

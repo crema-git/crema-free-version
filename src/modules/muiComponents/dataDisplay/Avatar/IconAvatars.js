@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {green, pink} from '@mui/material/colors';
+import { green, pink } from '@mui/material/colors';
 import Avatar from '@mui/material/Avatar';
 import Stack from '@mui/material/Stack';
 import FolderIcon from '@mui/icons-material/Folder';
@@ -12,10 +12,10 @@ export default function IconAvatars() {
       <Avatar>
         <FolderIcon />
       </Avatar>
-      <Avatar sx={{bgcolor: pink[500]}}>
+      <Avatar sx={{ bgcolor: pink[500] }}>
         <PageviewIcon />
       </Avatar>
-      <Avatar sx={{bgcolor: green[500]}}>
+      <Avatar sx={{ bgcolor: green[500] }}>
         <AssignmentIcon />
       </Avatar>
     </Stack>

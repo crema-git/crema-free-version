@@ -4,11 +4,11 @@ import CardDetailItem from './CardDetailItem';
 import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
 import MonthlyLimitItem from './MonthlyLimitItem';
-import {Typography} from '@mui/material';
-import {useIntl} from 'react-intl';
+import { Typography } from '@mui/material';
+import { useIntl } from 'react-intl';
 
-const CardDetails = ({cardDetails}) => {
-  const {messages} = useIntl();
+const CardDetails = ({ cardDetails }) => {
+  const { messages } = useIntl();
   return (
     <AppCard title={messages['dashboard.crypto.cardDetails']}>
       <Box

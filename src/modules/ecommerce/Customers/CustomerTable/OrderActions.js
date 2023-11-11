@@ -5,7 +5,7 @@ import Fade from '@mui/material/Fade';
 import IconButton from '@mui/material/IconButton';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import Box from '@mui/material/Box';
-import {useNavigate} from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const OrderActions = () => {
   const navigate = useNavigate();
@@ -38,15 +38,15 @@ const OrderActions = () => {
         TransitionComponent={Fade}
       >
         <MenuItem
-          style={{fontSize: 14}}
+          style={{ fontSize: 14 }}
           onClick={() => navigate('/ecommerce/orders')}
         >
           View Order
         </MenuItem>
-        <MenuItem style={{fontSize: 14}} onClick={handleClose}>
+        <MenuItem style={{ fontSize: 14 }} onClick={handleClose}>
           Edit
         </MenuItem>
-        <MenuItem style={{fontSize: 14}} onClick={handleClose}>
+        <MenuItem style={{ fontSize: 14 }} onClick={handleClose}>
           Delete
         </MenuItem>
       </Menu>

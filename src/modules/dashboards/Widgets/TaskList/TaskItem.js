@@ -3,10 +3,10 @@ import ListItemText from '@mui/material/ListItemText';
 import Box from '@mui/material/Box';
 import ListItem from '@mui/material/ListItem';
 import PropTypes from 'prop-types';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Fonts } from '@crema/constants/AppEnums';
 
 const TaskItem = (props) => {
-  const {item} = props;
+  const { item } = props;
 
   return (
     <ListItem

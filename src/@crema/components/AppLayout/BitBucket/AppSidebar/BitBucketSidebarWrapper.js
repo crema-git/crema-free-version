@@ -1,8 +1,8 @@
 import React from 'react';
 import PropsTypes from 'prop-types';
-import {Box} from '@mui/material';
+import { Box } from '@mui/material';
 
-const BitBucketSidebarWrapper = ({children, ...rest}) => {
+const BitBucketSidebarWrapper = ({ children, ...rest }) => {
   return (
     <Box
       sx={{
@@ -27,7 +27,7 @@ const BitBucketSidebarWrapper = ({children, ...rest}) => {
           color: (theme) => theme.palette.primary.contrastText,
           cursor: 'pointer',
           zIndex: 99,
-          display: {xs: 'none', lg: 'block'},
+          display: { xs: 'none', lg: 'block' },
           '& svg': {
             display: 'block',
           },

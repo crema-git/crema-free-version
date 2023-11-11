@@ -1,11 +1,11 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import MenuItem from '@mui/material/MenuItem';
 import Box from '@mui/material/Box';
-import {useIntl} from 'react-intl';
+import { useIntl } from 'react-intl';
 import PropTypes from 'prop-types';
-import {StyledSelect} from './index.style';
+import { StyledSelect } from './index.style';
 
-const SelectTasksDropdown = ({checkedTasks, onSelectTasks}) => {
+const SelectTasksDropdown = ({ checkedTasks, onSelectTasks }) => {
   const [selectedItems, setSelectedItems] = useState(1);
   useEffect(() => {
     if (checkedTasks.length === 0) setSelectedItems(1);
@@ -15,12 +15,12 @@ const SelectTasksDropdown = ({checkedTasks, onSelectTasks}) => {
     onSelectTasks(event.target.value);
   };
 
-  const {messages} = useIntl();
+  const { messages } = useIntl();
 
   return (
     <Box
       sx={{
-        mr: {xs: 2, xl: 4},
+        mr: { xs: 2, xl: 4 },
       }}
       component='span'
     >

@@ -1,5 +1,10 @@
-import React, {createContext, useCallback, useContext, useReducer} from 'react';
-import {contextReducer, InFoViewActions} from './InfoViewReducer';
+import React, {
+  createContext,
+  useCallback,
+  useContext,
+  useReducer,
+} from 'react';
+import { contextReducer, InFoViewActions } from './InfoViewReducer';
 import PropTypes from 'prop-types';
 
 export const ContextState = {
@@ -23,23 +28,23 @@ const InfoViewContextProvider = (props) => {
   );
 
   const fetchStart = useCallback(() => {
-    dispatch({type: InFoViewActions.FETCH_STARTS});
+    dispatch({ type: InFoViewActions.FETCH_STARTS });
   }, []);
 
   const fetchSuccess = useCallback(() => {
-    dispatch({type: InFoViewActions.FETCH_SUCCESS});
+    dispatch({ type: InFoViewActions.FETCH_SUCCESS });
   }, []);
 
   const fetchError = (error) => {
-    dispatch({type: InFoViewActions.SET_ERROR, payload: error});
+    dispatch({ type: InFoViewActions.SET_ERROR, payload: error });
   };
 
   const showMessage = (message) => {
-    dispatch({type: InFoViewActions.SET_MESSAGE, payload: message});
+    dispatch({ type: InFoViewActions.SET_MESSAGE, payload: message });
   };
 
   const clearInfoView = () => {
-    dispatch({type: InFoViewActions.CLEAR_INFOVIEW});
+    dispatch({ type: InFoViewActions.CLEAR_INFOVIEW });
   };
 
   return (

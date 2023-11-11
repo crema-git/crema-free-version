@@ -1,15 +1,15 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import DealsTable from './DealsTable';
 import IntlMessages from '@crema/helpers/IntlMessages';
-import {useIntl} from 'react-intl';
+import { useIntl } from 'react-intl';
 import Box from '@mui/material/Box';
 import PropTypes from 'prop-types';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Fonts } from '@crema/constants/AppEnums';
 import AppCard from '@crema/components/AppCard';
 import AppSelect from '@crema/components/AppSelect';
 
 const Deals = (props) => {
-  const {dealsTableData} = props;
+  const { dealsTableData } = props;
   const [tableData, setTableData] = useState(dealsTableData);
 
   const handleChange = (value) => {
@@ -26,7 +26,7 @@ const Deals = (props) => {
     }
   };
 
-  const {messages} = useIntl();
+  const { messages } = useIntl();
 
   return (
     <AppCard
@@ -39,7 +39,7 @@ const Deals = (props) => {
         >
           <Box
             sx={{
-              mr: {xs: 3, lg: 8},
+              mr: { xs: 3, lg: 8 },
               fontWeight: Fonts.BOLD,
               fontSize: 16,
             }}
@@ -58,9 +58,9 @@ const Deals = (props) => {
           />
         </Box>
       }
-      contentStyle={{px: 0}}
+      contentStyle={{ px: 0 }}
       action={messages['common.viewAll']}
-      sxStyle={{height: 1}}
+      sxStyle={{ height: 1 }}
     >
       <DealsTable dealsTableData={tableData} />
     </AppCard>

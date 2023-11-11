@@ -8,7 +8,7 @@ import {
   CardContent,
   CardMedia,
 } from '@mui/material';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Fonts } from '@crema/constants/AppEnums';
 
 const AppCardMedia = ({
   children,
@@ -23,8 +23,11 @@ const AppCardMedia = ({
   ...rest
 }) => {
   return (
-    <Card sx={{display: 'flex', flexDirection: 'column', ...sxStyle}} {...rest}>
-      <Box sx={{position: 'relative'}}>
+    <Card
+      sx={{ display: 'flex', flexDirection: 'column', ...sxStyle }}
+      {...rest}
+    >
+      <Box sx={{ position: 'relative' }}>
         <CardMedia
           component='img'
           image={cardMedia}

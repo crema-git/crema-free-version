@@ -1,19 +1,19 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
 import dayjs from 'dayjs';
-import {Zoom} from '@mui/material';
-import {useIntl} from 'react-intl';
+import { Zoom } from '@mui/material';
+import { useIntl } from 'react-intl';
 import AppSearchBar from '@crema/components/AppSearchBar';
-import {useAuthUser} from '@crema/hooks/AuthHooks';
-import {useChatContext} from '../../context/ChatContextProvider';
+import { useAuthUser } from '@crema/hooks/AuthHooks';
+import { useChatContext } from '../../context/ChatContextProvider';
 import ChatTabs from './ChatTabs';
 import ChatUserInfo from './UserInfo';
 
-const ChatSideBar = ({selectedUser, setSelectedUser}) => {
-  const {connectionList, loading} = useChatContext();
+const ChatSideBar = ({ selectedUser, setSelectedUser }) => {
+  const { connectionList, loading } = useChatContext();
   const [keywords, setKeywords] = useState('');
-  const {user} = useAuthUser();
+  const { user } = useAuthUser();
 
   const getConnectionList = () => {
     if (keywords !== '') {
@@ -43,7 +43,7 @@ const ChatSideBar = ({selectedUser, setSelectedUser}) => {
 
   const chatListData = getChatList();
 
-  const {messages} = useIntl();
+  const { messages } = useIntl();
 
   return (
     <Box
@@ -53,7 +53,7 @@ const ChatSideBar = ({selectedUser, setSelectedUser}) => {
         flexDirection: 'column',
       }}
     >
-      <Zoom in style={{transitionDelay: '300ms'}}>
+      <Zoom in style={{ transitionDelay: '300ms' }}>
         <Box
           sx={{
             px: 5,

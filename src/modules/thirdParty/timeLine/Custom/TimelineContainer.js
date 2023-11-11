@@ -1,18 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {Box} from '@mui/material';
+import { Box } from '@mui/material';
 
-const TimelineContainer = ({children}) => {
+const TimelineContainer = ({ children }) => {
   return (
     <Box
       sx={{
         display: 'flex',
         flexDirection: 'column',
         position: 'relative',
-        margin: {xs: '20px 0', md: '40px 0'},
+        margin: { xs: '20px 0', md: '40px 0' },
         width: '100%',
-        minWidth: {'@media (max-width: 499px)': 400},
-        paddingRight: {'@media (max-width: 499px)': 4},
+        minWidth: { '@media (max-width: 499px)': 400 },
+        paddingRight: { '@media (max-width: 499px)': 4 },
 
         '&:after': {
           backgroundColor: '#d5d6d8',

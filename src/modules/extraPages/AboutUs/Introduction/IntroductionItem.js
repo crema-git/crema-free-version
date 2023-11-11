@@ -1,23 +1,23 @@
 import React from 'react';
-import {Box, Typography} from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import PropTypes from 'prop-types';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Fonts } from '@crema/constants/AppEnums';
 
-const IntroductionItem = ({data}) => {
+const IntroductionItem = ({ data }) => {
   return (
     <Box
       sx={{
         display: 'flex',
       }}
     >
-      <Box sx={{mr: 5}}>
-        <img style={{minWidth: 34}} src={data.icon} alt='icon' />
+      <Box sx={{ mr: 5 }}>
+        <img style={{ minWidth: 34 }} src={data.icon} alt='icon' />
       </Box>
       <Box>
         <Typography
           component='h4'
           variant='h4'
-          sx={{fontWeight: Fonts.SEMI_BOLD, fontSize: 16, mb: 2.5}}
+          sx={{ fontWeight: Fonts.SEMI_BOLD, fontSize: 16, mb: 2.5 }}
         >
           {data.title}
         </Typography>

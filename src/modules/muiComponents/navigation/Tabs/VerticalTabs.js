@@ -6,7 +6,7 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 
 function TabPanel(props) {
-  const {children, value, index, ...other} = props;
+  const { children, value, index, ...other } = props;
 
   return (
     <div
@@ -17,7 +17,7 @@ function TabPanel(props) {
       {...other}
     >
       {value === index && (
-        <Box sx={{p: 3}}>
+        <Box sx={{ p: 3 }}>
           <Typography>{children}</Typography>
         </Box>
       )}
@@ -60,7 +60,7 @@ export default function VerticalTabs() {
         value={value}
         onChange={handleChange}
         aria-label='Vertical tabs example'
-        sx={{borderRight: 1, borderColor: 'divider'}}
+        sx={{ borderRight: 1, borderColor: 'divider' }}
       >
         <Tab label='Item One' {...a11yProps(0)} />
         <Tab label='Item Two' {...a11yProps(1)} />

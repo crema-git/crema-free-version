@@ -10,12 +10,12 @@ import {
   Slide,
   Typography,
 } from '@mui/material';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Fonts } from '@crema/constants/AppEnums';
 
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction='up' ref={ref} {...props} />;
 });
-const AppConfirmDialog = ({open, onDeny, onConfirm, title, dialogTitle}) => {
+const AppConfirmDialog = ({ open, onDeny, onConfirm, title, dialogTitle }) => {
   return (
     <Dialog
       TransitionComponent={Transition}
@@ -35,7 +35,7 @@ const AppConfirmDialog = ({open, onDeny, onConfirm, title, dialogTitle}) => {
         </Typography>
       </DialogTitle>
       <DialogContent
-        sx={{color: 'text.secondary', fontSize: 14}}
+        sx={{ color: 'text.secondary', fontSize: 14 }}
         id='alert-dialog-description'
       >
         {title}

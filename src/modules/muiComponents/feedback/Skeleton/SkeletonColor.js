@@ -14,7 +14,7 @@ export default function SkeletonColor() {
       }}
     >
       <Skeleton
-        sx={{bgcolor: 'grey.900'}}
+        sx={{ bgcolor: 'grey.900' }}
         variant='rectangular'
         width={210}
         height={118}

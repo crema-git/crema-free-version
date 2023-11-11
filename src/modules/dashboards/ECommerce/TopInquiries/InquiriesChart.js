@@ -1,8 +1,8 @@
 import React from 'react';
-import {Cell, Pie, PieChart, ResponsiveContainer, Tooltip} from 'recharts';
+import { Cell, Pie, PieChart, ResponsiveContainer, Tooltip } from 'recharts';
 import PropTypes from 'prop-types';
 
-const InquiriesChart = ({data}) => {
+const InquiriesChart = ({ data }) => {
   return (
     <ResponsiveContainer height={195}>
       <PieChart>
@@ -20,7 +20,7 @@ const InquiriesChart = ({data}) => {
           ))}
         </Pie>
         <Tooltip
-          labelStyle={{color: 'black'}}
+          labelStyle={{ color: 'black' }}
           contentStyle={{
             borderRadius: 12,
             borderColor: '#31354188',

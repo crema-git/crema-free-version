@@ -10,7 +10,7 @@ import BeachAccessIcon from '@mui/icons-material/BeachAccess';
 
 export default function FolderList() {
   return (
-    <List sx={{width: '100%', maxWidth: 360, bgcolor: 'background.paper'}}>
+    <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
       <ListItem>
         <ListItemAvatar>
           <Avatar>

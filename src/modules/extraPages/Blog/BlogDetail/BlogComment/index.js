@@ -1,16 +1,16 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import BlogCommentForm from './BlogCommentForm';
 import BlogCommentList from './BlogCommentList';
 import PropTypes from 'prop-types';
-import {Box, Typography} from '@mui/material';
-import {Formik} from 'formik';
+import { Box, Typography } from '@mui/material';
+import { Formik } from 'formik';
 import * as yup from 'yup';
 import dayjs from 'dayjs';
 import AppCard from '@crema/components/AppCard';
 import IntlMessages from '@crema/helpers/IntlMessages';
-import {Fonts} from '@crema/constants/AppEnums';
-import {useAuthUser} from '@crema/hooks/AuthHooks';
-import {generateRandomUniqueNumber} from '@crema/helpers/Common';
+import { Fonts } from '@crema/constants/AppEnums';
+import { useAuthUser } from '@crema/hooks/AuthHooks';
+import { generateRandomUniqueNumber } from '@crema/helpers/Common';
 
 const validationSchema = yup.object({
   name: yup.string().required(<IntlMessages id='validation.nameRequired' />),
@@ -21,7 +21,7 @@ const validationSchema = yup.object({
   comment: yup.string().required(<IntlMessages id='validation.comment' />),
 });
 
-const BlogComment = ({comment}) => {
+const BlogComment = ({ comment }) => {
   const user = useAuthUser();
 
   const [comments, setComments] = useState(comment);
@@ -42,12 +42,12 @@ const BlogComment = ({comment}) => {
   return (
     <AppCard>
       <BlogCommentList comments={comments} />
-      <Box sx={{position: 'relative'}}>
+      <Box sx={{ position: 'relative' }}>
         <Typography
           component='h3'
           sx={{
             mb: 7.5,
-            fontSize: {xs: 18, md: 20},
+            fontSize: { xs: 18, md: 20 },
             fontWeight: Fonts.BOLD,
           }}
         >
@@ -62,7 +62,7 @@ const BlogComment = ({comment}) => {
             comment: '',
           }}
           validationSchema={validationSchema}
-          onSubmit={(data, {resetForm}) => {
+          onSubmit={(data, { resetForm }) => {
             onCommentSend(data);
             resetForm();
           }}

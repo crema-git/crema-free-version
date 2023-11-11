@@ -3,17 +3,17 @@ import WebTrafficGraph from './WebTrafficGraph';
 import IntlMessages from '@crema/helpers/IntlMessages';
 import Box from '@mui/material/Box';
 import PropTypes from 'prop-types';
-import {blue, red} from '@mui/material/colors';
-import {Fonts} from '@crema/constants/AppEnums';
+import { blue, red } from '@mui/material/colors';
+import { Fonts } from '@crema/constants/AppEnums';
 import AppCard from '@crema/components/AppCard';
-import {useIntl} from 'react-intl';
+import { useIntl } from 'react-intl';
 
-const WebTraffic = ({websiteTrafficData}) => {
-  const {messages} = useIntl();
+const WebTraffic = ({ websiteTrafficData }) => {
+  const { messages } = useIntl();
   return (
     <AppCard
       sxStyle={{
-        mb: {xs: 5, md: 8},
+        mb: { xs: 5, md: 8 },
       }}
       title={messages['dashboard.websiteTraffic']}
     >
@@ -32,7 +32,7 @@ const WebTraffic = ({websiteTrafficData}) => {
             sx={{
               mb: 2,
               fontWeight: Fonts.MEDIUM,
-              fontSize: {xs: 18, xl: 20},
+              fontSize: { xs: 18, xl: 20 },
               color: red[500],
             }}
           >
@@ -53,7 +53,7 @@ const WebTraffic = ({websiteTrafficData}) => {
             color: 'grey.400',
             fontWeight: Fonts.MEDIUM,
             pt: 2,
-            fontSize: {xs: 18, xl: 20},
+            fontSize: { xs: 18, xl: 20 },
           }}
         >
           2019
@@ -64,7 +64,7 @@ const WebTraffic = ({websiteTrafficData}) => {
             sx={{
               mb: 2,
               fontWeight: Fonts.MEDIUM,
-              fontSize: {xs: 18, xl: 20},
+              fontSize: { xs: 18, xl: 20 },
               color: blue[400],
             }}
           >

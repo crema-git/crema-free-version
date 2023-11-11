@@ -1,15 +1,15 @@
 import React from 'react';
-import {alpha, Box} from '@mui/material';
+import { alpha, Box } from '@mui/material';
 import PropTypes from 'prop-types';
 
-const AccountTabsWrapper = ({children}) => {
+const AccountTabsWrapper = ({ children }) => {
   return (
     <Box
       sx={{
         display: 'flex',
-        flexDirection: {xs: 'column', sm: 'row'},
+        flexDirection: { xs: 'column', sm: 'row' },
         '& .account-tabs': {
-          minWidth: {xs: 200, lg: 280},
+          minWidth: { xs: 200, lg: 280 },
           backgroundColor: (theme) => theme.palette.background.paper,
           backgroundImage: (theme) =>
             `linear-gradient(${alpha(
@@ -32,7 +32,7 @@ const AccountTabsWrapper = ({children}) => {
           minHeight: 36,
           maxWidth: 'none',
           py: 1,
-          px: {xs: 4, lg: 6},
+          px: { xs: 4, lg: 6 },
           fontSize: 14,
           color: (theme) => theme.palette.text.primary,
           borderRadius: '0 30px 30px 0',
@@ -41,7 +41,7 @@ const AccountTabsWrapper = ({children}) => {
             mb: 0.25,
           },
           '& svg': {
-            fontSize: {xs: 16, md: 18, lg: 20},
+            fontSize: { xs: 16, md: 18, lg: 20 },
             margin: '4px 16px 0 0',
             textTransform: 'capitalize',
           },
@@ -61,8 +61,8 @@ const AccountTabsWrapper = ({children}) => {
           borderRadius: (theme) => theme.cardRadius / 4,
           p: 5,
           flex: 1,
-          ml: {sm: 5, lg: 8},
-          mt: {xs: 5, sm: 0},
+          ml: { sm: 5, lg: 8 },
+          mt: { xs: 5, sm: 0 },
         },
       }}
     >

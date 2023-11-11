@@ -1,13 +1,13 @@
 import React from 'react';
-import {alpha, Box} from '@mui/material';
-import {Fonts} from '@crema/constants/AppEnums';
-import {useIntl} from 'react-intl';
+import { alpha, Box } from '@mui/material';
+import { Fonts } from '@crema/constants/AppEnums';
+import { useIntl } from 'react-intl';
 import AppCard from '@crema/components/AppCard';
 import PropTypes from 'prop-types';
 
-import {HiOutlineMailOpen} from 'react-icons/hi';
-import {BiMessageDetail} from 'react-icons/bi';
-import {CgFileDocument} from 'react-icons/cg';
+import { HiOutlineMailOpen } from 'react-icons/hi';
+import { BiMessageDetail } from 'react-icons/bi';
+import { CgFileDocument } from 'react-icons/cg';
 import AppScrollbar from '@crema/components/AppScrollbar';
 
 const getWelcomeIcon = (iconType) => {
@@ -21,24 +21,24 @@ const getWelcomeIcon = (iconType) => {
   }
 };
 
-const WelcomeCard = ({data}) => {
-  const {messages} = useIntl();
+const WelcomeCard = ({ data }) => {
+  const { messages } = useIntl();
   return (
     <AppCard
       sxStyle={{
-        mb: {xs: 5, md: 8},
+        mb: { xs: 5, md: 8 },
       }}
     >
       <Box
         sx={{
           flex: 1,
           display: 'flex',
-          flexDirection: {xs: 'column', sm: 'row'},
+          flexDirection: { xs: 'column', sm: 'row' },
         }}
       >
         <Box
           sx={{
-            mr: {xs: 2, xl: 3},
+            mr: { xs: 2, xl: 3 },
             flex: 1,
             display: 'flex',
             flexDirection: 'column',
@@ -47,7 +47,7 @@ const WelcomeCard = ({data}) => {
         >
           <Box
             sx={{
-              mb: {md: 12},
+              mb: { md: 12 },
             }}
           >
             <Box
@@ -107,10 +107,10 @@ const WelcomeCard = ({data}) => {
                         mr: 4,
                         backgroundColor: (theme) =>
                           alpha(theme.palette.primary.main, 0.1),
-                        width: {xs: 46, md: 60},
-                        height: {xs: 46, md: 60},
-                        minWidth: {xs: 46, md: 60},
-                        fontSize: {xs: 24, md: 26},
+                        width: { xs: 46, md: 60 },
+                        height: { xs: 46, md: 60 },
+                        minWidth: { xs: 46, md: 60 },
+                        fontSize: { xs: 24, md: 26 },
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
@@ -153,7 +153,7 @@ const WelcomeCard = ({data}) => {
             alignItems: 'flex-end',
             marginRight: -2.5,
             marginBottom: -5,
-            maxWidth: {sm: 150, xl: 180},
+            maxWidth: { sm: 150, xl: 180 },
             '& img': {
               width: '100%',
               height: '100%',

@@ -1,7 +1,7 @@
-import React, {createContext, useContext, useEffect, useState} from 'react';
+import React, { createContext, useContext, useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
-import {useGetDataApi} from '@crema/hooks/APIHooks';
-import {useLocation, useParams} from 'react-router-dom';
+import { useGetDataApi } from '@crema/hooks/APIHooks';
+import { useLocation, useParams } from 'react-router-dom';
 
 const CalendarContext = createContext();
 const CalendarActionsContext = createContext();
@@ -11,31 +11,31 @@ export const useCalendarContext = () => useContext(CalendarContext);
 export const useCalendarActionsContext = () =>
   useContext(CalendarActionsContext);
 
-export const CalendarContextProvider = ({children}) => {
+export const CalendarContextProvider = ({ children }) => {
   const [filterData, setFilterData] = useState({
     status: [],
     priority: [],
   });
   const params = useParams();
-  const {pathname} = useLocation();
-  const [{apiData: labelList}] = useGetDataApi('/api/calendar/labels/list');
-  const [{apiData: priorityList}] = useGetDataApi(
+  const { pathname } = useLocation();
+  const [{ apiData: labelList }] = useGetDataApi('/api/calendar/labels/list');
+  const [{ apiData: priorityList }] = useGetDataApi(
     '/api/calendar/priority/list',
   );
-  const [{apiData: staffList}] = useGetDataApi('/api/calendar/staff/list');
-  const [{apiData: folderList}] = useGetDataApi(
+  const [{ apiData: staffList }] = useGetDataApi('/api/calendar/staff/list');
+  const [{ apiData: folderList }] = useGetDataApi(
     '/api/calendar/folders/list',
     [],
   );
-  const [{apiData: statusList}] = useGetDataApi(
+  const [{ apiData: statusList }] = useGetDataApi(
     '/api/calendar/status/list',
     [],
   );
   const [page, setPage] = useState(0);
 
   const [
-    {apiData: taskLists, loading},
-    {setQueryParams, setData: setCalenderData, reCallAPI},
+    { apiData: taskLists, loading },
+    { setQueryParams, setData: setCalenderData, reCallAPI },
   ] = useGetDataApi('/api/calendar/task/list', undefined, {}, false);
 
   useEffect(() => {

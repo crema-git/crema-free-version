@@ -1,23 +1,23 @@
 import React from 'react';
 import Box from '@mui/material/Box';
 import IntlMessages from '@crema/helpers/IntlMessages';
-import {Form} from 'formik';
+import { Form } from 'formik';
 import AppGridContainer from '@crema/components/AppGridContainer';
 import Grid from '@mui/material/Grid';
 import TextField from '@mui/material/TextField';
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
-import {useIntl} from 'react-intl';
+import { useIntl } from 'react-intl';
 import Divider from '@mui/material/Divider';
 import dayjs from 'dayjs';
 import PropTypes from 'prop-types';
-import {Autocomplete} from '@mui/lab';
+import { Autocomplete } from '@mui/lab';
 import AppTextField from '@crema/components/AppFormComponents/AppTextField';
 import AppScrollbar from '@crema/components/AppScrollbar';
 
-import {useScrumContext} from '../../../../context/ScrumContextProvider';
-import {DatePicker} from '@mui/x-date-pickers';
-import {generateRandomUniqueNumber} from '@crema/helpers/Common';
+import { useScrumContext } from '../../../../context/ScrumContextProvider';
+import { DatePicker } from '@mui/x-date-pickers';
+import { generateRandomUniqueNumber } from '@crema/helpers/Common';
 import CardAttachments from './CardAttachments';
 import CardCheckedList from './CardCheckedList';
 import CardComments from './CardComments';
@@ -42,8 +42,8 @@ const AddCardForm = (props) => {
     isSubmitting,
   } = props;
 
-  const {messages} = useIntl();
-  const {labelList, memberList} = useScrumContext();
+  const { messages } = useIntl();
+  const { labelList, memberList } = useScrumContext();
 
   const onDeleteCheckedItem = (id) => {
     const updatedList = checkedList.filter((item) => item.id !== id);
@@ -112,17 +112,17 @@ const AddCardForm = (props) => {
         <Box
           sx={{
             pt: 6,
-            px: {xs: 5, lg: 8, xl: 10},
+            px: { xs: 5, lg: 8, xl: 10 },
             pb: 2,
             display: 'flex',
-            flexDirection: {xs: 'column', md: 'row'},
-            alignItems: {md: 'center'},
+            flexDirection: { xs: 'column', md: 'row' },
+            alignItems: { md: 'center' },
           }}
         >
           <Box
             sx={{
               mb: 3,
-              width: {md: '60%'},
+              width: { md: '60%' },
             }}
           >
             <AppTextField
@@ -137,9 +137,9 @@ const AddCardForm = (props) => {
 
           <Box
             sx={{
-              ml: {md: 8},
+              ml: { md: 8 },
               mb: 3,
-              width: {md: '40%'},
+              width: { md: '40%' },
               '& .MuiFormControl-root': {
                 width: '100%',
               },
@@ -162,7 +162,7 @@ const AddCardForm = (props) => {
         <Box
           sx={{
             pb: 5,
-            px: {xs: 5, lg: 8, xl: 10},
+            px: { xs: 5, lg: 8, xl: 10 },
           }}
         >
           <AppTextField
@@ -214,7 +214,7 @@ const AddCardForm = (props) => {
                 renderOption={(props, option) => (
                   <Box
                     component='li'
-                    sx={{display: 'flex', alignItems: 'center'}}
+                    sx={{ display: 'flex', alignItems: 'center' }}
                     {...props}
                   >
                     {option.image ? (
@@ -254,8 +254,8 @@ const AddCardForm = (props) => {
 
           <Divider
             sx={{
-              mb: {xs: 4, md: 6},
-              mx: {xs: -5, lg: -8, xl: -10},
+              mb: { xs: 4, md: 6 },
+              mx: { xs: -5, lg: -8, xl: -10 },
             }}
           />
 

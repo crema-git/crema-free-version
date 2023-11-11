@@ -1,14 +1,14 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import Button from '@mui/material/Button';
-import {DataGridPro, useGridApiRef} from '@mui/x-data-grid-pro';
+import { DataGridPro, useGridApiRef } from '@mui/x-data-grid-pro';
 import {
   randomCreatedDate,
   randomTraderName,
   randomUpdatedDate,
 } from '@mui/x-data-grid-generator';
-import {createTheme} from '@mui/material/styles';
-import {makeStyles} from '@mui/styles';
+import { createTheme } from '@mui/material/styles';
+import { makeStyles } from '@mui/styles';
 
 const defaultTheme = createTheme();
 const useStyles = makeStyles(
@@ -19,25 +19,25 @@ const useStyles = makeStyles(
       borderBottom: `1px solid ${theme.palette.divider}`,
     },
   }),
-  {defaultTheme},
+  { defaultTheme },
 );
 
 function EditToolbar(props) {
-  const {selectedCellParams, apiRef, setSelectedCellParams} = props;
+  const { selectedCellParams, apiRef, setSelectedCellParams } = props;
   const classes = useStyles();
 
   const handleClick = () => {
     if (!selectedCellParams) {
       return;
     }
-    const {id, field, cellMode} = selectedCellParams;
+    const { id, field, cellMode } = selectedCellParams;
     if (cellMode === 'edit') {
-      apiRef.current.commitCellChange({id, field});
+      apiRef.current.commitCellChange({ id, field });
       apiRef.current.setCellMode(id, field, 'view');
-      setSelectedCellParams({...selectedCellParams, cellMode: 'view'});
+      setSelectedCellParams({ ...selectedCellParams, cellMode: 'view' });
     } else {
       apiRef.current.setCellMode(id, field, 'edit');
-      setSelectedCellParams({...selectedCellParams, cellMode: 'edit'});
+      setSelectedCellParams({ ...selectedCellParams, cellMode: 'edit' });
     }
   };
 
@@ -95,7 +95,7 @@ export default function StartEditButtonGrid() {
   }, []);
 
   return (
-    <div style={{height: 400, width: '100%'}}>
+    <div style={{ height: 400, width: '100%' }}>
       <DataGridPro
         rows={rows}
         columns={columns}
@@ -120,8 +120,8 @@ export default function StartEditButtonGrid() {
 }
 
 const columns = [
-  {field: 'name', headerName: 'Name', width: 180, editable: true},
-  {field: 'age', headerName: 'Age', type: 'number', editable: true},
+  { field: 'name', headerName: 'Name', width: 180, editable: true },
+  { field: 'age', headerName: 'Age', type: 'number', editable: true },
   {
     field: 'dateCreated',
     headerName: 'Date Created',

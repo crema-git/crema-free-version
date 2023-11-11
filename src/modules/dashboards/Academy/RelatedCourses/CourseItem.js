@@ -1,14 +1,14 @@
 import React from 'react';
 import Box from '@mui/material/Box';
 import VisibilityIcon from '@mui/icons-material/Visibility';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Fonts } from '@crema/constants/AppEnums';
 import PropTypes from 'prop-types';
 
-const CourseItem = ({data}) => {
+const CourseItem = ({ data }) => {
   return (
     <Box
       sx={{
-        px: {sm: 3},
+        px: { sm: 3 },
       }}
     >
       <Box

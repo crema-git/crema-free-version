@@ -1,18 +1,18 @@
-import React, {useEffect, useState} from 'react';
-import {Formik} from 'formik';
+import React, { useEffect, useState } from 'react';
+import { Formik } from 'formik';
 import * as yup from 'yup';
 import AppConfirmDialog from '@crema/components/AppConfirmDialog';
 import IntlMessages from '@crema/helpers/IntlMessages';
 import PropTypes from 'prop-types';
 import AddCardForm from './AddCardForm';
-import {useAuthUser} from '@crema/hooks/AuthHooks';
+import { useAuthUser } from '@crema/hooks/AuthHooks';
 import Drawer from '@mui/material/Drawer';
 import Box from '@mui/material/Box';
-import {useInfoViewActionsContext} from '@crema/context/AppContextProvider/InfoViewContextProvider';
-import {postDataApi, putDataApi} from '@crema/hooks/APIHooks';
+import { useInfoViewActionsContext } from '@crema/context/AppContextProvider/InfoViewContextProvider';
+import { postDataApi, putDataApi } from '@crema/hooks/APIHooks';
 
-import {getDateObject} from '@crema/helpers/DateHelper';
-import {generateRandomUniqueNumber} from '@crema/helpers/Common';
+import { getDateObject } from '@crema/helpers/DateHelper';
+import { generateRandomUniqueNumber } from '@crema/helpers/Common';
 import CardHeader from './CardHeader';
 
 const validationSchema = yup.object({
@@ -20,12 +20,12 @@ const validationSchema = yup.object({
 });
 
 const AddCard = (props) => {
-  const {isAddCardOpen, onCloseAddCard, board, list, selectedCard, setData} =
+  const { isAddCardOpen, onCloseAddCard, board, list, selectedCard, setData } =
     props;
 
   const infoViewActionsContext = useInfoViewActionsContext();
 
-  const {user} = useAuthUser();
+  const { user } = useAuthUser();
   console.log('selectedCard: ', selectedCard);
   const [checkedList, setCheckedList] = useState(() =>
     selectedCard ? selectedCard.checkedList : [],
@@ -96,7 +96,7 @@ const AddCard = (props) => {
       sx={{
         flexShrink: 0,
         '& .MuiDrawer-paper': {
-          width: {xs: 320, sm: 400, md: 600, lg: 900},
+          width: { xs: 320, sm: 400, md: 600, lg: 900 },
           boxSizing: 'border-box',
         },
       }}
@@ -118,7 +118,7 @@ const AddCard = (props) => {
               : getDateObject(),
         }}
         validationSchema={validationSchema}
-        onSubmit={(data, {setSubmitting, resetForm}) => {
+        onSubmit={(data, { setSubmitting, resetForm }) => {
           setSubmitting(true);
           if (selectedCard) {
             const editedCard = {
@@ -170,7 +170,7 @@ const AddCard = (props) => {
           setSubmitting(false);
         }}
       >
-        {({values, isSubmitting, setFieldValue}) => (
+        {({ values, isSubmitting, setFieldValue }) => (
           <>
             <CardHeader
               onAddAttachments={onAddAttachments}

@@ -1,13 +1,13 @@
 import React from 'react';
 import AppCard from '@crema/components/AppCard';
-import {useIntl} from 'react-intl';
+import { useIntl } from 'react-intl';
 import StoriesItem from './StoriesItem';
 import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
 import AppScrollbar from '@crema/components/AppScrollbar';
 
-const TopStories = ({stories}) => {
-  const {messages} = useIntl();
+const TopStories = ({ stories }) => {
+  const { messages } = useIntl();
   return (
     <AppCard
       contentStyle={{
@@ -17,7 +17,7 @@ const TopStories = ({stories}) => {
       title={messages['dashboard.crypto.topStories']}
       action={messages['common.viewAll']}
     >
-      <AppScrollbar sx={{maxHeight: 388, px: 5}}>
+      <AppScrollbar sx={{ maxHeight: 388, px: 5 }}>
         <Box
           sx={{
             position: 'relative',

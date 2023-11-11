@@ -1,18 +1,18 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import AppsContainer from '@crema/components/AppsContainer';
-import {useIntl} from 'react-intl';
-import {Button, Hidden} from '@mui/material';
+import { useIntl } from 'react-intl';
+import { Button, Hidden } from '@mui/material';
 import AppsHeader from '@crema/components/AppsContainer/AppsHeader';
 import AppsContent from '@crema/components/AppsContainer/AppsContent';
 import AppsPagination from '@crema/components/AppsPagination';
 import Box from '@mui/material/Box';
 import AppSearchBar from '@crema/components/AppSearchBar';
-import {useGetDataApi} from '@crema/hooks/APIHooks';
+import { useGetDataApi } from '@crema/hooks/APIHooks';
 import OrderTable from './OrderTable';
 
 const Orders = () => {
-  const {messages} = useIntl();
-  const [{apiData, loading}, {setQueryParams}] = useGetDataApi(
+  const { messages } = useIntl();
+  const [{ apiData, loading }, { setQueryParams }] = useGetDataApi(
     '/api/ecommerce/orders',
     {},
     {},
@@ -25,7 +25,7 @@ const Orders = () => {
     setPage(value);
   };
   useEffect(() => {
-    setQueryParams({search, page});
+    setQueryParams({ search, page });
   }, [search, page]);
 
   const onSearchOrder = (value) => {

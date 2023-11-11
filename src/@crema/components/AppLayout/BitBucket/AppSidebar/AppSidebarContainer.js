@@ -1,10 +1,10 @@
 import React from 'react';
 import PropsTypes from 'prop-types';
-import {Box} from '@mui/material';
-import {useSidebarContext} from '@crema/context/AppContextProvider/SidebarContextProvider';
+import { Box } from '@mui/material';
+import { useSidebarContext } from '@crema/context/AppContextProvider/SidebarContextProvider';
 
-const AppSidebarContainer = ({children, ...rest}) => {
-  const {borderColor} = useSidebarContext();
+const AppSidebarContainer = ({ children, ...rest }) => {
+  const { borderColor } = useSidebarContext();
   return (
     <Box
       sx={{

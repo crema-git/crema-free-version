@@ -1,14 +1,14 @@
-import React, {useEffect, useRef} from 'react';
+import React, { useEffect, useRef } from 'react';
 import Box from '@mui/material/Box';
 import IntlMessages from '@crema/helpers/IntlMessages';
 import PropTypes from 'prop-types';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Fonts } from '@crema/constants/AppEnums';
 import SimpleBarReact from 'simplebar-react';
 import CommentsListItem from './CommentsListItem';
-import {styled} from '@mui/material/styles';
+import { styled } from '@mui/material/styles';
 import AppList from '@crema/components/AppList';
 
-export const StyledSimpleBarReact = styled(SimpleBarReact)(({theme}) => ({
+export const StyledSimpleBarReact = styled(SimpleBarReact)(({ theme }) => ({
   maxHeight: 155,
   [theme.breakpoints.up('xl')]: {
     maxHeight: 190,
@@ -23,7 +23,7 @@ export const StyledSimpleBarReact = styled(SimpleBarReact)(({theme}) => ({
     maxHeight: 360,
   },
 }));
-const CommentsList = ({comments}) => {
+const CommentsList = ({ comments }) => {
   let _scrollBarRef = useRef();
   useEffect(() => {
     if (comments?.length > 0) {
@@ -41,7 +41,7 @@ const CommentsList = ({comments}) => {
             marginBottom: 5,
           }}
         >
-          <Box sx={{mb: 4, fontWeight: Fonts.SEMI_BOLD}} component='h4'>
+          <Box sx={{ mb: 4, fontWeight: Fonts.SEMI_BOLD }} component='h4'>
             <IntlMessages id='common.comments' />
           </Box>
           <StyledSimpleBarReact ref={_scrollBarRef}>

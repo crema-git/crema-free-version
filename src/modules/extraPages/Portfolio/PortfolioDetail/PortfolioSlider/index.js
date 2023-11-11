@@ -49,7 +49,7 @@ const settings = {
   ],
 };
 
-const PortfolioSlider = ({slide}) => {
+const PortfolioSlider = ({ slide }) => {
   return (
     <MediaSlider>
       <Slider {...settings}>

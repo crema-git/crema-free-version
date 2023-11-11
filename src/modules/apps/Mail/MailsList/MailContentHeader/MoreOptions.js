@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import Box from '@mui/material/Box';
 import IntlMessages from '@crema/helpers/IntlMessages';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
@@ -7,14 +7,14 @@ import MenuItem from '@mui/material/MenuItem';
 import PropTypes from 'prop-types';
 import IconButton from '@mui/material/IconButton';
 import AppTooltip from '@crema/components/AppTooltip';
-import {useInfoViewActionsContext} from '@crema/context/AppContextProvider/InfoViewContextProvider';
-import {putDataApi} from '@crema/hooks/APIHooks';
-import {useMailActionsContext} from '../../../context/MailContextProvider';
+import { useInfoViewActionsContext } from '@crema/context/AppContextProvider/InfoViewContextProvider';
+import { putDataApi } from '@crema/hooks/APIHooks';
+import { useMailActionsContext } from '../../../context/MailContextProvider';
 
 const MoreOptions = (props) => {
-  const {checkedMails, setCheckedMails, mailList} = props;
+  const { checkedMails, setCheckedMails, mailList } = props;
   const infoViewActionsContext = useInfoViewActionsContext();
-  const {setMailData} = useMailActionsContext();
+  const { setMailData } = useMailActionsContext();
 
   let unReadOption;
   let readOption;
@@ -139,7 +139,7 @@ const MoreOptions = (props) => {
   return (
     <>
       {checkedMails.length > 0 ? (
-        <Box component='span' sx={{ml: {xs: 'auto', sm: 0}}}>
+        <Box component='span' sx={{ ml: { xs: 'auto', sm: 0 } }}>
           <AppTooltip title={<IntlMessages id='common.more' />}>
             <IconButton
               sx={{
@@ -180,7 +180,7 @@ const MoreOptions = (props) => {
           </Menu>
         </Box>
       ) : (
-        <Box component='span' sx={{ml: {xs: 'auto', sm: 0}}}>
+        <Box component='span' sx={{ ml: { xs: 'auto', sm: 0 } }}>
           <AppTooltip title={<IntlMessages id='common.more' />}>
             <IconButton
               sx={{

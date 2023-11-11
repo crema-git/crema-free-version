@@ -1,16 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
-import {Avatar, IconButton, Typography} from '@mui/material';
-import {AiFillHeart} from 'react-icons/ai';
+import { Avatar, IconButton, Typography } from '@mui/material';
+import { AiFillHeart } from 'react-icons/ai';
 import Tag from '../Tag';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Fonts } from '@crema/constants/AppEnums';
 import AppCardMedia from '@crema/components/AppCard/AppCardMedia';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 
-const BlogCard = ({blog, onViewBlogDetail}) => {
+const BlogCard = ({ blog, onViewBlogDetail }) => {
   const [isLabelOpen, onOpenLabel] = React.useState(null);
 
   const onLabelOpen = (event) => {
@@ -23,15 +23,15 @@ const BlogCard = ({blog, onViewBlogDetail}) => {
 
   return (
     <AppCardMedia
-      sxStyle={{height: '100%', position: 'relative'}}
+      sxStyle={{ height: '100%', position: 'relative' }}
       cardMedia={blog.blogDetailContent.cardMedia}
       cardMediaAction={blog.cardMediaAction}
-      sxCardMediaAction={{mr: 3}}
+      sxCardMediaAction={{ mr: 3 }}
       // onClick={() => onViewBlogDetail(blog)}
     >
-      <Box sx={{position: 'absolute', top: 10, right: 0}}>
+      <Box sx={{ position: 'absolute', top: 10, right: 0 }}>
         <IconButton
-          style={{height: 30, width: 30}}
+          style={{ height: 30, width: 30 }}
           aria-label='more'
           onClick={onLabelOpen}
           size='large'
@@ -78,7 +78,7 @@ const BlogCard = ({blog, onViewBlogDetail}) => {
           {blog.blogDetailContent.description}
         </Typography>
         {blog.blogDetailContent.tag ? (
-          <Box sx={{mb: 4}}>
+          <Box sx={{ mb: 4 }}>
             <Tag tag={blog.blogDetailContent.tag} />
           </Box>
         ) : null}
@@ -96,7 +96,7 @@ const BlogCard = ({blog, onViewBlogDetail}) => {
               alignItems: 'center',
             }}
           >
-            <Box sx={{mr: 2}}>
+            <Box sx={{ mr: 2 }}>
               <Avatar
                 sx={{
                   width: 30,
@@ -106,7 +106,7 @@ const BlogCard = ({blog, onViewBlogDetail}) => {
                 alt={blog.blogDetailContent.post.userName}
               />
             </Box>
-            <Box component='span' sx={{fontSize: 12}}>
+            <Box component='span' sx={{ fontSize: 12 }}>
               By {blog.blogDetailContent.post.userName}
             </Box>
           </Box>

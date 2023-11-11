@@ -2,7 +2,7 @@ import React from 'react';
 import PropsTypes from 'prop-types';
 import Box from '@mui/material/Box';
 
-const MediaSlider = ({children}) => {
+const MediaSlider = ({ children }) => {
   return (
     <Box
       sx={{

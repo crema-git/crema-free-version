@@ -2,21 +2,21 @@ import React from 'react';
 import SocialMediaGraph from './SocialMediaGraph';
 import Box from '@mui/material/Box';
 import PropTypes from 'prop-types';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Fonts } from '@crema/constants/AppEnums';
 import AppCard from '@crema/components/AppCard';
-import {useIntl} from 'react-intl';
+import { useIntl } from 'react-intl';
 
 const SocialMediaAdvertise = (props) => {
-  const {socialMediaData} = props;
+  const { socialMediaData } = props;
 
-  const {messages} = useIntl();
+  const { messages } = useIntl();
   return (
-    <AppCard title={messages['dashboard.socialMedia']} sxStyle={{height: 1}}>
+    <AppCard title={messages['dashboard.socialMedia']} sxStyle={{ height: 1 }}>
       <SocialMediaGraph socialMediaData={socialMediaData} />
       <Box
         sx={{
           mb: 1,
-          mx: {xs: -2, xl: -3},
+          mx: { xs: -2, xl: -3 },
           display: 'flex',
           justifyContent: 'space-between',
         }}
@@ -25,7 +25,7 @@ const SocialMediaAdvertise = (props) => {
           return (
             <Box
               sx={{
-                px: {xs: 2, xl: 3},
+                px: { xs: 2, xl: 3 },
               }}
               key={item.id}
             >
@@ -57,7 +57,7 @@ const SocialMediaAdvertise = (props) => {
                 </Box>
                 <Box
                   component='span'
-                  sx={{color: item.changeColor, fontSize: 13}}
+                  sx={{ color: item.changeColor, fontSize: 13 }}
                 >
                   {item.change}
                 </Box>

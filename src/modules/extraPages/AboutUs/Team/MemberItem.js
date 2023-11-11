@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Typography from '@mui/material/Typography';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Fonts } from '@crema/constants/AppEnums';
 import AppCardMedia from '@crema/components/AppCard/AppCardMedia';
 
-const MemberItem = ({member}) => {
+const MemberItem = ({ member }) => {
   return (
     <AppCardMedia
       cardMedia={member.srcImg}
@@ -19,7 +19,7 @@ const MemberItem = ({member}) => {
         sx={{
           mb: 1,
           fontWeight: Fonts.SEMI_BOLD,
-          fontSize: {xs: 16, md: 18},
+          fontSize: { xs: 16, md: 18 },
         }}
       >
         {member.name}

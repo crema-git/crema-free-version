@@ -1,11 +1,11 @@
 import React from 'react';
 
-import {CustomPicker} from 'react-color';
-import {EditableInput, Hue} from 'react-color/lib/components/common';
+import { CustomPicker } from 'react-color';
+import { EditableInput, Hue } from 'react-color/lib/components/common';
 import PropTypes from 'prop-types';
-import {Box} from '@mui/material';
+import { Box } from '@mui/material';
 
-export const MyPicker = ({hex, hsl, onChange}) => {
+export const MyPicker = ({ hex, hsl, onChange }) => {
   return (
     <Box
       sx={{
@@ -25,7 +25,7 @@ export const MyPicker = ({hex, hsl, onChange}) => {
         <Hue hsl={hsl} onChange={onChange} />
       </Box>
 
-      <Box sx={{display: 'flex'}}>
+      <Box sx={{ display: 'flex' }}>
         <EditableInput
           style={{
             input: {

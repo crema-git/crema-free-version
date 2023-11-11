@@ -1,8 +1,8 @@
 import * as React from 'react';
-import {createTheme} from '@mui/material/styles';
-import {makeStyles} from '@mui/styles';
-import {DataGridPro, useGridApiRef} from '@mui/x-data-grid-pro';
-import {randomPrice} from '@mui/x-data-grid-generator';
+import { createTheme } from '@mui/material/styles';
+import { makeStyles } from '@mui/styles';
+import { DataGridPro, useGridApiRef } from '@mui/x-data-grid-pro';
+import { randomPrice } from '@mui/x-data-grid-generator';
 
 const defaultTheme = createTheme();
 
@@ -23,7 +23,7 @@ const useStyles = makeStyles(
       },
     };
   },
-  {defaultTheme},
+  { defaultTheme },
 );
 
 const rows = [
@@ -56,7 +56,7 @@ export default function ConditionalValidationGrid() {
   const apiRef = useGridApiRef();
 
   const columns = [
-    {field: 'expense', headerName: 'Expense', width: 160, editable: true},
+    { field: 'expense', headerName: 'Expense', width: 160, editable: true },
     {
       field: 'price',
       headerName: 'Price',
@@ -89,13 +89,13 @@ export default function ConditionalValidationGrid() {
         const editRowsModel = apiRef.current.getEditRowsModel();
         const isPaidProps = editRowsModel[params.id].isPaid;
         const hasError = isPaidProps.value && !params.props.value;
-        return {...params.props, error: hasError};
+        return { ...params.props, error: hasError };
       },
     },
   ];
 
   return (
-    <div style={{height: 400, width: '100%'}}>
+    <div style={{ height: 400, width: '100%' }}>
       <DataGridPro
         apiRef={apiRef}
         className={classes.root}

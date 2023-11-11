@@ -1,15 +1,15 @@
 import AppGrid from '@crema/components/AppGrid';
 import AppLoader from '@crema/components/AppLoader';
-import {isEmptyObject} from '@crema/helpers/ApiHelper';
-import {useGetDataApi} from '@crema/hooks/APIHooks';
+import { isEmptyObject } from '@crema/helpers/ApiHelper';
+import { useGetDataApi } from '@crema/hooks/APIHooks';
 import ClientItem from './ClientItem';
-import {Box, Button} from '@mui/material';
+import { Box, Button } from '@mui/material';
 import React from 'react';
-import {useNavigate} from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const Clients = () => {
   const navigate = useNavigate();
-  const [{apiData: clientsList, loading}] = useGetDataApi(
+  const [{ apiData: clientsList, loading }] = useGetDataApi(
     '/api/invoice/clients',
     {},
     {},
@@ -22,7 +22,7 @@ const Clients = () => {
         <Button
           color='primary'
           variant='contained'
-          sx={{display: 'block', ml: 'auto', mb: 3}}
+          sx={{ display: 'block', ml: 'auto', mb: 3 }}
           onClick={() => navigate('/invoice/client/add')}
         >
           Add Clients

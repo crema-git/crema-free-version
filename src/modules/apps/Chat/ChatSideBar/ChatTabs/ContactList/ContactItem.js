@@ -5,10 +5,10 @@ import Avatar from '@mui/material/Avatar';
 import PropTypes from 'prop-types';
 import ListItem from '@mui/material/ListItem';
 import clsx from 'clsx';
-import {alpha} from '@mui/material';
+import { alpha } from '@mui/material';
 
 const ContactItem = (props) => {
-  const {item, selectedUser, setSelectedUser} = props;
+  const { item, selectedUser, setSelectedUser } = props;
 
   return (
     <ListItem

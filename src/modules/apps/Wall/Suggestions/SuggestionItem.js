@@ -2,9 +2,9 @@ import React from 'react';
 import Box from '@mui/material/Box';
 import Avatar from '@mui/material/Avatar';
 import PropTypes from 'prop-types';
-import {styled} from '@mui/material/styles';
+import { styled } from '@mui/material/styles';
 
-const StyledAvatar = styled(Avatar)(({theme}) => ({
+const StyledAvatar = styled(Avatar)(({ theme }) => ({
   width: 50,
   height: 50,
   borderRadius: 10,
@@ -14,7 +14,7 @@ const StyledAvatar = styled(Avatar)(({theme}) => ({
   },
 }));
 
-const SuggestionItem = ({item}) => {
+const SuggestionItem = ({ item }) => {
   return (
     <Box className='item-hover' px={5} py={2}>
       <Box display='flex'>

@@ -1,7 +1,7 @@
 import * as React from 'react';
-import {styled} from '@mui/material/styles';
+import { styled } from '@mui/material/styles';
 import TextField from '@mui/material/TextField';
-import {AdapterDateFns} from '@mui/x-date-pickers/AdapterDateFns';
+import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
 import {
   LocalizationProvider,
   PickersDay,
@@ -15,7 +15,7 @@ import startOfWeek from 'date-fns/startOfWeek';
 const CustomPickersDay = styled(PickersDay, {
   shouldForwardProp: (prop) =>
     prop !== 'dayIsBetween' && prop !== 'isFirstDay' && prop !== 'isLastDay',
-})(({theme, dayIsBetween, isFirstDay, isLastDay}) => ({
+})(({ theme, dayIsBetween, isFirstDay, isLastDay }) => ({
   ...(dayIsBetween && {
     borderRadius: 0,
     backgroundColor: theme.palette.primary.main,
@@ -45,7 +45,7 @@ export default function CustomDay() {
     const start = startOfWeek(value);
     const end = endOfWeek(value);
 
-    const dayIsBetween = isWithinInterval(date, {start, end});
+    const dayIsBetween = isWithinInterval(date, { start, end });
     const isFirstDay = isSameDay(date, start);
     const isLastDay = isSameDay(date, end);
 

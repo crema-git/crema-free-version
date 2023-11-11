@@ -9,13 +9,16 @@ import {
   YAxis,
 } from 'recharts';
 import data from './data';
-import {useThemeContext} from '@crema/context/AppContextProvider/ThemeContextProvider';
+import { useThemeContext } from '@crema/context/AppContextProvider/ThemeContextProvider';
 
 const StackedAreaChart = () => {
-  const {theme} = useThemeContext();
+  const { theme } = useThemeContext();
   return (
     <ResponsiveContainer width='100%' height={200}>
-      <AreaChart data={data} margin={{top: 10, right: 0, left: -25, bottom: 0}}>
+      <AreaChart
+        data={data}
+        margin={{ top: 10, right: 0, left: -25, bottom: 0 }}
+      >
         <XAxis dataKey='name' />
         <YAxis />
         <CartesianGrid strokeDasharray='3 3' />

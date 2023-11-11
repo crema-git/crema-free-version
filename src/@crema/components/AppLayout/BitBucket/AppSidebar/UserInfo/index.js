@@ -1,16 +1,16 @@
 import React from 'react';
 import orange from '@mui/material/colors/orange';
-import {alpha, Box} from '@mui/material';
+import { alpha, Box } from '@mui/material';
 import Avatar from '@mui/material/Avatar';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
-import {Fonts} from '@crema/constants/AppEnums';
-import {useNavigate} from 'react-router-dom';
-import {useAuthMethod, useAuthUser} from '@crema/hooks/AuthHooks';
+import { Fonts } from '@crema/constants/AppEnums';
+import { useNavigate } from 'react-router-dom';
+import { useAuthMethod, useAuthUser } from '@crema/hooks/AuthHooks';
 
 const UserInfo = () => {
-  const {logout} = useAuthMethod();
-  const {user} = useAuthUser();
+  const { logout } = useAuthMethod();
+  const { user } = useAuthUser();
   const navigate = useNavigate();
 
   const [anchorEl, setAnchorEl] = React.useState(null);

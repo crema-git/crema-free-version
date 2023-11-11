@@ -63,7 +63,7 @@ export default function HorizontalNonLinearStepper() {
   };
 
   return (
-    <Box sx={{width: '100%'}}>
+    <Box sx={{ width: '100%' }}>
       <Stepper nonLinear activeStep={activeStep}>
         {steps.map((label, index) => (
           <Step key={label} completed={completed[index]}>
@@ -76,33 +76,36 @@ export default function HorizontalNonLinearStepper() {
       <div>
         {allStepsCompleted() ? (
           <React.Fragment>
-            <Typography sx={{mt: 2, mb: 1}}>
+            <Typography sx={{ mt: 2, mb: 1 }}>
               All steps completed - you&apos;re finished
             </Typography>
-            <Box sx={{display: 'flex', flexDirection: 'row', pt: 2}}>
-              <Box sx={{flex: '1 1 auto'}} />
+            <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>
+              <Box sx={{ flex: '1 1 auto' }} />
               <Button onClick={handleReset}>Reset</Button>
             </Box>
           </React.Fragment>
         ) : (
           <React.Fragment>
-            <Typography sx={{mt: 2, mb: 1}}>Step {activeStep + 1}</Typography>
-            <Box sx={{display: 'flex', flexDirection: 'row', pt: 2}}>
+            <Typography sx={{ mt: 2, mb: 1 }}>Step {activeStep + 1}</Typography>
+            <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>
               <Button
                 color='inherit'
                 disabled={activeStep === 0}
                 onClick={handleBack}
-                sx={{mr: 1}}
+                sx={{ mr: 1 }}
               >
                 Back
               </Button>
-              <Box sx={{flex: '1 1 auto'}} />
-              <Button onClick={handleNext} sx={{mr: 1}}>
+              <Box sx={{ flex: '1 1 auto' }} />
+              <Button onClick={handleNext} sx={{ mr: 1 }}>
                 Next
               </Button>
               {activeStep !== steps.length &&
                 (completed[activeStep] ? (
-                  <Typography variant='caption' sx={{display: 'inline-block'}}>
+                  <Typography
+                    variant='caption'
+                    sx={{ display: 'inline-block' }}
+                  >
                     Step {activeStep + 1} already completed
                   </Typography>
                 ) : (

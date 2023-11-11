@@ -1,16 +1,16 @@
 import React from 'react';
-import {NavLink} from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 const AppNavLink = React.forwardRef(function AppNavLink(
-  {activeClassName, className, ...rest},
+  { activeClassName, className, ...rest },
   ref,
 ) {
   return (
     <NavLink
       ref={ref}
       {...rest}
-      className={({isActive}) =>
+      className={({ isActive }) =>
         isActive ? `${activeClassName} ${className}` : className
       }
     />

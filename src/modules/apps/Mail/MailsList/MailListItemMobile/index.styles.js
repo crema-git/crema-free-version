@@ -1,5 +1,5 @@
-import {alpha} from '@mui/material';
-import {styled} from '@mui/material/styles';
+import { alpha } from '@mui/material';
+import { styled } from '@mui/material/styles';
 import ListItem from '@mui/material/ListItem';
 
 export const MailMobileItemWrapper = styled(ListItem)((props) => {
@@ -24,7 +24,7 @@ export const MailMobileItemWrapper = styled(ListItem)((props) => {
   };
 });
 
-export const AvatarWrapper = styled('div')(({theme}) => {
+export const AvatarWrapper = styled('div')(({ theme }) => {
   return {
     '& .avatar': {
       width: 36,
@@ -43,7 +43,7 @@ export const AvatarWrapper = styled('div')(({theme}) => {
   };
 });
 
-export const AttachmentWrapper = styled('div')(({theme}) => {
+export const AttachmentWrapper = styled('div')(({ theme }) => {
   return {
     position: 'relative',
     border: `solid 1px ${theme.palette.divider}`,

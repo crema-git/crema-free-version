@@ -1,8 +1,8 @@
 import React from 'react';
-import {dayjsLocalizer} from 'react-big-calendar';
+import { dayjsLocalizer } from 'react-big-calendar';
 import events from '../events';
 import dayjs from 'dayjs';
-import {StyledCalendar} from '../calandar.style';
+import { StyledCalendar } from '../calandar.style';
 import Box from '@mui/material/Box';
 
 const localizer = dayjsLocalizer(dayjs);
@@ -10,7 +10,7 @@ const localizer = dayjsLocalizer(dayjs);
 const Selectable = () => {
   return (
     <div className='app-calendar app-cul-calendar'>
-      <Box sx={{mb: 3}}>
+      <Box sx={{ mb: 3 }}>
         Click an event to see more info, or drag the mouse over the calendar to
         select a date/time range.
       </Box>

@@ -1,12 +1,12 @@
 import React from 'react';
-import {Box, Grid} from '@mui/material';
+import { Box, Grid } from '@mui/material';
 import AppCard from '@crema/components/AppCard';
 import IntlMessages from '@crema/helpers/IntlMessages';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Fonts } from '@crema/constants/AppEnums';
 
 import AppAnimate from '@crema/components/AppAnimate';
 import AppGridContainer from '@crema/components/AppGridContainer';
-import {useGetDataApi} from '@crema/hooks/APIHooks';
+import { useGetDataApi } from '@crema/hooks/APIHooks';
 // import {
 //   DeliveryAddress,
 //   OrderSummary,
@@ -18,7 +18,7 @@ import OrderSummary from '../OrderSummary';
 import PaymentInfo from './PaymentInfo';
 
 const Checkout = () => {
-  const [{apiData: cartItems, loading}] = useGetDataApi('/api/cart/get', []);
+  const [{ apiData: cartItems, loading }] = useGetDataApi('/api/cart/get', []);
 
   return (
     <>
@@ -42,7 +42,7 @@ const Checkout = () => {
               <Grid item xs={12} md={8}>
                 <AppCard
                   title={
-                    <Box sx={{fontSize: 16, fontWeight: Fonts.BOLD}}>
+                    <Box sx={{ fontSize: 16, fontWeight: Fonts.BOLD }}>
                       Delivery Address
                     </Box>
                   }

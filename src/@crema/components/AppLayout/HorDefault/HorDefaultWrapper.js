@@ -1,8 +1,8 @@
 import React from 'react';
-import {Box} from '@mui/material';
+import { Box } from '@mui/material';
 import PropsTypes from 'prop-types';
 
-const HorDefaultWrapper = ({children, ...rest}) => {
+const HorDefaultWrapper = ({ children, ...rest }) => {
   return (
     <Box
       sx={{
@@ -13,7 +13,7 @@ const HorDefaultWrapper = ({children, ...rest}) => {
         backgroundColor: (theme) => theme.palette.background.default,
 
         '&.appMainFixedFooter': {
-          pb: {xs: 12, xl: 14.5},
+          pb: { xs: 12, xl: 14.5 },
         },
         '& .customizerOption': {
           top: 210,

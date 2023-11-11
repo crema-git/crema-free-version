@@ -1,5 +1,5 @@
-import React, {useState} from 'react';
-import {useIntl} from 'react-intl';
+import React, { useState } from 'react';
+import { useIntl } from 'react-intl';
 import AppsContainer from '@crema/components/AppsContainer';
 
 import ProductsSidebar from './ProductsSidebar';
@@ -10,7 +10,7 @@ export const VIEW_TYPE = {
   LIST: 'list',
 };
 const Products = () => {
-  const {messages} = useIntl();
+  const { messages } = useIntl();
   const [filterData, setFilterData] = useState({
     title: '',
     brand: [],

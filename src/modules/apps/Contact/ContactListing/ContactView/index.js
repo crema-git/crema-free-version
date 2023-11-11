@@ -6,9 +6,9 @@ import AppGrid from '@crema/components/AppGrid';
 import ListEmptyResult from '@crema/components/AppList/ListEmptyResult';
 import IntlMessages from '@crema/helpers/IntlMessages';
 import ContactListSkeleton from '@crema/components/AppSkeleton/ContactListSkeleton';
-import {Hidden} from '@mui/material';
+import { Hidden } from '@mui/material';
 
-import {useContactContext} from '../../../context/ContactContextProvider';
+import { useContactContext } from '../../../context/ContactContextProvider';
 import ContactListItem from './ContactListItem';
 import ContactListItemMobile from './ContactListItem/ContactListItemMobile';
 import ContactGridItem from './ContactGridItem';
@@ -25,7 +25,7 @@ const ContactView = (props) => {
     onViewContactDetail,
   } = props;
 
-  const {pageView, loading, labelList} = useContactContext();
+  const { pageView, loading, labelList } = useContactContext();
 
   return (
     <>

@@ -1,19 +1,19 @@
 import React from 'react';
 import Box from '@mui/material/Box';
 import IntlMessages from '@crema/helpers/IntlMessages';
-import {useIntl} from 'react-intl';
+import { useIntl } from 'react-intl';
 import PropTypes from 'prop-types';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Fonts } from '@crema/constants/AppEnums';
 import TextField from '@mui/material/TextField';
 
 const Notes = (props) => {
-  const {contact} = props;
-  const {messages} = useIntl();
+  const { contact } = props;
+  const { messages } = useIntl();
 
   return (
     <Box
       sx={{
-        pr: {xs: 5, lg: 8, xl: 10},
+        pr: { xs: 5, lg: 8, xl: 10 },
         py: 5,
       }}
     >

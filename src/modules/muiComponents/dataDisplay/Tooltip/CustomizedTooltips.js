@@ -1,12 +1,12 @@
 import * as React from 'react';
-import {styled} from '@mui/material/styles';
+import { styled } from '@mui/material/styles';
 import Button from '@mui/material/Button';
-import Tooltip, {tooltipClasses} from '@mui/material/Tooltip';
+import Tooltip, { tooltipClasses } from '@mui/material/Tooltip';
 import Typography from '@mui/material/Typography';
 
-const LightTooltip = styled(({className, ...props}) => (
-  <Tooltip {...props} classes={{popper: className}} />
-))(({theme}) => ({
+const LightTooltip = styled(({ className, ...props }) => (
+  <Tooltip {...props} classes={{ popper: className }} />
+))(({ theme }) => ({
   [`& .${tooltipClasses.tooltip}`]: {
     backgroundColor: theme.palette.common.white,
     color: 'rgba(0, 0, 0, 0.87)',
@@ -15,9 +15,9 @@ const LightTooltip = styled(({className, ...props}) => (
   },
 }));
 
-const BootstrapTooltip = styled(({className, ...props}) => (
-  <Tooltip {...props} arrow classes={{popper: className}} />
-))(({theme}) => ({
+const BootstrapTooltip = styled(({ className, ...props }) => (
+  <Tooltip {...props} arrow classes={{ popper: className }} />
+))(({ theme }) => ({
   [`& .${tooltipClasses.arrow}`]: {
     color: theme.palette.common.black,
   },
@@ -26,9 +26,9 @@ const BootstrapTooltip = styled(({className, ...props}) => (
   },
 }));
 
-const HtmlTooltip = styled(({className, ...props}) => (
-  <Tooltip {...props} classes={{popper: className}} />
-))(({theme}) => ({
+const HtmlTooltip = styled(({ className, ...props }) => (
+  <Tooltip {...props} classes={{ popper: className }} />
+))(({ theme }) => ({
   [`& .${tooltipClasses.tooltip}`]: {
     backgroundColor: '#f5f5f9',
     color: 'rgba(0, 0, 0, 0.87)',

@@ -1,12 +1,12 @@
 import React from 'react';
 import PropsTypes from 'prop-types';
 import ListItem from '@mui/material/ListItem';
-import {Fonts, MenuStyle} from '@crema/constants/AppEnums';
-import {useSidebarContext} from '@crema/context/AppContextProvider/SidebarContextProvider';
+import { Fonts, MenuStyle } from '@crema/constants/AppEnums';
+import { useSidebarContext } from '@crema/context/AppContextProvider/SidebarContextProvider';
 import clsx from 'clsx';
-import {alpha} from '@mui/material';
+import { alpha } from '@mui/material';
 
-const VerticalNavItem = ({children, level, ...rest}) => {
+const VerticalNavItem = ({ children, level, ...rest }) => {
   const {
     sidebarTextColor,
     sidebarMenuSelectedBgColor,

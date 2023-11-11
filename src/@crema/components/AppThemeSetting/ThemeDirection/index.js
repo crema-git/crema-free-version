@@ -1,22 +1,22 @@
 import React from 'react';
-import {CustomizerItemWrapper} from '../index.style';
+import { CustomizerItemWrapper } from '../index.style';
 import Box from '@mui/material/Box';
 import IntlMessages from '@crema/helpers/IntlMessages';
 import Switch from '@mui/material/Switch';
-import {LayoutDirection} from '@crema/constants/AppEnums';
+import { LayoutDirection } from '@crema/constants/AppEnums';
 import {
   useThemeActionsContext,
   useThemeContext,
 } from '@crema/context/AppContextProvider/ThemeContextProvider';
 
 const ThemeDirection = () => {
-  const {theme} = useThemeContext();
-  const {updateTheme} = useThemeActionsContext();
+  const { theme } = useThemeContext();
+  const { updateTheme } = useThemeActionsContext();
   const onChangeRtlSetting = (event) => {
     theme.direction = event.target.checked
       ? LayoutDirection.RTL
       : LayoutDirection.LTR;
-    updateTheme({...theme});
+    updateTheme({ ...theme });
   };
 
   return (
@@ -30,7 +30,7 @@ const ThemeDirection = () => {
             checked={theme.direction === LayoutDirection.RTL}
             onChange={onChangeRtlSetting}
             value='checkedA'
-            inputProps={{'aria-label': 'secondary checkbox'}}
+            inputProps={{ 'aria-label': 'secondary checkbox' }}
           />
         </Box>
       </Box>

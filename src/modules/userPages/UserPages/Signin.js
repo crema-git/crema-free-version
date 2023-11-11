@@ -1,18 +1,18 @@
 import React from 'react';
 import Card from '@mui/material/Card';
 import Button from '@mui/material/Button';
-import {Checkbox} from '@mui/material';
-import {Form, Formik} from 'formik';
+import { Checkbox } from '@mui/material';
+import { Form, Formik } from 'formik';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import IconButton from '@mui/material/IconButton';
 import * as yup from 'yup';
 import IntlMessages from '@crema/helpers/IntlMessages';
-import {useIntl} from 'react-intl';
+import { useIntl } from 'react-intl';
 import Box from '@mui/material/Box';
-import {grey} from '@mui/material/colors';
-import {Fonts} from '@crema/constants/AppEnums';
+import { grey } from '@mui/material/colors';
+import { Fonts } from '@crema/constants/AppEnums';
 import AppAnimate from '@crema/components/AppAnimate';
 import AppTextField from '@crema/components/AppFormComponents/AppTextField';
 
@@ -27,13 +27,13 @@ const validationSchema = yup.object({
 });
 
 const Signin = () => {
-  const {messages} = useIntl();
+  const { messages } = useIntl();
   return (
     <AppAnimate animation='transition.slideUpIn' delay={200}>
       <Box
         sx={{
           pb: 6,
-          py: {xl: 8},
+          py: { xl: 8 },
           display: 'flex',
           flex: 1,
           flexDirection: 'column',
@@ -46,7 +46,7 @@ const Signin = () => {
             maxWidth: 576,
             width: '100%',
             textAlign: 'center',
-            padding: {xs: 8, lg: 12, xl: '48px 64px'},
+            padding: { xs: 8, lg: 12, xl: '48px 64px' },
             overflow: 'hidden',
             boxShadow:
               '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
@@ -54,7 +54,7 @@ const Signin = () => {
         >
           <Box
             sx={{
-              mb: {xs: 3, xl: 4},
+              mb: { xs: 3, xl: 4 },
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
@@ -93,11 +93,11 @@ const Signin = () => {
               password: '',
             }}
             validationSchema={validationSchema}
-            onSubmit={(data, {resetForm}) => {
+            onSubmit={(data, { resetForm }) => {
               resetForm();
             }}
           >
-            {({isSubmitting}) => (
+            {({ isSubmitting }) => (
               <Form
                 sx={{
                   textAlign: 'left',
@@ -107,7 +107,7 @@ const Signin = () => {
               >
                 <Box
                   sx={{
-                    mb: {xs: 3, xl: 4},
+                    mb: { xs: 3, xl: 4 },
                   }}
                 >
                   <AppTextField
@@ -123,7 +123,7 @@ const Signin = () => {
 
                 <Box
                   sx={{
-                    mb: {xs: 3, xl: 4},
+                    mb: { xs: 3, xl: 4 },
                   }}
                 >
                   <AppTextField
@@ -140,10 +140,10 @@ const Signin = () => {
 
                 <Box
                   sx={{
-                    mb: {xs: 3, xl: 4},
+                    mb: { xs: 3, xl: 4 },
                     display: 'flex',
-                    flexDirection: {xs: 'column', sm: 'row'},
-                    alignItems: {sm: 'center'},
+                    flexDirection: { xs: 'column', sm: 'row' },
+                    alignItems: { sm: 'center' },
                   }}
                 >
                   <Box
@@ -160,16 +160,16 @@ const Signin = () => {
                     >
                       <Checkbox />
                     </Box>
-                    <Box component='span' sx={{fontSize: 14}}>
+                    <Box component='span' sx={{ fontSize: 14 }}>
                       <IntlMessages id='common.rememberMe' />
                     </Box>
                   </Box>
                   <Box
                     component='span'
                     sx={{
-                      ml: {sm: 'auto'},
+                      ml: { sm: 'auto' },
                       color: 'primary.main',
-                      mt: {xs: 2, sm: 0},
+                      mt: { xs: 2, sm: 0 },
                       fontWeight: Fonts.BOLD,
                       fontSize: 14,
                       cursor: 'pointer',
@@ -196,12 +196,12 @@ const Signin = () => {
 
           <Box
             sx={{
-              mt: {xs: 3, xl: 4},
-              mb: {xs: 2, xl: 4},
+              mt: { xs: 3, xl: 4 },
+              mb: { xs: 2, xl: 4 },
               display: 'flex',
-              flexDirection: {xs: 'column', sm: 'row'},
-              justifyContent: {sm: 'center'},
-              alignItems: {sm: 'center'},
+              flexDirection: { xs: 'column', sm: 'row' },
+              justifyContent: { sm: 'center' },
+              alignItems: { sm: 'center' },
             }}
           >
             <Box

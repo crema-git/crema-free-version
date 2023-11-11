@@ -3,8 +3,8 @@ import TableCell from '@mui/material/TableCell';
 import TableRow from '@mui/material/TableRow';
 import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
-import {styled} from '@mui/material/styles';
-import {formatCurrency} from '@crema/helpers/StringHelper';
+import { styled } from '@mui/material/styles';
+import { formatCurrency } from '@crema/helpers/StringHelper';
 
 const StyledTableCell = styled(TableCell)(() => ({
   fontSize: 14,
@@ -18,7 +18,7 @@ const StyledTableCell = styled(TableCell)(() => ({
   },
 }));
 
-const TableItem = ({data, currencyData}) => {
+const TableItem = ({ data, currencyData }) => {
   return (
     <TableRow
       key={data?.id}
@@ -35,7 +35,7 @@ const TableItem = ({data, currencyData}) => {
       }}
     >
       <StyledTableCell align='left'>
-        <Box sx={{display: 'flex', alignItems: 'center'}}>{data?.id}</Box>
+        <Box sx={{ display: 'flex', alignItems: 'center' }}>{data?.id}</Box>
       </StyledTableCell>
       <StyledTableCell>{data?.name}</StyledTableCell>
       <StyledTableCell align='left'>
@@ -51,8 +51,8 @@ const TableItem = ({data, currencyData}) => {
         {data?.quantity?.type !== 'fixed' ? `per ${data?.quantity?.type}` : ''}
       </StyledTableCell>
 
-      <StyledTableCell align='left' sx={{width: '30px'}}>
-        <Box sx={{display: 'flex', alignItems: 'center'}}>
+      <StyledTableCell align='left' sx={{ width: '30px' }}>
+        <Box sx={{ display: 'flex', alignItems: 'center' }}>
           {formatCurrency(
             data?.total || 0,
             {

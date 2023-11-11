@@ -1,15 +1,15 @@
 import React from 'react';
 import AppCard from '@crema/components/AppCard';
 import AppSelect from '@crema/components/AppSelect';
-import {useIntl} from 'react-intl';
-import {Box, Typography} from '@mui/material';
+import { useIntl } from 'react-intl';
+import { Box, Typography } from '@mui/material';
 import InquiriesChart from './InquiriesChart';
 import PropTypes from 'prop-types';
 
-import {styled} from '@mui/material/styles';
+import { styled } from '@mui/material/styles';
 import AppList from '@crema/components/AppList';
 
-const TopInquiryRow = styled('div')(({theme}) => {
+const TopInquiryRow = styled('div')(({ theme }) => {
   return {
     position: 'relative',
     display: 'flex',
@@ -46,7 +46,7 @@ const TopInquiryRow = styled('div')(({theme}) => {
   };
 });
 
-const InquiriesCell = ({inquiry}) => {
+const InquiriesCell = ({ inquiry }) => {
   return (
     <Box
       sx={{
@@ -99,8 +99,8 @@ InquiriesCell.propTypes = {
   inquiry: PropTypes.object,
 };
 
-const TopInquiries = ({topInquiries}) => {
-  const {messages} = useIntl();
+const TopInquiries = ({ topInquiries }) => {
+  const { messages } = useIntl();
 
   const handleSelectionType = (data) => {
     console.log('data: ', data);

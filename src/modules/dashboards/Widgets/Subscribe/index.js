@@ -1,13 +1,13 @@
 import React from 'react';
-import {Form, Formik} from 'formik';
+import { Form, Formik } from 'formik';
 import * as yup from 'yup';
 import Button from '@mui/material/Button';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
-import {useInfoViewActionsContext} from '@crema/context/AppContextProvider/InfoViewContextProvider';
+import { useInfoViewActionsContext } from '@crema/context/AppContextProvider/InfoViewContextProvider';
 import IntlMessages from '@crema/helpers/IntlMessages';
-import {useIntl} from 'react-intl';
+import { useIntl } from 'react-intl';
 import Box from '@mui/material/Box';
-import {red} from '@mui/material/colors';
+import { red } from '@mui/material/colors';
 import AppCard from '@crema/components/AppCard';
 import AppTextField from '@crema/components/AppFormComponents/AppTextField';
 
@@ -21,7 +21,7 @@ const validationSchema = yup.object({
 const Subscribe = () => {
   const infoViewActionsContext = useInfoViewActionsContext();
 
-  const {messages} = useIntl();
+  const { messages } = useIntl();
 
   return (
     <AppCard
@@ -30,7 +30,7 @@ const Subscribe = () => {
         backgroundColor: red[600],
         color: 'white',
       }}
-      titleStyle={{color: 'white'}}
+      titleStyle={{ color: 'white' }}
       title={messages['dashboard.subscribe']}
     >
       <Box
@@ -49,7 +49,7 @@ const Subscribe = () => {
           email: '',
         }}
         validationSchema={validationSchema}
-        onSubmit={(data, {setSubmitting, resetForm}) => {
+        onSubmit={(data, { setSubmitting, resetForm }) => {
           setSubmitting(true);
           infoViewActionsContext.showMessage(
             <IntlMessages id='message.thankYouSubscription' />,
@@ -58,7 +58,7 @@ const Subscribe = () => {
           resetForm();
         }}
       >
-        {({isSubmitting}) => (
+        {({ isSubmitting }) => (
           <Box
             sx={{
               textAlign: 'left',

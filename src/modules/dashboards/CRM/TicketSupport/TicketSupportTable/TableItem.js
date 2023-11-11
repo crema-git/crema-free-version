@@ -1,14 +1,14 @@
 import React from 'react';
 import TableCell from '@mui/material/TableCell';
-import {Box} from '@mui/material';
+import { Box } from '@mui/material';
 import Avatar from '@mui/material/Avatar';
 import TableRow from '@mui/material/TableRow';
 import PropTypes from 'prop-types';
-import {red} from '@mui/material/colors';
-import {Fonts} from '@crema/constants/AppEnums';
+import { red } from '@mui/material/colors';
+import { Fonts } from '@crema/constants/AppEnums';
 
 const TableItem = (props) => {
-  const {row} = props;
+  const { row } = props;
 
   return (
     <TableRow
@@ -36,8 +36,8 @@ const TableItem = (props) => {
           {row.image ? (
             <Avatar
               sx={{
-                width: {xs: 30, xl: 40},
-                height: {xs: 30, xl: 40},
+                width: { xs: 30, xl: 40 },
+                height: { xs: 30, xl: 40 },
                 backgroundColor: red[500],
               }}
               src={row.image}
@@ -45,8 +45,8 @@ const TableItem = (props) => {
           ) : (
             <Avatar
               sx={{
-                width: {xs: 30, xl: 40},
-                height: {xs: 30, xl: 40},
+                width: { xs: 30, xl: 40 },
+                height: { xs: 30, xl: 40 },
                 backgroundColor: red[500],
               }}
             >

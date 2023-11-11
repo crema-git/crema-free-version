@@ -6,12 +6,12 @@ import MenuItem from '@mui/material/MenuItem';
 import Box from '@mui/material/Box';
 import AppsDeleteIcon from '@crema/components/AppsDeleteIcon';
 import PropTypes from 'prop-types';
-import {useParams} from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import IconButton from '@mui/material/IconButton';
 import AppTooltip from '@crema/components/AppTooltip';
-import {StyledBox} from './index.style';
-import {useInfoViewActionsContext} from '@crema/context/AppContextProvider/InfoViewContextProvider';
-import {putDataApi} from '@crema/hooks/APIHooks';
+import { StyledBox } from './index.style';
+import { useInfoViewActionsContext } from '@crema/context/AppContextProvider/InfoViewContextProvider';
+import { putDataApi } from '@crema/hooks/APIHooks';
 import {
   useTodoActionsContext,
   useTodoContext,
@@ -25,8 +25,8 @@ const CheckedTasksActions = ({
 }) => {
   const params = useParams();
   const infoViewActionsContext = useInfoViewActionsContext();
-  const {labelList} = useTodoContext();
-  const {setTodoData} = useTodoActionsContext();
+  const { labelList } = useTodoContext();
+  const { setTodoData } = useTodoActionsContext();
 
   const [isLabelOpen, onOpenLabel] = React.useState(null);
 
@@ -116,7 +116,7 @@ const CheckedTasksActions = ({
           return (
             <MenuItem
               key={label.id}
-              sx={{p: '8px !important'}}
+              sx={{ p: '8px !important' }}
               value={label.id}
               onClick={onSelectLabel}
             >

@@ -1,5 +1,5 @@
 import React from 'react';
-import {RoutePermittedRole} from '@crema/constants/AppEnums';
+import { RoutePermittedRole } from '@crema/constants/AppEnums';
 
 import ClickawayListener from '../../../../modules/muiComponents/utils/ClickawayListener';
 import Modal from '../../../../modules/muiComponents/utils/Modal';

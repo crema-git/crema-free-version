@@ -1,11 +1,11 @@
 import React from 'react';
 import Box from '@mui/material/Box';
-import {Button, makeStyles} from '@mui/material';
+import { Button, makeStyles } from '@mui/material';
 import clsx from 'clsx';
-import {useLayoutContext} from '@crema/context/AppContextProvider/LayoutContextProvider';
+import { useLayoutContext } from '@crema/context/AppContextProvider/LayoutContextProvider';
 
 const AppFixedFooter = (props) => {
-  const {footer, footerType} = useLayoutContext();
+  const { footer, footerType } = useLayoutContext();
 
   const useStyles = makeStyles((theme) => ({
     footer: {
@@ -44,7 +44,7 @@ const AppFixedFooter = (props) => {
           >
             <Box>Copy right @crema 2021</Box>
             <Box ml='auto'>
-              <Box sx={{px: 5}}>
+              <Box sx={{ px: 5 }}>
                 <Button color='primary'>Buy Now</Button>
               </Box>
             </Box>

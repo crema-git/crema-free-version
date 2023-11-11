@@ -1,9 +1,9 @@
 import React from 'react';
-import {store} from 'react-notifications-component';
+import { store } from 'react-notifications-component';
 import Button from '@mui/material/Button';
 
 import notification from '../helpers/notification';
-import {getContainer} from '../helpers/randomize';
+import { getContainer } from '../helpers/randomize';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 

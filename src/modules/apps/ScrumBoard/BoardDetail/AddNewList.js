@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import Avatar from '@mui/material/Avatar';
 import AddIcon from '@mui/icons-material/Add';
 import TextField from '@mui/material/TextField';
@@ -7,13 +7,13 @@ import Button from '@mui/material/Button';
 import CloseIcon from '@mui/icons-material/Close';
 import Box from '@mui/material/Box';
 import PropTypes from 'prop-types';
-import {grey} from '@mui/material/colors';
-import {Fonts} from '@crema/constants/AppEnums';
+import { grey } from '@mui/material/colors';
+import { Fonts } from '@crema/constants/AppEnums';
 import IntlMessages from '@crema/helpers/IntlMessages';
 import IconButton from '@mui/material/IconButton';
 
 const AddNewList = (props) => {
-  const {onAdd, onCancel} = props;
+  const { onAdd, onCancel } = props;
 
   const [listName, setListName] = useState('');
 
@@ -87,7 +87,7 @@ const AddNewList = (props) => {
             </IconButton>
           </Box>
         </Box>
-        <Box sx={{my: 3}}>
+        <Box sx={{ my: 3 }}>
           <TextField
             sx={{
               '& .MuiInputBase-input': {

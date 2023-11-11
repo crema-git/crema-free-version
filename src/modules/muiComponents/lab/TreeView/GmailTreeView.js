@@ -1,9 +1,9 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
-import {styled} from '@mui/material/styles';
+import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import TreeView from '@mui/lab/TreeView';
-import TreeItem, {treeItemClasses} from '@mui/lab/TreeItem';
+import TreeItem, { treeItemClasses } from '@mui/lab/TreeItem';
 import Typography from '@mui/material/Typography';
 import MailIcon from '@mui/icons-material/Mail';
 import DeleteIcon from '@mui/icons-material/Delete';
@@ -15,7 +15,7 @@ import LocalOfferIcon from '@mui/icons-material/LocalOffer';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import ArrowRightIcon from '@mui/icons-material/ArrowRight';
 
-const StyledTreeItemRoot = styled(TreeItem)(({theme}) => ({
+const StyledTreeItemRoot = styled(TreeItem)(({ theme }) => ({
   color: theme.palette.text.secondary,
   [`& .${treeItemClasses.content}`]: {
     color: theme.palette.text.secondary,
@@ -59,9 +59,12 @@ function StyledTreeItem(props) {
   return (
     <StyledTreeItemRoot
       label={
-        <Box sx={{display: 'flex', alignItems: 'center', p: 0.5, pr: 0}}>
-          <Box component={LabelIcon} color='inherit' sx={{mr: 1}} />
-          <Typography variant='body2' sx={{fontWeight: 'inherit', flexGrow: 1}}>
+        <Box sx={{ display: 'flex', alignItems: 'center', p: 0.5, pr: 0 }}>
+          <Box component={LabelIcon} color='inherit' sx={{ mr: 1 }} />
+          <Typography
+            variant='body2'
+            sx={{ fontWeight: 'inherit', flexGrow: 1 }}
+          >
             {labelText}
           </Typography>
           <Typography variant='caption' color='inherit'>
@@ -93,8 +96,8 @@ export default function GmailTreeView() {
       defaultExpanded={['3']}
       defaultCollapseIcon={<ArrowDropDownIcon />}
       defaultExpandIcon={<ArrowRightIcon />}
-      defaultEndIcon={<div style={{width: 24}} />}
-      sx={{height: 264, flexGrow: 1, maxWidth: 400, overflowY: 'auto'}}
+      defaultEndIcon={<div style={{ width: 24 }} />}
+      sx={{ height: 264, flexGrow: 1, maxWidth: 400, overflowY: 'auto' }}
     >
       <StyledTreeItem nodeId='1' labelText='All Mail' labelIcon={MailIcon} />
       <StyledTreeItem nodeId='2' labelText='Trash' labelIcon={DeleteIcon} />

@@ -1,21 +1,21 @@
 import React from 'react';
-import {Icon, ListItem, ListItemText} from '@mui/material';
+import { Icon, ListItem, ListItemText } from '@mui/material';
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
 import IntlMessages from '@crema/helpers/IntlMessages';
 import Box from '@mui/material/Box';
 import AppNavLink from '../../../AppNavLink';
 import Badge from '@mui/material/Badge';
-import {useSidebarContext} from '@crema/context/AppContextProvider/SidebarContextProvider';
-import {useLocation} from 'react-router-dom';
-import {allowMultiLanguage} from '@crema/constants/AppConst';
+import { useSidebarContext } from '@crema/context/AppContextProvider/SidebarContextProvider';
+import { useLocation } from 'react-router-dom';
+import { allowMultiLanguage } from '@crema/constants/AppConst';
 
 function HorizontalItem(props) {
-  const {item, dense} = props;
+  const { item, dense } = props;
 
   const location = useLocation();
   const active = isUrlInChildren(item, location.pathname);
-  const {sidebarMenuSelectedBgColor, sidebarMenuSelectedTextColor} =
+  const { sidebarMenuSelectedBgColor, sidebarMenuSelectedTextColor } =
     useSidebarContext();
 
   function isUrlInChildren(parent, url) {
@@ -82,7 +82,7 @@ function HorizontalItem(props) {
           sx={{
             color: active ? sidebarMenuSelectedTextColor : 'action',
             mr: 3,
-            fontSize: {xs: 16, xl: 18},
+            fontSize: { xs: 16, xl: 18 },
           }}
         >
           {item.icon}

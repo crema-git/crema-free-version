@@ -6,7 +6,7 @@ import Tooltip from '@mui/material/Tooltip';
 
 export default function PositionedTooltips() {
   return (
-    <Box sx={{width: 500}}>
+    <Box sx={{ width: 500 }}>
       <Grid container justifyContent='center'>
         <Grid item>
           <Tooltip title='Add' placement='top-start'>

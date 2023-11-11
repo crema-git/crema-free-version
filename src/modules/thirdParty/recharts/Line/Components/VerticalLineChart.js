@@ -16,7 +16,7 @@ const VerticalLineChart = () => (
     <LineChart
       layout='vertical'
       data={data}
-      margin={{top: 10, right: 0, left: -13, bottom: 0}}
+      margin={{ top: 10, right: 0, left: -13, bottom: 0 }}
     >
       <XAxis type='number' />
       <YAxis dataKey='name' type='category' />

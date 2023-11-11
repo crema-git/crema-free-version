@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {Pie, PieChart, ResponsiveContainer, Tooltip} from 'recharts';
-import {data01, data02} from './data';
+import { Pie, PieChart, ResponsiveContainer, Tooltip } from 'recharts';
+import { data01, data02 } from './data';
 
 const TwoSimplePieChart = () => (
   <ResponsiveContainer width='100%' height={300}>

@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 import Typography from '@mui/material/Typography';
 import CheckCircleOutlinedIcon from '@mui/icons-material/CheckCircleOutlined';
 
-const FollowItem = ({item}) => {
+const FollowItem = ({ item }) => {
   return (
     <Box className='item-hover' px={5} py={2} display='flex'>
       <Avatar

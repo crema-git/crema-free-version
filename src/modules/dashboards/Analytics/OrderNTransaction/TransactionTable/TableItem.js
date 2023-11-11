@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 
-const TableItem = ({data}) => {
+const TableItem = ({ data }) => {
   const getPaymentTypeColor = () => {
     switch (data.paymentType) {
       case 'COD': {
@@ -70,7 +70,7 @@ const TableItem = ({data}) => {
       <TableCell
         align='left'
         className='tableCell'
-        style={{color: getPaymentTypeColor()}}
+        style={{ color: getPaymentTypeColor() }}
       >
         {data.paymentType}
       </TableCell>

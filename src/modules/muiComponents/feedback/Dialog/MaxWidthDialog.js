@@ -63,7 +63,7 @@ export default function MaxWidthDialog() {
               width: 'fit-content',
             }}
           >
-            <FormControl sx={{mt: 2, minWidth: 120}}>
+            <FormControl sx={{ mt: 2, minWidth: 120 }}>
               <InputLabel htmlFor='max-width'>maxWidth</InputLabel>
               <Select
                 autoFocus
@@ -84,7 +84,7 @@ export default function MaxWidthDialog() {
               </Select>
             </FormControl>
             <FormControlLabel
-              sx={{mt: 1}}
+              sx={{ mt: 1 }}
               control={
                 <Switch checked={fullWidth} onChange={handleFullWidthChange} />
               }

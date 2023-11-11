@@ -1,6 +1,10 @@
 /* eslint-disable no-undef */
-import React, {useEffect, useState} from 'react';
-import {DirectionsRenderer, GoogleMap, withGoogleMap} from 'react-google-maps';
+import React, { useEffect, useState } from 'react';
+import {
+  DirectionsRenderer,
+  GoogleMap,
+  withGoogleMap,
+} from 'react-google-maps';
 
 // const google = window.google;
 

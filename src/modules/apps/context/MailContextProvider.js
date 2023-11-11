@@ -1,7 +1,7 @@
-import React, {createContext, useContext, useEffect, useState} from 'react';
+import React, { createContext, useContext, useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
-import {useGetDataApi} from '@crema/hooks/APIHooks';
-import {useLocation, useParams} from 'react-router-dom';
+import { useGetDataApi } from '@crema/hooks/APIHooks';
+import { useLocation, useParams } from 'react-router-dom';
 
 const MailContext = createContext();
 const MailActionsContext = createContext();
@@ -10,19 +10,19 @@ export const useMailContext = () => useContext(MailContext);
 
 export const useMailActionsContext = () => useContext(MailActionsContext);
 
-export const MailContextProvider = ({children}) => {
+export const MailContextProvider = ({ children }) => {
   const params = useParams();
-  const {pathname} = useLocation();
-  const [{apiData: labelList}] = useGetDataApi('/api/mailApp/labels/list');
-  const [{apiData: connectionList}] = useGetDataApi(
+  const { pathname } = useLocation();
+  const [{ apiData: labelList }] = useGetDataApi('/api/mailApp/labels/list');
+  const [{ apiData: connectionList }] = useGetDataApi(
     '/api/mailApp/connection/list',
   );
-  const [{apiData: folderList}] = useGetDataApi('/api/mailApp/folders/list');
+  const [{ apiData: folderList }] = useGetDataApi('/api/mailApp/folders/list');
   const [page, setPage] = useState(0);
 
   const [
-    {apiData: mailList, loading},
-    {setQueryParams, setData: setMailData, reCallAPI},
+    { apiData: mailList, loading },
+    { setQueryParams, setData: setMailData, reCallAPI },
   ] = useGetDataApi(
     '/api/mailApp/folder/mail/List',
     undefined,

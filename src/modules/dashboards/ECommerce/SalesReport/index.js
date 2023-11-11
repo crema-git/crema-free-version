@@ -2,14 +2,14 @@ import React from 'react';
 import AppCard from '@crema/components/AppCard';
 import SalesChart from './SalesChart';
 import AppSelect from '@crema/components/AppSelect';
-import {useIntl} from 'react-intl';
+import { useIntl } from 'react-intl';
 import IntlMessages from '@crema/helpers/IntlMessages';
-import {alpha, useTheme} from '@mui/material';
+import { alpha, useTheme } from '@mui/material';
 import Box from '@mui/material/Box';
 
-import {styled} from '@mui/material/styles';
+import { styled } from '@mui/material/styles';
 
-const DotActionItem = styled('div')(({theme}) => {
+const DotActionItem = styled('div')(({ theme }) => {
   return {
     display: 'flex',
     alignItems: 'center',
@@ -34,7 +34,7 @@ const DotActionItem = styled('div')(({theme}) => {
 });
 
 const SalesReport = () => {
-  const {messages} = useIntl();
+  const { messages } = useIntl();
 
   const theme = useTheme();
 
@@ -43,7 +43,7 @@ const SalesReport = () => {
 
   return (
     <AppCard
-      sxStyle={{position: 'relative'}}
+      sxStyle={{ position: 'relative' }}
       title={messages['dashboard.eCommerce.salesReportOverview']}
       action={
         <Box
@@ -55,7 +55,7 @@ const SalesReport = () => {
         >
           <Box
             sx={{
-              display: {xs: 'none', sm: 'flex'},
+              display: { xs: 'none', sm: 'flex' },
               alignItems: 'center',
               flexWrap: 'wrap',
               mr: 2,
@@ -63,14 +63,14 @@ const SalesReport = () => {
           >
             <DotActionItem>
               <span
-                style={{backgroundColor: theme.palette.secondary.main}}
+                style={{ backgroundColor: theme.palette.secondary.main }}
                 className='dot-icon'
               />
               <IntlMessages id='dashboard.eCommerce.return' />
             </DotActionItem>
             <DotActionItem>
               <span
-                style={{backgroundColor: theme.palette.primary.main}}
+                style={{ backgroundColor: theme.palette.primary.main }}
                 className='dot-icon'
               />
               <IntlMessages id='common.orders' />

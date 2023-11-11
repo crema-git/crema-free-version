@@ -6,19 +6,19 @@ import {
   useSidebarContext,
 } from '@crema/context/AppContextProvider/SidebarContextProvider';
 import AppSelectedIcon from '../../../AppSelectedIcon';
-import {menuStyles} from '@crema/mockapi/fakedb/navigationStyle';
+import { menuStyles } from '@crema/mockapi/fakedb/navigationStyle';
 
 const NavMenuStyle = () => {
-  const {menuStyle} = useSidebarContext();
+  const { menuStyle } = useSidebarContext();
 
-  const {updateMenuStyle} = useSidebarActionsContext();
+  const { updateMenuStyle } = useSidebarActionsContext();
   const onMenuStyleChange = (menuStyle) => {
     updateMenuStyle(menuStyle);
   };
 
   return (
     <>
-      <Box component='h4' sx={{mb: 3}}>
+      <Box component='h4' sx={{ mb: 3 }}>
         <IntlMessages id='customizer.sidebarMenuStyle' />
       </Box>
       <Box

@@ -3,16 +3,16 @@ import TaskSideBar from './TaskSideBar/index';
 import TasksCalendar from './TasksCalendar';
 import TaskDetail from './TaskDetail';
 import PropTypes from 'prop-types';
-import {useIntl} from 'react-intl';
+import { useIntl } from 'react-intl';
 import AppsContainer from '@crema/components/AppsContainer';
 import clsx from 'clsx';
-import {useParams} from 'react-router-dom';
-import {Box} from '@mui/material';
+import { useParams } from 'react-router-dom';
+import { Box } from '@mui/material';
 import CalendarContextProvider from '../context/CalendarContextProvider';
 
 const Calendar = () => {
-  const {id} = useParams();
-  const {messages} = useIntl();
+  const { id } = useParams();
+  const { messages } = useIntl();
 
   return (
     <CalendarContextProvider>

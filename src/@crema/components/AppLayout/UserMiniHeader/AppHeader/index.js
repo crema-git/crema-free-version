@@ -14,12 +14,12 @@ import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import AppTooltip from '../../../AppTooltip';
-import {alpha} from '@mui/material/styles';
+import { alpha } from '@mui/material/styles';
 import AppLogo from '../../components/AppLogo';
 import UserInfo from '../../components/UserInfo';
-import {allowMultiLanguage} from '../../../../constants/AppConst';
+import { allowMultiLanguage } from '../../../../constants/AppConst';
 
-const AppHeader = ({toggleNavCollapsed}) => {
+const AppHeader = ({ toggleNavCollapsed }) => {
   const [anchorEl, setAnchorEl] = React.useState(null);
 
   const handleClick = (event) => {
@@ -45,14 +45,14 @@ const AppHeader = ({toggleNavCollapsed}) => {
       <Toolbar
         sx={{
           boxSizing: 'border-box',
-          minHeight: {xs: 56, sm: 70},
-          paddingLeft: {xs: 2.5, md: 5},
-          paddingRight: {xs: 2.5, md: 5},
+          minHeight: { xs: 56, sm: 70 },
+          paddingLeft: { xs: 2.5, md: 5 },
+          paddingRight: { xs: 2.5, md: 5 },
         }}
       >
         <Hidden lgUp>
           <IconButton
-            sx={{color: 'text.secondary'}}
+            sx={{ color: 'text.secondary' }}
             edge='start'
             className='menu-btn'
             color='inherit'
@@ -71,7 +71,7 @@ const AppHeader = ({toggleNavCollapsed}) => {
         <Box
           sx={{
             '& .logo-text': {
-              display: {xs: 'none', sm: 'block'},
+              display: { xs: 'none', sm: 'block' },
             },
           }}
         >
@@ -86,11 +86,11 @@ const AppHeader = ({toggleNavCollapsed}) => {
           sx={{
             minHeight: 40,
             position: 'relative',
-            display: {xs: 'none', sm: 'block'},
+            display: { xs: 'none', sm: 'block' },
             '& .searchRoot': {
-              position: {xs: 'absolute', sm: 'relative'},
-              right: {xs: 0, sm: 'auto'},
-              top: {xs: 0, sm: 'auto'},
+              position: { xs: 'absolute', sm: 'relative' },
+              right: { xs: 0, sm: 'auto' },
+              top: { xs: 0, sm: 'auto' },
             },
           }}
         >
@@ -98,7 +98,7 @@ const AppHeader = ({toggleNavCollapsed}) => {
         </Box>
 
         {allowMultiLanguage && (
-          <Box sx={{ml: 4}}>
+          <Box sx={{ ml: 4 }}>
             <AppLngSwitcher iconOnly={true} tooltipPosition='bottom' />
           </Box>
         )}
@@ -139,14 +139,14 @@ const AppHeader = ({toggleNavCollapsed}) => {
 
           <Box
             sx={{
-              ml: {sm: 4},
-              mr: {xs: 4, sm: 0},
-              minWidth: {md: 220},
+              ml: { sm: 4 },
+              mr: { xs: 4, sm: 0 },
+              minWidth: { md: 220 },
               '& .user-info-view': {
                 p: 0,
               },
               '& .user-info': {
-                display: {xs: 'none', md: 'block'},
+                display: { xs: 'none', md: 'block' },
               },
             }}
           >

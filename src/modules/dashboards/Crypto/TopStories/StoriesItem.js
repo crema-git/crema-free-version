@@ -1,9 +1,9 @@
 import React from 'react';
-import {Box, Typography} from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import PropTypes from 'prop-types';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Fonts } from '@crema/constants/AppEnums';
 
-const StoriesItem = ({stories}) => {
+const StoriesItem = ({ stories }) => {
   return (
     <Box
       sx={{
@@ -48,10 +48,10 @@ const StoriesItem = ({stories}) => {
             fontWeight: Fonts.MEDIUM,
           }}
         >
-          <Box component='span' sx={{mr: 1}}>
+          <Box component='span' sx={{ mr: 1 }}>
             {stories.tag}
           </Box>
-          <Box component='span' sx={{mr: 1}}>
+          <Box component='span' sx={{ mr: 1 }}>
             .
           </Box>
           <Box component='span'>{stories.time}</Box>

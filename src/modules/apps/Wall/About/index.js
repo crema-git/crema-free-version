@@ -1,18 +1,18 @@
 import React from 'react';
-import {styled} from '@mui/material/styles';
+import { styled } from '@mui/material/styles';
 import AppCard from '@crema/components/AppCard';
 import Box from '@mui/material/Box';
 import EditOutlinedIcon from '@mui/icons-material/EditOutlined';
 import IconButton from '@mui/material/IconButton';
 import AppList from '@crema/components/AppList';
 import PropTypes from 'prop-types';
-import {useIntl} from 'react-intl';
-import {AiOutlineMail, AiOutlineUser} from 'react-icons/ai';
-import {BiErrorCircle, BiPhone} from 'react-icons/bi';
-import {FiThumbsUp} from 'react-icons/fi';
-import {MdPublic} from 'react-icons/md';
+import { useIntl } from 'react-intl';
+import { AiOutlineMail, AiOutlineUser } from 'react-icons/ai';
+import { BiErrorCircle, BiPhone } from 'react-icons/bi';
+import { FiThumbsUp } from 'react-icons/fi';
+import { MdPublic } from 'react-icons/md';
 
-const AboutItemRoot = styled('div')(({theme}) => ({
+const AboutItemRoot = styled('div')(({ theme }) => ({
   display: 'flex',
   alignItems: 'center',
   '&:not(:last-of-type)': {
@@ -57,7 +57,7 @@ const getIconByName = (iconName) => {
   }
 };
 
-const AboutItem = ({item}) => {
+const AboutItem = ({ item }) => {
   const getLinkAddress = () => {
     switch (item.linkType) {
       case 'link': {
@@ -76,7 +76,7 @@ const AboutItem = ({item}) => {
 
   return (
     <AboutItemRoot>
-      <Box component='span' sx={{mr: 3.5, fontSize: 20}}>
+      <Box component='span' sx={{ mr: 3.5, fontSize: 20 }}>
         {getIconByName(item.icon)}
       </Box>
       {getLinkAddress()}
@@ -100,11 +100,11 @@ const AboutItem = ({item}) => {
   );
 };
 
-const About = ({about}) => {
-  const {messages} = useIntl();
+const About = ({ about }) => {
+  const { messages } = useIntl();
   return (
     <AppCard
-      sxStyle={{mb: 8}}
+      sxStyle={{ mb: 8 }}
       title={messages['wall.about']}
       action={messages['wall.editPageInfo']}
     >

@@ -3,11 +3,11 @@ import ListItemAvatar from '@mui/material/ListItemAvatar';
 import Avatar from '@mui/material/Avatar';
 import PropTypes from 'prop-types';
 import ListItem from '@mui/material/ListItem';
-import {Box, Typography} from '@mui/material';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Box, Typography } from '@mui/material';
+import { Fonts } from '@crema/constants/AppEnums';
 
 const MessageItem = (props) => {
-  const {item} = props;
+  const { item } = props;
 
   return (
     <ListItem

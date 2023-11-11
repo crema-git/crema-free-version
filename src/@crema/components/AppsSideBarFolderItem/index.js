@@ -16,13 +16,13 @@ import TodayOutlinedIcon from '@mui/icons-material/TodayOutlined';
 import CheckCircleOutlinedIcon from '@mui/icons-material/CheckCircleOutlined';
 import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
 import LabelImportantIcon from '@mui/icons-material/LabelImportant';
-import {alpha, styled} from '@mui/material/styles';
-import {Fonts} from '@crema/constants/AppEnums';
+import { alpha, styled } from '@mui/material/styles';
+import { Fonts } from '@crema/constants/AppEnums';
 import AppNavLink from '../AppNavLink';
-import {AiOutlineSend, AiOutlineStop} from 'react-icons/ai';
-import {MdOutlineCancel, MdOutlinePayment} from 'react-icons/md';
+import { AiOutlineSend, AiOutlineStop } from 'react-icons/ai';
+import { MdOutlineCancel, MdOutlinePayment } from 'react-icons/md';
 
-const AppsSideBarFolderList = styled(ListItem)(({theme}) => {
+const AppsSideBarFolderList = styled(ListItem)(({ theme }) => {
   return {
     padding: '7px 16px',
     borderRadius: '0 30px 30px 0',
@@ -106,7 +106,7 @@ const getIconByName = (name) => {
   }
 };
 
-const AppsSideBarFolderItem = ({item, path}) => {
+const AppsSideBarFolderItem = ({ item, path }) => {
   return (
     <AppsSideBarFolderList
       button

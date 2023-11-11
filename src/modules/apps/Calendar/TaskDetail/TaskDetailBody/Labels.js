@@ -4,7 +4,7 @@ import LabelOutlinedIcon from '@mui/icons-material/LabelOutlined';
 import Box from '@mui/material/Box';
 import AppTooltip from '@crema/components/AppTooltip';
 
-const Labels = ({labels}) => {
+const Labels = ({ labels }) => {
   return (
     <Box
       className='labelIcon'

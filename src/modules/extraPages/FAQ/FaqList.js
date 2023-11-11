@@ -5,11 +5,11 @@ import AccordionDetails from '@mui/material/AccordionDetails';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import Box from '@mui/material/Box';
 import PropTypes from 'prop-types';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Fonts } from '@crema/constants/AppEnums';
 
-const FaqList = ({faqList}) => {
+const FaqList = ({ faqList }) => {
   return (
-    <Box sx={{height: '100%'}}>
+    <Box sx={{ height: '100%' }}>
       {faqList.map((item) => {
         return (
           <Accordion
@@ -35,7 +35,7 @@ const FaqList = ({faqList}) => {
             >
               <Box>{item.ques}</Box>
             </AccordionSummary>
-            <AccordionDetails sx={{padding: '0 0 10px'}}>
+            <AccordionDetails sx={{ padding: '0 0 10px' }}>
               <Box>{item.ans}</Box>
             </AccordionDetails>
           </Accordion>

@@ -1,11 +1,11 @@
 import React from 'react';
 import Box from '@mui/material/Box';
 import PropTypes from 'prop-types';
-import {TiFolderOpen} from 'react-icons/ti';
-import {useThemeContext} from '@crema/context/AppContextProvider/ThemeContextProvider';
+import { TiFolderOpen } from 'react-icons/ti';
+import { useThemeContext } from '@crema/context/AppContextProvider/ThemeContextProvider';
 
-const UploadModern = ({customContent, uploadText, dropzone}) => {
-  const {theme} = useThemeContext();
+const UploadModern = ({ customContent, uploadText, dropzone }) => {
+  const { theme } = useThemeContext();
   return (
     <Box
       sx={{
@@ -17,7 +17,7 @@ const UploadModern = ({customContent, uploadText, dropzone}) => {
       }}
     >
       <Box
-        {...dropzone.getRootProps({className: 'dropzone'})}
+        {...dropzone.getRootProps({ className: 'dropzone' })}
         sx={{
           cursor: 'pointer',
           border: (theme) => `dashed 2px ${theme.palette.divider}`,

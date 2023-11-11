@@ -3,13 +3,13 @@ import AppCard from '@crema/components/AppCard';
 import Box from '@mui/material/Box';
 import Avatar from '@mui/material/Avatar';
 import PersonIcon from '@mui/icons-material/Person';
-import {useIntl} from 'react-intl';
-import {Fonts} from '@crema/constants/AppEnums';
+import { useIntl } from 'react-intl';
+import { Fonts } from '@crema/constants/AppEnums';
 import PropTypes from 'prop-types';
 
-const MyProfile = ({profile}) => {
-  const {profile_pic, name, designation, achievements, friends} = profile;
-  const {messages} = useIntl();
+const MyProfile = ({ profile }) => {
+  const { profile_pic, name, designation, achievements, friends } = profile;
+  const { messages } = useIntl();
 
   return (
     <AppCard
@@ -39,8 +39,8 @@ const MyProfile = ({profile}) => {
         >
           <Avatar
             sx={{
-              width: {xs: 50, md: 770, lg: 90, xl: 110},
-              height: {xs: 50, md: 770, lg: 90, xl: 110},
+              width: { xs: 50, md: 770, lg: 90, xl: 110 },
+              height: { xs: 50, md: 770, lg: 90, xl: 110 },
               my: 4,
             }}
             src={profile_pic}
@@ -69,7 +69,7 @@ const MyProfile = ({profile}) => {
         <Box
           sx={{
             width: 1,
-            p: {xs: 3, xl: 5},
+            p: { xs: 3, xl: 5 },
             display: 'flex',
             alignItems: 'center',
             backgroundColor: '#E7F4FC',
@@ -136,7 +136,7 @@ const MyProfile = ({profile}) => {
                 mb: 2,
               }}
             >
-              <PersonIcon style={{fontSize: 40, color: '#FD3A84'}} />
+              <PersonIcon style={{ fontSize: 40, color: '#FD3A84' }} />
             </Box>
             <Box
               sx={{

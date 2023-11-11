@@ -21,7 +21,7 @@ export default function NestedList() {
 
   return (
     <List
-      sx={{width: '100%', maxWidth: 360, bgcolor: 'background.paper'}}
+      sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}
       component='nav'
       aria-labelledby='nested-list-subheader'
       subheader={
@@ -51,7 +51,7 @@ export default function NestedList() {
       </ListItemButton>
       <Collapse in={open} timeout='auto' unmountOnExit>
         <List component='div' disablePadding>
-          <ListItemButton sx={{pl: 4}}>
+          <ListItemButton sx={{ pl: 4 }}>
             <ListItemIcon>
               <StarBorder />
             </ListItemIcon>

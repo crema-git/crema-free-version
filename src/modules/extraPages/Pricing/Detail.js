@@ -1,11 +1,11 @@
 import React from 'react';
-import {Box, Grid, Typography} from '@mui/material';
+import { Box, Grid, Typography } from '@mui/material';
 import AppGridContainer from '@crema/components/AppGridContainer';
 import PackageOneNew from './PackageOneNew';
 import PackageTable from './PackageTable';
 import GitPackage from './GitPackage';
 import PricingFaq from './Faq';
-import {pricingData, pricingFaq} from '@crema/mockapi/fakedb/extraPages';
+import { pricingData, pricingFaq } from '@crema/mockapi/fakedb/extraPages';
 
 const PricingDetail = () => {
   const [billingFormat, setBillingFormat] = React.useState('month');
@@ -14,7 +14,7 @@ const PricingDetail = () => {
     <AppGridContainer>
       <Typography
         variant='h1'
-        sx={{mt: 8, width: '100%', fontSize: 48, textAlign: 'center'}}
+        sx={{ mt: 8, width: '100%', fontSize: 48, textAlign: 'center' }}
       >
         Plans that fit your scale
       </Typography>
@@ -49,20 +49,20 @@ const PricingDetail = () => {
       >
         <Box
           className={billingFormat === 'month' ? 'active' : ''}
-          sx={{p: 3, borderRadius: 1.5, cursor: 'pointer'}}
+          sx={{ p: 3, borderRadius: 1.5, cursor: 'pointer' }}
           onClick={() => setBillingFormat('month')}
         >
           Monthly billing
         </Box>
         <Box
           className={billingFormat === 'year' ? 'active' : ''}
-          sx={{p: 3, borderRadius: 1.5, cursor: 'pointer'}}
+          sx={{ p: 3, borderRadius: 1.5, cursor: 'pointer' }}
           onClick={() => setBillingFormat('year')}
         >
           Yearly billing
         </Box>
         <Box
-          sx={{borderRadius: '20px', bgcolor: '#F2F4F7', ml: 3, p: '4px 8px'}}
+          sx={{ borderRadius: '20px', bgcolor: '#F2F4F7', ml: 3, p: '4px 8px' }}
         >
           Save 20%
         </Box>
@@ -81,7 +81,7 @@ const PricingDetail = () => {
           width: '100%',
         }}
       >
-        <Box sx={{m: '10px auto'}}>
+        <Box sx={{ m: '10px auto' }}>
           <img src='/assets/images/heartglobe.svg' alt='heartglobe' />
         </Box>
         <Typography
@@ -106,7 +106,7 @@ const PricingDetail = () => {
           pricing={pricingData.tableData}
         />
       </Grid>
-      <Grid item xs={12} sx={{mt: 7}}>
+      <Grid item xs={12} sx={{ mt: 7 }}>
         <PricingFaq pricingFaq={pricingFaq} />
       </Grid>
     </AppGridContainer>

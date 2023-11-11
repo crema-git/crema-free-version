@@ -1,10 +1,10 @@
 import React from 'react';
 import Box from '@mui/material/Box';
 import PropTypes from 'prop-types';
-import {Fonts} from '@crema/constants/AppEnums';
-import {alpha} from '@mui/material';
+import { Fonts } from '@crema/constants/AppEnums';
+import { alpha } from '@mui/material';
 
-const Priority = ({priority}) => {
+const Priority = ({ priority }) => {
   return (
     <Box
       component='span'

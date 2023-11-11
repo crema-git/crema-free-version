@@ -7,14 +7,14 @@ import Hidden from '@mui/material/Hidden';
 import Drawer from '@mui/material/Drawer';
 import VerticalNav from '../../components/VerticalNav';
 import SidebarWrapper from './SidebarWrapper';
-import {useLayoutContext} from '@crema/context/AppContextProvider/LayoutContextProvider';
+import { useLayoutContext } from '@crema/context/AppContextProvider/LayoutContextProvider';
 import UserInfo from '../../components/UserInfo';
-import {useSidebarContext} from '@crema/context/AppContextProvider/SidebarContextProvider';
+import { useSidebarContext } from '@crema/context/AppContextProvider/SidebarContextProvider';
 
 const AppSidebar = (props) => {
-  const {footer, footerType} = useLayoutContext();
+  const { footer, footerType } = useLayoutContext();
 
-  const {sidebarTextColor} = useSidebarContext();
+  const { sidebarTextColor } = useSidebarContext();
 
   return (
     <>
@@ -27,7 +27,7 @@ const AppSidebar = (props) => {
             root: clsx(props.variant),
             paper: clsx(props.variant),
           }}
-          style={{position: 'absolute'}}
+          style={{ position: 'absolute' }}
         >
           <SidebarWrapper className='mini-sidebar'>
             <MainSidebar>

@@ -1,13 +1,13 @@
 import React from 'react';
-import {Area, AreaChart, ResponsiveContainer, Tooltip, XAxis} from 'recharts';
+import { Area, AreaChart, ResponsiveContainer, Tooltip, XAxis } from 'recharts';
 import PropTypes from 'prop-types';
 
-const StatGraphs = ({id, data, strokeColor}) => {
+const StatGraphs = ({ id, data, strokeColor }) => {
   return (
     <ResponsiveContainer width='100%' height={60}>
       <AreaChart
         data={data}
-        margin={{top: 0, right: 0, left: 0, bottom: 0}}
+        margin={{ top: 0, right: 0, left: 0, bottom: 0 }}
         nameKey='month'
       >
         <defs>
@@ -17,7 +17,7 @@ const StatGraphs = ({id, data, strokeColor}) => {
           </linearGradient>
         </defs>
         <Tooltip
-          labelStyle={{color: 'black'}}
+          labelStyle={{ color: 'black' }}
           contentStyle={{
             borderRadius: 12,
             borderColor: '#31354188',

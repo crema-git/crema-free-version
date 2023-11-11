@@ -13,7 +13,7 @@ import data from './data';
 
 const DashedLineChart = () => (
   <ResponsiveContainer width='100%' height={200}>
-    <LineChart data={data} margin={{top: 10, right: 0, left: -25, bottom: 0}}>
+    <LineChart data={data} margin={{ top: 10, right: 0, left: -25, bottom: 0 }}>
       <XAxis dataKey='name' />
       <YAxis />
       <CartesianGrid strokeDasharray='3 3' />

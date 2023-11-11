@@ -7,7 +7,7 @@ import {
 } from 'recharts';
 import PropTypes from 'prop-types';
 
-const ChartView = ({data}) => {
+const ChartView = ({ data }) => {
   return (
     <ResponsiveContainer width='100%' height={250}>
       <RadialBarChart

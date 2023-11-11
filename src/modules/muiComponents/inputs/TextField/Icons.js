@@ -9,7 +9,7 @@ import AccountCircle from '@mui/icons-material/AccountCircle';
 
 export default function InputWithIcon() {
   return (
-    <Box sx={{'& > :not(style)': {m: 1}}}>
+    <Box sx={{ '& > :not(style)': { m: 1 } }}>
       <FormControl variant='standard'>
         <InputLabel htmlFor='input-with-icon-adornment'>
           With a start adornment
@@ -35,8 +35,8 @@ export default function InputWithIcon() {
         }}
         variant='standard'
       />
-      <Box sx={{display: 'flex', alignItems: 'flex-end'}}>
-        <AccountCircle sx={{color: 'action.active', mr: 1, my: 0.5}} />
+      <Box sx={{ display: 'flex', alignItems: 'flex-end' }}>
+        <AccountCircle sx={{ color: 'action.active', mr: 1, my: 0.5 }} />
         <TextField id='input-with-sx' label='With sx' variant='standard' />
       </Box>
     </Box>

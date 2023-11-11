@@ -1,5 +1,5 @@
 import React from 'react';
-import {RoutePermittedRole} from '@crema/constants/AppEnums';
+import { RoutePermittedRole } from '@crema/constants/AppEnums';
 
 const Signin = React.lazy(() =>
   import('../../../modules/userPages/UserPages/Signin'),

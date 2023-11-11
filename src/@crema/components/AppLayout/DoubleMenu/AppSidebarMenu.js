@@ -7,12 +7,12 @@ import PropTypes from 'prop-types';
 import useStyles from './AppSidebarMenu.style';
 import AppScrollbar from '../../AppScrollbar';
 import MenuGroup from './SidebarMenu/MenuGroup';
-import {useThemeContext} from '@crema/context/AppContextProvider/ThemeContextProvider';
+import { useThemeContext } from '@crema/context/AppContextProvider/ThemeContextProvider';
 
 const AppSidebarMenu = (props) => {
-  const {themeMode} = useThemeContext();
+  const { themeMode } = useThemeContext();
 
-  const classes = useStyles({themeMode});
+  const classes = useStyles({ themeMode });
   let sidebarClasses = classes.sidebarStandard;
   return (
     <>
@@ -25,7 +25,7 @@ const AppSidebarMenu = (props) => {
             root: clsx(props.variant),
             paper: clsx(props.variant),
           }}
-          style={{position: 'absolute'}}
+          style={{ position: 'absolute' }}
         >
           <Box className={clsx(classes.appSidebarMenuRoot, 'app-sidebar-menu')}>
             <Box className={clsx(classes.sidebarBg, sidebarClasses)}>

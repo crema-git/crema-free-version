@@ -4,7 +4,7 @@ import AppGridContainer from '@crema/components/AppGridContainer';
 import Grid from '@mui/material/Grid';
 import PackageCard from './PackageCard';
 
-const GitPackage = ({pricing}) => {
+const GitPackage = ({ pricing }) => {
   return (
     <AppGridContainer>
       {pricing.map((data, index) => (

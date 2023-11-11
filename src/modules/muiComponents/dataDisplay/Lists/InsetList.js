@@ -9,7 +9,7 @@ import StarIcon from '@mui/icons-material/Star';
 export default function InsetList() {
   return (
     <List
-      sx={{width: '100%', maxWidth: 360, bgcolor: 'background.paper'}}
+      sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}
       aria-label='contacts'
     >
       <ListItem disablePadding>

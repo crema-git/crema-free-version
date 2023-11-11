@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, { useEffect } from 'react';
 import AppLoader from '@crema/components/AppLoader';
 import Grid from '@mui/material/Grid';
 import BlogSidebarCard from '../BlogSidebarCard';
@@ -9,21 +9,21 @@ import PropTypes from 'prop-types';
 import BlogContent from '../BlogContent';
 import AppAnimate from '@crema/components/AppAnimate';
 import AppGridContainer from '@crema/components/AppGridContainer';
-import {useGetDataApi} from '@crema/hooks/APIHooks';
-import {isEmptyObject} from '@crema/helpers/ApiHelper';
-import {useParams} from 'react-router-dom';
+import { useGetDataApi } from '@crema/hooks/APIHooks';
+import { isEmptyObject } from '@crema/helpers/ApiHelper';
+import { useParams } from 'react-router-dom';
 
 const BlogDetail = () => {
-  const {id} = useParams();
-  const [{apiData, loading}, {setQueryParams}] = useGetDataApi(
+  const { id } = useParams();
+  const [{ apiData, loading }, { setQueryParams }] = useGetDataApi(
     '/pages/blogs/detail',
     {},
-    {id: id},
+    { id: id },
     false,
   );
 
   useEffect(() => {
-    setQueryParams({id: id});
+    setQueryParams({ id: id });
   }, [id]);
 
   return loading ? (
@@ -45,17 +45,17 @@ const BlogDetail = () => {
             lg={4}
             xl={3}
             sx={{
-              order: {md: 2},
-              position: {md: 'sticky'},
-              top: {md: 70},
-              bottom: {md: 0},
+              order: { md: 2 },
+              position: { md: 'sticky' },
+              top: { md: 70 },
+              bottom: { md: 0 },
               zIndex: 2,
-              alignSelf: {md: 'flex-start'},
+              alignSelf: { md: 'flex-start' },
             }}
           >
             <BlogSidebarCard blogSidebar={apiData.blogSidebar} />
           </Grid>
-          <Grid item xs={12} md={8} lg={8} xl={9} sx={{order: {md: 1}}}>
+          <Grid item xs={12} md={8} lg={8} xl={9} sx={{ order: { md: 1 } }}>
             <BlogDetailContent
               blogDetailContent={apiData.blogDetail.blogDetailContent}
             />

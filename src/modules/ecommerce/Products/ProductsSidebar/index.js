@@ -1,8 +1,8 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import ProductsCategory from './ProductsCategory';
-import {Box} from '@mui/material';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Box } from '@mui/material';
+import { Fonts } from '@crema/constants/AppEnums';
 import Divider from '@mui/material/Divider';
 import PriceSelector from './PriceSelector';
 import AppScrollbar from '@crema/components/AppScrollbar';
@@ -18,7 +18,7 @@ import {
   ProductColors,
 } from '@crema/mockapi/fakedb/ecommerce';
 
-const ProductSidebar = ({filterData, setFilterData}) => {
+const ProductSidebar = ({ filterData, setFilterData }) => {
   const [selectedBrand, setSelectedBrand] = useState(filterData.brand);
   const [selectedFor, setSelectedFor] = useState(filterData.ideaFor);
   const [selectedDiscount, setSelectedDiscount] = useState(filterData.discount);
@@ -211,7 +211,7 @@ const ProductSidebar = ({filterData, setFilterData}) => {
             fontWeight: Fonts.MEDIUM,
           }}
         >
-          <Box sx={{mb: 3}}>COLOR</Box>
+          <Box sx={{ mb: 3 }}>COLOR</Box>
 
           <AppGrid
             data={Object.values(ProductColors)}

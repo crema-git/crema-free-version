@@ -1,8 +1,8 @@
 import React from 'react';
-import {Box} from '@mui/material';
+import { Box } from '@mui/material';
 import PropTypes from 'prop-types';
 
-const ImageCardSlideWrapper = ({children}) => {
+const ImageCardSlideWrapper = ({ children }) => {
   return (
     <Box
       sx={{
@@ -21,16 +21,16 @@ const ImageCardSlideWrapper = ({children}) => {
             mx: 1.5,
           },
           '& .slick-dots li button': {
-            width: {xs: 10, xl: 14},
-            height: {xs: 10, xl: 14},
+            width: { xs: 10, xl: 14 },
+            height: { xs: 10, xl: 14 },
           },
           '& .slick-dots li button:before': {
             color: 'transparent',
             border: 'solid 2px #fff',
             opacity: 1,
             borderRadius: '50%',
-            width: {xs: 10, xl: 14},
-            height: {xs: 10, xl: 14},
+            width: { xs: 10, xl: 14 },
+            height: { xs: 10, xl: 14 },
           },
           '& .slick-dots li.slick-active button:before': {
             backgroundColor: (theme) => theme.palette.primary.main,

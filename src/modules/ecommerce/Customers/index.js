@@ -1,23 +1,23 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import AppsContainer from '@crema/components/AppsContainer';
-import {useIntl} from 'react-intl';
-import {Hidden} from '@mui/material';
+import { useIntl } from 'react-intl';
+import { Hidden } from '@mui/material';
 import AppsHeader from '@crema/components/AppsContainer/AppsHeader';
 import AppsContent from '@crema/components/AppsContainer/AppsContent';
 import AppsPagination from '@crema/components/AppsPagination';
 import Box from '@mui/material/Box';
 import AppSearchBar from '@crema/components/AppSearchBar';
-import {useGetDataApi} from '@crema/hooks/APIHooks';
+import { useGetDataApi } from '@crema/hooks/APIHooks';
 import CustomerTable from './CustomerTable';
 
 const Customers = () => {
-  const {messages} = useIntl();
+  const { messages } = useIntl();
   const [
     {
-      apiData: {customers, customerCount},
+      apiData: { customers, customerCount },
       loading,
     },
-    {setQueryParams},
+    { setQueryParams },
   ] = useGetDataApi('/api/ecommerce/customers', {}, {}, false);
 
   const [page, setPage] = useState(0);
@@ -27,7 +27,7 @@ const Customers = () => {
     setPage(value);
   };
   useEffect(() => {
-    setQueryParams({search, page});
+    setQueryParams({ search, page });
   }, [search, page]);
 
   const onSearchCustomer = (e) => {

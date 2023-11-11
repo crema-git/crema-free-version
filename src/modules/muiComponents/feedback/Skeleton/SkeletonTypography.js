@@ -7,7 +7,7 @@ import Grid from '@mui/material/Grid';
 const variants = ['h1', 'h3', 'body1', 'caption'];
 
 function TypographyDemo(props) {
-  const {loading = false} = props;
+  const { loading = false } = props;
 
   return (
     <div>

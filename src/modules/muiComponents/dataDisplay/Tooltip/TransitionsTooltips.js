@@ -12,7 +12,7 @@ export default function TransitionsTooltips() {
       </Tooltip>
       <Tooltip
         TransitionComponent={Fade}
-        TransitionProps={{timeout: 600}}
+        TransitionProps={{ timeout: 600 }}
         title='Add'
       >
         <Button>Fade</Button>

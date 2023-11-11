@@ -1,5 +1,5 @@
 import React from 'react';
-import {RoutePermittedRole} from '@crema/constants/AppEnums';
+import { RoutePermittedRole } from '@crema/constants/AppEnums';
 
 import Alert from '../../../../modules/muiComponents/feedback/Alert';
 import Backdrop from '../../../../modules/muiComponents/feedback/Backdrop';

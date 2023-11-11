@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
-import React, {memo} from 'react';
+import React, { memo } from 'react';
 // import { VelocityComponent } from 'velocity-react';
 // import 'velocity-animate/velocity.ui';
 
-const AppAnimate = ({children}) => {
+const AppAnimate = ({ children }) => {
   // const children = React.cloneElement(props.children, {
   //   style: {
   //     ...props.children.style,

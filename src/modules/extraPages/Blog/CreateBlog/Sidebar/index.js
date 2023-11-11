@@ -26,7 +26,7 @@ const TagList = [
     name: 'Event',
   },
 ];
-const BlogSidebar = ({selectedTags, setSelectedTags}) => {
+const BlogSidebar = ({ selectedTags, setSelectedTags }) => {
   return (
     <Slide direction='left' in mountOnEnter unmountOnExit>
       <Grid item xs={12} lg={4}>
@@ -39,7 +39,7 @@ const BlogSidebar = ({selectedTags, setSelectedTags}) => {
           >
             <Switch
               value='checkedA'
-              inputProps={{'aria-label': 'secondary checkbox'}}
+              inputProps={{ 'aria-label': 'secondary checkbox' }}
             />
             <Box component='p'>Publish</Box>
           </Box>
@@ -51,7 +51,7 @@ const BlogSidebar = ({selectedTags, setSelectedTags}) => {
           >
             <Switch
               value='checkedA'
-              inputProps={{'aria-label': 'secondary checkbox'}}
+              inputProps={{ 'aria-label': 'secondary checkbox' }}
             />
             <Box component='p'>Comments</Box>
           </Box>
@@ -71,7 +71,7 @@ const BlogSidebar = ({selectedTags, setSelectedTags}) => {
             renderOption={(props, option) => (
               <Box
                 component='li'
-                sx={{display: 'flex', alignItems: 'center'}}
+                sx={{ display: 'flex', alignItems: 'center' }}
                 {...props}
               >
                 <Box ml={4}>{option?.name}</Box>

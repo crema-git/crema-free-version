@@ -1,21 +1,21 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import clsx from 'clsx';
 import AppContentView from '../../AppContentView';
 import AppFixedFooter from './AppFixedFooter';
 import AppHeader from './AppHeader';
-import {useLayoutContext} from '@crema/context/AppContextProvider/LayoutContextProvider';
+import { useLayoutContext } from '@crema/context/AppContextProvider/LayoutContextProvider';
 import AppThemeSetting from '../../AppThemeSetting';
 import DefaultLayoutWrapper from './DefaultLayoutWrapper';
 import MainContent from './MainContent';
-import {LayoutType} from '@crema/constants/AppEnums';
+import { LayoutType } from '@crema/constants/AppEnums';
 import AppSidebar from './AppSidebar';
 import DefaultLayoutContainer from './DefaultLayoutContainer';
-import {useLocation} from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import PropsTypes from 'prop-types';
 
-const DefaultLayout = ({routes, routesConfig}) => {
-  const {footer, layoutType, headerType, footerType} = useLayoutContext();
-  const {pathname} = useLocation();
+const DefaultLayout = ({ routes, routesConfig }) => {
+  const { footer, layoutType, headerType, footerType } = useLayoutContext();
+  const { pathname } = useLocation();
   const [isNavCollapsed, setNavCollapsed] = useState(false);
 
   const toggleNavCollapsed = () => {

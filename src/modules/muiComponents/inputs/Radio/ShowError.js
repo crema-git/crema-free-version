@@ -36,7 +36,7 @@ export default function ErrorRadios() {
   return (
     <form onSubmit={handleSubmit}>
       <FormControl
-        sx={{m: 3}}
+        sx={{ m: 3 }}
         component='fieldset'
         error={error}
         variant='standard'
@@ -60,7 +60,7 @@ export default function ErrorRadios() {
           />
         </RadioGroup>
         <FormHelperText>{helperText}</FormHelperText>
-        <Button sx={{mt: 1, mr: 1}} type='submit' variant='outlined'>
+        <Button sx={{ mt: 1, mr: 1 }} type='submit' variant='outlined'>
           Check Answer
         </Button>
       </FormControl>

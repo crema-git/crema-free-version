@@ -35,8 +35,8 @@ export default function DialogSelect() {
       <Dialog disableEscapeKeyDown open={open} onClose={handleClose}>
         <DialogTitle>Fill the form</DialogTitle>
         <DialogContent>
-          <Box component='form' sx={{display: 'flex', flexWrap: 'wrap'}}>
-            <FormControl sx={{m: 1, minWidth: 120}}>
+          <Box component='form' sx={{ display: 'flex', flexWrap: 'wrap' }}>
+            <FormControl sx={{ m: 1, minWidth: 120 }}>
               <InputLabel htmlFor='demo-dialog-native'>Age</InputLabel>
               <Select
                 native
@@ -50,7 +50,7 @@ export default function DialogSelect() {
                 <option value={30}>Thirty</option>
               </Select>
             </FormControl>
-            <FormControl sx={{m: 1, minWidth: 120}}>
+            <FormControl sx={{ m: 1, minWidth: 120 }}>
               <InputLabel id='demo-dialog-select-label'>Age</InputLabel>
               <Select
                 labelId='demo-dialog-select-label'

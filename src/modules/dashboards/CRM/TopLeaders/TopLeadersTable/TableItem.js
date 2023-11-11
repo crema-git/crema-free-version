@@ -4,10 +4,10 @@ import TableRow from '@mui/material/TableRow';
 import PropTypes from 'prop-types';
 import Avatar from '@mui/material/Avatar';
 import AvatarGroup from '@mui/material/AvatarGroup';
-import {Typography} from '@mui/material';
+import { Typography } from '@mui/material';
 
-import {styled} from '@mui/material/styles';
-import {Fonts} from '@crema/constants/AppEnums';
+import { styled } from '@mui/material/styles';
+import { Fonts } from '@crema/constants/AppEnums';
 import Box from '@mui/material/Box';
 
 const TableCellWrapper = styled(TableCell)(() => {
@@ -26,7 +26,7 @@ const TableCellWrapper = styled(TableCell)(() => {
   };
 });
 
-const TableItem = ({data}) => {
+const TableItem = ({ data }) => {
   return (
     <TableRow key={data.name} className='item-hover'>
       <TableCellWrapper component='th' scope='row'>
@@ -39,8 +39,8 @@ const TableItem = ({data}) => {
           <Avatar
             sx={{
               mr: 3.5,
-              width: {lg: 44},
-              height: {lg: 44},
+              width: { lg: 44 },
+              height: { lg: 44 },
             }}
             src={data.teamLead.image}
           />
@@ -65,7 +65,7 @@ const TableItem = ({data}) => {
       </TableCellWrapper>
       <TableCellWrapper>{data.project}</TableCellWrapper>
       <TableCellWrapper>
-        <AvatarGroup max={3} sx={{justifyContent: 'center'}}>
+        <AvatarGroup max={3} sx={{ justifyContent: 'center' }}>
           {data.team.map((data) => (
             <Avatar key={data.id} src={data.image} />
           ))}

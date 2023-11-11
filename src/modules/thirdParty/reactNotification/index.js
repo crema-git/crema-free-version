@@ -16,7 +16,7 @@ import CustomContent from './CustomContent';
 import CustomContentSource from '!raw-loader!./CustomContent';
 import Type from './Type';
 import TypeSource from '!raw-loader!./Type';
-import {ReactNotifications} from 'react-notifications-component';
+import { ReactNotifications } from 'react-notifications-component';
 import 'react-notifications-component/dist/theme.css';
 
 const ReactNotificationEx = () => {

@@ -32,7 +32,7 @@ export default function BasicPopover() {
           horizontal: 'left',
         }}
       >
-        <Typography sx={{p: 2}}>The content of the Popover.</Typography>
+        <Typography sx={{ p: 2 }}>The content of the Popover.</Typography>
       </Popover>
     </div>
   );

@@ -5,13 +5,13 @@ import TableBody from '@mui/material/TableBody';
 import TableHeading from './TableHeading';
 import TableItem from './TableItem';
 import AppTableContainer from '@crema/components/AppTableContainer';
-import {Box, Grid, MenuItem, Select} from '@mui/material';
+import { Box, Grid, MenuItem, Select } from '@mui/material';
 import AppGridContainer from '@crema/components/AppGridContainer';
-import {getFormattedDate} from '@crema/helpers/DateHelper';
+import { getFormattedDate } from '@crema/helpers/DateHelper';
 import dayjs from 'dayjs';
-import {currencyList, taxRates, taxType} from '../data';
-import {AiOutlinePlus} from 'react-icons/ai';
-import {formatCurrency} from '@crema/helpers/StringHelper';
+import { currencyList, taxRates, taxType } from '../data';
+import { AiOutlinePlus } from 'react-icons/ai';
+import { formatCurrency } from '@crema/helpers/StringHelper';
 import PropTypes from 'prop-types';
 
 const today = dayjs().format('DD MMM YYYY');
@@ -73,7 +73,7 @@ const EditInvoiceTable = ({
           </TableBody>
         </Table>
       </AppTableContainer>
-      <AppGridContainer spacing={2} sx={{mt: 10}}>
+      <AppGridContainer spacing={2} sx={{ mt: 10 }}>
         <Grid item xs={12} md={6}>
           <Box
             sx={{
@@ -89,7 +89,7 @@ const EditInvoiceTable = ({
                 ...items,
                 {
                   id: items.length + 1,
-                  duration: {from: today, to: today},
+                  duration: { from: today, to: today },
                   quantity: {
                     type: 'fixed',
                     value: 1,
@@ -99,10 +99,10 @@ const EditInvoiceTable = ({
             }
           >
             <AiOutlinePlus size={18} />
-            <Box sx={{ml: 2, fontSize: 16}}>Add Item</Box>
+            <Box sx={{ ml: 2, fontSize: 16 }}>Add Item</Box>
           </Box>
         </Grid>
-        <Grid item xs={12} md={5} sx={{ml: 'auto', mr: 10}}>
+        <Grid item xs={12} md={5} sx={{ ml: 'auto', mr: 10 }}>
           <Box
             sx={{
               color: 'text.secondary',
@@ -111,7 +111,7 @@ const EditInvoiceTable = ({
               alignItems: 'center',
             }}
           >
-            <Box sx={{mr: 7, width: '100%'}}>Subtotal:</Box>
+            <Box sx={{ mr: 7, width: '100%' }}>Subtotal:</Box>
             <Box>
               {formatCurrency(
                 getTotal(),
@@ -133,7 +133,7 @@ const EditInvoiceTable = ({
           >
             <Select
               size='small'
-              sx={{mr: 6, width: '100%'}}
+              sx={{ mr: 6, width: '100%' }}
               value={taxTypeData}
               onChange={(event) => setTaxTypeData(event.target.value)}
             >
@@ -154,7 +154,7 @@ const EditInvoiceTable = ({
             </Select>
             <Select
               size='small'
-              sx={{mr: 6, width: '100%'}}
+              sx={{ mr: 6, width: '100%' }}
               value={taxRateData}
               onChange={(event) => setTaxRateData(event.target.value)}
             >
@@ -173,7 +173,7 @@ const EditInvoiceTable = ({
                 );
               })}
             </Select>
-            <Box sx={{color: 'text.secondary'}}>
+            <Box sx={{ color: 'text.secondary' }}>
               {formatCurrency(
                 getTotal() * taxRateData * 0.01,
                 {
@@ -195,8 +195,8 @@ const EditInvoiceTable = ({
                   color: 'text.secondary',
                 }}
               >
-                <Box sx={{width: '50%'}} />
-                <Box sx={{ml: 4, width: '50%'}}> CGST:</Box>
+                <Box sx={{ width: '50%' }} />
+                <Box sx={{ ml: 4, width: '50%' }}> CGST:</Box>
                 <Box sx={{}}>
                   {formatCurrency(
                     (getTotal() * (taxRateData * 0.01)) / 2,
@@ -217,8 +217,8 @@ const EditInvoiceTable = ({
                   color: 'text.secondary',
                 }}
               >
-                <Box sx={{width: '50%'}} />
-                <Box sx={{ml: 4, width: '50%'}}> SGST:</Box>
+                <Box sx={{ width: '50%' }} />
+                <Box sx={{ ml: 4, width: '50%' }}> SGST:</Box>
                 <Box sx={{}}>
                   {formatCurrency(
                     (getTotal() * (taxRateData * 0.01)) / 2,
@@ -241,10 +241,10 @@ const EditInvoiceTable = ({
               color: 'text.secondary',
             }}
           >
-            <Box sx={{mr: 6, width: '50%'}}>Total:</Box>
+            <Box sx={{ mr: 6, width: '50%' }}>Total:</Box>
             <Select
               size='small'
-              sx={{mr: 6, width: '50%'}}
+              sx={{ mr: 6, width: '50%' }}
               value={currencyData.currency}
               onChange={(event) => {
                 const type = currencyList.find(

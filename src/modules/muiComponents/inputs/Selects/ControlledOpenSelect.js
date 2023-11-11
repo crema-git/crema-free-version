@@ -23,10 +23,10 @@ export default function ControlledOpenSelect() {
 
   return (
     <div>
-      <Button sx={{display: 'block', mt: 2}} onClick={handleOpen}>
+      <Button sx={{ display: 'block', mt: 2 }} onClick={handleOpen}>
         Open the select
       </Button>
-      <FormControl sx={{m: 1, minWidth: 120}}>
+      <FormControl sx={{ m: 1, minWidth: 120 }}>
         <InputLabel id='demo-controlled-open-select-label'>Age</InputLabel>
         <Select
           labelId='demo-controlled-open-select-label'

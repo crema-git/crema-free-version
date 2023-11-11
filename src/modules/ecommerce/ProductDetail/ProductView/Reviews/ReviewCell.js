@@ -1,6 +1,6 @@
 import React from 'react';
-import {Box} from '@mui/material';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Box } from '@mui/material';
+import { Fonts } from '@crema/constants/AppEnums';
 import StarRateIcon from '@mui/icons-material/StarRate';
 import Avatar from '@mui/material/Avatar';
 import ThumbUpAltOutlinedIcon from '@mui/icons-material/ThumbUpAltOutlined';
@@ -68,10 +68,10 @@ const ReviewCell = () => {
                 fontSize: 12,
               }}
             >
-              <Box component='span' sx={{pb: 0.5}}>
+              <Box component='span' sx={{ pb: 0.5 }}>
                 5
               </Box>
-              <StarRateIcon style={{fontSize: 16}} />
+              <StarRateIcon style={{ fontSize: 16 }} />
             </Box>
             Parmar Ravikumar
           </Box>
@@ -107,14 +107,14 @@ const ReviewCell = () => {
           fontSize: 14,
         }}
       >
-        <IconButton style={{marginRight: 5, height: 25, width: 25}}>
-          <ThumbUpAltOutlinedIcon style={{fontSize: 16}} />
+        <IconButton style={{ marginRight: 5, height: 25, width: 25 }}>
+          <ThumbUpAltOutlinedIcon style={{ fontSize: 16 }} />
         </IconButton>
         345
         <IconButton
-          style={{marginRight: 5, marginLeft: 15, height: 25, width: 25}}
+          style={{ marginRight: 5, marginLeft: 15, height: 25, width: 25 }}
         >
-          <ThumbDownAltOutlinedIcon style={{fontSize: 16}} />
+          <ThumbDownAltOutlinedIcon style={{ fontSize: 16 }} />
         </IconButton>
         13
       </Box>

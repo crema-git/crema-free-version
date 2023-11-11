@@ -1,10 +1,10 @@
 import React from 'react';
-import {alpha, Box, Typography} from '@mui/material';
+import { alpha, Box, Typography } from '@mui/material';
 import PropTypes from 'prop-types';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Fonts } from '@crema/constants/AppEnums';
 import AppCircularProgress from '@crema/components/AppCircularProgress';
 
-const MonthlyLimitItem = ({monthlyLimit}) => {
+const MonthlyLimitItem = ({ monthlyLimit }) => {
   return (
     <Box
       sx={{

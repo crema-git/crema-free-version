@@ -7,8 +7,8 @@ import Collapse from '@mui/material/Collapse';
 import FormControlLabel from '@mui/material/FormControlLabel';
 
 const icon = (
-  <Paper sx={{m: 1}} elevation={4}>
-    <Box component='svg' sx={{width: 100, height: 100}}>
+  <Paper sx={{ m: 1 }} elevation={4}>
+    <Box component='svg' sx={{ width: 100, height: 100 }}>
       <Box
         component='polygon'
         sx={{
@@ -30,7 +30,7 @@ export default function SimpleCollapse() {
   };
 
   return (
-    <Box sx={{height: 300}}>
+    <Box sx={{ height: 300 }}>
       <FormControlLabel
         control={<Switch checked={checked} onChange={handleChange} />}
         label='Show'
@@ -52,12 +52,12 @@ export default function SimpleCollapse() {
           </Collapse>
         </div>
         <div>
-          <Box sx={{width: '50%'}}>
+          <Box sx={{ width: '50%' }}>
             <Collapse orientation='horizontal' in={checked}>
               {icon}
             </Collapse>
           </Box>
-          <Box sx={{width: '50%'}}>
+          <Box sx={{ width: '50%' }}>
             <Collapse orientation='horizontal' in={checked} collapsedSize={40}>
               {icon}
             </Collapse>

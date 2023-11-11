@@ -1,9 +1,9 @@
 import React from 'react';
 import AppCard from '@crema/components/AppCard';
-import {Box} from '@mui/material';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Box } from '@mui/material';
+import { Fonts } from '@crema/constants/AppEnums';
 import Divider from '@mui/material/Divider';
-import {useIntl} from 'react-intl';
+import { useIntl } from 'react-intl';
 import AppAnimate from '@crema/components/AppAnimate';
 import PropTypes from 'prop-types';
 
@@ -16,8 +16,8 @@ const getTotalPrice = (cartItems) => {
   return total;
 };
 
-const OrderSummary = ({cartItems}) => {
-  const {messages} = useIntl();
+const OrderSummary = ({ cartItems }) => {
+  const { messages } = useIntl();
   const totalPrice = getTotalPrice(cartItems);
   return (
     <AppAnimate animation='transition.slideUpIn' delay={200}>
@@ -38,7 +38,7 @@ const OrderSummary = ({cartItems}) => {
             mb: 4,
           }}
         >
-          <Box sx={{color: 'text.secondary'}}>Grand Total: </Box>
+          <Box sx={{ color: 'text.secondary' }}>Grand Total: </Box>
           <Box>${totalPrice}</Box>
         </Box>
         <Box
@@ -50,7 +50,7 @@ const OrderSummary = ({cartItems}) => {
             mb: 4,
           }}
         >
-          <Box sx={{color: 'text.secondary'}}>Discount: </Box>
+          <Box sx={{ color: 'text.secondary' }}>Discount: </Box>
           <Box>$4</Box>
         </Box>
         <Box
@@ -62,7 +62,7 @@ const OrderSummary = ({cartItems}) => {
             mb: 4,
           }}
         >
-          <Box sx={{color: 'text.secondary'}}>Shipping Charge: </Box>
+          <Box sx={{ color: 'text.secondary' }}>Shipping Charge: </Box>
           <Box>$4</Box>
         </Box>
         <Box
@@ -74,7 +74,7 @@ const OrderSummary = ({cartItems}) => {
             mb: 4,
           }}
         >
-          <Box sx={{color: 'text.secondary'}}>Estimated Tax: </Box>
+          <Box sx={{ color: 'text.secondary' }}>Estimated Tax: </Box>
           <Box>$1</Box>
         </Box>
 
@@ -89,7 +89,7 @@ const OrderSummary = ({cartItems}) => {
             my: 4,
           }}
         >
-          <Box sx={{color: 'text.secondary'}}>Order Total: </Box>
+          <Box sx={{ color: 'text.secondary' }}>Order Total: </Box>
           <Box>${totalPrice + 1}</Box>
         </Box>
       </AppCard>

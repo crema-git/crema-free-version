@@ -2,13 +2,13 @@ import React from 'react';
 import AppCard from '@crema/components/AppCard';
 import AppList from '@crema/components/AppList';
 import LearningItem from './LearningItem';
-import {useIntl} from 'react-intl';
+import { useIntl } from 'react-intl';
 import PropTypes from 'prop-types';
 
-const MyLearning = ({learningData}) => {
-  const {messages} = useIntl();
+const MyLearning = ({ learningData }) => {
+  const { messages } = useIntl();
   return (
-    <AppCard title={messages['academy.myLearning']} contentStyle={{px: 0}}>
+    <AppCard title={messages['academy.myLearning']} contentStyle={{ px: 0 }}>
       <AppList
         animation='transition.slideRightBigIn'
         data={learningData}

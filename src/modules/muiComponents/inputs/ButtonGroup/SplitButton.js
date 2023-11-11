@@ -67,7 +67,7 @@ export default function SplitButton() {
         transition
         disablePortal
       >
-        {({TransitionProps, placement}) => (
+        {({ TransitionProps, placement }) => (
           <Grow
             {...TransitionProps}
             style={{

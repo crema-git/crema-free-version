@@ -1,25 +1,25 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
-import {Typography} from '@mui/material';
-import {Fonts} from '@crema/constants/AppEnums';
-import {AiFillHeart} from 'react-icons/ai';
+import { Typography } from '@mui/material';
+import { Fonts } from '@crema/constants/AppEnums';
+import { AiFillHeart } from 'react-icons/ai';
 import Tag from '../../BlogContent/Tag';
 import BlogPost from './BlogPost';
 import Social from './Social';
 import AppCardMedia from '@crema/components/AppCard/AppCardMedia';
 import renderHTML from 'react-render-html';
 
-const BlogDetailContent = ({blogDetailContent}) => {
+const BlogDetailContent = ({ blogDetailContent }) => {
   return (
     <AppCardMedia
       sxStyle={{
         color: (theme) => theme.palette.text.secondary,
-        mb: {xs: 5, md: 7.5},
+        mb: { xs: 5, md: 7.5 },
       }}
       cardMedia={blogDetailContent.cardMedia}
     >
-      <Typography sx={{mb: 7.5}}>{blogDetailContent.description}</Typography>
+      <Typography sx={{ mb: 7.5 }}>{blogDetailContent.description}</Typography>
       <Box> {renderHTML(blogDetailContent.content)}</Box>
       <Box
         sx={{
@@ -29,7 +29,7 @@ const BlogDetailContent = ({blogDetailContent}) => {
           mb: 3.5,
         }}
       >
-        <Box sx={{mb: 2}}>
+        <Box sx={{ mb: 2 }}>
           <Tag tag={blogDetailContent.tag} />
         </Box>
 
@@ -58,13 +58,13 @@ const BlogDetailContent = ({blogDetailContent}) => {
         </Box>
       </Box>
 
-      <Box sx={{mb: {xs: 5, sm: 7, md: 10, lg: 15}}}>
+      <Box sx={{ mb: { xs: 5, sm: 7, md: 10, lg: 15 } }}>
         <BlogPost post={blogDetailContent.post} />
       </Box>
 
       <Box
         sx={{
-          mb: {xs: 2, sm: 4, md: 8, lg: 10},
+          mb: { xs: 2, sm: 4, md: 8, lg: 10 },
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',

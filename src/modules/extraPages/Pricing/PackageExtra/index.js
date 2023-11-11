@@ -2,13 +2,13 @@ import React from 'react';
 import ContactUs from './ContactUs';
 import PackageItem from './PackageItem';
 import PropTypes from 'prop-types';
-import {Grid} from '@mui/material';
+import { Grid } from '@mui/material';
 import AppCard from '@crema/components/AppCard';
 import AppGridContainer from '@crema/components/AppGridContainer';
 
-const PackageExtra = ({pricing}) => {
+const PackageExtra = ({ pricing }) => {
   return (
-    <AppCard title='Pricing Package Style 2' sxStyle={{alignItems: 'center'}}>
+    <AppCard title='Pricing Package Style 2' sxStyle={{ alignItems: 'center' }}>
       <AppGridContainer
         spacing={0}
         sx={{

@@ -4,19 +4,19 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import Button from '@mui/material/Button';
-import {Checkbox, useTheme} from '@mui/material';
-import {Form, Formik} from 'formik';
+import { Checkbox, useTheme } from '@mui/material';
+import { Form, Formik } from 'formik';
 import * as yup from 'yup';
 import Grid from '@mui/material/Grid';
 import IconButton from '@mui/material/IconButton';
 import IntlMessages from '@crema/helpers/IntlMessages';
-import {useIntl} from 'react-intl';
+import { useIntl } from 'react-intl';
 import Box from '@mui/material/Box';
-import {grey} from '@mui/material/colors';
-import {Fonts} from '@crema/constants/AppEnums';
+import { grey } from '@mui/material/colors';
+import { Fonts } from '@crema/constants/AppEnums';
 import AppAnimate from '@crema/components/AppAnimate';
 import AppTextField from '@crema/components/AppFormComponents/AppTextField';
-import {ReactComponent as Logo} from '../../../assets/user/login.svg';
+import { ReactComponent as Logo } from '../../../assets/user/login.svg';
 
 const validationSchema = yup.object({
   email: yup
@@ -30,13 +30,13 @@ const validationSchema = yup.object({
 
 const Signin = () => {
   const theme = useTheme();
-  const {messages} = useIntl();
+  const { messages } = useIntl();
   return (
     <AppAnimate animation='transition.slideUpIn' delay={200}>
       <Box
         sx={{
           pb: 6,
-          py: {xl: 8},
+          py: { xl: 8 },
           display: 'flex',
           flex: 1,
           flexDirection: 'column',
@@ -49,7 +49,7 @@ const Signin = () => {
             maxWidth: 1024,
             width: '100%',
             padding: 8,
-            paddingLeft: {xs: 8, md: 2},
+            paddingLeft: { xs: 8, md: 2 },
             overflow: 'hidden',
             boxShadow:
               '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
@@ -68,7 +68,7 @@ const Signin = () => {
                   width: '100%',
                   height: '100%',
                   display: 'inline-block',
-                  paddingRight: {xs: 0, lg: 10},
+                  paddingRight: { xs: 0, lg: 10 },
                 },
               }}
             >
@@ -84,7 +84,7 @@ const Signin = () => {
             >
               <Box
                 sx={{
-                  mb: {xs: 3, xl: 4},
+                  mb: { xs: 3, xl: 4 },
                   fontWeight: Fonts.BOLD,
                   fontSize: 20,
                 }}
@@ -99,20 +99,20 @@ const Signin = () => {
                   password: '',
                 }}
                 validationSchema={validationSchema}
-                onSubmit={(data, {resetForm}) => {
+                onSubmit={(data, { resetForm }) => {
                   resetForm();
                 }}
               >
-                {({isSubmitting}) => (
+                {({ isSubmitting }) => (
                   <Form
                     sx={{
                       textAlign: 'left',
-                      marginBottom: {xs: 4, lg: 6, xl: 12},
+                      marginBottom: { xs: 4, lg: 6, xl: 12 },
                     }}
                     noValidate
                     autoComplete='off'
                   >
-                    <Box sx={{mb: {xs: 5, xl: 8}}}>
+                    <Box sx={{ mb: { xs: 5, xl: 8 } }}>
                       <AppTextField
                         placeholder={messages['common.email']}
                         label={<IntlMessages id='common.email' />}
@@ -124,7 +124,7 @@ const Signin = () => {
                       />
                     </Box>
 
-                    <Box sx={{mb: {xs: 5, xl: 8}}}>
+                    <Box sx={{ mb: { xs: 5, xl: 8 } }}>
                       <AppTextField
                         type='password'
                         placeholder={messages['common.password']}
@@ -139,10 +139,10 @@ const Signin = () => {
 
                     <Box
                       sx={{
-                        mb: {xs: 3, xl: 4},
+                        mb: { xs: 3, xl: 4 },
                         display: 'flex',
-                        flexDirection: {xs: 'column', sm: 'row'},
-                        alignItems: {sm: 'center'},
+                        flexDirection: { xs: 'column', sm: 'row' },
+                        alignItems: { sm: 'center' },
                       }}
                     >
                       <Box
@@ -172,8 +172,8 @@ const Signin = () => {
                         component='span'
                         sx={{
                           cursor: 'pointer',
-                          ml: {xs: 0, sm: 'auto'},
-                          mt: {xs: 2, sm: 0},
+                          ml: { xs: 0, sm: 'auto' },
+                          mt: { xs: 2, sm: 0 },
                           color: 'primary.main',
                           fontWeight: Fonts.BOLD,
                           fontSize: 14,
@@ -200,12 +200,12 @@ const Signin = () => {
 
               <Box
                 sx={{
-                  mt: {xs: 3, xl: 4},
+                  mt: { xs: 3, xl: 4 },
                   mb: 3,
                   display: 'flex',
-                  flexDirection: {xs: 'column', sm: 'row'},
-                  justifyContent: {sm: 'center'},
-                  alignItems: {sm: 'center'},
+                  flexDirection: { xs: 'column', sm: 'row' },
+                  justifyContent: { sm: 'center' },
+                  alignItems: { sm: 'center' },
                 }}
               >
                 <Box
@@ -220,13 +220,13 @@ const Signin = () => {
                 </Box>
                 <Box display='inline-block'>
                   <IconButton>
-                    <FacebookIcon sx={{color: 'text.primary'}} />
+                    <FacebookIcon sx={{ color: 'text.primary' }} />
                   </IconButton>
                   <IconButton>
-                    <GitHubIcon sx={{color: 'text.primary'}} />
+                    <GitHubIcon sx={{ color: 'text.primary' }} />
                   </IconButton>
                   <IconButton>
-                    <TwitterIcon sx={{color: 'text.primary'}} />
+                    <TwitterIcon sx={{ color: 'text.primary' }} />
                   </IconButton>
                 </Box>
               </Box>

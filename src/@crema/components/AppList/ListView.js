@@ -1,7 +1,7 @@
 import React from 'react';
-import {useBottomScrollListener} from 'react-bottom-scroll-listener';
+import { useBottomScrollListener } from 'react-bottom-scroll-listener';
 import PropTypes from 'prop-types';
-import {Box, useTheme} from '@mui/material';
+import { Box, useTheme } from '@mui/material';
 // import AppAnimateGroup from '../AppAnimateGroup';
 
 const getEmptyContainer = (ListEmptyComponent) => {
@@ -51,12 +51,12 @@ const ListView = ({
 
   let style = containerStyle;
   if (border) {
-    style = {...style, ...borderStyle};
+    style = { ...style, ...borderStyle };
   }
   useBottomScrollListener(onEndReached, 200);
   return (
     <Box
-      style={{...style}}
+      style={{ ...style }}
       {...rest}
       // enter={{ delay, duration, animation }}
     >

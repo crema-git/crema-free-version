@@ -1,18 +1,18 @@
 import React from 'react';
 import AudienceChart from './AudienceChart';
-import {Box} from '@mui/material';
+import { Box } from '@mui/material';
 import PropTypes from 'prop-types';
-import {useIntl} from 'react-intl';
+import { useIntl } from 'react-intl';
 import AudienceCell from './AudienceCell';
 import AppCard from '@crema/components/AppCard';
 import AppList from '@crema/components/AppList';
 
-const AgeOfAudience = ({audienceData}) => {
-  const {messages} = useIntl();
+const AgeOfAudience = ({ audienceData }) => {
+  const { messages } = useIntl();
 
   return (
     <AppCard
-      sxStyle={{height: 1}}
+      sxStyle={{ height: 1 }}
       title={messages['dashboard.eCommerce.ageAudience']}
       contentStyle={{
         paddingLeft: 0,

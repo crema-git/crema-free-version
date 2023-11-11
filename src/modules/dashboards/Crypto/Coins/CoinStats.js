@@ -2,12 +2,12 @@ import React from 'react';
 import Avatar from '@mui/material/Avatar';
 import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
-import {green, red} from '@mui/material/colors';
-import {Fonts} from '@crema/constants/AppEnums';
+import { green, red } from '@mui/material/colors';
+import { Fonts } from '@crema/constants/AppEnums';
 import AppCard from '@crema/components/AppCard';
 
 const CoinStats = (props) => {
-  const {icon, bgColor, data, heading} = props;
+  const { icon, bgColor, data, heading } = props;
 
   return (
     <AppCard
@@ -26,9 +26,9 @@ const CoinStats = (props) => {
         <Avatar
           sx={{
             p: 3,
-            fontSize: {xs: 30, md: 42},
-            height: {xs: 44, md: 48, xl: 52},
-            width: {xs: 44, md: 48, xl: 52},
+            fontSize: { xs: 30, md: 42 },
+            height: { xs: 44, md: 48, xl: 52 },
+            width: { xs: 44, md: 48, xl: 52 },
             backgroundColor: bgColor,
           }}
         >
@@ -63,7 +63,7 @@ const CoinStats = (props) => {
             ${data.price}
           </Box>
         </Box>
-        <Box sx={{ml: 'auto'}}>
+        <Box sx={{ ml: 'auto' }}>
           <Box
             component='p'
             sx={{

@@ -1,4 +1,4 @@
-import {authRole} from '@crema/constants/AppConst';
+import { authRole } from '@crema/constants/AppConst';
 
 export const getUserFromAuth0 = (user) => {
   if (user)

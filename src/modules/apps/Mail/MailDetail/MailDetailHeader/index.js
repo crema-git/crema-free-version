@@ -9,22 +9,22 @@ import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import MarkunreadOutlinedIcon from '@mui/icons-material/MarkunreadOutlined';
 import IntlMessages from '@crema/helpers/IntlMessages';
-import {Box} from '@mui/material';
-import {useNavigate} from 'react-router-dom';
+import { Box } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import AppTooltip from '@crema/components/AppTooltip';
 import IconButton from '@mui/material/IconButton';
-import {putDataApi} from '@crema/hooks/APIHooks';
-import {useInfoViewActionsContext} from '@crema/context/AppContextProvider/InfoViewContextProvider';
-import {useMailContext} from '../../../context/MailContextProvider';
+import { putDataApi } from '@crema/hooks/APIHooks';
+import { useInfoViewActionsContext } from '@crema/context/AppContextProvider/InfoViewContextProvider';
+import { useMailContext } from '../../../context/MailContextProvider';
 
 const MailDetailHeader = (props) => {
-  const {selectedMail, onUpdateSelectedMail} = props;
+  const { selectedMail, onUpdateSelectedMail } = props;
   const infoViewActionsContext = useInfoViewActionsContext();
 
   const navigate = useNavigate();
 
-  const {labelList} = useMailContext();
+  const { labelList } = useMailContext();
 
   const [isLabelOpen, onOpenLabel] = React.useState(null);
 
@@ -53,7 +53,7 @@ const MailDetailHeader = (props) => {
   const onSelectLabel = (event) => {
     const mail = selectedMail;
     mail.label = event.target.value;
-    putDataApi('/api/mailApp/mail/', infoViewActionsContext, {mail})
+    putDataApi('/api/mailApp/mail/', infoViewActionsContext, { mail })
       .then(() => {
         onUpdateSelectedMail(mail);
         onOpenLabel(null);
@@ -85,7 +85,7 @@ const MailDetailHeader = (props) => {
   const onChangeReadStatus = () => {
     const mail = selectedMail;
     mail.isRead = false;
-    putDataApi('/api/mailApp/mail/', infoViewActionsContext, {mail})
+    putDataApi('/api/mailApp/mail/', infoViewActionsContext, { mail })
       .then((data) => {
         onUpdateSelectedMail(data);
         navigate(-1);

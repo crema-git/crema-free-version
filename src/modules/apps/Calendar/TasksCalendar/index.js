@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import AppsContent from '@crema/components/AppsContainer/AppsContent';
 import TaskCalender from './TasksCalendar';
 import {
@@ -8,8 +8,8 @@ import {
 
 const TasksCalendar = () => {
   // const infoViewActionsContext = useInfoViewActionsContext();
-  const {taskLists} = useCalendarContext();
-  const {setCalenderData, reCallAPI} = useCalendarActionsContext();
+  const { taskLists } = useCalendarContext();
+  const { setCalenderData, reCallAPI } = useCalendarActionsContext();
 
   const [filterText, onSetFilterText] = useState('');
 

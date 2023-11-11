@@ -1,9 +1,9 @@
 import React from 'react';
-import {Line, LineChart, ResponsiveContainer} from 'recharts';
+import { Line, LineChart, ResponsiveContainer } from 'recharts';
 import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
 
-const TrafficRaiseGraph = ({data}) => {
+const TrafficRaiseGraph = ({ data }) => {
   return (
     <Box
       sx={{
@@ -20,7 +20,7 @@ const TrafficRaiseGraph = ({data}) => {
             dataKey='traffic'
             stroke='#4299E1'
             strokeWidth={2}
-            dot={{r: 0}}
+            dot={{ r: 0 }}
           />
         </LineChart>
       </ResponsiveContainer>

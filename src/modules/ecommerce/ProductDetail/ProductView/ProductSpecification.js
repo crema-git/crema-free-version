@@ -1,9 +1,9 @@
 import React from 'react';
-import {Box} from '@mui/material';
+import { Box } from '@mui/material';
 import Grid from '@mui/material/Grid';
 import PropTypes from 'prop-types';
 
-const productSpec = ({productSpec}) => {
+const productSpec = ({ productSpec }) => {
   return (
     <>
       <Box

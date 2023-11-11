@@ -1,5 +1,5 @@
 import React from 'react';
-import {Box} from '@mui/material';
+import { Box } from '@mui/material';
 import Grid from '@mui/material/Grid';
 import TextField from '@mui/material/TextField';
 import LoopIcon from '@mui/icons-material/Loop';
@@ -82,7 +82,7 @@ const DeliveryInfo = () => {
           }}
         >
           <Tooltip title='Return policy'>
-            <LoopIcon sx={{color: 'primary.main', fontSize: 18}} />
+            <LoopIcon sx={{ color: 'primary.main', fontSize: 18 }} />
           </Tooltip>
           <Box
             sx={{
@@ -94,7 +94,9 @@ const DeliveryInfo = () => {
           >
             30 Day Return Policy
             <Tooltip title='info'>
-              <InfoIcon sx={{color: '#A0A5B9', fontSize: 18, marginLeft: 12}} />
+              <InfoIcon
+                sx={{ color: '#A0A5B9', fontSize: 18, marginLeft: 12 }}
+              />
             </Tooltip>
           </Box>
         </Box>
@@ -108,7 +110,7 @@ const DeliveryInfo = () => {
           }}
         >
           <Tooltip title='COD Available'>
-            <MonetizationOnIcon sx={{color: 'primary.main', fontSize: 18}} />
+            <MonetizationOnIcon sx={{ color: 'primary.main', fontSize: 18 }} />
           </Tooltip>
           <Box
             sx={{
@@ -120,7 +122,9 @@ const DeliveryInfo = () => {
           >
             Cash on Delivery available{' '}
             <Tooltip title='info'>
-              <InfoIcon sx={{color: '#A0A5B9', fontSize: 18, marginLeft: 12}} />
+              <InfoIcon
+                sx={{ color: '#A0A5B9', fontSize: 18, marginLeft: 12 }}
+              />
             </Tooltip>
           </Box>
         </Box>

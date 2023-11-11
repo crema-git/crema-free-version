@@ -1,11 +1,11 @@
 import React from 'react';
-import {Box, Typography} from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import BlogCommentItem from './BlogCommentItem';
 import PropTypes from 'prop-types';
 import IntlMessages from '@crema/helpers/IntlMessages';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Fonts } from '@crema/constants/AppEnums';
 
-const BlogCommentList = ({comments}) => {
+const BlogCommentList = ({ comments }) => {
   return (
     <Box
       sx={{
@@ -18,7 +18,7 @@ const BlogCommentList = ({comments}) => {
         component='h3'
         sx={{
           mb: 7.5,
-          fontSize: {xs: 18, md: 20},
+          fontSize: { xs: 18, md: 20 },
           fontWeight: Fonts.BOLD,
         }}
       >

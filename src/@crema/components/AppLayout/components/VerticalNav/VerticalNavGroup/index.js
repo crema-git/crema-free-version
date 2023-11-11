@@ -1,18 +1,18 @@
-import React, {useMemo} from 'react';
+import React, { useMemo } from 'react';
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
 import VerticalCollapse from '../VerticalCollapse';
 import VerticalItem from '../VerticalItem';
 import IntlMessages from '@crema/helpers/IntlMessages';
-import {useSidebarContext} from '@crema/context/AppContextProvider/SidebarContextProvider';
+import { useSidebarContext } from '@crema/context/AppContextProvider/SidebarContextProvider';
 import VerticalNavGroupItem from './VerticalNavGroupItem';
-import {useAuthUser} from '@crema/hooks/AuthHooks';
-import {checkPermission} from '@crema/helpers/RouteHelper';
-import {allowMultiLanguage} from '@crema/constants/AppConst';
+import { useAuthUser } from '@crema/hooks/AuthHooks';
+import { checkPermission } from '@crema/helpers/RouteHelper';
+import { allowMultiLanguage } from '@crema/constants/AppConst';
 
-const VerticalNavGroup = ({item, level}) => {
-  const {sidebarTextColor} = useSidebarContext();
-  const {user} = useAuthUser();
+const VerticalNavGroup = ({ item, level }) => {
+  const { sidebarTextColor } = useSidebarContext();
+  const { user } = useAuthUser();
   const hasPermission = useMemo(
     () => checkPermission(item.permittedRole, user.role),
     [item.permittedRole, user.role],

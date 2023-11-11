@@ -1,10 +1,10 @@
 import React from 'react';
-import {useInfoViewActionsContext} from '@crema/context/AppContextProvider/InfoViewContextProvider';
+import { useInfoViewActionsContext } from '@crema/context/AppContextProvider/InfoViewContextProvider';
 import FirebaseAuthProvider from '@crema/services/auth/firebase/FirebaseAuthProvider';
 import PropTypes from 'prop-types';
 
-const AppAuthProvider = ({children}) => {
-  const {fetchStart, fetchSuccess, fetchError, showMessage} =
+const AppAuthProvider = ({ children }) => {
+  const { fetchStart, fetchSuccess, fetchError, showMessage } =
     useInfoViewActionsContext();
 
   return (

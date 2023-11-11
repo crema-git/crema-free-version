@@ -9,10 +9,10 @@ import PostStats from './PostStats';
 import AddComment from './AddComment';
 import CommentsList from './CommentsList';
 import PropTypes from 'prop-types';
-import {timeFromNow} from '@crema/helpers/DateHelper';
+import { timeFromNow } from '@crema/helpers/DateHelper';
 
-const PostItem = ({post, wallData, setPostList}) => {
-  const {owner, message, date, attachments, comments} = post;
+const PostItem = ({ post, wallData, setPostList }) => {
+  const { owner, message, date, attachments, comments } = post;
 
   const getTitle = () => (
     <Box display='flex' alignItems='center'>

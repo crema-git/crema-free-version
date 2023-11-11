@@ -1,5 +1,10 @@
-import React, {useState} from 'react';
-import {GoogleMap, InfoWindow, Marker, withGoogleMap} from 'react-google-maps';
+import React, { useState } from 'react';
+import {
+  GoogleMap,
+  InfoWindow,
+  Marker,
+  withGoogleMap,
+} from 'react-google-maps';
 import Box from '@mui/material/Box';
 
 const google = window.google;

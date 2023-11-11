@@ -1,5 +1,5 @@
 import React from 'react';
-import {ResponsiveContainer, Treemap} from 'recharts';
+import { ResponsiveContainer, Treemap } from 'recharts';
 import data from './data';
 
 const SimpleTreemap = () => (

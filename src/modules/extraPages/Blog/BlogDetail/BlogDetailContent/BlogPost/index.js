@@ -1,24 +1,24 @@
 import React from 'react';
-import {Avatar, Box, Typography} from '@mui/material';
+import { Avatar, Box, Typography } from '@mui/material';
 import PropTypes from 'prop-types';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Fonts } from '@crema/constants/AppEnums';
 import Button from '@mui/material/Button';
 
-const BlogPost = ({post}) => {
+const BlogPost = ({ post }) => {
   return (
     <Box
       sx={{
         display: 'flex',
         border: (theme) => `solid 1px ${theme.palette.divider}`,
         borderRadius: 1,
-        py: {xs: 5, lg: 7.5},
-        pr: {xs: 5, lg: 7.5},
-        pl: {xs: 5, lg: 7.5, xl: 15},
+        py: { xs: 5, lg: 7.5 },
+        pr: { xs: 5, lg: 7.5 },
+        pl: { xs: 5, lg: 7.5, xl: 15 },
       }}
     >
       <Box
         sx={{
-          mr: {xs: 5, md: 7.5, xl: 15},
+          mr: { xs: 5, md: 7.5, xl: 15 },
           minWidth: 80,
           textAlign: 'center',
           display: 'flex',
@@ -26,11 +26,11 @@ const BlogPost = ({post}) => {
           alignItems: 'center',
         }}
       >
-        <Box sx={{mb: {xs: 2, md: 4}}}>
+        <Box sx={{ mb: { xs: 2, md: 4 } }}>
           <Avatar
             sx={{
-              width: {xs: 40, md: 60, lg: 80},
-              height: {xs: 40, md: 60, lg: 80},
+              width: { xs: 40, md: 60, lg: 80 },
+              height: { xs: 40, md: 60, lg: 80 },
             }}
             src={post.user}
           />
@@ -60,7 +60,7 @@ const BlogPost = ({post}) => {
           color: (theme) => theme.palette.text.secondary,
         }}
       >
-        <Typography sx={{mb: 3}}>{post.description}</Typography>
+        <Typography sx={{ mb: 3 }}>{post.description}</Typography>
         <Button
           variant='text'
           sx={{

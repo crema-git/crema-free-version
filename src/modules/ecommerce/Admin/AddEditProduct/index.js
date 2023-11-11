@@ -1,34 +1,34 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import AppGridContainer from '@crema/components/AppGridContainer';
-import {Fonts} from '@crema/constants/AppEnums';
-import {Box} from '@mui/material';
+import { Fonts } from '@crema/constants/AppEnums';
+import { Box } from '@mui/material';
 import BlogSidebar from './Sidebar';
 import ProductContent from './Content';
-import {Form, Formik} from 'formik';
-import {useInfoViewActionsContext} from '@crema/context/AppContextProvider/InfoViewContextProvider';
-import {postDataApi, putDataApi} from '@crema/hooks/APIHooks';
-import {useNavigate} from 'react-router-dom';
-import {getStringFromHtml} from '@crema/helpers/StringHelper';
+import { Form, Formik } from 'formik';
+import { useInfoViewActionsContext } from '@crema/context/AppContextProvider/InfoViewContextProvider';
+import { postDataApi, putDataApi } from '@crema/hooks/APIHooks';
+import { useNavigate } from 'react-router-dom';
+import { getStringFromHtml } from '@crema/helpers/StringHelper';
 import dayjs from 'dayjs';
 import PropTypes from 'prop-types';
 
-export const AddEditProduct = ({selectedProd}) => {
+export const AddEditProduct = ({ selectedProd }) => {
   const [selectedTags, setSelectedTags] = useState([]);
   const [uploadedFiles, setUploadedFiles] = useState([]);
   const infoViewActionsContext = useInfoViewActionsContext();
   const navigate = useNavigate();
   const [productInfo, setProductInfo] = React.useState([
-    {id: 1, title: '', desc: ''},
+    { id: 1, title: '', desc: '' },
   ]);
   const [productSpec, setProductSpec] = React.useState([
-    {id: 1, title: '', desc: ''},
+    { id: 1, title: '', desc: '' },
   ]);
 
   useEffect(() => {
     if (selectedProd) {
       setSelectedTags(selectedProd?.tag || []);
       setUploadedFiles(
-        selectedProd?.image.map((img) => ({...img, preview: img.src})),
+        selectedProd?.image.map((img) => ({ ...img, preview: img.src })),
       );
       setProductInfo(selectedProd?.productInfo);
       setProductSpec(selectedProd?.productSpec);
@@ -71,7 +71,7 @@ export const AddEditProduct = ({selectedProd}) => {
                 inStock: false,
               }
         }
-        onSubmit={(data, {setSubmitting, resetForm}) => {
+        onSubmit={(data, { setSubmitting, resetForm }) => {
           setSubmitting(true);
           if (selectedProd) {
             const updatedProd = {
@@ -122,7 +122,7 @@ export const AddEditProduct = ({selectedProd}) => {
           resetForm();
         }}
       >
-        {({setFieldValue}) => (
+        {({ setFieldValue }) => (
           <Form noValidate autoComplete='off'>
             <AppGridContainer>
               <ProductContent

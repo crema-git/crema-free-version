@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {useTheme} from '@mui/material/styles';
+import { useTheme } from '@mui/material/styles';
 import OutlinedInput from '@mui/material/OutlinedInput';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
@@ -45,7 +45,7 @@ export default function MultipleSelect() {
 
   const handleChange = (event) => {
     const {
-      target: {value},
+      target: { value },
     } = event;
     setPersonName(
       // On autofill we get a the stringified value.
@@ -55,7 +55,7 @@ export default function MultipleSelect() {
 
   return (
     <div>
-      <FormControl sx={{m: 1, width: 300}}>
+      <FormControl sx={{ m: 1, width: 300 }}>
         <InputLabel id='demo-multiple-name-label'>Name</InputLabel>
         <Select
           labelId='demo-multiple-name-label'

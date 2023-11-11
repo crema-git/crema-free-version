@@ -2,13 +2,13 @@ import React from 'react';
 import AppCard from '@crema/components/AppCard';
 import DateSelector from './DateSelector';
 import PropTypes from 'prop-types';
-import {useIntl} from 'react-intl';
+import { useIntl } from 'react-intl';
 import Typography from '@mui/material/Typography';
 
-import {styled} from '@mui/material/styles';
+import { styled } from '@mui/material/styles';
 import AppList from '@crema/components/AppList';
 
-const SchedulesRoot = styled('div')(({theme}) => {
+const SchedulesRoot = styled('div')(({ theme }) => {
   return {
     display: 'flex',
     flexWrap: 'wrap',
@@ -39,7 +39,7 @@ const SchedulesRoot = styled('div')(({theme}) => {
     },
   };
 });
-const ScheduleCellWrapper = styled('div')(({theme}) => {
+const ScheduleCellWrapper = styled('div')(({ theme }) => {
   return {
     display: 'flex',
     alignItems: 'center',
@@ -59,10 +59,10 @@ const ScheduleCellWrapper = styled('div')(({theme}) => {
   };
 });
 
-const ScheduleCell = ({data}) => {
+const ScheduleCell = ({ data }) => {
   return (
     <ScheduleCellWrapper className='item-hover'>
-      <span style={{backgroundColor: data.color}} className='dot-icon' />
+      <span style={{ backgroundColor: data.color }} className='dot-icon' />
       <Typography variant='h5' component='h5'>
         {data.title}
       </Typography>
@@ -75,14 +75,14 @@ ScheduleCell.propTypes = {
   data: PropTypes.object,
 };
 
-const Schedules = ({schedules}) => {
-  const {messages} = useIntl();
+const Schedules = ({ schedules }) => {
+  const { messages } = useIntl();
   return (
     <AppCard
-      sxStyle={{height: 1}}
+      sxStyle={{ height: 1 }}
       title={messages['dashboard.eCommerce.schedules']}
       action={messages['dashboard.eCommerce.addNewSchedules']}
-      contentStyle={{paddingTop: 8}}
+      contentStyle={{ paddingTop: 8 }}
     >
       <SchedulesRoot>
         <div className='schedules-item'>

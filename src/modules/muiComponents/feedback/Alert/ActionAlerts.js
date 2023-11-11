@@ -5,7 +5,7 @@ import Stack from '@mui/material/Stack';
 
 export default function ActionAlerts() {
   return (
-    <Stack sx={{width: '100%'}} spacing={2}>
+    <Stack sx={{ width: '100%' }} spacing={2}>
       <Alert
         onClose={() => {
           //function

@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import AppCard from '@crema/components/AppCard';
 import Box from '@mui/material/Box';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
@@ -7,17 +7,17 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Button from '@mui/material/Button';
 import ReactPlayer from 'react-player';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Fonts } from '@crema/constants/AppEnums';
 import PropTypes from 'prop-types';
 
 const tabs = [
-  {id: 1, title: 'Class Detail', slug: 'class'},
-  {id: 2, title: 'Assignments', slug: 'assignments'},
-  {id: 3, title: 'Projects', slug: 'projects'},
-  {id: 4, title: 'Exams', slug: 'exams'},
+  { id: 1, title: 'Class Detail', slug: 'class' },
+  { id: 2, title: 'Assignments', slug: 'assignments' },
+  { id: 3, title: 'Projects', slug: 'projects' },
+  { id: 4, title: 'Exams', slug: 'exams' },
 ];
 
-const VideoPromo = ({videoPromo}) => {
+const VideoPromo = ({ videoPromo }) => {
   const [tabValue, setTabValue] = useState('assignments');
 
   const handleTabChange = (event, newValue) => {
@@ -25,7 +25,7 @@ const VideoPromo = ({videoPromo}) => {
   };
 
   return (
-    <AppCard sxStyle={{height: 1}}>
+    <AppCard sxStyle={{ height: 1 }}>
       <Box
         sx={{
           mt: -5,
@@ -49,8 +49,8 @@ const VideoPromo = ({videoPromo}) => {
         <Box
           sx={{
             display: 'flex',
-            flexDirection: {xs: 'column', sm: 'row'},
-            alignItems: {sm: 'center'},
+            flexDirection: { xs: 'column', sm: 'row' },
+            alignItems: { sm: 'center' },
             mb: 1,
           }}
         >
@@ -235,21 +235,21 @@ const VideoPromo = ({videoPromo}) => {
               sx={{
                 display: 'flex',
                 flexWrap: 'wrap',
-                flexDirection: {xs: 'column', sm: 'row'},
-                alignItems: {sm: 'center'},
+                flexDirection: { xs: 'column', sm: 'row' },
+                alignItems: { sm: 'center' },
               }}
             >
               <Box
                 sx={{
                   my: 1,
-                  mr: {sm: 'auto'},
+                  mr: { sm: 'auto' },
                   display: 'flex',
                   alignItems: 'center',
                 }}
               >
                 <Button
                   size='small'
-                  sx={{fontSize: 10, whiteSpace: 'nowrap'}}
+                  sx={{ fontSize: 10, whiteSpace: 'nowrap' }}
                   variant='outlined'
                   color='primary'
                 >
@@ -262,7 +262,7 @@ const VideoPromo = ({videoPromo}) => {
                 >
                   <Button
                     size='small'
-                    sx={{fontSize: 10, whiteSpace: 'nowrap'}}
+                    sx={{ fontSize: 10, whiteSpace: 'nowrap' }}
                     variant='contained'
                     color='primary'
                   >

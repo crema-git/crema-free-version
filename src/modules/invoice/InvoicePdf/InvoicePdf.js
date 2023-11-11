@@ -1,15 +1,15 @@
 import React from 'react';
 import AppCard from '@crema/components/AppCard';
 import AppGridContainer from '@crema/components/AppGridContainer';
-import {Box, Button, Divider, Grid, Typography} from '@mui/material';
+import { Box, Button, Divider, Grid, Typography } from '@mui/material';
 import dayjs from 'dayjs';
 
 import InvoiceTable from './InvoiceTable';
-import {AiOutlineDownload} from 'react-icons/ai';
-import {downloadPdf} from '@crema/helpers/FileHelper';
+import { AiOutlineDownload } from 'react-icons/ai';
+import { downloadPdf } from '@crema/helpers/FileHelper';
 import PropTypes from 'prop-types';
 
-const InvoicePdf = ({selectedInv, clientsList, invoiceSettings}) => {
+const InvoicePdf = ({ selectedInv, clientsList, invoiceSettings }) => {
   const selectedClient = clientsList.find(
     (item) => item.id === selectedInv.clientId,
   );
@@ -19,9 +19,9 @@ const InvoicePdf = ({selectedInv, clientsList, invoiceSettings}) => {
   const dueDays = dueDate.diff(invDate, 'days');
 
   return (
-    <AppCard title='Invoice' sx={{width: '70%', margin: 'auto'}}>
+    <AppCard title='Invoice' sx={{ width: '70%', margin: 'auto' }}>
       <Box id='pdfdiv'>
-        <Box sx={{py: 10, px: 4}}>
+        <Box sx={{ py: 10, px: 4 }}>
           <AppGridContainer spacing={5}>
             <Grid item xs={12} md={5}>
               <Box
@@ -32,10 +32,10 @@ const InvoicePdf = ({selectedInv, clientsList, invoiceSettings}) => {
                 }}
               >
                 <Typography variant='h4'>{selectedClient?.name}</Typography>
-                <Typography variant='h5' sx={{my: 3}}>
+                <Typography variant='h5' sx={{ my: 3 }}>
                   {selectedClient?.firstName} {selectedClient?.lastName}
                 </Typography>
-                <Box sx={{mb: 2}}>
+                <Box sx={{ mb: 2 }}>
                   {selectedClient?.steetName}{' '}
                   {selectedClient?.steetName.length > 0 && ' , '}
                   {selectedClient?.city}{' '}
@@ -47,7 +47,7 @@ const InvoicePdf = ({selectedInv, clientsList, invoiceSettings}) => {
                   {selectedClient?.country}
                 </Box>
                 {selectedClient?.vatId && (
-                  <Box sx={{mb: 2}}>VAT ID: {selectedClient?.vatId}</Box>
+                  <Box sx={{ mb: 2 }}>VAT ID: {selectedClient?.vatId}</Box>
                 )}
               </Box>
             </Grid>
@@ -56,16 +56,16 @@ const InvoicePdf = ({selectedInv, clientsList, invoiceSettings}) => {
                 item
                 xs={12}
                 md={6}
-                sx={{ml: 'auto', display: 'flex', alignItems: 'flex-start'}}
+                sx={{ ml: 'auto', display: 'flex', alignItems: 'flex-start' }}
               >
-                <Box sx={{width: '50%'}}>
-                  <Typography variant='h4' sx={{mb: 3}}>
+                <Box sx={{ width: '50%' }}>
+                  <Typography variant='h4' sx={{ mb: 3 }}>
                     {invoiceSettings.general.agencyName}
                   </Typography>
-                  <Typography variant='h4' sx={{mb: 3}}>
+                  <Typography variant='h4' sx={{ mb: 3 }}>
                     {invoiceSettings.general.agencyName}
                   </Typography>
-                  <Box sx={{mb: 3}}>
+                  <Box sx={{ mb: 3 }}>
                     <Box>{invoiceSettings.general.streetName}</Box>
                     <Box>{invoiceSettings.general.state}</Box>
                     <Box>
@@ -73,22 +73,22 @@ const InvoicePdf = ({selectedInv, clientsList, invoiceSettings}) => {
                       {invoiceSettings.general.country}
                     </Box>
                   </Box>
-                  <Box sx={{mb: 3}}>
+                  <Box sx={{ mb: 3 }}>
                     <Box>{invoiceSettings.general.phoneNumber}</Box>
                     <Box>{invoiceSettings.invoicing.email}</Box>
                   </Box>
-                  <Box sx={{mb: 3}}>
+                  <Box sx={{ mb: 3 }}>
                     <Box>VAT ID: {invoiceSettings.accounting.vatId}</Box>
                     <Box>Tax ID: {invoiceSettings.accounting.taxId}</Box>
                   </Box>
                 </Box>
                 {invoiceSettings?.invoicing && (
-                  <Box sx={{width: '50%', ml: 4}}>
+                  <Box sx={{ width: '50%', ml: 4 }}>
                     {invoiceSettings.invoicing.logo && (
                       <img
                         src={invoiceSettings.invoicing.logo}
                         alt='logo'
-                        style={{width: 70, height: 'auto'}}
+                        style={{ width: 70, height: 'auto' }}
                       />
                     )}
                   </Box>
@@ -96,10 +96,10 @@ const InvoicePdf = ({selectedInv, clientsList, invoiceSettings}) => {
               </Grid>
             )}
           </AppGridContainer>
-          <Typography variant='h2' sx={{mb: 3}}>
+          <Typography variant='h2' sx={{ mb: 3 }}>
             Invoice
           </Typography>
-          <Box sx={{display: 'flex', justifyContent: 'space-between', mb: 4}}>
+          <Box sx={{ display: 'flex', justifyContent: 'space-between', mb: 4 }}>
             <Box
               sx={{
                 display: 'flex',
@@ -108,7 +108,7 @@ const InvoicePdf = ({selectedInv, clientsList, invoiceSettings}) => {
                 p: 1,
               }}
             >
-              <Box component='span' sx={{mr: 2}}>
+              <Box component='span' sx={{ mr: 2 }}>
                 Invoice ID:
               </Box>
               <Box>{selectedInv.inum}</Box>
@@ -121,13 +121,13 @@ const InvoicePdf = ({selectedInv, clientsList, invoiceSettings}) => {
                 p: 1,
               }}
             >
-              <Box component='span' sx={{mr: 2}}>
+              <Box component='span' sx={{ mr: 2 }}>
                 Invoice Date:
               </Box>
               <Box>{selectedInv.idt}</Box>
             </Box>
           </Box>
-          <Box sx={{mb: 4}}>{selectedInv.introductionText}</Box>
+          <Box sx={{ mb: 4 }}>{selectedInv.introductionText}</Box>
         </Box>
 
         <InvoiceTable
@@ -137,22 +137,22 @@ const InvoicePdf = ({selectedInv, clientsList, invoiceSettings}) => {
           currency={selectedInv?.currency}
         />
 
-        <Box sx={{py: 10, px: 4}}>
+        <Box sx={{ py: 10, px: 4 }}>
           <Box
             sx={{
               borderRadius: 2,
               p: 1,
             }}
           >
-            <Typography variant='h4' sx={{mb: 1}}>
+            <Typography variant='h4' sx={{ mb: 1 }}>
               Payment Terms
             </Typography>
-            <Typography variant='body1' sx={{mb: 4}}>
+            <Typography variant='body1' sx={{ mb: 4 }}>
               Please Pay within {dueDays} days of receiving this invoice.
             </Typography>
           </Box>
 
-          <Box sx={{mb: 3}}>{selectedInv.conclusionText}</Box>
+          <Box sx={{ mb: 3 }}>{selectedInv.conclusionText}</Box>
           <Divider />
 
           {invoiceSettings?.accounting && (
@@ -167,10 +167,10 @@ const InvoicePdf = ({selectedInv, clientsList, invoiceSettings}) => {
                 width: 'fit-content',
               }}
             >
-              <Typography variant='h4' sx={{mb: 4}}>
+              <Typography variant='h4' sx={{ mb: 4 }}>
                 Bank Account
               </Typography>
-              <Box sx={{color: 'text.primary'}}>
+              <Box sx={{ color: 'text.primary' }}>
                 <Box>Receiver: {invoiceSettings.accounting.accountHolder}</Box>
                 <Box>Bank Name: {invoiceSettings.accounting.bankName}</Box>
                 <Box>
@@ -189,7 +189,7 @@ const InvoicePdf = ({selectedInv, clientsList, invoiceSettings}) => {
       <Button
         variant='contained'
         startIcon={<AiOutlineDownload size={20} />}
-        sx={{display: 'flex', ml: 'auto', mt: 4}}
+        sx={{ display: 'flex', ml: 'auto', mt: 4 }}
         onClick={() => downloadPdf()}
       >
         Download Invoice

@@ -1,19 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {Box} from '@mui/material';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Box } from '@mui/material';
+import { Fonts } from '@crema/constants/AppEnums';
 
-const TimelineImageWrapper = ({children}) => {
+const TimelineImageWrapper = ({ children }) => {
   return (
     <Box
       sx={{
         width: '100%',
-        pb: {sx: 4, ms: 0},
+        pb: { sx: 4, ms: 0 },
         '& .rt-timeline': {
           position: 'relative',
           background: 'none',
           '&:before': {
-            left: {xs: 30, sm: 'calc(50% - .5px)'},
+            left: { xs: 30, sm: 'calc(50% - .5px)' },
             top: 1,
             zIndex: 1,
             width: '1px',
@@ -24,7 +24,7 @@ const TimelineImageWrapper = ({children}) => {
           },
         },
         '& .rt-label-container': {
-          justifyContent: {xs: 'flex-start', sm: 'center'},
+          justifyContent: { xs: 'flex-start', sm: 'center' },
         },
         '& .rt-backing': {
           borderRadius: (theme) => theme.cardRadius / 4,
@@ -55,7 +55,7 @@ const TimelineImageWrapper = ({children}) => {
           p: 5,
         },
         '& .rt-event': {
-          width: {xs: '100%', sm: '50%'},
+          width: { xs: '100%', sm: '50%' },
           paddingLeft: {
             xs: '76px',
             sm: '45px',
@@ -78,20 +78,20 @@ const TimelineImageWrapper = ({children}) => {
           borderRadius: '50%',
           width: 30,
           height: 30,
-          left: {xs: -61, sm: -60, xl: -79},
+          left: { xs: -61, sm: -60, xl: -79 },
         },
         '& .rt-event:nth-of-type(2n)': {
-          textAlign: {xs: 'left', sm: 'right'},
-          paddingRight: {xs: 0, sm: '45px', xl: '65px'},
-          paddingLeft: {xs: '76px', sm: 0},
+          textAlign: { xs: 'left', sm: 'right' },
+          paddingRight: { xs: 0, sm: '45px', xl: '65px' },
+          paddingLeft: { xs: '76px', sm: 0 },
           '& .rt-dot': {
-            right: {xs: 'auto', sm: -60, xl: -79},
-            left: {xs: -61, sm: 'auto'},
+            right: { xs: 'auto', sm: -60, xl: -79 },
+            left: { xs: -61, sm: 'auto' },
           },
           '& .rt-arrow': {
-            right: {xs: 'auto', sm: -20},
-            left: {xs: -20, sm: 'auto'},
-            transform: {xs: 'rotate(180deg)', sm: 'rotate(0deg)'},
+            right: { xs: 'auto', sm: -20 },
+            left: { xs: -20, sm: 'auto' },
+            transform: { xs: 'rotate(180deg)', sm: 'rotate(0deg)' },
           },
         },
         '& .rt-footer-container': {

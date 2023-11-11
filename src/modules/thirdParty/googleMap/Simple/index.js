@@ -1,5 +1,5 @@
 import React from 'react';
-import {GoogleMap, withGoogleMap} from 'react-google-maps';
+import { GoogleMap, withGoogleMap } from 'react-google-maps';
 import PropTypes from 'prop-types';
 
 /*
@@ -12,7 +12,7 @@ const SimpleMapExampleGoogleMap = withGoogleMap(() => (
     options={{
       scrollwheel: false,
     }}
-    defaultCenter={{lat: 47.646935, lng: -122.303763}}
+    defaultCenter={{ lat: 47.646935, lng: -122.303763 }}
   />
 ));
 

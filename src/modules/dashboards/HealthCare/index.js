@@ -1,8 +1,8 @@
 import React from 'react';
-import {Grid} from '@mui/material';
+import { Grid } from '@mui/material';
 import AppGridContainer from '@crema/components/AppGridContainer';
 import AppAnimate from '@crema/components/AppAnimate';
-import {useGetDataApi} from '@crema/hooks/APIHooks';
+import { useGetDataApi } from '@crema/hooks/APIHooks';
 import DrCard from './DrCard';
 import Activities from './Activities';
 import HealthStatics from './HealthStatics';
@@ -20,7 +20,7 @@ import YourActivity from './YourActivity';
 import AppLoader from '@crema/components/AppLoader';
 
 const HealthCare = () => {
-  const [{apiData: healthCare, loading}] = useGetDataApi(
+  const [{ apiData: healthCare, loading }] = useGetDataApi(
     '/dashboard/health_care',
   );
 

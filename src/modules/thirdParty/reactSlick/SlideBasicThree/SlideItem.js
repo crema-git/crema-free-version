@@ -1,9 +1,9 @@
 import React from 'react';
-import {alpha, Box, Typography} from '@mui/material';
+import { alpha, Box, Typography } from '@mui/material';
 import PropTypes from 'prop-types';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Fonts } from '@crema/constants/AppEnums';
 
-const SlideItem = ({slide}) => {
+const SlideItem = ({ slide }) => {
   return (
     <Box
       sx={{
@@ -14,8 +14,8 @@ const SlideItem = ({slide}) => {
       <Box
         sx={{
           position: 'relative',
-          maxHeight: {xs: '100%', md: 320},
-          minHeight: {xs: 250, md: '100%'},
+          maxHeight: { xs: '100%', md: 320 },
+          minHeight: { xs: 250, md: '100%' },
           height: '100%',
           '& img': {
             maxWidth: '100%',

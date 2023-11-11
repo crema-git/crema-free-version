@@ -3,8 +3,8 @@ import ListItemText from '@mui/material/ListItemText';
 import ListItem from '@mui/material/ListItem';
 import PropTypes from 'prop-types';
 
-import {styled} from '@mui/material/styles';
-import {Fonts} from '@crema/constants/AppEnums';
+import { styled } from '@mui/material/styles';
+import { Fonts } from '@crema/constants/AppEnums';
 
 const EarningCategoryListItem = styled(ListItem)((props) => {
   return {
@@ -42,7 +42,7 @@ const EarningCategoryListItem = styled(ListItem)((props) => {
 });
 
 const Categories = (props) => {
-  const {category} = props;
+  const { category } = props;
 
   return (
     <EarningCategoryListItem

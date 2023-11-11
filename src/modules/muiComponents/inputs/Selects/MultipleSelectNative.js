@@ -19,7 +19,7 @@ const names = [
 export default function MultipleSelectNative() {
   const [personName, setPersonName] = React.useState([]);
   const handleChangeMultiple = (event) => {
-    const {options} = event.target;
+    const { options } = event.target;
     const value = [];
     for (let i = 0, l = options.length; i < l; i += 1) {
       if (options[i].selected) {
@@ -31,7 +31,7 @@ export default function MultipleSelectNative() {
 
   return (
     <div>
-      <FormControl sx={{m: 1, minWidth: 120, maxWidth: 300}}>
+      <FormControl sx={{ m: 1, minWidth: 120, maxWidth: 300 }}>
         <InputLabel shrink htmlFor='select-multiple-native'>
           Native
         </InputLabel>

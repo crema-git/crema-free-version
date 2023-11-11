@@ -5,10 +5,10 @@ import AppCard from '@crema/components/AppCard';
 import AppGrid from '@crema/components/AppGrid';
 
 const Share = (props) => {
-  const {data} = props;
+  const { data } = props;
 
   return (
-    <AppCard sxStyle={{height: 1}} title='Share'>
+    <AppCard sxStyle={{ height: 1 }} title='Share'>
       <AppGrid
         data={data}
         itemPadding={5}
@@ -25,7 +25,7 @@ const Share = (props) => {
             key={index}
             sx={{
               backgroundColor: data.color,
-              width: {xs: 50, xl: 65},
+              width: { xs: 50, xl: 65 },
               color: (theme) => theme.palette.primary.contrastText,
               padding: '6px 5px',
               borderRadius: 1,

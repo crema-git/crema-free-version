@@ -1,11 +1,11 @@
 import React from 'react';
 import Avatar from '@mui/material/Avatar';
 import PropTypes from 'prop-types';
-import {Typography} from '@mui/material';
+import { Typography } from '@mui/material';
 import Box from '@mui/material/Box';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Fonts } from '@crema/constants/AppEnums';
 
-const ProductCell = ({data}) => {
+const ProductCell = ({ data }) => {
   return (
     <Box
       sx={{
@@ -27,7 +27,7 @@ const ProductCell = ({data}) => {
         }}
       />
 
-      <Box sx={{flex: 1}}>
+      <Box sx={{ flex: 1 }}>
         <Typography
           sx={{
             color: (theme) => theme.palette.primary.main,

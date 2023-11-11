@@ -12,16 +12,16 @@ import {
   YAxis,
 } from 'recharts';
 import data from './data';
-import {useThemeContext} from '@crema/context/AppContextProvider/ThemeContextProvider';
+import { useThemeContext } from '@crema/context/AppContextProvider/ThemeContextProvider';
 
 const VerticalComposedChart = () => {
-  const {theme} = useThemeContext();
+  const { theme } = useThemeContext();
   return (
     <ResponsiveContainer width='100%' height={200}>
       <ComposedChart
         layout='vertical'
         data={data}
-        margin={{top: 10, right: 0, left: -12, bottom: 0}}
+        margin={{ top: 10, right: 0, left: -12, bottom: 0 }}
       >
         <XAxis type='number' />
         <YAxis dataKey='name' type='category' />

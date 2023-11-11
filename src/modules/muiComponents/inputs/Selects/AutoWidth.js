@@ -13,7 +13,7 @@ export default function SelectAutoWidth() {
 
   return (
     <div>
-      <FormControl sx={{m: 1, minWidth: 80}}>
+      <FormControl sx={{ m: 1, minWidth: 80 }}>
         <InputLabel id='demo-simple-select-autowidth-label'>Age</InputLabel>
         <Select
           labelId='demo-simple-select-autowidth-label'

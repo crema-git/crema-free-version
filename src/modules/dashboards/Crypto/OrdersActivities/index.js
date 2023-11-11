@@ -1,11 +1,11 @@
 import React from 'react';
 import AppCard from '@crema/components/AppCard';
-import {useIntl} from 'react-intl';
+import { useIntl } from 'react-intl';
 import OrdersActivitiesTable from './OrdersActivitiesTable';
 import PropTypes from 'prop-types';
 
-const OrdersActivities = ({ordersActivities}) => {
-  const {messages} = useIntl();
+const OrdersActivities = ({ ordersActivities }) => {
+  const { messages } = useIntl();
   return (
     <AppCard
       contentStyle={{

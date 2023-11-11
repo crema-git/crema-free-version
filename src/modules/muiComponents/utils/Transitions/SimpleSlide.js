@@ -7,8 +7,8 @@ import Slide from '@mui/material/Slide';
 import FormControlLabel from '@mui/material/FormControlLabel';
 
 const icon = (
-  <Paper sx={{m: 1}} elevation={4}>
-    <Box component='svg' sx={{width: 100, height: 100}}>
+  <Paper sx={{ m: 1 }} elevation={4}>
+    <Box component='svg' sx={{ width: 100, height: 100 }}>
       <Box
         component='polygon'
         sx={{
@@ -30,8 +30,8 @@ export default function SimpleSlide() {
   };
 
   return (
-    <Box sx={{height: 180}}>
-      <Box sx={{width: `calc(100px + 16px)`}}>
+    <Box sx={{ height: 180 }}>
+      <Box sx={{ width: `calc(100px + 16px)` }}>
         <FormControlLabel
           control={<Switch checked={checked} onChange={handleChange} />}
           label='Show'

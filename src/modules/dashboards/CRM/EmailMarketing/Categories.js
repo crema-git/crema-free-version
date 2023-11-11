@@ -2,12 +2,12 @@ import React from 'react';
 import ListItem from '@mui/material/ListItem';
 import PropTypes from 'prop-types';
 import ListItemText from '@mui/material/ListItemText';
-import {Typography} from '@mui/material';
+import { Typography } from '@mui/material';
 import Box from '@mui/material/Box';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Fonts } from '@crema/constants/AppEnums';
 
 const Categories = (props) => {
-  const {category} = props;
+  const { category } = props;
 
   return (
     <ListItem

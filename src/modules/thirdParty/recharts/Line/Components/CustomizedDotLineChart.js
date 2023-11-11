@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import {
   CartesianGrid,
   Legend,
@@ -14,7 +14,7 @@ import propTypess from 'prop-types';
 
 class CustomizedDot extends Component {
   render() {
-    const {cx, cy, value} = this.props;
+    const { cx, cy, value } = this.props;
 
     if (value > 2500) {
       return (
@@ -54,7 +54,7 @@ CustomizedDot.propTypes = {
 
 const CustomizedDotLineChart = () => (
   <ResponsiveContainer width='100%' height={200}>
-    <LineChart data={data} margin={{top: 10, right: 0, left: -25, bottom: 0}}>
+    <LineChart data={data} margin={{ top: 10, right: 0, left: -25, bottom: 0 }}>
       <XAxis dataKey='name' />
       <YAxis />
       <CartesianGrid strokeDasharray='3 3' />

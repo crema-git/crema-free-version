@@ -25,9 +25,9 @@ const AppSearch = ({
         align={align}
         className={clsx(
           'searchRoot',
-          {'hs-search': overlap},
-          {'hs-disableFocus': disableFocus},
-          {searchIconBox: onlyIcon},
+          { 'hs-search': overlap },
+          { 'hs-disableFocus': disableFocus },
+          { searchIconBox: onlyIcon },
         )}
       >
         <SearchIconWrapper
@@ -41,7 +41,7 @@ const AppSearch = ({
         <SearchInputBase
           {...rest}
           placeholder={placeholder || 'Search…'}
-          inputProps={{'aria-label': 'search'}}
+          inputProps={{ 'aria-label': 'search' }}
         />
       </SearchIconBox>
     </SearchWrapper>

@@ -68,7 +68,7 @@ export default function TransferList() {
   const customList = (title, items) => (
     <Card>
       <CardHeader
-        sx={{px: 2, py: 1}}
+        sx={{ px: 2, py: 1 }}
         avatar={
           <Checkbox
             onClick={handleToggleAll(items)}
@@ -135,7 +135,7 @@ export default function TransferList() {
       <Grid item>
         <Grid container direction='column' alignItems='center'>
           <Button
-            sx={{my: 0.5}}
+            sx={{ my: 0.5 }}
             variant='outlined'
             size='small'
             onClick={handleCheckedRight}
@@ -145,7 +145,7 @@ export default function TransferList() {
             &gt;
           </Button>
           <Button
-            sx={{my: 0.5}}
+            sx={{ my: 0.5 }}
             variant='outlined'
             size='small'
             onClick={handleCheckedLeft}

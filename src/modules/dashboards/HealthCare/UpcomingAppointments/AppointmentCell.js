@@ -2,10 +2,10 @@ import React from 'react';
 import Box from '@mui/material/Box';
 import Avatar from '@mui/material/Avatar';
 import PropTypes from 'prop-types';
-import {Fonts} from '@crema/constants/AppEnums';
-import {Typography} from '@mui/material';
+import { Fonts } from '@crema/constants/AppEnums';
+import { Typography } from '@mui/material';
 
-const AppointmentCell = ({appointment}) => {
+const AppointmentCell = ({ appointment }) => {
   return (
     <Box
       sx={{
@@ -15,7 +15,7 @@ const AppointmentCell = ({appointment}) => {
       }}
       className='item-hover'
     >
-      <Box sx={{mr: 4}}>
+      <Box sx={{ mr: 4 }}>
         <Avatar
           sx={{
             width: 48,
@@ -38,7 +38,7 @@ const AppointmentCell = ({appointment}) => {
         >
           {appointment.name}
         </Box>
-        <Box component='p' sx={{color: 'primary.main'}}>
+        <Box component='p' sx={{ color: 'primary.main' }}>
           {appointment.speciality}
         </Box>
       </Box>

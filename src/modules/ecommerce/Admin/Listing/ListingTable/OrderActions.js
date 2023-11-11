@@ -5,10 +5,10 @@ import Fade from '@mui/material/Fade';
 import IconButton from '@mui/material/IconButton';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import Box from '@mui/material/Box';
-import {useNavigate} from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-const OrderActions = ({id}) => {
+const OrderActions = ({ id }) => {
   const navigate = useNavigate();
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
@@ -39,18 +39,18 @@ const OrderActions = ({id}) => {
         TransitionComponent={Fade}
       >
         <MenuItem
-          style={{fontSize: 14}}
+          style={{ fontSize: 14 }}
           onClick={() => navigate('/ecommerce/orders')}
         >
           View Order
         </MenuItem>
         <MenuItem
-          style={{fontSize: 14}}
+          style={{ fontSize: 14 }}
           onClick={() => navigate(`/ecommerce/edit-products/${id}`)}
         >
           Edit
         </MenuItem>
-        <MenuItem style={{fontSize: 14}} onClick={handleClose}>
+        <MenuItem style={{ fontSize: 14 }} onClick={handleClose}>
           Delete
         </MenuItem>
       </Menu>

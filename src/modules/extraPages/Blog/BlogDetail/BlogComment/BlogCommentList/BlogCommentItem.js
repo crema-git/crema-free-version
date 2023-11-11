@@ -1,33 +1,33 @@
 import React from 'react';
-import {Avatar, Box, Typography} from '@mui/material';
+import { Avatar, Box, Typography } from '@mui/material';
 import PropTypes from 'prop-types';
 import Button from '@mui/material/Button';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Fonts } from '@crema/constants/AppEnums';
 import IntlMessages from '@crema/helpers/IntlMessages';
 
-const BlogCommentItem = ({comment}) => {
+const BlogCommentItem = ({ comment }) => {
   return (
     <Box
       sx={{
         display: 'flex',
       }}
     >
-      <Box sx={{mr: 4}}>
+      <Box sx={{ mr: 4 }}>
         <Avatar
-          sx={{width: {md: 50}, height: {md: 50}}}
+          sx={{ width: { md: 50 }, height: { md: 50 } }}
           src={comment.image}
           alt={comment.name}
         />
       </Box>
-      <Box sx={{flex: 1}}>
+      <Box sx={{ flex: 1 }}>
         <Box
           sx={{
             display: 'flex',
             alignItems: 'center',
-            mb: {xs: 2, md: 3},
+            mb: { xs: 2, md: 3 },
           }}
         >
-          <Box sx={{flex: 1}}>
+          <Box sx={{ flex: 1 }}>
             <Typography
               component='h5'
               sx={{
@@ -49,7 +49,7 @@ const BlogCommentItem = ({comment}) => {
               {comment.duration}
             </Box>
           </Box>
-          <Box sx={{ml: 2}}>
+          <Box sx={{ ml: 2 }}>
             <Button
               variant='outlined'
               sx={{
@@ -62,7 +62,7 @@ const BlogCommentItem = ({comment}) => {
             </Button>
           </Box>
         </Box>
-        <Typography sx={{color: (theme) => theme.palette.text.secondary}}>
+        <Typography sx={{ color: (theme) => theme.palette.text.secondary }}>
           {comment.comment}
         </Typography>
       </Box>

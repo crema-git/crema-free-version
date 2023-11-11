@@ -1,11 +1,11 @@
 import * as React from 'react';
-import {DataGrid} from '@mui/x-data-grid';
-import {useDemoData} from '@mui/x-data-grid-generator';
+import { DataGrid } from '@mui/x-data-grid';
+import { useDemoData } from '@mui/x-data-grid-generator';
 import Popover from '@mui/material/Popover';
 import Typography from '@mui/material/Typography';
 
 export default function CellWithPopover() {
-  const {data} = useDemoData({
+  const { data } = useDemoData({
     dataSet: 'Commodity',
     rowLength: 100,
     maxColumns: 4,
@@ -29,7 +29,7 @@ export default function CellWithPopover() {
   const open = Boolean(anchorEl);
 
   return (
-    <div style={{height: 400, width: '100%'}}>
+    <div style={{ height: 400, width: '100%' }}>
       <DataGrid
         {...data}
         componentsProps={{
@@ -56,7 +56,7 @@ export default function CellWithPopover() {
         onClose={handlePopoverClose}
         disableRestoreFocus
       >
-        <Typography sx={{p: 1}}>{`${value.length} characters.`}</Typography>
+        <Typography sx={{ p: 1 }}>{`${value.length} characters.`}</Typography>
       </Popover>
     </div>
   );

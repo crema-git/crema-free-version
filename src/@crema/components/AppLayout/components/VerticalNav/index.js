@@ -6,7 +6,7 @@ import VerticalCollapse from './VerticalCollapse';
 import VerticalItem from './VerticalItem';
 import PropTypes from 'prop-types';
 
-const VerticalNav = ({routesConfig}) => {
+const VerticalNav = ({ routesConfig }) => {
   return (
     <List
       sx={{

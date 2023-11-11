@@ -4,15 +4,15 @@ import Grid from '@mui/material/Grid';
 import TextField from '@mui/material/TextField';
 import IntlMessages from '@crema/helpers/IntlMessages';
 import Box from '@mui/material/Box';
-import {Button} from '@mui/material';
-import {Form} from 'formik';
+import { Button } from '@mui/material';
+import { Form } from 'formik';
 import AppTextField from '@crema/components/AppFormComponents/AppTextField';
 import PropTypes from 'prop-types';
-import {DatePicker} from '@mui/x-date-pickers';
+import { DatePicker } from '@mui/x-date-pickers';
 import Autocomplete from '@mui/material/Autocomplete';
-import {countries} from '@crema/mockapi';
+import { countries } from '@crema/mockapi';
 
-const InfoForm = ({values, setFieldValue}) => {
+const InfoForm = ({ values, setFieldValue }) => {
   return (
     <Form autoComplete='off'>
       <AppGridContainer spacing={4}>
@@ -57,7 +57,7 @@ const InfoForm = ({values, setFieldValue}) => {
             renderOption={(props, option) => (
               <Box
                 component='li'
-                sx={{'& > img': {mr: 2, flexShrink: 0}}}
+                sx={{ '& > img': { mr: 2, flexShrink: 0 } }}
                 {...props}
               >
                 <img

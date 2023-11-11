@@ -1,20 +1,20 @@
 import React from 'react';
 import MarketGraph from './MarketGraph';
 import IntlMessages from '@crema/helpers/IntlMessages';
-import {Box} from '@mui/material';
+import { Box } from '@mui/material';
 import PropTypes from 'prop-types';
-import {indigo, red, teal} from '@mui/material/colors';
-import {Fonts} from '@crema/constants/AppEnums';
+import { indigo, red, teal } from '@mui/material/colors';
+import { Fonts } from '@crema/constants/AppEnums';
 import AppCard from '@crema/components/AppCard';
-import {useIntl} from 'react-intl';
+import { useIntl } from 'react-intl';
 
 const CryptoMarketActivity = (props) => {
-  const {marketGraphData} = props;
+  const { marketGraphData } = props;
 
-  const {messages} = useIntl();
+  const { messages } = useIntl();
   return (
     <AppCard
-      sxStyle={{height: 1}}
+      sxStyle={{ height: 1 }}
       title={messages['dashboard.cryptoMarketActivity']}
       action={messages['common.viewAll']}
       contentStyle={{
@@ -37,8 +37,8 @@ const CryptoMarketActivity = (props) => {
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'space-between',
-              mr: {sm: 2},
-              mt: {xs: -4, sm: 2, md: 2},
+              mr: { sm: 2 },
+              mt: { xs: -4, sm: 2, md: 2 },
               width: '100%',
             }}
           >
@@ -52,8 +52,8 @@ const CryptoMarketActivity = (props) => {
               <Box
                 component='span'
                 sx={{
-                  height: {xs: 12, xl: 16},
-                  width: {xs: 12, xl: 16},
+                  height: { xs: 12, xl: 16 },
+                  width: { xs: 12, xl: 16 },
                   display: 'block',
                   borderRadius: '50%',
                   mr: 2,
@@ -80,8 +80,8 @@ const CryptoMarketActivity = (props) => {
               <Box
                 component='span'
                 sx={{
-                  height: {xs: 12, xl: 16},
-                  width: {xs: 12, xl: 16},
+                  height: { xs: 12, xl: 16 },
+                  width: { xs: 12, xl: 16 },
                   display: 'block',
                   borderRadius: '50%',
                   mr: 2,
@@ -107,8 +107,8 @@ const CryptoMarketActivity = (props) => {
               <Box
                 component='span'
                 sx={{
-                  height: {xs: 12, xl: 16},
-                  width: {xs: 12, xl: 16},
+                  height: { xs: 12, xl: 16 },
+                  width: { xs: 12, xl: 16 },
                   display: 'block',
                   borderRadius: '50%',
                   mr: 2,
@@ -127,7 +127,7 @@ const CryptoMarketActivity = (props) => {
           </Box>
           <Box
             sx={{
-              mt: {xs: 8, sm: 5, md: 2},
+              mt: { xs: 8, sm: 5, md: 2 },
               width: '100%',
               fontSize: 14,
               display: 'flex',

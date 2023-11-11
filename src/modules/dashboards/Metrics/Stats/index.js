@@ -1,12 +1,12 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import StatsGraph from './StatsGraph';
-import {useIntl} from 'react-intl';
+import { useIntl } from 'react-intl';
 import PropTypes from 'prop-types';
 import AppSelect from '@crema/components/AppSelect';
 import AppCard from '@crema/components/AppCard';
-import {Box} from '@mui/material';
+import { Box } from '@mui/material';
 
-const Stats = ({data}) => {
+const Stats = ({ data }) => {
   const [graphData, setGraphData] = useState(data.dataOne);
 
   const handleYearChange = (value) => {
@@ -41,11 +41,11 @@ const Stats = ({data}) => {
     }
   };
 
-  const {messages} = useIntl();
+  const { messages } = useIntl();
 
   return (
     <AppCard
-      sxStyle={{height: 1}}
+      sxStyle={{ height: 1 }}
       title={messages['dashboard.companyProduction']}
       action={
         <Box>

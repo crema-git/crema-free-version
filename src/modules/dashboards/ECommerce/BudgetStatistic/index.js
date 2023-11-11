@@ -1,16 +1,16 @@
 import React from 'react';
-import {FormattedNumber, useIntl} from 'react-intl';
+import { FormattedNumber, useIntl } from 'react-intl';
 import IntlMessages from '@crema/helpers/IntlMessages';
 import Typography from '@mui/material/Typography';
-import {alpha, useTheme} from '@mui/material';
+import { alpha, useTheme } from '@mui/material';
 import Box from '@mui/material/Box';
 
-import {styled} from '@mui/material/styles';
-import {Fonts} from '@crema/constants/AppEnums';
+import { styled } from '@mui/material/styles';
+import { Fonts } from '@crema/constants/AppEnums';
 import AppCard from '@crema/components/AppCard';
 import AppCircularProgress from '@crema/components/AppCircularProgress';
 
-const FooterActionItem = styled('div')(({theme}) => {
+const FooterActionItem = styled('div')(({ theme }) => {
   return {
     display: 'flex',
     alignItems: 'center',
@@ -39,12 +39,12 @@ const FooterActionItem = styled('div')(({theme}) => {
 });
 
 const BudgetStatistic = () => {
-  const {messages} = useIntl();
+  const { messages } = useIntl();
   const theme = useTheme();
 
   return (
     <AppCard
-      sxStyle={{height: 1}}
+      sxStyle={{ height: 1 }}
       contentStyle={{
         display: 'flex',
         flexDirection: 'column',
@@ -52,7 +52,7 @@ const BudgetStatistic = () => {
       }}
       title={messages['dashboard.eCommerce.budgetStatistic']}
       footerPosition='center'
-      footerStyle={{paddingBottom: 7.5, paddingTop: 0}}
+      footerStyle={{ paddingBottom: 7.5, paddingTop: 0 }}
       footer={
         <Box
           sx={{

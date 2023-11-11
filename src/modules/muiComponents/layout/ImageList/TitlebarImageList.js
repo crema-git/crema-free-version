@@ -8,7 +8,7 @@ import InfoIcon from '@mui/icons-material/Info';
 
 export default function TitlebarImageList() {
   return (
-    <ImageList sx={{width: 500, height: 450}}>
+    <ImageList sx={{ width: 500, height: 450 }}>
       <ImageListItem key='Subheader' cols={2}>
         <ListSubheader component='div'>December</ListSubheader>
       </ImageListItem>
@@ -25,7 +25,7 @@ export default function TitlebarImageList() {
             subtitle={item.author}
             actionIcon={
               <IconButton
-                sx={{color: 'rgba(255, 255, 255, 0.54)'}}
+                sx={{ color: 'rgba(255, 255, 255, 0.54)' }}
                 aria-label={`info about ${item.title}`}
               >
                 <InfoIcon />

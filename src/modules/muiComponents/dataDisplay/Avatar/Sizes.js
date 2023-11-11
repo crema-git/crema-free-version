@@ -8,13 +8,13 @@ export default function ImageAvatars() {
       <Avatar
         alt='Remy Sharp'
         src='/assets/images/avatar/A1.jpg'
-        sx={{width: 24, height: 24}}
+        sx={{ width: 24, height: 24 }}
       />
       <Avatar alt='Remy Sharp' src='/assets/images/avatar/A1.jpg' />
       <Avatar
         alt='Remy Sharp'
         src='/assets/images/avatar/A1.jpg'
-        sx={{width: 56, height: 56}}
+        sx={{ width: 56, height: 56 }}
       />
     </Stack>
   );

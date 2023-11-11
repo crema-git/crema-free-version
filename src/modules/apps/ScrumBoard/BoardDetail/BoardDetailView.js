@@ -1,10 +1,10 @@
-import React, {useCallback, useEffect, useState} from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import AppsContent from '@crema/components/AppsContainer/AppsContent';
 import Board from 'react-trello';
 import PropTypes from 'prop-types';
-import {Box, useTheme} from '@mui/material';
-import {useInfoViewActionsContext} from '@crema/context/AppContextProvider/InfoViewContextProvider';
-import {postDataApi, putDataApi} from '@crema/hooks/APIHooks';
+import { Box, useTheme } from '@mui/material';
+import { useInfoViewActionsContext } from '@crema/context/AppContextProvider/InfoViewContextProvider';
+import { postDataApi, putDataApi } from '@crema/hooks/APIHooks';
 
 import AddCard from './List/AddCard';
 import CardDetail from './List/CardDetail';
@@ -13,7 +13,7 @@ import ListHeader from './List/ListHeader';
 import AddNewList from './AddNewList';
 import NewListButton from './NewListButton';
 
-const BoardWrapper = ({children}) => {
+const BoardWrapper = ({ children }) => {
   return (
     <Box
       sx={{
@@ -40,7 +40,7 @@ const BoardDetailView = (props) => {
   const [isAddCardOpen, setAddCardOpen] = useState(false);
 
   const [selectedCard, setSelectedCard] = useState(null);
-  const {boardDetail, setData} = props;
+  const { boardDetail, setData } = props;
 
   const getBoardData = useCallback(() => {
     return {
@@ -191,7 +191,7 @@ const BoardDetailView = (props) => {
         onLaneAdd={(name) => onAddList(name)}
         onLaneUpdate={(laneId, data) => {
           const lane = boardData.lanes.find((item) => item.id === laneId);
-          onEditBoardList(boardDetail.id, {...lane, name: data.title});
+          onEditBoardList(boardDetail.id, { ...lane, name: data.title });
         }}
         onLaneDelete={(laneId) => onDeleteSelectedList(boardDetail.id, laneId)}
         t={(listId) => onClickAddCard(listId)}

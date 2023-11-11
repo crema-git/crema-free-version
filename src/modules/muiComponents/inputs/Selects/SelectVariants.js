@@ -13,7 +13,7 @@ export default function SelectVariants() {
 
   return (
     <div>
-      <FormControl variant='standard' sx={{m: 1, minWidth: 120}}>
+      <FormControl variant='standard' sx={{ m: 1, minWidth: 120 }}>
         <InputLabel id='demo-simple-select-standard-label'>Age</InputLabel>
         <Select
           labelId='demo-simple-select-standard-label'
@@ -30,7 +30,7 @@ export default function SelectVariants() {
           <MenuItem value={30}>Thirty</MenuItem>
         </Select>
       </FormControl>
-      <FormControl variant='filled' sx={{m: 1, minWidth: 120}}>
+      <FormControl variant='filled' sx={{ m: 1, minWidth: 120 }}>
         <InputLabel id='demo-simple-select-filled-label'>Age</InputLabel>
         <Select
           labelId='demo-simple-select-filled-label'

@@ -7,8 +7,8 @@ import {
 } from '@crema/context/AppContextProvider/InfoViewContextProvider';
 
 const AppInfoViewContext = () => {
-  const {error, loading, message} = useInfoViewContext();
-  const {clearInfoView} = useInfoViewActionsContext();
+  const { error, loading, message } = useInfoViewContext();
+  const { clearInfoView } = useInfoViewActionsContext();
 
   const showMessage = () => {
     return (

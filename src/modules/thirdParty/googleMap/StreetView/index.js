@@ -6,7 +6,7 @@ import {
   withGoogleMap,
 } from 'react-google-maps';
 
-const coordinates = {lat: 49.2853171, lng: -123.1119202};
+const coordinates = { lat: 49.2853171, lng: -123.1119202 };
 
 const STYLES = {
   overlayView: {
@@ -18,14 +18,14 @@ const STYLES = {
 };
 
 function getPixelPositionOffset(width, height) {
-  return {x: -(width / 2), y: -(height / 2)};
+  return { x: -(width / 2), y: -(height / 2) };
 }
 
 const StreetViewPanoramaExampleGoogleMap = withGoogleMap(() => (
   <GoogleMap defaultZoom={8} defaultCenter={coordinates}>
     <StreetViewPanorama defaultPosition={coordinates} visible>
       <OverlayView
-        position={{lat: 49.28590291211115, lng: -123.11248166065218}}
+        position={{ lat: 49.28590291211115, lng: -123.11248166065218 }}
         mapPaneName={OverlayView.OVERLAY_LAYER}
         getPixelPositionOffset={getPixelPositionOffset}
       >

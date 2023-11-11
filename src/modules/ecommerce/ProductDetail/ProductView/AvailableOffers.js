@@ -1,5 +1,5 @@
 import React from 'react';
-import {Box} from '@mui/material';
+import { Box } from '@mui/material';
 import LocalOfferOutlinedIcon from '@mui/icons-material/LocalOfferOutlined';
 import DateRangeIcon from '@mui/icons-material/DateRange';
 
@@ -29,7 +29,7 @@ const AvailableOffers = () => {
           color: 'primary.main',
         }}
       >
-        <LocalOfferOutlinedIcon style={{fontSize: 18}} />
+        <LocalOfferOutlinedIcon style={{ fontSize: 18 }} />
         <Box
           component='span'
           sx={{
@@ -59,7 +59,7 @@ const AvailableOffers = () => {
           color: 'primary.main',
         }}
       >
-        <DateRangeIcon style={{fontSize: 18}} />
+        <DateRangeIcon style={{ fontSize: 18 }} />
         <Box
           component='span'
           sx={{

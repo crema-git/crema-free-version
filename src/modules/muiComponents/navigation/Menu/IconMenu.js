@@ -13,7 +13,7 @@ import Cloud from '@mui/icons-material/Cloud';
 
 export default function IconMenu() {
   return (
-    <Paper sx={{width: 320, maxWidth: '100%'}}>
+    <Paper sx={{ width: 320, maxWidth: '100%' }}>
       <MenuList>
         <MenuItem>
           <ListItemIcon>

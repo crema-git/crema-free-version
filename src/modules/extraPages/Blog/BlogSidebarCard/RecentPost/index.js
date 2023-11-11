@@ -1,12 +1,12 @@
 import React from 'react';
-import {Box, Typography} from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import RecentPostItem from './RecentPostItem';
 import PropTypes from 'prop-types';
 import IntlMessages from '@crema/helpers/IntlMessages';
 import AppList from '@crema/components/AppList';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Fonts } from '@crema/constants/AppEnums';
 
-const RecentPost = ({recentPost}) => {
+const RecentPost = ({ recentPost }) => {
   return (
     <Box
       sx={{

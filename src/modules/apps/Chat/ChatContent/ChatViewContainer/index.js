@@ -1,18 +1,18 @@
-import React, {useEffect, useRef, useState} from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Box from '@mui/material/Box';
 import dayjs from 'dayjs';
 import PropTypes from 'prop-types';
 import IntlMessages from '@crema/helpers/IntlMessages';
 import AppsHeader from '@crema/components/AppsContainer/AppsHeader';
 import AppsFooter from '@crema/components/AppsContainer/AppsFooter';
-import {useAuthUser} from '@crema/hooks/AuthHooks';
+import { useAuthUser } from '@crema/hooks/AuthHooks';
 import SimpleBarReact from 'simplebar-react';
 
-import {styled} from '@mui/material/styles';
-import {postDataApi, putDataApi, useGetDataApi} from '@crema/hooks/APIHooks';
-import {useInfoViewActionsContext} from '@crema/context/AppContextProvider/InfoViewContextProvider';
-import {MessageType} from '@crema/mockapi/fakedb/apps/chat/connectionList';
-import {useChatActionsContext} from '../../../context/ChatContextProvider';
+import { styled } from '@mui/material/styles';
+import { postDataApi, putDataApi, useGetDataApi } from '@crema/hooks/APIHooks';
+import { useInfoViewActionsContext } from '@crema/context/AppContextProvider/InfoViewContextProvider';
+import { MessageType } from '@crema/mockapi/fakedb/apps/chat/connectionList';
+import { useChatActionsContext } from '../../../context/ChatContextProvider';
 import Header from './Header';
 import SendMessage from './SendMessage';
 import MessagesList from './MessageList';
@@ -34,24 +34,20 @@ const ScrollChatNoMainWrapper = styled('div')(() => {
   };
 });
 
-const ChatViewContainer = ({selectedUser, setSelectedUser}) => {
-  const {setConnectionData} = useChatActionsContext();
+const ChatViewContainer = ({ selectedUser, setSelectedUser }) => {
+  const { setConnectionData } = useChatActionsContext();
   const [message, setMessage] = useState('');
   const [isEdit, setIsEdit] = useState(false);
   const infoViewActionsContext = useInfoViewActionsContext();
   const [selectedMessage, setSelectedMessage] = useState(null);
-  const {user} = useAuthUser();
+  const { user } = useAuthUser();
 
   let _scrollBarRef = useRef();
-  const [{apiData: userMessages}, {setQueryParams, setData}] = useGetDataApi(
-    '/api/chatApp/connection/messages',
-    {},
-    {},
-    false,
-  );
+  const [{ apiData: userMessages }, { setQueryParams, setData }] =
+    useGetDataApi('/api/chatApp/connection/messages', {}, {}, false);
 
   useEffect(() => {
-    setQueryParams({id: selectedUser?.channelId});
+    setQueryParams({ id: selectedUser?.channelId });
   }, [selectedUser?.channelId]);
 
   useEffect(() => {

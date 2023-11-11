@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
 import React from 'react';
-import {GoogleMap, withGoogleMap} from 'react-google-maps';
+import { GoogleMap, withGoogleMap } from 'react-google-maps';
 
 import InfoBox from 'react-google-maps/lib/components/addons/InfoBox';
 
@@ -12,17 +12,17 @@ const StyledMapExampleGoogleMap = withGoogleMap((props) => (
   <GoogleMap
     defaultZoom={11}
     defaultCenter={props.center}
-    defaultOptions={{styles: fancyMapStyles}}
+    defaultOptions={{ styles: fancyMapStyles }}
   >
     <InfoBox
       defaultPosition={props.center}
-      options={{closeBoxURL: ``, enableEventPropagation: true}}
+      options={{ closeBoxURL: ``, enableEventPropagation: true }}
     >
       <div
-        style={{backgroundColor: `yellow`, opacity: 0.75, padding: `20px`}}
+        style={{ backgroundColor: `yellow`, opacity: 0.75, padding: `20px` }}
         onClick={props.onClickFromChildrenOfInfoBox}
       >
-        <div style={{fontSize: `16px`, fontColor: `#08233B`}}>Taipei</div>
+        <div style={{ fontSize: `16px`, fontColor: `#08233B` }}>Taipei</div>
       </div>
     </InfoBox>
   </GoogleMap>

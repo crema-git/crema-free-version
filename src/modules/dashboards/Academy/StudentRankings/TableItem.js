@@ -4,9 +4,9 @@ import TableRow from '@mui/material/TableRow';
 import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
 import Avatar from '@mui/material/Avatar';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Fonts } from '@crema/constants/AppEnums';
 
-const TableItem = ({data}) => {
+const TableItem = ({ data }) => {
   return (
     <TableRow
       key={data.name}
@@ -26,7 +26,7 @@ const TableItem = ({data}) => {
     >
       <TableCell className='tableCell'>
         <Box display='flex' alignItems='center'>
-          <Box sx={{mr: 3.5}}>
+          <Box sx={{ mr: 3.5 }}>
             <Avatar src={data.profile_pic} />
           </Box>
           <Box fontWeight={Fonts.MEDIUM}>{data.name}</Box>

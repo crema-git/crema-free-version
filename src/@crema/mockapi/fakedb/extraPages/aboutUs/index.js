@@ -1,9 +1,9 @@
 import React from 'react';
-import {BiChart} from 'react-icons/bi';
-import {FaUserAlt} from 'react-icons/fa';
-import {BsFileText} from 'react-icons/bs';
-import {HiLocationMarker} from 'react-icons/hi';
-import {green, indigo, pink, teal} from '@mui/material/colors';
+import { BiChart } from 'react-icons/bi';
+import { FaUserAlt } from 'react-icons/fa';
+import { BsFileText } from 'react-icons/bs';
+import { HiLocationMarker } from 'react-icons/hi';
+import { green, indigo, pink, teal } from '@mui/material/colors';
 
 export const aboutUsData = {
   introduction: {

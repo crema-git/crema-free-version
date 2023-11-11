@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 import AppContentViewWrapper from './AppContentViewWrapper';
 import AppSuspense from '../AppSuspense';
 
-const AppContentView = ({sxStyle, routes}) => {
+const AppContentView = ({ sxStyle, routes }) => {
   return (
     <AppContentViewWrapper>
       <Box
@@ -14,7 +14,7 @@ const AppContentView = ({sxStyle, routes}) => {
           display: 'flex',
           flex: 1,
           flexDirection: 'column',
-          p: {xs: 5, md: 7.5, xl: 12.5},
+          p: { xs: 5, md: 7.5, xl: 12.5 },
           ...sxStyle,
         }}
         className='app-content'

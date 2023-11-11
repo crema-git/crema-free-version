@@ -3,11 +3,11 @@ import AppCard from '@crema/components/AppCard';
 import Box from '@mui/material/Box';
 
 import Avatar from '@mui/material/Avatar';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Fonts } from '@crema/constants/AppEnums';
 import PropTypes from 'prop-types';
 
-import {FcGraduationCap, FcReading, FcViewDetails} from 'react-icons/fc';
-import {GiBookshelf} from 'react-icons/gi';
+import { FcGraduationCap, FcReading, FcViewDetails } from 'react-icons/fc';
+import { GiBookshelf } from 'react-icons/gi';
 
 const getIcon = (iconType) => {
   switch (iconType) {
@@ -22,10 +22,10 @@ const getIcon = (iconType) => {
   }
 };
 
-const GeneralStats = ({stats}) => {
+const GeneralStats = ({ stats }) => {
   return (
     <AppCard
-      sxStyle={{height: 1}}
+      sxStyle={{ height: 1 }}
       className='card-hover'
       contentStyle={{
         p: 0,
@@ -74,7 +74,7 @@ const GeneralStats = ({stats}) => {
             },
           }}
         >
-          <Box sx={{overflow: 'hidden'}}>
+          <Box sx={{ overflow: 'hidden' }}>
             <Box component='h3'>{stats.count}</Box>
             <Box
               component='p'

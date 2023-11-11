@@ -8,7 +8,7 @@ function valuetext(value) {
 
 export default function ColorSlider() {
   return (
-    <Box sx={{width: 300}}>
+    <Box sx={{ width: 300 }}>
       <Slider
         aria-label='Temperature'
         defaultValue={30}

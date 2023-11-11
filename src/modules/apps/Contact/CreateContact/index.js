@@ -1,15 +1,15 @@
-import React, {useEffect, useState} from 'react';
-import {Formik} from 'formik';
+import React, { useEffect, useState } from 'react';
+import { Formik } from 'formik';
 import * as yup from 'yup';
 import IntlMessages from '@crema/helpers/IntlMessages';
 import PropTypes from 'prop-types';
 import AddContactForm from './AddContactForm';
 import AppDialog from '@crema/components/AppDialog';
-import {useInfoViewActionsContext} from '@crema/context/AppContextProvider/InfoViewContextProvider';
-import {postDataApi, putDataApi} from '@crema/hooks/APIHooks';
-import {useContactActionsContext} from '../../context/ContactContextProvider';
-import {getDateObject, getFormattedDate} from '@crema/helpers/DateHelper';
-import {generateRandomUniqueNumber} from '@crema/helpers/Common';
+import { useInfoViewActionsContext } from '@crema/context/AppContextProvider/InfoViewContextProvider';
+import { postDataApi, putDataApi } from '@crema/hooks/APIHooks';
+import { useContactActionsContext } from '../../context/ContactContextProvider';
+import { getDateObject, getFormattedDate } from '@crema/helpers/DateHelper';
+import { generateRandomUniqueNumber } from '@crema/helpers/Common';
 
 const validationSchema = yup.object({
   name: yup.string().required(<IntlMessages id='validation.nameRequired' />),
@@ -23,10 +23,14 @@ const validationSchema = yup.object({
 });
 
 const CreateContact = (props) => {
-  const {isAddContact, handleAddContactClose, selectContact, onUpdateContact} =
-    props;
+  const {
+    isAddContact,
+    handleAddContactClose,
+    selectContact,
+    onUpdateContact,
+  } = props;
   const infoViewActionsContext = useInfoViewActionsContext();
-  const {reCallAPI} = useContactActionsContext();
+  const { reCallAPI } = useContactActionsContext();
 
   const [userImage, setUserImage] = useState(
     selectContact && selectContact.image
@@ -83,7 +87,7 @@ const CreateContact = (props) => {
             selectContact && selectContact.label ? selectContact.label : '',
         }}
         validationSchema={validationSchema}
-        onSubmit={(data, {setSubmitting, resetForm}) => {
+        onSubmit={(data, { setSubmitting, resetForm }) => {
           setSubmitting(true);
           if (selectContact) {
             const newContact = {
@@ -134,7 +138,7 @@ const CreateContact = (props) => {
           setSubmitting(false);
         }}
       >
-        {({values, setFieldValue}) => (
+        {({ values, setFieldValue }) => (
           <AddContactForm
             setUserImage={setUserImage}
             userImage={userImage}

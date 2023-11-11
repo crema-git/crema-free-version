@@ -7,7 +7,7 @@ import {
   Tooltip,
   XAxis,
 } from 'recharts';
-import {useTheme} from '@mui/material';
+import { useTheme } from '@mui/material';
 
 const data = [
   {
@@ -108,7 +108,7 @@ const SalesChart = () => {
         <XAxis dataKey='days' />
         {/*<YAxis />*/}
         <Tooltip
-          labelStyle={{color: 'black'}}
+          labelStyle={{ color: 'black' }}
           contentStyle={{
             borderRadius: 12,
             borderColor: '#31354188',
@@ -125,7 +125,7 @@ const SalesChart = () => {
           stackId='a'
           dataKey='order'
           fill={theme.palette.primary.main}
-          margin={{bottom: -15}}
+          margin={{ bottom: -15 }}
           barSize={8}
           radius={[20, 20, 0, 0]}
         />

@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import React, {memo} from 'react';
+import React, { memo } from 'react';
 // import { VelocityTransitionGroup } from 'velocity-react';
 // import 'velocity-animate/velocity.ui';
 
@@ -21,7 +21,7 @@ import React, {memo} from 'react';
 //   delay: 0,
 // };
 
-const AppAnimateGroup = ({children}) => {
+const AppAnimateGroup = ({ children }) => {
   return <>{children}</>;
   // return (
   //   <VelocityTransitionGroup

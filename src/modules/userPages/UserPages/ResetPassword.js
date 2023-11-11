@@ -1,11 +1,11 @@
 import React from 'react';
 import Card from '@mui/material/Card';
 import Button from '@mui/material/Button';
-import {Form, Formik} from 'formik';
+import { Form, Formik } from 'formik';
 import * as yup from 'yup';
 import IntlMessages from '@crema/helpers/IntlMessages';
 import Box from '@mui/material/Box';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Fonts } from '@crema/constants/AppEnums';
 import AppAnimate from '@crema/components/AppAnimate';
 import AppTextField from '@crema/components/AppFormComponents/AppTextField';
 
@@ -27,7 +27,7 @@ const ResetPassword = () => {
       <Box
         sx={{
           pb: 6,
-          py: {xl: 8},
+          py: { xl: 8 },
           display: 'flex',
           flex: 1,
           flexDirection: 'column',
@@ -40,7 +40,7 @@ const ResetPassword = () => {
             maxWidth: 576,
             width: '100%',
             textAlign: 'center',
-            padding: {xs: 8, lg: 12, xl: '48px 64px'},
+            padding: { xs: 8, lg: 12, xl: '48px 64px' },
             overflow: 'hidden',
             boxShadow:
               '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
@@ -48,7 +48,7 @@ const ResetPassword = () => {
         >
           <Box
             sx={{
-              mb: {xs: 3, xl: 4},
+              mb: { xs: 3, xl: 4 },
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
@@ -88,7 +88,7 @@ const ResetPassword = () => {
               confirmPassword: '',
             }}
             validationSchema={validationSchema}
-            onSubmit={(data, {setErrors, resetForm}) => {
+            onSubmit={(data, { setErrors, resetForm }) => {
               if (data.newPassword !== data.confirmPassword) {
                 setErrors({
                   confirmPassword: (
@@ -100,7 +100,7 @@ const ResetPassword = () => {
               }
             }}
           >
-            {({isSubmitting}) => (
+            {({ isSubmitting }) => (
               <Form
                 sx={{
                   textAlign: 'left',
@@ -110,7 +110,7 @@ const ResetPassword = () => {
               >
                 <Box
                   sx={{
-                    mb: {xs: 6, xl: 8},
+                    mb: { xs: 6, xl: 8 },
                   }}
                 >
                   <AppTextField
@@ -125,7 +125,7 @@ const ResetPassword = () => {
                 </Box>
                 <Box
                   sx={{
-                    mb: {xs: 6, xl: 8},
+                    mb: { xs: 6, xl: 8 },
                   }}
                 >
                   <AppTextField
@@ -140,7 +140,7 @@ const ResetPassword = () => {
                 </Box>
                 <Box
                   sx={{
-                    mb: {xs: 6, xl: 8},
+                    mb: { xs: 6, xl: 8 },
                   }}
                 >
                   <AppTextField

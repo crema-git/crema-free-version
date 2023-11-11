@@ -1,13 +1,13 @@
 import React from 'react';
-import {useIntl} from 'react-intl';
+import { useIntl } from 'react-intl';
 import AppCard from '@crema/components/AppCard';
-import {Box} from '@mui/material';
+import { Box } from '@mui/material';
 import VisitsGraph from './VisitsGraph';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Fonts } from '@crema/constants/AppEnums';
 import PropTypes from 'prop-types';
 
-const CancelVisits = ({data}) => {
-  const {messages} = useIntl();
+const CancelVisits = ({ data }) => {
+  const { messages } = useIntl();
 
   return (
     <AppCard
@@ -15,10 +15,10 @@ const CancelVisits = ({data}) => {
       action={messages['common.viewAll']}
     >
       <Box>
-        <Box sx={{mb: 6, display: 'flex', alignItems: 'center'}}>
+        <Box sx={{ mb: 6, display: 'flex', alignItems: 'center' }}>
           <Box
             component='span'
-            sx={{mr: 2, fontSize: 20, fontWeight: Fonts.BOLD}}
+            sx={{ mr: 2, fontSize: 20, fontWeight: Fonts.BOLD }}
           >
             32
           </Box>
@@ -26,11 +26,11 @@ const CancelVisits = ({data}) => {
             <img
               src={'/assets/images/dashboard/decries_icon.svg'}
               alt='down'
-              style={{height: 12}}
+              style={{ height: 12 }}
             />
           </Box>
         </Box>
-        <Box sx={{mx: -6, mb: -6}}>
+        <Box sx={{ mx: -6, mb: -6 }}>
           <VisitsGraph data={data} />
         </Box>
       </Box>

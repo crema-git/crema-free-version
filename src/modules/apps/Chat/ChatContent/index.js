@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import ChatViewContainer from './ChatViewContainer';
 
-import {styled} from '@mui/material/styles';
-import {Fonts} from '@crema/constants/AppEnums';
+import { styled } from '@mui/material/styles';
+import { Fonts } from '@crema/constants/AppEnums';
 import NoUserScreen from './NoUserScreen';
 
 const MessagesScreen = styled('div')(() => {
@@ -13,7 +13,7 @@ const MessagesScreen = styled('div')(() => {
     flexDirection: 'column',
   };
 });
-const ScrollChatNoUser = styled('div')(({theme}) => {
+const ScrollChatNoUser = styled('div')(({ theme }) => {
   return {
     fontSize: 18,
     padding: 16,
@@ -36,7 +36,7 @@ const ScrollChatNoUser = styled('div')(({theme}) => {
   };
 });
 
-const ChatContent = ({selectedUser, setSelectedUser}) => {
+const ChatContent = ({ selectedUser, setSelectedUser }) => {
   return (
     <>
       {selectedUser ? (

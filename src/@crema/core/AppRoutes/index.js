@@ -1,19 +1,19 @@
 import React from 'react';
-import {Navigate} from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
 
-import {authRouteConfig} from './AuthRoutes';
+import { authRouteConfig } from './AuthRoutes';
 import Error403 from '../../../modules/errorPages/Error403';
-import {errorPagesConfigs} from './ErrorPagesRoutes';
-import {dashBoardConfigs} from './DashboardsRoutes';
-import {extraPagesConfigs} from './ExtraPagesRoutes';
-import {ecommerceConfig} from './EcommerceRoutes';
-import {userListConfig} from './UserListRoutes';
-import {userPagesConfig} from './UserPagesRoutes';
-import {muiComponentConfigs} from './MUIComponents';
-import {thirdPartyConfigs} from './ThirdPartyRoutes';
-import {appsConfig} from './AppsRoutes';
-import {accountPagesConfigs} from './AccountRoutes';
-import {invoiceConfig} from './InvoiceRoutes';
+import { errorPagesConfigs } from './ErrorPagesRoutes';
+import { dashBoardConfigs } from './DashboardsRoutes';
+import { extraPagesConfigs } from './ExtraPagesRoutes';
+import { ecommerceConfig } from './EcommerceRoutes';
+import { userListConfig } from './UserListRoutes';
+import { userPagesConfig } from './UserPagesRoutes';
+import { muiComponentConfigs } from './MUIComponents';
+import { thirdPartyConfigs } from './ThirdPartyRoutes';
+import { appsConfig } from './AppsRoutes';
+import { accountPagesConfigs } from './AccountRoutes';
+import { invoiceConfig } from './InvoiceRoutes';
 
 export const authorizedStructure = (loginUrl) => {
   return {

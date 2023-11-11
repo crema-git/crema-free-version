@@ -2,12 +2,12 @@ import React from 'react';
 import Button from '@mui/material/Button';
 import PropTypes from 'prop-types';
 import IntlMessages from '@crema/helpers/IntlMessages';
-import {alpha, Box} from '@mui/material';
+import { alpha, Box } from '@mui/material';
 import CoinsInfo from './CoinsInfo';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Fonts } from '@crema/constants/AppEnums';
 import AppCard from '@crema/components/AppCard';
 
-const TotalBalance = ({totalBalanceData}) => {
+const TotalBalance = ({ totalBalanceData }) => {
   return (
     <Box>
       <Box
@@ -16,7 +16,7 @@ const TotalBalance = ({totalBalanceData}) => {
           color: 'text.primary',
           fontSize: 16,
           textTransform: 'uppercase',
-          mb: {xs: 4, sm: 4, xl: 6},
+          mb: { xs: 4, sm: 4, xl: 6 },
           fontWeight: Fonts.BOLD,
         }}
       >
@@ -25,7 +25,7 @@ const TotalBalance = ({totalBalanceData}) => {
       <AppCard sxStyle={{}}>
         <Box
           sx={{
-            mb: {xs: 3, md: 6},
+            mb: { xs: 3, md: 6 },
             display: 'flex',
             flexWrap: 'wrap',
             justifyContent: 'space-between',
@@ -77,7 +77,7 @@ const TotalBalance = ({totalBalanceData}) => {
                       alpha(theme.palette.primary.main, 0.15),
                     color: 'primary.main',
                   },
-                  lineHeight: {xs: '16px', sm: '20px', xl: '26px'},
+                  lineHeight: { xs: '16px', sm: '20px', xl: '26px' },
                 }}
               >
                 <IntlMessages id='common.send' />
@@ -95,7 +95,7 @@ const TotalBalance = ({totalBalanceData}) => {
                   textTransform: 'capitalize',
                   width: 96,
                   fontSize: 16,
-                  lineHeight: {xs: '16px', sm: '20px', xl: '26px'},
+                  lineHeight: { xs: '16px', sm: '20px', xl: '26px' },
                 }}
               >
                 <IntlMessages id='common.receive' />
@@ -114,7 +114,7 @@ const TotalBalance = ({totalBalanceData}) => {
         </Box>
         <Box
           sx={{
-            pt: {md: 2, lg: 3},
+            pt: { md: 2, lg: 3 },
           }}
         >
           <CoinsInfo coins={totalBalanceData.coins} />

@@ -1,7 +1,7 @@
-import {useEffect, useRef, useState} from 'react';
+import { useEffect, useRef, useState } from 'react';
 import _ from 'lodash';
-import {useInfoViewActionsContext} from '@crema/context/AppContextProvider/InfoViewContextProvider';
-import {isRequestSuccessful, sanitizeData} from '@crema/helpers/ApiHelper';
+import { useInfoViewActionsContext } from '@crema/context/AppContextProvider/InfoViewContextProvider';
+import { isRequestSuccessful, sanitizeData } from '@crema/helpers/ApiHelper';
 import jwtAxios from '@crema/services/axios';
 
 export const useGetDataApi = (
@@ -11,7 +11,7 @@ export const useGetDataApi = (
   initialCall = true,
   callbackFun,
 ) => {
-  const {fetchError} = useInfoViewActionsContext();
+  const { fetchError } = useInfoViewActionsContext();
   const [initialUrl, setInitialUrl] = useState(url);
   const [allowApiCall, setAllowApiCall] = useState(initialCall);
   const [loading, setLoading] = useState(initialCall);
@@ -31,7 +31,7 @@ export const useGetDataApi = (
 
   const setQueryParams = (queryParams) => {
     setLoading(true);
-    updateQueryParams({...queryParams});
+    updateQueryParams({ ...queryParams });
     setAllowApiCall(true);
   };
 
@@ -46,7 +46,7 @@ export const useGetDataApi = (
         };
       }
       jwtAxios
-        .get(initialUrl, {params: sanitizeData(params)})
+        .get(initialUrl, { params: sanitizeData(params) })
         .then((data) => {
           console.log(
             initialUrl,
@@ -141,11 +141,11 @@ export const postDataApi = (
   isHideLoader = false,
   headers,
 ) => {
-  const {fetchStart, fetchSuccess} = infoViewContext;
+  const { fetchStart, fetchSuccess } = infoViewContext;
   return new Promise((resolve, reject) => {
     if (!isHideLoader) fetchStart();
     jwtAxios
-      .post(url, sanitizeData(payload), headers ? {headers} : {})
+      .post(url, sanitizeData(payload), headers ? { headers } : {})
       .then((data) => {
         return handleApiResponse(url, fetchSuccess, data, resolve, reject);
       })
@@ -162,7 +162,7 @@ export const putDataApi = (
   payload,
   isHideLoader = false,
 ) => {
-  const {fetchStart, fetchSuccess} = infoViewContext;
+  const { fetchStart, fetchSuccess } = infoViewContext;
   return new Promise((resolve, reject) => {
     if (!isHideLoader) fetchStart();
     jwtAxios
@@ -184,11 +184,11 @@ export const getDataApi = (
   isHideLoader = false,
   headers,
 ) => {
-  const {fetchStart, fetchSuccess} = infoViewContext;
+  const { fetchStart, fetchSuccess } = infoViewContext;
   return new Promise((resolve, reject) => {
     if (!isHideLoader) fetchStart();
     jwtAxios
-      .get(url, {params: sanitizeData(params), headers})
+      .get(url, { params: sanitizeData(params), headers })
       .then((data) => {
         return handleApiResponse(url, fetchSuccess, data, resolve, reject);
       })
@@ -205,11 +205,11 @@ export const deleteDataApi = (
   params = {},
   isHideLoader = false,
 ) => {
-  const {fetchStart, fetchSuccess} = infoViewContext;
+  const { fetchStart, fetchSuccess } = infoViewContext;
   return new Promise((resolve, reject) => {
     if (!isHideLoader) fetchStart();
     jwtAxios
-      .delete(url, {params})
+      .delete(url, { params })
       .then((data) => {
         return handleApiResponse(url, fetchSuccess, data, resolve, reject);
       })
@@ -230,7 +230,7 @@ export const uploadDataApi = (
   },
   allowDownload = false,
 ) => {
-  const {fetchStart, fetchSuccess} = infoViewContext;
+  const { fetchStart, fetchSuccess } = infoViewContext;
   return new Promise((resolve, reject) => {
     if (!isHideLoader) fetchStart();
     jwtAxios
@@ -257,7 +257,7 @@ export const uploadPutDataApi = (
   payload = {},
   isHideLoader = false,
 ) => {
-  const {fetchStart, fetchSuccess} = infoViewContext;
+  const { fetchStart, fetchSuccess } = infoViewContext;
   return new Promise((resolve, reject) => {
     if (!isHideLoader) fetchStart();
     jwtAxios

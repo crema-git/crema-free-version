@@ -1,14 +1,14 @@
 import React from 'react';
 import Box from '@mui/material/Box';
-import {Button} from '@mui/material';
+import { Button } from '@mui/material';
 import IntlMessages from '@crema/helpers/IntlMessages';
 import Activity from './Activity';
-import {accountData} from '@crema/mockapi';
+import { accountData } from '@crema/mockapi';
 import Application from './Application';
 
 const Notification = () => {
   return (
-    <Box sx={{position: 'relative'}}>
+    <Box sx={{ position: 'relative' }}>
       <Activity activity={accountData.notification.activity} />
 
       <Box

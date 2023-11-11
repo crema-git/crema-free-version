@@ -3,11 +3,11 @@ import Box from '@mui/material/Box';
 import CheckIcon from '@mui/icons-material/Check';
 import IntlMessages from '@crema/helpers/IntlMessages';
 import PropTypes from 'prop-types';
-import {useThemeContext} from '@crema/context/AppContextProvider/ThemeContextProvider';
+import { useThemeContext } from '@crema/context/AppContextProvider/ThemeContextProvider';
 import AddOutlinedIcon from '@mui/icons-material/AddOutlined';
 
-const CustomColorCell = ({themeColorSet, updateThemeColors}) => {
-  const {theme} = useThemeContext();
+const CustomColorCell = ({ themeColorSet, updateThemeColors }) => {
+  const { theme } = useThemeContext();
   return (
     <Box
       onClick={() => {
@@ -109,7 +109,7 @@ const CustomColorCell = ({themeColorSet, updateThemeColors}) => {
           Background
         </Box>
       </Box>
-      <Box sx={{pt: 2, px: 3, pb: 3}}>{themeColorSet.title}</Box>
+      <Box sx={{ pt: 2, px: 3, pb: 3 }}>{themeColorSet.title}</Box>
     </Box>
   );
 };

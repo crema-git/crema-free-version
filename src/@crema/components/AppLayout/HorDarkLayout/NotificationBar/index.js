@@ -1,14 +1,14 @@
 import React from 'react';
 import IconButton from '@mui/material/IconButton';
 import Collapse from '@mui/material/Collapse';
-import {alpha, Box} from '@mui/material';
+import { alpha, Box } from '@mui/material';
 import Alert from '@mui/material/Alert';
 import CloseIcon from '@mui/icons-material/Close';
-import {useSidebarContext} from '@crema/context/AppContextProvider/SidebarContextProvider';
+import { useSidebarContext } from '@crema/context/AppContextProvider/SidebarContextProvider';
 
 const NotificationBar = () => {
   const [open, setOpen] = React.useState(true);
-  const {sidebarBgColor, sidebarTextColor} = useSidebarContext();
+  const { sidebarBgColor, sidebarTextColor } = useSidebarContext();
 
   return (
     <Collapse in={open}>
@@ -24,7 +24,7 @@ const NotificationBar = () => {
         <Box
           sx={{
             width: '100%',
-            maxWidth: {lg: 1140, xl: 1420},
+            maxWidth: { lg: 1140, xl: 1420 },
             mx: 'auto',
             px: 5,
           }}

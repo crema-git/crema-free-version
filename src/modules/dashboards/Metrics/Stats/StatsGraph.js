@@ -10,10 +10,10 @@ import {
 } from 'recharts';
 import PropTypes from 'prop-types';
 
-const StatsGraph = ({data}) => {
+const StatsGraph = ({ data }) => {
   return (
     <ResponsiveContainer width='100%' height={370}>
-      <ScatterChart margin={{top: 20, right: 0, bottom: 20, left: 0}}>
+      <ScatterChart margin={{ top: 20, right: 0, bottom: 20, left: 0 }}>
         <CartesianGrid
           strokeDasharray='5 5'
           stroke='#E2E8F0'
@@ -36,11 +36,11 @@ const StatsGraph = ({data}) => {
           ticks={[1000, 2000, 3000, 4000, 5000, 6000]}
         />
         <Tooltip
-          cursor={{strokeDasharray: '3 3'}}
-          labelStyle={{color: 'black'}}
+          cursor={{ strokeDasharray: '3 3' }}
+          labelStyle={{ color: 'black' }}
         />
-        <Scatter data={data.stats1} fill='#E53E3E' dot={{r: 7}} />
-        <Scatter data={data.stats2} fill='#0A8FDC' dot={{r: 7}} />
+        <Scatter data={data.stats1} fill='#E53E3E' dot={{ r: 7 }} />
+        <Scatter data={data.stats2} fill='#0A8FDC' dot={{ r: 7 }} />
       </ScatterChart>
     </ResponsiveContainer>
   );

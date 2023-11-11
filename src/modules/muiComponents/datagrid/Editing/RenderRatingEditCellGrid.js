@@ -1,8 +1,8 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
-import {makeStyles} from '@mui/styles';
+import { makeStyles } from '@mui/styles';
 import Rating from '@mui/material/Rating';
-import {DataGrid} from '@mui/x-data-grid';
+import { DataGrid } from '@mui/x-data-grid';
 
 function renderRating(params) {
   return <Rating readOnly value={params.value} />;
@@ -24,15 +24,18 @@ const useStyles = makeStyles({
 });
 
 function RatingEditInputCell(props) {
-  const {id, value, api, field} = props;
+  const { id, value, api, field } = props;
   const classes = useStyles();
 
   const handleChange = async (event) => {
-    api.setEditCellValue({id, field, value: Number(event.target.value)}, event);
+    api.setEditCellValue(
+      { id, field, value: Number(event.target.value) },
+      event,
+    );
     // Check if the event is not from the keyboard
     // https://github.com/facebook/react/issues/7407
     if (event.nativeEvent.clientX !== 0 && event.nativeEvent.clientY !== 0) {
-      await api.commitCellChange({id, field});
+      await api.commitCellChange({ id, field });
       api.setCellMode(id, field, 'view');
     }
   };
@@ -81,7 +84,7 @@ function renderRatingEditInputCell(params) {
 
 export default function RenderRatingEditCellGrid() {
   return (
-    <div style={{height: 250, width: '100%'}}>
+    <div style={{ height: 250, width: '100%' }}>
       <DataGrid rows={rows} columns={columns} />
     </div>
   );
@@ -105,8 +108,8 @@ const columns = [
 ];
 
 const rows = [
-  {id: 1, places: 'Barcelona', rating: 5},
-  {id: 2, places: 'Rio de Janeiro', rating: 4},
-  {id: 3, places: 'London', rating: 3},
-  {id: 4, places: 'New York', rating: 2},
+  { id: 1, places: 'Barcelona', rating: 5 },
+  { id: 2, places: 'Rio de Janeiro', rating: 4 },
+  { id: 3, places: 'London', rating: 3 },
+  { id: 4, places: 'New York', rating: 2 },
 ];

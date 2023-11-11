@@ -6,7 +6,7 @@ import NativeSelect from '@mui/material/NativeSelect';
 
 export default function NativeSelectDemo() {
   return (
-    <Box sx={{minWidth: 120}}>
+    <Box sx={{ minWidth: 120 }}>
       <FormControl fullWidth>
         <InputLabel variant='standard' htmlFor='uncontrolled-native'>
           Age

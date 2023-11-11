@@ -1,9 +1,9 @@
 import React from 'react';
-import {Box} from '@mui/material';
+import { Box } from '@mui/material';
 import Tooltip from '@mui/material/Tooltip';
 import PropTypes from 'prop-types';
 
-const Labels = ({labels}) => {
+const Labels = ({ labels }) => {
   return (
     <Box
       sx={{
@@ -18,7 +18,7 @@ const Labels = ({labels}) => {
           <Tooltip title={label.name} placement='top' key={label.id}>
             <Box
               sx={{
-                height: {xs: 4, sm: 6},
+                height: { xs: 4, sm: 6 },
                 width: 32,
                 mx: 1,
                 borderRadius: 20,

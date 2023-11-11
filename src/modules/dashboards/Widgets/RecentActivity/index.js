@@ -1,22 +1,22 @@
 import React from 'react';
-import {Box} from '@mui/material';
+import { Box } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
 import NotificationItem from '@crema/components/AppNotifications/NotificationItem';
 import PropTypes from 'prop-types';
 import AppList from '@crema/components/AppList';
 import AppCard from '@crema/components/AppCard';
-import {useIntl} from 'react-intl';
+import { useIntl } from 'react-intl';
 import AppScrollbar from '@crema/components/AppScrollbar';
 
 const RecentActivity = (props) => {
-  const {data} = props;
+  const { data } = props;
 
-  const {messages} = useIntl();
+  const { messages } = useIntl();
   return (
     <AppCard
-      sxStyle={{height: 1}}
+      sxStyle={{ height: 1 }}
       title={messages['dashboard.recentActivity']}
-      contentStyle={{px: 0}}
+      contentStyle={{ px: 0 }}
       action={
         <Box
           component='span'
@@ -35,7 +35,7 @@ const RecentActivity = (props) => {
     >
       <AppScrollbar
         sx={{
-          height: {xs: 296, xl: 346},
+          height: { xs: 296, xl: 346 },
         }}
       >
         <AppList

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import CircularProgress from '@mui/material/CircularProgress';
-import {green} from '@mui/material/colors';
+import { green } from '@mui/material/colors';
 import Button from '@mui/material/Button';
 import Fab from '@mui/material/Fab';
 import CheckIcon from '@mui/icons-material/Check';
@@ -39,8 +39,8 @@ export default function CircularIntegration() {
   };
 
   return (
-    <Box sx={{display: 'flex', alignItems: 'center'}}>
-      <Box sx={{m: 1, position: 'relative'}}>
+    <Box sx={{ display: 'flex', alignItems: 'center' }}>
+      <Box sx={{ m: 1, position: 'relative' }}>
         <Fab
           aria-label='save'
           color='primary'
@@ -62,7 +62,7 @@ export default function CircularIntegration() {
           />
         )}
       </Box>
-      <Box sx={{m: 1, position: 'relative'}}>
+      <Box sx={{ m: 1, position: 'relative' }}>
         <Button
           variant='contained'
           sx={buttonSx}

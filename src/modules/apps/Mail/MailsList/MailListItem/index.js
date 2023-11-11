@@ -1,5 +1,5 @@
 import React from 'react';
-import {Checkbox} from '@mui/material';
+import { Checkbox } from '@mui/material';
 import LabelOutlinedIcon from '@mui/icons-material/LabelOutlined';
 import AttachFileIcon from '@mui/icons-material/AttachFile';
 import DraftsOutlinedIcon from '@mui/icons-material/DraftsOutlined';
@@ -21,9 +21,9 @@ import {
   MailItemWrapper,
   MainActionWrapper,
 } from './index.styles';
-import {Fonts} from '@crema/constants/AppEnums';
-import {useInfoViewActionsContext} from '@crema/context/AppContextProvider/InfoViewContextProvider';
-import {putDataApi} from '@crema/hooks/APIHooks';
+import { Fonts } from '@crema/constants/AppEnums';
+import { useInfoViewActionsContext } from '@crema/context/AppContextProvider/InfoViewContextProvider';
+import { putDataApi } from '@crema/hooks/APIHooks';
 
 const MailListItem = (props) => {
   const {
@@ -157,7 +157,7 @@ const MailListItem = (props) => {
         sx={{
           display: 'flex',
           alignItems: 'center',
-          width: {xs: '100%', sm: 'auto'},
+          width: { xs: '100%', sm: 'auto' },
         }}
       >
         <Box
@@ -181,7 +181,7 @@ const MailListItem = (props) => {
         <Box
           sx={{
             mr: 2.5,
-            display: {xs: 'none', sm: 'inline-block'},
+            display: { xs: 'none', sm: 'inline-block' },
             '& .MuiCheckbox-root': {
               color: (theme) => theme.palette.warning.main,
             },
@@ -211,7 +211,7 @@ const MailListItem = (props) => {
             whiteSpace: 'nowrap',
             fontWeight: mail.isRead ? Fonts.REGULAR : Fonts.MEDIUM,
             fontSize: 14,
-            width: {sm: '120px'},
+            width: { sm: '120px' },
           }}
           className={clsx(!mail.isRead ? 'fontBold' : '')}
         >

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {alpha, styled} from '@mui/material/styles';
+import { alpha, styled } from '@mui/material/styles';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -16,7 +16,7 @@ import MailIcon from '@mui/icons-material/Mail';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import MoreIcon from '@mui/icons-material/MoreVert';
 
-const Search = styled('div')(({theme}) => ({
+const Search = styled('div')(({ theme }) => ({
   position: 'relative',
   borderRadius: theme.shape.borderRadius,
   backgroundColor: alpha(theme.palette.common.white, 0.15),
@@ -32,7 +32,7 @@ const Search = styled('div')(({theme}) => ({
   },
 }));
 
-const SearchIconWrapper = styled('div')(({theme}) => ({
+const SearchIconWrapper = styled('div')(({ theme }) => ({
   padding: theme.spacing(0, 2),
   height: '100%',
   position: 'absolute',
@@ -42,7 +42,7 @@ const SearchIconWrapper = styled('div')(({theme}) => ({
   justifyContent: 'center',
 }));
 
-const StyledInputBase = styled(InputBase)(({theme}) => ({
+const StyledInputBase = styled(InputBase)(({ theme }) => ({
   color: 'inherit',
   '& .MuiInputBase-input': {
     padding: theme.spacing(1, 1, 1, 0),
@@ -155,7 +155,7 @@ export default function PrimarySearchAppBar() {
   );
 
   return (
-    <Box sx={{flexGrow: 1}}>
+    <Box sx={{ flexGrow: 1 }}>
       <AppBar position='static'>
         <Toolbar>
           <IconButton
@@ -163,7 +163,7 @@ export default function PrimarySearchAppBar() {
             edge='start'
             color='inherit'
             aria-label='open drawer'
-            sx={{mr: 2}}
+            sx={{ mr: 2 }}
           >
             <MenuIcon />
           </IconButton>
@@ -171,7 +171,7 @@ export default function PrimarySearchAppBar() {
             variant='h6'
             noWrap
             component='div'
-            sx={{display: {xs: 'none', sm: 'block'}}}
+            sx={{ display: { xs: 'none', sm: 'block' } }}
           >
             MUI
           </Typography>
@@ -181,11 +181,11 @@ export default function PrimarySearchAppBar() {
             </SearchIconWrapper>
             <StyledInputBase
               placeholder='Search…'
-              inputProps={{'aria-label': 'search'}}
+              inputProps={{ 'aria-label': 'search' }}
             />
           </Search>
-          <Box sx={{flexGrow: 1}} />
-          <Box sx={{display: {xs: 'none', md: 'flex'}}}>
+          <Box sx={{ flexGrow: 1 }} />
+          <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
             <IconButton
               size='large'
               aria-label='show 4 new mails'
@@ -216,7 +216,7 @@ export default function PrimarySearchAppBar() {
               <AccountCircle />
             </IconButton>
           </Box>
-          <Box sx={{display: {xs: 'flex', md: 'none'}}}>
+          <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
             <IconButton
               size='large'
               aria-label='show more'

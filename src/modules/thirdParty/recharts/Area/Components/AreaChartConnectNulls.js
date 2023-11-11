@@ -9,19 +9,19 @@ import {
   YAxis,
 } from 'recharts';
 import Box from '@mui/material/Box';
-import {useThemeContext} from '@crema/context/AppContextProvider/ThemeContextProvider';
+import { useThemeContext } from '@crema/context/AppContextProvider/ThemeContextProvider';
 
 const data = [
-  {name: 'Page A', uv: 4000},
-  {name: 'Page B', uv: 3000},
-  {name: 'Page C', uv: 2000},
-  {name: 'Page D'},
-  {name: 'Page E', uv: 1890},
-  {name: 'Page F', uv: 2390},
-  {name: 'Page G', uv: 3490},
+  { name: 'Page A', uv: 4000 },
+  { name: 'Page B', uv: 3000 },
+  { name: 'Page C', uv: 2000 },
+  { name: 'Page D' },
+  { name: 'Page E', uv: 1890 },
+  { name: 'Page F', uv: 2390 },
+  { name: 'Page G', uv: 3490 },
 ];
 const AreaChartConnectNulls = () => {
-  const {theme} = useThemeContext();
+  const { theme } = useThemeContext();
   return (
     <ResponsiveContainer width='100%'>
       <div>
@@ -29,7 +29,7 @@ const AreaChartConnectNulls = () => {
           <ResponsiveContainer width='100%' height={200}>
             <AreaChart
               data={data}
-              margin={{top: 10, right: 0, left: -25, bottom: 0}}
+              margin={{ top: 10, right: 0, left: -25, bottom: 0 }}
             >
               <XAxis dataKey='name' />
               <YAxis />
@@ -47,7 +47,7 @@ const AreaChartConnectNulls = () => {
           <ResponsiveContainer width='100%' height={200}>
             <AreaChart
               data={data}
-              margin={{top: 10, right: 0, left: -25, bottom: 0}}
+              margin={{ top: 10, right: 0, left: -25, bottom: 0 }}
             >
               <XAxis dataKey='name' />
               <YAxis />

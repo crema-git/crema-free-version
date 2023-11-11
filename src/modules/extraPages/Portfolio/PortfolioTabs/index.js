@@ -5,8 +5,8 @@ import Box from '@mui/material/Box';
 import IntlMessages from '@crema/helpers/IntlMessages';
 import PropTypes from 'prop-types';
 import PortfolioCard from './PortfolioCard';
-import {useNavigate} from 'react-router-dom';
-import {alpha} from '@mui/material';
+import { useNavigate } from 'react-router-dom';
+import { alpha } from '@mui/material';
 import AppGrid from '@crema/components/AppGrid';
 
 function a11yProps(index) {
@@ -17,13 +17,13 @@ function a11yProps(index) {
 }
 
 const tabs = [
-  {id: 1, name: <IntlMessages id='common.all' />},
-  {id: 2, name: <IntlMessages id='extra.branding' />},
-  {id: 3, name: <IntlMessages id='extra.graphics' />},
-  {id: 4, name: <IntlMessages id='extra.logos' />},
+  { id: 1, name: <IntlMessages id='common.all' /> },
+  { id: 2, name: <IntlMessages id='extra.branding' /> },
+  { id: 3, name: <IntlMessages id='extra.graphics' /> },
+  { id: 4, name: <IntlMessages id='extra.logos' /> },
 ];
 
-const PortfolioTabs = ({portfolio}) => {
+const PortfolioTabs = ({ portfolio }) => {
   const [value, setValue] = React.useState(0);
   const navigate = useNavigate();
 
@@ -36,7 +36,7 @@ const PortfolioTabs = ({portfolio}) => {
   };
 
   return (
-    <Box sx={{width: '100%'}}>
+    <Box sx={{ width: '100%' }}>
       <Box
         sx={{
           backgroundColor: (theme) => theme.palette.background.paper,
@@ -50,7 +50,7 @@ const PortfolioTabs = ({portfolio}) => {
           mb: 7.5,
           px: 5,
           '& .MuiTab-root': {
-            minHeight: {xs: 48, md: 60},
+            minHeight: { xs: 48, md: 60 },
             minWidth: 60,
             textTransform: 'capitalize',
             '&.Mui-selected': {

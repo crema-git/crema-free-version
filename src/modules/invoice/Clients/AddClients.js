@@ -1,8 +1,8 @@
 import React from 'react';
-import {useNavigate} from 'react-router-dom';
-import {useInfoViewActionsContext} from '@crema/context/AppContextProvider/InfoViewContextProvider';
+import { useNavigate } from 'react-router-dom';
+import { useInfoViewActionsContext } from '@crema/context/AppContextProvider/InfoViewContextProvider';
 
-import {postDataApi} from '@crema/hooks/APIHooks';
+import { postDataApi } from '@crema/hooks/APIHooks';
 import AddClient from './AddClient';
 
 const AddClients = () => {

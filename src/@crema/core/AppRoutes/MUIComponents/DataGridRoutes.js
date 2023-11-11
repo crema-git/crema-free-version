@@ -1,5 +1,5 @@
 import React from 'react';
-import {RoutePermittedRole} from '@crema/constants/AppEnums';
+import { RoutePermittedRole } from '@crema/constants/AppEnums';
 
 import Overview from '../../../../modules/muiComponents/datagrid/Overview';
 import Layout from '../../../../modules/muiComponents/datagrid/Layout';

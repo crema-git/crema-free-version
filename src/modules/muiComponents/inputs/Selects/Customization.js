@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {styled} from '@mui/material/styles';
+import { styled } from '@mui/material/styles';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
@@ -7,7 +7,7 @@ import Select from '@mui/material/Select';
 import NativeSelect from '@mui/material/NativeSelect';
 import InputBase from '@mui/material/InputBase';
 
-const BootstrapInput = styled(InputBase)(({theme}) => ({
+const BootstrapInput = styled(InputBase)(({ theme }) => ({
   'label + &': {
     marginTop: theme.spacing(3),
   },
@@ -47,11 +47,11 @@ export default function CustomizedSelects() {
   };
   return (
     <div>
-      <FormControl sx={{m: 1}} variant='standard'>
+      <FormControl sx={{ m: 1 }} variant='standard'>
         <InputLabel htmlFor='demo-customized-textbox'>Age</InputLabel>
         <BootstrapInput id='demo-customized-textbox' />
       </FormControl>
-      <FormControl sx={{m: 1}} variant='standard'>
+      <FormControl sx={{ m: 1 }} variant='standard'>
         <InputLabel id='demo-customized-select-label'>Age</InputLabel>
         <Select
           labelId='demo-customized-select-label'
@@ -68,7 +68,7 @@ export default function CustomizedSelects() {
           <MenuItem value={30}>Thirty</MenuItem>
         </Select>
       </FormControl>
-      <FormControl sx={{m: 1}} variant='standard'>
+      <FormControl sx={{ m: 1 }} variant='standard'>
         <InputLabel htmlFor='demo-customized-select-native'>Age</InputLabel>
         <NativeSelect
           id='demo-customized-select-native'

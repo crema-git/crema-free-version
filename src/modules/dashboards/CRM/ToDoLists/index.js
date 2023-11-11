@@ -4,18 +4,18 @@ import AppScrollbar from '@crema/components/AppScrollbar';
 import AppList from '@crema/components/AppList';
 import TodoCell from './TodoCell';
 import PropTypes from 'prop-types';
-import {useIntl} from 'react-intl';
+import { useIntl } from 'react-intl';
 
-const ToDoLists = ({data}) => {
-  const {messages} = useIntl();
+const ToDoLists = ({ data }) => {
+  const { messages } = useIntl();
   return (
     <AppCard
-      sxStyle={{height: 1}}
+      sxStyle={{ height: 1 }}
       title={messages['dashboard.crm.toDoLists']}
-      contentStyle={{paddingLeft: 0, paddingRight: 0}}
+      contentStyle={{ paddingLeft: 0, paddingRight: 0 }}
       action={messages['common.viewAll']}
     >
-      <AppScrollbar style={{paddingLeft: 20, paddingRight: 20}}>
+      <AppScrollbar style={{ paddingLeft: 20, paddingRight: 20 }}>
         <AppList
           data={data}
           renderRow={(todo) => <TodoCell key={todo.id} todo={todo} />}

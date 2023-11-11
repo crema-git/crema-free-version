@@ -1,12 +1,12 @@
 import * as React from 'react';
-import {styled} from '@mui/material/styles';
+import { styled } from '@mui/material/styles';
 import FormGroup from '@mui/material/FormGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Switch from '@mui/material/Switch';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 
-const MaterialUISwitch = styled(Switch)(({theme}) => ({
+const MaterialUISwitch = styled(Switch)(({ theme }) => ({
   width: 62,
   height: 34,
   padding: 7,
@@ -53,7 +53,7 @@ const MaterialUISwitch = styled(Switch)(({theme}) => ({
   },
 }));
 
-const Android12Switch = styled(Switch)(({theme}) => ({
+const Android12Switch = styled(Switch)(({ theme }) => ({
   padding: 8,
   '& .MuiSwitch-track': {
     borderRadius: 22 / 2,
@@ -88,7 +88,7 @@ const Android12Switch = styled(Switch)(({theme}) => ({
 
 const IOSSwitch = styled((props) => (
   <Switch focusVisibleClassName='.Mui-focusVisible' disableRipple {...props} />
-))(({theme}) => ({
+))(({ theme }) => ({
   width: 42,
   height: 26,
   padding: 0,
@@ -137,7 +137,7 @@ const IOSSwitch = styled((props) => (
   },
 }));
 
-const AntSwitch = styled(Switch)(({theme}) => ({
+const AntSwitch = styled(Switch)(({ theme }) => ({
   width: 28,
   height: 16,
   padding: 0,
@@ -185,7 +185,7 @@ export default function CustomizedSwitches() {
   return (
     <FormGroup>
       <FormControlLabel
-        control={<MaterialUISwitch sx={{m: 1}} defaultChecked />}
+        control={<MaterialUISwitch sx={{ m: 1 }} defaultChecked />}
         label='MUI switch'
       />
       <FormControlLabel
@@ -193,12 +193,12 @@ export default function CustomizedSwitches() {
         label='Android 12'
       />
       <FormControlLabel
-        control={<IOSSwitch sx={{m: 1}} defaultChecked />}
+        control={<IOSSwitch sx={{ m: 1 }} defaultChecked />}
         label='iOS style'
       />
       <Stack direction='row' spacing={1} alignItems='center'>
         <Typography>Off</Typography>
-        <AntSwitch defaultChecked inputProps={{'aria-label': 'ant design'}} />
+        <AntSwitch defaultChecked inputProps={{ 'aria-label': 'ant design' }} />
         <Typography>On</Typography>
       </Stack>
     </FormGroup>

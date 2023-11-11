@@ -1,11 +1,11 @@
 import React from 'react';
 import TableCell from '@mui/material/TableCell';
-import {Box} from '@mui/material';
+import { Box } from '@mui/material';
 import Avatar from '@mui/material/Avatar';
 import TableRow from '@mui/material/TableRow';
 import PropTypes from 'prop-types';
-import {blue, green, red} from '@mui/material/colors';
-import {Fonts} from '@crema/constants/AppEnums';
+import { blue, green, red } from '@mui/material/colors';
+import { Fonts } from '@crema/constants/AppEnums';
 
 const getProgressColor = (progress) => {
   switch (progress) {
@@ -24,7 +24,7 @@ const getProgressColor = (progress) => {
 };
 
 const TableItem = (props) => {
-  const {row} = props;
+  const { row } = props;
 
   return (
     <TableRow

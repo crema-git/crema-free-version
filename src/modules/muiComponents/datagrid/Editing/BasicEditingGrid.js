@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {DataGrid} from '@mui/x-data-grid';
+import { DataGrid } from '@mui/x-data-grid';
 import {
   randomCreatedDate,
   randomTraderName,
@@ -8,15 +8,15 @@ import {
 
 export default function BasicEditingGrid() {
   return (
-    <div style={{height: 300, width: '100%'}}>
+    <div style={{ height: 300, width: '100%' }}>
       <DataGrid rows={rows} columns={columns} />
     </div>
   );
 }
 
 const columns = [
-  {field: 'name', headerName: 'Name', width: 180, editable: true},
-  {field: 'age', headerName: 'Age', type: 'number', editable: true},
+  { field: 'name', headerName: 'Name', width: 180, editable: true },
+  { field: 'age', headerName: 'Age', type: 'number', editable: true },
   {
     field: 'dateCreated',
     headerName: 'Date Created',

@@ -1,21 +1,21 @@
 import React from 'react';
-import {Box} from '@mui/material';
+import { Box } from '@mui/material';
 import Typography from '@mui/material/Typography';
 import IntlMessages from '@crema/helpers/IntlMessages';
-import {Fonts} from '@crema/constants/AppEnums';
-import {useThemeContext} from '@crema/context/AppContextProvider/ThemeContextProvider';
+import { Fonts } from '@crema/constants/AppEnums';
+import { useThemeContext } from '@crema/context/AppContextProvider/ThemeContextProvider';
 
-import {ReactComponent as Logo} from '../../../assets/icon/logo.svg';
-import {invoiceData} from '@crema/mockapi/fakedb/extraPages';
+import { ReactComponent as Logo } from '../../../assets/icon/logo.svg';
+import { invoiceData } from '@crema/mockapi/fakedb/extraPages';
 
 const Header = () => {
-  const {theme} = useThemeContext();
+  const { theme } = useThemeContext();
   return (
     <Box
       sx={{
         pt: 2,
-        pb: {xs: 6, sm: 8, xl: 10},
-        mb: {xl: 8},
+        pb: { xs: 6, sm: 8, xl: 10 },
+        mb: { xl: 8 },
       }}
     >
       <Box
@@ -39,7 +39,7 @@ const Header = () => {
           mx: -3,
           color: 'text.secondary',
           display: 'flex',
-          flexDirection: {xs: 'column', sm: 'row'},
+          flexDirection: { xs: 'column', sm: 'row' },
           justifyContent: 'space-between',
           flex: 1,
         }}
@@ -48,7 +48,7 @@ const Header = () => {
           sx={{
             px: 3,
             mb: 3,
-            textAlign: {xs: 'center', sm: 'left'},
+            textAlign: { xs: 'center', sm: 'left' },
             minWidth: 200,
           }}
         >
@@ -62,13 +62,13 @@ const Header = () => {
           >
             {invoiceData.company.name}
           </Box>
-          <Typography component='p' sx={{mb: 1}}>
+          <Typography component='p' sx={{ mb: 1 }}>
             {invoiceData.company.address1}
           </Typography>
-          <Typography component='p' sx={{mb: 1}}>
+          <Typography component='p' sx={{ mb: 1 }}>
             {invoiceData.company.address2}
           </Typography>
-          <Typography component='p' sx={{mb: 1}}>
+          <Typography component='p' sx={{ mb: 1 }}>
             Phone: {invoiceData.company.phone}
           </Typography>
         </Box>
@@ -91,13 +91,13 @@ const Header = () => {
           >
             <IntlMessages id='invoice.client' />
           </Box>
-          <Typography component='p' sx={{mb: 1}}>
+          <Typography component='p' sx={{ mb: 1 }}>
             {invoiceData.client.name}
           </Typography>
-          <Typography component='p' sx={{mb: 1}}>
+          <Typography component='p' sx={{ mb: 1 }}>
             {invoiceData.client.phone}
           </Typography>
-          <Typography component='p' sx={{mb: 1}}>
+          <Typography component='p' sx={{ mb: 1 }}>
             {invoiceData.client.email}
           </Typography>
         </Box>
@@ -106,7 +106,7 @@ const Header = () => {
           sx={{
             px: 3,
             mb: 3,
-            textAlign: {xs: 'center', sm: 'right'},
+            textAlign: { xs: 'center', sm: 'right' },
             minWidth: 200,
           }}
         >
@@ -121,13 +121,13 @@ const Header = () => {
           >
             <IntlMessages id='invoice.invoice' />
           </Box>
-          <Typography component='p' sx={{mb: 1, fontWeight: Fonts.MEDIUM}}>
+          <Typography component='p' sx={{ mb: 1, fontWeight: Fonts.MEDIUM }}>
             <IntlMessages id='invoice.id' />: {invoiceData.invoice.id}
           </Typography>
-          <Typography component='p' sx={{mb: 1}}>
+          <Typography component='p' sx={{ mb: 1 }}>
             <IntlMessages id='invoice.issued' />: {invoiceData.invoice.date}
           </Typography>
-          <Typography component='p' sx={{mb: 1, fontWeight: Fonts.MEDIUM}}>
+          <Typography component='p' sx={{ mb: 1, fontWeight: Fonts.MEDIUM }}>
             <IntlMessages id='invoice.dueOn' />: {invoiceData.invoice.dueDate}
           </Typography>
         </Box>

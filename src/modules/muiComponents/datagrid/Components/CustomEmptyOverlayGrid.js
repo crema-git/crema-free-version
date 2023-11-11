@@ -1,8 +1,8 @@
 import * as React from 'react';
-import {DataGrid, GridOverlay} from '@mui/x-data-grid';
-import {useDemoData} from '@mui/x-data-grid-generator';
-import {createTheme} from '@mui/material/styles';
-import {createStyles, makeStyles} from '@mui/styles';
+import { DataGrid, GridOverlay } from '@mui/x-data-grid';
+import { useDemoData } from '@mui/x-data-grid-generator';
+import { createTheme } from '@mui/material/styles';
+import { createStyles, makeStyles } from '@mui/styles';
 
 const defaultTheme = createTheme();
 const useStyles = makeStyles(
@@ -31,7 +31,7 @@ const useStyles = makeStyles(
         marginTop: theme.spacing(1),
       },
     }),
-  {defaultTheme},
+  { defaultTheme },
 );
 
 function CustomNoRowsOverlay() {
@@ -84,14 +84,14 @@ function CustomNoRowsOverlay() {
 }
 
 export default function CustomEmptyOverlayGrid() {
-  const {data} = useDemoData({
+  const { data } = useDemoData({
     dataSet: 'Commodity',
     rowLength: 100,
     maxColumns: 6,
   });
 
   return (
-    <div style={{height: 400, width: '100%'}}>
+    <div style={{ height: 400, width: '100%' }}>
       <DataGrid
         components={{
           NoRowsOverlay: CustomNoRowsOverlay,

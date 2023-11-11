@@ -6,7 +6,7 @@ export default function EmptyTextarea() {
     <TextareaAutosize
       aria-label='empty textarea'
       placeholder='Empty'
-      style={{width: 200}}
+      style={{ width: 200 }}
     />
   );
 }

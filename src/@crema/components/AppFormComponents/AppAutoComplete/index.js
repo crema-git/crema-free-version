@@ -3,7 +3,7 @@ import TextField from '@mui/material/TextField';
 import Autocomplete from '@mui/material/Autocomplete';
 import CircularProgress from '@mui/material/CircularProgress';
 import PropTypes from 'prop-types';
-import {Chip} from '@mui/material';
+import { Chip } from '@mui/material';
 
 export default function AppAutoComplete({
   options = [],
@@ -70,7 +70,7 @@ export default function AppAutoComplete({
           <Chip
             key={index}
             label={option[keyName]}
-            {...getTagProps({index})}
+            {...getTagProps({ index })}
             disabled={disabledId.indexOf(option?.[idField]) !== -1}
           />
         ))

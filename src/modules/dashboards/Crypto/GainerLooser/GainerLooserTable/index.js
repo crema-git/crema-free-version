@@ -8,10 +8,10 @@ import TableItem from './TableItem';
 import AppTableContainer from '@crema/components/AppTableContainer';
 import AppScrollbar from '@crema/components/AppScrollbar';
 
-const GainerLooserTable = ({data}) => {
+const GainerLooserTable = ({ data }) => {
   return (
     <AppTableContainer>
-      <AppScrollbar style={{maxHeight: 320}}>
+      <AppScrollbar style={{ maxHeight: 320 }}>
         <Table stickyHeader>
           <TableHead>
             <TableHeading />

@@ -1,12 +1,12 @@
 import React from 'react';
 import ListItem from '@mui/material/ListItem';
 import PropTypes from 'prop-types';
-import {alpha, styled} from '@mui/material/styles';
-import {Fonts} from '@crema/constants/AppEnums';
+import { alpha, styled } from '@mui/material/styles';
+import { Fonts } from '@crema/constants/AppEnums';
 import Checkbox from '@mui/material/Checkbox';
 import FormControlLabel from '@mui/material/FormControlLabel';
 
-const StyledListItem = styled(ListItem)(({theme}) => ({
+const StyledListItem = styled(ListItem)(({ theme }) => ({
   paddingTop: 5,
   paddingBottom: 5,
   paddingLeft: 16,
@@ -49,7 +49,7 @@ const StyledListItem = styled(ListItem)(({theme}) => ({
   },
 }));
 
-const FilterItem = ({item, checked, onChange}) => {
+const FilterItem = ({ item, checked, onChange }) => {
   return (
     <StyledListItem>
       <FormControlLabel

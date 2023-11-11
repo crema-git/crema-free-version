@@ -1,6 +1,6 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
-import {useTheme} from '@mui/material/styles';
+import { useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
@@ -18,7 +18,7 @@ import LastPageIcon from '@mui/icons-material/LastPage';
 
 function TablePaginationActions(props) {
   const theme = useTheme();
-  const {count, page, rowsPerPage, onPageChange} = props;
+  const { count, page, rowsPerPage, onPageChange } = props;
 
   const handleFirstPageButtonClick = (event) => {
     onPageChange(event, 0);
@@ -37,7 +37,7 @@ function TablePaginationActions(props) {
   };
 
   return (
-    <Box sx={{flexShrink: 0, ml: 2.5}}>
+    <Box sx={{ flexShrink: 0, ml: 2.5 }}>
       <IconButton
         onClick={handleFirstPageButtonClick}
         disabled={page === 0}
@@ -86,7 +86,7 @@ TablePaginationActions.propTypes = {
 };
 
 function createData(name, calories, fat) {
-  return {name, calories, fat};
+  return { name, calories, fat };
 }
 
 const rows = [
@@ -124,7 +124,7 @@ export default function CustomPaginationActionsTable() {
 
   return (
     <TableContainer component={Paper}>
-      <Table sx={{minWidth: 500}} aria-label='custom pagination table'>
+      <Table sx={{ minWidth: 500 }} aria-label='custom pagination table'>
         <TableBody>
           {(rowsPerPage > 0
             ? rows.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
@@ -134,16 +134,16 @@ export default function CustomPaginationActionsTable() {
               <TableCell component='th' scope='row'>
                 {row.name}
               </TableCell>
-              <TableCell style={{width: 160}} align='right'>
+              <TableCell style={{ width: 160 }} align='right'>
                 {row.calories}
               </TableCell>
-              <TableCell style={{width: 160}} align='right'>
+              <TableCell style={{ width: 160 }} align='right'>
                 {row.fat}
               </TableCell>
             </TableRow>
           ))}
           {emptyRows > 0 && (
-            <TableRow style={{height: 53 * emptyRows}}>
+            <TableRow style={{ height: 53 * emptyRows }}>
               <TableCell colSpan={6} />
             </TableRow>
           )}
@@ -151,7 +151,7 @@ export default function CustomPaginationActionsTable() {
         <TableFooter>
           <TableRow>
             <TablePagination
-              rowsPerPageOptions={[5, 10, 25, {label: 'All', value: -1}]}
+              rowsPerPageOptions={[5, 10, 25, { label: 'All', value: -1 }]}
               colSpan={3}
               count={rows.length}
               rowsPerPage={rowsPerPage}

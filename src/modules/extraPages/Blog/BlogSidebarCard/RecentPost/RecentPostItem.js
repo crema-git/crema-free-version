@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {Box, Typography} from '@mui/material';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Box, Typography } from '@mui/material';
+import { Fonts } from '@crema/constants/AppEnums';
 
-const RecentPostItem = ({recentPost}) => {
+const RecentPostItem = ({ recentPost }) => {
   return (
     <Box
       sx={{
@@ -24,7 +24,7 @@ const RecentPostItem = ({recentPost}) => {
       >
         <img src={recentPost.srcImg} alt='Recent Post' />
       </Box>
-      <Box sx={{flex: 1}}>
+      <Box sx={{ flex: 1 }}>
         <Typography
           component='h4'
           sx={{

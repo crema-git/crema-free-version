@@ -1,15 +1,15 @@
-import React, {useEffect} from 'react';
-import {useDropzone} from 'react-dropzone';
+import React, { useEffect } from 'react';
+import { useDropzone } from 'react-dropzone';
 import AppGrid from '@crema/components/AppGrid';
-import {Box} from '@mui/material';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Box } from '@mui/material';
+import { Fonts } from '@crema/constants/AppEnums';
 import PropTypes from 'prop-types';
 import {
   PreviewThumb,
   UploadModern,
 } from '../../../../thirdParty/reactDropzone/components';
 
-const ImgUpload = ({uploadedFiles, setUploadedFiles}) => {
+const ImgUpload = ({ uploadedFiles, setUploadedFiles }) => {
   const dropzone = useDropzone({
     accept: {
       'image/png': ['.png', '.jpeg', '.jpg'],
@@ -34,7 +34,7 @@ const ImgUpload = ({uploadedFiles, setUploadedFiles}) => {
   };
 
   return (
-    <section className='container' style={{cursor: 'pointer'}}>
+    <section className='container' style={{ cursor: 'pointer' }}>
       <UploadModern
         setUploadedFiles={setUploadedFiles}
         dropzone={dropzone}
@@ -50,13 +50,13 @@ const ImgUpload = ({uploadedFiles, setUploadedFiles}) => {
             <p>
               <Box
                 component='span'
-                sx={{color: 'primary.main', fontWeight: Fonts.MEDIUM}}
+                sx={{ color: 'primary.main', fontWeight: Fonts.MEDIUM }}
               >
                 Click to upload
               </Box>{' '}
               or drag and drop
             </p>
-            <Box component='p' sx={{mt: 1}}>
+            <Box component='p' sx={{ mt: 1 }}>
               SVG, PNG, JPG or GIF (max. 800x400px)
             </Box>
           </>

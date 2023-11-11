@@ -9,8 +9,8 @@ import Typography from '@mui/material/Typography';
 
 export default function MiddleDividers() {
   return (
-    <Box sx={{width: '100%', maxWidth: 360, bgcolor: 'background.paper'}}>
-      <Box sx={{my: 3, mx: 2}}>
+    <Box sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
+      <Box sx={{ my: 3, mx: 2 }}>
         <Grid container alignItems='center'>
           <Grid item xs>
             <Typography gutterBottom variant='h4' component='div'>
@@ -29,7 +29,7 @@ export default function MiddleDividers() {
         </Typography>
       </Box>
       <Divider variant='middle' />
-      <Box sx={{m: 2}}>
+      <Box sx={{ m: 2 }}>
         <Typography gutterBottom variant='body1'>
           Select type
         </Typography>
@@ -40,7 +40,7 @@ export default function MiddleDividers() {
           <Chip label='Hard' />
         </Stack>
       </Box>
-      <Box sx={{mt: 3, ml: 1, mb: 1}}>
+      <Box sx={{ mt: 3, ml: 1, mb: 1 }}>
         <Button>Add to cart</Button>
       </Box>
     </Box>

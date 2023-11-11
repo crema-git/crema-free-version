@@ -3,11 +3,11 @@ import ListItemAvatar from '@mui/material/ListItemAvatar';
 import Avatar from '@mui/material/Avatar';
 import ListItemText from '@mui/material/ListItemText';
 import ListItem from '@mui/material/ListItem';
-import {Box} from '@mui/material';
+import { Box } from '@mui/material';
 import PropTypes from 'prop-types';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Fonts } from '@crema/constants/AppEnums';
 
-import {styled} from '@mui/material/styles';
+import { styled } from '@mui/material/styles';
 
 const ListItemTextWrapper = styled(ListItemText)(() => {
   return {
@@ -26,7 +26,7 @@ const ListItemTextWrapper = styled(ListItemText)(() => {
 });
 
 const ConnectionListItem = (props) => {
-  const {connection} = props;
+  const { connection } = props;
 
   return (
     <ListItem

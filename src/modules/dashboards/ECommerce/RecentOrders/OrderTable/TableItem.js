@@ -3,14 +3,14 @@ import TableCell from '@mui/material/TableCell';
 import TableRow from '@mui/material/TableRow';
 import PropTypes from 'prop-types';
 import IconButton from '@mui/material/IconButton';
-import {Typography} from '@mui/material';
-import {BiArchiveIn} from 'react-icons/bi';
-import {AiOutlineEye} from 'react-icons/ai';
+import { Typography } from '@mui/material';
+import { BiArchiveIn } from 'react-icons/bi';
+import { AiOutlineEye } from 'react-icons/ai';
 
-import {alpha, styled} from '@mui/material/styles';
+import { alpha, styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 
-const TableCellWrapper = styled(TableCell)(({theme}) => {
+const TableCellWrapper = styled(TableCell)(({ theme }) => {
   return {
     padding: 16,
     fontSize: 14,
@@ -46,7 +46,7 @@ const TableCellWrapper = styled(TableCell)(({theme}) => {
   };
 });
 
-const TableItem = ({data}) => {
+const TableItem = ({ data }) => {
   const getPaymentStatusColor = () => {
     switch (data.status) {
       case 'Pending': {

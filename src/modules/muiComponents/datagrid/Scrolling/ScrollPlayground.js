@@ -12,7 +12,7 @@ import {
   visibleGridColumnsLengthSelector,
   visibleGridColumnsSelector,
 } from '@mui/x-data-grid-pro';
-import {useDemoData} from '@mui/x-data-grid-generator';
+import { useDemoData } from '@mui/x-data-grid-generator';
 
 export default function ScrollPlayground() {
   const apiRef = useGridApiRef();
@@ -22,13 +22,13 @@ export default function ScrollPlayground() {
     colIndex: 0,
   });
 
-  const {data} = useDemoData({
+  const { data } = useDemoData({
     dataSet: 'Commodity',
     rowLength: 100,
   });
 
   React.useEffect(() => {
-    const {rowIndex, colIndex} = coordinates;
+    const { rowIndex, colIndex } = coordinates;
     apiRef.current.scrollToIndexes(coordinates);
     const id = gridVisibleSortedRowIdsSelector(apiRef.current.state)[rowIndex];
     const column = visibleGridColumnsSelector(apiRef.current.state)[colIndex];
@@ -43,21 +43,21 @@ export default function ScrollPlayground() {
     setCoordinates((coords) => {
       switch (position) {
         case 'top':
-          return {...coords, rowIndex: Math.max(0, coords.rowIndex - 1)};
+          return { ...coords, rowIndex: Math.max(0, coords.rowIndex - 1) };
         case 'bottom':
           return {
             ...coords,
             rowIndex: Math.min(maxRowIndex, coords.rowIndex + 1),
           };
         case 'left':
-          return {...coords, colIndex: Math.max(0, coords.colIndex - 1)};
+          return { ...coords, colIndex: Math.max(0, coords.colIndex - 1) };
         case 'right':
           return {
             ...coords,
             colIndex: Math.min(maxColIndex, coords.colIndex + 1),
           };
         default:
-          return {...coords, rowIndex: 0, colIndex: 0};
+          return { ...coords, rowIndex: 0, colIndex: 0 };
       }
     });
   };
@@ -71,12 +71,12 @@ export default function ScrollPlayground() {
       (column) => column.field === params.field,
     );
 
-    setCoordinates({rowIndex, colIndex});
+    setCoordinates({ rowIndex, colIndex });
   };
 
   return (
-    <div style={{width: '100%'}}>
-      <Box sx={{width: 300, margin: '0 auto 16px'}}>
+    <div style={{ width: '100%' }}>
+      <Box sx={{ width: 300, margin: '0 auto 16px' }}>
         <Grid container justifyContent='center'>
           <Grid item>
             <Button onClick={handleClick('top')}>top</Button>
@@ -105,7 +105,7 @@ export default function ScrollPlayground() {
           </Grid>
         </Grid>
       </Box>
-      <Box sx={{height: 400, bgcolor: 'background.paper'}}>
+      <Box sx={{ height: 400, bgcolor: 'background.paper' }}>
         <DataGridPro
           apiRef={apiRef}
           onCellClick={handleCellClick}

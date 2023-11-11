@@ -1,8 +1,8 @@
 import React from 'react';
-import {Box, Button, CircularProgress, Typography} from '@mui/material';
+import { Box, Button, CircularProgress, Typography } from '@mui/material';
 import IntlMessages from '@crema/helpers/IntlMessages';
 import PropTypes from 'prop-types';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Fonts } from '@crema/constants/AppEnums';
 
 const ListEmptyResult = ({
   loader,
@@ -35,7 +35,7 @@ const ListEmptyResult = ({
             }}
           >
             <CircularProgress size={16} />
-            <Box component='span' sx={{ml: 2}}>
+            <Box component='span' sx={{ ml: 2 }}>
               Loading...
             </Box>
           </Box>
@@ -87,7 +87,7 @@ const ListEmptyResult = ({
           <Button
             color='primary'
             variant='contained'
-            style={{mt: 7.5, height: 45, minWidth: 150}}
+            style={{ mt: 7.5, height: 45, minWidth: 150 }}
             onClick={onClick}
           >
             {actionTitle}

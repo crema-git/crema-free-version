@@ -3,25 +3,25 @@ import IntlMessages from '@crema/helpers/IntlMessages';
 import Box from '@mui/material/Box';
 import FormControl from '@mui/material/FormControl';
 import InputLabel from '@mui/material/InputLabel';
-import {Form} from 'formik';
+import { Form } from 'formik';
 import Select from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
 import Avatar from '@mui/material/Avatar';
-import {DatePicker} from '@mui/x-date-pickers';
+import { DatePicker } from '@mui/x-date-pickers';
 import Autocomplete from '@mui/material/Autocomplete';
 import TextField from '@mui/material/TextField';
 import Divider from '@mui/material/Divider';
 import Button from '@mui/material/Button';
-import {useIntl} from 'react-intl';
+import { useIntl } from 'react-intl';
 import PropTypes from 'prop-types';
 import AppGridContainer from '@crema/components/AppGridContainer';
 import Grid from '@mui/material/Grid';
 import AppTextField from '@crema/components/AppFormComponents/AppTextField';
-import {Fonts} from '@crema/constants/AppEnums';
-import {styled} from '@mui/material/styles';
-import {useGetDataApi} from '@crema/hooks/APIHooks';
+import { Fonts } from '@crema/constants/AppEnums';
+import { styled } from '@mui/material/styles';
+import { useGetDataApi } from '@crema/hooks/APIHooks';
 
-const StyledDivider = styled(Divider)(({theme}) => ({
+const StyledDivider = styled(Divider)(({ theme }) => ({
   marginTop: 20,
   marginBottom: 20,
   [theme.breakpoints.up('xl')]: {
@@ -30,19 +30,19 @@ const StyledDivider = styled(Divider)(({theme}) => ({
   },
 }));
 const AddTaskForm = (props) => {
-  const {values, setFieldValue, isSubmitting, setTaskLabels, taskLabels} =
+  const { values, setFieldValue, isSubmitting, setTaskLabels, taskLabels } =
     props;
 
-  const [{apiData: labelList}] = useGetDataApi('/api/todo/labels/list', []);
-  const [{apiData: priorityList}] = useGetDataApi(
+  const [{ apiData: labelList }] = useGetDataApi('/api/todo/labels/list', []);
+  const [{ apiData: priorityList }] = useGetDataApi(
     '/api/todo/priority/list',
     [],
   );
-  const [{apiData: staffList}] = useGetDataApi('/api/todo/staff/list', []);
+  const [{ apiData: staffList }] = useGetDataApi('/api/todo/staff/list', []);
 
   const inputLabel = React.useRef(null);
 
-  const {messages} = useIntl();
+  const { messages } = useIntl();
 
   return (
     <Form
@@ -227,7 +227,7 @@ const AddTaskForm = (props) => {
 
         <StyledDivider />
       </div>
-      <div style={{textAlign: 'right'}}>
+      <div style={{ textAlign: 'right' }}>
         <Button
           sx={{
             position: 'relative',

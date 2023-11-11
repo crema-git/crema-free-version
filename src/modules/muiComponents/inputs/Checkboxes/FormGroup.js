@@ -21,12 +21,12 @@ export default function CheckboxesGroup() {
     });
   };
 
-  const {gilad, jason, antoine} = state;
+  const { gilad, jason, antoine } = state;
   const error = [gilad, jason, antoine].filter((v) => v).length !== 2;
 
   return (
-    <Box sx={{display: 'flex'}}>
-      <FormControl sx={{m: 3}} component='fieldset' variant='standard'>
+    <Box sx={{ display: 'flex' }}>
+      <FormControl sx={{ m: 3 }} component='fieldset' variant='standard'>
         <FormLabel component='legend'>Assign responsibility</FormLabel>
         <FormGroup>
           <FormControlLabel
@@ -58,7 +58,7 @@ export default function CheckboxesGroup() {
         required
         error={error}
         component='fieldset'
-        sx={{m: 3}}
+        sx={{ m: 3 }}
         variant='standard'
       >
         <FormLabel component='legend'>Pick two</FormLabel>

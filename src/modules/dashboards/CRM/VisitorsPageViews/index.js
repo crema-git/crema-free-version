@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import StatGraphs from './StatGraphs';
-import {useIntl} from 'react-intl';
-import {alpha, useTheme} from '@mui/material';
-import {styled} from '@mui/material/styles';
+import { useIntl } from 'react-intl';
+import { alpha, useTheme } from '@mui/material';
+import { styled } from '@mui/material/styles';
 import AppCard from '@crema/components/AppCard';
 import AppSelect from '@crema/components/AppSelect';
 
-const VisitorCard = styled(AppCard)(({theme}) => {
+const VisitorCard = styled(AppCard)(({ theme }) => {
   return {
     height: '100%',
     '& .MuiCardHeader-root': {
@@ -17,7 +17,7 @@ const VisitorCard = styled(AppCard)(({theme}) => {
     },
   };
 });
-const VisitorAction = styled('div')(({theme}) => {
+const VisitorAction = styled('div')(({ theme }) => {
   return {
     display: 'flex',
     alignItems: 'flex-end',
@@ -57,12 +57,12 @@ const VisitorAction = styled('div')(({theme}) => {
   };
 });
 
-const VisitorsPageViews = ({data}) => {
+const VisitorsPageViews = ({ data }) => {
   const theme = useTheme();
   const handleSelectionType = (data) => {
     console.log('data: ', data);
   };
-  const {messages} = useIntl();
+  const { messages } = useIntl();
 
   return (
     <VisitorCard
@@ -73,14 +73,14 @@ const VisitorsPageViews = ({data}) => {
             <div className='visitor-action-item'>
               <span
                 className='dot-visitor'
-                style={{backgroundColor: theme.palette.primary.main}}
+                style={{ backgroundColor: theme.palette.primary.main }}
               />
               {messages['dashboard.crm.pagesViews']}
             </div>
             <div className='visitor-action-item'>
               <span
                 className='dot-visitor'
-                style={{backgroundColor: theme.palette.secondary.main}}
+                style={{ backgroundColor: theme.palette.secondary.main }}
               />
               {messages['dashboard.crm.visitors']}
             </div>

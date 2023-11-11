@@ -1,5 +1,5 @@
 import React from 'react';
-import {styled} from '@mui/material/styles';
+import { styled } from '@mui/material/styles';
 import PropTypes from 'prop-types';
 import SimpleBarReact from 'simplebar-react';
 import 'simplebar-react/dist/simplebar.min.css';
@@ -10,7 +10,7 @@ const StyledSimpleBarReact = styled(SimpleBarReact)(() => ({
 }));
 
 const AppScrollbar = (props) => {
-  const {children, ...others} = props;
+  const { children, ...others } = props;
 
   return <StyledSimpleBarReact {...others}>{children}</StyledSimpleBarReact>;
 };

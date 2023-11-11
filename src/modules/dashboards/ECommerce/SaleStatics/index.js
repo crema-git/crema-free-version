@@ -1,15 +1,15 @@
 import React from 'react';
 import AppCard from '@crema/components/AppCard';
-import {useIntl} from 'react-intl';
+import { useIntl } from 'react-intl';
 import AppSelect from '@crema/components/AppSelect';
-import {Box, Grid} from '@mui/material';
+import { Box, Grid } from '@mui/material';
 import Typography from '@mui/material/Typography';
 import AppCircularProgress from '@crema/components/AppCircularProgress';
 import SaleStaticChart from './SaleStaticChart';
 import AppGridContainer from '@crema/components/AppGridContainer';
 
 const SaleStatics = () => {
-  const {messages} = useIntl();
+  const { messages } = useIntl();
   const handleSelectionType = (data) => {
     console.log('data: ', data);
   };
@@ -45,7 +45,7 @@ const SaleStatics = () => {
             <Box
               sx={{
                 mb: 9,
-                pl: {xl: 8},
+                pl: { xl: 8 },
               }}
             >
               <AppCircularProgress

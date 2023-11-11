@@ -47,7 +47,7 @@ export default function CustomImageList() {
               position='top'
               actionIcon={
                 <IconButton
-                  sx={{color: 'white'}}
+                  sx={{ color: 'white' }}
                   aria-label={`star ${item.title}`}
                 >
                   <StarBorderIcon />

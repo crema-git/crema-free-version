@@ -3,15 +3,15 @@ import AppAnimate from '@crema/components/AppAnimate';
 import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
 import AppTableContainer from '@crema/components/AppTableContainer';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Fonts } from '@crema/constants/AppEnums';
 import IntlMessages from '@crema/helpers/IntlMessages';
 import TableBody from '@mui/material/TableBody';
 import TableRow from '@mui/material/TableRow';
 import TableCell from '@mui/material/TableCell';
-import {Typography} from '@mui/material';
+import { Typography } from '@mui/material';
 import Header from './Header';
 import ItemList from './ItemList';
-import {invoiceData} from '@crema/mockapi/fakedb/extraPages';
+import { invoiceData } from '@crema/mockapi/fakedb/extraPages';
 
 const Invoice3 = () => {
   return (
@@ -24,19 +24,19 @@ const Invoice3 = () => {
           alignItems: 'center',
         }}
       >
-        <Box sx={{flex: 1, maxWidth: 900, width: '100%'}}>
+        <Box sx={{ flex: 1, maxWidth: 900, width: '100%' }}>
           <Card
             sx={{
-              py: {xs: 6, xl: 8},
+              py: { xs: 6, xl: 8 },
               minHeight: 1200,
               display: 'flex',
               flexDirection: 'column',
             }}
           >
-            <Box sx={{px: {xs: 6, xl: 8}}}>
+            <Box sx={{ px: { xs: 6, xl: 8 } }}>
               <Header />
             </Box>
-            <Box sx={{mb: 5}}>
+            <Box sx={{ mb: 5 }}>
               <AppTableContainer>
                 <ItemList />
               </AppTableContainer>
@@ -46,15 +46,15 @@ const Invoice3 = () => {
               sx={{
                 mt: 'auto',
                 display: 'flex',
-                flexDirection: {xs: 'column', md: 'row'},
-                justifyContent: {md: 'space-between'},
+                flexDirection: { xs: 'column', md: 'row' },
+                justifyContent: { md: 'space-between' },
                 borderTop: (theme) => `solid 1px ${theme.palette.divider}`,
                 pt: 4,
               }}
             >
               <Box
                 sx={{
-                  px: {xs: 6, xl: 8},
+                  px: { xs: 6, xl: 8 },
                 }}
               >
                 <Box
@@ -70,11 +70,11 @@ const Invoice3 = () => {
                 </Box>
                 <Box
                   sx={{
-                    display: {xs: 'flex', md: 'inherit'},
-                    flexDirection: {xs: 'column', md: 'inherit'},
-                    alignItems: {xs: 'center', md: 'inherit'},
-                    justifyContent: {xs: 'center', md: 'inherit'},
-                    mb: {xs: 5, md: 0},
+                    display: { xs: 'flex', md: 'inherit' },
+                    flexDirection: { xs: 'column', md: 'inherit' },
+                    alignItems: { xs: 'center', md: 'inherit' },
+                    justifyContent: { xs: 'center', md: 'inherit' },
+                    mb: { xs: 5, md: 0 },
                   }}
                 >
                   <Typography
@@ -151,7 +151,7 @@ const Invoice3 = () => {
               >
                 <AppTableContainer
                   sxStyle={{
-                    width: {xs: 'auto', md: '100%'},
+                    width: { xs: 'auto', md: '100%' },
                   }}
                 >
                   <TableBody>
@@ -159,7 +159,7 @@ const Invoice3 = () => {
                       <TableCell
                         component='th'
                         scope='row'
-                        sx={{border: '0 none', px: {xs: 6, xl: 8}, py: 1}}
+                        sx={{ border: '0 none', px: { xs: 6, xl: 8 }, py: 1 }}
                       >
                         <Box
                           sx={{
@@ -174,7 +174,7 @@ const Invoice3 = () => {
                         </Box>
                       </TableCell>
                       <TableCell
-                        sx={{border: '0 none', px: {xs: 6, xl: 8}, py: 1}}
+                        sx={{ border: '0 none', px: { xs: 6, xl: 8 }, py: 1 }}
                       >
                         <Box
                           sx={{
@@ -192,7 +192,7 @@ const Invoice3 = () => {
                       <TableCell
                         component='th'
                         scope='row'
-                        sx={{border: '0 none', px: {xs: 6, xl: 8}, py: 1}}
+                        sx={{ border: '0 none', px: { xs: 6, xl: 8 }, py: 1 }}
                       >
                         <Box
                           sx={{
@@ -207,7 +207,7 @@ const Invoice3 = () => {
                         </Box>
                       </TableCell>
                       <TableCell
-                        sx={{border: '0 none', px: {xs: 6, xl: 8}, py: 1}}
+                        sx={{ border: '0 none', px: { xs: 6, xl: 8 }, py: 1 }}
                       >
                         <Box
                           sx={{
@@ -227,7 +227,7 @@ const Invoice3 = () => {
                         scope='row'
                         sx={{
                           border: '0 none',
-                          px: {xs: 6, xl: 8},
+                          px: { xs: 6, xl: 8 },
                           pt: 1,
                           pb: 5,
                         }}
@@ -247,7 +247,7 @@ const Invoice3 = () => {
                       <TableCell
                         sx={{
                           border: '0 none',
-                          px: {xs: 6, xl: 8},
+                          px: { xs: 6, xl: 8 },
                           pt: 1,
                           pb: 5,
                         }}
@@ -270,7 +270,7 @@ const Invoice3 = () => {
                         scope='row'
                         sx={{
                           border: '0 none',
-                          px: {xs: 6, xl: 8},
+                          px: { xs: 6, xl: 8 },
                           py: 2,
                         }}
                       >
@@ -288,7 +288,7 @@ const Invoice3 = () => {
                       <TableCell
                         sx={{
                           border: '0 none',
-                          px: {xs: 6, xl: 8},
+                          px: { xs: 6, xl: 8 },
                           py: 2,
                         }}
                       >

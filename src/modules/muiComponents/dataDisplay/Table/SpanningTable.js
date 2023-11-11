@@ -19,11 +19,11 @@ function priceRow(qty, unit) {
 
 function createRow(desc, qty, unit) {
   const price = priceRow(qty, unit);
-  return {desc, qty, unit, price};
+  return { desc, qty, unit, price };
 }
 
 function subtotal(items) {
-  return items.map(({price}) => price).reduce((sum, i) => sum + i, 0);
+  return items.map(({ price }) => price).reduce((sum, i) => sum + i, 0);
 }
 
 const rows = [
@@ -39,7 +39,7 @@ const invoiceTotal = invoiceTaxes + invoiceSubtotal;
 export default function SpanningTable() {
   return (
     <TableContainer component={Paper}>
-      <Table sx={{minWidth: 700}} aria-label='spanning table'>
+      <Table sx={{ minWidth: 700 }} aria-label='spanning table'>
         <TableHead>
           <TableRow>
             <TableCell align='center' colSpan={3}>

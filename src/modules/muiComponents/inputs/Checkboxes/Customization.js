@@ -1,8 +1,8 @@
 import * as React from 'react';
-import {styled} from '@mui/material/styles';
+import { styled } from '@mui/material/styles';
 import Checkbox from '@mui/material/Checkbox';
 
-const BpIcon = styled('span')(({theme}) => ({
+const BpIcon = styled('span')(({ theme }) => ({
   borderRadius: 3,
   width: 16,
   height: 16,
@@ -55,13 +55,13 @@ function BpCheckbox(props) {
   return (
     <Checkbox
       sx={{
-        '&:hover': {bgcolor: 'transparent'},
+        '&:hover': { bgcolor: 'transparent' },
       }}
       disableRipple
       color='default'
       checkedIcon={<BpCheckedIcon />}
       icon={<BpIcon />}
-      inputProps={{'aria-label': 'Checkbox demo'}}
+      inputProps={{ 'aria-label': 'Checkbox demo' }}
       {...props}
     />
   );

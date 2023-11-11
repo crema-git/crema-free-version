@@ -1,5 +1,5 @@
 import zhMessages from '../locales/zh-Hans.json';
-import {zhCN} from '@mui/material/locale';
+import { zhCN } from '@mui/material/locale';
 
 const ZhLan = {
   messages: {

@@ -4,17 +4,17 @@ import IntlMessages from '@crema/helpers/IntlMessages';
 import Box from '@mui/material/Box';
 import PropTypes from 'prop-types';
 import CloseIcon from '@mui/icons-material/Close';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Fonts } from '@crema/constants/AppEnums';
 import AppCard from '@crema/components/AppCard';
-import {useIntl} from 'react-intl';
+import { useIntl } from 'react-intl';
 
 const Profile = (props) => {
-  const {data} = props;
+  const { data } = props;
 
-  const {messages} = useIntl();
+  const { messages } = useIntl();
   return (
     <AppCard
-      sxStyle={{height: 1}}
+      sxStyle={{ height: 1 }}
       contentStyle={{
         display: 'flex',
         flexDirection: 'column',
@@ -41,8 +41,8 @@ const Profile = (props) => {
       >
         <Avatar
           sx={{
-            width: {xs: 100, md: 120},
-            height: {xs: 100, md: 120},
+            width: { xs: 100, md: 120 },
+            height: { xs: 100, md: 120 },
           }}
           src={data.image}
         />
@@ -68,7 +68,7 @@ const Profile = (props) => {
       >
         <Box
           sx={{
-            px: {xs: 2, xl: 4},
+            px: { xs: 2, xl: 4 },
           }}
         >
           <Box
@@ -96,7 +96,7 @@ const Profile = (props) => {
         </Box>
         <Box
           sx={{
-            px: {xs: 2, xl: 4},
+            px: { xs: 2, xl: 4 },
           }}
         >
           <Box
@@ -124,7 +124,7 @@ const Profile = (props) => {
         </Box>
         <Box
           sx={{
-            px: {xs: 2, xl: 4},
+            px: { xs: 2, xl: 4 },
           }}
         >
           <Box

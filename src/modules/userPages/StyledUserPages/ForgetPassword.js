@@ -1,16 +1,16 @@
 import React from 'react';
 import Card from '@mui/material/Card';
 import Button from '@mui/material/Button';
-import {Form, Formik} from 'formik';
+import { Form, Formik } from 'formik';
 import * as yup from 'yup';
 import Grid from '@mui/material/Grid';
 import IntlMessages from '@crema/helpers/IntlMessages';
 import Box from '@mui/material/Box';
-import {Typography, useTheme} from '@mui/material';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Typography, useTheme } from '@mui/material';
+import { Fonts } from '@crema/constants/AppEnums';
 import AppAnimate from '@crema/components/AppAnimate';
 import AppTextField from '@crema/components/AppFormComponents/AppTextField';
-import {ReactComponent as Logo} from '../../../assets/user/forgot-password.svg';
+import { ReactComponent as Logo } from '../../../assets/user/forgot-password.svg';
 
 const validationSchema = yup.object({
   email: yup
@@ -26,7 +26,7 @@ const ForgetPassword = () => {
       <Box
         sx={{
           pb: 6,
-          py: {xl: 8},
+          py: { xl: 8 },
           display: 'flex',
           flex: 1,
           flexDirection: 'column',
@@ -55,7 +55,7 @@ const ForgetPassword = () => {
                     width: '100%',
                     height: '350px',
                     display: 'inline-block',
-                    paddingRight: {xs: 0, lg: 2.5},
+                    paddingRight: { xs: 0, lg: 2.5 },
                   },
                 }}
               >
@@ -66,21 +66,21 @@ const ForgetPassword = () => {
             <Grid item xs={12} lg={6}>
               <Box
                 sx={{
-                  p: {xs: 8, lg: 12},
-                  px: {xl: 16},
-                  py: {xl: 12},
+                  p: { xs: 8, lg: 12 },
+                  px: { xl: 16 },
+                  py: { xl: 12 },
                 }}
               >
                 <Box
                   sx={{
-                    mb: {xs: 4, xl: 8},
+                    mb: { xs: 4, xl: 8 },
                     fontWeight: Fonts.BOLD,
                     fontSize: 20,
                   }}
                 >
                   <IntlMessages id='common.forgetPassword' />
                 </Box>
-                <Box sx={{mb: 5, fontSize: 14}}>
+                <Box sx={{ mb: 5, fontSize: 14 }}>
                   <Typography component='p'>
                     <IntlMessages id='common.forgetPasswordTextOne' />
                   </Typography>
@@ -94,19 +94,19 @@ const ForgetPassword = () => {
                     email: '',
                   }}
                   validationSchema={validationSchema}
-                  onSubmit={(data, {setSubmitting, resetForm}) => {
+                  onSubmit={(data, { setSubmitting, resetForm }) => {
                     setSubmitting(true);
                     setSubmitting(false);
                     resetForm();
                   }}
                 >
-                  {({isSubmitting}) => (
+                  {({ isSubmitting }) => (
                     <Form
                       sx={{
                         textAlign: 'left',
                       }}
                     >
-                      <Box sx={{mb: {xs: 3, xl: 4}}}>
+                      <Box sx={{ mb: { xs: 3, xl: 4 } }}>
                         <AppTextField
                           name='email'
                           label={<IntlMessages id='common.emailAddress' />}

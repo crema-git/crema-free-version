@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import Box from '@mui/material/Box';
 import Avatar from '@mui/material/Avatar';
 import clsx from 'clsx';
@@ -7,13 +7,13 @@ import EditIcon from '@mui/icons-material/Edit';
 import PlayCircleOutlineIcon from '@mui/icons-material/PlayCircleOutline';
 import DescriptionOutlinedIcon from '@mui/icons-material/DescriptionOutlined';
 import MediaViewer from '@crema/components/AppMedialViewer';
-import {alpha, Typography} from '@mui/material';
-import {orange} from '@mui/material/colors';
-import {Fonts} from '@crema/constants/AppEnums';
+import { alpha, Typography } from '@mui/material';
+import { orange } from '@mui/material/colors';
+import { Fonts } from '@crema/constants/AppEnums';
 
-import {styled} from '@mui/material/styles';
-import {MessageType} from '@crema/mockapi/fakedb/apps/chat/connectionList';
-import {getFileSize} from '@crema/helpers/Common';
+import { styled } from '@mui/material/styles';
+import { MessageType } from '@crema/mockapi/fakedb/apps/chat/connectionList';
+import { getFileSize } from '@crema/helpers/Common';
 
 const ReceiverMessageWrapper = styled('div')(() => {
   return {
@@ -38,7 +38,7 @@ const ReceiverMessageWrapper = styled('div')(() => {
     },
   };
 });
-const VideoWrapper = styled('div')(({theme}) => {
+const VideoWrapper = styled('div')(({ theme }) => {
   return {
     position: 'relative',
     width: 56,
@@ -65,7 +65,7 @@ const VideoWrapper = styled('div')(({theme}) => {
     },
   };
 });
-const MessageChat = styled('div')(({theme}) => {
+const MessageChat = styled('div')(({ theme }) => {
   return {
     display: 'inline-flex',
     border: `solid 1px ${theme.palette.grey[200]}`,
@@ -137,10 +137,10 @@ const getMediaMessage = (item) => {
             ml: 2,
           }}
         >
-          <Box component='span' sx={{display: 'block'}}>
+          <Box component='span' sx={{ display: 'block' }}>
             {item.file_name}
           </Box>
-          <Box component='span' sx={{display: 'block'}}>
+          <Box component='span' sx={{ display: 'block' }}>
             {getFileSize(item.file_size)}
           </Box>
         </Box>

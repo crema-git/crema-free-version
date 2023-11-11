@@ -2,7 +2,7 @@ import React from 'react';
 import FusionCharts from 'fusioncharts';
 import charts from 'fusioncharts/fusioncharts.charts';
 import ReactFusioncharts from 'react-fusioncharts';
-import {stackNegChartData} from './data';
+import { stackNegChartData } from './data';
 
 charts(FusionCharts);
 

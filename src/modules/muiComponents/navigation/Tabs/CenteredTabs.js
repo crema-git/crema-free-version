@@ -11,7 +11,7 @@ export default function CenteredTabs() {
   };
 
   return (
-    <Box sx={{width: '100%', bgcolor: 'background.paper'}}>
+    <Box sx={{ width: '100%', bgcolor: 'background.paper' }}>
       <Tabs value={value} onChange={handleChange} centered>
         <Tab label='Item One' />
         <Tab label='Item Two' />

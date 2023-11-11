@@ -1,5 +1,5 @@
 import React from 'react';
-import {RoutePermittedRole} from '@crema/constants/AppEnums';
+import { RoutePermittedRole } from '@crema/constants/AppEnums';
 
 import AppBar from '../../../../modules/muiComponents/surfaces/AppBar';
 import Accordion from '../../../../modules/muiComponents/surfaces/Accordion';

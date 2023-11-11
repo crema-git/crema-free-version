@@ -1,8 +1,8 @@
 import React from 'react';
-import {Grid} from '@mui/material';
+import { Grid } from '@mui/material';
 import AppGridContainer from '@crema/components/AppGridContainer';
 import AppAnimate from '@crema/components/AppAnimate';
-import {useGetDataApi} from '@crema/hooks/APIHooks';
+import { useGetDataApi } from '@crema/hooks/APIHooks';
 import StateCard from './StateCard';
 import SalesReport from './SalesReport';
 import BudgetStatistic from './BudgetStatistic';
@@ -20,7 +20,7 @@ import Browser from './Browser';
 import AppLoader from '@crema/components/AppLoader';
 
 const ECommerce = () => {
-  const [{apiData: ecommerceData, loading}] = useGetDataApi(
+  const [{ apiData: ecommerceData, loading }] = useGetDataApi(
     '/dashboard/ecommerce',
   );
 

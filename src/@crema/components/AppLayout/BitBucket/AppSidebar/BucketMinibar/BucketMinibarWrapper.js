@@ -1,11 +1,11 @@
 import React from 'react';
 import PropsTypes from 'prop-types';
-import {alpha, Box} from '@mui/material';
-import {useSidebarContext} from '@crema/context/AppContextProvider/SidebarContextProvider';
-import {ThemeMode} from '@crema/constants/AppEnums';
+import { alpha, Box } from '@mui/material';
+import { useSidebarContext } from '@crema/context/AppContextProvider/SidebarContextProvider';
+import { ThemeMode } from '@crema/constants/AppEnums';
 
-const BucketMinibarWrapper = ({children, ...rest}) => {
-  const {sidebarBgColor, mode, sidebarTextColor} = useSidebarContext();
+const BucketMinibarWrapper = ({ children, ...rest }) => {
+  const { sidebarBgColor, mode, sidebarTextColor } = useSidebarContext();
 
   return (
     <Box

@@ -5,8 +5,8 @@ import Slider from 'react-slick';
 import Box from '@mui/material/Box';
 import MediaSlider from './MediaSlider';
 import AppCard from '@crema/components/AppCard';
-import {useIntl} from 'react-intl';
-import {Fonts} from '@crema/constants/AppEnums';
+import { useIntl } from 'react-intl';
+import { Fonts } from '@crema/constants/AppEnums';
 
 const settings = {
   dots: true,
@@ -41,18 +41,18 @@ const settings = {
   ],
 };
 
-const Team = ({team}) => {
-  const {messages} = useIntl();
+const Team = ({ team }) => {
+  const { messages } = useIntl();
   return (
     <AppCard
       title={messages['extraPages.team']}
-      titleStyle={{fontWeight: Fonts.BOLD, fontSize: {xs: 18, md: 20}}}
+      titleStyle={{ fontWeight: Fonts.BOLD, fontSize: { xs: 18, md: 20 } }}
     >
       <MediaSlider>
         <Slider {...settings}>
           {team.map((member) => {
             return (
-              <Box key={member.id} sx={{px: 2.5}}>
+              <Box key={member.id} sx={{ px: 2.5 }}>
                 <MemberItem member={member} />
               </Box>
             );

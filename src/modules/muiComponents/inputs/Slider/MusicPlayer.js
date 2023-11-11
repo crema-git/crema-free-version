@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {styled, useTheme} from '@mui/material/styles';
+import { styled, useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Slider from '@mui/material/Slider';
@@ -45,7 +45,7 @@ const WallPaper = styled('div')({
   },
 });
 
-const Widget = styled('div')(({theme}) => ({
+const Widget = styled('div')(({ theme }) => ({
   padding: 16,
   borderRadius: 16,
   width: 343,
@@ -104,14 +104,14 @@ export default function MusicPlayerSlider() {
       }}
     >
       <Widget>
-        <Box sx={{display: 'flex', alignItems: 'center'}}>
+        <Box sx={{ display: 'flex', alignItems: 'center' }}>
           <CoverImage>
             <img
               alt="can't win - Chilling Sunday"
               src='/static/images/sliders/chilling-sunday.jpg'
             />
           </CoverImage>
-          <Box sx={{ml: 1.5, minWidth: 0}}>
+          <Box sx={{ ml: 1.5, minWidth: 0 }}>
             <Typography
               variant='caption'
               color='text.secondary'
@@ -190,11 +190,14 @@ export default function MusicPlayerSlider() {
           >
             {paused ? (
               <PlayArrowRounded
-                sx={{fontSize: '3rem'}}
+                sx={{ fontSize: '3rem' }}
                 htmlColor={mainIconColor}
               />
             ) : (
-              <PauseRounded sx={{fontSize: '3rem'}} htmlColor={mainIconColor} />
+              <PauseRounded
+                sx={{ fontSize: '3rem' }}
+                htmlColor={mainIconColor}
+              />
             )}
           </IconButton>
           <IconButton aria-label='next song'>
@@ -204,7 +207,7 @@ export default function MusicPlayerSlider() {
         <Stack
           spacing={2}
           direction='row'
-          sx={{mb: 1, px: 1}}
+          sx={{ mb: 1, px: 1 }}
           alignItems='center'
         >
           <VolumeDownRounded htmlColor={lightIconColor} />

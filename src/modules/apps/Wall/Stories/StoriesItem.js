@@ -1,11 +1,11 @@
 import React from 'react';
-import {Box, CardMedia} from '@mui/material';
+import { Box, CardMedia } from '@mui/material';
 import Avatar from '@mui/material/Avatar';
 import Typography from '@mui/material/Typography';
 import PropTypes from 'prop-types';
-import {styled} from '@mui/material/styles';
+import { styled } from '@mui/material/styles';
 
-const UserInfoContainer = styled('div')(({theme}) => ({
+const UserInfoContainer = styled('div')(({ theme }) => ({
   position: 'absolute',
   bottom: 0,
   left: 0,
@@ -35,8 +35,8 @@ const UserInfoContainer = styled('div')(({theme}) => ({
   },
 }));
 
-const StoriesItem = ({data}) => {
-  const {imgSrc, avatar, title} = data;
+const StoriesItem = ({ data }) => {
+  const { imgSrc, avatar, title } = data;
   return (
     <Box
       sx={{

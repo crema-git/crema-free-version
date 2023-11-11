@@ -1,21 +1,21 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import clsx from 'clsx';
 import AppContentView from '../../AppContentView';
 import AppFixedFooter from './AppFixedFooter';
 import AppHeader from './AppHeader';
 import AppSidebar from './AppSidebar';
-import {useLayoutContext} from '@crema/context/AppContextProvider/LayoutContextProvider';
+import { useLayoutContext } from '@crema/context/AppContextProvider/LayoutContextProvider';
 import AppThemeSetting from '../../AppThemeSetting';
 import HorHeaderFixedWrapper from './HorHeaderFixedWrapper';
 import MainContent from './MainContent';
-import {LayoutType} from '@crema/constants/AppEnums';
+import { LayoutType } from '@crema/constants/AppEnums';
 import HorHeaderFixedContainer from './HorHeaderFixedContainer';
-import {useLocation} from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import PropsTypes from 'prop-types';
 
-const HorHeaderFixed = ({routes, routesConfig}) => {
-  const {pathname} = useLocation();
-  const {footer, layoutType, footerType} = useLayoutContext();
+const HorHeaderFixed = ({ routes, routesConfig }) => {
+  const { pathname } = useLocation();
+  const { footer, layoutType, footerType } = useLayoutContext();
   const [isNavCollapsed, setNavCollapsed] = useState(false);
 
   const toggleNavCollapsed = () => {

@@ -5,14 +5,14 @@ import Box from '@mui/material/Box';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import AppsStarredIcon from '@crema/components/AppsStarredIcon';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Fonts } from '@crema/constants/AppEnums';
 import LabelOutlinedIcon from '@mui/icons-material/LabelOutlined';
-import {blue} from '@mui/material/colors';
+import { blue } from '@mui/material/colors';
 
-import {styled} from '@mui/material/styles';
-import {alpha} from '@mui/material';
+import { styled } from '@mui/material/styles';
+import { alpha } from '@mui/material';
 
-const ContactListItemWrapper = styled(ListItem)(({theme}) => {
+const ContactListItemWrapper = styled(ListItem)(({ theme }) => {
   return {
     display: 'flex',
     flexDirection: 'row',
@@ -63,7 +63,7 @@ const ContactListItemMobile = ({
     >
       <Box
         sx={{
-          width: {xs: '75%', sm: '80%', md: '50%'},
+          width: { xs: '75%', sm: '80%', md: '50%' },
           display: 'flex',
           alignItems: 'center',
         }}
@@ -97,7 +97,7 @@ const ContactListItemMobile = ({
             </Avatar>
           )}
         </Box>
-        <Box sx={{mr: 3, overflow: 'hidden'}}>
+        <Box sx={{ mr: 3, overflow: 'hidden' }}>
           <Box
             sx={{
               fontWeight: Fonts.MEDIUM,
@@ -129,12 +129,12 @@ const ContactListItemMobile = ({
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'flex-end',
-          width: {xs: '25%', sm: '20%', md: '50%'},
+          width: { xs: '25%', sm: '20%', md: '50%' },
         }}
       >
         <span>
           <LabelOutlinedIcon
-            style={{color: `${onGetLabelColor(contact.label)}`}}
+            style={{ color: `${onGetLabelColor(contact.label)}` }}
             sx={{
               ml: 2,
             }}

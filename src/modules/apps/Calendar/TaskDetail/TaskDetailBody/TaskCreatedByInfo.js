@@ -3,11 +3,11 @@ import Avatar from '@mui/material/Avatar';
 import Box from '@mui/material/Box';
 import IntlMessages from '@crema/helpers/IntlMessages';
 import PropTypes from 'prop-types';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Fonts } from '@crema/constants/AppEnums';
 
-const TaskCreatedByInfo = ({createdBy, createdOn}) => {
+const TaskCreatedByInfo = ({ createdBy, createdOn }) => {
   return (
-    <Box sx={{display: 'flex', alignItems: 'center'}}>
+    <Box sx={{ display: 'flex', alignItems: 'center' }}>
       {createdBy.image ? (
         <Avatar
           src={createdBy.image}
@@ -31,8 +31,8 @@ const TaskCreatedByInfo = ({createdBy, createdOn}) => {
           ml: 3.5,
           fontSize: 14,
           display: 'flex',
-          flexDirection: {xs: 'column', md: 'row'},
-          alignItems: {md: 'center'},
+          flexDirection: { xs: 'column', md: 'row' },
+          alignItems: { md: 'center' },
         }}
       >
         <Box

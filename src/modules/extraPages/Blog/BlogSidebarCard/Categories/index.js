@@ -1,12 +1,12 @@
 import React from 'react';
-import {Box, Typography} from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import PropTypes from 'prop-types';
 import CategoriesItem from './CategoriesItem';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Fonts } from '@crema/constants/AppEnums';
 import IntlMessages from '@crema/helpers/IntlMessages';
 import AppList from '@crema/components/AppList';
 
-const Categories = ({categories}) => {
+const Categories = ({ categories }) => {
   return (
     <Box
       sx={{

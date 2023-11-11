@@ -1,11 +1,11 @@
 import React from 'react';
-import {GoogleMap, KmlLayer, withGoogleMap} from 'react-google-maps';
+import { GoogleMap, KmlLayer, withGoogleMap } from 'react-google-maps';
 
 const KmlLayerExampleGoogleMap = withGoogleMap(() => (
-  <GoogleMap defaultZoom={8} defaultCenter={{lat: 41.876, lng: -87.624}}>
+  <GoogleMap defaultZoom={8} defaultCenter={{ lat: 41.876, lng: -87.624 }}>
     <KmlLayer
       url='http://googlemaps.github.io/js-v2-samples/ggeoxml/cta.kml'
-      options={{preserveViewport: true}}
+      options={{ preserveViewport: true }}
     />
   </GoogleMap>
 ));

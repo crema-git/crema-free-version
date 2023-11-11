@@ -1,19 +1,19 @@
 import React from 'react';
-import {Avatar, Box, Typography} from '@mui/material';
+import { Avatar, Box, Typography } from '@mui/material';
 import PropTypes from 'prop-types';
 
-const RecentContact = ({recentContact}) => {
+const RecentContact = ({ recentContact }) => {
   return (
     <Box
       sx={{
         position: 'relative',
       }}
     >
-      <Box sx={{mb: 2.5}}>
+      <Box sx={{ mb: 2.5 }}>
         <Avatar
           sx={{
-            width: {xs: 50, md: 60, lg: 70},
-            height: {xs: 50, md: 60, lg: 70},
+            width: { xs: 50, md: 60, lg: 70 },
+            height: { xs: 50, md: 60, lg: 70 },
           }}
           src={recentContact.image}
           alt={recentContact.name}

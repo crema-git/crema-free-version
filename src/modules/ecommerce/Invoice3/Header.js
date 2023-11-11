@@ -1,8 +1,8 @@
 import React from 'react';
-import {Box, Typography} from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import IntlMessages from '@crema/helpers/IntlMessages';
-import {Fonts} from '@crema/constants/AppEnums';
-import {invoiceData} from '@crema/mockapi/fakedb/extraPages';
+import { Fonts } from '@crema/constants/AppEnums';
+import { invoiceData } from '@crema/mockapi/fakedb/extraPages';
 
 const Header = () => {
   return (
@@ -10,16 +10,16 @@ const Header = () => {
       sx={{
         pt: 2,
         display: 'flex',
-        flexDirection: {xs: 'column', sm: 'row'},
-        justifyContent: {sm: 'space-between'},
+        flexDirection: { xs: 'column', sm: 'row' },
+        justifyContent: { sm: 'space-between' },
       }}
     >
-      <Box sx={{mr: {sm: 3}, mb: {xs: 5, sm: 0}}}>
+      <Box sx={{ mr: { sm: 3 }, mb: { xs: 5, sm: 0 } }}>
         <Box
           sx={{
             display: 'flex',
             flexDirection: 'column',
-            alignItems: {xs: 'center', sm: 'flex-start'},
+            alignItems: { xs: 'center', sm: 'flex-start' },
           }}
         >
           <Box
@@ -27,7 +27,7 @@ const Header = () => {
               display: 'flex',
               cursor: 'pointer',
               alignItems: 'center',
-              mb: {xs: 5, sm: 7.5, lg: 8},
+              mb: { xs: 5, sm: 7.5, lg: 8 },
               '& svg': {
                 height: 40,
               },
@@ -38,7 +38,7 @@ const Header = () => {
               component='span'
               sx={{
                 color: 'text.primary',
-                fontSize: {xs: 26, md: 30},
+                fontSize: { xs: 26, md: 30 },
                 fontWeight: Fonts.SEMI_BOLD,
                 marginLeft: 3,
               }}
@@ -49,8 +49,8 @@ const Header = () => {
         </Box>
         <Box
           sx={{
-            mb: {xs: 5, lg: 6},
-            textAlign: {xs: 'center', sm: 'left'},
+            mb: { xs: 5, lg: 6 },
+            textAlign: { xs: 'center', sm: 'left' },
           }}
         >
           <Box
@@ -58,7 +58,7 @@ const Header = () => {
               color: 'text.primary',
               mb: 1.5,
               fontWeight: Fonts.MEDIUM,
-              fontSize: {xs: 14, sm: 16},
+              fontSize: { xs: 14, sm: 16 },
             }}
           >
             <IntlMessages id='invoice.invoiceTo' />
@@ -79,7 +79,7 @@ const Header = () => {
             mb: 3,
             display: 'flex',
             flexDirection: 'column',
-            alignItems: {xs: 'center', sm: 'flex-start'},
+            alignItems: { xs: 'center', sm: 'flex-start' },
           }}
         >
           <Typography
@@ -94,7 +94,7 @@ const Header = () => {
             A
             <Box
               component='span'
-              sx={{color: 'text.secondary', ml: 3, fontWeight: Fonts.REGULAR}}
+              sx={{ color: 'text.secondary', ml: 3, fontWeight: Fonts.REGULAR }}
             >
               {invoiceData.company.address1}
             </Box>
@@ -111,7 +111,7 @@ const Header = () => {
             E
             <Box
               component='span'
-              sx={{color: 'text.secondary', ml: 3, fontWeight: Fonts.REGULAR}}
+              sx={{ color: 'text.secondary', ml: 3, fontWeight: Fonts.REGULAR }}
             >
               {invoiceData.company.email}
             </Box>
@@ -128,34 +128,34 @@ const Header = () => {
             P
             <Box
               component='span'
-              sx={{color: 'text.secondary', ml: 3, fontWeight: Fonts.REGULAR}}
+              sx={{ color: 'text.secondary', ml: 3, fontWeight: Fonts.REGULAR }}
             >
               {invoiceData.company.phone}
             </Box>
           </Typography>
         </Box>
       </Box>
-      <Box sx={{ml: {sm: 2}}}>
+      <Box sx={{ ml: { sm: 2 } }}>
         <Box
           component='h1'
           sx={{
-            mb: {xs: 5, sm: 6, lg: 7, xl: 12},
+            mb: { xs: 5, sm: 6, lg: 7, xl: 12 },
             color: 'text.primary',
             fontWeight: Fonts.BOLD,
             fontSize: 32,
             lineHeight: 1,
             textTransform: 'uppercase',
-            textAlign: {xs: 'center', sm: 'right'},
+            textAlign: { xs: 'center', sm: 'right' },
           }}
         >
           <IntlMessages id='invoice.invoice' />
         </Box>
         <Box
           sx={{
-            mb: {xs: 5, lg: 6},
+            mb: { xs: 5, lg: 6 },
             display: 'flex',
             flexDirection: 'column',
-            alignItems: {xs: 'center', sm: 'flex-start'},
+            alignItems: { xs: 'center', sm: 'flex-start' },
           }}
         >
           <Box
@@ -170,7 +170,7 @@ const Header = () => {
             <Box component='span'>
               <IntlMessages id='invoice.invoiceDate' /> :
             </Box>
-            <Box component='span' sx={{ml: 2}}>
+            <Box component='span' sx={{ ml: 2 }}>
               {invoiceData.invoice.date}
             </Box>
           </Box>
@@ -186,15 +186,15 @@ const Header = () => {
             <Box component='span'>
               <IntlMessages id='invoice.invoiceNumber' /> :
             </Box>
-            <Box component='span' sx={{ml: 2}}>
+            <Box component='span' sx={{ ml: 2 }}>
               {invoiceData.invoice.number}
             </Box>
           </Box>
         </Box>
         <Box
           sx={{
-            mb: {xs: 5, sm: 7.5, lg: 8, xl: 15},
-            textAlign: {xs: 'center', sm: 'left'},
+            mb: { xs: 5, sm: 7.5, lg: 8, xl: 15 },
+            textAlign: { xs: 'center', sm: 'left' },
           }}
         >
           <Box

@@ -1,14 +1,14 @@
 import React from 'react';
-import {Box, Typography} from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import CardMedia from '@mui/material/CardMedia';
 import PropTypes from 'prop-types';
-import {FiSearch} from 'react-icons/fi';
-import {AiOutlineLink} from 'react-icons/ai';
+import { FiSearch } from 'react-icons/fi';
+import { AiOutlineLink } from 'react-icons/ai';
 import CardContent from '@mui/material/CardContent';
 import CardWrapper from './CardMediaWrapper';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Fonts } from '@crema/constants/AppEnums';
 
-const PortfolioCard = ({portfolio, onViewPortfolioDetail}) => {
+const PortfolioCard = ({ portfolio, onViewPortfolioDetail }) => {
   return (
     <CardWrapper onClick={() => onViewPortfolioDetail(portfolio)}>
       <Box className='card-media-wrapper'>

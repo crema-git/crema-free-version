@@ -1,8 +1,8 @@
 import React from 'react';
 import TableCell from '@mui/material/TableCell';
 import TableHeader from '@crema/components/AppTable/TableHeader';
-import {grey} from '@mui/material/colors';
-import {Fonts} from '@crema/constants/AppEnums';
+import { grey } from '@mui/material/colors';
+import { Fonts } from '@crema/constants/AppEnums';
 
 const TableHeading = () => {
   return (

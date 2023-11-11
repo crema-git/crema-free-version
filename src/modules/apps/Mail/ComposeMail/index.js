@@ -1,26 +1,26 @@
-import React, {useState} from 'react';
-import {Form, Formik} from 'formik';
+import React, { useState } from 'react';
+import { Form, Formik } from 'formik';
 import * as yup from 'yup';
 import dayjs from 'dayjs';
 import Chip from '@mui/material/Chip';
 import IntlMessages from '@crema/helpers/IntlMessages';
-import {useIntl} from 'react-intl';
+import { useIntl } from 'react-intl';
 import Box from '@mui/material/Box';
 import PropTypes from 'prop-types';
 import Button from '@mui/material/Button';
-import {useAuthUser} from '@crema/hooks/AuthHooks';
+import { useAuthUser } from '@crema/hooks/AuthHooks';
 import AppTextField from '@crema/components/AppFormComponents/AppTextField';
 import AppDialog from '@crema/components/AppDialog';
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
-import {blue} from '@mui/material/colors';
-import {Fonts} from '@crema/constants/AppEnums';
+import { blue } from '@mui/material/colors';
+import { Fonts } from '@crema/constants/AppEnums';
 
-import {styled} from '@mui/material/styles';
+import { styled } from '@mui/material/styles';
 import AppInfoView from '@crema/components/AppInfoView';
-import {postDataApi} from '@crema/hooks/APIHooks';
-import {useInfoViewActionsContext} from '@crema/context/AppContextProvider/InfoViewContextProvider';
-import {generateRandomUniqueNumber} from '@crema/helpers/Common';
+import { postDataApi } from '@crema/hooks/APIHooks';
+import { useInfoViewActionsContext } from '@crema/context/AppContextProvider/InfoViewContextProvider';
+import { generateRandomUniqueNumber } from '@crema/helpers/Common';
 
 const ReactQuillWrapper = styled(ReactQuill)(() => {
   return {
@@ -67,7 +67,7 @@ const validationSchema = yup.object({
 });
 
 const ComposeMail = (props) => {
-  const {isComposeMail, onCloseComposeMail} = props;
+  const { isComposeMail, onCloseComposeMail } = props;
   const infoViewActionsContext = useInfoViewActionsContext();
   const [isShowBcc, onShowBcc] = useState(false);
 
@@ -81,9 +81,9 @@ const ComposeMail = (props) => {
     }
   };
 
-  const {user} = useAuthUser();
+  const { user } = useAuthUser();
 
-  const {messages} = useIntl();
+  const { messages } = useIntl();
 
   return (
     <AppDialog
@@ -111,7 +111,7 @@ const ComposeMail = (props) => {
           content: '',
         }}
         validationSchema={validationSchema}
-        onSubmit={(data, {setSubmitting, resetForm}) => {
+        onSubmit={(data, { setSubmitting, resetForm }) => {
           const mail = {
             id: generateRandomUniqueNumber(),
             isChecked: false,
@@ -153,7 +153,7 @@ const ComposeMail = (props) => {
             subject: data.subject !== '' ? data.subject : 'No Subject',
           };
           console.log('Success:', mail);
-          postDataApi('/api/mailApp/compose', infoViewActionsContext, {mail})
+          postDataApi('/api/mailApp/compose', infoViewActionsContext, { mail })
             .then(() => {
               infoViewActionsContext.showMessage('Mail Sent Successfully');
               onCloseComposeMail(false);
@@ -166,7 +166,7 @@ const ComposeMail = (props) => {
             });
         }}
       >
-        {({isSubmitting, values, setFieldValue}) => (
+        {({ isSubmitting, values, setFieldValue }) => (
           <Form
             style={{
               width: '100%',

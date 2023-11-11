@@ -11,10 +11,10 @@ import MoreVertIcon from '@mui/icons-material/MoreVert';
 import Skeleton from '@mui/material/Skeleton';
 
 function Media(props) {
-  const {loading = false} = props;
+  const { loading = false } = props;
 
   return (
-    <Card sx={{maxWidth: 345, m: 2}}>
+    <Card sx={{ maxWidth: 345, m: 2 }}>
       <CardHeader
         avatar={
           loading ? (
@@ -44,7 +44,7 @@ function Media(props) {
               animation='wave'
               height={10}
               width='80%'
-              style={{marginBottom: 6}}
+              style={{ marginBottom: 6 }}
             />
           ) : (
             'Ted'
@@ -59,7 +59,7 @@ function Media(props) {
         }
       />
       {loading ? (
-        <Skeleton sx={{height: 190}} animation='wave' variant='rectangular' />
+        <Skeleton sx={{ height: 190 }} animation='wave' variant='rectangular' />
       ) : (
         <CardMedia
           component='img'
@@ -72,7 +72,11 @@ function Media(props) {
       <CardContent>
         {loading ? (
           <React.Fragment>
-            <Skeleton animation='wave' height={10} style={{marginBottom: 6}} />
+            <Skeleton
+              animation='wave'
+              height={10}
+              style={{ marginBottom: 6 }}
+            />
             <Skeleton animation='wave' height={10} width='80%' />
           </React.Fragment>
         ) : (

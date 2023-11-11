@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import {
   Grow,
   Icon,
@@ -10,20 +10,20 @@ import {
 } from '@mui/material';
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
-import {Manager, Popper, Reference} from 'react-popper';
+import { Manager, Popper, Reference } from 'react-popper';
 import * as ReactDOM from 'react-dom';
 import Box from '@mui/material/Box';
-import {useLocation} from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
 import HorizontalCollapse from './HorizontalCollapse';
 import HorizontalItem from './HorizontalItem';
 import IntlMessages from '@crema/helpers/IntlMessages';
-import {Fonts} from '@crema/constants/AppEnums';
-import {allowMultiLanguage} from '@crema/constants/AppConst';
+import { Fonts } from '@crema/constants/AppEnums';
+import { allowMultiLanguage } from '@crema/constants/AppConst';
 
 function HorizontalGroup(props) {
   const [opened, setOpened] = useState(false);
-  const {item, nestedLevel} = props;
+  const { item, nestedLevel } = props;
   const location = useLocation();
 
   const handleToggle = (open) => {
@@ -56,7 +56,7 @@ function HorizontalGroup(props) {
   return (
     <Manager>
       <Reference>
-        {({ref}) => (
+        {({ ref }) => (
           <ListItem
             ref={ref}
             className={clsx(
@@ -109,7 +109,7 @@ function HorizontalGroup(props) {
           eventsEnabled={opened}
           positionFixed
         >
-          {({ref, style, placement}) =>
+          {({ ref, style, placement }) =>
             opened && (
               <Box
                 ref={ref}
@@ -129,7 +129,7 @@ function HorizontalGroup(props) {
                 <Grow
                   in={opened}
                   id='menu-list-grow'
-                  style={{transformOrigin: '0 0 0'}}
+                  style={{ transformOrigin: '0 0 0' }}
                 >
                   <Paper
                     onMouseEnter={() => handleToggle(true)}

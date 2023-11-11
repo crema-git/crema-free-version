@@ -1,5 +1,5 @@
 import React from 'react';
-import {Pie, PieChart, ResponsiveContainer} from 'recharts';
+import { Pie, PieChart, ResponsiveContainer } from 'recharts';
 import data from './data';
 
 const StraightAnglePieChart = () => (

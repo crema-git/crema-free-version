@@ -1,23 +1,23 @@
 import React from 'react';
 import PropsTypes from 'prop-types';
-import {Box} from '@mui/material';
+import { Box } from '@mui/material';
 
-const MediaSlider = ({children}) => {
+const MediaSlider = ({ children }) => {
   return (
     <Box
       sx={{
         '& .slick-slider': {
-          pb: {xs: 5, md: 0},
+          pb: { xs: 5, md: 0 },
         },
         '& .slick-slide img': {
           display: 'inline-block',
         },
         '& .slick-dots': {
-          bottom: {xs: 0, md: 'auto'},
-          top: {md: 0},
-          left: {md: '50%'},
-          textAlign: {md: 'left'},
-          paddingLeft: {md: 5},
+          bottom: { xs: 0, md: 'auto' },
+          top: { md: 0 },
+          left: { md: '50%' },
+          textAlign: { md: 'left' },
+          paddingLeft: { md: 5 },
           '& li': {
             width: 10,
             height: 10,

@@ -1,8 +1,8 @@
 import React from 'react';
-import {Box} from '@mui/material';
+import { Box } from '@mui/material';
 import PropTypes from 'prop-types';
 
-const CalendarWrapper = ({children}) => {
+const CalendarWrapper = ({ children }) => {
   return (
     <Box
       sx={{

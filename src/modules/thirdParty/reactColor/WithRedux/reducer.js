@@ -1,7 +1,7 @@
 export const CHANGE_COLOR = 'APP/CHANGE_COLOR';
 
 export const actions = {
-  changeColor: ({hex}) => ({type: CHANGE_COLOR, hex}),
+  changeColor: ({ hex }) => ({ type: CHANGE_COLOR, hex }),
 };
 
 const initialState = {
@@ -11,7 +11,7 @@ const initialState = {
 export const reducer = (state = initialState, action) => {
   switch (action.type) {
     case CHANGE_COLOR:
-      return {...state, color: action.hex};
+      return { ...state, color: action.hex };
     default:
       return state;
   }

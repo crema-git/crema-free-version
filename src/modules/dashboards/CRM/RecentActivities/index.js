@@ -4,16 +4,16 @@ import AppList from '@crema/components/AppList';
 import RecentActivityCell from './RecentActivityCell';
 import AppScrollbar from '@crema/components/AppScrollbar';
 import PropTypes from 'prop-types';
-import {useIntl} from 'react-intl';
+import { useIntl } from 'react-intl';
 import AppMenu from '@crema/components/AppMenu';
 
-const RecentActivities = ({data}) => {
-  const {messages} = useIntl();
+const RecentActivities = ({ data }) => {
+  const { messages } = useIntl();
 
   return (
     <AppCard
-      sxStyle={{height: 1}}
-      contentStyle={{paddingLeft: 0, paddingRight: 0}}
+      sxStyle={{ height: 1 }}
+      contentStyle={{ paddingLeft: 0, paddingRight: 0 }}
       title={messages['dashboard.crm.recentActivities']}
       action={<AppMenu />}
     >

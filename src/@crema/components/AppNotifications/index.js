@@ -1,12 +1,12 @@
-import React, {useState} from 'react';
-import {IconButton} from '@mui/material';
+import React, { useState } from 'react';
+import { IconButton } from '@mui/material';
 import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
 import AppNotificationContent from './AppNotificationContent';
 import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone';
 import AppTooltip from '../AppTooltip';
-import {alpha} from '@mui/material/styles';
+import { alpha } from '@mui/material/styles';
 
 const AppNotifications = ({
   drawerPosition,

@@ -1,26 +1,26 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import Box from '@mui/material/Box';
 import Avatar from '@mui/material/Avatar';
 import AppTooltip from '@crema/components/AppTooltip';
 import IntlMessages from '@crema/helpers/IntlMessages';
-import {Checkbox, Popover, Typography} from '@mui/material';
+import { Checkbox, Popover, Typography } from '@mui/material';
 import StarBorderIcon from '@mui/icons-material/StarBorder';
 import StarIcon from '@mui/icons-material/Star';
 import IconButton from '@mui/material/IconButton';
-import {IoArrowUndoOutline} from 'react-icons/io5';
+import { IoArrowUndoOutline } from 'react-icons/io5';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import ForwardMail from './ForwardMail';
 import dayjs from 'dayjs';
 import PropTypes from 'prop-types';
-import {BiChevronDown} from 'react-icons/bi';
+import { BiChevronDown } from 'react-icons/bi';
 import renderHTML from 'react-render-html';
 import clsx from 'clsx';
 
-import {styled} from '@mui/material/styles';
-import {Fonts} from '@crema/constants/AppEnums';
-import {getStringFromHtml} from '@crema/helpers/StringHelper';
+import { styled } from '@mui/material/styles';
+import { Fonts } from '@crema/constants/AppEnums';
+import { getStringFromHtml } from '@crema/helpers/StringHelper';
 
-const MailDetailUser = styled('div')(({theme}) => {
+const MailDetailUser = styled('div')(({ theme }) => {
   return {
     display: 'flex',
     width: '100%',
@@ -36,7 +36,7 @@ const MailDetailUser = styled('div')(({theme}) => {
   };
 });
 
-const MailDescriptionItem = styled('div')(({theme}) => {
+const MailDescriptionItem = styled('div')(({ theme }) => {
   return {
     display: 'flex',
     alignItems: 'center',
@@ -61,14 +61,14 @@ const MessageItem = ({
 }) => {
   const [isExpanded, setExpanded] = useState(mailLength === index + 1);
 
-  const [{isReply, isForward}, onSelectMethod] = useState({
+  const [{ isReply, isForward }, onSelectMethod] = useState({
     isReply: false,
     isForward: false,
   });
   const [anchorEl, setAnchorEl] = React.useState(null);
 
   const onReplyToMail = () => {
-    onSelectMethod({isReply: true, isForward: false});
+    onSelectMethod({ isReply: true, isForward: false });
   };
 
   const onSubmitForwardedMail = (mail) => {
@@ -124,7 +124,7 @@ const MessageItem = ({
           <span className='mail-description-name'>from:</span>
           <span>
             <strong>{message.sender.name}</strong>
-            <span style={{fontSize: 12}}> {`<${message.sender.email}>`}</span>
+            <span style={{ fontSize: 12 }}> {`<${message.sender.email}>`}</span>
           </span>
         </MailDescriptionItem>
         <MailDescriptionItem>
@@ -161,7 +161,7 @@ const MessageItem = ({
             >
               <>
                 {`to ${message.to.map((user) => user.email).toString()}`}
-                <span style={{marginTop: 0, fontSize: 18}}>
+                <span style={{ marginTop: 0, fontSize: 18 }}>
                   <BiChevronDown />
                 </span>
               </>
@@ -209,13 +209,13 @@ const MessageItem = ({
       <Box
         sx={{
           display: 'flex',
-          flexDirection: {xs: 'column', md: 'row'},
+          flexDirection: { xs: 'column', md: 'row' },
           mb: 3.75,
           cursor: 'pointer',
         }}
       >
         <MailDetailUser
-          className={clsx({'has-expanded': isExpanded})}
+          className={clsx({ 'has-expanded': isExpanded })}
           onClick={() => {
             if (mailLength !== index + 1) setExpanded(!isExpanded);
           }}
@@ -278,13 +278,13 @@ const MessageItem = ({
         {isExpanded ? (
           <Box
             sx={{
-              ml: {xs: 0, md: 'auto'},
-              mt: {xs: 1.5, md: 0},
+              ml: { xs: 0, md: 'auto' },
+              mt: { xs: 1.5, md: 0 },
               color: 'text.secondary',
               display: 'flex',
               alignItems: 'center',
               flexWrap: 'wrap',
-              justifyContent: {md: 'flex-end'},
+              justifyContent: { md: 'flex-end' },
             }}
           >
             <Box component='span'>{onGetMailDate(message.sentOn)}</Box>,
@@ -300,7 +300,7 @@ const MessageItem = ({
               sx={{
                 display: 'flex',
                 alignItems: 'center',
-                ml: {xs: 'auto', md: 3},
+                ml: { xs: 'auto', md: 3 },
                 mr: -3,
               }}
             >
@@ -357,8 +357,8 @@ const MessageItem = ({
         <Box
           sx={{
             mb: 5,
-            ml: {md: 12.5},
-            mr: {md: 8},
+            ml: { md: 12.5 },
+            mr: { md: 8 },
           }}
         >
           {renderHTML(message.description)}

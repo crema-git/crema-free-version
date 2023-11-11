@@ -2,8 +2,8 @@ import React from 'react';
 import AppCard from '@crema/components/AppCard';
 import AppGridContainer from '@crema/components/AppGridContainer';
 import AppTextField from '@crema/components/AppFormComponents/AppTextField';
-import {Button, Divider, Grid, Typography} from '@mui/material';
-import {Form, Formik} from 'formik';
+import { Button, Divider, Grid, Typography } from '@mui/material';
+import { Form, Formik } from 'formik';
 import IntlMessages from '@crema/helpers/IntlMessages';
 import * as yup from 'yup';
 import PropTypes from 'prop-types';
@@ -39,11 +39,11 @@ const validationSchema = yup.object({
     .required(<IntlMessages id='validation.countryRequired' />),
 });
 
-const AddClient = ({selectedClient, onSave}) => {
+const AddClient = ({ selectedClient, onSave }) => {
   return (
     <AppCard
       title={selectedClient ? 'Edit Client' : 'Add Client'}
-      sxStyle={{width: '70%', margin: 'auto'}}
+      sxStyle={{ width: '70%', margin: 'auto' }}
     >
       <Formik
         validateOnChange={true}
@@ -66,12 +66,12 @@ const AddClient = ({selectedClient, onSave}) => {
               }
         }
         validationSchema={validationSchema}
-        onSubmit={(data, {setSubmitting, resetForm}) => {
+        onSubmit={(data, { setSubmitting, resetForm }) => {
           let id;
           if (selectedClient) id = selectedClient.id;
           else id = data.name.split(' ')[0].toLowerCase();
           setSubmitting(true);
-          onSave({...data, id});
+          onSave({ ...data, id });
           setSubmitting(false);
           resetForm();
         }}
@@ -86,10 +86,10 @@ const AddClient = ({selectedClient, onSave}) => {
             label='Client Name'
           />
 
-          <Typography variant='h3' sx={{mt: 4, mb: 2}}>
+          <Typography variant='h3' sx={{ mt: 4, mb: 2 }}>
             Contact Person
           </Typography>
-          <Divider sx={{mb: 6}} />
+          <Divider sx={{ mb: 6 }} />
           <AppGridContainer>
             <Grid item xs={12} md={6}>
               <AppTextField
@@ -133,10 +133,10 @@ const AddClient = ({selectedClient, onSave}) => {
               />
             </Grid>
           </AppGridContainer>
-          <Typography variant='h3' sx={{mt: 4, mb: 2}}>
+          <Typography variant='h3' sx={{ mt: 4, mb: 2 }}>
             Settings
           </Typography>
-          <Divider sx={{mb: 6}} />
+          <Divider sx={{ mb: 6 }} />
           <AppGridContainer>
             <Grid item xs={12} md={6}>
               <AppTextField
@@ -159,10 +159,10 @@ const AddClient = ({selectedClient, onSave}) => {
               />
             </Grid>
           </AppGridContainer>
-          <Typography variant='h3' sx={{mt: 4, mb: 2}}>
+          <Typography variant='h3' sx={{ mt: 4, mb: 2 }}>
             Billing Address
           </Typography>
-          <Divider sx={{mb: 6}} />
+          <Divider sx={{ mb: 6 }} />
           <AppGridContainer>
             <Grid item xs={12}>
               <AppTextField
@@ -216,7 +216,7 @@ const AddClient = ({selectedClient, onSave}) => {
             </Grid>
           </AppGridContainer>
           <Button
-            sx={{display: 'block', mt: 6, ml: 'auto'}}
+            sx={{ display: 'block', mt: 6, ml: 'auto' }}
             type='submit'
             variant='contained'
             color='primary'

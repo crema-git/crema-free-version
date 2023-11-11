@@ -52,10 +52,10 @@ export default function VirtualElementPopper() {
         transition
         placement='bottom-start'
       >
-        {({TransitionProps}) => (
+        {({ TransitionProps }) => (
           <Fade {...TransitionProps} timeout={350}>
             <Paper>
-              <Typography sx={{p: 2}}>The content of the Popper.</Typography>
+              <Typography sx={{ p: 2 }}>The content of the Popper.</Typography>
             </Paper>
           </Fade>
         )}

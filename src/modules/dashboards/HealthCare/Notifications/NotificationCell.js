@@ -1,9 +1,9 @@
 import React from 'react';
 import Box from '@mui/material/Box';
 import PropTypes from 'prop-types';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Fonts } from '@crema/constants/AppEnums';
 
-const NotificationCell = ({notification}) => {
+const NotificationCell = ({ notification }) => {
   return (
     <Box
       sx={{
@@ -23,7 +23,7 @@ const NotificationCell = ({notification}) => {
           backgroundColor: notification.color,
         }}
       />
-      <Box sx={{fontSize: 14}}>
+      <Box sx={{ fontSize: 14 }}>
         <Box
           component='h5'
           sx={{

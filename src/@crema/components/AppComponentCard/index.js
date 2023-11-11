@@ -1,16 +1,16 @@
-import React, {useState} from 'react';
-import {Card} from '@mui/material';
+import React, { useState } from 'react';
+import { Card } from '@mui/material';
 import CardHeader from '@mui/material/CardHeader';
 import CardContent from '@mui/material/CardContent';
 import CodeIcon from '@mui/icons-material/Code';
-import {Highlight, themes} from 'prism-react-renderer';
+import { Highlight, themes } from 'prism-react-renderer';
 import PropTypes from 'prop-types';
 import IconButton from '@mui/material/IconButton';
 import Collapse from '@mui/material/Collapse';
 import AppScrollbar from '../AppScrollbar';
 import Box from '@mui/material/Box';
 import AppAnimate from '../AppAnimate';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Fonts } from '@crema/constants/AppEnums';
 
 const AppComponentCard = ({
   title,
@@ -71,7 +71,7 @@ const AppComponentCard = ({
           }
         />
 
-        <CardContent sx={{px: 4, pt: 0}}>
+        <CardContent sx={{ px: 4, pt: 0 }}>
           <Collapse in={animation}>
             {viewSource ? (
               <AppScrollbar
@@ -85,7 +85,7 @@ const AppComponentCard = ({
                   language='jsx'
                   theme={themes.shadesOfPurple}
                 >
-                  {({style, tokens, getLineProps, getTokenProps}) => (
+                  {({ style, tokens, getLineProps, getTokenProps }) => (
                     <pre
                       style={{
                         ...style,
@@ -97,12 +97,12 @@ const AppComponentCard = ({
                       {tokens.map((line, i) => (
                         <Box
                           key={'line-' + i}
-                          {...getLineProps({line, key: i})}
+                          {...getLineProps({ line, key: i })}
                         >
                           {line.map((token, key) => (
                             <span
                               key={'token-' + key}
-                              {...getTokenProps({token, key})}
+                              {...getTokenProps({ token, key })}
                             />
                           ))}
                         </Box>

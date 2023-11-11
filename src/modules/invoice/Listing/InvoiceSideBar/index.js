@@ -9,12 +9,12 @@ import AppList from '@crema/components/AppList';
 import ListEmptyResult from '@crema/components/AppList/ListEmptyResult';
 import SidebarPlaceholder from '@crema/components/AppSkeleton/SidebarListSkeleton';
 import AddIcon from '@mui/icons-material/Add';
-import {Zoom} from '@mui/material';
-import {styled} from '@mui/material/styles';
-import {useGetDataApi} from '@crema/hooks/APIHooks';
-import {useNavigate} from 'react-router-dom';
+import { Zoom } from '@mui/material';
+import { styled } from '@mui/material/styles';
+import { useGetDataApi } from '@crema/hooks/APIHooks';
+import { useNavigate } from 'react-router-dom';
 
-const ListWrapper = styled(List)(({theme}) => ({
+const ListWrapper = styled(List)(({ theme }) => ({
   marginBottom: 8,
   [theme.breakpoints.up('xl')]: {
     marginBottom: 20,
@@ -23,7 +23,7 @@ const ListWrapper = styled(List)(({theme}) => ({
 
 const TaskSideBar = () => {
   const navigate = useNavigate();
-  const [{apiData: folderList}] = useGetDataApi(
+  const [{ apiData: folderList }] = useGetDataApi(
     '/api/invoice/folders/list',
     [],
     {},
@@ -32,8 +32,8 @@ const TaskSideBar = () => {
 
   return (
     <>
-      <Box sx={{px: {xs: 4, md: 5}, pt: {xs: 4, md: 5}, pb: 2.5}}>
-        <Zoom in style={{transitionDelay: '300ms'}}>
+      <Box sx={{ px: { xs: 4, md: 5 }, pt: { xs: 4, md: 5 }, pb: 2.5 }}>
+        <Zoom in style={{ transitionDelay: '300ms' }}>
           <Button
             variant='outlined'
             color='primary'
@@ -59,7 +59,7 @@ const TaskSideBar = () => {
         <Box
           sx={{
             pr: 4,
-            pb: {xs: 4, md: 5, lg: 6.2},
+            pb: { xs: 4, md: 5, lg: 6.2 },
           }}
         >
           <ListWrapper component='nav' aria-label='main task folders'>
@@ -69,7 +69,7 @@ const TaskSideBar = () => {
                 <ListEmptyResult
                   loading={true}
                   placeholder={
-                    <Box px={{xs: 4, md: 5, lg: 6.2}}>
+                    <Box px={{ xs: 4, md: 5, lg: 6.2 }}>
                       <SidebarPlaceholder />
                     </Box>
                   }

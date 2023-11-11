@@ -1,5 +1,5 @@
 import React from 'react';
-import {RoutePermittedRole} from '@crema/constants/AppEnums';
+import { RoutePermittedRole } from '@crema/constants/AppEnums';
 
 import BottomNavigation from '../../../../modules/muiComponents/navigation/BottomNavigation';
 import Breadcrumbs from '../../../../modules/muiComponents/navigation/Breadcrumbs';

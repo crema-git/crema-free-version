@@ -12,7 +12,7 @@ import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import Zoom from '@mui/material/Zoom';
 
 function ScrollTop(props) {
-  const {children, window} = props;
+  const { children, window } = props;
   // Note that you normally won't need to set the window ref as useScrollTrigger
   // will default to window.
   // This is only being set here because the demo is in an iframe.
@@ -40,7 +40,7 @@ function ScrollTop(props) {
       <Box
         onClick={handleClick}
         role='presentation'
-        sx={{position: 'fixed', bottom: 16, right: 16}}
+        sx={{ position: 'fixed', bottom: 16, right: 16 }}
       >
         {children}
       </Box>
@@ -70,7 +70,7 @@ export default function BackToTop(props) {
       </AppBar>
       <Toolbar id='back-to-top-anchor' />
       <Container>
-        <Box sx={{my: 2}}>
+        <Box sx={{ my: 2 }}>
           {[...new Array(12)]
             .map(
               () => `Cras mattis consectetur purus sit amet fermentum.

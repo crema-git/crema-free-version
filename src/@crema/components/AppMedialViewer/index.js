@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import Dialog from '@mui/material/Dialog';
 import IconButton from '@mui/material/IconButton';
 import 'slick-carousel/slick/slick.css';
@@ -56,7 +56,7 @@ const Transition = React.forwardRef(function Transition(props, ref) {
   return <Zoom in ref={ref} {...props} />;
 });
 
-const AppMedialViewer = ({index, medias, onClose}) => {
+const AppMedialViewer = ({ index, medias, onClose }) => {
   const [isOpen, setOpen] = useState(false);
 
   useEffect(() => {
@@ -105,7 +105,7 @@ const AppMedialViewer = ({index, medias, onClose}) => {
         {index >= 0 ? (
           <MediaSlider>
             <Slider
-              settings={{...settings, initialSlide: index}}
+              settings={{ ...settings, initialSlide: index }}
               slickGoTo={index}
             >
               {medias.map((data, index) => renderRow(data, index))}

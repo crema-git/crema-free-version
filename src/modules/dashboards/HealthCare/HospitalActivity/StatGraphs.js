@@ -8,21 +8,24 @@ import {
   XAxis,
 } from 'recharts';
 import PropTypes from 'prop-types';
-import {useThemeContext} from '@crema/context/AppContextProvider/ThemeContextProvider';
+import { useThemeContext } from '@crema/context/AppContextProvider/ThemeContextProvider';
 
-const StatGraphs = ({data}) => {
-  const {theme} = useThemeContext();
+const StatGraphs = ({ data }) => {
+  const { theme } = useThemeContext();
   return (
     <ResponsiveContainer width='100%' height={250}>
-      <LineChart data={data} margin={{top: 50, right: 0, left: -25, bottom: 0}}>
+      <LineChart
+        data={data}
+        margin={{ top: 50, right: 0, left: -25, bottom: 0 }}
+      >
         <XAxis
           dataKey='name'
           tickLine={false}
           axisLine={false}
-          padding={{left: 20, right: 20}}
+          padding={{ left: 20, right: 20 }}
         />
         <Tooltip
-          labelStyle={{color: 'black'}}
+          labelStyle={{ color: 'black' }}
           contentStyle={{
             borderRadius: 12,
             borderColor: '#31354188',
@@ -36,7 +39,7 @@ const StatGraphs = ({data}) => {
           stroke={theme.palette.primary.main}
           dot={false}
           strokeWidth={2}
-          activeDot={{r: 4}}
+          activeDot={{ r: 4 }}
         />
         <Line
           type='monotone'

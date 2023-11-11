@@ -42,12 +42,12 @@ const ResponsiveAppBar = () => {
             variant='h6'
             noWrap
             component='div'
-            sx={{mr: 2, display: {xs: 'none', md: 'flex'}}}
+            sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }}
           >
             LOGO
           </Typography>
 
-          <Box sx={{flexGrow: 1, display: {xs: 'flex', md: 'none'}}}>
+          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
               size='large'
               aria-label='account of current user'
@@ -73,7 +73,7 @@ const ResponsiveAppBar = () => {
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
               sx={{
-                display: {xs: 'block', md: 'none'},
+                display: { xs: 'block', md: 'none' },
               }}
             >
               {pages.map((page) => (
@@ -87,30 +87,30 @@ const ResponsiveAppBar = () => {
             variant='h6'
             noWrap
             component='div'
-            sx={{flexGrow: 1, display: {xs: 'flex', md: 'none'}}}
+            sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}
           >
             LOGO
           </Typography>
-          <Box sx={{flexGrow: 1, display: {xs: 'none', md: 'flex'}}}>
+          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
-                sx={{my: 2, color: 'white', display: 'block'}}
+                sx={{ my: 2, color: 'white', display: 'block' }}
               >
                 {page}
               </Button>
             ))}
           </Box>
 
-          <Box sx={{flexGrow: 0}}>
+          <Box sx={{ flexGrow: 0 }}>
             <Tooltip title='Open settings'>
-              <IconButton onClick={handleOpenUserMenu} sx={{p: 0}}>
+              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                 <Avatar alt='Remy Sharp' src='/static/images/avatar/2.jpg' />
               </IconButton>
             </Tooltip>
             <Menu
-              sx={{mt: '45px'}}
+              sx={{ mt: '45px' }}
               id='menu-appbar'
               anchorEl={anchorElUser}
               anchorOrigin={{

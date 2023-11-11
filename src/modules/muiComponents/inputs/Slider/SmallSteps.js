@@ -8,7 +8,7 @@ function valuetext(value) {
 
 export default function DiscreteSliderSteps() {
   return (
-    <Box sx={{width: 300}}>
+    <Box sx={{ width: 300 }}>
       <Slider
         aria-label='Small steps'
         defaultValue={0.00000005}

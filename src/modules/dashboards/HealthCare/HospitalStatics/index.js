@@ -1,19 +1,19 @@
 import React from 'react';
 import AppCard from '@crema/components/AppCard';
-import {Box, Typography} from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import PropTypes from 'prop-types';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Fonts } from '@crema/constants/AppEnums';
 
-const HospitalStatics = ({data}) => {
-  const {bgColor, icon, value, name} = data;
+const HospitalStatics = ({ data }) => {
+  const { bgColor, icon, value, name } = data;
 
   return (
     <AppCard
-      sxStyle={{height: 1}}
-      style={{backgroundColor: bgColor}}
+      sxStyle={{ height: 1 }}
+      style={{ backgroundColor: bgColor }}
       className='card-hover'
     >
-      <Box sx={{display: 'flex', alignItems: 'center'}}>
+      <Box sx={{ display: 'flex', alignItems: 'center' }}>
         <Box
           sx={{
             mr: 4,

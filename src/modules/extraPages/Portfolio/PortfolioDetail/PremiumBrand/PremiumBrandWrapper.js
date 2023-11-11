@@ -1,13 +1,13 @@
 import React from 'react';
 import PropsTypes from 'prop-types';
-import {alpha, Box} from '@mui/material';
+import { alpha, Box } from '@mui/material';
 
-const PremiumBrandWrapper = ({children}) => {
+const PremiumBrandWrapper = ({ children }) => {
   return (
     <Box
       sx={{
         position: 'relative',
-        mb: {xs: 7.5, md: 15},
+        mb: { xs: 7.5, md: 15 },
         '& > img': {
           width: '100%',
           display: 'block',

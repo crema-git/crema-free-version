@@ -1,13 +1,13 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import AppCard from '@crema/components/AppCard';
 import Box from '@mui/material/Box';
 import Chip from '@mui/material/Chip';
 import AppList from '@crema/components/AppList';
 import CourseCell from './CourseCell';
-import {useIntl} from 'react-intl';
+import { useIntl } from 'react-intl';
 import PropTypes from 'prop-types';
 
-const MyCourses = ({courses}) => {
+const MyCourses = ({ courses }) => {
   const [selectedCategory, setSelectedCategory] = useState(
     courses.categories[0].slug,
   );
@@ -16,13 +16,13 @@ const MyCourses = ({courses}) => {
     setSelectedCategory(category);
   };
 
-  const {messages} = useIntl();
+  const { messages } = useIntl();
 
   return (
     <AppCard
-      sxStyle={{height: 1}}
+      sxStyle={{ height: 1 }}
       title={messages['academy.myCourses']}
-      contentStyle={{px: 0}}
+      contentStyle={{ px: 0 }}
     >
       <Box
         sx={{

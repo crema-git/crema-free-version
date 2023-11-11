@@ -31,7 +31,7 @@ function valueLabelFormat(value) {
 
 export default function DiscreteSliderValues() {
   return (
-    <Box sx={{width: 300}}>
+    <Box sx={{ width: 300 }}>
       <Slider
         aria-label='Restricted values'
         defaultValue={20}

@@ -3,7 +3,7 @@ import Box from '@mui/material/Box';
 import Select from '@mui/material/Select';
 import crypto from '@crema/mockapi/fakedb/dashboard/crypto';
 import CurrencyCell from '../BuySell/CurrencyCell';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Fonts } from '@crema/constants/AppEnums';
 
 const ChartHeader = () => {
   return (
@@ -16,7 +16,7 @@ const ChartHeader = () => {
         mx: -2,
       }}
     >
-      <Box sx={{px: 2, pb: {xs: 2, lg: 0}}}>
+      <Box sx={{ px: 2, pb: { xs: 2, lg: 0 } }}>
         <Select
           sx={{
             cursor: 'pointer',
@@ -28,7 +28,7 @@ const ChartHeader = () => {
           })}
         </Select>
       </Box>
-      <Box sx={{px: 2, pb: {xs: 2, lg: 0}}}>
+      <Box sx={{ px: 2, pb: { xs: 2, lg: 0 } }}>
         <Box
           component='h3'
           sx={{
@@ -46,7 +46,7 @@ const ChartHeader = () => {
           Low Price
         </Box>
       </Box>
-      <Box sx={{px: 2, pb: {xs: 2, lg: 0}}}>
+      <Box sx={{ px: 2, pb: { xs: 2, lg: 0 } }}>
         <Box
           component='h3'
           sx={{
@@ -64,7 +64,7 @@ const ChartHeader = () => {
           High Price
         </Box>
       </Box>
-      <Box sx={{px: 2, pb: {xs: 2, lg: 0}}}>
+      <Box sx={{ px: 2, pb: { xs: 2, lg: 0 } }}>
         <Box
           component='h3'
           sx={{
@@ -82,7 +82,7 @@ const ChartHeader = () => {
           24H Volume
         </Box>
       </Box>
-      <Box sx={{px: 2, pb: {xs: 2, lg: 0}}}>
+      <Box sx={{ px: 2, pb: { xs: 2, lg: 0 } }}>
         <Box
           component='h3'
           sx={{

@@ -32,10 +32,10 @@ export default function FixedBottomNavigation() {
   }, [value, setMessages]);
 
   return (
-    <Box sx={{pb: 7}} ref={ref}>
+    <Box sx={{ pb: 7 }} ref={ref}>
       <CssBaseline />
       <List>
-        {messages.map(({primary, secondary, person}, index) => (
+        {messages.map(({ primary, secondary, person }, index) => (
           <ListItem button key={index + person}>
             <ListItemAvatar>
               <Avatar alt='Profile Picture' src={person} />
@@ -45,7 +45,7 @@ export default function FixedBottomNavigation() {
         ))}
       </List>
       <Paper
-        sx={{position: 'fixed', bottom: 0, left: 0, right: 0}}
+        sx={{ position: 'fixed', bottom: 0, left: 0, right: 0 }}
         elevation={3}
       >
         <BottomNavigation

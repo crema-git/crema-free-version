@@ -1,10 +1,15 @@
 import React from 'react';
 import ListItem from '@mui/material/ListItem';
 import PropsTypes from 'prop-types';
-import {Fonts} from '@crema/constants/AppEnums';
-import {alpha} from '@mui/material';
+import { Fonts } from '@crema/constants/AppEnums';
+import { alpha } from '@mui/material';
 
-const VerticalNavGroupItem = ({children, sidebarTextColor, level, ...rest}) => {
+const VerticalNavGroupItem = ({
+  children,
+  sidebarTextColor,
+  level,
+  ...rest
+}) => {
   return (
     <ListItem
       sx={{

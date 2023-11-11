@@ -4,10 +4,10 @@ import Avatar from '@mui/material/Avatar';
 import PropTypes from 'prop-types';
 import Rating from '@mui/material/Rating';
 
-import {alpha, styled} from '@mui/material/styles';
-import {Fonts} from '@crema/constants/AppEnums';
+import { alpha, styled } from '@mui/material/styles';
+import { Fonts } from '@crema/constants/AppEnums';
 
-const BadgeRoot = styled('div')(({theme}) => {
+const BadgeRoot = styled('div')(({ theme }) => {
   return {
     backgroundColor: alpha(theme.palette.primary.main, 0.2),
     color: theme.palette.primary.main,
@@ -19,7 +19,7 @@ const BadgeRoot = styled('div')(({theme}) => {
   };
 });
 
-const BestSellersCell = ({bestSeller}) => {
+const BestSellersCell = ({ bestSeller }) => {
   return (
     <Box
       sx={{
@@ -45,8 +45,8 @@ const BestSellersCell = ({bestSeller}) => {
           flexWrap: 'wrap',
         }}
       >
-        <Box sx={{mr: 3}}>
-          <Box component='h5' sx={{mb: 0.5}}>
+        <Box sx={{ mr: 3 }}>
+          <Box component='h5' sx={{ mb: 0.5 }}>
             {bestSeller.name}
           </Box>
           <Box

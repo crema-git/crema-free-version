@@ -2,9 +2,9 @@ import React from 'react';
 import Box from '@mui/material/Box';
 import Rating from '@mui/material/Rating';
 import PropTypes from 'prop-types';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Fonts } from '@crema/constants/AppEnums';
 
-const ReviewItem = ({item}) => {
+const ReviewItem = ({ item }) => {
   return (
     <Box
       sx={{

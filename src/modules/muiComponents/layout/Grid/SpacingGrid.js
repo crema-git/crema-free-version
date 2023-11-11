@@ -15,18 +15,18 @@ export default function SpacingGrid() {
   };
 
   return (
-    <Grid sx={{flexGrow: 1}} container spacing={2}>
+    <Grid sx={{ flexGrow: 1 }} container spacing={2}>
       <Grid item xs={12}>
         <Grid container justifyContent='center' spacing={spacing}>
           {[0, 1, 2].map((value) => (
             <Grid key={value} item>
-              <Paper sx={{height: 140, width: 100}} />
+              <Paper sx={{ height: 140, width: 100 }} />
             </Grid>
           ))}
         </Grid>
       </Grid>
       <Grid item xs={12}>
-        <Paper sx={{p: 2}}>
+        <Paper sx={{ p: 2 }}>
           <Grid container>
             <Grid item>
               <FormControl component='fieldset'>

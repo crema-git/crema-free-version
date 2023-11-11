@@ -1,19 +1,19 @@
 import React from 'react';
-import {useNavigate, useParams} from 'react-router-dom';
-import {useInfoViewActionsContext} from '@crema/context/AppContextProvider/InfoViewContextProvider';
+import { useNavigate, useParams } from 'react-router-dom';
+import { useInfoViewActionsContext } from '@crema/context/AppContextProvider/InfoViewContextProvider';
 import AddClient from './AddClient';
-import {putDataApi, useGetDataApi} from '@crema/hooks/APIHooks';
-import {isEmptyObject} from '@crema/helpers/ApiHelper';
+import { putDataApi, useGetDataApi } from '@crema/hooks/APIHooks';
+import { isEmptyObject } from '@crema/helpers/ApiHelper';
 
 const EditClients = () => {
-  const {id} = useParams();
+  const { id } = useParams();
   const navigate = useNavigate();
   const infoViewActionsContext = useInfoViewActionsContext();
 
-  const [{apiData: selectedClient}] = useGetDataApi(
+  const [{ apiData: selectedClient }] = useGetDataApi(
     '/api/clients/detail',
     {},
-    {id},
+    { id },
     true,
   );
   const onSave = (client) => {

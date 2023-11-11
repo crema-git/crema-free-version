@@ -2,7 +2,7 @@ import React from 'react';
 import TableContainer from '@mui/material/TableContainer';
 import PropTypes from 'prop-types';
 
-const AppTableContainer = ({children, sxStyle}) => {
+const AppTableContainer = ({ children, sxStyle }) => {
   return (
     <TableContainer
       sx={{

@@ -1,26 +1,26 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import Box from '@mui/material/Box';
 import clsx from 'clsx';
 import AppContentView from '../../AppContentView';
-import {LayoutType} from '@crema/constants/AppEnums';
+import { LayoutType } from '@crema/constants/AppEnums';
 import useStyles from './index.style';
 import AppFixedFooter from './AppFixedFooter';
 import AppHeader from './AppHeader';
 import AppSidebarMenu from './AppSidebarMenu';
 import AppSidebarSubMenu from './AppSidebarSubMenu';
-import {useLayoutContext} from '@crema/context/AppContextProvider/LayoutContextProvider';
-import {useThemeContext} from '@crema/context/AppContextProvider/ThemeContextProvider';
-import {useLocation} from 'react-router-dom';
+import { useLayoutContext } from '@crema/context/AppContextProvider/LayoutContextProvider';
+import { useThemeContext } from '@crema/context/AppContextProvider/ThemeContextProvider';
+import { useLocation } from 'react-router-dom';
 import PropsTypes from 'prop-types';
 
-const DoubleMenu = ({routes, routesConfig}) => {
-  const {pathname} = useLocation();
+const DoubleMenu = ({ routes, routesConfig }) => {
+  const { pathname } = useLocation();
   const [isNavCollapsed, setNavCollapsed] = useState(false);
   const [sidebarMenuState, setSidebarMenuState] = useState(2);
   const [selectedMenu, setSelectedMenu] = useState(routesConfig[0]);
-  const {themeStyle} = useThemeContext();
-  const {footer, layoutType, footerType} = useLayoutContext();
-  const classes = useStyles({footer, themeStyle});
+  const { themeStyle } = useThemeContext();
+  const { footer, layoutType, footerType } = useLayoutContext();
+  const classes = useStyles({ footer, themeStyle });
 
   const toggleNavCollapsed = () => {
     setNavCollapsed(!isNavCollapsed);

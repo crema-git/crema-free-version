@@ -1,13 +1,13 @@
 import React from 'react';
 import AppCard from '@crema/components/AppCard';
-import {useIntl} from 'react-intl';
+import { useIntl } from 'react-intl';
 import Slider from 'react-slick';
 import CourseItem from './CourseItem';
 import PropTypes from 'prop-types';
 import CourseSlider from './CourseSlider';
 
-const RelatedCourses = ({relatedCourses}) => {
-  const {messages} = useIntl();
+const RelatedCourses = ({ relatedCourses }) => {
+  const { messages } = useIntl();
 
   const settings = {
     dots: false,
@@ -49,7 +49,7 @@ const RelatedCourses = ({relatedCourses}) => {
   };
 
   return (
-    <AppCard sxStyle={{height: 1}} title={messages['academy.relatedCourses']}>
+    <AppCard sxStyle={{ height: 1 }} title={messages['academy.relatedCourses']}>
       <CourseSlider>
         <Slider className='slideRoot' {...settings}>
           {relatedCourses.map((data, index) => (

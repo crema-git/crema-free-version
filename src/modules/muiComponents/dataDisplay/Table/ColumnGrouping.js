@@ -9,8 +9,8 @@ import TablePagination from '@mui/material/TablePagination';
 import TableRow from '@mui/material/TableRow';
 
 const columns = [
-  {id: 'name', label: 'Name', minWidth: 170},
-  {id: 'code', label: 'ISO\u00a0Code', minWidth: 100},
+  { id: 'name', label: 'Name', minWidth: 170 },
+  { id: 'code', label: 'ISO\u00a0Code', minWidth: 100 },
   {
     id: 'population',
     label: 'Population',
@@ -36,7 +36,7 @@ const columns = [
 
 function createData(name, code, population, size) {
   const density = population / size;
-  return {name, code, population, size, density};
+  return { name, code, population, size, density };
 }
 
 const rows = [
@@ -71,8 +71,8 @@ export default function ColumnGrouping() {
   };
 
   return (
-    <Paper sx={{width: '100%'}}>
-      <TableContainer sx={{maxHeight: 440}}>
+    <Paper sx={{ width: '100%' }}>
+      <TableContainer sx={{ maxHeight: 440 }}>
         <Table stickyHeader aria-label='sticky table'>
           <TableHead>
             <TableRow>
@@ -88,7 +88,7 @@ export default function ColumnGrouping() {
                 <TableCell
                   key={column.id}
                   align={column.align}
-                  style={{top: 57, minWidth: column.minWidth}}
+                  style={{ top: 57, minWidth: column.minWidth }}
                 >
                   {column.label}
                 </TableCell>

@@ -2,12 +2,12 @@ import React from 'react';
 import AppCard from '@crema/components/AppCard';
 import IconButton from '@mui/material/IconButton';
 import Box from '@mui/material/Box';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Fonts } from '@crema/constants/AppEnums';
 import CourseGraph from './CourseGraph';
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 import PropTypes from 'prop-types';
 
-const CourseDetail = ({course}) => {
+const CourseDetail = ({ course }) => {
   const getTitle = () => (
     <Box
       sx={{

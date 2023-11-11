@@ -34,7 +34,7 @@ export default function SimpleListMenu() {
       <List
         component='nav'
         aria-label='Device settings'
-        sx={{bgcolor: 'background.paper'}}
+        sx={{ bgcolor: 'background.paper' }}
       >
         <ListItem
           button

@@ -7,7 +7,7 @@ import {
   GridToolbarExport,
   GridToolbarFilterButton,
 } from '@mui/x-data-grid';
-import {useDemoData} from '@mui/x-data-grid-generator';
+import { useDemoData } from '@mui/x-data-grid-generator';
 
 function CustomToolbar() {
   return (
@@ -21,14 +21,14 @@ function CustomToolbar() {
 }
 
 export default function CustomToolbarGrid() {
-  const {data} = useDemoData({
+  const { data } = useDemoData({
     dataSet: 'Commodity',
     rowLength: 10,
     maxColumns: 6,
   });
 
   return (
-    <div style={{height: 400, width: '100%'}}>
+    <div style={{ height: 400, width: '100%' }}>
       <DataGrid
         {...data}
         components={{

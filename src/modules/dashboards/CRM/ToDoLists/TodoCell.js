@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {Typography} from '@mui/material';
+import { Typography } from '@mui/material';
 import IconButton from '@mui/material/IconButton';
-import {BiPencil} from 'react-icons/bi';
-import {BsCheck} from 'react-icons/bs';
-import {alpha, styled} from '@mui/material/styles';
+import { BiPencil } from 'react-icons/bi';
+import { BsCheck } from 'react-icons/bs';
+import { alpha, styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 
-const TodoCellWrapper = styled('div')(({theme}) => {
+const TodoCellWrapper = styled('div')(({ theme }) => {
   return {
     display: 'flex',
     alignItems: 'center',
@@ -58,7 +58,7 @@ const TodoCellWrapper = styled('div')(({theme}) => {
   };
 });
 
-const TodoCell = ({todo}) => {
+const TodoCell = ({ todo }) => {
   return (
     <TodoCellWrapper>
       <div className='date-view'>

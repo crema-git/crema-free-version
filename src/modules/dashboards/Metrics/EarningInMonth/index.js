@@ -4,15 +4,15 @@ import Box from '@mui/material/Box';
 import PropTypes from 'prop-types';
 import Categories from './Categories';
 import AppCard from '@crema/components/AppCard';
-import {useIntl} from 'react-intl';
+import { useIntl } from 'react-intl';
 
-const EarningInMonth = ({data}) => {
-  const {messages} = useIntl();
+const EarningInMonth = ({ data }) => {
+  const { messages } = useIntl();
   return (
     <AppCard
       title={messages['dashboard.earningInMonth']}
       footer={<Categories data={data} />}
-      sxStyle={{height: 1}}
+      sxStyle={{ height: 1 }}
     >
       <Box
         sx={{

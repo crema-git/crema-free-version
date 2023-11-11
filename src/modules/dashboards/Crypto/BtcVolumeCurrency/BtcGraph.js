@@ -1,5 +1,5 @@
-import React, {useState} from 'react';
-import {Cell, Pie, PieChart, ResponsiveContainer, Sector} from 'recharts';
+import React, { useState } from 'react';
+import { Cell, Pie, PieChart, ResponsiveContainer, Sector } from 'recharts';
 import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
 
@@ -67,7 +67,7 @@ const renderActiveShape = (props) => {
 };
 
 const BtcGraph = (props) => {
-  const {data} = props;
+  const { data } = props;
 
   const [activeIndex, setActiveIndex] = useState(0);
 

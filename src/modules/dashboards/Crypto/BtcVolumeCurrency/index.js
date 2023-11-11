@@ -1,24 +1,24 @@
 import React from 'react';
 import BtcGraph from './BtcGraph';
-import {Box} from '@mui/material';
+import { Box } from '@mui/material';
 import PropTypes from 'prop-types';
 import AppCard from '@crema/components/AppCard';
-import {useIntl} from 'react-intl';
-import {Fonts} from '@crema/constants/AppEnums';
+import { useIntl } from 'react-intl';
+import { Fonts } from '@crema/constants/AppEnums';
 
 const BtcVolumeCurrency = (props) => {
-  const {data} = props;
+  const { data } = props;
 
-  const {messages} = useIntl();
+  const { messages } = useIntl();
   return (
     <AppCard
-      sxStyle={{height: 1}}
+      sxStyle={{ height: 1 }}
       title={messages['dashboard.btcVolumeByCurency']}
     >
       <BtcGraph data={data} />
       <Box
         sx={{
-          pl: {xl: 5},
+          pl: { xl: 5 },
           pt: 5,
           display: 'flex',
           flexWrap: 'wrap',

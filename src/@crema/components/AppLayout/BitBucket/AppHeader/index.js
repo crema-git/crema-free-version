@@ -8,7 +8,7 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import BitBucketHeaderWrapper from './BitBucketHeaderWrapper';
 
-const AppHeader = ({toggleNavCollapsed}) => {
+const AppHeader = ({ toggleNavCollapsed }) => {
   return (
     <Hidden lgUp>
       <BitBucketHeaderWrapper className='bit-bucket-header'>

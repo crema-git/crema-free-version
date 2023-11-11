@@ -1,5 +1,5 @@
 import React from 'react';
-import {Typography} from '@mui/material';
+import { Typography } from '@mui/material';
 import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
@@ -8,10 +8,10 @@ import ListItem from '@mui/material/ListItem';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import CheckOutlinedIcon from '@mui/icons-material/CheckOutlined';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Fonts } from '@crema/constants/AppEnums';
 import Card from '@mui/material/Card';
 
-const PackageCard = ({pricing}) => {
+const PackageCard = ({ pricing }) => {
   return (
     <Card
       sx={{
@@ -93,7 +93,7 @@ const PackageCard = ({pricing}) => {
                 borderBottom: (theme) => `solid 1px ${theme.palette.divider}`,
               }}
             >
-              <ListItemIcon sx={{minWidth: 10, mr: 3.5}}>
+              <ListItemIcon sx={{ minWidth: 10, mr: 3.5 }}>
                 <CheckOutlinedIcon
                   sx={{
                     fontSize: 16,
@@ -107,7 +107,7 @@ const PackageCard = ({pricing}) => {
           ))}
         </List>
       </Box>
-      <Box sx={{mt: 7.5}}>
+      <Box sx={{ mt: 7.5 }}>
         <Button
           variant='contained'
           sx={{

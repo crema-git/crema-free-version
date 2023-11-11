@@ -41,7 +41,7 @@ export default function DraggableDialog() {
         PaperComponent={PaperComponent}
         aria-labelledby='draggable-dialog-title'
       >
-        <DialogTitle style={{cursor: 'move'}} id='draggable-dialog-title'>
+        <DialogTitle style={{ cursor: 'move' }} id='draggable-dialog-title'>
           Subscribe
         </DialogTitle>
         <DialogContent>

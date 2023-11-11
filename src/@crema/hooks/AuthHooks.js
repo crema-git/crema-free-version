@@ -29,10 +29,10 @@ import {
   useFirebase,
   useFirebaseActions,
 } from '@crema/services/auth/firebase/FirebaseAuthProvider';
-import {getUserFromFirebase} from '@crema/helpers/AuthHelper';
+import { getUserFromFirebase } from '@crema/helpers/AuthHelper';
 
 export const useAuthUser = () => {
-  const {user, isAuthenticated, isLoading} = useFirebase();
+  const { user, isAuthenticated, isLoading } = useFirebase();
   return {
     isLoading,
     isAuthenticated,

@@ -1,11 +1,11 @@
 import React from 'react';
 import AppCard from '@crema/components/AppCard';
-import {alpha, Box} from '@mui/material';
+import { alpha, Box } from '@mui/material';
 import ViewGraph from './ViewGraph';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Fonts } from '@crema/constants/AppEnums';
 import PropTypes from 'prop-types';
 
-const HeartRate = ({data}) => {
+const HeartRate = ({ data }) => {
   return (
     <AppCard>
       <Box
@@ -49,13 +49,13 @@ const HeartRate = ({data}) => {
           sx={{
             backgroundColor: (theme) => alpha(theme.palette.common.black, 0.04),
             margin: '0 -24px -20px',
-            padding: {xs: '8px 24px 14px', xl: '4px 24px 14px'},
-            fontSize: {xs: 20, xl: 24},
+            padding: { xs: '8px 24px 14px', xl: '4px 24px 14px' },
+            fontSize: { xs: 20, xl: 24 },
             fontWeight: Fonts.BOLD,
           }}
         >
           {data.measurement}
-          <Box sx={{fontSize: 16, ml: 2}} component='span'>
+          <Box sx={{ fontSize: 16, ml: 2 }} component='span'>
             {data.unit}
           </Box>
         </Box>

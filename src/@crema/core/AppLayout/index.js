@@ -1,29 +1,29 @@
-import React, {useEffect} from 'react';
-import {useUrlSearchParams} from 'use-url-search-params';
+import React, { useEffect } from 'react';
+import { useUrlSearchParams } from 'use-url-search-params';
 import AppContentView from '@crema/components/AppContentView';
 import generateRoutes from '@crema/helpers/RouteGenerator';
-import {Layouts} from '@crema/components/AppLayout';
-import {useAuthUser} from '@crema/hooks/AuthHooks';
+import { Layouts } from '@crema/components/AppLayout';
+import { useAuthUser } from '@crema/hooks/AuthHooks';
 import {
   useLayoutActionsContext,
   useLayoutContext,
 } from '@crema/context/AppContextProvider/LayoutContextProvider';
-import {useSidebarActionsContext} from '@crema/context/AppContextProvider/SidebarContextProvider';
+import { useSidebarActionsContext } from '@crema/context/AppContextProvider/SidebarContextProvider';
 import {
   anonymousStructure,
   authorizedStructure,
   publicStructure,
 } from '../AppRoutes';
-import {useRoutes} from 'react-router-dom';
+import { useRoutes } from 'react-router-dom';
 import routesConfig from '../AppRoutes/routeConfig';
-import {initialUrl} from '@crema/constants/AppConst';
+import { initialUrl } from '@crema/constants/AppConst';
 
 const AppLayout = () => {
-  const {navStyle} = useLayoutContext();
+  const { navStyle } = useLayoutContext();
 
-  const {user, isAuthenticated} = useAuthUser();
-  const {updateNavStyle} = useLayoutActionsContext();
-  const {updateMenuStyle, setSidebarBgImage} = useSidebarActionsContext();
+  const { user, isAuthenticated } = useAuthUser();
+  const { updateNavStyle } = useLayoutActionsContext();
+  const { updateMenuStyle, setSidebarBgImage } = useSidebarActionsContext();
   const AppLayout = Layouts[navStyle];
   const [params] = useUrlSearchParams();
 

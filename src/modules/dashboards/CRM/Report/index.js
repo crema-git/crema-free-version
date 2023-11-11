@@ -1,22 +1,22 @@
 import React from 'react';
-import {alpha, Typography, useTheme} from '@mui/material';
+import { alpha, Typography, useTheme } from '@mui/material';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import Button from '@mui/material/Button';
 import PictureAsPdfIcon from '@mui/icons-material/PictureAsPdf';
-import {useIntl} from 'react-intl';
+import { useIntl } from 'react-intl';
 import IntlMessages from '@crema/helpers/IntlMessages';
 import Box from '@mui/material/Box';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Fonts } from '@crema/constants/AppEnums';
 import AppCard from '@crema/components/AppCard';
 
 const Report = () => {
   const theme = useTheme();
 
-  const {messages} = useIntl();
+  const { messages } = useIntl();
 
   return (
-    <AppCard sxStyle={{height: 1}} title={messages['dashboard.crm.report']}>
+    <AppCard sxStyle={{ height: 1 }} title={messages['dashboard.crm.report']}>
       <AppCard
         sxStyle={{
           position: 'relative',
@@ -78,7 +78,7 @@ const Report = () => {
                 <IntlMessages id='dashboard.crm.weeklyActivity' />
               </Typography>
             </Box>
-            <div style={{marginLeft: 'auto'}}>
+            <div style={{ marginLeft: 'auto' }}>
               <Box
                 component='span'
                 sx={{
@@ -169,7 +169,7 @@ const Report = () => {
                 <IntlMessages id='dashboard.crm.workedThisWeek' />
               </Typography>
             </Box>
-            <div style={{marginLeft: 'auto'}}>
+            <div style={{ marginLeft: 'auto' }}>
               <Box
                 component='span'
                 sx={{

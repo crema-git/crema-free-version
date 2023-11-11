@@ -1,8 +1,8 @@
-import {styled} from '@mui/material/styles';
-import {Calendar} from 'react-big-calendar';
+import { styled } from '@mui/material/styles';
+import { Calendar } from 'react-big-calendar';
 import 'react-big-calendar/lib/css/react-big-calendar.css';
 
-export const StyledCalendar = styled(Calendar)(({theme}) => ({
+export const StyledCalendar = styled(Calendar)(({ theme }) => ({
   '& .rbc-event': {
     minHeight: 30,
     backgroundColor: 'transparent',

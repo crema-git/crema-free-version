@@ -2,13 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Zoom from '@mui/material/Zoom';
 
-import Tooltip, {tooltipClasses} from '@mui/material/Tooltip';
-import {lighten} from '@mui/material';
+import Tooltip, { tooltipClasses } from '@mui/material/Tooltip';
+import { lighten } from '@mui/material';
 import styled from '@emotion/styled';
 
-const LightTooltip = styled(({className, ...props}) => (
-  <Tooltip {...props} arrow classes={{popper: className}} />
-))(({theme}) => ({
+const LightTooltip = styled(({ className, ...props }) => (
+  <Tooltip {...props} arrow classes={{ popper: className }} />
+))(({ theme }) => ({
   [`& .${tooltipClasses.arrow}`]: {
     color: lighten(theme.palette.background.default, 0.25),
     '&:before': {
@@ -23,7 +23,7 @@ const LightTooltip = styled(({className, ...props}) => (
   },
 }));
 
-const AppTooltip = ({title, children, placement = 'top'}) => {
+const AppTooltip = ({ title, children, placement = 'top' }) => {
   return (
     <LightTooltip
       title={title}

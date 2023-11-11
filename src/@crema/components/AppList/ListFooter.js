@@ -1,8 +1,8 @@
 import React from 'react';
-import {Box, CircularProgress, Typography} from '@mui/material';
+import { Box, CircularProgress, Typography } from '@mui/material';
 import PropTypes from 'prop-types';
 
-const ListFooter = ({loading, footerText}) => {
+const ListFooter = ({ loading, footerText }) => {
   return loading ? (
     <Box
       sx={{
@@ -17,7 +17,7 @@ const ListFooter = ({loading, footerText}) => {
       }}
     >
       <CircularProgress size={16} />
-      <Box component='span' sx={{ml: 2}}>
+      <Box component='span' sx={{ ml: 2 }}>
         Loading...
       </Box>
     </Box>

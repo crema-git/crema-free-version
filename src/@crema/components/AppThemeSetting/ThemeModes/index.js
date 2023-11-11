@@ -1,21 +1,21 @@
 import React from 'react';
-import {CustomizerItemWrapper, StyledToggleButton} from '../index.style';
+import { CustomizerItemWrapper, StyledToggleButton } from '../index.style';
 import Box from '@mui/material/Box';
 import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
-import {ThemeMode} from '@crema/constants/AppEnums';
+import { ThemeMode } from '@crema/constants/AppEnums';
 import clsx from 'clsx';
 import {
   useThemeActionsContext,
   useThemeContext,
 } from '@crema/context/AppContextProvider/ThemeContextProvider';
-import {useSidebarActionsContext} from '@crema/context/AppContextProvider/SidebarContextProvider';
-import {DarkSidebar, LightSidebar} from '@crema/constants/defaultConfig';
+import { useSidebarActionsContext } from '@crema/context/AppContextProvider/SidebarContextProvider';
+import { DarkSidebar, LightSidebar } from '@crema/constants/defaultConfig';
 import IntlMessages from '@crema/helpers/IntlMessages';
 
 const ThemeModes = () => {
-  const {updateThemeMode} = useThemeActionsContext();
-  const {updateSidebarColorSet} = useSidebarActionsContext();
-  const {themeMode, theme} = useThemeContext();
+  const { updateThemeMode } = useThemeActionsContext();
+  const { updateSidebarColorSet } = useSidebarActionsContext();
+  const { themeMode, theme } = useThemeContext();
   console.log('themeMode: ', themeMode);
 
   const onModeChange = (event, themeMode) => {
@@ -45,7 +45,7 @@ const ThemeModes = () => {
 
   return (
     <CustomizerItemWrapper>
-      <Box component='h4' sx={{mb: 2}}>
+      <Box component='h4' sx={{ mb: 2 }}>
         <IntlMessages id='customizer.themeMode' />
       </Box>
       <ToggleButtonGroup

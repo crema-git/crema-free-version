@@ -10,10 +10,10 @@ import {
 } from 'recharts';
 import data from './data';
 import Box from '@mui/material/Box';
-import {useThemeContext} from '@crema/context/AppContextProvider/ThemeContextProvider';
+import { useThemeContext } from '@crema/context/AppContextProvider/ThemeContextProvider';
 
 const SynchronizedAreaChart = () => {
-  const {theme} = useThemeContext();
+  const { theme } = useThemeContext();
   return (
     <ResponsiveContainer width='100%'>
       <div>
@@ -25,7 +25,7 @@ const SynchronizedAreaChart = () => {
             <AreaChart
               data={data}
               syncId='anyId'
-              margin={{top: 10, right: 0, left: -25, bottom: 0}}
+              margin={{ top: 10, right: 0, left: -25, bottom: 0 }}
             >
               <XAxis dataKey='name' />
               <YAxis />
@@ -47,7 +47,7 @@ const SynchronizedAreaChart = () => {
             <AreaChart
               data={data}
               syncId='anyId'
-              margin={{top: 10, right: 0, left: -25, bottom: 0}}
+              margin={{ top: 10, right: 0, left: -25, bottom: 0 }}
             >
               <XAxis dataKey='name' />
               <YAxis />

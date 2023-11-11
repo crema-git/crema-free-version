@@ -1,7 +1,7 @@
 import React from 'react';
 import DatePickerWrapper from './DatePickerWrapper';
 import TextField from '@mui/material/TextField';
-import {StaticDatePicker} from '@mui/lab';
+import { StaticDatePicker } from '@mui/lab';
 
 const DateSelector = () => {
   const [value, setValue] = React.useState(new Date());

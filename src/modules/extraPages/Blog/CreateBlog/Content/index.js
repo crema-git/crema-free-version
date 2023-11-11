@@ -1,5 +1,5 @@
 import React from 'react';
-import {Box, Grid, Slide} from '@mui/material';
+import { Box, Grid, Slide } from '@mui/material';
 import AppTextField from '@crema/components/AppFormComponents/AppTextField';
 import AppCard from '@crema/components/AppCard';
 import ImgUpload from './ImageUpload';
@@ -44,7 +44,7 @@ const BlogContent = ({
             label='Blog Name'
           />
 
-          <Box component='p' sx={{mt: 3, fontSize: 16}}>
+          <Box component='p' sx={{ mt: 3, fontSize: 16 }}>
             Description
           </Box>
           <AppTextField
@@ -59,7 +59,7 @@ const BlogContent = ({
             placeholder='Description here'
           />
 
-          <Box component='p' sx={{mt: 3, fontSize: 16}}>
+          <Box component='p' sx={{ mt: 3, fontSize: 16 }}>
             Content*
           </Box>
           <Box
@@ -75,7 +75,7 @@ const BlogContent = ({
               onChange={(value) => setFieldValue('content', value)}
             />
           </Box>
-          <Box component='p' sx={{mt: 3, mb: 2, fontSize: 16}}>
+          <Box component='p' sx={{ mt: 3, mb: 2, fontSize: 16 }}>
             Cover Image
           </Box>
           <ImgUpload

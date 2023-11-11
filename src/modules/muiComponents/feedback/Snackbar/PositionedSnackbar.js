@@ -9,14 +9,14 @@ export default function PositionedSnackbar() {
     horizontal: 'center',
   });
 
-  const {vertical, horizontal, open} = state;
+  const { vertical, horizontal, open } = state;
 
   const handleClick = (newState) => () => {
-    setState({open: true, ...newState});
+    setState({ open: true, ...newState });
   };
 
   const handleClose = () => {
-    setState({...state, open: false});
+    setState({ ...state, open: false });
   };
 
   const buttons = (
@@ -76,7 +76,7 @@ export default function PositionedSnackbar() {
     <div>
       {buttons}
       <Snackbar
-        anchorOrigin={{vertical, horizontal}}
+        anchorOrigin={{ vertical, horizontal }}
         open={open}
         onClose={handleClose}
         message='I love snacks'

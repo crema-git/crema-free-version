@@ -15,9 +15,9 @@ const settings = {
   slidesToScroll: 1,
 };
 
-const SlideBasicFive = ({slideBasicFive}) => {
+const SlideBasicFive = ({ slideBasicFive }) => {
   return (
-    <AppCard sxStyle={{height: '100%'}}>
+    <AppCard sxStyle={{ height: '100%' }}>
       <MediaSlider>
         <Slider {...settings}>
           {slideBasicFive.map((slide, index) => (

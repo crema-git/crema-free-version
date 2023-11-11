@@ -7,7 +7,7 @@ import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
 import DeleteIcon from '@mui/icons-material/Delete';
-import {TransitionGroup} from 'react-transition-group';
+import { TransitionGroup } from 'react-transition-group';
 
 const FRUITS = [
   '🍏 Apple',
@@ -17,7 +17,7 @@ const FRUITS = [
   '🍉 Watermelon',
 ];
 
-function renderItem({item, handleRemoveFruit}) {
+function renderItem({ item, handleRemoveFruit }) {
   return (
     <ListItem
       secondaryAction={
@@ -65,12 +65,12 @@ export default function TransitionGroupExample() {
   return (
     <div>
       {addFruitButton}
-      <Box sx={{mt: 1}}>
+      <Box sx={{ mt: 1 }}>
         <List>
           <TransitionGroup>
             {fruitsInBasket.map((item) => (
               <Collapse key={item}>
-                {renderItem({item, handleRemoveFruit})}
+                {renderItem({ item, handleRemoveFruit })}
               </Collapse>
             ))}
           </TransitionGroup>

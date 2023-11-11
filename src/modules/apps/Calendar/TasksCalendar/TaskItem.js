@@ -6,9 +6,9 @@ import InsertCommentIcon from '@mui/icons-material/InsertComment';
 import AttachmentIcon from '@mui/icons-material/Attachment';
 import StarBorderIcon from '@mui/icons-material/StarBorder';
 import StarIcon from '@mui/icons-material/Star';
-import {Box} from '@mui/material';
+import { Box } from '@mui/material';
 
-const TaskItem = ({item}) => {
+const TaskItem = ({ item }) => {
   return (
     <Box
       sx={{
@@ -46,7 +46,7 @@ const TaskItem = ({item}) => {
           {item.title}
         </Box>
       </Box>
-      <Box sx={{display: 'flex', p: 1}}>
+      <Box sx={{ display: 'flex', p: 1 }}>
         {item.hasAttachments ? (
           <Box
             sx={{
@@ -56,7 +56,7 @@ const TaskItem = ({item}) => {
               alignItems: 'center',
             }}
           >
-            <AttachmentIcon sx={{fontSize: 16}} />
+            <AttachmentIcon sx={{ fontSize: 16 }} />
           </Box>
         ) : null}
         <Box
@@ -68,9 +68,9 @@ const TaskItem = ({item}) => {
           }}
         >
           {item.hasAttachments ? (
-            <StarIcon sx={{fontSize: 14}} />
+            <StarIcon sx={{ fontSize: 14 }} />
           ) : (
-            <StarBorderIcon sx={{fontSize: 14}} />
+            <StarBorderIcon sx={{ fontSize: 14 }} />
           )}
         </Box>
         <Box
@@ -81,7 +81,7 @@ const TaskItem = ({item}) => {
             alignItems: 'center',
           }}
         >
-          <InsertCommentIcon sx={{fontSize: 14}} />
+          <InsertCommentIcon sx={{ fontSize: 14 }} />
           <Box
             sx={{
               fontSize: 14,
@@ -97,12 +97,12 @@ const TaskItem = ({item}) => {
           <Avatar
             alt={item?.createdBy?.name}
             src={item?.assignedTo?.image}
-            sx={{width: 24, height: 24}}
+            sx={{ width: 24, height: 24 }}
           />
           <Avatar
             alt={item?.createdBy?.name}
             src={item?.createdBy?.image}
-            sx={{width: 24, height: 24}}
+            sx={{ width: 24, height: 24 }}
           />
         </AvatarGroup>
       </Box>

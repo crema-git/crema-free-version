@@ -1,43 +1,43 @@
 import React from 'react';
 import AddInvoice from '../AddInvoice/AddInvoice';
-import {putDataApi, useGetDataApi} from '@crema/hooks/APIHooks';
-import {useNavigate, useParams} from 'react-router-dom';
-import {useInfoViewActionsContext} from '@crema/context/AppContextProvider/InfoViewContextProvider';
-import {isEmptyObject} from '@crema/helpers/ApiHelper';
+import { putDataApi, useGetDataApi } from '@crema/hooks/APIHooks';
+import { useNavigate, useParams } from 'react-router-dom';
+import { useInfoViewActionsContext } from '@crema/context/AppContextProvider/InfoViewContextProvider';
+import { isEmptyObject } from '@crema/helpers/ApiHelper';
 
 const EditInvoicePage = () => {
-  const {id} = useParams();
+  const { id } = useParams();
   const navigate = useNavigate();
   const infoViewActionsContext = useInfoViewActionsContext();
 
-  const [{apiData: clientsList}] = useGetDataApi(
+  const [{ apiData: clientsList }] = useGetDataApi(
     '/api/invoice/clients',
     {},
     {},
     true,
   );
-  const [{apiData: invoiceSettings}] = useGetDataApi(
+  const [{ apiData: invoiceSettings }] = useGetDataApi(
     '/api/invoice/settings',
     {},
     {},
     true,
   );
 
-  const [{apiData: invoiceList}] = useGetDataApi(
+  const [{ apiData: invoiceList }] = useGetDataApi(
     '/api/invoice/list',
     {},
     {},
     true,
   );
-  const [{apiData: selectedInv}] = useGetDataApi(
+  const [{ apiData: selectedInv }] = useGetDataApi(
     '/api/invoice/detail',
     {},
-    {id},
+    { id },
     true,
   );
 
   const onSave = (invoice) => {
-    putDataApi('/api/invoice/list/update', infoViewActionsContext, {invoice})
+    putDataApi('/api/invoice/list/update', infoViewActionsContext, { invoice })
       .then(() => {
         infoViewActionsContext.showMessage(
           'New Invoice has been udpated successfully!',

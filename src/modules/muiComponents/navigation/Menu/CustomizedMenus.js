@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {alpha, styled} from '@mui/material/styles';
+import { alpha, styled } from '@mui/material/styles';
 import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
@@ -23,7 +23,7 @@ const StyledMenu = styled((props) => (
     }}
     {...props}
   />
-))(({theme}) => ({
+))(({ theme }) => ({
   '& .MuiPaper-root': {
     borderRadius: 6,
     marginTop: theme.spacing(1),
@@ -94,7 +94,7 @@ export default function CustomizedMenus() {
           <FileCopyIcon />
           Duplicate
         </MenuItem>
-        <Divider sx={{my: 0.5}} />
+        <Divider sx={{ my: 0.5 }} />
         <MenuItem onClick={handleClose} disableRipple>
           <ArchiveIcon />
           Archive

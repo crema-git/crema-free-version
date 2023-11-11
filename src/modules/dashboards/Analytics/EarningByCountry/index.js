@@ -1,21 +1,21 @@
 import React from 'react';
 import AppCard from '@crema/components/AppCard';
 import MapChart from '../../Widgets/CountryMap/MapChart';
-import {Box} from '@mui/material';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Box } from '@mui/material';
+import { Fonts } from '@crema/constants/AppEnums';
 import AppSelect from '@crema/components/AppSelect';
-import {useIntl} from 'react-intl';
+import { useIntl } from 'react-intl';
 import PropTypes from 'prop-types';
 
-const EarningByCountry = ({earningData}) => {
+const EarningByCountry = ({ earningData }) => {
   const handleSelectionType = (data) => {
     console.log('data: ', data);
   };
 
-  const {messages} = useIntl();
+  const { messages } = useIntl();
   return (
     <AppCard
-      sxStyle={{height: 1}}
+      sxStyle={{ height: 1 }}
       title={messages['dashboard.analytics.earningByCountries']}
       action={
         <AppSelect
@@ -76,8 +76,8 @@ const EarningByCountry = ({earningData}) => {
               <Box
                 component='span'
                 sx={{
-                  height: {xs: 8, xl: 10},
-                  width: {xs: 8, xl: 10},
+                  height: { xs: 8, xl: 10 },
+                  width: { xs: 8, xl: 10 },
                   borderRadius: '50%',
                   display: 'block',
                   backgroundColor: data.color,

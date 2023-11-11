@@ -1,7 +1,7 @@
 import React from 'react';
 import Checkbox from '@mui/material/Checkbox/index';
 import Box from '@mui/material/Box';
-import {useIntl} from 'react-intl';
+import { useIntl } from 'react-intl';
 import AppSearchBar from '@crema/components/AppSearchBar';
 import PropTypes from 'prop-types';
 import AppsPagination from '@crema/components/AppsPagination';
@@ -27,7 +27,7 @@ const InvContentHeader = (props) => {
     }
   };
 
-  const {messages} = useIntl();
+  const { messages } = useIntl();
 
   return (
     <>
@@ -55,7 +55,7 @@ const InvContentHeader = (props) => {
             onChange={onHandleMasterCheckbox}
           />
         </span>
-        <Box sx={{mr: 3}}>
+        <Box sx={{ mr: 3 }}>
           <AppSearchBar
             iconPosition='right'
             overlap={false}

@@ -3,13 +3,13 @@ import TableCell from '@mui/material/TableCell';
 import TableRow from '@mui/material/TableRow';
 import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
-import {styled} from '@mui/material/styles';
-import {MenuItem, Select, TextField} from '@mui/material';
-import {getDateObject} from '@crema/helpers/DateHelper';
-import {DatePicker} from '@mui/x-date-pickers';
-import {GrClose} from 'react-icons/gr';
-import {quantityType} from '../data';
-import {formatCurrency} from '@crema/helpers/StringHelper';
+import { styled } from '@mui/material/styles';
+import { MenuItem, Select, TextField } from '@mui/material';
+import { getDateObject } from '@crema/helpers/DateHelper';
+import { DatePicker } from '@mui/x-date-pickers';
+import { GrClose } from 'react-icons/gr';
+import { quantityType } from '../data';
+import { formatCurrency } from '@crema/helpers/StringHelper';
 
 const StyledTableCell = styled(TableCell)(() => ({
   fontSize: 14,
@@ -58,7 +58,7 @@ const TableItem = ({
           onChange={(e) => onChangeLineItems(index, 'name', e.target.value)}
         />
       </StyledTableCell>
-      <StyledTableCell align='left' sx={{whiteSpace: 'inherit !important'}}>
+      <StyledTableCell align='left' sx={{ whiteSpace: 'inherit !important' }}>
         {/* <DateRangePicker
             value={[data?.duration?.from, data?.duration?.to]}
             onChange={(newValue) => {
@@ -82,7 +82,7 @@ const TableItem = ({
               </React.Fragment>
             )}
           /> */}
-        <Box sx={{display: 'flex'}}>
+        <Box sx={{ display: 'flex' }}>
           <DatePicker
             sx={{
               height: 40,
@@ -133,7 +133,7 @@ const TableItem = ({
       >
         <TextField
           type='number'
-          sx={{minWidth: 50}}
+          sx={{ minWidth: 50 }}
           variant='standard'
           value={data?.quantity?.value}
           placeholder='Value'
@@ -152,7 +152,7 @@ const TableItem = ({
         // sx={{ width: 300, whiteSpace: 'inherit !important' }}
       >
         <Select
-          sx={{mr: 2.5}}
+          sx={{ mr: 2.5 }}
           variant='standard'
           value={data?.quantity?.type}
           onChange={(event) => {
@@ -194,7 +194,7 @@ const TableItem = ({
 
       <StyledTableCell
         align='left'
-        sx={{width: '100%', display: 'flex', alignItems: 'center'}}
+        sx={{ width: '100%', display: 'flex', alignItems: 'center' }}
       >
         {formatCurrency(
           data?.total || 0,

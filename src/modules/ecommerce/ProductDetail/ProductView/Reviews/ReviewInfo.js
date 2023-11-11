@@ -1,7 +1,7 @@
 import React from 'react';
-import {Box} from '@mui/material';
+import { Box } from '@mui/material';
 import AppCircularProgress from '@crema/components/AppCircularProgress';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Fonts } from '@crema/constants/AppEnums';
 import StarRateIcon from '@mui/icons-material/StarRate';
 import AppLinearProgress from '@crema/components/AppLinearProgress';
 
@@ -10,14 +10,14 @@ const ReviewInfo = () => {
     <Box
       sx={{
         display: 'flex',
-        flexDirection: {xs: 'column', md: 'row'},
-        alignItems: {xs: 'center', md: 'flex-start'},
+        flexDirection: { xs: 'column', md: 'row' },
+        alignItems: { xs: 'center', md: 'flex-start' },
       }}
     >
       <Box
         component='span'
         sx={{
-          mr: {xs: 0, md: 5},
+          mr: { xs: 0, md: 5 },
         }}
       >
         <AppCircularProgress
@@ -75,12 +75,12 @@ const ReviewInfo = () => {
           }}
         >
           <Box component='span'>5</Box>
-          <StarRateIcon style={{fontSize: 16}} />
+          <StarRateIcon style={{ fontSize: 16 }} />
           <AppLinearProgress
             activeColor='#49BD65'
             value={70}
             thickness={6}
-            style={{minWidth: 200, maxWidth: 500}}
+            style={{ minWidth: 200, maxWidth: 500 }}
           />
           <Box
             component='span'
@@ -102,12 +102,12 @@ const ReviewInfo = () => {
           }}
         >
           <Box component='span'>4</Box>
-          <StarRateIcon style={{fontSize: 16}} />
+          <StarRateIcon style={{ fontSize: 16 }} />
           <AppLinearProgress
             activeColor='#49BD65'
             value={30}
             thickness={6}
-            style={{minWidth: 200, maxWidth: 500}}
+            style={{ minWidth: 200, maxWidth: 500 }}
           />
           <Box
             component='span'
@@ -129,12 +129,12 @@ const ReviewInfo = () => {
           }}
         >
           <Box component='span'>3</Box>
-          <StarRateIcon style={{fontSize: 16}} />
+          <StarRateIcon style={{ fontSize: 16 }} />
           <AppLinearProgress
             activeColor='#FF9F00'
             value={20}
             thickness={6}
-            style={{minWidth: 200, maxWidth: 500}}
+            style={{ minWidth: 200, maxWidth: 500 }}
           />
           <Box
             component='span'
@@ -156,12 +156,12 @@ const ReviewInfo = () => {
           }}
         >
           <Box component='span'>2</Box>
-          <StarRateIcon style={{fontSize: 16}} />
+          <StarRateIcon style={{ fontSize: 16 }} />
           <AppLinearProgress
             activeColor='#FF9F00'
             value={30}
             thickness={6}
-            style={{minWidth: 200, maxWidth: 500}}
+            style={{ minWidth: 200, maxWidth: 500 }}
           />
           <Box
             component='span'
@@ -183,12 +183,12 @@ const ReviewInfo = () => {
           }}
         >
           <Box component='span'>1</Box>
-          <StarRateIcon style={{fontSize: 16}} />
+          <StarRateIcon style={{ fontSize: 16 }} />
           <AppLinearProgress
             activeColor='#FF6161'
             value={40}
             thickness={6}
-            style={{minWidth: 200, maxWidth: 500}}
+            style={{ minWidth: 200, maxWidth: 500 }}
           />
           <Box
             component='span'

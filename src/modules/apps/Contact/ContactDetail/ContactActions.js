@@ -4,10 +4,11 @@ import EditOutlinedIcon from '@mui/icons-material/EditOutlined';
 import DeleteOutlinedIcon from '@mui/icons-material/DeleteOutlined';
 import PropTypes from 'prop-types';
 import AppsStarredIcon from '@crema/components/AppsStarredIcon';
-import {IconButton} from '@mui/material';
+import { IconButton } from '@mui/material';
 
 const ContactActions = (props) => {
-  const {onDeleteContact, onChangeStarred, onOpenEditContact, contact} = props;
+  const { onDeleteContact, onChangeStarred, onOpenEditContact, contact } =
+    props;
 
   return (
     <Box

@@ -1,8 +1,8 @@
 import React from 'react';
-import {Grid} from '@mui/material';
+import { Grid } from '@mui/material';
 import AppGridContainer from '@crema/components/AppGridContainer';
 import AppAnimate from '@crema/components/AppAnimate';
-import {useGetDataApi} from '@crema/hooks/APIHooks';
+import { useGetDataApi } from '@crema/hooks/APIHooks';
 import TicketsSupport from './TicketsSupport';
 import InfoWidget from './InfoWidget';
 import PageVisits from './PageVisits';
@@ -18,7 +18,7 @@ import ActiveVisitors from './ActiveVisitors';
 import AppLoader from '@crema/components/AppLoader';
 
 const Analytics = () => {
-  const [{apiData: analyticsData, loading}] = useGetDataApi(
+  const [{ apiData: analyticsData, loading }] = useGetDataApi(
     '/dashboard/analytics',
   );
 

@@ -7,9 +7,9 @@ import TextField from '@mui/material/TextField';
 import DeleteOutlinedIcon from '@mui/icons-material/DeleteOutlined';
 import PropTypes from 'prop-types';
 import Hidden from '@mui/material/Hidden';
-import {IconButton} from '@mui/material';
+import { IconButton } from '@mui/material';
 
-import {styled} from '@mui/material/styles';
+import { styled } from '@mui/material/styles';
 
 const CheckedItemWrapper = styled('div')(() => {
   return {

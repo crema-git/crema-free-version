@@ -7,7 +7,7 @@ import ListItem from '@mui/material/ListItem';
 import PropTypes from 'prop-types';
 
 const CategoryItem = (props) => {
-  const {item, handleChange} = props;
+  const { item, handleChange } = props;
   return (
     <ListItem key={item.id} className='item-hover'>
       <ListItemIcon>

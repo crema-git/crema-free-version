@@ -2,14 +2,14 @@ import React from 'react';
 import Box from '@mui/material/Box';
 import PropTypes from 'prop-types';
 
-const Categories = ({data}) => {
+const Categories = ({ data }) => {
   return (
     <Box
       sx={{
         display: 'flex',
         justifyContent: 'space-around',
         flexWrap: 'wrap',
-        pl: {xl: 5},
+        pl: { xl: 5 },
       }}
     >
       {data.map((item) => {
@@ -27,8 +27,8 @@ const Categories = ({data}) => {
             <Box
               component='span'
               sx={{
-                height: {xs: 12, xl: 16},
-                width: {xs: 12, xl: 16},
+                height: { xs: 12, xl: 16 },
+                width: { xs: 12, xl: 16 },
                 p: 1,
                 display: 'block',
                 borderRadius: '50%',

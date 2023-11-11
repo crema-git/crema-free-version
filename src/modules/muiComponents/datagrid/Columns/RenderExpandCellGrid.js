@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import Typography from '@mui/material/Typography';
 import Paper from '@mui/material/Paper';
 import Popper from '@mui/material/Popper';
-import {createStyles, makeStyles} from '@mui/styles';
-import {DataGrid} from '@mui/x-data-grid';
+import { createStyles, makeStyles } from '@mui/styles';
+import { DataGrid } from '@mui/x-data-grid';
 
 const useStyles = makeStyles(() =>
   createStyles({
@@ -32,7 +32,7 @@ function isOverflown(element) {
 }
 
 const GridCellExpand = React.memo(function GridCellExpand(props) {
-  const {width, value} = props;
+  const { width, value } = props;
   const wrapper = React.useRef(null);
   const cellDiv = React.useRef(null);
   const cellValue = React.useRef(null);
@@ -95,13 +95,13 @@ const GridCellExpand = React.memo(function GridCellExpand(props) {
         <Popper
           open={showFullCell && anchorEl !== null}
           anchorEl={anchorEl}
-          style={{width, marginLeft: -17}}
+          style={{ width, marginLeft: -17 }}
         >
           <Paper
             elevation={1}
-            style={{minHeight: wrapper.current.offsetHeight - 3}}
+            style={{ minHeight: wrapper.current.offsetHeight - 3 }}
           >
-            <Typography variant='body2' style={{padding: 8}}>
+            <Typography variant='body2' style={{ padding: 8 }}>
               {value}
             </Typography>
           </Paper>
@@ -198,7 +198,7 @@ const rows = [
 
 export default function RenderExpandCellGrid() {
   return (
-    <div style={{height: 300, width: '100%'}}>
+    <div style={{ height: 300, width: '100%' }}>
       <DataGrid rows={rows} columns={columns} />
     </div>
   );

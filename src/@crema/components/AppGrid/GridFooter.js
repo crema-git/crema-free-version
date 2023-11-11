@@ -1,8 +1,8 @@
 import React from 'react';
-import {Box, CircularProgress, Typography} from '@mui/material';
+import { Box, CircularProgress, Typography } from '@mui/material';
 import PropTypes from 'prop-types';
 
-const GridFooter = ({loading, footerText}) => {
+const GridFooter = ({ loading, footerText }) => {
   if (loading) {
     return (
       <Box

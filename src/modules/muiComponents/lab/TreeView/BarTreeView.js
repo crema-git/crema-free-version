@@ -1,14 +1,14 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
-import {alpha, styled} from '@mui/material/styles';
+import { alpha, styled } from '@mui/material/styles';
 import TreeView from '@mui/lab/TreeView';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
-import TreeItem, {useTreeItem} from '@mui/lab/TreeItem';
+import TreeItem, { useTreeItem } from '@mui/lab/TreeItem';
 import clsx from 'clsx';
 import Typography from '@mui/material/Typography';
 
-const CustomContentRoot = styled('div')(({theme}) => ({
+const CustomContentRoot = styled('div')(({ theme }) => ({
   WebkitTapHighlightColor: 'transparent',
   '&:hover, &.Mui-disabled, &.Mui-focused, &.Mui-selected, &.Mui-selected.Mui-focused, &.Mui-selected:hover':
     {
@@ -157,7 +157,7 @@ export default function BarTreeView() {
       aria-label='icon expansion'
       defaultCollapseIcon={<ExpandMoreIcon />}
       defaultExpandIcon={<ChevronRightIcon />}
-      sx={{height: 240, flexGrow: 1, maxWidth: 400, position: 'relative'}}
+      sx={{ height: 240, flexGrow: 1, maxWidth: 400, position: 'relative' }}
     >
       <CustomTreeItem nodeId='1' label='Applications'>
         <CustomTreeItem nodeId='2' label='Calendar' />
