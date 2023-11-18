@@ -14,6 +14,7 @@ import {
   twitterAuthProvider,
   updateProfile,
 } from './firebase';
+import { useInfoViewActionsContext } from '../../../context/AppContextProvider/InfoViewContextProvider';
 
 const FirebaseContext = createContext();
 const FirebaseActionsContext = createContext();
@@ -22,12 +23,8 @@ export const useFirebase = () => useContext(FirebaseContext);
 
 export const useFirebaseActions = () => useContext(FirebaseActionsContext);
 
-const FirebaseAuthProvider = ({
-  children,
-  fetchStart,
-  fetchSuccess,
-  fetchError,
-}) => {
+const FirebaseAuthProvider = ({ children }) => {
+  const { fetchStart, fetchSuccess, fetchError } = useInfoViewActionsContext();
   const [firebaseData, setFirebaseData] = useState({
     user: null,
     isLoading: true,

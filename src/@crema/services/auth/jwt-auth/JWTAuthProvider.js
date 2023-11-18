@@ -1,6 +1,7 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import jwtAxios, { setAuthToken } from './index';
+import { useInfoViewActionsContext } from '../../../context/AppContextProvider/InfoViewContextProvider';
 
 const JWTAuthContext = createContext();
 const JWTAuthActionsContext = createContext();
@@ -9,13 +10,9 @@ export const useJWTAuth = () => useContext(JWTAuthContext);
 
 export const useJWTAuthActions = () => useContext(JWTAuthActionsContext);
 
-const JWTAuthAuthProvider = ({
-  children,
-  fetchStart,
-  fetchSuccess,
-  fetchError,
-}) => {
-  const [firebaseData, setJWTAuthData] = useState({
+const JWTAuthAuthProvider = ({ children }) => {
+  const { fetchStart, fetchSuccess, fetchError } = useInfoViewActionsContext();
+  const [authData, setJWTAuthData] = useState({
     user: null,
     isAuthenticated: false,
     isLoading: true,
@@ -74,7 +71,7 @@ const JWTAuthAuthProvider = ({
       fetchSuccess();
     } catch (error) {
       setJWTAuthData({
-        ...firebaseData,
+        ...authData,
         isAuthenticated: false,
         isLoading: false,
       });
@@ -97,7 +94,7 @@ const JWTAuthAuthProvider = ({
       fetchSuccess();
     } catch (error) {
       setJWTAuthData({
-        ...firebaseData,
+        ...authData,
         isAuthenticated: false,
         isLoading: false,
       });
@@ -119,7 +116,7 @@ const JWTAuthAuthProvider = ({
   return (
     <JWTAuthContext.Provider
       value={{
-        ...firebaseData,
+        ...authData,
       }}
     >
       <JWTAuthActionsContext.Provider

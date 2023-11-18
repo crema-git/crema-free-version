@@ -9,6 +9,7 @@ import Auth from '@aws-amplify/auth';
 import PropTypes from 'prop-types';
 import { awsConfig } from './aws-exports';
 import { useNavigate } from 'react-router-dom';
+import { useInfoViewActionsContext } from '../../../context/AppContextProvider/InfoViewContextProvider';
 
 const AwsCognitoContext = createContext();
 const AwsCognitoActionsContext = createContext();
@@ -17,13 +18,9 @@ export const useAwsCognito = () => useContext(AwsCognitoContext);
 
 export const useAwsCognitoActions = () => useContext(AwsCognitoActionsContext);
 
-const AwsAuthProvider = ({
-  children,
-  fetchStart,
-  fetchSuccess,
-  showMessage,
-  fetchError,
-}) => {
+const AwsAuthProvider = ({ children }) => {
+  const { fetchStart, fetchSuccess, fetchError, showMessage } =
+    useInfoViewActionsContext();
   const [awsCognitoData, setAwsCognitoData] = useState({
     user: null,
     isAuthenticated: false,
