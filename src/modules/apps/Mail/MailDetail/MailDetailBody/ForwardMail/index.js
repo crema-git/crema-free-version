@@ -1,33 +1,92 @@
-import React, { useState } from 'react';
+import React, {useRef, useState} from 'react';
 import Button from '@mui/material/Button/index';
 import InputAdornment from '@mui/material/InputAdornment/index';
-import { Form, Formik } from 'formik';
+import {Form, Formik} from 'formik';
 import * as yup from 'yup';
 import IntlMessages from '@crema/helpers/IntlMessages';
-import { useIntl } from 'react-intl';
-import { Box } from '@mui/material';
+import {useIntl} from 'react-intl';
+import {Box} from '@mui/material';
 import PropTypes from 'prop-types';
 import dayjs from 'dayjs';
-import { useAuthUser } from '@crema/hooks/AuthHooks';
+import {useAuthUser} from '@crema/hooks/AuthHooks';
 import AppTextField from '@crema/components/AppFormComponents/AppTextField';
-import ReactQuill from 'react-quill';
-import { Fonts } from '@crema/constants/AppEnums';
+import {Fonts} from '@crema/constants/AppEnums';
+import {generateRandomUniqueNumber} from '@crema/helpers/Common';
+import JoditEditor from 'jodit-react';
 
-import { styled } from '@mui/material/styles';
-import { generateRandomUniqueNumber } from '@crema/helpers/Common';
-
-const ReactQuillWrapper = styled(ReactQuill)(() => {
-  return {
-    '& .ql-toolbar': {
-      borderRadius: '8px 8px 0 0',
+const config = {
+  readonly: false, // all options from https://xdsoft.net/jodit/doc/
+  toolbar: true,
+  minHeight: 300,
+  maxHeight: 500,
+  buttons: [
+    'source',
+    '|',
+    'bold',
+    'strikethrough',
+    'underline',
+    'italic',
+    '|',
+    'ul',
+    'ol',
+    '|',
+    'outdent',
+    'indent',
+    '|',
+    'font',
+    'fontsize',
+    'paragraph',
+    '|',
+    'image',
+    'video',
+    'table',
+    'link',
+    '|',
+    'align',
+    'undo',
+    'redo',
+    'selectall',
+    'cut',
+    'copy',
+    '|',
+    'hr',
+    '|',
+    'print',
+    'symbol',
+    'about',
+  ],
+  uploader: {
+    insertImageAsBase64URI: true,
+    url: '/api/upload',
+    format: 'json',
+    imagesExtensions: ['jpg', 'png', 'jpeg', 'gif'],
+    headers: {
+      'X-CSRF-TOKEN': 'CSFR-Token',
+      Authorization: 'Bearer <JSON Web Token>',
     },
-    '& .ql-container': {
-      borderRadius: '0 0 8px 8px',
-      minHeight: 150,
-      maxHeight: 200,
+    prepareData: function (formData) {
+      formData.append('image', formData);
+      return formData;
     },
-  };
-});
+    isSuccess: function (resp) {
+      return resp.status && resp.status === 200;
+    },
+    getMessage: function (resp) {
+      return resp.msg;
+    },
+    process: function (resp) {
+      return {
+        files: resp.data,
+      };
+    },
+  },
+  style: {
+    '& .jodit .jodit-status-bar': {
+      background: '#29572E',
+      color: 'rgba(255,255,255,0.5)',
+    },
+  },
+};
 
 const validationSchema = yup.object({
   to: yup
@@ -39,6 +98,7 @@ const validationSchema = yup.object({
 
 const ForwardMail = ({ onSubmitForwardedMail }) => {
   const [isShowCC, onShowCC] = useState(false);
+  const editor = useRef(null);
 
   const onShowCcInput = () => {
     onShowCC(true);
@@ -155,10 +215,12 @@ const ForwardMail = ({ onSubmitForwardedMail }) => {
                 mb: 4,
               }}
             >
-              <ReactQuillWrapper
-                theme='snow'
-                placeholder={messages['common.writeContent']}
-                onChange={(value) => setFieldValue('content', value)}
+              <JoditEditor
+                  ref={editor}
+                  placeholder={messages['common.writeContent']}
+                  config={config}
+                  tabIndex={1} // tabIndex of textarea
+                  onChange={(value) => setFieldValue('content', value)}
               />
             </Box>
 

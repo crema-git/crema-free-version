@@ -1,35 +1,80 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { Box, Grid, Slide } from '@mui/material';
 import AppTextField from '@crema/components/AppFormComponents/AppTextField';
 import AppCard from '@crema/components/AppCard';
 import ImgUpload from './ImageUpload';
-import styled from '@emotion/styled';
-import ReactQuill from 'react-quill';
-import 'react-quill/dist/quill.snow.css';
 import PropTypes from 'prop-types';
+import JoditEditor from 'jodit-react';
 
-const ReactQuillWrapper = styled(ReactQuill)(() => {
-  return {
-    '& .ql-editor, & .ql-container': {
-      maxHeight: '100% !important',
+const config = {
+  readonly: false, // all options from https://xdsoft.net/jodit/doc/
+  toolbar: true,
+  minHeight: 300,
+  maxHeight: 500,
+  buttons: [
+    'source',
+    '|',
+    'bold',
+    'strikethrough',
+    'underline',
+    'italic',
+    '|',
+    'ul',
+    'ol',
+    '|',
+    'outdent',
+    'indent',
+    '|',
+    'font',
+    'fontsize',
+    'paragraph',
+    '|',
+    'image',
+    'video',
+    'table',
+    'link',
+    '|',
+    'align',
+    'undo',
+    'redo',
+    'selectall',
+    'cut',
+    'copy',
+    '|',
+    'hr',
+  ],
+  uploader: {
+    insertImageAsBase64URI: true,
+    url: '/api/upload',
+    format: 'json',
+    imagesExtensions: ['jpg', 'png', 'jpeg', 'gif'],
+    headers: {
+      'X-CSRF-TOKEN': 'CSFR-Token',
+      Authorization: 'Bearer <JSON Web Token>',
     },
-    '& .ql-toolbar': {
-      borderRadius: '8px 8px 0 0',
+    getMessage: function (resp) {
+      return resp.msg;
     },
-    '& .ql-container': {
-      borderRadius: '0 0 8px 8px',
-      minHeight: 150,
-      maxHeight: 200,
+    process: function (resp) {
+      return {
+        files: resp.data,
+      };
     },
-  };
-});
-
+  },
+  style: {
+    '& .jodit .jodit-status-bar': {
+      background: '#29572E',
+      color: 'rgba(255,255,255,0.5)',
+    },
+  },
+};
 const BlogContent = ({
   content,
   uploadedFiles,
   setUploadedFiles,
   setFieldValue,
 }) => {
+  const editor = useRef(null);
   return (
     <Slide direction='right' in mountOnEnter unmountOnExit>
       <Grid item xs={12} lg={8}>
@@ -68,10 +113,12 @@ const BlogContent = ({
               my: 2,
             }}
           >
-            <ReactQuillWrapper
-              defaultValue={content}
-              theme='snow'
+            <JoditEditor
+              ref={editor}
+              value={content}
               placeholder='Description here'
+              config={config}
+              tabIndex={1} // tabIndex of textarea
               onChange={(value) => setFieldValue('content', value)}
             />
           </Box>

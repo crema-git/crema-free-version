@@ -1,44 +1,47 @@
 import * as React from 'react';
-import PropTypes from 'prop-types';
+import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
-import { DataGridPro, useGridApiRef } from '@mui/x-data-grid-pro';
+import { DataGrid, GridCellModes } from '@mui/x-data-grid';
 import {
   randomCreatedDate,
   randomTraderName,
   randomUpdatedDate,
 } from '@mui/x-data-grid-generator';
-import { createTheme } from '@mui/material/styles';
-import { makeStyles } from '@mui/styles';
-
-const defaultTheme = createTheme();
-const useStyles = makeStyles(
-  (theme) => ({
-    root: {
-      justifyContent: 'center',
-      display: 'flex',
-      borderBottom: `1px solid ${theme.palette.divider}`,
-    },
-  }),
-  { defaultTheme },
-);
 
 function EditToolbar(props) {
-  const { selectedCellParams, apiRef, setSelectedCellParams } = props;
-  const classes = useStyles();
+  const { selectedCellParams, cellMode, cellModesModel, setCellModesModel } =
+    props;
 
-  const handleClick = () => {
+  const handleSaveOrEdit = () => {
     if (!selectedCellParams) {
       return;
     }
-    const { id, field, cellMode } = selectedCellParams;
+    const { id, field } = selectedCellParams;
     if (cellMode === 'edit') {
-      apiRef.current.commitCellChange({ id, field });
-      apiRef.current.setCellMode(id, field, 'view');
-      setSelectedCellParams({ ...selectedCellParams, cellMode: 'view' });
+      setCellModesModel({
+        ...cellModesModel,
+        [id]: { ...cellModesModel[id], [field]: { mode: GridCellModes.View } },
+      });
     } else {
-      apiRef.current.setCellMode(id, field, 'edit');
-      setSelectedCellParams({ ...selectedCellParams, cellMode: 'edit' });
+      setCellModesModel({
+        ...cellModesModel,
+        [id]: { ...cellModesModel[id], [field]: { mode: GridCellModes.Edit } },
+      });
     }
+  };
+
+  const handleCancel = () => {
+    if (!selectedCellParams) {
+      return;
+    }
+    const { id, field } = selectedCellParams;
+    setCellModesModel({
+      ...cellModesModel,
+      [id]: {
+        ...cellModesModel[id],
+        [field]: { mode: GridCellModes.View, ignoreModifications: true },
+      },
+    });
   };
 
   const handleMouseDown = (event) => {
@@ -47,71 +50,89 @@ function EditToolbar(props) {
   };
 
   return (
-    <div className={classes.root}>
+    <Box
+      sx={{
+        borderBottom: 1,
+        borderColor: 'divider',
+        p: 1,
+      }}
+    >
       <Button
-        onClick={handleClick}
+        onClick={handleSaveOrEdit}
         onMouseDown={handleMouseDown}
         disabled={!selectedCellParams}
-        color='primary'
+        variant='outlined'
       >
-        {selectedCellParams?.cellMode === 'edit' ? 'Save' : 'Edit'}
+        {cellMode === 'edit' ? 'Save' : 'Edit'}
       </Button>
-    </div>
+      <Button
+        onClick={handleCancel}
+        onMouseDown={handleMouseDown}
+        disabled={cellMode === 'view'}
+        variant='outlined'
+        sx={{ ml: 1 }}
+      >
+        Cancel
+      </Button>
+    </Box>
   );
 }
 
-EditToolbar.propTypes = {
-  apiRef: PropTypes.shape({
-    current: PropTypes.object.isRequired,
-  }).isRequired,
-  selectedCellParams: PropTypes.any,
-  setSelectedCellParams: PropTypes.func.isRequired,
-};
-
 export default function StartEditButtonGrid() {
-  const apiRef = useGridApiRef();
   const [selectedCellParams, setSelectedCellParams] = React.useState(null);
+  const [cellModesModel, setCellModesModel] = React.useState({});
 
-  const handleCellClick = React.useCallback((params) => {
-    setSelectedCellParams(params);
+  const handleCellFocus = React.useCallback((event) => {
+    const row = event.currentTarget.parentElement;
+    const id = row.dataset.id;
+    const field = event.currentTarget.dataset.field;
+    setSelectedCellParams({ id, field });
   }, []);
 
-  const handleDoubleCellClick = React.useCallback((params, event) => {
+  const cellMode = React.useMemo(() => {
+    if (!selectedCellParams) {
+      return 'view';
+    }
+    const { id, field } = selectedCellParams;
+    return cellModesModel[id]?.[field]?.mode || 'view';
+  }, [cellModesModel, selectedCellParams]);
+
+  const handleCellKeyDown = React.useCallback(
+    (params, event) => {
+      if (cellMode === 'edit') {
+        // Prevents calling event.preventDefault() if Tab is pressed on a cell in edit mode
+        event.defaultMuiPrevented = true;
+      }
+    },
+    [cellMode],
+  );
+
+  const handleCellEditStop = React.useCallback((params, event) => {
     event.defaultMuiPrevented = true;
-  }, []);
-
-  // Prevent from rolling back on escape
-  const handleCellKeyDown = React.useCallback((params, event) => {
-    if (['Escape', 'Delete', 'Backspace', 'Enter'].includes(event.key)) {
-      event.defaultMuiPrevented = true;
-    }
-  }, []);
-
-  // Prevent from committing on focus out
-  const handleCellFocusOut = React.useCallback((params, event) => {
-    if (params.cellMode === 'edit' && event) {
-      event.defaultMuiPrevented = true;
-    }
   }, []);
 
   return (
     <div style={{ height: 400, width: '100%' }}>
-      <DataGridPro
+      <DataGrid
         rows={rows}
         columns={columns}
-        apiRef={apiRef}
-        onCellClick={handleCellClick}
-        onCellDoubleClick={handleDoubleCellClick}
-        onCellFocusOut={handleCellFocusOut}
         onCellKeyDown={handleCellKeyDown}
-        components={{
-          Toolbar: EditToolbar,
+        cellModesModel={cellModesModel}
+        onCellEditStop={handleCellEditStop}
+        onCellModesModelChange={(model) => setCellModesModel(model)}
+        slots={{
+          toolbar: EditToolbar,
         }}
-        componentsProps={{
+        slotProps={{
           toolbar: {
+            cellMode,
             selectedCellParams,
-            apiRef,
             setSelectedCellParams,
+            cellModesModel,
+            setCellModesModel,
+          },
+          cell: {
+            onFocus: handleCellFocus,
           },
         }}
       />
@@ -121,7 +142,14 @@ export default function StartEditButtonGrid() {
 
 const columns = [
   { field: 'name', headerName: 'Name', width: 180, editable: true },
-  { field: 'age', headerName: 'Age', type: 'number', editable: true },
+  {
+    field: 'age',
+    headerName: 'Age',
+    type: 'number',
+    editable: true,
+    align: 'left',
+    headerAlign: 'left',
+  },
   {
     field: 'dateCreated',
     headerName: 'Date Created',

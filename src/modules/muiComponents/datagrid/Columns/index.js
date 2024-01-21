@@ -31,9 +31,6 @@ import ValueParserGridSource from '!raw-loader!./ValueParserGrid';
 import RenderCellGrid from './RenderCellGrid';
 import RenderCellGridSource from '!raw-loader!./RenderCellGrid';
 
-import RenderExpandCellGrid from './RenderExpandCellGrid';
-import RenderExpandCellGridSource from '!raw-loader!./RenderExpandCellGrid';
-
 import RenderHeaderGrid from './RenderHeaderGrid';
 import RenderHeaderGridSource from '!raw-loader!./RenderHeaderGrid';
 
@@ -137,14 +134,7 @@ const Columns = () => {
             noScrollbar
           />
         </Grid>
-        <Grid item xs={12}>
-          <AppComponentCard
-            title='RenderExpandCellGrid'
-            component={RenderExpandCellGrid}
-            source={RenderExpandCellGridSource}
-            noScrollbar
-          />
-        </Grid>
+
         <Grid item xs={12}>
           <AppComponentCard
             title='RenderHeaderGrid'

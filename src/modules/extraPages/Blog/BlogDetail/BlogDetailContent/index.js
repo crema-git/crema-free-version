@@ -20,7 +20,11 @@ const BlogDetailContent = ({ blogDetailContent }) => {
       cardMedia={blogDetailContent.cardMedia}
     >
       <Typography sx={{ mb: 7.5 }}>{blogDetailContent.description}</Typography>
-      <Box> {renderHTML(blogDetailContent.content)}</Box>
+      <Box>
+        <div
+          dangerouslySetInnerHTML={{ __html: `${blogDetailContent.content}` }}
+        />
+      </Box>
       <Box
         sx={{
           display: 'flex',

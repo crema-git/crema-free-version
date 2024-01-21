@@ -1,60 +1,70 @@
 import * as React from 'react';
-import { createTheme } from '@mui/material/styles';
-import { makeStyles } from '@mui/styles';
-import { DataGridPro, useGridApiRef } from '@mui/x-data-grid-pro';
+import { styled } from '@mui/material/styles';
+import Box from '@mui/material/Box';
+import Tooltip, { tooltipClasses } from '@mui/material/Tooltip';
+import { DataGrid, GridEditInputCell } from '@mui/x-data-grid';
 
-const defaultTheme = createTheme();
-const useStyles = makeStyles(
-  (theme) => {
-    const isDark = theme.palette.mode === 'dark';
-
-    return {
-      root: {
-        '& .MuiDataGrid-cell--editable': {
-          backgroundColor: isDark ? '#376331' : 'rgb(217 243 190)',
-        },
-        '& .Mui-error': {
-          backgroundColor: `rgb(126,10,15, ${isDark ? 0 : 0.1})`,
-          color: isDark ? '#ff4343' : '#750f0f',
-        },
-      },
-    };
+const StyledBox = styled(Box)(({ theme }) => ({
+  height: 400,
+  width: '100%',
+  '& .MuiDataGrid-cell--editable': {
+    backgroundColor:
+      theme.palette.mode === 'dark' ? '#376331' : 'rgb(217 243 190)',
+    '& .MuiInputBase-root': {
+      height: '100%',
+    },
   },
-  { defaultTheme },
-);
+  '& .Mui-error': {
+    backgroundColor: `rgb(126,10,15, ${
+      theme.palette.mode === 'dark' ? 0 : 0.1
+    })`,
+    color: theme.palette.mode === 'dark' ? '#ff4343' : '#750f0f',
+  },
+}));
 
 let promiseTimeout;
-
 function validateName(username) {
   const existingUsers = rows.map((row) => row.name.toLowerCase());
 
   return new Promise((resolve) => {
     promiseTimeout = setTimeout(
       () => {
-        resolve(existingUsers.indexOf(username.toLowerCase()) === -1);
+        const exists = existingUsers.includes(username.toLowerCase());
+        resolve(exists ? `${username} is already taken.` : null);
       },
       Math.random() * 500 + 100,
     ); // simulate network latency
   });
 }
 
+const StyledTooltip = styled(({ className, ...props }) => (
+  <Tooltip {...props} classes={{ popper: className }} />
+))(({ theme }) => ({
+  [`& .${tooltipClasses.tooltip}`]: {
+    backgroundColor: theme.palette.error.main,
+    color: theme.palette.error.contrastText,
+  },
+}));
+
+function NameEditInputCell(props) {
+  const { error } = props;
+
+  return (
+    <StyledTooltip open={!!error} title={error}>
+      <GridEditInputCell {...props} />
+    </StyledTooltip>
+  );
+}
+
+function renderEditName(params) {
+  return <NameEditInputCell {...params} />;
+}
+
 export default function ValidateServerNameGrid() {
-  const apiRef = useGridApiRef();
-  const classes = useStyles();
-
-  const keyStrokeTimeoutRef = React.useRef();
-
-  const preProcessEditCellProps = (params) =>
-    new Promise((resolve) => {
-      clearTimeout(promiseTimeout);
-      clearTimeout(keyStrokeTimeoutRef.current);
-
-      // basic debouncing here
-      keyStrokeTimeoutRef.current = setTimeout(async () => {
-        const isValid = await validateName(params.props.value.toString());
-        resolve({ ...params.props, error: !isValid });
-      }, 100);
-    });
+  const preProcessEditCellProps = async (params) => {
+    const errorMessage = await validateName(params.props.value.toString());
+    return { ...params.props, error: errorMessage };
+  };
 
   const columns = [
     {
@@ -63,26 +73,24 @@ export default function ValidateServerNameGrid() {
       width: 180,
       editable: true,
       preProcessEditCellProps,
+      renderEditCell: renderEditName,
     },
   ];
 
   React.useEffect(() => {
     return () => {
       clearTimeout(promiseTimeout);
-      clearTimeout(keyStrokeTimeoutRef.current);
     };
   }, []);
 
   return (
-    <div style={{ height: 400, width: '100%' }}>
-      <DataGridPro
-        className={classes.root}
-        apiRef={apiRef}
+    <StyledBox>
+      <DataGrid
         rows={rows}
         columns={columns}
         isCellEditable={(params) => params.row.id === 5}
       />
-    </div>
+    </StyledBox>
   );
 }
 

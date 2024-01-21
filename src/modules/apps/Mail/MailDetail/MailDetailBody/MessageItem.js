@@ -13,7 +13,6 @@ import ForwardMail from './ForwardMail';
 import dayjs from 'dayjs';
 import PropTypes from 'prop-types';
 import { BiChevronDown } from 'react-icons/bi';
-import renderHTML from 'react-render-html';
 import clsx from 'clsx';
 
 import { styled } from '@mui/material/styles';
@@ -361,7 +360,7 @@ const MessageItem = ({
             mr: { md: 8 },
           }}
         >
-          {renderHTML(message.description)}
+          <div dangerouslySetInnerHTML={{ __html: `${message.description}` }} />
         </Box>
       ) : null}
 

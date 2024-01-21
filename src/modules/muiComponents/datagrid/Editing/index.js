@@ -31,9 +31,6 @@ import BasicRowEditingGridSource from '!raw-loader!./BasicRowEditingGrid';
 import RowEditControlGrid from './RowEditControlGrid';
 import RowEditControlGridSource from '!raw-loader!./RowEditControlGrid';
 
-import ConditionalValidationGrid from './ConditionalValidationGrid';
-import ConditionalValidationGridSource from '!raw-loader!./ConditionalValidationGrid';
-
 const Editing = () => {
   return (
     <>
@@ -113,14 +110,6 @@ const Editing = () => {
             title='RowEditControlGrid'
             component={RowEditControlGrid}
             source={RowEditControlGridSource}
-            noScrollbar
-          />
-        </Grid>
-        <Grid item xs={12}>
-          <AppComponentCard
-            title='ConditionalValidationGrid'
-            component={ConditionalValidationGrid}
-            source={ConditionalValidationGridSource}
             noScrollbar
           />
         </Grid>

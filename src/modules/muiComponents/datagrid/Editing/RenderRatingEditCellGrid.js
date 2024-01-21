@@ -1,88 +1,47 @@
 import * as React from 'react';
-import PropTypes from 'prop-types';
-import { makeStyles } from '@mui/styles';
+import Box from '@mui/material/Box';
 import Rating from '@mui/material/Rating';
-import { DataGrid } from '@mui/x-data-grid';
+import { unstable_useEnhancedEffect as useEnhancedEffect } from '@mui/utils';
+import { DataGrid, useGridApiContext } from '@mui/x-data-grid';
 
 function renderRating(params) {
   return <Rating readOnly value={params.value} />;
 }
 
-renderRating.propTypes = {
-  /**
-   * The cell value, but if the column has valueGetter, use getValue.
-   */
-  value: PropTypes.number.isRequired,
-};
-
-const useStyles = makeStyles({
-  root: {
-    display: 'flex',
-    alignItems: 'center',
-    paddingRight: 16,
-  },
-});
-
 function RatingEditInputCell(props) {
-  const { id, value, api, field } = props;
-  const classes = useStyles();
+  const { id, value, field, hasFocus } = props;
+  const apiRef = useGridApiContext();
+  const ref = React.useRef();
 
-  const handleChange = async (event) => {
-    api.setEditCellValue(
-      { id, field, value: Number(event.target.value) },
-      event,
-    );
-    // Check if the event is not from the keyboard
-    // https://github.com/facebook/react/issues/7407
-    if (event.nativeEvent.clientX !== 0 && event.nativeEvent.clientY !== 0) {
-      await api.commitCellChange({ id, field });
-      api.setCellMode(id, field, 'view');
-    }
+  const handleChange = (event, newValue) => {
+    apiRef.current.setEditCellValue({ id, field, value: newValue });
   };
 
-  const handleRef = (element) => {
-    if (element) {
-      element.querySelector(`input[value="${value}"]`).focus();
+  useEnhancedEffect(() => {
+    if (hasFocus && ref.current) {
+      const input = ref.current.querySelector(`input[value="${value}"]`);
+      input?.focus();
     }
-  };
+  }, [hasFocus, value]);
 
   return (
-    <div className={classes.root}>
+    <Box sx={{ display: 'flex', alignItems: 'center', pr: 2 }}>
       <Rating
-        ref={handleRef}
+        ref={ref}
         name='rating'
         precision={1}
         value={value}
         onChange={handleChange}
       />
-    </div>
+    </Box>
   );
 }
 
-RatingEditInputCell.propTypes = {
-  /**
-   * GridApi that let you manipulate the grid.
-   */
-  api: PropTypes.any.isRequired,
-  /**
-   * The column field of the cell that triggered the event
-   */
-  field: PropTypes.string.isRequired,
-  /**
-   * The grid row id.
-   */
-  id: PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired,
-  /**
-   * The cell value, but if the column has valueGetter, use getValue.
-   */
-  value: PropTypes.number.isRequired,
+const renderRatingEditInputCell = (params) => {
+  return <RatingEditInputCell {...params} />;
 };
 
-function renderRatingEditInputCell(params) {
-  return <RatingEditInputCell {...params} />;
-}
-
-export default function RenderRatingEditCellGrid() {
+export default function CustomEditComponent() {
   return (
     <div style={{ height: 250, width: '100%' }}>
       <DataGrid rows={rows} columns={columns} />
