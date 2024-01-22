@@ -1,15 +1,15 @@
-<svg class="animated" id="freepik_stories-profile-interface" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500"
+<svg class="animated" id="freepik_stories-profile-type" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500"
      version="1.1">
-    <style>svg#freepik_stories-profile-interface:not(.animated) .animable {opacity:
-        0;}svg#freepik_stories-profile-interface.animated #freepik--Floor--inject-6 {animation: 1s 1 forwards
-        cubic-bezier(.36,-0.01,.5,1.38) slideRight;animation-delay: 0s;}svg#freepik_stories-profile-interface.animated
+    <style>svg#freepik_stories-profile-type:not(.animated) .animable {opacity:
+        0;}svg#freepik_stories-profile-type.animated #freepik--Floor--inject-6 {animation: 1s 1 forwards
+        cubic-bezier(.36,-0.01,.5,1.38) slideRight;animation-delay: 0s;}svg#freepik_stories-profile-type.animated
         #freepik--Plant--inject-6 {animation: 1s 1 forwards cubic-bezier(.36,-0.01,.5,1.38) slideDown;animation-delay:
-        0s;}svg#freepik_stories-profile-interface.animated #freepik--Shadows--inject-6 {animation: 1s 1 forwards
+        0s;}svg#freepik_stories-profile-type.animated #freepik--Shadows--inject-6 {animation: 1s 1 forwards
         cubic-bezier(.36,-0.01,.5,1.38) lightSpeedLeft;animation-delay:
-        0s;}svg#freepik_stories-profile-interface.animated #freepik--Device--inject-6 {animation: 1s 1 forwards
-        cubic-bezier(.36,-0.01,.5,1.38) fadeIn;animation-delay: 0s;}svg#freepik_stories-profile-interface.animated
+        0s;}svg#freepik_stories-profile-type.animated #freepik--Device--inject-6 {animation: 1s 1 forwards
+        cubic-bezier(.36,-0.01,.5,1.38) fadeIn;animation-delay: 0s;}svg#freepik_stories-profile-type.animated
         #freepik--Screen--inject-6 {animation: 1s 1 forwards cubic-bezier(.36,-0.01,.5,1.38) slideDown;animation-delay:
-        0s;}svg#freepik_stories-profile-interface.animated #freepik--Character--inject-6 {animation: 1s 1 forwards
+        0s;}svg#freepik_stories-profile-type.animated #freepik--Character--inject-6 {animation: 1s 1 forwards
         cubic-bezier(.36,-0.01,.5,1.38) zoomOut;animation-delay: 0s;} @keyframes slideRight { 0% { opacity: 0;
         transform: translateX(30px); } 100% { opacity: 1; transform: translateX(0); } } @keyframes slideDown { 0% {
         opacity: 0; transform: translateY(-30px); } 100% { opacity: 1; transform: translateY(0); } } @keyframes
@@ -25,7 +25,7 @@
     </g>
     <g id="freepik--Plant--inject-6" class="animable" style="transform-origin: 83.9289px 311.514px;">
         <path d="M98.66,330.05l-9.15,5.32s4.62-14.74,2.06-29.56A28.4,28.4,0,0,0,87.85,296c-.72-1.5-6.23-10.74-1.38-15s16.25,4.21,15.73,27A88.7,88.7,0,0,1,98.66,330.05Z"
-              style="fill: current; transform-origin: 93.3552px 307.654px;" id="elfzltlh5tfvl"
+              style="fill: #0A8FDC; transform-origin: 93.3552px 307.654px;" id="elfzltlh5tfvl"
               class="animable"/>
         <g id="elnofx8ebt7se">
             <path d="M98.66,330.05l-9.15,5.32s4.62-14.74,2.06-29.56A28.4,28.4,0,0,0,87.85,296c-.72-1.5-6.23-10.74-1.38-15s16.25,4.21,15.73,27A88.7,88.7,0,0,1,98.66,330.05Z"
@@ -35,7 +35,7 @@
               style="fill: rgb(255, 255, 255); transform-origin: 93.5574px 308.337px;" id="elrksmf4cxwgk"
               class="animable"/>
         <path d="M91.57,334.2l-15.11,8.89s-6.92-1-6.4-7.53,3.34-8.05-.16-10.91-4.41-3-4.24-5.86,2-4,2.94-5.14,3.36-3.44,1.62-6.82-4.1-6.65-.59-8.2c2.09-.93,5.6.23,7.94,2.71s4.25,4.25,6.46,4.82,6.81.63,6.66,4.43-1.15,5.12-.22,6.81C92.21,320.58,99.63,322.3,91.57,334.2Z"
-              style="fill: current; transform-origin: 80.4475px 320.7px;" id="eljnpu9ssqiz"
+              style="fill: #0A8FDC; transform-origin: 80.4475px 320.7px;" id="eljnpu9ssqiz"
               class="animable"/>
         <path d="M85.41,338.25h0a.42.42,0,0,1-.39-.45c0-.22,1.63-22.36-13.73-36.88a.41.41,0,0,1,0-.59.43.43,0,0,1,.6,0c15.66,14.8,14,37.33,14,37.56A.43.43,0,0,1,85.41,338.25Z"
               style="fill: rgb(255, 255, 255); transform-origin: 78.5528px 319.231px;" id="elvbf83l6dnn"
@@ -81,7 +81,7 @@
               style="fill: rgb(69, 90, 100); transform-origin: 392.044px 207.876px;" id="elehjx76gfeko"
               class="animable"/>
         <path d="M365.68,108.82,246.07,39.75a3.3,3.3,0,0,0-4.95,2.86v261c0,8.72,6.17,19.42,13.72,23.77l116.71,67.39a3.63,3.63,0,0,0,5.45-3.15V128.43C377,121.24,371.91,112.42,365.68,108.82Z"
-              style="fill: current; transform-origin: 309.06px 217.284px;" id="eljfqv0b78x4o"
+              style="fill: #0A8FDC; transform-origin: 309.06px 217.284px;" id="eljfqv0b78x4o"
               class="animable"/>
         <g id="el3jtun4s39wa">
             <path d="M365.68,108.82,246.07,39.75a3.3,3.3,0,0,0-4.95,2.86v261c0,8.72,6.17,19.42,13.72,23.77l116.71,67.39a3.63,3.63,0,0,0,5.45-3.15V128.43C377,121.24,371.91,112.42,365.68,108.82Z"
@@ -121,10 +121,10 @@
               style="fill: rgb(235, 235, 235); transform-origin: 262.138px 249.074px;" id="el0vw0e7bezfb"
               class="animable"/>
         <path d="M205.26,100.6c0,2.13-1.5,3-3.34,1.93a7.41,7.41,0,0,1-3.34-5.78c0-2.13,1.5-3,3.34-1.93A7.38,7.38,0,0,1,205.26,100.6Z"
-              style="fill: current; transform-origin: 201.92px 98.675px;" id="elppllvdbg5b"
+              style="fill: #0A8FDC; transform-origin: 201.92px 98.675px;" id="elppllvdbg5b"
               class="animable"/>
         <path d="M201.92,102.53h0c-2.72-1.58-4.93.09-4.93,3.73v1.12l9.86,5.7V112C206.85,108.32,204.64,104.1,201.92,102.53Z"
-              style="fill: current; transform-origin: 201.92px 107.507px;" id="elbg89qsswia7"
+              style="fill: #0A8FDC; transform-origin: 201.92px 107.507px;" id="elbg89qsswia7"
               class="animable"/>
         <path d="M327.25,135.54,197.85,59.71a6.61,6.61,0,0,0-10,5.71v12.2h0l148.39,85.67V151.37A18.36,18.36,0,0,0,327.25,135.54Z"
               style="fill: rgb(235, 235, 235); transform-origin: 262.045px 111.032px;" id="elrt699reaev"
@@ -141,7 +141,7 @@
               style="fill: rgb(255, 168, 167); transform-origin: 244.715px 226.53px;" id="ellsvnued0o4b"
               class="animable"/>
         <path d="M279.39,257.21a27,27,0,0,1-3.8-.44,42.59,42.59,0,0,1-13.48-5.22,67,67,0,0,1-11.68-8.65,87.81,87.81,0,0,1-9.87-10.69,12.15,12.15,0,0,1,0-3.35c.8-5.82,7.36-13.71,10.36-17.07.92-1,1.5-1.62,1.5-1.62l5-.13,11.23.62,5.16,1.41h0a1.53,1.53,0,0,1,1.09,1.37l.91,13.19.38,5.43-.6,2.1h0l-2.32,8.2a6.29,6.29,0,0,0,1,5.4c.4.55.86,1.2,1.32,1.94A39.61,39.61,0,0,1,279.39,257.21Z"
-              style="fill: current; transform-origin: 259.917px 233.625px;" id="el6gcgxn6hey5"
+              style="fill: #0A8FDC; transform-origin: 259.917px 233.625px;" id="el6gcgxn6hey5"
               class="animable"/>
         <path d="M268.66,210.65l-14.31,9.27a.67.67,0,0,1-1-.84l4.06-9V195.16h11.23Z"
               style="fill: rgb(255, 168, 167); transform-origin: 260.968px 207.608px;" id="eldxp1wrs2qq4"
@@ -181,22 +181,22 @@
                   style="opacity: 0.2; transform-origin: 261.765px 238.878px;" class="animable"/>
         </g>
         <path d="M322.09,167.09c0,.88-.61,1.24-1.38.8a3.06,3.06,0,0,1-1.38-2.4c0-.88.62-1.23,1.38-.79A3,3,0,0,1,322.09,167.09Z"
-              style="fill: current; transform-origin: 320.71px 166.294px;" id="elampdvxj20wf"
+              style="fill: #0A8FDC; transform-origin: 320.71px 166.294px;" id="elampdvxj20wf"
               class="animable"/>
         <path d="M322.09,173.34c0,.88-.61,1.24-1.38.8a3.07,3.07,0,0,1-1.38-2.4c0-.88.62-1.24,1.38-.79A3,3,0,0,1,322.09,173.34Z"
-              style="fill: current; transform-origin: 320.71px 172.542px;" id="el3ciwrzk7xsh"
+              style="fill: #0A8FDC; transform-origin: 320.71px 172.542px;" id="el3ciwrzk7xsh"
               class="animable"/>
         <path d="M322.09,179.59c0,.88-.61,1.24-1.38.8a3.07,3.07,0,0,1-1.38-2.4c0-.88.62-1.24,1.38-.79A3,3,0,0,1,322.09,179.59Z"
-              style="fill: current; transform-origin: 320.71px 178.792px;" id="eloiwemm8tld"
+              style="fill: #0A8FDC; transform-origin: 320.71px 178.792px;" id="eloiwemm8tld"
               class="animable"/>
         <path d="M325.9,386.77a.57.57,0,0,1-.25-.06L198.06,313a.49.49,0,0,1-.18-.68.51.51,0,0,1,.68-.19l127.59,73.67a.51.51,0,0,1,.19.68A.52.52,0,0,1,325.9,386.77Z"
-              style="fill: current; transform-origin: 262.105px 349.42px;" id="eljlm1h8l4be"
+              style="fill: #0A8FDC; transform-origin: 262.105px 349.42px;" id="eljlm1h8l4be"
               class="animable"/>
         <path d="M325.9,373.84a.47.47,0,0,1-.25-.07L198.06,300.11a.51.51,0,0,1-.18-.69.49.49,0,0,1,.68-.18l127.59,73.67a.5.5,0,0,1,.19.68A.52.52,0,0,1,325.9,373.84Z"
-              style="fill: current; transform-origin: 262.108px 336.505px;" id="elftvivbxfyd"
+              style="fill: #0A8FDC; transform-origin: 262.108px 336.505px;" id="elftvivbxfyd"
               class="animable"/>
         <path d="M325.9,360.91a.59.59,0,0,1-.25-.07L198.06,287.17a.5.5,0,0,1,.5-.86L326.15,360a.52.52,0,0,1,.19.69A.52.52,0,0,1,325.9,360.91Z"
-              style="fill: current; transform-origin: 262.128px 323.588px;" id="elj1h1h19z99"
+              style="fill: #0A8FDC; transform-origin: 262.128px 323.588px;" id="elj1h1h19z99"
               class="animable"/>
         <text transform="matrix(0.87, 0.5, 0, 1, 245.61, 132.33)"
               style="font-size:10.802305221557617px;fill:#455a64;font-family:Montserrat-Bold, Montserrat;font-weight:700">
@@ -258,7 +258,7 @@
               style="fill: rgb(38, 50, 56); transform-origin: 151.922px 265.121px;" id="eloq89k41bxp"
               class="animable"/>
         <path d="M160.13,182.37l5.78,1.59a1.74,1.74,0,0,1,1.28,1.56l1.44,20.87L165.36,218a7.05,7.05,0,0,0,1.08,6.05,46.57,46.57,0,0,1,5.82,10.79s-6.74,8.53-22.27,8.53c-10.76,0-18.48-6.91-18.48-6.91a74.38,74.38,0,0,0,3.25-14.07,23.88,23.88,0,0,0-.93-8s-6.36-3-5.19-11.52,13.3-21,13.3-21l5.6-.15Z"
-              style="fill: current; transform-origin: 150.378px 212.545px;" id="elwo46zxaw7y"
+              style="fill: #0A8FDC; transform-origin: 150.378px 212.545px;" id="elwo46zxaw7y"
               class="animable"/>
         <path d="M160.13,182.37l-16,10.4a.76.76,0,0,1-1.1-.94l4.56-10.15V165h12.59Z"
               style="fill: rgb(255, 168, 167); transform-origin: 151.576px 178.941px;" id="elg3t4rjj5p6m"
