@@ -1,11 +1,7 @@
-import React from "react";
 import AppComponentHeader from "@crema/components/AppComponentHeader";
 import AppGridContainer from "@crema/components/AppGridContainer";
 import Grid from "@mui/material/Grid";
 import AppComponentCard from "@crema/components/AppComponentCard";
-
-import FileSystemNavigator from "./FileSystemNavigator";
-import FileSystemNavigatorSource from "./FileSystemNavigator?raw";
 
 import MultiSelectTreeView from "./MultiSelectTreeView";
 import MultiSelectTreeViewSource from "./MultiSelectTreeView?raw";
@@ -15,9 +11,6 @@ import ControlledTreeViewSource from "./ControlledTreeView?raw";
 
 import RichObjectTreeView from "./RichObjectTreeView";
 import RichObjectTreeViewSource from "./RichObjectTreeView?raw";
-
-import IconExpansionTreeView from "./IconExpansionTreeView";
-import IconExpansionTreeViewSource from "./IconExpansionTreeView?raw";
 
 import BarTreeView from "./BarTreeView";
 import BarTreeViewSource from "./BarTreeView?raw";
@@ -41,22 +34,6 @@ const TreeView = () => {
       />
 
       <AppGridContainer>
-        <Grid item xs={12} md={6}>
-          <AppComponentCard
-            title="File System Navigator"
-            component={FileSystemNavigator}
-            source={FileSystemNavigatorSource}
-            noScrollbar
-          />
-        </Grid>
-        <Grid item xs={12} md={6}>
-          <AppComponentCard
-            title="Icon Expansion Tree View"
-            component={IconExpansionTreeView}
-            source={IconExpansionTreeViewSource}
-            noScrollbar
-          />
-        </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
             title="Multi Select Tree View"

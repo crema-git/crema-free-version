@@ -1,5 +1,3 @@
-import React from 'react';
-
 const CustomizedTreeView = () => {
   return <div>CustomizedTreeView</div>;
 };

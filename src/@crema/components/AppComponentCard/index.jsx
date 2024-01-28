@@ -1,16 +1,16 @@
-import React, { useState } from 'react';
-import { Card } from '@mui/material';
-import CardHeader from '@mui/material/CardHeader';
-import CardContent from '@mui/material/CardContent';
-import CodeIcon from '@mui/icons-material/Code';
-import { Highlight, themes } from 'prism-react-renderer';
-import PropTypes from 'prop-types';
-import IconButton from '@mui/material/IconButton';
-import Collapse from '@mui/material/Collapse';
-import AppScrollbar from '../AppScrollbar';
-import Box from '@mui/material/Box';
-import AppAnimate from '../AppAnimate';
-import { Fonts } from '@crema/constants/AppEnums';
+import React, { useState } from "react";
+import { Card } from "@mui/material";
+import CardHeader from "@mui/material/CardHeader";
+import CardContent from "@mui/material/CardContent";
+import CodeIcon from "@mui/icons-material/Code";
+import { Highlight, themes } from "prism-react-renderer";
+import PropTypes from "prop-types";
+import IconButton from "@mui/material/IconButton";
+import Collapse from "@mui/material/Collapse";
+import AppScrollbar from "../AppScrollbar";
+import Box from "@mui/material/Box";
+import AppAnimate from "../AppAnimate";
+import { Fonts } from "@crema/constants/AppEnums";
 
 const AppComponentCard = ({
   title,
@@ -24,18 +24,18 @@ const AppComponentCard = ({
   const [animation, setAnimation] = useState(false);
 
   return (
-    <AppAnimate animation='transition.slideUpIn' delay={200}>
+    <AppAnimate animation="transition.slideUpIn" delay={200}>
       <Card>
         <CardHeader
           sx={{
             py: 4,
             pb: 1,
             px: 5,
-            display: 'flex',
-            alignItems: 'center',
+            display: "flex",
+            alignItems: "center",
             minHeight: 50,
-            boxSizing: 'border-box',
-            '& .MuiTypography-h5': {
+            boxSizing: "border-box",
+            "& .MuiTypography-h5": {
               fontSize: 14,
               fontWeight: Fonts.BOLD,
               marginBottom: 0.25,
@@ -52,7 +52,7 @@ const AppComponentCard = ({
             source ? (
               <Box>
                 <IconButton
-                  aria-label='view code'
+                  aria-label="view code"
                   onClick={() => {
                     if (animation) {
                       setAnimation(!animation);
@@ -62,7 +62,7 @@ const AppComponentCard = ({
                       setToggleViewSource(!viewSource);
                     }
                   }}
-                  size='large'
+                  size="large"
                 >
                   <CodeIcon />
                 </IconButton>
@@ -77,12 +77,12 @@ const AppComponentCard = ({
               <AppScrollbar
                 sx={{
                   borderRadius: 3,
-                  background: '#333333',
+                  background: "#333333",
                 }}
               >
                 <Highlight
                   code={source}
-                  language='jsx'
+                  language="jsx"
                   theme={themes.shadesOfPurple}
                 >
                   {({ style, tokens, getLineProps, getTokenProps }) => (
@@ -96,12 +96,12 @@ const AppComponentCard = ({
                     >
                       {tokens.map((line, i) => (
                         <Box
-                          key={'line-' + i}
+                          key={"line-" + i}
                           {...getLineProps({ line, key: i })}
                         >
                           {line.map((token, key) => (
                             <span
-                              key={'token-' + key}
+                              key={"token-" + key}
                               {...getTokenProps({ token, key })}
                             />
                           ))}
@@ -113,13 +113,14 @@ const AppComponentCard = ({
               </AppScrollbar>
             ) : null}
           </Collapse>
+
           {noScrollbar ? (
             <Box
               sx={{
-                width: '100%',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
+                width: "100%",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
                 p: 4,
                 backgroundColor: (theme) => theme.palette.background.default,
               }}
@@ -138,10 +139,10 @@ const AppComponentCard = ({
             >
               <Box
                 sx={{
-                  width: '100%',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
+                  width: "100%",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
                 }}
               >
                 <Component />
@@ -157,7 +158,7 @@ const AppComponentCard = ({
 export default AppComponentCard;
 
 AppComponentCard.defaultProps = {
-  description: '',
+  description: "",
   maxHeight: 500,
 };
 

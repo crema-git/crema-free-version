@@ -87,9 +87,9 @@ const Pagination = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title="Pagination Controlled"
-            component={PaginationControlled}
-            source={PaginationControlledSource}
+            title="UsePagination"
+            component={UsePagination}
+            source={UsePaginationSource}
             noScrollbar
           />
         </Grid>
@@ -98,6 +98,14 @@ const Pagination = () => {
             title="TablePaginationDemo"
             component={TablePaginationDemo}
             source={TablePaginationDemoSource}
+            noScrollbar
+          />
+        </Grid>
+        <Grid item xs={12} md={6}>
+          <AppComponentCard
+            title="Pagination Controlled"
+            component={PaginationControlled}
+            source={PaginationControlledSource}
             noScrollbar
           />
         </Grid>
@@ -115,14 +123,6 @@ const Pagination = () => {
             title="Pagination Ranges"
             component={PaginationRanges}
             source={PaginationRangesSource}
-            noScrollbar
-          />
-        </Grid>
-        <Grid item xs={12} md={6}>
-          <AppComponentCard
-            title="UsePagination"
-            component={UsePagination}
-            source={UsePaginationSource}
             noScrollbar
           />
         </Grid>

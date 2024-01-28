@@ -12,9 +12,6 @@ import DisableEnforceFocusSource from "./DisableEnforceFocus?raw";
 import LazyTrapFocus from "./LazyTrapFocus";
 import LazyTrapFocusSource from "./LazyTrapFocus?raw";
 
-import PortalTrapFocus from "./PortalTrapFocus";
-import PortalTrapFocusSource from "./PortalTrapFocus?raw";
-
 import ToggleTrapFocus from "./ToggleTrapFocus";
 import ToggleTrapFocusSource from "./ToggleTrapFocus?raw";
 
@@ -52,14 +49,7 @@ const TrapFocus = () => {
             noScrollbar
           />
         </Grid>
-        <Grid item xs={12} md={6}>
-          <AppComponentCard
-            title="PortalTrapFocus"
-            component={PortalTrapFocus}
-            source={PortalTrapFocusSource}
-            noScrollbar
-          />
-        </Grid>
+
         <Grid item xs={12} md={6}>
           <AppComponentCard
             title="ToggleTrapFocus"

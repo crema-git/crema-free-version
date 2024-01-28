@@ -1,14 +1,14 @@
-import React from 'react';
-import Drawer from '@mui/material/Drawer';
-import Hidden from '@mui/material/Hidden';
-import clsx from 'clsx';
-import PropTypes from 'prop-types';
-import AppScrollbar from '../../AppScrollbar';
-import VerticalNav from '../components/VerticalNav';
-import MainSidebar from '../components/MainSidebar';
-import { useLayoutContext } from '@crema/context/AppContextProvider/LayoutContextProvider';
-import UserInfo from '../components/UserInfo';
-import { useSidebarContext } from '@crema/context/AppContextProvider/SidebarContextProvider';
+import React from "react";
+import Drawer from "@mui/material/Drawer";
+import Hidden from "@mui/material/Hidden";
+import clsx from "clsx";
+import PropTypes from "prop-types";
+import AppScrollbar from "../../AppScrollbar";
+import VerticalNav from "../components/VerticalNav";
+import MainSidebar from "../components/MainSidebar";
+import { useLayoutContext } from "@crema/context/AppContextProvider/LayoutContextProvider";
+import UserInfo from "../components/UserInfo";
+import { useSidebarContext } from "@crema/context/AppContextProvider/SidebarContextProvider";
 
 const AppSidebar = ({
   toggleNavCollapsed,
@@ -35,14 +35,14 @@ const AppSidebar = ({
             root: clsx(variant),
             paper: clsx(variant),
           }}
-          style={{ position: 'absolute' }}
+          style={{ position: "absolute" }}
         >
           <MainSidebar>
             <UserInfo color={sidebarTextColor} />
             <AppScrollbar
               sx={{
                 py: 2,
-                height: 'calc(100vh - 70px) !important',
+                height: "calc(100vh - 70px) !important",
                 borderTop: (theme) => `solid 1px ${theme.palette.divider}`,
                 mt: 0.5,
               }}
@@ -57,17 +57,17 @@ const AppSidebar = ({
           <UserInfo color={sidebarTextColor} />
           <AppScrollbar
             className={clsx({
-              'has-footer-fixed': footer && footerType === 'fixed',
+              "has-footer-fixed": footer && footerType === "fixed",
             })}
             sx={{
               py: 2,
-              height: 'calc(100vh - 70px) !important',
+              height: "calc(100vh - 70px) !important",
               borderTop: (theme) => `solid 1px ${theme.palette.divider}`,
               mt: 0.5,
-              '&.has-footer-fixed': {
+              "&.has-footer-fixed": {
                 height: {
-                  xs: 'calc(100vh - 117px) !important',
-                  xl: 'calc(100vh - 127px) !important',
+                  xs: "calc(100vh - 117px) !important",
+                  xl: "calc(100vh - 127px) !important",
                 },
               },
             }}
@@ -83,8 +83,8 @@ const AppSidebar = ({
 export default AppSidebar;
 
 AppSidebar.defaultProps = {
-  variant: '',
-  position: 'left',
+  variant: "",
+  position: "left",
 };
 
 AppSidebar.propTypes = {
