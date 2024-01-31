@@ -1,26 +1,26 @@
-import React, { useCallback, useEffect, useState } from 'react';
-import AppsContent from '@crema/components/AppsContainer/AppsContent';
-import Board from 'react-trello';
-import PropTypes from 'prop-types';
-import { Box, useTheme } from '@mui/material';
-import { useInfoViewActionsContext } from '@crema/context/AppContextProvider/InfoViewContextProvider';
-import { postDataApi, putDataApi } from '@crema/hooks/APIHooks';
+import React, { useCallback, useEffect, useState } from "react";
+import AppsContent from "@crema/components/AppsContainer/AppsContent";
+import Board from "react-trello";
+import PropTypes from "prop-types";
+import { Box, useTheme } from "@mui/material";
+import { useInfoViewActionsContext } from "@crema/context/AppContextProvider/InfoViewContextProvider";
+import { postDataApi, putDataApi } from "@crema/hooks/APIHooks";
 
-import AddCard from './List/AddCard';
-import CardDetail from './List/CardDetail';
-import AddCardButton from './List/AddCardButton';
-import ListHeader from './List/ListHeader';
-import AddNewList from './AddNewList';
-import NewListButton from './NewListButton';
+import AddCard from "./List/AddCard";
+import CardDetail from "./List/CardDetail";
+import AddCardButton from "./List/AddCardButton";
+import ListHeader from "./List/ListHeader";
+import AddNewList from "./AddNewList";
+import NewListButton from "./NewListButton";
 
 const BoardWrapper = ({ children }) => {
   return (
     <Box
       sx={{
-        display: 'flex',
-        flexDirection: 'row',
+        display: "flex",
+        flexDirection: "row",
         height: 1,
-        '& .smooth-dnd-container.horizontal': {
+        "& .smooth-dnd-container.horizontal": {
           height: 1,
         },
       }}
@@ -70,7 +70,7 @@ const BoardDetailView = (props) => {
   };
 
   const onAddList = (name) => {
-    postDataApi('/api/scrumboard/add/list', infoViewActionsContext, {
+    postDataApi("/api/scrumboard/add/list", infoViewActionsContext, {
       boardId: boardDetail?.id,
       list: {
         name: name,
@@ -78,7 +78,7 @@ const BoardDetailView = (props) => {
     })
       .then((data) => {
         setData(data);
-        infoViewActionsContext.showMessage('List Added Successfully!');
+        infoViewActionsContext.showMessage("List Added Successfully!");
       })
       .catch((error) => {
         infoViewActionsContext.fetchError(error.message);
@@ -89,7 +89,7 @@ const BoardDetailView = (props) => {
     lane.cards.find((item) => item.id === cardId);
 
   const onEditCardDetail = (cardId) => {
-    console.log('onEditCardDetail');
+    console.log("onEditCardDetail");
     const selectedList = boardData.lanes.find((item) => {
       const correctCard = item.cards.find((card) => card.id === cardId);
       if (correctCard) return item;
@@ -110,7 +110,7 @@ const BoardDetailView = (props) => {
   ) => {
     if (sourceLaneId !== targetLaneId) {
       const boardId = boardDetail.id;
-      putDataApi('/api/cards/update/category', infoViewActionsContext, {
+      putDataApi("/api/cards/update/category", infoViewActionsContext, {
         cardId: cardDetails.id,
         sourceLaneId: sourceLaneId,
         categoryId: targetLaneId,
@@ -119,7 +119,7 @@ const BoardDetailView = (props) => {
       })
         .then((data) => {
           setData(data);
-          infoViewActionsContext.showMessage('Card Updated Successfully!');
+          infoViewActionsContext.showMessage("Card Updated Successfully!");
         })
         .catch((error) => {
           infoViewActionsContext.fetchError(error.message);
@@ -128,13 +128,13 @@ const BoardDetailView = (props) => {
   };
 
   const onEditBoardList = (boardId, list) => {
-    putDataApi('/api/scrumboard/edit/list', infoViewActionsContext, {
+    putDataApi("/api/scrumboard/edit/list", infoViewActionsContext, {
       boardId: boardId,
       list: list,
     })
       .then((data) => {
         setData(data);
-        infoViewActionsContext.showMessage('List Edited Successfully!');
+        infoViewActionsContext.showMessage("List Edited Successfully!");
       })
       .catch((error) => {
         infoViewActionsContext.fetchError(error.message);
@@ -142,13 +142,13 @@ const BoardDetailView = (props) => {
   };
 
   const onDeleteSelectedList = (boardId, laneId) => {
-    postDataApi('/api/scrumboard/delete/list', infoViewActionsContext, {
+    postDataApi("/api/scrumboard/delete/list", infoViewActionsContext, {
       boardId: boardId,
       listId: laneId,
     })
       .then((data) => {
         setData(data);
-        infoViewActionsContext.showMessage('List Deleted Successfully!');
+        infoViewActionsContext.showMessage("List Deleted Successfully!");
       })
       .catch((error) => {
         infoViewActionsContext.fetchError(error.message);
@@ -159,21 +159,21 @@ const BoardDetailView = (props) => {
     <AppsContent
       sx={{
         flex: 1,
-        '& .simplebar-wrapper': {
-          my: '0 !important',
-          height: '100%',
+        "& .simplebar-wrapper": {
+          my: "0 !important",
+          height: "100%",
         },
-        '& .simplebar-content': {
-          height: '100%',
-          maxHeight: '100%',
-          py: '0 !important',
+        "& .simplebar-content": {
+          height: "100%",
+          maxHeight: "100%",
+          py: "0 !important",
         },
       }}
     >
       <Board
         laneStyle={{
           borderRadius: 16,
-          maxHeight: '98%',
+          maxHeight: "98%",
           backgroundColor: theme.palette.background.default,
           width: 350,
         }}
@@ -205,6 +205,7 @@ const BoardDetailView = (props) => {
           NewLaneSection: NewListButton,
         }}
       />
+
       <AddCard
         isAddCardOpen={isAddCardOpen}
         onCloseAddCard={onCloseAddCard}

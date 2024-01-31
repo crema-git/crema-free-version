@@ -1,22 +1,22 @@
-import React from 'react';
-import AppBar from '@mui/material/AppBar';
-import Toolbar from '@mui/material/Toolbar';
-import AppLngSwitcher from '../../../AppLngSwitcher';
-import Box from '@mui/material/Box';
-import AppSearchBar from '../../../AppSearchBar';
-import Hidden from '@mui/material/Hidden';
-import IconButton from '@mui/material/IconButton';
-import MenuIcon from '@mui/icons-material/Menu';
-import AppMessages from '../../../AppMessages';
-import AppNotifications from '../../../AppNotifications';
-import Menu from '@mui/material/Menu';
-import MenuItem from '@mui/material/MenuItem';
-import MoreVertIcon from '@mui/icons-material/MoreVert';
-import AppTooltip from '../../../AppTooltip';
-import PropTypes from 'prop-types';
-import { alpha } from '@mui/material/styles';
-import AppLogo from '../../components/AppLogo';
-import { allowMultiLanguage } from '../../../../constants/AppConst';
+import React from "react";
+import AppBar from "@mui/material/AppBar";
+import Toolbar from "@mui/material/Toolbar";
+import AppLngSwitcher from "../../../AppLngSwitcher";
+import Box from "@mui/material/Box";
+import AppSearchBar from "../../../AppSearchBar";
+import Hidden from "@mui/material/Hidden";
+import IconButton from "@mui/material/IconButton";
+import MenuIcon from "@mui/icons-material/Menu";
+import AppMessages from "../../../AppMessages";
+import AppNotifications from "../../../AppNotifications";
+import Menu from "@mui/material/Menu";
+import MenuItem from "@mui/material/MenuItem";
+import MoreVertIcon from "@mui/icons-material/MoreVert";
+import AppTooltip from "../../../AppTooltip";
+import PropTypes from "prop-types";
+import { alpha } from "@mui/material/styles";
+import AppLogo from "../../components/AppLogo";
+import { allowMultiLanguage } from "../../../../constants/AppConst";
 
 const AppHeader = (props) => {
   const { isCollapsed, setCollapsed, toggleNavCollapsed } = props;
@@ -33,20 +33,20 @@ const AppHeader = (props) => {
 
   return (
     <AppBar
-      position='relative'
-      color='inherit'
+      position="relative"
+      color="inherit"
       sx={{
-        boxShadow: 'none',
+        boxShadow: "none",
         borderBottom: (theme) => `1px solid ${theme.palette.divider}`,
-        backgroundColor: 'background.paper',
-        transition: 'width 0.5s ease',
-        width: '100%',
+        backgroundColor: "background.paper",
+        transition: "width 0.5s ease",
+        width: "100%",
       }}
-      className='app-bar'
+      className="app-bar"
     >
       <Toolbar
         sx={{
-          boxSizing: 'border-box',
+          boxSizing: "border-box",
           minHeight: { xs: 56, sm: 70 },
           paddingLeft: { xs: 5 },
           paddingRight: { xs: 5, md: 7.5 },
@@ -54,13 +54,13 @@ const AppHeader = (props) => {
       >
         <Hidden lgDown>
           <IconButton
-            sx={{ color: 'text.secondary' }}
-            edge='start'
-            className='menu-btn'
-            color='inherit'
-            aria-label='open drawer'
+            sx={{ color: "text.secondary" }}
+            edge="start"
+            className="menu-btn"
+            color="inherit"
+            aria-label="open drawer"
             onClick={() => setCollapsed(!isCollapsed)}
-            size='large'
+            size="large"
           >
             <MenuIcon
               sx={{
@@ -72,13 +72,13 @@ const AppHeader = (props) => {
         </Hidden>
         <Hidden lgUp>
           <IconButton
-            sx={{ color: 'text.secondary' }}
-            edge='start'
-            className='menu-btn'
-            color='inherit'
-            aria-label='open drawer'
+            sx={{ color: "text.secondary" }}
+            edge="start"
+            className="menu-btn"
+            color="inherit"
+            aria-label="open drawer"
             onClick={toggleNavCollapsed}
-            size='large'
+            size="large"
           >
             <MenuIcon
               sx={{
@@ -90,35 +90,35 @@ const AppHeader = (props) => {
         </Hidden>
         <Box
           sx={{
-            '& .logo-text': {
-              display: { xs: 'none', sm: 'block' },
+            "& .logo-text": {
+              display: { xs: "none", sm: "block" },
             },
           }}
         >
           <AppLogo />
+        </Box>
+
+        <Box
+          sx={{
+            minHeight: 40,
+            position: "relative",
+            "& .searchRoot": {
+              position: { xs: "absolute", sm: "relative" },
+              right: { xs: 0, sm: "auto" },
+              top: { xs: 0, sm: "auto" },
+            },
+          }}
+        >
+          <AppSearchBar iconPosition="right" placeholder="Search…" />
         </Box>
         <Box
           sx={{
             flexGrow: 1,
           }}
         />
-        <Box
-          sx={{
-            minHeight: 40,
-            position: 'relative',
-            '& .searchRoot': {
-              position: { xs: 'absolute', sm: 'relative' },
-              right: { xs: 0, sm: 'auto' },
-              top: { xs: 0, sm: 'auto' },
-            },
-          }}
-        >
-          <AppSearchBar iconPosition='right' placeholder='Search…' />
-        </Box>
-
         {allowMultiLanguage && (
           <Box sx={{ ml: 4 }}>
-            <AppLngSwitcher iconOnly={true} tooltipPosition='bottom' />
+            <AppLngSwitcher iconOnly={true} tooltipPosition="bottom" />
           </Box>
         )}
 
@@ -126,9 +126,9 @@ const AppHeader = (props) => {
           <Hidden smDown>
             <Box
               sx={{
-                position: 'relative',
-                display: 'flex',
-                alignItems: 'center',
+                position: "relative",
+                display: "flex",
+                alignItems: "center",
                 marginLeft: -2,
                 marginRight: -2,
               }}
@@ -153,9 +153,9 @@ const AppHeader = (props) => {
           <Hidden smUp>
             <Box
               sx={{
-                position: 'relative',
-                display: 'flex',
-                alignItems: 'center',
+                position: "relative",
+                display: "flex",
+                alignItems: "center",
                 marginLeft: -2,
                 marginRight: -2,
               }}
@@ -165,18 +165,18 @@ const AppHeader = (props) => {
                   px: 1.85,
                 }}
               >
-                <AppTooltip title='More'>
+                <AppTooltip title="More">
                   <IconButton
                     sx={{
-                      borderRadius: '50%',
+                      borderRadius: "50%",
                       width: 40,
                       height: 40,
                       color: (theme) => theme.palette.text.secondary,
                       backgroundColor: (theme) =>
                         theme.palette.background.default,
                       border: 1,
-                      borderColor: 'transparent',
-                      '&:hover, &:focus': {
+                      borderColor: "transparent",
+                      "&:hover, &:focus": {
                         color: (theme) => theme.palette.text.primary,
                         backgroundColor: (theme) =>
                           alpha(theme.palette.background.default, 0.9),
@@ -185,7 +185,7 @@ const AppHeader = (props) => {
                       },
                     }}
                     onClick={handleClick}
-                    size='large'
+                    size="large"
                   >
                     <MoreVertIcon />
                   </IconButton>
@@ -194,7 +194,7 @@ const AppHeader = (props) => {
             </Box>
           </Hidden>
           <Menu
-            id='simple-menu'
+            id="simple-menu"
             anchorEl={anchorEl}
             keepMounted
             open={Boolean(anchorEl)}
