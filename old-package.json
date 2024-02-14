@@ -1,0 +1,8 @@
+{    "@aws-amplify/auth": "^6.0.16",
+  "@emotion/cache": "^11.11.0",
+  "@emotion/react": "^11.11.3",
+  "@emotion/styled": "^11.11.0",
+  "@googlemaps/js-api-loader": "^1.16.2"
+
+
+}

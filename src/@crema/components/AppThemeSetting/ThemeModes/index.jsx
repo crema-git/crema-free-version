@@ -25,6 +25,8 @@ const ThemeModes = () => {
   console.log("themeMode: ", themeMode);
 
   const onModeChange = (event, themeMode) => {
+    console.log("themeMode: ", themeMode);
+    console.log("event: ", event);
     if (themeMode) {
       updateThemeMode(themeMode);
       if (themeMode === ThemeMode.LIGHT) {

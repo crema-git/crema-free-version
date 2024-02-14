@@ -1,18 +1,18 @@
-import React from 'react';
-import Box from '@mui/material/Box';
-import AppSearchBar from '@crema/components/AppSearchBar';
-import { Hidden } from '@mui/material';
-import PropTypes from 'prop-types';
-import { useIntl } from 'react-intl';
-import CheckBox from './CheckBox';
-import ContactCheckedActions from './ContactCheckedActions';
-import AppsPagination from '@crema/components/AppsPagination';
+import React from "react";
+import Box from "@mui/material/Box";
+import AppSearchBar from "@crema/components/AppSearchBar";
+import { Hidden } from "@mui/material";
+import PropTypes from "prop-types";
+import { useIntl } from "react-intl";
+import CheckBox from "./CheckBox";
+import ContactCheckedActions from "./ContactCheckedActions";
+import AppsPagination from "@crema/components/AppsPagination";
 
 import {
   useContactActionsContext,
   useContactContext,
-} from '../../../context/ContactContextProvider';
-import ViewSelectButtons from './ViewSelectButtons';
+} from "../../../context/ContactContextProvider";
+import ViewSelectButtons from "./ViewSelectButtons";
 
 const ContactHeader = (props) => {
   const {
@@ -33,22 +33,21 @@ const ContactHeader = (props) => {
       <Box
         sx={{
           flex: 1,
-          display: 'flex',
-          flexDirection: 'row',
-          alignItems: 'center',
+          display: "flex",
+          flexDirection: "row",
+          alignItems: "center",
         }}
       >
         <CheckBox
           checkedContacts={checkedContacts}
           setCheckedContacts={setCheckedContacts}
         />
-
         <AppSearchBar
-          iconPosition='right'
+          iconPosition="right"
           overlap={false}
           value={filterText}
           onChange={(event) => onSetFilterText(event.target.value)}
-          placeholder={messages['common.searchHere']}
+          placeholder={messages["common.searchHere"]}
         />
         {checkedContacts.length > 0 ? (
           <ContactCheckedActions
@@ -79,8 +78,8 @@ export default ContactHeader;
 
 ContactHeader.defaultProps = {
   checkedContacts: [],
-  filterText: '',
-  pageView: 'list',
+  filterText: "",
+  pageView: "list",
   page: 0,
 };
 
