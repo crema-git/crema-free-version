@@ -1,5 +1,5 @@
-import React, { createContext, useContext, useEffect, useState } from 'react';
-import PropTypes from 'prop-types';
+import React, { createContext, useContext, useEffect, useState } from "react";
+import PropTypes from "prop-types";
 import {
   auth,
   createUserWithEmailAndPassword,
@@ -13,8 +13,8 @@ import {
   signOut,
   twitterAuthProvider,
   updateProfile,
-} from './firebase';
-import { useInfoViewActionsContext } from '../../../context/AppContextProvider/InfoViewContextProvider';
+} from "./firebase";
+import { useInfoViewActionsContext } from "../../../context/AppContextProvider/InfoViewContextProvider";
 
 const FirebaseContext = createContext();
 const FirebaseActionsContext = createContext();
@@ -68,16 +68,16 @@ const FirebaseAuthProvider = ({ children }) => {
 
   const getProvider = (providerName) => {
     switch (providerName) {
-      case 'google': {
+      case "google": {
         return googleAuthProvider;
       }
-      case 'facebook': {
+      case "facebook": {
         return facebookAuthProvider;
       }
-      case 'twitter': {
+      case "twitter": {
         return twitterAuthProvider;
       }
-      case 'github': {
+      case "github": {
         return githubAuthProvider;
       }
       default:
@@ -164,7 +164,9 @@ const FirebaseAuthProvider = ({ children }) => {
         isLoading: false,
         isAuthenticated: false,
       });
+      console.log("logout");
     } catch (error) {
+      console.log("error", error);
       setFirebaseData({
         user: null,
         isLoading: false,

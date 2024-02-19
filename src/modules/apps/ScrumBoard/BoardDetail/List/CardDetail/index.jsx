@@ -1,13 +1,13 @@
-import React from 'react';
-import Card from '@mui/material/Card';
-import AttachFileIcon from '@mui/icons-material/AttachFile';
-import ChatBubbleIcon from '@mui/icons-material/ChatBubble';
-import dayjs from 'dayjs';
-import { Box } from '@mui/material';
-import PropTypes from 'prop-types';
-import Members from './Members';
-import Labels from './Labels';
-import { Fonts } from '@crema/constants/AppEnums';
+import React from "react";
+import Card from "@mui/material/Card";
+import AttachFileIcon from "@mui/icons-material/AttachFile";
+import ChatBubbleIcon from "@mui/icons-material/ChatBubble";
+import dayjs from "dayjs";
+import { Box } from "@mui/material";
+import PropTypes from "prop-types";
+import Members from "./Members";
+import Labels from "./Labels";
+import { Fonts } from "@crema/constants/AppEnums";
 
 const CardDetail = ({
   title,
@@ -24,8 +24,8 @@ const CardDetail = ({
         py: 4,
         px: 6,
         mb: 2,
-        cursor: 'pointer',
-        whiteSpace: 'normal',
+        cursor: "pointer",
+        whiteSpace: "normal",
       }}
       onClick={(e) => {
         e.stopPropagation();
@@ -40,8 +40,8 @@ const CardDetail = ({
         <Box
           sx={{
             mb: 3,
-            display: 'flex',
-            alignItems: 'center',
+            display: "flex",
+            alignItems: "center",
           }}
         >
           <Box
@@ -55,13 +55,13 @@ const CardDetail = ({
           {attachments && attachments.length > 0 ? (
             <Box
               sx={{
-                ml: 'auto',
-                display: 'flex',
-                alignItems: 'center',
+                ml: "auto",
+                display: "flex",
+                alignItems: "center",
               }}
             >
               <Box
-                component='span'
+                component="span"
                 sx={{
                   fontWeight: Fonts.LIGHT,
                 }}
@@ -80,8 +80,8 @@ const CardDetail = ({
 
         <Box
           sx={{
-            display: 'flex',
-            alignItems: 'center',
+            display: "flex",
+            alignItems: "center",
           }}
         >
           {members.length > 0 ? <Members members={members} /> : null}
@@ -89,23 +89,23 @@ const CardDetail = ({
           <Box
             sx={{
               ml: 1,
-              mr: 'auto',
-              color: 'text.secondary',
+              mr: "auto",
+              color: "text.secondary",
             }}
           >
-            {date ? dayjs(date).format('ll').split(',')[0] : null}
+            {date ? dayjs(date).format("ll").split(",")[0] : null}
           </Box>
           {comments && comments.length > 0 ? (
             <Box
               sx={{
                 ml: 2,
-                display: 'flex',
-                alignItems: 'center',
-                color: 'text.secondary',
+                display: "flex",
+                alignItems: "center",
+                color: "text.secondary",
               }}
             >
               <Box
-                component='span'
+                component="span"
                 sx={{
                   mr: 2,
                   fontWeight: Fonts.LIGHT,

@@ -1,31 +1,31 @@
-import React from 'react';
-import { Box, Grid, Typography } from '@mui/material';
-import AppGridContainer from '@crema/components/AppGridContainer';
-import PackageOneNew from './PackageOneNew';
-import PackageTable from './PackageTable';
-import GitPackage from './GitPackage';
-import PricingFaq from './Faq';
-import { pricingData, pricingFaq } from '@crema/mockapi/fakedb/extraPages';
+import React from "react";
+import { Box, Grid, Typography } from "@mui/material";
+import AppGridContainer from "@crema/components/AppGridContainer";
+import PackageOneNew from "./PackageOneNew";
+import PackageTable from "./PackageTable";
+import GitPackage from "./GitPackage";
+import PricingFaq from "./Faq";
+import { pricingData, pricingFaq } from "@crema/mockapi/fakedb/extraPages";
 
 const PricingDetail = () => {
-  const [billingFormat, setBillingFormat] = React.useState('month');
+  const [billingFormat, setBillingFormat] = React.useState("month");
 
   return (
     <AppGridContainer>
       <Typography
-        variant='h1'
-        sx={{ mt: 8, width: '100%', fontSize: 48, textAlign: 'center' }}
+        variant="h1"
+        sx={{ mt: 8, width: "100%", fontSize: 48, textAlign: "center" }}
       >
         Plans that fit your scale
       </Typography>
       <Typography
-        variant='body1'
+        variant="body1"
         sx={{
-          width: '100%',
+          width: "100%",
           fontSize: 20,
           mt: 3,
-          textAlign: 'center',
-          color: 'text.secondary',
+          textAlign: "center",
+          color: "text.secondary",
           mb: 6,
         }}
       >
@@ -34,35 +34,35 @@ const PricingDetail = () => {
       </Typography>
       <Box
         sx={{
-          width: 'fit-content',
-          m: 'auto',
+          width: "fit-content",
+          m: "auto",
           borderRadius: 1.5,
           p: 1,
-          bgcolor: (theme) => theme.palette.common.white,
-          display: 'flex',
-          alignItems: 'center',
-          '.active': {
+          bgcolor: (theme) => theme.palette.background.paper,
+          display: "flex",
+          alignItems: "center",
+          ".active": {
             boxShadow:
-              '0px 1px 3px rgba(16, 24, 40, 0.1), 0px 1px 2px rgba(16, 24, 40, 0.06)',
+              "0px 1px 3px rgba(16, 24, 40, 0.1), 0px 1px 2px rgba(16, 24, 40, 0.06)",
           },
         }}
       >
         <Box
-          className={billingFormat === 'month' ? 'active' : ''}
-          sx={{ p: 3, borderRadius: 1.5, cursor: 'pointer' }}
-          onClick={() => setBillingFormat('month')}
+          className={billingFormat === "month" ? "active" : ""}
+          sx={{ p: 3, borderRadius: 1.5, cursor: "pointer" }}
+          onClick={() => setBillingFormat("month")}
         >
           Monthly billing
         </Box>
         <Box
-          className={billingFormat === 'year' ? 'active' : ''}
-          sx={{ p: 3, borderRadius: 1.5, cursor: 'pointer' }}
-          onClick={() => setBillingFormat('year')}
+          className={billingFormat === "year" ? "active" : ""}
+          sx={{ p: 3, borderRadius: 1.5, cursor: "pointer" }}
+          onClick={() => setBillingFormat("year")}
         >
           Yearly billing
         </Box>
         <Box
-          sx={{ borderRadius: '20px', bgcolor: '#F2F4F7', ml: 3, p: '4px 8px' }}
+          sx={{ borderRadius: "20px", bgcolor: "#F2F4F7", ml: 3, p: "4px 8px" }}
         >
           Save 20%
         </Box>
@@ -75,23 +75,23 @@ const PricingDetail = () => {
       </Grid>
       <Box
         sx={{
-          m: '60px auto 30px',
-          display: 'flex',
-          flexDirection: 'column',
-          width: '100%',
+          m: "60px auto 30px",
+          display: "flex",
+          flexDirection: "column",
+          width: "100%",
         }}
       >
-        <Box sx={{ m: '10px auto' }}>
-          <img src='/assets/images/heartglobe.svg' alt='heartglobe' />
+        <Box sx={{ m: "10px auto" }}>
+          <img src="/assets/images/heartglobe.svg" alt="heartglobe" />
         </Box>
         <Typography
-          variant='h2'
+          variant="h2"
           sx={{
-            m: 'auto',
-            width: '40%',
+            m: "auto",
+            width: "40%",
             fontSize: 48,
-            display: 'block',
-            textAlign: 'center',
+            display: "block",
+            textAlign: "center",
           }}
         >
           We love people who are changing the world

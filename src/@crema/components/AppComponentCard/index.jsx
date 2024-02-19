@@ -92,6 +92,7 @@ const AppComponentCard = ({
                         maxHeight: 500,
                         borderRadius: 8,
                         padding: 12,
+                        overflowY: "scroll",
                       }}
                     >
                       {tokens.map((line, i) => (

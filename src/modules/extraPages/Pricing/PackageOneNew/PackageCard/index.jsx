@@ -1,23 +1,24 @@
-import React from 'react';
-import { Typography } from '@mui/material';
-import PropTypes from 'prop-types';
-import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
-import CheckOutlinedIcon from '@mui/icons-material/CheckOutlined';
-import CardWrapper from './CardWrapper';
-import { Fonts } from '@crema/constants/AppEnums';
-import PackageWrapper from './PackageWrapper';
+import React from "react";
+import { Typography } from "@mui/material";
+import PropTypes from "prop-types";
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+import List from "@mui/material/List";
+import ListItem from "@mui/material/ListItem";
+import ListItemIcon from "@mui/material/ListItemIcon";
+import ListItemText from "@mui/material/ListItemText";
+import CheckOutlinedIcon from "@mui/icons-material/CheckOutlined";
+import CardWrapper from "./CardWrapper";
+import { Fonts } from "@crema/constants/AppEnums";
+import PackageWrapper from "./PackageWrapper";
 
 const PackageCard = ({ billingFormat, pricing }) => {
+  console.log("PackageCard: billingFormat:", pricing);
   return (
     <PackageWrapper>
       <Box
-        component='span'
-        className='tag'
+        component="span"
+        className="tag"
         sx={{
           backgroundColor: pricing.tagColor,
         }}
@@ -27,12 +28,12 @@ const PackageCard = ({ billingFormat, pricing }) => {
       <CardWrapper>
         <Box
           sx={{
-            position: 'relative',
+            position: "relative",
             pr: 20,
           }}
         >
           <Typography
-            component='h3'
+            component="h3"
             sx={{
               fontWeight: Fonts.BOLD,
               fontSize: { xs: 28, md: 32, lg: 36 },
@@ -40,15 +41,16 @@ const PackageCard = ({ billingFormat, pricing }) => {
           >
             {pricing.title}
           </Typography>
+
           <Typography
-            component='h4'
+            component="h4"
             sx={{
               fontSize: { xs: 20, md: 22, lg: 24 },
               mb: { xs: 5, lg: 7.5 },
             }}
           >
             <Box
-              component='span'
+              component="span"
               sx={{
                 fontWeight: Fonts.BOLD,
               }}
@@ -58,10 +60,10 @@ const PackageCard = ({ billingFormat, pricing }) => {
             /{billingFormat}
           </Typography>
           {pricing.popular ? (
-            <Box className='popular'>
-              <img src='/assets/images/arrowleft.svg' alt='arrowleft' />
+            <Box className="popular">
+              <img src="/assets/images/arrowleft.svg" alt="arrowleft" />
               <Typography
-                className='popularText'
+                className="popularText"
                 sx={{
                   fontSize: { xs: 12, xl: 14 },
                 }}
@@ -73,17 +75,17 @@ const PackageCard = ({ billingFormat, pricing }) => {
         </Box>
         <Box sx={{ mb: 7.5 }}>
           <Button
-            variant='outlined'
+            variant="outlined"
             sx={{
-              width: '100%',
+              width: "100%",
               fontWeight: Fonts.BOLD,
               color: (theme) => theme.palette.text.primary,
               minHeight: 46,
               borderRadius: 7.5,
-              boxShadow: 'none',
+              boxShadow: "none",
               borderWidth: 2,
               borderColor: pricing.tagColor,
-              '&:hover, &:focus': {
+              "&:hover, &:focus": {
                 borderColor: pricing.tagColor,
                 borderWidth: 2,
               },

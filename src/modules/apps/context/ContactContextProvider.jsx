@@ -1,7 +1,7 @@
-import React, { createContext, useContext, useEffect, useState } from 'react';
-import PropTypes from 'prop-types';
-import { useGetDataApi } from '@crema/hooks/APIHooks';
-import { useLocation } from 'react-router-dom';
+import React, { createContext, useContext, useEffect, useState } from "react";
+import PropTypes from "prop-types";
+import { useGetDataApi } from "@crema/hooks/APIHooks";
+import { useLocation } from "react-router-dom";
 
 const ContactContext = createContext();
 const ContactActionsContext = createContext();
@@ -12,16 +12,16 @@ export const useContactActionsContext = () => useContext(ContactActionsContext);
 
 export const ContactContextProvider = ({ children }) => {
   const [{ apiData: labelList }] = useGetDataApi(
-    '/api/contactApp/labels/list',
+    "/api/contactApp/labels/list",
     [],
   );
 
   const [{ apiData: folderList }] = useGetDataApi(
-    '/api/contactApp/folders/list',
+    "/api/contactApp/folders/list",
     [],
   );
 
-  const [pageView, setPageView] = useState('list');
+  const [pageView, setPageView] = useState("grid");
   const { pathname } = useLocation();
 
   const [page, setPage] = useState(0);
@@ -29,14 +29,14 @@ export const ContactContextProvider = ({ children }) => {
   const [
     { apiData: contactList, loading },
     { setQueryParams, setData: setContactData, reCallAPI },
-  ] = useGetDataApi('/api/contactApp/contact/List', {}, {}, false);
+  ] = useGetDataApi("/api/contactApp/contact/List", {}, {}, false);
 
   useEffect(() => {
     setPage(0);
   }, [pathname]);
 
   useEffect(() => {
-    const path = pathname.split('/');
+    const path = pathname.split("/");
     setQueryParams({
       type: path[path.length - 2],
       name: path[path.length - 1],

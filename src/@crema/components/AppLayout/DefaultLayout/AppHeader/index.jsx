@@ -69,13 +69,12 @@ const AppHeader = ({ toggleNavCollapsed }) => {
             />
           </IconButton>
         </Hidden>
-        <AppLogo />
+        <AppLogo /> <AppSearchBar iconPosition="right" placeholder="Search…" />
         <Box
           sx={{
             flexGrow: 1,
           }}
-        />{" "}
-        <AppSearchBar iconPosition="right" placeholder="Search…" />
+        />
         {allowMultiLanguage && (
           <AppLngSwitcher iconOnly={true} tooltipPosition="bottom" />
         )}

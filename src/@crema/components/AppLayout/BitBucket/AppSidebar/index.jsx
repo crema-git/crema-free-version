@@ -1,19 +1,19 @@
-import React from 'react';
-import clsx from 'clsx';
-import PropTypes from 'prop-types';
-import AppScrollbar from '../../../AppScrollbar';
-import MainSidebar from '../../components/MainSidebar';
-import Box from '@mui/material/Box';
-import Hidden from '@mui/material/Hidden';
-import Drawer from '@mui/material/Drawer';
-import VerticalNav from '../../components/VerticalNav';
-import NavigateBeforeIcon from '@mui/icons-material/NavigateBefore';
-import NavigateNextIcon from '@mui/icons-material/NavigateNext';
-import BitBucketSidebarWrapper from './BitBucketSidebarWrapper';
-import AppSidebarContainer from './AppSidebarContainer';
-import BucketMinibar from './BucketMinibar';
-import { Typography } from '@mui/material';
-import { Fonts } from '@crema/constants/AppEnums';
+import React from "react";
+import clsx from "clsx";
+import PropTypes from "prop-types";
+import AppScrollbar from "../../../AppScrollbar";
+import MainSidebar from "../../components/MainSidebar";
+import Box from "@mui/material/Box";
+import Hidden from "@mui/material/Hidden";
+import Drawer from "@mui/material/Drawer";
+import VerticalNav from "../../components/VerticalNav";
+import NavigateBeforeIcon from "@mui/icons-material/NavigateBefore";
+import NavigateNextIcon from "@mui/icons-material/NavigateNext";
+import BitBucketSidebarWrapper from "./BitBucketSidebarWrapper";
+import AppSidebarContainer from "./AppSidebarContainer";
+import BucketMinibar from "./BucketMinibar";
+import { Typography } from "@mui/material";
+import { Fonts } from "@crema/constants/AppEnums";
 
 const AppSidebar = (props) => {
   const {
@@ -26,16 +26,17 @@ const AppSidebar = (props) => {
 
   const sideBarComponent = () => {
     return (
-      <BitBucketSidebarWrapper className='bit-bucket-sidebar'>
-        <Box className='bit-bucket-sidebar-fixed'>
+      <BitBucketSidebarWrapper className="bit-bucket-sidebar">
+        <Box className="bit-bucket-sidebar-fixed">
           <Box
-            className='bit-bucket-btn'
+            className="bit-bucket-btn"
             onClick={() => setCollapsed(!isCollapsed)}
           >
             {isCollapsed ? <NavigateNextIcon /> : <NavigateBeforeIcon />}
           </Box>
+
           <BucketMinibar />
-          <AppSidebarContainer className='app-sidebar-container'>
+          <AppSidebarContainer className="app-sidebar-container">
             <MainSidebar>
               <Box
                 sx={{
@@ -48,7 +49,7 @@ const AppSidebar = (props) => {
                     fontSize: 22,
                     fontWeight: Fonts.MEDIUM,
                   }}
-                  component='h2'
+                  component="h2"
                 >
                   Crema
                 </Typography>
@@ -56,7 +57,7 @@ const AppSidebar = (props) => {
               <AppScrollbar
                 sx={{
                   py: 2,
-                  height: 'calc(100vh - 70px) !important',
+                  height: "calc(100vh - 70px) !important",
                 }}
                 scrollToTop={false}
               >
@@ -79,7 +80,7 @@ const AppSidebar = (props) => {
             root: clsx(props.variant),
             paper: clsx(props.variant),
           }}
-          style={{ position: 'absolute' }}
+          style={{ position: "absolute" }}
         >
           {sideBarComponent()}
         </Drawer>
@@ -91,8 +92,8 @@ const AppSidebar = (props) => {
 export default AppSidebar;
 
 AppSidebar.defaultProps = {
-  variant: '',
-  position: 'left',
+  variant: "",
+  position: "left",
 };
 
 AppSidebar.propTypes = {

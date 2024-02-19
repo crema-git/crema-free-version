@@ -1,11 +1,11 @@
-import React, { isValidElement } from 'react';
-import Card from '@mui/material/Card';
-import PropTypes from 'prop-types';
-import { Box, CardHeader } from '@mui/material';
-import { Fonts } from '@crema/constants/AppEnums';
-import Link from '@mui/material/Link';
-import CardContent from '@mui/material/CardContent';
-import CardActions from '@mui/material/CardActions';
+import { isValidElement } from "react";
+import Card from "@mui/material/Card";
+import PropTypes from "prop-types";
+import { Box, CardHeader } from "@mui/material";
+import { Fonts } from "@crema/constants/AppEnums";
+import Link from "@mui/material/Link";
+import CardContent from "@mui/material/CardContent";
+import CardActions from "@mui/material/CardActions";
 
 const AppCard = ({
   sxStyle,
@@ -23,7 +23,7 @@ const AppCard = ({
 }) => {
   return (
     <Card
-      sx={{ display: 'flex', flexDirection: 'column', ...sxStyle }}
+      sx={{ display: "flex", flexDirection: "column", ...sxStyle }}
       {...rest}
     >
       {title || action ? (
@@ -31,29 +31,29 @@ const AppCard = ({
           sx={{
             px: 6,
             pb: 0,
-            '& .MuiCardHeader-action': {
+            "& .MuiCardHeader-action": {
               marginTop: 0,
               marginRight: 0,
             },
-            '& .MuiCardHeader-content': {
-              overflow: 'hidden',
+            "& .MuiCardHeader-content": {
+              overflow: "hidden",
             },
             ...headerStyle,
           }}
           title={
-            typeof title === 'object' ? (
+            typeof title === "object" ? (
               title
             ) : (
               <Box
-                component='h3'
+                component="h3"
                 sx={{
-                  color: 'text.primary',
+                  color: "text.primary",
                   fontWeight: Fonts.SEMI_BOLD,
                   fontSize: 16,
-                  overflow: 'hidden',
-                  textOverflow: 'ellipsis',
-                  whiteSpace: 'nowrap',
-                  width: '100%',
+                  overflow: "hidden",
+                  textOverflow: "ellipsis",
+                  whiteSpace: "nowrap",
+                  width: "100%",
                   ...titleStyle,
                 }}
               >
@@ -62,14 +62,14 @@ const AppCard = ({
             )
           }
           action={
-            typeof action === 'object' ? (
+            typeof action === "object" ? (
               action
             ) : (
               <span {...actionStyle}>
                 <Link
-                  href='#'
-                  color='secondary'
-                  underline='none'
+                  href="#"
+                  color="secondary"
+                  underline="none"
                   sx={{
                     fontSize: 14,
                     fontWeight: Fonts.MEDIUM,
@@ -84,9 +84,9 @@ const AppCard = ({
       ) : null}
       <CardContent
         sx={{
-          height: '100%',
+          height: "100%",
           px: 6,
-          '&:last-of-type': {
+          "&:last-of-type": {
             pb: 4,
           },
           ...contentStyle,
@@ -106,13 +106,13 @@ const AppCard = ({
             footer
           ) : (
             <Box
-              component='span'
-              sx={{ ml: footerPosition === 'right' ? 'auto' : 0 }}
+              component="span"
+              sx={{ ml: footerPosition === "right" ? "auto" : 0 }}
             >
               <Link
-                color='secondary'
-                component='button'
-                underline='none'
+                color="secondary"
+                component="button"
+                underline="none"
                 sx={{
                   fontSize: 14,
                   fontWeight: Fonts.MEDIUM,
@@ -146,5 +146,5 @@ AppCard.propTypes = {
 };
 
 AppCard.defaultProps = {
-  footerPosition: 'left',
+  footerPosition: "left",
 };

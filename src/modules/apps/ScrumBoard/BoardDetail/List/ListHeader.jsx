@@ -1,23 +1,23 @@
-import React, { useState } from 'react';
-import Card from '@mui/material/Card';
-import TextField from '@mui/material/TextField';
-import CloseIcon from '@mui/icons-material/Close';
-import DeleteOutlinedIcon from '@mui/icons-material/DeleteOutlined';
-import EditOutlinedIcon from '@mui/icons-material/EditOutlined';
-import CheckIcon from '@mui/icons-material/Check';
-import Box from '@mui/material/Box';
-import PropTypes from 'prop-types';
-import { Fonts } from '@crema/constants/AppEnums';
-import IntlMessages from '@crema/helpers/IntlMessages';
-import AppConfirmDialog from '@crema/components/AppConfirmDialog';
-import IconButton from '@mui/material/IconButton';
+import React, { useState } from "react";
+import Card from "@mui/material/Card";
+import TextField from "@mui/material/TextField";
+import CloseIcon from "@mui/icons-material/Close";
+import DeleteOutlinedIcon from "@mui/icons-material/DeleteOutlined";
+import EditOutlinedIcon from "@mui/icons-material/EditOutlined";
+import CheckIcon from "@mui/icons-material/Check";
+import Box from "@mui/material/Box";
+import PropTypes from "prop-types";
+import { Fonts } from "@crema/constants/AppEnums";
+import IntlMessages from "@crema/helpers/IntlMessages";
+import AppConfirmDialog from "@crema/components/AppConfirmDialog";
+import IconButton from "@mui/material/IconButton";
 
 const ListHeader = (props) => {
   const { name, id, onDelete, updateTitle } = props;
 
   const [isEditListName, setEditListName] = useState(false);
 
-  const [editedListName, setEditedListName] = useState('');
+  const [editedListName, setEditedListName] = useState("");
 
   const [isDeleteDialogOpen, setDeleteDialogOpen] = useState(false);
 
@@ -32,7 +32,7 @@ const ListHeader = (props) => {
   };
 
   const onEditListName = () => {
-    if (editedListName !== '') {
+    if (editedListName !== "") {
       updateTitle(editedListName);
       setEditListName(false);
     }
@@ -49,31 +49,31 @@ const ListHeader = (props) => {
     >
       <Box
         sx={{
-          display: 'flex',
-          alignItems: 'center',
+          display: "flex",
+          alignItems: "center",
         }}
       >
         {!isEditListName ? (
           <>
             <Box
-              componet='h5'
+              componet="h5"
               sx={{
                 fontSize: 15,
                 fontWeight: Fonts.MEDIUM,
-                width: '100%',
-                whiteSpace: 'nowrap',
-                overflow: 'hidden',
-                textOverflow: 'ellipsis',
+                width: "100%",
+                whiteSpace: "nowrap",
+                overflow: "hidden",
+                textOverflow: "ellipsis",
               }}
             >
               {name}
             </Box>
             <Box
               sx={{
-                ml: 'auto',
+                ml: "auto",
                 mr: -2,
-                display: 'flex',
-                alignItems: 'center',
+                display: "flex",
+                alignItems: "center",
               }}
             >
               <IconButton
@@ -103,17 +103,17 @@ const ListHeader = (props) => {
             >
               <TextField
                 fullWidth
-                label={<IntlMessages id='scrumboard.listTitle' />}
+                label={<IntlMessages id="scrumboard.listTitle" />}
                 value={editedListName}
                 onChange={(event) => setEditedListName(event.target.value)}
               />
             </Box>
             <Box
               sx={{
-                ml: 'auto',
+                ml: "auto",
                 mr: -2,
-                display: 'flex',
-                alignItems: 'center',
+                display: "flex",
+                alignItems: "center",
               }}
             >
               <IconButton
@@ -136,14 +136,13 @@ const ListHeader = (props) => {
           </>
         )}
       </Box>
-
       {isDeleteDialogOpen ? (
         <AppConfirmDialog
           open={isDeleteDialogOpen}
           onDeny={setDeleteDialogOpen}
           onConfirm={onDeleteBoardList}
-          title={<IntlMessages id='scrumboard.deleteMessage' />}
-          dialogTitle={<IntlMessages id='common.deleteItem' />}
+          title={<IntlMessages id="scrumboard.deleteMessage" />}
+          dialogTitle={<IntlMessages id="common.deleteItem" />}
         />
       ) : null}
     </Card>
