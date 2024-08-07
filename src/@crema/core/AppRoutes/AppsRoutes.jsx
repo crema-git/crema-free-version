@@ -6,7 +6,6 @@ const Mail = React.lazy(() => import('../../../modules/apps/Mail'));
 const ToDo = React.lazy(() => import('../../../modules/apps/ToDo'));
 const Calendar = React.lazy(() => import('../../../modules/apps/Calendar'));
 const Contact = React.lazy(() => import('../../../modules/apps/Contact'));
-const ScrumBoard = React.lazy(() => import('../../../modules/apps/ScrumBoard'));
 const Chat = React.lazy(() => import('../../../modules/apps/Chat'));
 const Wall = React.lazy(() => import('../../../modules/apps/Wall'));
 
@@ -70,11 +69,6 @@ export const appsConfig = [
     permittedRole: RoutePermittedRole.User,
     path: ['/apps/chat'],
     element: <Chat />,
-  },
-  {
-    permittedRole: RoutePermittedRole.User,
-    path: ['/apps/scrum-board/:id', '/apps/scrum-board'],
-    element: <ScrumBoard />,
   },
   {
     permittedRole: RoutePermittedRole.User,

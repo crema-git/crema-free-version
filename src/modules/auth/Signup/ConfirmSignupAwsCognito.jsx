@@ -8,8 +8,8 @@ import Typography from '@mui/material/Typography';
 import IntlMessages from '@crema/helpers/IntlMessages';
 import Button from '@mui/material/Button';
 import AppInfoView from '@crema/components/AppInfoView';
+import VerificationInput from "react-verification-input";
 import { useAuthMethod } from '@crema/hooks/AuthHooks';
-import ReactCodeInput from 'react-code-input';
 import AuthWrapper from '../AuthWrapper';
 import { useInfoViewActionsContext } from '@crema/context/AppContextProvider/InfoViewContextProvider';
 
@@ -67,10 +67,10 @@ const ConfirmSignupAwsCognito = () => {
             mb: { xs: 6, xl: 10 },
           }}
         >
-          <ReactCodeInput
-            type='password'
+          <VerificationInput
+            passwordMode
             value={pin}
-            fields={6}
+            length={6}
             onChange={(value) => setPin(value)}
           />
         </Box>

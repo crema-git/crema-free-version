@@ -19,7 +19,7 @@
     "@mui/base": "^5.0.0-beta.33",
     "@mui/icons-material": "^5.14.1",
     "@mui/lab": "^5.0.0-alpha.162",
-    "@mui/material": "^5.15.6",
+    "@mui/material": "5.15.6",
     "@mui/system": "^5.15.6",
     "@mui/x-data-grid": "^6.10.0",
     "@mui/x-data-grid-generator": "^6.10.0",
@@ -51,7 +51,6 @@
     "react-apexcharts": "^1.4.1",
     "react-big-calendar": "^1.8.1",
     "react-bottom-scroll-listener": "^5.1.0",
-    "react-code-input": "^3.10.1",
     "react-color": "^2.19.3",
     "react-content-loader": "^6.2.1",
     "react-dom": "^18.2.0",
@@ -64,11 +63,10 @@
     "react-notifications-component": "^4.0.1",
     "react-player": "^2.12.0",
     "react-popper": "^2.3.0",
-    "react-redux": "^8.1.1",
     "react-router-dom": "^6.21.3",
     "react-share": "^4.4.1",
     "react-slick": "^0.29.0",
-    "react-trello": "^2.2.11",
+    "react-verification-input": "^4.1.2",
     "react-window": "^1.8.9",
     "recharts": "^2.7.2",
     "rxjs": "^7.8.1",
@@ -88,7 +86,7 @@
     "@release-it/conventional-changelog": "^8.0.1",
     "@types/react": "^18.2.43",
     "@types/react-dom": "^18.2.17",
-    "@vitejs/plugin-react": "^4.2.1",
+    "@vitejs/plugin-react": "4.2.1",
     "eslint": "^8.55.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-prettier": "^5.0.0",
@@ -98,6 +96,6 @@
     "lint-staged": "^13.2.3",
     "prettier": "^3.2.5",
     "release-it": "^17.1.1",
-    "vite": "^5.1.1"
+    "vite": "5.1.1"
   }
 }

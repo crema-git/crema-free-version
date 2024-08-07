@@ -4,15 +4,15 @@ import clsx from 'clsx';
 import PropTypes from 'prop-types';
 import IntlMessages from '@crema/helpers/IntlMessages';
 import useStyles from './GroupItem.style';
-import { useSelector } from 'react-redux';
 import Box from '@mui/material/Box';
 import { checkPermission } from '@crema/helpers/RouteHelper';
 import { useThemeContext } from '@crema/context/AppContextProvider/ThemeContextProvider';
+import { useAuthUser } from '@crema/hooks/AuthHooks';
 
 const GroupItem = ({ item, setSelectedMenu, selectedMenu }) => {
   const { themeMode } = useThemeContext();
   const classes = useStyles({ themeMode });
-  const { user } = useSelector(({ auth }) => auth);
+  const {user} = useAuthUser();
   const hasPermission = useMemo(
     () => checkPermission(item.auth, user.role),
     [item.auth, user.role],

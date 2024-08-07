@@ -7,14 +7,14 @@ import AppNavLink from '../../../../AppNavLink';
 import Box from '@mui/material/Box';
 import IntlMessages from '@crema/helpers/IntlMessages';
 import useStyles from './VerticalItem.style';
-import { useSelector } from 'react-redux';
 import { checkPermission } from '@crema/helpers/RouteHelper';
 import { useThemeContext } from '@crema/context/AppContextProvider/ThemeContextProvider';
+import { useAuthUser } from '@crema/hooks/AuthHooks';
 
 const VerticalItem = ({ level, item }) => {
   const { themeMode } = useThemeContext();
   const classes = useStyles({ level, themeMode });
-  const { user } = useSelector(({ auth }) => auth);
+  const { user } = useAuthUser();
   const hasPermission = useMemo(
     () => checkPermission(item.auth, user.role),
     [item.auth, user.role],

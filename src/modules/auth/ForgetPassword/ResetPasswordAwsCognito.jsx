@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Form, Formik } from 'formik';
 import * as yup from 'yup';
-import ReactCodeInput from 'react-code-input';
+import VerificationInput from 'react-verification-input';
 import { useInfoViewActionsContext } from '@crema/context/AppContextProvider/InfoViewContextProvider';
 import { useIntl } from 'react-intl';
 import { Fonts } from '@crema/constants/AppEnums';
@@ -99,10 +99,10 @@ const ResetPasswordAwsCognito = () => {
                   mb: { xs: 4, lg: 6 },
                 }}
               >
-                <ReactCodeInput
-                  type='password'
+                <VerificationInput
+                  passwordMode
                   value={pin}
-                  fields={6}
+                  length={6}
                   onChange={(value) => setPin(value)}
                 />
               </Box>
