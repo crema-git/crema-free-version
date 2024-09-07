@@ -18,14 +18,14 @@ import {
 
 // Initialize Firebase
 const firebaseConfig = {
-  apiKey: 'AIzaSyAzL_2jiVBhmiIUFGs2z6-cDR-Hgoedh3k',
-  authDomain: 'crema-react.firebaseapp.com',
-  databaseURL: 'https://crema-react.firebaseio.com',
-  projectId: 'crema-react',
-  storageBucket: 'crema-react.appspot.com',
-  messagingSenderId: '369173776768',
-  appId: '1:369173776768:web:895ded916749deebd31965',
-  measurementId: 'G-976YVMRB4R',
+  apiKey: 'YOUR_API_KEY',
+  authDomain: 'YOUR_PROJECT_ID.firebaseapp.com',
+  databaseURL: 'https://YOUR_PROJECT_ID.firebaseio.com',
+  projectId: 'YOUR_PROJECT_ID',
+  storageBucket: 'YOUR_PROJECT_ID.appspot.com',
+  messagingSenderId: 'YOUR_MESSAGING_SENDER_ID',
+  appId: '1:YOUR_APP_ID',
+  measurementId: 'G-YOUR_MEASUREMENT_ID',
 };
 
 const app = initializeApp(firebaseConfig);
