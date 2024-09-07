@@ -14,7 +14,7 @@ messagingSenderId: 'YOUR_MESSAGING_SENDER_ID',
 appId: '1:YOUR_APP_ID',
 measurementId: 'G-YOUR_MEASUREMENT_ID',
 ```
-# React + Vite Free Admin Template
+### React + Vite Free Admin Template
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
