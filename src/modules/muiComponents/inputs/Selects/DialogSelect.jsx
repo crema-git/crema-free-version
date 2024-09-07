@@ -1,22 +1,22 @@
-import * as React from 'react';
-import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
-import Dialog from '@mui/material/Dialog';
-import DialogActions from '@mui/material/DialogActions';
-import DialogContent from '@mui/material/DialogContent';
-import DialogTitle from '@mui/material/DialogTitle';
-import InputLabel from '@mui/material/InputLabel';
-import OutlinedInput from '@mui/material/OutlinedInput';
-import MenuItem from '@mui/material/MenuItem';
-import FormControl from '@mui/material/FormControl';
-import Select from '@mui/material/Select';
+import * as React from "react";
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+import Dialog from "@mui/material/Dialog";
+import DialogActions from "@mui/material/DialogActions";
+import DialogContent from "@mui/material/DialogContent";
+import DialogTitle from "@mui/material/DialogTitle";
+import InputLabel from "@mui/material/InputLabel";
+import OutlinedInput from "@mui/material/OutlinedInput";
+import MenuItem from "@mui/material/MenuItem";
+import FormControl from "@mui/material/FormControl";
+import Select from "@mui/material/Select";
 
 export default function DialogSelect() {
   const [open, setOpen] = React.useState(false);
-  const [age, setAge] = React.useState('');
+  const [age, setAge] = React.useState("");
 
   const handleChange = (event) => {
-    setAge(Number(event.target.value) || '');
+    setAge(Number(event.target.value) || "");
   };
 
   const handleClickOpen = () => {
@@ -24,7 +24,7 @@ export default function DialogSelect() {
   };
 
   const handleClose = (event, reason) => {
-    if (reason !== 'backdropClick') {
+    if (reason !== "backdropClick") {
       setOpen(false);
     }
   };
@@ -35,31 +35,31 @@ export default function DialogSelect() {
       <Dialog disableEscapeKeyDown open={open} onClose={handleClose}>
         <DialogTitle>Fill the form</DialogTitle>
         <DialogContent>
-          <Box component='form' sx={{ display: 'flex', flexWrap: 'wrap' }}>
+          <Box component="form" sx={{ display: "flex", flexWrap: "wrap" }}>
             <FormControl sx={{ m: 1, minWidth: 120 }}>
-              <InputLabel htmlFor='demo-dialog-native'>Age</InputLabel>
+              <InputLabel htmlFor="demo-dialog-native">Age</InputLabel>
               <Select
                 native
                 value={age}
                 onChange={handleChange}
-                input={<OutlinedInput label='Age' id='demo-dialog-native' />}
+                input={<OutlinedInput label="Age" id="demo-dialog-native" />}
               >
-                <option aria-label='None' value='' />
+                <option aria-label="None" value="" />
                 <option value={10}>Ten</option>
                 <option value={20}>Twenty</option>
                 <option value={30}>Thirty</option>
               </Select>
             </FormControl>
             <FormControl sx={{ m: 1, minWidth: 120 }}>
-              <InputLabel id='demo-dialog-select-label'>Age</InputLabel>
+              <InputLabel id="demo-dialog-select-label">Age</InputLabel>
               <Select
-                labelId='demo-dialog-select-label'
-                id='demo-dialog-select'
+                labelId="demo-dialog-select-label"
+                id="demo-dialog-select"
                 value={age}
                 onChange={handleChange}
-                input={<OutlinedInput label='Age' />}
+                input={<OutlinedInput label="Age" />}
               >
-                <MenuItem value=''>
+                <MenuItem value="">
                   <em>None</em>
                 </MenuItem>
                 <MenuItem value={10}>Ten</MenuItem>

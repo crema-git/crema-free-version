@@ -1,10 +1,10 @@
-import * as React from 'react';
-import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
-import Slider from '@mui/material/Slider';
+import * as React from "react";
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
+import Slider from "@mui/material/Slider";
 
 function valueLabelFormat(value) {
-  const units = ['KB', 'MB', 'GB', 'TB'];
+  const units = ["KB", "MB", "GB", "TB"];
 
   let unitIndex = 0;
   let scaledValue = value;
@@ -25,14 +25,14 @@ export default function NonLinearSlider() {
   const [value, setValue] = React.useState(10);
 
   const handleChange = (event, newValue) => {
-    if (typeof newValue === 'number') {
+    if (typeof newValue === "number") {
       setValue(newValue);
     }
   };
 
   return (
     <Box sx={{ width: 250 }}>
-      <Typography id='non-linear-slider' gutterBottom>
+      <Typography id="non-linear-slider" gutterBottom>
         Storage: {valueLabelFormat(calculateValue(value))}
       </Typography>
       <Slider
@@ -44,8 +44,8 @@ export default function NonLinearSlider() {
         getAriaValueText={valueLabelFormat}
         valueLabelFormat={valueLabelFormat}
         onChange={handleChange}
-        valueLabelDisplay='auto'
-        aria-labelledby='non-linear-slider'
+        valueLabelDisplay="auto"
+        aria-labelledby="non-linear-slider"
       />
     </Box>
   );

@@ -1,6 +1,6 @@
-import * as React from 'react';
-import Stack from '@mui/material/Stack';
-import Slider from '@mui/material/Slider';
+import * as React from "react";
+import Stack from "@mui/material/Stack";
+import Slider from "@mui/material/Slider";
 
 function valuetext(value) {
   return `${value}°C`;
@@ -9,40 +9,40 @@ function valuetext(value) {
 const marks = [
   {
     value: 0,
-    label: '0°C',
+    label: "0°C",
   },
   {
     value: 20,
-    label: '20°C',
+    label: "20°C",
   },
   {
     value: 37,
-    label: '37°C',
+    label: "37°C",
   },
   {
     value: 100,
-    label: '100°C',
+    label: "100°C",
   },
 ];
 
 export default function VerticalSlider() {
   return (
-    <Stack sx={{ height: 300 }} spacing={1} direction='row'>
+    <Stack sx={{ height: 300 }} spacing={1} direction="row">
       <Slider
-        aria-label='Temperature'
-        orientation='vertical'
+        aria-label="Temperature"
+        orientation="vertical"
         getAriaValueText={valuetext}
         defaultValue={30}
       />
       <Slider
-        aria-label='Temperature'
-        orientation='vertical'
+        aria-label="Temperature"
+        orientation="vertical"
         defaultValue={30}
         disabled
       />
       <Slider
-        getAriaLabel={() => 'Temperature'}
-        orientation='vertical'
+        getAriaLabel={() => "Temperature"}
+        orientation="vertical"
         getAriaValueText={valuetext}
         defaultValue={[20, 37]}
         marks={marks}

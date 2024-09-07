@@ -7,28 +7,28 @@ import {
   ThemeMode,
   ThemeStyle,
   ThemeStyleRadius,
-} from './AppEnums';
+} from "./AppEnums";
 
 export const textLight = {
-  primary: 'rgb(17, 24, 39)',
-  secondary: 'rgb(107, 114, 128)',
-  disabled: 'rgb(149, 156, 169)',
+  primary: "rgb(17, 24, 39)",
+  secondary: "rgb(107, 114, 128)",
+  disabled: "rgb(149, 156, 169)",
 };
 
 export const textDark = {
-  primary: 'rgb(255,255,255)',
-  secondary: 'rgb(229, 231, 235)',
-  disabled: 'rgb(156, 163, 175)',
+  primary: "rgb(255,255,255)",
+  secondary: "rgb(229, 231, 235)",
+  disabled: "rgb(156, 163, 175)",
 };
 
 export const backgroundDark = {
-  paper: '#2B3137',
-  default: '#1F2527',
+  paper: "#2B3137",
+  default: "#1F2527",
 };
 
 export const backgroundLight = {
-  paper: '#FFFFFF',
-  default: '#F4F7FE',
+  paper: "#FFFFFF",
+  default: "#F4F7FE",
 };
 
 const cardRadius = ThemeStyleRadius.STANDARD;
@@ -40,48 +40,48 @@ export const defaultTheme = {
     palette: {
       mode: import.meta.env.VITE__THEME_MODE,
       background: {
-        paper: '#FFFFFF',
-        default: '#F4F7FE',
+        paper: "#FFFFFF",
+        default: "#F4F7FE",
       },
       primary: {
         main: import.meta.env.VITE__PRIMARY_COLOR,
-        contrastText: '#fff',
+        contrastText: "#fff",
       },
       secondary: {
         main: import.meta.env.VITE__SECONDARY_COLOR,
       },
       success: {
-        main: '#11C15B',
-        light: '#D9F5E5',
+        main: "#11C15B",
+        light: "#D9F5E5",
       },
       warning: {
-        main: '#FF5252',
-        light: '#FFECDC',
+        main: "#FF5252",
+        light: "#FFECDC",
       },
       text: textLight,
       gray: {
-        50: '#fafafa',
-        100: '#F5F6FA',
-        200: '#edf2f7',
-        300: '#E0E0E0',
-        400: '#c5c6cb',
-        500: '#A8A8A8',
-        600: '#666666',
-        700: '#4a5568',
-        800: '#201e21',
-        900: '#1a202c',
-        A100: '#d5d5d5',
-        A200: '#aaaaaa',
-        A400: '#303030',
-        A700: '#616161',
+        50: "#fafafa",
+        100: "#F5F6FA",
+        200: "#edf2f7",
+        300: "#E0E0E0",
+        400: "#c5c6cb",
+        500: "#A8A8A8",
+        600: "#666666",
+        700: "#4a5568",
+        800: "#201e21",
+        900: "#1a202c",
+        A100: "#d5d5d5",
+        A200: "#aaaaaa",
+        A400: "#303030",
+        A700: "#616161",
       },
     },
     status: {
-      danger: 'orange',
+      danger: "orange",
     },
-    divider: 'rgba(224, 224, 224, 1)',
+    divider: "rgba(224, 224, 224, 1)",
     typography: {
-      fontFamily: ['Be Vietnam', 'sans-serif'].join(','),
+      fontFamily: ["Be Vietnam", "sans-serif"].join(","),
       fontSize: 14,
       fontWeight: 400,
       h1: {
@@ -144,7 +144,7 @@ export const defaultTheme = {
         styleOverrides: {
           root: {
             borderRadius: cardRadius,
-            boxShadow: '0px 10px 10px 4px rgba(0, 0, 0, 0.04)',
+            boxShadow: "0px 10px 10px 4px rgba(0, 0, 0, 0.04)",
             // '& .MuiCardContent-root:last-of-type': {
             //   paddingBottom: 16,
             // },
@@ -156,7 +156,7 @@ export const defaultTheme = {
           root: {
             borderRadius: cardRadius / 2,
             // boxShadow: '0px 5px 6px rgba(0, 0, 0, 0.04)',
-            textTransform: 'capitalize',
+            textTransform: "capitalize",
           },
         },
       },
@@ -192,24 +192,24 @@ export const defaultTheme = {
   },
 };
 export const DarkSidebar = {
-  sidebarBgColor: '#313541',
-  sidebarTextColor: '#fff',
-  sidebarHeaderColor: '#313541',
-  sidebarMenuSelectedBgColor: '#F4F7FE',
-  sidebarMenuSelectedTextColor: 'rgba(0, 0, 0, 0.87)',
+  sidebarBgColor: "#313541",
+  sidebarTextColor: "#fff",
+  sidebarHeaderColor: "#313541",
+  sidebarMenuSelectedBgColor: "#F4F7FE",
+  sidebarMenuSelectedTextColor: "rgba(0, 0, 0, 0.87)",
   mode: ThemeMode.DARK,
 };
 export const LightSidebar = {
-  sidebarBgColor: '#fff',
-  sidebarTextColor: 'rgba(0, 0, 0, 0.60)',
-  sidebarHeaderColor: '#fff',
-  sidebarMenuSelectedBgColor: '#F4F7FE',
-  sidebarMenuSelectedTextColor: 'rgba(0, 0, 0, 0.87)',
+  sidebarBgColor: "#fff",
+  sidebarTextColor: "rgba(0, 0, 0, 0.60)",
+  sidebarHeaderColor: "#fff",
+  sidebarMenuSelectedBgColor: "#F4F7FE",
+  sidebarMenuSelectedTextColor: "rgba(0, 0, 0, 0.87)",
   mode: ThemeMode.LIGHT,
 };
 const defaultConfig = {
   sidebar: {
-    borderColor: '#757575',
+    borderColor: "#757575",
     menuStyle: MenuStyle.DEFAULT,
     allowSidebarBgImage: false,
     sidebarBgImageId: 1,
@@ -219,15 +219,15 @@ const defaultConfig = {
   themeMode: import.meta.env.VITE__THEME_MODE,
   navStyle: import.meta.env.VITE__NAV_STYLE,
   layoutType: import.meta.env.VITE__LAYOUT_TYPE,
-  footerType: FooterType.FLUID,
+  footerType: FooterType.FIXED,
   headerType: HeaderType.FIXED,
-  footer: false,
+  footer: true,
   locale: {
-    languageId: 'english',
-    locale: 'en',
-    name: 'English',
-    icon: 'us',
+    languageId: "english",
+    locale: "en",
+    name: "English",
+    icon: "us",
   },
-  rtlLocale: ['ar'],
+  rtlLocale: ["ar"],
 };
 export default defaultConfig;

@@ -1,19 +1,13 @@
 // import React from 'react';
-import { Navigate } from 'react-router-dom';
+import { Navigate } from "react-router-dom";
 
-import { authRouteConfig } from './AuthRoutes';
-import Error403 from '../../../modules/errorPages/Error403';
-import { errorPagesConfigs } from './ErrorPagesRoutes';
-import { dashBoardConfigs } from './DashboardsRoutes';
-import { extraPagesConfigs } from './ExtraPagesRoutes';
-import { ecommerceConfig } from './EcommerceRoutes';
-import { userListConfig } from './UserListRoutes';
-import { userPagesConfig } from './UserPagesRoutes';
-import { muiComponentConfigs } from './MUIComponents';
-import { thirdPartyConfigs } from './ThirdPartyRoutes';
-import { appsConfig } from './AppsRoutes';
-import { accountPagesConfigs } from './AccountRoutes';
-import { invoiceConfig } from './InvoiceRoutes';
+import { authRouteConfig } from "./AuthRoutes";
+import Error403 from "../../../modules/errorPages/Error403";
+import { errorPagesConfigs } from "./ErrorPagesRoutes";
+import { dashBoardConfigs } from "./DashboardsRoutes";
+import { userListConfig } from "./UserListRoutes";
+import { muiComponentConfigs } from "./MUIComponents";
+import { accountPagesConfigs } from "./AccountRoutes";
 
 export const authorizedStructure = (loginUrl) => {
   return {
@@ -22,14 +16,8 @@ export const authorizedStructure = (loginUrl) => {
     routes: [
       ...dashBoardConfigs,
       ...accountPagesConfigs,
-      ...appsConfig,
-      ...thirdPartyConfigs,
-      ...extraPagesConfigs,
-      ...ecommerceConfig,
       ...muiComponentConfigs,
-      ...userPagesConfig,
       ...userListConfig,
-      ...invoiceConfig,
     ],
   };
 };
@@ -44,12 +32,12 @@ export const anonymousStructure = (initialUrl) => {
   return {
     routes: errorPagesConfigs.concat([
       {
-        path: '/',
+        path: "/",
         element: <Navigate to={initialUrl} />,
       },
       {
-        path: '*',
-        element: <Navigate to='/error-pages/error-404' />,
+        path: "*",
+        element: <Navigate to="/error-pages/error-404" />,
       },
     ]),
   };

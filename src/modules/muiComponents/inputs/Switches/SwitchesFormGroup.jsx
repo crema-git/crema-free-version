@@ -1,10 +1,10 @@
-import * as React from 'react';
-import FormLabel from '@mui/material/FormLabel';
-import FormControl from '@mui/material/FormControl';
-import FormGroup from '@mui/material/FormGroup';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import FormHelperText from '@mui/material/FormHelperText';
-import Switch from '@mui/material/Switch';
+import * as React from "react";
+import FormLabel from "@mui/material/FormLabel";
+import FormControl from "@mui/material/FormControl";
+import FormGroup from "@mui/material/FormGroup";
+import FormControlLabel from "@mui/material/FormControlLabel";
+import FormHelperText from "@mui/material/FormHelperText";
+import Switch from "@mui/material/Switch";
 
 export default function SwitchesGroup() {
   const [state, setState] = React.useState({
@@ -21,38 +21,38 @@ export default function SwitchesGroup() {
   };
 
   return (
-    <FormControl component='fieldset' variant='standard'>
-      <FormLabel component='legend'>Assign responsibility</FormLabel>
+    <FormControl component="fieldset" variant="standard">
+      <FormLabel component="legend">Assign responsibility</FormLabel>
       <FormGroup>
         <FormControlLabel
           control={
             <Switch
               checked={state.gilad}
               onChange={handleChange}
-              name='gilad'
+              name="gilad"
             />
           }
-          label='Gilad Gray'
+          label="Gilad Gray"
         />
         <FormControlLabel
           control={
             <Switch
               checked={state.jason}
               onChange={handleChange}
-              name='jason'
+              name="jason"
             />
           }
-          label='Jason Killian'
+          label="Jason Killian"
         />
         <FormControlLabel
           control={
             <Switch
               checked={state.antoine}
               onChange={handleChange}
-              name='antoine'
+              name="antoine"
             />
           }
-          label='Antoine Llorca'
+          label="Antoine Llorca"
         />
       </FormGroup>
       <FormHelperText>Be careful</FormHelperText>

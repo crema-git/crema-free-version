@@ -1,6 +1,6 @@
-import * as React from 'react';
-import Box from '@mui/material/Box';
-import TextField from '@mui/material/TextField';
+import * as React from "react";
+import Box from "@mui/material/Box";
+import TextField from "@mui/material/TextField";
 
 function RedBar() {
   return (
@@ -8,9 +8,9 @@ function RedBar() {
       sx={{
         height: 20,
         backgroundColor: (theme) =>
-          theme.palette.mode === 'light'
-            ? 'rgba(255, 0, 0, 0.1)'
-            : 'rgb(255 132 132 / 25%)',
+          theme.palette.mode === "light"
+            ? "rgba(255, 0, 0, 0.1)"
+            : "rgb(255 132 132 / 25%)",
       }}
     />
   );
@@ -20,17 +20,17 @@ export default function LayoutTextFields() {
   return (
     <Box
       sx={{
-        display: 'flex',
-        flexDirection: 'column',
-        '& .MuiTextField-root': { width: '25ch' },
+        display: "flex",
+        flexDirection: "column",
+        "& .MuiTextField-root": { width: "25ch" },
       }}
     >
       <RedBar />
-      <TextField label={'margin="none"'} id='margin-none' />
+      <TextField label={'margin="none"'} id="margin-none" />
       <RedBar />
-      <TextField label={'margin="dense"'} id='margin-dense' margin='dense' />
+      <TextField label={'margin="dense"'} id="margin-dense" margin="dense" />
       <RedBar />
-      <TextField label={'margin="normal"'} id='margin-normal' margin='normal' />
+      <TextField label={'margin="normal"'} id="margin-normal" margin="normal" />
       <RedBar />
     </Box>
   );

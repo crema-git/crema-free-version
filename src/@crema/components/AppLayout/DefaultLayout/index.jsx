@@ -4,7 +4,6 @@ import AppContentView from "../../AppContentView";
 import AppFixedFooter from "./AppFixedFooter";
 import AppHeader from "./AppHeader";
 import { useLayoutContext } from "@crema/context/AppContextProvider/LayoutContextProvider";
-import AppThemeSetting from "../../AppThemeSetting";
 import DefaultLayoutWrapper from "./DefaultLayoutWrapper";
 import MainContent from "./MainContent";
 import { LayoutType } from "@crema/constants/AppEnums";
@@ -50,7 +49,6 @@ const DefaultLayout = ({ routes, routesConfig }) => {
           <AppContentView routes={routes} />
           <AppFixedFooter />
         </MainContent>
-        <AppThemeSetting />
       </DefaultLayoutWrapper>
     </DefaultLayoutContainer>
   );
