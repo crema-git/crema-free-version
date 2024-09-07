@@ -2,7 +2,7 @@
 ### Full version Live Demo [here](https://cremawork.com/) ###
 ### You can find out the Document [here](https://docs.cremawork.com//) ###
 
-Update your Firebase app's Config here `src/@crema/services/auth/firebase/firebase.jsx` before running the project.
+Update your [Firebase](https://console.firebase.google.com/) app's Config here `src/@crema/services/auth/firebase/firebase.jsx` before running the project.
 
 ```jsx
 apiKey: 'YOUR_API_KEY',
