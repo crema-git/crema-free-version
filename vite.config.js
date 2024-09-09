@@ -6,8 +6,5 @@ export default defineConfig({
   resolve: {
     alias: [{ find: "@crema", replacement: "/src/@crema" }],
   },
-  define: {
-    "process.env": {},
-  },
   plugins: [react()],
 });

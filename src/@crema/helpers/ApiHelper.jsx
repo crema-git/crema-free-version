@@ -1,5 +1,5 @@
-import sanitizeHtml from 'sanitize-html';
-import dayjs from 'dayjs';
+// import sanitizeHtml from 'sanitize-html';
+import dayjs from "dayjs";
 
 /**
  * Sanitize Content
@@ -7,9 +7,9 @@ import dayjs from 'dayjs';
  * @returns content any
  */
 export const sanitizeContent = (content) => {
-  if (typeof content === 'string') {
-    return sanitizeHtml(content);
-  }
+  // if (typeof content === 'string') { // sanitize-html enable if you want to sanitize html content in the api request
+  //   return sanitizeHtml(content);
+  // }
 
   return content;
 };
@@ -25,23 +25,23 @@ const sanitizeArrayObject = (arrayOrObject) => {
   // loop for an array
   for (let key in arrayOrObject) {
     const item = arrayOrObject[key];
-    if (typeof item === 'object' && item instanceof FormData) {
+    if (typeof item === "object" && item instanceof FormData) {
       output[key] = item;
     } else if (
-      typeof item === 'object' &&
+      typeof item === "object" &&
       item !== null &&
       dayjs.isDayjs(item)
     ) {
       output[key] = item;
     } else if (
-      typeof item === 'object' &&
+      typeof item === "object" &&
       item !== null &&
-      typeof item.getMonth === 'function'
+      typeof item.getMonth === "function"
     ) {
       output[key] = item;
     } else if (
       Array.isArray(item) ||
-      (typeof item === 'object' && item !== null)
+      (typeof item === "object" && item !== null)
     ) {
       output[key] = sanitizeArrayObject(item);
     } else {
@@ -54,20 +54,20 @@ const sanitizeArrayObject = (arrayOrObject) => {
 
 export const sanitizeData = (inputVal) => {
   try {
-    if (typeof inputVal === 'object' && inputVal instanceof FormData) {
+    if (typeof inputVal === "object" && inputVal instanceof FormData) {
       return inputVal;
     }
 
     if (
       Array.isArray(inputVal) ||
-      (typeof inputVal === 'object' && inputVal !== null)
+      (typeof inputVal === "object" && inputVal !== null)
     ) {
       return sanitizeArrayObject(inputVal);
     }
 
     return sanitizeContent(inputVal);
   } catch (e) {
-    console.log('parse error', e);
+    console.log("parse error", e);
   }
 };
 

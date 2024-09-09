@@ -4,10 +4,11 @@ import PropsTypes from "prop-types";
 
 const DefaultLayoutWrapper = ({ children, ...rest }) => {
   return (
-    (<Box
-      sx={theme => ({
+    <Box
+      sx={(theme) => ({
         flex: 1,
         display: "flex",
+        minHeight: "100vh",
         flexDirection: "row",
         position: "relative",
         backgroundColor: theme.palette.background.default,
@@ -28,12 +29,12 @@ const DefaultLayoutWrapper = ({ children, ...rest }) => {
               lg: "calc(100% - 280px)",
             },
           },
-        }
+        },
       })}
       {...rest}
     >
       {children}
-    </Box>)
+    </Box>
   );
 };
 

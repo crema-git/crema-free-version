@@ -4,8 +4,8 @@ import AppScrollbar from "@crema/components/AppScrollbar/index.jsx";
 
 const DefaultLayoutContainer = ({ children, ...rest }) => {
   return (
-    (<Box
-      sx={theme => ({
+    <Box
+      sx={(theme) => ({
         minHeight: "100vh",
         display: "flex",
         flexDirection: "column",
@@ -84,12 +84,12 @@ const DefaultLayoutContainer = ({ children, ...rest }) => {
           "& .appMainFixedFooter": {
             pb: { xl: 0 },
           },
-        }
+        },
       })}
       {...rest}
     >
       <AppScrollbar sx={{ maxHeight: "100vh" }}>{children}</AppScrollbar>
-    </Box>)
+    </Box>
   );
 };
 
