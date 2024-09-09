@@ -17,7 +17,7 @@ const Member = ({ member }) => {
   };
 
   return (
-    <AppCard
+    (<AppCard
       title={member.title}
       sxStyle={{
         boxShadow: 'none',
@@ -73,23 +73,26 @@ const Member = ({ member }) => {
               {member.email ? member.email : null}
             </Typography>
             <Button
-              sx={{
+              sx={theme => ({
                 boxShadow: 'none',
+
                 backgroundColor: (theme) =>
                   alpha(theme.palette.secondary.main, 0.1),
-                color: (theme) => theme.palette.secondary.main,
+
+                color: theme.palette.secondary.main,
                 fontSize: 12,
                 fontWeight: Fonts.BOLD,
                 pt: 1,
                 pb: 1.5,
                 px: 3,
                 maxWidth: '100%',
+
                 '&:hover, &:focus': {
                   backgroundColor: (theme) =>
                     alpha(theme.palette.secondary.main, 0.1),
-                  color: (theme) => theme.palette.secondary.main,
-                },
-              }}
+                  color: theme.palette.secondary.main,
+                }
+              })}
               onClick={onDisconnect}
             >
               <Box
@@ -107,7 +110,7 @@ const Member = ({ member }) => {
           </Box>
         </Box>
       )}
-    </AppCard>
+    </AppCard>)
   );
 };
 

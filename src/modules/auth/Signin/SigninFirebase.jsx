@@ -38,7 +38,7 @@ const SigninFirebase = () => {
   const { messages } = useIntl();
 
   return (
-    <AuthWrapper>
+    (<AuthWrapper>
       <Box sx={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
         <Box sx={{ flex: 1, display: 'flex', flexDirection: 'column', mb: 5 }}>
           <Formik
@@ -111,13 +111,13 @@ const SigninFirebase = () => {
                   </Box>
                   <Box
                     component='span'
-                    sx={{
-                      color: (theme) => theme.palette.primary.main,
+                    sx={theme => ({
+                      color: theme.palette.primary.main,
                       fontWeight: Fonts.SEMI_BOLD,
                       cursor: 'pointer',
                       display: 'block',
-                      textAlign: 'right',
-                    }}
+                      textAlign: 'right'
+                    })}
                     onClick={onGoToForgetPassword}
                   >
                     <IntlMessages id='common.forgetPassword' />
@@ -157,13 +157,14 @@ const SigninFirebase = () => {
           </span>
           <Box
             component='span'
-            sx={{
+            sx={theme => ({
               fontWeight: Fonts.SEMI_BOLD,
+
               '& a': {
-                color: (theme) => theme.palette.primary.main,
+                color: theme.palette.primary.main,
                 textDecoration: 'none',
-              },
-            }}
+              }
+            })}
           >
             <Link to='/signup'>
               <IntlMessages id='common.signup' />
@@ -172,22 +173,22 @@ const SigninFirebase = () => {
         </Box>
 
         <Box
-          sx={{
+          sx={theme => ({
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'space-between',
-            backgroundColor: (theme) => theme.palette.background.default,
+            backgroundColor: theme.palette.background.default,
             mx: { xs: -5, lg: -10 },
             mb: { xs: -6, lg: -11 },
             mt: 'auto',
             py: 2,
-            px: { xs: 5, lg: 10 },
-          }}
+            px: { xs: 5, lg: 10 }
+          })}
         >
           <Box
-            sx={{
-              color: (theme) => theme.palette.text.secondary,
-            }}
+            sx={theme => ({
+              color: theme.palette.text.secondary
+            })}
           >
             <IntlMessages id='common.orLoginWith' />
           </Box>
@@ -199,44 +200,44 @@ const SigninFirebase = () => {
           >
             <IconButton
               aria-label='Google'
-              sx={{
+              sx={theme => ({
                 p: 2,
                 '& svg': { fontSize: 20 },
-                color: (theme) => theme.palette.text.secondary,
-              }}
+                color: theme.palette.text.secondary
+              })}
               onClick={() => logInWithPopup('google')}
             >
               <AiOutlineGoogle />
             </IconButton>
             <IconButton
               aria-label='Facebook'
-              sx={{
+              sx={theme => ({
                 p: 1.5,
                 '& svg': { fontSize: 20 },
-                color: (theme) => theme.palette.text.secondary,
-              }}
+                color: theme.palette.text.secondary
+              })}
               onClick={() => logInWithPopup('facebook')}
             >
               <FaFacebookF />
             </IconButton>
             <IconButton
               aria-label='Github'
-              sx={{
+              sx={theme => ({
                 p: 1.5,
                 '& svg': { fontSize: 20 },
-                color: (theme) => theme.palette.text.secondary,
-              }}
+                color: theme.palette.text.secondary
+              })}
               onClick={() => logInWithPopup('github')}
             >
               <BsGithub />
             </IconButton>
             <IconButton
               aria-label='Twitter'
-              sx={{
+              sx={theme => ({
                 p: 1.5,
                 '& svg': { fontSize: 20 },
-                color: (theme) => theme.palette.text.secondary,
-              }}
+                color: theme.palette.text.secondary
+              })}
               onClick={() => logInWithPopup('twitter')}
             >
               <AiOutlineTwitter />
@@ -246,7 +247,7 @@ const SigninFirebase = () => {
 
         <AppInfoView />
       </Box>
-    </AuthWrapper>
+    </AuthWrapper>)
   );
 };
 

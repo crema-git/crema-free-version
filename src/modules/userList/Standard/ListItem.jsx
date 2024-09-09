@@ -20,7 +20,7 @@ import PropTypes from 'prop-types';
 const ListItem = (props) => {
   const { user } = props;
   return (
-    <Box sx={{ mb: 8 }} className='item-hover'>
+    (<Box sx={{ mb: 8 }} className='item-hover'>
       <Card>
         <Box
           sx={{
@@ -66,13 +66,13 @@ const ListItem = (props) => {
             </Box>
             <Chip
               label={`@${user.charge}/Hour`}
-              sx={{
-                backgroundColor: (theme) => theme.palette.primary.contrastText,
+              sx={theme => ({
+                backgroundColor: theme.palette.primary.contrastText,
                 color: '#484848',
                 paddingRight: 4,
                 paddingLeft: 4,
-                fontWeight: Fonts.MEDIUM,
-              }}
+                fontWeight: Fonts.MEDIUM
+              })}
             />
           </Box>
 
@@ -241,23 +241,23 @@ const ListItem = (props) => {
               >
                 {user.skills.map((skill, index) => {
                   return (
-                    <Chip
+                    (<Chip
                       key={index}
                       label={skill}
-                      sx={{
-                        backgroundColor: (theme) =>
-                          theme.palette.type === 'dark'
-                            ? theme.palette.grey[700]
-                            : theme.palette.grey[200],
+                      sx={theme => ([{
                         padding: '4px 12px',
                         marginTop: 2,
                         marginRight: { xs: 1, xl: 2 },
                         marginLeft: { xs: 1, xl: 2 },
                         border: '1px solid',
                         borderColor: grey[500],
-                        borderRadius: 2,
-                      }}
-                    />
+                        borderRadius: 2
+                      }, theme.palette.type === 'dark' ? {
+                        backgroundColor: theme.palette.grey[700]
+                      } : {
+                        backgroundColor: theme.palette.grey[200]
+                      }])}
+                    />)
                   );
                 })}
               </Box>
@@ -283,9 +283,8 @@ const ListItem = (props) => {
                 </Button>
                 <Button
                   variant='contained'
-                  sx={{
-                    backgroundColor: (theme) =>
-                      theme.palette.primary.contrastText,
+                  sx={theme => ({
+                    backgroundColor: theme.palette.primary.contrastText,
                     color: 'grey.700',
                     marginTop: 2,
                     border: '1px solid',
@@ -293,8 +292,8 @@ const ListItem = (props) => {
                     width: 96,
                     fontWeight: Fonts.MEDIUM,
                     padding: '9px 12px',
-                    lineHeight: 1,
-                  }}
+                    lineHeight: 1
+                  })}
                 >
                   <IntlMessages id='mailApp.remove' />
                 </Button>
@@ -303,7 +302,7 @@ const ListItem = (props) => {
           </Box>
         </Box>
       </Card>
-    </Box>
+    </Box>)
   );
 };
 

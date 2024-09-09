@@ -35,7 +35,7 @@ const ResponsiveAppBar = () => {
   };
 
   return (
-    <AppBar position='static'>
+    (<AppBar position='static'>
       <Container maxWidth='xl'>
         <Toolbar disableGutters>
           <Typography
@@ -78,7 +78,9 @@ const ResponsiveAppBar = () => {
             >
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign='center'>{page}</Typography>
+                  <Typography sx={{
+                    textAlign: 'center'
+                  }}>{page}</Typography>
                 </MenuItem>
               ))}
             </Menu>
@@ -127,14 +129,16 @@ const ResponsiveAppBar = () => {
             >
               {settings.map((setting) => (
                 <MenuItem key={setting} onClick={handleCloseNavMenu}>
-                  <Typography textAlign='center'>{setting}</Typography>
+                  <Typography sx={{
+                    textAlign: 'center'
+                  }}>{setting}</Typography>
                 </MenuItem>
               ))}
             </Menu>
           </Box>
         </Toolbar>
       </Container>
-    </AppBar>
+    </AppBar>)
   );
 };
 export default ResponsiveAppBar;

@@ -9,10 +9,10 @@ import PropTypes from 'prop-types';
 const VerticalNav = ({ routesConfig }) => {
   return (
     <List
-      sx={{
+      sx={theme=>({
         position: 'relative',
         padding: 0,
-      }}
+      })}
       component='div'
     >
       {routesConfig.map((item) => (

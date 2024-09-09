@@ -9,7 +9,7 @@ const ListItem = (props) => {
   const { user } = props;
 
   return (
-    <Box
+    (<Box
       sx={{
         mb: { xs: 6, xl: 8 },
       }}
@@ -41,7 +41,7 @@ const ListItem = (props) => {
         </Box>
 
         <Box
-          sx={{
+          sx={theme => ({
             pb: { xs: 5, xl: 8 },
             flex: 1,
             position: 'relative',
@@ -56,10 +56,10 @@ const ListItem = (props) => {
               zIndex: 1,
               height: '2px',
               width: '162px',
-              backgroundColor: (theme) => theme.palette.grey['400'],
+              backgroundColor: theme.palette.grey['400'],
               transition: 'all 0.5s ease',
-            },
-          }}
+            }
+          })}
         >
           <Box
             sx={{ mb: 3, fontSize: 16, component: 'h3', color: 'text.primary' }}
@@ -107,7 +107,7 @@ const ListItem = (props) => {
           <UserSocialMediaInfo user={user} />
         </Box>
       </Box>
-    </Box>
+    </Box>)
   );
 };
 

@@ -1,9 +1,9 @@
-import React from 'react';
-import PropsTypes from 'prop-types';
-import Box from '@mui/material/Box';
-import { alpha } from '@mui/material';
-import { ThemeMode } from '@crema/constants/AppEnums';
-import { useSidebarContext } from '@crema/context/AppContextProvider/SidebarContextProvider';
+import React from "react";
+import PropsTypes from "prop-types";
+import Box from "@mui/material/Box";
+import { alpha } from "@mui/material";
+import { ThemeMode } from "@crema/constants/AppEnums";
+import { useSidebarContext } from "@crema/context/AppContextProvider/SidebarContextProvider";
 
 const SidebarBgWrapper = ({ children }) => {
   const {
@@ -15,39 +15,83 @@ const SidebarBgWrapper = ({ children }) => {
   } = useSidebarContext();
   return (
     <Box
-      sx={{
-        position: 'relative',
-        height: '100%',
-        width: '100%',
-        overflow: 'hidden',
-        backgroundColor: sidebarBgColor,
-        backgroundImage: allowSidebarBgImage
-          ? `url(/assets/images/sidebar/images/${sidebarBgImageId}.png)`
-          : '',
-        backgroundRepeat: allowSidebarBgImage ? 'no-repeat' : '',
-        backgroundPosition: allowSidebarBgImage ? 'center center' : '',
-        backgroundSize: allowSidebarBgImage ? 'cover' : '',
-        color: sidebarTextColor,
-        // boxShadow: '3px 3px 4px rgba(0, 0, 0, 0.04)',
-        '&:before': {
-          content: '""',
-          display: allowSidebarBgImage ? 'block' : 'none',
-          position: 'absolute',
-          left: 0,
-          top: 0,
-          zIndex: 1,
-          width: '100%',
-          height: '100%',
-          backgroundColor: (theme) =>
-            mode === ThemeMode.LIGHT
-              ? alpha(theme.palette.common.white, 0.5)
-              : alpha(theme.palette.common.black, 0.5),
+      sx={[
+        {
+          position: "relative",
+          height: "100%",
+          width: "100%",
+          overflow: "hidden",
+          backgroundColor: sidebarBgColor,
+          color: sidebarTextColor,
+
+          // boxShadow: '3px 3px 4px rgba(0, 0, 0, 0.04)',
+          "&:before": {
+            content: '""',
+            position: "absolute",
+            left: 0,
+            top: 0,
+            zIndex: 1,
+            width: "100%",
+            height: "100%",
+          },
+
+          "& > *": {
+            position: "relative",
+            zIndex: 3,
+          },
         },
-        '& > *': {
-          position: 'relative',
-          zIndex: 3,
-        },
-      }}
+        allowSidebarBgImage
+          ? {
+              backgroundImage: `url(/assets/images/sidebar/images/${sidebarBgImageId}.png)`,
+            }
+          : {
+              backgroundImage: "",
+            },
+        allowSidebarBgImage
+          ? {
+              backgroundRepeat: "no-repeat",
+            }
+          : {
+              backgroundRepeat: "",
+            },
+        allowSidebarBgImage
+          ? {
+              backgroundPosition: "center center",
+            }
+          : {
+              backgroundPosition: "",
+            },
+        allowSidebarBgImage
+          ? {
+              backgroundSize: "cover",
+            }
+          : {
+              backgroundSize: "",
+            },
+        allowSidebarBgImage
+          ? {
+              "&:before": {
+                display: "block",
+              },
+            }
+          : {
+              "&:before": {
+                display: "none",
+              },
+            },
+        (theme) =>
+          mode === ThemeMode.LIGHT
+            ? {
+                "&:before": {
+                  backgroundColor: alpha(theme.palette.common.white, 0.5),
+                },
+              }
+            : {
+                "&:before": {
+                  backgroundColor: alpha(theme.palette.common.black, 0.5),
+                },
+              },
+      ]}
     >
       {children}
     </Box>

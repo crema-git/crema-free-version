@@ -16,7 +16,7 @@ const ListItem = (props) => {
   const { user } = props;
 
   return (
-    <Card
+    (<Card
       sx={{
         p: 5,
         mb: 5,
@@ -30,17 +30,17 @@ const ListItem = (props) => {
         }}
       >
         <Box
-          sx={{
+          sx={theme => ({
             mr: { sm: 5 },
             mb: { xs: 3, sm: 0 },
+
             '.crUserImage': {
               objectFit: 'cover',
-              borderRadius: (theme) =>
-                theme.components.MuiCard.styleOverrides.root.borderRadius,
+              borderRadius: theme.components.MuiCard.styleOverrides.root.borderRadius,
               width: { sx: '100%', sm: 130 },
               height: { sx: 180, sm: 130 },
-            },
-          }}
+            }
+          })}
         >
           <img src={user.image} alt='user' className='crUserImage' />
         </Box>
@@ -137,23 +137,23 @@ const ListItem = (props) => {
             <Box sx={{ mx: { xs: -1, xl: -2 } }}>
               {user.skills.map((skill, index) => {
                 return (
-                  <Chip
+                  (<Chip
                     key={index}
                     label={skill}
-                    sx={{
-                      backgroundColor: (theme) =>
-                        theme.palette.type === 'dark'
-                          ? theme.palette.grey[700]
-                          : theme.palette.grey[200],
+                    sx={theme => ([{
                       padding: '4px 12px',
                       marginTop: 2,
                       marginRight: { xs: 1, xl: 2 },
                       marginLeft: { xs: 1, xl: 2 },
                       border: '1px solid',
                       borderColor: grey[500],
-                      borderRadius: 2,
-                    }}
-                  />
+                      borderRadius: 2
+                    }, theme.palette.type === 'dark' ? {
+                      backgroundColor: theme.palette.grey[700]
+                    } : {
+                      backgroundColor: theme.palette.grey[200]
+                    }])}
+                  />)
                 );
               })}
             </Box>
@@ -179,9 +179,8 @@ const ListItem = (props) => {
               </Button>
               <Button
                 variant='contained'
-                sx={{
-                  backgroundColor: (theme) =>
-                    theme.palette.primary.contrastText,
+                sx={theme => ({
+                  backgroundColor: theme.palette.primary.contrastText,
                   color: grey[500],
                   marginTop: 2,
                   border: '1px solid',
@@ -189,8 +188,8 @@ const ListItem = (props) => {
                   width: 96,
                   fontWeight: Fonts.MEDIUM,
                   padding: '9px 12px',
-                  lineHeight: 1,
-                }}
+                  lineHeight: 1
+                })}
               >
                 <IntlMessages id='mailApp.remove' />
               </Button>
@@ -198,7 +197,7 @@ const ListItem = (props) => {
           </Box>
         </Box>
       </Box>
-    </Card>
+    </Card>)
   );
 };
 

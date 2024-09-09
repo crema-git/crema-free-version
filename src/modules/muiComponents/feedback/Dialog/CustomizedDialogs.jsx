@@ -23,23 +23,23 @@ const BootstrapDialogTitle = (props) => {
   const { children, onClose, ...other } = props;
 
   return (
-    <DialogTitle sx={{ m: 0, p: 2 }} {...other}>
+    (<DialogTitle sx={{ m: 0, p: 2 }} {...other}>
       {children}
       {onClose ? (
         <IconButton
           aria-label='close'
           onClick={onClose}
-          sx={{
+          sx={theme => ({
             position: 'absolute',
             right: 8,
             top: 8,
-            color: (theme) => theme.palette.grey[500],
-          }}
+            color: theme.palette.grey[500]
+          })}
         >
           <CloseIcon />
         </IconButton>
       ) : null}
-    </DialogTitle>
+    </DialogTitle>)
   );
 };
 

@@ -8,20 +8,18 @@ import Application from './Application';
 
 const Notification = () => {
   return (
-    <Box sx={{ position: 'relative' }}>
+    (<Box sx={{ position: 'relative' }}>
       <Activity activity={accountData.notification.activity} />
-
       <Box
-        sx={{
+        sx={theme => ({
           mx: -5,
           px: 5,
           pt: 5,
-          borderTop: (theme) => `solid 1px ${theme.palette.divider}`,
-        }}
+          borderTop: `solid 1px ${theme.palette.divider}`
+        })}
       >
         <Application application={accountData.notification.application} />
       </Box>
-
       <Box
         sx={{
           display: 'flex',
@@ -52,7 +50,7 @@ const Notification = () => {
           <IntlMessages id='common.cancel' />
         </Button>
       </Box>
-    </Box>
+    </Box>)
   );
 };
 

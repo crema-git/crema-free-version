@@ -1,58 +1,68 @@
-import React from 'react';
-import ProtoTypes from 'prop-types';
+import React from "react";
+import ProtoTypes from "prop-types";
 import CircularProgress, {
   circularProgressClasses,
-} from '@mui/material/CircularProgress';
-import Box from '@mui/material/Box';
-import { Fonts } from '@crema/constants/AppEnums';
+} from "@mui/material/CircularProgress";
+import Box from "@mui/material/Box";
+import { Fonts } from "@crema/constants/AppEnums";
 
 const AppCircularProgress = ({
   value,
   centerNode,
-  hidePercentage,
-  minWidth,
-  maxWidth,
   valueStyle,
-  activeColor,
-  pathColor,
-  thickness,
+  hidePercentage = false,
+  minWidth = 160,
+  maxWidth = 200,
+  pathColor = "#d6d6d6",
+  activeColor = "#23fa23",
+  thickness = 10,
   ...props
 }) => {
   return (
     <Box
       sx={{
-        position: 'relative',
+        position: "relative",
         minWidth: minWidth,
         maxWidth: maxWidth,
-        margin: '0 auto',
+        margin: "0 auto",
       }}
     >
-      <Box sx={{ position: 'relative' }}>
+      <Box sx={{ position: "relative" }}>
         <CircularProgress
-          variant='determinate'
+          variant="determinate"
           value={100}
           sx={{
             color: pathColor,
-            width: '100% !important',
-            height: '100% !important',
+            width: "100% !important",
+            height: "100% !important",
           }}
           thickness={thickness}
           {...props}
         />
         <CircularProgress
-          sx={{
-            color: activeColor,
-            animationDuration: '550ms',
-            position: 'absolute',
-            left: (theme) => (theme.direction === 'rtl' ? -2 : 2),
-            top: -2,
-            width: '100% !important',
-            height: '100% !important',
-            [`& .${circularProgressClasses.circle}`]: {
-              strokeLinecap: 'round',
+          sx={[
+            {
+              color: activeColor,
+              animationDuration: "550ms",
+              position: "absolute",
+              top: -2,
+              width: "100% !important",
+              height: "100% !important",
+
+              [`& .${circularProgressClasses.circle}`]: {
+                strokeLinecap: "round",
+              },
             },
-          }}
-          variant='determinate'
+            (theme) =>
+              theme.direction === "rtl"
+                ? {
+                    left: -2,
+                  }
+                : {
+                    left: 2,
+                  },
+          ]}
+          variant="determinate"
           value={value}
           thickness={thickness}
           {...props}
@@ -60,27 +70,27 @@ const AppCircularProgress = ({
       </Box>
       <Box
         sx={{
-          position: 'absolute',
+          position: "absolute",
           left: 0,
           top: 0,
-          width: '100%',
-          height: '100%',
+          width: "100%",
+          height: "100%",
           zIndex: 3,
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
         }}
       >
         {centerNode}
         {hidePercentage ? null : (
           <Box
-            component='p'
-            sx={{
+            component="p"
+            sx={(theme) => ({
               fontSize: 30,
               fontWeight: Fonts.MEDIUM,
-              color: (theme) => theme.palette.secondary.main,
+              color: theme.palette.secondary.main,
               ...valueStyle,
-            }}
+            })}
           >
             {value}%
           </Box>
@@ -100,13 +110,4 @@ AppCircularProgress.propTypes = {
   value: ProtoTypes.number,
   thickness: ProtoTypes.number,
   valueStyle: ProtoTypes.object,
-};
-
-AppCircularProgress.defaultProps = {
-  hidePercentage: false,
-  minWidth: 160,
-  maxWidth: 200,
-  pathColor: '#d6d6d6',
-  activeColor: '#23fa23',
-  thickness: 10,
 };

@@ -1,7 +1,7 @@
-import React from 'react';
-import { useBottomScrollListener } from 'react-bottom-scroll-listener';
-import PropTypes from 'prop-types';
-import { Box, useTheme } from '@mui/material';
+import React from "react";
+import { useBottomScrollListener } from "react-bottom-scroll-listener";
+import PropTypes from "prop-types";
+import { Box, useTheme } from "@mui/material";
 // import AppAnimateGroup from '../AppAnimateGroup';
 
 const getEmptyContainer = (ListEmptyComponent) => {
@@ -25,15 +25,15 @@ const getFooterContainer = (ListFooterComponent) => {
 };
 const ListView = ({
   renderRow,
-  onEndReached,
-  data,
   // animation,
   // delay = 0,
   // duration = 200,
   containerStyle,
-  border,
   ListFooterComponent,
   ListEmptyComponent,
+  border = false,
+  data = [],
+  onEndReached = () => {},
   ...rest
 }) => {
   const theme = useTheme();
@@ -41,7 +41,7 @@ const ListView = ({
     border: `1px solid ${theme.palette.divider}`,
     backgroundColor: theme.palette.background.paper,
     borderRadius: 4,
-    overflow: 'hidden',
+    overflow: "hidden",
   };
 
   if (!onEndReached) {
@@ -80,11 +80,4 @@ ListView.propTypes = {
   ListFooterComponent: PropTypes.node,
   data: PropTypes.array.isRequired,
   onEndReached: PropTypes.func,
-};
-ListView.defaultProps = {
-  border: false,
-  // animation: 'transition.slideUpIn',
-  data: [],
-  // eslint-disable-next-line @typescript-eslint/no-empty-function
-  onEndReached: () => {},
 };

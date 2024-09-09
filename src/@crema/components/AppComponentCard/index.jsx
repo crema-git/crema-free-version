@@ -14,11 +14,11 @@ import { Fonts } from "@crema/constants/AppEnums";
 
 const AppComponentCard = ({
   title,
-  maxHeight,
-  description,
   component: Component,
   source,
   noScrollbar,
+  description = "",
+  maxHeight = 500,
 }) => {
   const [viewSource, setToggleViewSource] = useState(false);
   const [animation, setAnimation] = useState(false);
@@ -117,26 +117,26 @@ const AppComponentCard = ({
 
           {noScrollbar ? (
             <Box
-              sx={{
+              sx={(theme) => ({
                 width: "100%",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
                 p: 4,
-                backgroundColor: (theme) => theme.palette.background.default,
-              }}
+                backgroundColor: theme.palette.background.default,
+              })}
             >
               <Component />
             </Box>
           ) : (
             <AppScrollbar
-              sx={{
+              sx={(theme) => ({
                 mt: 2,
                 p: 4,
                 borderRadius: 3,
                 maxHeight: maxHeight,
-                backgroundColor: (theme) => theme.palette.background.default,
-              }}
+                backgroundColor: theme.palette.background.default,
+              })}
             >
               <Box
                 sx={{
@@ -157,11 +157,6 @@ const AppComponentCard = ({
 };
 
 export default AppComponentCard;
-
-AppComponentCard.defaultProps = {
-  description: "",
-  maxHeight: 500,
-};
 
 AppComponentCard.propTypes = {
   component: PropTypes.any.isRequired,

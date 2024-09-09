@@ -62,13 +62,13 @@ const TableItem = ({ data }) => {
   };
 
   return (
-    <TableRow key={data.name} className='item-hover'>
+    (<TableRow key={data.name} className='item-hover'>
       <TableCellWrapper component='th' scope='row'>
         <Typography
-          sx={{
-            color: (theme) => theme.palette.primary.main,
-            display: 'inline-block',
-          }}
+          sx={theme => ({
+            color: theme.palette.primary.main,
+            display: 'inline-block'
+          })}
           component='h5'
           variant='h5'
         >
@@ -101,7 +101,7 @@ const TableItem = ({ data }) => {
           <BiArchiveIn />
         </IconButton>
       </TableCellWrapper>
-    </TableRow>
+    </TableRow>)
   );
 };
 

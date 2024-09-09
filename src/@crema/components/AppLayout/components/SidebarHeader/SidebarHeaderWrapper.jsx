@@ -6,24 +6,26 @@ import { useSidebarContext } from '@crema/context/AppContextProvider/SidebarCont
 const SidebarHeaderWrapper = ({ children }) => {
   const { sidebarHeaderColor, allowSidebarBgImage } = useSidebarContext();
   return (
-    <Box
-      sx={{
+    (<Box
+      sx={[{
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
-        backgroundColor: allowSidebarBgImage
-          ? 'transparent'
-          : sidebarHeaderColor,
+
         '&:hover': {
           '& .arrowIcon': {
             opacity: 1,
             visibility: 'visible',
           },
-        },
-      }}
+        }
+      }, allowSidebarBgImage ? {
+        backgroundColor: 'transparent'
+      } : {
+        backgroundColor: sidebarHeaderColor
+      }]}
     >
       {children}
-    </Box>
+    </Box>)
   );
 };
 

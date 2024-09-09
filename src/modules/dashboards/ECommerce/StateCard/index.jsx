@@ -87,7 +87,7 @@ const StateWrapper = styled('div')((props) => {
 
 const StateCard = ({ data }) => {
   return (
-    <AppCard
+    (<AppCard
       sxStyle={{ height: 1 }}
       contentStyle={{
         display: 'flex',
@@ -126,14 +126,14 @@ const StateCard = ({ data }) => {
               <FormattedNumber value={+data.value} />
             </Typography>
             <Typography
-              sx={{
+              sx={theme => ({
                 overflow: 'hidden',
                 textOverflow: 'ellipsis',
                 whiteSpace: 'nowrap',
                 width: '100%',
-                color: (theme) => theme.palette.text.secondary,
-                fontSize: 14,
-              }}
+                color: theme.palette.text.secondary,
+                fontSize: 14
+              })}
             >
               {data.title}
             </Typography>
@@ -175,7 +175,7 @@ const StateCard = ({ data }) => {
           </Box>
         </div>
       </StateWrapper>
-    </AppCard>
+    </AppCard>)
   );
 };
 

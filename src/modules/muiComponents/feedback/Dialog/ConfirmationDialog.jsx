@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
 import DialogTitle from '@mui/material/DialogTitle';
 import DialogContent from '@mui/material/DialogContent';
@@ -12,6 +11,7 @@ import Dialog from '@mui/material/Dialog';
 import RadioGroup from '@mui/material/RadioGroup';
 import Radio from '@mui/material/Radio';
 import FormControlLabel from '@mui/material/FormControlLabel';
+import ListItemButton from "@mui/material/ListItemButton";
 
 const options = [
   'None',
@@ -119,27 +119,25 @@ export default function ConfirmationDialog() {
   };
 
   return (
-    <Box sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
+    (<Box sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
       <List component='div' role='group'>
-        <ListItem button divider disabled>
+        <ListItemButton divider disabled>
           <ListItemText primary='Interruptions' />
-        </ListItem>
-        <ListItem
-          button
+        </ListItemButton>
+        <ListItemButton
           divider
           aria-haspopup='true'
           aria-controls='ringtone-menu'
           aria-label='phone ringtone'
-          onClick={handleClickListItem}
-        >
+          onClick={handleClickListItem}>
           <ListItemText primary='Phone ringtone' secondary={value} />
-        </ListItem>
-        <ListItem button divider disabled>
+        </ListItemButton>
+        <ListItemButton divider disabled>
           <ListItemText
             primary='Default notification ringtone'
             secondary='Tethys'
           />
-        </ListItem>
+        </ListItemButton>
         <ConfirmationDialogRaw
           id='ringtone-menu'
           keepMounted
@@ -148,6 +146,6 @@ export default function ConfirmationDialog() {
           value={value}
         />
       </List>
-    </Box>
+    </Box>)
   );
 }

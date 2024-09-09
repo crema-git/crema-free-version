@@ -1,7 +1,7 @@
-import React from 'react';
-import ListView from './ListView';
-import PropTypes from 'prop-types';
-import ListFooter from './ListFooter';
+import React from "react";
+import ListView from "./ListView";
+import PropTypes from "prop-types";
+import ListFooter from "./ListFooter";
 
 const AppList = ({ footerProps, ...props }) => {
   return (
@@ -32,8 +32,4 @@ AppList.propTypes = {
     loading: PropTypes.bool,
     footerText: PropTypes.string,
   }),
-};
-AppList.defaultProps = {
-  border: false,
-  data: [],
 };

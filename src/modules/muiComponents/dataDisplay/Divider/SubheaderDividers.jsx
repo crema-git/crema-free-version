@@ -10,7 +10,7 @@ import Typography from '@mui/material/Typography';
 
 export default function SubheaderDividers() {
   return (
-    <List
+    (<List
       sx={{
         width: '100%',
         maxWidth: 360,
@@ -23,11 +23,13 @@ export default function SubheaderDividers() {
       <Divider component='li' />
       <li>
         <Typography
-          sx={{ mt: 0.5, ml: 2 }}
-          color='text.secondary'
-          display='block'
           variant='caption'
-        >
+          sx={{
+            color: 'text.secondary',
+            display: 'block',
+            mt: 0.5,
+            ml: 2
+          }}>
           Divider
         </Typography>
       </li>
@@ -37,11 +39,13 @@ export default function SubheaderDividers() {
       <Divider component='li' variant='inset' />
       <li>
         <Typography
-          sx={{ mt: 0.5, ml: 9 }}
-          color='text.secondary'
-          display='block'
           variant='caption'
-        >
+          sx={{
+            color: 'text.secondary',
+            display: 'block',
+            mt: 0.5,
+            ml: 9
+          }}>
           Leisure
         </Typography>
       </li>
@@ -53,6 +57,6 @@ export default function SubheaderDividers() {
         </ListItemAvatar>
         <ListItemText primary='Vacation' secondary='July 20, 2014' />
       </ListItem>
-    </List>
+    </List>)
   );
 }

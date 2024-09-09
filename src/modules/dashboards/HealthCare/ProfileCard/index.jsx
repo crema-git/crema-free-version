@@ -22,7 +22,7 @@ const ProfilePic = styled('div')(({ theme }) => {
 
 const ProfileCard = () => {
   return (
-    <AppCard>
+    (<AppCard>
       <Box
         sx={{
           display: 'flex',
@@ -62,15 +62,17 @@ const ProfileCard = () => {
             }}
           >
             <Box
-              sx={{
+              sx={theme => ({
                 py: 3.5,
                 px: 2,
                 width: 1 / 2,
-                borderRight: (theme) => `solid 1px ${theme.palette.grey[200]}`,
-              }}
+                borderRight: `solid 1px ${theme.palette.grey[200]}`
+              })}
             >
               <Box component='h5'>24</Box>
-              <Box component='p' color='text.secondary'>
+              <Box component='p' sx={{
+                color: 'text.secondary'
+              }}>
                 Years
               </Box>
             </Box>
@@ -88,20 +90,20 @@ const ProfileCard = () => {
             </Box>
           </Box>
           <Box
-            sx={{
+            sx={theme => ({
               display: 'flex',
               alignItems: 'center',
               textAlign: 'center',
-              borderTop: (theme) => `solid 1px ${theme.palette.grey[200]}`,
-            }}
+              borderTop: `solid 1px ${theme.palette.grey[200]}`
+            })}
           >
             <Box
-              sx={{
+              sx={theme => ({
                 py: 3.5,
                 px: 2,
                 width: 1 / 2,
-                borderRight: (theme) => `solid 1px ${theme.palette.grey[200]}`,
-              }}
+                borderRight: `solid 1px ${theme.palette.grey[200]}`
+              })}
             >
               <Box component='h5'>185 cm</Box>
               <Box component='p' sx={{ color: 'text.secondary' }}>
@@ -123,7 +125,7 @@ const ProfileCard = () => {
           </Box>
         </Box>
       </Box>
-    </AppCard>
+    </AppCard>)
   );
 };
 

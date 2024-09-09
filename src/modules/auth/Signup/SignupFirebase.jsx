@@ -31,7 +31,7 @@ const SignupFirebase = () => {
   const { registerUserWithEmailAndPassword, logInWithPopup } = useAuthMethod();
 
   return (
-    <AuthWrapper>
+    (<AuthWrapper>
       <Box sx={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
         <Box sx={{ flex: 1, display: 'flex', flexDirection: 'column', mb: 5 }}>
           <Formik
@@ -129,10 +129,10 @@ const SignupFirebase = () => {
                   </Box>
                   <Box
                     component='span'
-                    sx={{
-                      color: (theme) => theme.palette.primary.main,
-                      cursor: 'pointer',
-                    }}
+                    sx={theme => ({
+                      color: theme.palette.primary.main,
+                      cursor: 'pointer'
+                    })}
                   >
                     <IntlMessages id='common.termConditions' />
                   </Box>
@@ -171,13 +171,14 @@ const SignupFirebase = () => {
           </span>
           <Box
             component='span'
-            sx={{
+            sx={theme => ({
               fontWeight: Fonts.MEDIUM,
+
               '& a': {
-                color: (theme) => theme.palette.primary.main,
+                color: theme.palette.primary.main,
                 textDecoration: 'none',
-              },
-            }}
+              }
+            })}
           >
             <Link to='/signIn'>
               <IntlMessages id='common.signIn' />
@@ -186,22 +187,22 @@ const SignupFirebase = () => {
         </Box>
 
         <Box
-          sx={{
+          sx={theme => ({
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'space-between',
-            backgroundColor: (theme) => theme.palette.background.default,
+            backgroundColor: theme.palette.background.default,
             mx: { xs: -5, lg: -10 },
             mb: { xs: -6, lg: -11 },
             mt: 'auto',
             py: 2,
-            px: { xs: 5, lg: 10 },
-          }}
+            px: { xs: 5, lg: 10 }
+          })}
         >
           <Box
-            sx={{
-              color: (theme) => theme.palette.text.secondary,
-            }}
+            sx={theme => ({
+              color: theme.palette.text.secondary
+            })}
           >
             <IntlMessages id='common.orLoginWith' />
           </Box>
@@ -249,7 +250,7 @@ const SignupFirebase = () => {
 
         <AppInfoView />
       </Box>
-    </AuthWrapper>
+    </AuthWrapper>)
   );
 };
 

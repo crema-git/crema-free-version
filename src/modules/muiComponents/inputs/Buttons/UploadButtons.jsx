@@ -11,7 +11,9 @@ const Input = styled("input")({
 
 export default function UploadButtons() {
   return (
-    <Stack direction="row" alignItems="center" spacing={2}>
+    (<Stack direction="row" spacing={2} sx={{
+      alignItems: "center"
+    }}>
       <label htmlFor="contained-button-file">
         <Input
           accept="image/*"
@@ -33,6 +35,6 @@ export default function UploadButtons() {
           <PhotoCamera />
         </IconButton>
       </label>
-    </Stack>
+    </Stack>)
   );
 }

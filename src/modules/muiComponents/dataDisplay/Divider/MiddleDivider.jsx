@@ -9,9 +9,11 @@ import Typography from '@mui/material/Typography';
 
 export default function MiddleDividers() {
   return (
-    <Box sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
+    (<Box sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
       <Box sx={{ my: 3, mx: 2 }}>
-        <Grid container alignItems='center'>
+        <Grid container sx={{
+          alignItems: 'center'
+        }}>
           <Grid item xs>
             <Typography gutterBottom variant='h4' component='div'>
               Toothbrush
@@ -23,7 +25,9 @@ export default function MiddleDividers() {
             </Typography>
           </Grid>
         </Grid>
-        <Typography color='text.secondary' variant='body2'>
+        <Typography variant='body2' sx={{
+          color: 'text.secondary'
+        }}>
           Pinstriped cornflower blue cotton blouse takes you on a walk to the
           park or just down the hall.
         </Typography>
@@ -43,6 +47,6 @@ export default function MiddleDividers() {
       <Box sx={{ mt: 3, ml: 1, mb: 1 }}>
         <Button>Add to cart</Button>
       </Box>
-    </Box>
+    </Box>)
   );
 }

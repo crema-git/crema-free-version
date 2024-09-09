@@ -8,7 +8,7 @@ import AppLogo from '@crema/components/AppLayout/components/AppLogo';
 
 const AuthWrapper = ({ children }) => {
   return (
-    <Box
+    (<Box
       sx={{
         flex: 1,
         display: 'flex',
@@ -52,7 +52,7 @@ const AuthWrapper = ({ children }) => {
           </Box>
         </Box>
         <Box
-          sx={{
+          sx={theme => ({
             width: { xs: '100%', sm: '50%', lg: '60%' },
             position: 'relative',
             padding: { xs: 5, lg: 10 },
@@ -60,10 +60,10 @@ const AuthWrapper = ({ children }) => {
             alignItems: { sm: 'center' },
             justifyContent: { sm: 'center' },
             flexDirection: { sm: 'column' },
-            backgroundColor: (theme) => theme.palette.grey[900],
-            color: (theme) => theme.palette.common.white,
-            fontSize: 14,
-          }}
+            backgroundColor: theme.palette.grey[900],
+            color: theme.palette.common.white,
+            fontSize: 14
+          })}
         >
           <Box
             sx={{
@@ -87,7 +87,7 @@ const AuthWrapper = ({ children }) => {
           </Box>
         </Box>
       </Card>
-    </Box>
+    </Box>)
   );
 };
 

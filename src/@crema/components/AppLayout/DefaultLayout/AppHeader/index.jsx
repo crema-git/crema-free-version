@@ -30,17 +30,18 @@ const AppHeader = ({ toggleNavCollapsed }) => {
   };
 
   return (
-    <AppBar
+    (<AppBar
       position="relative"
       color="inherit"
-      sx={{
+      sx={theme => ({
         boxShadow: "none",
-        borderBottom: (theme) => `solid 1px ${theme.palette.divider}`,
+        borderBottom: `solid 1px ${theme.palette.divider}`,
         backgroundColor: "background.paper",
+
         width: {
           xs: "100%",
-        },
-      }}
+        }
+      })}
       className="app-bar"
     >
       <Toolbar
@@ -123,23 +124,23 @@ const AppHeader = ({ toggleNavCollapsed }) => {
               >
                 <AppTooltip title="More">
                   <IconButton
-                    sx={{
+                    sx={theme => ({
                       borderRadius: "50%",
                       width: 40,
                       height: 40,
-                      color: (theme) => theme.palette.text.secondary,
-                      backgroundColor: (theme) =>
-                        theme.palette.background.default,
+                      color: theme.palette.text.secondary,
+                      backgroundColor: theme.palette.background.default,
                       border: 1,
                       borderColor: "transparent",
+
                       "&:hover, &:focus": {
-                        color: (theme) => theme.palette.text.primary,
+                        color: theme.palette.text.primary,
                         backgroundColor: (theme) =>
                           alpha(theme.palette.background.default, 0.9),
                         borderColor: (theme) =>
                           alpha(theme.palette.text.secondary, 0.25),
-                      },
-                    }}
+                      }
+                    })}
                     onClick={handleClick}
                     size="large"
                   >
@@ -166,7 +167,7 @@ const AppHeader = ({ toggleNavCollapsed }) => {
           </Menu>
         </Box>
       </Toolbar>
-    </AppBar>
+    </AppBar>)
   );
 };
 export default AppHeader;

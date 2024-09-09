@@ -10,7 +10,7 @@ import { useNavigate } from "react-router-dom";
 import PropTypes from "prop-types";
 import { useAuthMethod, useAuthUser } from "@crema/hooks/AuthHooks";
 
-const UserInfo = ({ color }) => {
+const UserInfo = ({ color = "text.secondary" }) => {
   const { logout } = useAuthMethod();
   const { user } = useAuthUser();
   const navigate = useNavigate();
@@ -152,10 +152,6 @@ const UserInfo = ({ color }) => {
 };
 
 export default UserInfo;
-
-UserInfo.defaultProps = {
-  color: "text.secondary",
-};
 
 UserInfo.propTypes = {
   color: PropTypes.string,

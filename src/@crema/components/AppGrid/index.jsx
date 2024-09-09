@@ -1,7 +1,7 @@
-import React from 'react';
-import GridView from './GridView';
-import PropTypes from 'prop-types';
-import GridFooter from './GridFooter';
+import React from "react";
+import GridView from "./GridView";
+import PropTypes from "prop-types";
+import GridFooter from "./GridFooter";
 
 const AppGrid = ({ footerProps, ...rest }) => {
   return (
@@ -32,9 +32,4 @@ AppGrid.propTypes = {
   ListFooterComponent: PropTypes.node,
   data: PropTypes.array.isRequired,
   onEndReached: PropTypes.func,
-};
-AppGrid.defaultProps = {
-  loading: false,
-  border: false,
-  data: [],
 };

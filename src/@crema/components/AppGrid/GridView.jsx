@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react';
-import { useBottomScrollListener } from 'react-bottom-scroll-listener';
-import PropTypes from 'prop-types';
-import { Box, useTheme } from '@mui/material';
+import React, { useEffect, useState } from "react";
+import { useBottomScrollListener } from "react-bottom-scroll-listener";
+import PropTypes from "prop-types";
+import { Box, useTheme } from "@mui/material";
 // import AppAnimateGroup from '../AppAnimateGroup';
-import { useWidth } from '@crema/helpers/Common';
+import { useWidth } from "@crema/helpers/Common";
 
 const getEmptyContainer = (ListEmptyComponent) => {
   if (ListEmptyComponent)
@@ -27,17 +27,18 @@ const getFooterContainer = (ListFooterComponent) => {
 
 const GridView = ({
   sx,
-  column,
   responsive,
-  itemPadding,
   // animation,
   renderRow,
   onEndReached,
-  data,
   containerStyle,
-  border,
   ListFooterComponent,
   ListEmptyComponent,
+  border = false,
+  data = [],
+  column = 3,
+  animation = "transition.expandIn",
+  itemPadding = 12,
 }) => {
   const theme = useTheme();
   const width = useWidth();
@@ -45,7 +46,7 @@ const GridView = ({
     border: `1px solid ${theme.palette.divider}`,
     backgroundColor: theme.palette.background.paper,
     borderRadius: 4,
-    overflow: 'hidden',
+    overflow: "hidden",
   };
 
   const [displayColumn, setColumn] = useState(column);
@@ -61,13 +62,13 @@ const GridView = ({
   useEffect(() => {
     const getColumnCount = () => {
       if (responsive) {
-        if (width === 'xs') {
+        if (width === "xs") {
           return responsive.xs || column;
-        } else if (width === 'sm') {
+        } else if (width === "sm") {
           return responsive.sm || responsive.xs || column;
-        } else if (width === 'md') {
+        } else if (width === "md") {
           return responsive.md || responsive.sm || responsive.xs || column;
-        } else if (width === 'lg') {
+        } else if (width === "lg") {
           return (
             responsive.lg ||
             responsive.md ||
@@ -75,7 +76,7 @@ const GridView = ({
             responsive.xs ||
             column
           );
-        } else if (width === 'xl') {
+        } else if (width === "xl") {
           return (
             responsive.xl ||
             responsive.lg ||
@@ -100,15 +101,15 @@ const GridView = ({
   return (
     <Box
       sx={{
-        width: '100%',
+        width: "100%",
         ...sx,
       }}
     >
       <Box
         style={{
-          display: 'flex',
-          flexDirection: 'row',
-          flexWrap: 'wrap',
+          display: "flex",
+          flexDirection: "row",
+          flexWrap: "wrap",
           margin: -itemPadding,
           ...style,
         }}
@@ -121,9 +122,9 @@ const GridView = ({
                   maxWidth: `${100 / displayColumn}%`,
                   flexBasis: `${100 / displayColumn}%`,
                   padding: itemPadding,
-                  boxSizing: 'border-box',
+                  boxSizing: "border-box",
                 }}
-                key={'grid-' + index}
+                key={"grid-" + index}
               >
                 {renderRow(item, index)}
               </Box>
@@ -152,18 +153,4 @@ GridView.propTypes = {
   ListFooterComponent: PropTypes.node,
   data: PropTypes.array.isRequired,
   onEndReached: PropTypes.func,
-};
-GridView.defaultProps = {
-  border: false,
-  data: [],
-  column: 3,
-  animation: 'transition.expandIn',
-  itemPadding: 12,
-  // responsive: {
-  //   xs: 1,
-  //   sm: 2,
-  //   md: 2,
-  //   lg: 4,
-  //   xl: 4,
-  // },
 };

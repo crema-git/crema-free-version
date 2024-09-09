@@ -74,7 +74,7 @@ const NotificationCell = ({ item }) => {
           </Box>
         }
       />
-    </ListItem>
+    </ListItemButton>
   );
 };
 

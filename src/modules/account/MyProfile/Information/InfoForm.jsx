@@ -14,7 +14,7 @@ import { countries } from '@crema/mockapi';
 
 const InfoForm = ({ values, setFieldValue }) => {
   return (
-    <Form autoComplete='off'>
+    (<Form autoComplete='off'>
       <AppGridContainer spacing={4}>
         <Grid item xs={12} md={12}>
           <AppTextField
@@ -74,9 +74,11 @@ const InfoForm = ({ values, setFieldValue }) => {
               <TextField
                 {...params}
                 label={<IntlMessages id='common.country' />}
-                inputProps={{
-                  ...params.inputProps,
-                  autoComplete: 'new-password', // disable autocomplete and autofill
+                slotProps={{
+                  htmlInput: {
+                    ...params.inputProps,
+                    autoComplete: 'new-password', // disable autocomplete and autofill
+                  }
                 }}
               />
             )}
@@ -129,7 +131,7 @@ const InfoForm = ({ values, setFieldValue }) => {
           </Box>
         </Grid>
       </AppGridContainer>
-    </Form>
+    </Form>)
   );
 };
 

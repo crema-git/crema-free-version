@@ -13,15 +13,18 @@ export default function SimpleBackdrop() {
   };
 
   return (
-    <div>
+    (<div>
       <Button onClick={handleToggle}>Show backdrop</Button>
       <Backdrop
-        sx={{ color: '#fff', zIndex: (theme) => theme.zIndex.drawer + 1 }}
+        sx={theme => ({
+          color: '#fff',
+          zIndex: theme.zIndex.drawer + 1
+        })}
         open={open}
         onClick={handleClose}
       >
         <CircularProgress color='inherit' />
       </Backdrop>
-    </div>
+    </div>)
   );
 }

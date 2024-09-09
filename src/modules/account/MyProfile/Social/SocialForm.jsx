@@ -11,7 +11,7 @@ import AppTextField from '@crema/components/AppFormComponents/AppTextField';
 
 const SocialForm = ({ social }) => {
   return (
-    <Form autoComplete='off'>
+    (<Form autoComplete='off'>
       <AppGridContainer spacing={4}>
         <Grid item xs={12}>
           <Box
@@ -69,13 +69,13 @@ const SocialForm = ({ social }) => {
 
         <Grid item xs={12}>
           <Box
-            sx={{
+            sx={theme => ({
               mx: -5,
               mt: 3,
               px: 5,
               pt: 5,
-              borderTop: (theme) => `solid 1px ${theme.palette.divider}`,
-            }}
+              borderTop: `solid 1px ${theme.palette.divider}`
+            })}
           >
             <ProfileConnection profileConnection={social} />
           </Box>
@@ -113,7 +113,7 @@ const SocialForm = ({ social }) => {
           </Box>
         </Grid>
       </AppGridContainer>
-    </Form>
+    </Form>)
   );
 };
 

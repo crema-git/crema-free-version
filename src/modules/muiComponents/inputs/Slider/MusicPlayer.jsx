@@ -53,9 +53,15 @@ const Widget = styled("div")(({ theme }) => ({
   margin: "auto",
   position: "relative",
   zIndex: 1,
+
   backgroundColor:
-    theme.palette.mode === "dark" ? "rgba(0,0,0,0.6)" : "rgba(255,255,255,0.4)",
+    "rgba(255,255,255,0.4)",
+
   backdropFilter: "blur(40px)",
+
+  ...theme.applyStyles("dark", {
+    backgroundColor: "rgba(0,0,0,0.6)"
+  })
 }));
 
 const CoverImage = styled("div")({
@@ -94,15 +100,15 @@ export default function MusicPlayerSlider() {
   const lightIconColor =
     theme.palette.mode === "dark" ? "rgba(255,255,255,0.4)" : "rgba(0,0,0,0.4)";
   return (
-    <Box
-      sx={{
-        width: "100%",
-        overflow: "hidden",
-        position: "relative",
-        py: 5,
-        px: 2.5,
-      }}
-    >
+    (<Box
+        sx={{
+          width: "100%",
+          overflow: "hidden",
+          position: "relative",
+          py: 5,
+          px: 2.5,
+        }}
+      >
       <Widget>
         <Box sx={{ display: "flex", alignItems: "center" }}>
           <CoverImage>
@@ -114,15 +120,18 @@ export default function MusicPlayerSlider() {
           <Box sx={{ ml: 1.5, minWidth: 0 }}>
             <Typography
               variant="caption"
-              color="text.secondary"
-              fontWeight={500}
-            >
+              sx={{
+                color: "text.secondary",
+                fontWeight: 500
+              }}>
               Jun Pulse
             </Typography>
             <Typography noWrap>
               <b>คนเก่าเขาทำไว้ดี (Can&apos;t win)</b>
             </Typography>
-            <Typography noWrap letterSpacing={-0.25}>
+            <Typography noWrap sx={{
+              letterSpacing: -0.25
+            }}>
               Chilling Sunday &mdash; คนเก่าเขาทำไว้ดี
             </Typography>
           </Box>
@@ -135,9 +144,10 @@ export default function MusicPlayerSlider() {
           step={1}
           max={duration}
           onChange={(_, value) => setPosition(value)}
-          sx={{
-            color: theme.palette.mode === "dark" ? "#fff" : "rgba(0,0,0,0.87)",
+          sx={theme => ({
+            color: "rgba(0,0,0,0.87)",
             height: 4,
+
             "& .MuiSlider-thumb": {
               width: 8,
               height: 8,
@@ -147,20 +157,27 @@ export default function MusicPlayerSlider() {
               },
               "&:hover, &.Mui-focusVisible": {
                 boxShadow: `0px 0px 0px 8px ${
-                  theme.palette.mode === "dark"
-                    ? "rgb(255 255 255 / 16%)"
-                    : "rgb(0 0 0 / 16%)"
+                  "rgb(0 0 0 / 16%)"
                 }`,
+
+                ...theme.applyStyles("dark", {
+                  boxShadow: `0px 0px 0px 8px ${"rgb(255 255 255 / 16%)"}`
+                })
               },
               "&.Mui-active": {
                 width: 20,
                 height: 20,
               },
             },
+
             "& .MuiSlider-rail": {
               opacity: 0.28,
             },
-          }}
+
+            ...theme.applyStyles("dark", {
+              color: "#fff"
+            })
+          })}
         />
         <Box
           sx={{
@@ -207,19 +224,23 @@ export default function MusicPlayerSlider() {
         <Stack
           spacing={2}
           direction="row"
-          sx={{ mb: 1, px: 1 }}
-          alignItems="center"
-        >
+          sx={{
+            alignItems: "center",
+            mb: 1,
+            px: 1
+          }}>
           <VolumeDownRounded htmlColor={lightIconColor} />
           <Slider
             aria-label="Volume"
             defaultValue={30}
-            sx={{
+            sx={theme => ({
               color:
-                theme.palette.mode === "dark" ? "#fff" : "rgba(0,0,0,0.87)",
+                "rgba(0,0,0,0.87)",
+
               "& .MuiSlider-track": {
                 border: "none",
               },
+
               "& .MuiSlider-thumb": {
                 width: 24,
                 height: 24,
@@ -231,12 +252,16 @@ export default function MusicPlayerSlider() {
                   boxShadow: "none",
                 },
               },
-            }}
+
+              ...theme.applyStyles("dark", {
+                color: "#fff"
+              })
+            })}
           />
           <VolumeUpRounded htmlColor={lightIconColor} />
         </Stack>
       </Widget>
       <WallPaper />
-    </Box>
+    </Box>)
   );
 }

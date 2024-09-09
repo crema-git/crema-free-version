@@ -24,7 +24,7 @@ const TableRowWrapper = styled(TableRow)(() => {
 
 const TableItem = (props) => {
   return (
-    <TableRowWrapper key={props.data.name} className='item-hover'>
+    (<TableRowWrapper key={props.data.name} className='item-hover'>
       <TableCell>
         <Box
           sx={{
@@ -41,17 +41,17 @@ const TableItem = (props) => {
             src={props.data.icon}
           />
           <Box
-            sx={{
+            sx={theme => ({
               fontSize: 14,
               flex: 1,
-              color: (theme) => theme.palette.text.secondary,
-            }}
+              color: theme.palette.text.secondary
+            })}
           >
             <Typography
-              sx={{
+              sx={theme => ({
                 mb: 0.5,
-                color: (theme) => theme.palette.text.primary,
-              }}
+                color: theme.palette.text.primary
+              })}
               variant='h5'
               component='h5'
             >
@@ -88,16 +88,16 @@ const TableItem = (props) => {
         </Box>
         <Box
           component='span'
-          sx={{
+          sx={theme => ({
             display: 'inline-block',
-            color: (theme) => theme.palette.text.secondary,
-            ml: 2,
-          }}
+            color: theme.palette.text.secondary,
+            ml: 2
+          })}
         >
           {props.data.growth ? 'Up' : 'Down'}
         </Box>
       </TableCell>
-    </TableRowWrapper>
+    </TableRowWrapper>)
   );
 };
 

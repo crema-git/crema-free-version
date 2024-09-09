@@ -9,7 +9,7 @@ const NotificationItem = (props) => {
   const { item } = props;
 
   return (
-    <ListItem
+    (<ListItem
       sx={{
         padding: '8px 20px',
       }}
@@ -31,29 +31,29 @@ const NotificationItem = (props) => {
         />
       </ListItemAvatar>
       <Box
-        sx={{
+        sx={theme => ({
           fontSize: 14,
-          color: (theme) => theme.palette.text.secondary,
-        }}
+          color: theme.palette.text.secondary
+        })}
       >
         <Typography>
           <Box
             component='span'
-            sx={{
+            sx={theme => ({
               fontSize: 14,
               fontWeight: Fonts.MEDIUM,
               mb: 0.5,
-              color: (theme) => theme.palette.text.primary,
+              color: theme.palette.text.primary,
               mr: 1,
-              display: 'inline-block',
-            }}
+              display: 'inline-block'
+            })}
           >
             {item.name}
           </Box>
           {item.message}
         </Typography>
       </Box>
-    </ListItem>
+    </ListItem>)
   );
 };
 

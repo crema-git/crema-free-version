@@ -4,7 +4,7 @@ import Typography from '@mui/material/Typography';
 
 export default function Types() {
   return (
-    <Box sx={{ width: '100%', maxWidth: 500 }}>
+    (<Box sx={{ width: '100%', maxWidth: 500 }}>
       <Typography variant='h1' component='div' gutterBottom>
         h1. Heading
       </Typography>
@@ -43,15 +43,21 @@ export default function Types() {
         consectetur, neque doloribus, cupiditate numquam dignissimos laborum
         fugiat deleniti? Eum quasi quidem quibusdam.
       </Typography>
-      <Typography variant='button' display='block' gutterBottom>
+      <Typography variant='button' gutterBottom sx={{
+        display: 'block'
+      }}>
         button text
       </Typography>
-      <Typography variant='caption' display='block' gutterBottom>
+      <Typography variant='caption' gutterBottom sx={{
+        display: 'block'
+      }}>
         caption text
       </Typography>
-      <Typography variant='overline' display='block' gutterBottom>
+      <Typography variant='overline' gutterBottom sx={{
+        display: 'block'
+      }}>
         overline text
       </Typography>
-    </Box>
+    </Box>)
   );
 }

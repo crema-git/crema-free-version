@@ -54,7 +54,7 @@ const PersonalInfoForm = ({ values, setFieldValue }) => {
   });
 
   return (
-    <Form noValidate autoComplete='off'>
+    (<Form noValidate autoComplete='off'>
       <Typography
         component='h3'
         sx={{
@@ -101,9 +101,9 @@ const PersonalInfoForm = ({ values, setFieldValue }) => {
             {values.displayName}
           </Typography>
           <Typography
-            sx={{
-              color: (theme) => theme.palette.text.secondary,
-            }}
+            sx={theme => ({
+              color: theme.palette.text.secondary
+            })}
           >
             {values.email}
           </Typography>
@@ -171,7 +171,7 @@ const PersonalInfoForm = ({ values, setFieldValue }) => {
           </Box>
         </Grid>
       </AppGridContainer>
-    </Form>
+    </Form>)
   );
 };
 

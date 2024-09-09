@@ -12,10 +12,10 @@ import { useSidebarContext } from "@crema/context/AppContextProvider/SidebarCont
 
 const AppSidebar = ({
   toggleNavCollapsed,
-  position,
   isNavCollapsed,
-  variant,
   routesConfig,
+  variant = "",
+  position = "left",
 }) => {
   const { footer, footerType } = useLayoutContext();
 
@@ -40,12 +40,12 @@ const AppSidebar = ({
           <MainSidebar>
             <UserInfo color={sidebarTextColor} />
             <AppScrollbar
-              sx={{
+              sx={(theme) => ({
                 py: 2,
                 height: "calc(100vh - 70px) !important",
-                borderTop: (theme) => `solid 1px ${theme.palette.divider}`,
+                borderTop: `solid 1px ${theme.palette.divider}`,
                 mt: 0.5,
-              }}
+              })}
             >
               <VerticalNav routesConfig={routesConfig} />
             </AppScrollbar>
@@ -56,21 +56,22 @@ const AppSidebar = ({
         <MainSidebar>
           <UserInfo color={sidebarTextColor} />
           <AppScrollbar
-            className={clsx({
-              "has-footer-fixed": footer && footerType === "fixed",
-            })}
-            sx={{
+            className={clsx(
+              footer && footerType === "fixed" && "has-footer-fixed",
+            )}
+            sx={(theme) => ({
               py: 2,
               height: "calc(100vh - 70px) !important",
-              borderTop: (theme) => `solid 1px ${theme.palette.divider}`,
+              borderTop: `solid 1px ${theme.palette.divider}`,
               mt: 0.5,
+
               "&.has-footer-fixed": {
                 height: {
                   xs: "calc(100vh - 117px) !important",
                   xl: "calc(100vh - 127px) !important",
                 },
               },
-            }}
+            })}
           >
             <VerticalNav routesConfig={routesConfig} />
           </AppScrollbar>
@@ -81,11 +82,6 @@ const AppSidebar = ({
 };
 
 export default AppSidebar;
-
-AppSidebar.defaultProps = {
-  variant: "",
-  position: "left",
-};
 
 AppSidebar.propTypes = {
   position: PropTypes.string,

@@ -30,7 +30,7 @@ export default function SelectTextFields() {
   };
 
   return (
-    <Box
+    (<Box
       component="form"
       sx={{
         "& .MuiTextField-root": { m: 1, width: "25ch" },
@@ -59,10 +59,12 @@ export default function SelectTextFields() {
           label="Native select"
           value={currency}
           onChange={handleChange}
-          SelectProps={{
-            native: true,
-          }}
           helperText="Please select your currency"
+          slotProps={{
+            select: {
+              native: true,
+            }
+          }}
         >
           {currencies.map((option) => (
             <option key={option.value} value={option.value}>
@@ -93,11 +95,13 @@ export default function SelectTextFields() {
           label="Native select"
           value={currency}
           onChange={handleChange}
-          SelectProps={{
-            native: true,
-          }}
           helperText="Please select your currency"
           variant="filled"
+          slotProps={{
+            select: {
+              native: true,
+            }
+          }}
         >
           {currencies.map((option) => (
             <option key={option.value} value={option.value}>
@@ -128,11 +132,13 @@ export default function SelectTextFields() {
           label="Native select"
           value={currency}
           onChange={handleChange}
-          SelectProps={{
-            native: true,
-          }}
           helperText="Please select your currency"
           variant="standard"
+          slotProps={{
+            select: {
+              native: true,
+            }
+          }}
         >
           {currencies.map((option) => (
             <option key={option.value} value={option.value}>
@@ -141,6 +147,6 @@ export default function SelectTextFields() {
           ))}
         </TextField>
       </div>
-    </Box>
+    </Box>)
   );
 }

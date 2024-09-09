@@ -16,7 +16,7 @@ const AppCard = ({
   action,
   actionStyle,
   footer,
-  footerPosition,
+  footerPosition = "left",
   footerStyle,
   children,
   ...rest
@@ -107,7 +107,15 @@ const AppCard = ({
           ) : (
             <Box
               component="span"
-              sx={{ ml: footerPosition === "right" ? "auto" : 0 }}
+              sx={[
+                footerPosition === "right"
+                  ? {
+                      ml: "auto",
+                    }
+                  : {
+                      ml: 0,
+                    },
+              ]}
             >
               <Link
                 color="secondary"
@@ -143,8 +151,4 @@ AppCard.propTypes = {
   contentStyle: PropTypes.object,
   actionStyle: PropTypes.object,
   children: PropTypes.node,
-};
-
-AppCard.defaultProps = {
-  footerPosition: "left",
 };

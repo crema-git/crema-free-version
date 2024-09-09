@@ -9,7 +9,7 @@ import { Fonts } from '@crema/constants/AppEnums';
 
 const ReportCard = ({ data }) => {
   return (
-    <AppCard
+    (<AppCard
       footer={
         <StatGraphs
           id={data.id}
@@ -46,23 +46,26 @@ const ReportCard = ({ data }) => {
             </Typography>
             {data?.percentageChange && (
               <Box
-                sx={{
-                  color: (theme) => theme.palette.success.main,
+                sx={theme => ({
+                  color: theme.palette.success.main,
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'flex-end',
-                  ml: 4,
-                }}
+                  ml: 4
+                })}
               >
                 <Box
                   component='span'
-                  sx={{
+                  sx={[{
                     ml: 0.25,
                     mt: '3px',
                     fontSize: 14,
-                    fontWeight: Fonts.SEMI_BOLD,
-                    color: data.percentageChange > 0 ? '#11C15B' : '#F04F47',
-                  }}
+                    fontWeight: Fonts.SEMI_BOLD
+                  }, data.percentageChange > 0 ? {
+                    color: '#11C15B'
+                  } : {
+                    color: '#F04F47'
+                  }]}
                 >
                   {data.percentageChange > 0 ? '+' : ''}
                   {data.percentageChange}%
@@ -71,13 +74,13 @@ const ReportCard = ({ data }) => {
             )}
           </Box>
           <Typography
-            sx={{
-              color: (theme) => theme.palette.text.secondary,
+            sx={theme => ({
+              color: theme.palette.text.secondary,
               overflow: 'hidden',
               textOverflow: 'ellipsis',
               whiteSpace: 'nowrap',
-              width: '100%',
-            }}
+              width: '100%'
+            })}
           >
             {data.type}
           </Typography>
@@ -93,7 +96,7 @@ const ReportCard = ({ data }) => {
           <Icon style={{ fontSize: 30 }}>{data.icon}</Icon>
         </IconButton>
       </Box>
-    </AppCard>
+    </AppCard>)
   );
 };
 

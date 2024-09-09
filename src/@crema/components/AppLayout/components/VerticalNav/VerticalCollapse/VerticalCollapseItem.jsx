@@ -1,65 +1,65 @@
-import React from 'react';
-import PropsTypes from 'prop-types';
-import ListItem from '@mui/material/ListItem';
-import { Fonts } from '@crema/constants/AppEnums';
-import { alpha } from '@mui/material';
+import React from "react";
+import PropsTypes from "prop-types";
+import { Fonts } from "@crema/constants/AppEnums";
+import { alpha } from "@mui/material";
+import ListItemButton from "@mui/material/ListItemButton";
 
 const VerticalCollapseItem = ({ children, sidebarTextColor, ...rest }) => {
   return (
-    <ListItem
+    <ListItemButton
       sx={{
         height: 40,
         my: 0.25,
-        pl: '31px',
+        pl: "31px",
         pr: 3.75,
-        whiteSpace: 'nowrap',
-        transition: 'all 0.4s ease',
-        '& .nav-item-text': {
+        whiteSpace: "nowrap",
+        transition: "all 0.4s ease",
+        "& .nav-item-text": {
           fontWeight: Fonts.MEDIUM,
           color: alpha(sidebarTextColor, 0.7),
         },
 
-        '& .nav-item-icon': {
+        "& .nav-item-icon": {
           color: alpha(sidebarTextColor, 0.7),
           fontSize: 20,
-          display: 'block',
+          display: "block",
         },
 
-        '& .nav-item-icon-arrow': {
+        "& .nav-item-icon-arrow": {
           color: alpha(sidebarTextColor, 0.7),
         },
 
-        '& .MuiIconButton-root': {
+        "& .MuiIconButton-root": {
           mr: 3,
           padding: 0,
         },
 
-        '& .MuiTouchRipple-root': {
+        "& .MuiTouchRipple-root": {
           zIndex: 10,
         },
 
-        '&.open, &:hover, &:focus': {
-          '& .nav-item-text': {
+        "&.open, &:hover, &:focus": {
+          "& .nav-item-text": {
             fontWeight: Fonts.MEDIUM,
             color: sidebarTextColor,
           },
 
-          '& .nav-item-icon': {
+          "& .nav-item-icon": {
             color: sidebarTextColor,
           },
 
-          '& .nav-item-icon-arrow': {
+          "& .nav-item-icon-arrow": {
             color: sidebarTextColor,
           },
         },
-        '&:hover': {
-          backgroundColor: 'transparent',
+        "&:hover": {
+          backgroundColor: "transparent",
         },
       }}
       {...rest}
     >
       {children}
-    </ListItem>
+    </ListItemButton>
   );
 };
 

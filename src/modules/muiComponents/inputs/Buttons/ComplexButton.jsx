@@ -88,7 +88,7 @@ const ImageMarked = styled("span")(({ theme }) => ({
 
 export default function ButtonBases() {
   return (
-    <Box
+    (<Box
       sx={{ display: "flex", flexWrap: "wrap", minWidth: 300, width: "100%" }}
     >
       {images.map((image) => (
@@ -106,12 +106,12 @@ export default function ButtonBases() {
               component="span"
               variant="subtitle1"
               color="inherit"
-              sx={{
+              sx={theme => ({
                 position: "relative",
                 p: 4,
                 pt: 2,
-                pb: (theme) => `calc(${theme.spacing(1)} + 6px)`,
-              }}
+                pb: `calc(${theme.spacing(1)} + 6px)`
+              })}
             >
               {image.title}
               <ImageMarked className="MuiImageMarked-root" />
@@ -119,6 +119,6 @@ export default function ButtonBases() {
           </Image>
         </ImageButton>
       ))}
-    </Box>
+    </Box>)
   );
 }

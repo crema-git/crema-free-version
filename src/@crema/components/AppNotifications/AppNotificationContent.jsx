@@ -13,7 +13,7 @@ import notificationData from '../../mockapi/fakedb/notifications';
 
 const AppNotificationContent = ({ onClose, sxStyle }) => {
   return (
-    <Box
+    (<Box
       sx={{
         display: 'flex',
         flexDirection: 'column',
@@ -23,14 +23,14 @@ const AppNotificationContent = ({ onClose, sxStyle }) => {
       }}
     >
       <Box
-        sx={{
+        sx={theme => ({
           padding: '5px 20px',
           display: 'flex',
           alignItems: 'center',
           borderBottom: 1,
-          borderBottomColor: (theme) => theme.palette.divider,
-          minHeight: { xs: 56, sm: 70 },
-        }}
+          borderBottomColor: theme.palette.divider,
+          minHeight: { xs: 56, sm: 70 }
+        })}
       >
         <Typography component='h3' variant='h3'>
           <IntlMessages id='common.notifications' />({notificationData.length})
@@ -72,7 +72,7 @@ const AppNotificationContent = ({ onClose, sxStyle }) => {
       >
         <IntlMessages id='common.viewAll' />
       </Button>
-    </Box>
+    </Box>)
   );
 };
 

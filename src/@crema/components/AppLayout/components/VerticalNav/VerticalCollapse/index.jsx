@@ -1,17 +1,17 @@
-import React, { useEffect, useMemo, useState } from 'react';
-import { Collapse, Icon, IconButton, ListItemText } from '@mui/material';
-import { useLocation } from 'react-router-dom';
-import clsx from 'clsx';
-import PropTypes from 'prop-types';
-import VerticalItem from '../VerticalItem';
-import Box from '@mui/material/Box';
-import IntlMessages from '@crema/helpers/IntlMessages';
-import { checkPermission } from '@crema/helpers/RouteHelper';
-import { useAuthUser } from '@crema/hooks/AuthHooks';
-import { useThemeContext } from '@crema/context/AppContextProvider/ThemeContextProvider';
-import { useSidebarContext } from '@crema/context/AppContextProvider/SidebarContextProvider';
-import VerticalCollapseItem from './VerticalCollapseItem';
-import { allowMultiLanguage } from '@crema/constants/AppConst';
+import React, { useEffect, useMemo, useState } from "react";
+import { Collapse, Icon, IconButton, ListItemText } from "@mui/material";
+import { useLocation } from "react-router-dom";
+import clsx from "clsx";
+import PropTypes from "prop-types";
+import VerticalItem from "../VerticalItem";
+import Box from "@mui/material/Box";
+import IntlMessages from "@crema/helpers/IntlMessages";
+import { checkPermission } from "@crema/helpers/RouteHelper";
+import { useAuthUser } from "@crema/hooks/AuthHooks";
+import { useThemeContext } from "@crema/context/AppContextProvider/ThemeContextProvider";
+import { useSidebarContext } from "@crema/context/AppContextProvider/SidebarContextProvider";
+import VerticalCollapseItem from "./VerticalCollapseItem";
+import { allowMultiLanguage } from "@crema/constants/AppConst";
 
 const needsToBeOpened = (pathname, item) => {
   return pathname && isUrlInChildren(item, pathname);
@@ -71,17 +71,16 @@ const VerticalCollapse = ({ item, level }) => {
       <VerticalCollapseItem
         level={level}
         sidebarTextColor={sidebarTextColor}
-        button
-        component='div'
-        className={clsx('menu-vertical-collapse', open && 'open')}
+        component="div"
+        className={clsx("menu-vertical-collapse", open && "open")}
         onClick={handleClick}
       >
         {item.icon && (
-          <Box component='span'>
+          <Box component="span">
             <Icon
               sx={{ mr: 4 }}
-              color='action'
-              className={clsx('nav-item-icon')}
+              color="action"
+              className={clsx("nav-item-icon")}
             >
               {item.icon}
             </Icon>
@@ -89,13 +88,13 @@ const VerticalCollapse = ({ item, level }) => {
         )}
         <ListItemText
           sx={{
-            overflow: 'hidden',
-            textOverflow: 'ellipsis',
-            whiteSpace: 'nowrap',
+            overflow: "hidden",
+            textOverflow: "ellipsis",
+            whiteSpace: "nowrap",
             fontSize: 14,
           }}
-          className='nav-item-content'
-          classes={{ primary: clsx('nav-item-text') }}
+          className="nav-item-content"
+          classes={{ primary: clsx("nav-item-text") }}
           primary={
             allowMultiLanguage ? (
               <IntlMessages id={item.messageId} />
@@ -105,30 +104,30 @@ const VerticalCollapse = ({ item, level }) => {
           }
         />
         <IconButton
-          className='nav-item-icon-arrow-btn'
+          className="nav-item-icon-arrow-btn"
           sx={{ p: 0, mr: 0.75 }}
           disableRipple
-          size='large'
+          size="large"
         >
-          <Icon className='nav-item-icon-arrow' color='inherit'>
+          <Icon className="nav-item-icon-arrow" color="inherit">
             {open
-              ? 'expand_more'
-              : theme.direction === 'ltr'
-              ? 'chevron_right'
-              : 'chevron_left'}
+              ? "expand_more"
+              : theme.direction === "ltr"
+                ? "chevron_right"
+                : "chevron_left"}
           </Icon>
         </IconButton>
       </VerticalCollapseItem>
 
       {item.children && (
-        <Collapse in={open} className='collapse-children'>
+        <Collapse in={open} className="collapse-children">
           {item.children.map((item) => (
             <React.Fragment key={item.id}>
-              {item.type === 'collapse' && (
+              {item.type === "collapse" && (
                 <VerticalCollapse item={item} level={level + 1} />
               )}
 
-              {item.type === 'item' && (
+              {item.type === "item" && (
                 <VerticalItem item={item} level={level + 1} />
               )}
             </React.Fragment>
@@ -151,6 +150,5 @@ VerticalCollapse.propTypes = {
   }),
   level: PropTypes.number,
 };
-VerticalCollapse.defaultProps = {};
 
 export default React.memo(VerticalCollapse);

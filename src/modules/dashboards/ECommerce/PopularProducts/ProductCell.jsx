@@ -7,7 +7,7 @@ import { Fonts } from '@crema/constants/AppEnums';
 
 const ProductCell = ({ data }) => {
   return (
-    <Box
+    (<Box
       sx={{
         padding: '8px 20px',
         display: 'flex',
@@ -26,13 +26,12 @@ const ProductCell = ({ data }) => {
           mr: 4,
         }}
       />
-
       <Box sx={{ flex: 1 }}>
         <Typography
-          sx={{
-            color: (theme) => theme.palette.primary.main,
-            mb: 0.5,
-          }}
+          sx={theme => ({
+            color: theme.palette.primary.main,
+            mb: 0.5
+          })}
           component='h5'
           variant='h5'
         >
@@ -49,17 +48,17 @@ const ProductCell = ({ data }) => {
           <span>${data.price}</span>
           <Box
             component='span'
-            sx={{
+            sx={theme => ({
               ml: 3,
-              color: (theme) => theme.palette.text.secondary,
-              textDecoration: 'line-through',
-            }}
+              color: theme.palette.text.secondary,
+              textDecoration: 'line-through'
+            })}
           >
             ${data.mrp}
           </Box>
         </Typography>
       </Box>
-    </Box>
+    </Box>)
   );
 };
 

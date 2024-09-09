@@ -8,10 +8,10 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import ArchiveIcon from '@mui/icons-material/Archive';
 import Paper from '@mui/material/Paper';
 import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
 import ListItemAvatar from '@mui/material/ListItemAvatar';
 import ListItemText from '@mui/material/ListItemText';
 import Avatar from '@mui/material/Avatar';
+import ListItemButton from "@mui/material/ListItemButton";
 
 function refreshMessages() {
   const getRandomInt = (max) => Math.floor(Math.random() * Math.floor(max));
@@ -32,16 +32,16 @@ export default function FixedBottomNavigation() {
   }, [value, setMessages]);
 
   return (
-    <Box sx={{ pb: 7 }} ref={ref}>
+    (<Box sx={{ pb: 7 }} ref={ref}>
       <CssBaseline />
       <List>
         {messages.map(({ primary, secondary, person }, index) => (
-          <ListItem button key={index + person}>
+          <ListItemButton key={index + person}>
             <ListItemAvatar>
               <Avatar alt='Profile Picture' src={person} />
             </ListItemAvatar>
             <ListItemText primary={primary} secondary={secondary} />
-          </ListItem>
+          </ListItemButton>
         ))}
       </List>
       <Paper
@@ -60,7 +60,7 @@ export default function FixedBottomNavigation() {
           <BottomNavigationAction label='Archive' icon={<ArchiveIcon />} />
         </BottomNavigation>
       </Paper>
-    </Box>
+    </Box>)
   );
 }
 

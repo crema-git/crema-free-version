@@ -6,9 +6,11 @@ import { Typography } from '@mui/material';
 import Box from '@mui/material/Box';
 import { Fonts } from '@crema/constants/AppEnums';
 
-const AppEmptyResult = ({ title, description, actionTitle, onAction }) => {
+const AppEmptyResult = ({  actionTitle, onAction.
+                            title= <IntlMessages id='common.noRecordFound' />,
+    description= '', }) => {
   return (
-    <Box
+    (<Box
       sx={{
         display: 'flex',
         flexDirection: 'column',
@@ -23,20 +25,20 @@ const AppEmptyResult = ({ title, description, actionTitle, onAction }) => {
       <Typography
         variant='h4'
         component='h4'
-        sx={{
+        sx={theme => ({
           mb: 4,
           fontWeight: Fonts.REGULAR,
-          color: (theme) => theme.palette.text.secondary,
-        }}
+          color: theme.palette.text.secondary
+        })}
       >
         {title}
       </Typography>
       {description ? (
         <Typography
-          sx={{
+          sx={theme => ({
             mb: 5,
-            color: (theme) => theme.palette.text.secondary,
-          }}
+            color: theme.palette.text.secondary
+          })}
         >
           {description}
         </Typography>
@@ -51,16 +53,12 @@ const AppEmptyResult = ({ title, description, actionTitle, onAction }) => {
           {actionTitle}
         </Button>
       ) : null}
-    </Box>
+    </Box>)
   );
 };
 
 export default AppEmptyResult;
 
-AppEmptyResult.defaultProps = {
-  title: <IntlMessages id='common.noRecordFound' />,
-  description: '',
-};
 
 AppEmptyResult.propTypes = {
   title: PropTypes.string,

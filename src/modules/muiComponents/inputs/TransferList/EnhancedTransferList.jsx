@@ -10,6 +10,8 @@ import Checkbox from "@mui/material/Checkbox";
 import Button from "@mui/material/Button";
 import Divider from "@mui/material/Divider";
 
+import ListItemButton from "@mui/material/ListItemButton";
+
 function not(a, b) {
   return a.filter((value) => b.indexOf(value) === -1);
 }
@@ -104,12 +106,7 @@ export default function TransferList() {
           const labelId = `transfer-list-all-item-${value}-label`;
 
           return (
-            <ListItem
-              key={value}
-              role="listitem"
-              button
-              onClick={handleToggle(value)}
-            >
+            (<ListItemButton key={value} role="listitem" onClick={handleToggle(value)}>
               <ListItemIcon>
                 <Checkbox
                   checked={checked.indexOf(value) !== -1}
@@ -121,7 +118,7 @@ export default function TransferList() {
                 />
               </ListItemIcon>
               <ListItemText id={labelId} primary={`List item ${value + 1}`} />
-            </ListItem>
+            </ListItemButton>)
           );
         })}
         <ListItem />

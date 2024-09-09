@@ -7,19 +7,31 @@ import PropTypes from 'prop-types';
 
 export const SearchWrapper = ({ iconPosition, children }) => {
   return (
-    <Box
-      sx={{
-        borderRadius: (theme) => theme.cardRadius,
+    (<Box
+      sx={[theme => ({
+        borderRadius: theme.cardRadius,
         display: 'block',
-        cursor: 'pointer',
+        cursor: 'pointer'
+      }), iconPosition === 'right' ? {
         '& .searchRoot .MuiInputBase-input': {
-          paddingLeft: iconPosition === 'right' ? 5 : 'calc(1em + 28px)',
-          paddingRight: iconPosition === 'right' ? 'calc(1em + 28px)' : 5,
-        },
-      }}
+          paddingLeft: 5
+        }
+      } : {
+        '& .searchRoot .MuiInputBase-input': {
+          paddingLeft: 'calc(1em + 28px)'
+        }
+      }, iconPosition === 'right' ? {
+        '& .searchRoot .MuiInputBase-input': {
+          paddingRight: 'calc(1em + 28px)'
+        }
+      } : {
+        '& .searchRoot .MuiInputBase-input': {
+          paddingRight: 5
+        }
+      }]}
     >
       {children}
-    </Box>
+    </Box>)
   );
 };
 SearchWrapper.propTypes = {

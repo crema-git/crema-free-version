@@ -1,10 +1,10 @@
-import React from 'react';
-import PropsTypes from 'prop-types';
-import ListItem from '@mui/material/ListItem';
-import { Fonts, MenuStyle } from '@crema/constants/AppEnums';
-import { useSidebarContext } from '@crema/context/AppContextProvider/SidebarContextProvider';
-import clsx from 'clsx';
-import { alpha } from '@mui/material';
+import React from "react";
+import PropsTypes from "prop-types";
+import { Fonts, MenuStyle } from "@crema/constants/AppEnums";
+import { useSidebarContext } from "@crema/context/AppContextProvider/SidebarContextProvider";
+import clsx from "clsx";
+import { alpha } from "@mui/material";
+import ListItemButton from "@mui/material/ListItemButton";
 
 const VerticalNavItem = ({ children, level, ...rest }) => {
   const {
@@ -15,146 +15,156 @@ const VerticalNavItem = ({ children, level, ...rest }) => {
   } = useSidebarContext();
 
   return (
-    <ListItem
-      className={clsx('menu-vertical-item', {
-        'rounded-menu': menuStyle === MenuStyle.ROUNDED,
-        'rounded-menu-reverse': menuStyle === MenuStyle.ROUNDED_REVERSE,
-        'standard-menu': menuStyle === MenuStyle.STANDARD,
-        'curved-menu': menuStyle === MenuStyle.CURVED_MENU,
-      })}
-      sx={{
+    <ListItemButton
+      className={clsx(
+        "menu-vertical-item",
+        menuStyle === MenuStyle.ROUNDED && "rounded-menu",
+        menuStyle === MenuStyle.ROUNDED_REVERSE && "rounded-menu-reverse",
+        menuStyle === MenuStyle.STANDARD && "standard-menu",
+        menuStyle === MenuStyle.CURVED_MENU && "curved-menu",
+      )}
+      sx={(theme) => ({
         height: 40,
         my: 0.25,
-        cursor: 'pointer',
-        textDecoration: 'none !important',
+        cursor: "pointer",
+        textDecoration: "none !important",
         mx: 2,
-        width: 'calc(100% - 16px)',
-        pl: 22 + 33 * level + 'px',
+        width: "calc(100% - 16px)",
+        pl: 22 + 33 * level + "px",
         pr: 3,
         borderRadius: 1,
-        position: 'relative',
-        transition: 'all 0.4s ease',
-        whiteSpace: 'nowrap',
-        '& .nav-item-icon': {
+        position: "relative",
+        transition: "all 0.4s ease",
+        whiteSpace: "nowrap",
+
+        "& .nav-item-icon": {
           color: alpha(sidebarTextColor, 0.7),
           fontSize: 20,
-          display: 'block',
+          display: "block",
         },
-        '& .nav-item-text': {
+
+        "& .nav-item-text": {
           color: alpha(sidebarTextColor, 0.7),
           fontWeight: Fonts.MEDIUM,
           fontSize: 14,
         },
 
-        '& .MuiTouchRipple-root': {
+        "& .MuiTouchRipple-root": {
           zIndex: 1,
         },
-        '&.nav-item-header': {
-          textTransform: 'uppercase',
+
+        "&.nav-item-header": {
+          textTransform: "uppercase",
         },
-        '&:hover, &:focus': {
-          '& .nav-item-text, & .nav-item-icon, & .nav-item-icon-arrow': {
+
+        "&:hover, &:focus": {
+          "& .nav-item-text, & .nav-item-icon, & .nav-item-icon-arrow": {
             color: sidebarTextColor,
           },
         },
-        '&.active': {
+
+        "&.active": {
           backgroundColor: sidebarMenuSelectedBgColor,
-          pointerEvents: 'none',
-          '& .nav-item-text': {
-            color: sidebarMenuSelectedTextColor + '!important',
+          pointerEvents: "none",
+          "& .nav-item-text": {
+            color: sidebarMenuSelectedTextColor + "!important",
             fontWeight: Fonts.MEDIUM,
           },
-          '& .nav-item-icon': {
-            color: sidebarMenuSelectedTextColor + '!important',
+          "& .nav-item-icon": {
+            color: sidebarMenuSelectedTextColor + "!important",
           },
         },
-        '&.rounded-menu': {
+
+        "&.rounded-menu": {
           mr: 4,
           ml: 0,
-          width: 'calc(100% - 16px)',
-          pl: 30 + 33 * level + 'px',
+          width: "calc(100% - 16px)",
+          pl: 30 + 33 * level + "px",
           pr: 3,
-          borderRadius: '0 30px 30px 0',
+          borderRadius: "0 30px 30px 0",
         },
-        '&.rounded-menu-reverse': {
+
+        "&.rounded-menu-reverse": {
           ml: 4,
           mr: 0,
-          width: 'calc(100% - 16px)',
-          pl: 14 + 33 * level + 'px',
+          width: "calc(100% - 16px)",
+          pl: 14 + 33 * level + "px",
           pr: 3,
-          borderRadius: '30px 0 0 30px',
+          borderRadius: "30px 0 0 30px",
         },
-        '&.standard-menu': {
+
+        "&.standard-menu": {
           mx: 0,
-          width: '100%',
-          pl: 30 + 33 * level + 'px',
+          width: "100%",
+          pl: 30 + 33 * level + "px",
           pr: 3,
           borderRadius: 0,
-          position: 'relative',
-          '&:after': {
+          position: "relative",
+          "&:after": {
             content: '""',
-            position: 'absolute',
+            position: "absolute",
             right: 0,
             top: 0,
-            height: '100%',
+            height: "100%",
             width: 4,
-            backgroundColor: 'transparent',
+            backgroundColor: "transparent",
           },
-          '&.active:after': {
-            backgroundColor: (theme) => theme.palette.primary.main,
+          "&.active:after": {
+            backgroundColor: theme.palette.primary.main,
           },
         },
-        '&.curved-menu': {
+
+        "&.curved-menu": {
           ml: 4,
           mr: 0,
-          width: 'calc(100% - 16px)',
-          pl: 14 + 33 * level + 'px',
+          width: "calc(100% - 16px)",
+          pl: 14 + 33 * level + "px",
           pr: 3,
-          borderRadius: '30px 0 0 30px',
-          position: 'relative',
-          transition: 'none',
-          '&:before, &:after': {
+          borderRadius: "30px 0 0 30px",
+          position: "relative",
+          transition: "none",
+          "&:before, &:after": {
             content: '""',
-            position: 'absolute',
+            position: "absolute",
             right: 0,
             zIndex: 1,
             height: 40,
             width: 40,
-            backgroundColor: 'transparent',
-            borderRadius: '50%',
+            backgroundColor: "transparent",
+            borderRadius: "50%",
             opacity: 0,
           },
-          '&:before': {
+          "&:before": {
             top: -40,
             boxShadow: `30px 30px 0 10px transparent`,
           },
-          '&:after': {
+          "&:after": {
             bottom: -40,
             boxShadow: `30px -30px 0 10px transparent`,
           },
-          '&:hover, &.active': {
+          "&:hover, &.active": {
             backgroundColor: sidebarMenuSelectedBgColor,
-            '& .nav-item-text, & .nav-item-icon': {
-              color: sidebarMenuSelectedTextColor + '!important',
+            "& .nav-item-text, & .nav-item-icon": {
+              color: sidebarMenuSelectedTextColor + "!important",
             },
-            '&:before': {
+            "&:before": {
               boxShadow: `30px 30px 0 10px ${sidebarMenuSelectedBgColor}`,
               opacity: 1,
             },
-            '&:after': {
+            "&:after": {
               boxShadow: `30px -30px 0 10px ${sidebarMenuSelectedBgColor}`,
               opacity: 1,
             },
           },
-          '& .MuiTouchRipple-root': {
-            display: 'none',
+          "& .MuiTouchRipple-root": {
+            display: "none",
           },
         },
-      }}
+      })}
       {...rest}
     >
       {children}
-    </ListItem>
+    </ListItemButton>
   );
 };
 

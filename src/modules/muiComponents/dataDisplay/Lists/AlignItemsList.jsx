@@ -9,7 +9,7 @@ import Typography from '@mui/material/Typography';
 
 export default function AlignItemsList() {
   return (
-    <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
+    (<List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
       <ListItem alignItems='flex-start'>
         <ListItemAvatar>
           <Avatar alt='Remy Sharp' src='/static/images/avatar/1.jpg' />
@@ -19,11 +19,12 @@ export default function AlignItemsList() {
           secondary={
             <React.Fragment>
               <Typography
-                sx={{ display: 'inline' }}
                 component='span'
                 variant='body2'
-                color='text.primary'
-              >
+                sx={{
+                  color: 'text.primary',
+                  display: 'inline'
+                }}>
                 Ali Connors
               </Typography>
               {" — I'll be in your neighborhood doing errands this…"}
@@ -41,11 +42,12 @@ export default function AlignItemsList() {
           secondary={
             <React.Fragment>
               <Typography
-                sx={{ display: 'inline' }}
                 component='span'
                 variant='body2'
-                color='text.primary'
-              >
+                sx={{
+                  color: 'text.primary',
+                  display: 'inline'
+                }}>
                 to Scott, Alex, Jennifer
               </Typography>
               {" — Wish I could come, but I'm out of town this…"}
@@ -63,11 +65,12 @@ export default function AlignItemsList() {
           secondary={
             <React.Fragment>
               <Typography
-                sx={{ display: 'inline' }}
                 component='span'
                 variant='body2'
-                color='text.primary'
-              >
+                sx={{
+                  color: 'text.primary',
+                  display: 'inline'
+                }}>
                 Sandra Adams
               </Typography>
               {' — Do you have Paris recommendations? Have you ever…'}
@@ -75,6 +78,6 @@ export default function AlignItemsList() {
           }
         />
       </ListItem>
-    </List>
+    </List>)
   );
 }

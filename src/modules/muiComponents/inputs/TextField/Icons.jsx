@@ -9,7 +9,7 @@ import AccountCircle from "@mui/icons-material/AccountCircle";
 
 export default function InputWithIcon() {
   return (
-    <Box sx={{ "& > :not(style)": { m: 1 } }}>
+    (<Box sx={{ "& > :not(style)": { m: 1 } }}>
       <FormControl variant="standard">
         <InputLabel htmlFor="input-with-icon-adornment">
           With a start adornment
@@ -26,19 +26,21 @@ export default function InputWithIcon() {
       <TextField
         id="input-with-icon-textfield"
         label="TextField"
-        InputProps={{
-          startAdornment: (
-            <InputAdornment position="start">
-              <AccountCircle />
-            </InputAdornment>
-          ),
-        }}
         variant="standard"
+        slotProps={{
+          input: {
+            startAdornment: (
+              <InputAdornment position="start">
+                <AccountCircle />
+              </InputAdornment>
+            ),
+          }
+        }}
       />
       <Box sx={{ display: "flex", alignItems: "flex-end" }}>
         <AccountCircle sx={{ color: "action.active", mr: 1, my: 0.5 }} />
         <TextField id="input-with-sx" label="With sx" variant="standard" />
       </Box>
-    </Box>
+    </Box>)
   );
 }

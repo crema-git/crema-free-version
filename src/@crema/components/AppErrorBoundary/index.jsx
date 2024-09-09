@@ -26,20 +26,21 @@ class AppErrorBoundary extends React.Component {
   render() {
     if (this.state.hasError) {
       return (
-        <Box
-          sx={{
+        (<Box
+          sx={theme => ({
             display: 'flex',
             alignItems: 'center',
             flexDirection: 'column',
             justifyContent: 'center',
             flex: 1,
             textAlign: 'center',
+
             '& img': {
               width: '100%',
               maxWidth: 400,
-              color: (theme) => theme.palette.primary.main,
-            },
-          }}
+              color: theme.palette.primary.main,
+            }
+          })}
         >
           <ErrorIcon />
           <Typography
@@ -70,7 +71,7 @@ class AppErrorBoundary extends React.Component {
             {' '}
             Try again
           </Button>
-        </Box>
+        </Box>)
       );
     } else {
       return this.props.children;

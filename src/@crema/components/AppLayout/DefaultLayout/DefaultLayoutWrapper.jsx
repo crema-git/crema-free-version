@@ -4,17 +4,18 @@ import PropsTypes from "prop-types";
 
 const DefaultLayoutWrapper = ({ children, ...rest }) => {
   return (
-    <Box
-      sx={{
+    (<Box
+      sx={theme => ({
         flex: 1,
         display: "flex",
         flexDirection: "row",
         position: "relative",
-        backgroundColor: (theme) => theme.palette.background.default,
+        backgroundColor: theme.palette.background.default,
 
         "&.appMainFixedFooter": {
           pb: { xs: 12, xl: 14.5 },
         },
+
         "&.appMainFixedHeader": {
           pt: { xs: 14, sm: 17.5 },
           "& .app-bar": {
@@ -27,12 +28,12 @@ const DefaultLayoutWrapper = ({ children, ...rest }) => {
               lg: "calc(100% - 280px)",
             },
           },
-        },
-      }}
+        }
+      })}
       {...rest}
     >
       {children}
-    </Box>
+    </Box>)
   );
 };
 

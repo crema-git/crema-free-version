@@ -1,22 +1,22 @@
-import React from 'react';
-import TablePagination from '@mui/material/TablePagination';
-import PropTypes from 'prop-types';
+import React from "react";
+import TablePagination from "@mui/material/TablePagination";
+import PropTypes from "prop-types";
 
 const AppsPagination = ({
-  count = 0,
   page,
   onPageChange,
-  rowsPerPage,
+  count = 0,
+  rowsPerPage = 15,
   ...rest
 }) => {
   return (
     <TablePagination
-      component='div'
+      component="div"
       count={count}
       rowsPerPage={rowsPerPage}
       page={page}
-      backIconButtonProps={{ 'aria-label': 'Previous Page' }}
-      nextIconButtonProps={{ 'aria-label': 'Next Page' }}
+      backIconButtonProps={{ "aria-label": "Previous Page" }}
+      nextIconButtonProps={{ "aria-label": "Next Page" }}
       onPageChange={onPageChange}
       rowsPerPageOptions={[]}
       {...rest}
@@ -25,10 +25,6 @@ const AppsPagination = ({
 };
 
 export default AppsPagination;
-
-AppsPagination.defaultProps = {
-  rowsPerPage: 15,
-};
 
 AppsPagination.propTypes = {
   count: PropTypes.number,

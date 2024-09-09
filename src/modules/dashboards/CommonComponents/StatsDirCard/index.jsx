@@ -8,7 +8,7 @@ import { getAssetsUrl } from '@crema/helpers/UrlHelper';
 
 const StatsDirCard = ({ data }) => {
   return (
-    <AppCard
+    (<AppCard
       className='card-hover'
       contentStyle={{
         p: 0,
@@ -71,14 +71,14 @@ const StatsDirCard = ({ data }) => {
               {data.value}
             </Typography>
             <Typography
-              sx={{
+              sx={theme => ({
                 overflow: 'hidden',
                 textOverflow: 'ellipsis',
                 whiteSpace: 'nowrap',
                 fontSize: 14,
-                color: (theme) => theme.palette.text.secondary,
-                mt: 0.5,
-              }}
+                color: theme.palette.text.secondary,
+                mt: 0.5
+              })}
             >
               {data.name}
             </Typography>
@@ -94,12 +94,12 @@ const StatsDirCard = ({ data }) => {
           }}
         >
           <Box
-            sx={{
-              color: (theme) => theme.palette.success.main,
+            sx={theme => ({
+              color: theme.palette.success.main,
               display: 'flex',
               alignItems: 'center',
-              justifyContent: 'flex-end',
-            }}
+              justifyContent: 'flex-end'
+            })}
           >
             {!data?.hidePercent && (
               <span style={{ marginRight: 4 }}>
@@ -115,28 +115,31 @@ const StatsDirCard = ({ data }) => {
             )}
             <Box
               component='span'
-              sx={{
+              sx={[{
                 ml: 0.25,
                 fontSize: 14,
-                fontWeight: Fonts.SEMI_BOLD,
-                color: data.percentageChange > 0 ? '#11C15B' : '#F04F47',
-              }}
+                fontWeight: Fonts.SEMI_BOLD
+              }, data.percentageChange > 0 ? {
+                color: '#11C15B'
+              } : {
+                color: '#F04F47'
+              }]}
             >
               {data.percentageChange > 0 ? '+' : ''}
               {data.percentageChange}%
             </Box>
           </Box>
           <Box
-            sx={{
+            sx={theme => ({
               mt: 2,
-              color: (theme) => theme.palette.text.secondary,
-            }}
+              color: theme.palette.text.secondary
+            })}
           >
             <Typography variant='body2'>{data.duration}</Typography>
           </Box>
         </Box>
       </Box>
-    </AppCard>
+    </AppCard>)
   );
 };
 

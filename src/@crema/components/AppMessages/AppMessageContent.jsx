@@ -12,7 +12,7 @@ import messageData from '@crema/mockapi/fakedb/messages';
 
 const AppMessageContent = ({ onClose, sxStyle }) => {
   return (
-    <Box
+    (<Box
       sx={{
         display: 'flex',
         flexDirection: 'column',
@@ -22,14 +22,14 @@ const AppMessageContent = ({ onClose, sxStyle }) => {
       }}
     >
       <Box
-        sx={{
+        sx={theme => ({
           padding: '5px 20px',
           display: 'flex',
           alignItems: 'center',
           borderBottom: 1,
-          borderBottomColor: (theme) => theme.palette.divider,
-          minHeight: { xs: 56, sm: 70 },
-        }}
+          borderBottomColor: theme.palette.divider,
+          minHeight: { xs: 56, sm: 70 }
+        })}
       >
         <Typography component='h3' variant='h3'>
           <IntlMessages id='dashboard.messages' />({messageData.length})
@@ -75,7 +75,7 @@ const AppMessageContent = ({ onClose, sxStyle }) => {
       >
         <IntlMessages id='common.viewAll' />
       </Button>
-    </Box>
+    </Box>)
   );
 };
 

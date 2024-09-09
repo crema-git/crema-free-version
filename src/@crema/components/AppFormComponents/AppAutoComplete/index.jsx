@@ -49,7 +49,7 @@ export default function AppAutoComplete({
   };
 
   return (
-    <Autocomplete
+    (<Autocomplete
       disabled={disabled}
       multiple={multiple}
       onChange={onSelectValue}
@@ -82,22 +82,24 @@ export default function AppAutoComplete({
           {...params}
           variant='outlined'
           onChange={(ev) => onType(ev.target.value)}
-          InputProps={{
-            ...params.InputProps,
-            endAdornment: (
-              <React.Fragment>
-                {loading ? (
-                  <CircularProgress color='inherit' size={20} />
-                ) : null}
-                {params.InputProps.endAdornment}
-              </React.Fragment>
-            ),
-          }}
           helperText={helperText}
           error={error}
+          slotProps={{
+            input: {
+              ...params.InputProps,
+              endAdornment: (
+                <React.Fragment>
+                  {loading ? (
+                    <CircularProgress color='inherit' size={20} />
+                  ) : null}
+                  {params.InputProps.endAdornment}
+                </React.Fragment>
+              ),
+            }
+          }}
         />
       )}
-    />
+    />)
   );
 }
 

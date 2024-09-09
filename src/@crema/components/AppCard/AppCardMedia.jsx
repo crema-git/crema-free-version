@@ -23,7 +23,7 @@ const AppCardMedia = ({
   ...rest
 }) => {
   return (
-    <Card
+    (<Card
       sx={{ display: 'flex', flexDirection: 'column', ...sxStyle }}
       {...rest}
     >
@@ -42,10 +42,11 @@ const AppCardMedia = ({
         {cardMediaAction ? (
           <Box
             component='span'
-            sx={{
+            sx={theme => ({
               backgroundColor: (theme) =>
                 alpha(theme.palette.text.primary, 0.7),
-              color: (theme) => theme.palette.background.paper,
+
+              color: theme.palette.background.paper,
               pt: 0.75,
               pb: 1.75,
               px: 4,
@@ -56,14 +57,13 @@ const AppCardMedia = ({
               zIndex: 1,
               fontSize: 12,
               fontWeight: Fonts.BOLD,
-              ...sxCardMediaAction,
-            }}
+              ...sxCardMediaAction
+            })}
           >
             {cardMediaAction}
           </Box>
         ) : null}
       </Box>
-
       <CardContent
         style={{
           paddingLeft: 20,
@@ -86,7 +86,7 @@ const AppCardMedia = ({
           {footer}
         </CardActions>
       ) : null}
-    </Card>
+    </Card>)
   );
 };
 

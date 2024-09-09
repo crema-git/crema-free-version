@@ -10,7 +10,7 @@ import AppLinearProgress from '@crema/components/AppLinearProgress';
 
 const RevenueItem = ({ item }) => {
   return (
-    <Box
+    (<Box
       sx={{
         padding: '10px 20px',
       }}
@@ -36,16 +36,16 @@ const RevenueItem = ({ item }) => {
         </Typography>
         <Box
           component='span'
-          sx={{
-            color: (theme) => theme.palette.text.secondary,
-            ml: 'auto',
-          }}
+          sx={theme => ({
+            color: theme.palette.text.secondary,
+            ml: 'auto'
+          })}
         >
           {item.value}%
         </Box>
       </Box>
       <AppLinearProgress value={item.value} activeColor='#0A8FDC' />
-    </Box>
+    </Box>)
   );
 };
 

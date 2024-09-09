@@ -37,16 +37,18 @@ export default function InputAdornments() {
   };
 
   return (
-    <Box sx={{ display: "flex", flexWrap: "wrap" }}>
+    (<Box sx={{ display: "flex", flexWrap: "wrap" }}>
       <div>
         <TextField
           label="With normal TextField"
           id="outlined-start-adornment"
           sx={{ m: 1, width: "25ch" }}
-          InputProps={{
-            startAdornment: (
-              <InputAdornment position="start">kg</InputAdornment>
-            ),
+          slotProps={{
+            input: {
+              startAdornment: (
+                <InputAdornment position="start">kg</InputAdornment>
+              ),
+            }
           }}
         />
         <FormControl sx={{ m: 1, width: "25ch" }} variant="outlined">
@@ -104,12 +106,14 @@ export default function InputAdornments() {
           label="With normal TextField"
           id="filled-start-adornment"
           sx={{ m: 1, width: "25ch" }}
-          InputProps={{
-            startAdornment: (
-              <InputAdornment position="start">kg</InputAdornment>
-            ),
-          }}
           variant="filled"
+          slotProps={{
+            input: {
+              startAdornment: (
+                <InputAdornment position="start">kg</InputAdornment>
+              ),
+            }
+          }}
         />
         <FormControl sx={{ m: 1, width: "25ch" }} variant="filled">
           <FilledInput
@@ -160,12 +164,14 @@ export default function InputAdornments() {
           label="With normal TextField"
           id="standard-start-adornment"
           sx={{ m: 1, width: "25ch" }}
-          InputProps={{
-            startAdornment: (
-              <InputAdornment position="start">kg</InputAdornment>
-            ),
-          }}
           variant="standard"
+          slotProps={{
+            input: {
+              startAdornment: (
+                <InputAdornment position="start">kg</InputAdornment>
+              ),
+            }
+          }}
         />
         <FormControl variant="standard" sx={{ m: 1, mt: 3, width: "25ch" }}>
           <Input
@@ -214,6 +220,6 @@ export default function InputAdornments() {
           />
         </FormControl>
       </div>
-    </Box>
+    </Box>)
   );
 }

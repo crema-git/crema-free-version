@@ -1,8 +1,8 @@
 import * as React from 'react';
 import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
 import Divider from '@mui/material/Divider';
+import ListItemButton from "@mui/material/ListItemButton";
 
 const style = {
   width: '100%',
@@ -12,21 +12,21 @@ const style = {
 
 export default function ListDividers() {
   return (
-    <List sx={style} component='nav' aria-label='mailbox folders'>
-      <ListItem button>
+    (<List sx={style} component='nav' aria-label='mailbox folders'>
+      <ListItemButton>
         <ListItemText primary='Inbox' />
-      </ListItem>
+      </ListItemButton>
       <Divider />
-      <ListItem button divider>
+      <ListItemButton divider>
         <ListItemText primary='Drafts' />
-      </ListItem>
-      <ListItem button>
+      </ListItemButton>
+      <ListItemButton>
         <ListItemText primary='Trash' />
-      </ListItem>
+      </ListItemButton>
       <Divider light />
-      <ListItem button>
+      <ListItemButton>
         <ListItemText primary='Spam' />
-      </ListItem>
-    </List>
+      </ListItemButton>
+    </List>)
   );
 }
