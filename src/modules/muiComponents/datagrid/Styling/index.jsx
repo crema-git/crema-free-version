@@ -1,23 +1,23 @@
-import React from "react";
-import AppComponentHeader from "@crema/components/AppComponentHeader";
-import AppGridContainer from "@crema/components/AppGridContainer";
-import Grid from "@mui/material/Grid";
-import AppComponentCard from "@crema/components/AppComponentCard";
+import React from 'react';
+import AppComponentHeader from '@crema/components/AppComponentHeader';
+import AppGridContainer from '@crema/components/AppGridContainer';
+import Grid from '@mui/material/Grid';
+import AppComponentCard from '@crema/components/AppComponentCard';
 
-import StylingHeaderGrid from "./StylingHeaderGrid";
-import StylingHeaderGridSource from "./StylingHeaderGrid?raw";
+import StylingHeaderGrid from './StylingHeaderGrid';
+import StylingHeaderGridSource from './StylingHeaderGrid?raw';
 
-import StylingRowsGrid from "./StylingRowsGrid";
-import StylingRowsGridSource from "./StylingRowsGrid?raw";
+import StylingRowsGrid from './StylingRowsGrid';
+import StylingRowsGridSource from './StylingRowsGrid?raw';
 
-import StylingCellsGrid from "./StylingCellsGrid";
-import StylingCellsGridSource from "./StylingCellsGrid?raw";
+import StylingCellsGrid from './StylingCellsGrid';
+import StylingCellsGridSource from './StylingCellsGrid?raw';
 
-import StylingAllCells from "./StylingAllCells";
-import StylingAllCellsSource from "./StylingAllCells?raw";
+import StylingAllCells from './StylingAllCells';
+import StylingAllCellsSource from './StylingAllCells?raw';
 
-import AntDesignGrid from "./AntDesignGrid";
-import AntDesignGridSource from "./AntDesignGrid?raw";
+import AntDesignGrid from './AntDesignGrid';
+import AntDesignGridSource from './AntDesignGrid?raw';
 
 const Styling = () => {
   return (
@@ -62,12 +62,7 @@ const Styling = () => {
           />
         </Grid>
         <Grid item xs={12}>
-          <AppComponentCard
-            title="AntDesignGrid"
-            component={AntDesignGrid}
-            source={AntDesignGridSource}
-            noScrollbar
-          />
+          <AppComponentCard title="AntDesignGrid" component={AntDesignGrid} source={AntDesignGridSource} noScrollbar />
         </Grid>
       </AppGridContainer>
     </>

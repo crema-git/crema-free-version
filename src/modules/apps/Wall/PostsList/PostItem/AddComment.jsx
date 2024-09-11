@@ -129,14 +129,14 @@ const AddComment = ({ postId, wallData, setPostList }) => {
         }}
       >
         <CommentTextField
-          placeholder='Write a comment'
+          placeholder="Write a comment"
           fullWidth
           value={comment}
           onChange={(e) => setComment(e.target.value)}
           onKeyPress={submitComment}
         />
 
-        <Box display='flex' alignItems='center'>
+        <Box display="flex" alignItems="center">
           {comment === '' ? (
             <>
               <IconButton

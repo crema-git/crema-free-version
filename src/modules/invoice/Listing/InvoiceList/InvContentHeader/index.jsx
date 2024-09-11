@@ -7,17 +7,15 @@ import PropTypes from 'prop-types';
 import AppsPagination from '@crema/components/AppsPagination';
 import Hidden from '@mui/material/Hidden';
 
-const InvContentHeader = (props) => {
-  const {
-    page,
-    invoiceList,
-    checkedInvs,
-    setCheckedInvs,
-    filterText,
-    onPageChange,
-    onSetFilterText,
-  } = props;
-
+const InvContentHeader = ({
+  invoiceList,
+  setCheckedInvs,
+  onPageChange,
+  onSetFilterText,
+  checkedInvs = [],
+  filterText = '',
+  page = 0,
+}) => {
   const onHandleMasterCheckbox = (event) => {
     if (event.target.checked) {
       const InvIds = invoiceList?.map((Inv) => Inv.id);
@@ -44,20 +42,14 @@ const InvContentHeader = (props) => {
             sx={{
               color: 'text.disabled',
             }}
-            indeterminate={
-              checkedInvs.length > 0 &&
-              checkedInvs?.length < invoiceList?.length
-            }
-            checked={
-              invoiceList?.length > 0 &&
-              checkedInvs?.length === invoiceList?.length
-            }
+            indeterminate={checkedInvs.length > 0 && checkedInvs?.length < invoiceList?.length}
+            checked={invoiceList?.length > 0 && checkedInvs?.length === invoiceList?.length}
             onChange={onHandleMasterCheckbox}
           />
         </span>
         <Box sx={{ mr: 3 }}>
           <AppSearchBar
-            iconPosition='right'
+            iconPosition="right"
             overlap={false}
             value={filterText}
             onChange={(event) => onSetFilterText(event.target.value)}
@@ -93,12 +85,6 @@ const InvContentHeader = (props) => {
 };
 
 export default InvContentHeader;
-
-InvContentHeader.defaultProps = {
-  checkedInvs: [],
-  filterText: '',
-  page: 0,
-};
 
 InvContentHeader.propTypes = {
   checkedInvs: PropTypes.array,

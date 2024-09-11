@@ -35,8 +35,8 @@ const AuthImgPanel = () => {
           height: '100%',
           objectFit: 'cover',
         }}
-        src='/assets/images/auth/auth.svg'
-        alt='crema-logo'
+        src="/assets/images/auth/auth.svg"
+        alt="crema-logo"
       />
       <LogoWrapper>
         <AppLogo />

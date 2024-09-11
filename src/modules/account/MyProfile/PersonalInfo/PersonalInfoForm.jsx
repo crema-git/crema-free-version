@@ -47,23 +47,23 @@ const AvatarViewWrapper = styled('div')(({ theme }) => {
 
 const PersonalInfoForm = ({ values, setFieldValue }) => {
   const { getRootProps, getInputProps } = useDropzone({
-    accept: 'image/*',
+    accept: { 'image/*': [] },
     onDrop: (acceptedFiles) => {
       setFieldValue('photoURL', URL.createObjectURL(acceptedFiles[0]));
     },
   });
 
   return (
-    <Form noValidate autoComplete='off'>
+    <Form noValidate autoComplete="off">
       <Typography
-        component='h3'
+        component="h3"
         sx={{
           fontSize: 16,
           fontWeight: Fonts.BOLD,
           mb: { xs: 3, lg: 4 },
         }}
       >
-        <IntlMessages id='common.personalInfo' />
+        <IntlMessages id="common.personalInfo" />
       </Typography>
       <Box
         sx={{
@@ -74,7 +74,7 @@ const PersonalInfoForm = ({ values, setFieldValue }) => {
       >
         <AvatarViewWrapper {...getRootProps({ className: 'dropzone' })}>
           <input {...getInputProps()} />
-          <label htmlFor='icon-button-file'>
+          <label htmlFor="icon-button-file">
             <Avatar
               sx={{
                 width: { xs: 50, lg: 64 },
@@ -83,7 +83,7 @@ const PersonalInfoForm = ({ values, setFieldValue }) => {
               }}
               src={values.photoURL}
             />
-            <Box className='edit-icon'>
+            <Box className="edit-icon">
               <EditIcon />
             </Box>
           </label>
@@ -101,9 +101,9 @@ const PersonalInfoForm = ({ values, setFieldValue }) => {
             {values.displayName}
           </Typography>
           <Typography
-            sx={{
-              color: (theme) => theme.palette.text.secondary,
-            }}
+            sx={(theme) => ({
+              color: theme.palette.text.secondary,
+            })}
           >
             {values.email}
           </Typography>
@@ -111,32 +111,16 @@ const PersonalInfoForm = ({ values, setFieldValue }) => {
       </Box>
       <AppGridContainer spacing={4}>
         <Grid item xs={12} md={6}>
-          <AppTextField
-            name='displayName'
-            fullWidth
-            label={<IntlMessages id='common.fullName' />}
-          />
+          <AppTextField name="displayName" fullWidth label={<IntlMessages id="common.fullName" />} />
         </Grid>
         <Grid item xs={12} md={6}>
-          <AppTextField
-            fullWidth
-            name='username'
-            label={<IntlMessages id='common.userName' />}
-          />
+          <AppTextField fullWidth name="username" label={<IntlMessages id="common.userName" />} />
         </Grid>
         <Grid item xs={12} md={6}>
-          <AppTextField
-            name='email'
-            fullWidth
-            label={<IntlMessages id='common.email' />}
-          />
+          <AppTextField name="email" fullWidth label={<IntlMessages id="common.email" />} />
         </Grid>
         <Grid item xs={12} md={6}>
-          <AppTextField
-            name='company'
-            fullWidth
-            label={<IntlMessages id='common.company' />}
-          />
+          <AppTextField name="company" fullWidth label={<IntlMessages id="common.company" />} />
         </Grid>
         <Grid item xs={12} md={12}>
           <Box
@@ -150,11 +134,11 @@ const PersonalInfoForm = ({ values, setFieldValue }) => {
                 position: 'relative',
                 minWidth: 100,
               }}
-              color='primary'
-              variant='contained'
-              type='submit'
+              color="primary"
+              variant="contained"
+              type="submit"
             >
-              <IntlMessages id='common.saveChanges' />
+              <IntlMessages id="common.saveChanges" />
             </Button>
             <Button
               sx={{
@@ -162,11 +146,11 @@ const PersonalInfoForm = ({ values, setFieldValue }) => {
                 minWidth: 100,
                 ml: 2.5,
               }}
-              color='primary'
-              variant='outlined'
-              type='cancel'
+              color="primary"
+              variant="outlined"
+              type="cancel"
             >
-              <IntlMessages id='common.cancel' />
+              <IntlMessages id="common.cancel" />
             </Button>
           </Box>
         </Grid>

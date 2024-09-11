@@ -5,10 +5,7 @@ import IntlMessages from '@crema/helpers/IntlMessages';
 import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
 import { ThemeStyle } from '@crema/constants/AppEnums';
 import clsx from 'clsx';
-import {
-  useThemeActionsContext,
-  useThemeContext,
-} from '@crema/context/AppContextProvider/ThemeContextProvider';
+import { useThemeActionsContext, useThemeContext } from '@crema/context/AppContextProvider/ThemeContextProvider';
 
 const ThemeStyles = () => {
   const { themeStyle } = useThemeContext();
@@ -19,32 +16,27 @@ const ThemeStyles = () => {
   };
   return (
     <CustomizerItemWrapper>
-      <Box component='h4' sx={{ mb: 2 }}>
-        <IntlMessages id='customizer.themeStyle' />
+      <Box component="h4" sx={{ mb: 2 }}>
+        <IntlMessages id="customizer.themeStyle" />
       </Box>
-      <ToggleButtonGroup
-        value={themeStyle}
-        exclusive={true}
-        onChange={onStyleChange}
-        aria-label='text alignment'
-      >
+      <ToggleButtonGroup value={themeStyle} exclusive={true} onChange={onStyleChange} aria-label="text alignment">
         <StyledToggleButton
           value={ThemeStyle.MODERN}
           className={clsx({
             active: themeStyle === ThemeStyle.MODERN,
           })}
-          aria-label='left aligned'
+          aria-label="left aligned"
         >
-          <IntlMessages id='sidebar.pages.userList.modern' />
+          <IntlMessages id="sidebar.pages.userList.modern" />
         </StyledToggleButton>
         <StyledToggleButton
           value={ThemeStyle.STANDARD}
           className={clsx({
             active: themeStyle === ThemeStyle.STANDARD,
           })}
-          aria-label='centered'
+          aria-label="centered"
         >
-          <IntlMessages id='sidebar.pages.userList.standard' />
+          <IntlMessages id="sidebar.pages.userList.standard" />
         </StyledToggleButton>
       </ToggleButtonGroup>
     </CustomizerItemWrapper>

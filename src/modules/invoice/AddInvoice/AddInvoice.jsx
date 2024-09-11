@@ -1,14 +1,6 @@
 import AppCard from '@crema/components/AppCard';
 import AppGridContainer from '@crema/components/AppGridContainer';
-import {
-  Autocomplete,
-  Box,
-  Button,
-  Divider,
-  Grid,
-  TextField,
-  Typography,
-} from '@mui/material';
+import { Autocomplete, Box, Button, Divider, Grid, TextField, Typography } from '@mui/material';
 import dayjs from 'dayjs';
 import React, { useEffect, useState } from 'react';
 import { GrClose } from 'react-icons/gr';
@@ -19,21 +11,13 @@ import { currencyList, taxRates, taxType } from './data';
 import { AiOutlinePlus } from 'react-icons/ai';
 import PropTypes from 'prop-types';
 
-const AddInvoice = ({
-  selectedInv,
-  totalCount,
-  clientsList,
-  invoiceSettings,
-  onSave,
-}) => {
+const AddInvoice = ({ selectedInv, totalCount, clientsList, invoiceSettings, onSave }) => {
   const [currencyData, setCurrencyData] = useState(currencyList[0]);
   const [selectedClient, setSelectedClient] = useState(null);
   const [editInum, setEditInum] = useState(false);
   const [editIdt, setShowIdt] = useState(false);
   const [items, setItems] = useState([]);
-  const [invoiceNo, setInvoiceNo] = useState(
-    dayjs().format('YYYY-MM-DD') + '-' + (Number(totalCount) + 1),
-  );
+  const [invoiceNo, setInvoiceNo] = useState(dayjs().format('YYYY-MM-DD') + '-' + (Number(totalCount) + 1));
   const [invoiceDate, setInvoiceDate] = useState(dayjs());
 
   const [introductionText, setIntroductionText] = useState('');
@@ -48,9 +32,7 @@ const AddInvoice = ({
 
   useEffect(() => {
     if (selectedInv) {
-      const client = clientsList.find(
-        (item) => item.id === selectedInv.clientId,
-      );
+      const client = clientsList.find((item) => item.id === selectedInv.clientId);
       setSelectedClient(client);
       setItems(selectedInv.items);
       setInvoiceNo(selectedInv.inum);
@@ -70,9 +52,7 @@ const AddInvoice = ({
       clientName: selectedClient?.name || '',
       inum: invoiceNo,
       idt: dayjs(invoiceDate, 'DD/MM/YYYY').format('DD MMM YYYY'),
-      dueDate: dayjs(invoiceDate, 'DD/MM/YYYY')
-        .add(dueDays, 'days')
-        .format('DD MMM YYYY'),
+      dueDate: dayjs(invoiceDate, 'DD/MM/YYYY').add(dueDays, 'days').format('DD MMM YYYY'),
       amount: totalAmount - totalAmount * taxRateData * 0.01,
       folderValue: 120,
       tax: taxRateData,
@@ -84,13 +64,13 @@ const AddInvoice = ({
     });
   };
   return (
-    <AppCard title='Invoice' sx={{ width: '70%', margin: 'auto' }}>
+    <AppCard title="Invoice" sx={{ width: '70%', margin: 'auto' }}>
       <Box sx={{ py: 10, px: 4 }}>
         <AppGridContainer spacing={5}>
           <Grid item xs={12} md={5}>
             {!selectedClient ? (
               <Autocomplete
-                size='small'
+                size="small"
                 options={clientsList}
                 getOptionLabel={(option) => option.name}
                 value={selectedClient}
@@ -98,14 +78,7 @@ const AddInvoice = ({
                   setSelectedClient(value);
                 }}
                 filterSelectedOptions
-                renderInput={(params) => (
-                  <TextField
-                    {...params}
-                    variant='outlined'
-                    label='Add Client'
-                    fullWidth
-                  />
-                )}
+                renderInput={(params) => <TextField {...params} variant="outlined" label="Add Client" fullWidth />}
               />
             ) : (
               <Box
@@ -126,7 +99,7 @@ const AddInvoice = ({
                 }}
               >
                 <Box
-                  className='closeBtn'
+                  className="closeBtn"
                   sx={{
                     position: 'absolute',
                     top: 10,
@@ -137,19 +110,15 @@ const AddInvoice = ({
                 >
                   <GrClose size={15} />
                 </Box>
-                <Typography variant='h4'>{selectedClient.name}</Typography>
-                <Typography variant='h5' sx={{ my: 3 }}>
+                <Typography variant="h4">{selectedClient.name}</Typography>
+                <Typography variant="h5" sx={{ my: 3 }}>
                   {selectedClient.firstName} {selectedClient.lastName}
                 </Typography>
                 <Box sx={{ mb: 2 }}>
-                  {selectedClient.steetName}{' '}
-                  {selectedClient.steetName.length > 0 && ' , '}
-                  {selectedClient.city}{' '}
-                  {selectedClient.city.length > 0 && ' , '}
-                  {selectedClient.zipCode}{' '}
-                  {selectedClient.zipCode.length > 0 && ' , '}
-                  {selectedClient.state}{' '}
-                  {selectedClient.state.length > 0 && ' , '}
+                  {selectedClient.steetName} {selectedClient.steetName.length > 0 && ' , '}
+                  {selectedClient.city} {selectedClient.city.length > 0 && ' , '}
+                  {selectedClient.zipCode} {selectedClient.zipCode.length > 0 && ' , '}
+                  {selectedClient.state} {selectedClient.state.length > 0 && ' , '}
                   {selectedClient.country}
                 </Box>
                 <Box sx={{ mb: 2 }}>VAT ID: {selectedClient.vatId}</Box>
@@ -157,25 +126,19 @@ const AddInvoice = ({
             )}
           </Grid>
           {invoiceSettings?.general && (
-            <Grid
-              item
-              xs={12}
-              md={6}
-              sx={{ ml: 'auto', display: 'flex', alignItems: 'flex-start' }}
-            >
+            <Grid item xs={12} md={6} sx={{ ml: 'auto', display: 'flex', alignItems: 'flex-start' }}>
               <Box sx={{ width: '50%' }}>
-                <Typography variant='h4' sx={{ mb: 3 }}>
+                <Typography variant="h4" sx={{ mb: 3 }}>
                   {invoiceSettings.general.agencyName}
                 </Typography>
-                <Typography variant='h4' sx={{ mb: 3 }}>
+                <Typography variant="h4" sx={{ mb: 3 }}>
                   {invoiceSettings.general.agencyName}
                 </Typography>
                 <Box sx={{ mb: 3 }}>
                   <Box>{invoiceSettings.general.streetName}</Box>
                   <Box>{invoiceSettings.general.state}</Box>
                   <Box>
-                    {invoiceSettings.general.zipCode}{' '}
-                    {invoiceSettings.general.country}
+                    {invoiceSettings.general.zipCode} {invoiceSettings.general.country}
                   </Box>
                 </Box>
                 <Box sx={{ mb: 3 }}>
@@ -190,18 +153,14 @@ const AddInvoice = ({
               {invoiceSettings?.invoicing && (
                 <Box sx={{ width: '50%', ml: 4 }}>
                   {invoiceSettings.invoicing.logo && (
-                    <img
-                      src={invoiceSettings.invoicing.logo}
-                      alt='logo'
-                      style={{ width: 70, height: 'auto' }}
-                    />
+                    <img src={invoiceSettings.invoicing.logo} alt="logo" style={{ width: 70, height: 'auto' }} />
                   )}
                 </Box>
               )}
             </Grid>
           )}
         </AppGridContainer>
-        <Typography variant='h2' sx={{ mb: 3 }}>
+        <Typography variant="h2" sx={{ mb: 3 }}>
           Invoice
         </Typography>
         <Box sx={{ display: 'flex', justifyContent: 'space-between', mb: 4 }}>
@@ -217,14 +176,14 @@ const AddInvoice = ({
               },
             }}
           >
-            <Box component='span' sx={{ mr: 2 }}>
+            <Box component="span" sx={{ mr: 2 }}>
               Invoice ID:
             </Box>
             {editInum ? (
               <TextField
                 autoFocus
-                size='small'
-                variant='outlined'
+                size="small"
+                variant="outlined"
                 value={invoiceNo}
                 onChange={(e) => setInvoiceNo(e.target.value)}
                 onBlur={() => setEditInum(false)}
@@ -245,7 +204,7 @@ const AddInvoice = ({
               },
             }}
           >
-            <Box component='span' sx={{ mr: 2 }}>
+            <Box component="span" sx={{ mr: 2 }}>
               Invoice Date:
             </Box>
             {editIdt ? (
@@ -256,19 +215,11 @@ const AddInvoice = ({
                   setShowIdt(false);
                 }}
                 renderInput={(params) => (
-                  <TextField
-                    autoFocus
-                    size='small'
-                    sx={{ width: 190 }}
-                    onBlur={() => setShowIdt(false)}
-                    {...params}
-                  />
+                  <TextField autoFocus size="small" sx={{ width: 190 }} onBlur={() => setShowIdt(false)} {...params} />
                 )}
               />
             ) : (
-              <Box onClick={() => setShowIdt(true)}>
-                {getFormattedDate(invoiceDate, 'DD/MM/YYYY')}
-              </Box>
+              <Box onClick={() => setShowIdt(true)}>{getFormattedDate(invoiceDate, 'DD/MM/YYYY')}</Box>
             )}
           </Box>
         </Box>
@@ -276,15 +227,13 @@ const AddInvoice = ({
           {editIntroductionText ? (
             <TextField
               autoFocus
-              variant='outlined'
+              variant="outlined"
               value={introductionText}
               onChange={(e) => setIntroductionText(e.target.value)}
               onBlur={() => setEditIntroductionText(false)}
             />
           ) : introductionText?.length > 0 ? (
-            <Box onClick={() => setEditIntroductionText(true)}>
-              {introductionText}
-            </Box>
+            <Box onClick={() => setEditIntroductionText(true)}>{introductionText}</Box>
           ) : (
             <Box
               sx={{
@@ -295,9 +244,7 @@ const AddInvoice = ({
               onClick={() => setEditIntroductionText(true)}
             >
               <AiOutlinePlus size={18} />
-              <Box sx={{ ml: 2, fontSize: 16 }}>
-                Add Introduction text (Optional)
-              </Box>
+              <Box sx={{ ml: 2, fontSize: 16 }}>Add Introduction text (Optional)</Box>
             </Box>
           )}
         </Box>
@@ -319,8 +266,8 @@ const AddInvoice = ({
           {editDueDays ? (
             <TextField
               autoFocus
-              type='number'
-              variant='outlined'
+              type="number"
+              variant="outlined"
               value={dueDays}
               onChange={(e) => setDueDays(e.target.value)}
               onBlur={() => setEditDueDays(false)}
@@ -337,10 +284,10 @@ const AddInvoice = ({
                 },
               }}
             >
-              <Typography variant='h4' sx={{ mb: 1 }}>
+              <Typography variant="h4" sx={{ mb: 1 }}>
                 Payment Terms
               </Typography>
-              <Typography variant='body1' sx={{ mb: 4 }}>
+              <Typography variant="body1" sx={{ mb: 4 }}>
                 Please Pay within {dueDays} days of receiving this invoice.
               </Typography>
             </Box>
@@ -351,15 +298,13 @@ const AddInvoice = ({
           {editConclusionText ? (
             <TextField
               autoFocus
-              variant='outlined'
+              variant="outlined"
               value={conclusionText}
               onChange={(e) => setConclusionText(e.target.value)}
               onBlur={() => setEditConclusionText(false)}
             />
           ) : conclusionText?.length > 0 ? (
-            <Box onClick={() => setEditConclusionText(true)}>
-              {conclusionText}
-            </Box>
+            <Box onClick={() => setEditConclusionText(true)}>{conclusionText}</Box>
           ) : (
             <Box
               sx={{
@@ -370,9 +315,7 @@ const AddInvoice = ({
               onClick={() => setEditConclusionText(true)}
             >
               <AiOutlinePlus size={18} />
-              <Box sx={{ ml: 2, fontSize: 16 }}>
-                Add concluding text (Optional)
-              </Box>
+              <Box sx={{ ml: 2, fontSize: 16 }}>Add concluding text (Optional)</Box>
             </Box>
           )}
         </Box>
@@ -390,25 +333,21 @@ const AddInvoice = ({
               width: 'fit-content',
             }}
           >
-            <Typography variant='h4' sx={{ mb: 4 }}>
+            <Typography variant="h4" sx={{ mb: 4 }}>
               Bank Account
             </Typography>
             <Box sx={{ color: 'text.primary' }}>
               <Box>Receiver: {invoiceSettings.accounting.accountHolder}</Box>
               <Box>Bank Name: {invoiceSettings.accounting.bankName}</Box>
-              <Box>
-                Country of bank: {invoiceSettings.accounting.countryOfBank}
-              </Box>
-              <Box>
-                Account Number: {invoiceSettings.accounting.accountNumber}
-              </Box>
+              <Box>Country of bank: {invoiceSettings.accounting.countryOfBank}</Box>
+              <Box>Account Number: {invoiceSettings.accounting.accountNumber}</Box>
               <Box>SWIFT/BIC: {invoiceSettings.accounting.swiftBic}</Box>
               <Box>IFSC: {invoiceSettings.accounting.ifsc}</Box>
             </Box>
           </Box>
         )}
         <Box sx={{ textAlign: 'right' }}>
-          <Button variant='contained' onClick={onSubmit}>
+          <Button variant="contained" onClick={onSubmit}>
             Send Invoice
           </Button>
         </Box>

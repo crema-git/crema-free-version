@@ -26,64 +26,38 @@ export default function CheckboxesGroup() {
 
   return (
     <Box sx={{ display: 'flex' }}>
-      <FormControl sx={{ m: 3 }} component='fieldset' variant='standard'>
-        <FormLabel component='legend'>Assign responsibility</FormLabel>
+      <FormControl sx={{ m: 3 }} component="fieldset" variant="standard">
+        <FormLabel component="legend">Assign responsibility</FormLabel>
         <FormGroup>
           <FormControlLabel
-            control={
-              <Checkbox checked={gilad} onChange={handleChange} name='gilad' />
-            }
-            label='Gilad Gray'
+            control={<Checkbox checked={gilad} onChange={handleChange} name="gilad" />}
+            label="Gilad Gray"
           />
           <FormControlLabel
-            control={
-              <Checkbox checked={jason} onChange={handleChange} name='jason' />
-            }
-            label='Jason Killian'
+            control={<Checkbox checked={jason} onChange={handleChange} name="jason" />}
+            label="Jason Killian"
           />
           <FormControlLabel
-            control={
-              <Checkbox
-                checked={antoine}
-                onChange={handleChange}
-                name='antoine'
-              />
-            }
-            label='Antoine Llorca'
+            control={<Checkbox checked={antoine} onChange={handleChange} name="antoine" />}
+            label="Antoine Llorca"
           />
         </FormGroup>
         <FormHelperText>Be careful</FormHelperText>
       </FormControl>
-      <FormControl
-        required
-        error={error}
-        component='fieldset'
-        sx={{ m: 3 }}
-        variant='standard'
-      >
-        <FormLabel component='legend'>Pick two</FormLabel>
+      <FormControl required error={error} component="fieldset" sx={{ m: 3 }} variant="standard">
+        <FormLabel component="legend">Pick two</FormLabel>
         <FormGroup>
           <FormControlLabel
-            control={
-              <Checkbox checked={gilad} onChange={handleChange} name='gilad' />
-            }
-            label='Gilad Gray'
+            control={<Checkbox checked={gilad} onChange={handleChange} name="gilad" />}
+            label="Gilad Gray"
           />
           <FormControlLabel
-            control={
-              <Checkbox checked={jason} onChange={handleChange} name='jason' />
-            }
-            label='Jason Killian'
+            control={<Checkbox checked={jason} onChange={handleChange} name="jason" />}
+            label="Jason Killian"
           />
           <FormControlLabel
-            control={
-              <Checkbox
-                checked={antoine}
-                onChange={handleChange}
-                name='antoine'
-              />
-            }
-            label='Antoine Llorca'
+            control={<Checkbox checked={antoine} onChange={handleChange} name="antoine" />}
+            label="Antoine Llorca"
           />
         </FormGroup>
         <FormHelperText>You can display an error</FormHelperText>

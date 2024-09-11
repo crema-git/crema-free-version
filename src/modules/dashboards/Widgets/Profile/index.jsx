@@ -47,7 +47,7 @@ const Profile = (props) => {
           src={data.image}
         />
         <Box
-          component='h3'
+          component="h3"
           sx={{
             mt: 8,
             fontWeight: Fonts.BOLD,
@@ -72,7 +72,7 @@ const Profile = (props) => {
           }}
         >
           <Box
-            component='span'
+            component="span"
             sx={{
               display: 'block',
               mb: 2,
@@ -83,7 +83,7 @@ const Profile = (props) => {
             {data.photos}
           </Box>
           <Box
-            component='span'
+            component="span"
             sx={{
               color: 'text.secondary',
               display: 'block',
@@ -91,7 +91,7 @@ const Profile = (props) => {
               textTransform: 'uppercase',
             }}
           >
-            <IntlMessages id='dashboard.photos' />
+            <IntlMessages id="dashboard.photos" />
           </Box>
         </Box>
         <Box
@@ -100,7 +100,7 @@ const Profile = (props) => {
           }}
         >
           <Box
-            component='span'
+            component="span"
             sx={{
               display: 'block',
               mb: 2,
@@ -111,7 +111,7 @@ const Profile = (props) => {
             {data.followers}
           </Box>
           <Box
-            component='span'
+            component="span"
             sx={{
               color: 'text.secondary',
               display: 'block',
@@ -119,7 +119,7 @@ const Profile = (props) => {
               textTransform: 'uppercase',
             }}
           >
-            <IntlMessages id='dashboard.followers' />
+            <IntlMessages id="dashboard.followers" />
           </Box>
         </Box>
         <Box
@@ -128,7 +128,7 @@ const Profile = (props) => {
           }}
         >
           <Box
-            component='span'
+            component="span"
             sx={{
               display: 'block',
               mb: 2,
@@ -139,7 +139,7 @@ const Profile = (props) => {
             {data.following}
           </Box>
           <Box
-            component='span'
+            component="span"
             sx={{
               color: 'text.secondary',
               display: 'block',
@@ -147,7 +147,7 @@ const Profile = (props) => {
               textTransform: 'uppercase',
             }}
           >
-            <IntlMessages id='dashboard.following' />
+            <IntlMessages id="dashboard.following" />
           </Box>
         </Box>
       </Box>

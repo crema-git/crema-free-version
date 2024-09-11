@@ -57,14 +57,8 @@ const Attachments = ({ attachments }) => {
         column={attachments.length > 3 ? 2 : attachments.length}
         renderRow={(item, index) => (
           <ImageView key={index}>
-            <img
-              src={item.preview}
-              alt='attachment'
-              onClick={() => setIndex(index)}
-            />
-            {attachments.length > 4 && index === 3 && (
-              <ImageCountView>+ {attachments.length - 3}</ImageCountView>
-            )}
+            <img src={item.preview} alt="attachment" onClick={() => setIndex(index)} />
+            {attachments.length > 4 && index === 3 && <ImageCountView>+ {attachments.length - 3}</ImageCountView>}
           </ImageView>
         )}
       />

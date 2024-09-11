@@ -7,14 +7,15 @@ import { Fonts } from '@crema/constants/AppEnums';
 const TableHeading = () => {
   return (
     <TableHeader
-      sx={{
+      sx={(theme) => ({
         borderBottom: '0 none',
         color: grey[500],
+
         '& .tableCell': {
           fontSize: 13,
           padding: 2,
           fontWeight: Fonts.BOLD,
-          backgroundColor: (theme) => theme.palette.background.paper,
+          backgroundColor: theme.palette.background.paper,
           '&:first-of-type': {
             pl: 5,
           },
@@ -22,15 +23,15 @@ const TableHeading = () => {
             pr: 5,
           },
         },
-      }}
+      })}
     >
-      <TableCell className='tableCell'>Name</TableCell>
-      <TableCell className='tableCell'>Gender</TableCell>
-      <TableCell className='tableCell'>Weight</TableCell>
-      <TableCell className='tableCell'>Assigned Dr</TableCell>
-      <TableCell className='tableCell'>Admit Date</TableCell>
-      <TableCell className='tableCell'>Status</TableCell>
-      <TableCell className='tableCell' align='right'>
+      <TableCell className="tableCell">Name</TableCell>
+      <TableCell className="tableCell">Gender</TableCell>
+      <TableCell className="tableCell">Weight</TableCell>
+      <TableCell className="tableCell">Assigned Dr</TableCell>
+      <TableCell className="tableCell">Admit Date</TableCell>
+      <TableCell className="tableCell">Status</TableCell>
+      <TableCell className="tableCell" align="right">
         Actions
       </TableCell>
     </TableHeader>

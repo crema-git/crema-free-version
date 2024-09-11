@@ -40,7 +40,7 @@ export default function ElevateAppBar(props) {
       <ElevationScroll {...props}>
         <AppBar>
           <Toolbar>
-            <Typography variant='h6' component='div'>
+            <Typography variant="h6" component="div">
               Scroll to Elevate App Bar
             </Typography>
           </Toolbar>

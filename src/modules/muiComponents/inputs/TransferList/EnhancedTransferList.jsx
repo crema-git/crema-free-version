@@ -10,6 +10,8 @@ import Checkbox from '@mui/material/Checkbox';
 import Button from '@mui/material/Button';
 import Divider from '@mui/material/Divider';
 
+import ListItemButton from '@mui/material/ListItemButton';
+
 function not(a, b) {
   return a.filter((value) => b.indexOf(value) === -1);
 }
@@ -72,13 +74,8 @@ export default function TransferList() {
         avatar={
           <Checkbox
             onClick={handleToggleAll(items)}
-            checked={
-              numberOfChecked(items) === items.length && items.length !== 0
-            }
-            indeterminate={
-              numberOfChecked(items) !== items.length &&
-              numberOfChecked(items) !== 0
-            }
+            checked={numberOfChecked(items) === items.length && items.length !== 0}
+            indeterminate={numberOfChecked(items) !== items.length && numberOfChecked(items) !== 0}
             disabled={items.length === 0}
             inputProps={{
               'aria-label': 'all items selected',
@@ -97,19 +94,14 @@ export default function TransferList() {
           overflow: 'auto',
         }}
         dense
-        component='div'
-        role='list'
+        component="div"
+        role="list"
       >
         {items.map((value) => {
           const labelId = `transfer-list-all-item-${value}-label`;
 
           return (
-            <ListItem
-              key={value}
-              role='listitem'
-              button
-              onClick={handleToggle(value)}
-            >
+            <ListItemButton key={value} role="listitem" onClick={handleToggle(value)}>
               <ListItemIcon>
                 <Checkbox
                   checked={checked.indexOf(value) !== -1}
@@ -121,7 +113,7 @@ export default function TransferList() {
                 />
               </ListItemIcon>
               <ListItemText id={labelId} primary={`List item ${value + 1}`} />
-            </ListItem>
+            </ListItemButton>
           );
         })}
         <ListItem />
@@ -130,27 +122,27 @@ export default function TransferList() {
   );
 
   return (
-    <Grid container spacing={2} justifyContent='center' alignItems='center'>
+    <Grid container spacing={2} justifyContent="center" alignItems="center">
       <Grid item>{customList('Choices', left)}</Grid>
       <Grid item>
-        <Grid container direction='column' alignItems='center'>
+        <Grid container direction="column" alignItems="center">
           <Button
             sx={{ my: 0.5 }}
-            variant='outlined'
-            size='small'
+            variant="outlined"
+            size="small"
             onClick={handleCheckedRight}
             disabled={leftChecked.length === 0}
-            aria-label='move selected right'
+            aria-label="move selected right"
           >
             &gt;
           </Button>
           <Button
             sx={{ my: 0.5 }}
-            variant='outlined'
-            size='small'
+            variant="outlined"
+            size="small"
             onClick={handleCheckedLeft}
             disabled={rightChecked.length === 0}
-            aria-label='move selected left'
+            aria-label="move selected left"
           >
             &lt;
           </Button>

@@ -61,12 +61,12 @@ export default function CustomizedList() {
         })}
       >
         <Paper elevation={0} sx={{ maxWidth: 256 }}>
-          <FireNav component='nav' disablePadding>
-            <ListItemButton component='a' href='#customized-list'>
+          <FireNav component="nav" disablePadding>
+            <ListItemButton component="a" href="#customized-list">
               <ListItemIcon sx={{ fontSize: 20 }}>🔥</ListItemIcon>
               <ListItemText
                 sx={{ my: 0 }}
-                primary='Firebash'
+                primary="Firebash"
                 primaryTypographyProps={{
                   fontSize: 20,
                   fontWeight: 'medium',
@@ -75,13 +75,13 @@ export default function CustomizedList() {
               />
             </ListItemButton>
             <Divider />
-            <ListItem component='div' disablePadding>
+            <ListItem component="div" disablePadding>
               <ListItemButton sx={{ height: 56 }}>
                 <ListItemIcon>
-                  <Home color='primary' />
+                  <Home color="primary" />
                 </ListItemIcon>
                 <ListItemText
-                  primary='Project Overview'
+                  primary="Project Overview"
                   primaryTypographyProps={{
                     color: 'primary',
                     fontWeight: 'medium',
@@ -89,9 +89,9 @@ export default function CustomizedList() {
                   }}
                 />
               </ListItemButton>
-              <Tooltip title='Project Settings'>
+              <Tooltip title="Project Settings">
                 <IconButton
-                  size='large'
+                  size="large"
                   sx={{
                     '& svg': {
                       color: 'rgba(255,255,255,0.8)',
@@ -120,38 +120,70 @@ export default function CustomizedList() {
                   }}
                 >
                   <Settings />
-                  <ArrowRight
-                    sx={{ position: 'absolute', right: 4, opacity: 0 }}
-                  />
+                  <ArrowRight sx={{ position: 'absolute', right: 4, opacity: 0 }} />
                 </IconButton>
               </Tooltip>
             </ListItem>
             <Divider />
             <Box
-              sx={{
-                bgcolor: open ? 'rgba(71, 98, 130, 0.2)' : null,
-                pb: open ? 2 : 0,
-              }}
+              sx={[
+                open
+                  ? {
+                      bgcolor: 'rgba(71, 98, 130, 0.2)',
+                    }
+                  : {
+                      bgcolor: null,
+                    },
+                open
+                  ? {
+                      pb: 2,
+                    }
+                  : {
+                      pb: 0,
+                    },
+              ]}
             >
               <ListItemButton
-                alignItems='flex-start'
+                alignItems="flex-start"
                 onClick={() => setOpen(!open)}
-                sx={{
-                  px: 3,
-                  pt: 2.5,
-                  pb: open ? 0 : 2.5,
-                  '&:hover, &:focus': { '& svg': { opacity: open ? 1 : 0 } },
-                }}
+                sx={[
+                  {
+                    px: 3,
+                    pt: 2.5,
+                  },
+                  open
+                    ? {
+                        pb: 0,
+                      }
+                    : {
+                        pb: 2.5,
+                      },
+                  open
+                    ? {
+                        '&:hover, &:focus': {
+                          '& svg': {
+                            opacity: 1,
+                          },
+                        },
+                      }
+                    : {
+                        '&:hover, &:focus': {
+                          '& svg': {
+                            opacity: 0,
+                          },
+                        },
+                      },
+                ]}
               >
                 <ListItemText
-                  primary='Build'
+                  primary="Build"
                   primaryTypographyProps={{
                     fontSize: 15,
                     fontWeight: 'medium',
                     lineHeight: '20px',
                     mb: '2px',
                   }}
-                  secondary='Authentication, Firestore Database, Realtime Database, Storage, Hosting, Functions, and Machine Learning'
+                  secondary="Authentication, Firestore Database, Realtime Database, Storage, Hosting, Functions, and Machine Learning"
                   secondaryTypographyProps={{
                     noWrap: true,
                     fontSize: 12,
@@ -161,23 +193,26 @@ export default function CustomizedList() {
                   sx={{ my: 0 }}
                 />
                 <KeyboardArrowDown
-                  sx={{
-                    mr: -1,
-                    opacity: 0,
-                    transform: open ? 'rotate(-180deg)' : 'rotate(0)',
-                    transition: '0.2s',
-                  }}
+                  sx={[
+                    {
+                      mr: -1,
+                      opacity: 0,
+                      transition: '0.2s',
+                    },
+                    open
+                      ? {
+                          transform: 'rotate(-180deg)',
+                        }
+                      : {
+                          transform: 'rotate(0)',
+                        },
+                  ]}
                 />
               </ListItemButton>
               {open &&
                 data.map((item) => (
-                  <ListItemButton
-                    key={item.label}
-                    sx={{ py: 0, minHeight: 32, color: 'rgba(255,255,255,.8)' }}
-                  >
-                    <ListItemIcon sx={{ color: 'inherit' }}>
-                      {item.icon}
-                    </ListItemIcon>
+                  <ListItemButton key={item.label} sx={{ py: 0, minHeight: 32, color: 'rgba(255,255,255,.8)' }}>
+                    <ListItemIcon sx={{ color: 'inherit' }}>{item.icon}</ListItemIcon>
                     <ListItemText
                       primary={item.label}
                       primaryTypographyProps={{

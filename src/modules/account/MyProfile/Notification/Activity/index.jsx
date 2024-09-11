@@ -10,14 +10,14 @@ const Activity = ({ activity }) => {
   return (
     <Box sx={{ mb: 5 }}>
       <Typography
-        component='h3'
+        component="h3"
         sx={{
           fontSize: 16,
           fontWeight: Fonts.BOLD,
           mb: { xs: 3, lg: 4 },
         }}
       >
-        <IntlMessages id='extraPages.activity' />
+        <IntlMessages id="extraPages.activity" />
       </Typography>
 
       {activity.map((data, index) => (

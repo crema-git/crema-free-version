@@ -1,11 +1,7 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import { DataGrid } from '@mui/x-data-grid';
-import {
-  randomCreatedDate,
-  randomTraderName,
-  randomUpdatedDate,
-} from '@mui/x-data-grid-generator';
+import { randomCreatedDate, randomTraderName, randomUpdatedDate } from '@mui/x-data-grid-generator';
 
 export default function IsCellEditableGrid() {
   return (
@@ -14,16 +10,11 @@ export default function IsCellEditableGrid() {
         height: 400,
         width: '100%',
         '& .MuiDataGrid-cell--editable': {
-          bgcolor: (theme) =>
-            theme.palette.mode === 'dark' ? '#376331' : 'rgb(217 243 190)',
+          bgcolor: (theme) => (theme.palette.mode === 'dark' ? '#376331' : 'rgb(217 243 190)'),
         },
       }}
     >
-      <DataGrid
-        rows={rows}
-        columns={columns}
-        isCellEditable={(params) => params.row.age % 2 === 0}
-      />
+      <DataGrid rows={rows} columns={columns} isCellEditable={(params) => params.row.age % 2 === 0} />
     </Box>
   );
 }

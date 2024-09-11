@@ -1,11 +1,4 @@
-import {
-  Avatar,
-  Box,
-  IconButton,
-  Menu,
-  MenuItem,
-  Typography,
-} from '@mui/material';
+import { Avatar, Box, IconButton, Menu, MenuItem, Typography } from '@mui/material';
 import React from 'react';
 import { AiOutlineMail } from 'react-icons/ai';
 import { BsLink45Deg } from 'react-icons/bs';
@@ -32,12 +25,7 @@ const ClientItem = ({ client }) => {
     <AppCard
       action={
         <Box>
-          <IconButton
-            style={{ height: 30, width: 30 }}
-            aria-label='more'
-            onClick={onLabelOpen}
-            size='large'
-          >
+          <IconButton style={{ height: 30, width: 30 }} aria-label="more" onClick={onLabelOpen} size="large">
             <MoreVertIcon />
           </IconButton>
         </Box>
@@ -54,13 +42,13 @@ const ClientItem = ({ client }) => {
               objectFit: 'contain',
             },
           }}
-          variant='square'
+          variant="square"
         />
       ) : (
         <Avatar sx={{ margin: 'auto' }}>{client.name[0].toUpperCase()}</Avatar>
       )}
 
-      <Typography variant='h3' sx={{ my: 4, textAlign: 'center' }}>
+      <Typography variant="h3" sx={{ my: 4, textAlign: 'center' }}>
         {client.name}
       </Typography>
       <Box sx={{ display: 'flex', mb: 4 }}>
@@ -83,27 +71,14 @@ const ClientItem = ({ client }) => {
           {client.phone ? (
             client.phone
           ) : (
-            <Box
-              component='a'
-              href={client.link}
-              sx={{ textDecoration: 'none', color: 'primary.main' }}
-            >
+            <Box component="a" href={client.link} sx={{ textDecoration: 'none', color: 'primary.main' }}>
               {client.link}
             </Box>
           )}
         </Box>
       </Box>
-      <Menu
-        anchorEl={isLabelOpen}
-        keepMounted
-        elevation={0}
-        open={Boolean(isLabelOpen)}
-        onClose={onLabelClose}
-      >
-        <MenuItem
-          value={312}
-          onClick={() => navigate(`/invoice/client/edit/${client.id}`)}
-        >
+      <Menu anchorEl={isLabelOpen} keepMounted elevation={0} open={Boolean(isLabelOpen)} onClose={onLabelClose}>
+        <MenuItem value={312} onClick={() => navigate(`/invoice/client/edit/${client.id}`)}>
           Edit Client
         </MenuItem>
       </Menu>

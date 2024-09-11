@@ -6,9 +6,7 @@ import { Fonts } from '@crema/constants/AppEnums';
 import AppCard from '@crema/components/AppCard';
 import { useIntl } from 'react-intl';
 
-const SocialMediaAdvertise = (props) => {
-  const { socialMediaData } = props;
-
+const SocialMediaAdvertise = ({ socialMediaData = [] }) => {
   const { messages } = useIntl();
   return (
     <AppCard title={messages['dashboard.socialMedia']} sxStyle={{ height: 1 }}>
@@ -30,7 +28,7 @@ const SocialMediaAdvertise = (props) => {
               key={item.id}
             >
               <Box
-                component='h4'
+                component="h4"
                 sx={{
                   mb: 1,
                   fontWeight: Fonts.MEDIUM,
@@ -46,7 +44,7 @@ const SocialMediaAdvertise = (props) => {
                 }}
               >
                 <Box
-                  component='p'
+                  component="p"
                   sx={{
                     color: 'text.secondary',
                     fontSize: 14,
@@ -55,10 +53,7 @@ const SocialMediaAdvertise = (props) => {
                 >
                   {item.name}
                 </Box>
-                <Box
-                  component='span'
-                  sx={{ color: item.changeColor, fontSize: 13 }}
-                >
+                <Box component="span" sx={{ color: item.changeColor, fontSize: 13 }}>
                   {item.change}
                 </Box>
               </Box>
@@ -71,10 +66,6 @@ const SocialMediaAdvertise = (props) => {
 };
 
 export default SocialMediaAdvertise;
-
-SocialMediaAdvertise.defaultProps = {
-  socialMediaData: [],
-};
 
 SocialMediaAdvertise.propTypes = {
   socialMediaData: PropTypes.array,

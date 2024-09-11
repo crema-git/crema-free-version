@@ -29,18 +29,13 @@ const EditInvoiceTable = ({ items, currency, taxTypeData, taxRateData }) => {
   return (
     <>
       <AppTableContainer>
-        <Table stickyHeader className='table'>
+        <Table stickyHeader className="table">
           <TableHead>
             <TableHeading />
           </TableHead>
           <TableBody>
             {items.map((data, index) => (
-              <TableItem
-                key={data.id}
-                index={index}
-                data={data}
-                currencyData={currencyData}
-              />
+              <TableItem key={data.id} index={index} data={data} currencyData={currencyData} />
             ))}
           </TableBody>
         </Table>

@@ -3,7 +3,7 @@ import Box from '@mui/material/Box';
 import PropTypes from 'prop-types';
 import { Fonts } from '@crema/constants/AppEnums';
 
-const Categories = ({ data }) => {
+const Categories = ({ data = [] }) => {
   return (
     <Box
       sx={{
@@ -29,7 +29,7 @@ const Categories = ({ data }) => {
               }}
             >
               <Box
-                component='span'
+                component="span"
                 sx={{
                   height: { xs: 12, xl: 16 },
                   width: { xs: 12, xl: 16 },
@@ -41,7 +41,7 @@ const Categories = ({ data }) => {
                 }}
               />
               <Box
-                component='p'
+                component="p"
                 sx={{
                   mb: 1,
                   fontWeight: Fonts.MEDIUM,
@@ -52,7 +52,7 @@ const Categories = ({ data }) => {
               </Box>
             </Box>
             <Box
-              component='p'
+              component="p"
               sx={{
                 textTransform: 'capitalize',
                 color: 'text.secondary',
@@ -69,10 +69,6 @@ const Categories = ({ data }) => {
 };
 
 export default Categories;
-
-Categories.defaultProps = {
-  data: [],
-};
 
 Categories.propTypes = {
   data: PropTypes.array,

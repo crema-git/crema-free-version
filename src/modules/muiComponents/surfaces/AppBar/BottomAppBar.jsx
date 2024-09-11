@@ -9,7 +9,6 @@ import IconButton from '@mui/material/IconButton';
 import Paper from '@mui/material/Paper';
 import Fab from '@mui/material/Fab';
 import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
 import ListItemAvatar from '@mui/material/ListItemAvatar';
 import ListItemText from '@mui/material/ListItemText';
 import ListSubheader from '@mui/material/ListSubheader';
@@ -18,13 +17,13 @@ import MenuIcon from '@mui/icons-material/Menu';
 import AddIcon from '@mui/icons-material/Add';
 import SearchIcon from '@mui/icons-material/Search';
 import MoreIcon from '@mui/icons-material/MoreVert';
+import ListItemButton from '@mui/material/ListItemButton';
 
 const messages = [
   {
     id: 1,
     primary: 'Brunch this week?',
-    secondary:
-      "I'll be in the neighbourhood this week. Let's grab a bite to eat",
+    secondary: "I'll be in the neighbourhood this week. Let's grab a bite to eat",
     person: '/static/images/avatar/5.jpg',
   },
   {
@@ -37,8 +36,7 @@ const messages = [
   {
     id: 3,
     primary: 'Recipe to try',
-    secondary:
-      'I am try out this new BBQ recipe, I think this might be amazing',
+    secondary: 'I am try out this new BBQ recipe, I think this might be amazing',
     person: '/static/images/avatar/2.jpg',
   },
   {
@@ -50,8 +48,7 @@ const messages = [
   {
     id: 5,
     primary: "Doctor's Appointment",
-    secondary:
-      'My appointment for the doctor was rescheduled for next Saturday.',
+    secondary: 'My appointment for the doctor was rescheduled for next Saturday.',
     person: '/static/images/avatar/4.jpg',
   },
   {
@@ -85,52 +82,39 @@ export default function BottomAppBar() {
     <React.Fragment>
       <CssBaseline />
       <Paper square sx={{ pb: '50px' }}>
-        <Typography
-          variant='h5'
-          gutterBottom
-          component='div'
-          sx={{ p: 2, pb: 0 }}
-        >
+        <Typography variant="h5" gutterBottom component="div" sx={{ p: 2, pb: 0 }}>
           Inbox
         </Typography>
         <List sx={{ mb: 2 }}>
           {messages.map(({ id, primary, secondary, person }) => (
             <React.Fragment key={id}>
-              {id === 1 && (
-                <ListSubheader sx={{ bgcolor: 'background.paper' }}>
-                  Today
-                </ListSubheader>
-              )}
+              {id === 1 && <ListSubheader sx={{ bgcolor: 'background.paper' }}>Today</ListSubheader>}
 
-              {id === 3 && (
-                <ListSubheader sx={{ bgcolor: 'background.paper' }}>
-                  Yesterday
-                </ListSubheader>
-              )}
+              {id === 3 && <ListSubheader sx={{ bgcolor: 'background.paper' }}>Yesterday</ListSubheader>}
 
-              <ListItem button>
+              <ListItemButton>
                 <ListItemAvatar>
-                  <Avatar alt='Profile Picture' src={person} />
+                  <Avatar alt="Profile Picture" src={person} />
                 </ListItemAvatar>
                 <ListItemText primary={primary} secondary={secondary} />
-              </ListItem>
+              </ListItemButton>
             </React.Fragment>
           ))}
         </List>
       </Paper>
-      <AppBar position='fixed' color='primary' sx={{ top: 'auto', bottom: 0 }}>
+      <AppBar position="fixed" color="primary" sx={{ top: 'auto', bottom: 0 }}>
         <Toolbar>
-          <IconButton color='inherit' aria-label='open drawer'>
+          <IconButton color="inherit" aria-label="open drawer">
             <MenuIcon />
           </IconButton>
-          <StyledFab color='secondary' aria-label='add'>
+          <StyledFab color="secondary" aria-label="add">
             <AddIcon />
           </StyledFab>
           <Box sx={{ flexGrow: 1 }} />
-          <IconButton color='inherit'>
+          <IconButton color="inherit">
             <SearchIcon />
           </IconButton>
-          <IconButton color='inherit'>
+          <IconButton color="inherit">
             <MoreIcon />
           </IconButton>
         </Toolbar>

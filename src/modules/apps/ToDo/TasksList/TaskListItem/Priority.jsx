@@ -7,7 +7,7 @@ import { alpha } from '@mui/material';
 const Priority = ({ priority }) => {
   return (
     <Box
-      component='span'
+      component="span"
       sx={{
         px: 3,
         py: 1,

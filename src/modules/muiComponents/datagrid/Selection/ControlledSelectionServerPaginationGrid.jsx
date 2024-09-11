@@ -59,7 +59,7 @@ export default function ControlledSelectionServerPaginationGrid() {
         pageSize={5}
         rowsPerPageOptions={[5]}
         rowCount={100}
-        paginationMode='server'
+        paginationMode="server"
         onPageChange={(newPage) => {
           prevSelectionModel.current = selectionModel;
           setPage(newPage);

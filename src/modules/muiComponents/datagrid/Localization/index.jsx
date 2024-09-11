@@ -1,11 +1,11 @@
-import React from "react";
-import AppComponentHeader from "@crema/components/AppComponentHeader";
-import AppGridContainer from "@crema/components/AppGridContainer";
-import Grid from "@mui/material/Grid";
-import AppComponentCard from "@crema/components/AppComponentCard";
+import React from 'react';
+import AppComponentHeader from '@crema/components/AppComponentHeader';
+import AppGridContainer from '@crema/components/AppGridContainer';
+import Grid from '@mui/material/Grid';
+import AppComponentCard from '@crema/components/AppComponentCard';
 
-import CustomLocaleTextGrid from "./CustomLocaleTextGrid";
-import CustomLocaleTextGridSource from "./CustomLocaleTextGrid?raw";
+import CustomLocaleTextGrid from './CustomLocaleTextGrid';
+import CustomLocaleTextGridSource from './CustomLocaleTextGrid?raw';
 
 const Localization = () => {
   return (

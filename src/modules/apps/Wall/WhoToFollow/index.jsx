@@ -14,10 +14,7 @@ const WhoToFollow = ({ whoToFollow }) => {
       contentStyle={{ px: 0 }}
       action={messages['common.viewAll']}
     >
-      <AppList
-        data={whoToFollow}
-        renderRow={(item, index) => <FollowItem key={index} item={item} />}
-      />
+      <AppList data={whoToFollow} renderRow={(item, index) => <FollowItem key={index} item={item} />} />
     </AppCard>
   );
 };

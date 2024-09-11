@@ -9,7 +9,7 @@ import AppScrollbar from '../../AppScrollbar';
 import MainMenu from './SidebarMenu/MainMenu';
 import { useThemeContext } from '@crema/context/AppContextProvider/ThemeContextProvider';
 
-const AppSidebarSubMenu = (props) => {
+const AppSidebarSubMenu = ({ variant = '', position = 'left', ...props }) => {
   const { themeMode } = useThemeContext();
 
   const classes = useStyles({ themeMode });
@@ -18,21 +18,16 @@ const AppSidebarSubMenu = (props) => {
     <>
       <Hidden lgUp>
         <Drawer
-          anchor={props.position}
+          anchor={position}
           open={props.isNavCollapsed}
           onClose={props.toggleNavCollapsed}
           classes={{
-            root: clsx(props.variant),
-            paper: clsx(props.variant),
+            root: clsx(variant),
+            paper: clsx(variant),
           }}
           style={{ position: 'absolute' }}
         >
-          <Box
-            className={clsx(
-              classes.appSidebarSubMenuRoot,
-              'app-sidebar-sub-menu',
-            )}
-          >
+          <Box className={clsx(classes.appSidebarSubMenuRoot, 'app-sidebar-sub-menu')}>
             <Box className={clsx(classes.sidebarBg, sidebarClasses)}>
               <AppScrollbar className={classes.drawerScrollAppSidebar}>
                 <MainMenu item={props.item} />
@@ -42,13 +37,7 @@ const AppSidebarSubMenu = (props) => {
         </Drawer>
       </Hidden>
       <Hidden mdDown>
-        <Box
-          height='100%'
-          className={clsx(
-            classes.appSidebarSubMenuRoot,
-            'app-sidebar-sub-menu',
-          )}
-        >
+        <Box height="100%" className={clsx(classes.appSidebarSubMenuRoot, 'app-sidebar-sub-menu')}>
           <Box className={clsx(classes.sidebarBg, sidebarClasses)}>
             <AppScrollbar className={classes.scrollAppSidebar}>
               <MainMenu item={props.item} />
@@ -61,11 +50,6 @@ const AppSidebarSubMenu = (props) => {
 };
 
 export default AppSidebarSubMenu;
-
-AppSidebarSubMenu.defaultProps = {
-  variant: '',
-  position: 'left',
-};
 
 AppSidebarSubMenu.propTypes = {
   position: PropTypes.string,

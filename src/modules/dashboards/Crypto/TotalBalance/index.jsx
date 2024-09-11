@@ -7,11 +7,16 @@ import CoinsInfo from './CoinsInfo';
 import { Fonts } from '@crema/constants/AppEnums';
 import AppCard from '@crema/components/AppCard';
 
-const TotalBalance = ({ totalBalanceData }) => {
+const TotalBalance = ({
+  totalBalanceData = {
+    balance: '',
+    coins: [],
+  },
+}) => {
   return (
     <Box>
       <Box
-        component='h2'
+        component="h2"
         sx={{
           color: 'text.primary',
           fontSize: 16,
@@ -20,7 +25,7 @@ const TotalBalance = ({ totalBalanceData }) => {
           fontWeight: Fonts.BOLD,
         }}
       >
-        <IntlMessages id='dashboard.totalBalance' />
+        <IntlMessages id="dashboard.totalBalance" />
       </Box>
       <AppCard sxStyle={{}}>
         <Box
@@ -37,7 +42,7 @@ const TotalBalance = ({ totalBalanceData }) => {
             }}
           >
             <Box
-              component='h3'
+              component="h3"
               sx={{
                 fontWeight: Fonts.MEDIUM,
                 fontSize: 20,
@@ -46,7 +51,7 @@ const TotalBalance = ({ totalBalanceData }) => {
               ${totalBalanceData.balance}
             </Box>
             <Box
-              component='p'
+              component="p"
               sx={{
                 color: 'text.secondary',
                 fontSize: 14,
@@ -54,7 +59,7 @@ const TotalBalance = ({ totalBalanceData }) => {
                 mb: 1,
               }}
             >
-              <IntlMessages id='dashboard.avlBalance' />
+              <IntlMessages id="dashboard.avlBalance" />
             </Box>
           </Box>
           <Box
@@ -65,22 +70,20 @@ const TotalBalance = ({ totalBalanceData }) => {
             <Box>
               <Button
                 sx={{
-                  backgroundColor: (theme) =>
-                    alpha(theme.palette.primary.main, 0.1),
+                  backgroundColor: (theme) => alpha(theme.palette.primary.main, 0.1),
                   color: 'primary.main',
                   fontWeight: Fonts.LIGHT,
                   textTransform: 'capitalize',
                   width: 96,
                   fontSize: 16,
                   '&:hover, &:focus': {
-                    backgroundColor: (theme) =>
-                      alpha(theme.palette.primary.main, 0.15),
+                    backgroundColor: (theme) => alpha(theme.palette.primary.main, 0.15),
                     color: 'primary.main',
                   },
                   lineHeight: { xs: '16px', sm: '20px', xl: '26px' },
                 }}
               >
-                <IntlMessages id='common.send' />
+                <IntlMessages id="common.send" />
               </Button>
             </Box>
             <Box
@@ -89,7 +92,7 @@ const TotalBalance = ({ totalBalanceData }) => {
               }}
             >
               <Button
-                variant='contained'
+                variant="contained"
                 sx={{
                   fontWeight: Fonts.LIGHT,
                   textTransform: 'capitalize',
@@ -98,19 +101,19 @@ const TotalBalance = ({ totalBalanceData }) => {
                   lineHeight: { xs: '16px', sm: '20px', xl: '26px' },
                 }}
               >
-                <IntlMessages id='common.receive' />
+                <IntlMessages id="common.receive" />
               </Button>
             </Box>
           </Box>
         </Box>
         <Box
-          component='p'
+          component="p"
           sx={{
             fontSize: 16,
             color: 'text.secondary',
           }}
         >
-          <IntlMessages id='dashboard.buyCurrency' />
+          <IntlMessages id="dashboard.buyCurrency" />
         </Box>
         <Box
           sx={{
@@ -125,13 +128,6 @@ const TotalBalance = ({ totalBalanceData }) => {
 };
 
 export default TotalBalance;
-
-TotalBalance.defaultProps = {
-  totalBalanceData: {
-    balance: '',
-    coins: [],
-  },
-};
 
 TotalBalance.propTypes = {
   totalBalanceData: PropTypes.object,

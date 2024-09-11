@@ -12,11 +12,8 @@ const Blogs = () => {
     <AppLoader />
   ) : (
     !isEmptyObject(apiData.blogSidebar) && (
-      <AppAnimate animation='transition.slideUpIn' delay={200}>
-        <BlogContent
-          blogSidebar={apiData.blogSidebar}
-          blogContent={apiData.blogContent}
-        />
+      <AppAnimate animation="transition.slideUpIn" delay={200}>
+        <BlogContent blogSidebar={apiData.blogSidebar} blogContent={apiData.blogContent} />
       </AppAnimate>
     )
   );

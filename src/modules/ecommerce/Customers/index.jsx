@@ -48,7 +48,7 @@ const Customers = () => {
           }}
         >
           <AppSearchBar
-            iconPosition='right'
+            iconPosition="right"
             overlap={false}
             onChange={onSearchCustomer}
             placeholder={messages['common.searchHere']}
@@ -62,12 +62,7 @@ const Customers = () => {
             }}
           >
             <Hidden smDown>
-              <AppsPagination
-                rowsPerPage={10}
-                count={customerCount}
-                page={page}
-                onPageChange={onPageChange}
-              />
+              <AppsPagination rowsPerPage={10} count={customerCount} page={page} onPageChange={onPageChange} />
             </Hidden>
           </Box>
         </Box>
@@ -83,12 +78,7 @@ const Customers = () => {
       </AppsContent>
 
       <Hidden smUp>
-        <AppsPagination
-          rowsPerPage={10}
-          count={customerCount}
-          page={page}
-          onPageChange={onPageChange}
-        />
+        <AppsPagination rowsPerPage={10} count={customerCount} page={page} onPageChange={onPageChange} />
       </Hidden>
     </AppsContainer>
   );

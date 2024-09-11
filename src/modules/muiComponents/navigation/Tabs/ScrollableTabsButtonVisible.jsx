@@ -15,22 +15,22 @@ export default function ScrollableTabsButtonVisible() {
       <Tabs
         value={value}
         onChange={handleChange}
-        variant='scrollable'
+        variant="scrollable"
         scrollButtons
-        aria-label='visible arrows tabs example'
+        aria-label="visible arrows tabs example"
         sx={{
           [`& .${tabsClasses.scrollButtons}`]: {
             '&.Mui-disabled': { opacity: 0.3 },
           },
         }}
       >
-        <Tab label='Item One' />
-        <Tab label='Item Two' />
-        <Tab label='Item Three' />
-        <Tab label='Item Four' />
-        <Tab label='Item Five' />
-        <Tab label='Item Six' />
-        <Tab label='Item Seven' />
+        <Tab label="Item One" />
+        <Tab label="Item Two" />
+        <Tab label="Item Three" />
+        <Tab label="Item Four" />
+        <Tab label="Item Five" />
+        <Tab label="Item Six" />
+        <Tab label="Item Seven" />
       </Tabs>
     </Box>
   );

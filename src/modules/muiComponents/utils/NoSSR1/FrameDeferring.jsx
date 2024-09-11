@@ -3,9 +3,7 @@ import Box from '@mui/material/Box';
 import NoSsr from '@mui/material/NoSsr';
 
 function LargeTree() {
-  return Array.from(new Array(5000)).map((_, index) => (
-    <span key={index}>.</span>
-  ));
+  return Array.from(new Array(5000)).map((_, index) => <span key={index}>.</span>);
 }
 
 export default function FrameDeferring() {
@@ -17,7 +15,7 @@ export default function FrameDeferring() {
   return (
     <div>
       <button
-        type='button'
+        type="button"
         onClick={() =>
           setState({
             open: !state.open,
@@ -29,7 +27,7 @@ export default function FrameDeferring() {
       </button>
       <br />
       <button
-        type='button'
+        type="button"
         onClick={() =>
           setState({
             open: !state.open,

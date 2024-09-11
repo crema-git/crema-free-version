@@ -23,7 +23,7 @@ const Crypto = () => {
       {loading ? (
         <AppLoader />
       ) : (
-        <AppAnimate animation='transition.slideUpIn' delay={200}>
+        <AppAnimate animation="transition.slideUpIn" delay={200}>
           <AppGridContainer>
             <Grid item xs={12} md={5}>
               <TotalBalance totalBalanceData={cryptoData.totalBalanceData} />
@@ -39,9 +39,7 @@ const Crypto = () => {
               <BuySell buySell={cryptoData.buySell} />
             </Grid>
             <Grid item xs={12} md={6} lg={8}>
-              <OrdersActivities
-                ordersActivities={cryptoData.ordersActivities}
-              />
+              <OrdersActivities ordersActivities={cryptoData.ordersActivities} />
             </Grid>
             <Grid item xs={12} md={6} lg={4}>
               <TopStories stories={cryptoData.stories} />

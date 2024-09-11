@@ -11,12 +11,7 @@ export default function BasisPaginationGrid() {
 
   return (
     <div style={{ height: 400, width: '100%' }}>
-      <DataGridPro
-        pagination
-        pageSize={200}
-        rowsPerPageOptions={[200]}
-        {...data}
-      />
+      <DataGridPro pagination pageSize={200} rowsPerPageOptions={[200]} {...data} />
     </div>
   );
 }

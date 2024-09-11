@@ -17,11 +17,9 @@ import AuthWrapper from '../AuthWrapper';
 const validationSchema = yup.object({
   email: yup
     .string()
-    .email(<IntlMessages id='validation.emailFormat' />)
-    .required(<IntlMessages id='validation.emailRequired' />),
-  password: yup
-    .string()
-    .required(<IntlMessages id='validation.passwordRequired' />),
+    .email(<IntlMessages id="validation.emailFormat" />)
+    .required(<IntlMessages id="validation.emailRequired" />),
+  password: yup.string().required(<IntlMessages id="validation.passwordRequired" />),
 });
 
 const SigninJwtAuth = () => {
@@ -54,13 +52,13 @@ const SigninJwtAuth = () => {
             }}
           >
             {({ isSubmitting }) => (
-              <Form style={{ textAlign: 'left' }} noValidate autoComplete='off'>
+              <Form style={{ textAlign: 'left' }} noValidate autoComplete="off">
                 <Box sx={{ mb: { xs: 5, xl: 8 } }}>
                   <AppTextField
                     placeholder={messages['common.email']}
-                    name='email'
-                    label={<IntlMessages id='common.email' />}
-                    variant='outlined'
+                    name="email"
+                    label={<IntlMessages id="common.email" />}
+                    variant="outlined"
                     sx={{
                       width: '100%',
                       '& .MuiInputBase-input': {
@@ -72,11 +70,11 @@ const SigninJwtAuth = () => {
 
                 <Box sx={{ mb: { xs: 3, xl: 4 } }}>
                   <AppTextField
-                    type='password'
+                    type="password"
                     placeholder={messages['common.password']}
-                    label={<IntlMessages id='common.password' />}
-                    name='password'
-                    variant='outlined'
+                    label={<IntlMessages id="common.password" />}
+                    name="password"
+                    variant="outlined"
                     sx={{
                       width: '100%',
                       '& .MuiInputBase-input': {
@@ -97,18 +95,18 @@ const SigninJwtAuth = () => {
                       alignItems: 'center',
                     }}
                   >
-                    <Checkbox color='primary' sx={{ ml: -3 }} />
+                    <Checkbox color="primary" sx={{ ml: -3 }} />
                     <Box
-                      component='span'
+                      component="span"
                       sx={{
                         color: 'grey.700',
                       }}
                     >
-                      <IntlMessages id='common.rememberMe' />
+                      <IntlMessages id="common.rememberMe" />
                     </Box>
                   </Box>
                   <Box
-                    component='span'
+                    component="span"
                     sx={{
                       color: (theme) => theme.palette.primary.main,
                       fontWeight: Fonts.MEDIUM,
@@ -118,15 +116,15 @@ const SigninJwtAuth = () => {
                     }}
                     onClick={onGoToForgetPassword}
                   >
-                    <IntlMessages id='common.forgetPassword' />
+                    <IntlMessages id="common.forgetPassword" />
                   </Box>
                 </Box>
 
                 <div>
                   <Button
-                    variant='contained'
-                    color='primary'
-                    type='submit'
+                    variant="contained"
+                    color="primary"
+                    type="submit"
                     disabled={isSubmitting}
                     sx={{
                       minWidth: 160,
@@ -136,7 +134,7 @@ const SigninJwtAuth = () => {
                       padding: '4px 16px 8px',
                     }}
                   >
-                    <IntlMessages id='common.login' />
+                    <IntlMessages id="common.login" />
                   </Button>
                 </div>
               </Form>
@@ -150,10 +148,10 @@ const SigninJwtAuth = () => {
           }}
         >
           <span style={{ marginRight: 4 }}>
-            <IntlMessages id='common.dontHaveAccount' />
+            <IntlMessages id="common.dontHaveAccount" />
           </span>
           <Box
-            component='span'
+            component="span"
             sx={{
               fontWeight: Fonts.MEDIUM,
               '& a': {
@@ -162,8 +160,8 @@ const SigninJwtAuth = () => {
               },
             }}
           >
-            <Link to='/signup'>
-              <IntlMessages id='common.signup' />
+            <Link to="/signup">
+              <IntlMessages id="common.signup" />
             </Link>
           </Box>
         </Box>

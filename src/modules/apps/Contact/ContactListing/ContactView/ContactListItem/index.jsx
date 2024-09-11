@@ -1,5 +1,5 @@
 import React from 'react';
-import ListItem from '@mui/material/ListItem';
+import ListItemButton from '@mui/material/ListItemButton';
 import Checkbox from '@mui/material/Checkbox';
 import Avatar from '@mui/material/Avatar';
 import LabelOutlinedIcon from '@mui/icons-material/LabelOutlined';
@@ -14,7 +14,7 @@ import { blue } from '@mui/material/colors';
 import { styled } from '@mui/material/styles';
 import { alpha } from '@mui/material';
 
-const ContactListItemWrapper = styled(ListItem)(({ theme }) => {
+const ContactListItemWrapper = styled(ListItemButton)(({ theme }) => {
   return {
     display: 'flex',
     flexDirection: 'row',
@@ -55,9 +55,9 @@ const ContactListItemWrapper = styled(ListItem)(({ theme }) => {
 
 const ContactListItem = ({
   contact,
-  labelList,
+  labelList = [],
   onChangeCheckedContacts,
-  checkedContacts,
+  checkedContacts = [],
   onChangeStarred,
   onSelectContactsForDelete,
   onViewContactDetail,
@@ -65,17 +65,13 @@ const ContactListItem = ({
 }) => {
   const onGetLabelColor = (labelId) => {
     if (labelId) {
-      return (
-        labelList.length > 0 &&
-        labelList.find((label) => label.id === labelId).color
-      );
+      return labelList.length > 0 && labelList.find((label) => label.id === labelId).color;
     }
   };
 
   return (
     <ContactListItemWrapper
       dense
-      button
       key={contact.id}
       className={clsx('item-hover', {
         rootCheck: checkedContacts.includes(contact.id),
@@ -96,14 +92,14 @@ const ContactListItem = ({
             }}
             checked={checkedContacts.includes(contact.id)}
             onChange={(event) => onChangeCheckedContacts(event, contact.id)}
-            color='primary'
+            color="primary"
           />
         </span>
         <Box
           sx={{
             mr: 2.5,
           }}
-          component='span'
+          component="span"
           onClick={(event) => event.stopPropagation()}
         >
           <AppsStarredIcon item={contact} onChange={onChangeStarred} />
@@ -112,7 +108,7 @@ const ContactListItem = ({
           sx={{
             mr: 3,
           }}
-          component='span'
+          component="span"
         >
           {contact.image ? (
             <Avatar
@@ -136,7 +132,7 @@ const ContactListItem = ({
           )}
         </Box>
         <Box
-          component='span'
+          component="span"
           sx={{
             mr: 4,
             fontWeight: Fonts.MEDIUM,
@@ -150,7 +146,7 @@ const ContactListItem = ({
         </Box>
 
         <Box
-          component='span'
+          component="span"
           sx={{
             mr: 4,
             flex: 1,
@@ -179,10 +175,10 @@ const ContactListItem = ({
             alignItems: 'center',
             width: { sm: 'calc(100% - 70px)' },
           }}
-          className='contactViewInfo'
+          className="contactViewInfo"
         >
           <Box
-            component='span'
+            component="span"
             sx={{
               mr: 4,
               flex: 1,
@@ -195,7 +191,7 @@ const ContactListItem = ({
             {contact.contact}
           </Box>
           <Box
-            component='span'
+            component="span"
             sx={{
               mr: 4,
               flex: 1,
@@ -210,14 +206,14 @@ const ContactListItem = ({
         </Box>
 
         <Box
-          component='span'
+          component="span"
           sx={{
             display: 'flex',
             alignItems: 'center',
             marginLeft: 'auto',
           }}
         >
-          <span className='conActionHoverHideRoot'>
+          <span className="conActionHoverHideRoot">
             <LabelOutlinedIcon
               sx={{
                 ml: 2,
@@ -239,11 +235,6 @@ const ContactListItem = ({
 };
 
 export default ContactListItem;
-
-ContactListItem.defaultProps = {
-  labelList: [],
-  checkedContacts: [],
-};
 
 ContactListItem.propTypes = {
   contact: PropTypes.object.isRequired,

@@ -28,7 +28,7 @@ const CRM = () => {
       {loading ? (
         <AppLoader />
       ) : (
-        <AppAnimate animation='transition.slideUpIn' delay={200}>
+        <AppAnimate animation="transition.slideUpIn" delay={200}>
           <AppGridContainer>
             {crmData.stateData.map((data) => (
               <Grid key={data.id} item xs={12} sm={6} lg={3}>
@@ -71,9 +71,7 @@ const CRM = () => {
                       <Report />
                     </Grid>
                     <Grid item xs={12} sm={6} lg={12}>
-                      <SocialMediaAdvertise
-                        socialMediaData={crmData.socialMediaData}
-                      />
+                      <SocialMediaAdvertise socialMediaData={crmData.socialMediaData} />
                     </Grid>
                   </AppGridContainer>
                 </Grid>

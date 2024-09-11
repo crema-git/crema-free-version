@@ -30,17 +30,17 @@ import { Fonts } from '@crema/constants/AppEnums';
 //   );
 // };
 
-const EarningGraph = ({ data }) => {
+const EarningGraph = ({ data = [] }) => {
   return (
     <PieChart width={400} height={400}>
       <text
-        x='50%'
+        x="50%"
         fontWeight={Fonts.MEDIUM}
-        fill='#0A8FDC'
+        fill="#0A8FDC"
         fontSize={20}
-        y='55%'
-        textAnchor='middle'
-        dominantBaseline='middle'
+        y="55%"
+        textAnchor="middle"
+        dominantBaseline="middle"
       >
         GBP
       </text>
@@ -50,10 +50,10 @@ const EarningGraph = ({ data }) => {
         cy={200}
         labelLine={false}
         // label={renderCustomizedLabel}
-        outerRadius='95%'
-        fill='#8884d8'
-        dataKey='value'
-        innerRadius='80%'
+        outerRadius="95%"
+        fill="#8884d8"
+        dataKey="value"
+        innerRadius="80%"
         paddingAngle={5}
       >
         {data.map((entry, index) => (
@@ -65,10 +65,6 @@ const EarningGraph = ({ data }) => {
 };
 
 export default EarningGraph;
-
-EarningGraph.defaultProps = {
-  data: [],
-};
 
 EarningGraph.propTypes = {
   data: PropTypes.array,

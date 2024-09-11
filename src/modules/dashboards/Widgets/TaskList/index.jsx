@@ -7,13 +7,7 @@ import AppCard from '@crema/components/AppCard';
 import { useIntl } from 'react-intl';
 import AppScrollbar from '@crema/components/AppScrollbar';
 
-const getData = (data) => {
-  return data;
-};
-
-const TaskList = (props) => {
-  const data = getData(props.data);
-
+const TaskList = ({ data = [] }) => {
   const { messages } = useIntl();
   return (
     <AppCard
@@ -44,10 +38,6 @@ const TaskList = (props) => {
 };
 
 export default TaskList;
-
-TaskList.defaultProps = {
-  data: [],
-};
 
 TaskList.propTypes = {
   data: PropTypes.array,

@@ -1,22 +1,22 @@
-import AppComponentHeader from "@crema/components/AppComponentHeader";
-import AppGridContainer from "@crema/components/AppGridContainer";
-import Grid from "@mui/material/Grid";
-import AppComponentCard from "@crema/components/AppComponentCard";
+import AppComponentHeader from '@crema/components/AppComponentHeader';
+import AppGridContainer from '@crema/components/AppGridContainer';
+import Grid from '@mui/material/Grid';
+import AppComponentCard from '@crema/components/AppComponentCard';
 
-import ExclusiveSelection from "./ExclusiveSelection";
-import ExclusiveSelectionSource from "./ExclusiveSelection?raw";
-import ToggleButtonsMultiple from "./MultipleSelection";
-import ToggleButtonsMultipleSource from "./MultipleSelection?raw";
-import ColorToggleButton from "./Color";
-import ColorToggleButtonSource from "./Color?raw";
-import VerticalToggleButtons from "./VerticalButtons";
-import VerticalToggleButtonsSource from "./VerticalButtons?raw";
-import ToggleButtonNotEmpty from "./EnforceValueSet";
-import ToggleButtonNotEmptySource from "./EnforceValueSet?raw";
-import StandaloneToggleButton from "./StandaloneToggleButton";
-import StandaloneToggleButtonSource from "./StandaloneToggleButton?raw";
-import CustomizedDividers from "./Customization";
-import CustomizedDividersSource from "./Customization?raw";
+import ExclusiveSelection from './ExclusiveSelection';
+import ExclusiveSelectionSource from './ExclusiveSelection?raw';
+import ToggleButtonsMultiple from './MultipleSelection';
+import ToggleButtonsMultipleSource from './MultipleSelection?raw';
+import ColorToggleButton from './Color';
+import ColorToggleButtonSource from './Color?raw';
+import VerticalToggleButtons from './VerticalButtons';
+import VerticalToggleButtonsSource from './VerticalButtons?raw';
+import ToggleButtonNotEmpty from './EnforceValueSet';
+import ToggleButtonNotEmptySource from './EnforceValueSet?raw';
+import StandaloneToggleButton from './StandaloneToggleButton';
+import StandaloneToggleButtonSource from './StandaloneToggleButton?raw';
+import CustomizedDividers from './Customization';
+import CustomizedDividersSource from './Customization?raw';
 
 const ToggleButtons = () => {
   return (
@@ -47,12 +47,7 @@ const ToggleButtons = () => {
           />
         </Grid>
         <Grid item xs={12} md={6}>
-          <AppComponentCard
-            title="Color"
-            component={ColorToggleButton}
-            source={ColorToggleButtonSource}
-            noScrollbar
-          />
+          <AppComponentCard title="Color" component={ColorToggleButton} source={ColorToggleButtonSource} noScrollbar />
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard

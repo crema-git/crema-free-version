@@ -1,28 +1,24 @@
 import React from 'react';
 import PropsTypes from 'prop-types';
-import ListItem from '@mui/material/ListItem';
 import { Fonts, MenuStyle } from '@crema/constants/AppEnums';
 import { useSidebarContext } from '@crema/context/AppContextProvider/SidebarContextProvider';
 import clsx from 'clsx';
 import { alpha } from '@mui/material';
+import ListItemButton from '@mui/material/ListItemButton';
 
 const VerticalNavItem = ({ children, level, ...rest }) => {
-  const {
-    sidebarTextColor,
-    sidebarMenuSelectedBgColor,
-    sidebarMenuSelectedTextColor,
-    menuStyle,
-  } = useSidebarContext();
+  const { sidebarTextColor, sidebarMenuSelectedBgColor, sidebarMenuSelectedTextColor, menuStyle } = useSidebarContext();
 
   return (
-    <ListItem
-      className={clsx('menu-vertical-item', {
-        'rounded-menu': menuStyle === MenuStyle.ROUNDED,
-        'rounded-menu-reverse': menuStyle === MenuStyle.ROUNDED_REVERSE,
-        'standard-menu': menuStyle === MenuStyle.STANDARD,
-        'curved-menu': menuStyle === MenuStyle.CURVED_MENU,
-      })}
-      sx={{
+    <ListItemButton
+      className={clsx(
+        'menu-vertical-item',
+        menuStyle === MenuStyle.ROUNDED && 'rounded-menu',
+        menuStyle === MenuStyle.ROUNDED_REVERSE && 'rounded-menu-reverse',
+        menuStyle === MenuStyle.STANDARD && 'standard-menu',
+        menuStyle === MenuStyle.CURVED_MENU && 'curved-menu',
+      )}
+      sx={(theme) => ({
         height: 40,
         my: 0.25,
         cursor: 'pointer',
@@ -35,11 +31,13 @@ const VerticalNavItem = ({ children, level, ...rest }) => {
         position: 'relative',
         transition: 'all 0.4s ease',
         whiteSpace: 'nowrap',
+
         '& .nav-item-icon': {
           color: alpha(sidebarTextColor, 0.7),
           fontSize: 20,
           display: 'block',
         },
+
         '& .nav-item-text': {
           color: alpha(sidebarTextColor, 0.7),
           fontWeight: Fonts.MEDIUM,
@@ -49,14 +47,17 @@ const VerticalNavItem = ({ children, level, ...rest }) => {
         '& .MuiTouchRipple-root': {
           zIndex: 1,
         },
+
         '&.nav-item-header': {
           textTransform: 'uppercase',
         },
+
         '&:hover, &:focus': {
           '& .nav-item-text, & .nav-item-icon, & .nav-item-icon-arrow': {
             color: sidebarTextColor,
           },
         },
+
         '&.active': {
           backgroundColor: sidebarMenuSelectedBgColor,
           pointerEvents: 'none',
@@ -68,6 +69,7 @@ const VerticalNavItem = ({ children, level, ...rest }) => {
             color: sidebarMenuSelectedTextColor + '!important',
           },
         },
+
         '&.rounded-menu': {
           mr: 4,
           ml: 0,
@@ -76,6 +78,7 @@ const VerticalNavItem = ({ children, level, ...rest }) => {
           pr: 3,
           borderRadius: '0 30px 30px 0',
         },
+
         '&.rounded-menu-reverse': {
           ml: 4,
           mr: 0,
@@ -84,6 +87,7 @@ const VerticalNavItem = ({ children, level, ...rest }) => {
           pr: 3,
           borderRadius: '30px 0 0 30px',
         },
+
         '&.standard-menu': {
           mx: 0,
           width: '100%',
@@ -101,9 +105,10 @@ const VerticalNavItem = ({ children, level, ...rest }) => {
             backgroundColor: 'transparent',
           },
           '&.active:after': {
-            backgroundColor: (theme) => theme.palette.primary.main,
+            backgroundColor: theme.palette.primary.main,
           },
         },
+
         '&.curved-menu': {
           ml: 4,
           mr: 0,
@@ -150,11 +155,11 @@ const VerticalNavItem = ({ children, level, ...rest }) => {
             display: 'none',
           },
         },
-      }}
+      })}
       {...rest}
     >
       {children}
-    </ListItem>
+    </ListItemButton>
   );
 };
 

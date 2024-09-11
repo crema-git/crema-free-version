@@ -11,16 +11,13 @@ const AppLocaleProvider = (props) => {
   if (allowMultiLanguage) {
     const currentAppLocale = AppLocale[locale.locale];
     return (
-      <IntlProvider
-        locale={currentAppLocale.locale}
-        messages={currentAppLocale.messages}
-      >
+      <IntlProvider locale={currentAppLocale.locale} messages={currentAppLocale.messages}>
         <IntlGlobalProvider>{props.children}</IntlGlobalProvider>
       </IntlProvider>
     );
   } else {
     return (
-      <IntlProvider locale='en' messages={[]}>
+      <IntlProvider locale="en" messages={[]}>
         {props.children}
       </IntlProvider>
     );

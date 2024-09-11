@@ -43,8 +43,8 @@ const TableItem = (props) => {
   const { row } = props;
 
   return (
-    <TableRow key={row.name} className='item-hover'>
-      <TableCellWrapper component='th' scope='row'>
+    <TableRow key={row.name} className="item-hover">
+      <TableCellWrapper component="th" scope="row">
         {row.id}.
       </TableCellWrapper>
       <TableCellWrapper>
@@ -74,20 +74,20 @@ const TableItem = (props) => {
               {row.name[0].toUpperCase()}
             </Avatar>
           )}
-          <Typography variant='h5' component='h5'>
+          <Typography variant="h5" component="h5">
             {row.name}
           </Typography>
         </Box>
       </TableCellWrapper>
       <TableCellWrapper>{row.type}</TableCellWrapper>
-      <TableCellWrapper align='left'>
-        <Box component='span' sx={{ fontWeight: Fonts.MEDIUM }}>
+      <TableCellWrapper align="left">
+        <Box component="span" sx={{ fontWeight: Fonts.MEDIUM }}>
           {row.amount}
         </Box>
       </TableCellWrapper>
       <TableCellWrapper>
         <Box
-          component='span'
+          component="span"
           sx={{
             padding: '5px 14px',
             borderRadius: 30,

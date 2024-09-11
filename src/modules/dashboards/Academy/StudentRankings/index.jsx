@@ -24,9 +24,9 @@ const StudentRankings = ({ studentRankings }) => {
             height: 30,
             width: 30,
           }}
-          aria-label='more'
-          aria-controls='long-menu'
-          aria-haspopup='true'
+          aria-label="more"
+          aria-controls="long-menu"
+          aria-haspopup="true"
           onClick={null}
         >
           <MoreVertIcon />
@@ -34,7 +34,7 @@ const StudentRankings = ({ studentRankings }) => {
       }
     >
       <AppTableContainer>
-        <Table className='table'>
+        <Table className="table">
           <TableHead>
             <TableHeading />
           </TableHead>

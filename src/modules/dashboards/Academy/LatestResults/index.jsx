@@ -18,7 +18,7 @@ const getColor = (percentage) => {
 const ResultItem = ({ result }) => {
   return (
     <Box
-      className='item-hover'
+      className="item-hover"
       sx={{
         px: 5,
         py: 3,
@@ -36,7 +36,7 @@ const ResultItem = ({ result }) => {
         }}
       >
         <Box
-          component='p'
+          component="p"
           sx={{
             fontSize: 14,
             fontWeight: Fonts.MEDIUM,
@@ -49,7 +49,7 @@ const ResultItem = ({ result }) => {
           {result.chapter}
         </Box>
         <Box
-          component='p'
+          component="p"
           sx={{
             ml: 1,
             overflow: 'hidden',
@@ -69,17 +69,13 @@ const ResultItem = ({ result }) => {
           alignItems: 'center',
         }}
       >
-        <AppLinearProgress
-          style={{ flex: 1 }}
-          value={result.percentage}
-          activeColor={getColor(result.percentage)}
-        />
+        <AppLinearProgress style={{ flex: 1 }} value={result.percentage} activeColor={getColor(result.percentage)} />
         <Box
           sx={{
             pl: 2,
             color: getColor(result.percentage),
           }}
-          component='span'
+          component="span"
         >
           {result.percentage}%
         </Box>
@@ -99,13 +95,9 @@ const LatestResults = ({ latestResults }) => {
     return data;
   };
   return (
-    <AppCard
-      sxStyle={{ height: 1 }}
-      title={messages['academy.latestResults']}
-      contentStyle={{ px: 0 }}
-    >
+    <AppCard sxStyle={{ height: 1 }} title={messages['academy.latestResults']} contentStyle={{ px: 0 }}>
       <AppList
-        animation='transition.slideRightBigIn'
+        animation="transition.slideRightBigIn"
         data={getData(latestResults)}
         renderRow={(data, index) => <ResultItem key={index} result={data} />}
       />

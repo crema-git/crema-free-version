@@ -12,17 +12,9 @@ import AppTooltip from '@crema/components/AppTooltip';
 import { StyledBox } from './index.style';
 import { useInfoViewActionsContext } from '@crema/context/AppContextProvider/InfoViewContextProvider';
 import { putDataApi } from '@crema/hooks/APIHooks';
-import {
-  useTodoActionsContext,
-  useTodoContext,
-} from '../../../context/TodoContextProvider';
+import { useTodoActionsContext, useTodoContext } from '../../../context/TodoContextProvider';
 
-const CheckedTasksActions = ({
-  checkedTasks,
-  setCheckedTasks,
-  onUpdateTasks,
-  page,
-}) => {
+const CheckedTasksActions = ({ checkedTasks, setCheckedTasks, onUpdateTasks, page }) => {
   const params = useParams();
   const infoViewActionsContext = useInfoViewActionsContext();
   const { labelList } = useTodoContext();
@@ -74,11 +66,11 @@ const CheckedTasksActions = ({
 
   return (
     <>
-      <StyledBox component='span'>
-        <Box component='span'>
+      <StyledBox component="span">
+        <Box component="span">
           <AppsDeleteIcon
             deleteAction={onDeleteTasks}
-            deleteTitle={<IntlMessages id='todo.deleteMessage' />}
+            deleteTitle={<IntlMessages id="todo.deleteMessage" />}
             sx={{
               cursor: 'pointer',
               color: 'text.disabled',
@@ -86,13 +78,13 @@ const CheckedTasksActions = ({
           />
         </Box>
 
-        <Box component='span'>
-          <AppTooltip title={<IntlMessages id='common.label' />}>
+        <Box component="span">
+          <AppTooltip title={<IntlMessages id="common.label" />}>
             <IconButton
               sx={{
                 color: 'text.disabled',
               }}
-              size='large'
+              size="large"
               onClick={onLabelOpen}
             >
               <LabelOutlinedIcon
@@ -107,19 +99,10 @@ const CheckedTasksActions = ({
           </AppTooltip>
         </Box>
       </StyledBox>
-      <Menu
-        anchorEl={isLabelOpen}
-        open={Boolean(isLabelOpen)}
-        onClose={onLabelClose}
-      >
+      <Menu anchorEl={isLabelOpen} open={Boolean(isLabelOpen)} onClose={onLabelClose}>
         {labelList.map((label) => {
           return (
-            <MenuItem
-              key={label.id}
-              sx={{ p: '8px !important' }}
-              value={label.id}
-              onClick={onSelectLabel}
-            >
+            <MenuItem key={label.id} sx={{ p: '8px !important' }} value={label.id} onClick={onSelectLabel}>
               {label.name}
             </MenuItem>
           );

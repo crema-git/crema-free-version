@@ -9,7 +9,7 @@ import { Fonts } from '@crema/constants/AppEnums';
 
 const AppComponentHeader = ({ title, description, refUrl }) => {
   return (
-    <AppAnimate animation='transition.slideDownIn' delay={300}>
+    <AppAnimate animation="transition.slideDownIn" delay={300}>
       <Box
         sx={{
           display: 'flex',
@@ -20,24 +20,24 @@ const AppComponentHeader = ({ title, description, refUrl }) => {
       >
         <Box sx={{ mb: 3, pr: { sm: 3 }, flex: { sm: 1 } }}>
           <Typography
-            component='h3'
-            variant='h3'
-            sx={{
-              color: (theme) => theme.palette.text.primary,
+            component="h3"
+            variant="h3"
+            sx={(theme) => ({
+              color: theme.palette.text.primary,
               fontWeight: Fonts.MEDIUM,
               fontSize: { xs: 18, sm: 20 },
-            }}
+            })}
           >
             {title}
           </Typography>
           {description ? (
             <Typography
-              variant='h6'
-              sx={{
+              variant="h6"
+              sx={(theme) => ({
                 fontSize: 15,
                 fontWeight: Fonts.REGULAR,
-                color: (theme) => theme.palette.text.secondary,
-              }}
+                color: theme.palette.text.secondary,
+              })}
             >
               {description}
             </Typography>
@@ -45,12 +45,7 @@ const AppComponentHeader = ({ title, description, refUrl }) => {
         </Box>
         {refUrl ? (
           <Box sx={{ height: 40 }}>
-            <Button
-              variant='outlined'
-              color='primary'
-              href={refUrl}
-              target='_blank'
-            >
+            <Button variant="outlined" color="primary" href={refUrl} target="_blank">
               Reference <LinkIcon sx={{ pl: 1 }} />
             </Button>
           </Box>
@@ -67,4 +62,3 @@ AppComponentHeader.propTypes = {
   description: PropTypes.string,
   refUrl: PropTypes.string,
 };
-AppComponentHeader.defaultProps = {};

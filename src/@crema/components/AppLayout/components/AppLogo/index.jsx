@@ -1,9 +1,8 @@
 import React from 'react';
 import { Box } from '@mui/material';
 import { useThemeContext } from '@crema/context/AppContextProvider/ThemeContextProvider';
-import { alpha } from '@mui/material/styles';
-import  Logo  from '../../../../../assets/icon/logo.svg';
-import LogoText  from '../../../../../assets/icon/logo_text.svg';
+import Logo from '../../../../../assets/icon/logo.svg';
+import LogoText from '../../../../../assets/icon/logo_text.svg';
 
 const AppLogo = () => {
   const { theme } = useThemeContext();
@@ -21,9 +20,9 @@ const AppLogo = () => {
           height: { xs: 40, sm: 45 },
         },
       }}
-      className='app-logo'
+      className="app-logo"
     >
-      <img src={Logo} alt={Logo}/>
+      <img src={Logo} alt={Logo} />
       <Box
         sx={{
           mt: 1,
@@ -33,7 +32,7 @@ const AppLogo = () => {
           },
         }}
       >
-          <img src={LogoText} alt={LogoText}/>
+        <img src={LogoText} alt={LogoText} />
       </Box>
     </Box>
   );

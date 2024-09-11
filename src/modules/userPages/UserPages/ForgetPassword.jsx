@@ -13,13 +13,13 @@ import AppTextField from '@crema/components/AppFormComponents/AppTextField';
 const validationSchema = yup.object({
   email: yup
     .string()
-    .email(<IntlMessages id='validation.emailFormat' />)
-    .required(<IntlMessages id='validation.emailRequired' />),
+    .email(<IntlMessages id="validation.emailFormat" />)
+    .required(<IntlMessages id="validation.emailRequired" />),
 });
 
 const ForgetPassword = () => {
   return (
-    <AppAnimate animation='transition.slideUpIn' delay={200}>
+    <AppAnimate animation="transition.slideUpIn" delay={200}>
       <Box
         sx={{
           pb: 6,
@@ -38,8 +38,7 @@ const ForgetPassword = () => {
             textAlign: 'center',
             padding: { xs: 8, lg: 12, xl: '48px 64px' },
             overflow: 'hidden',
-            boxShadow:
-              '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
+            boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
           }}
         >
           <Box
@@ -58,11 +57,7 @@ const ForgetPassword = () => {
                 },
               }}
             >
-              <img
-                className='logo'
-                src={'/assets/images/logo-icon-large.png'}
-                alt='crema'
-              />
+              <img className="logo" src={'/assets/images/logo-icon-large.png'} alt="crema" />
             </Box>
             <Box
               sx={{
@@ -71,7 +66,7 @@ const ForgetPassword = () => {
                 fontSize: 20,
               }}
             >
-              <IntlMessages id='common.forgetPassword' />
+              <IntlMessages id="common.forgetPassword" />
             </Box>
           </Box>
 
@@ -82,10 +77,10 @@ const ForgetPassword = () => {
             }}
           >
             <Typography>
-              <IntlMessages id='common.forgetPasswordTextOne' />
+              <IntlMessages id="common.forgetPasswordTextOne" />
             </Typography>
-            <Typography component='p'>
-              <IntlMessages id='common.forgetPasswordTextTwo' />
+            <Typography component="p">
+              <IntlMessages id="common.forgetPasswordTextTwo" />
             </Typography>
           </Box>
 
@@ -111,18 +106,18 @@ const ForgetPassword = () => {
                   }}
                 >
                   <AppTextField
-                    name='email'
-                    label={<IntlMessages id='common.emailAddress' />}
+                    name="email"
+                    label={<IntlMessages id="common.emailAddress" />}
                     sx={{
                       width: '100%',
                     }}
-                    variant='outlined'
+                    variant="outlined"
                   />
                 </Box>
 
                 <Button
-                  variant='contained'
-                  color='primary'
+                  variant="contained"
+                  color="primary"
                   disabled={isSubmitting}
                   sx={{
                     width: '100%',
@@ -130,9 +125,9 @@ const ForgetPassword = () => {
                     textTransform: 'capitalize',
                     height: 44,
                   }}
-                  type='submit'
+                  type="submit"
                 >
-                  <IntlMessages id='common.sendNewPassword' />
+                  <IntlMessages id="common.sendNewPassword" />
                 </Button>
               </Form>
             )}

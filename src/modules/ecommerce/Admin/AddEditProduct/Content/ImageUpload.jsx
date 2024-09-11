@@ -4,10 +4,7 @@ import AppGrid from '@crema/components/AppGrid';
 import { Box } from '@mui/material';
 import { Fonts } from '@crema/constants/AppEnums';
 import PropTypes from 'prop-types';
-import {
-  PreviewThumb,
-  UploadModern,
-} from '../../../../thirdParty/reactDropzone/components';
+import { PreviewThumb, UploadModern } from '../../../../thirdParty/reactDropzone/components';
 
 const ImgUpload = ({ uploadedFiles, setUploadedFiles }) => {
   const dropzone = useDropzone({
@@ -34,29 +31,21 @@ const ImgUpload = ({ uploadedFiles, setUploadedFiles }) => {
   };
 
   return (
-    <section className='container' style={{ cursor: 'pointer' }}>
+    <section className="container" style={{ cursor: 'pointer' }}>
       <UploadModern
         setUploadedFiles={setUploadedFiles}
         dropzone={dropzone}
         customContent={
           <>
-            <img
-              src={'/assets/icon/upload.svg'}
-              width={40}
-              height={40}
-              alt='upload'
-            />
+            <img src={'/assets/icon/upload.svg'} width={40} height={40} alt="upload" />
 
             <p>
-              <Box
-                component='span'
-                sx={{ color: 'primary.main', fontWeight: Fonts.MEDIUM }}
-              >
+              <Box component="span" sx={{ color: 'primary.main', fontWeight: Fonts.MEDIUM }}>
                 Click to upload
               </Box>{' '}
               or drag and drop
             </p>
-            <Box component='p' sx={{ mt: 1 }}>
+            <Box component="p" sx={{ mt: 1 }}>
               SVG, PNG, JPG or GIF (max. 800x400px)
             </Box>
           </>
@@ -70,11 +59,7 @@ const ImgUpload = ({ uploadedFiles, setUploadedFiles }) => {
         column={4}
         itemPadding={5}
         renderRow={(file, index) => (
-          <PreviewThumb
-            file={file}
-            onDeleteUploadFile={onDeleteUploadFile}
-            key={index + file.path}
-          />
+          <PreviewThumb file={file} onDeleteUploadFile={onDeleteUploadFile} key={index + file.path} />
         )}
       />
     </section>

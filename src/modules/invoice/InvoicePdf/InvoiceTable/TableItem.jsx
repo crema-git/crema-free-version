@@ -34,24 +34,22 @@ const TableItem = ({ data, currencyData }) => {
         },
       }}
     >
-      <StyledTableCell align='left'>
+      <StyledTableCell align="left">
         <Box sx={{ display: 'flex', alignItems: 'center' }}>{data?.id}</Box>
       </StyledTableCell>
       <StyledTableCell>{data?.name}</StyledTableCell>
-      <StyledTableCell align='left'>
+      <StyledTableCell align="left">
         {data?.duration?.from} To {data?.duration?.to}
       </StyledTableCell>
-      <StyledTableCell align='left'>
+      <StyledTableCell align="left">
         {data?.quantity?.value}{' '}
-        {data?.quantity?.type !== 'fixed' &&
-          `${data?.quantity?.type}${data?.quantity?.value > 1 ? 's' : ''}`}
+        {data?.quantity?.type !== 'fixed' && `${data?.quantity?.type}${data?.quantity?.value > 1 ? 's' : ''}`}
       </StyledTableCell>
       <StyledTableCell>
-        {data?.unitPrice}{' '}
-        {data?.quantity?.type !== 'fixed' ? `per ${data?.quantity?.type}` : ''}
+        {data?.unitPrice} {data?.quantity?.type !== 'fixed' ? `per ${data?.quantity?.type}` : ''}
       </StyledTableCell>
 
-      <StyledTableCell align='left' sx={{ width: '30px' }}>
+      <StyledTableCell align="left" sx={{ width: '30px' }}>
         <Box sx={{ display: 'flex', alignItems: 'center' }}>
           {formatCurrency(
             data?.total || 0,

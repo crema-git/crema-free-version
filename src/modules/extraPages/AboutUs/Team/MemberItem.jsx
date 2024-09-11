@@ -15,7 +15,7 @@ const MemberItem = ({ member }) => {
       }}
     >
       <Typography
-        component='h5'
+        component="h5"
         sx={{
           mb: 1,
           fontWeight: Fonts.SEMI_BOLD,

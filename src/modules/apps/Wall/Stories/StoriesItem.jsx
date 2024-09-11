@@ -23,8 +23,7 @@ const UserInfoContainer = styled('div')(({ theme }) => ({
     top: 0,
     width: '100%',
     height: '100%',
-    backgroundImage:
-      'linear-gradient(180deg, rgba(120, 130, 146, 0) 7.29%, #788292 100%)',
+    backgroundImage: 'linear-gradient(180deg, rgba(120, 130, 146, 0) 7.29%, #788292 100%)',
     borderBottomLeftRadius: 4,
     borderBottomRightRadius: 4,
     opacity: 0.65,
@@ -44,14 +43,14 @@ const StoriesItem = ({ data }) => {
       }}
     >
       <CardMedia
-        component='img'
+        component="img"
         sx={{
           width: '100%',
           minHeight: 160,
           borderRadius: 1,
         }}
         src={imgSrc}
-        alt='Stories 1'
+        alt="Stories 1"
       />
       <UserInfoContainer>
         <Avatar
@@ -67,7 +66,7 @@ const StoriesItem = ({ data }) => {
             },
           }}
           src={avatar}
-          alt='Avatar'
+          alt="Avatar"
         />
         <Typography
           sx={{

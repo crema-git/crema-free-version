@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import { Fonts } from '@crema/constants/AppEnums';
 import AppCard from '@crema/components/AppCard';
 
-const StatsCard = ({ icon, bgColor, text, value }) => {
+const StatsCard = ({ icon, text, bgColor = '', value = '' }) => {
   return (
     <AppCard
       sxStyle={{
@@ -24,10 +24,10 @@ const StatsCard = ({ icon, bgColor, text, value }) => {
           backgroundColor: bgColor,
         }}
       >
-        <img src={icon} alt='' />
+        <img src={icon} alt="" />
       </Avatar>
       <Box
-        component='p'
+        component="p"
         sx={{
           color: 'text.secondary',
           mb: 2,
@@ -37,7 +37,7 @@ const StatsCard = ({ icon, bgColor, text, value }) => {
         {text}
       </Box>
       <Box
-        component='h3'
+        component="h3"
         sx={{
           fontWeight: Fonts.MEDIUM,
           fontSize: 20,
@@ -50,11 +50,6 @@ const StatsCard = ({ icon, bgColor, text, value }) => {
 };
 
 export default StatsCard;
-
-StatsCard.defaultProps = {
-  bgColor: '',
-  value: '',
-};
 
 StatsCard.propTypes = {
   text: PropTypes.any.isRequired,

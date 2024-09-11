@@ -93,22 +93,22 @@ const VideoCall = ({ data }) => {
           height: 140,
           width: '100%',
         }}
-        image='/assets/images/wall/v-card.jpg'
-        alt='Video Thumb'
+        image="/assets/images/wall/v-card.jpg"
+        alt="Video Thumb"
       />
       <Box px={5} pb={4}>
         <UserInfo>
           <UserWrapper>
-            <Avatar src='/assets/images/avatar/A5.jpg' alt='User' />
+            <Avatar src="/assets/images/avatar/A5.jpg" alt="User" />
             <UserStatus>
               <CheckCircleIcon />
             </UserStatus>
           </UserWrapper>
-          <Typography component='h3' variant='h3'>
-            <IntlMessages id='wall.ericBrickey' />
+          <Typography component="h3" variant="h3">
+            <IntlMessages id="wall.ericBrickey" />
           </Typography>
-          <Box component='p' color='text.secondary' mt={1}>
-            <IntlMessages id='wall.osloNorway' />
+          <Box component="p" color="text.secondary" mt={1}>
+            <IntlMessages id="wall.osloNorway" />
           </Box>
         </UserInfo>
         <Box
@@ -119,45 +119,38 @@ const VideoCall = ({ data }) => {
             flexDirection: 'column',
           }}
         >
-          <Box mb={2.5} component='h4'>
+          <Box mb={2.5} component="h4">
             {title}
           </Box>
-          <Box display='flex' alignItems='center' mb={{ xs: 5, xl: 7.5 }}>
+          <Box display="flex" alignItems="center" mb={{ xs: 5, xl: 7.5 }}>
             {users.slice(0, 4).map((user) => (
               <UserAvatar key={user.id} src={user.profilePic} />
             ))}
-            {users.length > 4 ? (
-              <AvatarCount>+{users.length - 4}</AvatarCount>
-            ) : null}
+            {users.length > 4 ? <AvatarCount>+{users.length - 4}</AvatarCount> : null}
           </Box>
-          <Box
-            display='flex'
-            alignItems='center'
-            justifyContent='center'
-            flexWrap='wrap'
-          >
+          <Box display="flex" alignItems="center" justifyContent="center" flexWrap="wrap">
             <Box mx={2} mb={2}>
               <Button
                 startIcon={<PhoneOutlinedIcon />}
-                color='primary'
-                variant='contained'
+                color="primary"
+                variant="contained"
                 sx={{
                   textTransform: 'capitalize',
                 }}
               >
-                <IntlMessages id='wall.groupCall' />
+                <IntlMessages id="wall.groupCall" />
               </Button>
             </Box>
             <Box mx={2} mb={2}>
               <Button
                 startIcon={<VideocamOutlinedIcon />}
-                color='primary'
-                variant='outlined'
+                color="primary"
+                variant="outlined"
                 sx={{
                   textTransform: 'capitalize',
                 }}
               >
-                <IntlMessages id='wall.videoCall' />
+                <IntlMessages id="wall.videoCall" />
               </Button>
             </Box>
           </Box>

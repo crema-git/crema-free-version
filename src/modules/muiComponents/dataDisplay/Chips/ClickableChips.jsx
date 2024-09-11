@@ -8,9 +8,9 @@ export default function ClickableChips() {
   };
 
   return (
-    <Stack direction='row' spacing={1}>
-      <Chip label='Clickable' onClick={handleClick} />
-      <Chip label='Clickable' variant='outlined' onClick={handleClick} />
+    <Stack direction="row" spacing={1}>
+      <Chip label="Clickable" onClick={handleClick} />
+      <Chip label="Clickable" variant="outlined" onClick={handleClick} />
     </Stack>
   );
 }

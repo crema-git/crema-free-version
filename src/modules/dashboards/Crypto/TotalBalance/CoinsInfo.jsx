@@ -3,7 +3,7 @@ import Box from '@mui/material/Box';
 import PropTypes from 'prop-types';
 import { Fonts } from '@crema/constants/AppEnums';
 
-const CoinsInfo = ({ coins }) => {
+const CoinsInfo = ({ coins = [] }) => {
   return (
     <Box
       sx={{
@@ -24,7 +24,7 @@ const CoinsInfo = ({ coins }) => {
             key={coin.id}
           >
             <Box
-              component='h3'
+              component="h3"
               sx={{
                 fontWeight: Fonts.BOLD,
                 fontSize: 20,
@@ -34,7 +34,7 @@ const CoinsInfo = ({ coins }) => {
               {coin.value}
             </Box>
             <Box
-              component='p'
+              component="p"
               sx={{
                 fontSize: 14,
                 color: 'text.secondary',
@@ -50,10 +50,6 @@ const CoinsInfo = ({ coins }) => {
 };
 
 export default CoinsInfo;
-
-CoinsInfo.defaultProps = {
-  coins: [],
-};
 
 CoinsInfo.propTypes = {
   coins: PropTypes.array,

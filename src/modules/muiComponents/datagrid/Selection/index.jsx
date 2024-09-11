@@ -1,29 +1,29 @@
-import React from "react";
-import AppComponentHeader from "@crema/components/AppComponentHeader";
-import AppGridContainer from "@crema/components/AppGridContainer";
-import Grid from "@mui/material/Grid";
-import AppComponentCard from "@crema/components/AppComponentCard";
+import React from 'react';
+import AppComponentHeader from '@crema/components/AppComponentHeader';
+import AppGridContainer from '@crema/components/AppGridContainer';
+import Grid from '@mui/material/Grid';
+import AppComponentCard from '@crema/components/AppComponentCard';
 
-import SingleRowSelectionGrid from "./SingleRowSelectionGrid";
-import SingleRowSelectionGridSource from "./SingleRowSelectionGrid?raw";
+import SingleRowSelectionGrid from './SingleRowSelectionGrid';
+import SingleRowSelectionGridSource from './SingleRowSelectionGrid?raw';
 
-import MultipleRowSelectionGrid from "./MultipleRowSelectionGrid";
-import MultipleRowSelectionGridSource from "./MultipleRowSelectionGrid?raw";
+import MultipleRowSelectionGrid from './MultipleRowSelectionGrid';
+import MultipleRowSelectionGridSource from './MultipleRowSelectionGrid?raw';
 
-import CheckboxSelectionGrid from "./CheckboxSelectionGrid";
-import CheckboxSelectionGridSource from "./CheckboxSelectionGrid?raw";
+import CheckboxSelectionGrid from './CheckboxSelectionGrid';
+import CheckboxSelectionGridSource from './CheckboxSelectionGrid?raw';
 
-import DisableClickSelectionGrid from "./DisableClickSelectionGrid";
-import DisableClickSelectionGridSource from "./DisableClickSelectionGrid?raw";
+import DisableClickSelectionGrid from './DisableClickSelectionGrid';
+import DisableClickSelectionGridSource from './DisableClickSelectionGrid?raw';
 
-import DisableRowSelection from "./DisableRowSelection";
-import DisableRowSelectionSource from "./DisableRowSelection?raw";
+import DisableRowSelection from './DisableRowSelection';
+import DisableRowSelectionSource from './DisableRowSelection?raw';
 
-import ControlledSelectionGrid from "./ControlledSelectionGrid";
-import ControlledSelectionGridSource from "./ControlledSelectionGrid?raw";
+import ControlledSelectionGrid from './ControlledSelectionGrid';
+import ControlledSelectionGridSource from './ControlledSelectionGrid?raw';
 
-import ControlledSelectionServerPaginationGrid from "./ControlledSelectionServerPaginationGrid";
-import ControlledSelectionServerPaginationGridSource from "./ControlledSelectionServerPaginationGrid?raw";
+import ControlledSelectionServerPaginationGrid from './ControlledSelectionServerPaginationGrid';
+import ControlledSelectionServerPaginationGridSource from './ControlledSelectionServerPaginationGrid?raw';
 
 const Selection = () => {
   return (

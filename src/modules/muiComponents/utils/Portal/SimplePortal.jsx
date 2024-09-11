@@ -12,7 +12,7 @@ export default function SimplePortal() {
 
   return (
     <div>
-      <button type='button' onClick={handleClick}>
+      <button type="button" onClick={handleClick}>
         {show ? 'Unmount children' : 'Mount children'}
       </button>
       <Box sx={{ p: 1, my: 1, border: '1px solid' }}>

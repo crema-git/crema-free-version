@@ -1,23 +1,23 @@
-import React from "react";
-import AppComponentHeader from "@crema/components/AppComponentHeader";
-import AppGridContainer from "@crema/components/AppGridContainer";
-import Grid from "@mui/material/Grid";
-import AppComponentCard from "@crema/components/AppComponentCard";
+import React from 'react';
+import AppComponentHeader from '@crema/components/AppComponentHeader';
+import AppGridContainer from '@crema/components/AppGridContainer';
+import Grid from '@mui/material/Grid';
+import AppComponentCard from '@crema/components/AppComponentCard';
 
-import ListDividers from "./ListDividers";
-import ListDividersSource from "./ListDividers?raw";
-import InsetDividers from "./InsetDividers";
-import InsetDividersSource from "./InsetDividers?raw";
-import SubheaderDividers from "./SubheaderDividers";
-import SubheaderDividersSource from "./SubheaderDividers?raw";
-import MiddleDividers from "./MiddleDivider";
-import MiddleDividersSource from "./MiddleDivider?raw";
-import DividerText from "./DividersText";
-import DividerTextSource from "./DividersText?raw";
-import VerticalDividers from "./VerticalDivider";
-import VerticalDividersSource from "./VerticalDivider?raw";
-import VerticalDividersWithText from "./VerticalDividerWithText";
-import VerticalDividerWithTextSource from "./VerticalDividerWithText?raw";
+import ListDividers from './ListDividers';
+import ListDividersSource from './ListDividers?raw';
+import InsetDividers from './InsetDividers';
+import InsetDividersSource from './InsetDividers?raw';
+import SubheaderDividers from './SubheaderDividers';
+import SubheaderDividersSource from './SubheaderDividers?raw';
+import MiddleDividers from './MiddleDivider';
+import MiddleDividersSource from './MiddleDivider?raw';
+import DividerText from './DividersText';
+import DividerTextSource from './DividersText?raw';
+import VerticalDividers from './VerticalDivider';
+import VerticalDividersSource from './VerticalDivider?raw';
+import VerticalDividersWithText from './VerticalDividerWithText';
+import VerticalDividerWithTextSource from './VerticalDividerWithText?raw';
 
 const Divider = () => {
   return (
@@ -39,12 +39,7 @@ const Divider = () => {
           />
         </Grid>
         <Grid item xs={12} md={6}>
-          <AppComponentCard
-            title="Inset dividers"
-            component={InsetDividers}
-            source={InsetDividersSource}
-            noScrollbar
-          />
+          <AppComponentCard title="Inset dividers" component={InsetDividers} source={InsetDividersSource} noScrollbar />
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard

@@ -13,7 +13,7 @@ const NotificationItem = (props) => {
       sx={{
         padding: '8px 20px',
       }}
-      className='item-hover'
+      className="item-hover"
     >
       <ListItemAvatar
         sx={{
@@ -26,27 +26,27 @@ const NotificationItem = (props) => {
             width: 48,
             height: 48,
           }}
-          alt='Remy Sharp'
+          alt="Remy Sharp"
           src={item.image}
         />
       </ListItemAvatar>
       <Box
-        sx={{
+        sx={(theme) => ({
           fontSize: 14,
-          color: (theme) => theme.palette.text.secondary,
-        }}
+          color: theme.palette.text.secondary,
+        })}
       >
         <Typography>
           <Box
-            component='span'
-            sx={{
+            component="span"
+            sx={(theme) => ({
               fontSize: 14,
               fontWeight: Fonts.MEDIUM,
               mb: 0.5,
-              color: (theme) => theme.palette.text.primary,
+              color: theme.palette.text.primary,
               mr: 1,
               display: 'inline-block',
-            }}
+            })}
           >
             {item.name}
           </Box>

@@ -8,11 +8,20 @@ import { Fonts } from '@crema/constants/AppEnums';
 import { green } from '@mui/material/colors';
 import AppCard from '@crema/components/AppCard';
 
-const FloatingGraphs = ({ data, title }) => {
+const FloatingGraphs = ({
+  data = {
+    value: '',
+    change: 0,
+    strokeColor: '#4299E1',
+    areaColor: '#90CDF4',
+    graphData: [],
+  },
+  title = '',
+}) => {
   return (
     <AppCard sxStyle={{ height: 1, textAlign: 'center' }}>
       <Box
-        component='p'
+        component="p"
         sx={{
           mb: 3,
           color: 'text.secondary',
@@ -22,7 +31,7 @@ const FloatingGraphs = ({ data, title }) => {
         {title}
       </Box>
       <Box
-        component='h3'
+        component="h3"
         sx={{
           fontWeight: Fonts.MEDIUM,
           fontSize: 20,
@@ -32,7 +41,7 @@ const FloatingGraphs = ({ data, title }) => {
         }}
       >
         <Box
-          component='span'
+          component="span"
           sx={{
             px: 3,
           }}
@@ -41,7 +50,7 @@ const FloatingGraphs = ({ data, title }) => {
         </Box>
         {data.change > 0 ? (
           <Box
-            component='span'
+            component="span"
             sx={{
               display: 'flex',
               alignItems: 'center',
@@ -52,7 +61,7 @@ const FloatingGraphs = ({ data, title }) => {
             }}
           >
             <Box
-              component='span'
+              component="span"
               sx={{
                 fontWeight: Fonts.LIGHT,
                 fontSize: 14,
@@ -61,7 +70,7 @@ const FloatingGraphs = ({ data, title }) => {
               <ArrowUpwardIcon />
             </Box>
             <Box
-              component='span'
+              component="span"
               sx={{
                 ml: 1,
                 mb: 1,
@@ -72,7 +81,7 @@ const FloatingGraphs = ({ data, title }) => {
           </Box>
         ) : (
           <Box
-            component='span'
+            component="span"
             sx={{
               display: 'flex',
               alignItems: 'center',
@@ -83,7 +92,7 @@ const FloatingGraphs = ({ data, title }) => {
             }}
           >
             <Box
-              component='span'
+              component="span"
               sx={{
                 fontWeight: Fonts.LIGHT,
                 fontSize: 14,
@@ -92,7 +101,7 @@ const FloatingGraphs = ({ data, title }) => {
               <ArrowDownwardIcon />
             </Box>
             <Box
-              component='span'
+              component="span"
               sx={{
                 ml: 1,
                 mb: 1,
@@ -109,28 +118,13 @@ const FloatingGraphs = ({ data, title }) => {
           mt: -2,
         }}
       >
-        <GraphFile
-          data={data.graphData}
-          strokeColor={data.strokeColor}
-          areaColor={data.areaColor}
-        />
+        <GraphFile data={data.graphData} strokeColor={data.strokeColor} areaColor={data.areaColor} />
       </Box>
     </AppCard>
   );
 };
 
 export default FloatingGraphs;
-
-FloatingGraphs.defaultProps = {
-  title: '',
-  data: {
-    value: '',
-    change: 0,
-    strokeColor: '#4299E1',
-    areaColor: '#90CDF4',
-    graphData: [],
-  },
-};
 
 FloatingGraphs.propTypes = {
   data: PropTypes.object,

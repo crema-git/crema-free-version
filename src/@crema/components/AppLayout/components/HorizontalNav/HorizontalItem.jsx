@@ -15,8 +15,7 @@ function HorizontalItem(props) {
 
   const location = useLocation();
   const active = isUrlInChildren(item, location.pathname);
-  const { sidebarMenuSelectedBgColor, sidebarMenuSelectedTextColor } =
-    useSidebarContext();
+  const { sidebarMenuSelectedBgColor, sidebarMenuSelectedTextColor } = useSidebarContext();
 
   function isUrlInChildren(parent, url) {
     if (!parent.children) {
@@ -30,10 +29,7 @@ function HorizontalItem(props) {
         }
       }
 
-      if (
-        parent.children[i].url === url ||
-        url.includes(parent.children[i].url)
-      ) {
+      if (parent.children[i].url === url || url.includes(parent.children[i].url)) {
         return true;
       }
     }
@@ -45,7 +41,7 @@ function HorizontalItem(props) {
     <ListItem
       component={AppNavLink}
       to={item.url}
-      activeClassName='active'
+      activeClassName="active"
       className={clsx('navItemSubmenu', dense && 'dense')}
       exact={item.exact}
       sx={{
@@ -89,10 +85,8 @@ function HorizontalItem(props) {
         </Icon>
       )}
       <ListItemText
-        className='AppNavLinkTextSubmenu'
-        primary={
-          allowMultiLanguage ? <IntlMessages id={item.messageId} /> : item.title
-        }
+        className="AppNavLinkTextSubmenu"
+        primary={allowMultiLanguage ? <IntlMessages id={item.messageId} /> : item.title}
       />
       {item.count && (
         <Box ml={4}>
@@ -107,8 +101,6 @@ function HorizontalItem(props) {
     </ListItem>
   );
 }
-
-HorizontalItem.defaultProps = {};
 
 export default React.memo(HorizontalItem);
 

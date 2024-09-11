@@ -6,14 +6,16 @@ import PropTypes from 'prop-types';
 import { Fonts } from '@crema/constants/AppEnums';
 import AppCard from '@crema/components/AppCard';
 
-const WorkViews = ({ data }) => {
+const WorkViews = ({
+  data = {
+    views: '',
+    graphData: [],
+  },
+}) => {
   return (
-    <AppCard
-      sxStyle={{ height: 1 }}
-      contentStyle={{ display: 'flex', flexDirection: 'column' }}
-    >
+    <AppCard sxStyle={{ height: 1 }} contentStyle={{ display: 'flex', flexDirection: 'column' }}>
       <Box
-        component='h3'
+        component="h3"
         sx={{
           mb: 1,
           color: 'secondary.main',
@@ -24,14 +26,14 @@ const WorkViews = ({ data }) => {
         {data.views}
       </Box>
       <Box
-        component='p'
+        component="p"
         sx={{
           color: 'text.secondary',
           fontSize: 14,
           fontWeight: Fonts.REGULAR,
         }}
       >
-        <IntlMessages id='dashboard.workViews' />
+        <IntlMessages id="dashboard.workViews" />
       </Box>
 
       <Box
@@ -46,13 +48,6 @@ const WorkViews = ({ data }) => {
 };
 
 export default WorkViews;
-
-WorkViews.defaultProps = {
-  data: {
-    views: '',
-    graphData: [],
-  },
-};
 
 WorkViews.propTypes = {
   data: PropTypes.object,

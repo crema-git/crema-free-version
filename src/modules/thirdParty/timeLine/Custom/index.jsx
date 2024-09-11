@@ -12,7 +12,7 @@ const Timeline = () => {
           display: 'flex',
           justifyContent: {
             xs: 'center',
-            '@media (max-width: 499px)': 'flex-start',
+            '@media (maxWidth: 499px)': 'flex-start',
           },
           alignItems: 'center',
           width: '100%',

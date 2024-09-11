@@ -56,7 +56,7 @@ const MailDetailBody = (props) => {
             }}
           >
             <Box
-              component='span'
+              component="span"
               sx={{
                 fontSize: { xs: 16, sm: 18 },
                 marginRight: 3,

@@ -1,36 +1,16 @@
 import React from 'react';
 import { RoutePermittedRole } from '@crema/constants/AppEnums';
 
-const Signin = React.lazy(() =>
-  import('../../../modules/userPages/UserPages/Signin'),
-);
-const Signup = React.lazy(() =>
-  import('../../../modules/userPages/UserPages/Signup'),
-);
-const ForgetPassword = React.lazy(() =>
-  import('../../../modules/userPages/UserPages/ForgetPassword'),
-);
-const ResetPassword = React.lazy(() =>
-  import('../../../modules/userPages/UserPages/ResetPassword'),
-);
-const UnlockScreen = React.lazy(() =>
-  import('../../../modules/userPages/UserPages/UnlockScreen'),
-);
-const StyledSignin = React.lazy(() =>
-  import('../../../modules/userPages/StyledUserPages/Signin'),
-);
-const StyledSignup = React.lazy(() =>
-  import('../../../modules/userPages/StyledUserPages/Signup'),
-);
-const StyledForgetPassword = React.lazy(() =>
-  import('../../../modules/userPages/StyledUserPages/ForgetPassword'),
-);
-const StyledResetPassword = React.lazy(() =>
-  import('../../../modules/userPages/StyledUserPages/ResetPassword'),
-);
-const StyledUnlockScreen = React.lazy(() =>
-  import('../../../modules/userPages/StyledUserPages/UnlockScreen'),
-);
+const Signin = React.lazy(() => import('../../../modules/userPages/UserPages/Signin'));
+const Signup = React.lazy(() => import('../../../modules/userPages/UserPages/Signup'));
+const ForgetPassword = React.lazy(() => import('../../../modules/userPages/UserPages/ForgetPassword'));
+const ResetPassword = React.lazy(() => import('../../../modules/userPages/UserPages/ResetPassword'));
+const UnlockScreen = React.lazy(() => import('../../../modules/userPages/UserPages/UnlockScreen'));
+const StyledSignin = React.lazy(() => import('../../../modules/userPages/StyledUserPages/Signin'));
+const StyledSignup = React.lazy(() => import('../../../modules/userPages/StyledUserPages/Signup'));
+const StyledForgetPassword = React.lazy(() => import('../../../modules/userPages/StyledUserPages/ForgetPassword'));
+const StyledResetPassword = React.lazy(() => import('../../../modules/userPages/StyledUserPages/ResetPassword'));
+const StyledUnlockScreen = React.lazy(() => import('../../../modules/userPages/StyledUserPages/UnlockScreen'));
 
 export const userPagesConfig = [
   {

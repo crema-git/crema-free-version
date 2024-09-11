@@ -19,9 +19,7 @@ const WeeklyBestSellers = ({ data }) => {
       <AppScrollbar style={{ maxHeight: 200 }}>
         <AppList
           data={data}
-          renderRow={(bestSeller) => (
-            <BestSellersCell key={bestSeller.id} bestSeller={bestSeller} />
-          )}
+          renderRow={(bestSeller) => <BestSellersCell key={bestSeller.id} bestSeller={bestSeller} />}
         />
       </AppScrollbar>
     </AppCard>

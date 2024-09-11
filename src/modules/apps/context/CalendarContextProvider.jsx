@@ -1,15 +1,14 @@
-import React, { createContext, useContext, useEffect, useState } from "react";
-import PropTypes from "prop-types";
-import { useGetDataApi } from "@crema/hooks/APIHooks";
-import { useLocation, useParams } from "react-router-dom";
+import React, { createContext, useContext, useEffect, useState } from 'react';
+import PropTypes from 'prop-types';
+import { useGetDataApi } from '@crema/hooks/APIHooks';
+import { useLocation, useParams } from 'react-router-dom';
 
 const CalendarContext = createContext();
 const CalendarActionsContext = createContext();
 
 export const useCalendarContext = () => useContext(CalendarContext);
 
-export const useCalendarActionsContext = () =>
-  useContext(CalendarActionsContext);
+export const useCalendarActionsContext = () => useContext(CalendarActionsContext);
 
 export const CalendarContextProvider = ({ children }) => {
   const [filterData, setFilterData] = useState({
@@ -18,33 +17,26 @@ export const CalendarContextProvider = ({ children }) => {
   });
   const params = useParams();
   const { pathname } = useLocation();
-  const [{ apiData: labelList }] = useGetDataApi("/api/calendar/labels/list");
-  const [{ apiData: priorityList }] = useGetDataApi(
-    "/api/calendar/priority/list",
-  );
-  const [{ apiData: staffList }] = useGetDataApi("/api/calendar/staff/list");
-  const [{ apiData: folderList }] = useGetDataApi(
-    "/api/calendar/folders/list",
-    [],
-  );
-  const [{ apiData: statusList }] = useGetDataApi(
-    "/api/calendar/status/list",
-    [],
-  );
+  const [{ apiData: labelList }] = useGetDataApi('/api/calendar/labels/list');
+  const [{ apiData: priorityList }] = useGetDataApi('/api/calendar/priority/list');
+  const [{ apiData: staffList }] = useGetDataApi('/api/calendar/staff/list');
+  const [{ apiData: folderList }] = useGetDataApi('/api/calendar/folders/list', []);
+  const [{ apiData: statusList }] = useGetDataApi('/api/calendar/status/list', []);
   const [page, setPage] = useState(0);
 
-  const [
-    { apiData: taskLists, loading },
-    { setQueryParams, setData: setCalenderData, reCallAPI },
-  ] = useGetDataApi("/api/calendar/task/list", undefined, {}, false);
-  console.log("taskLists", taskLists);
+  const [{ apiData: taskLists, loading }, { setQueryParams, setData: setCalenderData, reCallAPI }] = useGetDataApi(
+    '/api/calendar/task/list',
+    { data: [] },
+    {},
+    false,
+  );
   useEffect(() => {
     setPage(0);
   }, [pathname]);
 
   useEffect(() => {
     setQueryParams({
-      type: params?.folder ? "folder" : "label",
+      type: params?.folder ? 'folder' : 'label',
       name: params?.folder || params?.label,
       page: page,
     });

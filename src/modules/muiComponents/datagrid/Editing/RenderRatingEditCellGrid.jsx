@@ -26,13 +26,7 @@ function RatingEditInputCell(props) {
 
   return (
     <Box sx={{ display: 'flex', alignItems: 'center', pr: 2 }}>
-      <Rating
-        ref={ref}
-        name='rating'
-        precision={1}
-        value={value}
-        onChange={handleChange}
-      />
+      <Rating ref={ref} name="rating" precision={1} value={value} onChange={handleChange} />
     </Box>
   );
 }

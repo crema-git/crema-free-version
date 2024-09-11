@@ -13,16 +13,16 @@ export default function SelectVariants() {
 
   return (
     <div>
-      <FormControl variant='standard' sx={{ m: 1, minWidth: 120 }}>
-        <InputLabel id='demo-simple-select-standard-label'>Age</InputLabel>
+      <FormControl variant="standard" sx={{ m: 1, minWidth: 120 }}>
+        <InputLabel id="demo-simple-select-standard-label">Age</InputLabel>
         <Select
-          labelId='demo-simple-select-standard-label'
-          id='demo-simple-select-standard'
+          labelId="demo-simple-select-standard-label"
+          id="demo-simple-select-standard"
           value={age}
           onChange={handleChange}
-          label='Age'
+          label="Age"
         >
-          <MenuItem value=''>
+          <MenuItem value="">
             <em>None</em>
           </MenuItem>
           <MenuItem value={10}>Ten</MenuItem>
@@ -30,15 +30,15 @@ export default function SelectVariants() {
           <MenuItem value={30}>Thirty</MenuItem>
         </Select>
       </FormControl>
-      <FormControl variant='filled' sx={{ m: 1, minWidth: 120 }}>
-        <InputLabel id='demo-simple-select-filled-label'>Age</InputLabel>
+      <FormControl variant="filled" sx={{ m: 1, minWidth: 120 }}>
+        <InputLabel id="demo-simple-select-filled-label">Age</InputLabel>
         <Select
-          labelId='demo-simple-select-filled-label'
-          id='demo-simple-select-filled'
+          labelId="demo-simple-select-filled-label"
+          id="demo-simple-select-filled"
           value={age}
           onChange={handleChange}
         >
-          <MenuItem value=''>
+          <MenuItem value="">
             <em>None</em>
           </MenuItem>
           <MenuItem value={10}>Ten</MenuItem>

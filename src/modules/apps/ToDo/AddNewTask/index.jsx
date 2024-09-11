@@ -13,7 +13,7 @@ import { getDateObject, getFormattedDate } from '@crema/helpers/DateHelper';
 import { generateRandomUniqueNumber } from '@crema/helpers/Common';
 
 const validationSchema = yup.object({
-  title: yup.string().required(<IntlMessages id='validation.titleRequired' />),
+  title: yup.string().required(<IntlMessages id="validation.titleRequired" />),
 });
 
 const AddNewTask = ({ isAddTaskOpen, onCloseAddTask, selectedDate }) => {
@@ -25,10 +25,10 @@ const AddNewTask = ({ isAddTaskOpen, onCloseAddTask, selectedDate }) => {
   return (
     <AppDialog
       dividers
-      maxWidth='md'
+      maxWidth="md"
       open={isAddTaskOpen}
       onClose={() => onCloseAddTask()}
-      title={<IntlMessages id='todo.addNewTask' />}
+      title={<IntlMessages id="todo.addNewTask" />}
     >
       <Formik
         validateOnChange={true}
@@ -37,9 +37,7 @@ const AddNewTask = ({ isAddTaskOpen, onCloseAddTask, selectedDate }) => {
           assignedTo: '',
           label: [],
           priority: 3,
-          startDate: selectedDate
-            ? getDateObject(selectedDate)
-            : getDateObject(),
+          startDate: selectedDate ? getDateObject(selectedDate) : getDateObject(),
           content: '',
         }}
         validationSchema={validationSchema}
@@ -68,9 +66,7 @@ const AddNewTask = ({ isAddTaskOpen, onCloseAddTask, selectedDate }) => {
           })
             .then(() => {
               reCallAPI();
-              infoViewActionsContext.showMessage(
-                'New Task has been created successfully!',
-              );
+              infoViewActionsContext.showMessage('New Task has been created successfully!');
             })
             .catch((error) => {
               infoViewActionsContext.fetchError(error.message);

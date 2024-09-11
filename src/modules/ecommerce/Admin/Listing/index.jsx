@@ -22,12 +22,7 @@ const ProductListing = () => {
   });
 
   const [page, setPage] = useState(0);
-  const [{ apiData, loading }, { setQueryParams }] = useGetDataApi(
-    '/api/ecommerce/list',
-    [],
-    {},
-    false,
-  );
+  const [{ apiData, loading }, { setQueryParams }] = useGetDataApi('/api/ecommerce/list', [], {}, false);
 
   const { list, total } = apiData;
 
@@ -45,8 +40,8 @@ const ProductListing = () => {
   return (
     <>
       <Box
-        component='h2'
-        variant='h2'
+        component="h2"
+        variant="h2"
         sx={{
           fontSize: 16,
           color: 'text.primary',
@@ -60,37 +55,21 @@ const ProductListing = () => {
         {messages['sidebar.ecommerceAdmin.productListing']}
       </Box>
       <AppGridContainer spacing={7}>
-        <Slide direction='right' in mountOnEnter unmountOnExit>
+        <Slide direction="right" in mountOnEnter unmountOnExit>
           <Grid item xs={12} lg={9}>
             <AppCard
               title={
                 <AppsHeader>
-                  <Box
-                    display='flex'
-                    flexDirection='row'
-                    alignItems='center'
-                    width={1}
-                    justifyContent='space-between'
-                  >
+                  <Box display="flex" flexDirection="row" alignItems="center" width={1} justifyContent="space-between">
                     <AppSearchBar
-                      iconPosition='right'
+                      iconPosition="right"
                       overlap={false}
                       onChange={(event) => searchProduct(event.target.value)}
                       placeholder={messages['common.searchHere']}
                     />
-                    <Box
-                      display='flex'
-                      flexDirection='row'
-                      alignItems='center'
-                      justifyContent='flex-end'
-                    >
+                    <Box display="flex" flexDirection="row" alignItems="center" justifyContent="flex-end">
                       <Hidden smDown>
-                        <AppsPagination
-                          rowsPerPage={10}
-                          count={total}
-                          page={page}
-                          onPageChange={onPageChange}
-                        />
+                        <AppsPagination rowsPerPage={10} count={total} page={page} onPageChange={onPageChange} />
                       </Hidden>
                     </Box>
                   </Box>
@@ -108,17 +87,12 @@ const ProductListing = () => {
                 <ListingTable productData={list || []} loading={loading} />
               </AppsContent>
               <Hidden smUp>
-                <AppsPagination
-                  rowsPerPage={10}
-                  count={total}
-                  page={page}
-                  onPageChange={onPageChange}
-                />
+                <AppsPagination rowsPerPage={10} count={total} page={page} onPageChange={onPageChange} />
               </Hidden>
             </AppCard>
           </Grid>
         </Slide>
-        <Slide direction='left' in mountOnEnter unmountOnExit>
+        <Slide direction="left" in mountOnEnter unmountOnExit>
           <Grid item xs={12} lg={3}>
             <FilterItem filterData={filterData} setFilterData={setFilterData} />
           </Grid>

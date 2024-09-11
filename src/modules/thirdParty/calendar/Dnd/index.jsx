@@ -32,9 +32,7 @@ const Dnd = () => {
 
   const resizeEvent = ({ event, start, end }) => {
     const nextEvents = events.map((existingEvent) => {
-      return existingEvent.id === event.id
-        ? { ...existingEvent, start, end }
-        : existingEvent;
+      return existingEvent.id === event.id ? { ...existingEvent, start, end } : existingEvent;
     });
 
     setEvents(nextEvents);

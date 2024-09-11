@@ -8,9 +8,7 @@ import { useIntl } from 'react-intl';
 import PropTypes from 'prop-types';
 
 const MyCourses = ({ courses }) => {
-  const [selectedCategory, setSelectedCategory] = useState(
-    courses.categories[0].slug,
-  );
+  const [selectedCategory, setSelectedCategory] = useState(courses.categories[0].slug);
 
   const handleChangeCategory = (category) => {
     setSelectedCategory(category);
@@ -19,11 +17,7 @@ const MyCourses = ({ courses }) => {
   const { messages } = useIntl();
 
   return (
-    <AppCard
-      sxStyle={{ height: 1 }}
-      title={messages['academy.myCourses']}
-      contentStyle={{ px: 0 }}
-    >
+    <AppCard sxStyle={{ height: 1 }} title={messages['academy.myCourses']} contentStyle={{ px: 0 }}>
       <Box
         sx={{
           mb: 2,
@@ -46,13 +40,9 @@ const MyCourses = ({ courses }) => {
               sx={{
                 cursor: 'pointer',
                 backgroundColor: (theme) =>
-                  item.slug === selectedCategory
-                    ? theme.palette.primary.main
-                    : theme.palette.background.default,
+                  item.slug === selectedCategory ? theme.palette.primary.main : theme.palette.background.default,
                 color: (theme) =>
-                  item.slug === selectedCategory
-                    ? theme.palette.primary.contrastText
-                    : theme.palette.text.primary,
+                  item.slug === selectedCategory ? theme.palette.primary.contrastText : theme.palette.text.primary,
                 '&:hover, &:focus': {
                   backgroundColor: (theme) => theme.palette.primary.main,
                   color: (theme) => theme.palette.primary.contrastText,
@@ -65,7 +55,7 @@ const MyCourses = ({ courses }) => {
         ))}
       </Box>
       <AppList
-        animation='transition.slideRightBigIn'
+        animation="transition.slideRightBigIn"
         data={courses.courses}
         renderRow={(data, index) => <CourseCell key={index} course={data} />}
       />

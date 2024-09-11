@@ -8,21 +8,10 @@ import CheckedTasksActions from './CheckedTasksActions';
 import AppsPagination from '@crema/components/AppsPagination';
 import Hidden from '@mui/material/Hidden';
 
-import {
-  useTodoActionsContext,
-  useTodoContext,
-} from '../../../context/TodoContextProvider';
+import { useTodoActionsContext, useTodoContext } from '../../../context/TodoContextProvider';
 import SelectTasksDropdown from './SelectTasksDropdown';
 
-const TaskContentHeader = (props) => {
-  const {
-    onUpdateTasks,
-    checkedTasks,
-    setCheckedTasks,
-    filterText,
-    onSetFilterText,
-  } = props;
-
+const TaskContentHeader = ({ onUpdateTasks, setCheckedTasks, onSetFilterText, checkedTasks = [], filterText = '' }) => {
   const { taskLists, page } = useTodoContext();
   const { onPageChange } = useTodoActionsContext();
 
@@ -45,19 +34,11 @@ const TaskContentHeader = (props) => {
         break;
 
       case 2:
-        setCheckedTasks(
-          taskLists?.data
-            ?.filter((task) => task.isStarred)
-            .map((task) => task.id),
-        );
+        setCheckedTasks(taskLists?.data?.filter((task) => task.isStarred).map((task) => task.id));
         break;
 
       case 3:
-        setCheckedTasks(
-          taskLists?.data
-            ?.filter((task) => task.hasAttachments)
-            .map((task) => task.id),
-        );
+        setCheckedTasks(taskLists?.data?.filter((task) => task.hasAttachments).map((task) => task.id));
         break;
 
       default:
@@ -82,33 +63,24 @@ const TaskContentHeader = (props) => {
             sx={{
               color: 'text.disabled',
             }}
-            indeterminate={
-              checkedTasks.length > 0 &&
-              checkedTasks?.length < taskLists?.data?.length
-            }
-            checked={
-              taskLists?.data?.length > 0 &&
-              checkedTasks?.length === taskLists?.data?.length
-            }
+            indeterminate={checkedTasks.length > 0 && checkedTasks?.length < taskLists?.data?.length}
+            checked={taskLists?.data?.length > 0 && checkedTasks?.length === taskLists?.data?.length}
             onChange={onHandleMasterCheckbox}
           />
         </span>
         <Box sx={{ mr: 3 }}>
           <AppSearchBar
-            iconPosition='right'
+            iconPosition="right"
             overlap={false}
             value={filterText}
             onChange={(event) => onSetFilterText(event.target.value)}
             placeholder={messages['common.searchHere']}
           />
         </Box>
-        <SelectTasksDropdown
-          onSelectTasks={onSelectTasks}
-          checkedTasks={checkedTasks}
-        />
+        <SelectTasksDropdown onSelectTasks={onSelectTasks} checkedTasks={checkedTasks} />
         {checkedTasks.length > 0 ? (
           <Box
-            component='span'
+            component="span"
             sx={{
               mr: { sm: 4 },
               display: 'flex',
@@ -151,12 +123,6 @@ const TaskContentHeader = (props) => {
 };
 
 export default TaskContentHeader;
-
-TaskContentHeader.defaultProps = {
-  checkedTasks: [],
-  filterText: '',
-  page: 0,
-};
 
 TaskContentHeader.propTypes = {
   checkedTasks: PropTypes.array,

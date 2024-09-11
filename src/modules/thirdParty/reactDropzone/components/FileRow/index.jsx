@@ -23,7 +23,7 @@ const FileRow = ({ file, onDeleteUploadFile }) => {
       <Box sx={{ flex: 1 }}>
         <Typography>{file.path}</Typography>
         <Box
-          component='span'
+          component="span"
           sx={{
             color: 'text.secondary',
           }}

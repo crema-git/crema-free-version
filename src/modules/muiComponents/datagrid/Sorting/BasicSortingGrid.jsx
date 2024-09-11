@@ -18,11 +18,7 @@ export default function BasicSortingGrid() {
 
   return (
     <div style={{ height: 400, width: '100%' }}>
-      <DataGrid
-        {...data}
-        sortModel={sortModel}
-        onSortModelChange={(model) => setSortModel(model)}
-      />
+      <DataGrid {...data} sortModel={sortModel} onSortModelChange={(model) => setSortModel(model)} />
     </div>
   );
 }

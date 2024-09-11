@@ -70,17 +70,17 @@ const AboutItem = ({ item }) => {
         return <a href={`mailto:${item.text}`}>{item.text}</a>;
       }
       default:
-        return <Box component='p'>{item.text}</Box>;
+        return <Box component="p">{item.text}</Box>;
     }
   };
 
   return (
     <AboutItemRoot>
-      <Box component='span' sx={{ mr: 3.5, fontSize: 20 }}>
+      <Box component="span" sx={{ mr: 3.5, fontSize: 20 }}>
         {getIconByName(item.icon)}
       </Box>
       {getLinkAddress()}
-      <Box component='span' ml='auto' mr={-2} mt={-2}>
+      <Box component="span" ml="auto" mr={-2} mt={-2}>
         <IconButton
           sx={{
             color: 'primary.main',
@@ -91,7 +91,7 @@ const AboutItem = ({ item }) => {
               fontSize: 20,
             },
           }}
-          size='large'
+          size="large"
         >
           <EditOutlinedIcon />
         </IconButton>
@@ -103,13 +103,9 @@ const AboutItem = ({ item }) => {
 const About = ({ about }) => {
   const { messages } = useIntl();
   return (
-    <AppCard
-      sxStyle={{ mb: 8 }}
-      title={messages['wall.about']}
-      action={messages['wall.editPageInfo']}
-    >
+    <AppCard sxStyle={{ mb: 8 }} title={messages['wall.about']} action={messages['wall.editPageInfo']}>
       <AppList
-        animation='transition.slideRightBigIn'
+        animation="transition.slideRightBigIn"
         data={about}
         renderRow={(data, index) => <AboutItem key={index} item={data} />}
       />

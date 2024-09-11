@@ -8,14 +8,11 @@ import Categories from './Categories';
 import AppCard from '@crema/components/AppCard';
 import { useIntl } from 'react-intl';
 
-export const MonthlyEarning = ({ earningGraphData }) => {
+export const MonthlyEarning = ({ earningGraphData = [] }) => {
   const { messages } = useIntl();
 
   return (
-    <AppCard
-      sxStyle={{ height: 1 }}
-      title={messages['dashboard.earningInMonth']}
-    >
+    <AppCard sxStyle={{ height: 1 }} title={messages['dashboard.earningInMonth']}>
       <Box
         sx={{
           '& text': {
@@ -45,10 +42,6 @@ export const MonthlyEarning = ({ earningGraphData }) => {
 };
 
 export default MonthlyEarning;
-
-MonthlyEarning.defaultProps = {
-  earningGraphData: [],
-};
 
 MonthlyEarning.propTypes = {
   earningGraphData: PropTypes.array,

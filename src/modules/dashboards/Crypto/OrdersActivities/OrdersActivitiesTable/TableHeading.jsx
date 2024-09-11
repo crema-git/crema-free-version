@@ -24,12 +24,12 @@ const TableHeading = () => {
         },
       }}
     >
-      <TableCell className='tableCell'>Transaction ID</TableCell>
-      <TableCell className='tableCell'>Type</TableCell>
-      <TableCell className='tableCell'>Description</TableCell>
-      <TableCell className='tableCell'>Date</TableCell>
-      <TableCell className='tableCell'>USD Amount</TableCell>
-      <TableCell className='tableCell' align='right'>
+      <TableCell className="tableCell">Transaction ID</TableCell>
+      <TableCell className="tableCell">Type</TableCell>
+      <TableCell className="tableCell">Description</TableCell>
+      <TableCell className="tableCell">Date</TableCell>
+      <TableCell className="tableCell">USD Amount</TableCell>
+      <TableCell className="tableCell" align="right">
         Amount
       </TableCell>
     </TableHeader>

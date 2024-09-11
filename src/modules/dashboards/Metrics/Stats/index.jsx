@@ -6,7 +6,22 @@ import AppSelect from '@crema/components/AppSelect';
 import AppCard from '@crema/components/AppCard';
 import { Box } from '@mui/material';
 
-const Stats = ({ data }) => {
+const Stats = ({
+  data = {
+    dataOne: {
+      stats1: [],
+      stats2: [],
+    },
+    dataTwo: {
+      stats1: [],
+      stats2: [],
+    },
+    dataThree: {
+      stats1: [],
+      stats2: [],
+    },
+  },
+}) => {
   const [graphData, setGraphData] = useState(data.dataOne);
 
   const handleYearChange = (value) => {
@@ -49,17 +64,9 @@ const Stats = ({ data }) => {
       title={messages['dashboard.companyProduction']}
       action={
         <Box>
+          <AppSelect menus={[2019, 2018, 2017]} defaultValue={2019} onChange={handleYearChange} />
           <AppSelect
-            menus={[2019, 2018, 2017]}
-            defaultValue={2019}
-            onChange={handleYearChange}
-          />
-          <AppSelect
-            menus={[
-              messages['common.june'],
-              messages['common.july'],
-              messages['common.august'],
-            ]}
+            menus={[messages['common.june'], messages['common.july'], messages['common.august']]}
             defaultValue={messages['common.june']}
             onChange={handleMonthChange}
           />
@@ -72,23 +79,6 @@ const Stats = ({ data }) => {
 };
 
 export default Stats;
-
-Stats.defaultProps = {
-  data: {
-    dataOne: {
-      stats1: [],
-      stats2: [],
-    },
-    dataTwo: {
-      stats1: [],
-      stats2: [],
-    },
-    dataThree: {
-      stats1: [],
-      stats2: [],
-    },
-  },
-};
 
 Stats.propTypes = {
   data: PropTypes.object,

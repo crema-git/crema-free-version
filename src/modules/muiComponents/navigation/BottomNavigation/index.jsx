@@ -1,17 +1,17 @@
-import React from "react";
-import AppComponentHeader from "@crema/components/AppComponentHeader";
-import AppGridContainer from "@crema/components/AppGridContainer";
-import Grid from "@mui/material/Grid";
-import AppComponentCard from "@crema/components/AppComponentCard";
+import React from 'react';
+import AppComponentHeader from '@crema/components/AppComponentHeader';
+import AppGridContainer from '@crema/components/AppGridContainer';
+import Grid from '@mui/material/Grid';
+import AppComponentCard from '@crema/components/AppComponentCard';
 
-import SimpleBottomNavigation from "./SimpleBottomNavigation";
-import SimpleBottomNavigationSource from "./SimpleBottomNavigation?raw";
+import SimpleBottomNavigation from './SimpleBottomNavigation';
+import SimpleBottomNavigationSource from './SimpleBottomNavigation?raw';
 
-import LabelBottomNavigation from "./LabelBottomNavigation";
-import LabelBottomNavigationSource from "./LabelBottomNavigation?raw";
+import LabelBottomNavigation from './LabelBottomNavigation';
+import LabelBottomNavigationSource from './LabelBottomNavigation?raw';
 
-import FixedBottomNavigation from "./FixedBottomNavigation";
-import FixedBottomNavigationSource from "./FixedBottomNavigation?raw";
+import FixedBottomNavigation from './FixedBottomNavigation';
+import FixedBottomNavigationSource from './FixedBottomNavigation?raw';
 
 const BottomNavigation = () => {
   return (

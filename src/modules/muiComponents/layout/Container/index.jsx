@@ -1,13 +1,13 @@
-import AppComponentHeader from "@crema/components/AppComponentHeader";
-import Grid from "@mui/material/Grid";
-import AppComponentCard from "@crema/components/AppComponentCard";
-import AppGridContainer from "@crema/components/AppGridContainer";
+import AppComponentHeader from '@crema/components/AppComponentHeader';
+import Grid from '@mui/material/Grid';
+import AppComponentCard from '@crema/components/AppComponentCard';
+import AppGridContainer from '@crema/components/AppGridContainer';
 
-import SimpleContainer from "./SimpleContainer";
-import SimpleContainerSource from "./SimpleContainer?raw";
+import SimpleContainer from './SimpleContainer';
+import SimpleContainerSource from './SimpleContainer?raw';
 
-import FixedContainer from "./FixedContainer";
-import FixedContainerSource from "./FixedContainer?raw";
+import FixedContainer from './FixedContainer';
+import FixedContainerSource from './FixedContainer?raw';
 
 const Container = () => {
   return (

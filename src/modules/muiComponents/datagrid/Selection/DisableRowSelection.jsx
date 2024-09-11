@@ -11,11 +11,7 @@ export default function DisableRowSelection() {
 
   return (
     <div style={{ height: 400, width: '100%' }}>
-      <DataGrid
-        {...data}
-        isRowSelectable={(params) => params.row.quantity > 50000}
-        checkboxSelection
-      />
+      <DataGrid {...data} isRowSelectable={(params) => params.row.quantity > 50000} checkboxSelection />
     </div>
   );
 }

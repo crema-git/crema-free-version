@@ -14,18 +14,15 @@ const RatingCell = ({ selected, data, onChange }) => {
         cursor: 'pointer',
       }}
       onClick={() => onChange(data)}
-      className='pointer'
+      className="pointer"
     >
       <Checkbox
         checked={selected.some((item) => item === data)}
-        color='primary'
+        color="primary"
         inputProps={{ 'aria-label': 'secondary checkbox' }}
       />
       {data}
-      <StarIcon
-        style={{ fontSize: 16, marginRight: 5, marginLeft: 2, marginTop: 3 }}
-      />
-      & above
+      <StarIcon style={{ fontSize: 16, marginRight: 5, marginLeft: 2, marginTop: 3 }} />& above
     </Box>
   );
 };

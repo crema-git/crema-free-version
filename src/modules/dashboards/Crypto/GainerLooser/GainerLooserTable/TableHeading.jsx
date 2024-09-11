@@ -24,9 +24,9 @@ const TableHeading = () => {
         },
       }}
     >
-      <TableCell className='tableCell'>User</TableCell>
-      <TableCell className='tableCell'>% change</TableCell>
-      <TableCell className='tableCell'>USD Amount</TableCell>
+      <TableCell className="tableCell">User</TableCell>
+      <TableCell className="tableCell">% change</TableCell>
+      <TableCell className="tableCell">USD Amount</TableCell>
     </TableHeader>
   );
 };

@@ -23,22 +23,22 @@ const TableHeading = () => {
         },
       }}
     >
-      <TableCell align='left' className='tableCell'>
+      <TableCell align="left" className="tableCell">
         Student Name
       </TableCell>
-      <TableCell align='left' className='tableCell'>
+      <TableCell align="left" className="tableCell">
         Course ID
       </TableCell>
-      <TableCell align='left' className='tableCell'>
+      <TableCell align="left" className="tableCell">
         Course Name
       </TableCell>
-      <TableCell align='left' className='tableCell'>
+      <TableCell align="left" className="tableCell">
         Total Grade
       </TableCell>
-      <TableCell align='left' className='tableCell'>
+      <TableCell align="left" className="tableCell">
         Ranking
       </TableCell>
-      <TableCell align='left' className='tableCell'>
+      <TableCell align="left" className="tableCell">
         Category
       </TableCell>
     </TableRow>

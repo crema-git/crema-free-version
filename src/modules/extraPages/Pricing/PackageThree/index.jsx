@@ -7,7 +7,7 @@ import AppCard from '@crema/components/AppCard';
 
 const PackageThree = ({ pricing }) => {
   return (
-    <AppCard title='Pricing Package Style 3' sxStyle={{ alignItems: 'center' }}>
+    <AppCard title="Pricing Package Style 3" sxStyle={{ alignItems: 'center' }}>
       <AppGridContainer
         sx={{
           maxWidth: 1000,

@@ -15,13 +15,13 @@ export default function ColorTabs() {
       <Tabs
         value={value}
         onChange={handleChange}
-        textColor='secondary'
-        indicatorColor='secondary'
-        aria-label='secondary tabs example'
+        textColor="secondary"
+        indicatorColor="secondary"
+        aria-label="secondary tabs example"
       >
-        <Tab value='one' label='Item One' />
-        <Tab value='two' label='Item Two' />
-        <Tab value='three' label='Item Three' />
+        <Tab value="one" label="Item One" />
+        <Tab value="two" label="Item Two" />
+        <Tab value="three" label="Item Three" />
       </Tabs>
     </Box>
   );

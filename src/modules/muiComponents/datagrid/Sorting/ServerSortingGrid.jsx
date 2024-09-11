@@ -14,9 +14,7 @@ function loadServerRows(sortModel, data) {
         const sortedColumn = sortModel[0];
 
         let sortedRows = [...data.rows].sort((a, b) =>
-          String(a[sortedColumn.field]).localeCompare(
-            String(b[sortedColumn.field]),
-          ),
+          String(a[sortedColumn.field]).localeCompare(String(b[sortedColumn.field])),
         );
 
         if (sortModel[0].sort === 'desc') {
@@ -37,9 +35,7 @@ export default function ServerSortingGrid() {
     maxColumns: 6,
   });
 
-  const [sortModel, setSortModel] = React.useState([
-    { field: 'commodity', sort: 'asc' },
-  ]);
+  const [sortModel, setSortModel] = React.useState([{ field: 'commodity', sort: 'asc' }]);
 
   const [rows, setRows] = React.useState([]);
   const [loading, setLoading] = React.useState(false);
@@ -73,7 +69,7 @@ export default function ServerSortingGrid() {
       <DataGrid
         rows={rows}
         columns={data.columns}
-        sortingMode='server'
+        sortingMode="server"
         sortModel={sortModel}
         onSortModelChange={handleSortModelChange}
         loading={loading}

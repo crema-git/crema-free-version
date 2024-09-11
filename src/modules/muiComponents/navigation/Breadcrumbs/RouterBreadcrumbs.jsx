@@ -3,20 +3,14 @@ import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
 import List from '@mui/material/List';
 import Link from '@mui/material/Link';
-import ListItem from '@mui/material/ListItem';
 import Collapse from '@mui/material/Collapse';
 import ListItemText from '@mui/material/ListItemText';
 import Typography from '@mui/material/Typography';
 import ExpandLess from '@mui/icons-material/ExpandLess';
 import ExpandMore from '@mui/icons-material/ExpandMore';
 import Breadcrumbs from '@mui/material/Breadcrumbs';
-import {
-  Link as RouterLink,
-  MemoryRouter,
-  Route,
-  Routes,
-  useLocation,
-} from 'react-router-dom';
+import { Link as RouterLink, MemoryRouter, Route, Routes, useLocation } from 'react-router-dom';
+import ListItemButton from '@mui/material/ListItemButton';
 
 const breadcrumbNameMap = {
   '/inbox': 'Inbox',
@@ -37,10 +31,10 @@ function ListItemLink(props) {
 
   return (
     <li>
-      <ListItem button component={RouterLink} to={to} {...other}>
+      <ListItemButton component={RouterLink} to={to} {...other}>
         <ListItemText primary={primary} />
         {icon}
-      </ListItem>
+      </ListItemButton>
     </li>
   );
 }
@@ -59,8 +53,8 @@ function Page() {
   const pathnames = location.pathname.split('/').filter((x) => x);
 
   return (
-    <Breadcrumbs aria-label='breadcrumb'>
-      <LinkRouter underline='hover' color='inherit' to='/'>
+    <Breadcrumbs aria-label="breadcrumb">
+      <LinkRouter underline="hover" color="inherit" to="/">
         Home
       </LinkRouter>
       {pathnames.map((value, index) => {
@@ -68,11 +62,11 @@ function Page() {
         const to = `/${pathnames.slice(0, index + 1).join('/')}`;
 
         return last ? (
-          <Typography color='text.primary' key={to}>
+          <Typography color="text.primary" key={to}>
             {breadcrumbNameMap[to]}
           </Typography>
         ) : (
-          <LinkRouter underline='hover' color='inherit' to={to} key={to}>
+          <LinkRouter underline="hover" color="inherit" to={to} key={to}>
             {breadcrumbNameMap[to]}
           </LinkRouter>
         );
@@ -92,25 +86,25 @@ export default function RouterBreadcrumbs() {
     <MemoryRouter initialEntries={['/inbox']} initialIndex={0}>
       <Box sx={{ display: 'flex', flexDirection: 'column', width: 360 }}>
         <Routes>
-          <Route path='*' element={<Page />} />
+          <Route path="*" element={<Page />} />
         </Routes>
         <Box
           sx={{
             bgcolor: 'background.paper',
             mt: 1,
           }}
-          component='nav'
-          aria-label='mailbox folders'
+          component="nav"
+          aria-label="mailbox folders"
         >
           <List>
-            <ListItemLink to='/inbox' open={open} onClick={handleClick} />
-            <Collapse component='li' in={open} timeout='auto' unmountOnExit>
+            <ListItemLink to="/inbox" open={open} onClick={handleClick} />
+            <Collapse component="li" in={open} timeout="auto" unmountOnExit>
               <List disablePadding>
-                <ListItemLink sx={{ pl: 4 }} to='/inbox/important' />
+                <ListItemLink sx={{ pl: 4 }} to="/inbox/important" />
               </List>
             </Collapse>
-            <ListItemLink to='/trash' />
-            <ListItemLink to='/spam' />
+            <ListItemLink to="/trash" />
+            <ListItemLink to="/spam" />
           </List>
         </Box>
       </Box>

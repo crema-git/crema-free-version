@@ -26,7 +26,7 @@ const Categories = (props) => {
         }}
       >
         <Box
-          component='span'
+          component="span"
           sx={{
             backgroundColor: category.fill,
             width: 10,
@@ -38,8 +38,8 @@ const Categories = (props) => {
           }}
         />
         <Typography
-          component='h6'
-          variant='h6'
+          component="h6"
+          variant="h6"
           sx={{
             fontSize: 14,
             fontWeight: Fonts.MEDIUM,

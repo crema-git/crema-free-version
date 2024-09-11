@@ -23,11 +23,7 @@ const Photos = ({ photos }) => {
   const { messages } = useIntl();
 
   return (
-    <AppCard
-      sxStyle={{ mb: 8 }}
-      title={messages['wall.photos']}
-      action={messages['common.viewAll']}
-    >
+    <AppCard sxStyle={{ mb: 8 }} title={messages['wall.photos']} action={messages['common.viewAll']}>
       <div>
         <AppGrid
           data={photos}
@@ -46,7 +42,7 @@ const Photos = ({ photos }) => {
               className={clsx('card-hover')}
               key={index}
               src={photo.thumb}
-              alt='user'
+              alt="user"
             />
           )}
         />

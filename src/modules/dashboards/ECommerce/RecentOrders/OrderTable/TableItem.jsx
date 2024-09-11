@@ -62,26 +62,26 @@ const TableItem = ({ data }) => {
   };
 
   return (
-    <TableRow key={data.name} className='item-hover'>
-      <TableCellWrapper component='th' scope='row'>
+    <TableRow key={data.name} className="item-hover">
+      <TableCellWrapper component="th" scope="row">
         <Typography
-          sx={{
-            color: (theme) => theme.palette.primary.main,
+          sx={(theme) => ({
+            color: theme.palette.primary.main,
             display: 'inline-block',
-          }}
-          component='h5'
-          variant='h5'
+          })}
+          component="h5"
+          variant="h5"
         >
           {data.id}
         </Typography>
       </TableCellWrapper>
-      <TableCellWrapper align='left'>{data.product}</TableCellWrapper>
-      <TableCellWrapper align='left'>{data.customer}</TableCellWrapper>
-      <TableCellWrapper align='left'>{data.date}</TableCellWrapper>
-      <TableCellWrapper align='left'>{data.price}</TableCellWrapper>
-      <TableCellWrapper align='left'>
+      <TableCellWrapper align="left">{data.product}</TableCellWrapper>
+      <TableCellWrapper align="left">{data.customer}</TableCellWrapper>
+      <TableCellWrapper align="left">{data.date}</TableCellWrapper>
+      <TableCellWrapper align="left">{data.price}</TableCellWrapper>
+      <TableCellWrapper align="left">
         <Box
-          component='span'
+          component="span"
           sx={{
             padding: '4px 10px',
             borderRadius: 30,
@@ -93,11 +93,11 @@ const TableItem = ({ data }) => {
           {data.status}
         </Box>
       </TableCellWrapper>
-      <TableCellWrapper align='right'>
-        <IconButton size='small' className='icon-btn icon-btn-eye'>
+      <TableCellWrapper align="right">
+        <IconButton size="small" className="icon-btn icon-btn-eye">
           <AiOutlineEye />
         </IconButton>
-        <IconButton size='small' className='icon-btn'>
+        <IconButton size="small" className="icon-btn">
           <BiArchiveIn />
         </IconButton>
       </TableCellWrapper>

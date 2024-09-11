@@ -38,7 +38,7 @@ const AppSelectedIcon = ({ backgroundColor, isCenter = true, color }) => {
       }}
     >
       <CheckIcon>
-        <IntlMessages id='customizer.checked' />
+        <IntlMessages id="customizer.checked" />
       </CheckIcon>
     </Box>
   );

@@ -20,7 +20,7 @@ const OrderSummary = ({ cartItems }) => {
   const { messages } = useIntl();
   const totalPrice = getTotalPrice(cartItems);
   return (
-    <AppAnimate animation='transition.slideUpIn' delay={200}>
+    <AppAnimate animation="transition.slideUpIn" delay={200}>
       <AppCard
         title={
           <Box fontSize={16} fontWeight={Fonts.BOLD}>

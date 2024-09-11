@@ -15,7 +15,7 @@ const RevenueItem = ({ item }) => {
         padding: '10px 20px',
       }}
       key={item.id}
-      className='item-hover'
+      className="item-hover"
     >
       <Box
         sx={{
@@ -25,8 +25,8 @@ const RevenueItem = ({ item }) => {
         }}
       >
         <Typography
-          variant='h5'
-          component='h5'
+          variant="h5"
+          component="h5"
           sx={{
             display: 'inline-block',
             mr: 1,
@@ -35,16 +35,16 @@ const RevenueItem = ({ item }) => {
           {item.name}
         </Typography>
         <Box
-          component='span'
-          sx={{
-            color: (theme) => theme.palette.text.secondary,
+          component="span"
+          sx={(theme) => ({
+            color: theme.palette.text.secondary,
             ml: 'auto',
-          }}
+          })}
         >
           {item.value}%
         </Box>
       </Box>
-      <AppLinearProgress value={item.value} activeColor='#0A8FDC' />
+      <AppLinearProgress value={item.value} activeColor="#0A8FDC" />
     </Box>
   );
 };
@@ -64,7 +64,7 @@ const Revenue = ({ revenueData }) => {
     >
       <AppScrollbar style={{ maxHeight: 200 }}>
         <AppList
-          animation='transition.slideRightBigIn'
+          animation="transition.slideRightBigIn"
           data={revenueData}
           renderRow={(data, index) => <RevenueItem key={index} item={data} />}
         />

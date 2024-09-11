@@ -61,12 +61,12 @@ const ScheduleCellWrapper = styled('div')(({ theme }) => {
 
 const ScheduleCell = ({ data }) => {
   return (
-    <ScheduleCellWrapper className='item-hover'>
-      <span style={{ backgroundColor: data.color }} className='dot-icon' />
-      <Typography variant='h5' component='h5'>
+    <ScheduleCellWrapper className="item-hover">
+      <span style={{ backgroundColor: data.color }} className="dot-icon" />
+      <Typography variant="h5" component="h5">
         {data.title}
       </Typography>
-      <span className='schedule-cell-action'>{data.day}th</span>
+      <span className="schedule-cell-action">{data.day}th</span>
     </ScheduleCellWrapper>
   );
 };
@@ -85,16 +85,11 @@ const Schedules = ({ schedules }) => {
       contentStyle={{ paddingTop: 8 }}
     >
       <SchedulesRoot>
-        <div className='schedules-item'>
+        <div className="schedules-item">
           <DateSelector schedules={schedules} />
         </div>
-        <div className='schedules-item'>
-          <AppList
-            data={schedules}
-            renderRow={(data) => (
-              <ScheduleCell key={'schedule-' + data.id} data={data} />
-            )}
-          />
+        <div className="schedules-item">
+          <AppList data={schedules} renderRow={(data) => <ScheduleCell key={'schedule-' + data.id} data={data} />} />
         </div>
       </SchedulesRoot>
     </AppCard>

@@ -17,9 +17,7 @@ const colorList = [
   { id: 9006, color: blue[600] },
 ];
 
-const AddTags = (props) => {
-  const { data } = props;
-
+const AddTags = ({ data = [] }) => {
   const [tags, setTags] = useState(data);
 
   const handleDelete = (tagToDelete) => () => {
@@ -43,8 +41,7 @@ const AddTags = (props) => {
         sx={{
           p: 2,
           borderRadius: 1,
-          backgroundColor: (theme) =>
-            darken(theme.palette.background.default, 0.03),
+          backgroundColor: (theme) => darken(theme.palette.background.default, 0.03),
         }}
       >
         {tags.map((item) => {
@@ -71,10 +68,6 @@ const AddTags = (props) => {
 };
 
 export default AddTags;
-
-AddTags.defaultProps = {
-  data: [],
-};
 
 AddTags.propTypes = {
   data: PropTypes.array,

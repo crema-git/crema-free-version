@@ -47,7 +47,7 @@ const PackageCard = ({ pricing }) => {
             }}
           >
             <Typography
-              component='h3'
+              component="h3"
               sx={{
                 fontSize: 16,
                 fontWeight: Fonts.MEDIUM,
@@ -55,7 +55,7 @@ const PackageCard = ({ pricing }) => {
               }}
             >
               <Box
-                component='span'
+                component="span"
                 sx={{
                   fontWeight: Fonts.BOLD,
                   fontSize: 26,
@@ -67,7 +67,7 @@ const PackageCard = ({ pricing }) => {
               /month
             </Typography>
             <Typography
-              component='h5'
+              component="h5"
               sx={{
                 fontWeight: Fonts.BOLD,
                 fontSize: 16,
@@ -109,7 +109,7 @@ const PackageCard = ({ pricing }) => {
       </Box>
       <Box sx={{ mt: 7.5 }}>
         <Button
-          variant='contained'
+          variant="contained"
           sx={{
             width: '100%',
             fontWeight: Fonts.BOLD,

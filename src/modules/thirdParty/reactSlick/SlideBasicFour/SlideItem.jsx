@@ -36,7 +36,7 @@ const SlideItem = ({ slide }) => {
             },
           }}
         >
-          <img src={slide.srcImg} alt='Art' />
+          <img src={slide.srcImg} alt="Art" />
         </Box>
       </Box>
       <Box
@@ -48,7 +48,7 @@ const SlideItem = ({ slide }) => {
         }}
       >
         <Typography
-          component='h3'
+          component="h3"
           sx={{
             fontSize: 16,
             fontWeight: Fonts.SEMI_BOLD,
@@ -77,7 +77,7 @@ const SlideItem = ({ slide }) => {
             }}
           >
             <Typography
-              component='h5'
+              component="h5"
               sx={{
                 fontWeight: Fonts.SEMI_BOLD,
               }}

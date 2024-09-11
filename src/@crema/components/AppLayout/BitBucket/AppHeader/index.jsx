@@ -1,11 +1,11 @@
-import PropTypes from "prop-types";
-import SearchBar from "../../../AppSearchBar";
-import AppLogo from "../../components/AppLogo";
-import Hidden from "@mui/material/Hidden";
-import Box from "@mui/material/Box";
-import IconButton from "@mui/material/IconButton";
-import MenuIcon from "@mui/icons-material/Menu";
-import BitBucketHeaderWrapper from "./BitBucketHeaderWrapper";
+import PropTypes from 'prop-types';
+import SearchBar from '../../../AppSearchBar';
+import AppLogo from '../../components/AppLogo';
+import Hidden from '@mui/material/Hidden';
+import Box from '@mui/material/Box';
+import IconButton from '@mui/material/IconButton';
+import MenuIcon from '@mui/icons-material/Menu';
+import BitBucketHeaderWrapper from './BitBucketHeaderWrapper';
 
 const AppHeader = ({ toggleNavCollapsed }) => {
   return (
@@ -23,7 +23,7 @@ const AppHeader = ({ toggleNavCollapsed }) => {
         <AppLogo />
         <Box
           sx={{
-            ml: "auto",
+            ml: 'auto',
           }}
         >
           <SearchBar borderLight placeholder="Search…" />

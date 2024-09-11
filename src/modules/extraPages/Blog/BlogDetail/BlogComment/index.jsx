@@ -13,12 +13,12 @@ import { useAuthUser } from '@crema/hooks/AuthHooks';
 import { generateRandomUniqueNumber } from '@crema/helpers/Common';
 
 const validationSchema = yup.object({
-  name: yup.string().required(<IntlMessages id='validation.nameRequired' />),
+  name: yup.string().required(<IntlMessages id="validation.nameRequired" />),
   email: yup
     .string()
-    .email(<IntlMessages id='validation.emailFormat' />)
-    .required(<IntlMessages id='validation.emailRequired' />),
-  comment: yup.string().required(<IntlMessages id='validation.comment' />),
+    .email(<IntlMessages id="validation.emailFormat" />)
+    .required(<IntlMessages id="validation.emailRequired" />),
+  comment: yup.string().required(<IntlMessages id="validation.comment" />),
 });
 
 const BlogComment = ({ comment }) => {
@@ -44,14 +44,14 @@ const BlogComment = ({ comment }) => {
       <BlogCommentList comments={comments} />
       <Box sx={{ position: 'relative' }}>
         <Typography
-          component='h3'
+          component="h3"
           sx={{
             mb: 7.5,
             fontSize: { xs: 18, md: 20 },
             fontWeight: Fonts.BOLD,
           }}
         >
-          <IntlMessages id='extraPages.writeComments' />
+          <IntlMessages id="extraPages.writeComments" />
         </Typography>
         <Formik
           validateOnChange={false}

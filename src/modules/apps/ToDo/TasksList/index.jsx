@@ -11,10 +11,7 @@ import AppList from '@crema/components/AppList';
 import { putDataApi } from '@crema/hooks/APIHooks';
 import { useInfoViewActionsContext } from '@crema/context/AppContextProvider/InfoViewContextProvider';
 
-import {
-  useTodoActionsContext,
-  useTodoContext,
-} from '../../context/TodoContextProvider';
+import { useTodoActionsContext, useTodoContext } from '../../context/TodoContextProvider';
 import AddNewTask from '../AddNewTask';
 import TaskListItem from './TaskListItem';
 import TaskListItemMobile from './TaskListItemMobile';
@@ -54,9 +51,7 @@ const TasksList = () => {
       .then((data) => {
         onUpdateSelectedTask(data[0]);
         infoViewActionsContext.showMessage(
-          data[0].isStarred
-            ? 'Todo Marked as Starred Successfully'
-            : 'Todo Marked as Unstarred Successfully',
+          data[0].isStarred ? 'Todo Marked as Starred Successfully' : 'Todo Marked as Unstarred Successfully',
         );
       })
       .catch((error) => {
@@ -68,9 +63,7 @@ const TasksList = () => {
     if (filterText === '') {
       return taskLists?.data;
     } else {
-      return taskLists?.data.filter((task) =>
-        task.title.toUpperCase().includes(filterText.toUpperCase()),
-      );
+      return taskLists?.data.filter((task) => task.title.toUpperCase().includes(filterText.toUpperCase()));
     }
   };
 
@@ -142,7 +135,7 @@ const TasksList = () => {
             ListEmptyComponent={
               <ListEmptyResult
                 loading={loading}
-                actionTitle='Add Task'
+                actionTitle="Add Task"
                 onAction={onOpenAddTask}
                 placeholder={<TodoListSkeleton />}
               />
@@ -167,7 +160,7 @@ const TasksList = () => {
             ListEmptyComponent={
               <ListEmptyResult
                 loading={loading}
-                actionTitle='Add Task'
+                actionTitle="Add Task"
                 onAction={onOpenAddTask}
                 placeholder={<TodoListSkeleton />}
               />
@@ -179,21 +172,12 @@ const TasksList = () => {
       <Hidden smUp>
         {taskLists?.data?.length > 0 ? (
           <AppsFooter>
-            <AppsPagination
-              count={taskLists?.count}
-              page={page}
-              onPageChange={onPageChange}
-            />
+            <AppsPagination count={taskLists?.count} page={page} onPageChange={onPageChange} />
           </AppsFooter>
         ) : null}
       </Hidden>
 
-      {isAddTaskOpen ? (
-        <AddNewTask
-          isAddTaskOpen={isAddTaskOpen}
-          onCloseAddTask={onCloseAddTask}
-        />
-      ) : null}
+      {isAddTaskOpen ? <AddNewTask isAddTaskOpen={isAddTaskOpen} onCloseAddTask={onCloseAddTask} /> : null}
     </>
   );
 };

@@ -8,9 +8,7 @@ function loadServerRows(cursor, data) {
   return new Promise((resolve) => {
     setTimeout(
       () => {
-        const start = cursor
-          ? data.rows.findIndex((row) => row.id === cursor)
-          : 0;
+        const start = cursor ? data.rows.findIndex((row) => row.id === cursor) : 0;
         const end = start + PAGE_SIZE;
         const rows = data.rows.slice(start, end);
 
@@ -80,7 +78,7 @@ export default function CursorPaginationGrid() {
         pageSize={5}
         rowsPerPageOptions={[5]}
         rowCount={100}
-        paginationMode='server'
+        paginationMode="server"
         onPageChange={handlePageChange}
         page={page}
         loading={loading}

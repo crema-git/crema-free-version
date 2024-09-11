@@ -6,12 +6,7 @@ import ListEmptyResult from '@crema/components/AppList/ListEmptyResult';
 import ChatListSkeleton from '@crema/components/AppSkeleton/ChatListSkeleton';
 import { useIntl } from 'react-intl';
 
-const ContactList = ({
-  connectionListData,
-  loading,
-  setSelectedUser,
-  selectedUser,
-}) => {
+const ContactList = ({ connectionListData, loading, setSelectedUser, selectedUser }) => {
   const { messages } = useIntl();
   return (
     <AppList
@@ -29,7 +24,7 @@ const ContactList = ({
       }
       renderRow={(item) => (
         <ContactItem
-          listStyle='px-0'
+          listStyle="px-0"
           key={'connection-item-' + item.id}
           item={item}
           selectedUser={selectedUser}

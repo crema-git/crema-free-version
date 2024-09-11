@@ -39,7 +39,7 @@ const Standard = ({ routes, routesConfig }) => {
         })}
       >
         <AppHeader toggleNavCollapsed={toggleNavCollapsed} />
-        <Box className='mainContent'>
+        <Box className="mainContent">
           <AppSidebar
             routesConfig={routesConfig}
             isNavCollapsed={isNavCollapsed}

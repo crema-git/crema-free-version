@@ -27,7 +27,7 @@ const UserInfo = ({ user, showStatus }) => {
         display: 'flex',
         alignItems: 'center',
       }}
-      className='user-info'
+      className="user-info"
     >
       <Box
         sx={{
@@ -69,8 +69,7 @@ const UserInfo = ({ user, showStatus }) => {
                   height: 14,
                   borderRadius: '50%',
                   border: `2px solid white`,
-                  backgroundColor:
-                    user.status === 'online' ? green[600] : red[600],
+                  backgroundColor: user.status === 'online' ? green[600] : red[600],
                 }}
               />
             )}
@@ -90,9 +89,7 @@ const UserInfo = ({ user, showStatus }) => {
             fontWeight: Fonts.MEDIUM,
           }}
         >
-          {user.displayName || user.name
-            ? user.displayName || user.name
-            : user.email}
+          {user.displayName || user.name ? user.displayName || user.name : user.email}
         </Typography>
         <Typography
           sx={{
@@ -104,8 +101,8 @@ const UserInfo = ({ user, showStatus }) => {
           }}
         >
           {user.isGroup ? (
-            <span className='pointer'>
-              {user.members.length} <IntlMessages id='chatApp.participants' />{' '}
+            <span className="pointer">
+              {user.members.length} <IntlMessages id="chatApp.participants" />{' '}
             </span>
           ) : (
             <span> {user.status ? user.status : 'Online'}</span>

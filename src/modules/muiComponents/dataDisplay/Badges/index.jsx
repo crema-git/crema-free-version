@@ -1,25 +1,25 @@
-import React from "react";
-import AppComponentHeader from "@crema/components/AppComponentHeader";
-import AppGridContainer from "@crema/components/AppGridContainer";
-import Grid from "@mui/material/Grid";
-import AppComponentCard from "@crema/components/AppComponentCard";
+import React from 'react';
+import AppComponentHeader from '@crema/components/AppComponentHeader';
+import AppGridContainer from '@crema/components/AppGridContainer';
+import Grid from '@mui/material/Grid';
+import AppComponentCard from '@crema/components/AppComponentCard';
 
-import SimpleBadge from "./BasicBadge";
-import SimpleBadgeSource from "./BasicBadge?raw";
-import ColorBadge from "./Color";
-import ColorBadgeSource from "./Color?raw";
-import CustomizedBadges from "./Customization";
-import CustomizedBadgesSource from "./Customization?raw";
-import BadgeVisibility from "./BadgeVisibility";
-import BadgeVisibilitySource from "./BadgeVisibility?raw";
-import BadgeMax from "./MaximumValue";
-import BadgeMaxSource from "./MaximumValue?raw";
-import DotBadge from "./DotBadge";
-import DotBadgeSource from "./DotBadge?raw";
-import BadgeOverlap from "./BadgeOverlap";
-import BadgeOverlapSource from "./BadgeOverlap?raw";
-import AccessibleBadges from "./Accessibility";
-import AccessibleBadgesSource from "./Accessibility?raw";
+import SimpleBadge from './BasicBadge';
+import SimpleBadgeSource from './BasicBadge?raw';
+import ColorBadge from './Color';
+import ColorBadgeSource from './Color?raw';
+import CustomizedBadges from './Customization';
+import CustomizedBadgesSource from './Customization?raw';
+import BadgeVisibility from './BadgeVisibility';
+import BadgeVisibilitySource from './BadgeVisibility?raw';
+import BadgeMax from './MaximumValue';
+import BadgeMaxSource from './MaximumValue?raw';
+import DotBadge from './DotBadge';
+import DotBadgeSource from './DotBadge?raw';
+import BadgeOverlap from './BadgeOverlap';
+import BadgeOverlapSource from './BadgeOverlap?raw';
+import AccessibleBadges from './Accessibility';
+import AccessibleBadgesSource from './Accessibility?raw';
 
 const Badges = () => {
   return (

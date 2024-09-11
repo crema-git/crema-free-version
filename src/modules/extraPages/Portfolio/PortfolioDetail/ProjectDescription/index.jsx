@@ -24,14 +24,14 @@ const ProjectDescription = ({ projectDescription }) => {
         <AppGridContainer>
           <Grid item xs={12} md={4}>
             <Typography
-              component='h2'
+              component="h2"
               sx={{
                 fontSize: { xs: 18, md: 20 },
                 fontWeight: Fonts.BOLD,
                 mb: { xs: 2, md: 3.5 },
               }}
             >
-              <IntlMessages id='extraPages.projectDescription' />
+              <IntlMessages id="extraPages.projectDescription" />
             </Typography>
             <Box sx={{ md: 2 }}>
               {projectDescription.service.map((service, index) => (
@@ -39,8 +39,7 @@ const ProjectDescription = ({ projectDescription }) => {
                   sx={{
                     display: 'flex',
                     alignItems: 'center',
-                    borderBottom: (theme) =>
-                      `solid 1px ${theme.palette.divider}`,
+                    borderBottom: (theme) => `solid 1px ${theme.palette.divider}`,
                   }}
                   key={index}
                 >
@@ -51,7 +50,7 @@ const ProjectDescription = ({ projectDescription }) => {
                       fontWeight: Fonts.SEMI_BOLD,
                       textTransform: 'uppercase',
                     }}
-                    component='span'
+                    component="span"
                   >
                     {service.title}
                   </Box>
@@ -62,7 +61,7 @@ const ProjectDescription = ({ projectDescription }) => {
                       color: (theme) => theme.palette.text.secondary,
                       flex: 1,
                     }}
-                    component='span'
+                    component="span"
                   >
                     {service.subTitle}
                   </Box>
@@ -72,7 +71,7 @@ const ProjectDescription = ({ projectDescription }) => {
           </Grid>
           <Grid item xs={12} md={8}>
             <Typography
-              component='h4'
+              component="h4"
               sx={{
                 fontSize: 16,
                 fontWeight: Fonts.SEMI_BOLD,
@@ -80,7 +79,7 @@ const ProjectDescription = ({ projectDescription }) => {
                 textTransform: 'uppercase',
               }}
             >
-              <IntlMessages id='extraPages.sbonTimelessStaplesIdentity' />
+              <IntlMessages id="extraPages.sbonTimelessStaplesIdentity" />
             </Typography>
             <Box
               sx={{
@@ -106,7 +105,7 @@ const ProjectDescription = ({ projectDescription }) => {
               ))}
             </Box>
             <Button
-              variant='text'
+              variant="text"
               sx={{
                 textTransform: 'uppercase',
                 boxShadow: 'none',

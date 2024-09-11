@@ -8,9 +8,9 @@ export default function ColorCheckboxes() {
   return (
     <div>
       <Checkbox {...label} defaultChecked />
-      <Checkbox {...label} defaultChecked color='secondary' />
-      <Checkbox {...label} defaultChecked color='success' />
-      <Checkbox {...label} defaultChecked color='default' />
+      <Checkbox {...label} defaultChecked color="secondary" />
+      <Checkbox {...label} defaultChecked color="success" />
+      <Checkbox {...label} defaultChecked color="default" />
       <Checkbox
         {...label}
         defaultChecked

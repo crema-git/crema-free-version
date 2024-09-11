@@ -11,7 +11,7 @@ import { useLayoutContext } from '@crema/context/AppContextProvider/LayoutContex
 import UserInfo from '../../components/UserInfo';
 import { useSidebarContext } from '@crema/context/AppContextProvider/SidebarContextProvider';
 
-const AppSidebar = (props) => {
+const AppSidebar = ({ variant = '', position = 'left', ...props }) => {
   const { footer, footerType } = useLayoutContext();
 
   const { sidebarTextColor } = useSidebarContext();
@@ -20,16 +20,16 @@ const AppSidebar = (props) => {
     <>
       <Hidden xlUp>
         <Drawer
-          anchor={props.position}
+          anchor={position}
           open={props.isNavCollapsed}
           onClose={props.toggleNavCollapsed}
           classes={{
-            root: clsx(props.variant),
-            paper: clsx(props.variant),
+            root: clsx(variant),
+            paper: clsx(variant),
           }}
           style={{ position: 'absolute' }}
         >
-          <SidebarWrapper className='mini-toggle-sidebar'>
+          <SidebarWrapper className="mini-toggle-sidebar">
             <MainSidebar>
               <UserInfo color={sidebarTextColor} />
               <AppScrollbar
@@ -37,7 +37,6 @@ const AppSidebar = (props) => {
                   py: 2,
                   height: 'calc(100vh - 70px) !important',
                 }}
-                scrollToTop={false}
               >
                 <VerticalNav routesConfig={props.routesConfig} />
               </AppScrollbar>
@@ -46,7 +45,7 @@ const AppSidebar = (props) => {
         </Drawer>
       </Hidden>
       <Hidden lgDown>
-        <SidebarWrapper className='mini-toggle-sidebar'>
+        <SidebarWrapper className="mini-toggle-sidebar">
           <MainSidebar>
             <UserInfo color={sidebarTextColor} />
             <AppScrollbar
@@ -60,7 +59,6 @@ const AppSidebar = (props) => {
                   height: 'calc(100vh - 117px) !important',
                 },
               }}
-              scrollToTop={false}
             >
               <VerticalNav routesConfig={props.routesConfig} />
             </AppScrollbar>
@@ -71,11 +69,6 @@ const AppSidebar = (props) => {
   );
 };
 export default AppSidebar;
-
-AppSidebar.defaultProps = {
-  variant: '',
-  position: 'left',
-};
 
 AppSidebar.propTypes = {
   position: PropTypes.string,

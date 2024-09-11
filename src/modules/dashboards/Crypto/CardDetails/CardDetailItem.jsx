@@ -11,7 +11,7 @@ const CardDetailItem = ({ cardDetail }) => {
       }}
     >
       <Typography
-        component='h5'
+        component="h5"
         sx={{
           color: 'text.secondary',
         }}

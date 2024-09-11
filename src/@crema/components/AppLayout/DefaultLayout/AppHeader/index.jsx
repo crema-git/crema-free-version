@@ -1,22 +1,22 @@
-import React from "react";
-import AppBar from "@mui/material/AppBar";
-import Toolbar from "@mui/material/Toolbar";
-import Box from "@mui/material/Box";
-import Hidden from "@mui/material/Hidden";
-import IconButton from "@mui/material/IconButton";
-import MenuIcon from "@mui/icons-material/Menu";
-import AppMessages from "../../../AppMessages";
-import AppNotifications from "../../../AppNotifications";
-import Menu from "@mui/material/Menu";
-import MenuItem from "@mui/material/MenuItem";
-import MoreVertIcon from "@mui/icons-material/MoreVert";
-import AppTooltip from "../../../AppTooltip";
-import { alpha } from "@mui/material/styles";
-import AppLogo from "../../components/AppLogo";
-import PropTypes from "prop-types";
-import AppLngSwitcher from "../../../AppLngSwitcher";
-import AppSearchBar from "../../../AppSearchBar";
-import { allowMultiLanguage } from "../../../../constants/AppConst";
+import React from 'react';
+import AppBar from '@mui/material/AppBar';
+import Toolbar from '@mui/material/Toolbar';
+import Box from '@mui/material/Box';
+import Hidden from '@mui/material/Hidden';
+import IconButton from '@mui/material/IconButton';
+import MenuIcon from '@mui/icons-material/Menu';
+import AppMessages from '../../../AppMessages';
+import AppNotifications from '../../../AppNotifications';
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
+import MoreVertIcon from '@mui/icons-material/MoreVert';
+import AppTooltip from '../../../AppTooltip';
+import { alpha } from '@mui/material/styles';
+import AppLogo from '../../components/AppLogo';
+import PropTypes from 'prop-types';
+import AppLngSwitcher from '../../../AppLngSwitcher';
+import AppSearchBar from '../../../AppSearchBar';
+import { allowMultiLanguage } from '../../../../constants/AppConst';
 
 const AppHeader = ({ toggleNavCollapsed }) => {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -33,19 +33,20 @@ const AppHeader = ({ toggleNavCollapsed }) => {
     <AppBar
       position="relative"
       color="inherit"
-      sx={{
-        boxShadow: "none",
-        borderBottom: (theme) => `solid 1px ${theme.palette.divider}`,
-        backgroundColor: "background.paper",
+      sx={(theme) => ({
+        boxShadow: 'none',
+        borderBottom: `solid 1px ${theme.palette.divider}`,
+        backgroundColor: 'background.paper',
+
         width: {
-          xs: "100%",
+          xs: '100%',
         },
-      }}
+      })}
       className="app-bar"
     >
       <Toolbar
         sx={{
-          boxSizing: "border-box",
+          boxSizing: 'border-box',
           minHeight: { xs: 56, sm: 70 },
           paddingLeft: { xs: 5 },
           paddingRight: { xs: 5, md: 7.5, xl: 12.5 },
@@ -53,7 +54,7 @@ const AppHeader = ({ toggleNavCollapsed }) => {
       >
         <Hidden lgUp>
           <IconButton
-            sx={{ color: "text.secondary" }}
+            sx={{ color: 'text.secondary' }}
             edge="start"
             className="menu-btn"
             color="inherit"
@@ -75,16 +76,14 @@ const AppHeader = ({ toggleNavCollapsed }) => {
             flexGrow: 1,
           }}
         />
-        {allowMultiLanguage && (
-          <AppLngSwitcher iconOnly={true} tooltipPosition="bottom" />
-        )}
+        {allowMultiLanguage && <AppLngSwitcher iconOnly={true} tooltipPosition="bottom" />}
         <Box sx={{ ml: 4 }}>
           <Hidden smDown>
             <Box
               sx={{
-                position: "relative",
-                display: "flex",
-                alignItems: "center",
+                position: 'relative',
+                display: 'flex',
+                alignItems: 'center',
                 marginLeft: -2,
                 marginRight: -2,
               }}
@@ -109,9 +108,9 @@ const AppHeader = ({ toggleNavCollapsed }) => {
           <Hidden smUp>
             <Box
               sx={{
-                position: "relative",
-                display: "flex",
-                alignItems: "center",
+                position: 'relative',
+                display: 'flex',
+                alignItems: 'center',
                 marginLeft: -2,
                 marginRight: -2,
               }}
@@ -123,23 +122,21 @@ const AppHeader = ({ toggleNavCollapsed }) => {
               >
                 <AppTooltip title="More">
                   <IconButton
-                    sx={{
-                      borderRadius: "50%",
+                    sx={(theme) => ({
+                      borderRadius: '50%',
                       width: 40,
                       height: 40,
-                      color: (theme) => theme.palette.text.secondary,
-                      backgroundColor: (theme) =>
-                        theme.palette.background.default,
+                      color: theme.palette.text.secondary,
+                      backgroundColor: theme.palette.background.default,
                       border: 1,
-                      borderColor: "transparent",
-                      "&:hover, &:focus": {
-                        color: (theme) => theme.palette.text.primary,
-                        backgroundColor: (theme) =>
-                          alpha(theme.palette.background.default, 0.9),
-                        borderColor: (theme) =>
-                          alpha(theme.palette.text.secondary, 0.25),
+                      borderColor: 'transparent',
+
+                      '&:hover, &:focus': {
+                        color: theme.palette.text.primary,
+                        backgroundColor: (theme) => alpha(theme.palette.background.default, 0.9),
+                        borderColor: (theme) => alpha(theme.palette.text.secondary, 0.25),
                       },
-                    }}
+                    })}
                     onClick={handleClick}
                     size="large"
                   >
@@ -149,13 +146,7 @@ const AppHeader = ({ toggleNavCollapsed }) => {
               </Box>
             </Box>
           </Hidden>
-          <Menu
-            id="simple-menu"
-            anchorEl={anchorEl}
-            keepMounted
-            open={Boolean(anchorEl)}
-            onClose={handleClose}
-          >
+          <Menu id="simple-menu" anchorEl={anchorEl} keepMounted open={Boolean(anchorEl)} onClose={handleClose}>
             <MenuItem>
               <AppNotifications isMenu />
             </MenuItem>

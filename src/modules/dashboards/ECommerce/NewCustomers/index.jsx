@@ -9,16 +9,11 @@ import PropTypes from 'prop-types';
 const NewCustomers = (props) => {
   const { messages } = useIntl();
   return (
-    <AppCard
-      title={messages['eCommerce.newCustomers']}
-      contentStyle={{ px: 0 }}
-    >
+    <AppCard title={messages['eCommerce.newCustomers']} contentStyle={{ px: 0 }}>
       <AppScrollbar sx={{ maxHeight: 300 }}>
         <AppList
           data={props.newCustomers}
-          renderRow={(item) => (
-            <CustomerItem listStyle='paddingX' key={item.id} item={item} />
-          )}
+          renderRow={(item) => <CustomerItem listStyle="paddingX" key={item.id} item={item} />}
         />
       </AppScrollbar>
     </AppCard>

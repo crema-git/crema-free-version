@@ -6,11 +6,11 @@ const AppsFooter = (props) => {
   const { children } = props;
   return (
     <Box
-      sx={{
+      sx={(theme) => ({
         px: 5,
         py: 2,
-        borderTop: (theme) => `1px solid ${theme.palette.divider}`,
-      }}
+        borderTop: `1px solid ${theme.palette.divider}`,
+      })}
     >
       {children}
     </Box>

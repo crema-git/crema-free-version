@@ -19,8 +19,7 @@ const boardList = [
                   path: 'asantha.jpg',
                   name: 'asantha.jpg',
                   lastModified: 1579117694243,
-                  lastModifiedDate:
-                    'Thu Jan 16 2020 01:18:14 GMT+0530 (India Standard Time)',
+                  lastModifiedDate: 'Thu Jan 16 2020 01:18:14 GMT+0530 (India Standard Time)',
                 },
                 preview: '/assets/images/avatar/A5.jpg',
               },
@@ -30,8 +29,7 @@ const boardList = [
                   path: 'rahul.jpg',
                   name: 'rahul.jpg',
                   lastModified: 1579117694535,
-                  lastModifiedDate:
-                    'Thu Jan 16 2020 01:18:14 GMT+0530 (India Standard Time)',
+                  lastModifiedDate: 'Thu Jan 16 2020 01:18:14 GMT+0530 (India Standard Time)',
                 },
                 preview: '/assets/images/avatar/A10.jpg',
               },
@@ -70,8 +68,7 @@ const boardList = [
                   path: 'narayan.jpg',
                   name: 'narayan.jpg',
                   lastModified: 1579117694999,
-                  lastModifiedDate:
-                    'Thu Jan 16 2020 01:18:14 GMT+0530 (India Standard Time)',
+                  lastModifiedDate: 'Thu Jan 16 2020 01:18:14 GMT+0530 (India Standard Time)',
                 },
                 preview: '/assets/images/avatar/A15.jpg',
               },
@@ -308,8 +305,7 @@ const boardList = [
                   path: 'dashboard crypto.jpg',
                   name: 'dashboard crypto.jpg',
                   lastModified: 1579117694243,
-                  lastModifiedDate:
-                    'Thu Jan 16 2020 01:18:14 GMT+0530 (India Standard Time)',
+                  lastModifiedDate: 'Thu Jan 16 2020 01:18:14 GMT+0530 (India Standard Time)',
                 },
                 preview: '/assets/images/avatar/A1.jpg',
               },

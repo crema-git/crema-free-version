@@ -10,10 +10,10 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 function appBarLabel(label) {
   return (
     <Toolbar>
-      <IconButton edge='start' color='inherit' aria-label='menu' sx={{ mr: 2 }}>
+      <IconButton edge="start" color="inherit" aria-label="menu" sx={{ mr: 2 }}>
         <MenuIcon />
       </IconButton>
-      <Typography variant='h6' noWrap component='div' sx={{ flexGrow: 1 }}>
+      <Typography variant="h6" noWrap component="div" sx={{ flexGrow: 1 }}>
         {label}
       </Typography>
     </Toolbar>
@@ -33,10 +33,10 @@ export default function EnableColorOnDarkAppBar() {
   return (
     <Stack spacing={2} sx={{ flexGrow: 1 }}>
       <ThemeProvider theme={darkTheme}>
-        <AppBar position='static' color='primary' enableColorOnDark>
+        <AppBar position="static" color="primary" enableColorOnDark>
           {appBarLabel('enableColorOnDark')}
         </AppBar>
-        <AppBar position='static' color='primary'>
+        <AppBar position="static" color="primary">
           {appBarLabel('default')}
         </AppBar>
       </ThemeProvider>

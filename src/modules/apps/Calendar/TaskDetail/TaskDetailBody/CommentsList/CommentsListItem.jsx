@@ -37,17 +37,14 @@ const CommentsListItem = ({ item, isPreviousSender = false, isLast }) => {
           },
         },
       }}
-      className={clsx(
-        isPreviousSender ? 'hideUserInfo' : 'first-chat-message',
-        isLast ? 'last-chat-message' : '',
-      )}
+      className={clsx(isPreviousSender ? 'hideUserInfo' : 'first-chat-message', isLast ? 'last-chat-message' : '')}
     >
       <Box
         sx={{
           marginRight: 2.5,
           position: 'relative',
         }}
-        className='todo-comment-user'
+        className="todo-comment-user"
       >
         {item.image ? (
           <Avatar
@@ -72,7 +69,7 @@ const CommentsListItem = ({ item, isPreviousSender = false, isLast }) => {
         sx={{
           position: 'relative',
         }}
-        className='todo-comment-info'
+        className="todo-comment-info"
       >
         <Box
           sx={{
@@ -84,7 +81,7 @@ const CommentsListItem = ({ item, isPreviousSender = false, isLast }) => {
               marginRight: 1,
             },
           }}
-          className='todo-comment-time'
+          className="todo-comment-time"
         >
           <span>{item.name},</span>
           <span>{item.time},</span>

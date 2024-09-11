@@ -9,9 +9,7 @@ import PropTypes from 'prop-types';
 import { Fonts } from '@crema/constants/AppEnums';
 import AppSelect from '@crema/components/AppSelect';
 
-const GraphTabs = (props) => {
-  const { clientsData, incomeData, projectData } = props;
-
+const GraphTabs = ({ clientsData = [], incomeData = [], projectData = [] }) => {
   const [value, setValue] = useState(0);
 
   const [projectGraphData, setProjectGraphData] = useState(projectData);
@@ -96,13 +94,13 @@ const GraphTabs = (props) => {
         }}
       >
         <Box
-          component='h3'
+          component="h3"
           sx={{
             fontWeight: Fonts.BOLD,
             fontSize: 16,
           }}
         >
-          <IntlMessages id='dashboard.statistics' />
+          <IntlMessages id="dashboard.statistics" />
         </Box>
 
         <Box
@@ -117,9 +115,9 @@ const GraphTabs = (props) => {
           <Tabs
             value={value}
             onChange={handleChange}
-            indicatorColor='primary'
-            textColor='primary'
-            aria-label='simple tabs example'
+            indicatorColor="primary"
+            textColor="primary"
+            aria-label="simple tabs example"
             sx={{
               flex: '1',
               position: 'relative',
@@ -135,38 +133,18 @@ const GraphTabs = (props) => {
               },
             }}
           >
-            <Tab
-              className='crMuiTab'
-              label={<IntlMessages id='dashboard.project' />}
-              {...a11yProps(0)}
-            />
-            <Tab
-              className='crMuiTab'
-              label={<IntlMessages id='dashboard.newClients' />}
-              {...a11yProps(1)}
-            />
-            <Tab
-              className='crMuiTab'
-              label={<IntlMessages id='dashboard.income' />}
-              {...a11yProps(2)}
-            />
+            <Tab className="crMuiTab" label={<IntlMessages id="dashboard.project" />} {...a11yProps(0)} />
+            <Tab className="crMuiTab" label={<IntlMessages id="dashboard.newClients" />} {...a11yProps(1)} />
+            <Tab className="crMuiTab" label={<IntlMessages id="dashboard.income" />} {...a11yProps(2)} />
           </Tabs>
           <Box
             sx={{
               mt: 2,
             }}
           >
+            <AppSelect menus={[2019, 2018, 2017]} defaultValue={2019} onChange={handleYearChange} />
             <AppSelect
-              menus={[2019, 2018, 2017]}
-              defaultValue={2019}
-              onChange={handleYearChange}
-            />
-            <AppSelect
-              menus={[
-                messages['common.june'],
-                messages['common.july'],
-                messages['common.august'],
-              ]}
+              menus={[messages['common.june'], messages['common.july'], messages['common.august']]}
               defaultValue={messages['common.june']}
               onChange={handleMonthChange}
             />
@@ -187,12 +165,6 @@ const GraphTabs = (props) => {
 };
 
 export default GraphTabs;
-
-GraphTabs.defaultProps = {
-  clientsData: [],
-  incomeData: [],
-  projectData: [],
-};
 
 GraphTabs.propTypes = {
   clientsData: PropTypes.array,

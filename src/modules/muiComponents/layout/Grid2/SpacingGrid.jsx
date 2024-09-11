@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Grid from '@mui/material/Unstable_Grid2';
+import Grid from '@mui/material/Grid';
 import FormLabel from '@mui/material/FormLabel';
 import FormControl from '@mui/material/FormControl';
 import FormControlLabel from '@mui/material/FormControlLabel';
@@ -17,7 +17,7 @@ export default function SpacingGrid() {
   return (
     <Grid sx={{ flexGrow: 1 }} container spacing={2}>
       <Grid item xs={12}>
-        <Grid container justifyContent='center' spacing={spacing}>
+        <Grid container justifyContent="center" spacing={spacing}>
           {[0, 1, 2].map((value) => (
             <Grid key={value} item>
               <Paper sx={{ height: 140, width: 100 }} />
@@ -29,15 +29,9 @@ export default function SpacingGrid() {
         <Paper sx={{ p: 2 }}>
           <Grid container>
             <Grid item>
-              <FormControl component='fieldset'>
-                <FormLabel component='legend'>spacing</FormLabel>
-                <RadioGroup
-                  name='spacing'
-                  aria-label='spacing'
-                  value={spacing.toString()}
-                  onChange={handleChange}
-                  row
-                >
+              <FormControl component="fieldset">
+                <FormLabel component="legend">spacing</FormLabel>
+                <RadioGroup name="spacing" aria-label="spacing" value={spacing.toString()} onChange={handleChange} row>
                   {[0, 0.5, 1, 2, 3, 4, 8, 12].map((value) => (
                     <FormControlLabel
                       key={value}

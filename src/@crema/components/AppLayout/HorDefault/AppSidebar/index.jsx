@@ -9,21 +9,21 @@ import StandardSidebarWrapper from './StandardSidebarWrapper';
 import UserInfo from '../../components/UserInfo';
 import { useSidebarContext } from '@crema/context/AppContextProvider/SidebarContextProvider';
 
-const AppSidebar = (props) => {
+const AppSidebar = ({ variant = '', position = 'left', ...props }) => {
   const { sidebarTextColor } = useSidebarContext();
 
   return (
     <Drawer
-      anchor={props.position}
+      anchor={position}
       open={props.isNavCollapsed}
       onClose={props.toggleNavCollapsed}
       classes={{
-        root: clsx(props.variant),
-        paper: clsx(props.variant),
+        root: clsx(variant),
+        paper: clsx(variant),
       }}
       style={{ position: 'absolute' }}
     >
-      <StandardSidebarWrapper className='standard-sidebar'>
+      <StandardSidebarWrapper className="standard-sidebar">
         <MainSidebar>
           <UserInfo color={sidebarTextColor} />
           <AppScrollbar
@@ -31,7 +31,6 @@ const AppSidebar = (props) => {
               py: 2,
               height: 'calc(100vh - 70px) !important',
             }}
-            scrollToTop={false}
           >
             <VerticalNav routesConfig={props.routesConfig} />
           </AppScrollbar>
@@ -41,11 +40,6 @@ const AppSidebar = (props) => {
   );
 };
 export default AppSidebar;
-
-AppSidebar.defaultProps = {
-  variant: '',
-  position: 'left',
-};
 
 AppSidebar.propTypes = {
   position: PropTypes.string,

@@ -15,14 +15,14 @@ const BlogCommentList = ({ comments }) => {
       }}
     >
       <Typography
-        component='h3'
+        component="h3"
         sx={{
           mb: 7.5,
           fontSize: { xs: 18, md: 20 },
           fontWeight: Fonts.BOLD,
         }}
       >
-        {comments.length} <IntlMessages id='common.comments' />
+        {comments.length} <IntlMessages id="common.comments" />
       </Typography>
       <Box
         sx={{
@@ -34,7 +34,7 @@ const BlogCommentList = ({ comments }) => {
         }}
       >
         {comments.map((comment, index) => (
-          <Box className='blog-comment-item' key={index}>
+          <Box className="blog-comment-item" key={index}>
             <BlogCommentItem comment={comment} />
           </Box>
         ))}

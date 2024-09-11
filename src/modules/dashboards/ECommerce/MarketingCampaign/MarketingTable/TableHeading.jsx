@@ -7,14 +7,15 @@ import { Fonts } from '@crema/constants/AppEnums';
 const TableHeading = () => {
   return (
     <TableHeader
-      sx={{
+      sx={(theme) => ({
         borderBottom: '0 none',
         color: grey[500],
+
         '& .tableCell': {
           fontSize: 13,
           padding: 2,
           fontWeight: Fonts.BOLD,
-          backgroundColor: (theme) => theme.palette.background.paper,
+          backgroundColor: theme.palette.background.paper,
           '&:first-of-type': {
             pl: 5,
           },
@@ -22,13 +23,13 @@ const TableHeading = () => {
             pr: 5,
           },
         },
-      }}
+      })}
     >
-      <TableCell className='tableCell'>Name</TableCell>
-      <TableCell className='tableCell'>Duration</TableCell>
-      <TableCell className='tableCell'>Spend</TableCell>
-      <TableCell className='tableCell'>Budget</TableCell>
-      <TableCell className='tableCell'>Graph</TableCell>
+      <TableCell className="tableCell">Name</TableCell>
+      <TableCell className="tableCell">Duration</TableCell>
+      <TableCell className="tableCell">Spend</TableCell>
+      <TableCell className="tableCell">Budget</TableCell>
+      <TableCell className="tableCell">Graph</TableCell>
     </TableHeader>
   );
 };

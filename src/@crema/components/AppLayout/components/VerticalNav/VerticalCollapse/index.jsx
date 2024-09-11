@@ -29,10 +29,7 @@ const isUrlInChildren = (parent, url) => {
       }
     }
 
-    if (
-      parent.children[i].url === url ||
-      url.includes(parent.children[i].url)
-    ) {
+    if (parent.children[i].url === url || url.includes(parent.children[i].url)) {
       return true;
     }
   }
@@ -57,10 +54,7 @@ const VerticalCollapse = ({ item, level }) => {
   };
 
   const { user } = useAuthUser();
-  const hasPermission = useMemo(
-    () => checkPermission(item.permittedRole, user.role),
-    [item.permittedRole, user.role],
-  );
+  const hasPermission = useMemo(() => checkPermission(item.permittedRole, user.role), [item.permittedRole, user.role]);
 
   if (!hasPermission) {
     return null;
@@ -71,18 +65,13 @@ const VerticalCollapse = ({ item, level }) => {
       <VerticalCollapseItem
         level={level}
         sidebarTextColor={sidebarTextColor}
-        button
-        component='div'
+        component="div"
         className={clsx('menu-vertical-collapse', open && 'open')}
         onClick={handleClick}
       >
         {item.icon && (
-          <Box component='span'>
-            <Icon
-              sx={{ mr: 4 }}
-              color='action'
-              className={clsx('nav-item-icon')}
-            >
+          <Box component="span">
+            <Icon sx={{ mr: 4 }} color="action" className={clsx('nav-item-icon')}>
               {item.icon}
             </Icon>
           </Box>
@@ -94,43 +83,24 @@ const VerticalCollapse = ({ item, level }) => {
             whiteSpace: 'nowrap',
             fontSize: 14,
           }}
-          className='nav-item-content'
+          className="nav-item-content"
           classes={{ primary: clsx('nav-item-text') }}
-          primary={
-            allowMultiLanguage ? (
-              <IntlMessages id={item.messageId} />
-            ) : (
-              item.title
-            )
-          }
+          primary={allowMultiLanguage ? <IntlMessages id={item.messageId} /> : item.title}
         />
-        <IconButton
-          className='nav-item-icon-arrow-btn'
-          sx={{ p: 0, mr: 0.75 }}
-          disableRipple
-          size='large'
-        >
-          <Icon className='nav-item-icon-arrow' color='inherit'>
-            {open
-              ? 'expand_more'
-              : theme.direction === 'ltr'
-              ? 'chevron_right'
-              : 'chevron_left'}
+        <IconButton className="nav-item-icon-arrow-btn" sx={{ p: 0, mr: 0.75 }} disableRipple size="large">
+          <Icon className="nav-item-icon-arrow" color="inherit">
+            {open ? 'expand_more' : theme.direction === 'ltr' ? 'chevron_right' : 'chevron_left'}
           </Icon>
         </IconButton>
       </VerticalCollapseItem>
 
       {item.children && (
-        <Collapse in={open} className='collapse-children'>
+        <Collapse in={open} className="collapse-children">
           {item.children.map((item) => (
             <React.Fragment key={item.id}>
-              {item.type === 'collapse' && (
-                <VerticalCollapse item={item} level={level + 1} />
-              )}
+              {item.type === 'collapse' && <VerticalCollapse item={item} level={level + 1} />}
 
-              {item.type === 'item' && (
-                <VerticalItem item={item} level={level + 1} />
-              )}
+              {item.type === 'item' && <VerticalItem item={item} level={level + 1} />}
             </React.Fragment>
           ))}
         </Collapse>
@@ -151,6 +121,5 @@ VerticalCollapse.propTypes = {
   }),
   level: PropTypes.number,
 };
-VerticalCollapse.defaultProps = {};
 
 export default React.memo(VerticalCollapse);

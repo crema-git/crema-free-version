@@ -1,8 +1,8 @@
-import { alpha, Box, ListItem } from '@mui/material';
+import { alpha, Box, ListItemButton } from '@mui/material';
 
 import { styled } from '@mui/material/styles';
 
-export const StyledListItem = styled(ListItem)(({ theme }) => ({
+export const StyledListItem = styled(ListItemButton)(({ theme }) => ({
   padding: '4px 20px 4px 10px',
   overflow: 'hidden',
   display: 'flex',

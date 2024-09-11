@@ -23,15 +23,7 @@ const IconBtn = styled(IconButton)(({ theme }) => {
     },
   };
 });
-const ProductHeader = ({
-  onSearch,
-  viewType,
-  list,
-  page,
-  totalProducts,
-  onPageChange,
-  setViewType,
-}) => {
+const ProductHeader = ({ onSearch, viewType, list, page, totalProducts, onPageChange, setViewType }) => {
   return (
     <Box
       sx={{
@@ -41,15 +33,12 @@ const ProductHeader = ({
       }}
     >
       <Box sx={{ mr: 3 }}>
-        <AppSearch
-          placeholder='Search here'
-          onChange={(e) => onSearch(e.target.value)}
-        />
+        <AppSearch placeholder="Search here" onChange={(e) => onSearch(e.target.value)} />
       </Box>
 
       <Stack
         spacing={2}
-        direction='row'
+        direction="row"
         sx={{
           display: 'flex',
           alignItems: 'center',
@@ -75,17 +64,12 @@ const ProductHeader = ({
         <Hidden smDown>
           {list?.length > 0 ? (
             <Box
-              component='span'
+              component="span"
               sx={{
                 ml: { sm: 'auto' },
               }}
             >
-              <AppsPagination
-                rowsPerPage={10}
-                count={totalProducts}
-                page={page}
-                onPageChange={onPageChange}
-              />
+              <AppsPagination rowsPerPage={10} count={totalProducts} page={page} onPageChange={onPageChange} />
             </Box>
           ) : null}
         </Hidden>

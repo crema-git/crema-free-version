@@ -4,8 +4,7 @@ import PropTypes from 'prop-types';
 import AppCard from '@crema/components/AppCard';
 import { useIntl } from 'react-intl';
 
-const PopularCoins = (props) => {
-  const { popularCoins } = props;
+const PopularCoins = ({ popularCoins = [] }) => {
   const { messages } = useIntl();
   return (
     <AppCard
@@ -20,10 +19,6 @@ const PopularCoins = (props) => {
 };
 
 export default PopularCoins;
-
-PopularCoins.defaultProps = {
-  popularCoins: [],
-};
 
 PopularCoins.propTypes = {
   popularCoins: PropTypes.array,

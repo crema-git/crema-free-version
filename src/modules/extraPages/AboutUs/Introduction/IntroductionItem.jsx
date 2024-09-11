@@ -11,14 +11,10 @@ const IntroductionItem = ({ data }) => {
       }}
     >
       <Box sx={{ mr: 5 }}>
-        <img style={{ minWidth: 34 }} src={data.icon} alt='icon' />
+        <img style={{ minWidth: 34 }} src={data.icon} alt="icon" />
       </Box>
       <Box>
-        <Typography
-          component='h4'
-          variant='h4'
-          sx={{ fontWeight: Fonts.SEMI_BOLD, fontSize: 16, mb: 2.5 }}
-        >
+        <Typography component="h4" variant="h4" sx={{ fontWeight: Fonts.SEMI_BOLD, fontSize: 16, mb: 2.5 }}>
           {data.title}
         </Typography>
         <Typography

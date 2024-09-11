@@ -20,11 +20,7 @@ const PopularProducts = ({ popularProducts }) => {
       title={messages['eCommerce.popularProducts']}
       action={
         <AppSelect
-          menus={[
-            messages['dashboard.thisWeek'],
-            messages['dashboard.lastWeeks'],
-            messages['dashboard.lastMonth'],
-          ]}
+          menus={[messages['dashboard.thisWeek'], messages['dashboard.lastWeeks'], messages['dashboard.lastMonth']]}
           defaultValue={messages['dashboard.thisWeek']}
           onChange={handleSelectionType}
         />
@@ -42,9 +38,7 @@ const PopularProducts = ({ popularProducts }) => {
             xl: 2,
           }}
           itemPadding={0}
-          renderRow={(data, index) => (
-            <ProductCell key={'product-' + index} data={data} />
-          )}
+          renderRow={(data, index) => <ProductCell key={'product-' + index} data={data} />}
         />
       </AppScrollbar>
     </AppCard>

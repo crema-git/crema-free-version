@@ -52,17 +52,9 @@ const HealthStatics = ({ data }) => {
             alignItems: 'center',
           }}
         >
+          <AppSelect menus={[2019, 2018, 2017]} defaultValue={2019} onChange={handleYearChange} />
           <AppSelect
-            menus={[2019, 2018, 2017]}
-            defaultValue={2019}
-            onChange={handleYearChange}
-          />
-          <AppSelect
-            menus={[
-              messages['common.june'],
-              messages['common.july'],
-              messages['common.august'],
-            ]}
+            menus={[messages['common.june'], messages['common.july'], messages['common.august']]}
             defaultValue={messages['common.june']}
             onChange={handleMonthChange}
           />

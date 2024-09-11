@@ -19,11 +19,7 @@ const SaleStatics = () => {
       title={messages['eCommerce.saleStatics']}
       action={
         <AppSelect
-          menus={[
-            messages['dashboard.thisWeek'],
-            messages['dashboard.lastWeeks'],
-            messages['dashboard.lastMonth'],
-          ]}
+          menus={[messages['dashboard.thisWeek'], messages['dashboard.lastWeeks'], messages['dashboard.lastMonth']]}
           defaultValue={messages['dashboard.thisWeek']}
           onChange={handleSelectionType}
         />
@@ -49,16 +45,11 @@ const SaleStatics = () => {
               }}
             >
               <AppCircularProgress
-                activeColor='#0A8FDC'
-                pathColor='#F44D50'
+                activeColor="#0A8FDC"
+                pathColor="#F44D50"
                 hidePercentage
                 value={70}
-                centerNode={
-                  <img
-                    alt='icon'
-                    src={'/assets/images/dashboard/application_icon.svg'}
-                  />
-                }
+                centerNode={<img alt="icon" src={'/assets/images/dashboard/application_icon.svg'} />}
                 thickness={2}
               />
             </Box>

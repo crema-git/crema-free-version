@@ -27,22 +27,12 @@ const marks = [
 
 export default function VerticalSlider() {
   return (
-    <Stack sx={{ height: 300 }} spacing={1} direction='row'>
-      <Slider
-        aria-label='Temperature'
-        orientation='vertical'
-        getAriaValueText={valuetext}
-        defaultValue={30}
-      />
-      <Slider
-        aria-label='Temperature'
-        orientation='vertical'
-        defaultValue={30}
-        disabled
-      />
+    <Stack sx={{ height: 300 }} spacing={1} direction="row">
+      <Slider aria-label="Temperature" orientation="vertical" getAriaValueText={valuetext} defaultValue={30} />
+      <Slider aria-label="Temperature" orientation="vertical" defaultValue={30} disabled />
       <Slider
         getAriaLabel={() => 'Temperature'}
-        orientation='vertical'
+        orientation="vertical"
         getAriaValueText={valuetext}
         defaultValue={[20, 37]}
         marks={marks}

@@ -15,14 +15,14 @@ export default function TransitionAlerts() {
         <Alert
           action={
             <IconButton
-              aria-label='close'
-              color='inherit'
-              size='small'
+              aria-label="close"
+              color="inherit"
+              size="small"
               onClick={() => {
                 setOpen(false);
               }}
             >
-              <CloseIcon fontSize='inherit' />
+              <CloseIcon fontSize="inherit" />
             </IconButton>
           }
           sx={{ mb: 2 }}
@@ -32,7 +32,7 @@ export default function TransitionAlerts() {
       </Collapse>
       <Button
         disabled={open}
-        variant='outlined'
+        variant="outlined"
         onClick={() => {
           setOpen(true);
         }}

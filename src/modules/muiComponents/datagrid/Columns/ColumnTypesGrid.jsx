@@ -3,10 +3,7 @@ import { DataGrid, GridActionsCellItem } from '@mui/x-data-grid';
 import DeleteIcon from '@mui/icons-material/Delete';
 import SecurityIcon from '@mui/icons-material/Security';
 import FileCopyIcon from '@mui/icons-material/FileCopy';
-import {
-  randomCreatedDate,
-  randomUpdatedDate,
-} from '@mui/x-data-grid-generator';
+import { randomCreatedDate, randomUpdatedDate } from '@mui/x-data-grid-generator';
 
 const initialRows = [
   {
@@ -55,11 +52,7 @@ export default function ColumnTypesGrid() {
 
   const toggleAdmin = React.useCallback(
     (id) => () => {
-      setRows((prevRows) =>
-        prevRows.map((row) =>
-          row.id === id ? { ...row, isAdmin: !row.isAdmin } : row,
-        ),
-      );
+      setRows((prevRows) => prevRows.map((row) => (row.id === id ? { ...row, isAdmin: !row.isAdmin } : row)));
     },
     [],
   );
@@ -85,14 +78,7 @@ export default function ColumnTypesGrid() {
         field: 'country',
         type: 'singleSelect',
         width: 120,
-        valueOptions: [
-          'Bulgaria',
-          'Netherlands',
-          'France',
-          'United Kingdom',
-          'Spain',
-          'Brazil',
-        ],
+        valueOptions: ['Bulgaria', 'Netherlands', 'France', 'United Kingdom', 'Spain', 'Brazil'],
       },
       {
         field: 'discount',
@@ -118,23 +104,18 @@ export default function ColumnTypesGrid() {
         type: 'actions',
         width: 80,
         getActions: (params) => [
-          <GridActionsCellItem
-            key={params.id}
-            icon={<DeleteIcon />}
-            label='Delete'
-            onClick={deleteUser(params.id)}
-          />,
+          <GridActionsCellItem key={params.id} icon={<DeleteIcon />} label="Delete" onClick={deleteUser(params.id)} />,
           <GridActionsCellItem
             key={params.id}
             icon={<SecurityIcon />}
-            label='Toggle Admin'
+            label="Toggle Admin"
             onClick={toggleAdmin(params.id)}
             showInMenu
           />,
           <GridActionsCellItem
             key={params.id}
             icon={<FileCopyIcon />}
-            label='Duplicate User'
+            label="Duplicate User"
             onClick={duplicateUser(params.id)}
             showInMenu
           />,

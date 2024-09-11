@@ -37,16 +37,12 @@ export default function ScrollDialog() {
         open={open}
         onClose={handleClose}
         scroll={scroll}
-        aria-labelledby='scroll-dialog-title'
-        aria-describedby='scroll-dialog-description'
+        aria-labelledby="scroll-dialog-title"
+        aria-describedby="scroll-dialog-description"
       >
-        <DialogTitle id='scroll-dialog-title'>Subscribe</DialogTitle>
+        <DialogTitle id="scroll-dialog-title">Subscribe</DialogTitle>
         <DialogContent dividers={scroll === 'paper'}>
-          <DialogContentText
-            id='scroll-dialog-description'
-            ref={descriptionElementRef}
-            tabIndex={-1}
-          >
+          <DialogContentText id="scroll-dialog-description" ref={descriptionElementRef} tabIndex={-1}>
             {[...new Array(50)]
               .map(
                 () => `Cras mattis consectetur purus sit amet fermentum.

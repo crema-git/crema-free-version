@@ -1,14 +1,14 @@
 import React from 'react';
 import LabelOutlinedIcon from '@mui/icons-material/LabelOutlined';
 import ListItemText from '@mui/material/ListItemText';
-import ListItem from '@mui/material/ListItem';
+import ListItemButton from '@mui/material/ListItemButton';
 import PropTypes from 'prop-types';
 
 import { alpha, styled } from '@mui/material/styles';
 import { Fonts } from '@crema/constants/AppEnums';
 import AppNavLink from '@crema/components/AppNavLink';
 
-const ContactSidebarListItemWrapper = styled(ListItem)(({ theme }) => {
+const ContactSidebarListItemWrapper = styled(ListItemButton)(({ theme }) => {
   return {
     paddingTop: 5,
     paddingBottom: 5,
@@ -50,10 +50,9 @@ const ContactSidebarListItemWrapper = styled(ListItem)(({ theme }) => {
 const LabelItem = ({ label }) => {
   return (
     <ContactSidebarListItemWrapper
-      button
       to={`/apps/contact/label/${label.alias}`}
       component={AppNavLink}
-      activeClassName='active'
+      activeClassName="active"
     >
       <LabelOutlinedIcon style={{ color: `${label.color}` }} />
       <ListItemText

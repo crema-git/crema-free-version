@@ -25,23 +25,23 @@ const TableHeading = () => {
         },
       }}
     >
-      <TableCell className='tableCell'>
-        <IntlMessages id='common.num' />
+      <TableCell className="tableCell">
+        <IntlMessages id="common.num" />
       </TableCell>
-      <TableCell className='tableCell'>
-        <IntlMessages id='common.name' />
+      <TableCell className="tableCell">
+        <IntlMessages id="common.name" />
       </TableCell>
-      <TableCell className='tableCell'>
-        <IntlMessages id='common.type' />
+      <TableCell className="tableCell">
+        <IntlMessages id="common.type" />
       </TableCell>
-      <TableCell className='tableCell'>
-        <IntlMessages id='common.amount' />
+      <TableCell className="tableCell">
+        <IntlMessages id="common.amount" />
       </TableCell>
-      <TableCell className='tableCell'>
-        <IntlMessages id='common.progress' />
+      <TableCell className="tableCell">
+        <IntlMessages id="common.progress" />
       </TableCell>
-      <TableCell className='tableCell'>
-        <IntlMessages id='common.created' />
+      <TableCell className="tableCell">
+        <IntlMessages id="common.created" />
       </TableCell>
     </TableHeader>
   );

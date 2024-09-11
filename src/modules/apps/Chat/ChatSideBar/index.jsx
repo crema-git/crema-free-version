@@ -17,9 +17,7 @@ const ChatSideBar = ({ selectedUser, setSelectedUser }) => {
 
   const getConnectionList = () => {
     if (keywords !== '') {
-      return connectionList.filter((item) =>
-        item.name.toUpperCase().includes(keywords.toUpperCase()),
-      );
+      return connectionList.filter((item) => item.name.toUpperCase().includes(keywords.toUpperCase()));
     }
     return connectionList;
   };
@@ -27,9 +25,7 @@ const ChatSideBar = ({ selectedUser, setSelectedUser }) => {
   const getChatList = () => {
     let chatsList = connectionList.filter((item) => item.lastMessage);
     if (keywords !== '') {
-      chatsList = chatsList.filter((item) =>
-        item.name.toUpperCase().includes(keywords.toUpperCase()),
-      );
+      chatsList = chatsList.filter((item) => item.name.toUpperCase().includes(keywords.toUpperCase()));
     }
     chatsList.sort((a, b) => {
       let dayjsA = dayjs(a.lastMessage.time).format('X');
@@ -85,7 +81,7 @@ const ChatSideBar = ({ selectedUser, setSelectedUser }) => {
               },
             },
           }}
-          iconPosition='right'
+          iconPosition="right"
           overlap={false}
           value={keywords}
           onChange={(e) => setKeywords(e.target.value)}

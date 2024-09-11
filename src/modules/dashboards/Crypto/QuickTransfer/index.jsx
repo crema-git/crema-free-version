@@ -11,9 +11,7 @@ import CoinDropdown from './CoinDropdown';
 import { useIntl } from 'react-intl';
 
 const QuickTransfer = ({ quickTransfer }) => {
-  const [selectedCoinId, setSelectedCoinID] = useState(
-    quickTransfer.coinList[0].id,
-  );
+  const [selectedCoinId, setSelectedCoinID] = useState(quickTransfer.coinList[0].id);
 
   const selectedCoin = () => {
     return quickTransfer.coinList.find((coin) => coin.id === selectedCoinId);
@@ -49,8 +47,8 @@ const QuickTransfer = ({ quickTransfer }) => {
             },
           }}
           fullWidth
-          id='outlined-basic'
-          variant='outlined'
+          id="outlined-basic"
+          variant="outlined"
         />
         <Box
           sx={{
@@ -67,7 +65,7 @@ const QuickTransfer = ({ quickTransfer }) => {
             borderTopLeftRadius: 8,
             borderBottomLeftRadius: 8,
           }}
-          component='span'
+          component="span"
         >
           Amount {coin.shortName}
         </Box>
@@ -114,7 +112,7 @@ const QuickTransfer = ({ quickTransfer }) => {
           textAlign: 'right',
         }}
       >
-        <Button variant='contained'>TRANSFER NOW</Button>
+        <Button variant="contained">TRANSFER NOW</Button>
       </Box>
     </AppCard>
   );

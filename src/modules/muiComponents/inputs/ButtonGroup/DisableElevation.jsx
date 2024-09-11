@@ -4,7 +4,7 @@ import Button from '@mui/material/Button';
 
 export default function DisableElevation() {
   return (
-    <ButtonGroup disableElevation variant='contained'>
+    <ButtonGroup disableElevation variant="contained">
       <Button>One</Button>
       <Button>Two</Button>
     </ButtonGroup>

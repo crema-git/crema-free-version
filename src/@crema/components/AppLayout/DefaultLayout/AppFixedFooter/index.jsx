@@ -4,6 +4,7 @@ import { Button } from '@mui/material';
 import { useLayoutContext } from '@crema/context/AppContextProvider/LayoutContextProvider';
 import Typography from '@mui/material/Typography';
 import FooterWrapper from './FooterWrapper';
+import dayjs from 'dayjs';
 
 const AppFixedFooter = () => {
   const { footer, footerType } = useLayoutContext();
@@ -11,11 +12,11 @@ const AppFixedFooter = () => {
   return (
     <>
       {footer && footerType === 'fixed' ? (
-        <FooterWrapper className='footer fixed-footer'>
-          <div className='footerContainer'>
-            <Typography>Copy right @crema 2021</Typography>
+        <FooterWrapper className="footer fixed-footer">
+          <div className="footerContainer">
+            <Typography>Copy right @crema {dayjs().year()}</Typography>
             <Box sx={{ ml: 'auto' }}>
-              <Button color='primary'>Buy Now</Button>
+              For full version <Button color="primary">Buy Now</Button>
             </Box>
           </div>
         </FooterWrapper>

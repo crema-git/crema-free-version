@@ -14,18 +14,13 @@ export const MailContextProvider = ({ children }) => {
   const params = useParams();
   const { pathname } = useLocation();
   const [{ apiData: labelList }] = useGetDataApi('/api/mailApp/labels/list');
-  const [{ apiData: connectionList }] = useGetDataApi(
-    '/api/mailApp/connection/list',
-  );
+  const [{ apiData: connectionList }] = useGetDataApi('/api/mailApp/connection/list');
   const [{ apiData: folderList }] = useGetDataApi('/api/mailApp/folders/list');
   const [page, setPage] = useState(0);
 
-  const [
-    { apiData: mailList, loading },
-    { setQueryParams, setData: setMailData, reCallAPI },
-  ] = useGetDataApi(
+  const [{ apiData: mailList, loading }, { setQueryParams, setData: setMailData, reCallAPI }] = useGetDataApi(
     '/api/mailApp/folder/mail/List',
-    undefined,
+    { data: [] },
     {
       type: params?.folder ? 'folder' : 'label',
       name: params?.folder || params?.label,

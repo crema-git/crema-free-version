@@ -29,8 +29,7 @@ const EditInvoiceTable = ({
   const onChangeLineItems = (index, key, value, nestedKey) => {
     const newItems = [...items];
     if (nestedKey) {
-      if (nestedKey === 'duration')
-        value = getFormattedDate(value, 'DD MMM YYYY');
+      if (nestedKey === 'duration') value = getFormattedDate(value, 'DD MMM YYYY');
       newItems[index][nestedKey][key] = value;
     } else {
       newItems[index][key] = value;
@@ -55,7 +54,7 @@ const EditInvoiceTable = ({
   return (
     <>
       <AppTableContainer>
-        <Table stickyHeader className='table'>
+        <Table stickyHeader className="table">
           <TableHead>
             <TableHeading />
           </TableHead>
@@ -132,7 +131,7 @@ const EditInvoiceTable = ({
             }}
           >
             <Select
-              size='small'
+              size="small"
               sx={{ mr: 6, width: '100%' }}
               value={taxTypeData}
               onChange={(event) => setTaxTypeData(event.target.value)}
@@ -153,7 +152,7 @@ const EditInvoiceTable = ({
               })}
             </Select>
             <Select
-              size='small'
+              size="small"
               sx={{ mr: 6, width: '100%' }}
               value={taxRateData}
               onChange={(event) => setTaxRateData(event.target.value)}
@@ -243,13 +242,11 @@ const EditInvoiceTable = ({
           >
             <Box sx={{ mr: 6, width: '50%' }}>Total:</Box>
             <Select
-              size='small'
+              size="small"
               sx={{ mr: 6, width: '50%' }}
               value={currencyData.currency}
               onChange={(event) => {
-                const type = currencyList.find(
-                  (item) => item.currency === event.target.value,
-                );
+                const type = currencyList.find((item) => item.currency === event.target.value);
                 setCurrencyData(type);
               }}
             >

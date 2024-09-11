@@ -67,7 +67,7 @@ const UserInfo = () => {
         )}
       </Box>
       <Menu
-        id='simple-menu'
+        id="simple-menu"
         anchorEl={anchorEl}
         keepMounted
         open={Boolean(anchorEl)}
@@ -120,7 +120,7 @@ const UserInfo = () => {
                 fontSize: 14,
                 fontWeight: Fonts.MEDIUM,
               }}
-              component='span'
+              component="span"
             >
               {user.displayName ? user.displayName : 'Admin User '}
             </Box>

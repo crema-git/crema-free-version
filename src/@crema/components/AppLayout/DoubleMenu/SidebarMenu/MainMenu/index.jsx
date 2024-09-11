@@ -18,26 +18,21 @@ const useStyles = makeStyles(() => ({
 const MainMenu = ({ item }) => {
   const classes = useStyles();
   const { user } = useAuthUser();
-  const hasPermission = useMemo(
-    () => checkPermission(item.auth, user.role),
-    [item.auth, user.role],
-  );
+  const hasPermission = useMemo(() => checkPermission(item.auth, user.role), [item.auth, user.role]);
   if (!hasPermission) {
     return null;
   }
   return (
     <React.Fragment>
       {item.children && (
-        <List component='div' className={classes.listRoot}>
+        <List component="div" className={classes.listRoot}>
           {item.children.map((item) => (
             <React.Fragment key={item.id}>
               {/*{item.type === 'group' && (*/}
               {/*   <NavVerticalGroup item={item} level={0} />*/}
               {/*)}*/}
 
-              {item.type === 'collapse' && (
-                <VerticalCollapse item={item} level={0} />
-              )}
+              {item.type === 'collapse' && <VerticalCollapse item={item} level={0} />}
 
               {item.type === 'item' && <VerticalItem item={item} level={0} />}
             </React.Fragment>
@@ -63,7 +58,5 @@ MainMenu.propTypes = {
   }),
   level: PropTypes.number,
 };
-
-MainMenu.defaultProps = {};
 
 export default React.memo(MainMenu);

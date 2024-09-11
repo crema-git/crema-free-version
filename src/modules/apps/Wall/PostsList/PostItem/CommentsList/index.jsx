@@ -19,13 +19,10 @@ const CommentsListWrapper = styled('div')(({ theme }) => ({
 const CommentsList = ({ comments }) => {
   return (
     <CommentsListWrapper>
-      <Box component='p' mb={5} fontSize={16} fontWeight={Fonts.MEDIUM}>
-        <IntlMessages id='wall.comments' />
+      <Box component="p" mb={5} fontSize={16} fontWeight={Fonts.MEDIUM}>
+        <IntlMessages id="wall.comments" />
       </Box>
-      <AppList
-        data={comments}
-        renderRow={(item, index) => <CommentItem key={index} item={item} />}
-      />
+      <AppList data={comments} renderRow={(item, index) => <CommentItem key={index} item={item} />} />
     </CommentsListWrapper>
   );
 };

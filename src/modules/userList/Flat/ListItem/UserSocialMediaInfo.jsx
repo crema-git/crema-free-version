@@ -26,20 +26,20 @@ const UserSocialMediaInfo = ({ user }) => {
             alignItems: 'center',
           }}
         >
-          <Box sx={{ mr: 1 }} component='span'>
+          <Box sx={{ mr: 1 }} component="span">
             {user.readTime}
           </Box>
-          <IntlMessages id='common.read' />
+          <IntlMessages id="common.read" />
         </Box>
       </Hidden>
       <Box sx={{ px: { xs: 3, xl: 5 }, display: 'flex', alignItems: 'center' }}>
-        <Box sx={{ mr: 1 }} component='span'>
+        <Box sx={{ mr: 1 }} component="span">
           <FacebookIcon />
         </Box>
-        <Box sx={{ mr: 1 }} component='span'>
+        <Box sx={{ mr: 1 }} component="span">
           {user.shares}
         </Box>
-        <IntlMessages id='common.shares' />
+        <IntlMessages id="common.shares" />
       </Box>
       <Box
         sx={{
@@ -48,13 +48,13 @@ const UserSocialMediaInfo = ({ user }) => {
           alignItems: 'center',
         }}
       >
-        <Box sx={{ mr: 1 }} component='span'>
+        <Box sx={{ mr: 1 }} component="span">
           <TwitterIcon />
         </Box>
-        <Box sx={{ mr: 1 }} component='span'>
+        <Box sx={{ mr: 1 }} component="span">
           {user.retweets}
         </Box>
-        <IntlMessages id='common.retweets' />
+        <IntlMessages id="common.retweets" />
       </Box>
     </Box>
   );

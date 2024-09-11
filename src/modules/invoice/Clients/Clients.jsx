@@ -9,19 +9,14 @@ import { useNavigate } from 'react-router-dom';
 
 const Clients = () => {
   const navigate = useNavigate();
-  const [{ apiData: clientsList, loading }] = useGetDataApi(
-    '/api/invoice/clients',
-    {},
-    {},
-    true,
-  );
+  const [{ apiData: clientsList, loading }] = useGetDataApi('/api/invoice/clients', {}, {}, true);
 
   return !isEmptyObject(clientsList) ? (
     <Box>
       <Box>
         <Button
-          color='primary'
-          variant='contained'
+          color="primary"
+          variant="contained"
           sx={{ display: 'block', ml: 'auto', mb: 3 }}
           onClick={() => navigate('/invoice/client/add')}
         >

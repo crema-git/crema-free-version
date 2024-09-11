@@ -10,9 +10,7 @@ import MuiAccordion from '@mui/material/Accordion';
 import MuiAccordionSummary from '@mui/material/AccordionSummary';
 import MuiAccordionDetails from '@mui/material/AccordionDetails';
 
-const Accordion = styled((props) => (
-  <MuiAccordion disableGutters elevation={0} square {...props} />
-))(({ theme }) => ({
+const Accordion = styled((props) => <MuiAccordion disableGutters elevation={0} square {...props} />)(({ theme }) => ({
   '&:before': {
     display: 'none',
   },
@@ -21,21 +19,19 @@ const Accordion = styled((props) => (
   },
 }));
 
-const AccordionSummary = styled((props) => <MuiAccordionSummary {...props} />)(
-  ({ theme }) => ({
-    backgroundColor: theme.palette.background.paper,
-    flexDirection: 'row-reverse',
-    '& .MuiAccordionSummary-expandIconWrapper.Mui-expanded': {
-      transform: 'rotate(90deg)',
-    },
-    '& .MuiLinearProgress-root': {
-      backgroundColor: darken(theme.palette.background.paper, 0.1),
-    },
-    '&.Mui-expanded': {
-      backgroundColor: theme.palette.background.default,
-    },
-  }),
-);
+const AccordionSummary = styled((props) => <MuiAccordionSummary {...props} />)(({ theme }) => ({
+  backgroundColor: theme.palette.background.paper,
+  flexDirection: 'row-reverse',
+  '& .MuiAccordionSummary-expandIconWrapper.Mui-expanded': {
+    transform: 'rotate(90deg)',
+  },
+  '& .MuiLinearProgress-root': {
+    backgroundColor: darken(theme.palette.background.paper, 0.1),
+  },
+  '&.Mui-expanded': {
+    backgroundColor: theme.palette.background.default,
+  },
+}));
 
 const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
   padding: theme.spacing(2),
@@ -52,15 +48,11 @@ const TrafficSource = ({ trafficData }) => {
   return (
     <AppCard title={messages['dashboard.analytics.trafficSource']}>
       {trafficData.map((data) => (
-        <Accordion
-          key={data.id}
-          expanded={expanded === data.id}
-          onChange={handleChange(data.id)}
-        >
+        <Accordion key={data.id} expanded={expanded === data.id} onChange={handleChange(data.id)}>
           <AccordionSummary
             expanded={expanded === data.id ? 'selected' : ''}
-            aria-controls='panel1bh-content'
-            id='panel1bh-header'
+            aria-controls="panel1bh-content"
+            id="panel1bh-header"
           >
             <Box
               sx={{
@@ -79,7 +71,7 @@ const TrafficSource = ({ trafficData }) => {
               >
                 <Box>{data.title}</Box>
                 <Box
-                  component='span'
+                  component="span"
                   sx={{
                     color: 'text.secondary',
                   }}
@@ -87,11 +79,7 @@ const TrafficSource = ({ trafficData }) => {
                   {data.value}%
                 </Box>
               </Box>
-              <AppLinearProgress
-                value={data.value}
-                thickness={10}
-                activeColor='#0698EC'
-              />
+              <AppLinearProgress value={data.value} thickness={10} activeColor="#0698EC" />
             </Box>
           </AccordionSummary>
           <AccordionDetails>
@@ -103,7 +91,7 @@ const TrafficSource = ({ trafficData }) => {
               }}
             >
               <Box
-                component='span'
+                component="span"
                 sx={{
                   ml: 2,
                   fontWeight: Fonts.LIGHT,
@@ -112,7 +100,7 @@ const TrafficSource = ({ trafficData }) => {
                 {data.session}
               </Box>
               <Box
-                component='span'
+                component="span"
                 sx={{
                   ml: 2,
                   color: 'text.secondary',

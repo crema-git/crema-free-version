@@ -8,7 +8,17 @@ import { Fonts } from '@crema/constants/AppEnums';
 import AppSelect from '@crema/components/AppSelect';
 import AppCard from '@crema/components/AppCard';
 
-const Visits = ({ data }) => {
+const Visits = ({
+  data = {
+    new: 0,
+    returning: 0,
+    graphData: {
+      dataOne: [],
+      dataTwo: [],
+      dataThree: [],
+    },
+  },
+}) => {
   const [graphData, setGraphData] = useState(data.graphData.dataOne);
 
   const handleWeekChange = (value) => {
@@ -34,11 +44,7 @@ const Visits = ({ data }) => {
       title={messages['dashboard.visits']}
       action={
         <AppSelect
-          menus={[
-            messages['dashboard.thisWeek'],
-            messages['dashboard.lastWeeks'],
-            messages['dashboard.lastMonth'],
-          ]}
+          menus={[messages['dashboard.thisWeek'], messages['dashboard.lastWeeks'], messages['dashboard.lastMonth']]}
           defaultValue={messages['dashboard.thisWeek']}
           onChange={handleWeekChange}
         />
@@ -57,15 +63,15 @@ const Visits = ({ data }) => {
           }}
         >
           <Box
-            component='p'
+            component="p"
             sx={{
               color: 'text.primary',
               fontSize: 14,
             }}
           >
-            <IntlMessages id='common.new' />
+            <IntlMessages id="common.new" />
             <Box
-              component='span'
+              component="span"
               sx={{
                 ml: 2,
                 color: 'primary.main',
@@ -75,15 +81,15 @@ const Visits = ({ data }) => {
             </Box>
           </Box>
           <Box
-            component='p'
+            component="p"
             sx={{
               color: 'text.primary',
               fontSize: 14,
             }}
           >
-            <IntlMessages id='common.returning' />
+            <IntlMessages id="common.returning" />
             <Box
-              component='span'
+              component="span"
               sx={{
                 ml: 2,
                 color: 'primary.main',
@@ -101,18 +107,6 @@ const Visits = ({ data }) => {
 };
 
 export default Visits;
-
-Visits.defaultProps = {
-  data: {
-    new: 0,
-    returning: 0,
-    graphData: {
-      dataOne: [],
-      dataTwo: [],
-      dataThree: [],
-    },
-  },
-};
 
 Visits.propTypes = {
   data: PropTypes.object,

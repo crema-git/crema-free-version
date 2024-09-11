@@ -16,14 +16,14 @@ const RecentPost = ({ recentPost }) => {
       }}
     >
       <Typography
-        component='h3'
+        component="h3"
         sx={{
           mb: 5,
           fontWeight: Fonts.SEMI_BOLD,
           fontSize: 14,
         }}
       >
-        <IntlMessages id='extraPages.recentPost' />
+        <IntlMessages id="extraPages.recentPost" />
       </Typography>
       <Box
         sx={{
@@ -36,7 +36,7 @@ const RecentPost = ({ recentPost }) => {
         <AppList
           data={recentPost}
           renderRow={(post, index) => (
-            <Box className='recent-post-item' key={index}>
+            <Box className="recent-post-item" key={index}>
               <RecentPostItem recentPost={post} />
             </Box>
           )}

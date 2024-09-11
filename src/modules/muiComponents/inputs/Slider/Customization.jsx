@@ -10,7 +10,7 @@ function ValueLabelComponent(props) {
   const { children, value } = props;
 
   return (
-    <Tooltip enterTouchDelay={0} placement='top' title={value}>
+    <Tooltip enterTouchDelay={0} placement="top" title={value}>
       {children}
     </Tooltip>
   );
@@ -21,8 +21,7 @@ ValueLabelComponent.propTypes = {
   value: PropTypes.number.isRequired,
 };
 
-const iOSBoxShadow =
-  '0 3px 1px rgba(0,0,0,0.1),0 4px 8px rgba(0,0,0,0.13),0 0 0 1px rgba(0,0,0,0.02)';
+const iOSBoxShadow = '0 3px 1px rgba(0,0,0,0.1),0 4px 8px rgba(0,0,0,0.13),0 0 0 1px rgba(0,0,0,0.02)';
 
 const marks = [
   {
@@ -40,23 +39,24 @@ const marks = [
 ];
 
 const IOSSlider = styled(Slider)(({ theme }) => ({
-  color: theme.palette.mode === 'dark' ? '#3880ff' : '#3880ff',
+  color: '#3880ff',
   height: 2,
   padding: '15px 0',
+
   '& .MuiSlider-thumb': {
     height: 28,
     width: 28,
     backgroundColor: '#fff',
     boxShadow: iOSBoxShadow,
     '&:focus, &:hover, &.Mui-active': {
-      boxShadow:
-        '0 3px 1px rgba(0,0,0,0.1),0 4px 8px rgba(0,0,0,0.3),0 0 0 1px rgba(0,0,0,0.02)',
+      boxShadow: '0 3px 1px rgba(0,0,0,0.1),0 4px 8px rgba(0,0,0,0.3),0 0 0 1px rgba(0,0,0,0.02)',
       // Reset on touch devices, it doesn't add specificity
       '@media (hover: none)': {
         boxShadow: iOSBoxShadow,
       },
     },
   },
+
   '& .MuiSlider-valueLabel': {
     fontSize: 12,
     fontWeight: 'normal',
@@ -68,16 +68,23 @@ const IOSSlider = styled(Slider)(({ theme }) => ({
     },
     '& *': {
       background: 'transparent',
-      color: theme.palette.mode === 'dark' ? '#fff' : '#000',
+      color: '#000',
+
+      ...theme.applyStyles('dark', {
+        color: '#fff',
+      }),
     },
   },
+
   '& .MuiSlider-track': {
     border: 'none',
   },
+
   '& .MuiSlider-rail': {
     opacity: 0.5,
     backgroundColor: '#bfbfbf',
   },
+
   '& .MuiSlider-mark': {
     backgroundColor: '#bfbfbf',
     height: 8,
@@ -87,6 +94,10 @@ const IOSSlider = styled(Slider)(({ theme }) => ({
       backgroundColor: 'currentColor',
     },
   },
+
+  ...theme.applyStyles('dark', {
+    color: '#3880ff',
+  }),
 }));
 
 const PrettoSlider = styled(Slider)({
@@ -152,9 +163,14 @@ const AirbnbSlider = styled(Slider)(({ theme }) => ({
     height: 3,
   },
   '& .MuiSlider-rail': {
-    color: theme.palette.mode === 'dark' ? '#bfbfbf' : '#d8d8d8',
-    opacity: theme.palette.mode === 'dark' ? undefined : 1,
+    color: '#d8d8d8',
+    opacity: 1,
     height: 3,
+
+    ...theme.applyStyles('dark', {
+      color: '#bfbfbf',
+      opacity: undefined,
+    }),
   },
 }));
 
@@ -163,9 +179,9 @@ function AirbnbThumbComponent(props) {
   return (
     <SliderThumb {...other}>
       {children}
-      <span className='airbnb-bar' />
-      <span className='airbnb-bar' />
-      <span className='airbnb-bar' />
+      <span className="airbnb-bar" />
+      <span className="airbnb-bar" />
+      <span className="airbnb-bar" />
     </SliderThumb>
   );
 }
@@ -178,36 +194,25 @@ export default function CustomizedSlider() {
   return (
     <Box sx={{ width: 320 }}>
       <Typography gutterBottom>iOS</Typography>
-      <IOSSlider
-        aria-label='ios slider'
-        defaultValue={60}
-        marks={marks}
-        valueLabelDisplay='on'
-      />
+      <IOSSlider aria-label="ios slider" defaultValue={60} marks={marks} valueLabelDisplay="on" />
       <Box sx={{ m: 3 }} />
       <Typography gutterBottom>pretto.fr</Typography>
-      <PrettoSlider
-        valueLabelDisplay='auto'
-        aria-label='pretto slider'
-        defaultValue={20}
-      />
+      <PrettoSlider valueLabelDisplay="auto" aria-label="pretto slider" defaultValue={20} />
       <Box sx={{ m: 3 }} />
       <Typography gutterBottom>Tooltip value label</Typography>
       <Slider
-        valueLabelDisplay='auto'
-        components={{
-          ValueLabel: ValueLabelComponent,
-        }}
-        aria-label='custom thumb label'
+        valueLabelDisplay="auto"
+        aria-label="custom thumb label"
         defaultValue={20}
+        slots={{
+          valueLabel: ValueLabelComponent,
+        }}
       />
       <Box sx={{ m: 3 }} />
       <Typography gutterBottom>Airbnb</Typography>
       <AirbnbSlider
         components={{ Thumb: AirbnbThumbComponent }}
-        getAriaLabel={(index) =>
-          index === 0 ? 'Minimum price' : 'Maximum price'
-        }
+        getAriaLabel={(index) => (index === 0 ? 'Minimum price' : 'Maximum price')}
         defaultValue={[20, 40]}
       />
     </Box>

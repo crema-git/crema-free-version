@@ -12,22 +12,15 @@ import AppGridContainer from '@crema/components/AppGridContainer';
 const Treemap = () => {
   return (
     <>
-      <AppComponentHeader
-        title='Treemap'
-        refUrl='http://recharts.org/en-US/api/Treemap/'
-      />
+      <AppComponentHeader title="Treemap" refUrl="http://recharts.org/en-US/api/Treemap/" />
 
       <AppGridContainer>
         <Grid item xs={12} lg={6}>
-          <AppComponentCard
-            title='Simple Tree map'
-            component={SimpleTreemap}
-            source={SimpleTreemapSource}
-          />
+          <AppComponentCard title="Simple Tree map" component={SimpleTreemap} source={SimpleTreemapSource} />
         </Grid>
         <Grid item xs={12} lg={6}>
           <AppComponentCard
-            title='Custom Content Treemap'
+            title="Custom Content Treemap"
             component={CustomContentTreemap}
             source={CustomContentTreemapSource}
           />

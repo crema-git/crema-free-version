@@ -9,20 +9,14 @@ import PropTypes from 'prop-types';
 
 const HorizontalNav = ({ routesConfig }) => {
   return (
-    <List className='navbarNav'>
+    <List className="navbarNav">
       {routesConfig.map((item) => (
         <React.Fragment key={item.id}>
-          {item.type === 'group' && (
-            <HorizontalGroup item={item} nestedLevel={0} />
-          )}
+          {item.type === 'group' && <HorizontalGroup item={item} nestedLevel={0} />}
 
-          {item.type === 'collapse' && (
-            <HorizontalCollapse item={item} nestedLevel={0} />
-          )}
+          {item.type === 'collapse' && <HorizontalCollapse item={item} nestedLevel={0} />}
 
-          {item.type === 'item' && (
-            <HorizontalItem item={item} nestedLevel={0} />
-          )}
+          {item.type === 'item' && <HorizontalItem item={item} nestedLevel={0} />}
 
           {item.type === 'divider' && <Divider sx={{ my: 5 }} />}
         </React.Fragment>

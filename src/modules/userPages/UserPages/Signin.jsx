@@ -19,17 +19,15 @@ import AppTextField from '@crema/components/AppFormComponents/AppTextField';
 const validationSchema = yup.object({
   email: yup
     .string()
-    .email(<IntlMessages id='validation.emailFormat' />)
-    .required(<IntlMessages id='validation.emailRequired' />),
-  password: yup
-    .string()
-    .required(<IntlMessages id='validation.passwordRequired' />),
+    .email(<IntlMessages id="validation.emailFormat" />)
+    .required(<IntlMessages id="validation.emailRequired" />),
+  password: yup.string().required(<IntlMessages id="validation.passwordRequired" />),
 });
 
 const Signin = () => {
   const { messages } = useIntl();
   return (
-    <AppAnimate animation='transition.slideUpIn' delay={200}>
+    <AppAnimate animation="transition.slideUpIn" delay={200}>
       <Box
         sx={{
           pb: 6,
@@ -48,8 +46,7 @@ const Signin = () => {
             textAlign: 'center',
             padding: { xs: 8, lg: 12, xl: '48px 64px' },
             overflow: 'hidden',
-            boxShadow:
-              '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
+            boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
           }}
         >
           <Box
@@ -68,12 +65,7 @@ const Signin = () => {
                 },
               }}
             >
-              <img
-                className='logo'
-                src={'/assets/images/logo-icon-large.png'}
-                alt='crema'
-                title='crema'
-              />
+              <img className="logo" src={'/assets/images/logo-icon-large.png'} alt="crema" title="crema" />
             </Box>
             <Box
               sx={{
@@ -82,7 +74,7 @@ const Signin = () => {
                 fontSize: 20,
               }}
             >
-              <IntlMessages id='common.login' />
+              <IntlMessages id="common.login" />
             </Box>
           </Box>
 
@@ -103,7 +95,7 @@ const Signin = () => {
                   textAlign: 'left',
                 }}
                 noValidate
-                autoComplete='off'
+                autoComplete="off"
               >
                 <Box
                   sx={{
@@ -112,9 +104,9 @@ const Signin = () => {
                 >
                   <AppTextField
                     placeholder={messages['common.email']}
-                    label={<IntlMessages id='common.email' />}
-                    name='email'
-                    variant='outlined'
+                    label={<IntlMessages id="common.email" />}
+                    name="email"
+                    variant="outlined"
                     sx={{
                       width: '100%',
                     }}
@@ -127,11 +119,11 @@ const Signin = () => {
                   }}
                 >
                   <AppTextField
-                    type='password'
+                    type="password"
                     placeholder={messages['common.password']}
-                    label={<IntlMessages id='common.password' />}
-                    name='password'
-                    variant='outlined'
+                    label={<IntlMessages id="common.password" />}
+                    name="password"
+                    variant="outlined"
                     sx={{
                       width: '100%',
                     }}
@@ -160,12 +152,12 @@ const Signin = () => {
                     >
                       <Checkbox />
                     </Box>
-                    <Box component='span' sx={{ fontSize: 14 }}>
-                      <IntlMessages id='common.rememberMe' />
+                    <Box component="span" sx={{ fontSize: 14 }}>
+                      <IntlMessages id="common.rememberMe" />
                     </Box>
                   </Box>
                   <Box
-                    component='span'
+                    component="span"
                     sx={{
                       ml: { sm: 'auto' },
                       color: 'primary.main',
@@ -175,20 +167,20 @@ const Signin = () => {
                       cursor: 'pointer',
                     }}
                   >
-                    <IntlMessages id='common.forgetPassword' />
+                    <IntlMessages id="common.forgetPassword" />
                   </Box>
                 </Box>
                 <Button
-                  variant='contained'
-                  color='primary'
-                  type='submit'
+                  variant="contained"
+                  color="primary"
+                  type="submit"
                   disabled={isSubmitting}
                   sx={{
                     width: '100%',
                     height: 44,
                   }}
                 >
-                  <IntlMessages id='common.login' />
+                  <IntlMessages id="common.login" />
                 </Button>
               </Form>
             )}
@@ -205,16 +197,16 @@ const Signin = () => {
             }}
           >
             <Box
-              component='span'
+              component="span"
               sx={{
                 mr: 4,
                 color: grey[600],
                 fontSize: 14,
               }}
             >
-              <IntlMessages id='common.orLoginWith' />
+              <IntlMessages id="common.orLoginWith" />
             </Box>
-            <Box display='inline-block'>
+            <Box display="inline-block">
               <IconButton>
                 <FacebookIcon
                   sx={{
@@ -247,22 +239,22 @@ const Signin = () => {
             }}
           >
             <Box
-              component='span'
+              component="span"
               sx={{
                 mr: 2,
               }}
             >
-              <IntlMessages id='common.dontHaveAccount' />
+              <IntlMessages id="common.dontHaveAccount" />
             </Box>
             <Box
-              component='span'
-              color='primary.main'
+              component="span"
+              color="primary.main"
               sx={{
                 width: '100%',
                 height: 44,
               }}
             >
-              <IntlMessages id='common.signup' />
+              <IntlMessages id="common.signup" />
             </Box>
           </Box>
         </Card>

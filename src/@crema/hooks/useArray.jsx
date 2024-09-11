@@ -12,18 +12,11 @@ export const useArray = (defaultValue) => {
   };
 
   const update = (index, newElement) => {
-    setArray((a) => [
-      ...a.slice(0, index),
-      newElement,
-      ...a.slice(index + 1, a.length - 1),
-    ]);
+    setArray((a) => [...a.slice(0, index), newElement, ...a.slice(index + 1, a.length - 1)]);
   };
 
   const remove = (index) => {
-    setArray((a) => [
-      ...a.slice(0, index),
-      ...a.slice(index + 1, a.length - 1),
-    ]);
+    setArray((a) => [...a.slice(0, index), ...a.slice(index + 1, a.length - 1)]);
   };
 
   const clear = () => {

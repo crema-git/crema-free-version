@@ -1,22 +1,16 @@
-import React, { useState } from "react";
-import Grid from "@mui/material/Grid";
-import AppGridContainer from "@crema/components/AppGridContainer";
-import AppInfoView from "@crema/components/AppInfoView";
+import React, { useState } from 'react';
+import Grid from '@mui/material/Grid';
+import AppGridContainer from '@crema/components/AppGridContainer';
+import AppInfoView from '@crema/components/AppInfoView';
 
-import IntlMessages from "@crema/helpers/IntlMessages";
-import Box from "@mui/material/Box";
-import { blue } from "@mui/material/colors";
-import { Fonts } from "@crema/constants/AppEnums";
-import AppAnimate from "@crema/components/AppAnimate";
-import FaqSideBar from "./FaqSideBar/index";
-import FaqList from "./FaqList";
-import {
-  generalFaq,
-  installationFaq,
-  licenseFaq,
-  pricingFaq,
-  supportFaq,
-} from "@crema/mockapi/fakedb/extraPages";
+import IntlMessages from '@crema/helpers/IntlMessages';
+import Box from '@mui/material/Box';
+import { blue } from '@mui/material/colors';
+import { Fonts } from '@crema/constants/AppEnums';
+import AppAnimate from '@crema/components/AppAnimate';
+import FaqSideBar from './FaqSideBar/index';
+import FaqList from './FaqList';
+import { generalFaq, installationFaq, licenseFaq, pricingFaq, supportFaq } from '@crema/mockapi/fakedb/extraPages';
 
 const FAQ = () => {
   const [dataValue, setDataValue] = useState(generalFaq);
@@ -56,22 +50,19 @@ const FAQ = () => {
         <Box
           sx={{
             backgroundColor: blue[500],
-            color: "primary.contrastText",
-            textAlign: "center",
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
+            color: 'primary.contrastText',
+            textAlign: 'center',
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
             minHeight: 224,
-            width: "100%",
+            width: '100%',
             p: 1.5,
             mb: 2,
-            borderRadius: "16px",
+            borderRadius: '16px',
           }}
         >
-          <Box
-            component="h2"
-            sx={{ mb: 5, fontSize: 20, fontWeight: Fonts.MEDIUM }}
-          >
+          <Box component="h2" sx={{ mb: 5, fontSize: 20, fontWeight: Fonts.MEDIUM }}>
             <IntlMessages id="faq.heading" />
           </Box>
           <Box component="p" sx={{ fontSize: 16 }}>

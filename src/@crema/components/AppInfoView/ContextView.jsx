@@ -11,23 +11,11 @@ const AppInfoViewContext = () => {
   const { clearInfoView } = useInfoViewActionsContext();
 
   const showMessage = () => {
-    return (
-      <AppMessageView
-        variant='success'
-        message={message.toString()}
-        clearInfoView={clearInfoView}
-      />
-    );
+    return <AppMessageView variant="success" message={message.toString()} clearInfoView={clearInfoView} />;
   };
 
   const showError = () => {
-    return (
-      <AppMessageView
-        variant='error'
-        message={error.toString()}
-        clearInfoView={clearInfoView}
-      />
-    );
+    return <AppMessageView variant="error" message={error.toString()} clearInfoView={clearInfoView} />;
   };
 
   return (

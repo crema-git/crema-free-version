@@ -10,14 +10,14 @@ const ProfileConnection = ({ profileConnection }) => {
   return (
     <Box sx={{ position: 'relative' }}>
       <Typography
-        component='h3'
+        component="h3"
         sx={{
           fontSize: 16,
           fontWeight: Fonts.BOLD,
           mb: { xs: 3, lg: 5 },
         }}
       >
-        <IntlMessages id='common.profileConnections' />
+        <IntlMessages id="common.profileConnections" />
       </Typography>
       <AppGridContainer spacing={4}>
         {profileConnection.map((member, index) => (

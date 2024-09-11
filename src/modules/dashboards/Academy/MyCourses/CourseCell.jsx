@@ -35,7 +35,7 @@ const CourseCell = ({ course }) => {
           borderBottom: (theme) => `solid 1px ${theme.palette.divider}`,
         },
       }}
-      className='item-hover'
+      className="item-hover"
     >
       <Box
         sx={{
@@ -55,7 +55,7 @@ const CourseCell = ({ course }) => {
             },
           }}
         >
-          <img className='logo' alt='' src={course.thumb} />
+          <img className="logo" alt="" src={course.thumb} />
         </Box>
         <Box
           sx={{
@@ -69,12 +69,12 @@ const CourseCell = ({ course }) => {
               mb: 0.5,
               fontSize: 14,
             }}
-            component='h3'
+            component="h3"
           >
             {course.title}
           </Box>
           <Box
-            component='p'
+            component="p"
             sx={{
               fontSize: 14,
               color: 'text.secondary',
@@ -111,9 +111,9 @@ const CourseCell = ({ course }) => {
                 whiteSpace: 'nowrap',
                 width: 105,
               }}
-              size='small'
-              variant='contained'
-              color='primary'
+              size="small"
+              variant="contained"
+              color="primary"
             >
               Certificate
             </Button>
@@ -125,16 +125,13 @@ const CourseCell = ({ course }) => {
               alignItems: 'center',
             }}
           >
-            <img
-              src={'/assets/images/dashboard/academy/rating.svg'}
-              alt='rating'
-            />
+            <img src={'/assets/images/dashboard/academy/rating.svg'} alt="rating" />
             <Box
               sx={{
                 mx: 2,
                 fontSize: { xs: 14, xl: 16 },
               }}
-              component='span'
+              component="span"
             >
               {course.rating}
             </Box>
@@ -143,9 +140,9 @@ const CourseCell = ({ course }) => {
                 whiteSpace: 'nowrap',
                 width: 105,
               }}
-              size='small'
-              variant='outlined'
-              color='primary'
+              size="small"
+              variant="outlined"
+              color="primary"
             >
               View Course
             </Button>
@@ -157,15 +154,11 @@ const CourseCell = ({ course }) => {
             mr: -2,
           }}
         >
-          <IconButton
-            aria-controls='alpha-menu'
-            aria-haspopup='true'
-            onClick={handleClick}
-          >
+          <IconButton aria-controls="alpha-menu" aria-haspopup="true" onClick={handleClick}>
             <MoreVertIcon />
           </IconButton>
           <Menu
-            id='alpha-menu'
+            id="alpha-menu"
             anchorEl={anchorEl}
             keepMounted
             open={open}

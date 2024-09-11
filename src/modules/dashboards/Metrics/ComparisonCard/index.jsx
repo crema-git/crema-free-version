@@ -9,12 +9,15 @@ import { Fonts } from '@crema/constants/AppEnums';
 import AppCard from '@crema/components/AppCard';
 
 const ComparisonCard = ({
-  data,
   text,
-  bgColor,
-  headingColor,
-  valueColor,
-  type,
+  bgColor = '',
+  data = {
+    value: '',
+    graphData: [],
+  },
+  type = '',
+  headingColor = '',
+  valueColor = '',
 }) => {
   const onGetGraph = () => {
     switch (type) {
@@ -57,7 +60,7 @@ const ComparisonCard = ({
           }}
         >
           <Box
-            component='p'
+            component="p"
             sx={{
               mb: 4,
               color: headingColor,
@@ -68,7 +71,7 @@ const ComparisonCard = ({
             {text}
           </Box>
           <Box
-            component='h3'
+            component="h3"
             sx={{
               color: valueColor,
               fontSize: 20,
@@ -93,17 +96,6 @@ const ComparisonCard = ({
 };
 
 export default ComparisonCard;
-
-ComparisonCard.defaultProps = {
-  bgColor: '',
-  data: {
-    value: '',
-    graphData: [],
-  },
-  type: '',
-  headingColor: '',
-  valueColor: '',
-};
 
 ComparisonCard.propTypes = {
   text: PropTypes.any.isRequired,

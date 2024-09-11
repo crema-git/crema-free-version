@@ -42,7 +42,7 @@ IconContainer.propTypes = {
 export default function RadioGroupRating() {
   return (
     <Rating
-      name='highlight-selected-only'
+      name="highlight-selected-only"
       defaultValue={2}
       IconContainerComponent={IconContainer}
       highlightSelectedOnly

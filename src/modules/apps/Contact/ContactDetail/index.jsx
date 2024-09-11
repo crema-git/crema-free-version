@@ -12,14 +12,8 @@ import PersonalDetails from './PersonalDetails';
 import OtherDetails from './OtherDetails';
 
 const ContactDetail = (props) => {
-  const {
-    isShowDetail,
-    selectedContact,
-    onShowDetail,
-    onChangeStarred,
-    onSelectContactsForDelete,
-    onOpenEditContact,
-  } = props;
+  const { isShowDetail, selectedContact, onShowDetail, onChangeStarred, onSelectContactsForDelete, onOpenEditContact } =
+    props;
 
   const [contact, setContact] = useState(selectedContact);
 
@@ -94,7 +88,7 @@ const ContactDetail = (props) => {
                   {contact.name[0].toUpperCase()}
                 </Avatar>
               )}
-              <Box component='h3'>{contact.name}</Box>
+              <Box component="h3">{contact.name}</Box>
             </Box>
           </Box>
 
@@ -119,9 +113,9 @@ const ContactDetail = (props) => {
       )}
       <DialogActions>
         <Button
-          variant='outlined'
-          color='primary'
-          type='submit'
+          variant="outlined"
+          color="primary"
+          type="submit"
           sx={{ width: 100 }}
           onClick={() => onShowDetail(false)}
         >

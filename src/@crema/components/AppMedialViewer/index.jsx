@@ -22,31 +22,17 @@ const settings = {
 
 const renderRow = (data, index) => {
   if (data.mime_type.startsWith('image')) {
-    return (
-      <img
-        key={'IMAGE-' + index}
-        src={data.url}
-        alt={data.name ? data.name : 'detail view'}
-      />
-    );
+    return <img key={'IMAGE-' + index} src={data.url} alt={data.name ? data.name : 'detail view'} />;
   } else if (data.mime_type.startsWith('docs')) {
     return (
-      <div className='embed-responsive'>
-        <iframe
-          key={'DOC-' + index}
-          src={data.url}
-          title={data.name ? data.name : 'detail view'}
-        />
+      <div className="embed-responsive">
+        <iframe key={'DOC-' + index} src={data.url} title={data.name ? data.name : 'detail view'} />
       </div>
     );
   } else {
     return (
-      <div className='embed-responsive'>
-        <iframe
-          key={'DOC-' + index}
-          src={data.url}
-          title={data.name ? data.name : 'detail view'}
-        />
+      <div className="embed-responsive">
+        <iframe key={'DOC-' + index} src={data.url} title={data.name ? data.name : 'detail view'} />
       </div>
     );
   }
@@ -98,16 +84,13 @@ const AppMedialViewer = ({ index, medias, onClose }) => {
             zIndex: 1,
           }}
           onClick={onClose}
-          size='large'
+          size="large"
         >
           <HighlightOffIcon />
         </IconButton>
         {index >= 0 ? (
           <MediaSlider>
-            <Slider
-              settings={{ ...settings, initialSlide: index }}
-              slickGoTo={index}
-            >
+            <Slider settings={{ ...settings, initialSlide: index }} slickGoTo={index}>
               {medias.map((data, index) => renderRow(data, index))}
             </Slider>
           </MediaSlider>

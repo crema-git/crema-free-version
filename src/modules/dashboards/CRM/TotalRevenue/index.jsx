@@ -6,11 +6,18 @@ import PropTypes from 'prop-types';
 import { Fonts } from '@crema/constants/AppEnums';
 import AppCard from '@crema/components/AppCard';
 
-const TotalRevenue = ({ revenueData }) => {
+const TotalRevenue = ({
+  revenueData = {
+    ytdRevenue: '',
+    clients: 0,
+    countries: '',
+    revenueGraphData: [],
+  },
+}) => {
   return (
     <>
       <Box
-        component='h2'
+        component="h2"
         sx={{
           textTransform: 'uppercase',
           color: 'text.primary',
@@ -19,7 +26,7 @@ const TotalRevenue = ({ revenueData }) => {
           fontWeight: Fonts.BOLD,
         }}
       >
-        <IntlMessages id='dashboard.totalRevenue' />
+        <IntlMessages id="dashboard.totalRevenue" />
       </Box>
       <AppCard>
         <Box
@@ -35,8 +42,7 @@ const TotalRevenue = ({ revenueData }) => {
               display: 'flex',
               flexDirection: 'column',
               color: 'text.secondary',
-              backgroundColor: (theme) =>
-                alpha(theme.palette.primary.main, 0.1),
+              backgroundColor: (theme) => alpha(theme.palette.primary.main, 0.1),
             }}
           >
             <Box
@@ -51,18 +57,18 @@ const TotalRevenue = ({ revenueData }) => {
                   fontWeight: Fonts.MEDIUM,
                   fontSize: 18,
                 }}
-                component='h3'
+                component="h3"
               >
                 {revenueData.ytdRevenue}
               </Box>
               <Box
-                component='p'
+                component="p"
                 sx={{
                   mb: 0,
                   fontSize: 14,
                 }}
               >
-                <IntlMessages id='dashboard.ytdRevenue' />
+                <IntlMessages id="dashboard.ytdRevenue" />
               </Box>
             </Box>
             <Box
@@ -85,18 +91,18 @@ const TotalRevenue = ({ revenueData }) => {
                     fontWeight: Fonts.MEDIUM,
                     fontSize: 18,
                   }}
-                  component='h3'
+                  component="h3"
                 >
                   {revenueData.clients}
                 </Box>
                 <Box
-                  component='p'
+                  component="p"
                   sx={{
                     mb: 0,
                     fontSize: 14,
                   }}
                 >
-                  <IntlMessages id='dashboard.clients' />
+                  <IntlMessages id="dashboard.clients" />
                 </Box>
               </Box>
 
@@ -112,18 +118,18 @@ const TotalRevenue = ({ revenueData }) => {
                     fontWeight: Fonts.MEDIUM,
                     fontSize: 18,
                   }}
-                  component='h2'
+                  component="h2"
                 >
                   {revenueData.countries}
                 </Box>
                 <Box
-                  component='p'
+                  component="p"
                   sx={{
                     mb: 0,
                     fontSize: 14,
                   }}
                 >
-                  <IntlMessages id='dashboard.countries' />
+                  <IntlMessages id="dashboard.countries" />
                 </Box>
               </Box>
             </Box>
@@ -143,15 +149,6 @@ const TotalRevenue = ({ revenueData }) => {
 };
 
 export default TotalRevenue;
-
-TotalRevenue.defaultProps = {
-  revenueData: {
-    ytdRevenue: '',
-    clients: 0,
-    countries: '',
-    revenueGraphData: [],
-  },
-};
 
 TotalRevenue.propTypes = {
   revenueData: PropTypes.object,

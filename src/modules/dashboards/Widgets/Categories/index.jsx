@@ -7,21 +7,14 @@ import AppCard from '@crema/components/AppCard';
 import { useIntl } from 'react-intl';
 import AppScrollbar from '@crema/components/AppScrollbar';
 
-const getData = (data) => {
-  return data;
-};
-
-const Categories = (props) => {
+const Categories = ({ data = [] }) => {
   const { messages } = useIntl();
-  const data = getData(props.data);
 
   const [categoryList, handleList] = useState(data);
 
   const handleChange = (e, category) => {
     category.isChecked = e.target.checked;
-    const list = categoryList.map((item) =>
-      item.id === category.id ? category : item,
-    );
+    const list = categoryList.map((item) => (item.id === category.id ? category : item));
     handleList(list);
   };
 
@@ -56,13 +49,7 @@ const Categories = (props) => {
           }}
         >
           {categoryList.map((item) => {
-            return (
-              <CategoryItem
-                key={item.id}
-                item={item}
-                handleChange={handleChange}
-              />
-            );
+            return <CategoryItem key={item.id} item={item} handleChange={handleChange} />;
           })}
         </List>
       </AppScrollbar>
@@ -71,10 +58,6 @@ const Categories = (props) => {
 };
 
 export default Categories;
-
-Categories.defaultProps = {
-  data: [],
-};
 
 Categories.propTypes = {
   data: PropTypes.array,

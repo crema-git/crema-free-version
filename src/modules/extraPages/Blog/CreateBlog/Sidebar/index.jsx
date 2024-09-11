@@ -1,13 +1,5 @@
 import React from 'react';
-import {
-  Autocomplete,
-  Box,
-  Button,
-  Grid,
-  Slide,
-  Switch,
-  TextField,
-} from '@mui/material';
+import { Autocomplete, Box, Button, Grid, Slide, Switch, TextField } from '@mui/material';
 import AppTextField from '@crema/components/AppFormComponents/AppTextField';
 import AppCard from '@crema/components/AppCard';
 import PropTypes from 'prop-types';
@@ -28,20 +20,17 @@ const TagList = [
 ];
 const BlogSidebar = ({ selectedTags, setSelectedTags }) => {
   return (
-    <Slide direction='left' in mountOnEnter unmountOnExit>
+    <Slide direction="left" in mountOnEnter unmountOnExit>
       <Grid item xs={12} lg={4}>
-        <AppCard title='Blog Details'>
+        <AppCard title="Blog Details">
           <Box
             sx={{
               display: 'flex',
               alignItems: 'center',
             }}
           >
-            <Switch
-              value='checkedA'
-              inputProps={{ 'aria-label': 'secondary checkbox' }}
-            />
-            <Box component='p'>Publish</Box>
+            <Switch value="checkedA" inputProps={{ 'aria-label': 'secondary checkbox' }} />
+            <Box component="p">Publish</Box>
           </Box>
           <Box
             sx={{
@@ -49,16 +38,13 @@ const BlogSidebar = ({ selectedTags, setSelectedTags }) => {
               alignItems: 'center',
             }}
           >
-            <Switch
-              value='checkedA'
-              inputProps={{ 'aria-label': 'secondary checkbox' }}
-            />
-            <Box component='p'>Comments</Box>
+            <Switch value="checkedA" inputProps={{ 'aria-label': 'secondary checkbox' }} />
+            <Box component="p">Comments</Box>
           </Box>
 
           <Autocomplete
             multiple
-            id='tags-outlined'
+            id="tags-outlined"
             sx={{
               width: '100%',
               my: 2,
@@ -69,53 +55,42 @@ const BlogSidebar = ({ selectedTags, setSelectedTags }) => {
             value={selectedTags}
             onChange={(event, value) => setSelectedTags(value)}
             renderOption={(props, option) => (
-              <Box
-                component='li'
-                sx={{ display: 'flex', alignItems: 'center' }}
-                {...props}
-              >
+              <Box component="li" sx={{ display: 'flex', alignItems: 'center' }} {...props}>
                 <Box ml={4}>{option?.name}</Box>
               </Box>
             )}
             filterSelectedOptions
-            renderInput={(params) => (
-              <TextField
-                {...params}
-                variant='outlined'
-                label='Tags'
-                fullWidth
-              />
-            )}
+            renderInput={(params) => <TextField {...params} variant="outlined" label="Tags" fullWidth />}
           />
 
           <AppTextField
-            name='metatitle'
-            variant='outlined'
+            name="metatitle"
+            variant="outlined"
             sx={{
               width: '100%',
               my: 2,
             }}
-            label='Meta Title'
+            label="Meta Title"
           />
           <AppTextField
             multiline
-            name='metadesc'
-            variant='outlined'
+            name="metadesc"
+            variant="outlined"
             rows={4}
             sx={{
               width: '100%',
               my: 2,
             }}
-            label='Meta Description'
+            label="Meta Description"
           />
           <AppTextField
-            name='keywords'
-            variant='outlined'
+            name="keywords"
+            variant="outlined"
             sx={{
               width: '100%',
               my: 2,
             }}
-            label='Meta Keywords'
+            label="Meta Keywords"
           />
         </AppCard>
 
@@ -126,9 +101,9 @@ const BlogSidebar = ({ selectedTags, setSelectedTags }) => {
             mt: 4,
             ml: 'auto',
           }}
-          color='primary'
-          variant='contained'
-          type='submit'
+          color="primary"
+          variant="contained"
+          type="submit"
         >
           Publish
         </Button>

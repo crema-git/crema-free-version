@@ -7,7 +7,13 @@ import { Fonts } from '@crema/constants/AppEnums';
 import AppCard from '@crema/components/AppCard';
 import { useIntl } from 'react-intl';
 
-const Sales = ({ data }) => {
+const Sales = ({
+  data = {
+    salesToday: '',
+    salesYesterday: '',
+    salesGraphData: [],
+  },
+}) => {
   const { messages } = useIntl();
   return (
     <AppCard
@@ -16,7 +22,7 @@ const Sales = ({ data }) => {
       contentStyle={{ display: 'flex', flexDirection: 'column' }}
     >
       <Box
-        component='h2'
+        component="h2"
         sx={{
           mb: 2,
           color: 'text.secondary',
@@ -27,13 +33,13 @@ const Sales = ({ data }) => {
         {data.salesToday}
       </Box>
       <Box
-        component='p'
+        component="p"
         sx={{
           color: 'secondary.main',
           fontSize: 14,
         }}
       >
-        {data.salesYesterday} <IntlMessages id='common.yesterday' />
+        {data.salesYesterday} <IntlMessages id="common.yesterday" />
       </Box>
       <Box
         sx={{
@@ -47,14 +53,6 @@ const Sales = ({ data }) => {
 };
 
 export default Sales;
-
-Sales.defaultProps = {
-  data: {
-    salesToday: '',
-    salesYesterday: '',
-    salesGraphData: [],
-  },
-};
 
 Sales.propTypes = {
   data: PropTypes.object,

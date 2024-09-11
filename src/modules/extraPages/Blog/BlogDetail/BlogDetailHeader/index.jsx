@@ -29,7 +29,7 @@ const BlogDetailHeader = ({ title, blogDetailHeader }) => {
         }}
       >
         <Typography
-          component='h2'
+          component="h2"
           sx={{
             mb: { xs: 5, md: 7.5 },
             fontWeight: Fonts.SEMI_BOLD,
@@ -60,10 +60,8 @@ const BlogDetailHeader = ({ title, blogDetailHeader }) => {
               }}
               key={index}
             >
-              <Box sx={{ fontSize: 16, mt: 1, mr: 2 }}>
-                {getBlogDetailHeaderIcon(data.icon)}
-              </Box>
-              <Box component='span'>{data.title}</Box>
+              <Box sx={{ fontSize: 16, mt: 1, mr: 2 }}>{getBlogDetailHeaderIcon(data.icon)}</Box>
+              <Box component="span">{data.title}</Box>
             </Box>
           ))}
         </Box>

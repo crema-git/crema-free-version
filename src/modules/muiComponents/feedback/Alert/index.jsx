@@ -1,32 +1,32 @@
-import React from "react";
-import AppComponentHeader from "@crema/components/AppComponentHeader";
-import AppGridContainer from "@crema/components/AppGridContainer";
-import Grid from "@mui/material/Grid";
-import AppComponentCard from "@crema/components/AppComponentCard";
+import React from 'react';
+import AppComponentHeader from '@crema/components/AppComponentHeader';
+import AppGridContainer from '@crema/components/AppGridContainer';
+import Grid from '@mui/material/Grid';
+import AppComponentCard from '@crema/components/AppComponentCard';
 
-import BasicAlerts from "./BasicAlerts";
-import BasicAlertsSource from "./BasicAlerts?raw";
+import BasicAlerts from './BasicAlerts';
+import BasicAlertsSource from './BasicAlerts?raw';
 
-import DescriptionAlerts from "./DescriptionAlerts";
-import DescriptionAlertsSource from "./DescriptionAlerts?raw";
+import DescriptionAlerts from './DescriptionAlerts';
+import DescriptionAlertsSource from './DescriptionAlerts?raw';
 
-import ActionAlerts from "./ActionAlerts";
-import ActionAlertsSource from "./ActionAlerts?raw";
+import ActionAlerts from './ActionAlerts';
+import ActionAlertsSource from './ActionAlerts?raw';
 
-import TransitionAlerts from "./TransitionAlerts";
-import TransitionAlertsSource from "./TransitionAlerts?raw";
+import TransitionAlerts from './TransitionAlerts';
+import TransitionAlertsSource from './TransitionAlerts?raw';
 
-import IconAlerts from "./IconAlerts";
-import IconAlertsSource from "./IconAlerts?raw";
+import IconAlerts from './IconAlerts';
+import IconAlertsSource from './IconAlerts?raw';
 
-import Variants from "./Variants";
-import VariantsSource from "./Variants?raw";
+import Variants from './Variants';
+import VariantsSource from './Variants?raw';
 
-import Filled from "./Filled";
-import FilledSource from "./Filled?raw";
+import Filled from './Filled';
+import FilledSource from './Filled?raw';
 
-import ColorAlerts from "./ColorAlerts";
-import ColorAlertsSource from "./ColorAlerts?raw";
+import ColorAlerts from './ColorAlerts';
+import ColorAlertsSource from './ColorAlerts?raw';
 
 const Alert = () => {
   return (

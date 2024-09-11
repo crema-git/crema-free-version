@@ -1,10 +1,6 @@
 import * as React from 'react';
 import { DataGrid } from '@mui/x-data-grid';
-import {
-  randomCreatedDate,
-  randomTraderName,
-  randomUpdatedDate,
-} from '@mui/x-data-grid-generator';
+import { randomCreatedDate, randomTraderName, randomUpdatedDate } from '@mui/x-data-grid-generator';
 import Alert from '@mui/material/Alert';
 
 export default function RowEditControlGrid() {
@@ -21,11 +17,11 @@ export default function RowEditControlGrid() {
           rows={rows}
           columns={columns}
           editRowsModel={editRowsModel}
-          editMode='row'
+          editMode="row"
           onEditRowsModelChange={handleEditRowsModelChange}
         />
       </div>
-      <Alert severity='info' style={{ marginTop: 8 }}>
+      <Alert severity="info" style={{ marginTop: 8 }}>
         <code>editRowsModel: {JSON.stringify(editRowsModel)}</code>
       </Alert>
     </div>

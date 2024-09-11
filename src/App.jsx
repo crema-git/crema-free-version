@@ -11,30 +11,29 @@ import AppLayout from '@crema/core/AppLayout';
 import '@crema/mockapi';
 import './styles/index.css';
 
-function App() {
-
+const App = () => {
   return (
     <>
-        <AppContextProvider>
-            <AppThemeProvider>
-                <AppStyleProvider>
-                    <AppLocaleProvider>
-                        <BrowserRouter>
-                            <InfoViewContextProvider>
-                                <AppAuthProvider>
-                                    <AuthRoutes>
-                                        <CssBaseline />
-                                        <AppLayout />
-                                    </AuthRoutes>
-                                </AppAuthProvider>
-                            </InfoViewContextProvider>
-                        </BrowserRouter>
-                    </AppLocaleProvider>
-                </AppStyleProvider>
-            </AppThemeProvider>
-        </AppContextProvider>
+      <AppContextProvider>
+        <AppThemeProvider>
+          <AppStyleProvider>
+            <AppLocaleProvider>
+              <BrowserRouter>
+                <InfoViewContextProvider>
+                  <AppAuthProvider>
+                    <AuthRoutes>
+                      <CssBaseline />
+                      <AppLayout />
+                    </AuthRoutes>
+                  </AppAuthProvider>
+                </InfoViewContextProvider>
+              </BrowserRouter>
+            </AppLocaleProvider>
+          </AppStyleProvider>
+        </AppThemeProvider>
+      </AppContextProvider>
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;

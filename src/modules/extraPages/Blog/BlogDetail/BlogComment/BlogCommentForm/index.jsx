@@ -8,30 +8,22 @@ import AppGridContainer from '@crema/components/AppGridContainer';
 
 const BlogCommentForm = () => {
   return (
-    <Form autoComplete='off'>
+    <Form autoComplete="off">
       <AppGridContainer spacing={4}>
         <Grid item xs={12} md={6}>
-          <AppTextField
-            fullWidth
-            name='name'
-            label={<IntlMessages id='common.fullName' />}
-          />
+          <AppTextField fullWidth name="name" label={<IntlMessages id="common.fullName" />} />
         </Grid>
         <Grid item xs={12} md={6}>
-          <AppTextField
-            name='email'
-            fullWidth
-            label={<IntlMessages id='common.email' />}
-          />
+          <AppTextField name="email" fullWidth label={<IntlMessages id="common.email" />} />
         </Grid>
         <Grid item xs={12} md={12}>
           <AppTextField
-            name='comment'
+            name="comment"
             fullWidth
             multiline
-            rows='3'
-            variant='outlined'
-            label={<IntlMessages id='common.comments' />}
+            rows="3"
+            variant="outlined"
+            label={<IntlMessages id="common.comments" />}
           />
         </Grid>
         <Grid item xs={12} md={12}>
@@ -40,11 +32,11 @@ const BlogCommentForm = () => {
               position: 'relative',
               minWidth: 100,
             }}
-            color='primary'
-            variant='contained'
-            type='submit'
+            color="primary"
+            variant="contained"
+            type="submit"
           >
-            <IntlMessages id='common.postComment' />
+            <IntlMessages id="common.postComment" />
           </Button>
         </Grid>
       </AppGridContainer>

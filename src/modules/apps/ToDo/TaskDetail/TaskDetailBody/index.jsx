@@ -25,12 +25,8 @@ import EditButton from './EditButton';
 import AssignedStaff from './AssignedStaff';
 import TodoDatePicker from './DatePicker';
 import TaskLabels from '../../TasksList/TaskListItem/Labels';
+import CommentsList from './CommentsList/index.jsx';
 
-function CommentsLists() {
-  return null;
-}
-
-CommentsLists.propTypes = {};
 const TaskDetailBody = (props) => {
   const { selectedTask, onUpdateSelectedTask } = props;
   const infoViewActionsContext = useInfoViewActionsContext();
@@ -44,9 +40,7 @@ const TaskDetailBody = (props) => {
 
   const [comment, setComment] = useState('');
 
-  const [scheduleDate, setScheduleDate] = useState(
-    getDateObject(selectedTask.startDate),
-  );
+  const [scheduleDate, setScheduleDate] = useState(getDateObject(selectedTask.startDate));
 
   const [selectedStaff, setStaff] = useState(selectedTask.assignedTo);
 
@@ -119,8 +113,8 @@ const TaskDetailBody = (props) => {
       >
         <Box sx={{ display: 'flex', alignItems: 'center' }}>
           <Typography
-            component='h2'
-            variant='h2'
+            component="h2"
+            variant="h2"
             sx={{
               overflow: 'hidden',
               textOverflow: 'ellipsis',
@@ -136,7 +130,7 @@ const TaskDetailBody = (props) => {
 
           <Box mr={1} mb={{ xs: 3, sm: 0 }}>
             <Box
-              component='span'
+              component="span"
               sx={{
                 px: 3,
                 py: 1,
@@ -152,28 +146,20 @@ const TaskDetailBody = (props) => {
           </Box>
         </Box>
 
-        <Box display='flex' alignItems='center' ml={{ sm: 'auto' }}>
+        <Box display="flex" alignItems="center" ml={{ sm: 'auto' }}>
           <TaskLabels labels={selectedTask.label} />
-          <Box component='span' color='text.secondary' fontSize={14} ml={2}>
+          <Box component="span" color="text.secondary" fontSize={14} ml={2}>
             Nov 21, 2020, 9:46 AM
           </Box>
         </Box>
       </Box>
 
-      <Box mb={0.5} display='flex'>
-        <Box
-          display='flex'
-          flexDirection={{ xs: 'column', sm: 'row' }}
-          mr={2}
-          alignItems={{ sm: 'center' }}
-        >
+      <Box mb={0.5} display="flex">
+        <Box display="flex" flexDirection={{ xs: 'column', sm: 'row' }} mr={2} alignItems={{ sm: 'center' }}>
           {isEdit ? (
             <>
               <Box mb={{ xs: 3, sm: 0 }}>
-                <ChangeStaff
-                  selectedStaff={selectedStaff}
-                  handleStaffChange={handleStaffChange}
-                />
+                <ChangeStaff selectedStaff={selectedStaff} handleStaffChange={handleStaffChange} />
               </Box>
               <TodoDatePicker date={scheduleDate} setDate={setScheduleDate} />
             </>
@@ -182,7 +168,7 @@ const TaskDetailBody = (props) => {
           )}
         </Box>
 
-        <Box ml='auto'>
+        <Box ml="auto">
           {!isEdit ? (
             <EditButton
               action={onClickEditButton}
@@ -227,10 +213,10 @@ const TaskDetailBody = (props) => {
               padding: '10px 15px',
             },
           }}
-          rows='6'
-          variant='outlined'
+          rows="6"
+          variant="outlined"
           placeholder={messages['common.description']}
-          name='content'
+          name="content"
           value={content}
           onChange={(event) => setContent(event.target.value)}
         />
@@ -245,28 +231,17 @@ const TaskDetailBody = (props) => {
           pt: 5,
         }}
       >
-        <Box
-          sx={{ display: 'flex', alignItems: 'center', mb: { xs: 3, sm: 0 } }}
-        >
+        <Box sx={{ display: 'flex', alignItems: 'center', mb: { xs: 3, sm: 0 } }}>
           <Box mr={5}>
-            <TaskStatus
-              selectedTask={selectedTask}
-              onUpdateSelectedTask={onUpdateSelectedTask}
-            />
+            <TaskStatus selectedTask={selectedTask} onUpdateSelectedTask={onUpdateSelectedTask} />
           </Box>
 
           <Box mr={5}>
-            <TaskPriority
-              selectedTask={selectedTask}
-              onUpdateSelectedTask={onUpdateSelectedTask}
-            />
+            <TaskPriority selectedTask={selectedTask} onUpdateSelectedTask={onUpdateSelectedTask} />
           </Box>
         </Box>
 
-        <TaskCreatedByInfo
-          createdBy={selectedTask.createdBy}
-          createdOn={selectedTask.createdOn}
-        />
+        <TaskCreatedByInfo createdBy={selectedTask.createdBy} createdOn={selectedTask.createdOn} />
       </Box>
 
       <Divider
@@ -276,7 +251,7 @@ const TaskDetailBody = (props) => {
         }}
       />
 
-      <CommentsLists comments={selectedTask.comments} />
+      <CommentsList comments={selectedTask.comments} />
 
       <Box
         sx={{
@@ -296,7 +271,7 @@ const TaskDetailBody = (props) => {
           }}
           minRows={2}
           maxRows={4}
-          variant='outlined'
+          variant="outlined"
           placeholder={messages['common.writeComment']}
           value={comment}
           onChange={(event) => setComment(event.target.value)}
@@ -313,8 +288,8 @@ const TaskDetailBody = (props) => {
               marginLeft: 0.75,
             },
           }}
-          variant='contained'
-          color='primary'
+          variant="contained"
+          color="primary"
           disabled={!comment}
           onClick={onAddComments}
         >

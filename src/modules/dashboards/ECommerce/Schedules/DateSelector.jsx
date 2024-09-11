@@ -38,15 +38,13 @@ const DateSelector = ({ schedules }) => {
     <CalendarRoot>
       <StaticDatePicker
         autoOk
-        orientation='landscape'
-        variant='static'
-        openTo='date'
+        orientation="landscape"
+        variant="static"
+        openTo="date"
         value={day}
         renderInput={(params) => <TextField {...params} />}
         renderDay={(day, selectedDate, isInCurrentMonth, dayComponent) => {
-          const scheduleDate = schedules.find(
-            (data) => data.day === day.get('date'),
-          );
+          const scheduleDate = schedules.find((data) => data.day === day.get('date'));
           if (!scheduleDate) {
             return dayComponent;
           }
@@ -54,14 +52,11 @@ const DateSelector = ({ schedules }) => {
             <Tooltip
               TransitionComponent={Zoom}
               title={scheduleDate.title}
-              placement='top'
+              placement="top"
               arrow
               bgcolor={scheduleDate.color}
             >
-              <Box
-                sx={{ bgcolor: scheduleDate.color }}
-                className='schedule-date'
-              >
+              <Box sx={{ bgcolor: scheduleDate.color }} className="schedule-date">
                 {dayComponent}
               </Box>
             </Tooltip>

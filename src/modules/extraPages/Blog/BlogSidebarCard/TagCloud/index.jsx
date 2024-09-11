@@ -12,14 +12,14 @@ const TagCloud = ({ tag }) => {
       }}
     >
       <Typography
-        component='h3'
+        component="h3"
         sx={{
           mb: 5,
           fontWeight: Fonts.SEMI_BOLD,
           fontSize: 14,
         }}
       >
-        <IntlMessages id='extraPages.tagsCloud' />
+        <IntlMessages id="extraPages.tagsCloud" />
       </Typography>
       <Box
         sx={{
@@ -53,7 +53,7 @@ const TagCloud = ({ tag }) => {
                   pt: 2.25,
                   pb: 2.75,
                 }}
-                component='span'
+                component="span"
               >
                 {tag.name}
               </Box>

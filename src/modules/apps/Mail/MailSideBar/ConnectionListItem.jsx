@@ -25,9 +25,7 @@ const ListItemTextWrapper = styled(ListItemText)(() => {
   };
 });
 
-const ConnectionListItem = (props) => {
-  const { connection } = props;
-
+const ConnectionListItem = ({ connection = null }) => {
   return (
     <ListItem
       key={connection.id}
@@ -35,7 +33,7 @@ const ConnectionListItem = (props) => {
         px: 0,
         cursor: 'pointer',
       }}
-      alignItems='flex-start'
+      alignItems="flex-start"
     >
       <ListItemAvatar
         sx={{
@@ -56,7 +54,7 @@ const ConnectionListItem = (props) => {
       <ListItemTextWrapper
         primary={
           <Box
-            component='span'
+            component="span"
             sx={{
               mb: 0,
               fontWeight: Fonts.MEDIUM,
@@ -72,10 +70,6 @@ const ConnectionListItem = (props) => {
 };
 
 export default ConnectionListItem;
-
-ConnectionListItem.defaultProps = {
-  connection: null,
-};
 
 ConnectionListItem.propTypes = {
   connection: PropTypes.object,

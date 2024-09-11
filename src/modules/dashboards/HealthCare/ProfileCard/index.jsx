@@ -32,9 +32,9 @@ const ProfileCard = () => {
         }}
       >
         <ProfilePic>
-          <Avatar className='avatar-pic' src={'/assets/images/avatar/A5.jpg'} />
+          <Avatar className="avatar-pic" src={'/assets/images/avatar/A5.jpg'} />
         </ProfilePic>
-        <Box sx={{ mb: 0.5 }} component='h5'>
+        <Box sx={{ mb: 0.5 }} component="h5">
           Talan Phips
         </Box>
         <Box
@@ -62,15 +62,20 @@ const ProfileCard = () => {
             }}
           >
             <Box
-              sx={{
+              sx={(theme) => ({
                 py: 3.5,
                 px: 2,
                 width: 1 / 2,
-                borderRight: (theme) => `solid 1px ${theme.palette.grey[200]}`,
-              }}
+                borderRight: `solid 1px ${theme.palette.grey[200]}`,
+              })}
             >
-              <Box component='h5'>24</Box>
-              <Box component='p' color='text.secondary'>
+              <Box component="h5">24</Box>
+              <Box
+                component="p"
+                sx={{
+                  color: 'text.secondary',
+                }}
+              >
                 Years
               </Box>
             </Box>
@@ -81,30 +86,30 @@ const ProfileCard = () => {
                 width: 1 / 2,
               }}
             >
-              <Box component='h5'>A+</Box>
-              <Box component='p' sx={{ color: 'text.secondary' }}>
+              <Box component="h5">A+</Box>
+              <Box component="p" sx={{ color: 'text.secondary' }}>
                 Blood
               </Box>
             </Box>
           </Box>
           <Box
-            sx={{
+            sx={(theme) => ({
               display: 'flex',
               alignItems: 'center',
               textAlign: 'center',
-              borderTop: (theme) => `solid 1px ${theme.palette.grey[200]}`,
-            }}
+              borderTop: `solid 1px ${theme.palette.grey[200]}`,
+            })}
           >
             <Box
-              sx={{
+              sx={(theme) => ({
                 py: 3.5,
                 px: 2,
                 width: 1 / 2,
-                borderRight: (theme) => `solid 1px ${theme.palette.grey[200]}`,
-              }}
+                borderRight: `solid 1px ${theme.palette.grey[200]}`,
+              })}
             >
-              <Box component='h5'>185 cm</Box>
-              <Box component='p' sx={{ color: 'text.secondary' }}>
+              <Box component="h5">185 cm</Box>
+              <Box component="p" sx={{ color: 'text.secondary' }}>
                 Height
               </Box>
             </Box>
@@ -115,8 +120,8 @@ const ProfileCard = () => {
                 width: 1 / 2,
               }}
             >
-              <Box component='h5'>84 kg</Box>
-              <Box component='p' sx={{ color: 'text.secondary' }}>
+              <Box component="h5">84 kg</Box>
+              <Box component="p" sx={{ color: 'text.secondary' }}>
                 Weight
               </Box>
             </Box>

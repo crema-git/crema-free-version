@@ -17,9 +17,7 @@ const UpcomingAppointments = ({ data }) => {
       <AppScrollbar style={{ maxHeight: 280 }}>
         <AppList
           data={data}
-          renderRow={(appointment) => (
-            <AppointmentCell key={appointment.id} appointment={appointment} />
-          )}
+          renderRow={(appointment) => <AppointmentCell key={appointment.id} appointment={appointment} />}
         />
       </AppScrollbar>
     </AppCard>

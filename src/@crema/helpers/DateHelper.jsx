@@ -26,11 +26,7 @@ export const getCurrentMonthDate = (date, format = 'MMM DD,YYYY') => {
   return dayjs().format(format);
 };
 
-export const getFormattedDateTime = (
-  value = 0,
-  unit = 'days',
-  format = 'MMM DD,YYYY',
-) => {
+export const getFormattedDateTime = (value = 0, unit = 'days', format = 'MMM DD,YYYY') => {
   if (value === 0) {
     return dayjs().format(format);
   } else {

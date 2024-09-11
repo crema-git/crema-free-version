@@ -46,12 +46,12 @@ const Header = () => {
         }}
       >
         <Box
-          component='p'
+          component="p"
           sx={{
             fontSize: 14,
           }}
         >
-          <IntlMessages id='dashboard.jombieContent' />
+          <IntlMessages id="dashboard.jombieContent" />
         </Box>
 
         <Box
@@ -62,18 +62,18 @@ const Header = () => {
           }}
         >
           <Button
-            variant='contained'
-            color='primary'
+            variant="contained"
+            color="primary"
             sx={{
               fontWeight: Fonts.LIGHT,
               fontSize: 14,
               mr: 4,
             }}
           >
-            <IntlMessages id='dashboard.getStarted' />
+            <IntlMessages id="dashboard.getStarted" />
           </Button>
           <Button
-            variant='outlined'
+            variant="outlined"
             sx={{
               fontWeight: Fonts.LIGHT,
               fontSize: 14,
@@ -82,7 +82,7 @@ const Header = () => {
               color: (theme) => theme.palette.primary.contrastText,
             }}
           >
-            <IntlMessages id='dashboard.readMore' />
+            <IntlMessages id="dashboard.readMore" />
           </Button>
         </Box>
       </Box>

@@ -14,19 +14,17 @@ import SimpleMap from '../../../modules/extraPages/ContactUs/SimpleMap';
 import { contactUsData } from '@crema/mockapi/fakedb/extraPages';
 
 const validationSchema = yup.object({
-  fullName: yup
-    .string()
-    .required(<IntlMessages id='validation.nameRequired' />),
+  fullName: yup.string().required(<IntlMessages id="validation.nameRequired" />),
   email: yup
     .string()
-    .email(<IntlMessages id='validation.emailFormat' />)
-    .required(<IntlMessages id='validation.emailRequired' />),
-  message: yup.string().required(<IntlMessages id='validation.message' />),
+    .email(<IntlMessages id="validation.emailFormat" />)
+    .required(<IntlMessages id="validation.emailRequired" />),
+  message: yup.string().required(<IntlMessages id="validation.message" />),
 });
 
 const ContactUs = () => {
   return (
-    <AppAnimate animation='transition.slideUpIn' delay={200}>
+    <AppAnimate animation="transition.slideUpIn" delay={200}>
       <AppCard>
         <Box sx={{ mb: 5, maxHeight: '40%' }}>
           <SimpleMap />

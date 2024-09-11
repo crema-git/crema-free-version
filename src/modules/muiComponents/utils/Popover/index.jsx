@@ -1,13 +1,13 @@
-import AppComponentHeader from "@crema/components/AppComponentHeader";
-import AppGridContainer from "@crema/components/AppGridContainer";
-import Grid from "@mui/material/Grid";
-import AppComponentCard from "@crema/components/AppComponentCard";
+import AppComponentHeader from '@crema/components/AppComponentHeader';
+import AppGridContainer from '@crema/components/AppGridContainer';
+import Grid from '@mui/material/Grid';
+import AppComponentCard from '@crema/components/AppComponentCard';
 
-import BasicPopover from "./BasicPopover";
-import BasicPopoverSource from "./BasicPopover?raw";
+import BasicPopover from './BasicPopover';
+import BasicPopoverSource from './BasicPopover?raw';
 
-import MouseOverPopover from "./MouseOverPopover";
-import MouseOverPopoverSource from "./MouseOverPopover?raw";
+import MouseOverPopover from './MouseOverPopover';
+import MouseOverPopoverSource from './MouseOverPopover?raw';
 
 const Popover = () => {
   return (
@@ -20,12 +20,7 @@ const Popover = () => {
 
       <AppGridContainer>
         <Grid item xs={12} md={6}>
-          <AppComponentCard
-            title="BasicPopover"
-            component={BasicPopover}
-            source={BasicPopoverSource}
-            noScrollbar
-          />
+          <AppComponentCard title="BasicPopover" component={BasicPopover} source={BasicPopoverSource} noScrollbar />
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard

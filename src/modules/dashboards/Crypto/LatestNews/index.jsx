@@ -4,9 +4,7 @@ import PropTypes from 'prop-types';
 import AppCard from '@crema/components/AppCard';
 import { useIntl } from 'react-intl';
 
-const LatestNews = (props) => {
-  const { newsData } = props;
-
+const LatestNews = ({ newsData = [] }) => {
   const { messages } = useIntl();
 
   return (
@@ -22,10 +20,6 @@ const LatestNews = (props) => {
 };
 
 export default LatestNews;
-
-LatestNews.defaultProps = {
-  newsData: [],
-};
 
 LatestNews.propTypes = {
   newsData: PropTypes.array,

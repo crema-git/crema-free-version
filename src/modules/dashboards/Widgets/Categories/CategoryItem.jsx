@@ -9,24 +9,20 @@ import PropTypes from 'prop-types';
 const CategoryItem = (props) => {
   const { item, handleChange } = props;
   return (
-    <ListItem key={item.id} className='item-hover'>
+    <ListItem key={item.id} className="item-hover">
       <ListItemIcon>
         <Box
           sx={{
             ml: -2,
           }}
         >
-          <Checkbox
-            color='primary'
-            checked={item.isChecked}
-            onChange={(e) => handleChange(e, item)}
-          />
+          <Checkbox color="primary" checked={item.isChecked} onChange={(e) => handleChange(e, item)} />
         </Box>
       </ListItemIcon>
       <ListItemText
         primary={
           <Box
-            component='span'
+            component="span"
             sx={{
               color: !item.isChecked ? 'text.secondary' : '',
               fontSize: 14,

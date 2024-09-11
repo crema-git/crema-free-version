@@ -13,7 +13,7 @@ const CurrencyCell = (coin) => {
         cursor: 'pointer',
       }}
     >
-      <Box display='flex' alignItems='center'>
+      <Box display="flex" alignItems="center">
         {coin.icon ? (
           <Avatar
             sx={{
@@ -34,9 +34,9 @@ const CurrencyCell = (coin) => {
             {coin.name.toUpperCase()}
           </Avatar>
         )}
-        <Box component='span'>{coin.name}</Box>
+        <Box component="span">{coin.name}</Box>
         <Box
-          component='span'
+          component="span"
           sx={{
             ml: 3,
             color: 'text.secondary',

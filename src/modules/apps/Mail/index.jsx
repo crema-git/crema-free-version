@@ -16,10 +16,7 @@ const Mail = () => {
 
   return (
     <MailContextProvider>
-      <AppsContainer
-        title={messages['mailApp.mail']}
-        sidebarContent={<MailSidebar />}
-      >
+      <AppsContainer title={messages['mailApp.mail']} sidebarContent={<MailSidebar />}>
         <MailsList />
         <MailDetailViewWrapper
           className={clsx({
@@ -34,8 +31,6 @@ const Mail = () => {
 };
 
 export default Mail;
-
-Mail.defaultProps = {};
 
 Mail.propTypes = {
   match: PropTypes.object,

@@ -7,12 +7,7 @@ import { isEmptyObject } from '@crema/helpers/ApiHelper';
 
 const BlogDetailPage = () => {
   const { id } = useParams();
-  const [{ apiData, loading }, { setQueryParams }] = useGetDataApi(
-    '/pages/blogs/detail',
-    {},
-    { id: id },
-    false,
-  );
+  const [{ apiData, loading }, { setQueryParams }] = useGetDataApi('/pages/blogs/detail', {}, { id: id }, false);
 
   useEffect(() => {
     setQueryParams({ id: id });
@@ -22,10 +17,7 @@ const BlogDetailPage = () => {
     <AppLoader />
   ) : (
     !isEmptyObject(apiData?.blogDetail) && (
-      <BlogDetail
-        blogSidebar={apiData.blogSidebar}
-        blogDetail={apiData.blogDetail}
-      />
+      <BlogDetail blogSidebar={apiData.blogSidebar} blogDetail={apiData.blogDetail} />
     )
   );
 };

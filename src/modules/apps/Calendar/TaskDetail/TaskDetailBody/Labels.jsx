@@ -7,7 +7,7 @@ import AppTooltip from '@crema/components/AppTooltip';
 const Labels = ({ labels }) => {
   return (
     <Box
-      className='labelIcon'
+      className="labelIcon"
       sx={{
         display: 'flex',
         alignItems: 'center',
@@ -15,7 +15,7 @@ const Labels = ({ labels }) => {
     >
       {labels.map((label) => {
         return (
-          <AppTooltip title={label.name} placement='top' key={label.id}>
+          <AppTooltip title={label.name} placement="top" key={label.id}>
             <LabelOutlinedIcon
               sx={{
                 color: `${label.color}`,

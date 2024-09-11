@@ -5,9 +5,9 @@ import LinearProgress from '@mui/material/LinearProgress';
 export default function LinearColor() {
   return (
     <Stack sx={{ width: '100%', color: 'grey.700' }} spacing={2}>
-      <LinearProgress color='secondary' />
-      <LinearProgress color='success' />
-      <LinearProgress color='inherit' />
+      <LinearProgress color="secondary" />
+      <LinearProgress color="success" />
+      <LinearProgress color="inherit" />
     </Stack>
   );
 }

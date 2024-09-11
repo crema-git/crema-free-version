@@ -43,19 +43,19 @@ const ChatViewContainer = ({ selectedUser, setSelectedUser }) => {
   const { user } = useAuthUser();
 
   let _scrollBarRef = useRef();
-  const [{ apiData: userMessages }, { setQueryParams, setData }] =
-    useGetDataApi('/api/chatApp/connection/messages', {}, {}, false);
+  const [{ apiData: userMessages }, { setQueryParams, setData }] = useGetDataApi(
+    '/api/chatApp/connection/messages',
+    {},
+    {},
+    false,
+  );
 
   useEffect(() => {
     setQueryParams({ id: selectedUser?.channelId });
   }, [selectedUser?.channelId]);
 
   useEffect(() => {
-    if (
-      userMessages &&
-      userMessages.messageData &&
-      userMessages.messageData.length > 0
-    ) {
+    if (userMessages && userMessages.messageData && userMessages.messageData.length > 0) {
       if (_scrollBarRef?.current) {
         const scrollEl = _scrollBarRef.current.getScrollElement();
         scrollEl.scrollTop = scrollEl.scrollHeight;
@@ -176,10 +176,7 @@ const ChatViewContainer = ({ selectedUser, setSelectedUser }) => {
       }}
     >
       <AppsHeader>
-        <Header
-          selectedUser={selectedUser}
-          deleteConversation={deleteConversation}
-        />
+        <Header selectedUser={selectedUser} deleteConversation={deleteConversation} />
       </AppsHeader>
 
       {userMessages && user ? (
@@ -195,31 +192,25 @@ const ChatViewContainer = ({ selectedUser, setSelectedUser }) => {
       ) : (
         <ScrollChatNoMainWrapper>
           <Box
-            component='span'
+            component="span"
             sx={{
               fontSize: 18,
               color: 'grey.700',
             }}
           >
-            <IntlMessages id='chatApp.sayHi' /> {selectedUser.name}
+            <IntlMessages id="chatApp.sayHi" /> {selectedUser.name}
           </Box>
         </ScrollChatNoMainWrapper>
       )}
 
       <AppsFooter>
-        <SendMessage
-          currentMessage={message}
-          sendFileMessage={sendFileMessage}
-          onSendMessage={onSend}
-        />
+        <SendMessage currentMessage={message} sendFileMessage={sendFileMessage} onSendMessage={onSend} />
       </AppsFooter>
     </Box>
   );
 };
 
 export default ChatViewContainer;
-
-ChatViewContainer.defaultProps = {};
 
 ChatViewContainer.propTypes = {
   selectedUser: PropTypes.object.isRequired,

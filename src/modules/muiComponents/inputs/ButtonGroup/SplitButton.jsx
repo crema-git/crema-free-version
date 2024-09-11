@@ -9,11 +9,7 @@ import Popper from '@mui/material/Popper';
 import MenuItem from '@mui/material/MenuItem';
 import MenuList from '@mui/material/MenuList';
 
-const options = [
-  'Create a merge commit',
-  'Squash and merge',
-  'Rebase and merge',
-];
+const options = ['Create a merge commit', 'Squash and merge', 'Rebase and merge'];
 
 export default function SplitButton() {
   const [open, setOpen] = React.useState(false);
@@ -43,41 +39,30 @@ export default function SplitButton() {
 
   return (
     <React.Fragment>
-      <ButtonGroup
-        variant='contained'
-        ref={anchorRef}
-        aria-label='split button'
-      >
+      <ButtonGroup variant="contained" ref={anchorRef} aria-label="split button">
         <Button onClick={handleClick}>{options[selectedIndex]}</Button>
         <Button
-          size='small'
+          size="small"
           aria-controls={open ? 'split-button-menu' : undefined}
           aria-expanded={open ? 'true' : undefined}
-          aria-label='select merge strategy'
-          aria-haspopup='menu'
+          aria-label="select merge strategy"
+          aria-haspopup="menu"
           onClick={handleToggle}
         >
           <ArrowDropDownIcon />
         </Button>
       </ButtonGroup>
-      <Popper
-        open={open}
-        anchorEl={anchorRef.current}
-        role={undefined}
-        transition
-        disablePortal
-      >
+      <Popper open={open} anchorEl={anchorRef.current} role={undefined} transition disablePortal>
         {({ TransitionProps, placement }) => (
           <Grow
             {...TransitionProps}
             style={{
-              transformOrigin:
-                placement === 'bottom' ? 'center top' : 'center bottom',
+              transformOrigin: placement === 'bottom' ? 'center top' : 'center bottom',
             }}
           >
             <Paper>
               <ClickAwayListener onClickAway={handleClose}>
-                <MenuList id='split-button-menu'>
+                <MenuList id="split-button-menu">
                   {options.map((option, index) => (
                     <MenuItem
                       key={option}

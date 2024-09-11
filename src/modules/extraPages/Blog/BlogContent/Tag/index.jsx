@@ -33,7 +33,7 @@ const Tag = ({ tag }) => {
               pt: 1.25,
               pb: 1.75,
             }}
-            component='span'
+            component="span"
           >
             {tag.name}
           </Box>

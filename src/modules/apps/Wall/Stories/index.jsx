@@ -9,11 +9,7 @@ const Stories = ({ stories }) => {
   const { messages } = useIntl();
 
   return (
-    <AppCard
-      sxStyle={{ mb: 8 }}
-      title={messages['wall.stories']}
-      action={messages['common.viewAll']}
-    >
+    <AppCard sxStyle={{ mb: 8 }} title={messages['wall.stories']} action={messages['common.viewAll']}>
       <Box
         sx={{
           display: 'flex',

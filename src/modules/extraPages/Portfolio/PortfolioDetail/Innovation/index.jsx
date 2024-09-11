@@ -21,10 +21,10 @@ const Innovation = ({ innovation }) => {
       >
         <Grid item xs={12} md={6}>
           <InnovationImgWrapper>
-            <img src={innovation.srcImg} alt='innovation' />
-            <Box className='innovation-img-content'>
+            <img src={innovation.srcImg} alt="innovation" />
+            <Box className="innovation-img-content">
               <Typography
-                component='h5'
+                component="h5"
                 sx={{
                   fontSize: 12,
                   fontWeight: Fonts.SEMI_BOLD,
@@ -35,7 +35,7 @@ const Innovation = ({ innovation }) => {
                 {innovation.brandSubTitle}
               </Typography>
               <Typography
-                component='h3'
+                component="h3"
                 sx={{
                   fontSize: { xs: 18, md: 20, lg: 22 },
                   fontWeight: Fonts.BOLD,
@@ -55,7 +55,7 @@ const Innovation = ({ innovation }) => {
             }}
           >
             <Typography
-              component='h5'
+              component="h5"
               sx={{
                 fontSize: { xs: 18, md: 20 },
                 fontWeight: Fonts.BOLD,
@@ -73,7 +73,7 @@ const Innovation = ({ innovation }) => {
             >
               {innovation.description}
             </Typography>
-            <Button variant='contained'>Explore Website</Button>
+            <Button variant="contained">Explore Website</Button>
           </Box>
         </Grid>
       </AppGridContainer>

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
 import { Fonts } from '@crema/constants/AppEnums';
 
-function AppBadge({ count, color }) {
+const AppBadge = ({ count, color = 'secondary.main' }) => {
   if (color === 'primary') {
     color = 'primary.main';
   } else if (color === 'v') {
@@ -11,7 +11,7 @@ function AppBadge({ count, color }) {
   }
   return (
     <Box
-      sx={{
+      sx={(theme) => ({
         bgcolor: color,
         padding: '0px 7px',
         fontSize: 11,
@@ -21,20 +21,17 @@ function AppBadge({ count, color }) {
         borderRadius: 20,
         display: 'flex',
         alignItems: 'center',
-        color: (theme) => theme.palette.secondary.contrastText,
-      }}
+        color: theme.palette.secondary.contrastText,
+      })}
     >
       {count}
     </Box>
   );
-}
+};
 
 AppBadge.propTypes = {
   count: PropTypes.any,
   color: PropTypes.string,
-};
-AppBadge.defaultProps = {
-  color: 'secondary.main',
 };
 
 export default React.memo(AppBadge);

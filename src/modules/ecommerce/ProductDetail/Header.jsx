@@ -33,7 +33,7 @@ const Header = ({ product }) => {
         }}
       >
         <Box
-          component='h3'
+          component="h3"
           sx={{
             color: 'text.primary',
             fontWeight: Fonts.BOLD,
@@ -48,7 +48,7 @@ const Header = ({ product }) => {
             display: 'flex',
           }}
         >
-          <Rating defaultValue={product.rating} size='small' readOnly />
+          <Rating defaultValue={product.rating} size="small" readOnly />
           <Box
             sx={{
               ml: 2,
@@ -62,7 +62,7 @@ const Header = ({ product }) => {
           <Box>
             SKU :{' '}
             <Box
-              component='span'
+              component="span"
               sx={{
                 ml: 2,
                 color: 'text.secondary',

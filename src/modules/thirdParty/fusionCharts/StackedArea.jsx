@@ -8,13 +8,7 @@ charts(FusionCharts);
 
 const StackedArea = () => {
   return (
-    <ReactFusioncharts
-      type='stackedarea2d'
-      width={600}
-      height={400}
-      dataFormat='JSON'
-      dataSource={stackAreaData}
-    />
+    <ReactFusioncharts type="stackedarea2d" width={600} height={400} dataFormat="JSON" dataSource={stackAreaData} />
   );
 };
 

@@ -1,14 +1,14 @@
 import React from 'react';
 import AppGridContainer from '@crema/components/AppGridContainer';
 import Grid from '@mui/material/Grid';
-import {FiFacebook, FiTwitter} from 'react-icons/fi';
+import { FiFacebook, FiTwitter } from 'react-icons/fi';
 import IntlMessages from '@crema/helpers/IntlMessages';
 import Box from '@mui/material/Box';
-import {blue, indigo} from '@mui/material/colors';
-import {Fonts} from '@crema/constants/AppEnums';
+import { blue, indigo } from '@mui/material/colors';
+import { Fonts } from '@crema/constants/AppEnums';
 import AppAnimate from '@crema/components/AppAnimate';
 import AppLoader from '@crema/components/AppLoader';
-import {useGetDataApi} from '@crema/hooks/APIHooks';
+import { useGetDataApi } from '@crema/hooks/APIHooks';
 import WallPaper from './WallPaper';
 import TemperatureCard from './TemperatureCard';
 import VisitorAnalysis from './VisitorAnalysis';
@@ -32,18 +32,17 @@ import CityInfo from './CityInfo';
 import DateSelector from './DatePicker';
 
 const Widgets = () => {
-  const [{ apiData: widgetsData, loading }] =
-    useGetDataApi('/dashboard/widgets');
+  const [{ apiData: widgetsData, loading }] = useGetDataApi('/dashboard/widgets');
 
   return (
     <>
       {loading ? (
         <AppLoader />
       ) : (
-        <AppAnimate animation='transition.slideUpIn' delay={200}>
+        <AppAnimate animation="transition.slideUpIn" delay={200}>
           <>
             <Box
-              component='h3'
+              component="h3"
               sx={{
                 color: 'text.primary',
                 mb: { xs: 4, sm: 4, xl: 6 },
@@ -51,7 +50,7 @@ const Widgets = () => {
                 fontWeight: Fonts.BOLD,
               }}
             >
-              <IntlMessages id='dashboard.widgets' />
+              <IntlMessages id="dashboard.widgets" />
             </Box>
 
             <AppGridContainer>
@@ -72,7 +71,7 @@ const Widgets = () => {
               </Grid>
 
               <Grid item xs={12} md={4}>
-                <Categories data={widgetsData.categories} />
+                <Reviews data={widgetsData.reviewsList} />
               </Grid>
 
               <Grid item xs={12} md={7}>
@@ -100,7 +99,7 @@ const Widgets = () => {
               </Grid>
 
               <Grid item xs={12} md={5}>
-                <Reviews data={widgetsData.reviewsList} />
+                <RecentActivity data={widgetsData.recentActivity} />
               </Grid>
 
               <Grid item xs={12} md={4}>
@@ -119,7 +118,7 @@ const Widgets = () => {
                 <CremaCard
                   data={widgetsData.mateInfo.facebookInfo}
                   bgColor={indigo[600]}
-                  color='white'
+                  color="white"
                   icon={
                     <Box
                       sx={{
@@ -139,7 +138,7 @@ const Widgets = () => {
                 <CremaCard
                   data={widgetsData.mateInfo.twitterInfo}
                   bgColor={blue[600]}
-                  color='white'
+                  color="white"
                   icon={
                     <Box
                       sx={{
@@ -174,10 +173,8 @@ const Widgets = () => {
                 <BirthdayCard />
               </Grid>
 
-
-
               <Grid item xs={12} md={4}>
-                <RecentActivity data={widgetsData.recentActivity} />
+                <Categories data={widgetsData.categories} />
               </Grid>
             </AppGridContainer>
           </>

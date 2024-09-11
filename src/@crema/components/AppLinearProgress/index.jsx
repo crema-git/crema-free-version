@@ -1,14 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import LinearProgress, {
-  linearProgressClasses,
-} from '@mui/material/LinearProgress';
+import LinearProgress, { linearProgressClasses } from '@mui/material/LinearProgress';
 
 export function CustomLinearProgress({
-  pathColor,
-  activeColor,
-  thickness,
-  borderRadius,
+  thickness = 5,
+  pathColor = '#d6d6d6',
+  activeColor = '#1a90ff',
+  borderRadius = 10,
   ...rest
 }) {
   return (
@@ -36,18 +34,13 @@ CustomLinearProgress.propTypes = {
   thickness: PropTypes.number,
   borderRadius: PropTypes.number,
 };
-CustomLinearProgress.defaultProps = {
-  thickness: 5,
-  pathColor: '#d6d6d6',
-  activeColor: '#1a90ff',
-  borderRadius: 10,
-};
 
 const AppLinearProgress = ({
-  pathColor,
-  borderRadius,
-  activeColor,
-  thickness,
+  thickness = 3,
+  borderRadius = 10,
+  pathColor = '#F5F6FA',
+  activeColor = '#00905F',
+  variant = 'determinate',
   ...rest
 }) => {
   return (
@@ -56,17 +49,10 @@ const AppLinearProgress = ({
       thickness={thickness}
       borderRadius={borderRadius}
       activeColor={activeColor}
+      variant={variant}
       {...rest}
     />
   );
-};
-
-AppLinearProgress.defaultProps = {
-  thickness: 3,
-  borderRadius: 10,
-  pathColor: '#F5F6FA',
-  activeColor: '#00905F',
-  variant: 'determinate',
 };
 
 AppLinearProgress.propTypes = {

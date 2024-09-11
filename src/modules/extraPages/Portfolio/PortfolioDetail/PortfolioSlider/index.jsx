@@ -62,7 +62,7 @@ const PortfolioSlider = ({ slide }) => {
               },
             }}
           >
-            <img src={data.srcImg} alt='slide' />
+            <img src={data.srcImg} alt="slide" />
           </Box>
         ))}
       </Slider>

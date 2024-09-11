@@ -21,14 +21,14 @@ const WallPaper = () => {
         }}
       >
         <Box
-          component='p'
+          component="p"
           sx={{
             fontWeight: Fonts.BOLD,
             fontSize: 16,
             textTransform: 'uppercase',
           }}
         >
-          <IntlMessages id='dashboard.latestPost' />
+          <IntlMessages id="dashboard.latestPost" />
         </Box>
         <Box
           sx={{
@@ -36,10 +36,7 @@ const WallPaper = () => {
             mr: -3,
           }}
         >
-          <Checkbox
-            icon={<FavoriteBorder style={{ color: 'white' }} />}
-            checkedIcon={<Favorite />}
-          />
+          <Checkbox icon={<FavoriteBorder style={{ color: 'white' }} />} checkedIcon={<Favorite />} />
         </Box>
       </Box>
 
@@ -63,24 +60,24 @@ const WallPaper = () => {
         </Box>
 
         <Box
-          component='h1'
+          component="h1"
           sx={{
             fontWeight: Fonts.MEDIUM,
             fontSize: { xs: 20, sm: 24, xl: 30 },
             lineHeight: 1.25,
           }}
         >
-          <IntlMessages id='dashboard.hdColorful' />
+          <IntlMessages id="dashboard.hdColorful" />
         </Box>
         <Box
-          component='h1'
+          component="h1"
           sx={{
             fontWeight: Fonts.MEDIUM,
             fontSize: { xs: 20, sm: 24, xl: 30 },
             lineHeight: 1.25,
           }}
         >
-          <IntlMessages id='dashboard.wallpaperFree' />
+          <IntlMessages id="dashboard.wallpaperFree" />
         </Box>
 
         <Box
@@ -90,14 +87,14 @@ const WallPaper = () => {
           }}
         >
           <Box
-            component='h1'
+            component="h1"
             sx={{
               fontWeight: Fonts.MEDIUM,
               fontSize: { xs: 20, sm: 24, xl: 30 },
               lineHeight: 1.25,
             }}
           >
-            <IntlMessages id='common.download' />
+            <IntlMessages id="common.download" />
           </Box>
           <Box
             sx={{
@@ -110,7 +107,7 @@ const WallPaper = () => {
             }}
           >
             <Box
-              component='span'
+              component="span"
               sx={{
                 display: 'block',
                 px: 3,
@@ -125,7 +122,7 @@ const WallPaper = () => {
               11.7 K
             </Box>
             <Box
-              component='span'
+              component="span"
               sx={{
                 display: 'block',
                 px: 3,
@@ -140,7 +137,7 @@ const WallPaper = () => {
               2.6 K
             </Box>
             <Box
-              component='span'
+              component="span"
               sx={{
                 display: 'block',
                 px: 3,

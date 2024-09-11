@@ -8,7 +8,7 @@ import AssignmentIcon from '@mui/icons-material/Assignment';
 
 export default function IconAvatars() {
   return (
-    <Stack direction='row' spacing={2}>
+    <Stack direction="row" spacing={2}>
       <Avatar>
         <FolderIcon />
       </Avatar>

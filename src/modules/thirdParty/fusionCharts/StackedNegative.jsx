@@ -9,10 +9,10 @@ charts(FusionCharts);
 const StackedNegative = () => {
   return (
     <ReactFusioncharts
-      type='stackedcolumn2d'
+      type="stackedcolumn2d"
       width={600}
       height={400}
-      dataFormat='JSON'
+      dataFormat="JSON"
       dataSource={stackNegChartData}
     />
   );

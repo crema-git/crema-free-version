@@ -9,58 +9,35 @@ export default function Multiple() {
     <Stack spacing={3} sx={{ width: 500 }}>
       <Autocomplete
         multiple
-        id='tags-standard'
+        id="tags-standard"
         options={top100Films}
         getOptionLabel={(option) => option.title}
         defaultValue={[top100Films[13]]}
         renderInput={(params) => (
-          <TextField
-            {...params}
-            variant='standard'
-            label='Multiple values'
-            placeholder='Favorites'
-          />
+          <TextField {...params} variant="standard" label="Multiple values" placeholder="Favorites" />
         )}
       />
       <Autocomplete
         multiple
-        id='tags-outlined'
+        id="tags-outlined"
         options={top100Films}
         getOptionLabel={(option) => option.title}
         defaultValue={[top100Films[13]]}
         filterSelectedOptions
-        renderInput={(params) => (
-          <TextField
-            {...params}
-            label='filterSelectedOptions'
-            placeholder='Favorites'
-          />
-        )}
+        renderInput={(params) => <TextField {...params} label="filterSelectedOptions" placeholder="Favorites" />}
       />
       <Autocomplete
         multiple
-        id='tags-filled'
+        id="tags-filled"
         options={top100Films.map((option) => option.title)}
         defaultValue={[top100Films[13].title]}
         freeSolo
         renderTags={(value, getTagProps) =>
           value.map((option, index) => (
-            <Chip
-              key={index}
-              variant='outlined'
-              label={option}
-              {...getTagProps({ index })}
-            />
+            <Chip key={index} variant="outlined" label={option} {...getTagProps({ index })} />
           ))
         }
-        renderInput={(params) => (
-          <TextField
-            {...params}
-            variant='filled'
-            label='freeSolo'
-            placeholder='Favorites'
-          />
-        )}
+        renderInput={(params) => <TextField {...params} variant="filled" label="freeSolo" placeholder="Favorites" />}
       />
     </Stack>
   );
@@ -136,8 +113,7 @@ const top100Films = [
   { title: 'Alien', year: 1979 },
   { title: 'Sunset Boulevard', year: 1950 },
   {
-    title:
-      'Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb',
+    title: 'Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb',
     year: 1964,
   },
   { title: 'The Great Dictator', year: 1940 },

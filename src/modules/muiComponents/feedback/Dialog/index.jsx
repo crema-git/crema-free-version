@@ -1,41 +1,41 @@
-import React from "react";
-import AppComponentHeader from "@crema/components/AppComponentHeader";
-import AppGridContainer from "@crema/components/AppGridContainer";
-import Grid from "@mui/material/Grid";
-import AppComponentCard from "@crema/components/AppComponentCard";
+import React from 'react';
+import AppComponentHeader from '@crema/components/AppComponentHeader';
+import AppGridContainer from '@crema/components/AppGridContainer';
+import Grid from '@mui/material/Grid';
+import AppComponentCard from '@crema/components/AppComponentCard';
 
-import SimpleDialog from "./SimpleDialog";
-import SimpleDialogSource from "./SimpleDialog?raw";
+import SimpleDialog from './SimpleDialog';
+import SimpleDialogSource from './SimpleDialog?raw';
 
-import AlertDialog from "./AlertDialog";
-import AlertDialogSource from "./AlertDialog?raw";
+import AlertDialog from './AlertDialog';
+import AlertDialogSource from './AlertDialog?raw';
 
-import AlertDialogSlide from "./AlertDialogSlide";
-import AlertDialogSlideSource from "./AlertDialogSlide?raw";
+import AlertDialogSlide from './AlertDialogSlide';
+import AlertDialogSlideSource from './AlertDialogSlide?raw';
 
-import FormDialog from "./FormDialog";
-import FormDialogSource from "./FormDialog?raw";
+import FormDialog from './FormDialog';
+import FormDialogSource from './FormDialog?raw';
 
-import CustomizedDialogs from "./CustomizedDialogs";
-import CustomizedDialogsSource from "./CustomizedDialogs?raw";
+import CustomizedDialogs from './CustomizedDialogs';
+import CustomizedDialogsSource from './CustomizedDialogs?raw';
 
-import FullScreenDialog from "./FullScreenDialog";
-import FullScreenDialogSource from "./FullScreenDialog?raw";
+import FullScreenDialog from './FullScreenDialog';
+import FullScreenDialogSource from './FullScreenDialog?raw';
 
-import MaxWidthDialog from "./MaxWidthDialog";
-import MaxWidthDialogSource from "./MaxWidthDialog?raw";
+import MaxWidthDialog from './MaxWidthDialog';
+import MaxWidthDialogSource from './MaxWidthDialog?raw';
 
-import ResponsiveDialog from "./ResponsiveDialog";
-import ResponsiveDialogSource from "./ResponsiveDialog?raw";
+import ResponsiveDialog from './ResponsiveDialog';
+import ResponsiveDialogSource from './ResponsiveDialog?raw';
 
-import ConfirmationDialog from "./ConfirmationDialog";
-import ConfirmationDialogSource from "./ConfirmationDialog?raw";
+import ConfirmationDialog from './ConfirmationDialog';
+import ConfirmationDialogSource from './ConfirmationDialog?raw';
 
-import DraggableDialog from "./DraggableDialog";
-import DraggableDialogSource from "./DraggableDialog?raw";
+import DraggableDialog from './DraggableDialog';
+import DraggableDialogSource from './DraggableDialog?raw';
 
-import ScrollDialog from "./ScrollDialog";
-import ScrollDialogSource from "./ScrollDialog?raw";
+import ScrollDialog from './ScrollDialog';
+import ScrollDialogSource from './ScrollDialog?raw';
 
 const Dialog = () => {
   return (

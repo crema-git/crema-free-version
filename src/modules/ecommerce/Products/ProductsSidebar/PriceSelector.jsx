@@ -4,8 +4,7 @@ import { Box } from '@mui/material';
 import { Fonts } from '@crema/constants/AppEnums';
 import styled from '@emotion/styled';
 
-const iOSBoxShadow =
-  '0 3px 1px rgba(0,0,0,0.1),0 4px 8px rgba(0,0,0,0.13),0 0 0 1px rgba(0,0,0,0.02)';
+const iOSBoxShadow = '0 3px 1px rgba(0,0,0,0.1),0 4px 8px rgba(0,0,0,0.13),0 0 0 1px rgba(0,0,0,0.02)';
 const PriceSlider = styled(Slider)(({ theme }) => ({
   color: theme.palette.primary.main,
   height: 8,
@@ -16,8 +15,7 @@ const PriceSlider = styled(Slider)(({ theme }) => ({
     backgroundColor: '#fff',
     boxShadow: iOSBoxShadow,
     '&:focus, &:hover, &.Mui-active': {
-      boxShadow:
-        '0 3px 1px rgba(0,0,0,0.1),0 4px 8px rgba(0,0,0,0.3),0 0 0 1px rgba(0,0,0,0.02)',
+      boxShadow: '0 3px 1px rgba(0,0,0,0.1),0 4px 8px rgba(0,0,0,0.3),0 0 0 1px rgba(0,0,0,0.02)',
       // Reset on touch devices, it doesn't add specificity
       '@media (hover: none)': {
         boxShadow: iOSBoxShadow,

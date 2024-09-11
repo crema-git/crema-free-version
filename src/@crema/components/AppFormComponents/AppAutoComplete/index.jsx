@@ -28,10 +28,7 @@ export default function AppAutoComplete({
     const event = {
       target: {
         name,
-        value:
-          multiple === true
-            ? value.map((data) => data?.[idField])
-            : value?.[idField],
+        value: multiple === true ? value.map((data) => data?.[idField]) : value?.[idField],
       },
     };
     if (handleChange) handleChange(event);
@@ -80,21 +77,21 @@ export default function AppAutoComplete({
           name={name}
           placeholder={placeholder}
           {...params}
-          variant='outlined'
+          variant="outlined"
           onChange={(ev) => onType(ev.target.value)}
-          InputProps={{
-            ...params.InputProps,
-            endAdornment: (
-              <React.Fragment>
-                {loading ? (
-                  <CircularProgress color='inherit' size={20} />
-                ) : null}
-                {params.InputProps.endAdornment}
-              </React.Fragment>
-            ),
-          }}
           helperText={helperText}
           error={error}
+          slotProps={{
+            input: {
+              ...params.InputProps,
+              endAdornment: (
+                <React.Fragment>
+                  {loading ? <CircularProgress color="inherit" size={20} /> : null}
+                  {params.InputProps.endAdornment}
+                </React.Fragment>
+              ),
+            },
+          }}
         />
       )}
     />

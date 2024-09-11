@@ -7,10 +7,10 @@ import TableHeading from './TableHeading';
 import TableItem from './TableItem';
 import AppTableContainer from '@crema/components/AppTableContainer';
 
-const TransactionTable = ({ transactionData }) => {
+const TransactionTable = ({ transactionData = [] }) => {
   return (
     <AppTableContainer>
-      <Table className='table'>
+      <Table className="table">
         <TableHead>
           <TableHeading />
         </TableHead>
@@ -25,10 +25,6 @@ const TransactionTable = ({ transactionData }) => {
 };
 
 export default TransactionTable;
-
-TransactionTable.defaultProps = {
-  transactionData: [],
-};
 
 TransactionTable.propTypes = {
   transactionData: PropTypes.array,

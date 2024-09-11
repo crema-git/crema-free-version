@@ -15,7 +15,7 @@ const TopSelling = ({ products }) => {
       footer={'+12 ' + messages['common.more']}
     >
       <AppList
-        animation='transition.slideRightBigIn'
+        animation="transition.slideRightBigIn"
         data={products}
         renderRow={(data, index) => <ProductCell key={index} data={data} />}
       />

@@ -2,14 +2,13 @@ import React from 'react';
 import Box from '@mui/material/Box';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import ListItem from '@mui/material/ListItem';
+import ListItemButton from '@mui/material/ListItemButton';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
 
 const SideBarItem = ({ item, onGetFaqData, selectionId }) => {
   return (
-    <ListItem
-      button
+    <ListItemButton
       className={clsx('listItem', {
         active: item.id === selectionId,
       })}
@@ -25,7 +24,7 @@ const SideBarItem = ({ item, onGetFaqData, selectionId }) => {
         </ListItemIcon>
       </Box>
       <ListItemText primary={item.name} />
-    </ListItem>
+    </ListItemButton>
   );
 };
 

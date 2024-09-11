@@ -22,12 +22,7 @@ const RecentActivities = ({ data }) => {
           height: 640,
         }}
       >
-        <AppList
-          data={data}
-          renderRow={(activity) => (
-            <RecentActivityCell key={activity.id} activity={activity} />
-          )}
-        />
+        <AppList data={data} renderRow={(activity) => <RecentActivityCell key={activity.id} activity={activity} />} />
       </AppScrollbar>
     </AppCard>
   );

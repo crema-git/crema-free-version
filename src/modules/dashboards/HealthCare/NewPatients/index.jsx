@@ -10,10 +10,7 @@ const NewPatients = ({ data }) => {
   const { messages } = useIntl();
 
   return (
-    <AppCard
-      title={messages['healthCare.newPatient']}
-      action={messages['common.viewAll']}
-    >
+    <AppCard title={messages['healthCare.newPatient']} action={messages['common.viewAll']}>
       <Box>
         <Box
           sx={{
@@ -23,7 +20,7 @@ const NewPatients = ({ data }) => {
           }}
         >
           <Box
-            component='span'
+            component="span"
             sx={{
               mr: 2,
               fontSize: 20,
@@ -33,11 +30,7 @@ const NewPatients = ({ data }) => {
             214
           </Box>
           <Box>
-            <img
-              src={'/assets/images/dashboard/growth_icon.svg'}
-              alt='down'
-              style={{ height: 12 }}
-            />
+            <img src={'/assets/images/dashboard/growth_icon.svg'} alt="down" style={{ height: 12 }} />
           </Box>
         </Box>
         <Box

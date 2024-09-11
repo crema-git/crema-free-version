@@ -46,12 +46,8 @@ const MiniSidebar = ({ routes, routesConfig }) => {
           isNavCollapsed={isNavCollapsed}
           toggleNavCollapsed={toggleNavCollapsed}
         />
-        <Box className='mainContent'>
-          <AppHeader
-            setCollapsed={setCollapsed}
-            isCollapsed={isCollapsed}
-            toggleNavCollapsed={toggleNavCollapsed}
-          />
+        <Box className="mainContent">
+          <AppHeader setCollapsed={setCollapsed} isCollapsed={isCollapsed} toggleNavCollapsed={toggleNavCollapsed} />
           <AppContentView routes={routes} />
           <AppFixedFooter />
         </Box>

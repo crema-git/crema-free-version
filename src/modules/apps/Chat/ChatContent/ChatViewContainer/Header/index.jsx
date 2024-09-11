@@ -61,9 +61,9 @@ const Header = ({ selectedUser, deleteConversation }) => {
           alignItems: 'center',
         }}
       >
-        <AppTooltip title={<IntlMessages id='chat.call' />}>
+        <AppTooltip title={<IntlMessages id="chat.call" />}>
           <Box
-            component='span'
+            component="span"
             sx={{
               ml: { xs: 2, md: 3.5 },
               color: 'text.disabled',
@@ -71,21 +71,20 @@ const Header = ({ selectedUser, deleteConversation }) => {
           >
             <IconButton
               sx={{
-                backgroundColor: (theme) =>
-                  alpha(theme.palette.primary.main, 0.05),
+                backgroundColor: (theme) => alpha(theme.palette.primary.main, 0.05),
                 color: (theme) => theme.palette.text.secondary,
                 padding: 2,
               }}
-              size='large'
+              size="large"
             >
               <PhoneOutlinedIcon />
             </IconButton>
           </Box>
         </AppTooltip>
 
-        <AppTooltip title={<IntlMessages id='wall.videoCall' />}>
+        <AppTooltip title={<IntlMessages id="wall.videoCall" />}>
           <Box
-            component='span'
+            component="span"
             sx={{
               ml: { xs: 2, md: 3.5 },
               color: 'text.disabled',
@@ -93,12 +92,11 @@ const Header = ({ selectedUser, deleteConversation }) => {
           >
             <IconButton
               sx={{
-                backgroundColor: (theme) =>
-                  alpha(theme.palette.primary.main, 0.05),
+                backgroundColor: (theme) => alpha(theme.palette.primary.main, 0.05),
                 color: (theme) => theme.palette.text.secondary,
                 padding: 2,
               }}
-              size='large'
+              size="large"
             >
               <VideocamOutlinedIcon />
             </IconButton>
@@ -106,7 +104,7 @@ const Header = ({ selectedUser, deleteConversation }) => {
         </AppTooltip>
 
         <Box
-          component='span'
+          component="span"
           sx={{
             ml: { xs: 2, md: 3.5 },
             color: 'text.disabled',
@@ -114,8 +112,7 @@ const Header = ({ selectedUser, deleteConversation }) => {
         >
           <Checkbox
             sx={{
-              backgroundColor: (theme) =>
-                alpha(theme.palette.warning.main, 0.05),
+              backgroundColor: (theme) => alpha(theme.palette.warning.main, 0.05),
               color: (theme) => theme.palette.warning.main,
               padding: 2,
               '&.Mui-checked': {
@@ -127,9 +124,9 @@ const Header = ({ selectedUser, deleteConversation }) => {
           />
         </Box>
 
-        <AppTooltip title={<IntlMessages id='common.more' />}>
+        <AppTooltip title={<IntlMessages id="common.more" />}>
           <Box
-            component='span'
+            component="span"
             sx={{
               ml: { xs: 2, md: 3.5 },
               color: 'text.disabled',
@@ -137,12 +134,11 @@ const Header = ({ selectedUser, deleteConversation }) => {
           >
             <IconButton
               sx={{
-                backgroundColor: (theme) =>
-                  alpha(theme.palette.primary.main, 0.05),
+                backgroundColor: (theme) => alpha(theme.palette.primary.main, 0.05),
                 color: (theme) => theme.palette.text.secondary,
                 padding: 2,
               }}
-              size='large'
+              size="large"
               onClick={onViewMoreOpen}
             >
               <MoreVertIcon />
@@ -151,19 +147,15 @@ const Header = ({ selectedUser, deleteConversation }) => {
         </AppTooltip>
       </Box>
 
-      <Menu
-        anchorEl={isMoreIcon}
-        open={Boolean(isMoreIcon)}
-        onClose={onViewMoreClose}
-      >
+      <Menu anchorEl={isMoreIcon} open={Boolean(isMoreIcon)} onClose={onViewMoreClose}>
         <MenuItem onClick={toggleDeleteDialog}>
-          <IntlMessages id='chatApp.deleteConversation' />
+          <IntlMessages id="chatApp.deleteConversation" />
         </MenuItem>
         <MenuItem onClick={onViewMoreClose}>
-          <IntlMessages id='chatApp.mute' />
+          <IntlMessages id="chatApp.mute" />
         </MenuItem>
         <MenuItem onClick={onViewMoreClose}>
-          <IntlMessages id='chatApp.hide' />
+          <IntlMessages id="chatApp.hide" />
         </MenuItem>
       </Menu>
 
@@ -171,16 +163,14 @@ const Header = ({ selectedUser, deleteConversation }) => {
         open={isDeleteDialogOpen}
         onDeny={setDeleteDialogOpen}
         onConfirm={onDeleteConversation}
-        title={<IntlMessages id='chatApp.deleteTitle' />}
-        dialogTitle={<IntlMessages id='chatApp.deleteContent' />}
+        title={<IntlMessages id="chatApp.deleteTitle" />}
+        dialogTitle={<IntlMessages id="chatApp.deleteContent" />}
       />
     </ChatHeaderWrapper>
   );
 };
 
 export default Header;
-
-Header.defaultProps = {};
 
 Header.propTypes = {
   selectedUser: PropTypes.object.isRequired,

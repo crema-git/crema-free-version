@@ -13,7 +13,7 @@ const DoctorCell = ({ doctor }) => {
         alignItems: 'center',
         padding: '8px 20px',
       }}
-      className='item-hover'
+      className="item-hover"
     >
       <Box sx={{ mr: 4 }}>
         <Avatar
@@ -34,7 +34,7 @@ const DoctorCell = ({ doctor }) => {
             fontWeight: Fonts.MEDIUM,
             mb: 0.5,
           }}
-          component='h5'
+          component="h5"
         >
           {doctor.name}
         </Box>
@@ -42,7 +42,7 @@ const DoctorCell = ({ doctor }) => {
           sx={{
             color: 'text.secondary',
           }}
-          component='p'
+          component="p"
         >
           {doctor.speciality}
         </Box>
@@ -52,18 +52,17 @@ const DoctorCell = ({ doctor }) => {
           display: 'flex',
           alignItems: 'center',
           ml: 'auto',
-          '@media only screen and (min-width: 1200px) and (max-width: 1399px)':
-            {
-              display: 'none',
-            },
+          '@media only screen and (min-width: 1200px) and (max-width: 1399px)': {
+            display: 'none',
+          },
         }}
       >
         {doctor.scheduled ? (
-          <Button color='secondary' variant='outlined'>
+          <Button color="secondary" variant="outlined">
             Remove
           </Button>
         ) : (
-          <Button color='primary' variant='outlined'>
+          <Button color="primary" variant="outlined">
             Schedule
           </Button>
         )}

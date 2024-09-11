@@ -37,7 +37,7 @@ const SelectBox = styled(Select)(({ theme }) => {
   };
 });
 
-const AppSelect = ({ menus, onChange, defaultValue, selectionKey }) => {
+const AppSelect = ({ onChange, menus = [], defaultValue = '', selectionKey = '' }) => {
   const [selectionType, setSelectionType] = useState(defaultValue);
 
   const handleSelectionType = (event) => {
@@ -46,12 +46,7 @@ const AppSelect = ({ menus, onChange, defaultValue, selectionKey }) => {
   };
 
   return (
-    <SelectBox
-      defaultValue={defaultValue}
-      value={selectionType}
-      onChange={handleSelectionType}
-      className='select-box'
-    >
+    <SelectBox defaultValue={defaultValue} value={selectionType} onChange={handleSelectionType} className="select-box">
       {menus.map((menu, index) => (
         <MenuItem
           key={index}
@@ -75,9 +70,4 @@ AppSelect.propTypes = {
   onChange: PropTypes.func,
   defaultValue: PropTypes.any,
   selectionKey: PropTypes.string,
-};
-AppSelect.defaultProps = {
-  menus: [],
-  defaultValue: '',
-  selectionKey: '',
 };

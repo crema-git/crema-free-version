@@ -44,10 +44,7 @@ const settings = {
 const Team = ({ team }) => {
   const { messages } = useIntl();
   return (
-    <AppCard
-      title={messages['extraPages.team']}
-      titleStyle={{ fontWeight: Fonts.BOLD, fontSize: { xs: 18, md: 20 } }}
-    >
+    <AppCard title={messages['extraPages.team']} titleStyle={{ fontWeight: Fonts.BOLD, fontSize: { xs: 18, md: 20 } }}>
       <MediaSlider>
         <Slider {...settings}>
           {team.map((member) => {

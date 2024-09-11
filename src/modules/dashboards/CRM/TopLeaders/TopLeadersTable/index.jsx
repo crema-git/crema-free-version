@@ -8,7 +8,7 @@ import TableItem from './TableItem';
 import AppTableContainer from '@crema/components/AppTableContainer';
 import AppScrollbar from '@crema/components/AppScrollbar';
 
-const TopLeadersTable = ({ topLeaders }) => {
+const TopLeadersTable = ({ topLeaders = [] }) => {
   return (
     <AppTableContainer>
       <AppScrollbar style={{ maxHeight: 340 }}>
@@ -28,10 +28,6 @@ const TopLeadersTable = ({ topLeaders }) => {
 };
 
 export default TopLeadersTable;
-
-TopLeadersTable.defaultProps = {
-  topLeaders: [],
-};
 
 TopLeadersTable.propTypes = {
   topLeaders: PropTypes.array,

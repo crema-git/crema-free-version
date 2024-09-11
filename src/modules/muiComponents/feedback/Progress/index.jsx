@@ -1,47 +1,47 @@
-import React from "react";
-import AppComponentHeader from "@crema/components/AppComponentHeader";
-import AppGridContainer from "@crema/components/AppGridContainer";
-import Grid from "@mui/material/Grid";
-import AppComponentCard from "@crema/components/AppComponentCard";
+import React from 'react';
+import AppComponentHeader from '@crema/components/AppComponentHeader';
+import AppGridContainer from '@crema/components/AppGridContainer';
+import Grid from '@mui/material/Grid';
+import AppComponentCard from '@crema/components/AppComponentCard';
 
-import CircularIndeterminate from "./CircularIndeterminate";
-import CircularIndeterminateSource from "./CircularIndeterminate?raw";
+import CircularIndeterminate from './CircularIndeterminate';
+import CircularIndeterminateSource from './CircularIndeterminate?raw';
 
-import CircularColor from "./CircularColor";
-import CircularColorSource from "./CircularColor?raw";
+import CircularColor from './CircularColor';
+import CircularColorSource from './CircularColor?raw';
 
-import CircularDeterminate from "./CircularDeterminate";
-import CircularDeterminateSource from "./CircularDeterminate?raw";
+import CircularDeterminate from './CircularDeterminate';
+import CircularDeterminateSource from './CircularDeterminate?raw';
 
-import CircularIntegration from "./CircularIntegration";
-import CircularIntegrationSource from "./CircularIntegration?raw";
+import CircularIntegration from './CircularIntegration';
+import CircularIntegrationSource from './CircularIntegration?raw';
 
-import CircularStatic from "./CircularStatic";
-import CircularStaticSource from "./CircularStatic?raw";
+import CircularStatic from './CircularStatic';
+import CircularStaticSource from './CircularStatic?raw';
 
-import LinearIndeterminate from "./LinearIndeterminate";
-import LinearIndeterminateSource from "./LinearIndeterminate?raw";
+import LinearIndeterminate from './LinearIndeterminate';
+import LinearIndeterminateSource from './LinearIndeterminate?raw';
 
-import LinearColor from "./LinearColor";
-import LinearColorSource from "./LinearColor?raw";
+import LinearColor from './LinearColor';
+import LinearColorSource from './LinearColor?raw';
 
-import LinearDeterminate from "./LinearDeterminate";
-import LinearDeterminateSource from "./LinearDeterminate?raw";
+import LinearDeterminate from './LinearDeterminate';
+import LinearDeterminateSource from './LinearDeterminate?raw';
 
-import LinearBuffer from "./LinearBuffer";
-import LinearBufferSource from "./LinearBuffer?raw";
+import LinearBuffer from './LinearBuffer';
+import LinearBufferSource from './LinearBuffer?raw';
 
-import LinearWithValueLabel from "./LinearWithValueLabel";
-import LinearWithValueLabelSource from "./LinearWithValueLabel?raw";
+import LinearWithValueLabel from './LinearWithValueLabel';
+import LinearWithValueLabelSource from './LinearWithValueLabel?raw';
 
-import CustomizedProgressBars from "./CustomizedProgressBars";
-import CustomizedProgressBarsSource from "./CustomizedProgressBars?raw";
+import CustomizedProgressBars from './CustomizedProgressBars';
+import CustomizedProgressBarsSource from './CustomizedProgressBars?raw';
 
-import DelayingAppearance from "./DelayingAppearance";
-import DelayingAppearanceSource from "./DelayingAppearance?raw";
+import DelayingAppearance from './DelayingAppearance';
+import DelayingAppearanceSource from './DelayingAppearance?raw';
 
-import CircularUnderLoad from "./CircularUnderLoad";
-import CircularUnderLoadSource from "./CircularUnderLoad?raw";
+import CircularUnderLoad from './CircularUnderLoad';
+import CircularUnderLoadSource from './CircularUnderLoad?raw';
 
 const Progress = () => {
   return (
@@ -62,12 +62,7 @@ const Progress = () => {
           />
         </Grid>
         <Grid item xs={12} md={6}>
-          <AppComponentCard
-            title="Circular Color"
-            component={CircularColor}
-            source={CircularColorSource}
-            noScrollbar
-          />
+          <AppComponentCard title="Circular Color" component={CircularColor} source={CircularColorSource} noScrollbar />
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
@@ -104,12 +99,7 @@ const Progress = () => {
           />
         </Grid>
         <Grid item xs={12} md={6}>
-          <AppComponentCard
-            title="Linear Buffer"
-            component={LinearBuffer}
-            source={LinearBufferSource}
-            noScrollbar
-          />
+          <AppComponentCard title="Linear Buffer" component={LinearBuffer} source={LinearBufferSource} noScrollbar />
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
@@ -120,12 +110,7 @@ const Progress = () => {
           />
         </Grid>
         <Grid item xs={12} md={6}>
-          <AppComponentCard
-            title="Linear Color"
-            component={LinearColor}
-            source={LinearColorSource}
-            noScrollbar
-          />
+          <AppComponentCard title="Linear Color" component={LinearColor} source={LinearColorSource} noScrollbar />
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard

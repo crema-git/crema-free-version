@@ -13,7 +13,7 @@ const AppointmentCell = ({ appointment }) => {
         alignItems: 'center',
         padding: '8px 20px',
       }}
-      className='item-hover'
+      className="item-hover"
     >
       <Box sx={{ mr: 4 }}>
         <Avatar
@@ -30,7 +30,7 @@ const AppointmentCell = ({ appointment }) => {
         }}
       >
         <Box
-          component='h5'
+          component="h5"
           sx={{
             fontWeight: Fonts.MEDIUM,
             mb: 0.5,
@@ -38,7 +38,7 @@ const AppointmentCell = ({ appointment }) => {
         >
           {appointment.name}
         </Box>
-        <Box component='p' sx={{ color: 'primary.main' }}>
+        <Box component="p" sx={{ color: 'primary.main' }}>
           {appointment.speciality}
         </Box>
       </Box>
@@ -51,7 +51,7 @@ const AppointmentCell = ({ appointment }) => {
         }}
       >
         <Box
-          component='p'
+          component="p"
           sx={{
             color: 'primary.main',
             my: 1,

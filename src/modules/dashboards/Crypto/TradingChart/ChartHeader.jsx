@@ -30,7 +30,7 @@ const ChartHeader = () => {
       </Box>
       <Box sx={{ px: 2, pb: { xs: 2, lg: 0 } }}>
         <Box
-          component='h3'
+          component="h3"
           sx={{
             color: 'text.primary',
             fontWeight: Fonts.SEMI_BOLD,
@@ -48,7 +48,7 @@ const ChartHeader = () => {
       </Box>
       <Box sx={{ px: 2, pb: { xs: 2, lg: 0 } }}>
         <Box
-          component='h3'
+          component="h3"
           sx={{
             color: '#11C15B',
             fontWeight: Fonts.SEMI_BOLD,
@@ -66,7 +66,7 @@ const ChartHeader = () => {
       </Box>
       <Box sx={{ px: 2, pb: { xs: 2, lg: 0 } }}>
         <Box
-          component='h3'
+          component="h3"
           sx={{
             color: 'text.primary',
             fontWeight: Fonts.SEMI_BOLD,
@@ -84,7 +84,7 @@ const ChartHeader = () => {
       </Box>
       <Box sx={{ px: 2, pb: { xs: 2, lg: 0 } }}>
         <Box
-          component='h3'
+          component="h3"
           sx={{
             color: '#F60002',
             fontWeight: Fonts.SEMI_BOLD,

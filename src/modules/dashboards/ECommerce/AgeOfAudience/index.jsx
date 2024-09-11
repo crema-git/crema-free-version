@@ -32,9 +32,7 @@ const AgeOfAudience = ({ audienceData }) => {
 
       <AppList
         data={audienceData}
-        renderRow={(audience) => (
-          <AudienceCell key={'audience-' + audience.id} audience={audience} />
-        )}
+        renderRow={(audience) => <AudienceCell key={'audience-' + audience.id} audience={audience} />}
       />
     </AppCard>
   );

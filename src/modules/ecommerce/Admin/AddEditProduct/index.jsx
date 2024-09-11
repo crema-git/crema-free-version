@@ -17,19 +17,13 @@ export const AddEditProduct = ({ selectedProd }) => {
   const [uploadedFiles, setUploadedFiles] = useState([]);
   const infoViewActionsContext = useInfoViewActionsContext();
   const navigate = useNavigate();
-  const [productInfo, setProductInfo] = React.useState([
-    { id: 1, title: '', desc: '' },
-  ]);
-  const [productSpec, setProductSpec] = React.useState([
-    { id: 1, title: '', desc: '' },
-  ]);
+  const [productInfo, setProductInfo] = React.useState([{ id: 1, title: '', desc: '' }]);
+  const [productSpec, setProductSpec] = React.useState([{ id: 1, title: '', desc: '' }]);
 
   useEffect(() => {
     if (selectedProd) {
       setSelectedTags(selectedProd?.tag || []);
-      setUploadedFiles(
-        selectedProd?.image.map((img) => ({ ...img, preview: img.src })),
-      );
+      setUploadedFiles(selectedProd?.image.map((img) => ({ ...img, preview: img.src })));
       setProductInfo(selectedProd?.productInfo);
       setProductSpec(selectedProd?.productSpec);
     }
@@ -38,8 +32,8 @@ export const AddEditProduct = ({ selectedProd }) => {
   return (
     <>
       <Box
-        component='h2'
-        variant='h2'
+        component="h2"
+        variant="h2"
         sx={{
           fontSize: 16,
           color: 'text.primary',
@@ -83,9 +77,7 @@ export const AddEditProduct = ({ selectedProd }) => {
             })
               .then(() => {
                 navigate('/ecommerce/product-listing');
-                infoViewActionsContext.showMessage(
-                  'Product updated successfully!',
-                );
+                infoViewActionsContext.showMessage('Product updated successfully!');
               })
               .catch((error) => {
                 infoViewActionsContext.fetchError(error.message);
@@ -109,9 +101,7 @@ export const AddEditProduct = ({ selectedProd }) => {
               },
             })
               .then(() => {
-                infoViewActionsContext.showMessage(
-                  'Product created successfully!',
-                );
+                infoViewActionsContext.showMessage('Product created successfully!');
                 navigate('/ecommerce/product-listing');
               })
               .catch((error) => {
@@ -123,7 +113,7 @@ export const AddEditProduct = ({ selectedProd }) => {
         }}
       >
         {({ setFieldValue }) => (
-          <Form noValidate autoComplete='off'>
+          <Form noValidate autoComplete="off">
             <AppGridContainer>
               <ProductContent
                 content={selectedProd?.description || ''}

@@ -16,10 +16,7 @@ const Calendar = () => {
 
   return (
     <CalendarContextProvider>
-      <AppsContainer
-        title={messages['todo.todoApp']}
-        sidebarContent={<TaskSideBar />}
-      >
+      <AppsContainer title={messages['todo.todoApp']} sidebarContent={<TaskSideBar />}>
         <TasksCalendar />
         <Box
           sx={{

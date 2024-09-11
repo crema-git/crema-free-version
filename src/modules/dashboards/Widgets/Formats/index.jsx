@@ -7,12 +7,7 @@ import { Fonts } from '@crema/constants/AppEnums';
 import AppCard from '@crema/components/AppCard';
 import { useIntl } from 'react-intl';
 
-const getData = (data) => {
-  return data;
-};
-
-const Formats = (props) => {
-  const data = getData(props.data);
+const Formats = ({ data = [] }) => {
   const { messages } = useIntl();
 
   return (
@@ -59,10 +54,6 @@ const Formats = (props) => {
 };
 
 export default Formats;
-
-Formats.defaultProps = {
-  data: [],
-};
 
 Formats.propTypes = {
   data: PropTypes.array,

@@ -31,9 +31,9 @@ const ProfileItem = ({ profile }) => {
       }}
     >
       <ProfilePic>
-        <Avatar className='avatar-pic' src={profile.srcImg} />
+        <Avatar className="avatar-pic" src={profile.srcImg} />
       </ProfilePic>
-      <Box sx={{ mb: 0.5 }} component='h5'>
+      <Box sx={{ mb: 0.5 }} component="h5">
         {profile.name}
       </Box>
       <Box
@@ -68,8 +68,8 @@ const ProfileItem = ({ profile }) => {
               borderRight: (theme) => `solid 1px ${theme.palette.grey[200]}`,
             }}
           >
-            <Box component='h5'>{profile.years}</Box>
-            <Box component='p' color='text.secondary'>
+            <Box component="h5">{profile.years}</Box>
+            <Box component="p" color="text.secondary">
               Years
             </Box>
           </Box>
@@ -80,8 +80,8 @@ const ProfileItem = ({ profile }) => {
               width: 1 / 2,
             }}
           >
-            <Box component='h5'>{profile.blood}</Box>
-            <Box component='p' sx={{ color: 'text.secondary' }}>
+            <Box component="h5">{profile.blood}</Box>
+            <Box component="p" sx={{ color: 'text.secondary' }}>
               Blood
             </Box>
           </Box>
@@ -102,8 +102,8 @@ const ProfileItem = ({ profile }) => {
               borderRight: (theme) => `solid 1px ${theme.palette.grey[200]}`,
             }}
           >
-            <Box component='h5'>{profile.height} cm</Box>
-            <Box component='p' sx={{ color: 'text.secondary' }}>
+            <Box component="h5">{profile.height} cm</Box>
+            <Box component="p" sx={{ color: 'text.secondary' }}>
               Height
             </Box>
           </Box>
@@ -114,8 +114,8 @@ const ProfileItem = ({ profile }) => {
               width: 1 / 2,
             }}
           >
-            <Box component='h5'>{profile.weight} kg</Box>
-            <Box component='p' sx={{ color: 'text.secondary' }}>
+            <Box component="h5">{profile.weight} kg</Box>
+            <Box component="p" sx={{ color: 'text.secondary' }}>
               Weight
             </Box>
           </Box>

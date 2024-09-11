@@ -9,12 +9,7 @@ import { putDataApi, useGetDataApi } from '@crema/hooks/APIHooks';
 import { useInfoViewActionsContext } from '@crema/context/AppContextProvider/InfoViewContextProvider';
 
 const InvoiceSettingsPage = () => {
-  const [{ apiData }, { reCallAPI }] = useGetDataApi(
-    '/api/invoice/settings',
-    {},
-    {},
-    true,
-  );
+  const [{ apiData }, { reCallAPI }] = useGetDataApi('/api/invoice/settings', {}, {}, true);
   const infoViewActionsContext = useInfoViewActionsContext();
 
   const onUpdateSettings = (key, newSettings) => {
@@ -46,7 +41,7 @@ const InvoiceSettingsPage = () => {
     };
   };
   return (
-    <AppCard title='Settings'>
+    <AppCard title="Settings">
       <Tabs
         value={value}
         onChange={handleChange}
@@ -57,21 +52,9 @@ const InvoiceSettingsPage = () => {
           },
         }}
       >
-        <Tab
-          className='crMuiTab'
-          label={<IntlMessages id='faq.general' />}
-          {...a11yProps(0)}
-        />
-        <Tab
-          className='crMuiTab'
-          label={<IntlMessages id='invoice.invoicing' />}
-          {...a11yProps(1)}
-        />
-        <Tab
-          className='crMuiTab'
-          label={<IntlMessages id='invoice.accounting' />}
-          {...a11yProps(2)}
-        />
+        <Tab className="crMuiTab" label={<IntlMessages id="faq.general" />} {...a11yProps(0)} />
+        <Tab className="crMuiTab" label={<IntlMessages id="invoice.invoicing" />} {...a11yProps(1)} />
+        <Tab className="crMuiTab" label={<IntlMessages id="invoice.accounting" />} {...a11yProps(2)} />
       </Tabs>
       {apiData?.general && (
         <Box
@@ -79,24 +62,9 @@ const InvoiceSettingsPage = () => {
             mt: 4,
           }}
         >
-          {value === 0 && (
-            <General
-              settings={apiData?.general}
-              onUpdateSettings={onUpdateSettings}
-            />
-          )}
-          {value === 1 && (
-            <Invoicing
-              settings={apiData?.invoicing}
-              onUpdateSettings={onUpdateSettings}
-            />
-          )}
-          {value === 2 && (
-            <Accounting
-              settings={apiData?.accounting}
-              onUpdateSettings={onUpdateSettings}
-            />
-          )}
+          {value === 0 && <General settings={apiData?.general} onUpdateSettings={onUpdateSettings} />}
+          {value === 1 && <Invoicing settings={apiData?.invoicing} onUpdateSettings={onUpdateSettings} />}
+          {value === 2 && <Accounting settings={apiData?.accounting} onUpdateSettings={onUpdateSettings} />}
         </Box>
       )}
     </AppCard>

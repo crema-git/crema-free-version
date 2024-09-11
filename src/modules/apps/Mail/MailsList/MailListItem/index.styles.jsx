@@ -2,9 +2,9 @@ import { alpha } from '@mui/material';
 import { Fonts } from '@crema/constants/AppEnums';
 
 import { styled } from '@mui/material/styles';
-import ListItem from '@mui/material/ListItem';
+import ListItemButton from '@mui/material/ListItemButton';
 
-export const MailItemWrapper = styled(ListItem)((props) => {
+export const MailItemWrapper = styled(ListItemButton)((props) => {
   return {
     fontWeight: props.mail.isRead ? Fonts.REGULAR : Fonts.MEDIUM,
     display: 'flex',

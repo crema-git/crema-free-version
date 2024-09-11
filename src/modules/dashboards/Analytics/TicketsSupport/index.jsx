@@ -33,7 +33,7 @@ const TicketsSupport = ({ tickets }) => {
         >
           <WatchLaterIcon style={{ fontSize: 16 }} />
           <Box
-            component='span'
+            component="span"
             sx={{
               ml: 2,
             }}
@@ -70,8 +70,8 @@ const TicketsSupport = ({ tickets }) => {
               },
             }}
             expandIcon={<ExpandMoreIcon />}
-            aria-controls='panel1bh-content'
-            id='panel1bh-header'
+            aria-controls="panel1bh-content"
+            id="panel1bh-header"
           >
             <Box
               sx={{
@@ -81,7 +81,7 @@ const TicketsSupport = ({ tickets }) => {
               }}
             >
               <Box
-                component='h3'
+                component="h3"
                 sx={{
                   color: 'text.primary',
                   fontWeight: Fonts.BOLD,
@@ -134,17 +134,14 @@ const TicketsSupport = ({ tickets }) => {
                       flex: 1,
                     }}
                   >
-                    <AppLinearProgress
-                      value={data.overAllPercentage.open}
-                      activeColor='#5ABE20'
-                    />
+                    <AppLinearProgress value={data.overAllPercentage.open} activeColor="#5ABE20" />
                   </Box>
                   <Box
                     sx={{
                       ml: 4,
                       color: 'text.secondary',
                     }}
-                    component='span'
+                    component="span"
                   >
                     {data.overAllPercentage.open}%
                   </Box>
@@ -173,17 +170,14 @@ const TicketsSupport = ({ tickets }) => {
                       flex: 1,
                     }}
                   >
-                    <AppLinearProgress
-                      value={data.overAllPercentage.close}
-                      activeColor='#F44D54'
-                    />
+                    <AppLinearProgress value={data.overAllPercentage.close} activeColor="#F44D54" />
                   </Box>
                   <Box
                     sx={{
                       ml: 4,
                       color: 'text.secondary',
                     }}
-                    component='span'
+                    component="span"
                   >
                     {data.overAllPercentage.close}%
                   </Box>
@@ -212,17 +206,14 @@ const TicketsSupport = ({ tickets }) => {
                       flex: 1,
                     }}
                   >
-                    <AppLinearProgress
-                      value={data.overAllPercentage.hold}
-                      activeColor='#F59821'
-                    />
+                    <AppLinearProgress value={data.overAllPercentage.hold} activeColor="#F59821" />
                   </Box>
                   <Box
                     sx={{
                       ml: 4,
                       color: 'text.secondary',
                     }}
-                    component='span'
+                    component="span"
                   >
                     {data.overAllPercentage.hold}%
                   </Box>

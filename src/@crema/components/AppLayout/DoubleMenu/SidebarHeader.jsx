@@ -36,10 +36,7 @@ const useStyles = makeStyles((theme) => {
       alignItems: 'center',
       textAlign: 'center',
       padding: '30px 10px',
-      borderBottom: `solid 1px ${alpha(
-        theme.palette.sidebar.borderColor,
-        0.2,
-      )}`,
+      borderBottom: `solid 1px ${alpha(theme.palette.sidebar.borderColor, 0.2)}`,
     },
     profilePic: {
       position: 'relative',
@@ -140,21 +137,12 @@ const SidebarHeader = () => {
           </Box>
         )}
         <Box className={classes.hsUserInfo}>
-          <Typography component='h3' variant='h3' className={classes.userName}>
+          <Typography component="h3" variant="h3" className={classes.userName}>
             {user.displayName ? user.displayName : 'Admin User '}
-            <KeyboardArrowDownIcon
-              className='arrowIcon'
-              onClick={handleClick}
-            />
+            <KeyboardArrowDownIcon className="arrowIcon" onClick={handleClick} />
           </Typography>
         </Box>
-        <Menu
-          id='simple-menu'
-          anchorEl={anchorEl}
-          keepMounted
-          open={Boolean(anchorEl)}
-          onClose={handleClose}
-        >
+        <Menu id="simple-menu" anchorEl={anchorEl} keepMounted open={Boolean(anchorEl)} onClose={handleClose}>
           <MenuItem>My account</MenuItem>
           <MenuItem onClick={logout}>Logout</MenuItem>
         </Menu>

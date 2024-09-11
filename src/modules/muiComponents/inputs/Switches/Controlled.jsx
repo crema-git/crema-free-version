@@ -8,11 +8,5 @@ export default function ControlledSwitches() {
     setChecked(event.target.checked);
   };
 
-  return (
-    <Switch
-      checked={checked}
-      onChange={handleChange}
-      inputProps={{ 'aria-label': 'controlled' }}
-    />
-  );
+  return <Switch checked={checked} onChange={handleChange} inputProps={{ 'aria-label': 'controlled' }} />;
 }

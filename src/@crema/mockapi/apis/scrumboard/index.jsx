@@ -68,18 +68,14 @@ mock.onPut('/api/scrumboard/edit/list').reply((request) => {
 });
 
 mock.onPut('/api/cards/update/category').reply((request) => {
-  const { cardId, sourceLaneId, categoryId, position, boardId } = JSON.parse(
-    request.data,
-  );
+  const { cardId, sourceLaneId, categoryId, position, boardId } = JSON.parse(request.data);
   const updatedBoardList = boardData.map((data) => {
     if (data.id === boardId) {
       let card = null;
       let sourceLane = data.list.find((item) => item.id === sourceLaneId);
       card = sourceLane.cards.find((item) => item.id === cardId);
       if (sourceLane) {
-        sourceLane.cards = sourceLane.cards
-          ? sourceLane.cards.filter((item) => item.id !== cardId)
-          : [];
+        sourceLane.cards = sourceLane.cards ? sourceLane.cards.filter((item) => item.id !== cardId) : [];
       }
       let targetLane = data.list.find((item) => item.id === categoryId);
       if (targetLane.cards) {
@@ -106,12 +102,8 @@ mock.onPost('/api/scrumboard/add/card').reply((request) => {
   let selectedBoard = boardData.find((data) => data.id === board.id);
   let selectedList = selectedBoard.list.find((data) => data.id === list.id);
   selectedList.cards = selectedList.cards.concat(card);
-  selectedBoard.list = selectedBoard.list.map((data) =>
-    data.id === selectedList.id ? selectedList : data,
-  );
-  boardData = boardData.map((data) =>
-    data.id === selectedBoard.id ? selectedBoard : data,
-  );
+  selectedBoard.list = selectedBoard.list.map((data) => (data.id === selectedList.id ? selectedList : data));
+  boardData = boardData.map((data) => (data.id === selectedBoard.id ? selectedBoard : data));
   return [200, selectedBoard];
 });
 
@@ -119,15 +111,9 @@ mock.onPut('/api/scrumboard/edit/card').reply((request) => {
   const { board, list, card } = JSON.parse(request.data);
   let selectedBoard = boardData.find((data) => data.id === board.id);
   let selectedList = selectedBoard.list.find((data) => data.id === list.id);
-  selectedList.cards = selectedList.cards.map((data) =>
-    data.id === card.id ? card : data,
-  );
-  selectedBoard.list = selectedBoard.list.map((data) =>
-    data.id === selectedList.id ? selectedList : data,
-  );
-  boardData = boardData.map((data) =>
-    data.id === selectedBoard.id ? selectedBoard : data,
-  );
+  selectedList.cards = selectedList.cards.map((data) => (data.id === card.id ? card : data));
+  selectedBoard.list = selectedBoard.list.map((data) => (data.id === selectedList.id ? selectedList : data));
+  boardData = boardData.map((data) => (data.id === selectedBoard.id ? selectedBoard : data));
   return [200, selectedBoard];
 });
 
@@ -136,12 +122,8 @@ mock.onPost('/api/scrumboard/delete/card').reply((request) => {
   let selectedBoard = boardData.find((data) => data.id === boardId);
   let selectedList = selectedBoard.list.find((data) => data.id === listId);
   selectedList.cards = selectedList.cards.filter((data) => data.id !== cardId);
-  selectedBoard.list = selectedBoard.list.map((data) =>
-    data.id === selectedList.id ? selectedList : data,
-  );
-  boardData = boardData.map((data) =>
-    data.id === selectedBoard.id ? selectedBoard : data,
-  );
+  selectedBoard.list = selectedBoard.list.map((data) => (data.id === selectedList.id ? selectedList : data));
+  boardData = boardData.map((data) => (data.id === selectedBoard.id ? selectedBoard : data));
   return [200, selectedBoard];
 });
 
@@ -155,8 +137,6 @@ mock.onPost('/api/scrumboard/delete/list').reply((request) => {
   const { boardId, listId } = JSON.parse(request.data);
   let selectedBoard = boardData.find((data) => data.id === boardId);
   selectedBoard.list = selectedBoard.list.filter((item) => item.id !== listId);
-  boardData = boardData.map((data) =>
-    data.id === selectedBoard.id ? selectedBoard : data,
-  );
+  boardData = boardData.map((data) => (data.id === selectedBoard.id ? selectedBoard : data));
   return [200, selectedBoard];
 });

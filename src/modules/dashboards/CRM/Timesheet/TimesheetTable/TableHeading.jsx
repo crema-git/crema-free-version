@@ -24,11 +24,11 @@ const TableHeading = () => {
         },
       }}
     >
-      <TableCell className='tableCell'>Project</TableCell>
-      <TableCell className='tableCell'>Date</TableCell>
-      <TableCell className='tableCell'>Start time</TableCell>
-      <TableCell className='tableCell'>Stop time</TableCell>
-      <TableCell className='tableCell'>Duration</TableCell>
+      <TableCell className="tableCell">Project</TableCell>
+      <TableCell className="tableCell">Date</TableCell>
+      <TableCell className="tableCell">Start time</TableCell>
+      <TableCell className="tableCell">Stop time</TableCell>
+      <TableCell className="tableCell">Duration</TableCell>
     </TableHeader>
   );
 };

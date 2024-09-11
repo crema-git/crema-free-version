@@ -6,38 +6,30 @@ import { Box, useTheme } from '@mui/material';
 import { useWidth } from '@crema/helpers/Common';
 
 const getEmptyContainer = (ListEmptyComponent) => {
-  if (ListEmptyComponent)
-    return React.isValidElement(ListEmptyComponent) ? (
-      ListEmptyComponent
-    ) : (
-      <ListEmptyComponent />
-    );
+  if (ListEmptyComponent) return React.isValidElement(ListEmptyComponent) ? ListEmptyComponent : <ListEmptyComponent />;
   return null;
 };
 
 const getFooterContainer = (ListFooterComponent) => {
   if (ListFooterComponent)
-    return React.isValidElement(ListFooterComponent) ? (
-      ListFooterComponent
-    ) : (
-      <ListFooterComponent />
-    );
+    return React.isValidElement(ListFooterComponent) ? ListFooterComponent : <ListFooterComponent />;
   return null;
 };
 
 const GridView = ({
   sx,
-  column,
   responsive,
-  itemPadding,
   // animation,
   renderRow,
   onEndReached,
-  data,
   containerStyle,
-  border,
   ListFooterComponent,
   ListEmptyComponent,
+  border = false,
+  data = [],
+  column = 3,
+  animation = 'transition.expandIn',
+  itemPadding = 12,
 }) => {
   const theme = useTheme();
   const width = useWidth();
@@ -68,22 +60,9 @@ const GridView = ({
         } else if (width === 'md') {
           return responsive.md || responsive.sm || responsive.xs || column;
         } else if (width === 'lg') {
-          return (
-            responsive.lg ||
-            responsive.md ||
-            responsive.sm ||
-            responsive.xs ||
-            column
-          );
+          return responsive.lg || responsive.md || responsive.sm || responsive.xs || column;
         } else if (width === 'xl') {
-          return (
-            responsive.xl ||
-            responsive.lg ||
-            responsive.md ||
-            responsive.sm ||
-            responsive.xs ||
-            column
-          );
+          return responsive.xl || responsive.lg || responsive.md || responsive.sm || responsive.xs || column;
         }
       } else {
         return column;
@@ -152,18 +131,4 @@ GridView.propTypes = {
   ListFooterComponent: PropTypes.node,
   data: PropTypes.array.isRequired,
   onEndReached: PropTypes.func,
-};
-GridView.defaultProps = {
-  border: false,
-  data: [],
-  column: 3,
-  animation: 'transition.expandIn',
-  itemPadding: 12,
-  // responsive: {
-  //   xs: 1,
-  //   sm: 2,
-  //   md: 2,
-  //   lg: 4,
-  //   xl: 4,
-  // },
 };

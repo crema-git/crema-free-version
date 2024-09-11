@@ -6,10 +6,10 @@ export default function ComboBox() {
   return (
     <Autocomplete
       disablePortal
-      id='combo-box-demo'
+      id="combo-box-demo"
       options={top100Films}
       sx={{ width: 300 }}
-      renderInput={(params) => <TextField {...params} label='Movie' />}
+      renderInput={(params) => <TextField {...params} label="Movie" />}
     />
   );
 }
@@ -84,8 +84,7 @@ const top100Films = [
   { label: 'Alien', year: 1979 },
   { label: 'Sunset Boulevard', year: 1950 },
   {
-    label:
-      'Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb',
+    label: 'Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb',
     year: 1964,
   },
   { label: 'The Great Dictator', year: 1940 },

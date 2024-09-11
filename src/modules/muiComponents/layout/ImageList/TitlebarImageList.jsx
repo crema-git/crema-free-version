@@ -9,8 +9,8 @@ import InfoIcon from '@mui/icons-material/Info';
 export default function TitlebarImageList() {
   return (
     <ImageList sx={{ width: 500, height: 450 }}>
-      <ImageListItem key='Subheader' cols={2}>
-        <ListSubheader component='div'>December</ListSubheader>
+      <ImageListItem key="Subheader" cols={2}>
+        <ListSubheader component="div">December</ListSubheader>
       </ImageListItem>
       {itemData.map((item) => (
         <ImageListItem key={item.img}>
@@ -18,16 +18,13 @@ export default function TitlebarImageList() {
             src={`${item.img}?w=248&fit=crop&auto=format`}
             srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
             alt={item.title}
-            loading='lazy'
+            loading="lazy"
           />
           <ImageListItemBar
             title={item.title}
             subtitle={item.author}
             actionIcon={
-              <IconButton
-                sx={{ color: 'rgba(255, 255, 255, 0.54)' }}
-                aria-label={`info about ${item.title}`}
-              >
+              <IconButton sx={{ color: 'rgba(255, 255, 255, 0.54)' }} aria-label={`info about ${item.title}`}>
                 <InfoIcon />
               </IconButton>
             }

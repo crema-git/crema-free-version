@@ -16,10 +16,7 @@ import { reactSlickData } from '@crema/mockapi/fakedb/thirdParty/reactSlick';
 const ReactSlick = () => {
   return (
     <>
-      <AppComponentHeader
-        title='React Slick'
-        refUrl='https://react-slick.neostack.com/'
-      />
+      <AppComponentHeader title="React Slick" refUrl="https://react-slick.neostack.com/" />
 
       <AppGridContainer>
         <Grid item xs={12} sm={6}>

@@ -57,7 +57,7 @@ const VisitorAction = styled('div')(({ theme }) => {
   };
 });
 
-const VisitorsPageViews = ({ data }) => {
+const VisitorsPageViews = ({ data = [] }) => {
   const theme = useTheme();
   const handleSelectionType = (data) => {
     console.log('data: ', data);
@@ -69,28 +69,18 @@ const VisitorsPageViews = ({ data }) => {
       title={messages['dashboard.crm.visitorsPageViews']}
       action={
         <VisitorAction>
-          <div className='visitor-action-view'>
-            <div className='visitor-action-item'>
-              <span
-                className='dot-visitor'
-                style={{ backgroundColor: theme.palette.primary.main }}
-              />
+          <div className="visitor-action-view">
+            <div className="visitor-action-item">
+              <span className="dot-visitor" style={{ backgroundColor: theme.palette.primary.main }} />
               {messages['dashboard.crm.pagesViews']}
             </div>
-            <div className='visitor-action-item'>
-              <span
-                className='dot-visitor'
-                style={{ backgroundColor: theme.palette.secondary.main }}
-              />
+            <div className="visitor-action-item">
+              <span className="dot-visitor" style={{ backgroundColor: theme.palette.secondary.main }} />
               {messages['dashboard.crm.visitors']}
             </div>
           </div>
           <AppSelect
-            menus={[
-              messages['dashboard.thisWeek'],
-              messages['dashboard.lastWeeks'],
-              messages['dashboard.lastMonth'],
-            ]}
+            menus={[messages['dashboard.thisWeek'], messages['dashboard.lastWeeks'], messages['dashboard.lastMonth']]}
             defaultValue={messages['dashboard.thisWeek']}
             onChange={handleSelectionType}
           />
@@ -102,10 +92,6 @@ const VisitorsPageViews = ({ data }) => {
   );
 };
 export default VisitorsPageViews;
-
-VisitorsPageViews.defaultProps = {
-  data: [],
-};
 
 VisitorsPageViews.propTypes = {
   data: PropTypes.array,

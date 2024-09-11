@@ -20,11 +20,9 @@ import AuthWrapper from '../AuthWrapper';
 const validationSchema = yup.object({
   email: yup
     .string()
-    .email(<IntlMessages id='validation.emailFormat' />)
-    .required(<IntlMessages id='validation.emailRequired' />),
-  password: yup
-    .string()
-    .required(<IntlMessages id='validation.passwordRequired' />),
+    .email(<IntlMessages id="validation.emailFormat" />)
+    .required(<IntlMessages id="validation.emailRequired" />),
+  password: yup.string().required(<IntlMessages id="validation.passwordRequired" />),
 });
 
 const SigninFirebase = () => {
@@ -55,13 +53,13 @@ const SigninFirebase = () => {
             }}
           >
             {({ isSubmitting }) => (
-              <Form style={{ textAlign: 'left' }} noValidate autoComplete='off'>
+              <Form style={{ textAlign: 'left' }} noValidate autoComplete="off">
                 <Box sx={{ mb: { xs: 5, xl: 8 } }}>
                   <AppTextField
                     placeholder={messages['common.email']}
-                    name='email'
-                    label={<IntlMessages id='common.email' />}
-                    variant='outlined'
+                    name="email"
+                    label={<IntlMessages id="common.email" />}
+                    variant="outlined"
                     sx={{
                       width: '100%',
                       '& .MuiInputBase-input': {
@@ -73,11 +71,11 @@ const SigninFirebase = () => {
 
                 <Box sx={{ mb: { xs: 3, xl: 4 } }}>
                   <AppTextField
-                    type='password'
+                    type="password"
                     placeholder={messages['common.password']}
-                    label={<IntlMessages id='common.password' />}
-                    name='password'
-                    variant='outlined'
+                    label={<IntlMessages id="common.password" />}
+                    name="password"
+                    variant="outlined"
                     sx={{
                       width: '100%',
                       '& .MuiInputBase-input': {
@@ -98,37 +96,37 @@ const SigninFirebase = () => {
                       alignItems: 'center',
                     }}
                   >
-                    <Checkbox sx={{ ml: -3 }} id='rememberMe' />
+                    <Checkbox sx={{ ml: -3 }} id="rememberMe" />
                     <Box
-                      aria-labelledby='rememberMe'
-                      component='span'
+                      aria-labelledby="rememberMe"
+                      component="span"
                       sx={{
                         color: 'grey.700',
                       }}
                     >
-                      <IntlMessages id='common.rememberMe' />
+                      <IntlMessages id="common.rememberMe" />
                     </Box>
                   </Box>
                   <Box
-                    component='span'
-                    sx={{
-                      color: (theme) => theme.palette.primary.main,
+                    component="span"
+                    sx={(theme) => ({
+                      color: theme.palette.primary.main,
                       fontWeight: Fonts.SEMI_BOLD,
                       cursor: 'pointer',
                       display: 'block',
                       textAlign: 'right',
-                    }}
+                    })}
                     onClick={onGoToForgetPassword}
                   >
-                    <IntlMessages id='common.forgetPassword' />
+                    <IntlMessages id="common.forgetPassword" />
                   </Box>
                 </Box>
 
                 <div>
                   <Button
-                    variant='contained'
-                    color='primary'
-                    type='submit'
+                    variant="contained"
+                    color="primary"
+                    type="submit"
                     disabled={isSubmitting}
                     sx={{
                       minWidth: 160,
@@ -138,7 +136,7 @@ const SigninFirebase = () => {
                       padding: '4px 16px 8px',
                     }}
                   >
-                    <IntlMessages id='common.login' />
+                    <IntlMessages id="common.login" />
                   </Button>
                 </div>
               </Form>
@@ -153,43 +151,44 @@ const SigninFirebase = () => {
           }}
         >
           <span style={{ marginRight: 4 }}>
-            <IntlMessages id='common.dontHaveAccount' />
+            <IntlMessages id="common.dontHaveAccount" />
           </span>
           <Box
-            component='span'
-            sx={{
+            component="span"
+            sx={(theme) => ({
               fontWeight: Fonts.SEMI_BOLD,
+
               '& a': {
-                color: (theme) => theme.palette.primary.main,
+                color: theme.palette.primary.main,
                 textDecoration: 'none',
               },
-            }}
+            })}
           >
-            <Link to='/signup'>
-              <IntlMessages id='common.signup' />
+            <Link to="/signup">
+              <IntlMessages id="common.signup" />
             </Link>
           </Box>
         </Box>
 
         <Box
-          sx={{
+          sx={(theme) => ({
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'space-between',
-            backgroundColor: (theme) => theme.palette.background.default,
+            backgroundColor: theme.palette.background.default,
             mx: { xs: -5, lg: -10 },
             mb: { xs: -6, lg: -11 },
             mt: 'auto',
             py: 2,
             px: { xs: 5, lg: 10 },
-          }}
+          })}
         >
           <Box
-            sx={{
-              color: (theme) => theme.palette.text.secondary,
-            }}
+            sx={(theme) => ({
+              color: theme.palette.text.secondary,
+            })}
           >
-            <IntlMessages id='common.orLoginWith' />
+            <IntlMessages id="common.orLoginWith" />
           </Box>
           <Box
             sx={{
@@ -198,45 +197,45 @@ const SigninFirebase = () => {
             }}
           >
             <IconButton
-              aria-label='Google'
-              sx={{
+              aria-label="Google"
+              sx={(theme) => ({
                 p: 2,
                 '& svg': { fontSize: 20 },
-                color: (theme) => theme.palette.text.secondary,
-              }}
+                color: theme.palette.text.secondary,
+              })}
               onClick={() => logInWithPopup('google')}
             >
               <AiOutlineGoogle />
             </IconButton>
             <IconButton
-              aria-label='Facebook'
-              sx={{
+              aria-label="Facebook"
+              sx={(theme) => ({
                 p: 1.5,
                 '& svg': { fontSize: 20 },
-                color: (theme) => theme.palette.text.secondary,
-              }}
+                color: theme.palette.text.secondary,
+              })}
               onClick={() => logInWithPopup('facebook')}
             >
               <FaFacebookF />
             </IconButton>
             <IconButton
-              aria-label='Github'
-              sx={{
+              aria-label="Github"
+              sx={(theme) => ({
                 p: 1.5,
                 '& svg': { fontSize: 20 },
-                color: (theme) => theme.palette.text.secondary,
-              }}
+                color: theme.palette.text.secondary,
+              })}
               onClick={() => logInWithPopup('github')}
             >
               <BsGithub />
             </IconButton>
             <IconButton
-              aria-label='Twitter'
-              sx={{
+              aria-label="Twitter"
+              sx={(theme) => ({
                 p: 1.5,
                 '& svg': { fontSize: 20 },
-                color: (theme) => theme.palette.text.secondary,
-              }}
+                color: theme.palette.text.secondary,
+              })}
               onClick={() => logInWithPopup('twitter')}
             >
               <AiOutlineTwitter />

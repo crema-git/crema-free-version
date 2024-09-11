@@ -1,26 +1,12 @@
 import React from 'react';
 
-const Error401 = React.lazy(() =>
-  import('../../../modules/errorPages/Error401'),
-);
-const Error403 = React.lazy(() =>
-  import('../../../modules/errorPages/Error403'),
-);
-const Error404 = React.lazy(() =>
-  import('../../../modules/errorPages/Error404'),
-);
-const Error500 = React.lazy(() =>
-  import('../../../modules/errorPages/Error500'),
-);
-const Error503 = React.lazy(() =>
-  import('../../../modules/errorPages/Error503'),
-);
-const ComingSoon = React.lazy(() =>
-  import('../../../modules/errorPages/ComingSoon'),
-);
-const Maintenance = React.lazy(() =>
-  import('../../../modules/errorPages/Maintenance'),
-);
+const Error401 = React.lazy(() => import('../../../modules/errorPages/Error401'));
+const Error403 = React.lazy(() => import('../../../modules/errorPages/Error403'));
+const Error404 = React.lazy(() => import('../../../modules/errorPages/Error404'));
+const Error500 = React.lazy(() => import('../../../modules/errorPages/Error500'));
+const Error503 = React.lazy(() => import('../../../modules/errorPages/Error503'));
+const ComingSoon = React.lazy(() => import('../../../modules/errorPages/ComingSoon'));
+const Maintenance = React.lazy(() => import('../../../modules/errorPages/Maintenance'));
 
 export const errorPagesConfigs = [
   {

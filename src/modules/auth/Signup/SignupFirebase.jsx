@@ -17,14 +17,12 @@ import { FaFacebookF } from 'react-icons/fa';
 import AuthWrapper from '../AuthWrapper';
 
 const validationSchema = yup.object({
-  name: yup.string().required(<IntlMessages id='validation.nameRequired' />),
+  name: yup.string().required(<IntlMessages id="validation.nameRequired" />),
   email: yup
     .string()
-    .email(<IntlMessages id='validation.emailFormat' />)
-    .required(<IntlMessages id='validation.emailRequired' />),
-  password: yup
-    .string()
-    .required(<IntlMessages id='validation.passwordRequired' />),
+    .email(<IntlMessages id="validation.emailFormat" />)
+    .required(<IntlMessages id="validation.emailRequired" />),
+  password: yup.string().required(<IntlMessages id="validation.passwordRequired" />),
 });
 
 const SignupFirebase = () => {
@@ -46,20 +44,17 @@ const SignupFirebase = () => {
               setSubmitting(true);
               console.log('data', data);
               registerUserWithEmailAndPassword(data);
-              console.log(
-                'registerUserWithEmailAndPassword',
-                registerUserWithEmailAndPassword,
-              );
+              console.log('registerUserWithEmailAndPassword', registerUserWithEmailAndPassword);
               setSubmitting(false);
             }}
           >
             {({ isSubmitting }) => (
-              <Form style={{ textAlign: 'left' }} noValidate autoComplete='off'>
+              <Form style={{ textAlign: 'left' }} noValidate autoComplete="off">
                 <Box sx={{ mb: { xs: 4, xl: 5 } }}>
                   <AppTextField
-                    label={<IntlMessages id='common.name' />}
-                    name='name'
-                    variant='outlined'
+                    label={<IntlMessages id="common.name" />}
+                    name="name"
+                    variant="outlined"
                     sx={{
                       width: '100%',
                       '& .MuiInputBase-input': {
@@ -71,9 +66,9 @@ const SignupFirebase = () => {
 
                 <Box sx={{ mb: { xs: 4, xl: 5 } }}>
                   <AppTextField
-                    label={<IntlMessages id='common.email' />}
-                    name='email'
-                    variant='outlined'
+                    label={<IntlMessages id="common.email" />}
+                    name="email"
+                    variant="outlined"
                     sx={{
                       width: '100%',
                       '& .MuiInputBase-input': {
@@ -85,10 +80,10 @@ const SignupFirebase = () => {
 
                 <Box sx={{ mb: { xs: 4, xl: 5 } }}>
                   <AppTextField
-                    label={<IntlMessages id='common.password' />}
-                    name='password'
-                    type='password'
-                    variant='outlined'
+                    label={<IntlMessages id="common.password" />}
+                    name="password"
+                    type="password"
+                    variant="outlined"
                     sx={{
                       width: '100%',
                       '& .MuiInputBase-input': {
@@ -118,30 +113,30 @@ const SignupFirebase = () => {
                       }}
                     />
                     <Box
-                      component='span'
+                      component="span"
                       sx={{
                         mr: 2,
                         color: 'grey.700',
                       }}
                     >
-                      <IntlMessages id='common.iAgreeTo' />
+                      <IntlMessages id="common.iAgreeTo" />
                     </Box>
                   </Box>
                   <Box
-                    component='span'
-                    sx={{
-                      color: (theme) => theme.palette.primary.main,
+                    component="span"
+                    sx={(theme) => ({
+                      color: theme.palette.primary.main,
                       cursor: 'pointer',
-                    }}
+                    })}
                   >
-                    <IntlMessages id='common.termConditions' />
+                    <IntlMessages id="common.termConditions" />
                   </Box>
                 </Box>
 
                 <div>
                   <Button
-                    variant='contained'
-                    color='primary'
+                    variant="contained"
+                    color="primary"
                     disabled={isSubmitting}
                     sx={{
                       minWidth: 160,
@@ -150,9 +145,9 @@ const SignupFirebase = () => {
                       textTransform: 'capitalize',
                       padding: '4px 16px 8px',
                     }}
-                    type='submit'
+                    type="submit"
                   >
-                    <IntlMessages id='common.signup' />
+                    <IntlMessages id="common.signup" />
                   </Button>
                 </div>
               </Form>
@@ -167,43 +162,44 @@ const SignupFirebase = () => {
           }}
         >
           <span style={{ marginRight: 4 }}>
-            <IntlMessages id='common.alreadyHaveAccount' />
+            <IntlMessages id="common.alreadyHaveAccount" />
           </span>
           <Box
-            component='span'
-            sx={{
+            component="span"
+            sx={(theme) => ({
               fontWeight: Fonts.MEDIUM,
+
               '& a': {
-                color: (theme) => theme.palette.primary.main,
+                color: theme.palette.primary.main,
                 textDecoration: 'none',
               },
-            }}
+            })}
           >
-            <Link to='/signIn'>
-              <IntlMessages id='common.signIn' />
+            <Link to="/signIn">
+              <IntlMessages id="common.signIn" />
             </Link>
           </Box>
         </Box>
 
         <Box
-          sx={{
+          sx={(theme) => ({
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'space-between',
-            backgroundColor: (theme) => theme.palette.background.default,
+            backgroundColor: theme.palette.background.default,
             mx: { xs: -5, lg: -10 },
             mb: { xs: -6, lg: -11 },
             mt: 'auto',
             py: 2,
             px: { xs: 5, lg: 10 },
-          }}
+          })}
         >
           <Box
-            sx={{
-              color: (theme) => theme.palette.text.secondary,
-            }}
+            sx={(theme) => ({
+              color: theme.palette.text.secondary,
+            })}
           >
-            <IntlMessages id='common.orLoginWith' />
+            <IntlMessages id="common.orLoginWith" />
           </Box>
           <Box
             sx={{
@@ -211,10 +207,7 @@ const SignupFirebase = () => {
               alignItems: 'center',
             }}
           >
-            <IconButton
-              sx={{ p: 2, '& svg': { fontSize: 18 } }}
-              onClick={() => logInWithPopup('google')}
-            >
+            <IconButton sx={{ p: 2, '& svg': { fontSize: 18 } }} onClick={() => logInWithPopup('google')}>
               <AiOutlineGoogle />
             </IconButton>
             <IconButton

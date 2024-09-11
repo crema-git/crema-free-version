@@ -7,17 +7,17 @@ const ariaLabel = { 'aria-label': 'description' };
 export default function Inputs() {
   return (
     <Box
-      component='form'
+      component="form"
       sx={{
         '& > :not(style)': { m: 1 },
       }}
       noValidate
-      autoComplete='off'
+      autoComplete="off"
     >
-      <Input defaultValue='Hello world' inputProps={ariaLabel} />
-      <Input placeholder='Placeholder' inputProps={ariaLabel} />
-      <Input disabled defaultValue='Disabled' inputProps={ariaLabel} />
-      <Input defaultValue='Error' error inputProps={ariaLabel} />
+      <Input defaultValue="Hello world" inputProps={ariaLabel} />
+      <Input placeholder="Placeholder" inputProps={ariaLabel} />
+      <Input disabled defaultValue="Disabled" inputProps={ariaLabel} />
+      <Input defaultValue="Error" error inputProps={ariaLabel} />
     </Box>
   );
 }

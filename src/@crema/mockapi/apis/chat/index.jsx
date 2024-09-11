@@ -20,13 +20,9 @@ mock.onPost('/api/chatApp/message').reply((request) => {
   const { channelId, message } = JSON.parse(request.data);
   const id = (Math.random() * 10000).toFixed();
   const data = { ...message, id };
-  let user = connectionData.find(
-    (connection) => connection.channelId === channelId,
-  );
+  let user = connectionData.find((connection) => connection.channelId === channelId);
   user = { ...user, lastMessage: data };
-  connectionData = connectionData.map((item) =>
-    item.channelId === user.channelId ? user : item,
-  );
+  connectionData = connectionData.map((item) => (item.channelId === user.channelId ? user : item));
   let userMessages = chatData.find((chat) => chat.channelId === channelId);
   if (userMessages) {
     userMessages.messageData = userMessages.messageData.concat(data);
@@ -42,55 +38,38 @@ mock.onPost('/api/chatApp/message').reply((request) => {
 
 mock.onPost('/api/chatApp/clearChat').reply((request) => {
   const { channelId } = JSON.parse(request.data);
-  let user = connectionData.find(
-    (connection) => connection.channelId === channelId,
-  );
+  let user = connectionData.find((connection) => connection.channelId === channelId);
   user = { ...user, lastMessage: null };
 
-  connectionData = connectionData.map((item) =>
-    item.channelId === user.channelId ? user : item,
-  );
+  connectionData = connectionData.map((item) => (item.channelId === user.channelId ? user : item));
 
   return [200, { connectionData, userMessages: [] }];
 });
 
 mock.onPut('/api/chatApp/message').reply((request) => {
   const { channelId, message } = JSON.parse(request.data);
-  let user = connectionData.find(
-    (connection) => connection.channelId === channelId,
-  );
+  let user = connectionData.find((connection) => connection.channelId === channelId);
   if (user.lastMessage.id === message.id) {
     user = { ...user, lastMessage: message };
-    connectionData = connectionData.map((item) =>
-      item.channelId === user.channelId ? user : item,
-    );
+    connectionData = connectionData.map((item) => (item.channelId === user.channelId ? user : item));
   }
   let userMessages = chatData.find((chat) => chat.channelId === channelId);
 
-  userMessages.messageData = userMessages.messageData.map((item) =>
-    item.id === message.id ? message : item,
-  );
+  userMessages.messageData = userMessages.messageData.map((item) => (item.id === message.id ? message : item));
   return [200, { connectionData, userMessages }];
 });
 
 mock.onPost('/api/chatApp/delete/message').reply((request) => {
   const { channelId, messageId } = JSON.parse(request.data);
   let userMessages = chatData.find((chat) => chat.channelId === channelId);
-  userMessages.messageData = userMessages.messageData.filter(
-    (item) => item.id !== messageId,
-  );
-  let user = connectionData.find(
-    (connection) => connection.channelId === channelId,
-  );
+  userMessages.messageData = userMessages.messageData.filter((item) => item.id !== messageId);
+  let user = connectionData.find((connection) => connection.channelId === channelId);
   if (user.lastMessage.id === messageId) {
     user = {
       ...user,
-      lastMessage:
-        userMessages.messageData[userMessages.messageData.length - 1],
+      lastMessage: userMessages.messageData[userMessages.messageData.length - 1],
     };
-    connectionData = connectionData.map((item) =>
-      item.id === user.id ? user : item,
-    );
+    connectionData = connectionData.map((item) => (item.id === user.id ? user : item));
   }
   return [200, { connectionData, userMessages }];
 });
@@ -98,12 +77,8 @@ mock.onPost('/api/chatApp/delete/message').reply((request) => {
 mock.onPost('/api/chatApp/delete/user/messages').reply((request) => {
   const { channelId } = JSON.parse(request.data);
   chatData = chatData.filter((chat) => chat.channelId !== channelId);
-  let user = connectionData.find(
-    (connection) => connection.channelId === channelId,
-  );
+  let user = connectionData.find((connection) => connection.channelId === channelId);
   delete user.lastMessage;
-  connectionData = connectionData.map((item) =>
-    item.id === user.id ? user : item,
-  );
+  connectionData = connectionData.map((item) => (item.id === user.id ? user : item));
   return [200, connectionData];
 });

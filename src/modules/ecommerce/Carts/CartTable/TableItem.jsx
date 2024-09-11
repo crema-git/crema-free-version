@@ -22,45 +22,45 @@ const StyledTableCell = styled(TableCell)(() => ({
 }));
 const TableItem = ({ data, onRemoveItem, onIncrement, onDecrement }) => {
   return (
-    <TableRow key={data.name} className='item-hover'>
+    <TableRow key={data.name} className="item-hover">
       <StyledTableCell>
-        <Box display='flex'>
+        <Box display="flex">
           <Avatar sx={{ mr: 3.5 }} src={data.image.src || data.image} />
           <Box>
             <Box fontSize={14} fontWeight={Fonts.MEDIUM}>
               {data.title}
             </Box>
-            <Box color='text.secondary' fontSize={14}>
+            <Box color="text.secondary" fontSize={14}>
               Brand: {data.brand}
             </Box>
           </Box>
         </Box>
       </StyledTableCell>
-      <StyledTableCell align='left' fontWeight={Fonts.MEDIUM}>
+      <StyledTableCell align="left" fontWeight={Fonts.MEDIUM}>
         ${+data.mrp - +data.discount}
       </StyledTableCell>
-      <StyledTableCell align='left'>
+      <StyledTableCell align="left">
         <Box
           border={1}
           borderRadius={4}
-          display='flex'
-          borderColor='text.secondary'
-          alignItems='center'
-          justifyContent='center'
+          display="flex"
+          borderColor="text.secondary"
+          alignItems="center"
+          justifyContent="center"
           width={100}
           height={36}
         >
-          <AddIcon className='pointer' onClick={() => onIncrement(data)} />
-          <Box component='span' px={3}>
+          <AddIcon className="pointer" onClick={() => onIncrement(data)} />
+          <Box component="span" px={3}>
             {data.count}
           </Box>
-          <RemoveIcon className='pointer' onClick={() => onDecrement(data)} />
+          <RemoveIcon className="pointer" onClick={() => onDecrement(data)} />
         </Box>
       </StyledTableCell>
-      <StyledTableCell align='left' fontWeight={Fonts.MEDIUM}>
+      <StyledTableCell align="left" fontWeight={Fonts.MEDIUM}>
         ${(+data.mrp - +data.discount) * +data.count}
       </StyledTableCell>
-      <StyledTableCell component='th' scope='row'>
+      <StyledTableCell component="th" scope="row">
         <CancelIcon onClick={() => onRemoveItem(data)} />
       </StyledTableCell>
     </TableRow>

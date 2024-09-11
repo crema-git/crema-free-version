@@ -1,14 +1,14 @@
-import React from "react";
-import AppComponentHeader from "@crema/components/AppComponentHeader";
-import AppGridContainer from "@crema/components/AppGridContainer";
-import Grid from "@mui/material/Grid";
-import AppComponentCard from "@crema/components/AppComponentCard";
+import React from 'react';
+import AppComponentHeader from '@crema/components/AppComponentHeader';
+import AppGridContainer from '@crema/components/AppGridContainer';
+import Grid from '@mui/material/Grid';
+import AppComponentCard from '@crema/components/AppComponentCard';
 
-import Types from "./Types";
-import TypesSource from "./Types?raw";
+import Types from './Types';
+import TypesSource from './Types?raw';
 
-import TypographyTheme from "./TypographyTheme";
-import TypographyThemeSource from "./TypographyTheme?raw";
+import TypographyTheme from './TypographyTheme';
+import TypographyThemeSource from './TypographyTheme?raw';
 
 const Typography = () => {
   return (

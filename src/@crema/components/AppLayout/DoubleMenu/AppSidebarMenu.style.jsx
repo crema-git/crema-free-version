@@ -35,8 +35,8 @@ const useStyles = makeStyles((theme) => {
         props.themeMode === ThemeMode.SEMI_DARK
           ? theme.palette.sidebar.bgColor
           : props.themeMode === ThemeMode.LIGHT
-          ? 'white'
-          : theme.palette.sidebar.bgColor,
+            ? 'white'
+            : theme.palette.sidebar.bgColor,
     },
     scrollAppSidebar: {
       height: '100% !important',

@@ -42,7 +42,7 @@ const ContactGridItem = (props) => {
   const {
     contact,
     onChangeCheckedContacts,
-    checkedContacts,
+    checkedContacts = [],
     onChangeStarred,
     onSelectContactsForDelete,
     onOpenEditContact,
@@ -50,10 +50,7 @@ const ContactGridItem = (props) => {
   } = props;
 
   return (
-    <GridCard
-      className='card-hover'
-      onClick={() => onViewContactDetail(contact)}
-    >
+    <GridCard className="card-hover" onClick={() => onViewContactDetail(contact)}>
       <Box
         sx={{
           mb: 1,
@@ -66,13 +63,13 @@ const ContactGridItem = (props) => {
           sx={{
             ml: -2,
           }}
-          component='span'
+          component="span"
           onClick={(event) => event.stopPropagation()}
         >
           <Checkbox
             checked={checkedContacts.includes(contact.id)}
             onChange={(event) => onChangeCheckedContacts(event, contact.id)}
-            color='primary'
+            color="primary"
           />
         </Box>
 
@@ -118,7 +115,7 @@ const ContactGridItem = (props) => {
           }}
         >
           <Box
-            component='p'
+            component="p"
             sx={{
               fontWeight: Fonts.MEDIUM,
               fontSize: 14,
@@ -127,7 +124,7 @@ const ContactGridItem = (props) => {
             {contact.name}
           </Box>
           <Box
-            component='p'
+            component="p"
             sx={{
               fontSize: 14,
               color: 'text.secondary',
@@ -164,13 +161,9 @@ const ContactGridItem = (props) => {
             sx={{
               ml: 3.5,
             }}
-            component='p'
+            component="p"
           >
-            {contact.company ? (
-              contact.company
-            ) : (
-              <IntlMessages id='common.na' />
-            )}
+            {contact.company ? contact.company : <IntlMessages id="common.na" />}
           </Box>
         </Box>
         <Box
@@ -189,7 +182,7 @@ const ContactGridItem = (props) => {
             sx={{
               ml: 3.5,
             }}
-            component='p'
+            component="p"
           >
             {contact.contact}
           </Box>
@@ -200,10 +193,6 @@ const ContactGridItem = (props) => {
 };
 
 export default ContactGridItem;
-
-ContactGridItem.defaultProps = {
-  checkedContacts: [],
-};
 
 ContactGridItem.propTypes = {
   contact: PropTypes.object.isRequired,

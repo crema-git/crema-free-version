@@ -12,13 +12,13 @@ import { GiBookshelf } from 'react-icons/gi';
 const getIcon = (iconType) => {
   switch (iconType) {
     case 'BiBasket':
-      return <FcViewDetails color='#9E49E6' className='icon' />;
+      return <FcViewDetails color="#9E49E6" className="icon" />;
     case 'FcGraduationCap':
-      return <FcGraduationCap color='#0A8FDC' className='icon' />;
+      return <FcGraduationCap color="#0A8FDC" className="icon" />;
     case 'GiBookshelf':
-      return <GiBookshelf color='#49BD65' className='icon' />;
+      return <GiBookshelf color="#49BD65" className="icon" />;
     default:
-      return <FcReading color='#9E49E6' className='icon' />;
+      return <FcReading color="#9E49E6" className="icon" />;
   }
 };
 
@@ -26,7 +26,7 @@ const GeneralStats = ({ stats }) => {
   return (
     <AppCard
       sxStyle={{ height: 1 }}
-      className='card-hover'
+      className="card-hover"
       contentStyle={{
         p: 0,
         '&:last-of-type': {
@@ -75,9 +75,9 @@ const GeneralStats = ({ stats }) => {
           }}
         >
           <Box sx={{ overflow: 'hidden' }}>
-            <Box component='h3'>{stats.count}</Box>
+            <Box component="h3">{stats.count}</Box>
             <Box
-              component='p'
+              component="p"
               sx={{
                 color: 'text.secondary',
                 fontSize: 14,
@@ -90,7 +90,7 @@ const GeneralStats = ({ stats }) => {
             </Box>
           </Box>
           <Box
-            component='span'
+            component="span"
             sx={{
               backgroundColor: stats.bgcolor,
               borderRadius: 30,
@@ -101,10 +101,9 @@ const GeneralStats = ({ stats }) => {
               display: 'inline-block',
               minWidth: 75,
               textAlign: 'center',
-              '@media only screen and (max-width: 1580px) and (min-width: 1200px)':
-                {
-                  display: 'none',
-                },
+              '@media only screen and (max-width: 1580px) and (min-width: 1200px)': {
+                display: 'none',
+              },
             }}
           >
             {stats.new}

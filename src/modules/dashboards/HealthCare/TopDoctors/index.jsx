@@ -15,10 +15,7 @@ const TopDoctors = ({ data }) => {
       action={messages['common.viewAll']}
     >
       <AppScrollbar style={{ maxHeight: 280 }}>
-        <AppList
-          data={data}
-          renderRow={(doctor) => <DoctorCell key={doctor.id} doctor={doctor} />}
-        />
+        <AppList data={data} renderRow={(doctor) => <DoctorCell key={doctor.id} doctor={doctor} />} />
       </AppScrollbar>
     </AppCard>
   );

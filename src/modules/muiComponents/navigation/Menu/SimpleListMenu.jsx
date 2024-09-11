@@ -1,9 +1,9 @@
 import * as React from 'react';
 import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
 import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
+import ListItemButton from '@mui/material/ListItemButton';
 
 const options = [
   'Show some love to MUI',
@@ -31,28 +31,20 @@ export default function SimpleListMenu() {
 
   return (
     <div>
-      <List
-        component='nav'
-        aria-label='Device settings'
-        sx={{ bgcolor: 'background.paper' }}
-      >
-        <ListItem
-          button
-          id='lock-button'
-          aria-haspopup='listbox'
-          aria-controls='lock-menu'
-          aria-label='when device is locked'
+      <List component="nav" aria-label="Device settings" sx={{ bgcolor: 'background.paper' }}>
+        <ListItemButton
+          id="lock-button"
+          aria-haspopup="listbox"
+          aria-controls="lock-menu"
+          aria-label="when device is locked"
           aria-expanded={open ? 'true' : undefined}
           onClick={handleClickListItem}
         >
-          <ListItemText
-            primary='When device is locked'
-            secondary={options[selectedIndex]}
-          />
-        </ListItem>
+          <ListItemText primary="When device is locked" secondary={options[selectedIndex]} />
+        </ListItemButton>
       </List>
       <Menu
-        id='lock-menu'
+        id="lock-menu"
         anchorEl={anchorEl}
         open={open}
         onClose={handleClose}

@@ -1,17 +1,17 @@
-import React, {useRef, useState} from 'react';
+import React, { useRef, useState } from 'react';
 import Button from '@mui/material/Button/index';
 import InputAdornment from '@mui/material/InputAdornment/index';
-import {Form, Formik} from 'formik';
+import { Form, Formik } from 'formik';
 import * as yup from 'yup';
 import IntlMessages from '@crema/helpers/IntlMessages';
-import {useIntl} from 'react-intl';
-import {Box} from '@mui/material';
+import { useIntl } from 'react-intl';
+import { Box } from '@mui/material';
 import PropTypes from 'prop-types';
 import dayjs from 'dayjs';
-import {useAuthUser} from '@crema/hooks/AuthHooks';
+import { useAuthUser } from '@crema/hooks/AuthHooks';
 import AppTextField from '@crema/components/AppFormComponents/AppTextField';
-import {Fonts} from '@crema/constants/AppEnums';
-import {generateRandomUniqueNumber} from '@crema/helpers/Common';
+import { Fonts } from '@crema/constants/AppEnums';
+import { generateRandomUniqueNumber } from '@crema/helpers/Common';
 import JoditEditor from 'jodit-react';
 
 const config = {
@@ -91,9 +91,9 @@ const config = {
 const validationSchema = yup.object({
   to: yup
     .string()
-    .email(<IntlMessages id='validation.emailFormat' />)
-    .required(<IntlMessages id='validation.emailRequired' />),
-  cc: yup.string().email(<IntlMessages id='validation.emailFormat' />),
+    .email(<IntlMessages id="validation.emailFormat" />)
+    .required(<IntlMessages id="validation.emailRequired" />),
+  cc: yup.string().email(<IntlMessages id="validation.emailFormat" />),
 });
 
 const ForwardMail = ({ onSubmitForwardedMail }) => {
@@ -172,27 +172,27 @@ const ForwardMail = ({ onSubmitForwardedMail }) => {
                 InputProps={{
                   startAdornment: (
                     <InputAdornment
-                      position='start'
+                      position="start"
                       sx={{
                         fontWeight: Fonts.MEDIUM,
                       }}
                     >
-                      <IntlMessages id='common.to' />
+                      <IntlMessages id="common.to" />
                     </InputAdornment>
                   ),
                 }}
-                name='to'
+                name="to"
               />
 
               <Box
-                component='span'
+                component="span"
                 sx={{
                   ml: 4,
                   cursor: 'pointer',
                 }}
                 onClick={onShowCcInput}
               >
-                <IntlMessages id='common.cc' />
+                <IntlMessages id="common.cc" />
               </Box>
             </Box>
 
@@ -202,11 +202,7 @@ const ForwardMail = ({ onSubmitForwardedMail }) => {
                   mb: 4,
                 }}
               >
-                <AppTextField
-                  placeholder={messages['common.cc']}
-                  fullWidth
-                  name='cc'
-                />
+                <AppTextField placeholder={messages['common.cc']} fullWidth name="cc" />
               </Box>
             ) : null}
 
@@ -216,17 +212,17 @@ const ForwardMail = ({ onSubmitForwardedMail }) => {
               }}
             >
               <JoditEditor
-                  ref={editor}
-                  placeholder={messages['common.writeContent']}
-                  config={config}
-                  tabIndex={1} // tabIndex of textarea
-                  onChange={(value) => setFieldValue('content', value)}
+                ref={editor}
+                placeholder={messages['common.writeContent']}
+                config={config}
+                tabIndex={1} // tabIndex of textarea
+                onChange={(value) => setFieldValue('content', value)}
               />
             </Box>
 
             <div style={{ textAlign: 'right' }}>
-              <Button type='submit' color='primary' variant='outlined'>
-                <IntlMessages id='common.send' />
+              <Button type="submit" color="primary" variant="outlined">
+                <IntlMessages id="common.send" />
               </Button>
             </div>
           </Form>

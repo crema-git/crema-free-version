@@ -8,7 +8,7 @@ import { Fonts } from '@crema/constants/AppEnums';
 import AppCard from '@crema/components/AppCard';
 import { useIntl } from 'react-intl';
 
-const WebTraffic = ({ websiteTrafficData }) => {
+const WebTraffic = ({ websiteTrafficData = [] }) => {
   const { messages } = useIntl();
   return (
     <AppCard
@@ -28,7 +28,7 @@ const WebTraffic = ({ websiteTrafficData }) => {
       >
         <Box>
           <Box
-            component='h4'
+            component="h4"
             sx={{
               mb: 2,
               fontWeight: Fonts.MEDIUM,
@@ -39,13 +39,13 @@ const WebTraffic = ({ websiteTrafficData }) => {
             1,265
           </Box>
           <Box
-            component='p'
+            component="p"
             sx={{
               fontSize: 14,
               color: 'text.secondary',
             }}
           >
-            <IntlMessages id='common.subscribers' />
+            <IntlMessages id="common.subscribers" />
           </Box>
         </Box>
         <Box
@@ -60,7 +60,7 @@ const WebTraffic = ({ websiteTrafficData }) => {
         </Box>
         <Box>
           <Box
-            component='h4'
+            component="h4"
             sx={{
               mb: 2,
               fontWeight: Fonts.MEDIUM,
@@ -71,13 +71,13 @@ const WebTraffic = ({ websiteTrafficData }) => {
             12,432
           </Box>
           <Box
-            component='p'
+            component="p"
             sx={{
               fontSize: 14,
               color: 'text.secondary',
             }}
           >
-            <IntlMessages id='common.newUsers' />
+            <IntlMessages id="common.newUsers" />
           </Box>
         </Box>
       </Box>
@@ -86,10 +86,6 @@ const WebTraffic = ({ websiteTrafficData }) => {
 };
 
 export default WebTraffic;
-
-WebTraffic.defaultProps = {
-  websiteTrafficData: [],
-};
 
 WebTraffic.propTypes = {
   websiteTrafficData: PropTypes.array,

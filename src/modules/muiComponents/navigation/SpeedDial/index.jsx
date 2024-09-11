@@ -1,23 +1,23 @@
-import React from "react";
-import AppComponentHeader from "@crema/components/AppComponentHeader";
-import AppGridContainer from "@crema/components/AppGridContainer";
-import Grid from "@mui/material/Grid";
-import AppComponentCard from "@crema/components/AppComponentCard";
+import React from 'react';
+import AppComponentHeader from '@crema/components/AppComponentHeader';
+import AppGridContainer from '@crema/components/AppGridContainer';
+import Grid from '@mui/material/Grid';
+import AppComponentCard from '@crema/components/AppComponentCard';
 
-import BasicSpeedDial from "./BasicSpeedDial";
-import BasicSpeedDialSource from "./BasicSpeedDial?raw";
+import BasicSpeedDial from './BasicSpeedDial';
+import BasicSpeedDialSource from './BasicSpeedDial?raw';
 
-import PlaygroundSpeedDial from "./PlaygroundSpeedDial";
-import PlaygroundSpeedDialSource from "./PlaygroundSpeedDial?raw";
+import PlaygroundSpeedDial from './PlaygroundSpeedDial';
+import PlaygroundSpeedDialSource from './PlaygroundSpeedDial?raw';
 
-import ControlledOpenSpeedDial from "./ControlledOpenSpeedDial";
-import ControlledOpenSpeedDialSource from "./ControlledOpenSpeedDial?raw";
+import ControlledOpenSpeedDial from './ControlledOpenSpeedDial';
+import ControlledOpenSpeedDialSource from './ControlledOpenSpeedDial?raw';
 
-import OpenIconSpeedDial from "./OpenIconSpeedDial";
-import OpenIconSpeedDialSource from "./OpenIconSpeedDial?raw";
+import OpenIconSpeedDial from './OpenIconSpeedDial';
+import OpenIconSpeedDialSource from './OpenIconSpeedDial?raw';
 
-import SpeedDialTooltipOpen from "./SpeedDialTooltipOpen";
-import SpeedDialTooltipOpenSource from "./SpeedDialTooltipOpen?raw";
+import SpeedDialTooltipOpen from './SpeedDialTooltipOpen';
+import SpeedDialTooltipOpenSource from './SpeedDialTooltipOpen?raw';
 
 const SpeedDial = () => {
   return (

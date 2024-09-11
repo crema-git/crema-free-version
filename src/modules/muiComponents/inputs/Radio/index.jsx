@@ -1,26 +1,26 @@
-import AppComponentHeader from "@crema/components/AppComponentHeader";
-import AppGridContainer from "@crema/components/AppGridContainer";
-import Grid from "@mui/material/Grid";
-import AppComponentCard from "@crema/components/AppComponentCard";
+import AppComponentHeader from '@crema/components/AppComponentHeader';
+import AppGridContainer from '@crema/components/AppGridContainer';
+import Grid from '@mui/material/Grid';
+import AppComponentCard from '@crema/components/AppComponentCard';
 
-import RadioButtonsGroup from "./RadioButtonsGroup";
-import RadioButtonsGroupSource from "./RadioButtonsGroup?raw";
-import RowRadioButtonsGroup from "./Direction";
-import RowRadioButtonsGroupSource from "./Direction?raw";
-import ControlledRadioButtonsGroup from "./Controlled";
-import ControlledRadioButtonsGroupSource from "./Controlled?raw";
-import RadioButtons from "./StandaloneRadioButtons";
-import RadioButtonsSource from "./StandaloneRadioButtons?raw";
-import SizeRadioButtons from "./Size";
-import SizeRadioButtonsSource from "./Size?raw";
-import ColorRadioButtons from "./Color";
-import ColorRadioButtonsSource from "./Color?raw";
-import FormControlLabelPlacement from "./LabelPlacement";
-import FormControlLabelPlacementSource from "./LabelPlacement?raw";
-import ErrorRadios from "./ShowError";
-import ErrorRadiosSource from "./ShowError?raw";
-import CustomizedRadios from "./Customization";
-import CustomizedRadiosSource from "./Customization?raw";
+import RadioButtonsGroup from './RadioButtonsGroup';
+import RadioButtonsGroupSource from './RadioButtonsGroup?raw';
+import RowRadioButtonsGroup from './Direction';
+import RowRadioButtonsGroupSource from './Direction?raw';
+import ControlledRadioButtonsGroup from './Controlled';
+import ControlledRadioButtonsGroupSource from './Controlled?raw';
+import RadioButtons from './StandaloneRadioButtons';
+import RadioButtonsSource from './StandaloneRadioButtons?raw';
+import SizeRadioButtons from './Size';
+import SizeRadioButtonsSource from './Size?raw';
+import ColorRadioButtons from './Color';
+import ColorRadioButtonsSource from './Color?raw';
+import FormControlLabelPlacement from './LabelPlacement';
+import FormControlLabelPlacementSource from './LabelPlacement?raw';
+import ErrorRadios from './ShowError';
+import ErrorRadiosSource from './ShowError?raw';
+import CustomizedRadios from './Customization';
+import CustomizedRadiosSource from './Customization?raw';
 
 const Radio = () => {
   return (
@@ -96,12 +96,7 @@ const Radio = () => {
           />
         </Grid>
         <Grid item xs={12} md={6}>
-          <AppComponentCard
-            title="Color"
-            component={ColorRadioButtons}
-            source={ColorRadioButtonsSource}
-            noScrollbar
-          />
+          <AppComponentCard title="Color" component={ColorRadioButtons} source={ColorRadioButtonsSource} noScrollbar />
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard

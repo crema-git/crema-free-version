@@ -9,7 +9,7 @@ function renderRow(props) {
   const { index, style } = props;
 
   return (
-    <ListItem style={style} key={index} component='div' disablePadding>
+    <ListItem style={style} key={index} component="div" disablePadding>
       <ListItemButton>
         <ListItemText primary={`Item ${index + 1}`} />
       </ListItemButton>
@@ -27,13 +27,7 @@ export default function VirtualizedList() {
         bgcolor: 'background.paper',
       }}
     >
-      <FixedSizeList
-        height={400}
-        width={360}
-        itemSize={46}
-        itemCount={200}
-        overscanCount={5}
-      >
+      <FixedSizeList height={400} width={360} itemSize={46} itemCount={200} overscanCount={5}>
         {renderRow}
       </FixedSizeList>
     </Box>

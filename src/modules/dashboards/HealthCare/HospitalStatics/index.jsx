@@ -8,11 +8,7 @@ const HospitalStatics = ({ data }) => {
   const { bgColor, icon, value, name } = data;
 
   return (
-    <AppCard
-      sxStyle={{ height: 1 }}
-      style={{ backgroundColor: bgColor }}
-      className='card-hover'
-    >
+    <AppCard sxStyle={{ height: 1 }} style={{ backgroundColor: bgColor }} className="card-hover">
       <Box sx={{ display: 'flex', alignItems: 'center' }}>
         <Box
           sx={{
@@ -20,7 +16,7 @@ const HospitalStatics = ({ data }) => {
             alignSelf: 'flex-start',
           }}
         >
-          <img src={icon} alt='icon' />
+          <img src={icon} alt="icon" />
         </Box>
         <Box
           sx={{
@@ -28,8 +24,8 @@ const HospitalStatics = ({ data }) => {
           }}
         >
           <Typography
-            component='h5'
-            variant='inherit'
+            component="h5"
+            variant="inherit"
             sx={{
               overflow: 'hidden',
               textOverflow: 'ellipsis',
@@ -43,7 +39,7 @@ const HospitalStatics = ({ data }) => {
             {value}
           </Typography>
           <Box
-            component='p'
+            component="p"
             sx={{
               pt: 0.5,
               color: 'text.secondary',

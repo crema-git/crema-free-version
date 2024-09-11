@@ -14,9 +14,7 @@ export default function SubscribeToEvents() {
 
   React.useEffect(() => {
     return apiRef.current.subscribeEvent('columnResize', (params) => {
-      setMessage(
-        `Column ${params.colDef.headerName} resized to ${params.width}px.`,
-      );
+      setMessage(`Column ${params.colDef.headerName} resized to ${params.width}px.`);
     });
   }, [apiRef]);
 
@@ -26,7 +24,7 @@ export default function SubscribeToEvents() {
         <DataGridPro apiRef={apiRef} {...data} />
       </div>
       {message && (
-        <Alert severity='info' style={{ marginTop: 8 }}>
+        <Alert severity="info" style={{ marginTop: 8 }}>
           {message}
         </Alert>
       )}

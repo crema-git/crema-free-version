@@ -45,7 +45,7 @@ const PreviewThumb = ({ file, onDeleteUploadFile }) => {
           onClick={() => onDeleteUploadFile(file)}
         />
       </Box>
-      <img alt='preview' src={file.preview} />
+      <img alt="preview" src={file.preview} />
     </Box>
   );
 };

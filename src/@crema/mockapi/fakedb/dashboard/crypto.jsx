@@ -387,8 +387,7 @@ const cryptoData = {
     {
       id: 2,
       srcImg: '/assets/images/dashboard/stories2.png',
-      title:
-        'Katy Perry, Nas, Jason Derulo invest big in crypto music platform Audius',
+      title: 'Katy Perry, Nas, Jason Derulo invest big in crypto music platform Audius',
       tag: 'Moneycontrol',
       time: '1 hour ago',
     },

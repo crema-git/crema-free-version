@@ -10,10 +10,8 @@ const useStyles = makeStyles((theme) => {
       cursor: 'pointer',
       textDecoration: 'none !important',
       borderRadius: '0 30px 30px 0',
-      paddingLeft:
-        theme.direction === 'ltr' ? (props) => 24 + 23 * props.level : 12,
-      paddingRight:
-        theme.direction === 'rtl' ? (props) => 24 + 23 * props.level : 12,
+      paddingLeft: theme.direction === 'ltr' ? (props) => 24 + 23 * props.level : 12,
+      paddingRight: theme.direction === 'rtl' ? (props) => 24 + 23 * props.level : 12,
       position: 'relative',
       '&.active': {
         backgroundColor: theme.palette.background.default,
@@ -30,17 +28,11 @@ const useStyles = makeStyles((theme) => {
 
       '&:hover, &:focus': {
         '& .nav-item-text': {
-          color: (props) =>
-            props.themeMode === ThemeMode.LIGHT
-              ? theme.palette.primary.main
-              : '#fff',
+          color: (props) => (props.themeMode === ThemeMode.LIGHT ? theme.palette.primary.main : '#fff'),
         },
 
         '& .nav-item-icon': {
-          color: (props) =>
-            props.themeMode === ThemeMode.LIGHT
-              ? theme.palette.primary.main
-              : '#fff',
+          color: (props) => (props.themeMode === ThemeMode.LIGHT ? theme.palette.primary.main : '#fff'),
         },
       },
       '&:hover': {

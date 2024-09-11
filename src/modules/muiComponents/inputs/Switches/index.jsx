@@ -1,24 +1,24 @@
-import AppComponentHeader from "@crema/components/AppComponentHeader";
-import AppGridContainer from "@crema/components/AppGridContainer";
-import Grid from "@mui/material/Grid";
-import AppComponentCard from "@crema/components/AppComponentCard";
+import AppComponentHeader from '@crema/components/AppComponentHeader';
+import AppGridContainer from '@crema/components/AppGridContainer';
+import Grid from '@mui/material/Grid';
+import AppComponentCard from '@crema/components/AppComponentCard';
 
-import BasicSwitches from "./BasicSwitches";
-import BasicSwitchesSource from "./BasicSwitches?raw";
-import SwitchLabels from "./Label";
-import SwitchLabelsSource from "./Label?raw";
-import SwitchesSize from "./Size";
-import SwitchesSizeSource from "./Size?raw";
-import ColorSwitches from "./Color";
-import ColorSwitchesSource from "./Color?raw";
-import ControlledSwitches from "./Controlled";
-import ControlledSwitchesSource from "./Controlled?raw";
-import SwitchesGroup from "./SwitchesFormGroup";
-import SwitchesGroupSource from "./SwitchesFormGroup?raw";
-import CustomizedSwitches from "./Customization";
-import CustomizedSwitchesSource from "./Customization?raw";
-import FormControlLabelPosition from "./LabelPlacement";
-import FormControlLabelPositionSource from "./LabelPlacement?raw";
+import BasicSwitches from './BasicSwitches';
+import BasicSwitchesSource from './BasicSwitches?raw';
+import SwitchLabels from './Label';
+import SwitchLabelsSource from './Label?raw';
+import SwitchesSize from './Size';
+import SwitchesSizeSource from './Size?raw';
+import ColorSwitches from './Color';
+import ColorSwitchesSource from './Color?raw';
+import ControlledSwitches from './Controlled';
+import ControlledSwitchesSource from './Controlled?raw';
+import SwitchesGroup from './SwitchesFormGroup';
+import SwitchesGroupSource from './SwitchesFormGroup?raw';
+import CustomizedSwitches from './Customization';
+import CustomizedSwitchesSource from './Customization?raw';
+import FormControlLabelPosition from './LabelPlacement';
+import FormControlLabelPositionSource from './LabelPlacement?raw';
 
 const Switches = () => {
   return (
@@ -85,12 +85,7 @@ const Switches = () => {
           />
         </Grid>
         <Grid item xs={12} md={6}>
-          <AppComponentCard
-            title="Color"
-            component={ColorSwitches}
-            source={ColorSwitchesSource}
-            noScrollbar
-          />
+          <AppComponentCard title="Color" component={ColorSwitches} source={ColorSwitchesSource} noScrollbar />
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard

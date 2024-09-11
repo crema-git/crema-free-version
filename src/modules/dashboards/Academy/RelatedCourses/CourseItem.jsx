@@ -22,7 +22,7 @@ const CourseItem = ({ data }) => {
         <img src={data.image} alt={data.title} />
       </Box>
       <Box
-        component='p'
+        component="p"
         sx={{
           fontSize: 14,
           fontWeight: Fonts.MEDIUM,
@@ -38,7 +38,7 @@ const CourseItem = ({ data }) => {
           color: 'text.secondary',
         }}
       >
-        <Box component='p'>{data.author}</Box>
+        <Box component="p">{data.author}</Box>
         <Box
           sx={{
             ml: 3,
@@ -51,7 +51,7 @@ const CourseItem = ({ data }) => {
         >
           <VisibilityIcon />
           <Box
-            component='p'
+            component="p"
             sx={{
               ml: 2,
             }}

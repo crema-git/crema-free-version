@@ -1,35 +1,35 @@
-import React from "react";
-import AppComponentHeader from "@crema/components/AppComponentHeader";
-import AppGridContainer from "@crema/components/AppGridContainer";
-import Grid from "@mui/material/Grid";
-import AppComponentCard from "@crema/components/AppComponentCard";
+import React from 'react';
+import AppComponentHeader from '@crema/components/AppComponentHeader';
+import AppGridContainer from '@crema/components/AppGridContainer';
+import Grid from '@mui/material/Grid';
+import AppComponentCard from '@crema/components/AppComponentCard';
 
-import SimpleSnackbar from "./SimpleSnackbar";
-import SimpleSnackbarSource from "./SimpleSnackbar?raw";
+import SimpleSnackbar from './SimpleSnackbar';
+import SimpleSnackbarSource from './SimpleSnackbar?raw';
 
-import CustomizedSnackbars from "./CustomizedSnackbars";
-import CustomizedSnackbarsSource from "./CustomizedSnackbars?raw";
+import CustomizedSnackbars from './CustomizedSnackbars';
+import CustomizedSnackbarsSource from './CustomizedSnackbars?raw';
 
-import PositionedSnackbar from "./PositionedSnackbar";
-import PositionedSnackbarSource from "./PositionedSnackbar?raw";
+import PositionedSnackbar from './PositionedSnackbar';
+import PositionedSnackbarSource from './PositionedSnackbar?raw';
 
-import LongTextSnackbar from "./LongTextSnackbar";
-import LongTextSnackbarSource from "./LongTextSnackbar?raw";
+import LongTextSnackbar from './LongTextSnackbar';
+import LongTextSnackbarSource from './LongTextSnackbar?raw';
 
-import ConsecutiveSnackbars from "./ConsecutiveSnackbars";
-import ConsecutiveSnackbarsSource from "./ConsecutiveSnackbars?raw";
+import ConsecutiveSnackbars from './ConsecutiveSnackbars';
+import ConsecutiveSnackbarsSource from './ConsecutiveSnackbars?raw';
 
-import FabIntegrationSnackbar from "./FabIntegrationSnackbar";
-import FabIntegrationSnackbarSource from "./FabIntegrationSnackbar?raw";
+import FabIntegrationSnackbar from './FabIntegrationSnackbar';
+import FabIntegrationSnackbarSource from './FabIntegrationSnackbar?raw';
 
-import TransitionsSnackbar from "./TransitionsSnackbar";
-import TransitionsSnackbarSource from "./TransitionsSnackbar?raw";
+import TransitionsSnackbar from './TransitionsSnackbar';
+import TransitionsSnackbarSource from './TransitionsSnackbar?raw';
 
-import DirectionSnackbar from "./DirectionSnackbar";
-import DirectionSnackbarSource from "./DirectionSnackbar?raw";
+import DirectionSnackbar from './DirectionSnackbar';
+import DirectionSnackbarSource from './DirectionSnackbar?raw';
 
-import IntegrationNotistack from "./IntegrationNotistack";
-import IntegrationNotistackSource from "./IntegrationNotistack?raw";
+import IntegrationNotistack from './IntegrationNotistack';
+import IntegrationNotistackSource from './IntegrationNotistack?raw';
 
 const Snackbar = () => {
   return (

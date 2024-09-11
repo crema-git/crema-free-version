@@ -11,11 +11,11 @@ const AppFixedFooter = () => {
   return (
     <>
       {footer && footerType === 'fixed' ? (
-        <FooterWrapper className='footer fixed-footer'>
-          <div className='footerContainer'>
+        <FooterWrapper className="footer fixed-footer">
+          <div className="footerContainer">
             <Typography>Copy right @crema 2021</Typography>
             <Box sx={{ ml: 'auto' }}>
-              <Button color='primary'>Buy Now</Button>
+              <Button color="primary">Buy Now</Button>
             </Box>
           </div>
         </FooterWrapper>

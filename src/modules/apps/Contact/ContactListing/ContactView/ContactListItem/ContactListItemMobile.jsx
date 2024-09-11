@@ -1,5 +1,5 @@
 import React from 'react';
-import ListItem from '@mui/material/ListItem';
+import ListItemButton from '@mui/material/ListItemButton';
 import Avatar from '@mui/material/Avatar';
 import Box from '@mui/material/Box';
 import PropTypes from 'prop-types';
@@ -12,7 +12,7 @@ import { blue } from '@mui/material/colors';
 import { styled } from '@mui/material/styles';
 import { alpha } from '@mui/material';
 
-const ContactListItemWrapper = styled(ListItem)(({ theme }) => {
+const ContactListItemWrapper = styled(ListItemButton)(({ theme }) => {
   return {
     display: 'flex',
     flexDirection: 'row',
@@ -35,26 +35,16 @@ const ContactListItemWrapper = styled(ListItem)(({ theme }) => {
   };
 });
 
-const ContactListItemMobile = ({
-  contact,
-  checkedContacts,
-  onChangeStarred,
-  labelList,
-  onViewContactDetail,
-}) => {
+const ContactListItemMobile = ({ contact, checkedContacts = [], onChangeStarred, labelList, onViewContactDetail }) => {
   const onGetLabelColor = (labelId) => {
     if (labelId) {
-      return (
-        labelList.length > 0 &&
-        labelList.find((label) => label.id === labelId).color
-      );
+      return labelList.length > 0 && labelList.find((label) => label.id === labelId).color;
     }
   };
 
   return (
     <ContactListItemWrapper
       dense
-      button
       key={contact.id}
       className={clsx('item-hover', {
         rootCheck: checkedContacts.includes(contact.id),
@@ -67,14 +57,14 @@ const ContactListItemMobile = ({
           display: 'flex',
           alignItems: 'center',
         }}
-        className='contactViewLeft'
+        className="contactViewLeft"
       >
         <Box
           sx={{
             mr: 3,
             mt: 1,
           }}
-          component='span'
+          component="span"
         >
           {contact.image ? (
             <Avatar
@@ -105,13 +95,13 @@ const ContactListItemMobile = ({
               textOverflow: 'ellipsis',
               whiteSpace: 'nowrap',
             }}
-            component='p'
+            component="p"
           >
             {contact.name}
           </Box>
 
           <Box
-            component='p'
+            component="p"
             sx={{
               color: 'text.secondary',
               overflow: 'hidden',
@@ -149,10 +139,6 @@ const ContactListItemMobile = ({
 };
 
 export default ContactListItemMobile;
-
-ContactListItemMobile.defaultProps = {
-  checkedContacts: [],
-};
 
 ContactListItemMobile.propTypes = {
   contact: PropTypes.object.isRequired,

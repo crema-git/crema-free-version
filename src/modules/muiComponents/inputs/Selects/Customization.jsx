@@ -47,20 +47,20 @@ export default function CustomizedSelects() {
   };
   return (
     <div>
-      <FormControl sx={{ m: 1 }} variant='standard'>
-        <InputLabel htmlFor='demo-customized-textbox'>Age</InputLabel>
-        <BootstrapInput id='demo-customized-textbox' />
+      <FormControl sx={{ m: 1 }} variant="standard">
+        <InputLabel htmlFor="demo-customized-textbox">Age</InputLabel>
+        <BootstrapInput id="demo-customized-textbox" />
       </FormControl>
-      <FormControl sx={{ m: 1 }} variant='standard'>
-        <InputLabel id='demo-customized-select-label'>Age</InputLabel>
+      <FormControl sx={{ m: 1 }} variant="standard">
+        <InputLabel id="demo-customized-select-label">Age</InputLabel>
         <Select
-          labelId='demo-customized-select-label'
-          id='demo-customized-select'
+          labelId="demo-customized-select-label"
+          id="demo-customized-select"
           value={age}
           onChange={handleChange}
           input={<BootstrapInput />}
         >
-          <MenuItem value=''>
+          <MenuItem value="">
             <em>None</em>
           </MenuItem>
           <MenuItem value={10}>Ten</MenuItem>
@@ -68,15 +68,10 @@ export default function CustomizedSelects() {
           <MenuItem value={30}>Thirty</MenuItem>
         </Select>
       </FormControl>
-      <FormControl sx={{ m: 1 }} variant='standard'>
-        <InputLabel htmlFor='demo-customized-select-native'>Age</InputLabel>
-        <NativeSelect
-          id='demo-customized-select-native'
-          value={age}
-          onChange={handleChange}
-          input={<BootstrapInput />}
-        >
-          <option aria-label='None' value='' />
+      <FormControl sx={{ m: 1 }} variant="standard">
+        <InputLabel htmlFor="demo-customized-select-native">Age</InputLabel>
+        <NativeSelect id="demo-customized-select-native" value={age} onChange={handleChange} input={<BootstrapInput />}>
+          <option aria-label="None" value="" />
           <option value={10}>Ten</option>
           <option value={20}>Twenty</option>
           <option value={30}>Thirty</option>

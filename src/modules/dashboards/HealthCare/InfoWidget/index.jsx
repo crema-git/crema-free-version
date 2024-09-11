@@ -6,11 +6,7 @@ import PropTypes from 'prop-types';
 
 const InfoWidget = ({ data }) => {
   return (
-    <AppCard
-      sxStyle={{ height: 1 }}
-      className='card-hover'
-      contentStyle={{ paddingLeft: 8, paddingRight: 8 }}
-    >
+    <AppCard sxStyle={{ height: 1 }} className="card-hover" contentStyle={{ paddingLeft: 8, paddingRight: 8 }}>
       <Box
         sx={{
           display: 'flex',
@@ -26,7 +22,7 @@ const InfoWidget = ({ data }) => {
             mb: 3,
           }}
         >
-          <img src={data.icon} alt='icon' style={{ height: 60, width: 60 }} />
+          <img src={data.icon} alt="icon" style={{ height: 60, width: 60 }} />
         </Box>
         <Box
           sx={{
@@ -42,7 +38,7 @@ const InfoWidget = ({ data }) => {
             {data.name}
           </Box>
           <Box
-            component='p'
+            component="p"
             sx={{
               fontSize: 14,
               fontWeight: Fonts.BOLD,

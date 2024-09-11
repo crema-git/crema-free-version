@@ -15,12 +15,7 @@ import { useParams } from 'react-router-dom';
 
 const BlogDetail = () => {
   const { id } = useParams();
-  const [{ apiData, loading }, { setQueryParams }] = useGetDataApi(
-    '/pages/blogs/detail',
-    {},
-    { id: id },
-    false,
-  );
+  const [{ apiData, loading }, { setQueryParams }] = useGetDataApi('/pages/blogs/detail', {}, { id: id }, false);
 
   useEffect(() => {
     setQueryParams({ id: id });
@@ -30,7 +25,7 @@ const BlogDetail = () => {
     <AppLoader />
   ) : (
     !isEmptyObject(apiData?.blogDetail) && (
-      <AppAnimate animation='transition.slideUpIn' delay={200}>
+      <AppAnimate animation="transition.slideUpIn" delay={200}>
         <AppGridContainer>
           <Grid item xs={12}>
             <BlogDetailHeader
@@ -56,9 +51,7 @@ const BlogDetail = () => {
             <BlogSidebarCard blogSidebar={apiData.blogSidebar} />
           </Grid>
           <Grid item xs={12} md={8} lg={8} xl={9} sx={{ order: { md: 1 } }}>
-            <BlogDetailContent
-              blogDetailContent={apiData.blogDetail.blogDetailContent}
-            />
+            <BlogDetailContent blogDetailContent={apiData.blogDetail.blogDetailContent} />
             <BlogComment comment={apiData.blogDetail.blogComment} />
           </Grid>
         </AppGridContainer>

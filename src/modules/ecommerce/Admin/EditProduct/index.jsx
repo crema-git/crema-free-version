@@ -8,8 +8,7 @@ import AddEditProduct from '../AddEditProduct';
 
 const ProductEditPage = () => {
   const { id } = useParams();
-  const [{ apiData: currentProduct, loading }, { setQueryParams }] =
-    useGetDataApi('/api/ecommerce/get', {}, {}, false);
+  const [{ apiData: currentProduct, loading }, { setQueryParams }] = useGetDataApi('/api/ecommerce/get', {}, {}, false);
 
   useEffect(() => {
     setQueryParams({ id: id });
@@ -18,7 +17,7 @@ const ProductEditPage = () => {
   return loading || isEmptyObject(currentProduct) ? (
     <AppLoader />
   ) : (
-    <AppAnimate animation='transition.slideUpIn' delay={200}>
+    <AppAnimate animation="transition.slideUpIn" delay={200}>
       <AddEditProduct selectedProd={currentProduct} />
     </AppAnimate>
   );

@@ -16,16 +16,42 @@ const AppsContentContainer = styled(SimpleBarReact)(() => {
   };
 });
 
-const AppsContent = ({ isDetailView, fullView, children, ...rest }) => {
+const AppsContent = ({ isDetailView = false, fullView, children, ...rest }) => {
   return (
     <AppsContentContainer
       {...rest}
-      sx={{
-        height: {
-          xs: `calc(100% - ${isDetailView ? 60 : 129}px)`,
-          sm: `calc(100% - ${fullView ? 0 : 60}px)`,
-        },
-      }}
+      sx={[
+        isDetailView
+          ? {
+              height: {
+                xs: {
+                  xs: 60,
+                },
+              },
+            }
+          : {
+              height: {
+                xs: {
+                  xs: 129,
+                },
+              },
+            },
+        fullView
+          ? {
+              height: {
+                sm: {
+                  sm: 0,
+                },
+              },
+            }
+          : {
+              height: {
+                sm: {
+                  sm: 60,
+                },
+              },
+            },
+      ]}
     >
       {children}
     </AppsContentContainer>
@@ -39,5 +65,3 @@ AppsContent.propTypes = {
   fullView: PropTypes.bool,
   isDetailView: PropTypes.bool,
 };
-
-AppsContent.defaultProps = { isDetailView: false };

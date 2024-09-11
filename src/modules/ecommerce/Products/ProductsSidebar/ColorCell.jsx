@@ -18,7 +18,7 @@ const ColorCell = ({ selected, data, onChange }) => {
         justifyContent: 'center',
       }}
       onClick={() => onChange(data)}
-      className='pointer'
+      className="pointer"
     >
       {selected.some((item) => item === data) ? (
         <IconButton

@@ -16,14 +16,14 @@ const Categories = ({ categories }) => {
       }}
     >
       <Typography
-        component='h3'
+        component="h3"
         sx={{
           mb: 5,
           fontWeight: Fonts.SEMI_BOLD,
           fontSize: 14,
         }}
       >
-        <IntlMessages id='dashboard.categories' />
+        <IntlMessages id="dashboard.categories" />
       </Typography>
       <Box
         sx={{
@@ -32,9 +32,7 @@ const Categories = ({ categories }) => {
       >
         <AppList
           data={categories}
-          renderRow={(categories, index) => (
-            <CategoriesItem key={index} categories={categories} />
-          )}
+          renderRow={(categories, index) => <CategoriesItem key={index} categories={categories} />}
         />
       </Box>
     </Box>

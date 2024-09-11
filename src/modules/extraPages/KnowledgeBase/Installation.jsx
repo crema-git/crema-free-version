@@ -9,14 +9,8 @@ import { Fonts } from '@crema/constants/AppEnums';
 const Installation = ({ installationQueries }) => {
   return (
     <Box mb={2}>
-      <Box
-        component='h3'
-        color='text.primary'
-        mb={{ xs: 4, lg: 6 }}
-        fontSize={16}
-        fontWeight={Fonts.BOLD}
-      >
-        <IntlMessages id='knowledge.installation' />
+      <Box component="h3" color="text.primary" mb={{ xs: 4, lg: 6 }} fontSize={16} fontWeight={Fonts.BOLD}>
+        <IntlMessages id="knowledge.installation" />
       </Box>
       <AppGridContainer>
         {installationQueries.map((data) => (

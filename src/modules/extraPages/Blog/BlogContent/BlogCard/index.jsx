@@ -30,12 +30,7 @@ const BlogCard = ({ blog, onViewBlogDetail }) => {
       // onClick={() => onViewBlogDetail(blog)}
     >
       <Box sx={{ position: 'absolute', top: 10, right: 0 }}>
-        <IconButton
-          style={{ height: 30, width: 30 }}
-          aria-label='more'
-          onClick={onLabelOpen}
-          size='large'
-        >
+        <IconButton style={{ height: 30, width: 30 }} aria-label="more" onClick={onLabelOpen} size="large">
           <MoreVertIcon />
         </IconButton>
       </Box>
@@ -55,7 +50,7 @@ const BlogCard = ({ blog, onViewBlogDetail }) => {
             mb: 2.5,
             display: 'block',
           }}
-          component='span'
+          component="span"
         >
           {blog.duration}
         </Box>
@@ -64,7 +59,7 @@ const BlogCard = ({ blog, onViewBlogDetail }) => {
             fontWeight: Fonts.MEDIUM,
             mb: 4,
           }}
-          component='h3'
+          component="h3"
         >
           {blog.blogDetailContent.title}
         </Typography>
@@ -106,7 +101,7 @@ const BlogCard = ({ blog, onViewBlogDetail }) => {
                 alt={blog.blogDetailContent.post.userName}
               />
             </Box>
-            <Box component='span' sx={{ fontSize: 12 }}>
+            <Box component="span" sx={{ fontSize: 12 }}>
               By {blog.blogDetailContent.post.userName}
             </Box>
           </Box>
@@ -129,13 +124,7 @@ const BlogCard = ({ blog, onViewBlogDetail }) => {
           </Box>
         </Box>
       </Box>
-      <Menu
-        anchorEl={isLabelOpen}
-        keepMounted
-        elevation={0}
-        open={Boolean(isLabelOpen)}
-        onClose={onLabelClose}
-      >
+      <Menu anchorEl={isLabelOpen} keepMounted elevation={0} open={Boolean(isLabelOpen)} onClose={onLabelClose}>
         <MenuItem value={311} onClick={() => onViewBlogDetail(blog)}>
           View Blog
         </MenuItem>

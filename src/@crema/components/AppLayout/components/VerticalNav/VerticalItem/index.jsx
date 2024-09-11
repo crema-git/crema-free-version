@@ -14,18 +14,13 @@ import AppNavLink from '../../../../AppNavLink';
 
 const VerticalItem = ({ level, item }) => {
   const { user } = useAuthUser();
-  const hasPermission = useMemo(
-    () => checkPermission(item.permittedRole, user.role),
-    [item.permittedRole, user.role],
-  );
+  const hasPermission = useMemo(() => checkPermission(item.permittedRole, user.role), [item.permittedRole, user.role]);
   const { pathname } = useLocation();
 
   useEffect(() => {
     if (pathname === item.url && document.getElementById(pathname)) {
       setTimeout(() => {
-        document
-          .getElementById(pathname)
-          ?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        document.getElementById(pathname)?.scrollIntoView({ behavior: 'smooth', block: 'center' });
       }, 1);
     }
   }, [pathname]);
@@ -37,15 +32,14 @@ const VerticalItem = ({ level, item }) => {
   return (
     <VerticalNavItem
       level={level}
-      button
       id={item.url}
       component={AppNavLink}
       to={item.url}
-      activeClassName='active'
+      activeClassName="active"
       exact={item.exact}
     >
       {item.icon && (
-        <Box component='span'>
+        <Box component="span">
           <Icon
             sx={{
               fontSize: 18,
@@ -53,21 +47,19 @@ const VerticalItem = ({ level, item }) => {
               mr: 4,
             }}
             className={clsx('nav-item-icon', 'material-icons-outlined')}
-            color='action'
+            color="action"
           >
             {item.icon}
           </Icon>
         </Box>
       )}
       <ListItemText
-        className='nav-item-content'
-        primary={
-          allowMultiLanguage ? <IntlMessages id={item.messageId} /> : item.title
-        }
+        className="nav-item-content"
+        primary={allowMultiLanguage ? <IntlMessages id={item.messageId} /> : item.title}
         classes={{ primary: 'nav-item-text' }}
       />
       {item.count && (
-        <Box sx={{ mr: 3.5 }} className='menu-badge'>
+        <Box sx={{ mr: 3.5 }} className="menu-badge">
           <AppBadge count={item.count} color={item.color} />
         </Box>
       )}
@@ -89,7 +81,5 @@ VerticalItem.propTypes = {
   }),
   level: PropTypes.number,
 };
-
-VerticalItem.defaultProps = {};
 
 export default React.memo(VerticalItem);

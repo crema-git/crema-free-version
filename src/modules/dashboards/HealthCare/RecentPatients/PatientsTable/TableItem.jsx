@@ -25,8 +25,8 @@ const TableCellWrapper = styled(TableCell)(() => {
 
 const TableItem = ({ data }) => {
   return (
-    <TableRow key={data.name} className='item-hover'>
-      <TableCellWrapper component='th' scope='row'>
+    <TableRow key={data.name} className="item-hover">
+      <TableCellWrapper component="th" scope="row">
         <Box
           sx={{
             display: 'flex',
@@ -40,20 +40,20 @@ const TableItem = ({ data }) => {
           >
             <Avatar src={data.profile_pic} />
           </Box>
-          <Typography variant='h5' component='h5'>
+          <Typography variant="h5" component="h5">
             {data.name}
           </Typography>
         </Box>
       </TableCellWrapper>
-      <TableCellWrapper align='left'>{data.gender}</TableCellWrapper>
-      <TableCellWrapper align='left'>{data.weight}</TableCellWrapper>
-      <TableCellWrapper align='left'>{data.assignedDr}</TableCellWrapper>
-      <TableCellWrapper align='left' sx={{ fontSize: 12 }}>
+      <TableCellWrapper align="left">{data.gender}</TableCellWrapper>
+      <TableCellWrapper align="left">{data.weight}</TableCellWrapper>
+      <TableCellWrapper align="left">{data.assignedDr}</TableCellWrapper>
+      <TableCellWrapper align="left" sx={{ fontSize: 12 }}>
         {data.date}
       </TableCellWrapper>
-      <TableCellWrapper align='left'>
+      <TableCellWrapper align="left">
         <Box
-          component='span'
+          component="span"
           sx={{
             padding: '3px 10px 4px',
             borderRadius: 4,
@@ -66,7 +66,7 @@ const TableItem = ({ data }) => {
           {data.status}
         </Box>
       </TableCellWrapper>
-      <TableCellWrapper align='right'>
+      <TableCellWrapper align="right">
         <AppMenu />
       </TableCellWrapper>
     </TableRow>

@@ -1,39 +1,39 @@
-import React from "react";
-import AppComponentHeader from "@crema/components/AppComponentHeader";
-import AppGridContainer from "@crema/components/AppGridContainer";
-import Grid from "@mui/material/Grid";
-import AppComponentCard from "@crema/components/AppComponentCard";
+import React from 'react';
+import AppComponentHeader from '@crema/components/AppComponentHeader';
+import AppGridContainer from '@crema/components/AppGridContainer';
+import Grid from '@mui/material/Grid';
+import AppComponentCard from '@crema/components/AppComponentCard';
 
-import BasicSelect from "./BasicSelect";
-import BasicSelectSource from "./BasicSelect?raw";
-import SelectVariants from "./SelectVariants";
-import SelectVariantsSource from "./SelectVariants?raw";
-import SelectLabels from "./LabelsHelperText";
-import SelectLabelsSource from "./LabelsHelperText?raw";
-import SelectAutoWidth from "./AutoWidth";
-import SelectAutoWidthSource from "./AutoWidth?raw";
-import SelectOtherProps from "./SelectOtherProps";
-import SelectOtherPropsSource from "./SelectOtherProps?raw";
-import NativeSelectDemo from "./NativeSelect";
-import NativeSelectDemoSource from "./NativeSelect?raw";
-import CustomizedSelects from "./Customization";
-import CustomizedSelectsSource from "./Customization?raw";
-import MultipleSelect from "./MultipleSelect";
-import MultipleSelectSource from "./MultipleSelect?raw";
-import MultipleSelectCheckmarks from "./MultipleSelectCheckmarks";
-import MultipleSelectCheckmarksSource from "./MultipleSelectCheckmarks?raw";
-import MultipleSelectChip from "./MultipleSelectChip";
-import MultipleSelectChipSource from "./MultipleSelectChip?raw";
-import MultipleSelectPlaceholder from "./MultipleSelectPlaceholder";
-import MultipleSelectPlaceholderSource from "./MultipleSelectPlaceholder?raw";
-import MultipleSelectNative from "./MultipleSelectNative";
-import MultipleSelectNativeSource from "./MultipleSelectNative?raw";
-import ControlledOpenSelect from "./ControlledOpenSelect";
-import ControlledOpenSelectSource from "./ControlledOpenSelect?raw";
-import DialogSelect from "./DialogSelect";
-import DialogSelectSource from "./DialogSelect?raw";
-import GroupedSelect from "./GroupedSelect";
-import GroupedSelectSource from "./GroupedSelect?raw";
+import BasicSelect from './BasicSelect';
+import BasicSelectSource from './BasicSelect?raw';
+import SelectVariants from './SelectVariants';
+import SelectVariantsSource from './SelectVariants?raw';
+import SelectLabels from './LabelsHelperText';
+import SelectLabelsSource from './LabelsHelperText?raw';
+import SelectAutoWidth from './AutoWidth';
+import SelectAutoWidthSource from './AutoWidth?raw';
+import SelectOtherProps from './SelectOtherProps';
+import SelectOtherPropsSource from './SelectOtherProps?raw';
+import NativeSelectDemo from './NativeSelect';
+import NativeSelectDemoSource from './NativeSelect?raw';
+import CustomizedSelects from './Customization';
+import CustomizedSelectsSource from './Customization?raw';
+import MultipleSelect from './MultipleSelect';
+import MultipleSelectSource from './MultipleSelect?raw';
+import MultipleSelectCheckmarks from './MultipleSelectCheckmarks';
+import MultipleSelectCheckmarksSource from './MultipleSelectCheckmarks?raw';
+import MultipleSelectChip from './MultipleSelectChip';
+import MultipleSelectChipSource from './MultipleSelectChip?raw';
+import MultipleSelectPlaceholder from './MultipleSelectPlaceholder';
+import MultipleSelectPlaceholderSource from './MultipleSelectPlaceholder?raw';
+import MultipleSelectNative from './MultipleSelectNative';
+import MultipleSelectNativeSource from './MultipleSelectNative?raw';
+import ControlledOpenSelect from './ControlledOpenSelect';
+import ControlledOpenSelectSource from './ControlledOpenSelect?raw';
+import DialogSelect from './DialogSelect';
+import DialogSelectSource from './DialogSelect?raw';
+import GroupedSelect from './GroupedSelect';
+import GroupedSelectSource from './GroupedSelect?raw';
 
 const Selects = () => {
   return (
@@ -71,12 +71,7 @@ const Selects = () => {
           />
         </Grid>
         <Grid item xs={12} md={6}>
-          <AppComponentCard
-            title="Auto width"
-            component={SelectAutoWidth}
-            source={SelectAutoWidthSource}
-            noScrollbar
-          />
+          <AppComponentCard title="Auto width" component={SelectAutoWidth} source={SelectAutoWidthSource} noScrollbar />
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard

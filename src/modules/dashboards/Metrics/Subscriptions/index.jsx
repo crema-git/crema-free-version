@@ -6,7 +6,13 @@ import PropTypes from 'prop-types';
 import AppSelect from '@crema/components/AppSelect';
 import AppCard from '@crema/components/AppCard';
 
-const Subscriptions = ({ data }) => {
+const Subscriptions = ({
+  data = {
+    dataOne: [],
+    dataTwo: [],
+    dataThree: [],
+  },
+}) => {
   const [graphData, setGraphData] = useState(data.dataOne);
 
   const handleYearChange = (value) => {
@@ -53,17 +59,9 @@ const Subscriptions = ({ data }) => {
             textAlign: { sm: 'right' },
           }}
         >
+          <AppSelect menus={[2019, 2018, 2017]} defaultValue={2019} onChange={handleYearChange} />
           <AppSelect
-            menus={[2019, 2018, 2017]}
-            defaultValue={2019}
-            onChange={handleYearChange}
-          />
-          <AppSelect
-            menus={[
-              messages['common.june'],
-              messages['common.july'],
-              messages['common.august'],
-            ]}
+            menus={[messages['common.june'], messages['common.july'], messages['common.august']]}
             defaultValue={messages['common.june']}
             onChange={handleMonthChange}
           />
@@ -76,14 +74,6 @@ const Subscriptions = ({ data }) => {
 };
 
 export default Subscriptions;
-
-Subscriptions.defaultProps = {
-  data: {
-    dataOne: [],
-    dataTwo: [],
-    dataThree: [],
-  },
-};
 
 Subscriptions.propTypes = {
   data: PropTypes.object,

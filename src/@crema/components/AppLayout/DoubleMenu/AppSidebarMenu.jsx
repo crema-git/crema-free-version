@@ -9,7 +9,7 @@ import AppScrollbar from '../../AppScrollbar';
 import MenuGroup from './SidebarMenu/MenuGroup';
 import { useThemeContext } from '@crema/context/AppContextProvider/ThemeContextProvider';
 
-const AppSidebarMenu = (props) => {
+const AppSidebarMenu = ({ variant = '', position = 'left', ...props }) => {
   const { themeMode } = useThemeContext();
 
   const classes = useStyles({ themeMode });
@@ -18,38 +18,29 @@ const AppSidebarMenu = (props) => {
     <>
       <Hidden lgUp>
         <Drawer
-          anchor={props.position}
+          anchor={position}
           open={props.isNavCollapsed}
           onClose={props.toggleNavCollapsed}
           classes={{
-            root: clsx(props.variant),
-            paper: clsx(props.variant),
+            root: clsx(variant),
+            paper: clsx(variant),
           }}
           style={{ position: 'absolute' }}
         >
           <Box className={clsx(classes.appSidebarMenuRoot, 'app-sidebar-menu')}>
             <Box className={clsx(classes.sidebarBg, sidebarClasses)}>
               <AppScrollbar className={classes.drawerScrollAppSidebar}>
-                <MenuGroup
-                  selectedMenu={props.selectedMenu}
-                  setSelectedMenu={props.setSelectedMenu}
-                />
+                <MenuGroup selectedMenu={props.selectedMenu} setSelectedMenu={props.setSelectedMenu} />
               </AppScrollbar>
             </Box>
           </Box>
         </Drawer>
       </Hidden>
       <Hidden mdDown>
-        <Box
-          height='100%'
-          className={clsx(classes.appSidebarMenuRoot, 'app-sidebar-menu')}
-        >
+        <Box height="100%" className={clsx(classes.appSidebarMenuRoot, 'app-sidebar-menu')}>
           <Box className={clsx(classes.sidebarBg, sidebarClasses)}>
             <AppScrollbar className={classes.scrollAppSidebar}>
-              <MenuGroup
-                selectedMenu={props.selectedMenu}
-                setSelectedMenu={props.setSelectedMenu}
-              />
+              <MenuGroup selectedMenu={props.selectedMenu} setSelectedMenu={props.setSelectedMenu} />
             </AppScrollbar>
           </Box>
         </Box>
@@ -59,11 +50,6 @@ const AppSidebarMenu = (props) => {
 };
 
 export default AppSidebarMenu;
-
-AppSidebarMenu.defaultProps = {
-  variant: '',
-  position: 'left',
-};
 
 AppSidebarMenu.propTypes = {
   position: PropTypes.string,

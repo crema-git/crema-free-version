@@ -11,7 +11,7 @@ import { Fonts } from '@crema/constants/AppEnums';
 
 import AppList from '@crema/components/AppList';
 
-const TaskList = ({ todayTaskData }) => {
+const TaskList = ({ todayTaskData = [] }) => {
   const [taskList, handleList] = useState(todayTaskData);
 
   const handleChange = (e, task) => {
@@ -32,7 +32,7 @@ const TaskList = ({ todayTaskData }) => {
                 px: 5,
                 py: 2,
               }}
-              className='item-hover'
+              className="item-hover"
             >
               <ListItemIcon
                 sx={{
@@ -47,11 +47,7 @@ const TaskList = ({ todayTaskData }) => {
                     ml: -2,
                   }}
                 >
-                  <Checkbox
-                    color='primary'
-                    checked={task.isChecked}
-                    onChange={(e) => handleChange(e, task)}
-                  />
+                  <Checkbox color="primary" checked={task.isChecked} onChange={(e) => handleChange(e, task)} />
                 </Box>
               </ListItemIcon>
               <ListItemText
@@ -62,19 +58,19 @@ const TaskList = ({ todayTaskData }) => {
                       fontSize: 14,
                       color: task.isChecked ? 'text.secondary' : 'text.primary',
                     }}
-                    component='span'
+                    component="span"
                   >
                     {task.task}
                   </Box>
                 }
                 secondary={
                   <Box
-                    component='span'
+                    component="span"
                     sx={{
                       fontSize: 12,
                     }}
                   >
-                    <IntlMessages id='common.scheduled' /> {task.date}
+                    <IntlMessages id="common.scheduled" /> {task.date}
                   </Box>
                 }
               />
@@ -87,10 +83,6 @@ const TaskList = ({ todayTaskData }) => {
 };
 
 export default TaskList;
-
-TaskList.defaultProps = {
-  todayTaskData: [],
-};
 
 TaskList.propTypes = {
   todayTaskData: PropTypes.array,

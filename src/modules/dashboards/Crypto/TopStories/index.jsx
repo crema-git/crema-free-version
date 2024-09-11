@@ -31,7 +31,7 @@ const TopStories = ({ stories }) => {
           }}
         >
           {stories.map((stories, index) => (
-            <Box key={index} className='stories-item'>
+            <Box key={index} className="stories-item">
               <StoriesItem stories={stories} />
             </Box>
           ))}

@@ -10,30 +10,19 @@ import {
   RiTodoLine,
 } from 'react-icons/ri';
 import { BiCarousel, BiCartAlt, BiErrorAlt, BiTask } from 'react-icons/bi';
-import {
-  BsBriefcase,
-  BsCart4,
-  BsChatDots,
-  BsCurrencyBitcoin,
-  BsQuestionDiamond,
-} from 'react-icons/bs';
+import { BsBriefcase, BsCart4, BsChatDots, BsCurrencyBitcoin, BsQuestionDiamond } from 'react-icons/bs';
 import { DiHtml5Multimedia } from 'react-icons/di';
 import {
   MdOutlineAnalytics,
   MdOutlineContactPhone,
   MdOutlineContactSupport,
-  MdOutlineDns,
   MdOutlineManageAccounts,
 } from 'react-icons/md';
 import { CgFeed } from 'react-icons/cg';
-import { ImFeed, ImLab } from 'react-icons/im';
+import { ImFeed } from 'react-icons/im';
 import { GrDatabase, GrNavigate, GrUserAdmin } from 'react-icons/gr';
 import { VscTable, VscTools } from 'react-icons/vsc';
-import {
-  AiOutlineEdit,
-  AiOutlineLayout,
-  AiOutlineUnorderedList,
-} from 'react-icons/ai';
+import { AiOutlineEdit, AiOutlineLayout, AiOutlineUnorderedList } from 'react-icons/ai';
 import { RoutePermittedRole } from '@crema/constants/AppEnums';
 import { TbFileInvoice } from 'react-icons/tb';
 
@@ -171,15 +160,6 @@ const routesConfig = [
         permittedRole: [RoutePermittedRole.User],
         icon: <BsChatDots />,
         url: '/apps/chat',
-      },
-      {
-        id: 'scrum-board',
-        title: 'Scrum Board',
-        messageId: 'sidebar.apps.scrumboard',
-        type: 'item',
-        permittedRole: [RoutePermittedRole.User],
-        icon: <MdOutlineDns />,
-        url: '/apps/scrum-board',
       },
       {
         id: 'wall',
@@ -881,14 +861,6 @@ const routesConfig = [
         icon: <VscTable />,
         children: [
           {
-            id: 'overview',
-            title: 'Overview',
-            messageId: 'sidebar.mui.dataGrid.overview',
-            type: 'item',
-            permittedRole: [RoutePermittedRole.User],
-            url: '/mui/data-grid/overview',
-          },
-          {
             id: 'layout',
             title: 'Layout',
             messageId: 'sidebar.mui.dataGrid.layout',
@@ -1015,71 +987,6 @@ const routesConfig = [
             type: 'item',
             permittedRole: [RoutePermittedRole.User],
             url: '/mui/data-grid/accessibility',
-          },
-        ],
-      },
-      {
-        id: 'lab',
-        title: 'Lab',
-        messageId: 'sidebar.mui.lab',
-        type: 'collapse',
-        icon: <ImLab />,
-        children: [
-          {
-            id: 'date-time',
-            title: 'Date Time',
-            messageId: 'sidebar.mui.lab.dateTime',
-            type: 'item',
-            permittedRole: [RoutePermittedRole.User],
-            url: '/mui/lab/date-picker',
-          },
-          {
-            id: 'date-time-picker',
-            title: 'Date Time Picker',
-            messageId: 'sidebar.mui.lab.dateTimePicker',
-            type: 'item',
-            permittedRole: [RoutePermittedRole.User],
-            url: '/mui/lab/date-time-picker',
-          },
-          {
-            id: 'time-picker',
-            title: 'Time Picker',
-            messageId: 'sidebar.mui.lab.timePicker',
-            type: 'item',
-            permittedRole: [RoutePermittedRole.User],
-            url: '/mui/lab/time-picker',
-          },
-          {
-            id: 'masonry',
-            title: 'Masonry',
-            messageId: 'sidebar.mui.lab.masonry',
-            type: 'item',
-            permittedRole: [RoutePermittedRole.User],
-            url: '/mui/lab/masonry',
-          },
-          {
-            id: 'timeline',
-            title: 'Time Line',
-            messageId: 'sidebar.mui.lab.timeline',
-            type: 'item',
-            permittedRole: [RoutePermittedRole.User],
-            url: '/mui/lab/timeline',
-          },
-          {
-            id: 'trap-focus',
-            title: 'Trap Focus',
-            messageId: 'sidebar.mui.lab.trapFocus',
-            type: 'item',
-            permittedRole: [RoutePermittedRole.User],
-            url: '/mui/lab/trap-focus',
-          },
-          {
-            id: 'tree-view',
-            title: 'Tree View',
-            messageId: 'sidebar.mui.lab.treeView',
-            type: 'item',
-            permittedRole: [RoutePermittedRole.User],
-            url: '/mui/lab/tree-view',
           },
         ],
       },

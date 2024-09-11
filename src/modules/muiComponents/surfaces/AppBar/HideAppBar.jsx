@@ -19,7 +19,7 @@ function HideOnScroll(props) {
   });
 
   return (
-    <Slide appear={false} direction='down' in={!trigger}>
+    <Slide appear={false} direction="down" in={!trigger}>
       {children}
     </Slide>
   );
@@ -41,7 +41,7 @@ export default function HideAppBar(props) {
       <HideOnScroll {...props}>
         <AppBar>
           <Toolbar>
-            <Typography variant='h6' component='div'>
+            <Typography variant="h6" component="div">
               Scroll to Hide App Bar
             </Typography>
           </Toolbar>

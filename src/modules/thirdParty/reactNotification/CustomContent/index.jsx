@@ -24,13 +24,11 @@ export default class CustomContentExample extends React.Component {
         container: getContainer(),
         content: (
           <Box className={`notification-custom-${type}`}>
-            <Box className='notification-custom-icon'>
+            <Box className="notification-custom-icon">
               <i className={iconClassName} />
             </Box>
-            <Box className='notification-custom-content'>
-              <Typography className='notification-message'>
-                {message}
-              </Typography>
+            <Box className="notification-custom-content">
+              <Typography className="notification-message">{message}</Typography>
             </Box>
           </Box>
         ),
@@ -44,13 +42,9 @@ export default class CustomContentExample extends React.Component {
         width: 325,
         container: getContainer(),
         content: (
-          <Box
-            display='flex'
-            flexDirection='row'
-            className='custom-image-content'
-          >
-            <img src='/assets/images/logo.png' alt='' />
-            <Box component='span' px={8} py={2}>
+          <Box display="flex" flexDirection="row" className="custom-image-content">
+            <img src="/assets/images/logo.png" alt="" />
+            <Box component="span" px={8} py={2}>
               Crema Admin
             </Box>
           </Box>
@@ -61,16 +55,16 @@ export default class CustomContentExample extends React.Component {
 
   render() {
     return (
-      <Box display='flex' flexWrap='wrap'>
+      <Box display="flex" flexWrap="wrap">
         <Box mr={2} my={1}>
-          <Button color='primary' variant='contained' onClick={this.add}>
+          <Button color="primary" variant="contained" onClick={this.add}>
             Custom Image Content
           </Button>
         </Box>
         <Box mr={2} my={1}>
           <Button
-            variant='contained'
-            color='primary'
+            variant="contained"
+            color="primary"
             onClick={() => this.addCustomIcon('success', 'fas fa-check-circle')}
           >
             Success with Icon
@@ -78,22 +72,18 @@ export default class CustomContentExample extends React.Component {
         </Box>
         <Box mr={2} my={1}>
           <Button
-            variant='contained'
-            color='primary'
-            onClick={() =>
-              this.addCustomIcon('danger', 'fas fa-exclamation-circle')
-            }
+            variant="contained"
+            color="primary"
+            onClick={() => this.addCustomIcon('danger', 'fas fa-exclamation-circle')}
           >
             Danger with Icon
           </Button>
         </Box>
         <Box mr={2} my={1}>
           <Button
-            color='primary'
-            variant='contained'
-            onClick={() =>
-              this.addCustomIcon('warning', 'fas fa-exclamation-triangle')
-            }
+            color="primary"
+            variant="contained"
+            onClick={() => this.addCustomIcon('warning', 'fas fa-exclamation-triangle')}
           >
             Warning with Icon
           </Button>

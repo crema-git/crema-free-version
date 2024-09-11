@@ -22,16 +22,11 @@ mock.onGet('/api/contactApp/contact/List').reply((config) => {
     }
   } else {
     const labelType = labelList.find((label) => label.alias === params.name).id;
-    folderContactList = contactList.filter(
-      (contact) => contact.label === labelType,
-    );
+    folderContactList = contactList.filter((contact) => contact.label === labelType);
   }
   const index = params.page * 15;
   const count = folderContactList.length;
-  const data =
-    folderContactList.length > 15
-      ? folderContactList.slice(index, index + 15)
-      : folderContactList;
+  const data = folderContactList.length > 15 ? folderContactList.slice(index, index + 15) : folderContactList;
   return [200, { data, count }];
 });
 
@@ -45,9 +40,7 @@ mock.onPut('/api/contactApp/update/starred').reply((request) => {
       return contact;
     }
   });
-  const updatedList = contactList.filter((contact) =>
-    contactIds.includes(contact.id),
-  );
+  const updatedList = contactList.filter((contact) => contactIds.includes(contact.id));
   return [200, updatedList];
 });
 
@@ -56,36 +49,23 @@ mock.onPost('/api/contactApp/delete/contact').reply((request) => {
   let folderContactList = [];
   if (type === 'folder') {
     if (name === 'starred') {
-      contactList = contactList.filter(
-        (contact) => !contactIds.includes(contact.id),
-      );
+      contactList = contactList.filter((contact) => !contactIds.includes(contact.id));
       folderContactList = contactList.filter((contact) => contact.isStarred);
     } else if (name === 'frequent') {
-      contactList = contactList.filter(
-        (contact) => !contactIds.includes(contact.id),
-      );
+      contactList = contactList.filter((contact) => !contactIds.includes(contact.id));
       folderContactList = contactList.filter((contact) => contact.isFrequent);
     } else {
-      contactList = contactList.filter(
-        (contact) => !contactIds.includes(contact.id),
-      );
+      contactList = contactList.filter((contact) => !contactIds.includes(contact.id));
       folderContactList = contactList;
     }
   } else {
     const labelType = labelList.find((label) => label.alias === name).id;
-    contactList = contactList.filter(
-      (contact) => !contactIds.includes(contact.id),
-    );
-    folderContactList = contactList.filter(
-      (contact) => contact.label === labelType,
-    );
+    contactList = contactList.filter((contact) => !contactIds.includes(contact.id));
+    folderContactList = contactList.filter((contact) => contact.label === labelType);
   }
   const index = page * 15;
   const count = folderContactList.length;
-  const data =
-    folderContactList.length > 15
-      ? folderContactList.slice(index, index + 15)
-      : folderContactList;
+  const data = folderContactList.length > 15 ? folderContactList.slice(index, index + 15) : folderContactList;
   return [200, { data, count }];
 });
 
@@ -99,17 +79,13 @@ mock.onPut('/api/contactApp/update/label').reply((request) => {
       return contact;
     }
   });
-  const updatedContacts = contactList.filter((contact) =>
-    contactIds.includes(contact.id),
-  );
+  const updatedContacts = contactList.filter((contact) => contactIds.includes(contact.id));
   return [200, updatedContacts];
 });
 
 mock.onPut('/api/contactApp/contact/').reply((request) => {
   const { contact } = JSON.parse(request.data);
-  contactList = contactList.map((item) =>
-    item.id === contact.id ? contact : item,
-  );
+  contactList = contactList.map((item) => (item.id === contact.id ? contact : item));
   return [200, contact];
 });
 
@@ -121,8 +97,6 @@ mock.onPost('/api/contactApp/compose').reply((request) => {
 
 mock.onGet('/api/contactApp/contact/').reply((config) => {
   const params = config.params;
-  const response = contactList.find(
-    (contact) => contact.id === parseInt(params.id),
-  );
+  const response = contactList.find((contact) => contact.id === parseInt(params.id));
   return [200, response];
 });

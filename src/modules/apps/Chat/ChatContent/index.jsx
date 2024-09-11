@@ -41,10 +41,7 @@ const ChatContent = ({ selectedUser, setSelectedUser }) => {
     <>
       {selectedUser ? (
         <MessagesScreen>
-          <ChatViewContainer
-            selectedUser={selectedUser}
-            setSelectedUser={setSelectedUser}
-          />
+          <ChatViewContainer selectedUser={selectedUser} setSelectedUser={setSelectedUser} />
         </MessagesScreen>
       ) : (
         <ScrollChatNoUser>

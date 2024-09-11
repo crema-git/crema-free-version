@@ -1,8 +1,8 @@
 import React from 'react';
-import { Navigate } from 'react-router-dom';
-import { authRole } from '@crema/constants/AppConst';
-import { RoutePermittedRole } from '@crema/constants/AppEnums';
-import { checkPermission } from './RouteHelper';
+import {Navigate} from 'react-router-dom';
+import {authRole} from '@crema/constants/AppConst';
+import {RoutePermittedRole} from '@crema/constants/AppEnums';
+import {checkPermission} from './RouteHelper';
 
 /**
  * @param {Object} structure - The passed object that defines the routes.
@@ -28,26 +28,17 @@ const generateRoutes = (structure) => {
   let dynamicRoutes = [];
 
   if (anonymousStructure) {
-    dynamicRoutes.push(
-      ...routesGenerator(isAuthenticated, anonymousStructure, 'anonymous'),
-    );
+    dynamicRoutes.push(...routesGenerator(isAuthenticated, anonymousStructure, 'anonymous'));
   }
 
   if (authorizedStructure) {
     dynamicRoutes.push(
-      ...routesGenerator(
-        isAuthenticated,
-        authorizedStructure,
-        'authorized',
-        isAuthenticated ? userRole : null,
-      ),
+      ...routesGenerator(isAuthenticated, authorizedStructure, 'authorized', isAuthenticated ? userRole : null),
     );
   }
 
   if (publicStructure) {
-    dynamicRoutes.push(
-      ...routesGenerator(isAuthenticated, publicStructure, 'public'),
-    );
+    dynamicRoutes.push(...routesGenerator(isAuthenticated, publicStructure, 'public'));
   }
   return dynamicRoutes;
 };
@@ -60,12 +51,7 @@ const generateRoutes = (structure) => {
  * redirectPath: String ----> To redirect to specific location
  * showRouteIf: to override when to show the component or when to [ Navigate ]
  */
-const routesGenerator = (
-  isAuthenticated = false,
-  routeSet = {},
-  type = 'anonymous',
-  userRole,
-) => {
+const routesGenerator = (isAuthenticated = false, routeSet = {}, type = 'anonymous', userRole) => {
   const generatedRoutes = [];
   const { fallbackPath = '' } = routeSet || {};
 
@@ -96,9 +82,7 @@ const routesGenerator = (
               return generatedRoutes.push(route);
             }
             if (isAuthorized) {
-              const renderCondition = isAuthorized
-                ? isAuthenticated
-                : !isAuthenticated;
+              const renderCondition = isAuthorized ? isAuthenticated : !isAuthenticated;
 
               if (Array.isArray(route.path)) {
                 route.path.map((path) => {
@@ -116,12 +100,7 @@ const routesGenerator = (
                           }
                       : {
                           path: path,
-                          element: (
-                            <Navigate
-                              to={redirectPath || fallbackPath}
-                              replace
-                            />
-                          ),
+                          element: <Navigate to={redirectPath || fallbackPath} replace />,
                         },
                   );
                 });
@@ -136,17 +115,13 @@ const routesGenerator = (
                         }
                     : {
                         path: route.path,
-                        element: (
-                          <Navigate to={redirectPath || fallbackPath} replace />
-                        ),
+                        element: <Navigate to={redirectPath || fallbackPath} replace />,
                       },
                 );
               }
               return generatedRoutes;
             }
-            const renderCondition = isAuthorized
-              ? isAuthenticated
-              : !isAuthenticated;
+            const renderCondition = isAuthorized ? isAuthenticated : !isAuthenticated;
             if (Array.isArray(route.path)) {
               route.path.map((path) => {
                 generatedRoutes.push(
@@ -158,9 +133,7 @@ const routesGenerator = (
                       }
                     : {
                         path: path,
-                        element: (
-                          <Navigate to={redirectPath || fallbackPath} replace />
-                        ),
+                        element: <Navigate to={redirectPath || fallbackPath} replace />,
                       },
                 );
               });
@@ -170,9 +143,7 @@ const routesGenerator = (
                   ? route
                   : {
                       path: route.path,
-                      element: (
-                        <Navigate to={redirectPath || fallbackPath} replace />
-                      ),
+                      element: <Navigate to={redirectPath || fallbackPath} replace />,
                     },
               );
             }

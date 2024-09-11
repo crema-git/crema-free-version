@@ -23,7 +23,7 @@ const TimelineItem = ({ data }) => {
         >
           <Box sx={{ mb: 1 }}>
             <Box
-              component='h2'
+              component="h2"
               sx={{
                 mb: 2,
                 fontWeight: Fonts.LIGHT,
@@ -50,13 +50,13 @@ const TimelineItem = ({ data }) => {
                   },
                 }}
               >
-                <i className='material-icons'>event</i>
+                <i className="material-icons">event</i>
               </Box>
               {data.date}
             </time>
           </Box>
           <Box
-            component='span'
+            component="span"
             sx={{
               py: 2,
               px: 4,
@@ -76,8 +76,6 @@ const TimelineItem = ({ data }) => {
             overflow: 'hidden',
             textOverflow: 'ellipsis',
             display: '-webkit-box',
-            '-webkitBoxOrient': 'vertical',
-            '-webkitLineClamp': 3,
           }}
         >
           {data.text}
@@ -97,19 +95,14 @@ const TimelineItem = ({ data }) => {
           }}
         >
           {data.link && (
-            <a
-              className='link'
-              href={data.link.url}
-              target='_blank'
-              rel='noopener noreferrer'
-            >
+            <a className="link" href={data.link.url} target="_blank" rel="noopener noreferrer">
               {data.link.text}
             </a>
           )}
         </Box>
         <CircleWrapper>
           <Box
-            component='span'
+            component="span"
             sx={{
               backgroundColor: (theme) => theme.palette.secondary.main,
               borderRadius: '50%',

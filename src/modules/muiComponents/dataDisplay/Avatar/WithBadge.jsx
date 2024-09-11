@@ -41,22 +41,16 @@ const SmallAvatar = styled(Avatar)(({ theme }) => ({
 
 export default function BadgeAvatars() {
   return (
-    <Stack direction='row' spacing={2}>
-      <StyledBadge
-        overlap='circular'
-        anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
-        variant='dot'
-      >
-        <Avatar alt='Remy Sharp' src='/assets/images/avatar/A1.jpg' />
+    <Stack direction="row" spacing={2}>
+      <StyledBadge overlap="circular" anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }} variant="dot">
+        <Avatar alt="Remy Sharp" src="/assets/images/avatar/A1.jpg" />
       </StyledBadge>
       <Badge
-        overlap='circular'
+        overlap="circular"
         anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
-        badgeContent={
-          <SmallAvatar alt='Remy Sharp' src='/assets/images/avatar/A1.jpg' />
-        }
+        badgeContent={<SmallAvatar alt="Remy Sharp" src="/assets/images/avatar/A1.jpg" />}
       >
-        <Avatar alt='Travis Howard' src='/assets/images/avatar/A2.jpg' />
+        <Avatar alt="Travis Howard" src="/assets/images/avatar/A2.jpg" />
       </Badge>
     </Stack>
   );

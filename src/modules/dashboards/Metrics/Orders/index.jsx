@@ -8,7 +8,17 @@ import AppCard from '@crema/components/AppCard';
 import AppSelect from '@crema/components/AppSelect';
 import { useIntl } from 'react-intl';
 
-const Orders = ({ data }) => {
+const Orders = ({
+  data = {
+    new: 0,
+    returning: 0,
+    graphData: {
+      dataOne: [],
+      dataTwo: [],
+      dataThree: [],
+    },
+  },
+}) => {
   const [graphData, setGraphData] = useState(data.graphData.dataTwo);
   const { messages } = useIntl();
 
@@ -45,11 +55,7 @@ const Orders = ({ data }) => {
       titleStyle={{ color: '#FFFFFF' }}
       action={
         <AppSelect
-          menus={[
-            messages['dashboard.thisWeek'],
-            messages['dashboard.lastWeeks'],
-            messages['dashboard.lastMonth'],
-          ]}
+          menus={[messages['dashboard.thisWeek'], messages['dashboard.lastWeeks'], messages['dashboard.lastMonth']]}
           defaultValue={messages['dashboard.thisWeek']}
           onChange={handleWeekChange}
         />
@@ -67,15 +73,15 @@ const Orders = ({ data }) => {
           }}
         >
           <Box
-            component='p'
+            component="p"
             sx={{
               color: '#FFFFFF88',
               fontSize: 14,
             }}
           >
-            <IntlMessages id='common.revenue' />
+            <IntlMessages id="common.revenue" />
             <Box
-              component='span'
+              component="span"
               sx={{
                 ml: 2,
                 color: 'primary.contrastText',
@@ -85,15 +91,15 @@ const Orders = ({ data }) => {
             </Box>
           </Box>
           <Box
-            component='p'
+            component="p"
             sx={{
               color: '#FFFFFF88',
               fontSize: 14,
             }}
           >
-            <IntlMessages id='common.orders' />
+            <IntlMessages id="common.orders" />
             <Box
-              component='span'
+              component="span"
               sx={{
                 ml: 2,
                 color: 'primary.contrastText',
@@ -111,18 +117,6 @@ const Orders = ({ data }) => {
 };
 
 export default Orders;
-
-Orders.defaultProps = {
-  data: {
-    new: 0,
-    returning: 0,
-    graphData: {
-      dataOne: [],
-      dataTwo: [],
-      dataThree: [],
-    },
-  },
-};
 
 Orders.propTypes = {
   data: PropTypes.object,

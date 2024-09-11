@@ -1,14 +1,14 @@
-import React from "react";
-import AppComponentHeader from "@crema/components/AppComponentHeader";
-import AppGridContainer from "@crema/components/AppGridContainer";
-import Grid from "@mui/material/Grid";
-import AppComponentCard from "@crema/components/AppComponentCard";
+import React from 'react';
+import AppComponentHeader from '@crema/components/AppComponentHeader';
+import AppGridContainer from '@crema/components/AppGridContainer';
+import Grid from '@mui/material/Grid';
+import AppComponentCard from '@crema/components/AppComponentCard';
 
-import SubscribeToEvents from "./SubscribeToEvents";
-import SubscribeToEventsSource from "./SubscribeToEvents?raw";
+import SubscribeToEvents from './SubscribeToEvents';
+import SubscribeToEventsSource from './SubscribeToEvents?raw';
 
-import DoubleClickWithCtrlToEdit from "./DoubleClickWithCtrlToEdit";
-import DoubleClickWithCtrlToEditSource from "./DoubleClickWithCtrlToEdit?raw";
+import DoubleClickWithCtrlToEdit from './DoubleClickWithCtrlToEdit';
+import DoubleClickWithCtrlToEditSource from './DoubleClickWithCtrlToEdit?raw';
 
 const Events = () => {
   return (

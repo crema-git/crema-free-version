@@ -9,12 +9,10 @@ import { FormattedNumber } from 'react-intl';
 
 const AppointmentCard = ({ data }) => {
   return (
-    <AppCard className='card-hover'>
+    <AppCard className="card-hover">
       <Box sx={{ display: 'flex', flexDirection: 'row' }}>
         <Box sx={{ width: '45%', display: 'flex', flexDirection: 'column' }}>
-          <Box
-            sx={{ boxShadow: 2, height: 46, width: 46, borderRadius: '50%' }}
-          >
+          <Box sx={{ boxShadow: 2, height: 46, width: 46, borderRadius: '50%' }}>
             <img src={data.icon} alt={data.name} />
           </Box>
           <Box
@@ -29,9 +27,7 @@ const AppointmentCard = ({ data }) => {
           >
             {data.name}
           </Box>
-          <Box
-            sx={{ fontSize: 20, fontWeight: Fonts.BOLD, color: 'text.primary' }}
-          >
+          <Box sx={{ fontSize: 20, fontWeight: Fonts.BOLD, color: 'text.primary' }}>
             <FormattedNumber value={+data.value} />
           </Box>
         </Box>

@@ -32,10 +32,16 @@ export default function InputSlider() {
 
   return (
     <Box sx={{ width: 250 }}>
-      <Typography id='input-slider' gutterBottom>
+      <Typography id="input-slider" gutterBottom>
         Volume
       </Typography>
-      <Grid container spacing={2} alignItems='center'>
+      <Grid
+        container
+        spacing={2}
+        sx={{
+          alignItems: 'center',
+        }}
+      >
         <Grid item>
           <VolumeUp />
         </Grid>
@@ -43,13 +49,13 @@ export default function InputSlider() {
           <Slider
             value={typeof value === 'number' ? value : 0}
             onChange={handleSliderChange}
-            aria-labelledby='input-slider'
+            aria-labelledby="input-slider"
           />
         </Grid>
         <Grid item>
           <Input
             value={value}
-            size='small'
+            size="small"
             onChange={handleInputChange}
             onBlur={handleBlur}
             inputProps={{

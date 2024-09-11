@@ -16,7 +16,7 @@ import { invoiceData } from '@crema/mockapi/fakedb/extraPages';
 
 const Invoice1 = () => {
   return (
-    <AppAnimate animation='transition.slideUpIn' delay={200}>
+    <AppAnimate animation="transition.slideUpIn" delay={200}>
       <Box
         sx={{
           flex: 1,
@@ -53,7 +53,7 @@ const Invoice1 = () => {
             >
               <Box>
                 <Box
-                  component='h4'
+                  component="h4"
                   sx={{
                     mb: { xs: 3, lg: 4 },
                     color: 'text.secondary',
@@ -62,7 +62,7 @@ const Invoice1 = () => {
                     fontWeight: Fonts.REGULAR,
                   }}
                 >
-                  <IntlMessages id='invoice.thankYou' />
+                  <IntlMessages id="invoice.thankYou" />
                 </Box>
               </Box>
               <Box
@@ -80,12 +80,7 @@ const Invoice1 = () => {
                   <Table>
                     <TableBody>
                       <TableRow>
-                        <TableCell
-                          colSpan='3'
-                          component='th'
-                          scope='row'
-                          sx={{ border: '0 none', p: 1.5 }}
-                        >
+                        <TableCell colSpan="3" component="th" scope="row" sx={{ border: '0 none', p: 1.5 }}>
                           <Box
                             sx={{
                               textAlign: 'right',
@@ -95,7 +90,7 @@ const Invoice1 = () => {
                               fontWeight: Fonts.MEDIUM,
                             }}
                           >
-                            <IntlMessages id='invoice.subTotal' />
+                            <IntlMessages id="invoice.subTotal" />
                           </Box>
                         </TableCell>
                         <TableCell sx={{ border: '0 none', p: 1.5 }}>
@@ -113,12 +108,7 @@ const Invoice1 = () => {
                       </TableRow>
 
                       <TableRow>
-                        <TableCell
-                          colSpan='3'
-                          component='th'
-                          scope='row'
-                          sx={{ border: '0 none', p: 1.5 }}
-                        >
+                        <TableCell colSpan="3" component="th" scope="row" sx={{ border: '0 none', p: 1.5 }}>
                           <Box
                             sx={{
                               color: 'text.secondary',
@@ -128,7 +118,7 @@ const Invoice1 = () => {
                               fontWeight: Fonts.MEDIUM,
                             }}
                           >
-                            <IntlMessages id='invoice.rebate' />
+                            <IntlMessages id="invoice.rebate" />
                           </Box>
                         </TableCell>
                         <TableCell sx={{ border: '0 none', p: 1.5 }}>
@@ -146,12 +136,7 @@ const Invoice1 = () => {
                       </TableRow>
 
                       <TableRow>
-                        <TableCell
-                          colSpan='3'
-                          component='th'
-                          scope='row'
-                          sx={{ border: '0 none', p: 1.5 }}
-                        >
+                        <TableCell colSpan="3" component="th" scope="row" sx={{ border: '0 none', p: 1.5 }}>
                           <Box
                             sx={{
                               color: 'text.secondary',
@@ -161,7 +146,7 @@ const Invoice1 = () => {
                               fontWeight: Fonts.MEDIUM,
                             }}
                           >
-                            <IntlMessages id='invoice.grandTotal' />
+                            <IntlMessages id="invoice.grandTotal" />
                           </Box>
                         </TableCell>
                         <TableCell sx={{ border: '0 none', p: 1.5 }}>

@@ -342,8 +342,7 @@ export const pricingData = {
     {
       id: 1,
       title: 'Free',
-      description:
-        'Designed to help your building initial community and educational content.',
+      description: 'Designed to help your building initial community and educational content.',
       price: 19,
       priceColor: '#11C15B',
       priceDescription: 'No transaction fees',
@@ -377,8 +376,7 @@ export const pricingData = {
     {
       id: 2,
       title: 'Start',
-      description:
-        'Designed to help your building initial community and educational content.',
+      description: 'Designed to help your building initial community and educational content.',
       price: 89,
       priceColor: '#FF8B26',
       priceDescription: '10% transaction fees + Stripe fees',
@@ -412,8 +410,7 @@ export const pricingData = {
     {
       id: 3,
       title: 'Scale',
-      description:
-        'Designed to help your building initial community and educational content.',
+      description: 'Designed to help your building initial community and educational content.',
       price: 49,
       priceColor: '#00905F',
       priceDescription: '8% transaction fees + Stripe fees',

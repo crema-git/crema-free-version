@@ -14,8 +14,7 @@ export default function QuickFilteringInitialize() {
 
   // Otherwise filter will be applied on fields such as the hidden column id
   const columns = React.useMemo(
-    () =>
-      data.columns.filter((column) => VISIBLE_FIELDS.includes(column.field)),
+    () => data.columns.filter((column) => VISIBLE_FIELDS.includes(column.field)),
     [data.columns],
   );
 

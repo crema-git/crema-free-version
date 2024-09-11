@@ -17,9 +17,7 @@ const validationSchema = yup.object({
     .required('New password required.')
     .min(8, 'Password is too short - should be 8 chars minimum.')
     .matches(/[a-zA-Z]/, 'Password can only contain Latin letters.'),
-  retypeNewPassword: yup
-    .string()
-    .oneOf([yup.ref('newPassword'), null], 'Passwords must match'),
+  retypeNewPassword: yup.string().oneOf([yup.ref('newPassword'), null], 'Passwords must match'),
 });
 
 const ChangePassword = () => {
@@ -31,14 +29,14 @@ const ChangePassword = () => {
       }}
     >
       <Typography
-        component='h3'
+        component="h3"
         sx={{
           fontSize: 16,
           fontWeight: Fonts.BOLD,
           mb: { xs: 3, lg: 5 },
         }}
       >
-        <IntlMessages id='common.changePassword' />
+        <IntlMessages id="common.changePassword" />
       </Typography>
       <Formik
         validateOnChange={false}

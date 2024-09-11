@@ -8,13 +8,11 @@ import TableItem from './TableItem';
 import AppTableContainer from '@crema/components/AppTableContainer';
 import AppScrollbar from '@crema/components/AppScrollbar';
 
-const DealsTable = (props) => {
-  const { dealsTableData } = props;
-
+const DealsTable = ({ dealsTableData = [] }) => {
   return (
     <AppTableContainer>
       <AppScrollbar style={{ maxHeight: 250 }}>
-        <Table className='table' stickyHeader>
+        <Table className="table" stickyHeader>
           <TableHead>
             <TableHeading />
           </TableHead>
@@ -30,10 +28,6 @@ const DealsTable = (props) => {
 };
 
 export default DealsTable;
-
-DealsTable.defaultProps = {
-  dealsTableData: [],
-};
 
 DealsTable.propTypes = {
   dealsTableData: PropTypes.array,

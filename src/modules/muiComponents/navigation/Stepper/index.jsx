@@ -1,38 +1,38 @@
-import React from "react";
-import AppComponentHeader from "@crema/components/AppComponentHeader";
-import AppGridContainer from "@crema/components/AppGridContainer";
-import Grid from "@mui/material/Grid";
-import AppComponentCard from "@crema/components/AppComponentCard";
+import React from 'react';
+import AppComponentHeader from '@crema/components/AppComponentHeader';
+import AppGridContainer from '@crema/components/AppGridContainer';
+import Grid from '@mui/material/Grid';
+import AppComponentCard from '@crema/components/AppComponentCard';
 
-import HorizontalLinearStepper from "./HorizontalLinearStepper";
-import HorizontalLinearStepperSource from "./HorizontalLinearStepper?raw";
+import HorizontalLinearStepper from './HorizontalLinearStepper';
+import HorizontalLinearStepperSource from './HorizontalLinearStepper?raw';
 
-import HorizontalNonLinearStepper from "./HorizontalNonLinearStepper";
-import HorizontalNonLinearStepperSource from "./HorizontalNonLinearStepper?raw";
+import HorizontalNonLinearStepper from './HorizontalNonLinearStepper';
+import HorizontalNonLinearStepperSource from './HorizontalNonLinearStepper?raw';
 
-import HorizontalLabelPositionBelowStepper from "./HorizontalLabelPositionBelowStepper";
-import HorizontalLabelPositionBelowStepperSource from "./HorizontalLabelPositionBelowStepper?raw";
+import HorizontalLabelPositionBelowStepper from './HorizontalLabelPositionBelowStepper';
+import HorizontalLabelPositionBelowStepperSource from './HorizontalLabelPositionBelowStepper?raw';
 
-import HorizontalStepperWithError from "./HorizontalStepperWithError";
-import HorizontalStepperWithErrorSource from "./HorizontalStepperWithError?raw";
+import HorizontalStepperWithError from './HorizontalStepperWithError';
+import HorizontalStepperWithErrorSource from './HorizontalStepperWithError?raw';
 
-import CustomizedSteppers from "./CustomizedSteppers";
-import CustomizedSteppersSource from "./CustomizedSteppers?raw";
+import CustomizedSteppers from './CustomizedSteppers';
+import CustomizedSteppersSource from './CustomizedSteppers?raw';
 
-import VerticalLinearStepper from "./VerticalLinearStepper";
-import VerticalLinearStepperSource from "./VerticalLinearStepper?raw";
+import VerticalLinearStepper from './VerticalLinearStepper';
+import VerticalLinearStepperSource from './VerticalLinearStepper?raw';
 
-import TextMobileStepper from "./TextMobileStepper";
-import TextMobileStepperSource from "./TextMobileStepper?raw";
+import TextMobileStepper from './TextMobileStepper';
+import TextMobileStepperSource from './TextMobileStepper?raw';
 
-import SwipeableTextMobileStepper from "./SwipeableTextMobileStepper";
-import SwipeableTextMobileStepperSource from "./SwipeableTextMobileStepper?raw";
+import SwipeableTextMobileStepper from './SwipeableTextMobileStepper';
+import SwipeableTextMobileStepperSource from './SwipeableTextMobileStepper?raw';
 
-import DotsMobileStepper from "./DotsMobileStepper";
-import DotsMobileStepperSource from "./DotsMobileStepper?raw";
+import DotsMobileStepper from './DotsMobileStepper';
+import DotsMobileStepperSource from './DotsMobileStepper?raw';
 
-import ProgressMobileStepper from "./ProgressMobileStepper";
-import ProgressMobileStepperSource from "./ProgressMobileStepper?raw";
+import ProgressMobileStepper from './ProgressMobileStepper';
+import ProgressMobileStepperSource from './ProgressMobileStepper?raw';
 
 const Stepper = () => {
   return (

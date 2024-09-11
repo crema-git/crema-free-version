@@ -10,7 +10,7 @@ const MyLearning = ({ learningData }) => {
   return (
     <AppCard title={messages['academy.myLearning']} contentStyle={{ px: 0 }}>
       <AppList
-        animation='transition.slideRightBigIn'
+        animation="transition.slideRightBigIn"
         data={learningData}
         renderRow={(data, index) => <LearningItem key={index} course={data} />}
       />

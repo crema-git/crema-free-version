@@ -2,24 +2,17 @@ import React from 'react';
 import Box from '@mui/material/Box';
 import Switch from '@mui/material/Switch';
 import { CustomizerItemWrapper } from '../index.style';
-import {
-  useSidebarActionsContext,
-  useSidebarContext,
-} from '@crema/context/AppContextProvider/SidebarContextProvider';
+import { useSidebarActionsContext, useSidebarContext } from '@crema/context/AppContextProvider/SidebarContextProvider';
 import CheckIcon from '@mui/icons-material/Check';
 import NavMenuStyle from './NavMenuStyle';
 import MenuColorCell from './MenuColorCell';
 import AppGrid from '../../AppGrid';
-import {
-  sidebarBgImages,
-  sidebarColors,
-} from '@crema/mockapi/fakedb/navigationStyle';
+import { sidebarBgImages, sidebarColors } from '@crema/mockapi/fakedb/navigationStyle';
 
 const SidebarSettings = () => {
   const { sidebarBgImageId, allowSidebarBgImage } = useSidebarContext();
 
-  const { updateSidebarBgImage, setSidebarBgImage } =
-    useSidebarActionsContext();
+  const { updateSidebarBgImage, setSidebarBgImage } = useSidebarActionsContext();
 
   const onToggleSidebarImage = () => {
     setSidebarBgImage(!allowSidebarBgImage);
@@ -36,13 +29,13 @@ const SidebarSettings = () => {
           mb: 2.5,
         }}
       >
-        <Box component='h4'>Sidebar Images</Box>
-        <Box component='span' sx={{ ml: 'auto' }}>
+        <Box component="h4">Sidebar Images</Box>
+        <Box component="span" sx={{ ml: 'auto' }}>
           <Switch
-            className='customize-switch'
+            className="customize-switch"
             checked={allowSidebarBgImage}
             onChange={onToggleSidebarImage}
-            value='checkedA'
+            value="checkedA"
           />
         </Box>
       </Box>
@@ -79,7 +72,7 @@ const SidebarSettings = () => {
                   }}
                   onClick={() => updateSidebarBgImage(imagesObj.id)}
                 >
-                  <img src={imagesObj.image} alt='nav' />
+                  <img src={imagesObj.image} alt="nav" />
                   {sidebarBgImageId === imagesObj.id ? (
                     <Box
                       sx={{
@@ -111,16 +104,14 @@ const SidebarSettings = () => {
           })}
         </Box>
       ) : null}
-      <Box component='h4' sx={{ mb: 3 }}>
+      <Box component="h4" sx={{ mb: 3 }}>
         Sidebar Colors
       </Box>
       <AppGrid
         data={sidebarColors}
         column={2}
         itemPadding={5}
-        renderRow={(colorSet, index) => (
-          <MenuColorCell key={index} sidebarColors={colorSet} />
-        )}
+        renderRow={(colorSet, index) => <MenuColorCell key={index} sidebarColors={colorSet} />}
       />
     </CustomizerItemWrapper>
   );

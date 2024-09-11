@@ -14,15 +14,11 @@ const useStyles = makeStyles(() => ({
 const MenuGroup = ({ selectedMenu, setSelectedMenu }) => {
   const classes = useStyles();
   return (
-    <List className={classes.navRoot} component='div'>
+    <List className={classes.navRoot} component="div">
       {routesConfig.map((item) => (
         <React.Fragment key={item.id}>
           {item.type === 'group' && (
-            <GroupItem
-              item={item}
-              selectedMenu={selectedMenu}
-              setSelectedMenu={setSelectedMenu}
-            />
+            <GroupItem item={item} selectedMenu={selectedMenu} setSelectedMenu={setSelectedMenu} />
           )}
         </React.Fragment>
       ))}

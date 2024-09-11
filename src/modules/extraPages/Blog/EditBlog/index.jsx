@@ -8,12 +8,7 @@ import CreateBlog from '../CreateBlog';
 
 const BlogEditPage = () => {
   const { id } = useParams();
-  const [{ apiData, loading }, { setQueryParams }] = useGetDataApi(
-    '/pages/blogs/detail',
-    {},
-    { id: id },
-    false,
-  );
+  const [{ apiData, loading }, { setQueryParams }] = useGetDataApi('/pages/blogs/detail', {}, { id: id }, false);
 
   useEffect(() => {
     setQueryParams({ id: id });
@@ -23,7 +18,7 @@ const BlogEditPage = () => {
     <AppLoader />
   ) : (
     !isEmptyObject(apiData?.blogDetail) && (
-      <AppAnimate animation='transition.slideUpIn' delay={200}>
+      <AppAnimate animation="transition.slideUpIn" delay={200}>
         <CreateBlog selectedBlog={apiData.blogDetail} />
       </AppAnimate>
     )

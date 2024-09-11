@@ -1,37 +1,37 @@
-import AppComponentHeader from "@crema/components/AppComponentHeader";
-import AppGridContainer from "@crema/components/AppGridContainer";
-import Grid from "@mui/material/Grid";
-import AppComponentCard from "@crema/components/AppComponentCard";
+import AppComponentHeader from '@crema/components/AppComponentHeader';
+import AppGridContainer from '@crema/components/AppGridContainer';
+import Grid from '@mui/material/Grid';
+import AppComponentCard from '@crema/components/AppComponentCard';
 
-import TemporaryDrawer from "./TemporaryDrawer";
-import TemporaryDrawerSource from "./TemporaryDrawer?raw";
+import TemporaryDrawer from './TemporaryDrawer';
+import TemporaryDrawerSource from './TemporaryDrawer?raw';
 
-import SwipeableTemporaryDrawer from "./SwipeableTemporaryDrawer";
-import SwipeableTemporaryDrawerSource from "./SwipeableTemporaryDrawer?raw";
+import SwipeableTemporaryDrawer from './SwipeableTemporaryDrawer';
+import SwipeableTemporaryDrawerSource from './SwipeableTemporaryDrawer?raw';
 
-import SwipeableEdgeDrawer from "./SwipeableEdgeDrawer";
-import SwipeableEdgeDrawerSource from "./SwipeableEdgeDrawer?raw";
+import SwipeableEdgeDrawer from './SwipeableEdgeDrawer';
+import SwipeableEdgeDrawerSource from './SwipeableEdgeDrawer?raw';
 
-import ResponsiveDrawer from "./ResponsiveDrawer";
-import ResponsiveDrawerSource from "./ResponsiveDrawer?raw";
+import ResponsiveDrawer from './ResponsiveDrawer';
+import ResponsiveDrawerSource from './ResponsiveDrawer?raw';
 
-import PersistentDrawerLeft from "./PersistentDrawerLeft";
-import PersistentDrawerLeftSource from "./PersistentDrawerLeft?raw";
+import PersistentDrawerLeft from './PersistentDrawerLeft';
+import PersistentDrawerLeftSource from './PersistentDrawerLeft?raw';
 
-import PersistentDrawerRight from "./PersistentDrawerRight";
-import PersistentDrawerRightSource from "./PersistentDrawerRight?raw";
+import PersistentDrawerRight from './PersistentDrawerRight';
+import PersistentDrawerRightSource from './PersistentDrawerRight?raw';
 
-import MiniDrawer from "./MiniDrawer";
-import MiniDrawerSource from "./MiniDrawer?raw";
+import MiniDrawer from './MiniDrawer';
+import MiniDrawerSource from './MiniDrawer?raw';
 
-import PermanentDrawerLeft from "./PermanentDrawerLeft";
-import PermanentDrawerLeftSource from "./PermanentDrawerLeft?raw";
+import PermanentDrawerLeft from './PermanentDrawerLeft';
+import PermanentDrawerLeftSource from './PermanentDrawerLeft?raw';
 
-import PermanentDrawerRight from "./PermanentDrawerRight";
-import PermanentDrawerRightSource from "./PermanentDrawerRight?raw";
+import PermanentDrawerRight from './PermanentDrawerRight';
+import PermanentDrawerRightSource from './PermanentDrawerRight?raw';
 
-import ClippedDrawer from "./ClippedDrawer";
-import ClippedDrawerSource from "./ClippedDrawer?raw";
+import ClippedDrawer from './ClippedDrawer';
+import ClippedDrawerSource from './ClippedDrawer?raw';
 
 const BottomNavigation = () => {
   return (

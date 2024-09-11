@@ -8,9 +8,9 @@ const PremiumBrand = ({ premiumBrand }) => {
   return (
     <PremiumBrandWrapper>
       <img src={premiumBrand.srcImg} alt={premiumBrand.subTitle} />
-      <Box className='premium-brand-content'>
+      <Box className="premium-brand-content">
         <Typography
-          component='h5'
+          component="h5"
           sx={{
             fontSize: { xs: 16, md: 18 },
             fontWeight: Fonts.BOLD,
@@ -20,7 +20,7 @@ const PremiumBrand = ({ premiumBrand }) => {
           {premiumBrand.subTitle}
         </Typography>
         <Typography
-          component='h2'
+          component="h2"
           sx={{
             fontSize: { xs: 26, sm: 30, md: 36, lg: 44, xl: 50 },
             fontWeight: Fonts.BOLD,

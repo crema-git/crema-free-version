@@ -1,13 +1,5 @@
 import React from 'react';
-import {
-  Area,
-  AreaChart,
-  CartesianGrid,
-  ResponsiveContainer,
-  Tooltip,
-  XAxis,
-  YAxis,
-} from 'recharts';
+import { Area, AreaChart, CartesianGrid, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
 import { useThemeContext } from '@crema/context/AppContextProvider/ThemeContextProvider';
 
 const data = [
@@ -34,9 +26,9 @@ const renderTooltipContent = (o) => {
   const total = payload.reduce((result, entry) => result + entry.value, 0);
 
   return (
-    <div className='customized-tooltip-content'>
-      <p className='total'>{`${label} (Total: ${total})`}</p>
-      <ul className='list'>
+    <div className="customized-tooltip-content">
+      <p className="total">{`${label} (Total: ${total})`}</p>
+      <ul className="list">
         {payload.map((entry, index) => (
           <li key={`item-${index}`} style={{ color: entry.color }}>
             {`${entry.name}: ${entry.value}(${getPercent(entry.value, total)})`}
@@ -49,33 +41,24 @@ const renderTooltipContent = (o) => {
 const PercentAreaChart = () => {
   const { theme } = useThemeContext();
   return (
-    <ResponsiveContainer width='100%' height={200}>
-      <AreaChart
-        data={data}
-        stackOffset='expand'
-        margin={{ top: 10, right: 0, left: -25, bottom: 0 }}
-      >
-        <XAxis dataKey='month' />
+    <ResponsiveContainer width="100%" height={200}>
+      <AreaChart data={data} stackOffset="expand" margin={{ top: 10, right: 0, left: -25, bottom: 0 }}>
+        <XAxis dataKey="month" />
         <YAxis tickFormatter={toPercent} />
-        <CartesianGrid strokeDasharray='3 3' />
+        <CartesianGrid strokeDasharray="3 3" />
         <Tooltip content={renderTooltipContent} />
+        <Area type="monotone" dataKey="a" stackId="1" fill={theme.palette.primary.main} />
         <Area
-          type='monotone'
-          dataKey='a'
-          stackId='1'
-          fill={theme.palette.primary.main}
-        />
-        <Area
-          type='monotone'
-          dataKey='b'
-          stackId='1'
+          type="monotone"
+          dataKey="b"
+          stackId="1"
           stroke={theme.palette.secondary.main}
           fill={theme.palette.secondary.main}
         />
         <Area
-          type='monotone'
-          dataKey='c'
-          stackId='1'
+          type="monotone"
+          dataKey="c"
+          stackId="1"
           stroke={theme.palette.success.main}
           fill={theme.palette.success.main}
         />

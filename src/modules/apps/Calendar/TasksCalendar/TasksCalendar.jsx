@@ -10,6 +10,7 @@ import CustomToolbar from './CustomToolbar';
 import TaskItem from './TaskItem';
 import 'react-big-calendar/lib/addons/dragAndDrop/styles.css';
 import withDragAndDrop from 'react-big-calendar/lib/addons/dragAndDrop';
+import AddNewTask from '../AddNewTask/index.jsx';
 
 const DragAndDropCalendar = withDragAndDrop(StyledCalendar);
 
@@ -20,9 +21,15 @@ const TaskCalender = ({ taskList, onUpdateTask, onSetFilterText }) => {
   const { folder, label } = useParams();
   const [selectedDate, setSelectedDate] = useState(null);
 
+  const [isAddTaskOpen, setAddTaskOpen] = React.useState(false);
+
+  const onCloseAddTask = () => {
+    setAddTaskOpen(false);
+    setSelectedDate(null);
+  };
   const onSelectDate = ({ start }) => {
     setSelectedDate(start);
-    // setAddTaskOpen(true);
+    setAddTaskOpen(true);
   };
 
   const onOpenAddTask = (data) => {
@@ -30,7 +37,7 @@ const TaskCalender = ({ taskList, onUpdateTask, onSetFilterText }) => {
       onViewTaskDetail(data);
     } else {
       if (selectedDate) {
-        console.log('selectedDate', selectedDate);
+        setAddTaskOpen(true);
       }
     }
   };
@@ -45,6 +52,7 @@ const TaskCalender = ({ taskList, onUpdateTask, onSetFilterText }) => {
   const moveEvent = ({ event, start, end }) => {
     onUpdateTask({ ...event, startDate: start, endDate: end });
   };
+  console.log('taskList', taskList);
 
   const getEvents = () => {
     if (taskList?.length > 0)
@@ -52,40 +60,42 @@ const TaskCalender = ({ taskList, onUpdateTask, onSetFilterText }) => {
         return {
           ...task,
           title: task.title,
-          start: task.startDate,
-          end: task.endDate,
+          start: new Date(task.startDate),
+          end: new Date(task.endDate),
         };
       });
     return [];
   };
   return (
-    <DragAndDropCalendar
-      localizer={localizer}
-      events={getEvents()}
-      themeVariant='dark'
-      views={['month', 'agenda']}
-      tooltipAccessor={null}
-      showMultiDayTimes
-      resizable
-      onEventResize={resizeEvent}
-      onEventDrop={moveEvent}
-      onSelectEvent={onOpenAddTask}
-      components={{
-        toolbar: (props) => (
-          <CustomToolbar onSetFilterText={onSetFilterText} {...props} />
-        ),
-        event: (item) => <TaskItem key={item.key} item={item.event} />,
-      }}
-      popup
-      selectable
-      onSelectSlot={onSelectDate}
-      defaultView='month'
-    />
+    <>
+      <DragAndDropCalendar
+        localizer={localizer}
+        events={getEvents()}
+        themeVariant="dark"
+        views={['month', 'agenda']}
+        tooltipAccessor={null}
+        showMultiDayTimes
+        resizable
+        onEventResize={resizeEvent}
+        onEventDrop={moveEvent}
+        onSelectEvent={onOpenAddTask}
+        components={{
+          toolbar: (props) => <CustomToolbar onSetFilterText={onSetFilterText} {...props} />,
+          event: (item) => <TaskItem key={item.key} item={item.event} />,
+        }}
+        popup
+        selectable
+        onSelectSlot={onSelectDate}
+        defaultView="month"
+      />
+      <AddNewTask selectedDate={selectedDate} isAddTaskOpen={isAddTaskOpen} onCloseAddTask={onCloseAddTask} />
+    </>
   );
 };
 export default TaskCalender;
 TaskCalender.propTypes = {
   taskList: PropTypes.any,
   onUpdateTask: PropTypes.func,
+  setAddTaskOpen: PropTypes.func,
   onSetFilterText: PropTypes.func,
 };

@@ -1,29 +1,29 @@
-import React from "react";
-import AppComponentHeader from "@crema/components/AppComponentHeader";
-import AppGridContainer from "@crema/components/AppGridContainer";
-import Grid from "@mui/material/Grid";
-import AppComponentCard from "@crema/components/AppComponentCard";
+import React from 'react';
+import AppComponentHeader from '@crema/components/AppComponentHeader';
+import AppGridContainer from '@crema/components/AppGridContainer';
+import Grid from '@mui/material/Grid';
+import AppComponentCard from '@crema/components/AppComponentCard';
 
-import Variants from "./Variants";
-import VariantsSource from "./Variants?raw";
+import Variants from './Variants';
+import VariantsSource from './Variants?raw';
 
-import Animations from "./Animations";
-import AnimationsSource from "./Animations?raw";
+import Animations from './Animations';
+import AnimationsSource from './Animations?raw';
 
-import YouTube from "./YouTube";
-import YouTubeSource from "./YouTube?raw";
+import YouTube from './YouTube';
+import YouTubeSource from './YouTube?raw';
 
-import Facebook from "./Facebook";
-import FacebookSource from "./Facebook?raw";
+import Facebook from './Facebook';
+import FacebookSource from './Facebook?raw';
 
-import SkeletonTypography from "./SkeletonTypography";
-import SkeletonTypographySource from "./SkeletonTypography?raw";
+import SkeletonTypography from './SkeletonTypography';
+import SkeletonTypographySource from './SkeletonTypography?raw';
 
-import SkeletonChildren from "./SkeletonChildren";
-import SkeletonChildrenSource from "./SkeletonChildren?raw";
+import SkeletonChildren from './SkeletonChildren';
+import SkeletonChildrenSource from './SkeletonChildren?raw';
 
-import SkeletonColor from "./SkeletonColor";
-import SkeletonColorSource from "./SkeletonColor?raw";
+import SkeletonColor from './SkeletonColor';
+import SkeletonColorSource from './SkeletonColor?raw';
 
 const Skeleton = () => {
   return (

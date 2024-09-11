@@ -1,36 +1,36 @@
-import React from "react";
+import React from 'react';
 
-import AppComponentHeader from "@crema/components/AppComponentHeader";
-import AppGridContainer from "@crema/components/AppGridContainer";
-import Grid from "@mui/material/Grid";
-import AppComponentCard from "@crema/components/AppComponentCard";
+import AppComponentHeader from '@crema/components/AppComponentHeader';
+import AppGridContainer from '@crema/components/AppGridContainer';
+import Grid from '@mui/material/Grid';
+import AppComponentCard from '@crema/components/AppComponentCard';
 
-import ComboBox from "./ComboBox";
-import ComboBoxSource from "./ComboBox?raw";
-import CountrySelectSource from "./ComboBox?raw";
+import ComboBox from './ComboBox';
+import ComboBoxSource from './ComboBox?raw';
+import CountrySelectSource from './ComboBox?raw';
 
-import CountrySelect from "./CountrySelect";
+import CountrySelect from './CountrySelect';
 
-import ControllableStates from "./ControlledStates";
-import ControlledStatesSource from "./ControlledStates?raw";
+import ControllableStates from './ControlledStates';
+import ControlledStatesSource from './ControlledStates?raw';
 
-import Grouped from "./Grouped";
-import GroupedSource from "./Grouped?raw";
+import Grouped from './Grouped';
+import GroupedSource from './Grouped?raw';
 
-import Asynchronous from "./Asynchronous";
-import AsynchronousSource from "./Asynchronous?raw";
+import Asynchronous from './Asynchronous';
+import AsynchronousSource from './Asynchronous?raw';
 
-import Multiple from "./Multiple";
-import MultipleSource from "./Multiple?raw";
+import Multiple from './Multiple';
+import MultipleSource from './Multiple?raw';
 
-import CheckboxesTags from "./Checkboxes";
-import CheckboxesTagsSource from "./Checkboxes?raw";
+import CheckboxesTags from './Checkboxes';
+import CheckboxesTagsSource from './Checkboxes?raw';
 
-import Sizes from "./Sizes";
-import SizesSource from "./Sizes?raw";
+import Sizes from './Sizes';
+import SizesSource from './Sizes?raw';
 
-import CustomInputAutocomplete from "./Customization";
-import CustomInputAutocompleteSource from "./Customization?raw";
+import CustomInputAutocomplete from './Customization';
+import CustomInputAutocompleteSource from './Customization?raw';
 
 const AutoComplete = () => {
   return (
@@ -84,11 +84,7 @@ const AutoComplete = () => {
           />
         </Grid>
         <Grid item xs={12} md={6}>
-          <AppComponentCard
-            title="CheckboxesTags"
-            component={CheckboxesTags}
-            source={CheckboxesTagsSource}
-          />
+          <AppComponentCard title="CheckboxesTags" component={CheckboxesTags} source={CheckboxesTagsSource} />
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard

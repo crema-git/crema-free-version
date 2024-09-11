@@ -29,7 +29,7 @@ const ActiveVisitors = ({ data }) => {
               fontWeight: Fonts.BOLD,
               fontSize: 16,
             }}
-            component='h3'
+            component="h3"
           >
             {messages['dashboard.analytics.activeVisitors']}
           </Box>
@@ -72,7 +72,7 @@ const ActiveVisitors = ({ data }) => {
                 fontWeight: Fonts.MEDIUM,
                 fontSize: 18,
               }}
-              component='h3'
+              component="h3"
             >
               {data.value}
             </Box>
@@ -83,13 +83,13 @@ const ActiveVisitors = ({ data }) => {
                 fontWeight: Fonts.MEDIUM,
                 color: data.growth > 0.0 ? green[500] : red[500],
               }}
-              component='span'
+              component="span"
             >
               {data.growth}% Then yesterday
             </Box>
           </Box>
           <Box
-            component='p'
+            component="p"
             sx={{
               fontSize: 14,
               color: 'text.secondary',
@@ -105,7 +105,7 @@ const ActiveVisitors = ({ data }) => {
           }}
         >
           <Link
-            component='button'
+            component="button"
             sx={{
               color: 'secondary.main',
               fontSize: 16,
@@ -122,8 +122,6 @@ const ActiveVisitors = ({ data }) => {
 };
 
 export default ActiveVisitors;
-
-ActiveVisitors.defaultProps = {};
 
 ActiveVisitors.propTypes = {
   data: PropTypes.object,

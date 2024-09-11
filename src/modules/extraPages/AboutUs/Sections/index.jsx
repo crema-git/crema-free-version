@@ -25,7 +25,7 @@ const Sections = ({ data }) => {
       </Box>
 
       <Typography
-        component='h3'
+        component="h3"
         sx={{
           mb: 2.5,
           fontWeight: Fonts.SEMI_BOLD,

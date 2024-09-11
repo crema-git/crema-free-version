@@ -6,15 +6,10 @@ import AppCard from '@crema/components/AppCard';
 import { useIntl } from 'react-intl';
 import { Fonts } from '@crema/constants/AppEnums';
 
-const BtcVolumeCurrency = (props) => {
-  const { data } = props;
-
+const BtcVolumeCurrency = ({ data = [] }) => {
   const { messages } = useIntl();
   return (
-    <AppCard
-      sxStyle={{ height: 1 }}
-      title={messages['dashboard.btcVolumeByCurency']}
-    >
+    <AppCard sxStyle={{ height: 1 }} title={messages['dashboard.btcVolumeByCurency']}>
       <BtcGraph data={data} />
       <Box
         sx={{
@@ -37,7 +32,7 @@ const BtcVolumeCurrency = (props) => {
               }}
             >
               <Box
-                component='h3'
+                component="h3"
                 sx={{
                   fontSize: 18,
                   fontWeight: Fonts.SEMI_BOLD,
@@ -47,7 +42,7 @@ const BtcVolumeCurrency = (props) => {
                 {item.value}
               </Box>
               <Box
-                component='span'
+                component="span"
                 sx={{
                   color: 'text.secondary',
                   fontSize: 14,
@@ -64,10 +59,6 @@ const BtcVolumeCurrency = (props) => {
 };
 
 export default BtcVolumeCurrency;
-
-BtcVolumeCurrency.defaultProps = {
-  data: [],
-};
 
 BtcVolumeCurrency.propTypes = {
   data: PropTypes.array,

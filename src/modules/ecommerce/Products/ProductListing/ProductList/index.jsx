@@ -10,9 +10,7 @@ const ProductList = ({ ecommerceList, loading }) => {
       delay={200}
       data={ecommerceList}
       renderRow={(item) => <ListItem item={item} key={item.id} />}
-      ListEmptyComponent={
-        <ListEmptyResult content='No product found' loading={loading} />
-      }
+      ListEmptyComponent={<ListEmptyResult content="No product found" loading={loading} />}
     />
   );
 };

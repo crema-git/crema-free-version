@@ -49,15 +49,10 @@ export default function ConsecutiveSnackbars() {
         message={messageInfo ? messageInfo.message : undefined}
         action={
           <React.Fragment>
-            <Button color='secondary' size='small' onClick={handleClose}>
+            <Button color="secondary" size="small" onClick={handleClose}>
               UNDO
             </Button>
-            <IconButton
-              aria-label='close'
-              color='inherit'
-              sx={{ p: 0.5 }}
-              onClick={handleClose}
-            >
+            <IconButton aria-label="close" color="inherit" sx={{ p: 0.5 }} onClick={handleClose}>
               <CloseIcon />
             </IconButton>
           </React.Fragment>

@@ -1,32 +1,32 @@
-import React from "react";
-import AppComponentHeader from "@crema/components/AppComponentHeader";
-import AppGridContainer from "@crema/components/AppGridContainer";
-import Grid from "@mui/material/Grid";
-import AppComponentCard from "@crema/components/AppComponentCard";
+import React from 'react';
+import AppComponentHeader from '@crema/components/AppComponentHeader';
+import AppGridContainer from '@crema/components/AppGridContainer';
+import Grid from '@mui/material/Grid';
+import AppComponentCard from '@crema/components/AppComponentCard';
 
-import BasicPaginationGrid from "./BasicPaginationGrid";
-import BasicPaginationGridSource from "./BasicPaginationGrid?raw";
+import BasicPaginationGrid from './BasicPaginationGrid';
+import BasicPaginationGridSource from './BasicPaginationGrid?raw';
 
-import SizePaginationGrid from "./SizePaginationGrid";
-import SizePaginationGridSource from "./SizePaginationGrid?raw";
+import SizePaginationGrid from './SizePaginationGrid';
+import SizePaginationGridSource from './SizePaginationGrid?raw';
 
-import ControlledPaginationGrid from "./ControlledPaginationGrid";
-import ControlledPaginationGridSource from "./ControlledPaginationGrid?raw";
+import ControlledPaginationGrid from './ControlledPaginationGrid';
+import ControlledPaginationGridSource from './ControlledPaginationGrid?raw';
 
-import AutoPaginationGrid from "./AutoPaginationGrid";
-import AutoPaginationGridSource from "./AutoPaginationGrid?raw";
+import AutoPaginationGrid from './AutoPaginationGrid';
+import AutoPaginationGridSource from './AutoPaginationGrid?raw';
 
-import ServerPaginationGrid from "./ServerPaginationGrid";
-import ServerPaginationGridSource from "./ServerPaginationGrid?raw";
+import ServerPaginationGrid from './ServerPaginationGrid';
+import ServerPaginationGridSource from './ServerPaginationGrid?raw';
 
-import CursorPaginationGrid from "./CursorPaginationGrid";
-import CursorPaginationGridSource from "./CursorPaginationGrid?raw";
+import CursorPaginationGrid from './CursorPaginationGrid';
+import CursorPaginationGridSource from './CursorPaginationGrid?raw';
 
-import BasisPaginationGrid from "./BasisPaginationGrid";
-import BasisPaginationGridSource from "./BasisPaginationGrid?raw";
+import BasisPaginationGrid from './BasisPaginationGrid';
+import BasisPaginationGridSource from './BasisPaginationGrid?raw';
 
-import ApiRefPaginationGrid from "./ApiRefPaginationGrid";
-import ApiRefPaginationGridSource from "./ApiRefPaginationGrid?raw";
+import ApiRefPaginationGrid from './ApiRefPaginationGrid';
+import ApiRefPaginationGridSource from './ApiRefPaginationGrid?raw';
 
 const Pagination = () => {
   return (

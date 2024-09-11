@@ -18,13 +18,13 @@ const PersonalDetails = (props) => {
       }}
     >
       <Box
-        component='h4'
+        component="h4"
         sx={{
           mb: 4,
           fontWeight: Fonts.SEMI_BOLD,
         }}
       >
-        <IntlMessages id='contactApp.personalDetails' />
+        <IntlMessages id="contactApp.personalDetails" />
       </Box>
 
       <div>
@@ -87,11 +87,7 @@ const PersonalDetails = (props) => {
               ml: 3.5,
             }}
           >
-            {contact.website ? (
-              contact.website
-            ) : (
-              <IntlMessages id='common.na' />
-            )}
+            {contact.website ? contact.website : <IntlMessages id="common.na" />}
           </Box>
         </Box>
 
@@ -111,11 +107,7 @@ const PersonalDetails = (props) => {
               ml: 3.5,
             }}
           >
-            {contact.birthday ? (
-              contact.birthday
-            ) : (
-              <IntlMessages id='common.na' />
-            )}
+            {contact.birthday ? contact.birthday : <IntlMessages id="common.na" />}
           </Box>
         </Box>
       </div>

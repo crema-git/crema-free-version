@@ -30,10 +30,9 @@ const MediaSlider = ({ children }) => {
         '& .slick-dots': {
           bottom: 10,
         },
-        '& .slick-dots li button:before, & .slick-dots li.slick-active button:before':
-          {
-            backgroundColor: (theme) => theme.palette.background.paper,
-          },
+        '& .slick-dots li button:before, & .slick-dots li.slick-active button:before': {
+          backgroundColor: (theme) => theme.palette.background.paper,
+        },
         '& .embed-responsive': {
           position: 'relative',
           display: 'block',

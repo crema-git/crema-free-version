@@ -25,15 +25,9 @@ const CheckBox = ({ checkedContacts, setCheckedContacts }) => {
         sx={{
           color: (theme) => theme.palette.text.disabled,
         }}
-        color='primary'
-        indeterminate={
-          checkedContacts.length > 0 &&
-          checkedContacts.length < contactList?.data?.length
-        }
-        checked={
-          contactList?.data?.length > 0 &&
-          checkedContacts.length === contactList?.data?.length
-        }
+        color="primary"
+        indeterminate={checkedContacts.length > 0 && checkedContacts.length < contactList?.data?.length}
+        checked={contactList?.data?.length > 0 && checkedContacts.length === contactList?.data?.length}
         onChange={onHandleMasterCheckbox}
       />
     </Box>

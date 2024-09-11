@@ -1,8 +1,8 @@
 import { alpha } from '@mui/material';
 import { styled } from '@mui/material/styles';
-import ListItem from '@mui/material/ListItem';
+import ListItemButton from '@mui/material/ListItemButton';
 
-export const MailMobileItemWrapper = styled(ListItem)((props) => {
+export const MailMobileItemWrapper = styled(ListItemButton)((props) => {
   return {
     display: 'flex',
     backgroundColor: props.mail.isRead

@@ -48,7 +48,7 @@ const BitBucket = ({ routes, routesConfig }) => {
           isNavCollapsed={isNavCollapsed}
           toggleNavCollapsed={toggleNavCollapsed}
         />
-        <Box className='mainContent'>
+        <Box className="mainContent">
           <AppContentView routes={routes} />
         </Box>
         <AppThemeSetting />

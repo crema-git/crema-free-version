@@ -9,7 +9,7 @@ import AppScrollbar from '@crema/components/AppScrollbar';
 import TableHeading from './TableHeading';
 import TableItem from './TableItem';
 
-const OrderTable = ({ marketingCampaign }) => {
+const OrderTable = ({ marketingCampaign = [] }) => {
   return (
     <AppTableContainer>
       <AppScrollbar sx={{ maxHeight: { xs: 365, lg: 340 } }}>
@@ -29,10 +29,6 @@ const OrderTable = ({ marketingCampaign }) => {
 };
 
 export default OrderTable;
-
-OrderTable.defaultProps = {
-  marketingCampaign: [],
-};
 
 OrderTable.propTypes = {
   marketingCampaign: PropTypes.array,

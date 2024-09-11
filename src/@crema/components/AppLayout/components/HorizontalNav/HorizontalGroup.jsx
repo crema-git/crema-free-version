@@ -1,13 +1,5 @@
 import React, { useState } from 'react';
-import {
-  Grow,
-  Icon,
-  IconButton,
-  List,
-  ListItem,
-  ListItemText,
-  Paper,
-} from '@mui/material';
+import { Grow, Icon, IconButton, List, ListItem, ListItemText, Paper } from '@mui/material';
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
 import { Manager, Popper, Reference } from 'react-popper';
@@ -42,10 +34,7 @@ function HorizontalGroup(props) {
         }
       }
 
-      if (
-        parent.children[i].url === url ||
-        url.includes(parent.children[i].url)
-      ) {
+      if (parent.children[i].url === url || url.includes(parent.children[i].url)) {
         return true;
       }
     }
@@ -59,26 +48,17 @@ function HorizontalGroup(props) {
         {({ ref }) => (
           <ListItem
             ref={ref}
-            className={clsx(
-              'navItem',
-              isUrlInChildren(item, location.pathname) && 'active',
-            )}
+            className={clsx('navItem', isUrlInChildren(item, location.pathname) && 'active')}
             onMouseEnter={() => handleToggle(true)}
             onMouseLeave={() => handleToggle(false)}
           >
             {item.icon && (
-              <Icon color='action' className='navLinkIcon'>
+              <Icon color="action" className="navLinkIcon">
                 {item.icon}
               </Icon>
             )}
             <ListItemText
-              primary={
-                allowMultiLanguage ? (
-                  <IntlMessages id={item.messageId} />
-                ) : (
-                  item.title
-                )
-              }
+              primary={allowMultiLanguage ? <IntlMessages id={item.messageId} /> : item.title}
               sx={{
                 fontWeight: Fonts.MEDIUM,
               }}
@@ -94,7 +74,7 @@ function HorizontalGroup(props) {
                   sx={{
                     fontSize: 18,
                   }}
-                  className='arrow-icon'
+                  className="arrow-icon"
                 >
                   keyboard_arrow_right
                 </Icon>
@@ -104,11 +84,7 @@ function HorizontalGroup(props) {
         )}
       </Reference>
       {ReactDOM.createPortal(
-        <Popper
-          placement={nestedLevel === 0 ? 'bottom-start' : 'right'}
-          eventsEnabled={opened}
-          positionFixed
-        >
+        <Popper placement={nestedLevel === 0 ? 'bottom-start' : 'right'} eventsEnabled={opened} positionFixed>
           {({ ref, style, placement }) =>
             opened && (
               <Box
@@ -126,15 +102,8 @@ function HorizontalGroup(props) {
                   popperClose: !opened,
                 })}
               >
-                <Grow
-                  in={opened}
-                  id='menu-list-grow'
-                  style={{ transformOrigin: '0 0 0' }}
-                >
-                  <Paper
-                    onMouseEnter={() => handleToggle(true)}
-                    onMouseLeave={() => handleToggle(false)}
-                  >
+                <Grow in={opened} id="menu-list-grow" style={{ transformOrigin: '0 0 0' }}>
+                  <Paper onMouseEnter={() => handleToggle(true)} onMouseLeave={() => handleToggle(false)}>
                     {item.children && (
                       <List
                         sx={{
@@ -143,26 +112,11 @@ function HorizontalGroup(props) {
                       >
                         {item.children.map((item) => (
                           <React.Fragment key={item.id}>
-                            {item.type === 'group' && (
-                              <HorizontalGroup
-                                item={item}
-                                nestedLevel={nestedLevel}
-                              />
-                            )}
+                            {item.type === 'group' && <HorizontalGroup item={item} nestedLevel={nestedLevel} />}
 
-                            {item.type === 'collapse' && (
-                              <HorizontalCollapse
-                                item={item}
-                                nestedLevel={nestedLevel}
-                              />
-                            )}
+                            {item.type === 'collapse' && <HorizontalCollapse item={item} nestedLevel={nestedLevel} />}
 
-                            {item.type === 'item' && (
-                              <HorizontalItem
-                                item={item}
-                                nestedLevel={nestedLevel}
-                              />
-                            )}
+                            {item.type === 'item' && <HorizontalItem item={item} nestedLevel={nestedLevel} />}
                           </React.Fragment>
                         ))}
                       </List>
@@ -184,7 +138,5 @@ HorizontalGroup.propTypes = {
   location: PropTypes.object,
   nestedLevel: PropTypes.number,
 };
-
-HorizontalGroup.defaultProps = {};
 
 export default React.memo(HorizontalGroup);

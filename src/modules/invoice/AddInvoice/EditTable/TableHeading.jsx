@@ -24,20 +24,20 @@ const TableHeading = () => {
         },
       }}
     >
-      <TableCell className='tableCell'>Pos</TableCell>
-      <TableCell className='tableCell' align='left'>
+      <TableCell className="tableCell">Pos</TableCell>
+      <TableCell className="tableCell" align="left">
         Task Name
       </TableCell>
-      <TableCell className='tableCell' align='left'>
+      <TableCell className="tableCell" align="left">
         Duration
       </TableCell>
-      <TableCell className='tableCell' align='center' colSpan={2}>
+      <TableCell className="tableCell" align="center" colSpan={2}>
         Quantity
       </TableCell>
-      <TableCell className='tableCell' align='left'>
+      <TableCell className="tableCell" align="left">
         Price Per Unit
       </TableCell>
-      <TableCell className='tableCell' align='left'>
+      <TableCell className="tableCell" align="left">
         Sub Total{' '}
       </TableCell>
     </TableHeader>

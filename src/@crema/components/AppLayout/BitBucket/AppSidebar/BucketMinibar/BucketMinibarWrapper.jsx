@@ -9,7 +9,7 @@ const BucketMinibarWrapper = ({ children, ...rest }) => {
 
   return (
     <Box
-      className='bucketMinibar'
+      className="bucketMinibar"
       sx={{
         width: 64,
         backgroundColor: sidebarBgColor,

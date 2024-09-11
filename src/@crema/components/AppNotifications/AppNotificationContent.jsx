@@ -23,17 +23,17 @@ const AppNotificationContent = ({ onClose, sxStyle }) => {
       }}
     >
       <Box
-        sx={{
+        sx={(theme) => ({
           padding: '5px 20px',
           display: 'flex',
           alignItems: 'center',
           borderBottom: 1,
-          borderBottomColor: (theme) => theme.palette.divider,
+          borderBottomColor: theme.palette.divider,
           minHeight: { xs: 56, sm: 70 },
-        }}
+        })}
       >
-        <Typography component='h3' variant='h3'>
-          <IntlMessages id='common.notifications' />({notificationData.length})
+        <Typography component="h3" variant="h3">
+          <IntlMessages id="common.notifications" />({notificationData.length})
         </Typography>
         <IconButton
           sx={{
@@ -43,7 +43,7 @@ const AppNotificationContent = ({ onClose, sxStyle }) => {
             color: 'text.secondary',
           }}
           onClick={onClose}
-          size='large'
+          size="large"
         >
           <CancelOutlinedIcon />
         </IconButton>
@@ -67,10 +67,10 @@ const AppNotificationContent = ({ onClose, sxStyle }) => {
           marginTop: 'auto',
           height: 40,
         }}
-        variant='contained'
-        color='primary'
+        variant="contained"
+        color="primary"
       >
-        <IntlMessages id='common.viewAll' />
+        <IntlMessages id="common.viewAll" />
       </Button>
     </Box>
   );

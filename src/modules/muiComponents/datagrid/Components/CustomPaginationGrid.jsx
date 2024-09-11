@@ -1,12 +1,6 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
-import {
-  DataGrid,
-  gridPageCountSelector,
-  GridPagination,
-  useGridApiContext,
-  useGridSelector,
-} from '@mui/x-data-grid';
+import { DataGrid, gridPageCountSelector, GridPagination, useGridApiContext, useGridSelector } from '@mui/x-data-grid';
 import { useDemoData } from '@mui/x-data-grid-generator';
 import MuiPagination from '@mui/material/Pagination';
 import PropTypes from 'prop-types';
@@ -17,7 +11,7 @@ function Pagination({ page, onPageChange, className }) {
 
   return (
     <MuiPagination
-      color='primary'
+      color="primary"
       className={className}
       count={pageCount}
       page={page + 1}

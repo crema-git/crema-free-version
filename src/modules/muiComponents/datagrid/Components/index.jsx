@@ -1,34 +1,34 @@
-import AppComponentHeader from "@crema/components/AppComponentHeader";
-import AppGridContainer from "@crema/components/AppGridContainer";
-import Grid from "@mui/material/Grid";
-import AppComponentCard from "@crema/components/AppComponentCard";
+import AppComponentHeader from '@crema/components/AppComponentHeader';
+import AppGridContainer from '@crema/components/AppGridContainer';
+import Grid from '@mui/material/Grid';
+import AppComponentCard from '@crema/components/AppComponentCard';
 
-import CustomColumnMenu from "./CustomColumnMenu";
-import CustomColumnMenuSource from "./CustomColumnMenu?raw";
+import CustomColumnMenu from './CustomColumnMenu';
+import CustomColumnMenuSource from './CustomColumnMenu?raw';
 
-import ToolbarGrid from "./ToolbarGrid";
-import ToolbarGridSource from "./ToolbarGrid?raw";
+import ToolbarGrid from './ToolbarGrid';
+import ToolbarGridSource from './ToolbarGrid?raw';
 
-import CustomToolbarGrid from "./CustomToolbarGrid";
-import CustomToolbarGridSource from "./CustomToolbarGrid?raw";
+import CustomToolbarGrid from './CustomToolbarGrid';
+import CustomToolbarGridSource from './CustomToolbarGrid?raw';
 
-import CustomFooter from "./CustomFooter";
-import CustomFooterSource from "./CustomFooter?raw";
+import CustomFooter from './CustomFooter';
+import CustomFooterSource from './CustomFooter?raw';
 
-import CustomPaginationGrid from "./CustomPaginationGrid";
-import CustomPaginationGridSource from "./CustomPaginationGrid?raw";
+import CustomPaginationGrid from './CustomPaginationGrid';
+import CustomPaginationGridSource from './CustomPaginationGrid?raw';
 
-import CustomLoadingOverlayGrid from "./CustomLoadingOverlayGrid";
-import CustomLoadingOverlayGridSource from "./CustomLoadingOverlayGrid?raw";
+import CustomLoadingOverlayGrid from './CustomLoadingOverlayGrid';
+import CustomLoadingOverlayGridSource from './CustomLoadingOverlayGrid?raw';
 
-import RowContextMenu from "./RowContextMenu";
-import RowContextMenuSource from "./RowContextMenu?raw";
+import RowContextMenu from './RowContextMenu';
+import RowContextMenuSource from './RowContextMenu?raw';
 
-import CellWithPopover from "./CellWithPopover";
-import CellWithPopoverSource from "./CellWithPopover?raw";
+import CellWithPopover from './CellWithPopover';
+import CellWithPopoverSource from './CellWithPopover?raw';
 
-import CustomSortIcons from "./CustomSortIcons";
-import CustomSortIconsSource from "./CustomSortIcons?raw";
+import CustomSortIcons from './CustomSortIcons';
+import CustomSortIconsSource from './CustomSortIcons?raw';
 
 const Components = () => {
   return (
@@ -49,12 +49,7 @@ const Components = () => {
           />
         </Grid>
         <Grid item xs={12}>
-          <AppComponentCard
-            title="Toolbar Grid"
-            component={ToolbarGrid}
-            source={ToolbarGridSource}
-            noScrollbar
-          />
+          <AppComponentCard title="Toolbar Grid" component={ToolbarGrid} source={ToolbarGridSource} noScrollbar />
         </Grid>
         <Grid item xs={12}>
           <AppComponentCard
@@ -65,12 +60,7 @@ const Components = () => {
           />
         </Grid>
         <Grid item xs={12}>
-          <AppComponentCard
-            title="Custom Footer"
-            component={CustomFooter}
-            source={CustomFooterSource}
-            noScrollbar
-          />
+          <AppComponentCard title="Custom Footer" component={CustomFooter} source={CustomFooterSource} noScrollbar />
         </Grid>
         <Grid item xs={12}>
           <AppComponentCard

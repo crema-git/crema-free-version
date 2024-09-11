@@ -1,15 +1,11 @@
 import * as React from 'react';
 import { DataGrid } from '@mui/x-data-grid';
-import {
-  randomCreatedDate,
-  randomTraderName,
-  randomUpdatedDate,
-} from '@mui/x-data-grid-generator';
+import { randomCreatedDate, randomTraderName, randomUpdatedDate } from '@mui/x-data-grid-generator';
 
 export default function BasicRowEditingGrid() {
   return (
     <div style={{ height: 300, width: '100%' }}>
-      <DataGrid editMode='row' rows={rows} columns={columns} />
+      <DataGrid editMode="row" rows={rows} columns={columns} />
     </div>
   );
 }

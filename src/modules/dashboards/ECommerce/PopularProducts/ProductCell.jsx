@@ -14,11 +14,11 @@ const ProductCell = ({ data }) => {
         alignItems: 'center',
       }}
       key={data.id}
-      className='item-hover'
+      className="item-hover"
     >
       <Avatar
-        variant='rounded'
-        alt=''
+        variant="rounded"
+        alt=""
         src={data.icon}
         sx={{
           height: 60,
@@ -26,15 +26,14 @@ const ProductCell = ({ data }) => {
           mr: 4,
         }}
       />
-
       <Box sx={{ flex: 1 }}>
         <Typography
-          sx={{
-            color: (theme) => theme.palette.primary.main,
+          sx={(theme) => ({
+            color: theme.palette.primary.main,
             mb: 0.5,
-          }}
-          component='h5'
-          variant='h5'
+          })}
+          component="h5"
+          variant="h5"
         >
           {data.name}
         </Typography>
@@ -48,12 +47,12 @@ const ProductCell = ({ data }) => {
         >
           <span>${data.price}</span>
           <Box
-            component='span'
-            sx={{
+            component="span"
+            sx={(theme) => ({
               ml: 3,
-              color: (theme) => theme.palette.text.secondary,
+              color: theme.palette.text.secondary,
               textDecoration: 'line-through',
-            }}
+            })}
           >
             ${data.mrp}
           </Box>

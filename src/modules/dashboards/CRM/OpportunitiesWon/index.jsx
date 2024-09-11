@@ -5,7 +5,7 @@ import AppCard from '@crema/components/AppCard';
 import { useIntl } from 'react-intl';
 import AppSelect from '@crema/components/AppSelect';
 
-const OpportunitiesWon = ({ data }) => {
+const OpportunitiesWon = ({ data = [] }) => {
   const { messages } = useIntl();
   const handleSelectionType = (data) => {
     console.log('data: ', data);
@@ -16,11 +16,7 @@ const OpportunitiesWon = ({ data }) => {
       title={messages['dashboard.crm.opportunitiesWon']}
       action={
         <AppSelect
-          menus={[
-            messages['dashboard.thisWeek'],
-            messages['dashboard.lastWeeks'],
-            messages['dashboard.lastMonth'],
-          ]}
+          menus={[messages['dashboard.thisWeek'], messages['dashboard.lastWeeks'], messages['dashboard.lastMonth']]}
           defaultValue={messages['dashboard.thisWeek']}
           onChange={handleSelectionType}
         />
@@ -32,10 +28,6 @@ const OpportunitiesWon = ({ data }) => {
 };
 
 export default OpportunitiesWon;
-
-OpportunitiesWon.defaultProps = {
-  data: [],
-};
 
 OpportunitiesWon.propTypes = {
   data: PropTypes.array,

@@ -22,15 +22,10 @@ const Application = () => {
           }}
         >
           <AppCircularProgress
-            activeColor='#49BD65'
+            activeColor="#49BD65"
             hidePercentage
             value={70}
-            centerNode={
-              <img
-                alt='icon'
-                src={'/assets/images/dashboard/application_icon.svg'}
-              />
-            }
+            centerNode={<img alt="icon" src={'/assets/images/dashboard/application_icon.svg'} />}
             thickness={2}
           />
         </Box>

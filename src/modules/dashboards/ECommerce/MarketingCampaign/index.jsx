@@ -17,11 +17,7 @@ const MarketingCampaign = ({ marketingCampaign }) => {
       contentStyle={{ paddingLeft: 0, paddingRight: 0 }}
       action={
         <AppSelect
-          menus={[
-            messages['dashboard.thisWeek'],
-            messages['dashboard.lastWeeks'],
-            messages['dashboard.lastMonth'],
-          ]}
+          menus={[messages['dashboard.thisWeek'], messages['dashboard.lastWeeks'], messages['dashboard.lastMonth']]}
           defaultValue={messages['dashboard.thisWeek']}
           onChange={handleSelectionType}
         />

@@ -28,7 +28,7 @@ const PackageCard = ({ pricing }) => {
         }}
       >
         <Typography
-          component='h5'
+          component="h5"
           sx={{
             fontWeight: Fonts.BOLD,
             fontSize: 16,
@@ -53,7 +53,7 @@ const PackageCard = ({ pricing }) => {
           }}
         >
           <Typography
-            component='h3'
+            component="h3"
             sx={{
               fontSize: { xs: 16, md: 18, lg: 20 },
               fontWeight: Fonts.MEDIUM,
@@ -61,7 +61,7 @@ const PackageCard = ({ pricing }) => {
             }}
           >
             <Box
-              component='span'
+              component="span"
               sx={{
                 display: 'inline-block',
                 verticalAlign: 'top',
@@ -70,7 +70,7 @@ const PackageCard = ({ pricing }) => {
               $
             </Box>
             <Box
-              component='span'
+              component="span"
               sx={{
                 fontWeight: Fonts.BOLD,
                 fontSize: { xs: 26, md: 32, lg: 44, xl: 54 },
@@ -120,7 +120,7 @@ const PackageCard = ({ pricing }) => {
         </List>
         <Box sx={{ mt: 7.5, textAlign: 'center' }}>
           <Button
-            variant='contained'
+            variant="contained"
             sx={{
               fontWeight: Fonts.BOLD,
               color: (theme) => theme.palette.common.white,

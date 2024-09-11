@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
-import Grid from '@mui/material/Unstable_Grid2';
+import Grid from '@mui/material/Grid';
 
 const Item = styled(Paper)(({ theme }) => ({
   ...theme.typography.body2,
@@ -16,7 +16,7 @@ export default function OffsetGrid() {
       <Grid xs={6} xsOffset={3} md={2} mdOffset={0}>
         <Item>1</Item>
       </Grid>
-      <Grid xs={4} md={2} mdOffset='auto'>
+      <Grid xs={4} md={2} mdOffset="auto">
         <Item>2</Item>
       </Grid>
       <Grid xs={4} xsOffset={4} md={2} mdOffset={0}>

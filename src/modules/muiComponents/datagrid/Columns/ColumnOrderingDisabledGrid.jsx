@@ -13,11 +13,7 @@ export default function ColumnOrderingDisabledGrid() {
   return (
     <div style={{ height: 250, width: '100%' }}>
       <DataGridPro
-        columns={[
-          { field: 'id' },
-          { field: 'username' },
-          { field: 'age', disableReorder: true },
-        ]}
+        columns={[{ field: 'id' }, { field: 'username' }, { field: 'age', disableReorder: true }]}
         rows={rows}
       />
     </div>

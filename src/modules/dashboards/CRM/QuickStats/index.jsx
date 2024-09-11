@@ -7,11 +7,11 @@ import Box from '@mui/material/Box';
 import PropTypes from 'prop-types';
 import { Fonts } from '@crema/constants/AppEnums';
 
-const QuickStats = ({ quickStatsData }) => {
+const QuickStats = ({ quickStatsData = null }) => {
   return (
     <>
       <Box
-        component='h2'
+        component="h2"
         sx={{
           color: 'text.primary',
           fontSize: 16,
@@ -20,14 +20,14 @@ const QuickStats = ({ quickStatsData }) => {
           textTransform: 'uppercase',
         }}
       >
-        <IntlMessages id='dashboard.quickStats' />
+        <IntlMessages id="dashboard.quickStats" />
       </Box>
       <Grid container spacing={{ xs: 4, md: 8 }}>
         <Grid item xs={12} sm={6}>
           <StatsCard
             icon={'/assets/images/dashboard/total-clients.svg'}
             data={quickStatsData.clientsData}
-            heading={<IntlMessages id='dashboard.totalClients' />}
+            heading={<IntlMessages id="dashboard.totalClients" />}
           />
         </Grid>
 
@@ -35,7 +35,7 @@ const QuickStats = ({ quickStatsData }) => {
           <StatsCard
             icon={'/assets/images/dashboard/invoices.svg'}
             data={quickStatsData.invoiceData}
-            heading={<IntlMessages id='dashboard.paidInvoices' />}
+            heading={<IntlMessages id="dashboard.paidInvoices" />}
           />
         </Grid>
 
@@ -43,7 +43,7 @@ const QuickStats = ({ quickStatsData }) => {
           <StatsCard
             icon={'/assets/images/dashboard/total-projects.svg'}
             data={quickStatsData.totalProjectsData}
-            heading={<IntlMessages id='dashboard.totalProjects' />}
+            heading={<IntlMessages id="dashboard.totalProjects" />}
           />
         </Grid>
 
@@ -51,7 +51,7 @@ const QuickStats = ({ quickStatsData }) => {
           <StatsCard
             icon={'/assets/images/dashboard/open-projects.svg'}
             data={quickStatsData.openProjectsData}
-            heading={<IntlMessages id='dashboard.openProjects' />}
+            heading={<IntlMessages id="dashboard.openProjects" />}
           />
         </Grid>
       </Grid>
@@ -60,10 +60,6 @@ const QuickStats = ({ quickStatsData }) => {
 };
 
 export default QuickStats;
-
-QuickStats.defaultProps = {
-  quickStatsData: null,
-};
 
 QuickStats.propTypes = {
   quickStatsData: PropTypes.object,

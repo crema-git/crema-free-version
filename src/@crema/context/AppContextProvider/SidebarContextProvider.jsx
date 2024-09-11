@@ -10,18 +10,10 @@ export const useSidebarContext = () => useContext(SidebarContext);
 export const useSidebarActionsContext = () => useContext(SidebarActionsContext);
 
 const SidebarContextProvider = ({ children }) => {
-  const [menuStyle, updateMenuStyle] = useState(
-    defaultConfig.sidebar.menuStyle,
-  );
-  const [sidebarColorSet, updateSidebarColorSet] = useState(
-    defaultConfig.sidebar.colorSet,
-  );
-  const [allowSidebarBgImage, updateImage] = useState(
-    defaultConfig.sidebar.allowSidebarBgImage,
-  );
-  const [sidebarBgImageId, setSidebarImage] = useState(
-    defaultConfig.sidebar.sidebarBgImageId,
-  );
+  const [menuStyle, updateMenuStyle] = useState(defaultConfig.sidebar.menuStyle);
+  const [sidebarColorSet, updateSidebarColorSet] = useState(defaultConfig.sidebar.colorSet);
+  const [allowSidebarBgImage, updateImage] = useState(defaultConfig.sidebar.allowSidebarBgImage);
+  const [sidebarBgImageId, setSidebarImage] = useState(defaultConfig.sidebar.sidebarBgImageId);
 
   const setSidebarBgImage = useCallback((allowSidebarBgImage) => {
     updateImage(allowSidebarBgImage);

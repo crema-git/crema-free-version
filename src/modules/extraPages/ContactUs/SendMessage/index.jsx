@@ -13,14 +13,14 @@ const SendMessage = ({ sendMessage }) => {
       }}
     >
       <Typography
-        component='h3'
+        component="h3"
         sx={{
           mb: 2.5,
           fontSize: { xs: 18, md: 20 },
           fontWeight: Fonts.BOLD,
         }}
       >
-        <IntlMessages id='extraPages.sendUsMessage' />
+        <IntlMessages id="extraPages.sendUsMessage" />
       </Typography>
       <Typography>{sendMessage.description}</Typography>
     </Box>

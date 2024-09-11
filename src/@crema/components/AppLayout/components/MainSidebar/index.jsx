@@ -5,7 +5,7 @@ import SidebarWrapper from './SidebarWrapper';
 
 const MainSidebar = ({ children }) => {
   return (
-    <SidebarWrapper className='app-sidebar'>
+    <SidebarWrapper className="app-sidebar">
       <SidebarBGWrapper>{children}</SidebarBGWrapper>
     </SidebarWrapper>
   );

@@ -99,12 +99,12 @@ const StateCard = ({ data }) => {
       }}
     >
       <StateWrapper color={data.color}>
-        <Box className='state-icon'>
-          <Box className='hsIcon'>
+        <Box className="state-icon">
+          <Box className="hsIcon">
             <Icon>{data.icon}</Icon>
           </Box>
         </Box>
-        <div className='state-content'>
+        <div className="state-content">
           <Box
             sx={{
               display: 'flex',
@@ -120,20 +120,20 @@ const StateCard = ({ data }) => {
                 width: '100%',
                 fontWeight: Fonts.SEMI_BOLD,
               }}
-              variant='h2'
-              component='h2'
+              variant="h2"
+              component="h2"
             >
               <FormattedNumber value={+data.value} />
             </Typography>
             <Typography
-              sx={{
+              sx={(theme) => ({
                 overflow: 'hidden',
                 textOverflow: 'ellipsis',
                 whiteSpace: 'nowrap',
                 width: '100%',
-                color: (theme) => theme.palette.text.secondary,
+                color: theme.palette.text.secondary,
                 fontSize: 14,
-              }}
+              })}
             >
               {data.title}
             </Typography>
@@ -145,16 +145,15 @@ const StateCard = ({ data }) => {
               flexDirection: 'column',
               alignSelf: 'flex-end',
               ml: 1,
-              '@media only screen and (min-width: 1200px) and (max-width: 1579px)':
-                {
-                  display: 'none',
-                },
+              '@media only screen and (min-width: 1200px) and (max-width: 1579px)': {
+                display: 'none',
+              },
             }}
           >
-            <Box component='span' className='state-growth'>
+            <Box component="span" className="state-growth">
               {data.growth}%
               <Box
-                component='span'
+                component="span"
                 sx={{
                   pt: 0.8,
                   pl: 0.8,
@@ -165,10 +164,7 @@ const StateCard = ({ data }) => {
               </Box>
             </Box>
             <div>
-              <Typography
-                variant='body2'
-                sx={{ color: 'text.secondary', whiteSpace: 'nowrap' }}
-              >
+              <Typography variant="body2" sx={{ color: 'text.secondary', whiteSpace: 'nowrap' }}>
                 in 30 days
               </Typography>
             </div>

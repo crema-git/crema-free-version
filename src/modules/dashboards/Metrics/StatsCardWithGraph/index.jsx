@@ -8,12 +8,15 @@ import { Fonts } from '@crema/constants/AppEnums';
 import AppCard from '@crema/components/AppCard';
 
 const StatsCardWithGraph = ({
-  data,
   text,
-  bgColor,
-  headingColor,
-  valueColor,
-  type,
+  bgColor = '',
+  data = {
+    value: '',
+    graphData: [],
+  },
+  type = '',
+  headingColor = '',
+  valueColor = '',
 }) => {
   const onGetGraph = () => {
     switch (type) {
@@ -51,7 +54,7 @@ const StatsCardWithGraph = ({
           }}
         >
           <Box
-            component='p'
+            component="p"
             sx={{
               color: headingColor,
               fontSize: 16,
@@ -62,7 +65,7 @@ const StatsCardWithGraph = ({
             {text}
           </Box>
           <Box
-            component='h3'
+            component="h3"
             sx={{
               color: valueColor,
               fontSize: 20,
@@ -87,17 +90,6 @@ const StatsCardWithGraph = ({
 };
 
 export default StatsCardWithGraph;
-
-StatsCardWithGraph.defaultProps = {
-  bgColor: '',
-  data: {
-    value: '',
-    graphData: [],
-  },
-  type: '',
-  headingColor: '',
-  valueColor: '',
-};
 
 StatsCardWithGraph.propTypes = {
   text: PropTypes.any.isRequired,

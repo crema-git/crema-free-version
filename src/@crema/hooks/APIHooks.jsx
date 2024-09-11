@@ -4,13 +4,7 @@ import { useInfoViewActionsContext } from '@crema/context/AppContextProvider/Inf
 import { isRequestSuccessful, sanitizeData } from '@crema/helpers/ApiHelper';
 import jwtAxios from '@crema/services/axios';
 
-export const useGetDataApi = (
-  url,
-  initialData = undefined,
-  params = {},
-  initialCall = true,
-  callbackFun,
-) => {
+export const useGetDataApi = (url, initialData = undefined, params = {}, initialCall = true, callbackFun) => {
   const { fetchError } = useInfoViewActionsContext();
   const [initialUrl, setInitialUrl] = useState(url);
   const [allowApiCall, setAllowApiCall] = useState(initialCall);
@@ -48,12 +42,7 @@ export const useGetDataApi = (
       jwtAxios
         .get(initialUrl, { params: sanitizeData(params) })
         .then((data) => {
-          console.log(
-            initialUrl,
-            data.data,
-            didCancelRef.current,
-            isRequestSuccessful(data.status),
-          );
+          console.log(initialUrl, data.data, didCancelRef.current, isRequestSuccessful(data.status));
           resStateRef.current = false;
           if (!didCancelRef.current) {
             if (isRequestSuccessful(data.status)) {
@@ -134,13 +123,7 @@ const handleAPIError = (url, fetchSuccess, error, reject) => {
   }
 };
 
-export const postDataApi = (
-  url,
-  infoViewContext,
-  payload,
-  isHideLoader = false,
-  headers,
-) => {
+export const postDataApi = (url, infoViewContext, payload, isHideLoader = false, headers) => {
   const { fetchStart, fetchSuccess } = infoViewContext;
   return new Promise((resolve, reject) => {
     if (!isHideLoader) fetchStart();
@@ -156,12 +139,7 @@ export const postDataApi = (
   });
 };
 
-export const putDataApi = (
-  url,
-  infoViewContext,
-  payload,
-  isHideLoader = false,
-) => {
+export const putDataApi = (url, infoViewContext, payload, isHideLoader = false) => {
   const { fetchStart, fetchSuccess } = infoViewContext;
   return new Promise((resolve, reject) => {
     if (!isHideLoader) fetchStart();
@@ -177,13 +155,7 @@ export const putDataApi = (
   });
 };
 
-export const getDataApi = (
-  url,
-  infoViewContext,
-  params = {},
-  isHideLoader = false,
-  headers,
-) => {
+export const getDataApi = (url, infoViewContext, params = {}, isHideLoader = false, headers) => {
   const { fetchStart, fetchSuccess } = infoViewContext;
   return new Promise((resolve, reject) => {
     if (!isHideLoader) fetchStart();
@@ -199,12 +171,7 @@ export const getDataApi = (
   });
 };
 
-export const deleteDataApi = (
-  url,
-  infoViewContext,
-  params = {},
-  isHideLoader = false,
-) => {
+export const deleteDataApi = (url, infoViewContext, params = {}, isHideLoader = false) => {
   const { fetchStart, fetchSuccess } = infoViewContext;
   return new Promise((resolve, reject) => {
     if (!isHideLoader) fetchStart();
@@ -251,12 +218,7 @@ export const uploadDataApi = (
   });
 };
 
-export const uploadPutDataApi = (
-  url,
-  infoViewContext,
-  payload = {},
-  isHideLoader = false,
-) => {
+export const uploadPutDataApi = (url, infoViewContext, payload = {}, isHideLoader = false) => {
   const { fetchStart, fetchSuccess } = infoViewContext;
   return new Promise((resolve, reject) => {
     if (!isHideLoader) fetchStart();

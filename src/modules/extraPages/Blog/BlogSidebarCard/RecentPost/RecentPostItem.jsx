@@ -22,11 +22,11 @@ const RecentPostItem = ({ recentPost }) => {
           },
         }}
       >
-        <img src={recentPost.srcImg} alt='Recent Post' />
+        <img src={recentPost.srcImg} alt="Recent Post" />
       </Box>
       <Box sx={{ flex: 1 }}>
         <Typography
-          component='h4'
+          component="h4"
           sx={{
             fontSize: 12,
             fontWeight: Fonts.MEDIUM,

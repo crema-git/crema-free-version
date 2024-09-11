@@ -1,10 +1,5 @@
 import mock from '../MockConfig';
-import ecommerceData, {
-  brandData,
-  cartItems,
-  customersData,
-  recentOrders,
-} from '../../fakedb/ecommerce/ecommerceData';
+import ecommerceData, { brandData, cartItems, customersData, recentOrders } from '../../fakedb/ecommerce/ecommerceData';
 import { multiPropsFilter } from '@crema/helpers/Common';
 
 let cartItemsData = cartItems;
@@ -122,9 +117,7 @@ mock.onPost('/api/cart/add').reply((request) => {
 
 mock.onPut('/api/cart/update').reply((request) => {
   const { product } = JSON.parse(request.data);
-  cartItemsData = cartItemsData.map((item) =>
-    item.id === product.id ? product : item,
-  );
+  cartItemsData = cartItemsData.map((item) => (item.id === product.id ? product : item));
   return [200, cartItemsData];
 });
 

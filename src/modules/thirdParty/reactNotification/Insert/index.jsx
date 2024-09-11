@@ -28,8 +28,8 @@ const InsertExample = () => {
           marginLeft: 2,
           marginRight: 2,
         }}
-        color='primary'
-        variant='contained'
+        color="primary"
+        variant="contained"
         onClick={() => add('top')}
       >
         Top
@@ -41,8 +41,8 @@ const InsertExample = () => {
           marginLeft: 2,
           marginRight: 2,
         }}
-        color='primary'
-        variant='contained'
+        color="primary"
+        variant="contained"
         onClick={() => add('bottom')}
       >
         Bottom

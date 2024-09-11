@@ -12,7 +12,7 @@ const DeliveryInfo = () => {
     <Grid container spacing={3}>
       <Grid item xs={12} sm={6}>
         <Box
-          component='h3'
+          component="h3"
           sx={{
             color: 'text.primary',
             fontSize: 16,
@@ -21,12 +21,7 @@ const DeliveryInfo = () => {
         >
           Deliver to
         </Box>
-        <TextField
-          id='delivery-pin-code'
-          label='Pin Code'
-          variant='outlined'
-          size='small'
-        />
+        <TextField id="delivery-pin-code" label="Pin Code" variant="outlined" size="small" />
 
         <Box
           sx={{
@@ -36,7 +31,7 @@ const DeliveryInfo = () => {
         >
           Delivery in 5-7 days |{' '}
           <Box
-            component='span'
+            component="span"
             sx={{
               color: '#49BD65',
               mx: 3,
@@ -45,7 +40,7 @@ const DeliveryInfo = () => {
             Free
           </Box>
           <Box
-            component='span'
+            component="span"
             sx={{
               color: 'text.secondary',
             }}
@@ -64,7 +59,7 @@ const DeliveryInfo = () => {
 
       <Grid item xs={12} sm={6}>
         <Box
-          component='h3'
+          component="h3"
           sx={{
             color: 'text.primary',
             fontSize: 16,
@@ -81,7 +76,7 @@ const DeliveryInfo = () => {
             alignItems: 'center',
           }}
         >
-          <Tooltip title='Return policy'>
+          <Tooltip title="Return policy">
             <LoopIcon sx={{ color: 'primary.main', fontSize: 18 }} />
           </Tooltip>
           <Box
@@ -93,10 +88,8 @@ const DeliveryInfo = () => {
             }}
           >
             30 Day Return Policy
-            <Tooltip title='info'>
-              <InfoIcon
-                sx={{ color: '#A0A5B9', fontSize: 18, marginLeft: 12 }}
-              />
+            <Tooltip title="info">
+              <InfoIcon sx={{ color: '#A0A5B9', fontSize: 18, marginLeft: 12 }} />
             </Tooltip>
           </Box>
         </Box>
@@ -109,7 +102,7 @@ const DeliveryInfo = () => {
             alignItems: 'center',
           }}
         >
-          <Tooltip title='COD Available'>
+          <Tooltip title="COD Available">
             <MonetizationOnIcon sx={{ color: 'primary.main', fontSize: 18 }} />
           </Tooltip>
           <Box
@@ -121,10 +114,8 @@ const DeliveryInfo = () => {
             }}
           >
             Cash on Delivery available{' '}
-            <Tooltip title='info'>
-              <InfoIcon
-                sx={{ color: '#A0A5B9', fontSize: 18, marginLeft: 12 }}
-              />
+            <Tooltip title="info">
+              <InfoIcon sx={{ color: '#A0A5B9', fontSize: 18, marginLeft: 12 }} />
             </Tooltip>
           </Box>
         </Box>

@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 import AppCard from '@crema/components/AppCard';
 import { useIntl } from 'react-intl';
 
-const GoalProgress = ({ progressGraphData }) => {
+const GoalProgress = ({ progressGraphData = [] }) => {
   const { messages } = useIntl();
   return (
     <AppCard sxStyle={{ height: 1 }} title={messages['dashboard.goalProgress']}>
@@ -27,7 +27,7 @@ const GoalProgress = ({ progressGraphData }) => {
           }}
         >
           <Box
-            component='span'
+            component="span"
             sx={{
               height: { xs: 12, xl: 16 },
               width: { xs: 12, xl: 16 },
@@ -37,12 +37,12 @@ const GoalProgress = ({ progressGraphData }) => {
             }}
           />
           <Box
-            component='span'
+            component="span"
             sx={{
               fontSize: 14,
             }}
           >
-            <IntlMessages id='dashboard.inProgress' />
+            <IntlMessages id="dashboard.inProgress" />
           </Box>
         </Box>
         <Box
@@ -53,7 +53,7 @@ const GoalProgress = ({ progressGraphData }) => {
           }}
         >
           <Box
-            component='span'
+            component="span"
             sx={{
               height: { xs: 12, xl: 16 },
               width: { xs: 12, xl: 16 },
@@ -63,12 +63,12 @@ const GoalProgress = ({ progressGraphData }) => {
             }}
           />
           <Box
-            component='span'
+            component="span"
             sx={{
               fontSize: 14,
             }}
           >
-            <IntlMessages id='common.actual' />
+            <IntlMessages id="common.actual" />
           </Box>
         </Box>
       </Box>
@@ -77,10 +77,6 @@ const GoalProgress = ({ progressGraphData }) => {
 };
 
 export default GoalProgress;
-
-GoalProgress.defaultProps = {
-  progressGraphData: [],
-};
 
 GoalProgress.propTypes = {
   progressGraphData: PropTypes.array,

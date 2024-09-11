@@ -4,12 +4,8 @@ import { alpha, Box } from '@mui/material';
 import { useSidebarContext } from '@crema/context/AppContextProvider/SidebarContextProvider';
 
 const HeaderNavWrapper = ({ children }) => {
-  const {
-    sidebarBgColor,
-    sidebarTextColor,
-    sidebarMenuSelectedBgColor,
-    sidebarMenuSelectedTextColor,
-  } = useSidebarContext();
+  const { sidebarBgColor, sidebarTextColor, sidebarMenuSelectedBgColor, sidebarMenuSelectedTextColor } =
+    useSidebarContext();
   return (
     <Box
       sx={{

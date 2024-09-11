@@ -4,10 +4,7 @@ import Box from '@mui/material/Box';
 import IntlMessages from '@crema/helpers/IntlMessages';
 import themeColorSets from '@crema/constants/ColorSets';
 import CustomColorCell from '../CustomColorCell';
-import {
-  useThemeActionsContext,
-  useThemeContext,
-} from '@crema/context/AppContextProvider/ThemeContextProvider';
+import { useThemeActionsContext, useThemeContext } from '@crema/context/AppContextProvider/ThemeContextProvider';
 import AppGrid from '../../AppGrid';
 
 const ThemeColors = () => {
@@ -26,8 +23,8 @@ const ThemeColors = () => {
   };
   return (
     <CustomizerItemWrapper>
-      <Box component='h4' sx={{ mb: 2 }}>
-        <IntlMessages id='customizer.themeColors' />
+      <Box component="h4" sx={{ mb: 2 }}>
+        <IntlMessages id="customizer.themeColors" />
       </Box>
       <Box mt={4}>
         <AppGrid
@@ -38,11 +35,7 @@ const ThemeColors = () => {
             sm: 2,
           }}
           renderRow={(colorSet, index) => (
-            <CustomColorCell
-              key={index}
-              updateThemeColors={updateThemeColors}
-              themeColorSet={colorSet}
-            />
+            <CustomColorCell key={index} updateThemeColors={updateThemeColors} themeColorSet={colorSet} />
           )}
         />
       </Box>

@@ -1,44 +1,44 @@
-import React from "react";
-import AppComponentHeader from "@crema/components/AppComponentHeader";
-import AppGridContainer from "@crema/components/AppGridContainer";
-import Grid from "@mui/material/Grid";
-import AppComponentCard from "@crema/components/AppComponentCard";
+import React from 'react';
+import AppComponentHeader from '@crema/components/AppComponentHeader';
+import AppGridContainer from '@crema/components/AppGridContainer';
+import Grid from '@mui/material/Grid';
+import AppComponentCard from '@crema/components/AppComponentCard';
 
-import BasicMenu from "./BasicMenu";
-import BasicMenuSource from "./BasicMenu?raw";
+import BasicMenu from './BasicMenu';
+import BasicMenuSource from './BasicMenu?raw';
 
-import IconMenu from "./IconMenu";
-import IconMenuSource from "./IconMenu?raw";
+import IconMenu from './IconMenu';
+import IconMenuSource from './IconMenu?raw';
 
-import DenseMenu from "./DenseMenu";
-import DenseMenuSource from "./DenseMenu?raw";
+import DenseMenu from './DenseMenu';
+import DenseMenuSource from './DenseMenu?raw';
 
-import SimpleListMenu from "./SimpleListMenu";
-import SimpleListMenuSource from "./SimpleListMenu?raw";
+import SimpleListMenu from './SimpleListMenu';
+import SimpleListMenuSource from './SimpleListMenu?raw';
 
-import PositionedMenu from "./PositionedMenu";
-import PositionedMenuSource from "./PositionedMenu?raw";
+import PositionedMenu from './PositionedMenu';
+import PositionedMenuSource from './PositionedMenu?raw';
 
-import MenuListComposition from "./MenuListComposition";
-import MenuListCompositionSource from "./MenuListComposition?raw";
+import MenuListComposition from './MenuListComposition';
+import MenuListCompositionSource from './MenuListComposition?raw';
 
-import AccountMenu from "./AccountMenu";
-import AccountMenuSource from "./AccountMenu?raw";
+import AccountMenu from './AccountMenu';
+import AccountMenuSource from './AccountMenu?raw';
 
-import CustomizedMenus from "./CustomizedMenus";
-import CustomizedMenusSource from "./CustomizedMenus?raw";
+import CustomizedMenus from './CustomizedMenus';
+import CustomizedMenusSource from './CustomizedMenus?raw';
 
-import LongMenu from "./LongMenu";
-import LongMenuSource from "./LongMenu?raw";
+import LongMenu from './LongMenu';
+import LongMenuSource from './LongMenu?raw';
 
-import TypographyMenu from "./TypographyMenu";
-import TypographyMenuSource from "./TypographyMenu?raw";
+import TypographyMenu from './TypographyMenu';
+import TypographyMenuSource from './TypographyMenu?raw';
 
-import FadeMenu from "./FadeMenu";
-import FadeMenuSource from "./FadeMenu?raw";
+import FadeMenu from './FadeMenu';
+import FadeMenuSource from './FadeMenu?raw';
 
-import ContextMenu from "./ContextMenu";
-import ContextMenuSource from "./ContextMenu?raw";
+import ContextMenu from './ContextMenu';
+import ContextMenuSource from './ContextMenu?raw';
 
 const Menu = () => {
   return (

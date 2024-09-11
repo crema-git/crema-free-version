@@ -13,7 +13,7 @@ const ProductView = ({ product }) => {
   return (
     <Grid item sm={12} md={8}>
       <Box
-        component='h3'
+        component="h3"
         sx={{
           color: 'text.primary',
           fontSize: 20,
@@ -22,7 +22,7 @@ const ProductView = ({ product }) => {
       >
         ${+product.mrp - Math.round((+product.mrp * +product.discount) / 100)}
         <Box
-          component='span'
+          component="span"
           sx={{
             textDecoration: 'line-through',
             color: 'text.secondary',
@@ -43,7 +43,7 @@ const ProductView = ({ product }) => {
         In stock
       </Box>
       <Box
-        component='p'
+        component="p"
         sx={{
           color: 'text.secondary',
         }}

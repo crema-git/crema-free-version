@@ -29,11 +29,7 @@ const SendBtn = styled(IconButton)(({ theme }) => {
   };
 });
 
-const SendMessage = ({
-  sendFileMessage,
-  onSendMessage,
-  currentMessage = '',
-}) => {
+const SendMessage = ({ sendFileMessage, onSendMessage, currentMessage = '' }) => {
   const [message, setMessage] = useState(currentMessage);
   const { getRootProps, getInputProps } = useDropzone({
     multiple: true,
@@ -91,7 +87,7 @@ const SendMessage = ({
               className: clsx('dropzone'),
             })}
             style={{ height: 40, width: 40 }}
-            size='large'
+            size="large"
           >
             <input {...getInputProps()} />
             <AttachFileIcon />
@@ -108,7 +104,7 @@ const SendMessage = ({
           },
         }}
         multiline
-        variant='outlined'
+        variant="outlined"
         placeholder={messages['chatApp.sendMessagePlaceholder']}
         value={message}
         onChange={(event) => {
@@ -121,7 +117,7 @@ const SendMessage = ({
           ml: 2,
         }}
       >
-        <SendBtn size='large' onClick={onClickSendMessage}>
+        <SendBtn size="large" onClick={onClickSendMessage}>
           <SendOutlinedIcon />
         </SendBtn>
       </Box>
@@ -130,10 +126,6 @@ const SendMessage = ({
 };
 
 export default SendMessage;
-
-SendMessage.defaultProps = {
-  message: '',
-};
 
 SendMessage.propTypes = {
   sendFileMessage: PropTypes.func,

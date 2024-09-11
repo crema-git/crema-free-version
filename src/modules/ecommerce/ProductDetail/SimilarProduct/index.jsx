@@ -47,8 +47,7 @@ const SimilarProduct = () => {
   return (
     <Box
       sx={{
-        backgroundColor: (theme) =>
-          alpha(theme.palette.background.default, 0.6),
+        backgroundColor: (theme) => alpha(theme.palette.background.default, 0.6),
         mt: 2,
       }}
     >

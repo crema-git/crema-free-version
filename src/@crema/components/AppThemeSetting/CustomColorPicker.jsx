@@ -29,7 +29,7 @@ const CustomColorPicker = ({ title, color, onUpdateColor }) => {
             backgroundColor: color,
           }}
         />
-        <Box component='span' className='font-extrabold'>
+        <Box component="span" className="font-extrabold">
           {title}
         </Box>
       </Box>
@@ -43,10 +43,7 @@ const CustomColorPicker = ({ title, color, onUpdateColor }) => {
           }}
           onClick={() => setVisibility(!visible)}
         >
-          <SketchPicker
-            color={color}
-            onChangeComplete={(color) => onUpdateColor(color.hex)}
-          />
+          <SketchPicker color={color} onChangeComplete={(color) => onUpdateColor(color.hex)} />
         </Box>
       ) : null}
     </>

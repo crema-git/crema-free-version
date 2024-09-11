@@ -6,7 +6,6 @@ import { feedbackConfigs } from './FeedbackRoutes';
 import { layoutConfigs } from './LayoutRoutes';
 import { utilConfigs } from './UtillRoutes';
 import { dataGridConfigs } from './DataGridRoutes';
-import { labConfigs } from './LabRoutes';
 
 export const muiComponentConfigs = [
   ...inputsConfigs,
@@ -17,5 +16,4 @@ export const muiComponentConfigs = [
   ...layoutConfigs,
   ...utilConfigs,
   ...dataGridConfigs,
-  ...labConfigs,
 ];

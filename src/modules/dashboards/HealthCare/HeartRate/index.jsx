@@ -16,7 +16,7 @@ const HeartRate = ({ data }) => {
         }}
       >
         <Box
-          component='h3'
+          component="h3"
           sx={{
             color: 'text.primary',
             fontWeight: Fonts.MEDIUM,
@@ -55,7 +55,7 @@ const HeartRate = ({ data }) => {
           }}
         >
           {data.measurement}
-          <Box sx={{ fontSize: 16, ml: 2 }} component='span'>
+          <Box sx={{ fontSize: 16, ml: 2 }} component="span">
             {data.unit}
           </Box>
         </Box>

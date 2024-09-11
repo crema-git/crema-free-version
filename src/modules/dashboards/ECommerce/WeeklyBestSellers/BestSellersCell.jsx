@@ -27,7 +27,7 @@ const BestSellersCell = ({ bestSeller }) => {
         alignItems: 'center',
         padding: '8px 20px',
       }}
-      className='item-hover'
+      className="item-hover"
     >
       <Avatar
         sx={{
@@ -46,11 +46,11 @@ const BestSellersCell = ({ bestSeller }) => {
         }}
       >
         <Box sx={{ mr: 3 }}>
-          <Box component='h5' sx={{ mb: 0.5 }}>
+          <Box component="h5" sx={{ mb: 0.5 }}>
             {bestSeller.name}
           </Box>
           <Box
-            component='p'
+            component="p"
             sx={{
               color: 'text.secondary',
               fontSize: 14,
@@ -81,7 +81,7 @@ const BestSellersCell = ({ bestSeller }) => {
                 fontSize: 18,
               }}
               readOnly
-              name='product-rating'
+              name="product-rating"
               defaultValue={bestSeller.rating}
               precision={0.5}
             />

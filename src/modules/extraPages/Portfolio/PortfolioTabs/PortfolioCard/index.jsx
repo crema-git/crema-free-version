@@ -11,13 +11,13 @@ import { Fonts } from '@crema/constants/AppEnums';
 const PortfolioCard = ({ portfolio, onViewPortfolioDetail }) => {
   return (
     <CardWrapper onClick={() => onViewPortfolioDetail(portfolio)}>
-      <Box className='card-media-wrapper'>
-        <CardMedia component='img' image={portfolio.srcImg} alt='Portfolio' />
-        <Box className='card-media-content'>
-          <Box className='icon'>
+      <Box className="card-media-wrapper">
+        <CardMedia component="img" image={portfolio.srcImg} alt="Portfolio" />
+        <Box className="card-media-content">
+          <Box className="icon">
             <FiSearch />
           </Box>
-          <Box className='icon'>
+          <Box className="icon">
             <AiOutlineLink />
           </Box>
         </Box>
@@ -28,7 +28,7 @@ const PortfolioCard = ({ portfolio, onViewPortfolioDetail }) => {
         }}
       >
         <Typography
-          component='h5'
+          component="h5"
           sx={{
             fontSize: 14,
             fontWeight: Fonts.MEDIUM,

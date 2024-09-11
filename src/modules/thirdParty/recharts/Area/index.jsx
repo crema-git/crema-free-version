@@ -17,46 +17,34 @@ const AreaChart = () => {
   return (
     <>
       <AppComponentHeader
-        title='Area Chart'
-        description='All svg elements can be added into the AreaChart component, such as defs, linearGradient, etc.'
-        refUrl='http://recharts.org/en-US/api/AreaChart/'
+        title="Area Chart"
+        description="All svg elements can be added into the AreaChart component, such as defs, linearGradient, etc."
+        refUrl="http://recharts.org/en-US/api/AreaChart/"
       />
 
       <AppGridContainer>
         <Grid item xs={12} lg={6}>
-          <AppComponentCard
-            title='Simple modal'
-            component={SimpleAreaChart}
-            source={SimpleAreaChartSource}
-          />
+          <AppComponentCard title="Simple modal" component={SimpleAreaChart} source={SimpleAreaChartSource} />
+        </Grid>
+        <Grid item xs={12} lg={6}>
+          <AppComponentCard title="Stacked Area Chart" component={StackedAreaChart} source={StackedAreaChartSource} />
         </Grid>
         <Grid item xs={12} lg={6}>
           <AppComponentCard
-            title='Stacked Area Chart'
-            component={StackedAreaChart}
-            source={StackedAreaChartSource}
-          />
-        </Grid>
-        <Grid item xs={12} lg={6}>
-          <AppComponentCard
-            title='AreaChart Connect Nulls'
+            title="AreaChart Connect Nulls"
             component={AreaChartConnectNulls}
             source={AreaChartConnectNullsSource}
           />
         </Grid>
         <Grid item xs={12} lg={6}>
           <AppComponentCard
-            title='Synchronized Area Chart'
+            title="Synchronized Area Chart"
             component={SynchronizedAreaChart}
             source={SynchronizedAreaChartSource}
           />
         </Grid>
         <Grid item xs={12} lg={6}>
-          <AppComponentCard
-            title='Percent Area Chart'
-            component={PercentAreaChart}
-            source={PercentAreaChartSource}
-          />
+          <AppComponentCard title="Percent Area Chart" component={PercentAreaChart} source={PercentAreaChartSource} />
         </Grid>
       </AppGridContainer>
     </>

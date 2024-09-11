@@ -20,8 +20,7 @@ import VideoPromo from './VideoPromo';
 import AppLoader from '@crema/components/AppLoader';
 
 const Academy = () => {
-  const [{ apiData: academyData, loading }] =
-    useGetDataApi('/dashboard/academy');
+  const [{ apiData: academyData, loading }] = useGetDataApi('/dashboard/academy');
 
   return (
     <>

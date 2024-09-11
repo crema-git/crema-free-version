@@ -9,24 +9,13 @@ import ListItemText from '@mui/material/ListItemText';
 import DeleteIcon from '@mui/icons-material/Delete';
 import { TransitionGroup } from 'react-transition-group';
 
-const FRUITS = [
-  '🍏 Apple',
-  '🍌 Banana',
-  '🍍 Pineapple',
-  '🥥 Coconut',
-  '🍉 Watermelon',
-];
+const FRUITS = ['🍏 Apple', '🍌 Banana', '🍍 Pineapple', '🥥 Coconut', '🍉 Watermelon'];
 
 function renderItem({ item, handleRemoveFruit }) {
   return (
     <ListItem
       secondaryAction={
-        <IconButton
-          edge='end'
-          aria-label='delete'
-          title='Delete'
-          onClick={() => handleRemoveFruit(item)}
-        >
+        <IconButton edge="end" aria-label="delete" title="Delete" onClick={() => handleRemoveFruit(item)}>
           <DeleteIcon />
         </IconButton>
       }
@@ -37,9 +26,7 @@ function renderItem({ item, handleRemoveFruit }) {
 }
 
 export default function TransitionGroupExample() {
-  const [fruitsInBasket, setFruitsInBasket] = React.useState(
-    FRUITS.slice(0, 3),
-  );
+  const [fruitsInBasket, setFruitsInBasket] = React.useState(FRUITS.slice(0, 3));
 
   const handleAddFruit = () => {
     const nextHiddenItem = FRUITS.find((i) => !fruitsInBasket.includes(i));
@@ -53,11 +40,7 @@ export default function TransitionGroupExample() {
   };
 
   const addFruitButton = (
-    <Button
-      variant='contained'
-      disabled={fruitsInBasket.length >= FRUITS.length}
-      onClick={handleAddFruit}
-    >
+    <Button variant="contained" disabled={fruitsInBasket.length >= FRUITS.length} onClick={handleAddFruit}>
       Add fruit to basket
     </Button>
   );
@@ -69,9 +52,7 @@ export default function TransitionGroupExample() {
         <List>
           <TransitionGroup>
             {fruitsInBasket.map((item) => (
-              <Collapse key={item}>
-                {renderItem({ item, handleRemoveFruit })}
-              </Collapse>
+              <Collapse key={item}>{renderItem({ item, handleRemoveFruit })}</Collapse>
             ))}
           </TransitionGroup>
         </List>

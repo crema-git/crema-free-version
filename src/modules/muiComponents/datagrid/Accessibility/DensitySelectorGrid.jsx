@@ -1,9 +1,5 @@
 import * as React from 'react';
-import {
-  DataGrid,
-  GridToolbarContainer,
-  GridToolbarDensitySelector,
-} from '@mui/x-data-grid';
+import { DataGrid, GridToolbarContainer, GridToolbarDensitySelector } from '@mui/x-data-grid';
 import { useDemoData } from '@mui/x-data-grid-generator';
 
 function CustomToolbar() {
@@ -25,7 +21,7 @@ export default function DensitySelectorSmallGrid() {
     <div style={{ height: 300, width: '100%' }}>
       <DataGrid
         {...data}
-        density='compact'
+        density="compact"
         components={{
           Toolbar: CustomToolbar,
         }}

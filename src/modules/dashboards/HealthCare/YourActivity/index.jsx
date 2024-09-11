@@ -14,11 +14,7 @@ const YourActivity = ({ data }) => {
     <AppCard
       title={messages['healthCare.yourActivity']}
       action={
-        <AppSelect
-          menus={['This Week', 'Last Week', 'This Month']}
-          defaultValue='This Week'
-          onChange={handleChange}
-        />
+        <AppSelect menus={['This Week', 'Last Week', 'This Month']} defaultValue="This Week" onChange={handleChange} />
       }
     >
       <ActivityGraph data={data} />

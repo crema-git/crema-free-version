@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react';
-import { Icon, ListItem, ListItemText } from '@mui/material';
+import { Icon, ListItemButton, ListItemText } from '@mui/material';
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
 import AppBadge from '../../../../AppBadge';
@@ -15,42 +15,32 @@ const VerticalItem = ({ level, item }) => {
   const { themeMode } = useThemeContext();
   const classes = useStyles({ level, themeMode });
   const { user } = useAuthUser();
-  const hasPermission = useMemo(
-    () => checkPermission(item.auth, user.role),
-    [item.auth, user.role],
-  );
+  const hasPermission = useMemo(() => checkPermission(item.auth, user.role), [item.auth, user.role]);
   if (!hasPermission) {
     return null;
   }
   return (
-    <ListItem
-      button
+    <ListItemButton
       component={AppNavLink}
       to={item.url}
-      activeClassName='active'
+      activeClassName="active"
       className={clsx(classes.navItem, 'nav-item')}
       exact={item.exact}
     >
       {item.icon && (
-        <Box component='span' mr={4}>
-          <Icon
-            className={clsx(classes.listIcon, 'nav-item-icon')}
-            color='action'
-          >
+        <Box component="span" mr={4}>
+          <Icon className={clsx(classes.listIcon, 'nav-item-icon')} color="action">
             {item.icon}
           </Icon>
         </Box>
       )}
-      <ListItemText
-        primary={<IntlMessages id={item.messageId} />}
-        classes={{ primary: 'nav-item-text' }}
-      />
+      <ListItemText primary={<IntlMessages id={item.messageId} />} classes={{ primary: 'nav-item-text' }} />
       {item.count && (
         <Box sx={{ mr: 4.25 }}>
           <AppBadge count={item.count} color={item.color} />
         </Box>
       )}
-    </ListItem>
+    </ListItemButton>
   );
 };
 
@@ -68,7 +58,5 @@ VerticalItem.propTypes = {
   }),
   level: PropTypes.number,
 };
-
-VerticalItem.defaultProps = {};
 
 export default React.memo(VerticalItem);

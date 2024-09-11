@@ -16,7 +16,7 @@ const CheckedCell = ({ selected, data, onChange }) => {
     >
       <Checkbox
         checked={selected.some((item) => item === data.id)}
-        color='primary'
+        color="primary"
         inputProps={{ 'aria-label': 'secondary checkbox' }}
       />
       <Box>{data.name}</Box>

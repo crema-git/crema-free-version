@@ -10,21 +10,21 @@ import AppScrollbar from '../AppScrollbar';
 import { Fonts } from '@crema/constants/AppEnums';
 
 const Transition = React.forwardRef(function Transition(props, ref) {
-  return <Slide direction='up' ref={ref} {...props} />;
+  return <Slide direction="up" ref={ref} {...props} />;
 });
 
 const AppDialog = ({
   sxStyle,
-  maxWidth,
-  hideClose,
   open,
   onClose,
   children,
-  dividers,
   title,
   actionTitle,
   maxScrollHeight,
-  fullHeight,
+  dividers = false,
+  fullHeight = false,
+  maxWidth = 'sm',
+  hideClose = false,
 }) => {
   return (
     <Dialog
@@ -49,12 +49,12 @@ const AppDialog = ({
           fontSize: 14,
           fontWeight: Fonts.MEDIUM,
         }}
-        id='app-dialog-title'
+        id="app-dialog-title"
       >
         {title}
         {hideClose ? null : (
           <IconButton
-            aria-label='close'
+            aria-label="close"
             sx={{
               position: 'absolute',
               right: 4,
@@ -62,7 +62,7 @@ const AppDialog = ({
               color: 'grey.700',
             }}
             onClick={onClose}
-            size='large'
+            size="large"
           >
             <CloseIcon />
           </IconButton>
@@ -70,21 +70,35 @@ const AppDialog = ({
       </DialogTitle>
       <DialogContent dividers={dividers}>
         <AppScrollbar
-          sx={{
-            paddingTop: 1,
-            height: fullHeight ? '70vh' : '100%',
-            minHeight: '300px',
-            maxHeight: maxScrollHeight ? maxScrollHeight : '400px',
-            paddingRight: 6,
-            paddingLeft: 6,
-          }}
+          sx={[
+            {
+              paddingTop: 1,
+              minHeight: '300px',
+              paddingRight: 6,
+              paddingLeft: 6,
+            },
+            fullHeight
+              ? {
+                  height: '70vh',
+                }
+              : {
+                  height: '100%',
+                },
+            maxScrollHeight
+              ? {
+                  maxHeight: maxScrollHeight,
+                }
+              : {
+                  maxHeight: '400px',
+                },
+          ]}
         >
           {children}
         </AppScrollbar>
       </DialogContent>
       {actionTitle ? (
         <DialogActions>
-          <Button color='primary' variant='contained' type='submit'>
+          <Button color="primary" variant="contained" type="submit">
             {actionTitle}
           </Button>
         </DialogActions>
@@ -106,10 +120,4 @@ AppDialog.propTypes = {
   fullHeight: PropTypes.bool,
   actionTitle: PropTypes.string,
   sxStyle: PropTypes.object,
-};
-AppDialog.defaultProps = {
-  dividers: false,
-  fullHeight: false,
-  maxWidth: 'sm',
-  hideClose: false,
 };

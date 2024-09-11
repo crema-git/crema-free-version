@@ -35,11 +35,7 @@ const VideoPromo = ({ videoPromo }) => {
           },
         }}
       >
-        <ReactPlayer
-          className='react-player'
-          controls={true}
-          url='https://www.youtube.com/watch?v=X1dz0xRbSJc'
-        />
+        <ReactPlayer className="react-player" controls={true} url="https://www.youtube.com/watch?v=X1dz0xRbSJc" />
       </Box>
       <Box
         sx={{
@@ -62,7 +58,7 @@ const VideoPromo = ({ videoPromo }) => {
             }}
           >
             <Box
-              component='p'
+              component="p"
               sx={{
                 fontSize: 14,
                 fontWeight: Fonts.BOLD,
@@ -76,10 +72,10 @@ const VideoPromo = ({ videoPromo }) => {
                 alignItems: 'center',
                 flexWrap: 'wrap',
               }}
-              component='p'
+              component="p"
             >
               <Box
-                component='span'
+                component="span"
                 sx={{
                   color: 'text.secondary',
                   position: 'relative',
@@ -98,7 +94,7 @@ const VideoPromo = ({ videoPromo }) => {
                 {videoPromo.owner}
               </Box>
               <Box
-                component='span'
+                component="span"
                 sx={{
                   color: 'text.secondary',
                   ml: 2,
@@ -118,7 +114,7 @@ const VideoPromo = ({ videoPromo }) => {
                 {videoPromo.category}
               </Box>
               <Box
-                component='span'
+                component="span"
                 sx={{
                   ml: 2,
                   color: 'primary.main',
@@ -179,8 +175,8 @@ const VideoPromo = ({ videoPromo }) => {
             }}
             value={tabValue}
             onChange={handleTabChange}
-            indicatorColor='primary'
-            aria-label='profile tabs'
+            indicatorColor="primary"
+            aria-label="profile tabs"
           >
             {tabs.map((item, index) => {
               return (
@@ -221,13 +217,13 @@ const VideoPromo = ({ videoPromo }) => {
                 mb: 2,
                 fontWeight: Fonts.MEDIUM,
               }}
-              component='p'
+              component="p"
             >{`${index + 1}. ${item.title} `}</Box>
             <Box
               sx={{
                 mb: 4,
               }}
-              component='p'
+              component="p"
             >
               {item.desc}
             </Box>
@@ -247,12 +243,7 @@ const VideoPromo = ({ videoPromo }) => {
                   alignItems: 'center',
                 }}
               >
-                <Button
-                  size='small'
-                  sx={{ fontSize: 10, whiteSpace: 'nowrap' }}
-                  variant='outlined'
-                  color='primary'
-                >
+                <Button size="small" sx={{ fontSize: 10, whiteSpace: 'nowrap' }} variant="outlined" color="primary">
                   See Calendar
                 </Button>
                 <Box
@@ -260,12 +251,7 @@ const VideoPromo = ({ videoPromo }) => {
                     ml: 2,
                   }}
                 >
-                  <Button
-                    size='small'
-                    sx={{ fontSize: 10, whiteSpace: 'nowrap' }}
-                    variant='contained'
-                    color='primary'
-                  >
+                  <Button size="small" sx={{ fontSize: 10, whiteSpace: 'nowrap' }} variant="contained" color="primary">
                     View details
                   </Button>
                 </Box>
@@ -277,9 +263,9 @@ const VideoPromo = ({ videoPromo }) => {
                   alignItems: 'center',
                 }}
               >
-                <Box component='span'>{item.students} Students enrolled</Box>
+                <Box component="span">{item.students} Students enrolled</Box>
                 <Box
-                  component='span'
+                  component="span"
                   sx={{
                     ml: 2,
                     color: '#F66F71',

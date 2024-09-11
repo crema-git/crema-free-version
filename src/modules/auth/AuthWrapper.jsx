@@ -52,7 +52,7 @@ const AuthWrapper = ({ children }) => {
           </Box>
         </Box>
         <Box
-          sx={{
+          sx={(theme) => ({
             width: { xs: '100%', sm: '50%', lg: '60%' },
             position: 'relative',
             padding: { xs: 5, lg: 10 },
@@ -60,10 +60,10 @@ const AuthWrapper = ({ children }) => {
             alignItems: { sm: 'center' },
             justifyContent: { sm: 'center' },
             flexDirection: { sm: 'column' },
-            backgroundColor: (theme) => theme.palette.grey[900],
-            color: (theme) => theme.palette.common.white,
+            backgroundColor: theme.palette.grey[900],
+            color: theme.palette.common.white,
             fontSize: 14,
-          }}
+          })}
         >
           <Box
             sx={{
@@ -71,7 +71,7 @@ const AuthWrapper = ({ children }) => {
             }}
           >
             <Typography
-              component='h2'
+              component="h2"
               sx={{
                 fontWeight: Fonts.BOLD,
                 fontSize: 30,
@@ -80,10 +80,7 @@ const AuthWrapper = ({ children }) => {
             >
               Welcome to Crema!
             </Typography>
-            <Typography>
-              Crema is purely based on Material ui components and follows
-              Material ui guidelines.
-            </Typography>
+            <Typography>Crema is purely based on Material ui components and follows Material ui guidelines.</Typography>
           </Box>
         </Box>
       </Card>

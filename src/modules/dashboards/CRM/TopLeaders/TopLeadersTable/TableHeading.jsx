@@ -24,16 +24,16 @@ const TableHeading = () => {
         },
       }}
     >
-      <TableCell className='tableCell'>Team Lead</TableCell>
-      <TableCell className='tableCell'>Project</TableCell>
-      <TableCell className='tableCell' align='center'>
+      <TableCell className="tableCell">Team Lead</TableCell>
+      <TableCell className="tableCell">Project</TableCell>
+      <TableCell className="tableCell" align="center">
         Team
       </TableCell>
-      <TableCell className='tableCell' align='center'>
+      <TableCell className="tableCell" align="center">
         Status
       </TableCell>
-      <TableCell className='tableCell'>Weeks</TableCell>
-      <TableCell className='tableCell'>Budget</TableCell>
+      <TableCell className="tableCell">Weeks</TableCell>
+      <TableCell className="tableCell">Budget</TableCell>
     </TableHeader>
   );
 };

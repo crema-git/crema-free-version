@@ -12,17 +12,11 @@ import ProductGrid from './ProductGrid';
 import { VIEW_TYPE } from '../index';
 import ProductList from './ProductList';
 
-const ProductListing = ({
-  filterData,
-  viewType,
-  setViewType,
-  setFilterData,
-}) => {
+const ProductListing = ({ filterData, viewType, setViewType, setFilterData }) => {
   const { theme } = useThemeContext();
   const [page, setPage] = useState(0);
 
-  const [{ apiData: ecommerceList, loading }, { setQueryParams }] =
-    useGetDataApi('/api/ecommerce/list', [], {}, false);
+  const [{ apiData: ecommerceList, loading }, { setQueryParams }] = useGetDataApi('/api/ecommerce/list', [], {}, false);
 
   const { list, total } = ecommerceList;
 
@@ -79,12 +73,7 @@ const ProductListing = ({
       <Hidden smUp>
         {list?.length > 0 ? (
           <AppsFooter>
-            <AppsPagination
-              count={total}
-              rowsPerPage={10}
-              page={page}
-              onPageChange={onPageChange}
-            />
+            <AppsPagination count={total} rowsPerPage={10} page={page} onPageChange={onPageChange} />
           </AppsFooter>
         ) : null}
       </Hidden>

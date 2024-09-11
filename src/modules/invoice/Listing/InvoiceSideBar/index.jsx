@@ -23,20 +23,15 @@ const ListWrapper = styled(List)(({ theme }) => ({
 
 const TaskSideBar = () => {
   const navigate = useNavigate();
-  const [{ apiData: folderList }] = useGetDataApi(
-    '/api/invoice/folders/list',
-    [],
-    {},
-    true,
-  );
+  const [{ apiData: folderList }] = useGetDataApi('/api/invoice/folders/list', [], {}, true);
 
   return (
     <>
       <Box sx={{ px: { xs: 4, md: 5 }, pt: { xs: 4, md: 5 }, pb: 2.5 }}>
         <Zoom in style={{ transitionDelay: '300ms' }}>
           <Button
-            variant='outlined'
-            color='primary'
+            variant="outlined"
+            color="primary"
             sx={{
               padding: '8px 28px',
               borderRadius: 30,
@@ -47,7 +42,7 @@ const TaskSideBar = () => {
             startIcon={<AddIcon />}
             onClick={() => navigate('/invoice/list/add')}
           >
-            <IntlMessages id='invoice.addNewInvoice' />
+            <IntlMessages id="invoice.addNewInvoice" />
           </Button>
         </Zoom>
       </Box>
@@ -62,7 +57,7 @@ const TaskSideBar = () => {
             pb: { xs: 4, md: 5, lg: 6.2 },
           }}
         >
-          <ListWrapper component='nav' aria-label='main task folders'>
+          <ListWrapper component="nav" aria-label="main task folders">
             <AppList
               data={folderList}
               ListEmptyComponent={
@@ -76,11 +71,7 @@ const TaskSideBar = () => {
                 />
               }
               renderRow={(item) => (
-                <AppsSideBarFolderItem
-                  key={item.id}
-                  item={item}
-                  path={`/invoice/home/${item.alias}`}
-                />
+                <AppsSideBarFolderItem key={item.id} item={item} path={`/invoice/home/${item.alias}`} />
               )}
             />
           </ListWrapper>

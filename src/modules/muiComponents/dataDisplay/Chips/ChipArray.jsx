@@ -18,9 +18,7 @@ export default function ChipsArray() {
   ]);
 
   const handleDelete = (chipToDelete) => () => {
-    setChipData((chips) =>
-      chips.filter((chip) => chip.key !== chipToDelete.key),
-    );
+    setChipData((chips) => chips.filter((chip) => chip.key !== chipToDelete.key));
   };
 
   return (
@@ -33,7 +31,7 @@ export default function ChipsArray() {
         p: 0.5,
         m: 0,
       }}
-      component='ul'
+      component="ul"
     >
       {chipData.map((data) => {
         let icon;
@@ -44,11 +42,7 @@ export default function ChipsArray() {
 
         return (
           <ListItem key={data.key}>
-            <Chip
-              icon={icon}
-              label={data.label}
-              onDelete={data.label === 'React' ? undefined : handleDelete(data)}
-            />
+            <Chip icon={icon} label={data.label} onDelete={data.label === 'React' ? undefined : handleDelete(data)} />
           </ListItem>
         );
       })}

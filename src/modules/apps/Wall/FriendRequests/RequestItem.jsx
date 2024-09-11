@@ -8,7 +8,7 @@ import { timeFromNow } from '@crema/helpers/DateHelper';
 const RequestItem = ({ request }) => {
   return (
     <Box
-      className='item-hover'
+      className="item-hover"
       sx={{
         display: 'flex',
         alignItems: 'center',
@@ -39,13 +39,13 @@ const RequestItem = ({ request }) => {
               marginBottom: 1,
               whiteSpace: 'nowrap',
             }}
-            component='h5'
-            variant='h5'
+            component="h5"
+            variant="h5"
           >
             {request.name}
           </Typography>
         </Box>
-        <Box component='p' color='text.secondary' mb={1}>
+        <Box component="p" color="text.secondary" mb={1}>
           {timeFromNow(request.date)}
         </Box>
       </Box>

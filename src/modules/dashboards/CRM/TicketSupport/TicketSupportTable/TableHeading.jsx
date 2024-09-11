@@ -25,20 +25,20 @@ const TableHeading = () => {
         },
       }}
     >
-      <TableCell className='tableCell'>
-        <IntlMessages id='common.num' />
+      <TableCell className="tableCell">
+        <IntlMessages id="common.num" />
       </TableCell>
-      <TableCell align='left' className='tableCell'>
-        <IntlMessages id='dashboard.basicInfo' />
+      <TableCell align="left" className="tableCell">
+        <IntlMessages id="dashboard.basicInfo" />
       </TableCell>
-      <TableCell align='left' className='tableCell'>
-        <IntlMessages id='dashboard.ticketId' />
+      <TableCell align="left" className="tableCell">
+        <IntlMessages id="dashboard.ticketId" />
       </TableCell>
-      <TableCell align='left' className='tableCell'>
-        <IntlMessages id='dashboard.createDate' />
+      <TableCell align="left" className="tableCell">
+        <IntlMessages id="dashboard.createDate" />
       </TableCell>
-      <TableCell align='left' className='tableCell'>
-        <IntlMessages id='common.contact' />
+      <TableCell align="left" className="tableCell">
+        <IntlMessages id="common.contact" />
       </TableCell>
     </TableRow>
   );

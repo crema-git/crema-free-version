@@ -7,19 +7,19 @@ const TableHeading = () => {
   return (
     <TableHeader>
       <TableCell>
-        <IntlMessages id='invoice.project' />
+        <IntlMessages id="invoice.project" />
       </TableCell>
       <TableCell>
-        <IntlMessages id='invoice.itemDesc' />
+        <IntlMessages id="invoice.itemDesc" />
       </TableCell>
       <TableCell>
-        <IntlMessages id='invoice.pricePerUnit' />
+        <IntlMessages id="invoice.pricePerUnit" />
       </TableCell>
       <TableCell>
-        <IntlMessages id='invoice.quantity' />
+        <IntlMessages id="invoice.quantity" />
       </TableCell>
       <TableCell>
-        <IntlMessages id='invoice.subTotal' />
+        <IntlMessages id="invoice.subTotal" />
       </TableCell>
     </TableHeader>
   );

@@ -44,11 +44,11 @@ const UploadClassic = ({ uploadText, dropzone }) => {
               color: theme.palette.primary.main,
             }}
           />
-          <Box component='p' sx={{ mb: 3 }}>
+          <Box component="p" sx={{ mb: 3 }}>
             {uploadText}
           </Box>
           <Box
-            component='p'
+            component="p"
             sx={{
               mb: 3,
               position: 'relative',
@@ -65,7 +65,7 @@ const UploadClassic = ({ uploadText, dropzone }) => {
             }}
           >
             <Box
-              component='span'
+              component="span"
               sx={{
                 backgroundColor: (theme) => theme.palette.background.default,
                 p: 2,
@@ -75,7 +75,7 @@ const UploadClassic = ({ uploadText, dropzone }) => {
               Or
             </Box>
           </Box>
-          <Button variant='contained'>Browse Files</Button>
+          <Button variant="contained">Browse Files</Button>
         </Box>
       </Box>
     </Box>

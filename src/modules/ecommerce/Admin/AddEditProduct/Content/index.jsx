@@ -73,29 +73,24 @@ const config = {
   },
 };
 
-const ProductContent = ({
-  content,
-  uploadedFiles,
-  setUploadedFiles,
-  setFieldValue,
-}) => {
+const ProductContent = ({ content, uploadedFiles, setUploadedFiles, setFieldValue }) => {
   const editor = useRef(null);
   return (
-    <Slide direction='right' in mountOnEnter unmountOnExit>
+    <Slide direction="right" in mountOnEnter unmountOnExit>
       <Grid item xs={12} lg={8}>
         <AppScrollbar style={{ height: '700px' }}>
           <AppCard>
             <AppTextField
-              name='title'
-              variant='outlined'
+              name="title"
+              variant="outlined"
               sx={{
                 width: '100%',
                 my: 2,
               }}
-              label='Product Name'
+              label="Product Name"
             />
 
-            <Box component='p' sx={{ mt: 3, fontSize: 16 }}>
+            <Box component="p" sx={{ mt: 3, fontSize: 16 }}>
               Description*
             </Box>
             <Box
@@ -107,19 +102,16 @@ const ProductContent = ({
               <JoditEditor
                 ref={editor}
                 value={content}
-                placeholder='Description here'
+                placeholder="Description here"
                 config={config}
                 tabIndex={1} // tabIndex of textarea
                 onChange={(value) => setFieldValue('description', value)}
               />
             </Box>
-            <Box component='p' sx={{ mt: 3, mb: 2, fontSize: 16 }}>
+            <Box component="p" sx={{ mt: 3, mb: 2, fontSize: 16 }}>
               Images
             </Box>
-            <ImgUpload
-              uploadedFiles={uploadedFiles}
-              setUploadedFiles={setUploadedFiles}
-            />
+            <ImgUpload uploadedFiles={uploadedFiles} setUploadedFiles={setUploadedFiles} />
           </AppCard>
         </AppScrollbar>
       </Grid>

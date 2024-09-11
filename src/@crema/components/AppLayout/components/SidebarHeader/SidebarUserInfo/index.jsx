@@ -61,7 +61,7 @@ const SidebarUserInfo = () => {
             },
           }}
         >
-          <Avatar className='avatar-pic' src={user.photoURL} />
+          <Avatar className="avatar-pic" src={user.photoURL} />
           <Status />
         </Box>
       ) : (
@@ -78,7 +78,7 @@ const SidebarUserInfo = () => {
             },
           }}
         >
-          <Avatar className='avatar-pic'>{getUserAvatar()}</Avatar>
+          <Avatar className="avatar-pic">{getUserAvatar()}</Avatar>
         </Box>
       )}
       <Box
@@ -96,8 +96,8 @@ const SidebarUserInfo = () => {
         }}
       >
         <Typography
-          component='h3'
-          variant='h3'
+          component="h3"
+          variant="h3"
           sx={{
             overflow: 'hidden',
             textOverflow: 'ellipsis',
@@ -111,7 +111,7 @@ const SidebarUserInfo = () => {
           }}
         >
           {user.displayName ? user.displayName : 'Admin User '}
-          <KeyboardArrowDownIcon className='arrowIcon' onClick={handleClick} />
+          <KeyboardArrowDownIcon className="arrowIcon" onClick={handleClick} />
         </Typography>
         <Typography
           sx={{
@@ -125,13 +125,7 @@ const SidebarUserInfo = () => {
           {user.email ? user.email : 'demo@crema-react.com '}
         </Typography>
       </Box>
-      <Menu
-        id='simple-menu'
-        anchorEl={anchorEl}
-        keepMounted
-        open={Boolean(anchorEl)}
-        onClose={handleClose}
-      >
+      <Menu id="simple-menu" anchorEl={anchorEl} keepMounted open={Boolean(anchorEl)} onClose={handleClose}>
         <MenuItem
           onClick={() => {
             handleClose();

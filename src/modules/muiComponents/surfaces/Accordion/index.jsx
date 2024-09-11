@@ -1,17 +1,17 @@
-import React from "react";
-import AppComponentHeader from "@crema/components/AppComponentHeader";
-import AppGridContainer from "@crema/components/AppGridContainer";
-import Grid from "@mui/material/Grid";
-import AppComponentCard from "@crema/components/AppComponentCard";
+import React from 'react';
+import AppComponentHeader from '@crema/components/AppComponentHeader';
+import AppGridContainer from '@crema/components/AppGridContainer';
+import Grid from '@mui/material/Grid';
+import AppComponentCard from '@crema/components/AppComponentCard';
 
-import SimpleAccordion from "./SimpleAccordion";
-import SimpleAccordionSource from "./SimpleAccordion?raw";
+import SimpleAccordion from './SimpleAccordion';
+import SimpleAccordionSource from './SimpleAccordion?raw';
 
-import ControlledAccordions from "./ControlledAccordions";
-import ControlledAccordionsSource from "./ControlledAccordions?raw";
+import ControlledAccordions from './ControlledAccordions';
+import ControlledAccordionsSource from './ControlledAccordions?raw';
 
-import CustomizedAccordions from "./CustomizedAccordions";
-import CustomizedAccordionsSource from "./CustomizedAccordions?raw";
+import CustomizedAccordions from './CustomizedAccordions';
+import CustomizedAccordionsSource from './CustomizedAccordions?raw';
 
 const Accordion = () => {
   return (

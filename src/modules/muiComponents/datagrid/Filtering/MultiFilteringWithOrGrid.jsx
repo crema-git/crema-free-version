@@ -15,20 +15,14 @@ export default function DisableMultiFiltersDataGridPro() {
     // remove already filtered fields from list of columns
     const filteredFields = currentFilters?.map((item) => item.field);
     return columns
-      .filter(
-        (colDef) =>
-          colDef.filterable &&
-          (colDef.field === field || !filteredFields.includes(colDef.field)),
-      )
+      .filter((colDef) => colDef.filterable && (colDef.field === field || !filteredFields.includes(colDef.field)))
       .map((column) => column.field);
   };
 
   const getColumnForNewFilter = ({ currentFilters, columns }) => {
     const filteredFields = currentFilters?.map(({ field }) => field);
     const columnForNewFilter = columns
-      .filter(
-        (colDef) => colDef.filterable && !filteredFields.includes(colDef.field),
-      )
+      .filter((colDef) => colDef.filterable && !filteredFields.includes(colDef.field))
       .find((colDef) => colDef.filterOperators?.length);
     return columnForNewFilter?.field ?? null;
   };

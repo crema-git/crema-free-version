@@ -57,7 +57,7 @@ const CustomColorCell = ({ themeColorSet, updateThemeColors }) => {
                   fontSize: 16,
                 }}
               >
-                <IntlMessages id='customizer.checked' />
+                <IntlMessages id="customizer.checked" />
               </CheckIcon>
             </Box>
           ) : null}
@@ -75,8 +75,7 @@ const CustomColorCell = ({ themeColorSet, updateThemeColors }) => {
               py: 1.5,
               px: 2.5,
               mb: 2.5,
-              boxShadow:
-                'rgba(0, 0, 0, 0.2) 0px 2px 1px -1px, rgba(0, 0, 0, 0.14) 0px 1px 1px 0px',
+              boxShadow: 'rgba(0, 0, 0, 0.2) 0px 2px 1px -1px, rgba(0, 0, 0, 0.14) 0px 1px 1px 0px',
               borderRadius: 1,
               backgroundColor: themeColorSet.background.paper,
               color: themeColorSet.text.primary,

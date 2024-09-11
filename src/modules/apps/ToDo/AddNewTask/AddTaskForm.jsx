@@ -29,15 +29,9 @@ const StyledDivider = styled(Divider)(({ theme }) => ({
     marginBottom: 32,
   },
 }));
-const AddTaskForm = (props) => {
-  const { values, setFieldValue, isSubmitting, setTaskLabels, taskLabels } =
-    props;
-
+const AddTaskForm = ({ values, setFieldValue, isSubmitting = false, setTaskLabels, taskLabels }) => {
   const [{ apiData: labelList }] = useGetDataApi('/api/todo/labels/list', []);
-  const [{ apiData: priorityList }] = useGetDataApi(
-    '/api/todo/priority/list',
-    [],
-  );
+  const [{ apiData: priorityList }] = useGetDataApi('/api/todo/priority/list', []);
   const [{ apiData: staffList }] = useGetDataApi('/api/todo/staff/list', []);
 
   const inputLabel = React.useRef(null);
@@ -50,7 +44,7 @@ const AddTaskForm = (props) => {
         width: '100%',
       }}
       noValidate
-      autoComplete='off'
+      autoComplete="off"
     >
       <div>
         <AppTextField
@@ -59,9 +53,9 @@ const AddTaskForm = (props) => {
             fontWeight: Fonts.LIGHT,
             marginBottom: 5,
           }}
-          variant='outlined'
-          label={<IntlMessages id='todo.taskTitle' />}
-          name='title'
+          variant="outlined"
+          label={<IntlMessages id="todo.taskTitle" />}
+          name="title"
         />
 
         <Box mb={5}>
@@ -77,21 +71,16 @@ const AddTaskForm = (props) => {
                     minHeight: 42,
                   },
                 }}
-                variant='outlined'
+                variant="outlined"
               >
-                <InputLabel
-                  ref={inputLabel}
-                  id='assigned-to-select-outlined-label'
-                >
-                  <IntlMessages id='common.staff' />
+                <InputLabel ref={inputLabel} id="assigned-to-select-outlined-label">
+                  <IntlMessages id="common.staff" />
                 </InputLabel>
                 <Select
-                  labelId='assigned-to-select-outlined-label'
-                  name='assignedTo'
-                  label={<IntlMessages id='common.staff' />}
-                  onChange={(event) =>
-                    setFieldValue('assignedTo', event.target.value)
-                  }
+                  labelId="assigned-to-select-outlined-label"
+                  name="assignedTo"
+                  label={<IntlMessages id="common.staff" />}
+                  onChange={(event) => setFieldValue('assignedTo', event.target.value)}
                   sx={{
                     width: '100%',
                   }}
@@ -106,7 +95,7 @@ const AddTaskForm = (props) => {
                           inputVariant: 'outlined',
                         }}
                       >
-                        <Box display='flex' alignItems='center'>
+                        <Box display="flex" alignItems="center">
                           {staff.image ? (
                             <Avatar
                               sx={{
@@ -135,7 +124,7 @@ const AddTaskForm = (props) => {
             <Grid item xs={12} sm={6} md={3}>
               <Box width={1}>
                 <DatePicker
-                  label={<IntlMessages id='common.startDate' />}
+                  label={<IntlMessages id="common.startDate" />}
                   value={values.startDate}
                   onChange={(value) => setFieldValue('startDate', value)}
                 />
@@ -147,15 +136,12 @@ const AddTaskForm = (props) => {
                 sx={{
                   width: '100%',
                 }}
-                variant='outlined'
+                variant="outlined"
               >
-                <InputLabel
-                  ref={inputLabel}
-                  id='demo-simple-select-outlined-label'
-                >
-                  <IntlMessages id='common.priority' />
+                <InputLabel ref={inputLabel} id="demo-simple-select-outlined-label">
+                  <IntlMessages id="common.priority" />
                 </InputLabel>
-                <Select label='priority' name='priority'>
+                <Select label="priority" name="priority">
                   {priorityList.map((priority) => {
                     return (
                       <MenuItem
@@ -177,19 +163,14 @@ const AddTaskForm = (props) => {
             <Grid item xs={12} sm={6} md={3}>
               <Autocomplete
                 multiple
-                id='tags-outlined'
+                id="tags-outlined"
                 options={labelList}
                 getOptionLabel={(option) => option.name}
                 value={taskLabels}
                 onChange={(event, value) => setTaskLabels(value)}
                 filterSelectedOptions
                 renderInput={(params) => (
-                  <TextField
-                    {...params}
-                    variant='outlined'
-                    label={<IntlMessages id='common.label' />}
-                    fullWidth
-                  />
+                  <TextField {...params} variant="outlined" label={<IntlMessages id="common.label" />} fullWidth />
                 )}
               />
             </Grid>
@@ -198,15 +179,15 @@ const AddTaskForm = (props) => {
 
         <Box mb={5}>
           <AppTextField
-            name='content'
+            name="content"
             multiline
             sx={{
               width: '100%',
               backgroundColor: 'background.paper',
               color: 'text.primary',
             }}
-            rows='6'
-            variant='outlined'
+            rows="6"
+            variant="outlined"
             placeholder={messages['common.description']}
           />
         </Box>
@@ -219,12 +200,12 @@ const AddTaskForm = (props) => {
             position: 'relative',
             minWidth: 100,
           }}
-          color='primary'
-          variant='outlined'
+          color="primary"
+          variant="outlined"
           disabled={isSubmitting}
-          type='submit'
+          type="submit"
         >
-          <IntlMessages id='common.save' />
+          <IntlMessages id="common.save" />
         </Button>
       </div>
     </Form>
@@ -232,10 +213,6 @@ const AddTaskForm = (props) => {
 };
 
 export default AddTaskForm;
-
-AddTaskForm.defaultProps = {
-  isSubmitting: false,
-};
 
 AddTaskForm.propTypes = {
   values: PropTypes.object.isRequired,

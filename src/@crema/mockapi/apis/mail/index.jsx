@@ -35,9 +35,7 @@ mock.onGet('/api/mailApp/folder/mail/List').reply((config) => {
     if (params.name === 'starred') {
       folderMailList = mailList.filter((mail) => mail.isStarred);
     } else {
-      const folderId = folderList.find(
-        (folder) => folder.alias === params.name,
-      ).id;
+      const folderId = folderList.find((folder) => folder.alias === params.name).id;
       folderMailList = mailList.filter((mail) => mail.folderValue === folderId);
     }
   } else if (params.type === 'label') {
@@ -46,10 +44,7 @@ mock.onGet('/api/mailApp/folder/mail/List').reply((config) => {
   }
   const index = params.page * 15;
   const count = folderMailList.length;
-  const data =
-    folderMailList.length > 15
-      ? folderMailList.slice(index, index + 15)
-      : folderMailList;
+  const data = folderMailList.length > 15 ? folderMailList.slice(index, index + 15) : folderMailList;
 
   return [200, { data: data, count: count }];
 });

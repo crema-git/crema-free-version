@@ -3,19 +3,7 @@ import PropTypes from 'prop-types';
 import AppLoader from '../AppLoader';
 
 const AppSuspense = (props) => {
-  return (
-    <React.Suspense fallback={<AppLoader />}>{props.children}</React.Suspense>
-  );
-};
-
-AppSuspense.propTypes = {
-  loadingProps: PropTypes.object,
-};
-
-AppSuspense.defaultProps = {
-  loadingProps: {
-    delay: 300,
-  },
+  return <React.Suspense fallback={<AppLoader />}>{props.children}</React.Suspense>;
 };
 
 export default AppSuspense;

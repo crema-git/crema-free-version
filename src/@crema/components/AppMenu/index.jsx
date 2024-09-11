@@ -19,27 +19,12 @@ const AppMenu = () => {
 
   return (
     <>
-      <IconButton
-        style={{ height: 30, width: 30 }}
-        aria-label='more'
-        onClick={handleClick}
-        size='large'
-      >
+      <IconButton style={{ height: 30, width: 30 }} aria-label="more" onClick={handleClick} size="large">
         <MoreVertIcon />
       </IconButton>
-      <Menu
-        id='long-menu'
-        anchorEl={anchorEl}
-        keepMounted
-        open={open}
-        onClose={handleClose}
-      >
+      <Menu id="long-menu" anchorEl={anchorEl} keepMounted open={open} onClose={handleClose}>
         {options.map((option) => (
-          <MenuItem
-            key={option}
-            selected={option === 'Pyxis'}
-            onClick={handleClose}
-          >
+          <MenuItem key={option} selected={option === 'Pyxis'} onClick={handleClose}>
             {option}
           </MenuItem>
         ))}

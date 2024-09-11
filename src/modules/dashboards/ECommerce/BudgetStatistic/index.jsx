@@ -51,7 +51,7 @@ const BudgetStatistic = () => {
         justifyContent: 'center',
       }}
       title={messages['dashboard.eCommerce.budgetStatistic']}
-      footerPosition='center'
+      footerPosition="center"
       footerStyle={{ paddingBottom: 7.5, paddingTop: 0 }}
       footer={
         <Box
@@ -66,32 +66,32 @@ const BudgetStatistic = () => {
         >
           <FooterActionItem>
             <Box
-              className='footer-dot'
+              className="footer-dot"
               sx={{
                 backgroundColor: 'success.main',
               }}
             />
-            <span className='footer-title'>
-              <IntlMessages id='dashboard.eCommerce.completed' />
+            <span className="footer-title">
+              <IntlMessages id="dashboard.eCommerce.completed" />
             </span>
           </FooterActionItem>
           <FooterActionItem>
             <Box
-              className='footer-dot'
+              className="footer-dot"
               sx={{
                 backgroundColor: 'grey.300',
               }}
             />
-            <span className='footer-title'>
-              <IntlMessages id='dashboard.eCommerce.remaining' />
+            <span className="footer-title">
+              <IntlMessages id="dashboard.eCommerce.remaining" />
             </span>
           </FooterActionItem>
         </Box>
       }
     >
       <AppCircularProgress
-        activeColor='#0A8FDC'
-        pathColor='#F5F6FA'
+        activeColor="#0A8FDC"
+        pathColor="#F5F6FA"
         value={70}
         hidePercentage
         thickness={2}
@@ -105,22 +105,17 @@ const BudgetStatistic = () => {
             }}
           >
             <Typography
-              component='h1'
-              variant='h1'
+              component="h1"
+              variant="h1"
               sx={{
                 color: theme.palette.text.primary,
                 fontWeight: Fonts.SEMI_BOLD,
               }}
             >
-              <FormattedNumber
-                value={1000}
-                maximumFractionDigits={0}
-                style='currency'
-                currency='USD'
-              />
+              <FormattedNumber value={1000} maximumFractionDigits={0} style="currency" currency="USD" />
             </Typography>
             <Typography>
-              <IntlMessages id='dashboard.eCommerce.totalBudget' />
+              <IntlMessages id="dashboard.eCommerce.totalBudget" />
             </Typography>
           </Box>
         }

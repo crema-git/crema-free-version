@@ -6,15 +6,7 @@ const InquiriesChart = ({ data }) => {
   return (
     <ResponsiveContainer height={195}>
       <PieChart>
-        <Pie
-          data={data}
-          cx='50%'
-          cy='50%'
-          innerRadius='80%'
-          outerRadius='95%'
-          nameKey='title'
-          dataKey='value'
-        >
+        <Pie data={data} cx="50%" cy="50%" innerRadius="80%" outerRadius="95%" nameKey="title" dataKey="value">
           {data.map((entry, index) => (
             <Cell key={`cell-${index}`} fill={entry.color} />
           ))}

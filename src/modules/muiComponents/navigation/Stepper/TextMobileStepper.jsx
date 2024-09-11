@@ -17,8 +17,7 @@ const steps = [
   },
   {
     label: 'Create an ad group',
-    description:
-      'An ad group contains one or more ads which target a shared set of keywords.',
+    description: 'An ad group contains one or more ads which target a shared set of keywords.',
   },
   {
     label: 'Create an ad',
@@ -57,35 +56,21 @@ export default function TextMobileStepper() {
       >
         <Typography>{steps[activeStep].label}</Typography>
       </Paper>
-      <Box sx={{ height: 255, maxWidth: 400, width: '100%', p: 2 }}>
-        {steps[activeStep].description}
-      </Box>
+      <Box sx={{ height: 255, maxWidth: 400, width: '100%', p: 2 }}>{steps[activeStep].description}</Box>
       <MobileStepper
-        variant='text'
+        variant="text"
         steps={maxSteps}
-        position='static'
+        position="static"
         activeStep={activeStep}
         nextButton={
-          <Button
-            size='small'
-            onClick={handleNext}
-            disabled={activeStep === maxSteps - 1}
-          >
+          <Button size="small" onClick={handleNext} disabled={activeStep === maxSteps - 1}>
             Next
-            {theme.direction === 'rtl' ? (
-              <KeyboardArrowLeft />
-            ) : (
-              <KeyboardArrowRight />
-            )}
+            {theme.direction === 'rtl' ? <KeyboardArrowLeft /> : <KeyboardArrowRight />}
           </Button>
         }
         backButton={
-          <Button size='small' onClick={handleBack} disabled={activeStep === 0}>
-            {theme.direction === 'rtl' ? (
-              <KeyboardArrowRight />
-            ) : (
-              <KeyboardArrowLeft />
-            )}
+          <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
+            {theme.direction === 'rtl' ? <KeyboardArrowRight /> : <KeyboardArrowLeft />}
             Back
           </Button>
         }

@@ -23,9 +23,9 @@ const TableCellWrapper = styled(TableCell)(() => {
 
 const TableItem = ({ data }) => {
   return (
-    <TableRow key={data.name} className='item-hover'>
-      <TableCellWrapper align='left'>{data.transactionID}</TableCellWrapper>
-      <TableCellWrapper align='left'>
+    <TableRow key={data.name} className="item-hover">
+      <TableCellWrapper align="left">{data.transactionID}</TableCellWrapper>
+      <TableCellWrapper align="left">
         <Box sx={{ display: 'flex' }}>
           <AvatarGroup max={2}>
             {data.type.map((item, index) => (
@@ -39,10 +39,10 @@ const TableItem = ({ data }) => {
           </AvatarGroup>
         </Box>
       </TableCellWrapper>
-      <TableCellWrapper align='left'>{data.description}</TableCellWrapper>
-      <TableCellWrapper align='left'>{data.date}</TableCellWrapper>
-      <TableCellWrapper align='left'>{data.usdAmount} USD</TableCellWrapper>
-      <TableCellWrapper align='right'>{data.amount} BTC</TableCellWrapper>
+      <TableCellWrapper align="left">{data.description}</TableCellWrapper>
+      <TableCellWrapper align="left">{data.date}</TableCellWrapper>
+      <TableCellWrapper align="left">{data.usdAmount} USD</TableCellWrapper>
+      <TableCellWrapper align="right">{data.amount} BTC</TableCellWrapper>
     </TableRow>
   );
 };

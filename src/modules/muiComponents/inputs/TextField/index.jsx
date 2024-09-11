@@ -1,38 +1,38 @@
-import AppComponentHeader from "@crema/components/AppComponentHeader";
-import AppGridContainer from "@crema/components/AppGridContainer";
-import Grid from "@mui/material/Grid";
-import AppComponentCard from "@crema/components/AppComponentCard";
+import AppComponentHeader from '@crema/components/AppComponentHeader';
+import AppGridContainer from '@crema/components/AppGridContainer';
+import Grid from '@mui/material/Grid';
+import AppComponentCard from '@crema/components/AppComponentCard';
 
-import BasicTextFields from "./BasicTextField";
-import BasicTextFieldsSource from "./BasicTextField?raw";
-import FormPropsTextFields from "./FormProps";
-import FormPropsTextFieldsSource from "./FormProps?raw";
-import ValidationTextFields from "./Validation";
-import ValidationTextFieldsSource from "./Validation?raw";
-import MultilineTextFields from "./Multiline";
-import MultilineTextFieldsSource from "./Multiline?raw";
-import SelectTextFields from "./Select";
-import SelectTextFieldsSource from "./Select?raw";
-import InputWithIcon from "./Icons";
-import InputWithIconSource from "./Icons?raw";
-import InputAdornments from "./InputAdornments";
-import InputAdornmentsSource from "./InputAdornments?raw";
-import TextFieldSizes from "./Sizes";
-import TextFieldSizesSource from "./Sizes?raw";
-import LayoutTextFields from "./Margin";
-import LayoutTextFieldsSource from "./Margin?raw";
-import FullWidthTextField from "./FullWidth";
-import FullWidthTextFieldSource from "./FullWidth?raw";
-import StateTextFields from "./UncontrolledControlled";
-import StateTextFieldsSource from "./UncontrolledControlled?raw";
-import ComposedTextField from "./Components";
-import ComposedTextFieldSource from "./Components?raw";
-import Inputs from "./Inputs";
-import InputsSource from "./Inputs?raw";
-import ColorTextFields from "./Color";
-import ColorTextFieldsSource from "./Color?raw";
-import CustomizedInputs from "./Customization";
-import CustomizedInputsSource from "./Customization?raw";
+import BasicTextFields from './BasicTextField';
+import BasicTextFieldsSource from './BasicTextField?raw';
+import FormPropsTextFields from './FormProps';
+import FormPropsTextFieldsSource from './FormProps?raw';
+import ValidationTextFields from './Validation';
+import ValidationTextFieldsSource from './Validation?raw';
+import MultilineTextFields from './Multiline';
+import MultilineTextFieldsSource from './Multiline?raw';
+import SelectTextFields from './Select';
+import SelectTextFieldsSource from './Select?raw';
+import InputWithIcon from './Icons';
+import InputWithIconSource from './Icons?raw';
+import InputAdornments from './InputAdornments';
+import InputAdornmentsSource from './InputAdornments?raw';
+import TextFieldSizes from './Sizes';
+import TextFieldSizesSource from './Sizes?raw';
+import LayoutTextFields from './Margin';
+import LayoutTextFieldsSource from './Margin?raw';
+import FullWidthTextField from './FullWidth';
+import FullWidthTextFieldSource from './FullWidth?raw';
+import StateTextFields from './UncontrolledControlled';
+import StateTextFieldsSource from './UncontrolledControlled?raw';
+import ComposedTextField from './Components';
+import ComposedTextFieldSource from './Components?raw';
+import Inputs from './Inputs';
+import InputsSource from './Inputs?raw';
+import ColorTextFields from './Color';
+import ColorTextFieldsSource from './Color?raw';
+import CustomizedInputs from './Customization';
+import CustomizedInputsSource from './Customization?raw';
 
 const TextField = () => {
   return (
@@ -153,12 +153,7 @@ const TextField = () => {
           />
         </Grid>
         <Grid item xs={12}>
-          <AppComponentCard
-            title="Inputs"
-            component={Inputs}
-            source={InputsSource}
-            noScrollbar
-          />
+          <AppComponentCard title="Inputs" component={Inputs} source={InputsSource} noScrollbar />
         </Grid>
         <Grid item xs={12}>
           <AppComponentCard

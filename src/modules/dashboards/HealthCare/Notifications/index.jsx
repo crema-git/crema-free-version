@@ -17,12 +17,7 @@ const Notifications = ({ data }) => {
       <AppScrollbar style={{ maxHeight: 280 }}>
         <AppList
           data={data}
-          renderRow={(notification) => (
-            <NotificationCell
-              key={notification.id}
-              notification={notification}
-            />
-          )}
+          renderRow={(notification) => <NotificationCell key={notification.id} notification={notification} />}
         />
       </AppScrollbar>
     </AppCard>

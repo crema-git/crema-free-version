@@ -17,14 +17,14 @@ const SocialMedia = (props) => {
       }}
     >
       <Box
-        component='h6'
+        component="h6"
         sx={{
           mb: 2,
           fontWeight: Fonts.MEDIUM,
           fontSize: 16,
         }}
       >
-        <IntlMessages id='common.socialMedia' />
+        <IntlMessages id="common.socialMedia" />
       </Box>
 
       <Box
@@ -50,11 +50,7 @@ const SocialMedia = (props) => {
               color: 'text.secondary',
             }}
           >
-            {contact.facebookId ? (
-              contact.facebookId
-            ) : (
-              <IntlMessages id='common.na' />
-            )}
+            {contact.facebookId ? contact.facebookId : <IntlMessages id="common.na" />}
           </Box>
         </Box>
 
@@ -75,11 +71,7 @@ const SocialMedia = (props) => {
               color: 'text.secondary',
             }}
           >
-            {contact.twitterId ? (
-              contact.twitterId
-            ) : (
-              <IntlMessages id='common.na' />
-            )}
+            {contact.twitterId ? contact.twitterId : <IntlMessages id="common.na" />}
           </Box>
         </Box>
       </Box>

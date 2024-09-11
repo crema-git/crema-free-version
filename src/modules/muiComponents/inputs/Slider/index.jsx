@@ -1,43 +1,43 @@
-import React from "react";
-import AppComponentHeader from "@crema/components/AppComponentHeader";
-import AppGridContainer from "@crema/components/AppGridContainer";
-import Grid from "@mui/material/Grid";
-import AppComponentCard from "@crema/components/AppComponentCard";
+import React from 'react';
+import AppComponentHeader from '@crema/components/AppComponentHeader';
+import AppGridContainer from '@crema/components/AppGridContainer';
+import Grid from '@mui/material/Grid';
+import AppComponentCard from '@crema/components/AppComponentCard';
 
-import ContinuousSlider from "./ContinuousSliders";
-import ContinuousSliderSource from "./ContinuousSliders?raw";
-import SliderSizes from "./Sizes";
-import SliderSizesSource from "./Sizes?raw";
-import DiscreteSlider from "./DiscreteSliders";
-import DiscreteSliderSource from "./DiscreteSliders?raw";
-import DiscreteSliderSteps from "./SmallSteps";
-import DiscreteSliderStepsSource from "./SmallSteps?raw";
-import DiscreteSliderMarks from "./CustomMarks";
-import DiscreteSliderMarksSource from "./CustomMarks?raw";
-import DiscreteSliderValues from "./RestrictedValues";
-import DiscreteSliderValuesSource from "./RestrictedValues?raw";
-import DiscreteSliderLabel from "./LabelAlwaysVisible";
-import DiscreteSliderLabelSource from "./LabelAlwaysVisible?raw";
-import RangeSlider from "./RangeSlider";
-import RangeSliderSource from "./RangeSlider?raw";
-import MinimumDistanceSlider from "./MinimumDistance";
-import MinimumDistanceSliderSource from "./MinimumDistance?raw";
-import InputSlider from "./InputSlider";
-import InputSliderSource from "./InputSlider?raw";
-import ColorSlider from "./Color";
-import ColorSliderSource from "./Color?raw";
-import CustomizedSlider from "./Customization";
-import CustomizedSliderSource from "./Customization?raw";
-import MusicPlayerSlider from "./MusicPlayer";
-import MusicPlayerSliderSource from "./MusicPlayer?raw";
-import VerticalSlider from "./VerticalSliders";
-import VerticalSliderSource from "./VerticalSliders?raw";
-import TrackFalseSlider from "./RemovedTrack";
-import TrackFalseSliderSource from "./RemovedTrack?raw";
-import TrackInvertedSlider from "./InvertedTrack";
-import TrackInvertedSliderSource from "./InvertedTrack?raw";
-import NonLinearSlider from "./NonLinearScale";
-import NonLinearSliderSource from "./NonLinearScale?raw";
+import ContinuousSlider from './ContinuousSliders';
+import ContinuousSliderSource from './ContinuousSliders?raw';
+import SliderSizes from './Sizes';
+import SliderSizesSource from './Sizes?raw';
+import DiscreteSlider from './DiscreteSliders';
+import DiscreteSliderSource from './DiscreteSliders?raw';
+import DiscreteSliderSteps from './SmallSteps';
+import DiscreteSliderStepsSource from './SmallSteps?raw';
+import DiscreteSliderMarks from './CustomMarks';
+import DiscreteSliderMarksSource from './CustomMarks?raw';
+import DiscreteSliderValues from './RestrictedValues';
+import DiscreteSliderValuesSource from './RestrictedValues?raw';
+import DiscreteSliderLabel from './LabelAlwaysVisible';
+import DiscreteSliderLabelSource from './LabelAlwaysVisible?raw';
+import RangeSlider from './RangeSlider';
+import RangeSliderSource from './RangeSlider?raw';
+import MinimumDistanceSlider from './MinimumDistance';
+import MinimumDistanceSliderSource from './MinimumDistance?raw';
+import InputSlider from './InputSlider';
+import InputSliderSource from './InputSlider?raw';
+import ColorSlider from './Color';
+import ColorSliderSource from './Color?raw';
+import CustomizedSlider from './Customization';
+import CustomizedSliderSource from './Customization?raw';
+import MusicPlayerSlider from './MusicPlayer';
+import MusicPlayerSliderSource from './MusicPlayer?raw';
+import VerticalSlider from './VerticalSliders';
+import VerticalSliderSource from './VerticalSliders?raw';
+import TrackFalseSlider from './RemovedTrack';
+import TrackFalseSliderSource from './RemovedTrack?raw';
+import TrackInvertedSlider from './InvertedTrack';
+import TrackInvertedSliderSource from './InvertedTrack?raw';
+import NonLinearSlider from './NonLinearScale';
+import NonLinearSliderSource from './NonLinearScale?raw';
 
 const Slider = () => {
   return (
@@ -192,12 +192,7 @@ const Slider = () => {
           />
         </Grid>
         <Grid item xs={12} md={6}>
-          <AppComponentCard
-            title="Color"
-            component={ColorSlider}
-            source={ColorSliderSource}
-            noScrollbar
-          />
+          <AppComponentCard title="Color" component={ColorSlider} source={ColorSliderSource} noScrollbar />
         </Grid>
       </AppGridContainer>
     </>

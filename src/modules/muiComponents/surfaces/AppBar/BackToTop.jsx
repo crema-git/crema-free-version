@@ -23,9 +23,7 @@ function ScrollTop(props) {
   });
 
   const handleClick = (event) => {
-    const anchor = (event.target.ownerDocument || document).querySelector(
-      '#back-to-top-anchor',
-    );
+    const anchor = (event.target.ownerDocument || document).querySelector('#back-to-top-anchor');
 
     if (anchor) {
       anchor.scrollIntoView({
@@ -37,11 +35,7 @@ function ScrollTop(props) {
 
   return (
     <Zoom in={trigger}>
-      <Box
-        onClick={handleClick}
-        role='presentation'
-        sx={{ position: 'fixed', bottom: 16, right: 16 }}
-      >
+      <Box onClick={handleClick} role="presentation" sx={{ position: 'fixed', bottom: 16, right: 16 }}>
         {children}
       </Box>
     </Zoom>
@@ -63,12 +57,12 @@ export default function BackToTop(props) {
       <CssBaseline />
       <AppBar>
         <Toolbar>
-          <Typography variant='h6' component='div'>
+          <Typography variant="h6" component="div">
             Scroll to see button
           </Typography>
         </Toolbar>
       </AppBar>
-      <Toolbar id='back-to-top-anchor' />
+      <Toolbar id="back-to-top-anchor" />
       <Container>
         <Box sx={{ my: 2 }}>
           {[...new Array(12)]
@@ -82,7 +76,7 @@ Praesent commodo cursus magna, vel scelerisque nisl consectetur et.`,
         </Box>
       </Container>
       <ScrollTop {...props}>
-        <Fab color='secondary' size='small' aria-label='scroll back to top'>
+        <Fab color="secondary" size="small" aria-label="scroll back to top">
           <KeyboardArrowUpIcon />
         </Fab>
       </ScrollTop>

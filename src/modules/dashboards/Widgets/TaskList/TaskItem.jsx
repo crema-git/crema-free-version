@@ -14,12 +14,12 @@ const TaskItem = (props) => {
       sx={{
         padding: '8px 20px',
       }}
-      className='item-hover'
+      className="item-hover"
     >
       <ListItemText
         primary={
           <Box
-            component='p'
+            component="p"
             sx={{
               color: 'primary.main',
               fontWeight: Fonts.MEDIUM,
@@ -31,7 +31,7 @@ const TaskItem = (props) => {
         }
         secondary={
           <Box
-            component='span'
+            component="span"
             sx={{
               color: 'text.secondary',
               fontSize: 14,

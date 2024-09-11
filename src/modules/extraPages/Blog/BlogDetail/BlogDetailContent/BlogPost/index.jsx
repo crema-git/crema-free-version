@@ -42,7 +42,7 @@ const BlogPost = ({ post }) => {
             color: (theme) => theme.palette.text.primary,
             mb: 1,
           }}
-          component='h6'
+          component="h6"
         >
           {post.userName}
         </Typography>
@@ -62,7 +62,7 @@ const BlogPost = ({ post }) => {
       >
         <Typography sx={{ mb: 3 }}>{post.description}</Typography>
         <Button
-          variant='text'
+          variant="text"
           sx={{
             fontSize: 14,
             fontWeight: Fonts.SEMI_BOLD,

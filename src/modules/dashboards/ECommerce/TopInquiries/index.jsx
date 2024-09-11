@@ -53,7 +53,7 @@ const InquiriesCell = ({ inquiry }) => {
         p: 2,
         display: 'flex',
       }}
-      className='item-hover'
+      className="item-hover"
     >
       <Box
         sx={{
@@ -71,18 +71,18 @@ const InquiriesCell = ({ inquiry }) => {
         }}
       >
         <Typography
-          variant='h5'
+          variant="h5"
           sx={{
             overflow: 'hidden',
             textOverflow: 'ellipsis',
             whiteSpace: 'nowrap',
           }}
-          component='h5'
+          component="h5"
         >
           {inquiry.title}
         </Typography>
         <Box
-          component='p'
+          component="p"
           sx={{
             color: 'text.secondary',
             fontSize: 14,
@@ -116,27 +116,21 @@ const TopInquiries = ({ topInquiries }) => {
       title={messages['dashboard.eCommerce.topInquiries']}
       action={
         <AppSelect
-          menus={[
-            messages['dashboard.thisWeek'],
-            messages['dashboard.lastWeeks'],
-            messages['dashboard.lastMonth'],
-          ]}
+          menus={[messages['dashboard.thisWeek'], messages['dashboard.lastWeeks'], messages['dashboard.lastMonth']]}
           defaultValue={messages['dashboard.thisWeek']}
           onChange={handleSelectionType}
         />
       }
     >
       <TopInquiryRow>
-        <div className='top-inquiry-col top-inquiry-chart'>
+        <div className="top-inquiry-col top-inquiry-chart">
           <InquiriesChart data={topInquiries} />
         </div>
 
-        <div className='top-inquiry-col'>
+        <div className="top-inquiry-col">
           <AppList
             data={topInquiries}
-            renderRow={(data) => (
-              <InquiriesCell key={'inquiry-' + data.id} inquiry={data} />
-            )}
+            renderRow={(data, index) => <InquiriesCell key={'inquiry-' + index + ',' + data.id} inquiry={data} />}
           />
         </div>
       </TopInquiryRow>

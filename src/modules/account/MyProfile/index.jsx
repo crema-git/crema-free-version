@@ -26,26 +26,26 @@ function a11yProps(index) {
 }
 
 const tabs = [
-  { id: 1, icon: <BiUser />, name: <IntlMessages id='common.personalInfo' /> },
+  { id: 1, icon: <BiUser />, name: <IntlMessages id="common.personalInfo" /> },
   {
     id: 2,
     icon: <AiOutlineLock />,
-    name: <IntlMessages id='common.changePassword' />,
+    name: <IntlMessages id="common.changePassword" />,
   },
   {
     id: 3,
     icon: <IoMdInformationCircleOutline />,
-    name: <IntlMessages id='common.information' />,
+    name: <IntlMessages id="common.information" />,
   },
   {
     id: 4,
     icon: <IoShareSocialOutline />,
-    name: <IntlMessages id='common.social' />,
+    name: <IntlMessages id="common.social" />,
   },
   {
     id: 5,
     icon: <NotificationsNoneIcon />,
-    name: <IntlMessages id='healthCare.notification' />,
+    name: <IntlMessages id="healthCare.notification" />,
   },
 ];
 
@@ -58,10 +58,10 @@ const Account = () => {
 
   return (
     <>
-      <AppAnimate animation='transition.slideDownIn' delay={300}>
+      <AppAnimate animation="transition.slideDownIn" delay={300}>
         <Box
-          component='h2'
-          variant='h2'
+          component="h2"
+          variant="h2"
           sx={{
             fontSize: 16,
             color: 'text.primary',
@@ -75,28 +75,22 @@ const Account = () => {
           My Account
         </Box>
       </AppAnimate>
-      <AccountTabsWrapper key='2'>
-        <AppAnimate animation='transition.slideLeftIn' delay={300}>
+      <AccountTabsWrapper key="2">
+        <AppAnimate animation="transition.slideLeftIn" delay={300}>
           <Tabs
-            className='account-tabs'
+            className="account-tabs"
             value={value}
             onChange={onTabsChange}
-            aria-label='basic tabs example'
-            orientation='vertical'
+            aria-label="basic tabs example"
+            orientation="vertical"
           >
             {tabs.map((tab, index) => (
-              <Tab
-                className='account-tab'
-                label={tab.name}
-                icon={tab.icon}
-                key={index}
-                {...a11yProps(index)}
-              />
+              <Tab className="account-tab" label={tab.name} icon={tab.icon} key={index} {...a11yProps(index)} />
             ))}
           </Tabs>
         </AppAnimate>
-        <AppAnimate animation='transition.slideRightIn' delay={300}>
-          <Box className='account-tabs-content'>
+        <AppAnimate animation="transition.slideRightIn" delay={300}>
+          <Box className="account-tabs-content">
             {value === 0 && <PersonalInfo />}
             {value === 1 && <ChangePassword />}
             {value === 2 && <Information />}

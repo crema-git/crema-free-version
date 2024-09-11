@@ -6,10 +6,7 @@ import PropTypes from 'prop-types';
 
 const InfoWidget = ({ data }) => {
   return (
-    <AppCard
-      sxStyle={{ height: 1, backgroundColor: data.bgColor }}
-      contentStyle={{ px: 2 }}
-    >
+    <AppCard sxStyle={{ height: 1, backgroundColor: data.bgColor }} contentStyle={{ px: 2 }}>
       <Box
         sx={{
           display: 'flex',
@@ -28,7 +25,7 @@ const InfoWidget = ({ data }) => {
             },
           }}
         >
-          <img src={data.icon} alt='icon' />
+          <img src={data.icon} alt="icon" />
         </Box>
         <Box
           sx={{
@@ -36,7 +33,7 @@ const InfoWidget = ({ data }) => {
           }}
         >
           <Box
-            component='h3'
+            component="h3"
             sx={{
               color: 'text.primary',
               fontWeight: Fonts.MEDIUM,
@@ -46,7 +43,7 @@ const InfoWidget = ({ data }) => {
             {data.count}
           </Box>
           <Box
-            component='p'
+            component="p"
             sx={{
               color: 'text.secondary',
             }}

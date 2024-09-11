@@ -25,9 +25,7 @@ export const getBreakPointsValue = (valueSet, breakpoint) => {
     case 'lg':
       return valueSet.lg || valueSet.md || valueSet.sm || valueSet.xs;
     default:
-      return (
-        valueSet.xl || valueSet.lg || valueSet.md || valueSet.sm || valueSet.xs
-      );
+      return valueSet.xl || valueSet.lg || valueSet.md || valueSet.sm || valueSet.xs;
   }
 };
 
@@ -51,10 +49,7 @@ export const multiPropsFilter = (products, filters, stringKey = 'title') => {
       }
       if (filters[key]?.start || filters[key]?.end) {
         if (key === 'mrp') {
-          return (
-            product[key] >= filters[key].start &&
-            product[key] < filters[key].end
-          );
+          return product[key] >= filters[key].start && product[key] < filters[key].end;
         } else {
           const start = new Date(filters[key].start).getTime();
           const end = new Date(filters[key].end).getTime();

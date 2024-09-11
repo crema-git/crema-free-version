@@ -1,16 +1,16 @@
-import React from "react";
-import orange from "@mui/material/colors/orange";
-import { Box } from "@mui/material";
-import Avatar from "@mui/material/Avatar";
-import Menu from "@mui/material/Menu";
-import MenuItem from "@mui/material/MenuItem";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import { Fonts } from "@crema/constants/AppEnums";
-import { useNavigate } from "react-router-dom";
-import PropTypes from "prop-types";
-import { useAuthMethod, useAuthUser } from "@crema/hooks/AuthHooks";
+import React from 'react';
+import orange from '@mui/material/colors/orange';
+import { Box } from '@mui/material';
+import Avatar from '@mui/material/Avatar';
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import { Fonts } from '@crema/constants/AppEnums';
+import { useNavigate } from 'react-router-dom';
+import PropTypes from 'prop-types';
+import { useAuthMethod, useAuthUser } from '@crema/hooks/AuthHooks';
 
-const UserInfo = ({ color }) => {
+const UserInfo = ({ color = 'text.secondary' }) => {
   const { logout } = useAuthMethod();
   const { user } = useAuthUser();
   const navigate = useNavigate();
@@ -41,9 +41,9 @@ const UserInfo = ({ color }) => {
         sx={{
           py: 3,
           px: 3,
-          display: "flex",
-          alignItems: "center",
-          cursor: "pointer",
+          display: 'flex',
+          alignItems: 'center',
+          cursor: 'pointer',
         }}
         className="user-info-view"
       >
@@ -73,7 +73,7 @@ const UserInfo = ({ color }) => {
         </Box>
         <Box
           sx={{
-            width: { xs: "calc(100% - 62px)", xl: "calc(100% - 72px)" },
+            width: { xs: 'calc(100% - 62px)', xl: 'calc(100% - 72px)' },
             ml: 4,
             color: color,
           }}
@@ -81,30 +81,30 @@ const UserInfo = ({ color }) => {
         >
           <Box
             sx={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "space-between",
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'space-between',
             }}
           >
             <Box
               sx={{
                 mb: 0,
-                overflow: "hidden",
-                textOverflow: "ellipsis",
-                whiteSpace: "nowrap",
+                overflow: 'hidden',
+                textOverflow: 'ellipsis',
+                whiteSpace: 'nowrap',
                 fontSize: 16,
                 fontWeight: Fonts.MEDIUM,
-                color: "inherit",
+                color: 'inherit',
               }}
               component="span"
             >
-              {user.displayName ? user.displayName : "Admin User "}
+              {user.displayName ? user.displayName : 'Admin User '}
             </Box>
             <Box
               sx={{
                 ml: 3,
-                color: "inherit",
-                display: "flex",
+                color: 'inherit',
+                display: 'flex',
               }}
             >
               <ExpandMoreIcon />
@@ -113,9 +113,9 @@ const UserInfo = ({ color }) => {
           <Box
             sx={{
               mt: -0.5,
-              textOverflow: "ellipsis",
-              whiteSpace: "nowrap",
-              color: "inherit",
+              textOverflow: 'ellipsis',
+              whiteSpace: 'nowrap',
+              color: 'inherit',
             }}
           >
             System Manager
@@ -129,18 +129,18 @@ const UserInfo = ({ color }) => {
         open={Boolean(anchorEl)}
         onClose={handleClose}
         anchorOrigin={{
-          vertical: "bottom",
-          horizontal: "right",
+          vertical: 'bottom',
+          horizontal: 'right',
         }}
         transformOrigin={{
-          vertical: "top",
-          horizontal: "right",
+          vertical: 'top',
+          horizontal: 'right',
         }}
       >
         <MenuItem
           onClick={() => {
             handleClose();
-            navigate("/my-profile");
+            navigate('/my-profile');
           }}
         >
           My account
@@ -152,10 +152,6 @@ const UserInfo = ({ color }) => {
 };
 
 export default UserInfo;
-
-UserInfo.defaultProps = {
-  color: "text.secondary",
-};
 
 UserInfo.propTypes = {
   color: PropTypes.string,

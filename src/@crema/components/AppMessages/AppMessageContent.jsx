@@ -22,17 +22,17 @@ const AppMessageContent = ({ onClose, sxStyle }) => {
       }}
     >
       <Box
-        sx={{
+        sx={(theme) => ({
           padding: '5px 20px',
           display: 'flex',
           alignItems: 'center',
           borderBottom: 1,
-          borderBottomColor: (theme) => theme.palette.divider,
+          borderBottomColor: theme.palette.divider,
           minHeight: { xs: 56, sm: 70 },
-        }}
+        })}
       >
-        <Typography component='h3' variant='h3'>
-          <IntlMessages id='dashboard.messages' />({messageData.length})
+        <Typography component="h3" variant="h3">
+          <IntlMessages id="dashboard.messages" />({messageData.length})
         </Typography>
         <IconButton
           sx={{
@@ -42,7 +42,7 @@ const AppMessageContent = ({ onClose, sxStyle }) => {
             color: 'text.secondary',
           }}
           onClick={onClose}
-          size='large'
+          size="large"
         >
           <CancelOutlinedIcon />
         </IconButton>
@@ -70,10 +70,10 @@ const AppMessageContent = ({ onClose, sxStyle }) => {
           marginTop: 'auto',
           height: 40,
         }}
-        variant='contained'
-        color='primary'
+        variant="contained"
+        color="primary"
       >
-        <IntlMessages id='common.viewAll' />
+        <IntlMessages id="common.viewAll" />
       </Button>
     </Box>
   );

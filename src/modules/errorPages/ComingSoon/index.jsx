@@ -1,18 +1,18 @@
 import React from 'react';
 import Button from '@mui/material/Button';
-import {useInfoViewActionsContext} from '@crema/context/AppContextProvider/InfoViewContextProvider';
-import {Form, Formik} from 'formik';
+import { useInfoViewActionsContext } from '@crema/context/AppContextProvider/InfoViewContextProvider';
+import { Form, Formik } from 'formik';
 import * as yup from 'yup';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
-import {grey} from '@mui/material/colors';
-import {Fonts} from '@crema/constants/AppEnums';
+import { grey } from '@mui/material/colors';
+import { Fonts } from '@crema/constants/AppEnums';
 import IntlMessages from '@crema/helpers/IntlMessages';
 import AppTextField from '@crema/components/AppFormComponents/AppTextField';
 import AppInfoView from '@crema/components/AppInfoView';
 import AppAnimate from '@crema/components/AppAnimate';
 
-import {styled} from '@mui/material/styles';
+import { styled } from '@mui/material/styles';
 import Logo from '../../../assets/icon/comingsoon.svg';
 
 const FormWrapper = styled(Form)(() => {
@@ -35,17 +35,14 @@ const FormWrapper = styled(Form)(() => {
 });
 
 const validationSchema = yup.object({
-  email: yup
-    .string()
-    .email('The Email you entered is not a valid format!')
-    .required('Please enter Email Address!'),
+  email: yup.string().email('The Email you entered is not a valid format!').required('Please enter Email Address!'),
 });
 
 const ComingSoon = () => {
   const infoViewActionsContext = useInfoViewActionsContext();
 
   return (
-    <AppAnimate animation='transition.slideUpIn' delay={200}>
+    <AppAnimate animation="transition.slideUpIn" delay={200}>
       <>
         <Box
           sx={{
@@ -69,18 +66,18 @@ const ComingSoon = () => {
               },
             }}
           >
-              <img src={Logo} alt={Logo}/>
+            <img src={Logo} alt={Logo} />
           </Box>
 
           <Box
-            variant='h3'
+            variant="h3"
             sx={{
               mb: { xs: 3, xl: 4 },
               fontSize: { xs: 20, md: 24 },
               fontWeight: Fonts.MEDIUM,
             }}
           >
-            <IntlMessages id='error.comingSoon' />!
+            <IntlMessages id="error.comingSoon" />!
           </Box>
 
           <Box
@@ -90,10 +87,10 @@ const ComingSoon = () => {
             }}
           >
             <Typography style={{ fontSize: 18, marginTop: 3 }}>
-              <IntlMessages id='error.comingSoonMessage1' />
+              <IntlMessages id="error.comingSoonMessage1" />
             </Typography>
             <Typography style={{ fontSize: 18 }}>
-              <IntlMessages id='error.comingSoonMessage2' />
+              <IntlMessages id="error.comingSoonMessage2" />
             </Typography>
           </Box>
         </Box>
@@ -111,29 +108,22 @@ const ComingSoon = () => {
             }}
             validationSchema={validationSchema}
             onSubmit={(data, { resetForm }) => {
-              infoViewActionsContext.showMessage(
-                <IntlMessages id='error.comingSoonNotification' />,
-              );
+              infoViewActionsContext.showMessage(<IntlMessages id="error.comingSoonNotification" />);
               resetForm();
             }}
           >
             {() => (
               <FormWrapper>
                 <AppTextField
-                  placeholder='Email'
-                  name='email'
-                  label={<IntlMessages id='common.emailAddress' />}
-                  className='text-field'
-                  variant='outlined'
+                  placeholder="Email"
+                  name="email"
+                  label={<IntlMessages id="common.emailAddress" />}
+                  className="text-field"
+                  variant="outlined"
                 />
 
-                <Button
-                  variant='contained'
-                  color='primary'
-                  type='submit'
-                  className='button'
-                >
-                  <IntlMessages id='error.notifyMe' />
+                <Button variant="contained" color="primary" type="submit" className="button">
+                  <IntlMessages id="error.notifyMe" />
                 </Button>
               </FormWrapper>
             )}

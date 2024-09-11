@@ -14,9 +14,7 @@ const ProductGrid = ({ ecommerceList, loading }) => (
     }}
     data={ecommerceList}
     renderRow={(item) => <GridItem item={item} key={item.id} />}
-    ListEmptyComponent={
-      <ListEmptyResult content='No product found' loading={loading} />
-    }
+    ListEmptyComponent={<ListEmptyResult content="No product found" loading={loading} />}
   />
 );
 export default ProductGrid;

@@ -19,7 +19,7 @@ const ClassItem = ({ item }) => {
         display: 'flex',
         alignItems: 'center',
       }}
-      className='item-hover'
+      className="item-hover"
     >
       <Box
         sx={{
@@ -33,7 +33,7 @@ const ClassItem = ({ item }) => {
           padding: 1.5,
         }}
       >
-        <img alt='' src={item.icon} />
+        <img alt="" src={item.icon} />
       </Box>
       <Box
         sx={{
@@ -54,7 +54,7 @@ const ClassItem = ({ item }) => {
               fontSize: 14,
               mr: 1,
             }}
-            component='h3'
+            component="h3"
           >
             {item.name}
           </Box>
@@ -73,7 +73,7 @@ const ClassItem = ({ item }) => {
             mt: 1,
           }}
         >
-          <AppLinearProgress value={item.percent} activeColor='#0A8FDC' />
+          <AppLinearProgress value={item.percent} activeColor="#0A8FDC" />
         </Box>
       </Box>
     </Box>
@@ -87,13 +87,9 @@ ClassItem.propTypes = {
 const MyClass = ({ classData }) => {
   const { messages } = useIntl();
   return (
-    <AppCard
-      sxStyle={{ height: 1 }}
-      title={messages['academy.myClass']}
-      contentStyle={{ px: 0 }}
-    >
+    <AppCard sxStyle={{ height: 1 }} title={messages['academy.myClass']} contentStyle={{ px: 0 }}>
       <AppList
-        animation='transition.slideRightBigIn'
+        animation="transition.slideRightBigIn"
         data={classData}
         renderRow={(data, index) => <ClassItem key={index} item={data} />}
       />

@@ -54,10 +54,7 @@ const ChatItem = (props) => {
                   border: `1.5px solid white`,
                 }}
               >
-                <Avatar
-                  sx={{ height: 12, width: 12 }}
-                  src={item.members[0].image}
-                />
+                <Avatar sx={{ height: 12, width: 12 }} src={item.members[0].image} />
               </Box>
             ) : (
               <Box
@@ -70,8 +67,7 @@ const ChatItem = (props) => {
                   height: 14,
                   borderRadius: '50%',
                   border: `1.5px solid white`,
-                  backgroundColor:
-                    item.status === 'online' ? green[600] : red[600],
+                  backgroundColor: item.status === 'online' ? green[600] : red[600],
                 }}
               />
             )}
@@ -86,7 +82,7 @@ const ChatItem = (props) => {
         }}
       >
         <Box
-          component='h5'
+          component="h5"
           sx={{
             display: 'block',
             mb: 0.5,
@@ -95,7 +91,7 @@ const ChatItem = (props) => {
           {item.name}
         </Box>
         <Box
-          component='p'
+          component="p"
           sx={{
             color: 'text.secondary',
             display: 'block',

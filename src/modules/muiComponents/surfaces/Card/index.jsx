@@ -1,20 +1,20 @@
-import React from "react";
-import AppComponentHeader from "@crema/components/AppComponentHeader";
-import AppGridContainer from "@crema/components/AppGridContainer";
-import Grid from "@mui/material/Grid";
-import AppComponentCard from "@crema/components/AppComponentCard";
+import React from 'react';
+import AppComponentHeader from '@crema/components/AppComponentHeader';
+import AppGridContainer from '@crema/components/AppGridContainer';
+import Grid from '@mui/material/Grid';
+import AppComponentCard from '@crema/components/AppComponentCard';
 
-import BasicCard from "./BasicCard";
-import BasicCardSource from "./BasicCard?raw";
+import BasicCard from './BasicCard';
+import BasicCardSource from './BasicCard?raw';
 
-import OutlinedCard from "./OutlinedCard";
-import OutlinedCardSource from "./OutlinedCard?raw";
+import OutlinedCard from './OutlinedCard';
+import OutlinedCardSource from './OutlinedCard?raw';
 
-import RecipeReviewCard from "./RecipeReviewCard";
-import RecipeReviewCardSource from "./RecipeReviewCard?raw";
+import RecipeReviewCard from './RecipeReviewCard';
+import RecipeReviewCardSource from './RecipeReviewCard?raw';
 
-import MediaCard from "./MediaCard";
-import MediaCardSource from "./MediaCard?raw";
+import MediaCard from './MediaCard';
+import MediaCardSource from './MediaCard?raw';
 
 const Card = () => {
   return (

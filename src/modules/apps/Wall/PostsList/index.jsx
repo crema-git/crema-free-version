@@ -7,14 +7,7 @@ const PostsList = ({ wallData, postList, setPostList }) => {
   return (
     <AppList
       data={postList}
-      renderRow={(post, index) => (
-        <PostItem
-          key={index}
-          post={post}
-          wallData={wallData}
-          setPostList={setPostList}
-        />
-      )}
+      renderRow={(post, index) => <PostItem key={index} post={post} wallData={wallData} setPostList={setPostList} />}
     />
   );
 };

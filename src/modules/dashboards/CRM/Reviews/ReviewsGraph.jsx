@@ -3,7 +3,7 @@ import { Line, LineChart, ResponsiveContainer } from 'recharts';
 import PropTypes from 'prop-types';
 import { Box } from '@mui/material';
 
-const ReviewsGraph = ({ reviewGraphData }) => {
+const ReviewsGraph = ({ reviewGraphData = [] }) => {
   return (
     <Box
       sx={{
@@ -12,15 +12,9 @@ const ReviewsGraph = ({ reviewGraphData }) => {
         flexDirection: 'column',
       }}
     >
-      <ResponsiveContainer height={160} width='100%'>
+      <ResponsiveContainer height={160} width="100%">
         <LineChart data={reviewGraphData}>
-          <Line
-            type='monotone'
-            dataKey='value'
-            stroke='#C6F6D5'
-            strokeWidth={3}
-            dot={false}
-          />
+          <Line type="monotone" dataKey="value" stroke="#C6F6D5" strokeWidth={3} dot={false} />
         </LineChart>
       </ResponsiveContainer>
     </Box>
@@ -28,10 +22,6 @@ const ReviewsGraph = ({ reviewGraphData }) => {
 };
 
 export default ReviewsGraph;
-
-ReviewsGraph.defaultProps = {
-  reviewGraphData: [],
-};
 
 ReviewsGraph.propTypes = {
   reviewGraphData: PropTypes.array,

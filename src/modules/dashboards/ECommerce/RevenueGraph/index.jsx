@@ -17,7 +17,7 @@ const RevenueGraph = () => {
         }}
       >
         <AppCircularProgress
-          activeColor='#0A8FDC'
+          activeColor="#0A8FDC"
           value={70}
           hidePercentage
           centerNode={
@@ -29,7 +29,7 @@ const RevenueGraph = () => {
                 }}
               >
                 <Box
-                  component='span'
+                  component="span"
                   sx={{
                     fontSize: 14,
                     fontWeight: Fonts.MEDIUM,
@@ -38,7 +38,7 @@ const RevenueGraph = () => {
                   $
                 </Box>
                 <Box
-                  component='h3'
+                  component="h3"
                   sx={{
                     color: 'text.primary',
                     fontSize: 18,
@@ -49,7 +49,7 @@ const RevenueGraph = () => {
                 </Box>
               </Box>
               <Box
-                component='p'
+                component="p"
                 sx={{
                   ml: 2,
                   fontSize: 14,

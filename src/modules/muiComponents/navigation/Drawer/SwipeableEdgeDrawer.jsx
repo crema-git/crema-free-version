@@ -14,24 +14,34 @@ const drawerBleeding = 56;
 
 const Root = styled('div')(({ theme }) => ({
   height: '100%',
-  backgroundColor:
-    theme.palette.mode === 'light'
-      ? grey[100]
-      : theme.palette.background.default,
+
+  backgroundColor: theme.palette.background.default,
+
+  ...theme.applyStyles('light', {
+    backgroundColor: grey[100],
+  }),
 }));
 
 const StyledBox = styled(Box)(({ theme }) => ({
-  backgroundColor: theme.palette.mode === 'light' ? '#fff' : grey[800],
+  backgroundColor: grey[800],
+
+  ...theme.applyStyles('light', {
+    backgroundColor: '#fff',
+  }),
 }));
 
 const Puller = styled(Box)(({ theme }) => ({
   width: 30,
   height: 6,
-  backgroundColor: theme.palette.mode === 'light' ? grey[300] : grey[900],
+  backgroundColor: grey[900],
   borderRadius: 3,
   position: 'absolute',
   top: 8,
   left: 'calc(50% - 15px)',
+
+  ...theme.applyStyles('light', {
+    backgroundColor: grey[300],
+  }),
 }));
 
 function SwipeableEdgeDrawer(props) {
@@ -43,8 +53,7 @@ function SwipeableEdgeDrawer(props) {
   };
 
   // This is used only for the example
-  const container =
-    window !== undefined ? () => window().document.body : undefined;
+  const container = window !== undefined ? () => window().document.body : undefined;
 
   return (
     <Root>
@@ -62,7 +71,7 @@ function SwipeableEdgeDrawer(props) {
       </Box>
       <SwipeableDrawer
         container={container}
-        anchor='bottom'
+        anchor="bottom"
         open={open}
         onClose={toggleDrawer(false)}
         onOpen={toggleDrawer(true)}
@@ -84,9 +93,7 @@ function SwipeableEdgeDrawer(props) {
           }}
         >
           <Puller />
-          <Typography sx={{ p: 2, color: 'text.secondary' }}>
-            51 results
-          </Typography>
+          <Typography sx={{ p: 2, color: 'text.secondary' }}>51 results</Typography>
         </StyledBox>
         <StyledBox
           sx={{
@@ -96,7 +103,7 @@ function SwipeableEdgeDrawer(props) {
             overflow: 'auto',
           }}
         >
-          <Skeleton variant='rectangular' height='100%' />
+          <Skeleton variant="rectangular" height="100%" />
         </StyledBox>
       </SwipeableDrawer>
     </Root>

@@ -124,12 +124,8 @@ const CreatePost = ({ wallData, setPostList }) => {
   const { messages } = useIntl();
 
   return (
-    <AppCard
-      sxStyle={{ mb: 8 }}
-      headerStyle={{ paddingTop: 5 }}
-      title={messages['wall.createPost']}
-    >
-      <Box display='flex' mb={1}>
+    <AppCard sxStyle={{ mb: 8 }} headerStyle={{ paddingTop: 5 }} title={messages['wall.createPost']}>
+      <Box display="flex" mb={1}>
         <Avatar
           sx={{
             marginRight: 3.5,
@@ -146,27 +142,27 @@ const CreatePost = ({ wallData, setPostList }) => {
             value={message}
             onChange={(e) => setMessage(e.target.value)}
           />
-          <Box display='flex' flexWrap='wrap'>
-            <Box display='flex' alignItems='center'>
+          <Box display="flex" flexWrap="wrap">
+            <Box display="flex" alignItems="center">
               <span {...getRootProps()}>
                 <input {...getInputProps()} />
-                <StyledIconButton size='large'>
+                <StyledIconButton size="large">
                   <PhotoOutlinedIcon />
                 </StyledIconButton>
               </span>
-              <StyledIconButton size='large'>
+              <StyledIconButton size="large">
                 <VideocamOutlinedIcon />
               </StyledIconButton>
-              <StyledIconButton size='large'>
+              <StyledIconButton size="large">
                 <EmojiEmotionsOutlinedIcon />
               </StyledIconButton>
-              <StyledIconButton size='large'>
+              <StyledIconButton size="large">
                 <PersonOutlinedIcon />
               </StyledIconButton>
               <StyledIconButton
                 disabled={!message.trim() && attachments.length === 0}
                 onClick={handlePostSubmit}
-                size='large'
+                size="large"
               >
                 <SendOutlinedIcon />
               </StyledIconButton>
@@ -179,7 +175,7 @@ const CreatePost = ({ wallData, setPostList }) => {
         containerStyle={{ display: 'flex', flexWrap: 'wrap' }}
         renderRow={(item, index) => (
           <Box p={1} key={index}>
-            <StyledImage src={item.preview} alt='upload' />
+            <StyledImage src={item.preview} alt="upload" />
           </Box>
         )}
       />

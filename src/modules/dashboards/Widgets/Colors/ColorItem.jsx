@@ -15,7 +15,7 @@ const ColorItem = (props) => {
         px: 5,
       }}
       key={item.id}
-      className='item-hover'
+      className="item-hover"
     >
       <Box
         sx={{
@@ -32,7 +32,7 @@ const ColorItem = (props) => {
         />
       </Box>
       <Box
-        component='span'
+        component="span"
         sx={{
           color: item.color,
           fontWeight: Fonts.MEDIUM,

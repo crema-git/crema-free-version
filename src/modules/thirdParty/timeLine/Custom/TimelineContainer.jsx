@@ -11,15 +11,15 @@ const TimelineContainer = ({ children }) => {
         position: 'relative',
         margin: { xs: '20px 0', md: '40px 0' },
         width: '100%',
-        minWidth: { '@media (max-width: 499px)': 400 },
-        paddingRight: { '@media (max-width: 499px)': 4 },
+        minWidth: { '@media (maxWidth: 499px)': 400 },
+        paddingRight: { '@media (maxWidth: 499px)': 4 },
 
         '&:after': {
           backgroundColor: '#d5d6d8',
           content: '""',
           position: 'absolute',
           left: {
-            '@media (max-width: 499px)': 10,
+            '@media (maxWidth: 499px)': 10,
             xs: 30,
             sm: 'calc(50% - 0.5px)',
           },

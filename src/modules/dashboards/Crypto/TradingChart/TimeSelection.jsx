@@ -32,8 +32,7 @@ const TimeSelection = () => {
               border: (theme) => `solid 1px ${theme.palette.divider}`,
               borderRadius: 2.5,
               '&.active': {
-                backgroundColor: (theme) =>
-                  alpha(theme.palette.primary.main, 0.3),
+                backgroundColor: (theme) => alpha(theme.palette.primary.main, 0.3),
               },
             }}
           >

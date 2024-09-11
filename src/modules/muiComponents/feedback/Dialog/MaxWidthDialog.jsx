@@ -39,23 +39,16 @@ export default function MaxWidthDialog() {
 
   return (
     <React.Fragment>
-      <Button variant='outlined' onClick={handleClickOpen}>
+      <Button variant="outlined" onClick={handleClickOpen}>
         Open max-width dialog
       </Button>
-      <Dialog
-        fullWidth={fullWidth}
-        maxWidth={maxWidth}
-        open={open}
-        onClose={handleClose}
-      >
+      <Dialog fullWidth={fullWidth} maxWidth={maxWidth} open={open} onClose={handleClose}>
         <DialogTitle>Optional sizes</DialogTitle>
         <DialogContent>
-          <DialogContentText>
-            You can set my maximum width and whether to adapt or not.
-          </DialogContentText>
+          <DialogContentText>You can set my maximum width and whether to adapt or not.</DialogContentText>
           <Box
             noValidate
-            component='form'
+            component="form"
             sx={{
               display: 'flex',
               flexDirection: 'column',
@@ -64,31 +57,29 @@ export default function MaxWidthDialog() {
             }}
           >
             <FormControl sx={{ mt: 2, minWidth: 120 }}>
-              <InputLabel htmlFor='max-width'>maxWidth</InputLabel>
+              <InputLabel htmlFor="max-width">maxWidth</InputLabel>
               <Select
                 autoFocus
                 value={maxWidth}
                 onChange={handleMaxWidthChange}
-                label='maxWidth'
+                label="maxWidth"
                 inputProps={{
                   name: 'max-width',
                   id: 'max-width',
                 }}
               >
                 <MenuItem value={false}>false</MenuItem>
-                <MenuItem value='xs'>xs</MenuItem>
-                <MenuItem value='sm'>sm</MenuItem>
-                <MenuItem value='md'>md</MenuItem>
-                <MenuItem value='lg'>lg</MenuItem>
-                <MenuItem value='xl'>xl</MenuItem>
+                <MenuItem value="xs">xs</MenuItem>
+                <MenuItem value="sm">sm</MenuItem>
+                <MenuItem value="md">md</MenuItem>
+                <MenuItem value="lg">lg</MenuItem>
+                <MenuItem value="xl">xl</MenuItem>
               </Select>
             </FormControl>
             <FormControlLabel
               sx={{ mt: 1 }}
-              control={
-                <Switch checked={fullWidth} onChange={handleFullWidthChange} />
-              }
-              label='Full width'
+              control={<Switch checked={fullWidth} onChange={handleFullWidthChange} />}
+              label="Full width"
             />
           </Box>
         </DialogContent>

@@ -39,14 +39,10 @@ const DoubleMenu = ({ routes, routesConfig }) => {
 
   return (
     <Box
-      className={clsx(
-        classes.appMain,
-        layoutType === LayoutType.BOXED ? classes.boxedLayout : '',
-        {
-          appMainFooter: footer && footerType === 'fluid',
-          appMainFixedFooter: footer && footerType === 'fixed',
-        },
-      )}
+      className={clsx(classes.appMain, layoutType === LayoutType.BOXED ? classes.boxedLayout : '', {
+        appMainFooter: footer && footerType === 'fluid',
+        appMainFixedFooter: footer && footerType === 'fixed',
+      })}
     >
       <AppHeader
         updateNavState={updateNavState}

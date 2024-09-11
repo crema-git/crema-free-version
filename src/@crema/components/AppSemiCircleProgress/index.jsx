@@ -7,20 +7,20 @@ import { getBreakPointsValue } from '@crema/helpers/Common';
 // FIXME checkout https://material-ui.com/components/use-media-query/#migrating-from-withwidth
 const withWidth = () => (WrappedComponent) =>
   function (props) {
-    <WrappedComponent {...props} width='xs' />;
+    <WrappedComponent {...props} width="xs" />;
   };
 
 const AppSemiCircleProgress = ({
-  activeColor,
   valueNode,
-  labelStyle,
-  strokeWidth,
-  pathColor,
-  diameter,
-  orientation,
-  direction,
-  showPercentValue,
   percentage,
+  activeColor = '#02B732',
+  labelStyle = {},
+  strokeWidth = 10,
+  pathColor = '#D0D0CE',
+  diameter = 200,
+  orientation = 'up',
+  direction = 'right',
+  showPercentValue = false,
   ...rest
 }) => {
   const actualDiameter = getBreakPointsValue(diameter, rest.width);
@@ -54,16 +54,12 @@ const AppSemiCircleProgress = ({
 
   return (
     <Box sx={{ width: actualDiameter }} style={{ position: 'relative' }}>
-      <svg
-        width={actualDiameter}
-        height={actualDiameter / 2}
-        style={{ transform: rotation, overflow: 'hidden' }}
-      >
+      <svg width={actualDiameter} height={actualDiameter / 2} style={{ transform: rotation, overflow: 'hidden' }}>
         <circle
           cx={coordinateForCircle}
           cy={coordinateForCircle}
           r={radius}
-          fill='none'
+          fill="none"
           stroke={pathColor}
           strokeWidth={strokeWidth}
           strokeDasharray={circumference}
@@ -75,14 +71,13 @@ const AppSemiCircleProgress = ({
           cx={coordinateForCircle}
           cy={coordinateForCircle}
           r={radius}
-          fill='none'
+          fill="none"
           stroke={activeColor}
           strokeWidth={strokeWidth}
           strokeDasharray={circumference}
           style={{
             strokeDashoffset: semiCirclePercentage,
-            transition:
-              'activeColor-dashoffset .3s ease 0s, activeColor-dasharray .3s ease 0s, activeColor .3s',
+            transition: 'activeColor-dashoffset .3s ease 0s, activeColor-dasharray .3s ease 0s, activeColor .3s',
           }}
         />
       </svg>
@@ -103,7 +98,7 @@ const AppSemiCircleProgress = ({
           }}
         >
           <Box
-            component='span'
+            component="span"
             sx={{
               fontSize: { xs: 18, sm: 20, xl: 22 },
               fontWeight: Fonts.LIGHT,
@@ -112,12 +107,12 @@ const AppSemiCircleProgress = ({
             {percentage}%
           </Box>
           <Box
-            component='span'
-            sx={{
+            component="span"
+            sx={(theme) => ({
               fontSize: { xs: 16, sm: 18, xl: 20 },
               textTransform: 'uppercase',
-              color: (theme) => theme.palette.text.secondary,
-            }}
+              color: theme.palette.text.secondary,
+            })}
           >
             Progress
           </Box>
@@ -136,14 +131,10 @@ function percentageValidation(isRequired) {
       }
     } else {
       if (typeof prop !== 'number') {
-        return new Error(
-          'Invalid percentage. Must be a number between 0 and 100.',
-        );
+        return new Error('Invalid percentage. Must be a number between 0 and 100.');
       }
       if (props[propName] < 0 || props[propName] > 100) {
-        return new Error(
-          'Invalid percentage. Must be a number between 0 and 100.',
-        );
+        return new Error('Invalid percentage. Must be a number between 0 and 100.');
       }
     }
   };
@@ -162,16 +153,5 @@ AppSemiCircleProgress.propTypes = {
   direction: PropTypes.oneOf(['left', 'right']),
   showPercentValue: PropTypes.bool,
   percentage: percentageisRequired,
-};
-
-AppSemiCircleProgress.defaultProps = {
-  activeColor: '#02B732',
-  labelStyle: {},
-  strokeWidth: 10,
-  pathColor: '#D0D0CE',
-  diameter: 200,
-  orientation: 'up',
-  direction: 'right',
-  showPercentValue: false,
 };
 export default withWidth()(AppSemiCircleProgress);

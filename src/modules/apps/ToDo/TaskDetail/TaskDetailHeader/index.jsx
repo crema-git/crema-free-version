@@ -29,9 +29,7 @@ const TaskDetailHeader = (props) => {
       .then((data) => {
         onUpdateSelectedTask(data[0]);
         infoViewActionsContext.showMessage(
-          data[0].isStarred
-            ? 'Task Marked as Starred Successfully'
-            : 'Task Marked as Unstarred Successfully',
+          data[0].isStarred ? 'Task Marked as Starred Successfully' : 'Task Marked as Unstarred Successfully',
         );
       })
       .catch((error) => {
@@ -61,11 +59,11 @@ const TaskDetailHeader = (props) => {
         sx={{
           cursor: 'pointer',
         }}
-        component='span'
+        component="span"
         mr={{ xs: 2, sm: 4 }}
         onClick={onClickBackButton}
       >
-        <AppTooltip title={<IntlMessages id='common.back' />}>
+        <AppTooltip title={<IntlMessages id="common.back" />}>
           <ArrowBackIcon
             sx={{
               color: 'text.secondary',
@@ -74,25 +72,21 @@ const TaskDetailHeader = (props) => {
         </AppTooltip>
       </Box>
 
-      <StatusToggleButton
-        selectedTask={selectedTask}
-        onUpdateSelectedTask={onUpdateSelectedTask}
-      />
+      <StatusToggleButton selectedTask={selectedTask} onUpdateSelectedTask={onUpdateSelectedTask} />
 
       <Box
-        component='span'
+        component="span"
         sx={{
           marginLeft: 'auto',
           display: { xs: 'none', sm: 'block' },
         }}
-        onChange={onChangeStarred}
       >
-        <AppsStarredIcon item={selectedTask} />
+        <AppsStarredIcon item={selectedTask} onChange={onChangeStarred} />
       </Box>
 
       <AppsDeleteIcon
         deleteAction={onDeleteTask}
-        deleteTitle={<IntlMessages id='todo.deleteMessage' />}
+        deleteTitle={<IntlMessages id="todo.deleteMessage" />}
         sx={{
           color: 'text.disabled',
         }}

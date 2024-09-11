@@ -27,37 +27,30 @@ class AppErrorBoundary extends React.Component {
     if (this.state.hasError) {
       return (
         <Box
-          sx={{
+          sx={(theme) => ({
             display: 'flex',
             alignItems: 'center',
             flexDirection: 'column',
             justifyContent: 'center',
             flex: 1,
             textAlign: 'center',
+
             '& img': {
               width: '100%',
               maxWidth: 400,
-              color: (theme) => theme.palette.primary.main,
+              color: theme.palette.primary.main,
             },
-          }}
+          })}
         >
           <ErrorIcon />
-          <Typography
-            variant='h2'
-            component='h2'
-            style={{ fontSize: 30, marginTop: 16 }}
-          >
+          <Typography variant="h2" component="h2" style={{ fontSize: 30, marginTop: 16 }}>
             Ah! Something went wrong.
           </Typography>
-          <Typography style={{ fontSize: 18, marginTop: 12 }}>
-            Brace yourself till we get the error fixed.
-          </Typography>
-          <Typography style={{ fontSize: 18 }}>
-            You may also refresh the page or try again latter
-          </Typography>
+          <Typography style={{ fontSize: 18, marginTop: 12 }}>Brace yourself till we get the error fixed.</Typography>
+          <Typography style={{ fontSize: 18 }}>You may also refresh the page or try again latter</Typography>
           <Button
-            color='primary'
-            variant='contained'
+            color="primary"
+            variant="contained"
             sx={{
               marginTop: 16,
             }}

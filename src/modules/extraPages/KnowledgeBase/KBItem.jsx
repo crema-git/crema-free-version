@@ -28,14 +28,14 @@ const KbItem = ({ data }) => {
             maxHeight: 130,
           }}
         >
-          <Box component='p'>{data.ans}</Box>
+          <Box component="p">{data.ans}</Box>
         </AppScrollbar>
         <Box mx={-2}>
           {data.tags.map((tag, index) => {
             return (
               <Chip
                 label={tag}
-                variant='outlined'
+                variant="outlined"
                 sx={{
                   margin: 2,
                   fontWeight: Fonts.MEDIUM,

@@ -5,18 +5,7 @@ import Box from '@mui/material/Box';
 
 const renderActiveShape = (props) => {
   const RADIAN = Math.PI / 180;
-  const {
-    cx,
-    cy,
-    midAngle,
-    innerRadius,
-    outerRadius,
-    startAngle,
-    endAngle,
-    fill,
-    payload,
-    value,
-  } = props;
+  const { cx, cy, midAngle, innerRadius, outerRadius, startAngle, endAngle, fill, payload, value } = props;
   const sin = Math.sin(-RADIAN * midAngle);
   const cos = Math.cos(-RADIAN * midAngle);
   const sx = cx + (outerRadius + 10) * cos;
@@ -29,7 +18,7 @@ const renderActiveShape = (props) => {
 
   return (
     <g>
-      <text x={cx} y={cy} dy={8} textAnchor='middle' fill={fill}>
+      <text x={cx} y={cy} dy={8} textAnchor="middle" fill={fill}>
         {payload.name}
       </text>
       <Sector
@@ -50,25 +39,14 @@ const renderActiveShape = (props) => {
         outerRadius={outerRadius + 4}
         fill={fill}
       />
-      <path
-        d={`M${sx},${sy}L${mx},${my}L${ex},${ey}`}
-        stroke={fill}
-        fill='none'
-      />
-      <circle cx={ex} cy={ey} r={2} fill={fill} stroke='none' />
-      <text
-        x={ex + (cos >= 0 ? 1 : -1) * 12}
-        y={ey}
-        textAnchor={textAnchor}
-        fill='#333'
-      >{`${value}`}</text>
+      <path d={`M${sx},${sy}L${mx},${my}L${ex},${ey}`} stroke={fill} fill="none" />
+      <circle cx={ex} cy={ey} r={2} fill={fill} stroke="none" />
+      <text x={ex + (cos >= 0 ? 1 : -1) * 12} y={ey} textAnchor={textAnchor} fill="#333">{`${value}`}</text>
     </g>
   );
 };
 
-const BtcGraph = (props) => {
-  const { data } = props;
-
+const BtcGraph = ({ data = [] }) => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   const onPieEnter = (data, index) => {
@@ -93,19 +71,19 @@ const BtcGraph = (props) => {
         },
       }}
     >
-      <ResponsiveContainer height='100%' width='100%'>
-        <PieChart className='btcGraph'>
+      <ResponsiveContainer height="100%" width="100%">
+        <PieChart className="btcGraph">
           <Pie
             activeIndex={activeIndex}
             activeShape={renderActiveShape}
             data={data}
-            cx='50%'
-            cy='50%'
+            cx="50%"
+            cy="50%"
             innerRadius={100}
             outerRadius={115}
-            fill='#8884d8'
+            fill="#8884d8"
             paddingAngle={5}
-            dataKey='value'
+            dataKey="value"
             onMouseEnter={onPieEnter}
           >
             {data.map((entry, index) => (
@@ -119,10 +97,6 @@ const BtcGraph = (props) => {
 };
 
 export default BtcGraph;
-
-BtcGraph.defaultProps = {
-  data: [],
-};
 
 BtcGraph.propTypes = {
   data: PropTypes.array,

@@ -12,33 +12,23 @@ const Wall = React.lazy(() => import('../../../modules/apps/Wall'));
 export const appsConfig = [
   {
     permittedRole: RoutePermittedRole.User,
-    path: [
-      '/apps/mail/label/:label',
-      '/apps/mail/label/:label/:id',
-      '/apps/mail/:folder',
-      '/apps/mail/:folder/:id',
-    ],
+    path: ['/apps/mail/label/:label', '/apps/mail/label/:label/:id', '/apps/mail/:folder', '/apps/mail/:folder/:id'],
     element: <Mail />,
   },
   {
     permittedRole: RoutePermittedRole.User,
     path: '/apps/mail',
-    element: <Navigate to='/apps/mail/inbox' />,
+    element: <Navigate to="/apps/mail/inbox" />,
   },
   {
     permittedRole: RoutePermittedRole.User,
-    path: [
-      '/apps/todo/label/:label',
-      '/apps/todo/label/:label/:id',
-      '/apps/todo/:folder',
-      '/apps/todo/:folder/:id',
-    ],
+    path: ['/apps/todo/label/:label', '/apps/todo/label/:label/:id', '/apps/todo/:folder', '/apps/todo/:folder/:id'],
     element: <ToDo />,
   },
   {
     permittedRole: RoutePermittedRole.User,
     path: '/apps/todo',
-    element: <Navigate to='/apps/todo/all' />,
+    element: <Navigate to="/apps/todo/all" />,
   },
   {
     permittedRole: RoutePermittedRole.User,
@@ -53,7 +43,7 @@ export const appsConfig = [
   {
     permittedRole: RoutePermittedRole.User,
     path: '/apps/calender',
-    element: <Navigate to='/apps/calender/all' />,
+    element: <Navigate to="/apps/calender/all" />,
   },
   {
     permittedRole: RoutePermittedRole.User,
@@ -63,7 +53,7 @@ export const appsConfig = [
   {
     permittedRole: RoutePermittedRole.User,
     path: '/apps/contact',
-    element: <Navigate to='/apps/contact/folder/all' />,
+    element: <Navigate to="/apps/contact/folder/all" />,
   },
   {
     permittedRole: RoutePermittedRole.User,

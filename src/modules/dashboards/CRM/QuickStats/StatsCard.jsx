@@ -5,15 +5,18 @@ import Box from '@mui/material/Box';
 import { Fonts } from '@crema/constants/AppEnums';
 import AppCard from '@crema/components/AppCard';
 
-const StatsCard = (props) => {
-  const { icon, data, heading } = props;
-
+const StatsCard = ({
+  icon,
+  data = {
+    count: '',
+  },
+  heading,
+}) => {
   return (
     <AppCard
-      className='card-hover'
+      className="card-hover"
       sxStyle={{
-        borderRadius: (theme) =>
-          theme.components.MuiCard.styleOverrides.root.borderRadius / 4,
+        borderRadius: (theme) => theme.components.MuiCard.styleOverrides.root.borderRadius / 4,
       }}
     >
       <Box sx={{ display: 'flex', alignItems: 'center' }}>
@@ -25,7 +28,7 @@ const StatsCard = (props) => {
               backgroundColor: 'transparent',
             }}
           >
-            <img src={icon} alt='icon' />
+            <img src={icon} alt="icon" />
           </Avatar>
         </Box>
         <Box
@@ -34,7 +37,7 @@ const StatsCard = (props) => {
           }}
         >
           <Box
-            component='h3'
+            component="h3"
             sx={{
               fontWeight: Fonts.MEDIUM,
               fontSize: 18,
@@ -43,7 +46,7 @@ const StatsCard = (props) => {
             {data.count}
           </Box>
           <Box
-            component='p'
+            component="p"
             sx={{
               color: 'text.secondary',
             }}
@@ -57,12 +60,6 @@ const StatsCard = (props) => {
 };
 
 export default StatsCard;
-
-StatsCard.defaultProps = {
-  data: {
-    count: '',
-  },
-};
 
 StatsCard.propTypes = {
   icon: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),

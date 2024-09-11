@@ -14,8 +14,8 @@ import AuthWrapper from '../AuthWrapper';
 const validationSchema = yup.object({
   email: yup
     .string()
-    .email(<IntlMessages id='validation.emailFormat' />)
-    .required(<IntlMessages id='validation.emailRequired' />),
+    .email(<IntlMessages id="validation.emailFormat" />)
+    .required(<IntlMessages id="validation.emailRequired" />),
 });
 
 const ForgetPasswordJwtAuth = () => {
@@ -24,8 +24,8 @@ const ForgetPasswordJwtAuth = () => {
       <Box sx={{ width: '100%' }}>
         <Box sx={{ mb: { xs: 8, xl: 10 } }}>
           <Typography
-            variant='h2'
-            component='h2'
+            variant="h2"
+            component="h2"
             sx={{
               mb: 1.5,
               color: (theme) => theme.palette.text.primary,
@@ -33,7 +33,7 @@ const ForgetPasswordJwtAuth = () => {
               fontSize: { xs: 14, xl: 16 },
             }}
           >
-            <IntlMessages id='common.forgetPassword' />
+            <IntlMessages id="common.forgetPassword" />
           </Typography>
 
           <Typography
@@ -44,10 +44,10 @@ const ForgetPasswordJwtAuth = () => {
             }}
           >
             <span style={{ marginRight: 4 }}>
-              <IntlMessages id='common.alreadyHavePassword' />
+              <IntlMessages id="common.alreadyHavePassword" />
             </span>
             <Box
-              component='span'
+              component="span"
               sx={{
                 fontWeight: Fonts.MEDIUM,
                 '& a': {
@@ -56,8 +56,8 @@ const ForgetPasswordJwtAuth = () => {
                 },
               }}
             >
-              <Link to='/signin'>
-                <IntlMessages id='common.signIn' />
+              <Link to="/signin">
+                <IntlMessages id="common.signIn" />
               </Link>
             </Box>
           </Typography>
@@ -82,23 +82,23 @@ const ForgetPasswordJwtAuth = () => {
                 <Form style={{ textAlign: 'left' }}>
                   <Box sx={{ mb: { xs: 5, lg: 8 } }}>
                     <AppTextField
-                      placeholder='Email'
-                      name='email'
-                      label={<IntlMessages id='common.emailAddress' />}
+                      placeholder="Email"
+                      name="email"
+                      label={<IntlMessages id="common.emailAddress" />}
                       sx={{
                         width: '100%',
                         '& .MuiInputBase-input': {
                           fontSize: 14,
                         },
                       }}
-                      variant='outlined'
+                      variant="outlined"
                     />
                   </Box>
 
                   <div>
                     <Button
-                      variant='contained'
-                      color='primary'
+                      variant="contained"
+                      color="primary"
                       disabled={isSubmitting}
                       sx={{
                         fontWeight: Fonts.REGULAR,
@@ -106,9 +106,9 @@ const ForgetPasswordJwtAuth = () => {
                         fontSize: 16,
                         minWidth: 160,
                       }}
-                      type='submit'
+                      type="submit"
                     >
-                      <IntlMessages id='common.sendNewPassword' />
+                      <IntlMessages id="common.sendNewPassword" />
                     </Button>
                   </div>
                 </Form>

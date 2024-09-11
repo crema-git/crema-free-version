@@ -17,7 +17,7 @@ const AppContentView = ({ sxStyle, routes }) => {
           p: { xs: 5, md: 7.5, xl: 12.5 },
           ...sxStyle,
         }}
-        className='app-content'
+        className="app-content"
       >
         <AppSuspense>
           <AppErrorBoundary>{routes}</AppErrorBoundary>

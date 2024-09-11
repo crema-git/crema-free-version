@@ -4,16 +4,9 @@ import AppContentView from '@crema/components/AppContentView';
 import generateRoutes from '@crema/helpers/RouteGenerator';
 import { Layouts } from '@crema/components/AppLayout';
 import { useAuthUser } from '@crema/hooks/AuthHooks';
-import {
-  useLayoutActionsContext,
-  useLayoutContext,
-} from '@crema/context/AppContextProvider/LayoutContextProvider';
+import { useLayoutActionsContext, useLayoutContext } from '@crema/context/AppContextProvider/LayoutContextProvider';
 import { useSidebarActionsContext } from '@crema/context/AppContextProvider/SidebarContextProvider';
-import {
-  anonymousStructure,
-  authorizedStructure,
-  publicStructure,
-} from '../AppRoutes';
+import { anonymousStructure, authorizedStructure, publicStructure } from '../AppRoutes';
 import { useRoutes } from 'react-router-dom';
 import routesConfig from '../AppRoutes/routeConfig';
 import { initialUrl } from '@crema/constants/AppConst';
@@ -42,22 +35,11 @@ const AppLayout = () => {
     if (params.layout) updateNavStyle(params.layout);
     if (params.menuStyle) updateMenuStyle(params.menuStyle);
     if (params.sidebarImage) setSidebarBgImage(true);
-  }, [
-    params.layout,
-    params.menuStyle,
-    params.sidebarImage,
-    updateNavStyle,
-    updateMenuStyle,
-    setSidebarBgImage,
-  ]);
+  }, [params.layout, params.menuStyle, params.sidebarImage, updateNavStyle, updateMenuStyle, setSidebarBgImage]);
 
   return (
     <>
-      {isAuthenticated ? (
-        <AppLayout routes={routes} routesConfig={routesConfig} />
-      ) : (
-        <AppContentView routes={routes} />
-      )}
+      {isAuthenticated ? <AppLayout routes={routes} routesConfig={routesConfig} /> : <AppContentView routes={routes} />}
     </>
   );
 };

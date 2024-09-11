@@ -8,7 +8,7 @@ const ListEmptyResult = ({
   loader,
   placeholder,
   loading,
-  title,
+  title = <IntlMessages id="common.noRecordFound" />,
   actionTitle,
   content,
   onClick,
@@ -35,7 +35,7 @@ const ListEmptyResult = ({
             }}
           >
             <CircularProgress size={16} />
-            <Box component='span' sx={{ ml: 2 }}>
+            <Box component="span" sx={{ ml: 2 }}>
               Loading...
             </Box>
           </Box>
@@ -62,34 +62,28 @@ const ListEmptyResult = ({
       >
         {title ? (
           <Typography
-            sx={{
+            sx={(theme) => ({
               fontSize: 14,
-              color: (theme) => theme.palette.text.secondary,
+              color: theme.palette.text.secondary,
               fontWeight: Fonts.MEDIUM,
               mb: 2,
-            }}
-            component='h4'
-            variant='h4'
+            })}
+            component="h4"
+            variant="h4"
           >
             {title}
           </Typography>
         ) : null}
         <Typography
-          sx={{
+          sx={(theme) => ({
             fontSize: 14,
-            color: (theme) => theme.palette.text.secondary,
-          }}
+            color: theme.palette.text.secondary,
+          })}
         >
           {content}
         </Typography>
-
         {actionTitle ? (
-          <Button
-            color='primary'
-            variant='contained'
-            style={{ mt: 7.5, height: 45, minWidth: 150 }}
-            onClick={onClick}
-          >
+          <Button color="primary" variant="contained" style={{ mt: 7.5, height: 45, minWidth: 150 }} onClick={onClick}>
             {actionTitle}
           </Button>
         ) : null}
@@ -99,10 +93,6 @@ const ListEmptyResult = ({
 };
 
 export default ListEmptyResult;
-
-ListEmptyResult.defaultProps = {
-  title: <IntlMessages id='common.noRecordFound' />,
-};
 
 ListEmptyResult.propTypes = {
   title: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),

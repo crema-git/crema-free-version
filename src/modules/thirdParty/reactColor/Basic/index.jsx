@@ -42,10 +42,7 @@ class Basic extends React.Component {
         {this.state.displayColorPicker ? (
           <div>
             <Box onClick={this.handleClose.bind(this)} />
-            <SketchPicker
-              color={this.state.color}
-              onChange={this.handleChange.bind(this)}
-            />
+            <SketchPicker color={this.state.color} onChange={this.handleChange.bind(this)} />
           </div>
         ) : null}
       </div>

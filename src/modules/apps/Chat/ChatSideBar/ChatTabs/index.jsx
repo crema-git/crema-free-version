@@ -34,17 +34,11 @@ const TabLabel = styled(Tab)(() => {
 });
 
 const tabs = [
-  { id: 1, name: <IntlMessages id='dashboard.messages' /> },
-  { id: 2, name: <IntlMessages id='chatApp.contacts' /> },
+  { id: 1, name: <IntlMessages id="dashboard.messages" /> },
+  { id: 2, name: <IntlMessages id="chatApp.contacts" /> },
 ];
 
-const UserTabs = ({
-  connectionListData,
-  chatListData,
-  loading,
-  selectedUser,
-  setSelectedUser,
-}) => {
+const UserTabs = ({ connectionListData = [], chatListData = [], loading, selectedUser, setSelectedUser }) => {
   const [value, setValue] = useState(0);
 
   const handleChange = (event, newValue) => {
@@ -69,11 +63,11 @@ const UserTabs = ({
         <Tabs
           value={value}
           onChange={handleChange}
-          indicatorColor='primary'
-          textColor='primary'
-          variant='scrollable'
-          scrollButtons='auto'
-          aria-label='scrollable auto tabs example'
+          indicatorColor="primary"
+          textColor="primary"
+          variant="scrollable"
+          scrollButtons="auto"
+          aria-label="scrollable auto tabs example"
           sx={{
             borderBottom: (theme) => `1px solid ${theme.palette.grey[300]}`,
             position: 'relative',
@@ -86,13 +80,7 @@ const UserTabs = ({
             return (
               <TabLabel
                 key={tab.id}
-                icon={
-                  tab.id === 1 ? (
-                    <ChatOutlinedIcon />
-                  ) : (
-                    <AccountBoxOutlinedIcon />
-                  )
-                }
+                icon={tab.id === 1 ? <ChatOutlinedIcon /> : <AccountBoxOutlinedIcon />}
                 label={tab.name}
                 {...a11yProps(index)}
               />
@@ -124,7 +112,7 @@ const UserTabs = ({
                     px: 5,
                     fontWeight: Fonts.SEMI_BOLD,
                   }}
-                  component='h4'
+                  component="h4"
                 >
                   Connections
                 </Box>
@@ -147,7 +135,7 @@ const UserTabs = ({
                     px: 5,
                     fontWeight: Fonts.SEMI_BOLD,
                   }}
-                  component='h4'
+                  component="h4"
                 >
                   Contacts
                 </Box>
@@ -167,11 +155,6 @@ const UserTabs = ({
 };
 
 export default UserTabs;
-
-UserTabs.defaultProps = {
-  connectionListData: [],
-  chatListData: [],
-};
 
 UserTabs.propTypes = {
   connectionListData: PropTypes.array,

@@ -17,13 +17,13 @@ const OtherDetails = (props) => {
       }}
     >
       <Box
-        component='h4'
+        component="h4"
         sx={{
           mb: 4,
           fontWeight: Fonts.SEMI_BOLD,
         }}
       >
-        <IntlMessages id='common.otherDetails' />
+        <IntlMessages id="common.otherDetails" />
       </Box>
 
       <div>
@@ -45,11 +45,7 @@ const OtherDetails = (props) => {
               ml: 3.5,
             }}
           >
-            {contact.company ? (
-              contact.company
-            ) : (
-              <IntlMessages id='common.na' />
-            )}
+            {contact.company ? contact.company : <IntlMessages id="common.na" />}
           </Box>
         </Box>
 
@@ -71,11 +67,7 @@ const OtherDetails = (props) => {
               ml: 3.5,
             }}
           >
-            {contact.address ? (
-              contact.address
-            ) : (
-              <IntlMessages id='common.na' />
-            )}
+            {contact.address ? contact.address : <IntlMessages id="common.na" />}
           </Box>
         </Box>
 
@@ -97,11 +89,7 @@ const OtherDetails = (props) => {
               ml: 3.5,
             }}
           >
-            {contact.facebookId ? (
-              contact.facebookId
-            ) : (
-              <IntlMessages id='common.na' />
-            )}
+            {contact.facebookId ? contact.facebookId : <IntlMessages id="common.na" />}
           </Box>
         </Box>
 
@@ -122,11 +110,7 @@ const OtherDetails = (props) => {
               ml: 3.5,
             }}
           >
-            {contact.twitterId ? (
-              contact.twitterId
-            ) : (
-              <IntlMessages id='common.na' />
-            )}
+            {contact.twitterId ? contact.twitterId : <IntlMessages id="common.na" />}
           </Box>
         </Box>
       </div>

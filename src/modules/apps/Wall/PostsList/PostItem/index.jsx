@@ -15,7 +15,7 @@ const PostItem = ({ post, wallData, setPostList }) => {
   const { owner, message, date, attachments, comments } = post;
 
   const getTitle = () => (
-    <Box display='flex' alignItems='center'>
+    <Box display="flex" alignItems="center">
       <Avatar
         sx={{
           width: 44,
@@ -24,10 +24,10 @@ const PostItem = ({ post, wallData, setPostList }) => {
         src={owner.profilePic}
       />
       <Box ml={3.5}>
-        <Box component='h4' mb={0.5}>
+        <Box component="h4" mb={0.5}>
           {owner.name}
         </Box>
-        <Box component='p' color='text.secondary' fontSize={14}>
+        <Box component="p" color="text.secondary" fontSize={14}>
           {timeFromNow(date)}
         </Box>
       </Box>
@@ -47,27 +47,23 @@ const PostItem = ({ post, wallData, setPostList }) => {
           sx={{
             padding: 1.5,
           }}
-          aria-label='more'
-          aria-controls='long-menu'
-          aria-haspopup='true'
-          size='large'
+          aria-label="more"
+          aria-controls="long-menu"
+          aria-haspopup="true"
+          size="large"
         >
           <MoreHorizIcon />
         </IconButton>
       }
     >
       {message ? (
-        <Box component='p' mb={2} fontSize={14}>
+        <Box component="p" mb={2} fontSize={14}>
           {message}
         </Box>
       ) : null}
       <Attachments attachments={attachments} />
       <PostStats post={post} setPostList={setPostList} />
-      <AddComment
-        postId={post.id}
-        wallData={wallData}
-        setPostList={setPostList}
-      />
+      <AddComment postId={post.id} wallData={wallData} setPostList={setPostList} />
       {comments.length > 0 && <CommentsList comments={comments} />}
     </AppCard>
   );

@@ -1,31 +1,31 @@
-import React from "react";
-import AppComponentHeader from "@crema/components/AppComponentHeader";
-import AppGridContainer from "@crema/components/AppGridContainer";
-import Grid from "@mui/material/Grid";
-import AppComponentCard from "@crema/components/AppComponentCard";
+import React from 'react';
+import AppComponentHeader from '@crema/components/AppComponentHeader';
+import AppGridContainer from '@crema/components/AppGridContainer';
+import Grid from '@mui/material/Grid';
+import AppComponentCard from '@crema/components/AppComponentCard';
 
-import BasicChips from "./BasicChip";
-import BasicChipsSource from "./BasicChip?raw";
-import ClickableChips from "./ClickableChips";
-import ClickableChipsSource from "./ClickableChips?raw";
-import DeletableChips from "./DeletableChips";
-import DeletableChipsSource from "./DeletableChips?raw";
-import ClickableAndDeletableChips from "./ClickableDeletable";
-import ClickableAndDeletableChipsSource from "./ClickableDeletable?raw";
-import ClickableLinkChips from "./ClickableLink";
-import ClickableLinkChipsSource from "./ClickableLink?raw";
-import CustomDeleteIconChips from "./CustomDeleteIcon";
-import CustomDeleteIconChipsSource from "./CustomDeleteIcon?raw";
-import AvatarChips from "./ChipAdornments";
-import AvatarChipsSource from "./ChipAdornments?raw";
-import IconChips from "./IconChip";
-import IconChipsSource from "./IconChip?raw";
-import ColorChips from "./ColorChip";
-import ColorChipsSource from "./ColorChip?raw";
-import SizesChips from "./SizesChip";
-import SizesChipsSource from "./SizesChip?raw";
-import ChipsArray from "./ChipArray";
-import ChipsArraySource from "./ChipArray?raw";
+import BasicChips from './BasicChip';
+import BasicChipsSource from './BasicChip?raw';
+import ClickableChips from './ClickableChips';
+import ClickableChipsSource from './ClickableChips?raw';
+import DeletableChips from './DeletableChips';
+import DeletableChipsSource from './DeletableChips?raw';
+import ClickableAndDeletableChips from './ClickableDeletable';
+import ClickableAndDeletableChipsSource from './ClickableDeletable?raw';
+import ClickableLinkChips from './ClickableLink';
+import ClickableLinkChipsSource from './ClickableLink?raw';
+import CustomDeleteIconChips from './CustomDeleteIcon';
+import CustomDeleteIconChipsSource from './CustomDeleteIcon?raw';
+import AvatarChips from './ChipAdornments';
+import AvatarChipsSource from './ChipAdornments?raw';
+import IconChips from './IconChip';
+import IconChipsSource from './IconChip?raw';
+import ColorChips from './ColorChip';
+import ColorChipsSource from './ColorChip?raw';
+import SizesChips from './SizesChip';
+import SizesChipsSource from './SizesChip?raw';
+import ChipsArray from './ChipArray';
+import ChipsArraySource from './ChipArray?raw';
 
 const Chips = () => {
   return (
@@ -56,12 +56,7 @@ const Chips = () => {
           />
         </Grid>
         <Grid item xs={12} md={6}>
-          <AppComponentCard
-            title="Deletable"
-            component={DeletableChips}
-            source={DeletableChipsSource}
-            noScrollbar
-          />
+          <AppComponentCard title="Deletable" component={DeletableChips} source={DeletableChipsSource} noScrollbar />
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
@@ -96,12 +91,7 @@ const Chips = () => {
           />
         </Grid>
         <Grid item xs={12} md={6}>
-          <AppComponentCard
-            title="Icon chip"
-            component={IconChips}
-            source={IconChipsSource}
-            noScrollbar
-          />
+          <AppComponentCard title="Icon chip" component={IconChips} source={IconChipsSource} noScrollbar />
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard

@@ -8,10 +8,7 @@ const InvoiceListing = () => {
   const { messages } = useIntl();
 
   return (
-    <AppsContainer
-      title={messages['sidebar.invoice']}
-      sidebarContent={<InvoiceSideBar />}
-    >
+    <AppsContainer title={messages['sidebar.invoice']} sidebarContent={<InvoiceSideBar />}>
       <InvoiceList />
     </AppsContainer>
   );

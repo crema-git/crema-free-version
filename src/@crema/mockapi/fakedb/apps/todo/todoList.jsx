@@ -38,8 +38,7 @@ const todoList = [
     status: 1003,
     comments: [
       {
-        comment:
-          'Call John at 8:00 PM to cross check the things and get a feedback too.',
+        comment: 'Call John at 8:00 PM to cross check the things and get a feedback too.',
         name: 'Rohit Sharma',
         image: '/assets/images/avatar/A22.jpg',
         date: getCurrentMonthDate(30),
@@ -85,8 +84,7 @@ const todoList = [
     status: 1002,
     comments: [
       {
-        comment:
-          'Call John at 8:00 PM to cross check the things and get a feedback too.',
+        comment: 'Call John at 8:00 PM to cross check the things and get a feedback too.',
         name: 'Narendra Kumar',
         image: '/assets/images/avatar/A11.jpg',
         date: 'Dec 21, 2021',
@@ -139,8 +137,7 @@ const todoList = [
     status: 1001,
     comments: [
       {
-        comment:
-          'The Task is very important, try to complete it so that we have time for testing.',
+        comment: 'The Task is very important, try to complete it so that we have time for testing.',
         name: 'K L Sharma',
         image: '/assets/images/avatar/A21.jpg',
         date: getCurrentMonthDate(20),
@@ -192,8 +189,7 @@ const todoList = [
     status: 1001,
     comments: [
       {
-        comment:
-          'The Task is very important, try to complete it so that we have time for testing.',
+        comment: 'The Task is very important, try to complete it so that we have time for testing.',
         name: 'K L Sharma',
         image: '/assets/images/avatar/A21.jpg',
         date: getCurrentMonthDate(28),
@@ -247,8 +243,7 @@ const todoList = [
     status: 1002,
     comments: [
       {
-        comment:
-          'Call John at 8:00 PM to cross check the things and get a feedback too.',
+        comment: 'Call John at 8:00 PM to cross check the things and get a feedback too.',
         name: 'M S Dhoni',
         image: '/assets/images/avatar/A1.jpg',
         date: getCurrentMonthDate(25),
@@ -302,8 +297,7 @@ const todoList = [
     status: 1002,
     comments: [
       {
-        comment:
-          'Call John at 8:00 PM to cross check the things and get a feedback too.',
+        comment: 'Call John at 8:00 PM to cross check the things and get a feedback too.',
         name: 'M S Dhoni',
         image: '/assets/images/avatar/A1.jpg',
         date: getCurrentMonthDate(28),
@@ -350,8 +344,7 @@ const todoList = [
     status: 1003,
     comments: [
       {
-        comment:
-          'Call John at 8:00 PM to cross check the things and get a feedback too.',
+        comment: 'Call John at 8:00 PM to cross check the things and get a feedback too.',
         name: 'Nikit Sharma',
         image: '/assets/images/avatar/A2.jpg',
         date: getCurrentMonthDate(21),
@@ -398,8 +391,7 @@ const todoList = [
     status: 1003,
     comments: [
       {
-        comment:
-          'Call John at 8:00 PM to cross check the things and get a feedback too.',
+        comment: 'Call John at 8:00 PM to cross check the things and get a feedback too.',
         name: 'Nikit Sharma',
         image: '/assets/images/avatar/A2.jpg',
         date: getCurrentMonthDate(27),
@@ -453,8 +445,7 @@ const todoList = [
     status: 1001,
     comments: [
       {
-        comment:
-          'Call John at 8:00 PM to cross check the things and get a feedback too.',
+        comment: 'Call John at 8:00 PM to cross check the things and get a feedback too.',
         name: 'Ravindra Jadeja',
         image: '/assets/images/avatar/A4.jpg',
         date: getCurrentMonthDate(22),
@@ -508,8 +499,7 @@ const todoList = [
     status: 1001,
     comments: [
       {
-        comment:
-          'Call John at 8:00 PM to cross check the things and get a feedback too.',
+        comment: 'Call John at 8:00 PM to cross check the things and get a feedback too.',
         name: 'Ravindra Jadeja',
         image: '/assets/images/avatar/A4.jpg',
         date: getCurrentMonthDate(26),
@@ -563,8 +553,7 @@ const todoList = [
     status: 1002,
     comments: [
       {
-        comment:
-          'Call John at 8:00 PM to cross check the things and get a feedback too.',
+        comment: 'Call John at 8:00 PM to cross check the things and get a feedback too.',
         name: 'Krishna Kumar',
         image: '/assets/images/avatar/A5.jpg',
         date: getCurrentMonthDate(19),
@@ -618,8 +607,7 @@ const todoList = [
     status: 1003,
     comments: [
       {
-        comment:
-          'Call John at 8:00 PM to cross check the things and get a feedback too.',
+        comment: 'Call John at 8:00 PM to cross check the things and get a feedback too.',
         name: 'Rehan Kant',
         image: '/assets/images/avatar/A6.jpg',
         date: getCurrentMonthDate(18),
@@ -673,8 +661,7 @@ const todoList = [
     status: 1002,
     comments: [
       {
-        comment:
-          'Call John at 8:00 PM to cross check the things and get a feedback too.',
+        comment: 'Call John at 8:00 PM to cross check the things and get a feedback too.',
         name: 'Krishna Kumar',
         image: '/assets/images/avatar/A5.jpg',
         date: getCurrentMonthDate(26),
@@ -728,8 +715,7 @@ const todoList = [
     status: 1001,
     comments: [
       {
-        comment:
-          'Call John at 8:00 PM to cross check the things and get a feedback too.',
+        comment: 'Call John at 8:00 PM to cross check the things and get a feedback too.',
         name: 'Rahul Rajan',
         image: '/assets/images/avatar/A7.jpg',
         date: getCurrentMonthDate(21),
@@ -775,8 +761,7 @@ const todoList = [
     status: 1002,
     comments: [
       {
-        comment:
-          'Call John at 8:00 PM to cross check the things and get a feedback too.',
+        comment: 'Call John at 8:00 PM to cross check the things and get a feedback too.',
         name: 'Shikhar Dhawan',
         image: '/assets/images/avatar/A8.jpg',
         date: getCurrentMonthDate(22),
@@ -830,8 +815,7 @@ const todoList = [
     status: 1003,
     comments: [
       {
-        comment:
-          'Call John at 8:00 PM to cross check the things and get a feedback too.',
+        comment: 'Call John at 8:00 PM to cross check the things and get a feedback too.',
         name: 'Rehan Kant',
         image: '/assets/images/avatar/A6.jpg',
         date: getCurrentMonthDate(18),
@@ -885,8 +869,7 @@ const todoList = [
     status: 1003,
     comments: [
       {
-        comment:
-          'Call John at 8:00 PM to cross check the things and get a feedback too.',
+        comment: 'Call John at 8:00 PM to cross check the things and get a feedback too.',
         name: 'shreyas Iyer',
         image: '/assets/images/avatar/A9.jpg',
         date: getCurrentMonthDate(18),
@@ -940,8 +923,7 @@ const todoList = [
     status: 1001,
     comments: [
       {
-        comment:
-          'Call John at 8:00 PM to cross check the things and get a feedback too.',
+        comment: 'Call John at 8:00 PM to cross check the things and get a feedback too.',
         name: 'Bhuvneshwar Kumar',
         image: '/assets/images/avatar/A10.jpg',
         date: getCurrentMonthDate(18),
@@ -995,8 +977,7 @@ const todoList = [
     status: 1001,
     comments: [
       {
-        comment:
-          'Call John at 8:00 PM to cross check the things and get a feedback too.',
+        comment: 'Call John at 8:00 PM to cross check the things and get a feedback too.',
         name: 'Rahul Rajan',
         image: '/assets/images/avatar/A7.jpg',
         date: getCurrentMonthDate(24),
@@ -1042,8 +1023,7 @@ const todoList = [
     status: 1002,
     comments: [
       {
-        comment:
-          'Call John at 8:00 PM to cross check the things and get a feedback too.',
+        comment: 'Call John at 8:00 PM to cross check the things and get a feedback too.',
         name: 'Narendra Kumar',
         image: '/assets/images/avatar/A11.jpg',
         date: getCurrentMonthDate(18),
@@ -1080,8 +1060,7 @@ const todoList = [
     status: 1003,
     comments: [
       {
-        comment:
-          'Call John at 8:00 PM to cross check the things and get a feedback too.',
+        comment: 'Call John at 8:00 PM to cross check the things and get a feedback too.',
         name: 'Baichang Bhutia',
         image: '/assets/images/avatar/A13.jpg',
         date: getCurrentMonthDate(22),
@@ -1127,8 +1106,7 @@ const todoList = [
     status: 1002,
     comments: [
       {
-        comment:
-          'Call John at 8:00 PM to cross check the things and get a feedback too.',
+        comment: 'Call John at 8:00 PM to cross check the things and get a feedback too.',
         name: 'Shikhar Dhawan',
         image: '/assets/images/avatar/A8.jpg',
         date: getCurrentMonthDate(25),
@@ -1182,8 +1160,7 @@ const todoList = [
     status: 1001,
     comments: [
       {
-        comment:
-          'Call John at 8:00 PM to cross check the things and get a feedback too.',
+        comment: 'Call John at 8:00 PM to cross check the things and get a feedback too.',
         name: 'Rameshwar Sharma',
         image: '/assets/images/avatar/A13.jpg',
         date: getCurrentMonthDate(17),
@@ -1220,8 +1197,7 @@ const todoList = [
     status: 1002,
     comments: [
       {
-        comment:
-          'Call John at 8:00 PM to cross check the things and get a feedback too.',
+        comment: 'Call John at 8:00 PM to cross check the things and get a feedback too.',
         name: 'Tushar Sharma',
         image: '/assets/images/avatar/A15.jpg',
         date: getCurrentMonthDate(24),
@@ -1275,8 +1251,7 @@ const todoList = [
     status: 1003,
     comments: [
       {
-        comment:
-          'Call John at 8:00 PM to cross check the things and get a feedback too.',
+        comment: 'Call John at 8:00 PM to cross check the things and get a feedback too.',
         name: 'shreyas Iyer',
         image: '/assets/images/avatar/A9.jpg',
         date: getCurrentMonthDate(22),
@@ -1322,8 +1297,7 @@ const todoList = [
     status: 1003,
     comments: [
       {
-        comment:
-          'Call John at 8:00 PM to cross check the things and get a feedback too.',
+        comment: 'Call John at 8:00 PM to cross check the things and get a feedback too.',
         name: 'Rohit Sharma',
         image: '/assets/images/avatar/A22.jpg',
         date: getCurrentMonthDate(25),
@@ -1377,8 +1351,7 @@ const todoList = [
     status: 1001,
     comments: [
       {
-        comment:
-          'Call John at 8:00 PM to cross check the things and get a feedback too.',
+        comment: 'Call John at 8:00 PM to cross check the things and get a feedback too.',
         name: 'Rameshwar Sharma',
         image: '/assets/images/avatar/A13.jpg',
         date: getCurrentMonthDate(17),
@@ -1432,8 +1405,7 @@ const todoList = [
     status: 1001,
     comments: [
       {
-        comment:
-          'Call John at 8:00 PM to cross check the things and get a feedback too.',
+        comment: 'Call John at 8:00 PM to cross check the things and get a feedback too.',
         name: 'Bhuvneshwar Kumar',
         image: '/assets/images/avatar/A10.jpg',
         date: getCurrentMonthDate(18),
@@ -1470,8 +1442,7 @@ const todoList = [
     status: 1002,
     comments: [
       {
-        comment:
-          'Call John at 8:00 PM to cross check the things and get a feedback too.',
+        comment: 'Call John at 8:00 PM to cross check the things and get a feedback too.',
         name: 'Tushar Sharma',
         image: '/assets/images/avatar/A15.jpg',
         date: getCurrentMonthDate(24),

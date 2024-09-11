@@ -10,38 +10,16 @@ const EditInvoicePage = () => {
   const navigate = useNavigate();
   const infoViewActionsContext = useInfoViewActionsContext();
 
-  const [{ apiData: clientsList }] = useGetDataApi(
-    '/api/invoice/clients',
-    {},
-    {},
-    true,
-  );
-  const [{ apiData: invoiceSettings }] = useGetDataApi(
-    '/api/invoice/settings',
-    {},
-    {},
-    true,
-  );
+  const [{ apiData: clientsList }] = useGetDataApi('/api/invoice/clients', {}, {}, true);
+  const [{ apiData: invoiceSettings }] = useGetDataApi('/api/invoice/settings', {}, {}, true);
 
-  const [{ apiData: invoiceList }] = useGetDataApi(
-    '/api/invoice/list',
-    {},
-    {},
-    true,
-  );
-  const [{ apiData: selectedInv }] = useGetDataApi(
-    '/api/invoice/detail',
-    {},
-    { id },
-    true,
-  );
+  const [{ apiData: invoiceList }] = useGetDataApi('/api/invoice/list', {}, {}, true);
+  const [{ apiData: selectedInv }] = useGetDataApi('/api/invoice/detail', {}, { id }, true);
 
   const onSave = (invoice) => {
     putDataApi('/api/invoice/list/update', infoViewActionsContext, { invoice })
       .then(() => {
-        infoViewActionsContext.showMessage(
-          'New Invoice has been udpated successfully!',
-        );
+        infoViewActionsContext.showMessage('New Invoice has been udpated successfully!');
       })
       .catch((error) => {
         infoViewActionsContext.fetchError(error.message);

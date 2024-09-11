@@ -12,7 +12,7 @@ const RecentActivityCell = ({ activity }) => {
         display: 'flex',
         padding: '3px 20px',
       }}
-      className='item-hover'
+      className="item-hover"
     >
       <Avatar
         sx={{

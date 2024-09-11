@@ -24,7 +24,7 @@ const TableRowWrapper = styled(TableRow)(() => {
 
 const TableItem = (props) => {
   return (
-    <TableRowWrapper key={props.data.name} className='item-hover'>
+    <TableRowWrapper key={props.data.name} className="item-hover">
       <TableCell>
         <Box
           sx={{
@@ -41,19 +41,19 @@ const TableItem = (props) => {
             src={props.data.icon}
           />
           <Box
-            sx={{
+            sx={(theme) => ({
               fontSize: 14,
               flex: 1,
-              color: (theme) => theme.palette.text.secondary,
-            }}
+              color: theme.palette.text.secondary,
+            })}
           >
             <Typography
-              sx={{
+              sx={(theme) => ({
                 mb: 0.5,
-                color: (theme) => theme.palette.text.primary,
-              }}
-              variant='h5'
-              component='h5'
+                color: theme.palette.text.primary,
+              })}
+              variant="h5"
+              component="h5"
             >
               {props.data.name}
             </Typography>
@@ -66,18 +66,12 @@ const TableItem = (props) => {
       <TableCell>{props.data.budget}</TableCell>
       <TableCell>
         {props.data.growth ? (
-          <img
-            src={'/assets/images/dashboard/growth_icon.svg'}
-            alt='growth_icon'
-          />
+          <img src={'/assets/images/dashboard/growth_icon.svg'} alt="growth_icon" />
         ) : (
-          <img
-            src={'/assets/images/dashboard/decries_icon.svg'}
-            alt='decries_icon'
-          />
+          <img src={'/assets/images/dashboard/decries_icon.svg'} alt="decries_icon" />
         )}
         <Box
-          component='span'
+          component="span"
           sx={{
             display: 'inline-block',
             ml: 2,
@@ -87,12 +81,12 @@ const TableItem = (props) => {
           {props.data.graph}
         </Box>
         <Box
-          component='span'
-          sx={{
+          component="span"
+          sx={(theme) => ({
             display: 'inline-block',
-            color: (theme) => theme.palette.text.secondary,
+            color: theme.palette.text.secondary,
             ml: 2,
-          }}
+          })}
         >
           {props.data.growth ? 'Up' : 'Down'}
         </Box>

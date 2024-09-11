@@ -1,41 +1,41 @@
-import React from "react";
-import AppComponentHeader from "@crema/components/AppComponentHeader";
-import AppGridContainer from "@crema/components/AppGridContainer";
-import Grid from "@mui/material/Grid";
-import AppComponentCard from "@crema/components/AppComponentCard";
+import React from 'react';
+import AppComponentHeader from '@crema/components/AppComponentHeader';
+import AppGridContainer from '@crema/components/AppGridContainer';
+import Grid from '@mui/material/Grid';
+import AppComponentCard from '@crema/components/AppComponentCard';
 
-import BasicTable from "./BasicTable";
-import BasicTableSource from "./BasicTable?raw";
+import BasicTable from './BasicTable';
+import BasicTableSource from './BasicTable?raw';
 
-import DataTable from "./DataTable";
-import DataTableSource from "./DataTable?raw";
+import DataTable from './DataTable';
+import DataTableSource from './DataTable?raw';
 
-import DenseTable from "./DenseTable";
-import DenseTableSource from "./DenseTable?raw";
+import DenseTable from './DenseTable';
+import DenseTableSource from './DenseTable?raw';
 
-import EnhancedTable from "./EnhancedTable";
-import EnhancedTableSource from "./EnhancedTable?raw";
+import EnhancedTable from './EnhancedTable';
+import EnhancedTableSource from './EnhancedTable?raw';
 
-import ColumnGrouping from "./ColumnGrouping";
-import ColumnGroupingSource from "./ColumnGrouping?raw";
+import ColumnGrouping from './ColumnGrouping';
+import ColumnGroupingSource from './ColumnGrouping?raw';
 
-import CustomPaginationActionsTable from "./Custompaginationactions";
-import CustomPaginationActionsTableSource from "./Custompaginationactions?raw";
+import CustomPaginationActionsTable from './Custompaginationactions';
+import CustomPaginationActionsTableSource from './Custompaginationactions?raw';
 
-import StickyHeadTable from "./StickyHeadTable";
-import StickyHeadTableSource from "./StickyHeadTable?raw";
+import StickyHeadTable from './StickyHeadTable';
+import StickyHeadTableSource from './StickyHeadTable?raw';
 
-import ColumnGroupingTable from "./ColumnGroupingTable";
-import ColumnGroupingTableSource from "./ColumnGroupingTable?raw";
+import ColumnGroupingTable from './ColumnGroupingTable';
+import ColumnGroupingTableSource from './ColumnGroupingTable?raw';
 
-import CollapsibleTable from "./CollapsibleTable";
-import CollapsibleTableSource from "./CollapsibleTable?raw";
+import CollapsibleTable from './CollapsibleTable';
+import CollapsibleTableSource from './CollapsibleTable?raw';
 
-import SpanningTable from "./SpanningTable";
-import SpanningTableSource from "./SpanningTable?raw";
+import SpanningTable from './SpanningTable';
+import SpanningTableSource from './SpanningTable?raw';
 
-import AcccessibleTable from "./AcccessibleTable";
-import AcccessibleTableSource from "./AcccessibleTable?raw";
+import AcccessibleTable from './AcccessibleTable';
+import AcccessibleTableSource from './AcccessibleTable?raw';
 
 const Table = () => {
   return (

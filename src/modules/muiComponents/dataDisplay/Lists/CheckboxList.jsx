@@ -33,20 +33,16 @@ export default function CheckboxList() {
           <ListItem
             key={value}
             secondaryAction={
-              <IconButton edge='end' aria-label='comments'>
+              <IconButton edge="end" aria-label="comments">
                 <CommentIcon />
               </IconButton>
             }
             disablePadding
           >
-            <ListItemButton
-              role={undefined}
-              onClick={handleToggle(value)}
-              dense
-            >
+            <ListItemButton role={undefined} onClick={handleToggle(value)} dense>
               <ListItemIcon>
                 <Checkbox
-                  edge='start'
+                  edge="start"
                   checked={checked.indexOf(value) !== -1}
                   tabIndex={-1}
                   disableRipple

@@ -2,10 +2,7 @@ import React, { useEffect } from 'react';
 import { useDropzone } from 'react-dropzone';
 import AppGrid from '@crema/components/AppGrid';
 import PropTypes from 'prop-types';
-import {
-  PreviewThumb,
-  UploadModern,
-} from '../../../../thirdParty/reactDropzone/components';
+import { PreviewThumb, UploadModern } from '../../../../thirdParty/reactDropzone/components';
 
 const ImgUpload = ({ uploadedFiles, setUploadedFiles }) => {
   const dropzone = useDropzone({
@@ -32,9 +29,9 @@ const ImgUpload = ({ uploadedFiles, setUploadedFiles }) => {
   };
 
   return (
-    <section className='container' style={{ cursor: 'pointer' }}>
+    <section className="container" style={{ cursor: 'pointer' }}>
       <UploadModern
-        uploadText='Drag n drop some files here, or click to select files'
+        uploadText="Drag n drop some files here, or click to select files"
         setUploadedFiles={setUploadedFiles}
         dropzone={dropzone}
       />
@@ -46,11 +43,7 @@ const ImgUpload = ({ uploadedFiles, setUploadedFiles }) => {
         column={4}
         itemPadding={5}
         renderRow={(file, index) => (
-          <PreviewThumb
-            file={file}
-            onDeleteUploadFile={onDeleteUploadFile}
-            key={index + file}
-          />
+          <PreviewThumb file={file} onDeleteUploadFile={onDeleteUploadFile} key={index + file} />
         )}
       />
     </section>

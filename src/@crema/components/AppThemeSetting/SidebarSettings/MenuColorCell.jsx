@@ -1,10 +1,7 @@
 import React from 'react';
 import Box from '@mui/material/Box';
 import PropTypes from 'prop-types';
-import {
-  useSidebarActionsContext,
-  useSidebarContext,
-} from '@crema/context/AppContextProvider/SidebarContextProvider';
+import { useSidebarActionsContext, useSidebarContext } from '@crema/context/AppContextProvider/SidebarContextProvider';
 import { MenuStyle, NavStyle, ThemeMode } from '@crema/constants/AppEnums';
 import clsx from 'clsx';
 import { useLayoutContext } from '@crema/context/AppContextProvider/LayoutContextProvider';
@@ -12,13 +9,8 @@ import AppSelectedIcon from '../../AppSelectedIcon';
 import { useThemeContext } from '@crema/context/AppContextProvider/ThemeContextProvider';
 
 const MenuColorCell = ({ sidebarColors }) => {
-  const {
-    sidebarBgColor,
-    sidebarTextColor,
-    sidebarMenuSelectedBgColor,
-    sidebarMenuSelectedTextColor,
-    menuStyle,
-  } = useSidebarContext();
+  const { sidebarBgColor, sidebarTextColor, sidebarMenuSelectedBgColor, sidebarMenuSelectedTextColor, menuStyle } =
+    useSidebarContext();
   const { updateSidebarColorSet } = useSidebarActionsContext();
   const { navStyle } = useLayoutContext();
   const { theme } = useThemeContext();
@@ -174,20 +166,13 @@ const MenuColorCell = ({ sidebarColors }) => {
       {sidebarColors.sidebarBgColor === sidebarBgColor &&
       sidebarColors.sidebarTextColor === sidebarTextColor &&
       sidebarColors.sidebarMenuSelectedBgColor === sidebarMenuSelectedBgColor &&
-      sidebarColors.sidebarMenuSelectedTextColor ===
-        sidebarMenuSelectedTextColor ? (
+      sidebarColors.sidebarMenuSelectedTextColor === sidebarMenuSelectedTextColor ? (
         <AppSelectedIcon
           isCenter={false}
           backgroundColor={
-            sidebarColors.mode === ThemeMode.LIGHT
-              ? theme.palette.text.primary
-              : theme.palette.background.default
+            sidebarColors.mode === ThemeMode.LIGHT ? theme.palette.text.primary : theme.palette.background.default
           }
-          color={
-            sidebarColors.mode === ThemeMode.LIGHT
-              ? theme.palette.background.default
-              : theme.palette.text.primary
-          }
+          color={sidebarColors.mode === ThemeMode.LIGHT ? theme.palette.background.default : theme.palette.text.primary}
         />
       ) : null}
     </Box>

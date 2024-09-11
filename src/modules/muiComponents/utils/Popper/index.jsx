@@ -20,23 +20,18 @@ const Popper = () => {
   return (
     <>
       <AppComponentHeader
-        title='Popper'
-        description='A Popper can be used to display some content on top of another. Its an alternative to react-popper.'
-        refUrl='https://mui.com/components/popper/'
+        title="Popper"
+        description="A Popper can be used to display some content on top of another. Its an alternative to react-popper."
+        refUrl="https://mui.com/components/popper/"
       />
 
       <AppGridContainer>
         <Grid item xs={12} md={6}>
-          <AppComponentCard
-            title='Simple Popper'
-            component={SimplePopper}
-            source={SimplePopperSource}
-            noScrollbar
-          />
+          <AppComponentCard title="Simple Popper" component={SimplePopper} source={SimplePopperSource} noScrollbar />
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='Transitions Popper'
+            title="Transitions Popper"
             component={TransitionsPopper}
             source={TransitionsPopperSource}
             noScrollbar
@@ -44,7 +39,7 @@ const Popper = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='PositionedPopper'
+            title="PositionedPopper"
             component={PositionedPopper}
             source={PositionedPopperSource}
             noScrollbar
@@ -52,7 +47,7 @@ const Popper = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard
-            title='VirtualElementPopper'
+            title="VirtualElementPopper"
             component={VirtualElementPopper}
             source={VirtualElementPopperSource}
             noScrollbar

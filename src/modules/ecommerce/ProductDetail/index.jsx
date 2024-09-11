@@ -17,8 +17,7 @@ import ProductImageSlide from './ProductImageSlide';
 ProductImageSlide.propTypes = { product: PropTypes.any };
 const ProductDetail = () => {
   const { id } = useParams();
-  const [{ apiData: currentProduct, loading }, { setQueryParams }] =
-    useGetDataApi('/api/ecommerce/get', {}, {}, false);
+  const [{ apiData: currentProduct, loading }, { setQueryParams }] = useGetDataApi('/api/ecommerce/get', {}, {}, false);
 
   useEffect(() => {
     setQueryParams({ id: id });
@@ -29,7 +28,7 @@ const ProductDetail = () => {
       {loading || isEmptyObject(currentProduct) ? (
         <AppLoader />
       ) : (
-        <AppAnimate animation='transition.slideUpIn' delay={200}>
+        <AppAnimate animation="transition.slideUpIn" delay={200}>
           <AppCard>
             <Header product={currentProduct} />
             <AppGridContainer>

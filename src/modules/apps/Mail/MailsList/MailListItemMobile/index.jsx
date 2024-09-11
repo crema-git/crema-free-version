@@ -8,30 +8,15 @@ import Box from '@mui/material/Box';
 import PropTypes from 'prop-types';
 import AppsStarredIcon from '@crema/components/AppsStarredIcon';
 import Avatar from '@mui/material/Avatar';
-import {
-  AttachmentWrapper,
-  AvatarWrapper,
-  MailMobileItemWrapper,
-} from './index.styles';
+import { AttachmentWrapper, AvatarWrapper, MailMobileItemWrapper } from './index.styles';
 import CheckOutlinedIcon from '@mui/icons-material/CheckOutlined';
 import { Fonts } from '@crema/constants/AppEnums';
 import { getStringFromHtml } from '@crema/helpers/StringHelper';
 
-const MailListItemMobile = (props) => {
-  const {
-    mail,
-    checkedMails,
-    onChangeCheckedMails,
-    onChangeStarred,
-    onViewMailDetail,
-  } = props;
-
+const MailListItemMobile = ({ mail, onChangeCheckedMails, onChangeStarred, onViewMailDetail, checkedMails = [] }) => {
   const messages = mail.messages.length;
   const onGetMailDate = (date) => {
-    if (
-      dayjs(date, 'ddd, MMM DD, YYYY').format() ===
-      dayjs('ddd, MMM DD, YYYY').format()
-    ) {
+    if (dayjs(date, 'ddd, MMM DD, YYYY').format() === dayjs('ddd, MMM DD, YYYY').format()) {
       return dayjs(date).format('LT');
     } else {
       return date.split(',')[1];
@@ -78,7 +63,6 @@ const MailListItemMobile = (props) => {
     <MailMobileItemWrapper
       mail={mail}
       dense
-      button
       key={mail.id}
       className={clsx('item-hover', {
         active: checkedMails.includes(mail.id),
@@ -103,11 +87,7 @@ const MailListItemMobile = (props) => {
           {checkedMails.includes(mail.id) ? (
             <CheckOutlinedIcon />
           ) : (
-            <Avatar
-              className='avatar'
-              alt={getSenderName()}
-              src={getSenderImage()}
-            />
+            <Avatar className="avatar" alt={getSenderName()} src={getSenderImage()} />
           )}
         </AvatarWrapper>
       </Box>
@@ -135,9 +115,7 @@ const MailListItemMobile = (props) => {
               whiteSpace: 'nowrap',
             }}
           >
-            {mail.isReplied
-              ? `${getSenderName()}, me(${messages})`
-              : getLastSenderName()}
+            {mail.isReplied ? `${getSenderName()}, me(${messages})` : getLastSenderName()}
           </Typography>
           <Typography
             sx={{
@@ -177,7 +155,7 @@ const MailListItemMobile = (props) => {
           }}
         >
           <Box
-            component='span'
+            component="span"
             sx={{
               fontWeight: Fonts.MEDIUM,
               fontSize: 12,
@@ -188,7 +166,7 @@ const MailListItemMobile = (props) => {
           </Box>
 
           <Box
-            component='span'
+            component="span"
             sx={{
               mt: 'auto',
             }}
@@ -204,14 +182,8 @@ const MailListItemMobile = (props) => {
 
 export default MailListItemMobile;
 
-MailListItemMobile.defaultProps = {
-  labelList: [],
-  checkedMails: [],
-};
-
 MailListItemMobile.propTypes = {
   mail: PropTypes.object.isRequired,
-  labelList: PropTypes.array,
   checkedMails: PropTypes.array,
   onChangeCheckedMails: PropTypes.func,
   onChangeStarred: PropTypes.func,

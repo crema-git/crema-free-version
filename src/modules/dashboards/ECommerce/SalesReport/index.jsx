@@ -62,26 +62,16 @@ const SalesReport = () => {
             }}
           >
             <DotActionItem>
-              <span
-                style={{ backgroundColor: theme.palette.secondary.main }}
-                className='dot-icon'
-              />
-              <IntlMessages id='dashboard.eCommerce.return' />
+              <span style={{ backgroundColor: theme.palette.secondary.main }} className="dot-icon" />
+              <IntlMessages id="dashboard.eCommerce.return" />
             </DotActionItem>
             <DotActionItem>
-              <span
-                style={{ backgroundColor: theme.palette.primary.main }}
-                className='dot-icon'
-              />
-              <IntlMessages id='common.orders' />
+              <span style={{ backgroundColor: theme.palette.primary.main }} className="dot-icon" />
+              <IntlMessages id="common.orders" />
             </DotActionItem>
           </Box>
           <AppSelect
-            menus={[
-              messages['dashboard.thisWeek'],
-              messages['dashboard.lastWeeks'],
-              messages['dashboard.lastMonth'],
-            ]}
+            menus={[messages['dashboard.thisWeek'], messages['dashboard.lastWeeks'], messages['dashboard.lastMonth']]}
             defaultValue={messages['dashboard.thisWeek']}
             onChange={handleSelectionType}
           />

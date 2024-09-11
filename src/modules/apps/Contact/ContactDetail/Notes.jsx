@@ -18,14 +18,14 @@ const Notes = (props) => {
       }}
     >
       <Box
-        component='h6'
+        component="h6"
         sx={{
           m: 2,
           fontWeight: Fonts.MEDIUM,
           fontSize: 16,
         }}
       >
-        <IntlMessages id='common.notes' />
+        <IntlMessages id="common.notes" />
       </Box>
 
       <TextField
@@ -33,11 +33,11 @@ const Notes = (props) => {
         sx={{
           width: '100%',
         }}
-        rows='4'
+        rows="4"
         placeholder={messages['common.notes']}
-        name='notes'
+        name="notes"
         value={contact.notes}
-        variant='outlined'
+        variant="outlined"
         disabled
       />
     </Box>

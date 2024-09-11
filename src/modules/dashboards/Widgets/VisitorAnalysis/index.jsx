@@ -13,7 +13,7 @@ const VisitorAnalysis = () => {
       title={messages['dashboard.visitorAnalysis']}
       sxStyle={{ height: 1 }}
       footer={
-        <Box color='text.secondary' display='flex' alignItems='center'>
+        <Box color="text.secondary" display="flex" alignItems="center">
           <Box
             sx={{
               backgroundColor: 'secondary.main',
@@ -33,14 +33,14 @@ const VisitorAnalysis = () => {
                 fontSize: 14,
               }}
             >
-              <IntlMessages id='dashboard.visitorAnalysisContent' />
+              <IntlMessages id="dashboard.visitorAnalysisContent" />
             </Typography>
           </Box>
         </Box>
       }
     >
       <Box>
-        <AppCircularProgress activeColor='#F04F47' value={59} thickness={2} />
+        <AppCircularProgress activeColor="#F04F47" value={59} thickness={2} />
       </Box>
     </AppCard>
   );

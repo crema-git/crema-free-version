@@ -17,10 +17,10 @@ function a11yProps(index) {
 }
 
 const tabs = [
-  { id: 1, name: <IntlMessages id='common.all' /> },
-  { id: 2, name: <IntlMessages id='extra.branding' /> },
-  { id: 3, name: <IntlMessages id='extra.graphics' /> },
-  { id: 4, name: <IntlMessages id='extra.logos' /> },
+  { id: 1, name: <IntlMessages id="common.all" /> },
+  { id: 2, name: <IntlMessages id="extra.branding" /> },
+  { id: 3, name: <IntlMessages id="extra.graphics" /> },
+  { id: 4, name: <IntlMessages id="extra.logos" /> },
 ];
 
 const PortfolioTabs = ({ portfolio }) => {
@@ -41,10 +41,7 @@ const PortfolioTabs = ({ portfolio }) => {
         sx={{
           backgroundColor: (theme) => theme.palette.background.paper,
           backgroundImage: (theme) =>
-            `linear-gradient(${alpha(
-              theme.palette.common.white,
-              0.05,
-            )}, ${alpha(theme.palette.common.white, 0.05)})`,
+            `linear-gradient(${alpha(theme.palette.common.white, 0.05)}, ${alpha(theme.palette.common.white, 0.05)})`,
           boxShadow: '0px 10px 10px 4px rgba(0, 0, 0, 0.04)',
           borderRadius: (theme) => theme.cardRadius / 4,
           mb: 7.5,
@@ -59,11 +56,7 @@ const PortfolioTabs = ({ portfolio }) => {
           },
         }}
       >
-        <Tabs
-          value={value}
-          onChange={onTabsChange}
-          aria-label='basic tabs example'
-        >
+        <Tabs value={value} onChange={onTabsChange} aria-label="basic tabs example">
           {tabs.map((tab, index) => (
             <Tab label={tab.name} key={index} {...a11yProps(index)} />
           ))}
@@ -80,11 +73,7 @@ const PortfolioTabs = ({ portfolio }) => {
             xl: 4,
           }}
           renderRow={(data, index) => (
-            <PortfolioCard
-              key={index}
-              onViewPortfolioDetail={onViewPortfolioDetail}
-              portfolio={data}
-            />
+            <PortfolioCard key={index} onViewPortfolioDetail={onViewPortfolioDetail} portfolio={data} />
           )}
         />
       )}
@@ -99,11 +88,7 @@ const PortfolioTabs = ({ portfolio }) => {
             xl: 4,
           }}
           renderRow={(data, index) => (
-            <PortfolioCard
-              key={index}
-              onViewPortfolioDetail={onViewPortfolioDetail}
-              portfolio={data}
-            />
+            <PortfolioCard key={index} onViewPortfolioDetail={onViewPortfolioDetail} portfolio={data} />
           )}
         />
       )}
@@ -118,11 +103,7 @@ const PortfolioTabs = ({ portfolio }) => {
             xl: 4,
           }}
           renderRow={(data, index) => (
-            <PortfolioCard
-              key={index}
-              onViewPortfolioDetail={onViewPortfolioDetail}
-              portfolio={data}
-            />
+            <PortfolioCard key={index} onViewPortfolioDetail={onViewPortfolioDetail} portfolio={data} />
           )}
         />
       )}
@@ -137,11 +118,7 @@ const PortfolioTabs = ({ portfolio }) => {
             xl: 4,
           }}
           renderRow={(data, index) => (
-            <PortfolioCard
-              key={index}
-              onViewPortfolioDetail={onViewPortfolioDetail}
-              portfolio={data}
-            />
+            <PortfolioCard key={index} onViewPortfolioDetail={onViewPortfolioDetail} portfolio={data} />
           )}
         />
       )}

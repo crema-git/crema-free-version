@@ -9,7 +9,7 @@ import { getAssetsUrl } from '@crema/helpers/UrlHelper';
 
 const StatsItemCard = ({ stats }) => {
   return (
-    <AppCard sxStyle={{ height: 1 }} className='card-hover'>
+    <AppCard sxStyle={{ height: 1 }} className="card-hover">
       <Box
         sx={{
           display: 'flex',
@@ -33,7 +33,7 @@ const StatsItemCard = ({ stats }) => {
               padding: 2,
             }}
           >
-            <img src={getAssetsUrl(stats.icon)} alt='' />
+            <img src={getAssetsUrl(stats.icon)} alt="" />
           </Avatar>
         </Box>
         <Box
@@ -49,9 +49,9 @@ const StatsItemCard = ({ stats }) => {
           }}
         >
           <Box sx={{ overflow: 'hidden' }}>
-            <Box component='h3'>{stats.count}</Box>
+            <Box component="h3">{stats.count}</Box>
             <Box
-              component='p'
+              component="p"
               sx={{
                 color: 'text.secondary',
                 fontSize: 14,
@@ -64,7 +64,7 @@ const StatsItemCard = ({ stats }) => {
             </Box>
           </Box>
           <Box
-            component='span'
+            component="span"
             sx={{
               backgroundColor: stats.bgcolor,
               borderRadius: 30,
@@ -75,10 +75,9 @@ const StatsItemCard = ({ stats }) => {
               display: 'inline-block',
               minWidth: 75,
               textAlign: 'center',
-              '@media only screen and (max-width: 1580px) and (min-width: 1200px)':
-                {
-                  display: 'none',
-                },
+              '@media only screen and (max-width: 1580px) and (min-width: 1200px)': {
+                display: 'none',
+              },
             }}
           >
             {stats.new}

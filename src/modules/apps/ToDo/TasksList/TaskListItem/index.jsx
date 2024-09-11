@@ -13,13 +13,7 @@ import LabelOutlinedIcon from '@mui/icons-material/LabelOutlined';
 import DeleteOutlinedIcon from '@mui/icons-material/DeleteOutlined';
 import { ActionWrapper, StyledListItem, TaskInfoWrapper } from './index.style';
 
-const TaskListItem = ({
-  task,
-  onChangeCheckedTasks,
-  checkedTasks,
-  onChangeStarred,
-  onDeleteTask,
-}) => {
+const TaskListItem = ({ task, onChangeCheckedTasks, checkedTasks = [], onChangeStarred, onDeleteTask }) => {
   const navigate = useNavigate();
   const { folder, label } = useParams();
 
@@ -31,7 +25,6 @@ const TaskListItem = ({
   return (
     <StyledListItem
       dense
-      button
       key={task.id}
       className={clsx('item-hover', {
         checked: checkedTasks.includes(task.id),
@@ -46,15 +39,11 @@ const TaskListItem = ({
             }}
             checked={checkedTasks.includes(task.id)}
             onChange={(event) => onChangeCheckedTasks(event, task.id)}
-            color='primary'
+            color="primary"
           />
         </span>
 
-        <Box
-          mr={2.5}
-          component='span'
-          onClick={(event) => event.stopPropagation()}
-        >
+        <Box mr={2.5} component="span" onClick={(event) => event.stopPropagation()}>
           <AppsStarredIcon item={task} onChange={onChangeStarred} />
         </Box>
         <Box mr={3.5}>
@@ -69,7 +58,7 @@ const TaskListItem = ({
         </Box>
 
         <Box
-          component='p'
+          component="p"
           sx={{
             mr: 3,
             overflow: 'hidden',
@@ -91,8 +80,8 @@ const TaskListItem = ({
         </Hidden>
 
         <Box
-          className='task-list-schedule'
-          component='span'
+          className="task-list-schedule"
+          component="span"
           sx={{
             ml: 2,
             overflow: 'hidden',
@@ -102,9 +91,9 @@ const TaskListItem = ({
             transform: 'translateX(60px)',
           }}
         >
-          <IntlMessages id='todo.scheduleFor' /> {task.startDate}
+          <IntlMessages id="todo.scheduleFor" /> {task.startDate}
         </Box>
-        <Box className='labelAction'>
+        <Box className="labelAction">
           <LabelOutlinedIcon onClick={(e) => e.stopPropagation()} />
           <DeleteOutlinedIcon
             onClick={(e) => {
@@ -119,10 +108,6 @@ const TaskListItem = ({
 };
 
 export default TaskListItem;
-
-TaskListItem.defaultProps = {
-  checkedTasks: [],
-};
 
 TaskListItem.propTypes = {
   task: PropTypes.object.isRequired,

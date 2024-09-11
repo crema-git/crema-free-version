@@ -11,8 +11,8 @@ const TableItem = (props) => {
   return (
     <TableRow>
       <TableCell
-        component='th'
-        scope='row'
+        component="th"
+        scope="row"
         sx={{
           verticalAlign: 'top',
         }}
@@ -38,22 +38,22 @@ const TableItem = (props) => {
           }}
         >
           <Box
-            component='p'
+            component="p"
             sx={{
               display: 'flex',
               alignItems: 'center',
               mb: 0,
             }}
           >
-            <Box component='span' sx={{ color: 'text.primary' }}>
+            <Box component="span" sx={{ color: 'text.primary' }}>
               Size:
             </Box>
-            <Box component='span' sx={{ color: 'text.secondary', ml: 2 }}>
+            <Box component="span" sx={{ color: 'text.secondary', ml: 2 }}>
               {product.desc.size}
             </Box>
           </Box>
           <Box
-            component='p'
+            component="p"
             sx={{
               display: 'flex',
               alignItems: 'center',
@@ -61,10 +61,10 @@ const TableItem = (props) => {
               ml: { xs: 4, xl: 6 },
             }}
           >
-            <Box component='span' sx={{ color: 'text.primary' }}>
+            <Box component="span" sx={{ color: 'text.primary' }}>
               Color:
             </Box>
-            <Box component='span' sx={{ color: 'text.secondary', ml: 2 }}>
+            <Box component="span" sx={{ color: 'text.secondary', ml: 2 }}>
               {product.desc.color}
             </Box>
           </Box>

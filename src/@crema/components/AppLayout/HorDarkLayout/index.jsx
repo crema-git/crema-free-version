@@ -45,10 +45,7 @@ const HorDarkLayout = ({ routes, routesConfig }) => {
         />
 
         <MainContent>
-          <AppHeader
-            toggleNavCollapsed={toggleNavCollapsed}
-            routesConfig={routesConfig}
-          />
+          <AppHeader toggleNavCollapsed={toggleNavCollapsed} routesConfig={routesConfig} />
           <AppContentView routes={routes} />
           <AppFixedFooter />
         </MainContent>

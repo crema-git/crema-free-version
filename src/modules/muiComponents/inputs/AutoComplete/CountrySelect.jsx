@@ -6,23 +6,19 @@ import Autocomplete from '@mui/material/Autocomplete';
 export default function CountrySelect() {
   return (
     <Autocomplete
-      id='country-select-demo'
+      id="country-select-demo"
       sx={{ width: 300 }}
       options={countries}
       autoHighlight
       getOptionLabel={(option) => option.label}
       renderOption={(props, option) => (
-        <Box
-          component='li'
-          sx={{ '& > img': { mr: 2, flexShrink: 0 } }}
-          {...props}
-        >
+        <Box component="li" sx={{ '& > img': { mr: 2, flexShrink: 0 } }} {...props}>
           <img
-            loading='lazy'
-            width='20'
+            loading="lazy"
+            width="20"
             src={`https://flagcdn.com/w20/${option.code.toLowerCase()}.png`}
             srcSet={`https://flagcdn.com/w40/${option.code.toLowerCase()}.png 2x`}
-            alt=''
+            alt=""
           />
           {option.label} ({option.code}) +{option.phone}
         </Box>
@@ -30,7 +26,7 @@ export default function CountrySelect() {
       renderInput={(params) => (
         <TextField
           {...params}
-          label='Choose a country'
+          label="Choose a country"
           inputProps={{
             ...params.inputProps,
             autoComplete: 'new-password', // disable autocomplete and autofill

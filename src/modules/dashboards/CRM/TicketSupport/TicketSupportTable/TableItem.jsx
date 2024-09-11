@@ -26,13 +26,13 @@ const TableItem = (props) => {
           },
         },
       }}
-      className='item-hover'
+      className="item-hover"
     >
-      <TableCell scope='row' className='tableCell'>
+      <TableCell scope="row" className="tableCell">
         {row.id}.
       </TableCell>
-      <TableCell align='left' className='tableCell'>
-        <Box display='flex' alignItems='center'>
+      <TableCell align="left" className="tableCell">
+        <Box display="flex" alignItems="center">
           {row.image ? (
             <Avatar
               sx={{
@@ -53,18 +53,18 @@ const TableItem = (props) => {
               {row.name[0].toUpperCase()}
             </Avatar>
           )}
-          <Box component='span' ml={3.5} fontWeight={Fonts.MEDIUM}>
+          <Box component="span" ml={3.5} fontWeight={Fonts.MEDIUM}>
             {row.name}
           </Box>
         </Box>
       </TableCell>
-      <TableCell align='left' className='tableCell'>
+      <TableCell align="left" className="tableCell">
         {row.ticketId}
       </TableCell>
-      <TableCell align='left' className='tableCell'>
+      <TableCell align="left" className="tableCell">
         {row.created}
       </TableCell>
-      <TableCell align='left' className='tableCell'>
+      <TableCell align="left" className="tableCell">
         {row.contact}
       </TableCell>
     </TableRow>

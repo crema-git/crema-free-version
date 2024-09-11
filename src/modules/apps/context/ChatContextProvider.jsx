@@ -10,8 +10,10 @@ export const useChatContext = () => useContext(ChatContext);
 export const useChatActionsContext = () => useContext(ChatActionsContext);
 
 export const ChatContextProvider = ({ children }) => {
-  const [{ apiData: connectionList, loading }, { setData: setConnectionData }] =
-    useGetDataApi('/api/chatApp/connections', []);
+  const [{ apiData: connectionList, loading }, { setData: setConnectionData }] = useGetDataApi(
+    '/api/chatApp/connections',
+    [],
+  );
 
   return (
     <ChatContext.Provider

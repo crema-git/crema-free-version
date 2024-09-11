@@ -10,7 +10,7 @@ const TableItem = ({ data }) => {
   return (
     <TableRow
       key={data.name}
-      className='item-hover'
+      className="item-hover"
       sx={{
         '& .tableCell': {
           fontSize: 13,
@@ -24,27 +24,27 @@ const TableItem = ({ data }) => {
         },
       }}
     >
-      <TableCell className='tableCell'>
-        <Box display='flex' alignItems='center'>
+      <TableCell className="tableCell">
+        <Box display="flex" alignItems="center">
           <Box sx={{ mr: 3.5 }}>
             <Avatar src={data.profile_pic} />
           </Box>
           <Box fontWeight={Fonts.MEDIUM}>{data.name}</Box>
         </Box>
       </TableCell>
-      <TableCell className='tableCell'>
+      <TableCell className="tableCell">
         <Box>{data.courseId}</Box>
       </TableCell>
-      <TableCell className='tableCell'>
+      <TableCell className="tableCell">
         <Box>{data.courseName}</Box>
       </TableCell>
-      <TableCell className='tableCell'>
+      <TableCell className="tableCell">
         <Box>{data.totalGrade} point</Box>
       </TableCell>
-      <TableCell className='tableCell'>
+      <TableCell className="tableCell">
         <Box> Ranking {data.ranking}</Box>
       </TableCell>
-      <TableCell className='tableCell'>
+      <TableCell className="tableCell">
         <Box
           sx={{
             borderRadius: '30px',

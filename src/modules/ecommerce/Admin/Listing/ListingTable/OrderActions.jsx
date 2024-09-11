@@ -23,31 +23,21 @@ const OrderActions = ({ id }) => {
 
   return (
     <Box>
-      <IconButton
-        aria-controls='alpha-menu'
-        aria-haspopup='true'
-        onClick={handleClick}
-      >
+      <IconButton aria-controls="alpha-menu" aria-haspopup="true" onClick={handleClick}>
         <MoreVertIcon />
       </IconButton>
       <Menu
-        id='alpha-menu'
+        id="alpha-menu"
         anchorEl={anchorEl}
         keepMounted
         open={open}
         onClose={handleClose}
         TransitionComponent={Fade}
       >
-        <MenuItem
-          style={{ fontSize: 14 }}
-          onClick={() => navigate('/ecommerce/orders')}
-        >
+        <MenuItem style={{ fontSize: 14 }} onClick={() => navigate('/ecommerce/orders')}>
           View Order
         </MenuItem>
-        <MenuItem
-          style={{ fontSize: 14 }}
-          onClick={() => navigate(`/ecommerce/edit-products/${id}`)}
-        >
+        <MenuItem style={{ fontSize: 14 }} onClick={() => navigate(`/ecommerce/edit-products/${id}`)}>
           Edit
         </MenuItem>
         <MenuItem style={{ fontSize: 14 }} onClick={handleClose}>

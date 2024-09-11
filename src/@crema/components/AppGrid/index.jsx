@@ -3,17 +3,13 @@ import GridView from './GridView';
 import PropTypes from 'prop-types';
 import GridFooter from './GridFooter';
 
-const AppGrid = ({ footerProps, ...rest }) => {
+const AppGrid = ({ footerProps, data = [], ...rest }) => {
   return (
     <GridView
       {...rest}
+      data={data}
       ListFooterComponent={
-        footerProps ? (
-          <GridFooter
-            loading={footerProps.loading}
-            footerText={footerProps.footerText}
-          />
-        ) : null
+        footerProps ? <GridFooter loading={footerProps.loading} footerText={footerProps.footerText} /> : null
       }
     />
   );
@@ -30,11 +26,6 @@ AppGrid.propTypes = {
   containerStyle: PropTypes.object,
   ListEmptyComponent: PropTypes.node,
   ListFooterComponent: PropTypes.node,
-  data: PropTypes.array.isRequired,
+  data: PropTypes.array,
   onEndReached: PropTypes.func,
-};
-AppGrid.defaultProps = {
-  loading: false,
-  border: false,
-  data: [],
 };

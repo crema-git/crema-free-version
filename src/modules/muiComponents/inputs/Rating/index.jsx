@@ -1,20 +1,20 @@
-import AppComponentHeader from "@crema/components/AppComponentHeader";
-import AppGridContainer from "@crema/components/AppGridContainer";
-import Grid from "@mui/material/Grid";
-import AppComponentCard from "@crema/components/AppComponentCard";
+import AppComponentHeader from '@crema/components/AppComponentHeader';
+import AppGridContainer from '@crema/components/AppGridContainer';
+import Grid from '@mui/material/Grid';
+import AppComponentCard from '@crema/components/AppComponentCard';
 
-import BasicRating from "./BasicRating";
-import BasicRatingSource from "./BasicRating?raw";
-import HalfRating from "./RatingPrecision";
-import HalfRatingSource from "./RatingPrecision?raw";
-import HoverRating from "./HoverFeedback";
-import HoverRatingSource from "./HoverFeedback?raw";
-import RatingSIze from "./Sizes";
-import RatingSIzeSource from "./Sizes?raw";
-import CustomizedRating from "./Customization";
-import CustomizedRatingSource from "./Customization?raw";
-import RadioGroupRating from "./RadioGroupRating";
-import RadioGroupRatingSource from "./RadioGroupRating?raw";
+import BasicRating from './BasicRating';
+import BasicRatingSource from './BasicRating?raw';
+import HalfRating from './RatingPrecision';
+import HalfRatingSource from './RatingPrecision?raw';
+import HoverRating from './HoverFeedback';
+import HoverRatingSource from './HoverFeedback?raw';
+import RatingSIze from './Sizes';
+import RatingSIzeSource from './Sizes?raw';
+import CustomizedRating from './Customization';
+import CustomizedRatingSource from './Customization?raw';
+import RadioGroupRating from './RadioGroupRating';
+import RadioGroupRatingSource from './RadioGroupRating?raw';
 
 const Rating = () => {
   return (
@@ -27,12 +27,7 @@ const Rating = () => {
 
       <AppGridContainer>
         <Grid item xs={12} md={6}>
-          <AppComponentCard
-            title="Basic rating"
-            component={BasicRating}
-            source={BasicRatingSource}
-            noScrollbar
-          />
+          <AppComponentCard title="Basic rating" component={BasicRating} source={BasicRatingSource} noScrollbar />
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard

@@ -22,8 +22,8 @@ const TableCellWrapper = styled(TableCell)(() => {
 
 const TableItem = ({ data }) => {
   return (
-    <TableRow key={data.name} className='item-hover'>
-      <TableCellWrapper align='left'>
+    <TableRow key={data.name} className="item-hover">
+      <TableCellWrapper align="left">
         <Box sx={{ display: 'flex', alignItems: 'center' }}>
           <Avatar
             sx={{ border: '0 none !important', width: 30, height: 30 }}
@@ -32,7 +32,7 @@ const TableItem = ({ data }) => {
             src={data.icon}
           />
           <Box
-            component='h5'
+            component="h5"
             sx={{
               ml: 3,
             }}
@@ -41,7 +41,7 @@ const TableItem = ({ data }) => {
           </Box>
         </Box>
       </TableCellWrapper>
-      <TableCellWrapper align='left'>
+      <TableCellWrapper align="left">
         <Box
           sx={{
             display: 'flex',
@@ -49,13 +49,13 @@ const TableItem = ({ data }) => {
             color: data.type === 'looser' ? '#EA3943' : '#16C784',
           }}
         >
-          <Box component='span' sx={{ mr: 2 }}>
+          <Box component="span" sx={{ mr: 2 }}>
             {data.percentage}
           </Box>
           <img src={`/assets/icon/${data.type}.svg`} alt={data.type} />
         </Box>
       </TableCellWrapper>
-      <TableCellWrapper align='right'>{data.amount}</TableCellWrapper>
+      <TableCellWrapper align="right">{data.amount}</TableCellWrapper>
     </TableRow>
   );
 };

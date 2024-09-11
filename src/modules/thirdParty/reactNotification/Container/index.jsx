@@ -22,58 +22,34 @@ export default class ContainerExample extends React.Component {
 
   render() {
     return (
-      <Box display='flex' flexWrap='wrap'>
+      <Box display="flex" flexWrap="wrap">
         <Box mr={2} my={1}>
-          <Button
-            color='primary'
-            variant='contained'
-            onClick={() => this.add('top-left')}
-          >
+          <Button color="primary" variant="contained" onClick={() => this.add('top-left')}>
             Top Left
           </Button>
         </Box>
         <Box mr={2} my={1}>
-          <Button
-            color='primary'
-            variant='contained'
-            onClick={() => this.add('top-right')}
-          >
+          <Button color="primary" variant="contained" onClick={() => this.add('top-right')}>
             Top Right
           </Button>
         </Box>
         <Box mr={2} my={1}>
-          <Button
-            color='primary'
-            variant='contained'
-            onClick={() => this.add('top-center')}
-          >
+          <Button color="primary" variant="contained" onClick={() => this.add('top-center')}>
             Top Center
           </Button>
         </Box>
         <Box mr={2} my={1}>
-          <Button
-            color='primary'
-            variant='contained'
-            onClick={() => this.add('bottom-left')}
-          >
+          <Button color="primary" variant="contained" onClick={() => this.add('bottom-left')}>
             Bottom Left
           </Button>
         </Box>
         <Box mr={2} my={1}>
-          <Button
-            color='primary'
-            variant='contained'
-            onClick={() => this.add('bottom-right')}
-          >
+          <Button color="primary" variant="contained" onClick={() => this.add('bottom-right')}>
             Bottom Right
           </Button>
         </Box>
         <Box mr={2} my={1}>
-          <Button
-            color='primary'
-            variant='contained'
-            onClick={() => this.add('bottom-center')}
-          >
+          <Button color="primary" variant="contained" onClick={() => this.add('bottom-center')}>
             Bottom Center
           </Button>
         </Box>

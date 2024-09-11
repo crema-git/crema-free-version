@@ -30,9 +30,9 @@ const Previews = () => {
   };
 
   return (
-    <section className='container' style={{ cursor: 'pointer' }}>
+    <section className="container" style={{ cursor: 'pointer' }}>
       <UploadModern
-        uploadText='Drag n drop some files here, or click to select files'
+        uploadText="Drag n drop some files here, or click to select files"
         setUploadedFiles={setUploadedFiles}
         dropzone={dropzone}
       />
@@ -44,11 +44,7 @@ const Previews = () => {
         column={4}
         itemPadding={5}
         renderRow={(file, index) => (
-          <PreviewThumb
-            file={file}
-            onDeleteUploadFile={onDeleteUploadFile}
-            key={index + file.path}
-          />
+          <PreviewThumb file={file} onDeleteUploadFile={onDeleteUploadFile} key={index + file.path} />
         )}
       />
     </section>

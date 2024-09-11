@@ -45,12 +45,9 @@ const Categories = (props) => {
   const { category } = props;
 
   return (
-    <EarningCategoryListItem
-      category={category}
-      secondaryAction={<span>{category.value}% </span>}
-    >
-      <span className='dot-icon' />
-      <ListItemText className='earning-text' primary={`${category.name}:`} />
+    <EarningCategoryListItem category={category} secondaryAction={<span>{category.value}% </span>}>
+      <span className="dot-icon" />
+      <ListItemText className="earning-text" primary={`${category.name}:`} />
     </EarningCategoryListItem>
   );
 };

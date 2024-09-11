@@ -21,36 +21,24 @@ const ReactDropzone = () => {
   return (
     <>
       <AppComponentHeader
-        title='React Dropzone'
+        title="React Dropzone"
         description="Simple React hook to create a HTML5-compliant drag'n'drop zone for files."
-        refUrl='https://react-dropzone.netlify.com/'
+        refUrl="https://react-dropzone.netlify.com/"
       />
 
       <AppGridContainer>
         <Grid item xs={12} lg={6}>
-          <AppComponentCard
-            title='Basic'
-            component={Basic}
-            source={BasicSource}
-          />
+          <AppComponentCard title="Basic" component={Basic} source={BasicSource} />
+        </Grid>
+        <Grid item xs={12} lg={6}>
+          <AppComponentCard title="Styling Dropzone" component={StylingDropzone} source={StylingDropzoneSource} />
+        </Grid>
+        <Grid item xs={12} lg={6}>
+          <AppComponentCard title="Previews" component={Previews} source={PreviewsSource} />
         </Grid>
         <Grid item xs={12} lg={6}>
           <AppComponentCard
-            title='Styling Dropzone'
-            component={StylingDropzone}
-            source={StylingDropzoneSource}
-          />
-        </Grid>
-        <Grid item xs={12} lg={6}>
-          <AppComponentCard
-            title='Previews'
-            component={Previews}
-            source={PreviewsSource}
-          />
-        </Grid>
-        <Grid item xs={12} lg={6}>
-          <AppComponentCard
-            title='Dialog Programmatically'
+            title="Dialog Programmatically"
             component={DialogProgrammatically}
             source={DialogProgrammaticallySource}
           />

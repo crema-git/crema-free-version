@@ -1,59 +1,59 @@
-import React from "react";
-import AppComponentHeader from "@crema/components/AppComponentHeader";
-import AppGridContainer from "@crema/components/AppGridContainer";
-import Grid from "@mui/material/Grid";
-import AppComponentCard from "@crema/components/AppComponentCard";
+import React from 'react';
+import AppComponentHeader from '@crema/components/AppComponentHeader';
+import AppGridContainer from '@crema/components/AppGridContainer';
+import Grid from '@mui/material/Grid';
+import AppComponentCard from '@crema/components/AppComponentCard';
 
-import BasicTabs from "./BasicTabs";
-import BasicTabsSource from "./BasicTabs?raw";
+import BasicTabs from './BasicTabs';
+import BasicTabsSource from './BasicTabs?raw';
 
-import LabTabs from "./LabTabs";
-import LabTabsSource from "./LabTabs?raw";
+import LabTabs from './LabTabs';
+import LabTabsSource from './LabTabs?raw';
 
-import TabsWrappedLabel from "./TabsWrappedLabel";
-import TabsWrappedLabelSource from "./TabsWrappedLabel?raw";
+import TabsWrappedLabel from './TabsWrappedLabel';
+import TabsWrappedLabelSource from './TabsWrappedLabel?raw';
 
-import ColorTabs from "./ColorTabs";
-import ColorTabsSource from "./ColorTabs?raw";
+import ColorTabs from './ColorTabs';
+import ColorTabsSource from './ColorTabs?raw';
 
-import DisabledTabs from "./DisabledTabs";
-import DisabledTabsSource from "./DisabledTabs?raw";
+import DisabledTabs from './DisabledTabs';
+import DisabledTabsSource from './DisabledTabs?raw';
 
-import CenteredTabs from "./CenteredTabs";
-import CenteredTabsSource from "./CenteredTabs?raw";
+import CenteredTabs from './CenteredTabs';
+import CenteredTabsSource from './CenteredTabs?raw';
 
-import ScrollableTabsButtonAuto from "./ScrollableTabsButtonAuto";
-import ScrollableTabsButtonAutoSource from "./ScrollableTabsButtonAuto?raw";
+import ScrollableTabsButtonAuto from './ScrollableTabsButtonAuto';
+import ScrollableTabsButtonAutoSource from './ScrollableTabsButtonAuto?raw';
 
-import ScrollableTabsButtonForce from "./ScrollableTabsButtonForce";
-import ScrollableTabsButtonForceSource from "./ScrollableTabsButtonForce?raw";
+import ScrollableTabsButtonForce from './ScrollableTabsButtonForce';
+import ScrollableTabsButtonForceSource from './ScrollableTabsButtonForce?raw';
 
-import ScrollableTabsButtonVisible from "./ScrollableTabsButtonVisible";
-import ScrollableTabsButtonVisibleSource from "./ScrollableTabsButtonVisible?raw";
+import ScrollableTabsButtonVisible from './ScrollableTabsButtonVisible';
+import ScrollableTabsButtonVisibleSource from './ScrollableTabsButtonVisible?raw';
 
-import CustomizedTabs from "./CustomizedTabs";
-import CustomizedTabsSource from "./CustomizedTabs?raw";
+import CustomizedTabs from './CustomizedTabs';
+import CustomizedTabsSource from './CustomizedTabs?raw';
 
-import VerticalTabs from "./VerticalTabs";
-import VerticalTabsSource from "./VerticalTabs?raw";
+import VerticalTabs from './VerticalTabs';
+import VerticalTabsSource from './VerticalTabs?raw';
 
-import NavTabs from "./NavTabs";
-import NavTabsSource from "./NavTabs?raw";
+import NavTabs from './NavTabs';
+import NavTabsSource from './NavTabs?raw';
 
-import IconTabs from "./IconTabs";
-import IconTabsSource from "./IconTabs";
+import IconTabs from './IconTabs';
+import IconTabsSource from './IconTabs';
 
-import IconLabelTabs from "./IconLabelTabs";
-import IconLabelTabsSource from "./IconLabelTabs";
+import IconLabelTabs from './IconLabelTabs';
+import IconLabelTabsSource from './IconLabelTabs';
 
-import IconPosition from "./IconPosition";
-import IconPositionSource from "./IconPosition";
+import IconPosition from './IconPosition';
+import IconPositionSource from './IconPosition';
 
-import AccessibleTabs1 from "./AccessibleTabs1";
-import AccessibleTabs1Source from "./AccessibleTabs1";
+import AccessibleTabs1 from './AccessibleTabs1';
+import AccessibleTabs1Source from './AccessibleTabs1';
 
-import AccessibleTabs2 from "./AccessibleTabs2";
-import AccessibleTabs2Source from "./AccessibleTabs2";
+import AccessibleTabs2 from './AccessibleTabs2';
+import AccessibleTabs2Source from './AccessibleTabs2';
 
 const Tabs = () => {
   return (

@@ -16,12 +16,8 @@ import AuthWrapper from '../AuthWrapper';
 import AppLogo from '@crema/components/AppLayout/components/AppLogo';
 
 const validationSchema = yup.object({
-  newPassword: yup
-    .string()
-    .required(<IntlMessages id='validation.enterNewPassword' />),
-  confirmPassword: yup
-    .string()
-    .required(<IntlMessages id='validation.reTypePassword' />),
+  newPassword: yup.string().required(<IntlMessages id="validation.enterNewPassword" />),
+  confirmPassword: yup.string().required(<IntlMessages id="validation.reTypePassword" />),
 });
 
 const ResetPasswordAwsCognito = () => {
@@ -44,8 +40,8 @@ const ResetPasswordAwsCognito = () => {
           <AppLogo />
         </Box>
         <Typography
-          variant='h2'
-          component='h2'
+          variant="h2"
+          component="h2"
           sx={{
             mb: 1.5,
             color: (theme) => theme.palette.text.primary,
@@ -53,7 +49,7 @@ const ResetPasswordAwsCognito = () => {
             fontSize: { xs: 14, xl: 16 },
           }}
         >
-          <IntlMessages id='common.resetPassword' />
+          <IntlMessages id="common.resetPassword" />
         </Typography>
 
         <Formik
@@ -66,14 +62,10 @@ const ResetPasswordAwsCognito = () => {
           validationSchema={validationSchema}
           onSubmit={(data, { setErrors, resetForm, setSubmitting }) => {
             if (pin.length !== 6) {
-              infoViewActionsContext.fetchError(
-                messages['validation.pinLength'],
-              );
+              infoViewActionsContext.fetchError(messages['validation.pinLength']);
             } else if (data.newPassword !== data.confirmPassword) {
               setErrors({
-                confirmPassword: (
-                  <IntlMessages id='validation.passwordMisMatch' />
-                ),
+                confirmPassword: <IntlMessages id="validation.passwordMisMatch" />,
               });
             } else {
               setSubmitting(true);
@@ -83,7 +75,7 @@ const ResetPasswordAwsCognito = () => {
           }}
         >
           {({ isSubmitting }) => (
-            <Form noValidate autoComplete='off'>
+            <Form noValidate autoComplete="off">
               <Box
                 sx={{
                   mb: 6,
@@ -91,7 +83,7 @@ const ResetPasswordAwsCognito = () => {
                 }}
               >
                 <Typography>
-                  <IntlMessages id='common.verificationMessage' />
+                  <IntlMessages id="common.verificationMessage" />
                 </Typography>
               </Box>
               <Box
@@ -99,11 +91,22 @@ const ResetPasswordAwsCognito = () => {
                   mb: { xs: 4, lg: 6 },
                 }}
               >
-                <VerificationInput
-                  passwordMode
-                  value={pin}
-                  length={6}
-                  onChange={(value) => setPin(value)}
+                <VerificationInput passwordMode value={pin} length={6} onChange={(value) => setPin(value)} />
+              </Box>
+
+              <Box
+                sx={{
+                  mb: { xs: 4, lg: 6 },
+                }}
+              >
+                <AppTextField
+                  name="newPassword"
+                  label={<IntlMessages id="common.newPassword" />}
+                  sx={{
+                    width: '100%',
+                  }}
+                  variant="outlined"
+                  type="password"
                 />
               </Box>
 
@@ -113,37 +116,21 @@ const ResetPasswordAwsCognito = () => {
                 }}
               >
                 <AppTextField
-                  name='newPassword'
-                  label={<IntlMessages id='common.newPassword' />}
+                  name="confirmPassword"
+                  label={<IntlMessages id="common.retypePassword" />}
                   sx={{
                     width: '100%',
                   }}
-                  variant='outlined'
-                  type='password'
-                />
-              </Box>
-
-              <Box
-                sx={{
-                  mb: { xs: 4, lg: 6 },
-                }}
-              >
-                <AppTextField
-                  name='confirmPassword'
-                  label={<IntlMessages id='common.retypePassword' />}
-                  sx={{
-                    width: '100%',
-                  }}
-                  variant='outlined'
-                  type='password'
+                  variant="outlined"
+                  type="password"
                 />
               </Box>
 
               <Button
-                variant='contained'
+                variant="contained"
                 disabled={isSubmitting}
-                color='primary'
-                type='submit'
+                color="primary"
+                type="submit"
                 sx={{
                   fontWeight: Fonts.REGULAR,
                   textTransform: 'capitalize',
@@ -151,7 +138,7 @@ const ResetPasswordAwsCognito = () => {
                   minWidth: 160,
                 }}
               >
-                <IntlMessages id='common.resetMyPassword' />
+                <IntlMessages id="common.resetMyPassword" />
               </Button>
             </Form>
           )}

@@ -89,40 +89,35 @@ export const reactSlickData = {
     {
       id: 1,
       srcImg: '/assets/images/slick-slider/carousel-1.jpg',
-      title:
-        "Event Awards: 7 Reasons Why They Don't Work & What You Can Do About It",
+      title: "Event Awards: 7 Reasons Why They Don't Work & What You Can Do About It",
       description:
         'Nihil ea sunt facilis praesentium atque. Ab animi alias sequi molestias aut velit ea. Sed possimus eos. Et est aliquid est voluptatem.',
     },
     {
       id: 3,
       srcImg: '/assets/images/slick-slider/carousel-3.jpg',
-      title:
-        "Event Awards: 7 Reasons Why They Don't Work & What You Can Do About It",
+      title: "Event Awards: 7 Reasons Why They Don't Work & What You Can Do About It",
       description:
         'Nihil ea sunt facilis praesentium atque. Ab animi alias sequi molestias aut velit ea. Sed possimus eos. Et est aliquid est voluptatem.',
     },
     {
       id: 4,
       srcImg: '/assets/images/slick-slider/carousel-5.jpg',
-      title:
-        "Event Awards: 7 Reasons Why They Don't Work & What You Can Do About It",
+      title: "Event Awards: 7 Reasons Why They Don't Work & What You Can Do About It",
       description:
         'Nihil ea sunt facilis praesentium atque. Ab animi alias sequi molestias aut velit ea. Sed possimus eos. Et est aliquid est voluptatem.',
     },
     {
       id: 2,
       srcImg: '/assets/images/slick-slider/carousel-2.jpg',
-      title:
-        "Event Awards: 7 Reasons Why They Don't Work & What You Can Do About It",
+      title: "Event Awards: 7 Reasons Why They Don't Work & What You Can Do About It",
       description:
         'Nihil ea sunt facilis praesentium atque. Ab animi alias sequi molestias aut velit ea. Sed possimus eos. Et est aliquid est voluptatem.',
     },
     {
       id: 5,
       srcImg: '/assets/images/slick-slider/carousel-6.jpg',
-      title:
-        "Event Awards: 7 Reasons Why They Don't Work & What You Can Do About It",
+      title: "Event Awards: 7 Reasons Why They Don't Work & What You Can Do About It",
       description:
         'Nihil ea sunt facilis praesentium atque. Ab animi alias sequi molestias aut velit ea. Sed possimus eos. Et est aliquid est voluptatem.',
     },
@@ -131,32 +126,27 @@ export const reactSlickData = {
     {
       id: 1,
       srcImg: '/assets/images/slick-slider/carousel-1.jpg',
-      title:
-        "Event Awards: 7 Reasons Why They Don't Work & What You Can Do About It",
+      title: "Event Awards: 7 Reasons Why They Don't Work & What You Can Do About It",
     },
     {
       id: 4,
       srcImg: '/assets/images/slick-slider/carousel-5.jpg',
-      title:
-        "Event Awards: 7 Reasons Why They Don't Work & What You Can Do About It",
+      title: "Event Awards: 7 Reasons Why They Don't Work & What You Can Do About It",
     },
     {
       id: 3,
       srcImg: '/assets/images/slick-slider/carousel-3.jpg',
-      title:
-        "Event Awards: 7 Reasons Why They Don't Work & What You Can Do About It",
+      title: "Event Awards: 7 Reasons Why They Don't Work & What You Can Do About It",
     },
     {
       id: 2,
       srcImg: '/assets/images/slick-slider/carousel-2.jpg',
-      title:
-        "Event Awards: 7 Reasons Why They Don't Work & What You Can Do About It",
+      title: "Event Awards: 7 Reasons Why They Don't Work & What You Can Do About It",
     },
     {
       id: 5,
       srcImg: '/assets/images/slick-slider/carousel-6.jpg',
-      title:
-        "Event Awards: 7 Reasons Why They Don't Work & What You Can Do About It",
+      title: "Event Awards: 7 Reasons Why They Don't Work & What You Can Do About It",
     },
   ],
   slideBasicFour: [
@@ -206,8 +196,7 @@ export const reactSlickData = {
       id: 1,
       srcImg: '/assets/images/slick-slider/carousel-1.jpg',
       srcThumb: '/assets/images/wall/happen_img2.png',
-      title:
-        "Event Awards: 7 Reasons Why They Don't Work & What You Can Do About It",
+      title: "Event Awards: 7 Reasons Why They Don't Work & What You Can Do About It",
       description:
         'Nihil ea sunt facilis praesentium atque. Ab animi alias sequi molestias aut velit ea. Sed possimus eos. Et est aliquid est voluptatem.',
     },
@@ -215,8 +204,7 @@ export const reactSlickData = {
       id: 3,
       srcImg: '/assets/images/slick-slider/carousel-3.jpg',
       srcThumb: '/assets/images/wall/happen_img3.png',
-      title:
-        "Event Awards: 7 Reasons Why They Don't Work & What You Can Do About It",
+      title: "Event Awards: 7 Reasons Why They Don't Work & What You Can Do About It",
       description:
         'Nihil ea sunt facilis praesentium atque. Ab animi alias sequi molestias aut velit ea. Sed possimus eos. Et est aliquid est voluptatem.',
     },
@@ -224,8 +212,7 @@ export const reactSlickData = {
       id: 4,
       srcImg: '/assets/images/slick-slider/carousel-5.jpg',
       srcThumb: '/assets/images/wall/happen_img1.png',
-      title:
-        "Event Awards: 7 Reasons Why They Don't Work & What You Can Do About It",
+      title: "Event Awards: 7 Reasons Why They Don't Work & What You Can Do About It",
       description:
         'Nihil ea sunt facilis praesentium atque. Ab animi alias sequi molestias aut velit ea. Sed possimus eos. Et est aliquid est voluptatem.',
     },
@@ -233,8 +220,7 @@ export const reactSlickData = {
       id: 2,
       srcImg: '/assets/images/slick-slider/carousel-2.jpg',
       srcThumb: '/assets/images/wall/happen_img2.png',
-      title:
-        "Event Awards: 7 Reasons Why They Don't Work & What You Can Do About It",
+      title: "Event Awards: 7 Reasons Why They Don't Work & What You Can Do About It",
       description:
         'Nihil ea sunt facilis praesentium atque. Ab animi alias sequi molestias aut velit ea. Sed possimus eos. Et est aliquid est voluptatem.',
     },
@@ -242,8 +228,7 @@ export const reactSlickData = {
       id: 5,
       srcImg: '/assets/images/slick-slider/carousel-6.jpg',
       srcThumb: '/assets/images/wall/happen_img4.png',
-      title:
-        "Event Awards: 7 Reasons Why They Don't Work & What You Can Do About It",
+      title: "Event Awards: 7 Reasons Why They Don't Work & What You Can Do About It",
       description:
         'Nihil ea sunt facilis praesentium atque. Ab animi alias sequi molestias aut velit ea. Sed possimus eos. Et est aliquid est voluptatem.',
     },

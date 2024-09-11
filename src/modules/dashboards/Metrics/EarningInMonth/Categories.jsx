@@ -2,7 +2,7 @@ import React from 'react';
 import Box from '@mui/material/Box';
 import PropTypes from 'prop-types';
 
-const Categories = ({ data }) => {
+const Categories = ({ data = [] }) => {
   return (
     <Box
       sx={{
@@ -25,7 +25,7 @@ const Categories = ({ data }) => {
             key={item.id}
           >
             <Box
-              component='span'
+              component="span"
               sx={{
                 height: { xs: 12, xl: 16 },
                 width: { xs: 12, xl: 16 },
@@ -36,7 +36,7 @@ const Categories = ({ data }) => {
               }}
             />
             <Box
-              component='p'
+              component="p"
               sx={{
                 textTransform: 'uppercase',
                 color: 'text.secondary',
@@ -54,10 +54,6 @@ const Categories = ({ data }) => {
 };
 
 export default Categories;
-
-Categories.defaultProps = {
-  data: [],
-};
 
 Categories.propTypes = {
   data: PropTypes.array,

@@ -1,9 +1,4 @@
-import React, {
-  createContext,
-  useCallback,
-  useContext,
-  useReducer,
-} from 'react';
+import React, { createContext, useCallback, useContext, useReducer } from 'react';
 import { contextReducer, InFoViewActions } from './InfoViewReducer';
 import PropTypes from 'prop-types';
 
@@ -17,15 +12,10 @@ const InfoViewContext = createContext();
 const InfoViewActionsContext = createContext();
 
 export const useInfoViewContext = () => useContext(InfoViewContext);
-export const useInfoViewActionsContext = () =>
-  useContext(InfoViewActionsContext);
+export const useInfoViewActionsContext = () => useContext(InfoViewActionsContext);
 
 const InfoViewContextProvider = (props) => {
-  const [state, dispatch] = useReducer(
-    contextReducer,
-    ContextState,
-    () => ContextState,
-  );
+  const [state, dispatch] = useReducer(contextReducer, ContextState, () => ContextState);
 
   const fetchStart = useCallback(() => {
     dispatch({ type: InFoViewActions.FETCH_STARTS });

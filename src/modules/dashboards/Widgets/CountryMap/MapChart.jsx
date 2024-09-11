@@ -1,12 +1,6 @@
 import React from 'react';
 import { geoCentroid } from 'd3-geo';
-import {
-  Annotation,
-  ComposableMap,
-  Geographies,
-  Geography,
-  Marker,
-} from 'react-simple-maps';
+import { Annotation, ComposableMap, Geographies, Geography, Marker } from 'react-simple-maps';
 
 const allStates = [
   { id: 'AL', val: '01' },
@@ -87,17 +81,12 @@ const offsets = {
 
 const MapChart = () => {
   return (
-    <ComposableMap className='map-chart' projection='geoAlbersUsa'>
+    <ComposableMap className="map-chart" projection="geoAlbersUsa">
       <Geographies geography={geoUrl}>
         {({ geographies }) => (
           <>
             {geographies.map((geo) => (
-              <Geography
-                key={geo.rsmKey}
-                stroke='#FFF'
-                geography={geo}
-                fill='#DDD'
-              />
+              <Geography key={geo.rsmKey} stroke="#FFF" geography={geo} fill="#DDD" />
             ))}
             {geographies.map((geo) => {
               const centroid = geoCentroid(geo);
@@ -109,17 +98,13 @@ const MapChart = () => {
                     centroid[0] < -67 &&
                     (Object.keys(offsets).indexOf(cur.id) === -1 ? (
                       <Marker coordinates={centroid}>
-                        <text y='2' fontSize={14} textAnchor='middle'>
+                        <text y="2" fontSize={14} textAnchor="middle">
                           {cur.id}
                         </text>
                       </Marker>
                     ) : (
-                      <Annotation
-                        subject={centroid}
-                        dx={offsets[cur.id][0]}
-                        dy={offsets[cur.id][1]}
-                      >
-                        <text x={4} fontSize={14} alignmentBaseline='middle'>
+                      <Annotation subject={centroid} dx={offsets[cur.id][0]} dy={offsets[cur.id][1]}>
+                        <text x={4} fontSize={14} alignmentBaseline="middle">
                           {cur.id}
                         </text>
                       </Annotation>

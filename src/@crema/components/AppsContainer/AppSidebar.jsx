@@ -8,7 +8,7 @@ import PropTypes from 'prop-types';
 const AppSidebar = (props) => {
   const { isAppDrawerOpen, sidebarContent, toggleNavCollapsed } = props;
   return (
-    <Slide direction='right' in mountOnEnter unmountOnExit>
+    <Slide direction="right" in mountOnEnter unmountOnExit>
       <Box
         sx={{
           height: '100%',

@@ -8,14 +8,8 @@ import PropTypes from 'prop-types';
 const RecentNews = ({ recentNews }) => {
   const { messages } = useIntl();
   return (
-    <AppCard
-      title={messages['wall.recentNews']}
-      contentStyle={{ px: 0, pt: 2 }}
-    >
-      <AppList
-        data={recentNews}
-        renderRow={(item, index) => <NewsItem key={index} item={item} />}
-      />
+    <AppCard title={messages['wall.recentNews']} contentStyle={{ px: 0, pt: 2 }}>
+      <AppList data={recentNews} renderRow={(item, index) => <NewsItem key={index} item={item} />} />
     </AppCard>
   );
 };

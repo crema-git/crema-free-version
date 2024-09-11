@@ -4,11 +4,11 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { DataGrid } from '@mui/x-data-grid';
 
 export function SortedDescendingIcon() {
-  return <ExpandMoreIcon className='icon' />;
+  return <ExpandMoreIcon className="icon" />;
 }
 
 export function SortedAscendingIcon() {
-  return <ExpandLessIcon className='icon' />;
+  return <ExpandLessIcon className="icon" />;
 }
 
 const rows = [

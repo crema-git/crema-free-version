@@ -1,26 +1,24 @@
 import React from 'react';
 import Card from '@mui/material/Card';
 import Button from '@mui/material/Button';
-import {Form, Formik} from 'formik';
+import { Form, Formik } from 'formik';
 import * as yup from 'yup';
 import Grid from '@mui/material/Grid';
 import IntlMessages from '@crema/helpers/IntlMessages';
 import Box from '@mui/material/Box';
-import {Typography} from '@mui/material';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Typography } from '@mui/material';
+import { Fonts } from '@crema/constants/AppEnums';
 import AppAnimate from '@crema/components/AppAnimate';
 import AppTextField from '@crema/components/AppFormComponents/AppTextField';
 import Logo from '../../../assets/user/lock-screen.svg';
 
 const validationSchema = yup.object({
-  password: yup
-    .string()
-    .required(<IntlMessages id='validation.passwordRequired' />),
+  password: yup.string().required(<IntlMessages id="validation.passwordRequired" />),
 });
 
 const UnlockScreen = () => {
   return (
-    <AppAnimate animation='transition.slideUpIn' delay={200}>
+    <AppAnimate animation="transition.slideUpIn" delay={200}>
       <Box
         sx={{
           pb: 6,
@@ -39,8 +37,7 @@ const UnlockScreen = () => {
             textAlign: 'center',
             overflow: 'hidden',
             padding: { xs: 8, md: 12 },
-            boxShadow:
-              '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
+            boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
             paddingLeft: {
               lg: 8,
               xl: 20,
@@ -54,7 +51,7 @@ const UnlockScreen = () => {
           <Grid container spacing={5}>
             <Grid item xs={12} md={6}>
               <Box
-                display='inline-block'
+                display="inline-block"
                 sx={{
                   width: '100%',
                   height: '100%',
@@ -67,7 +64,7 @@ const UnlockScreen = () => {
                   },
                 }}
               >
-                  <img src={Logo} alt={Logo}/>
+                <img src={Logo} alt={Logo} />
               </Box>
             </Grid>
 
@@ -79,7 +76,7 @@ const UnlockScreen = () => {
                   fontSize: 20,
                 }}
               >
-                <IntlMessages id='common.unlockScreen' />
+                <IntlMessages id="common.unlockScreen" />
               </Box>
               <Box
                 sx={{
@@ -87,11 +84,11 @@ const UnlockScreen = () => {
                   fontSize: 14,
                 }}
               >
-                <Typography component='span'>
-                  <IntlMessages id='common.unlockScreenTextOne' />
+                <Typography component="span">
+                  <IntlMessages id="common.unlockScreenTextOne" />
                 </Typography>
-                <Typography component='span'>
-                  <IntlMessages id='common.unlockScreenTextTwo' />
+                <Typography component="span">
+                  <IntlMessages id="common.unlockScreenTextTwo" />
                 </Typography>
               </Box>
               <Formik
@@ -116,26 +113,26 @@ const UnlockScreen = () => {
                       }}
                     >
                       <AppTextField
-                        name='password'
-                        label={<IntlMessages id='common.password' />}
+                        name="password"
+                        label={<IntlMessages id="common.password" />}
                         sx={{
                           width: '100%',
                         }}
-                        variant='outlined'
-                        type='password'
+                        variant="outlined"
+                        type="password"
                       />
                     </Box>
                     <Button
-                      variant='contained'
-                      color='primary'
+                      variant="contained"
+                      color="primary"
                       disabled={isSubmitting}
                       sx={{
                         width: '100%',
                         height: 44,
                       }}
-                      type='submit'
+                      type="submit"
                     >
-                      <IntlMessages id='common.unlockItForMe' />
+                      <IntlMessages id="common.unlockItForMe" />
                     </Button>
                   </Form>
                 )}

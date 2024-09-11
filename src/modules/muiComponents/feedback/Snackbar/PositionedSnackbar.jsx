@@ -79,7 +79,7 @@ export default function PositionedSnackbar() {
         anchorOrigin={{ vertical, horizontal }}
         open={open}
         onClose={handleClose}
-        message='I love snacks'
+        message="I love snacks"
         key={vertical + horizontal}
       />
     </div>

@@ -20,16 +20,14 @@ import Browser from './Browser';
 import AppLoader from '@crema/components/AppLoader';
 
 const ECommerce = () => {
-  const [{ apiData: ecommerceData, loading }] = useGetDataApi(
-    '/dashboard/ecommerce',
-  );
+  const [{ apiData: ecommerceData, loading }] = useGetDataApi('/dashboard/ecommerce');
 
   return (
     <>
       {loading ? (
         <AppLoader />
       ) : (
-        <AppAnimate animation='transition.slideUpIn' delay={200}>
+        <AppAnimate animation="transition.slideUpIn" delay={200}>
           <AppGridContainer>
             {ecommerceData.stateData.map((data) => (
               <Grid key={data.id} item xs={12} sm={6} lg={3}>
@@ -66,14 +64,10 @@ const ECommerce = () => {
               <AgeOfAudience audienceData={ecommerceData.audienceData} />
             </Grid>
             <Grid item xs={12} md={6} lg={6}>
-              <MarketingCampaign
-                marketingCampaign={ecommerceData.marketingCampaign}
-              />
+              <MarketingCampaign marketingCampaign={ecommerceData.marketingCampaign} />
             </Grid>
             <Grid item xs={12} md={12} lg={6}>
-              <PopularProducts
-                popularProducts={ecommerceData.popularProducts}
-              />
+              <PopularProducts popularProducts={ecommerceData.popularProducts} />
             </Grid>
             <Grid item xs={12} md={6} lg={3}>
               <RevenueGraph />

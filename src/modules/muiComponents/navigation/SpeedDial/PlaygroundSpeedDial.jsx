@@ -49,43 +49,27 @@ export default function PlaygroundSpeedDial() {
   return (
     <Box sx={{ transform: 'translateZ(0px)', flexGrow: 1 }}>
       <FormControlLabel
-        control={
-          <Switch
-            checked={hidden}
-            onChange={handleHiddenChange}
-            color='primary'
-          />
-        }
-        label='Hidden'
+        control={<Switch checked={hidden} onChange={handleHiddenChange} color="primary" />}
+        label="Hidden"
       />
-      <FormControl component='fieldset' sx={{ mt: 1, display: 'flex' }}>
-        <FormLabel component='legend'>Direction</FormLabel>
-        <RadioGroup
-          aria-label='direction'
-          name='direction'
-          value={direction}
-          onChange={handleDirectionChange}
-          row
-        >
-          <FormControlLabel value='up' control={<Radio />} label='Up' />
-          <FormControlLabel value='right' control={<Radio />} label='Right' />
-          <FormControlLabel value='down' control={<Radio />} label='Down' />
-          <FormControlLabel value='left' control={<Radio />} label='Left' />
+      <FormControl component="fieldset" sx={{ mt: 1, display: 'flex' }}>
+        <FormLabel component="legend">Direction</FormLabel>
+        <RadioGroup aria-label="direction" name="direction" value={direction} onChange={handleDirectionChange} row>
+          <FormControlLabel value="up" control={<Radio />} label="Up" />
+          <FormControlLabel value="right" control={<Radio />} label="Right" />
+          <FormControlLabel value="down" control={<Radio />} label="Down" />
+          <FormControlLabel value="left" control={<Radio />} label="Left" />
         </RadioGroup>
       </FormControl>
       <Box sx={{ position: 'relative', mt: 3, height: 320 }}>
         <StyledSpeedDial
-          ariaLabel='SpeedDial playground example'
+          ariaLabel="SpeedDial playground example"
           hidden={hidden}
           icon={<SpeedDialIcon />}
           direction={direction}
         >
           {actions.map((action) => (
-            <SpeedDialAction
-              key={action.name}
-              icon={action.icon}
-              tooltipTitle={action.name}
-            />
+            <SpeedDialAction key={action.name} icon={action.icon} tooltipTitle={action.name} />
           ))}
         </StyledSpeedDial>
       </Box>

@@ -6,7 +6,7 @@ export default function Animations() {
   return (
     <Box sx={{ width: 300 }}>
       <Skeleton />
-      <Skeleton animation='wave' />
+      <Skeleton animation="wave" />
       <Skeleton animation={false} />
     </Box>
   );

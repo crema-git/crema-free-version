@@ -14,8 +14,8 @@ import AppTextField from '@crema/components/AppFormComponents/AppTextField';
 const validationSchema = yup.object({
   email: yup
     .string()
-    .email(<IntlMessages id='validation.emailFormat' />)
-    .required(<IntlMessages id='validation.emailRequired' />),
+    .email(<IntlMessages id="validation.emailFormat" />)
+    .required(<IntlMessages id="validation.emailRequired" />),
 });
 
 const Subscribe = () => {
@@ -34,14 +34,14 @@ const Subscribe = () => {
       title={messages['dashboard.subscribe']}
     >
       <Box
-        component='p'
+        component="p"
         sx={{
           mb: 6,
           pr: 4,
           fontSize: 14,
         }}
       >
-        <IntlMessages id='dashboard.subscribeContent' />
+        <IntlMessages id="dashboard.subscribeContent" />
       </Box>
       <Formik
         validateOnChange={true}
@@ -51,9 +51,7 @@ const Subscribe = () => {
         validationSchema={validationSchema}
         onSubmit={(data, { setSubmitting, resetForm }) => {
           setSubmitting(true);
-          infoViewActionsContext.showMessage(
-            <IntlMessages id='message.thankYouSubscription' />,
-          );
+          infoViewActionsContext.showMessage(<IntlMessages id="message.thankYouSubscription" />);
           setSubmitting(false);
           resetForm();
         }}
@@ -78,8 +76,8 @@ const Subscribe = () => {
                 >
                   <AppTextField
                     placeholder={messages['common.email']}
-                    name='email'
-                    label={<IntlMessages id='common.emailAddress' />}
+                    name="email"
+                    label={<IntlMessages id="common.emailAddress" />}
                     inputProps={{
                       'aria-label': 'naked',
                     }}
@@ -106,11 +104,11 @@ const Subscribe = () => {
                   }}
                 >
                   <Button
-                    size='large'
-                    variant='contained'
-                    color='primary'
+                    size="large"
+                    variant="contained"
+                    color="primary"
                     disabled={isSubmitting}
-                    type='submit'
+                    type="submit"
                     sx={{
                       width: '100%',
                       height: '51.1px',

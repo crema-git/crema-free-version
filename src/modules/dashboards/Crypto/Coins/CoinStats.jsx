@@ -6,16 +6,21 @@ import { green, red } from '@mui/material/colors';
 import { Fonts } from '@crema/constants/AppEnums';
 import AppCard from '@crema/components/AppCard';
 
-const CoinStats = (props) => {
-  const { icon, bgColor, data, heading } = props;
-
+const CoinStats = ({
+  icon,
+  bgColor = '',
+  data = {
+    price: '',
+    increment: null,
+  },
+  heading,
+}) => {
   return (
     <AppCard
       sxStyle={{
-        borderRadius: (theme) =>
-          theme.components.MuiCard.styleOverrides.root.borderRadius / 4,
+        borderRadius: (theme) => theme.components.MuiCard.styleOverrides.root.borderRadius / 4,
       }}
-      className='card-hover'
+      className="card-hover"
     >
       <Box
         sx={{
@@ -32,7 +37,7 @@ const CoinStats = (props) => {
             backgroundColor: bgColor,
           }}
         >
-          <img alt='' src={icon} />
+          <img alt="" src={icon} />
         </Avatar>
 
         <Box
@@ -42,7 +47,7 @@ const CoinStats = (props) => {
           }}
         >
           <Box
-            component='p'
+            component="p"
             sx={{
               fontSize: 14,
               color: 'text.secondary',
@@ -52,7 +57,7 @@ const CoinStats = (props) => {
             {heading}
           </Box>
           <Box
-            component='h3'
+            component="h3"
             sx={{
               display: 'inline-block',
               fontWeight: Fonts.MEDIUM,
@@ -65,7 +70,7 @@ const CoinStats = (props) => {
         </Box>
         <Box sx={{ ml: 'auto' }}>
           <Box
-            component='p'
+            component="p"
             sx={{
               fontSize: 16,
               fontWeight: Fonts.MEDIUM,
@@ -90,14 +95,6 @@ const CoinStats = (props) => {
 };
 
 export default CoinStats;
-
-CoinStats.defaultProps = {
-  bgColor: '',
-  data: {
-    price: '',
-    increment: null,
-  },
-};
 
 CoinStats.propTypes = {
   icon: PropTypes.string,

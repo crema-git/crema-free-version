@@ -9,7 +9,7 @@ import CurrencyCell from './CurrencyCell';
 const CoinDropdown = ({ handleCoinChange, coinList, selectedCoinId }) => {
   return (
     <FormControl
-      variant='outlined'
+      variant="outlined"
       sx={{
         minWidth: 100,
         width: '100%',
@@ -21,11 +21,11 @@ const CoinDropdown = ({ handleCoinChange, coinList, selectedCoinId }) => {
         },
       }}
     >
-      <InputLabel id='selected-coin-select-outlined-label'>
-        <IntlMessages id='dashboard.crypto.coinName' />
+      <InputLabel id="selected-coin-select-outlined-label">
+        <IntlMessages id="dashboard.crypto.coinName" />
       </InputLabel>
       <Select
-        labelId='selected-coin-select-outlined-label'
+        labelId="selected-coin-select-outlined-label"
         sx={{
           cursor: 'pointer',
           '& .MuiOutlinedInput-input': {
@@ -33,7 +33,7 @@ const CoinDropdown = ({ handleCoinChange, coinList, selectedCoinId }) => {
           },
         }}
         value={selectedCoinId}
-        label={<IntlMessages id='dashboard.crypto.coinName' />}
+        label={<IntlMessages id="dashboard.crypto.coinName" />}
         onChange={handleCoinChange}
       >
         {coinList.map((coin) => {

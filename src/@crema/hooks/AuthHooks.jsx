@@ -25,10 +25,7 @@ export const useAuthMethod = () => {
 };*/
 //For Firebase Auth
 
-import {
-  useFirebase,
-  useFirebaseActions,
-} from '@crema/services/auth/firebase/FirebaseAuthProvider';
+import { useFirebase, useFirebaseActions } from '@crema/services/auth/firebase/FirebaseAuthProvider';
 import { getUserFromFirebase } from '@crema/helpers/AuthHelper';
 
 export const useAuthUser = () => {
@@ -41,19 +38,19 @@ export const useAuthUser = () => {
 };
 
 export const useAuthMethod = () => {
-  const {
-    logInWithEmailAndPassword,
-    registerUserWithEmailAndPassword,
-    logInWithPopup,
-    logout,
-  } = useFirebaseActions();
+    const {
+        logInWithEmailAndPassword,
+        registerUserWithEmailAndPassword,
+        logInWithPopup,
+        logout,
+    } = useFirebaseActions();
 
-  return {
-    logInWithEmailAndPassword,
-    registerUserWithEmailAndPassword,
-    logInWithPopup,
-    logout,
-  };
+    return {
+        logInWithEmailAndPassword,
+        registerUserWithEmailAndPassword,
+        logInWithPopup,
+        logout,
+    };
 };
 
 /*// For AWS Auth

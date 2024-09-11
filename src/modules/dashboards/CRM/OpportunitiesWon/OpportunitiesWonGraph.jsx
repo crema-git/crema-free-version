@@ -3,14 +3,13 @@ import { Bar, BarChart, ResponsiveContainer, Tooltip, XAxis } from 'recharts';
 import PropTypes from 'prop-types';
 import { alpha, useTheme } from '@mui/material';
 
-const OpportunitiesWonGraph = (props) => {
+const OpportunitiesWonGraph = ({ data = [] }) => {
   const theme = useTheme();
-  const { data } = props;
 
   return (
     <ResponsiveContainer maxHeight={260} minHeight={160}>
       <BarChart barGap={16} barSize={8} data={data}>
-        <XAxis dataKey='name' />
+        <XAxis dataKey="name" />
         <Tooltip
           labelStyle={{ color: 'black' }}
           contentStyle={{
@@ -21,15 +20,15 @@ const OpportunitiesWonGraph = (props) => {
           cursor={{ fill: 'transparent' }}
         />
         <Bar
-          dataKey='progress'
-          stackId='a'
+          dataKey="progress"
+          stackId="a"
           fill={alpha(theme.palette.primary.main, 0.9)}
           radius={[20, 20, 0, 0]}
           background={{ fill: alpha(theme.palette.primary.main, 0.15) }}
         />
         <Bar
-          dataKey='actual'
-          stackId='b'
+          dataKey="actual"
+          stackId="b"
           fill={alpha(theme.palette.secondary.main, 0.9)}
           radius={[20, 20, 0, 0]}
           background={{ fill: alpha(theme.palette.secondary.main, 0.15) }}
@@ -40,10 +39,6 @@ const OpportunitiesWonGraph = (props) => {
 };
 
 export default OpportunitiesWonGraph;
-
-OpportunitiesWonGraph.defaultProps = {
-  data: [],
-};
 
 OpportunitiesWonGraph.propTypes = {
   data: PropTypes.array,

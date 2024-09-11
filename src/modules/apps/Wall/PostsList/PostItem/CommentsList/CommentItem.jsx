@@ -21,7 +21,7 @@ const CommentItem = ({ item }) => {
         },
       }}
     >
-      <Box display='flex'>
+      <Box display="flex">
         <Avatar
           sx={{
             width: 44,
@@ -53,18 +53,14 @@ const CommentItem = ({ item }) => {
                 },
               }}
             >
-              <img src={media.url} alt='comment-img' />
+              <img src={media.url} alt="comment-img" />
             </Box>
           )}
-          <Box display='flex' alignItems='center' mt={1}>
-            <Box
-              className='pointer'
-              color={isLiked && 'primary.main'}
-              onClick={toggleLikeStatus}
-            >
+          <Box display="flex" alignItems="center" mt={1}>
+            <Box className="pointer" color={isLiked && 'primary.main'} onClick={toggleLikeStatus}>
               Like
             </Box>
-            <Box ml={4} className='pointer'>
+            <Box ml={4} className="pointer">
               Reply
             </Box>
           </Box>

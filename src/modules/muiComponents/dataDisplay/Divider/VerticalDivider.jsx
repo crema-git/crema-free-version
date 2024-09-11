@@ -11,26 +11,28 @@ export default function VerticalDividers() {
   return (
     <div>
       <Box
-        sx={{
+        sx={(theme) => ({
           display: 'flex',
           alignItems: 'center',
           width: 'fit-content',
-          border: (theme) => `1px solid ${theme.palette.divider}`,
+          border: `1px solid ${theme.palette.divider}`,
           borderRadius: 1,
           bgcolor: 'background.paper',
           color: 'text.secondary',
+
           '& svg': {
             m: 1.5,
           },
+
           '& hr': {
             mx: 0.5,
           },
-        }}
+        })}
       >
         <FormatAlignLeftIcon />
         <FormatAlignCenterIcon />
         <FormatAlignRightIcon />
-        <Divider orientation='vertical' flexItem />
+        <Divider orientation="vertical" flexItem />
         <FormatBoldIcon />
         <FormatItalicIcon />
       </Box>

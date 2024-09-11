@@ -21,49 +21,29 @@ const AnimationExit = () => {
   };
 
   return (
-    <Box display='flex' flexWrap='wrap'>
+    <Box display="flex" flexWrap="wrap">
       <Box mr={2} my={1}>
-        <Button
-          color='primary'
-          variant='contained'
-          onClick={() => add(['animated bounceOut'])}
-        >
+        <Button color="primary" variant="contained" onClick={() => add(['animated bounceOut'])}>
           Bounce Out
         </Button>
       </Box>
       <Box mr={2} my={1}>
-        <Button
-          color='primary'
-          variant='contained'
-          onClick={() => add(['animated fadeOut'])}
-        >
+        <Button color="primary" variant="contained" onClick={() => add(['animated fadeOut'])}>
           Fade Out
         </Button>
       </Box>
       <Box mr={2} my={1}>
-        <Button
-          color='primary'
-          variant='contained'
-          onClick={() => add(['animated flipOutX'])}
-        >
+        <Button color="primary" variant="contained" onClick={() => add(['animated flipOutX'])}>
           Flip Out X
         </Button>
       </Box>
       <Box mr={2} my={1}>
-        <Button
-          color='primary'
-          variant='contained'
-          onClick={() => add(['animated flipOutY'])}
-        >
+        <Button color="primary" variant="contained" onClick={() => add(['animated flipOutY'])}>
           Flip Out Y
         </Button>
       </Box>
       <Box mr={2} my={1}>
-        <Button
-          color='primary'
-          variant='contained'
-          onClick={() => add(['animated zoomOut'])}
-        >
+        <Button color="primary" variant="contained" onClick={() => add(['animated zoomOut'])}>
           Zoom Out
         </Button>
       </Box>

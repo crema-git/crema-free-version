@@ -4,12 +4,7 @@ import IconButton from '@mui/material/IconButton';
 
 const EditButton = ({ action, title }) => {
   return (
-    <IconButton
-      variant='contained'
-      color='primary'
-      onClick={action}
-      size='large'
-    >
+    <IconButton variant="contained" color="primary" onClick={action} size="large">
       {title}
     </IconButton>
   );

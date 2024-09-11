@@ -13,8 +13,12 @@ const MailDetail = () => {
   const contentRef = createRef();
 
   const { id } = useParams();
-  const [{ apiData: selectedMail }, { setQueryParams, setData }] =
-    useGetDataApi('/api/mailApp/mail/', undefined, { id: id }, false);
+  const [{ apiData: selectedMail }, { setQueryParams, setData }] = useGetDataApi(
+    '/api/mailApp/mail/',
+    undefined,
+    { id: id },
+    false,
+  );
 
   useEffect(() => {
     if (id) setQueryParams({ id });
@@ -38,18 +42,11 @@ const MailDetail = () => {
       ref={contentRef}
     >
       <AppsHeader>
-        <MailDetailHeader
-          selectedMail={selectedMail}
-          onUpdateSelectedMail={onUpdateSelectedMail}
-        />
+        <MailDetailHeader selectedMail={selectedMail} onUpdateSelectedMail={onUpdateSelectedMail} />
       </AppsHeader>
       <AppsContent isDetailView>
-        <AppAnimate animatoin='transition.slideUpIn'>
-          <MailDetailBody
-            selectedMail={selectedMail}
-            key={'mail_detail'}
-            onUpdateSelectedMail={onUpdateSelectedMail}
-          />
+        <AppAnimate animatoin="transition.slideUpIn">
+          <MailDetailBody selectedMail={selectedMail} key={'mail_detail'} onUpdateSelectedMail={onUpdateSelectedMail} />
         </AppAnimate>
       </AppsContent>
     </Box>

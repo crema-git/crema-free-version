@@ -134,9 +134,7 @@ export const defaultTheme = {
           root: {
             // apply theme's border-radius instead of component's default
             borderRadius:
-              cardRadius === ThemeStyleRadius.STANDARD
-                ? ThemeStyleRadius.STANDARD
-                : ThemeStyleRadius.MODERN + 20,
+              cardRadius === ThemeStyleRadius.STANDARD ? ThemeStyleRadius.STANDARD : ThemeStyleRadius.MODERN + 20,
           },
         },
       },

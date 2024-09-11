@@ -8,7 +8,7 @@ import TableItem from './TableItem';
 import AppTableContainer from '@crema/components/AppTableContainer';
 import AppScrollbar from '@crema/components/AppScrollbar';
 
-const TimesheetTable = ({ timesheet }) => {
+const TimesheetTable = ({ timesheet = [] }) => {
   return (
     <AppTableContainer>
       <AppScrollbar style={{ maxHeight: 235 }}>
@@ -28,10 +28,6 @@ const TimesheetTable = ({ timesheet }) => {
 };
 
 export default TimesheetTable;
-
-TimesheetTable.defaultProps = {
-  timesheet: [],
-};
 
 TimesheetTable.propTypes = {
   timesheet: PropTypes.array,

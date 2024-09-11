@@ -10,12 +10,7 @@ const columns = [
     renderCell: (params) => (
       <strong>
         {params.value.getFullYear()}
-        <Button
-          variant='contained'
-          color='primary'
-          size='small'
-          style={{ marginLeft: 16 }}
-        >
+        <Button variant="contained" color="primary" size="small" style={{ marginLeft: 16 }}>
           Open
         </Button>
       </strong>

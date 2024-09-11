@@ -8,22 +8,17 @@ import MoreOptions from './MoreOptions';
 import AppsPagination from '@crema/components/AppsPagination';
 import AppSearchBar from '@crema/components/AppSearchBar';
 import { useIntl } from 'react-intl';
-import {
-  useMailActionsContext,
-  useMailContext,
-} from '../../../context/MailContextProvider';
+import { useMailActionsContext, useMailContext } from '../../../context/MailContextProvider';
 
-const MailContentHeader = (props) => {
-  const {
-    path,
-    checkedMails,
-    setCheckedMails,
-    mailList,
-    totalMails,
-    filterText,
-    onSetFilterText,
-  } = props;
-
+const MailContentHeader = ({
+  path,
+  setCheckedMails,
+  mailList,
+  totalMails,
+  filterText,
+  onSetFilterText,
+  checkedMails = [],
+}) => {
   const { messages } = useIntl();
   const { page } = useMailContext();
   const { onPageChange } = useMailActionsContext();
@@ -46,25 +41,20 @@ const MailContentHeader = (props) => {
           width: { xs: '100%', sm: 'auto' },
         }}
       >
-        <Box component='span'>
+        <Box component="span">
           <Checkbox
             sx={{
               color: (theme) => theme.palette.text.disabled,
             }}
-            color='primary'
-            indeterminate={
-              checkedMails?.length > 0 &&
-              checkedMails?.length < mailList?.length
-            }
-            checked={
-              mailList?.length > 0 && checkedMails?.length === mailList?.length
-            }
+            color="primary"
+            indeterminate={checkedMails?.length > 0 && checkedMails?.length < mailList?.length}
+            checked={mailList?.length > 0 && checkedMails?.length === mailList?.length}
             onChange={onHandleMasterCheckbox}
           />
         </Box>
         <Box sx={{ mr: 5 }}>
           <AppSearchBar
-            iconPosition='right'
+            iconPosition="right"
             overlap={false}
             value={filterText}
             onChange={(event) => onSetFilterText(event.target.value)}
@@ -72,10 +62,7 @@ const MailContentHeader = (props) => {
           />
         </Box>
         {checkedMails?.length > 0 ? (
-          <CheckedMailActions
-            checkedMails={checkedMails}
-            setCheckedMails={setCheckedMails}
-          />
+          <CheckedMailActions checkedMails={checkedMails} setCheckedMails={setCheckedMails} />
         ) : null}
 
         <MoreOptions
@@ -88,16 +75,12 @@ const MailContentHeader = (props) => {
       <Hidden smDown>
         {mailList?.length > 0 ? (
           <Box
-            component='span'
+            component="span"
             sx={{
               ml: { sm: 'auto' },
             }}
           >
-            <AppsPagination
-              count={totalMails}
-              page={page}
-              onPageChange={onPageChange}
-            />
+            <AppsPagination count={totalMails} page={page} onPageChange={onPageChange} />
           </Box>
         ) : null}
       </Hidden>
@@ -106,11 +89,6 @@ const MailContentHeader = (props) => {
 };
 
 export default MailContentHeader;
-
-MailContentHeader.defaultProps = {
-  checkedMails: [],
-  page: 0,
-};
 
 MailContentHeader.propTypes = {
   checkedMails: PropTypes.array,

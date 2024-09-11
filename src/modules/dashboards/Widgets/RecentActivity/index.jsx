@@ -19,7 +19,7 @@ const RecentActivity = (props) => {
       contentStyle={{ px: 0 }}
       action={
         <Box
-          component='span'
+          component="span"
           sx={{
             ml: 'auto',
             mt: 1.5,
@@ -50,10 +50,6 @@ const RecentActivity = (props) => {
 };
 
 export default RecentActivity;
-
-RecentActivity.defaultProps = {
-  data: [],
-};
 
 RecentActivity.propTypes = {
   data: PropTypes.array,

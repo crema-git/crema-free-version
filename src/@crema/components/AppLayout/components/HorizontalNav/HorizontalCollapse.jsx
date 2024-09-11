@@ -1,12 +1,5 @@
 import React, { useState } from 'react';
-import {
-  Grow,
-  Icon,
-  IconButton,
-  ListItem,
-  ListItemText,
-  Paper,
-} from '@mui/material';
+import { Grow, Icon, IconButton, ListItemButton, ListItemText, Paper } from '@mui/material';
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
 import { Manager, Popper, Reference } from 'react-popper';
@@ -27,8 +20,7 @@ function HorizontalCollapse(props) {
   const location = useLocation();
   const { item, nestedLevel, dense } = props;
   const active = isUrlInChildren(item, location.pathname);
-  const { sidebarMenuSelectedBgColor, sidebarMenuSelectedTextColor } =
-    useSidebarContext();
+  const { sidebarMenuSelectedBgColor, sidebarMenuSelectedTextColor } = useSidebarContext();
 
   const handleToggle = (open) => {
     setOpened(open);
@@ -46,10 +38,7 @@ function HorizontalCollapse(props) {
         }
       }
 
-      if (
-        parent.children[i].url === url ||
-        url.includes(parent.children[i].url)
-      ) {
+      if (parent.children[i].url === url || url.includes(parent.children[i].url)) {
         return true;
       }
     }
@@ -65,14 +54,13 @@ function HorizontalCollapse(props) {
           padding: '0 0 0 16px',
         },
       }}
-      className='navbarNavSubmenu'
+      className="navbarNavSubmenu"
     >
       <Manager>
         <Reference>
           {({ ref }) => (
-            <ListItem
+            <ListItemButton
               ref={ref}
-              button
               sx={{
                 color: theme.palette.text.primary,
                 padding: '0px 12px',
@@ -90,16 +78,11 @@ function HorizontalCollapse(props) {
                   },
                 },
               }}
-              className={clsx(
-                'navItemSubmenu',
-                opened && 'open',
-                dense && 'dense',
-                active && 'active',
-              )}
+              className={clsx('navItemSubmenu', opened && 'open', dense && 'dense', active && 'active')}
               onMouseEnter={() => handleToggle(true)}
               onMouseLeave={() => handleToggle(false)}
               aria-owns={opened ? 'menu-list-grow' : null}
-              aria-haspopup='true'
+              aria-haspopup="true"
             >
               {item.icon && (
                 <Icon
@@ -113,14 +96,8 @@ function HorizontalCollapse(props) {
                 </Icon>
               )}
               <ListItemText
-                className='navLinkTextSubmenu'
-                primary={
-                  allowMultiLanguage ? (
-                    <IntlMessages id={item.messageId} />
-                  ) : (
-                    item.title
-                  )
-                }
+                className="navLinkTextSubmenu"
+                primary={allowMultiLanguage ? <IntlMessages id={item.messageId} /> : item.title}
               />
               <Box p={0}>
                 <IconButton disableRipple>
@@ -129,17 +106,15 @@ function HorizontalCollapse(props) {
                       color: active ? sidebarMenuSelectedTextColor : 'action',
                     }}
                   >
-                    {theme.direction === 'ltr'
-                      ? 'chevron_right'
-                      : 'chevron_left'}
+                    {theme.direction === 'ltr' ? 'chevron_right' : 'chevron_left'}
                   </Icon>
                 </IconButton>
               </Box>
-            </ListItem>
+            </ListItemButton>
           )}
         </Reference>
         {ReactDOM.createPortal(
-          <Popper placement='right' eventsEnabled={opened} positionFixed>
+          <Popper placement="right" eventsEnabled={opened} positionFixed>
             {({ ref, style, placement }) =>
               opened && (
                 <Box
@@ -157,15 +132,8 @@ function HorizontalCollapse(props) {
                     popperClose: !opened,
                   })}
                 >
-                  <Grow
-                    in={opened}
-                    id='menu-list-grow'
-                    sx={{ transformOrigin: '0 0 0' }}
-                  >
-                    <Paper
-                      onMouseEnter={() => handleToggle(true)}
-                      onMouseLeave={() => handleToggle(false)}
-                    >
+                  <Grow in={opened} id="menu-list-grow" sx={{ transformOrigin: '0 0 0' }}>
+                    <Paper onMouseEnter={() => handleToggle(true)} onMouseLeave={() => handleToggle(false)}>
                       {item.children && (
                         <List
                           sx={{
@@ -174,27 +142,13 @@ function HorizontalCollapse(props) {
                         >
                           {item.children.map((item) => (
                             <React.Fragment key={item.id}>
-                              {item.type === 'group' && (
-                                <HorizontalGroup
-                                  item={item}
-                                  nestedLevel={nestedLevel + 1}
-                                />
-                              )}
+                              {item.type === 'group' && <HorizontalGroup item={item} nestedLevel={nestedLevel + 1} />}
 
                               {item.type === 'collapse' && (
-                                <HorizontalCollapse
-                                  item={item}
-                                  nestedLevel={nestedLevel + 1}
-                                  location={location}
-                                />
+                                <HorizontalCollapse item={item} nestedLevel={nestedLevel + 1} location={location} />
                               )}
 
-                              {item.type === 'item' && (
-                                <HorizontalItem
-                                  item={item}
-                                  nestedLevel={nestedLevel + 1}
-                                />
-                              )}
+                              {item.type === 'item' && <HorizontalItem item={item} nestedLevel={nestedLevel + 1} />}
                             </React.Fragment>
                           ))}
                         </List>
@@ -220,5 +174,3 @@ HorizontalCollapse.propTypes = {
   location: PropTypes.object,
   dense: PropTypes.number,
 };
-
-HorizontalCollapse.defaultProps = {};

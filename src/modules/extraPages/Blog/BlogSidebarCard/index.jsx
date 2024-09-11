@@ -20,12 +20,7 @@ const BlogSidebarCard = ({ blogSidebar }) => {
           borderBottom: (theme) => `solid 1px ${theme.palette.divider}`,
         }}
       >
-        <AppSearchBar
-          disableFocus
-          iconPosition='right'
-          overlap={false}
-          placeholder={messages['common.searchHere']}
-        />
+        <AppSearchBar disableFocus iconPosition="right" overlap={false} placeholder={messages['common.searchHere']} />
       </Box>
       <RecentPost recentPost={blogSidebar.recentPost} />
       <Categories categories={blogSidebar.categories} />

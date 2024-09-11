@@ -23,13 +23,7 @@ const StyledTableCell = styled(TableCell)(() => ({
   },
 }));
 
-const TableItem = ({
-  data,
-  index,
-  currencyData,
-  onChangeLineItems,
-  onDeleteLineItem,
-}) => {
+const TableItem = ({ data, index, currencyData, onChangeLineItems, onDeleteLineItem }) => {
   return (
     <TableRow
       key={data?.id}
@@ -48,17 +42,17 @@ const TableItem = ({
         },
       }}
     >
-      <StyledTableCell align='left'>{data?.id}</StyledTableCell>
-      <StyledTableCell align='left'>
+      <StyledTableCell align="left">{data?.id}</StyledTableCell>
+      <StyledTableCell align="left">
         <TextField
           autoFocus
-          variant='standard'
+          variant="standard"
           value={data?.name || ''}
-          placeholder='Name'
+          placeholder="Name"
           onChange={(e) => onChangeLineItems(index, 'name', e.target.value)}
         />
       </StyledTableCell>
-      <StyledTableCell align='left' sx={{ whiteSpace: 'inherit !important' }}>
+      <StyledTableCell align="left" sx={{ whiteSpace: 'inherit !important' }}>
         {/* <DateRangePicker
             value={[data?.duration?.from, data?.duration?.to]}
             onChange={(newValue) => {
@@ -99,10 +93,8 @@ const TableItem = ({
               },
             }}
             value={getDateObject(data?.duration?.from)}
-            placeholder='From'
-            onChange={(value) =>
-              onChangeLineItems(index, 'from', value, 'duration')
-            }
+            placeholder="From"
+            onChange={(value) => onChangeLineItems(index, 'from', value, 'duration')}
           />
           <DatePicker
             sx={{
@@ -119,41 +111,35 @@ const TableItem = ({
               },
             }}
             value={getDateObject(data?.duration?.to)}
-            placeholder='To'
-            onChange={(value) =>
-              onChangeLineItems(index, 'to', value, 'duration')
-            }
+            placeholder="To"
+            onChange={(value) => onChangeLineItems(index, 'to', value, 'duration')}
           />
         </Box>
       </StyledTableCell>
 
       <StyledTableCell
-        align='left'
+        align="left"
         // sx={{ width: 300, whiteSpace: 'inherit !important' }}
       >
         <TextField
-          type='number'
+          type="number"
           sx={{ minWidth: 50 }}
-          variant='standard'
+          variant="standard"
           value={data?.quantity?.value}
-          placeholder='Value'
+          placeholder="Value"
           onChange={(e) => {
             onChangeLineItems(index, 'value', e.target.value, 'quantity');
-            onChangeLineItems(
-              index,
-              'total',
-              e.target.value * data?.unitPrice || 0,
-            );
+            onChangeLineItems(index, 'total', e.target.value * data?.unitPrice || 0);
           }}
         />
       </StyledTableCell>
       <StyledTableCell
-        align='left'
+        align="left"
         // sx={{ width: 300, whiteSpace: 'inherit !important' }}
       >
         <Select
           sx={{ mr: 2.5 }}
-          variant='standard'
+          variant="standard"
           value={data?.quantity?.type}
           onChange={(event) => {
             onChangeLineItems(index, 'type', event.target.value, 'quantity');
@@ -175,27 +161,20 @@ const TableItem = ({
           })}
         </Select>
       </StyledTableCell>
-      <StyledTableCell align='left'>
+      <StyledTableCell align="left">
         <TextField
-          type='number'
-          variant='standard'
+          type="number"
+          variant="standard"
           value={data?.unitPrice || 0}
-          placeholder='Unit Price'
+          placeholder="Unit Price"
           onChange={(e) => {
             onChangeLineItems(index, 'unitPrice', e.target.value);
-            onChangeLineItems(
-              index,
-              'total',
-              e.target.value * data?.quantity?.value || 0,
-            );
+            onChangeLineItems(index, 'total', e.target.value * data?.quantity?.value || 0);
           }}
         />
       </StyledTableCell>
 
-      <StyledTableCell
-        align='left'
-        sx={{ width: '100%', display: 'flex', alignItems: 'center' }}
-      >
+      <StyledTableCell align="left" sx={{ width: '100%', display: 'flex', alignItems: 'center' }}>
         {formatCurrency(
           data?.total || 0,
           {
@@ -204,7 +183,7 @@ const TableItem = ({
           },
           2,
         )}
-        <Box className='closeBtn' onClick={() => onDeleteLineItem(index)}>
+        <Box className="closeBtn" onClick={() => onDeleteLineItem(index)}>
           <GrClose size={15} />
         </Box>
       </StyledTableCell>

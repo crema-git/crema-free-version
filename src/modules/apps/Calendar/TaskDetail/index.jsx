@@ -9,8 +9,12 @@ import { useGetDataApi } from '@crema/hooks/APIHooks';
 
 const TaskDetail = () => {
   const { id } = useParams();
-  const [{ apiData: selectedTask }, { setQueryParams, setData }] =
-    useGetDataApi('/api/calendar/task/', undefined, { id: id }, false);
+  const [{ apiData: selectedTask }, { setQueryParams, setData }] = useGetDataApi(
+    '/api/calendar/task/',
+    undefined,
+    { id: id },
+    false,
+  );
 
   useEffect(() => {
     setQueryParams({ id });
@@ -26,16 +30,10 @@ const TaskDetail = () => {
   return (
     <>
       <AppsHeader>
-        <TaskDetailHeader
-          selectedTask={selectedTask}
-          onUpdateSelectedTask={onUpdateSelectedTask}
-        />
+        <TaskDetailHeader selectedTask={selectedTask} onUpdateSelectedTask={onUpdateSelectedTask} />
       </AppsHeader>
       <AppsContent isDetailView>
-        <TaskDetailBody
-          selectedTask={selectedTask}
-          onUpdateSelectedTask={onUpdateSelectedTask}
-        />
+        <TaskDetailBody selectedTask={selectedTask} onUpdateSelectedTask={onUpdateSelectedTask} />
       </AppsContent>
     </>
   );

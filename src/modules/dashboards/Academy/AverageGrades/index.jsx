@@ -1,10 +1,10 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
 import React from 'react';
-import { Box } from '@mui/material';
+import {Box} from '@mui/material';
 import AppSelect from '@crema/components/AppSelect';
 import AppCard from '@crema/components/AppCard';
 import GradeGraph from './GradeGraph';
-import { useIntl } from 'react-intl';
+import {useIntl} from 'react-intl';
 import PropTypes from 'prop-types';
 
 const AverageGrades = ({ grades }) => {
@@ -25,16 +25,8 @@ const AverageGrades = ({ grades }) => {
             alignItems: 'center',
           }}
         >
-          <AppSelect
-            menus={[2020, 2019, 2018]}
-            defaultValue={2020}
-            onChange={() => {}}
-          />
-          <AppSelect
-            menus={['All Months', 'Jan', 'Feb']}
-            defaultValue={'All Months'}
-            onChange={() => {}}
-          />
+          <AppSelect menus={[2020, 2019, 2018]} defaultValue={2020} onChange={() => {}} />
+          <AppSelect menus={['All Months', 'Jan', 'Feb']} defaultValue={'All Months'} onChange={() => {}} />
         </Box>
       }
     >

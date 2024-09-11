@@ -1,25 +1,18 @@
-import React, { useState } from "react";
-import { Card } from "@mui/material";
-import CardHeader from "@mui/material/CardHeader";
-import CardContent from "@mui/material/CardContent";
-import CodeIcon from "@mui/icons-material/Code";
-import { Highlight, themes } from "prism-react-renderer";
-import PropTypes from "prop-types";
-import IconButton from "@mui/material/IconButton";
-import Collapse from "@mui/material/Collapse";
-import AppScrollbar from "../AppScrollbar";
-import Box from "@mui/material/Box";
-import AppAnimate from "../AppAnimate";
-import { Fonts } from "@crema/constants/AppEnums";
+import React, { useState } from 'react';
+import { Card } from '@mui/material';
+import CardHeader from '@mui/material/CardHeader';
+import CardContent from '@mui/material/CardContent';
+import CodeIcon from '@mui/icons-material/Code';
+import { Highlight, themes } from 'prism-react-renderer';
+import PropTypes from 'prop-types';
+import IconButton from '@mui/material/IconButton';
+import Collapse from '@mui/material/Collapse';
+import AppScrollbar from '../AppScrollbar';
+import Box from '@mui/material/Box';
+import AppAnimate from '../AppAnimate';
+import { Fonts } from '@crema/constants/AppEnums';
 
-const AppComponentCard = ({
-  title,
-  maxHeight,
-  description,
-  component: Component,
-  source,
-  noScrollbar,
-}) => {
+const AppComponentCard = ({ title, component: Component, source, noScrollbar, description = '', maxHeight = 500 }) => {
   const [viewSource, setToggleViewSource] = useState(false);
   const [animation, setAnimation] = useState(false);
 
@@ -31,11 +24,11 @@ const AppComponentCard = ({
             py: 4,
             pb: 1,
             px: 5,
-            display: "flex",
-            alignItems: "center",
+            display: 'flex',
+            alignItems: 'center',
             minHeight: 50,
-            boxSizing: "border-box",
-            "& .MuiTypography-h5": {
+            boxSizing: 'border-box',
+            '& .MuiTypography-h5': {
               fontSize: 14,
               fontWeight: Fonts.BOLD,
               marginBottom: 0.25,
@@ -77,14 +70,10 @@ const AppComponentCard = ({
               <AppScrollbar
                 sx={{
                   borderRadius: 3,
-                  background: "#333333",
+                  background: '#333333',
                 }}
               >
-                <Highlight
-                  code={source}
-                  language="jsx"
-                  theme={themes.shadesOfPurple}
-                >
+                <Highlight code={source} language="jsx" theme={themes.shadesOfPurple}>
                   {({ style, tokens, getLineProps, getTokenProps }) => (
                     <pre
                       style={{
@@ -92,19 +81,13 @@ const AppComponentCard = ({
                         maxHeight: 500,
                         borderRadius: 8,
                         padding: 12,
-                        overflowY: "scroll",
+                        overflowY: 'scroll',
                       }}
                     >
                       {tokens.map((line, i) => (
-                        <Box
-                          key={"line-" + i}
-                          {...getLineProps({ line, key: i })}
-                        >
+                        <Box key={'line-' + i} {...getLineProps({ line, key: i })}>
                           {line.map((token, key) => (
-                            <span
-                              key={"token-" + key}
-                              {...getTokenProps({ token, key })}
-                            />
+                            <span key={'token-' + key} {...getTokenProps({ token, key })} />
                           ))}
                         </Box>
                       ))}
@@ -117,33 +100,33 @@ const AppComponentCard = ({
 
           {noScrollbar ? (
             <Box
-              sx={{
-                width: "100%",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
+              sx={(theme) => ({
+                width: '100%',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
                 p: 4,
-                backgroundColor: (theme) => theme.palette.background.default,
-              }}
+                backgroundColor: theme.palette.background.default,
+              })}
             >
               <Component />
             </Box>
           ) : (
             <AppScrollbar
-              sx={{
+              sx={(theme) => ({
                 mt: 2,
                 p: 4,
                 borderRadius: 3,
                 maxHeight: maxHeight,
-                backgroundColor: (theme) => theme.palette.background.default,
-              }}
+                backgroundColor: theme.palette.background.default,
+              })}
             >
               <Box
                 sx={{
-                  width: "100%",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
+                  width: '100%',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
                 }}
               >
                 <Component />
@@ -157,11 +140,6 @@ const AppComponentCard = ({
 };
 
 export default AppComponentCard;
-
-AppComponentCard.defaultProps = {
-  description: "",
-  maxHeight: 500,
-};
 
 AppComponentCard.propTypes = {
   component: PropTypes.any.isRequired,

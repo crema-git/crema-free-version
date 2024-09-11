@@ -13,7 +13,7 @@ const AddressCell = ({ address, selectedAddress, setSelectAddress }) => {
   return (
     <Box
       onClick={() => setSelectAddress(address)}
-      className='item-hover'
+      className="item-hover"
       sx={{
         border: 1,
         px: 5,
@@ -35,28 +35,24 @@ const AddressCell = ({ address, selectedAddress, setSelectAddress }) => {
           checked={isActive}
           icon={<RadioButtonUncheckedIcon />}
           checkedIcon={<RadioButtonCheckedIcon />}
-          color='primary'
+          color="primary"
         />
         <Box sx={{ mx: 3.5 }}>{address.name}</Box>
         <Box>{address.mobile}</Box>
         {isActive ? (
           <Box sx={{ ml: 'auto' }}>
-            <IconButton size='small'>
+            <IconButton size="small">
               <EditOutlinedIcon />
             </IconButton>
           </Box>
         ) : null}
       </Box>
-      <Box
-        sx={{ fontSize: 14, fontWeight: Fonts.REGULAR, ml: 14, mt: -2, mb: 4 }}
-      >
+      <Box sx={{ fontSize: 14, fontWeight: Fonts.REGULAR, ml: 14, mt: -2, mb: 4 }}>
         {address.addressLine}, {address.city}, {address.pin}
       </Box>
       {isActive ? (
-        <Box
-          sx={{ fontSize: 14, fontWeight: Fonts.REGULAR, ml: 14, mt: 1, mb: 4 }}
-        >
-          <Button variant='contained' color='primary'>
+        <Box sx={{ fontSize: 14, fontWeight: Fonts.REGULAR, ml: 14, mt: 1, mb: 4 }}>
+          <Button variant="contained" color="primary">
             Deliver Here
           </Button>
         </Box>

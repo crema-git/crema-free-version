@@ -2,16 +2,10 @@ import React from 'react';
 import TablePagination from '@mui/material/TablePagination';
 import PropTypes from 'prop-types';
 
-const AppsPagination = ({
-  count = 0,
-  page,
-  onPageChange,
-  rowsPerPage,
-  ...rest
-}) => {
+const AppsPagination = ({ page, onPageChange, count = 0, rowsPerPage = 15, ...rest }) => {
   return (
     <TablePagination
-      component='div'
+      component="div"
       count={count}
       rowsPerPage={rowsPerPage}
       page={page}
@@ -25,10 +19,6 @@ const AppsPagination = ({
 };
 
 export default AppsPagination;
-
-AppsPagination.defaultProps = {
-  rowsPerPage: 15,
-};
 
 AppsPagination.propTypes = {
   count: PropTypes.number,

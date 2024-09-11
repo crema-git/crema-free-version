@@ -22,11 +22,7 @@ export default function MultiSortingGrid() {
 
   return (
     <div style={{ height: 400, width: '100%' }}>
-      <DataGridPro
-        {...data}
-        sortModel={sortModel}
-        onSortModelChange={(model) => setSortModel(model)}
-      />
+      <DataGridPro {...data} sortModel={sortModel} onSortModelChange={(model) => setSortModel(model)} />
     </div>
   );
 }

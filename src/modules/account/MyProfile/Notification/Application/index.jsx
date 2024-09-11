@@ -10,14 +10,14 @@ const Application = ({ application }) => {
   return (
     <Box sx={{ mb: { xs: 5, lg: 6 } }}>
       <Typography
-        component='h3'
+        component="h3"
         sx={{
           fontSize: 16,
           fontWeight: Fonts.BOLD,
           mb: { xs: 3, lg: 4 },
         }}
       >
-        <IntlMessages id='eCommerce.application' />
+        <IntlMessages id="eCommerce.application" />
       </Typography>
 
       {application.map((data, index) => (

@@ -37,11 +37,11 @@ const ListItem = (props) => {
             },
           }}
         >
-          <img src={user.image} alt='user' className='crUserImage' />
+          <img src={user.image} alt="user" className="crUserImage" />
         </Box>
 
         <Box
-          sx={{
+          sx={(theme) => ({
             pb: { xs: 5, xl: 8 },
             flex: 1,
             position: 'relative',
@@ -56,16 +56,14 @@ const ListItem = (props) => {
               zIndex: 1,
               height: '2px',
               width: '162px',
-              backgroundColor: (theme) => theme.palette.grey['400'],
+              backgroundColor: theme.palette.grey['400'],
               transition: 'all 0.5s ease',
             },
-          }}
+          })}
         >
-          <Box
-            sx={{ mb: 3, fontSize: 16, component: 'h3', color: 'text.primary' }}
-          >
+          <Box sx={{ mb: 3, fontSize: 16, component: 'h3', color: 'text.primary' }}>
             <Box
-              component='span'
+              component="span"
               sx={{
                 fontWeight: Fonts.BOLD,
                 color: 'text.primary',
@@ -74,9 +72,9 @@ const ListItem = (props) => {
             >
               {user.name}
             </Box>
-            <IntlMessages id='common.in' />
+            <IntlMessages id="common.in" />
             <Box
-              component='span'
+              component="span"
               sx={{
                 color: 'primary.main',
                 fontWeight: Fonts.BOLD,
@@ -93,7 +91,7 @@ const ListItem = (props) => {
             }}
           >
             <Box
-              component='p'
+              component="p"
               sx={{
                 color: 'text.secondary',
                 fontSize: 14,

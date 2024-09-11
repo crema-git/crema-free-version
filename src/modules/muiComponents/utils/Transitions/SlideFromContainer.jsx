@@ -8,15 +8,15 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 
 const icon = (
   <Paper sx={{ m: 1, width: 100, height: 100 }} elevation={4}>
-    <Box component='svg' sx={{ width: 100, height: 100 }}>
+    <Box component="svg" sx={{ width: 100, height: 100 }}>
       <Box
-        component='polygon'
+        component="polygon"
         sx={{
           fill: (theme) => theme.palette.common.white,
           stroke: (theme) => theme.palette.divider,
           strokeWidth: 1,
         }}
-        points='0,100 50,00, 100,100'
+        points="0,100 50,00, 100,100"
       />
     </Box>
   </Paper>
@@ -38,18 +38,14 @@ export default function SlideFromContainer() {
         display: 'flex',
         padding: 2,
         borderRadius: 1,
-        bgcolor: (theme) =>
-          theme.palette.mode === 'light' ? 'grey.100' : 'grey.900',
+        bgcolor: (theme) => (theme.palette.mode === 'light' ? 'grey.100' : 'grey.900'),
         overflow: 'hidden',
       }}
       ref={containerRef}
     >
       <Box sx={{ width: 200 }}>
-        <FormControlLabel
-          control={<Switch checked={checked} onChange={handleChange} />}
-          label='Show from target'
-        />
-        <Slide direction='up' in={checked} container={containerRef.current}>
+        <FormControlLabel control={<Switch checked={checked} onChange={handleChange} />} label="Show from target" />
+        <Slide direction="up" in={checked} container={containerRef.current}>
           {icon}
         </Slide>
       </Box>

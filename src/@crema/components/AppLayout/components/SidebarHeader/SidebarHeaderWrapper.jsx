@@ -7,20 +7,27 @@ const SidebarHeaderWrapper = ({ children }) => {
   const { sidebarHeaderColor, allowSidebarBgImage } = useSidebarContext();
   return (
     <Box
-      sx={{
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
-        backgroundColor: allowSidebarBgImage
-          ? 'transparent'
-          : sidebarHeaderColor,
-        '&:hover': {
-          '& .arrowIcon': {
-            opacity: 1,
-            visibility: 'visible',
+      sx={[
+        {
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+
+          '&:hover': {
+            '& .arrowIcon': {
+              opacity: 1,
+              visibility: 'visible',
+            },
           },
         },
-      }}
+        allowSidebarBgImage
+          ? {
+              backgroundColor: 'transparent',
+            }
+          : {
+              backgroundColor: sidebarHeaderColor,
+            },
+      ]}
     >
       {children}
     </Box>

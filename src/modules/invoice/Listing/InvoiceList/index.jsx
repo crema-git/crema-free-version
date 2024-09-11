@@ -14,13 +14,12 @@ const InvoiceList = () => {
   const { pathname } = useLocation();
   const infoViewActionsContext = useInfoViewActionsContext();
 
-  const [{ apiData: invoiceList, loading }, { setQueryParams, reCallAPI }] =
-    useGetDataApi(
-      '/api/invoice/list',
-      {},
-      { folder: params?.folder || 'all' },
-      true,
-    );
+  const [{ apiData: invoiceList, loading }, { setQueryParams, reCallAPI }] = useGetDataApi(
+    '/api/invoice/list',
+    {},
+    { folder: params?.folder || 'all' },
+    true,
+  );
 
   const [page, setPage] = useState(0);
 
@@ -44,9 +43,7 @@ const InvoiceList = () => {
     putDataApi('/api/invoice/list/update', infoViewActionsContext, { invoice })
       .then(() => {
         reCallAPI();
-        infoViewActionsContext.showMessage(
-          'Invoice status udpated successfully!',
-        );
+        infoViewActionsContext.showMessage('Invoice status udpated successfully!');
       })
       .catch((error) => {
         infoViewActionsContext.fetchError(error.message);
@@ -66,11 +63,7 @@ const InvoiceList = () => {
         />
       </AppsHeader>
       <AppsContent>
-        <InvoiceTable
-          invoiceData={invoiceList || []}
-          loading={loading}
-          onChangeStatus={onChangeStatus}
-        />
+        <InvoiceTable invoiceData={invoiceList || []} loading={loading} onChangeStatus={onChangeStatus} />
       </AppsContent>
     </>
   ) : (

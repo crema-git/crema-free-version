@@ -13,11 +13,7 @@ export default function ColumnSizingGrid() {
   return (
     <div style={{ height: 250, width: '100%' }}>
       <DataGridPro
-        columns={[
-          { field: 'id' },
-          { field: 'username', minWidth: 150 },
-          { field: 'age', resizable: false },
-        ]}
+        columns={[{ field: 'id' }, { field: 'username', minWidth: 150 }, { field: 'age', resizable: false }]}
         rows={rows}
       />
     </div>

@@ -19,7 +19,7 @@ export default function RangeSlider() {
         getAriaLabel={() => 'Temperature range'}
         value={value}
         onChange={handleChange}
-        valueLabelDisplay='auto'
+        valueLabelDisplay="auto"
         getAriaValueText={valuetext}
       />
     </Box>

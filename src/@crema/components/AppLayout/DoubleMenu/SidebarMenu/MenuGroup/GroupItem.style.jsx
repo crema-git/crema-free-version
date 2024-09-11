@@ -38,17 +38,11 @@ const useStyles = makeStyles((theme) => {
 
       '&:hover, &:focus': {
         '& .nav-item-text': {
-          color: (props) =>
-            props.themeMode === ThemeMode.LIGHT
-              ? `${theme.palette.primary.main}`
-              : '#fff',
+          color: (props) => (props.themeMode === ThemeMode.LIGHT ? `${theme.palette.primary.main}` : '#fff'),
         },
 
         '& .nav-item-icon': {
-          color: (props) =>
-            props.themeMode === ThemeMode.LIGHT
-              ? `${theme.palette.primary.main}`
-              : '#fff',
+          color: (props) => (props.themeMode === ThemeMode.LIGHT ? `${theme.palette.primary.main}` : '#fff'),
         },
       },
       '&:hover': {

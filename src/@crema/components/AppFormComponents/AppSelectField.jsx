@@ -10,11 +10,7 @@ const AppSelectField = (props) => {
   return (
     <>
       <Select {...props} {...field} error={!!errorText} />
-      {!props.disabled && (
-        <FormHelperText style={{ color: '#f44336' }}>
-          {errorText}
-        </FormHelperText>
-      )}
+      {!props.disabled && <FormHelperText style={{ color: '#f44336' }}>{errorText}</FormHelperText>}
     </>
   );
 };

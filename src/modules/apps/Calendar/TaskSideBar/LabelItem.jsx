@@ -1,13 +1,13 @@
 import React from 'react';
 import ListItemText from '@mui/material/ListItemText';
-import ListItem from '@mui/material/ListItem';
+import ListItemButton from '@mui/material/ListItemButton';
 import PropTypes from 'prop-types';
 import LabelOutlinedIcon from '@mui/icons-material/LabelOutlined';
 import { alpha, styled } from '@mui/material/styles';
 import { Fonts } from '@crema/constants/AppEnums';
 import AppNavLink from '@crema/components/AppNavLink';
 
-const StyledListItem = styled(ListItem)(({ theme }) => ({
+const StyledListItem = styled(ListItemButton)(({ theme }) => ({
   paddingTop: 5,
   paddingBottom: 5,
   paddingLeft: 16,
@@ -47,11 +47,10 @@ const StyledListItem = styled(ListItem)(({ theme }) => ({
 const LabelItem = ({ label }) => {
   return (
     <StyledListItem
-      button
       key={label.id}
       to={`/apps/calender/label/${label.alias}`}
       component={AppNavLink}
-      activeClassName='active'
+      activeClassName="active"
     >
       <LabelOutlinedIcon style={{ color: `${label.color}` }} />
 

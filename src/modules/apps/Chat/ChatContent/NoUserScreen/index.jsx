@@ -8,7 +8,7 @@ const NoUserScreen = () => {
     <div>
       <ChatBubbleOutlineIcon />
       <Typography>
-        <IntlMessages id='chatApp.noUser' />
+        <IntlMessages id="chatApp.noUser" />
       </Typography>
     </div>
   );

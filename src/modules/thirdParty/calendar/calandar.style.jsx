@@ -4,10 +4,9 @@ import 'react-big-calendar/lib/css/react-big-calendar.css';
 import './calendar.css';
 
 export const StyledCalendar = styled(Calendar)(({ theme }) => ({
-  '& .cr-calendar .react-daypicker-root .day.today, & .cr-calendar .react-daypicker-root .day.today:hover ':
-    {
-      color: theme.palette.primary.main,
-    },
+  '& .cr-calendar .react-daypicker-root .day.today, & .cr-calendar .react-daypicker-root .day.today:hover ': {
+    color: theme.palette.primary.main,
+  },
   '& .rbc-event, & .rbc-event.rbc-selected': {
     backgroundColor: theme.palette.primary.main,
   },
@@ -49,11 +48,10 @@ export const StyledCalendar = styled(Calendar)(({ theme }) => ({
       color: '#b1b5b8',
     },
   },
-  '& .cr-calendar .react-daypicker-root .day:hover:not(.empty), & .cr-calendar .react-daypicker-root .day.active':
-    {
-      backgroundColor: 'transparent',
-      color: '#888888',
-    },
+  '& .cr-calendar .react-daypicker-root .day:hover:not(.empty), & .cr-calendar .react-daypicker-root .day.active': {
+    backgroundColor: 'transparent',
+    color: '#888888',
+  },
   '& .cr-calendar-color .react-daypicker-root .previous-month, & .cr-calendar-color .react-daypicker-root .next-month, & .cr-calendar-color .react-daypicker-root .previous-month:hover, & .cr-calendar-color .react-daypicker-root .next-month:hover':
     {
       color: theme.palette.primary.contrastText,

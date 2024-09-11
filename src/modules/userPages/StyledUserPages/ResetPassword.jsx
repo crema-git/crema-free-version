@@ -1,31 +1,25 @@
 import React from 'react';
 import Card from '@mui/material/Card';
 import Button from '@mui/material/Button';
-import {Form, Formik} from 'formik';
+import { Form, Formik } from 'formik';
 import * as yup from 'yup';
 import Grid from '@mui/material/Grid';
 import IntlMessages from '@crema/helpers/IntlMessages';
 import Box from '@mui/material/Box';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Fonts } from '@crema/constants/AppEnums';
 import AppAnimate from '@crema/components/AppAnimate';
 import AppTextField from '@crema/components/AppFormComponents/AppTextField';
 import Logo from '../../../assets/user/reset-password.svg';
 
 const validationSchema = yup.object({
-  oldPassword: yup
-    .string()
-    .required(<IntlMessages id='validation.enterOldPassword' />),
-  newPassword: yup
-    .string()
-    .required(<IntlMessages id='validation.enterNewPassword' />),
-  confirmPassword: yup
-    .string()
-    .required(<IntlMessages id='validation.reTypePassword' />),
+  oldPassword: yup.string().required(<IntlMessages id="validation.enterOldPassword" />),
+  newPassword: yup.string().required(<IntlMessages id="validation.enterNewPassword" />),
+  confirmPassword: yup.string().required(<IntlMessages id="validation.reTypePassword" />),
 });
 
 const ResetPassword = () => {
   return (
-    <AppAnimate animation='transition.slideUpIn' delay={200}>
+    <AppAnimate animation="transition.slideUpIn" delay={200}>
       <Box
         sx={{
           pb: 6,
@@ -44,8 +38,7 @@ const ResetPassword = () => {
             textAlign: 'center',
             overflow: 'hidden',
             padding: { xs: 8, md: 12 },
-            boxShadow:
-              '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
+            boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
             paddingLeft: {
               lg: 8,
               xl: 20,
@@ -67,7 +60,7 @@ const ResetPassword = () => {
               }}
             >
               <Box
-                display='inline-block'
+                display="inline-block"
                 sx={{
                   width: '100%',
                   height: '100%',
@@ -80,7 +73,7 @@ const ResetPassword = () => {
                   },
                 }}
               >
-                  <img src={Logo} alt={Logo}/>
+                <img src={Logo} alt={Logo} />
               </Box>
             </Grid>
 
@@ -92,7 +85,7 @@ const ResetPassword = () => {
                   fontSize: 20,
                 }}
               >
-                <IntlMessages id='common.resetPassword' />
+                <IntlMessages id="common.resetPassword" />
               </Box>
               <Formik
                 validateOnChange={true}
@@ -105,9 +98,7 @@ const ResetPassword = () => {
                 onSubmit={(data, { setErrors, resetForm }) => {
                   if (data.newPassword !== data.confirmPassword) {
                     setErrors({
-                      confirmPassword: (
-                        <IntlMessages id='validation.passwordMisMatch' />
-                      ),
+                      confirmPassword: <IntlMessages id="validation.passwordMisMatch" />,
                     });
                   } else {
                     resetForm();
@@ -120,20 +111,20 @@ const ResetPassword = () => {
                       textAlign: 'left',
                     }}
                   >
-                    <Form noValidate autoComplete='off'>
+                    <Form noValidate autoComplete="off">
                       <Box
                         sx={{
                           mb: { xs: 3, xl: 4 },
                         }}
                       >
                         <AppTextField
-                          name='oldPassword'
-                          label={<IntlMessages id='common.oldPassword' />}
+                          name="oldPassword"
+                          label={<IntlMessages id="common.oldPassword" />}
                           sx={{
                             width: '100%',
                           }}
-                          variant='outlined'
-                          type='password'
+                          variant="outlined"
+                          type="password"
                         />
                       </Box>
                       <Box
@@ -142,13 +133,13 @@ const ResetPassword = () => {
                         }}
                       >
                         <AppTextField
-                          name='newPassword'
-                          label={<IntlMessages id='common.newPassword' />}
+                          name="newPassword"
+                          label={<IntlMessages id="common.newPassword" />}
                           sx={{
                             width: '100%',
                           }}
-                          variant='outlined'
-                          type='password'
+                          variant="outlined"
+                          type="password"
                         />
                       </Box>
                       <Box
@@ -157,27 +148,27 @@ const ResetPassword = () => {
                         }}
                       >
                         <AppTextField
-                          name='confirmPassword'
-                          label={<IntlMessages id='common.retypePassword' />}
+                          name="confirmPassword"
+                          label={<IntlMessages id="common.retypePassword" />}
                           sx={{
                             width: '100%',
                           }}
-                          variant='outlined'
-                          type='password'
+                          variant="outlined"
+                          type="password"
                         />
                       </Box>
 
                       <Button
-                        variant='contained'
-                        color='primary'
+                        variant="contained"
+                        color="primary"
                         disabled={isSubmitting}
                         sx={{
                           width: '100%',
                           height: 44,
                         }}
-                        type='submit'
+                        type="submit"
                       >
-                        {<IntlMessages id='common.resetMyPassword' />}
+                        {<IntlMessages id="common.resetMyPassword" />}
                       </Button>
                     </Form>
                   </Box>

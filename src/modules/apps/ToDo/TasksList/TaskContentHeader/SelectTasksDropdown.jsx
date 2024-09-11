@@ -22,7 +22,7 @@ const SelectTasksDropdown = ({ checkedTasks, onSelectTasks }) => {
       sx={{
         mr: { xs: 2, xl: 4 },
       }}
-      component='span'
+      component="span"
     >
       <StyledSelect value={selectedItems} onChange={onChangeSelectValue}>
         <MenuItem

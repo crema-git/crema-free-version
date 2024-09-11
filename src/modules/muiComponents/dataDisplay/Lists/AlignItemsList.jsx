@@ -10,19 +10,21 @@ import Typography from '@mui/material/Typography';
 export default function AlignItemsList() {
   return (
     <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
-      <ListItem alignItems='flex-start'>
+      <ListItem alignItems="flex-start">
         <ListItemAvatar>
-          <Avatar alt='Remy Sharp' src='/static/images/avatar/1.jpg' />
+          <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
         </ListItemAvatar>
         <ListItemText
-          primary='Brunch this weekend?'
+          primary="Brunch this weekend?"
           secondary={
             <React.Fragment>
               <Typography
-                sx={{ display: 'inline' }}
-                component='span'
-                variant='body2'
-                color='text.primary'
+                component="span"
+                variant="body2"
+                sx={{
+                  color: 'text.primary',
+                  display: 'inline',
+                }}
               >
                 Ali Connors
               </Typography>
@@ -31,20 +33,22 @@ export default function AlignItemsList() {
           }
         />
       </ListItem>
-      <Divider variant='inset' component='li' />
-      <ListItem alignItems='flex-start'>
+      <Divider variant="inset" component="li" />
+      <ListItem alignItems="flex-start">
         <ListItemAvatar>
-          <Avatar alt='Travis Howard' src='/static/images/avatar/2.jpg' />
+          <Avatar alt="Travis Howard" src="/static/images/avatar/2.jpg" />
         </ListItemAvatar>
         <ListItemText
-          primary='Summer BBQ'
+          primary="Summer BBQ"
           secondary={
             <React.Fragment>
               <Typography
-                sx={{ display: 'inline' }}
-                component='span'
-                variant='body2'
-                color='text.primary'
+                component="span"
+                variant="body2"
+                sx={{
+                  color: 'text.primary',
+                  display: 'inline',
+                }}
               >
                 to Scott, Alex, Jennifer
               </Typography>
@@ -53,20 +57,22 @@ export default function AlignItemsList() {
           }
         />
       </ListItem>
-      <Divider variant='inset' component='li' />
-      <ListItem alignItems='flex-start'>
+      <Divider variant="inset" component="li" />
+      <ListItem alignItems="flex-start">
         <ListItemAvatar>
-          <Avatar alt='Cindy Baker' src='/static/images/avatar/3.jpg' />
+          <Avatar alt="Cindy Baker" src="/static/images/avatar/3.jpg" />
         </ListItemAvatar>
         <ListItemText
-          primary='Oui Oui'
+          primary="Oui Oui"
           secondary={
             <React.Fragment>
               <Typography
-                sx={{ display: 'inline' }}
-                component='span'
-                variant='body2'
-                color='text.primary'
+                component="span"
+                variant="body2"
+                sx={{
+                  color: 'text.primary',
+                  display: 'inline',
+                }}
               >
                 Sandra Adams
               </Typography>

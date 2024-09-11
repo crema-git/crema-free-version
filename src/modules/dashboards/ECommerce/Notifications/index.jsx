@@ -21,9 +21,9 @@ const Notifications = (props) => {
             height: 30,
             width: 30,
           }}
-          aria-label='more'
-          aria-controls='long-menu'
-          aria-haspopup='true'
+          aria-label="more"
+          aria-controls="long-menu"
+          aria-haspopup="true"
           onClick={null}
         >
           <MoreVertIcon />
@@ -35,10 +35,7 @@ const Notifications = (props) => {
           maxHeight: 386,
         }}
       >
-        <AppList
-          data={props.notifications}
-          renderRow={(item) => <NotificationCell key={item.id} item={item} />}
-        />
+        <AppList data={props.notifications} renderRow={(item) => <NotificationCell key={item.id} item={item} />} />
       </AppScrollbar>
     </AppCard>
   );

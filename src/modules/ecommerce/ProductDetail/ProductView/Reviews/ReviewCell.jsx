@@ -31,7 +31,7 @@ const ReviewCell = () => {
             width: 50,
             overflow: 'hidden',
           }}
-          alt='user image'
+          alt="user image"
           src={'/assets/images/avatar/A1.jpg'}
         />
 
@@ -42,7 +42,7 @@ const ReviewCell = () => {
           }}
         >
           <Box
-            component='h3'
+            component="h3"
             sx={{
               color: 'text.primary',
               display: 'flex',
@@ -53,7 +53,7 @@ const ReviewCell = () => {
             }}
           >
             <Box
-              component='span'
+              component="span"
               sx={{
                 color: 'white',
                 backgroundColor: '#388E3C',
@@ -68,7 +68,7 @@ const ReviewCell = () => {
                 fontSize: 12,
               }}
             >
-              <Box component='span' sx={{ pb: 0.5 }}>
+              <Box component="span" sx={{ pb: 0.5 }}>
                 5
               </Box>
               <StarRateIcon style={{ fontSize: 16 }} />
@@ -76,7 +76,7 @@ const ReviewCell = () => {
             Parmar Ravikumar
           </Box>
           <Box
-            component='p'
+            component="p"
             sx={{
               fontSize: 14,
               color: 'text.secondary',
@@ -85,7 +85,7 @@ const ReviewCell = () => {
             If several languages coalesce, the grammar of the resulting language
           </Box>
           <Box
-            component='p'
+            component="p"
             sx={{
               fontSize: 12,
               color: 'text.hint',
@@ -111,9 +111,7 @@ const ReviewCell = () => {
           <ThumbUpAltOutlinedIcon style={{ fontSize: 16 }} />
         </IconButton>
         345
-        <IconButton
-          style={{ marginRight: 5, marginLeft: 15, height: 25, width: 25 }}
-        >
+        <IconButton style={{ marginRight: 5, marginLeft: 15, height: 25, width: 25 }}>
           <ThumbDownAltOutlinedIcon style={{ fontSize: 16 }} />
         </IconButton>
         13

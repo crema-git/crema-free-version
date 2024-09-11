@@ -25,7 +25,7 @@ export default function SpeedDialTooltipOpen() {
     <Box sx={{ height: 330, transform: 'translateZ(0px)', flexGrow: 1 }}>
       <Backdrop open={open} />
       <SpeedDial
-        ariaLabel='SpeedDial tooltip example'
+        ariaLabel="SpeedDial tooltip example"
         sx={{ position: 'absolute', bottom: 16, right: 16 }}
         icon={<SpeedDialIcon />}
         onClose={handleClose}

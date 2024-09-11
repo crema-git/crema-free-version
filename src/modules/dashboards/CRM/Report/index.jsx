@@ -47,7 +47,7 @@ const Report = () => {
               },
             }}
           >
-            <img src='/assets/images/dashboard/chart_icon.svg' alt='chart' />
+            <img src="/assets/images/dashboard/chart_icon.svg" alt="chart" />
           </Box>
           <Box
             sx={{
@@ -62,7 +62,7 @@ const Report = () => {
                 width: 'calc(100% - 60px)',
               }}
             >
-              <Typography variant='h2' component='h2'>
+              <Typography variant="h2" component="h2">
                 52%
               </Typography>
               <Typography
@@ -73,14 +73,14 @@ const Report = () => {
                   width: '100%',
                   fontSize: 14,
                 }}
-                variant='body1'
+                variant="body1"
               >
-                <IntlMessages id='dashboard.crm.weeklyActivity' />
+                <IntlMessages id="dashboard.crm.weeklyActivity" />
               </Typography>
             </Box>
             <div style={{ marginLeft: 'auto' }}>
               <Box
-                component='span'
+                component="span"
                 sx={{
                   borderRadius: 30,
                   fontSize: 12,
@@ -131,7 +131,7 @@ const Report = () => {
               },
             }}
           >
-            <img src='/assets/images/dashboard/clock_icon.svg' alt='chart' />
+            <img src="/assets/images/dashboard/clock_icon.svg" alt="chart" />
           </Box>
           <Box
             sx={{
@@ -147,8 +147,8 @@ const Report = () => {
               }}
             >
               <Typography
-                variant='h2'
-                component='h2'
+                variant="h2"
+                component="h2"
                 sx={{
                   color: theme.palette.text.primary,
                   mb: 0.5,
@@ -164,14 +164,14 @@ const Report = () => {
                   width: '100%',
                   fontSize: 14,
                 }}
-                variant='body1'
+                variant="body1"
               >
-                <IntlMessages id='dashboard.crm.workedThisWeek' />
+                <IntlMessages id="dashboard.crm.workedThisWeek" />
               </Typography>
             </Box>
             <div style={{ marginLeft: 'auto' }}>
               <Box
-                component='span'
+                component="span"
                 sx={{
                   borderRadius: 30,
                   fontSize: 12,
@@ -204,11 +204,11 @@ const Report = () => {
             borderRadius: 4,
           }}
           fullWidth
-          variant='outlined'
-          color='primary'
+          variant="outlined"
+          color="primary"
           startIcon={<PictureAsPdfIcon />}
         >
-          <IntlMessages id='dashboard.crm.exportasPDF' />
+          <IntlMessages id="dashboard.crm.exportasPDF" />
         </Button>
       </Box>
     </AppCard>

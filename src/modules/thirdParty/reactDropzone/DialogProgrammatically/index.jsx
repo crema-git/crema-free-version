@@ -25,20 +25,13 @@ const DialogProgrammatically = () => {
 
   return (
     <Box>
-      <UploadClassic
-        uploadText='Drag your documents, photos or videos here to start uploading.'
-        dropzone={dropzone}
-      />
+      <UploadClassic uploadText="Drag your documents, photos or videos here to start uploading." dropzone={dropzone} />
       <aside>
         <h4>Accepted files</h4>
         <AppList
           data={uploadedFiles}
           renderRow={(file, index) => (
-            <FileRow
-              key={index + file.path}
-              file={file}
-              onDeleteUploadFile={onDeleteUploadFile}
-            />
+            <FileRow key={index + file.path} file={file} onDeleteUploadFile={onDeleteUploadFile} />
           )}
         />
         <h4 style={{ marginTop: 10 }}>Rejected files</h4>
@@ -48,9 +41,7 @@ const DialogProgrammatically = () => {
             <FileRow
               key={index + file.path}
               file={file}
-              onDeleteUploadFile={() =>
-                fileRejections.splice(fileRejections.indexOf(file), 1)
-              }
+              onDeleteUploadFile={() => fileRejections.splice(fileRejections.indexOf(file), 1)}
             />
           )}
         />

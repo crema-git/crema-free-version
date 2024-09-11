@@ -9,7 +9,7 @@ const Review = () => {
   return (
     <Box>
       <Box
-        component='h3'
+        component="h3"
         sx={{
           color: 'text.primary',
           fontSize: 16,
@@ -20,10 +20,7 @@ const Review = () => {
       </Box>
       <ReviewInfo />
       <Divider style={{ marginTop: 15, marginBottom: 15 }} />
-      <AppList
-        data={[1, 2, 3, 4, 5]}
-        renderRow={(data) => <ReviewCell key={data} />}
-      />
+      <AppList data={[1, 2, 3, 4, 5]} renderRow={(data) => <ReviewCell key={data} />} />
     </Box>
   );
 };

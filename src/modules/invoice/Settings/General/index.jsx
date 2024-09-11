@@ -21,32 +21,22 @@ const General = ({ settings, onUpdateSettings }) => {
         resetForm();
       }}
     >
-      <Form noValidate autoComplete='off'>
+      <Form noValidate autoComplete="off">
         <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
           <Box>
-            <Typography variant='h4'>General Settings</Typography>
-            <Typography variant='body1' sx={{ mt: 2, color: 'text.secondary' }}>
+            <Typography variant="h4">General Settings</Typography>
+            <Typography variant="body1" sx={{ mt: 2, color: 'text.secondary' }}>
               Manage your general account settings
             </Typography>
           </Box>
-          <Box>
-            {!isEdit && (
-              <EditIcon
-                sx={{ cursor: 'pointer' }}
-                onClick={() => setIsEdit(true)}
-              />
-            )}
-          </Box>
+          <Box>{!isEdit && <EditIcon sx={{ cursor: 'pointer' }} onClick={() => setIsEdit(true)} />}</Box>
         </Box>
         <Divider sx={{ my: 4 }} />
         <AppGridContainer>
           <Grid item xs={12} md={3}>
             <Box>
-              <Typography variant='h5'>Account Info</Typography>
-              <Typography
-                variant='body1'
-                sx={{ mt: 1, color: 'text.secondary' }}
-              >
+              <Typography variant="h5">Account Info</Typography>
+              <Typography variant="body1" sx={{ mt: 1, color: 'text.secondary' }}>
                 Update your account details.
               </Typography>
             </Box>
@@ -57,20 +47,19 @@ const General = ({ settings, onUpdateSettings }) => {
                 border: '1px solid #EAECF0',
                 p: 6,
                 borderRadius: 3,
-                boxShadow:
-                  '0px 1px 3px rgba(16, 24, 40, 0.1), 0px 1px 2px rgba(16, 24, 40, 0.06)',
+                boxShadow: '0px 1px 3px rgba(16, 24, 40, 0.1), 0px 1px 2px rgba(16, 24, 40, 0.06)',
               }}
             >
               <AppGridContainer>
                 <Grid item xs={12} md={6}>
                   <AppTextField
-                    name='accountType'
-                    variant='outlined'
+                    name="accountType"
+                    variant="outlined"
                     sx={{
                       width: '100%',
                       my: 2,
                     }}
-                    label='Account type'
+                    label="Account type"
                     InputProps={{
                       readOnly: !isEdit,
                     }}
@@ -78,13 +67,13 @@ const General = ({ settings, onUpdateSettings }) => {
                 </Grid>
                 <Grid item xs={12} md={6}>
                   <AppTextField
-                    name='agencyName'
-                    variant='outlined'
+                    name="agencyName"
+                    variant="outlined"
                     sx={{
                       width: '100%',
                       my: 2,
                     }}
-                    label='Agency Name'
+                    label="Agency Name"
                     InputProps={{
                       readOnly: !isEdit,
                     }}
@@ -98,11 +87,8 @@ const General = ({ settings, onUpdateSettings }) => {
         <AppGridContainer>
           <Grid item xs={12} md={3}>
             <Box>
-              <Typography variant='h5'>System</Typography>
-              <Typography
-                variant='body1'
-                sx={{ mt: 1, color: 'text.secondary' }}
-              >
+              <Typography variant="h5">System</Typography>
+              <Typography variant="body1" sx={{ mt: 1, color: 'text.secondary' }}>
                 Update your system information.
               </Typography>
             </Box>
@@ -113,20 +99,19 @@ const General = ({ settings, onUpdateSettings }) => {
                 border: '1px solid #EAECF0',
                 p: 6,
                 borderRadius: 3,
-                boxShadow:
-                  '0px 1px 3px rgba(16, 24, 40, 0.1), 0px 1px 2px rgba(16, 24, 40, 0.06)',
+                boxShadow: '0px 1px 3px rgba(16, 24, 40, 0.1), 0px 1px 2px rgba(16, 24, 40, 0.06)',
               }}
             >
               <AppGridContainer>
                 <Grid item xs={12} md={6}>
                   <AppTextField
-                    name='language'
-                    variant='outlined'
+                    name="language"
+                    variant="outlined"
                     sx={{
                       width: '100%',
                       my: 2,
                     }}
-                    label='Language'
+                    label="Language"
                     InputProps={{
                       readOnly: !isEdit,
                     }}
@@ -134,13 +119,13 @@ const General = ({ settings, onUpdateSettings }) => {
                 </Grid>
                 <Grid item xs={12} md={6}>
                   <AppTextField
-                    name='dateFormat'
-                    variant='outlined'
+                    name="dateFormat"
+                    variant="outlined"
                     sx={{
                       width: '100%',
                       my: 2,
                     }}
-                    label='Date Format'
+                    label="Date Format"
                     InputProps={{
                       readOnly: !isEdit,
                     }}
@@ -148,13 +133,13 @@ const General = ({ settings, onUpdateSettings }) => {
                 </Grid>
                 <Grid item xs={12} md={6}>
                   <AppTextField
-                    name='currency'
-                    variant='outlined'
+                    name="currency"
+                    variant="outlined"
                     sx={{
                       width: '100%',
                       my: 2,
                     }}
-                    label='Default Currency'
+                    label="Default Currency"
                     InputProps={{
                       readOnly: !isEdit,
                     }}
@@ -162,13 +147,13 @@ const General = ({ settings, onUpdateSettings }) => {
                 </Grid>
                 <Grid item xs={12} md={6}>
                   <AppTextField
-                    name='decimalSeparator'
-                    variant='outlined'
+                    name="decimalSeparator"
+                    variant="outlined"
                     sx={{
                       width: '100%',
                       my: 2,
                     }}
-                    label='Decimal Separator'
+                    label="Decimal Separator"
                     InputProps={{
                       readOnly: !isEdit,
                     }}
@@ -181,11 +166,8 @@ const General = ({ settings, onUpdateSettings }) => {
         <AppGridContainer sx={{ my: 1 }}>
           <Grid item xs={12} md={3}>
             <Box>
-              <Typography variant='h5'>Address</Typography>
-              <Typography
-                variant='body1'
-                sx={{ mt: 1, color: 'text.secondary' }}
-              >
+              <Typography variant="h5">Address</Typography>
+              <Typography variant="body1" sx={{ mt: 1, color: 'text.secondary' }}>
                 Update your address details.
               </Typography>
             </Box>
@@ -196,20 +178,19 @@ const General = ({ settings, onUpdateSettings }) => {
                 border: '1px solid #EAECF0',
                 p: 6,
                 borderRadius: 3,
-                boxShadow:
-                  '0px 1px 3px rgba(16, 24, 40, 0.1), 0px 1px 2px rgba(16, 24, 40, 0.06)',
+                boxShadow: '0px 1px 3px rgba(16, 24, 40, 0.1), 0px 1px 2px rgba(16, 24, 40, 0.06)',
               }}
             >
               <AppGridContainer>
                 <Grid item xs={12}>
                   <AppTextField
-                    name='street'
-                    variant='outlined'
+                    name="street"
+                    variant="outlined"
                     sx={{
                       width: '100%',
                       my: 2,
                     }}
-                    label='Street/Number'
+                    label="Street/Number"
                     InputProps={{
                       readOnly: !isEdit,
                     }}
@@ -217,13 +198,13 @@ const General = ({ settings, onUpdateSettings }) => {
                 </Grid>
                 <Grid item xs={12} md={6}>
                   <AppTextField
-                    name='zipCode'
-                    variant='outlined'
+                    name="zipCode"
+                    variant="outlined"
                     sx={{
                       width: '100%',
                       my: 2,
                     }}
-                    label='Zip Code'
+                    label="Zip Code"
                     InputProps={{
                       readOnly: !isEdit,
                     }}
@@ -231,13 +212,13 @@ const General = ({ settings, onUpdateSettings }) => {
                 </Grid>
                 <Grid item xs={12} md={6}>
                   <AppTextField
-                    name='city'
-                    variant='outlined'
+                    name="city"
+                    variant="outlined"
                     sx={{
                       width: '100%',
                       my: 2,
                     }}
-                    label='City'
+                    label="City"
                     InputProps={{
                       readOnly: !isEdit,
                     }}
@@ -245,13 +226,13 @@ const General = ({ settings, onUpdateSettings }) => {
                 </Grid>
                 <Grid item xs={12} md={6}>
                   <AppTextField
-                    name='state'
-                    variant='outlined'
+                    name="state"
+                    variant="outlined"
                     sx={{
                       width: '100%',
                       my: 2,
                     }}
-                    label='State'
+                    label="State"
                     InputProps={{
                       readOnly: !isEdit,
                     }}
@@ -259,13 +240,13 @@ const General = ({ settings, onUpdateSettings }) => {
                 </Grid>
                 <Grid item xs={12} md={6}>
                   <AppTextField
-                    name='country'
-                    variant='outlined'
+                    name="country"
+                    variant="outlined"
                     sx={{
                       width: '100%',
                       my: 2,
                     }}
-                    label='Country'
+                    label="Country"
                     InputProps={{
                       readOnly: !isEdit,
                     }}
@@ -279,11 +260,8 @@ const General = ({ settings, onUpdateSettings }) => {
         <AppGridContainer>
           <Grid item xs={12} md={3}>
             <Box>
-              <Typography variant='h5'>Contact info</Typography>
-              <Typography
-                variant='body1'
-                sx={{ mt: 1, color: 'text.secondary' }}
-              >
+              <Typography variant="h5">Contact info</Typography>
+              <Typography variant="body1" sx={{ mt: 1, color: 'text.secondary' }}>
                 Update your contact details.
               </Typography>
             </Box>
@@ -294,32 +272,31 @@ const General = ({ settings, onUpdateSettings }) => {
                 border: '1px solid #EAECF0',
                 p: 6,
                 borderRadius: 3,
-                boxShadow:
-                  '0px 1px 3px rgba(16, 24, 40, 0.1), 0px 1px 2px rgba(16, 24, 40, 0.06)',
+                boxShadow: '0px 1px 3px rgba(16, 24, 40, 0.1), 0px 1px 2px rgba(16, 24, 40, 0.06)',
               }}
             >
               <AppGridContainer>
                 <Grid item xs={12} md={6}>
                   <AppTextField
-                    name='phoneNumber'
-                    variant='outlined'
+                    name="phoneNumber"
+                    variant="outlined"
                     sx={{
                       width: '100%',
                       my: 2,
                     }}
-                    label='Phone Number'
+                    label="Phone Number"
                     readOnly={!isEdit}
                   />
                 </Grid>
                 <Grid item xs={12} md={6}>
                   <AppTextField
-                    name='alternateNumber'
-                    variant='outlined'
+                    name="alternateNumber"
+                    variant="outlined"
                     sx={{
                       width: '100%',
                       my: 2,
                     }}
-                    label='Alternate Number'
+                    label="Alternate Number"
                     readOnly={!isEdit}
                   />
                 </Grid>
@@ -328,19 +305,11 @@ const General = ({ settings, onUpdateSettings }) => {
           </Grid>
         </AppGridContainer>
         {isEdit && (
-          <Stack
-            direction='row'
-            justifyContent='flex-end'
-            spacing={5}
-            sx={{ mt: 3 }}
-          >
-            <Button
-              sx={{ color: 'text.secondary' }}
-              onClick={() => setIsEdit(false)}
-            >
+          <Stack direction="row" justifyContent="flex-end" spacing={5} sx={{ mt: 3 }}>
+            <Button sx={{ color: 'text.secondary' }} onClick={() => setIsEdit(false)}>
               Cancel
             </Button>
-            <Button variant='contained' color='primary' type='submit'>
+            <Button variant="contained" color="primary" type="submit">
               Save
             </Button>
           </Stack>

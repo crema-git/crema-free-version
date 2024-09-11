@@ -29,12 +29,7 @@ const ContactActionHoverWrapper = styled('div')(() => {
 });
 
 const ItemMenu = (props) => {
-  const {
-    onSelectContactsForDelete,
-    contact,
-    onChangeStarred,
-    onOpenEditContact,
-  } = props;
+  const { onSelectContactsForDelete, contact, onChangeStarred, onOpenEditContact } = props;
 
   const onDeleteContact = (e) => {
     onSelectContactsForDelete([contact.id]);
@@ -53,7 +48,7 @@ const ItemMenu = (props) => {
 
   return (
     <Box
-      component='span'
+      component="span"
       sx={{
         display: 'flex',
         alignItems: 'center',
@@ -61,8 +56,8 @@ const ItemMenu = (props) => {
         position: 'relative',
       }}
     >
-      <span className='conActionHoverHideRoot'>
-        <AppTooltip title={<IntlMessages id='common.more' />}>
+      <span className="conActionHoverHideRoot">
+        <AppTooltip title={<IntlMessages id="common.more" />}>
           <IconButton
             sx={{
               color: (theme) => theme.palette.text.disabled,
@@ -71,14 +66,14 @@ const ItemMenu = (props) => {
                 fontSize: 22,
               },
             }}
-            size='large'
+            size="large"
           >
             <MoreVertIcon />
           </IconButton>
         </AppTooltip>
       </span>
 
-      <ContactActionHoverWrapper className='conActionHoverRoot'>
+      <ContactActionHoverWrapper className="conActionHoverRoot">
         <IconButton
           sx={{
             color: (theme) => theme.palette.warning.main,
@@ -88,7 +83,7 @@ const ItemMenu = (props) => {
             },
           }}
           onClick={onChangeStarredStatus}
-          size='large'
+          size="large"
         >
           {contact.isStarred ? <StarBorderIcon /> : <StarIcon />}
         </IconButton>
@@ -101,7 +96,7 @@ const ItemMenu = (props) => {
             },
           }}
           onClick={onClickEditOption}
-          size='large'
+          size="large"
         >
           <EditOutlinedIcon />
         </IconButton>
@@ -114,7 +109,7 @@ const ItemMenu = (props) => {
             },
           }}
           onClick={onDeleteContact}
-          size='large'
+          size="large"
         >
           <DeleteOutlinedIcon />
         </IconButton>

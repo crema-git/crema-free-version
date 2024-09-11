@@ -1,22 +1,16 @@
-import React from "react";
-import Drawer from "@mui/material/Drawer";
-import Hidden from "@mui/material/Hidden";
-import clsx from "clsx";
-import PropTypes from "prop-types";
-import AppScrollbar from "../../AppScrollbar";
-import VerticalNav from "../components/VerticalNav";
-import MainSidebar from "../components/MainSidebar";
-import { useLayoutContext } from "@crema/context/AppContextProvider/LayoutContextProvider";
-import UserInfo from "../components/UserInfo";
-import { useSidebarContext } from "@crema/context/AppContextProvider/SidebarContextProvider";
+import React from 'react';
+import Drawer from '@mui/material/Drawer';
+import Hidden from '@mui/material/Hidden';
+import clsx from 'clsx';
+import PropTypes from 'prop-types';
+import AppScrollbar from '../../AppScrollbar';
+import VerticalNav from '../components/VerticalNav';
+import MainSidebar from '../components/MainSidebar';
+import { useLayoutContext } from '@crema/context/AppContextProvider/LayoutContextProvider';
+import UserInfo from '../components/UserInfo';
+import { useSidebarContext } from '@crema/context/AppContextProvider/SidebarContextProvider';
 
-const AppSidebar = ({
-  toggleNavCollapsed,
-  position,
-  isNavCollapsed,
-  variant,
-  routesConfig,
-}) => {
+const AppSidebar = ({ toggleNavCollapsed, isNavCollapsed, routesConfig, variant = '', position = 'left' }) => {
   const { footer, footerType } = useLayoutContext();
 
   const { sidebarTextColor } = useSidebarContext();
@@ -35,17 +29,17 @@ const AppSidebar = ({
             root: clsx(variant),
             paper: clsx(variant),
           }}
-          style={{ position: "absolute" }}
+          style={{ position: 'absolute' }}
         >
           <MainSidebar>
             <UserInfo color={sidebarTextColor} />
             <AppScrollbar
-              sx={{
+              sx={(theme) => ({
                 py: 2,
-                height: "calc(100vh - 70px) !important",
-                borderTop: (theme) => `solid 1px ${theme.palette.divider}`,
+                height: 'calc(100vh - 70px) !important',
+                borderTop: `solid 1px ${theme.palette.divider}`,
                 mt: 0.5,
-              }}
+              })}
             >
               <VerticalNav routesConfig={routesConfig} />
             </AppScrollbar>
@@ -56,21 +50,20 @@ const AppSidebar = ({
         <MainSidebar>
           <UserInfo color={sidebarTextColor} />
           <AppScrollbar
-            className={clsx({
-              "has-footer-fixed": footer && footerType === "fixed",
-            })}
-            sx={{
+            className={clsx(footer && footerType === 'fixed' && 'has-footer-fixed')}
+            sx={(theme) => ({
               py: 2,
-              height: "calc(100vh - 70px) !important",
-              borderTop: (theme) => `solid 1px ${theme.palette.divider}`,
+              height: 'calc(100vh - 70px) !important',
+              borderTop: `solid 1px ${theme.palette.divider}`,
               mt: 0.5,
-              "&.has-footer-fixed": {
+
+              '&.has-footer-fixed': {
                 height: {
-                  xs: "calc(100vh - 117px) !important",
-                  xl: "calc(100vh - 127px) !important",
+                  xs: 'calc(100vh - 117px) !important',
+                  xl: 'calc(100vh - 127px) !important',
                 },
               },
-            }}
+            })}
           >
             <VerticalNav routesConfig={routesConfig} />
           </AppScrollbar>
@@ -81,11 +74,6 @@ const AppSidebar = ({
 };
 
 export default AppSidebar;
-
-AppSidebar.defaultProps = {
-  variant: "",
-  position: "left",
-};
 
 AppSidebar.propTypes = {
   position: PropTypes.string,

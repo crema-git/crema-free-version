@@ -3,25 +3,15 @@ import GraphTabs from './GraphTabs';
 import PropTypes from 'prop-types';
 import AppCard from '@crema/components/AppCard';
 
-export const Statistics = ({ clientsData, incomeData, projectData }) => {
+export const Statistics = ({ clientsData = [], incomeData = [], projectData = [] }) => {
   return (
     <AppCard sxStyle={{ height: 1 }}>
-      <GraphTabs
-        clientsData={clientsData}
-        incomeData={incomeData}
-        projectData={projectData}
-      />
+      <GraphTabs clientsData={clientsData} incomeData={incomeData} projectData={projectData} />
     </AppCard>
   );
 };
 
 export default Statistics;
-
-Statistics.defaultProps = {
-  clientsData: [],
-  incomeData: [],
-  projectData: [],
-};
 
 Statistics.propTypes = {
   clientsData: PropTypes.array,

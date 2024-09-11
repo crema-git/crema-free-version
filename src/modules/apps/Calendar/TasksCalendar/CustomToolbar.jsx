@@ -54,10 +54,10 @@ const CustomToolbar = (props) => {
   }
 
   /*
-      const goToDayView = () => {
-        props.onView('day');
-        setViewState('day');
-      };*/
+        const goToDayView = () => {
+          props.onView('day');
+          setViewState('day');
+        };*/
 
   const goToAgenda = () => {
     props.onView('agenda');
@@ -111,13 +111,13 @@ const CustomToolbar = (props) => {
           mb: 2,
         }}
       >
-        <Stack spacing={2} direction='row' sx={{ alignItems: 'center' }}>
+        <Stack spacing={2} direction="row" sx={{ alignItems: 'center' }}>
           <IconBtn
             className={clsx({
               active: viewState === 'month',
             })}
           >
-            <AppTooltip title='Month'>
+            <AppTooltip title="Month">
               <CalendarViewMonthOutlinedIcon onClick={goToMonthView} />
             </AppTooltip>
           </IconBtn>
@@ -126,13 +126,13 @@ const CustomToolbar = (props) => {
               active: viewState === 'agenda',
             })}
           >
-            <AppTooltip title='Agenda'>
+            <AppTooltip title="Agenda">
               <ViewAgendaOutlinedIcon onClick={goToAgenda} />
             </AppTooltip>
           </IconBtn>
           <Box sx={{ mr: 3 }}>
             <AppSearchBar
-              iconPosition='right'
+              iconPosition="right"
               overlap={false}
               onChange={(event) => props.onSetFilterText(event.target.value)}
               placeholder={messages['common.searchHere']}
@@ -140,27 +140,19 @@ const CustomToolbar = (props) => {
           </Box>
         </Stack>
 
-        <Box sx={{ fontWeight: Fonts.SEMI_BOLD }}>
-          {dayjs(props.date).format('DD/MM/YYYY')}
-        </Box>
+        <Box sx={{ fontWeight: Fonts.SEMI_BOLD }}>{dayjs(props.date).format('DD/MM/YYYY')}</Box>
 
-        <Stack spacing={2} direction='row' sx={{ alignItems: 'center' }}>
+        <Stack spacing={2} direction="row" sx={{ alignItems: 'center' }}>
           <IconButton>
-            <AppTooltip title='Next'>
+            <AppTooltip title="Next">
               <ArrowBackIosNewIcon onClick={goToBack} />
             </AppTooltip>
           </IconButton>
-          <Button
-            sx={{ maxHeight: 36 }}
-            size='small'
-            color='primary'
-            variant='contained'
-            onClick={goToToday}
-          >
+          <Button sx={{ maxHeight: 36 }} size="small" color="primary" variant="contained" onClick={goToToday}>
             today
           </Button>
           <IconButton>
-            <AppTooltip title='Next'>
+            <AppTooltip title="Next">
               <ArrowForwardIosIcon onClick={goToNext} />
             </AppTooltip>
           </IconButton>

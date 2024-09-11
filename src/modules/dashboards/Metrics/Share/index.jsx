@@ -8,7 +8,7 @@ const Share = (props) => {
   const { data } = props;
 
   return (
-    <AppCard sxStyle={{ height: 1 }} title='Share'>
+    <AppCard sxStyle={{ height: 1 }} title="Share">
       <AppGrid
         data={data}
         itemPadding={5}
@@ -36,7 +36,7 @@ const Share = (props) => {
           >
             <i className={'zmdi zmdi-' + data.icon} />
             <Box
-              component='span'
+              component="span"
               sx={{
                 ml: 1,
               }}

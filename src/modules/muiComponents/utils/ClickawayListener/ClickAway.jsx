@@ -27,14 +27,10 @@ export default function ClickAway() {
   return (
     <ClickAwayListener onClickAway={handleClickAway}>
       <Box sx={{ position: 'relative' }}>
-        <button type='button' onClick={handleClick}>
+        <button type="button" onClick={handleClick}>
           Open menu dropdown
         </button>
-        {open ? (
-          <Box sx={styles}>
-            Click me, I will stay visible until you click outside.
-          </Box>
-        ) : null}
+        {open ? <Box sx={styles}>Click me, I will stay visible until you click outside.</Box> : null}
       </Box>
     </ClickAwayListener>
   );

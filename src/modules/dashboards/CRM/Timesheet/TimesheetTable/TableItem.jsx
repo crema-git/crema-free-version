@@ -38,8 +38,8 @@ const NumberWrapper = styled('span')(({ theme }) => {
 
 const TableItem = ({ data }) => {
   return (
-    <TableRow key={data.name} className='item-hover'>
-      <TableCellWrapper component='th' scope='row'>
+    <TableRow key={data.name} className="item-hover">
+      <TableCellWrapper component="th" scope="row">
         <Box
           sx={{
             display: 'flex',
@@ -47,15 +47,15 @@ const TableItem = ({ data }) => {
           }}
         >
           <NumberWrapper>{data.id}</NumberWrapper>
-          <Typography variant='h5' component='h5'>
+          <Typography variant="h5" component="h5">
             {data.name}
           </Typography>
         </Box>
       </TableCellWrapper>
-      <TableCellWrapper align='left'>{data.date}</TableCellWrapper>
-      <TableCellWrapper align='left'>{data.start_time}</TableCellWrapper>
-      <TableCellWrapper align='left'>{data.end_time}</TableCellWrapper>
-      <TableCellWrapper align='left'>{data.duration}</TableCellWrapper>
+      <TableCellWrapper align="left">{data.date}</TableCellWrapper>
+      <TableCellWrapper align="left">{data.start_time}</TableCellWrapper>
+      <TableCellWrapper align="left">{data.end_time}</TableCellWrapper>
+      <TableCellWrapper align="left">{data.duration}</TableCellWrapper>
     </TableRow>
   );
 };

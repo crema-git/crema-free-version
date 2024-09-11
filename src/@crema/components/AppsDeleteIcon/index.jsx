@@ -11,12 +11,8 @@ const AppsDeleteIcon = ({ deleteAction, deleteTitle, sx }) => {
 
   return (
     <>
-      <AppTooltip title={<IntlMessages id='common.trash' />}>
-        <IconButton
-          sx={sx}
-          size='large'
-          onClick={() => setDeleteDialogOpen(true)}
-        >
+      <AppTooltip title={<IntlMessages id="common.trash" />}>
+        <IconButton sx={sx} size="large" onClick={() => setDeleteDialogOpen(true)}>
           <DeleteOutlinedIcon />
         </IconButton>
       </AppTooltip>
@@ -25,7 +21,7 @@ const AppsDeleteIcon = ({ deleteAction, deleteTitle, sx }) => {
         onDeny={setDeleteDialogOpen}
         onConfirm={deleteAction}
         title={deleteTitle}
-        dialogTitle={<IntlMessages id='common.deleteItem' />}
+        dialogTitle={<IntlMessages id="common.deleteItem" />}
       />
     </>
   );

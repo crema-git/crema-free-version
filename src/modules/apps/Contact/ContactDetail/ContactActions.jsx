@@ -7,8 +7,7 @@ import AppsStarredIcon from '@crema/components/AppsStarredIcon';
 import { IconButton } from '@mui/material';
 
 const ContactActions = (props) => {
-  const { onDeleteContact, onChangeStarred, onOpenEditContact, contact } =
-    props;
+  const { onDeleteContact, onChangeStarred, onOpenEditContact, contact } = props;
 
   return (
     <Box
@@ -26,7 +25,7 @@ const ContactActions = (props) => {
           opacity: 0,
           visibility: 'hidden',
         }}
-        className='btn-action-view'
+        className="btn-action-view"
       >
         <IconButton
           onClick={onDeleteContact}

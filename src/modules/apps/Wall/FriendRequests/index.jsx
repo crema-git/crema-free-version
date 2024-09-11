@@ -16,7 +16,7 @@ const FriendRequests = ({ friendRequests }) => {
       contentStyle={{ px: 0, pt: 2 }}
     >
       <AppList
-        animation='transition.slideRightBigIn'
+        animation="transition.slideRightBigIn"
         data={friendRequests}
         renderRow={(data, index) => <RequestItem key={index} request={data} />}
       />

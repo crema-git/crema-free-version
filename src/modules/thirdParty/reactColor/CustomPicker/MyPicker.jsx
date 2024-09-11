@@ -9,8 +9,7 @@ export const MyPicker = ({ hex, hsl, onChange }) => {
   return (
     <Box
       sx={{
-        boxShadow:
-          'rgba(0, 0, 0, 0.01) 0px 2px 10px, rgba(0, 0, 0, 0.1) 0px 2px 5px',
+        boxShadow: 'rgba(0, 0, 0, 0.01) 0px 2px 10px, rgba(0, 0, 0, 0.1) 0px 2px 5px',
         p: 4,
         borderRadius: 1,
       }}

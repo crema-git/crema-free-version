@@ -11,7 +11,7 @@ import AppTextField from '@crema/components/AppFormComponents/AppTextField';
 
 const SocialForm = ({ social }) => {
   return (
-    <Form autoComplete='off'>
+    <Form autoComplete="off">
       <AppGridContainer spacing={4}>
         <Grid item xs={12}>
           <Box
@@ -22,46 +22,22 @@ const SocialForm = ({ social }) => {
           >
             <AppGridContainer spacing={4}>
               <Grid item xs={12} md={6}>
-                <AppTextField
-                  name='twitter'
-                  fullWidth
-                  label={<IntlMessages id='common.twitter' />}
-                />
+                <AppTextField name="twitter" fullWidth label={<IntlMessages id="common.twitter" />} />
               </Grid>
               <Grid item xs={12} md={6}>
-                <AppTextField
-                  name='facebook'
-                  fullWidth
-                  label={<IntlMessages id='common.facebook' />}
-                />
+                <AppTextField name="facebook" fullWidth label={<IntlMessages id="common.facebook" />} />
               </Grid>
               <Grid item xs={12} md={6}>
-                <AppTextField
-                  name='google'
-                  fullWidth
-                  label={<IntlMessages id='common.google' />}
-                />
+                <AppTextField name="google" fullWidth label={<IntlMessages id="common.google" />} />
               </Grid>
               <Grid item xs={12} md={6}>
-                <AppTextField
-                  name='linkedIn'
-                  fullWidth
-                  label={<IntlMessages id='common.linkedIn' />}
-                />
+                <AppTextField name="linkedIn" fullWidth label={<IntlMessages id="common.linkedIn" />} />
               </Grid>
               <Grid item xs={12} md={6}>
-                <AppTextField
-                  name='instagram'
-                  fullWidth
-                  label={<IntlMessages id='common.instagram' />}
-                />
+                <AppTextField name="instagram" fullWidth label={<IntlMessages id="common.instagram" />} />
               </Grid>
               <Grid item xs={12} md={6}>
-                <AppTextField
-                  name='quora'
-                  fullWidth
-                  label={<IntlMessages id='common.quora' />}
-                />
+                <AppTextField name="quora" fullWidth label={<IntlMessages id="common.quora" />} />
               </Grid>
             </AppGridContainer>
           </Box>
@@ -69,13 +45,13 @@ const SocialForm = ({ social }) => {
 
         <Grid item xs={12}>
           <Box
-            sx={{
+            sx={(theme) => ({
               mx: -5,
               mt: 3,
               px: 5,
               pt: 5,
-              borderTop: (theme) => `solid 1px ${theme.palette.divider}`,
-            }}
+              borderTop: `solid 1px ${theme.palette.divider}`,
+            })}
           >
             <ProfileConnection profileConnection={social} />
           </Box>
@@ -92,11 +68,11 @@ const SocialForm = ({ social }) => {
                 position: 'relative',
                 minWidth: 100,
               }}
-              color='primary'
-              variant='contained'
-              type='submit'
+              color="primary"
+              variant="contained"
+              type="submit"
             >
-              <IntlMessages id='common.saveChanges' />
+              <IntlMessages id="common.saveChanges" />
             </Button>
             <Button
               sx={{
@@ -104,11 +80,11 @@ const SocialForm = ({ social }) => {
                 minWidth: 100,
                 ml: 2.5,
               }}
-              color='primary'
-              variant='outlined'
-              type='cancel'
+              color="primary"
+              variant="outlined"
+              type="cancel"
             >
-              <IntlMessages id='common.cancel' />
+              <IntlMessages id="common.cancel" />
             </Button>
           </Box>
         </Grid>

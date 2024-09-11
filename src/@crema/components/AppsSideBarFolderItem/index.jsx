@@ -1,7 +1,6 @@
 import React from 'react';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import ListItem from '@mui/material/ListItem';
 import PropTypes from 'prop-types';
 import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
 import PersonOutlinedIcon from '@mui/icons-material/PersonOutlined';
@@ -21,8 +20,9 @@ import { Fonts } from '@crema/constants/AppEnums';
 import AppNavLink from '../AppNavLink';
 import { AiOutlineSend, AiOutlineStop } from 'react-icons/ai';
 import { MdOutlineCancel, MdOutlinePayment } from 'react-icons/md';
+import ListItemButton from '@mui/material/ListItemButton';
 
-const AppsSideBarFolderList = styled(ListItem)(({ theme }) => {
+const AppsSideBarFolderList = styled(ListItemButton)(({ theme }) => {
   return {
     padding: '7px 16px',
     borderRadius: '0 30px 30px 0',
@@ -108,22 +108,17 @@ const getIconByName = (name) => {
 
 const AppsSideBarFolderItem = ({ item, path }) => {
   return (
-    <AppsSideBarFolderList
-      button
-      key={item.id}
-      to={path}
-      component={AppNavLink}
-      activeClassName='active'
-    >
+    <AppsSideBarFolderList key={item.id} to={path} component={AppNavLink} activeClassName="active">
       <ListItemIcon
-        sx={{
+        sx={(theme) => ({
           minWidth: 10,
           mr: 3.5,
+
           '& .material-icons, & svg': {
             fontSize: 22,
-            color: (theme) => theme.palette.text.secondary,
+            color: theme.palette.text.secondary,
           },
-        }}
+        })}
       >
         {getIconByName(item.alias)}
       </ListItemIcon>
@@ -136,7 +131,7 @@ const AppsSideBarFolderItem = ({ item, path }) => {
             mb: 0.5,
           },
         }}
-        className='list-item-text'
+        className="list-item-text"
       />
     </AppsSideBarFolderList>
   );

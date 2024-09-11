@@ -7,15 +7,10 @@ import AppCardMedia from '@crema/components/AppCard/AppCardMedia';
 const OfficeCultureCard = ({ officeCulture }) => {
   return (
     <AppCardMedia sxStyle={{ height: '100%' }} cardMedia={officeCulture.srcImg}>
-      <Typography
-        component='h3'
-        sx={{ fontSize: 16, fontWeight: Fonts.SEMI_BOLD, mb: { xs: 2, md: 4 } }}
-      >
+      <Typography component="h3" sx={{ fontSize: 16, fontWeight: Fonts.SEMI_BOLD, mb: { xs: 2, md: 4 } }}>
         {officeCulture.title}
       </Typography>
-      <Typography
-        sx={{ mb: 2, color: (theme) => theme.palette.text.secondary }}
-      >
+      <Typography sx={{ mb: 2, color: (theme) => theme.palette.text.secondary }}>
         {officeCulture.description}
       </Typography>
     </AppCardMedia>

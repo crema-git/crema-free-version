@@ -9,29 +9,28 @@ import VerticalNav from '../../components/VerticalNav';
 import UserHeaderSidebarWrapper from './UserHeaderSidebarWrapper';
 import { useLayoutContext } from '@crema/context/AppContextProvider/LayoutContextProvider';
 
-const AppSidebar = (props) => {
+const AppSidebar = ({ variant = '', position = 'left', ...props }) => {
   const { footer, footerType } = useLayoutContext();
 
   return (
     <>
       <Hidden xlUp>
         <Drawer
-          anchor={props.position}
+          anchor={position}
           open={props.isNavCollapsed}
           onClose={props.toggleNavCollapsed}
           classes={{
-            root: clsx(props.variant),
-            paper: clsx(props.variant),
+            root: clsx(variant),
+            paper: clsx(variant),
           }}
           style={{ position: 'absolute' }}
         >
-          <UserHeaderSidebarWrapper className='user-header-sidebar'>
+          <UserHeaderSidebarWrapper className="user-header-sidebar">
             <MainSidebar>
               <AppScrollbar
                 sx={{
                   py: 2,
                 }}
-                scrollToTop={false}
               >
                 <VerticalNav routesConfig={props.routesConfig} />
               </AppScrollbar>
@@ -40,7 +39,7 @@ const AppSidebar = (props) => {
         </Drawer>
       </Hidden>
       <Hidden lgDown>
-        <UserHeaderSidebarWrapper className='user-header-sidebar'>
+        <UserHeaderSidebarWrapper className="user-header-sidebar">
           <MainSidebar>
             <AppScrollbar
               className={clsx({
@@ -56,7 +55,6 @@ const AppSidebar = (props) => {
                   },
                 },
               }}
-              scrollToTop={false}
             >
               <VerticalNav routesConfig={props.routesConfig} />
             </AppScrollbar>
@@ -67,11 +65,6 @@ const AppSidebar = (props) => {
   );
 };
 export default AppSidebar;
-
-AppSidebar.defaultProps = {
-  variant: '',
-  position: 'left',
-};
 
 AppSidebar.propTypes = {
   position: PropTypes.string,

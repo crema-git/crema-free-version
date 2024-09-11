@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import { DataGrid } from '@mui/x-data-grid';
-import { randomStatusOptions, randomPrice } from '@mui/x-data-grid-generator';
+import { randomPrice, randomStatusOptions } from '@mui/x-data-grid-generator';
 
 const rows = [
   {

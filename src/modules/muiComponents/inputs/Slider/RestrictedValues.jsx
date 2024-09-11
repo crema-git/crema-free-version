@@ -33,12 +33,12 @@ export default function DiscreteSliderValues() {
   return (
     <Box sx={{ width: 300 }}>
       <Slider
-        aria-label='Restricted values'
+        aria-label="Restricted values"
         defaultValue={20}
         valueLabelFormat={valueLabelFormat}
         getAriaValueText={valuetext}
         step={null}
-        valueLabelDisplay='auto'
+        valueLabelDisplay="auto"
         marks={marks}
       />
     </Box>

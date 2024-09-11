@@ -26,7 +26,7 @@ const PackageCard = ({ pricing }) => {
       >
         <img src={pricing.src} alt={pricing.title} />
         <Typography
-          component='h3'
+          component="h3"
           sx={{
             fontWeight: Fonts.BOLD,
             fontSize: 36,

@@ -19,7 +19,7 @@ const MainContent = ({ children, ...rest }) => {
           mx: 'auto',
         },
       }}
-      className='mainContent'
+      className="mainContent"
       {...rest}
     >
       {children}

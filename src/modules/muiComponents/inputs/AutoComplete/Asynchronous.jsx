@@ -42,7 +42,7 @@ export default function Asynchronous() {
 
   return (
     <Autocomplete
-      id='asynchronous-demo'
+      id="asynchronous-demo"
       sx={{ width: 300 }}
       open={open}
       onOpen={() => {
@@ -58,14 +58,12 @@ export default function Asynchronous() {
       renderInput={(params) => (
         <TextField
           {...params}
-          label='Asynchronous'
+          label="Asynchronous"
           InputProps={{
             ...params.InputProps,
             endAdornment: (
               <React.Fragment>
-                {loading ? (
-                  <CircularProgress color='inherit' size={20} />
-                ) : null}
+                {loading ? <CircularProgress color="inherit" size={20} /> : null}
                 {params.InputProps.endAdornment}
               </React.Fragment>
             ),

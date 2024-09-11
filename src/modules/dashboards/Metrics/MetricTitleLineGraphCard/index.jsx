@@ -8,17 +8,22 @@ import AppCard from '@crema/components/AppCard';
 
 const MetricTitleLineGraphCard = ({
   title,
-  titleColor,
-  valueColor,
-  differenceColor,
-  bgColor,
-  data,
-  graphColor,
+  bgColor = '',
+  titleColor = '',
+  valueColor = '',
+  data = {
+    value: '',
+    difference: '',
+    differencePercent: '',
+    graphData: [],
+  },
+  differenceColor = '',
+  graphColor = '',
 }) => {
   return (
     <AppCard sxStyle={{ backgroundColor: bgColor }}>
       <Box
-        component='h3'
+        component="h3"
         sx={{
           mb: 2,
           fontWeight: Fonts.BOLD,
@@ -36,7 +41,7 @@ const MetricTitleLineGraphCard = ({
         }}
       >
         <Box
-          component='h2'
+          component="h2"
           sx={{
             mb: 0,
             mr: 3,
@@ -51,7 +56,7 @@ const MetricTitleLineGraphCard = ({
         <LineGraph data={data.graphData} graphColor={graphColor} />
       </Box>
       <Box
-        component='p'
+        component="p"
         sx={{
           fontSize: 14,
           color: differenceColor,
@@ -61,7 +66,7 @@ const MetricTitleLineGraphCard = ({
           sx={{
             mr: 1,
           }}
-          component='span'
+          component="span"
         >
           {data.difference}
         </Box>
@@ -69,15 +74,15 @@ const MetricTitleLineGraphCard = ({
           sx={{
             mr: 1,
           }}
-          component='span'
+          component="span"
         >
-          <IntlMessages id='dashboard.thisMonth' />
+          <IntlMessages id="dashboard.thisMonth" />
         </Box>
         <Box
           sx={{
             mr: 1,
           }}
-          component='span'
+          component="span"
         >
           {data.differencePercent}
         </Box>
@@ -87,20 +92,6 @@ const MetricTitleLineGraphCard = ({
 };
 
 export default MetricTitleLineGraphCard;
-
-MetricTitleLineGraphCard.defaultProps = {
-  bgColor: '',
-  titleColor: '',
-  valueColor: '',
-  data: {
-    value: '',
-    difference: '',
-    differencePercent: '',
-    graphData: [],
-  },
-  differenceColor: '',
-  graphColor: '',
-};
 
 MetricTitleLineGraphCard.propTypes = {
   title: PropTypes.any.isRequired,

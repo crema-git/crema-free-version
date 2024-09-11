@@ -16,7 +16,7 @@ const ProductCell = ({ data }) => {
         py: 2,
         px: 5,
       }}
-      className='item-hover'
+      className="item-hover"
     >
       <Box
         sx={{
@@ -29,7 +29,7 @@ const ProductCell = ({ data }) => {
           },
         }}
       >
-        <img className='logo' alt='' src={data.icon} />
+        <img className="logo" alt="" src={data.icon} />
 
         <Box
           sx={{
@@ -45,12 +45,12 @@ const ProductCell = ({ data }) => {
               mb: 0.5,
               fontSize: 14,
             }}
-            component='h3'
+            component="h3"
           >
             {data.name}
           </Box>
           <Box
-            component='p'
+            component="p"
             sx={{
               fontSize: 12,
               color: 'text.secondary',
@@ -60,7 +60,7 @@ const ProductCell = ({ data }) => {
             {data.description}
           </Box>
           <Box
-            component='p'
+            component="p"
             sx={{
               fontSize: 14,
               fontWeight: Fonts.MEDIUM,

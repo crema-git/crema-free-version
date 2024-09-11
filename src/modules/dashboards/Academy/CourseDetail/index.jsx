@@ -26,7 +26,7 @@ const CourseDetail = ({ course }) => {
           },
         }}
       >
-        <img className='logo' alt='' src={course.thumb} />
+        <img className="logo" alt="" src={course.thumb} />
       </Box>
       <Box
         sx={{
@@ -34,7 +34,7 @@ const CourseDetail = ({ course }) => {
         }}
       >
         <Box
-          component='h3'
+          component="h3"
           sx={{
             fontWeight: Fonts.BOLD,
             mb: 0.5,
@@ -44,7 +44,7 @@ const CourseDetail = ({ course }) => {
           {course.title}
         </Box>
         <Box
-          component='p'
+          component="p"
           sx={{
             fontSize: 14,
             color: 'text.secondary',
@@ -61,12 +61,7 @@ const CourseDetail = ({ course }) => {
       title={getTitle()}
       action={
         <Box>
-          <IconButton
-            aria-label='more'
-            aria-controls='long-menu'
-            aria-haspopup='true'
-            onClick={null}
-          >
+          <IconButton aria-label="more" aria-controls="long-menu" aria-haspopup="true" onClick={null}>
             <MoreHorizIcon />
           </IconButton>
         </Box>
@@ -86,12 +81,12 @@ const CourseDetail = ({ course }) => {
               fontWeight: Fonts.MEDIUM,
               mb: 3,
             }}
-            component='p'
+            component="p"
           >
             {course.coveredDuration}
           </Box>
           <Box
-            component='p'
+            component="p"
             sx={{
               mb: 1,
               color: 'text.secondary',
@@ -100,7 +95,7 @@ const CourseDetail = ({ course }) => {
             Lecture of
           </Box>
           <Box
-            component='p'
+            component="p"
             sx={{
               color: 'text.secondary',
             }}
@@ -115,12 +110,12 @@ const CourseDetail = ({ course }) => {
               fontWeight: Fonts.MEDIUM,
               mb: 3,
             }}
-            component='p'
+            component="p"
           >
             {course.coveredPractice}
           </Box>
           <Box
-            component='p'
+            component="p"
             sx={{
               mb: 1,
               color: 'text.secondary',
@@ -129,7 +124,7 @@ const CourseDetail = ({ course }) => {
             Practice of
           </Box>
           <Box
-            component='p'
+            component="p"
             sx={{
               color: 'text.secondary',
             }}

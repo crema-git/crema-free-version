@@ -22,12 +22,12 @@ const TableItem = ({ data }) => {
         },
       }}
       key={data.id}
-      className='item-hover'
+      className="item-hover"
     >
-      <TableCell component='th' scope='data' className='tableCell'>
+      <TableCell component="th" scope="data" className="tableCell">
         {data.page}
       </TableCell>
-      <TableCell align='right' className='tableCell'>
+      <TableCell align="right" className="tableCell">
         <Box
           sx={{
             display: 'flex',
@@ -45,7 +45,7 @@ const TableItem = ({ data }) => {
           {data.pageView}
         </Box>
       </TableCell>
-      <TableCell align='right' className='tableCell'>
+      <TableCell align="right" className="tableCell">
         <Box
           sx={{
             display: 'flex',

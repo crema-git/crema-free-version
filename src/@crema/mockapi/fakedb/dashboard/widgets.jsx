@@ -1,12 +1,4 @@
-import {
-  blue,
-  green,
-  grey,
-  orange,
-  pink,
-  purple,
-  red,
-} from '@mui/material/colors';
+import { blue, green, grey, orange, pink, purple, red } from '@mui/material/colors';
 
 const widgetsData = {
   recentActivity: [
@@ -155,8 +147,7 @@ const widgetsData = {
       id: 100001,
       rating: 5,
       by: 'M S Brar',
-      content:
-        'It is a long established fact that a reader will be distracted by the readable content of a page.',
+      content: 'It is a long established fact that a reader will be distracted by the readable content of a page.',
       time: '50 minutes ago',
     },
     {
@@ -170,8 +161,7 @@ const widgetsData = {
       id: 100003,
       rating: 4,
       by: 'Rahul Bajaj',
-      content:
-        'It is a long established fact that a reader will be distracted by the readable content of a page.',
+      content: 'It is a long established fact that a reader will be distracted by the readable content of a page.',
       time: '2 hours ago',
     },
     {

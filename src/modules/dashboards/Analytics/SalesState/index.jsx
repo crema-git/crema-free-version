@@ -12,7 +12,7 @@ import AppList from '@crema/components/AppList';
 import Avatar from '@mui/material/Avatar';
 import MixBarChart from './MixBarChart';
 
-const SalesState = ({ salesState, chartData }) => {
+const SalesState = ({ salesState = [], chartData }) => {
   const handleSelectionType = (data) => {
     console.log('data: ', data);
   };
@@ -26,11 +26,7 @@ const SalesState = ({ salesState, chartData }) => {
       sxStyle={{ height: 1 }}
       action={
         <AppSelect
-          menus={[
-            messages['dashboard.thisWeek'],
-            messages['dashboard.lastWeeks'],
-            messages['dashboard.lastMonth'],
-          ]}
+          menus={[messages['dashboard.thisWeek'], messages['dashboard.lastWeeks'], messages['dashboard.lastMonth']]}
           defaultValue={messages['dashboard.thisWeek']}
           onChange={handleSelectionType}
         />
@@ -44,7 +40,7 @@ const SalesState = ({ salesState, chartData }) => {
         }}
       >
         <Box
-          component='p'
+          component="p"
           sx={{
             textAlign: { xs: 'center', sm: 'left' },
             color: 'text.secondary',
@@ -87,7 +83,7 @@ const SalesState = ({ salesState, chartData }) => {
                 }}
               >
                 <AppList
-                  animation='transition.slideRightBigIn'
+                  animation="transition.slideRightBigIn"
                   delay={200}
                   duration={400}
                   containerStyle={{ width: '100%', overflow: 'hidden' }}
@@ -104,14 +100,10 @@ const SalesState = ({ salesState, chartData }) => {
                         overflow: 'hidden',
                       }}
                     >
-                      <Avatar
-                        src={item.icon}
-                        alt='icon'
-                        sx={{ height: 50, width: 50 }}
-                      />
+                      <Avatar src={item.icon} alt="icon" sx={{ height: 50, width: 50 }} />
 
                       <Box
-                        position='relative'
+                        position="relative"
                         sx={{
                           ml: 4,
                           overflow: 'hidden',
@@ -119,7 +111,7 @@ const SalesState = ({ salesState, chartData }) => {
                         }}
                       >
                         <Box
-                          component='h3'
+                          component="h3"
                           sx={{
                             display: 'inline-block',
                             fontWeight: Fonts.MEDIUM,
@@ -130,7 +122,7 @@ const SalesState = ({ salesState, chartData }) => {
                           ${item.amount}
                         </Box>
                         <Box
-                          component='p'
+                          component="p"
                           sx={{
                             color: 'text.secondary',
                             fontSize: 14,
@@ -155,10 +147,6 @@ const SalesState = ({ salesState, chartData }) => {
   );
 };
 export default SalesState;
-
-SalesState.defaultProps = {
-  salesState: [],
-};
 
 SalesState.propTypes = {
   salesState: PropTypes.array,

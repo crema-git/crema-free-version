@@ -19,8 +19,8 @@ const StyledTableCell = styled(TableCell)(() => ({
 }));
 const TableItem = ({ data }) => {
   return (
-    <TableRow key={data.name} className='item-hover'>
-      <StyledTableCell component='th' scope='row'>
+    <TableRow key={data.name} className="item-hover">
+      <StyledTableCell component="th" scope="row">
         <Box
           sx={{
             color: 'primary.main',
@@ -31,12 +31,12 @@ const TableItem = ({ data }) => {
           {data.name}
         </Box>
       </StyledTableCell>
-      <StyledTableCell align='left'>{data.email}</StyledTableCell>
-      <StyledTableCell align='left'>{data.lastItem}</StyledTableCell>
-      <StyledTableCell align='left'>{data.lastOrder}</StyledTableCell>
-      <StyledTableCell align='left'>
+      <StyledTableCell align="left">{data.email}</StyledTableCell>
+      <StyledTableCell align="left">{data.lastItem}</StyledTableCell>
+      <StyledTableCell align="left">{data.lastOrder}</StyledTableCell>
+      <StyledTableCell align="left">
         <Box
-          component='span'
+          component="span"
           sx={{
             color: 'white',
             backgroundColor: '#388E3C',
@@ -54,10 +54,10 @@ const TableItem = ({ data }) => {
           {data.rating} <StarRateIcon style={{ fontSize: 16 }} />
         </Box>
       </StyledTableCell>
-      <StyledTableCell align='left'>{data.balance}</StyledTableCell>
-      <StyledTableCell align='left'>{data.address}</StyledTableCell>
-      <StyledTableCell align='left'>{data.joinDate}</StyledTableCell>
-      <StyledTableCell align='right'>
+      <StyledTableCell align="left">{data.balance}</StyledTableCell>
+      <StyledTableCell align="left">{data.address}</StyledTableCell>
+      <StyledTableCell align="left">{data.joinDate}</StyledTableCell>
+      <StyledTableCell align="right">
         <OrderActions />
       </StyledTableCell>
     </TableRow>

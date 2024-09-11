@@ -20,7 +20,7 @@ import PropTypes from 'prop-types';
 const ListItem = (props) => {
   const { user } = props;
   return (
-    <Box sx={{ mb: 8 }} className='item-hover'>
+    <Box sx={{ mb: 8 }} className="item-hover">
       <Card>
         <Box
           sx={{
@@ -50,7 +50,7 @@ const ListItem = (props) => {
               />
             </Box>
             <Box
-              component='h3'
+              component="h3"
               sx={{
                 overflow: 'hidden',
                 textOverflow: 'ellipsis',
@@ -66,13 +66,13 @@ const ListItem = (props) => {
             </Box>
             <Chip
               label={`@${user.charge}/Hour`}
-              sx={{
-                backgroundColor: (theme) => theme.palette.primary.contrastText,
+              sx={(theme) => ({
+                backgroundColor: theme.palette.primary.contrastText,
                 color: '#484848',
                 paddingRight: 4,
                 paddingLeft: 4,
                 fontWeight: Fonts.MEDIUM,
-              }}
+              })}
             />
           </Box>
 
@@ -171,7 +171,7 @@ const ListItem = (props) => {
                 }}
               >
                 <Box
-                  component='span'
+                  component="span"
                   sx={{
                     cursor: 'pointer',
                     mx: { xs: 1, xl: 4 },
@@ -180,7 +180,7 @@ const ListItem = (props) => {
                   <FacebookIcon />
                 </Box>
                 <Box
-                  component='span'
+                  component="span"
                   sx={{
                     cursor: 'pointer',
                     mx: { xs: 1, xl: 4 },
@@ -189,7 +189,7 @@ const ListItem = (props) => {
                   <LinkedInIcon />
                 </Box>
                 <Box
-                  component='span'
+                  component="span"
                   sx={{
                     cursor: 'pointer',
                     mx: { xs: 1, xl: 4 },
@@ -198,7 +198,7 @@ const ListItem = (props) => {
                   <InstagramIcon />
                 </Box>
                 <Box
-                  component='span'
+                  component="span"
                   sx={{
                     cursor: 'pointer',
                     mx: { xs: 1, xl: 4 },
@@ -215,7 +215,7 @@ const ListItem = (props) => {
               }}
             >
               <Box
-                component='p'
+                component="p"
                 sx={{
                   color: 'text.secondary',
                   mb: 4,
@@ -244,19 +244,24 @@ const ListItem = (props) => {
                     <Chip
                       key={index}
                       label={skill}
-                      sx={{
-                        backgroundColor: (theme) =>
-                          theme.palette.type === 'dark'
-                            ? theme.palette.grey[700]
-                            : theme.palette.grey[200],
-                        padding: '4px 12px',
-                        marginTop: 2,
-                        marginRight: { xs: 1, xl: 2 },
-                        marginLeft: { xs: 1, xl: 2 },
-                        border: '1px solid',
-                        borderColor: grey[500],
-                        borderRadius: 2,
-                      }}
+                      sx={(theme) => [
+                        {
+                          padding: '4px 12px',
+                          marginTop: 2,
+                          marginRight: { xs: 1, xl: 2 },
+                          marginLeft: { xs: 1, xl: 2 },
+                          border: '1px solid',
+                          borderColor: grey[500],
+                          borderRadius: 2,
+                        },
+                        theme.palette.type === 'dark'
+                          ? {
+                              backgroundColor: theme.palette.grey[700],
+                            }
+                          : {
+                              backgroundColor: theme.palette.grey[200],
+                            },
+                      ]}
                     />
                   );
                 })}
@@ -268,8 +273,8 @@ const ListItem = (props) => {
                 }}
               >
                 <Button
-                  variant='contained'
-                  color='primary'
+                  variant="contained"
+                  color="primary"
                   sx={{
                     marginRight: 5,
                     marginTop: 2,
@@ -279,13 +284,12 @@ const ListItem = (props) => {
                     fontWeight: Fonts.MEDIUM,
                   }}
                 >
-                  <IntlMessages id='common.hire' />
+                  <IntlMessages id="common.hire" />
                 </Button>
                 <Button
-                  variant='contained'
-                  sx={{
-                    backgroundColor: (theme) =>
-                      theme.palette.primary.contrastText,
+                  variant="contained"
+                  sx={(theme) => ({
+                    backgroundColor: theme.palette.primary.contrastText,
                     color: 'grey.700',
                     marginTop: 2,
                     border: '1px solid',
@@ -294,9 +298,9 @@ const ListItem = (props) => {
                     fontWeight: Fonts.MEDIUM,
                     padding: '9px 12px',
                     lineHeight: 1,
-                  }}
+                  })}
                 >
-                  <IntlMessages id='mailApp.remove' />
+                  <IntlMessages id="mailApp.remove" />
                 </Button>
               </Box>
             </Box>

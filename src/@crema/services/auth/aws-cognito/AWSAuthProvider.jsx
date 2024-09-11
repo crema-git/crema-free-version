@@ -1,10 +1,4 @@
-import React, {
-  createContext,
-  useContext,
-  useEffect,
-  useMemo,
-  useState,
-} from 'react';
+import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
 import Auth from '@aws-amplify/auth';
 import PropTypes from 'prop-types';
 import { awsConfig } from './aws-exports';
@@ -19,8 +13,7 @@ export const useAwsCognito = () => useContext(AwsCognitoContext);
 export const useAwsCognitoActions = () => useContext(AwsCognitoActionsContext);
 
 const AwsAuthProvider = ({ children }) => {
-  const { fetchStart, fetchSuccess, fetchError, showMessage } =
-    useInfoViewActionsContext();
+  const { fetchStart, fetchSuccess, fetchError, showMessage } = useInfoViewActionsContext();
   const [awsCognitoData, setAwsCognitoData] = useState({
     user: null,
     isAuthenticated: false,
@@ -108,9 +101,7 @@ const AwsAuthProvider = ({ children }) => {
       navigate('/signin', {
         replace: true,
       });
-      showMessage(
-        'Congratulations, Signup process is complete, You can now Sign in by entering correct credentials!',
-      );
+      showMessage('Congratulations, Signup process is complete, You can now Sign in by entering correct credentials!');
     } catch (error) {
       setAwsCognitoData({
         user: null,
@@ -129,9 +120,7 @@ const AwsAuthProvider = ({ children }) => {
       navigate('/signin', {
         replace: true,
       });
-      showMessage(
-        'Congratulations, Signup process is complete, You can now Sign in by entering correct credentials!',
-      );
+      showMessage('Congratulations, Signup process is complete, You can now Sign in by entering correct credentials!');
     } catch (error) {
       setAwsCognitoData({
         user: null,

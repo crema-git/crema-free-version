@@ -9,16 +9,15 @@ const localizer = dayjsLocalizer(dayjs);
 
 const Selectable = () => {
   return (
-    <div className='app-calendar app-cul-calendar'>
+    <div className="app-calendar app-cul-calendar">
       <Box sx={{ mb: 3 }}>
-        Click an event to see more info, or drag the mouse over the calendar to
-        select a date/time range.
+        Click an event to see more info, or drag the mouse over the calendar to select a date/time range.
       </Box>
       <StyledCalendar
         selectable
         events={events}
         localizer={localizer}
-        defaultView='week'
+        defaultView="week"
         scrollToTime={new Date(1970, 1, 1, 6)}
         defaultDate={new Date(2019, 10, 12)}
         onSelectEvent={(event) => alert(event.title)}

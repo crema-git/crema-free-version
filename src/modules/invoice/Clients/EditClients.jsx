@@ -10,20 +10,13 @@ const EditClients = () => {
   const navigate = useNavigate();
   const infoViewActionsContext = useInfoViewActionsContext();
 
-  const [{ apiData: selectedClient }] = useGetDataApi(
-    '/api/clients/detail',
-    {},
-    { id },
-    true,
-  );
+  const [{ apiData: selectedClient }] = useGetDataApi('/api/clients/detail', {}, { id }, true);
   const onSave = (client) => {
     putDataApi('/api/invoice/clients/update', infoViewActionsContext, {
       client,
     })
       .then(() => {
-        infoViewActionsContext.showMessage(
-          'Client has been updated successfully!',
-        );
+        infoViewActionsContext.showMessage('Client has been updated successfully!');
       })
       .catch((error) => {
         infoViewActionsContext.fetchError(error.message);
@@ -32,11 +25,7 @@ const EditClients = () => {
     navigate('/invoice/clients');
   };
 
-  return (
-    !isEmptyObject(selectedClient) && (
-      <AddClient selectedClient={selectedClient} onSave={onSave} />
-    )
-  );
+  return !isEmptyObject(selectedClient) && <AddClient selectedClient={selectedClient} onSave={onSave} />;
 };
 
 export default EditClients;

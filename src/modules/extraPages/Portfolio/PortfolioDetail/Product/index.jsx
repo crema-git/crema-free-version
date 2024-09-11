@@ -21,9 +21,9 @@ const Product = ({ product }) => {
     >
       <AppGridContainer>
         {product.map((product, index) => (
-          <Grid item xs={12} sm={6} md={3} key={index} className='product-grid'>
-            <Box className='product-img'>
-              <img src={product.srcImg} alt='Product' />
+          <Grid item xs={12} sm={6} md={3} key={index} className="product-grid">
+            <Box className="product-img">
+              <img src={product.srcImg} alt="Product" />
             </Box>
           </Grid>
         ))}

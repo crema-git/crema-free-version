@@ -10,19 +10,10 @@ export const useScrumContext = () => useContext(ScrumContext);
 export const useScrumActionsContext = () => useContext(ScrumActionsContext);
 
 export const ScrumContextProvider = ({ children }) => {
-  const [{ apiData: boardList }, { setData }] = useGetDataApi(
-    '/api/scrumboard/board/list',
-    [],
-  );
+  const [{ apiData: boardList }, { setData }] = useGetDataApi('/api/scrumboard/board/list', []);
 
-  const [{ apiData: labelList }] = useGetDataApi(
-    '/api/scrumboard/label/list',
-    [],
-  );
-  const [{ apiData: memberList }] = useGetDataApi(
-    '/api/scrumboard/member/list',
-    [],
-  );
+  const [{ apiData: labelList }] = useGetDataApi('/api/scrumboard/label/list', []);
+  const [{ apiData: memberList }] = useGetDataApi('/api/scrumboard/member/list', []);
 
   return (
     <ScrumContext.Provider

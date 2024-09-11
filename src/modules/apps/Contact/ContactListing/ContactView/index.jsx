@@ -13,18 +13,17 @@ import ContactListItem from './ContactListItem';
 import ContactListItemMobile from './ContactListItem/ContactListItemMobile';
 import ContactGridItem from './ContactGridItem';
 
-const ContactView = (props) => {
-  const {
-    list,
-    handleAddContactOpen,
-    onChangeStarred,
-    onChangeCheckedContacts,
-    checkedContacts,
-    onSelectContactsForDelete,
-    onOpenEditContact,
-    onViewContactDetail,
-  } = props;
+const ContactView = ({
+  handleAddContactOpen,
+  onChangeStarred,
+  onChangeCheckedContacts,
+  onSelectContactsForDelete,
+  onOpenEditContact,
+  onViewContactDetail,
 
+  list = [],
+  checkedContacts = [],
+}) => {
   const { pageView, loading, labelList } = useContactContext();
 
   return (
@@ -34,7 +33,7 @@ const ContactView = (props) => {
           <Hidden smDown>
             <AppList
               data={list}
-              animation='transition.slideUpIn'
+              animation="transition.slideUpIn"
               sx={{
                 pt: 0,
                 pb: 0,
@@ -45,7 +44,7 @@ const ContactView = (props) => {
               ListEmptyComponent={
                 <ListEmptyResult
                   loading={loading}
-                  actionTitle={<IntlMessages id='contactApp.createContact' />}
+                  actionTitle={<IntlMessages id="contactApp.createContact" />}
                   onClick={handleAddContactOpen}
                   placeholder={<ContactListSkeleton />}
                 />
@@ -69,7 +68,7 @@ const ContactView = (props) => {
           <Hidden smUp>
             <AppList
               data={list}
-              animation='transition.slideUpIn'
+              animation="transition.slideUpIn"
               sx={{
                 pt: 0,
                 pb: 0,
@@ -80,7 +79,7 @@ const ContactView = (props) => {
               ListEmptyComponent={
                 <ListEmptyResult
                   loading={loading}
-                  actionTitle={<IntlMessages id='contactApp.createContact' />}
+                  actionTitle={<IntlMessages id="contactApp.createContact" />}
                   onClick={handleAddContactOpen}
                   placeholder={<ContactListSkeleton />}
                 />
@@ -138,15 +137,8 @@ const ContactView = (props) => {
 
 export default ContactView;
 
-ContactView.defaultProps = {
-  list: [],
-  pageView: 'list',
-  checkedContacts: [],
-};
-
 ContactView.propTypes = {
   list: PropTypes.array,
-  pageView: PropTypes.string.isRequired,
   loading: PropTypes.bool,
   handleAddContactOpen: PropTypes.func,
   checkedContacts: PropTypes.array,

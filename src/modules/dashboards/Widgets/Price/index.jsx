@@ -15,7 +15,7 @@ const Price = () => {
   return (
     <AppCard title={messages['dashboard.price']}>
       <Box
-        component='p'
+        component="p"
         sx={{
           color: 'text.secondary',
           fontWeight: Fonts.MEDIUM,

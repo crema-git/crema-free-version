@@ -17,7 +17,7 @@ export default function SizeRadioButtons() {
 
   return (
     <div>
-      <Radio {...controlProps('a')} size='small' />
+      <Radio {...controlProps('a')} size="small" />
       <Radio {...controlProps('b')} />
       <Radio
         {...controlProps('c')}

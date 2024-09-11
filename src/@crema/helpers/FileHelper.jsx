@@ -1,11 +1,7 @@
 import html2canvas from 'html2canvas';
 import JsPDF from 'jspdf';
 
-export const downloadPdf = (
-  noDownload = false,
-  elementName = 'pdfdiv',
-  fileName = 'Invoice.pdf',
-) => {
+export const downloadPdf = (noDownload = false, elementName = 'pdfdiv', fileName = 'Invoice.pdf') => {
   const input = document.getElementById(elementName);
   const result = html2canvas(input, {
     allowTaint: true,

@@ -8,9 +8,7 @@ import { Fonts } from '@crema/constants/AppEnums';
 import AppScrollbar from '@crema/components/AppScrollbar';
 import AppList from '@crema/components/AppList';
 
-const NewsList = (props) => {
-  const { newsData } = props;
-
+const NewsList = ({ newsData = [] }) => {
   return (
     <AppScrollbar>
       <List>
@@ -20,7 +18,7 @@ const NewsList = (props) => {
             return (
               <ListItem
                 key={news.id}
-                className='item-hover'
+                className="item-hover"
                 sx={{
                   px: 5,
                   display: 'flex',
@@ -34,7 +32,7 @@ const NewsList = (props) => {
                   }}
                   primary={
                     <Box
-                      component='span'
+                      component="span"
                       sx={{
                         mb: 1,
                         display: 'flex',
@@ -61,7 +59,7 @@ const NewsList = (props) => {
                   }
                   secondary={
                     <Box
-                      component='span'
+                      component="span"
                       sx={{
                         color: 'text.secondary',
                         fontWeight: Fonts.MEDIUM,
@@ -82,7 +80,7 @@ const NewsList = (props) => {
                     },
                   }}
                 >
-                  <img className='newsImg' src={news.image} alt='bitcoin' />
+                  <img className="newsImg" src={news.image} alt="bitcoin" />
                 </Box>
               </ListItem>
             );
@@ -94,10 +92,6 @@ const NewsList = (props) => {
 };
 
 export default NewsList;
-
-NewsList.defaultProps = {
-  newsData: [],
-};
 
 NewsList.propTypes = {
   newsData: PropTypes.array,

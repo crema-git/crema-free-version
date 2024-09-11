@@ -20,58 +20,34 @@ export default class TypeExample extends React.Component {
 
   render() {
     return (
-      <Box display='flex' flexWrap='wrap'>
+      <Box display="flex" flexWrap="wrap">
         <Box mr={2} my={1}>
-          <Button
-            color='primary'
-            variant='contained'
-            onClick={() => this.add('success')}
-          >
+          <Button color="primary" variant="contained" onClick={() => this.add('success')}>
             Success
           </Button>
         </Box>
         <Box mr={2} my={1}>
-          <Button
-            color='primary'
-            variant='contained'
-            onClick={() => this.add('default')}
-          >
+          <Button color="primary" variant="contained" onClick={() => this.add('default')}>
             Default
           </Button>
         </Box>
         <Box mr={2} my={1}>
-          <Button
-            color='primary'
-            variant='contained'
-            onClick={() => this.add('warning')}
-          >
+          <Button color="primary" variant="contained" onClick={() => this.add('warning')}>
             Warning
           </Button>
         </Box>
         <Box mr={2} my={1}>
-          <Button
-            color='primary'
-            variant='contained'
-            onClick={() => this.add('info')}
-          >
+          <Button color="primary" variant="contained" onClick={() => this.add('info')}>
             Info
           </Button>
         </Box>
         <Box mr={2} my={1}>
-          <Button
-            color='primary'
-            variant='contained'
-            onClick={() => this.add('danger')}
-          >
+          <Button color="primary" variant="contained" onClick={() => this.add('danger')}>
             Danger
           </Button>
         </Box>
         <Box mr={2} my={1}>
-          <Button
-            color='primary'
-            variant='contained'
-            onClick={() => this.add('awesome')}
-          >
+          <Button color="primary" variant="contained" onClick={() => this.add('awesome')}>
             Custom
           </Button>
         </Box>

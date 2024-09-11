@@ -155,8 +155,7 @@ const mailList = [
       alias: 'personal',
       color: blue[500],
     },
-    subject:
-      'Bitcoins IP Whitelist mail: Please approve this IP to continue to login',
+    subject: 'Bitcoins IP Whitelist mail: Please approve this IP to continue to login',
     hasAttachments: true,
     isRead: true,
     messages: [
@@ -316,8 +315,7 @@ const mailList = [
       alias: 'personal',
       color: blue[500],
     },
-    subject:
-      'Bitcoins IP Whitelist mail: Please approve this IP to continue to login',
+    subject: 'Bitcoins IP Whitelist mail: Please approve this IP to continue to login',
     hasAttachments: false,
     messages: [
       {
@@ -487,8 +485,7 @@ const mailList = [
       alias: 'paypal',
       color: 'grey.700',
     },
-    subject:
-      'Bitcoins IP Whitelist mail: Please approve this IP to continue to login',
+    subject: 'Bitcoins IP Whitelist mail: Please approve this IP to continue to login',
     hasAttachments: false,
     messages: [
       {

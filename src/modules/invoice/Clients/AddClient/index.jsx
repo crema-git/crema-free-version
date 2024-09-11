@@ -9,42 +9,35 @@ import * as yup from 'yup';
 import PropTypes from 'prop-types';
 
 const validationSchema = yup.object({
-  name: yup.string().required(<IntlMessages id='validation.nameRequired' />),
-  firstName: yup
-    .string()
-    .required(<IntlMessages id='validation.firstNameRequired' />),
-  lastName: yup
-    .string()
-    .required(<IntlMessages id='validation.lastNameRequired' />),
+  name: yup.string().required(<IntlMessages id="validation.nameRequired" />),
+  firstName: yup.string().required(<IntlMessages id="validation.firstNameRequired" />),
+  lastName: yup.string().required(<IntlMessages id="validation.lastNameRequired" />),
   mail: yup
     .string()
-    .email(<IntlMessages id='validation.emailFormat' />)
-    .required(<IntlMessages id='validation.emailRequired' />),
+    .email(<IntlMessages id="validation.emailFormat" />)
+    .required(<IntlMessages id="validation.emailRequired" />),
   phone: yup.string().matches(/^[0-9]{10}$/, 'Enter a valid phone number!'),
   zipCode: yup
     .string()
     .matches(/^[0-9]{6}$/, 'Enter a valid zip code!')
-    .required(<IntlMessages id='validation.zipCodeRequired' />),
+    .required(<IntlMessages id="validation.zipCodeRequired" />),
   city: yup
     .string()
     .matches(/^[A-Za-z]+$/, 'Enter a valid city!')
-    .required(<IntlMessages id='validation.cityRequired' />),
+    .required(<IntlMessages id="validation.cityRequired" />),
   state: yup
     .string()
     .matches(/^[A-Za-z]+$/, 'Enter a valid state!')
-    .required(<IntlMessages id='validation.stateRequired' />),
+    .required(<IntlMessages id="validation.stateRequired" />),
   country: yup
     .string()
     .matches(/^[A-Za-z]+$/, 'Enter a valid country!')
-    .required(<IntlMessages id='validation.countryRequired' />),
+    .required(<IntlMessages id="validation.countryRequired" />),
 });
 
 const AddClient = ({ selectedClient, onSave }) => {
   return (
-    <AppCard
-      title={selectedClient ? 'Edit Client' : 'Add Client'}
-      sxStyle={{ width: '70%', margin: 'auto' }}
-    >
+    <AppCard title={selectedClient ? 'Edit Client' : 'Add Client'} sxStyle={{ width: '70%', margin: 'auto' }}>
       <Formik
         validateOnChange={true}
         initialValues={
@@ -76,151 +69,146 @@ const AddClient = ({ selectedClient, onSave }) => {
           resetForm();
         }}
       >
-        <Form noValidate autoComplete='off'>
+        <Form noValidate autoComplete="off">
           <AppTextField
-            name='name'
-            variant='outlined'
+            name="name"
+            variant="outlined"
             sx={{
               width: '100%',
             }}
-            label='Client Name'
+            label="Client Name"
           />
 
-          <Typography variant='h3' sx={{ mt: 4, mb: 2 }}>
+          <Typography variant="h3" sx={{ mt: 4, mb: 2 }}>
             Contact Person
           </Typography>
           <Divider sx={{ mb: 6 }} />
           <AppGridContainer>
             <Grid item xs={12} md={6}>
               <AppTextField
-                name='firstName'
-                variant='outlined'
+                name="firstName"
+                variant="outlined"
                 sx={{
                   width: '100%',
                 }}
-                label='First Name'
+                label="First Name"
               />
             </Grid>
             <Grid item xs={12} md={6}>
               <AppTextField
-                name='lastName'
-                variant='outlined'
+                name="lastName"
+                variant="outlined"
                 sx={{
                   width: '100%',
                 }}
-                label='Last Name'
+                label="Last Name"
               />
             </Grid>
             <Grid item xs={12}>
               <AppTextField
-                type='email'
-                name='mail'
-                variant='outlined'
+                type="email"
+                name="mail"
+                variant="outlined"
                 sx={{
                   width: '100%',
                 }}
-                label='Email'
+                label="Email"
               />
             </Grid>
             <Grid item xs={12}>
               <AppTextField
-                name='phone'
-                variant='outlined'
+                name="phone"
+                variant="outlined"
                 sx={{
                   width: '100%',
                 }}
-                label='Phone Number'
+                label="Phone Number"
               />
             </Grid>
           </AppGridContainer>
-          <Typography variant='h3' sx={{ mt: 4, mb: 2 }}>
+          <Typography variant="h3" sx={{ mt: 4, mb: 2 }}>
             Settings
           </Typography>
           <Divider sx={{ mb: 6 }} />
           <AppGridContainer>
             <Grid item xs={12} md={6}>
               <AppTextField
-                name='vatId'
-                variant='outlined'
+                name="vatId"
+                variant="outlined"
                 sx={{
                   width: '100%',
                 }}
-                label='VAT ID'
+                label="VAT ID"
               />
             </Grid>
             <Grid item xs={12} md={6}>
               <AppTextField
-                name='taxId'
-                variant='outlined'
+                name="taxId"
+                variant="outlined"
                 sx={{
                   width: '100%',
                 }}
-                label='Tax ID'
+                label="Tax ID"
               />
             </Grid>
           </AppGridContainer>
-          <Typography variant='h3' sx={{ mt: 4, mb: 2 }}>
+          <Typography variant="h3" sx={{ mt: 4, mb: 2 }}>
             Billing Address
           </Typography>
           <Divider sx={{ mb: 6 }} />
           <AppGridContainer>
             <Grid item xs={12}>
               <AppTextField
-                name='steetName'
-                variant='outlined'
+                name="steetName"
+                variant="outlined"
                 sx={{
                   width: '100%',
                 }}
-                label='Street Name/Number'
+                label="Street Name/Number"
               />
             </Grid>
             <Grid item xs={12} md={6}>
               <AppTextField
-                name='zipCode'
-                variant='outlined'
+                name="zipCode"
+                variant="outlined"
                 sx={{
                   width: '100%',
                 }}
-                label='Zip Code'
+                label="Zip Code"
               />
             </Grid>
             <Grid item xs={12} md={6}>
               <AppTextField
-                name='city'
-                variant='outlined'
+                name="city"
+                variant="outlined"
                 sx={{
                   width: '100%',
                 }}
-                label='City'
+                label="City"
               />
             </Grid>
             <Grid item xs={12} md={6}>
               <AppTextField
-                name='state'
-                variant='outlined'
+                name="state"
+                variant="outlined"
                 sx={{
                   width: '100%',
                 }}
-                label='State'
+                label="State"
               />
             </Grid>
             <Grid item xs={12} md={6}>
               <AppTextField
-                name='country'
-                variant='outlined'
+                name="country"
+                variant="outlined"
                 sx={{
                   width: '100%',
                 }}
-                label='Country'
+                label="Country"
               />
             </Grid>
           </AppGridContainer>
-          <Button
-            sx={{ display: 'block', mt: 6, ml: 'auto' }}
-            type='submit'
-            variant='contained'
-            color='primary'
-          >
+          <Button sx={{ display: 'block', mt: 6, ml: 'auto' }} type="submit" variant="contained" color="primary">
             {selectedClient ? 'Edit' : 'Add'} Client
           </Button>
         </Form>

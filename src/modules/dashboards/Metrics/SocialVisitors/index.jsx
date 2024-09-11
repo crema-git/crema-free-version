@@ -5,13 +5,10 @@ import Categories from './Categories';
 import AppCard from '@crema/components/AppCard';
 import { useIntl } from 'react-intl';
 
-const SocialVisitors = ({ data }) => {
+const SocialVisitors = ({ data = [] }) => {
   const { messages } = useIntl();
   return (
-    <AppCard
-      title={messages['dashboard.socialVisitors']}
-      action={messages['common.viewAll']}
-    >
+    <AppCard title={messages['dashboard.socialVisitors']} action={messages['common.viewAll']}>
       <SocialVisitorsGraph data={data} />
 
       <Categories data={data} />
@@ -20,10 +17,6 @@ const SocialVisitors = ({ data }) => {
 };
 
 export default SocialVisitors;
-
-SocialVisitors.defaultProps = {
-  data: [],
-};
 
 SocialVisitors.propTypes = {
   data: PropTypes.array,

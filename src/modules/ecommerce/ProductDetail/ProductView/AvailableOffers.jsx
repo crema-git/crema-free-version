@@ -11,7 +11,7 @@ const AvailableOffers = () => {
       }}
     >
       <Box
-        component='h3'
+        component="h3"
         sx={{
           color: 'text.primary',
           fontSize: 16,
@@ -31,7 +31,7 @@ const AvailableOffers = () => {
       >
         <LocalOfferOutlinedIcon style={{ fontSize: 18 }} />
         <Box
-          component='span'
+          component="span"
           sx={{
             color: 'text.primary',
             mx: 3,
@@ -39,7 +39,7 @@ const AvailableOffers = () => {
         >
           Special PriceGet extra ₹598 off (price inclusive of discount)
           <Box
-            component='span'
+            component="span"
             sx={{
               color: 'primary.main',
               ml: 2,
@@ -61,7 +61,7 @@ const AvailableOffers = () => {
       >
         <DateRangeIcon style={{ fontSize: 18 }} />
         <Box
-          component='span'
+          component="span"
           sx={{
             color: 'text.primary',
             mx: 3,
@@ -69,7 +69,7 @@ const AvailableOffers = () => {
         >
           No cost EMI ₹1,368/month. Standard EMI also available
           <Box
-            component='span'
+            component="span"
             sx={{
               color: 'primary.main',
             }}

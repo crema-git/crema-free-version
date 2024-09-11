@@ -23,7 +23,7 @@ export const StyledSimpleBarReact = styled(SimpleBarReact)(({ theme }) => ({
     maxHeight: 360,
   },
 }));
-const CommentsList = ({ comments }) => {
+const CommentsList = ({ comments = [] }) => {
   let _scrollBarRef = useRef();
   useEffect(() => {
     if (comments?.length > 0) {
@@ -41,8 +41,8 @@ const CommentsList = ({ comments }) => {
             marginBottom: 5,
           }}
         >
-          <Box sx={{ mb: 4, fontWeight: Fonts.SEMI_BOLD }} component='h4'>
-            <IntlMessages id='common.comments' />
+          <Box sx={{ mb: 4, fontWeight: Fonts.SEMI_BOLD }} component="h4">
+            <IntlMessages id="common.comments" />
           </Box>
           <StyledSimpleBarReact ref={_scrollBarRef}>
             <AppList
@@ -51,12 +51,9 @@ const CommentsList = ({ comments }) => {
                 <CommentsListItem
                   item={item}
                   key={index}
-                  isPreviousSender={
-                    index > 0 && comments.sender === comments[index - 1].sender
-                  }
+                  isPreviousSender={index > 0 && comments.sender === comments[index - 1].sender}
                   isLast={
-                    (index + 1 < comments.length &&
-                      comments.sender !== comments[index + 1].sender) ||
+                    (index + 1 < comments.length && comments.sender !== comments[index + 1].sender) ||
                     index + 1 === comments.length
                   }
                 />
@@ -70,10 +67,6 @@ const CommentsList = ({ comments }) => {
 };
 
 export default CommentsList;
-
-CommentsList.defaultProps = {
-  comments: [],
-};
 
 CommentsList.propTypes = {
   comments: PropTypes.array,

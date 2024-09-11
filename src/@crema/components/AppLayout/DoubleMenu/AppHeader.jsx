@@ -22,11 +22,7 @@ import Tooltip from '@mui/material/Tooltip';
 import PropTypes from 'prop-types';
 import { allowMultiLanguage } from '../../../constants/AppConst';
 
-const AppHeader = ({
-  updateNavState,
-  sidebarMenuState,
-  toggleNavCollapsed,
-}) => {
+const AppHeader = ({ updateNavState, sidebarMenuState, toggleNavCollapsed }) => {
   const [showMessage, setShowMessage] = useState(false);
   const [showNotification, setShowNotification] = useState(false);
 
@@ -42,18 +38,18 @@ const AppHeader = ({
   const classes = useStyles();
 
   return (
-    <AppBar color='inherit' className={clsx(classes.appBar, 'app-bar')}>
+    <AppBar color="inherit" className={clsx(classes.appBar, 'app-bar')}>
       <Toolbar className={classes.appToolbar}>
         <Hidden mdDown>
           <IconButton
-            edge='start'
+            edge="start"
             className={clsx(classes.menuBarButton, 'menu-bar-btn')}
-            color='inherit'
-            aria-label='open drawer'
+            color="inherit"
+            aria-label="open drawer"
             onClick={updateNavState}
           >
             <Box
-              component='span'
+              component="span"
               className={clsx(classes.menuBarIcon, 'main', {
                 active: sidebarMenuState > 0,
               })}
@@ -61,7 +57,7 @@ const AppHeader = ({
               <MenuIcon />
             </Box>
             <Box
-              component='span'
+              component="span"
               className={clsx(classes.menuBarIcon, 'sub', {
                 active: sidebarMenuState > 1 && sidebarMenuState < 3,
               })}
@@ -72,20 +68,16 @@ const AppHeader = ({
         </Hidden>
         <Hidden lgUp>
           <IconButton
-            edge='start'
+            edge="start"
             className={clsx(classes.menuButton, 'menu-btn')}
-            color='inherit'
-            aria-label='open drawer'
+            color="inherit"
+            aria-label="open drawer"
             onClick={toggleNavCollapsed}
           >
             <MenuIcon className={classes.menuIcon} />
           </IconButton>
         </Hidden>
-        <AppSearchBar
-          className={classes.appSearch}
-          iconPosition='right'
-          placeholder='Search…'
-        />
+        <AppSearchBar className={classes.appSearch} iconPosition="right" placeholder="Search…" />
         <Box className={classes.grow} />
         {allowMultiLanguage && <AppLngSwitcher />}
 
@@ -93,28 +85,22 @@ const AppHeader = ({
           <Hidden xsDown>
             <Box className={classes.hsHeaderAction}>
               <Box className={classes.hsHeaderActionItem}>
-                <Tooltip title='Notification'>
-                  <IconButton
-                    className='iconBtn'
-                    onClick={() => setShowNotification(true)}
-                  >
+                <Tooltip title="Notification">
+                  <IconButton className="iconBtn" onClick={() => setShowNotification(true)}>
                     <NotificationsNoneIcon />
                   </IconButton>
                 </Tooltip>
               </Box>
               <Box className={classes.hsHeaderActionItem}>
-                <Tooltip title='Message'>
-                  <IconButton
-                    className='iconBtn'
-                    onClick={() => setShowMessage(true)}
-                  >
+                <Tooltip title="Message">
+                  <IconButton className="iconBtn" onClick={() => setShowMessage(true)}>
                     <ChatBubbleOutlineIcon />
                   </IconButton>
                 </Tooltip>
               </Box>
               <Box className={classes.hsHeaderActionItem}>
-                <Tooltip title='Setting'>
-                  <IconButton className='iconBtn'>
+                <Tooltip title="Setting">
+                  <IconButton className="iconBtn">
                     <SettingsOutlinedIcon />
                   </IconButton>
                 </Tooltip>
@@ -124,40 +110,24 @@ const AppHeader = ({
 
           <Hidden smUp>
             <Box className={classes.hsHeaderActionItem}>
-              <Tooltip title='More'>
-                <IconButton className='iconBtn' onClick={handleClick}>
+              <Tooltip title="More">
+                <IconButton className="iconBtn" onClick={handleClick}>
                   <MoreVertIcon />
                 </IconButton>
               </Tooltip>
             </Box>
           </Hidden>
-          <Menu
-            id='simple-menu'
-            anchorEl={anchorEl}
-            keepMounted
-            open={Boolean(anchorEl)}
-            onClose={handleClose}
-          >
-            <MenuItem onClick={() => setShowNotification(true)}>
-              Notification
-            </MenuItem>
+          <Menu id="simple-menu" anchorEl={anchorEl} keepMounted open={Boolean(anchorEl)} onClose={handleClose}>
+            <MenuItem onClick={() => setShowNotification(true)}>Notification</MenuItem>
             <MenuItem onClick={() => setShowMessage(true)}>Message</MenuItem>
             <MenuItem>Setting</MenuItem>
           </Menu>
         </Box>
 
-        <Drawer
-          anchor='right'
-          open={showMessage}
-          onClose={() => setShowMessage(false)}
-        >
+        <Drawer anchor="right" open={showMessage} onClose={() => setShowMessage(false)}>
           <AppMessages onClose={() => setShowMessage(false)} />
         </Drawer>
-        <Drawer
-          anchor='right'
-          open={showNotification}
-          onClose={() => setShowNotification(false)}
-        >
+        <Drawer anchor="right" open={showNotification} onClose={() => setShowNotification(false)}>
           <AppNotifications onClose={() => setShowNotification(false)} />
         </Drawer>
       </Toolbar>

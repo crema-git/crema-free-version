@@ -2,10 +2,7 @@ import React from 'react';
 import { CustomizerItemWrapper } from '../index.style';
 import Box from '@mui/material/Box';
 import IntlMessages from '@crema/helpers/IntlMessages';
-import {
-  useLayoutActionsContext,
-  useLayoutContext,
-} from '@crema/context/AppContextProvider/LayoutContextProvider';
+import { useLayoutActionsContext, useLayoutContext } from '@crema/context/AppContextProvider/LayoutContextProvider';
 import AppSelectedIcon from '../../AppSelectedIcon';
 import { layoutTypes } from '@crema/mockapi/fakedb/navigationStyle';
 
@@ -18,8 +15,8 @@ const LayoutTypes = () => {
   };
   return (
     <CustomizerItemWrapper pb={1}>
-      <Box component='h4' sx={{ mb: 3 }}>
-        <IntlMessages id='customizer.layoutTypes' />
+      <Box component="h4" sx={{ mb: 3 }}>
+        <IntlMessages id="customizer.layoutTypes" />
       </Box>
       <Box
         sx={{
@@ -48,7 +45,7 @@ const LayoutTypes = () => {
                 }}
                 onClick={() => onLayoutChange(layout.alias)}
               >
-                <img src={layout.image} alt='nav' />
+                <img src={layout.image} alt="nav" />
                 {layoutType === layout.alias ? <AppSelectedIcon /> : null}
               </Box>
             </Box>

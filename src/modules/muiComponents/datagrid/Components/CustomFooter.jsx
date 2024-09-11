@@ -10,7 +10,7 @@ export function CustomFooterStatusComponent(props) {
   return (
     <Box sx={{ p: 1, display: 'flex' }}>
       <FiberManualRecordIcon
-        fontSize='small'
+        fontSize="small"
         sx={{
           mr: 1,
           color: props.status === 'connected' ? '#4caf50' : '#d9182e',
@@ -46,12 +46,8 @@ export default function CustomFooter() {
         />
       </Box>
       <Button
-        variant='contained'
-        onClick={() =>
-          setStatus((current) =>
-            current === 'connected' ? 'disconnected' : 'connected',
-          )
-        }
+        variant="contained"
+        onClick={() => setStatus((current) => (current === 'connected' ? 'disconnected' : 'connected'))}
       >
         {status === 'connected' ? 'Disconnect' : 'Connect'}
       </Button>

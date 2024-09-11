@@ -8,21 +8,19 @@ const StyledBox = styled(Box)(({ theme }) => ({
   height: 400,
   width: '100%',
   '& .MuiDataGrid-cell--editable': {
-    backgroundColor:
-      theme.palette.mode === 'dark' ? '#376331' : 'rgb(217 243 190)',
+    backgroundColor: theme.palette.mode === 'dark' ? '#376331' : 'rgb(217 243 190)',
     '& .MuiInputBase-root': {
       height: '100%',
     },
   },
   '& .Mui-error': {
-    backgroundColor: `rgb(126,10,15, ${
-      theme.palette.mode === 'dark' ? 0 : 0.1
-    })`,
+    backgroundColor: `rgb(126,10,15, ${theme.palette.mode === 'dark' ? 0 : 0.1})`,
     color: theme.palette.mode === 'dark' ? '#ff4343' : '#750f0f',
   },
 }));
 
 let promiseTimeout;
+
 function validateName(username) {
   const existingUsers = rows.map((row) => row.name.toLowerCase());
 
@@ -37,14 +35,14 @@ function validateName(username) {
   });
 }
 
-const StyledTooltip = styled(({ className, ...props }) => (
-  <Tooltip {...props} classes={{ popper: className }} />
-))(({ theme }) => ({
-  [`& .${tooltipClasses.tooltip}`]: {
-    backgroundColor: theme.palette.error.main,
-    color: theme.palette.error.contrastText,
-  },
-}));
+const StyledTooltip = styled(({ className, ...props }) => <Tooltip {...props} classes={{ popper: className }} />)(
+  ({ theme }) => ({
+    [`& .${tooltipClasses.tooltip}`]: {
+      backgroundColor: theme.palette.error.main,
+      color: theme.palette.error.contrastText,
+    },
+  }),
+);
 
 function NameEditInputCell(props) {
   const { error } = props;
@@ -85,11 +83,7 @@ export default function ValidateServerNameGrid() {
 
   return (
     <StyledBox>
-      <DataGrid
-        rows={rows}
-        columns={columns}
-        isCellEditable={(params) => params.row.id === 5}
-      />
+      <DataGrid rows={rows} columns={columns} isCellEditable={(params) => params.row.id === 5} />
     </StyledBox>
   );
 }

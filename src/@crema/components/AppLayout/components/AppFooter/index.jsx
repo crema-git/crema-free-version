@@ -4,6 +4,7 @@ import { Button } from '@mui/material';
 import { useLayoutContext } from '@crema/context/AppContextProvider/LayoutContextProvider';
 import Typography from '@mui/material/Typography';
 import FooterWrapper from './FooterWrapper';
+import dayjs from 'dayjs';
 
 const AppFooter = () => {
   const { footer, footerType, navStyle } = useLayoutContext();
@@ -15,15 +16,15 @@ const AppFooter = () => {
       navStyle !== 'h-default' &&
       navStyle !== 'hor-light-nav' &&
       navStyle !== 'hor-dark-layout' ? (
-        <FooterWrapper className='footer'>
-          <div className='footerContainer'>
-            <Typography>Copy right @crema 2021</Typography>
+        <FooterWrapper className="footer">
+          <div className="footerContainer">
+            <Typography>Copy right @crema {dayjs().year()}</Typography>
             <Box sx={{ ml: 'auto' }}>
               <Button
                 sx={{
                   px: 5,
                 }}
-                color='primary'
+                color="primary"
               >
                 Buy Now
               </Button>

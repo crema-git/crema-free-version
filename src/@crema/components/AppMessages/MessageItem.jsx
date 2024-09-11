@@ -14,7 +14,7 @@ const MessageItem = (props) => {
       sx={{
         padding: '8px 20px',
       }}
-      className='item-hover'
+      className="item-hover"
     >
       <ListItemAvatar
         sx={{
@@ -31,20 +31,20 @@ const MessageItem = (props) => {
         />
       </ListItemAvatar>
       <Box
-        sx={{
+        sx={(theme) => ({
           fontSize: 14,
-          color: (theme) => theme.palette.text.secondary,
-        }}
+          color: theme.palette.text.secondary,
+        })}
       >
         <Typography
-          component='h4'
-          variant='h4'
-          sx={{
+          component="h4"
+          variant="h4"
+          sx={(theme) => ({
             fontSize: 14,
             fontWeight: Fonts.MEDIUM,
             mb: 0.5,
-            color: (theme) => theme.palette.text.primary,
-          }}
+            color: theme.palette.text.primary,
+          })}
         >
           {item.name}
         </Typography>

@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
-import {Typography} from '@mui/material';
-import {Fonts} from '@crema/constants/AppEnums';
-import {AiFillHeart} from 'react-icons/ai';
+import { Typography } from '@mui/material';
+import { Fonts } from '@crema/constants/AppEnums';
+import { AiFillHeart } from 'react-icons/ai';
 import Tag from '../../BlogContent/Tag';
 import BlogPost from './BlogPost';
 import Social from './Social';
@@ -20,9 +20,7 @@ const BlogDetailContent = ({ blogDetailContent }) => {
     >
       <Typography sx={{ mb: 7.5 }}>{blogDetailContent.description}</Typography>
       <Box>
-        <div
-          dangerouslySetInnerHTML={{ __html: `${blogDetailContent.content}` }}
-        />
+        <div dangerouslySetInnerHTML={{ __html: `${blogDetailContent.content}` }} />
       </Box>
       <Box
         sx={{

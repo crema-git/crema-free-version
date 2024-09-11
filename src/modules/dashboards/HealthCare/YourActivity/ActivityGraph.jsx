@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 const ActivityGraph = ({ data }) => {
   return (
-    <ResponsiveContainer width='100%' height={143}>
+    <ResponsiveContainer width="100%" height={143}>
       <BarChart
         data={data}
         margin={{
@@ -24,13 +24,8 @@ const ActivityGraph = ({ data }) => {
           }}
           itemStyle={{ color: '#0A8FDC' }}
         />
-        <Bar radius={[5, 5, 0, 0]} dataKey='Visits' fill='#0A8FDC53' />{' '}
-        <XAxis
-          dataKey='day'
-          tickLine={false}
-          axisLine={false}
-          padding={{ left: 20, right: 20 }}
-        />
+        <Bar radius={[5, 5, 0, 0]} dataKey="Visits" fill="#0A8FDC53" />{' '}
+        <XAxis dataKey="day" tickLine={false} axisLine={false} padding={{ left: 20, right: 20 }} />
       </BarChart>
     </ResponsiveContainer>
   );

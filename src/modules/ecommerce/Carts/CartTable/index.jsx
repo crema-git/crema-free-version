@@ -10,7 +10,7 @@ import PropTypes from 'prop-types';
 const CartTable = ({ cartItems, onRemoveItem, onIncrement, onDecrement }) => {
   return (
     <AppTableContainer>
-      <Table stickyHeader className='table'>
+      <Table stickyHeader className="table">
         <TableHead>
           <TableHeading />
         </TableHead>

@@ -1,13 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {
-  alpha,
-  Box,
-  Card,
-  CardActions,
-  CardContent,
-  CardMedia,
-} from '@mui/material';
+import { alpha, Box, Card, CardActions, CardContent, CardMedia } from '@mui/material';
 import { Fonts } from '@crema/constants/AppEnums';
 
 const AppCardMedia = ({
@@ -23,15 +16,12 @@ const AppCardMedia = ({
   ...rest
 }) => {
   return (
-    <Card
-      sx={{ display: 'flex', flexDirection: 'column', ...sxStyle }}
-      {...rest}
-    >
+    <Card sx={{ display: 'flex', flexDirection: 'column', ...sxStyle }} {...rest}>
       <Box sx={{ position: 'relative' }}>
         <CardMedia
-          component='img'
+          component="img"
           image={cardMedia}
-          alt='card media'
+          alt="card media"
           sx={{
             minHeight: 140,
             width: '100%',
@@ -41,11 +31,11 @@ const AppCardMedia = ({
         />
         {cardMediaAction ? (
           <Box
-            component='span'
-            sx={{
-              backgroundColor: (theme) =>
-                alpha(theme.palette.text.primary, 0.7),
-              color: (theme) => theme.palette.background.paper,
+            component="span"
+            sx={(theme) => ({
+              backgroundColor: (theme) => alpha(theme.palette.text.primary, 0.7),
+
+              color: theme.palette.background.paper,
               pt: 0.75,
               pb: 1.75,
               px: 4,
@@ -57,13 +47,12 @@ const AppCardMedia = ({
               fontSize: 12,
               fontWeight: Fonts.BOLD,
               ...sxCardMediaAction,
-            }}
+            })}
           >
             {cardMediaAction}
           </Box>
         ) : null}
       </Box>
-
       <CardContent
         style={{
           paddingLeft: 20,

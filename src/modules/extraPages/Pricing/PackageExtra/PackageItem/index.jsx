@@ -17,7 +17,7 @@ const PackageItem = ({ pricing }) => {
     >
       <Box>
         <Typography
-          component='h3'
+          component="h3"
           sx={{
             fontWeight: Fonts.MEDIUM,
             fontSize: { xs: 18, lg: 20 },
@@ -26,7 +26,7 @@ const PackageItem = ({ pricing }) => {
           {pricing.title}
         </Typography>
         <Typography
-          component='h4'
+          component="h4"
           sx={{
             fontSize: 14,
             fontWeight: Fonts.MEDIUM,
@@ -35,7 +35,7 @@ const PackageItem = ({ pricing }) => {
           }}
         >
           <Box
-            component='span'
+            component="span"
             sx={{
               fontWeight: Fonts.BOLD,
               fontSize: { xs: 26, md: 28, lg: 30 },
@@ -47,15 +47,14 @@ const PackageItem = ({ pricing }) => {
           /month
         </Typography>
         <Button
-          variant='contained'
+          variant="contained"
           sx={{
             fontWeight: Fonts.BOLD,
             backgroundColor: (theme) => alpha(theme.palette.primary.main, 0.1),
             color: (theme) => theme.palette.primary.main,
             boxShadow: 'none',
             '&:hover, &:focus': {
-              backgroundColor: (theme) =>
-                alpha(theme.palette.primary.main, 0.2),
+              backgroundColor: (theme) => alpha(theme.palette.primary.main, 0.2),
               color: (theme) => theme.palette.primary.main,
             },
           }}

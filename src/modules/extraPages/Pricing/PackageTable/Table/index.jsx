@@ -10,28 +10,28 @@ import { Box, Button, TableRow, Typography } from '@mui/material';
 import { StyledTableCell } from './index.styled';
 import { Fonts } from '@crema/constants/AppEnums';
 
-const PricingTable = ({ billingFormat, tableData }) => {
+const PricingTable = ({ billingFormat, tableData = [] }) => {
   return (
     <AppTableContainer>
-      <Table stickyHeader className='table'>
+      <Table stickyHeader className="table">
         <TableHead>
           <TableHeading />
         </TableHead>
         <TableBody>
           <TableRow>
-            <StyledTableCell className='no-border' />
+            <StyledTableCell className="no-border" />
 
-            <StyledTableCell className='no-border'>
+            <StyledTableCell className="no-border">
               <Box>
                 <Box sx={{ display: 'flex', alignItems: 'flex-end' }}>
                   <Typography
-                    component='h4'
+                    component="h4"
                     sx={{
                       fontSize: { xs: 20, md: 22, lg: 48 },
                     }}
                   >
                     <Box
-                      component='span'
+                      component="span"
                       sx={{
                         fontWeight: Fonts.BOLD,
                       }}
@@ -39,9 +39,7 @@ const PricingTable = ({ billingFormat, tableData }) => {
                       $0
                     </Box>
                   </Typography>
-                  <Box sx={{ color: 'text.secondary', ml: 2, mb: 2 }}>
-                    per {billingFormat}
-                  </Box>
+                  <Box sx={{ color: 'text.secondary', ml: 2, mb: 2 }}>per {billingFormat}</Box>
                 </Box>
                 <Box
                   sx={{
@@ -51,12 +49,11 @@ const PricingTable = ({ billingFormat, tableData }) => {
                     whiteSpace: 'pre-wrap',
                   }}
                 >
-                  Basic features for up to 10 employees with everything you
-                  need.
+                  Basic features for up to 10 employees with everything you need.
                 </Box>
                 <Box sx={{ mb: 7.5, mr: 8 }}>
                   <Button
-                    variant='outlined'
+                    variant="outlined"
                     sx={{
                       mt: 3,
                       width: '100%',
@@ -78,17 +75,17 @@ const PricingTable = ({ billingFormat, tableData }) => {
                 </Box>
               </Box>
             </StyledTableCell>
-            <StyledTableCell className='no-border'>
+            <StyledTableCell className="no-border">
               <Box>
                 <Box sx={{ display: 'flex', alignItems: 'flex-end' }}>
                   <Typography
-                    component='h4'
+                    component="h4"
                     sx={{
                       fontSize: { xs: 20, md: 22, lg: 48 },
                     }}
                   >
                     <Box
-                      component='span'
+                      component="span"
                       sx={{
                         fontWeight: Fonts.BOLD,
                       }}
@@ -96,9 +93,7 @@ const PricingTable = ({ billingFormat, tableData }) => {
                       $69
                     </Box>
                   </Typography>
-                  <Box sx={{ color: 'text.secondary', ml: 2, mb: 2 }}>
-                    per {billingFormat}
-                  </Box>
+                  <Box sx={{ color: 'text.secondary', ml: 2, mb: 2 }}>per {billingFormat}</Box>
                 </Box>
                 <Box
                   sx={{
@@ -108,12 +103,11 @@ const PricingTable = ({ billingFormat, tableData }) => {
                     whiteSpace: 'pre-wrap',
                   }}
                 >
-                  Advanced features and reporting, better workflows and
-                  automation.
+                  Advanced features and reporting, better workflows and automation.
                 </Box>
                 <Box sx={{ mb: 7.5, mr: 8 }}>
                   <Button
-                    variant='outlined'
+                    variant="outlined"
                     sx={{
                       mt: 3,
                       width: '100%',
@@ -135,17 +129,17 @@ const PricingTable = ({ billingFormat, tableData }) => {
                 </Box>
               </Box>
             </StyledTableCell>
-            <StyledTableCell className='no-border'>
+            <StyledTableCell className="no-border">
               <Box>
                 <Box sx={{ display: 'flex', alignItems: 'flex-end' }}>
                   <Typography
-                    component='h4'
+                    component="h4"
                     sx={{
                       fontSize: { xs: 20, md: 22, lg: 48 },
                     }}
                   >
                     <Box
-                      component='span'
+                      component="span"
                       sx={{
                         fontWeight: Fonts.BOLD,
                       }}
@@ -153,9 +147,7 @@ const PricingTable = ({ billingFormat, tableData }) => {
                       $349
                     </Box>
                   </Typography>
-                  <Box sx={{ color: 'text.secondary', ml: 2, mb: 2 }}>
-                    per {billingFormat}
-                  </Box>
+                  <Box sx={{ color: 'text.secondary', ml: 2, mb: 2 }}>per {billingFormat}</Box>
                 </Box>
                 <Box
                   sx={{
@@ -169,7 +161,7 @@ const PricingTable = ({ billingFormat, tableData }) => {
                 </Box>
                 <Box sx={{ mb: 7.5, mr: 8 }}>
                   <Button
-                    variant='outlined'
+                    variant="outlined"
                     sx={{
                       mt: 3,
                       width: '100%',
@@ -196,11 +188,11 @@ const PricingTable = ({ billingFormat, tableData }) => {
             <TableItem data={data} key={data.id} />
           ))}
           <TableRow>
-            <StyledTableCell className='no-border' />
+            <StyledTableCell className="no-border" />
 
-            <StyledTableCell className='no-border'>
+            <StyledTableCell className="no-border">
               <Button
-                variant='outlined'
+                variant="outlined"
                 sx={{
                   mt: 3,
                   width: '100%',
@@ -220,9 +212,9 @@ const PricingTable = ({ billingFormat, tableData }) => {
                 Try Now
               </Button>
             </StyledTableCell>
-            <StyledTableCell className='no-border'>
+            <StyledTableCell className="no-border">
               <Button
-                variant='outlined'
+                variant="outlined"
                 sx={{
                   mt: 3,
                   width: '100%',
@@ -242,9 +234,9 @@ const PricingTable = ({ billingFormat, tableData }) => {
                 Buy Now
               </Button>
             </StyledTableCell>
-            <StyledTableCell className='no-border'>
+            <StyledTableCell className="no-border">
               <Button
-                variant='outlined'
+                variant="outlined"
                 sx={{
                   mt: 3,
                   width: '100%',
@@ -272,10 +264,6 @@ const PricingTable = ({ billingFormat, tableData }) => {
 };
 
 export default PricingTable;
-
-PricingTable.defaultProps = {
-  tableData: [],
-};
 
 PricingTable.propTypes = {
   billingFormat: PropTypes.string,

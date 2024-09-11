@@ -11,12 +11,7 @@ import CheckedCell from './CheckedCell';
 import AppGrid from '@crema/components/AppGrid';
 import ColorCell from './ColorCell';
 import RatingCell from './RatingCell';
-import {
-  brandData,
-  discountList,
-  idealFor,
-  ProductColors,
-} from '@crema/mockapi/fakedb/ecommerce';
+import { brandData, discountList, idealFor, ProductColors } from '@crema/mockapi/fakedb/ecommerce';
 
 const ProductSidebar = ({ filterData, setFilterData }) => {
   const [selectedBrand, setSelectedBrand] = useState(filterData.brand);
@@ -34,14 +29,7 @@ const ProductSidebar = ({ filterData, setFilterData }) => {
       color: selectedColor,
       rating: customerRating,
     });
-  }, [
-    filterData.title,
-    selectedBrand,
-    selectedFor,
-    selectedDiscount,
-    selectedColor,
-    customerRating,
-  ]);
+  }, [filterData.title, selectedBrand, selectedFor, selectedDiscount, selectedColor, customerRating]);
 
   const onSelectBrand = (brandId) => {
     if (selectedBrand.some((brand) => brand === brandId)) {
@@ -91,7 +79,7 @@ const ProductSidebar = ({ filterData, setFilterData }) => {
         }}
       >
         <Box
-          component='h5'
+          component="h5"
           sx={{
             mb: 2,
             fontWeight: Fonts.MEDIUM,
@@ -140,12 +128,7 @@ const ProductSidebar = ({ filterData, setFilterData }) => {
           <AppList
             data={brandData}
             renderRow={(data) => (
-              <CheckedCell
-                key={data.id}
-                data={data}
-                onChange={onSelectBrand}
-                selected={selectedBrand}
-              />
+              <CheckedCell key={data.id} data={data} onChange={onSelectBrand} selected={selectedBrand} />
             )}
           />
         </Box>
@@ -165,12 +148,7 @@ const ProductSidebar = ({ filterData, setFilterData }) => {
           <AppList
             data={idealFor}
             renderRow={(data) => (
-              <CheckedCell
-                key={data.id}
-                data={data}
-                onChange={onSelectFor}
-                selected={selectedFor}
-              />
+              <CheckedCell key={data.id} data={data} onChange={onSelectFor} selected={selectedFor} />
             )}
           />
         </Box>
@@ -190,12 +168,7 @@ const ProductSidebar = ({ filterData, setFilterData }) => {
           <AppList
             data={discountList}
             renderRow={(data) => (
-              <CheckedCell
-                key={data.id}
-                data={data}
-                onChange={onSelectDiscount}
-                selected={selectedDiscount}
-              />
+              <CheckedCell key={data.id} data={data} onChange={onSelectDiscount} selected={selectedDiscount} />
             )}
           />
         </Box>
@@ -218,12 +191,7 @@ const ProductSidebar = ({ filterData, setFilterData }) => {
             column={6}
             itemPadding={10}
             renderRow={(data, index) => (
-              <ColorCell
-                key={'color-' + index}
-                data={data}
-                selected={selectedColor}
-                onChange={onSelectColor}
-              />
+              <ColorCell key={'color-' + index} data={data} selected={selectedColor} onChange={onSelectColor} />
             )}
           />
         </Box>
@@ -243,12 +211,7 @@ const ProductSidebar = ({ filterData, setFilterData }) => {
           <AppList
             data={[5, 4, 3, 2, 1]}
             renderRow={(data) => (
-              <RatingCell
-                key={data}
-                data={data}
-                onChange={onSelectRating}
-                selected={customerRating}
-              />
+              <RatingCell key={data} data={data} onChange={onSelectRating} selected={customerRating} />
             )}
           />
         </Box>

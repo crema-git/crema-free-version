@@ -10,7 +10,7 @@ const TimelineItemContentWrapper = ({ children }) => {
         backgroundColor: (theme) => theme.palette.background.paper,
         padding: 5,
         position: 'relative',
-        maxWidth: { xs: 500, '@media (max-width: 1023px)': '100%' },
+        maxWidth: { xs: 500, '@media (maxWidth: 1023px)': '100%' },
 
         '&:after': {
           content: '""',
@@ -26,7 +26,7 @@ const TimelineItemContentWrapper = ({ children }) => {
           transform: { xs: 'rotate(180deg)', sm: 'rotate(0deg)' },
         },
       }}
-      className='timelineItemContent'
+      className="timelineItemContent"
     >
       {children}
     </Box>

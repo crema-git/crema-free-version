@@ -16,16 +16,16 @@ const StyledAvatar = styled(Avatar)(({ theme }) => ({
 
 const SuggestionItem = ({ item }) => {
   return (
-    <Box className='item-hover' px={5} py={2}>
-      <Box display='flex'>
+    <Box className="item-hover" px={5} py={2}>
+      <Box display="flex">
         <Box mr={4}>
           <StyledAvatar src={item.thumb} alt={item.name} />
         </Box>
         <div>
-          <Box component='h5' mb={0.5}>
+          <Box component="h5" mb={0.5}>
             {item.name}
           </Box>
-          <Box component='p' color='text.secondary'>
+          <Box component="p" color="text.secondary">
             {item.desc}
           </Box>
         </div>

@@ -41,8 +41,8 @@ const TaskSideBar = () => {
       <Box sx={{ px: { xs: 4, md: 5 }, pt: { xs: 4, md: 5 }, pb: 2.5 }}>
         <Zoom in style={{ transitionDelay: '300ms' }}>
           <Button
-            variant='outlined'
-            color='primary'
+            variant="outlined"
+            color="primary"
             sx={{
               padding: '8px 28px',
               borderRadius: 30,
@@ -53,7 +53,7 @@ const TaskSideBar = () => {
             startIcon={<AddIcon />}
             onClick={onOpenAddTask}
           >
-            <IntlMessages id='todo.addNewTask' />
+            <IntlMessages id="todo.addNewTask" />
           </Button>
         </Zoom>
       </Box>
@@ -68,7 +68,7 @@ const TaskSideBar = () => {
             pb: { xs: 4, md: 5, lg: 6.2 },
           }}
         >
-          <ListWrapper component='nav' aria-label='main task folders'>
+          <ListWrapper component="nav" aria-label="main task folders">
             <AppList
               data={folderList}
               ListEmptyComponent={
@@ -82,25 +82,16 @@ const TaskSideBar = () => {
                 />
               }
               renderRow={(item) => (
-                <AppsSideBarFolderItem
-                  key={item.id}
-                  item={item}
-                  path={`/apps/todo/${item.alias}`}
-                />
+                <AppsSideBarFolderItem key={item.id} item={item} path={`/apps/todo/${item.alias}`} />
               )}
             />
           </ListWrapper>
 
-          <Box
-            component='h4'
-            mt={{ xs: 4, xl: 5 }}
-            px={{ xs: 4, md: 5, lg: 6.2 }}
-            fontWeight={Fonts.SEMI_BOLD}
-          >
+          <Box component="h4" mt={{ xs: 4, xl: 5 }} px={{ xs: 4, md: 5, lg: 6.2 }} fontWeight={Fonts.SEMI_BOLD}>
             Labels
           </Box>
 
-          <List component='nav' aria-label='main mailbox folders'>
+          <List component="nav" aria-label="main mailbox folders">
             <AppList
               data={labelList}
               ListEmptyComponent={
@@ -113,17 +104,12 @@ const TaskSideBar = () => {
                   }
                 />
               }
-              renderRow={(label) => (
-                <TaskLabelItem key={label.id} label={label} />
-              )}
+              renderRow={(label) => <TaskLabelItem key={label.id} label={label} />}
             />
           </List>
         </Box>
       </AppScrollbar>
-      <AddNewTask
-        isAddTaskOpen={isAddTaskOpen}
-        onCloseAddTask={onCloseAddTask}
-      />
+      <AddNewTask isAddTaskOpen={isAddTaskOpen} onCloseAddTask={onCloseAddTask} />
     </>
   );
 };

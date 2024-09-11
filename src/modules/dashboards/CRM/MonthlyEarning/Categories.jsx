@@ -17,7 +17,7 @@ const Categories = (props) => {
       }}
     >
       <Box
-        component='span'
+        component="span"
         sx={{
           height: 12,
           width: 12,
@@ -42,7 +42,7 @@ const Categories = (props) => {
         }}
       >
         <Box
-          component='span'
+          component="span"
           sx={{
             fontSize: 14,
             fontWeight: Fonts.BOLD,

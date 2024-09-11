@@ -28,8 +28,8 @@ const TableCellWrapper = styled(TableCell)(() => {
 
 const TableItem = ({ data }) => {
   return (
-    <TableRow key={data.name} className='item-hover'>
-      <TableCellWrapper component='th' scope='row'>
+    <TableRow key={data.name} className="item-hover">
+      <TableCellWrapper component="th" scope="row">
         <Box
           sx={{
             display: 'flex',
@@ -49,7 +49,7 @@ const TableItem = ({ data }) => {
               flex: 1,
             }}
           >
-            <Typography variant='h5' component='h5'>
+            <Typography variant="h5" component="h5">
               {data.teamLead.name}
             </Typography>
             <Typography
@@ -71,9 +71,9 @@ const TableItem = ({ data }) => {
           ))}
         </AvatarGroup>
       </TableCellWrapper>
-      <TableCellWrapper align='center'>
+      <TableCellWrapper align="center">
         <Box
-          component='span'
+          component="span"
           sx={{
             backgroundColor: data.color,
             width: 12,
@@ -86,7 +86,7 @@ const TableItem = ({ data }) => {
         </Box>
       </TableCellWrapper>
       <TableCellWrapper>{data.weeks}</TableCellWrapper>
-      <TableCellWrapper className='budget'>{data.budgets}</TableCellWrapper>
+      <TableCellWrapper className="budget">{data.budgets}</TableCellWrapper>
     </TableRow>
   );
 };

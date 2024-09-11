@@ -1,18 +1,9 @@
 import React from 'react';
-import {
-  Bar,
-  BarChart,
-  ResponsiveContainer,
-  Tooltip,
-  XAxis,
-  YAxis,
-} from 'recharts';
+import { Bar, BarChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
 import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
 
-const GoalProgressGraph = (props) => {
-  const { progressGraphData } = props;
-
+const GoalProgressGraph = ({ progressGraphData = [] }) => {
   return (
     <Box
       sx={{
@@ -23,17 +14,12 @@ const GoalProgressGraph = (props) => {
       }}
     >
       <ResponsiveContainer height={340}>
-        <BarChart
-          barGap={5}
-          barSize={8}
-          data={progressGraphData}
-          margin={{ top: 50 }}
-        >
-          <XAxis dataKey='name' axisLine={false} tickLine={false} />
+        <BarChart barGap={5} barSize={8} data={progressGraphData} margin={{ top: 50 }}>
+          <XAxis dataKey="name" axisLine={false} tickLine={false} />
           <YAxis hide />
           <Tooltip labelStyle={{ color: 'black' }} />
-          <Bar dataKey='progress' stackId='a' fill='#3182CE' />
-          <Bar dataKey='actual' stackId='a' fill='#E53E3E' />
+          <Bar dataKey="progress" stackId="a" fill="#3182CE" />
+          <Bar dataKey="actual" stackId="a" fill="#E53E3E" />
         </BarChart>
       </ResponsiveContainer>
     </Box>
@@ -41,10 +27,6 @@ const GoalProgressGraph = (props) => {
 };
 
 export default GoalProgressGraph;
-
-GoalProgressGraph.defaultProps = {
-  progressGraphData: [],
-};
 
 GoalProgressGraph.propTypes = {
   progressGraphData: PropTypes.array,

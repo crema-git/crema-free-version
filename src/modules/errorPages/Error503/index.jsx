@@ -1,11 +1,11 @@
 import React from 'react';
 import Button from '@mui/material/Button';
-import {useNavigate} from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
-import {grey} from '@mui/material/colors';
-import {Fonts} from '@crema/constants/AppEnums';
-import {initialUrl} from '@crema/constants/AppConst';
+import { grey } from '@mui/material/colors';
+import { Fonts } from '@crema/constants/AppEnums';
+import { initialUrl } from '@crema/constants/AppConst';
 import AppAnimate from '@crema/components/AppAnimate';
 import IntlMessages from '@crema/helpers/IntlMessages';
 import Logo from '../../../assets/icon/503.svg';
@@ -18,7 +18,7 @@ const Error503 = () => {
   };
 
   return (
-    <AppAnimate animation='transition.slideUpIn' delay={200}>
+    <AppAnimate animation="transition.slideUpIn" delay={200}>
       <Box
         sx={{
           py: { xl: 8 },
@@ -40,7 +40,7 @@ const Error503 = () => {
             },
           }}
         >
-            <img src={Logo} alt={Logo}/>
+          <img src={Logo} alt={Logo} />
         </Box>
         <Box
           sx={{
@@ -48,14 +48,14 @@ const Error503 = () => {
           }}
         >
           <Box
-            variant='h3'
+            variant="h3"
             sx={{
               mb: { xs: 3, xl: 4 },
               fontSize: { xs: 20, md: 24 },
               fontWeight: Fonts.MEDIUM,
             }}
           >
-            <IntlMessages id='error.500Error' />.
+            <IntlMessages id="error.500Error" />.
           </Box>
           <Box
             sx={{
@@ -66,15 +66,15 @@ const Error503 = () => {
             }}
           >
             <Typography>
-              <IntlMessages id='error.500Message1' />
+              <IntlMessages id="error.500Message1" />
             </Typography>
             <Typography>
-              <IntlMessages id='error.500Message2' />
+              <IntlMessages id="error.500Message2" />
             </Typography>
           </Box>
           <Button
-            variant='contained'
-            color='primary'
+            variant="contained"
+            color="primary"
             sx={{
               fontWeight: Fonts.MEDIUM,
               fontSize: 16,
@@ -82,7 +82,7 @@ const Error503 = () => {
             }}
             onClick={onGoBackToHome}
           >
-            <IntlMessages id='error.goBackToHome' />
+            <IntlMessages id="error.goBackToHome" />
           </Button>
         </Box>
       </Box>

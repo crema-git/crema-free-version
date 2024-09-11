@@ -9,19 +9,17 @@ import PropTypes from 'prop-types';
 const VerticalNav = ({ routesConfig }) => {
   return (
     <List
-      sx={{
+      sx={(theme) => ({
         position: 'relative',
         padding: 0,
-      }}
-      component='div'
+      })}
+      component="div"
     >
       {routesConfig.map((item) => (
         <React.Fragment key={item.id}>
           {item.type === 'group' && <NavVerticalGroup item={item} level={0} />}
 
-          {item.type === 'collapse' && (
-            <VerticalCollapse item={item} level={0} />
-          )}
+          {item.type === 'collapse' && <VerticalCollapse item={item} level={0} />}
 
           {item.type === 'item' && <VerticalItem item={item} level={0} />}
         </React.Fragment>

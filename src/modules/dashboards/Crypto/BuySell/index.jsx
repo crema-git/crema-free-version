@@ -12,15 +12,13 @@ function TabPanel(props) {
 
   return (
     <div
-      role='tabpanel'
+      role="tabpanel"
       hidden={value !== index}
       id={`simple-tabpanel-${index}`}
       aria-labelledby={`simple-tab-${index}`}
       {...other}
     >
-      {value === index && (
-        <Box sx={{ width: '100%', px: 5, py: 6 }}>{children}</Box>
-      )}
+      {value === index && <Box sx={{ width: '100%', px: 5, py: 6 }}>{children}</Box>}
     </div>
   );
 }
@@ -39,8 +37,8 @@ function a11yProps(index) {
 }
 
 const tabs = [
-  { id: 1, name: <IntlMessages id='common.buy' /> },
-  { id: 2, name: <IntlMessages id='common.sell' /> },
+  { id: 1, name: <IntlMessages id="common.buy" /> },
+  { id: 2, name: <IntlMessages id="common.sell" /> },
 ];
 
 const BuySell = ({ buySell }) => {
@@ -72,7 +70,7 @@ const BuySell = ({ buySell }) => {
             }}
             value={value}
             onChange={handleChange}
-            aria-label='basic tabs example'
+            aria-label="basic tabs example"
           >
             {tabs.map((tab, index) => (
               <Tab
@@ -94,7 +92,7 @@ const BuySell = ({ buySell }) => {
           <ExchangeForm coinList={buySell.coinList} />
         </TabPanel>
         <TabPanel value={value} index={1}>
-          <ExchangeForm coinList={buySell.coinList} type='sell' />
+          <ExchangeForm coinList={buySell.coinList} type="sell" />
         </TabPanel>
       </Box>
     </AppCard>

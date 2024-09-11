@@ -12,37 +12,24 @@ import { getDateObject, getFormattedDate } from '@crema/helpers/DateHelper';
 import { generateRandomUniqueNumber } from '@crema/helpers/Common';
 
 const validationSchema = yup.object({
-  name: yup.string().required(<IntlMessages id='validation.nameRequired' />),
+  name: yup.string().required(<IntlMessages id="validation.nameRequired" />),
   email: yup
     .string()
-    .email(<IntlMessages id='validation.emailFormat' />)
-    .required(<IntlMessages id='validation.emailRequired' />),
-  contact: yup
-    .string()
-    .required(<IntlMessages id='validation.phoneNumberRequired' />),
+    .email(<IntlMessages id="validation.emailFormat" />)
+    .required(<IntlMessages id="validation.emailRequired" />),
+  contact: yup.string().required(<IntlMessages id="validation.phoneNumberRequired" />),
 });
 
 const CreateContact = (props) => {
-  const {
-    isAddContact,
-    handleAddContactClose,
-    selectContact,
-    onUpdateContact,
-  } = props;
+  const { isAddContact, handleAddContactClose, selectContact = null, onUpdateContact } = props;
   const infoViewActionsContext = useInfoViewActionsContext();
   const { reCallAPI } = useContactActionsContext();
 
   const [userImage, setUserImage] = useState(
-    selectContact && selectContact.image
-      ? selectContact.image
-      : '/assets/images/placeholder.jpg',
+    selectContact && selectContact.image ? selectContact.image : '/assets/images/placeholder.jpg',
   );
   useEffect(() => {
-    setUserImage(
-      selectContact && selectContact.image
-        ? selectContact.image
-        : '/assets/images/placeholder.jpg',
-    );
+    setUserImage(selectContact && selectContact.image ? selectContact.image : '/assets/images/placeholder.jpg');
   }, [selectContact]);
 
   return (
@@ -63,28 +50,14 @@ const CreateContact = (props) => {
           name: selectContact ? selectContact.name : '',
           email: selectContact ? selectContact.email : '',
           contact: selectContact ? selectContact.contact : '',
-          birthday:
-            selectContact && selectContact.birthday
-              ? getDateObject(selectContact.birthday)
-              : getDateObject(),
-          website:
-            selectContact && selectContact.website ? selectContact.website : '',
-          company:
-            selectContact && selectContact.company ? selectContact.company : '',
-          address:
-            selectContact && selectContact.address ? selectContact.address : '',
-          facebookId:
-            selectContact && selectContact.facebookId
-              ? selectContact.facebookId
-              : '',
-          twitterId:
-            selectContact && selectContact.twitterId
-              ? selectContact.twitterId
-              : '',
-          notes:
-            selectContact && selectContact.notes ? selectContact.notes : '',
-          label:
-            selectContact && selectContact.label ? selectContact.label : '',
+          birthday: selectContact && selectContact.birthday ? getDateObject(selectContact.birthday) : getDateObject(),
+          website: selectContact && selectContact.website ? selectContact.website : '',
+          company: selectContact && selectContact.company ? selectContact.company : '',
+          address: selectContact && selectContact.address ? selectContact.address : '',
+          facebookId: selectContact && selectContact.facebookId ? selectContact.facebookId : '',
+          twitterId: selectContact && selectContact.twitterId ? selectContact.twitterId : '',
+          notes: selectContact && selectContact.notes ? selectContact.notes : '',
+          label: selectContact && selectContact.label ? selectContact.label : '',
         }}
         validationSchema={validationSchema}
         onSubmit={(data, { setSubmitting, resetForm }) => {
@@ -103,9 +76,7 @@ const CreateContact = (props) => {
             })
               .then(() => {
                 reCallAPI();
-                infoViewActionsContext.showMessage(
-                  'Contact updated successfully!',
-                );
+                infoViewActionsContext.showMessage('Contact updated successfully!');
               })
               .catch((error) => {
                 infoViewActionsContext.fetchError(error.message);
@@ -125,9 +96,7 @@ const CreateContact = (props) => {
             })
               .then(() => {
                 reCallAPI();
-                infoViewActionsContext.showMessage(
-                  'Contact created successfully!',
-                );
+                infoViewActionsContext.showMessage('Contact created successfully!');
               })
               .catch((error) => {
                 infoViewActionsContext.fetchError(error.message);
@@ -153,10 +122,6 @@ const CreateContact = (props) => {
 };
 
 export default CreateContact;
-
-CreateContact.defaultProps = {
-  selectContact: null,
-};
 
 CreateContact.propTypes = {
   isAddContact: PropTypes.bool.isRequired,

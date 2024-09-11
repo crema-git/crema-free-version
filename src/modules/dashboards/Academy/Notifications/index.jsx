@@ -15,7 +15,7 @@ const NotificationItem = ({ notification }) => {
         px: 5,
         py: 2,
       }}
-      className='item-hover'
+      className="item-hover"
     >
       <Box
         sx={{
@@ -41,7 +41,7 @@ const NotificationItem = ({ notification }) => {
         }}
       >
         <Box
-          component='h3'
+          component="h3"
           sx={{
             display: 'inline-block',
             fontWeight: Fonts.MEDIUM,
@@ -52,7 +52,7 @@ const NotificationItem = ({ notification }) => {
           {notification.content}
         </Box>
         <Box
-          component='p'
+          component="p"
           sx={{
             fontSize: 14,
             color: 'text.secondary',
@@ -76,17 +76,11 @@ NotificationItem.propTypes = {
 const Notifications = ({ notifications }) => {
   const { messages } = useIntl();
   return (
-    <AppCard
-      sxStyle={{ height: 1 }}
-      title={messages['academy.notifications']}
-      contentStyle={{ px: 0 }}
-    >
+    <AppCard sxStyle={{ height: 1 }} title={messages['academy.notifications']} contentStyle={{ px: 0 }}>
       <AppList
-        animation='transition.slideRightBigIn'
+        animation="transition.slideRightBigIn"
         data={notifications}
-        renderRow={(data, index) => (
-          <NotificationItem key={index} notification={data} />
-        )}
+        renderRow={(data, index) => <NotificationItem key={index} notification={data} />}
       />
     </AppCard>
   );

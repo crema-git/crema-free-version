@@ -19,67 +19,39 @@ const AnimationEntrance = () => {
   };
 
   return (
-    <Box display='flex' flexWrap='wrap'>
+    <Box display="flex" flexWrap="wrap">
       <Box mr={2} my={1}>
-        <Button
-          color='primary'
-          variant='contained'
-          onClick={() => add(['animated bounceIn'])}
-        >
+        <Button color="primary" variant="contained" onClick={() => add(['animated bounceIn'])}>
           Bounce In
         </Button>
       </Box>
       <Box mr={2} my={1}>
-        <Button
-          color='primary'
-          variant='contained'
-          onClick={() => add(['animated fadeIn'])}
-        >
+        <Button color="primary" variant="contained" onClick={() => add(['animated fadeIn'])}>
           Fade In
         </Button>
       </Box>
       <Box mr={2} my={1}>
-        <Button
-          color='primary'
-          variant='contained'
-          onClick={() => add(['animated flipInX'])}
-        >
+        <Button color="primary" variant="contained" onClick={() => add(['animated flipInX'])}>
           Flip In X
         </Button>
       </Box>
       <Box mr={2} my={1}>
-        <Button
-          color='primary'
-          variant='contained'
-          onClick={() => add(['animated flipInY'])}
-        >
+        <Button color="primary" variant="contained" onClick={() => add(['animated flipInY'])}>
           Flip In Y
         </Button>
       </Box>
       <Box mr={2} my={1}>
-        <Button
-          color='primary'
-          variant='contained'
-          onClick={() => add(['animated zoomIn'])}
-        >
+        <Button color="primary" variant="contained" onClick={() => add(['animated zoomIn'])}>
           Zoom In
         </Button>
       </Box>
       <Box mr={2} my={1}>
-        <Button
-          color='primary'
-          variant='contained'
-          onClick={() => add(['animated flash'])}
-        >
+        <Button color="primary" variant="contained" onClick={() => add(['animated flash'])}>
           Flash
         </Button>
       </Box>
       <Box mr={2} my={1}>
-        <Button
-          color='primary'
-          variant='contained'
-          onClick={() => add(['animated jackInTheBox'])}
-        >
+        <Button color="primary" variant="contained" onClick={() => add(['animated jackInTheBox'])}>
           Jack In The Box
         </Button>
       </Box>

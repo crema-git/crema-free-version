@@ -8,13 +8,13 @@ import TableItem from './TableItem';
 import AppTableContainer from '@crema/components/AppTableContainer';
 import AppLoader from '@crema/components/AppLoader';
 
-const CustomerTable = ({ customers, loading }) => {
+const CustomerTable = ({ customers = [], loading }) => {
   return (
     <AppTableContainer>
       {loading ? (
         <AppLoader />
       ) : (
-        <Table stickyHeader className='table'>
+        <Table stickyHeader className="table">
           <TableHead>
             <TableHeading />
           </TableHead>
@@ -30,10 +30,6 @@ const CustomerTable = ({ customers, loading }) => {
 };
 
 export default CustomerTable;
-
-CustomerTable.defaultProps = {
-  customers: [],
-};
 
 CustomerTable.propTypes = {
   customers: PropTypes.array,

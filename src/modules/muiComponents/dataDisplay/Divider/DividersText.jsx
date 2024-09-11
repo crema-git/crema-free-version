@@ -25,12 +25,12 @@ export default function DividerText() {
       {content}
       <Divider>CENTER</Divider>
       {content}
-      <Divider textAlign='left'>LEFT</Divider>
+      <Divider textAlign="left">LEFT</Divider>
       {content}
-      <Divider textAlign='right'>RIGHT</Divider>
+      <Divider textAlign="right">RIGHT</Divider>
       {content}
       <Divider>
-        <Chip label='CHIP' />
+        <Chip label="CHIP" />
       </Divider>
       {content}
     </Root>

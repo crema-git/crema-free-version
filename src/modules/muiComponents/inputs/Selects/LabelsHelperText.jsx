@@ -15,15 +15,15 @@ export default function SelectLabels() {
   return (
     <div>
       <FormControl sx={{ m: 1, minWidth: 120 }}>
-        <InputLabel id='demo-simple-select-helper-label'>Age</InputLabel>
+        <InputLabel id="demo-simple-select-helper-label">Age</InputLabel>
         <Select
-          labelId='demo-simple-select-helper-label'
-          id='demo-simple-select-helper'
+          labelId="demo-simple-select-helper-label"
+          id="demo-simple-select-helper"
           value={age}
-          label='Age'
+          label="Age"
           onChange={handleChange}
         >
-          <MenuItem value=''>
+          <MenuItem value="">
             <em>None</em>
           </MenuItem>
           <MenuItem value={10}>Ten</MenuItem>
@@ -33,13 +33,8 @@ export default function SelectLabels() {
         <FormHelperText>With label + helper text</FormHelperText>
       </FormControl>
       <FormControl sx={{ m: 1, minWidth: 120 }}>
-        <Select
-          value={age}
-          onChange={handleChange}
-          displayEmpty
-          inputProps={{ 'aria-label': 'Without label' }}
-        >
-          <MenuItem value=''>
+        <Select value={age} onChange={handleChange} displayEmpty inputProps={{ 'aria-label': 'Without label' }}>
+          <MenuItem value="">
             <em>None</em>
           </MenuItem>
           <MenuItem value={10}>Ten</MenuItem>

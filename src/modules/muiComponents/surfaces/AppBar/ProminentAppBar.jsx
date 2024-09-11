@@ -22,34 +22,18 @@ const StyledToolbar = styled(Toolbar)(({ theme }) => ({
 export default function ProminentAppBar() {
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position='static'>
+      <AppBar position="static">
         <StyledToolbar>
-          <IconButton
-            size='large'
-            edge='start'
-            color='inherit'
-            aria-label='open drawer'
-            sx={{ mr: 2 }}
-          >
+          <IconButton size="large" edge="start" color="inherit" aria-label="open drawer" sx={{ mr: 2 }}>
             <MenuIcon />
           </IconButton>
-          <Typography
-            variant='h5'
-            noWrap
-            component='div'
-            sx={{ flexGrow: 1, alignSelf: 'flex-end' }}
-          >
+          <Typography variant="h5" noWrap component="div" sx={{ flexGrow: 1, alignSelf: 'flex-end' }}>
             MUI
           </Typography>
-          <IconButton size='large' aria-label='search' color='inherit'>
+          <IconButton size="large" aria-label="search" color="inherit">
             <SearchIcon />
           </IconButton>
-          <IconButton
-            size='large'
-            aria-label='display more actions'
-            edge='end'
-            color='inherit'
-          >
+          <IconButton size="large" aria-label="display more actions" edge="end" color="inherit">
             <MoreIcon />
           </IconButton>
         </StyledToolbar>

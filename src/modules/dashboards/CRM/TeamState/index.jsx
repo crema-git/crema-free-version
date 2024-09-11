@@ -59,56 +59,54 @@ const IconBtnRoot = styled(IconButton)(({ theme }) => {
   };
 });
 
-const IOSSwitch = styled((props) => (
-  <Switch focusVisibleClassName='.Mui-focusVisible' disableRipple {...props} />
-))(({ theme }) => ({
-  width: 36,
-  height: 20,
-  padding: 0,
-  '& .MuiSwitch-switchBase': {
+const IOSSwitch = styled((props) => <Switch focusVisibleClassName=".Mui-focusVisible" disableRipple {...props} />)(
+  ({ theme }) => ({
+    width: 36,
+    height: 20,
     padding: 0,
-    margin: 2,
-    transitionDuration: '300ms',
-    '&.Mui-checked': {
-      transform: 'translateX(16px)',
-      color: '#fff',
-      '& + .MuiSwitch-track': {
-        backgroundColor:
-          theme.palette.mode === 'dark'
-            ? theme.palette.primary.main
-            : alpha(theme.palette.primary.main, 0.6),
-        opacity: 1,
-        border: 0,
+    '& .MuiSwitch-switchBase': {
+      padding: 0,
+      margin: 2,
+      transitionDuration: '300ms',
+      '&.Mui-checked': {
+        transform: 'translateX(16px)',
+        color: '#fff',
+        '& + .MuiSwitch-track': {
+          backgroundColor:
+            theme.palette.mode === 'dark' ? theme.palette.primary.main : alpha(theme.palette.primary.main, 0.6),
+          opacity: 1,
+          border: 0,
+        },
+        '&.Mui-disabled + .MuiSwitch-track': {
+          opacity: 0.5,
+        },
+      },
+      '&.Mui-focusVisible .MuiSwitch-thumb': {
+        color: '#33cf4d',
+        border: '6px solid #fff',
+      },
+      '&.Mui-disabled .MuiSwitch-thumb': {
+        color: theme.palette.mode === 'light' ? 'grey.100' : 'grey.600',
       },
       '&.Mui-disabled + .MuiSwitch-track': {
-        opacity: 0.5,
+        opacity: theme.palette.mode === 'light' ? 0.7 : 0.3,
       },
     },
-    '&.Mui-focusVisible .MuiSwitch-thumb': {
-      color: '#33cf4d',
-      border: '6px solid #fff',
+    '& .MuiSwitch-thumb': {
+      boxSizing: 'border-box',
+      width: 16,
+      height: 16,
     },
-    '&.Mui-disabled .MuiSwitch-thumb': {
-      color: theme.palette.mode === 'light' ? 'grey.100' : 'grey.600',
+    '& .MuiSwitch-track': {
+      borderRadius: 26 / 2,
+      backgroundColor: theme.palette.mode === 'light' ? '#E9E9EA' : '#39393D',
+      opacity: 1,
+      transition: theme.transitions.create(['background-color'], {
+        duration: 500,
+      }),
     },
-    '&.Mui-disabled + .MuiSwitch-track': {
-      opacity: theme.palette.mode === 'light' ? 0.7 : 0.3,
-    },
-  },
-  '& .MuiSwitch-thumb': {
-    boxSizing: 'border-box',
-    width: 16,
-    height: 16,
-  },
-  '& .MuiSwitch-track': {
-    borderRadius: 26 / 2,
-    backgroundColor: theme.palette.mode === 'light' ? '#E9E9EA' : '#39393D',
-    opacity: 1,
-    transition: theme.transitions.create(['background-color'], {
-      duration: 500,
-    }),
-  },
-}));
+  }),
+);
 
 const TeamState = ({ data }) => {
   return (
@@ -127,8 +125,8 @@ const TeamState = ({ data }) => {
           }}
         >
           <Typography
-            component='h3'
-            variant='h3'
+            component="h3"
+            variant="h3"
             sx={{
               overflow: 'hidden',
               textOverflow: 'ellipsis',
@@ -155,7 +153,7 @@ const TeamState = ({ data }) => {
       >
         {data.tags.map((data, index) => (
           <Box
-            component='span'
+            component="span"
             sx={{
               padding: '2px 12px',
               mr: 1.5,
@@ -164,7 +162,7 @@ const TeamState = ({ data }) => {
             key={'team-' + index}
             style={{ backgroundColor: data.color + '21', color: data.color }}
           >
-            <Typography component='span' variant='h6'>
+            <Typography component="span" variant="h6">
               {data.title}
             </Typography>
           </Box>
@@ -191,24 +189,24 @@ const TeamState = ({ data }) => {
           }}
         >
           <Box
-            component='span'
+            component="span"
             sx={{
               display: 'block',
             }}
           >
-            <IconBtnRoot size='large'>
+            <IconBtnRoot size="large">
               <EditIcon />
             </IconBtnRoot>
           </Box>
 
           <Box
-            component='span'
+            component="span"
             sx={{
               display: 'block',
               ml: 1.5,
             }}
           >
-            <IconBtnRoot size='large'>
+            <IconBtnRoot size="large">
               <CallMadeOutlinedIcon />
             </IconBtnRoot>
           </Box>

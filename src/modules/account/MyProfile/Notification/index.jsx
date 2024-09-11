@@ -10,18 +10,16 @@ const Notification = () => {
   return (
     <Box sx={{ position: 'relative' }}>
       <Activity activity={accountData.notification.activity} />
-
       <Box
-        sx={{
+        sx={(theme) => ({
           mx: -5,
           px: 5,
           pt: 5,
-          borderTop: (theme) => `solid 1px ${theme.palette.divider}`,
-        }}
+          borderTop: `solid 1px ${theme.palette.divider}`,
+        })}
       >
         <Application application={accountData.notification.application} />
       </Box>
-
       <Box
         sx={{
           display: 'flex',
@@ -33,11 +31,11 @@ const Notification = () => {
             position: 'relative',
             minWidth: 100,
           }}
-          color='primary'
-          variant='contained'
-          type='submit'
+          color="primary"
+          variant="contained"
+          type="submit"
         >
-          <IntlMessages id='common.saveChanges' />
+          <IntlMessages id="common.saveChanges" />
         </Button>
         <Button
           sx={{
@@ -45,11 +43,11 @@ const Notification = () => {
             minWidth: 100,
             ml: 2.5,
           }}
-          color='primary'
-          variant='outlined'
-          type='cancel'
+          color="primary"
+          variant="outlined"
+          type="cancel"
         >
-          <IntlMessages id='common.cancel' />
+          <IntlMessages id="common.cancel" />
         </Button>
       </Box>
     </Box>

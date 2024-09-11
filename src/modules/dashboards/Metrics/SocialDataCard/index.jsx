@@ -43,7 +43,7 @@ const SocialDataCard = ({ data }) => {
             <FavoriteBorderOutlinedIcon />
           </Box>
           <Box
-            component='h3'
+            component="h3"
             sx={{
               mb: 2,
               fontSize: 20,
@@ -53,7 +53,7 @@ const SocialDataCard = ({ data }) => {
             {data.likes}
           </Box>
           <Box
-            component='p'
+            component="p"
             sx={{
               color: 'text.secondary',
               mb: 1,
@@ -61,7 +61,7 @@ const SocialDataCard = ({ data }) => {
               fontWeight: Fonts.REGULAR,
             }}
           >
-            <IntlMessages id='common.likes' />
+            <IntlMessages id="common.likes" />
           </Box>
         </Box>
 
@@ -81,7 +81,7 @@ const SocialDataCard = ({ data }) => {
             <SpeakerNotesOutlinedIcon />
           </Box>
           <Box
-            component='h3'
+            component="h3"
             sx={{
               mb: 2,
               fontSize: 20,
@@ -91,7 +91,7 @@ const SocialDataCard = ({ data }) => {
             {data.comments}
           </Box>
           <Box
-            component='p'
+            component="p"
             sx={{
               color: 'text.secondary',
               mb: 1,
@@ -99,7 +99,7 @@ const SocialDataCard = ({ data }) => {
               fontWeight: Fonts.REGULAR,
             }}
           >
-            <IntlMessages id='common.comments' />
+            <IntlMessages id="common.comments" />
           </Box>
         </Box>
       </Box>
@@ -108,8 +108,6 @@ const SocialDataCard = ({ data }) => {
 };
 
 export default SocialDataCard;
-
-SocialDataCard.defaultProps = {};
 
 SocialDataCard.propTypes = {
   data: PropTypes.object.isRequired,

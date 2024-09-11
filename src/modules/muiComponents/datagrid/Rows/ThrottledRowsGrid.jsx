@@ -3,11 +3,7 @@ import { DataGridPro, useGridApiRef } from '@mui/x-data-grid-pro';
 import { interval } from 'rxjs';
 import { randomInt, randomUserName } from '@mui/x-data-grid-generator';
 
-const columns = [
-  { field: 'id' },
-  { field: 'username', width: 150 },
-  { field: 'age', width: 80, type: 'number' },
-];
+const columns = [{ field: 'id' }, { field: 'username', width: 150 }, { field: 'age', width: 80, type: 'number' }];
 
 const rows = [
   { id: 1, username: randomUserName(), age: randomInt(10, 80) },
@@ -42,12 +38,7 @@ export default function ThrottledRowsGrid() {
 
   return (
     <div style={{ height: 400, width: '100%' }}>
-      <DataGridPro
-        rows={rows}
-        columns={columns}
-        apiRef={apiRef}
-        throttleRowsMs={2000}
-      />
+      <DataGridPro rows={rows} columns={columns} apiRef={apiRef} throttleRowsMs={2000} />
     </div>
   );
 }

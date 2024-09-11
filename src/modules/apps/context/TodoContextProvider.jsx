@@ -20,10 +20,12 @@ export const TodoContextProvider = ({ children }) => {
   const [{ apiData: statusList }] = useGetDataApi('/api/todo/status/list', []);
   const [page, setPage] = useState(0);
 
-  const [
-    { apiData: taskLists, loading },
-    { setQueryParams, setData: setTodoData, reCallAPI },
-  ] = useGetDataApi('/api/todo/task/list', undefined, {}, false);
+  const [{ apiData: taskLists, loading }, { setQueryParams, setData: setTodoData, reCallAPI }] = useGetDataApi(
+    '/api/todo/task/list',
+    undefined,
+    {},
+    false,
+  );
 
   useEffect(() => {
     setPage(0);

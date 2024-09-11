@@ -10,7 +10,7 @@ const TableItem = (props) => {
 
   return (
     <TableRow>
-      <TableCell component='th' scope='row'>
+      <TableCell component="th" scope="row">
         <Box
           sx={{
             mb: 2,
@@ -21,7 +21,7 @@ const TableItem = (props) => {
         >
           {product.item}
         </Box>
-        <Box component='p' sx={{ color: 'text.secondary', mb: 0 }}>
+        <Box component="p" sx={{ color: 'text.secondary', mb: 0 }}>
           {product.desc}
         </Box>
       </TableCell>

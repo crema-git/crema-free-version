@@ -48,9 +48,9 @@ const TableItem = ({ data }) => {
           },
         },
       }}
-      className='item-hover'
+      className="item-hover"
     >
-      <TableCell component='th' scope='row' className='tableCell'>
+      <TableCell component="th" scope="row" className="tableCell">
         <Box
           sx={{
             color: (theme) => theme.palette.primary.main,
@@ -61,20 +61,16 @@ const TableItem = ({ data }) => {
           {data.id}
         </Box>
       </TableCell>
-      <TableCell align='left' className='tableCell'>
+      <TableCell align="left" className="tableCell">
         {data.customer}
       </TableCell>
-      <TableCell align='left' className='tableCell'>
+      <TableCell align="left" className="tableCell">
         {data.date}
       </TableCell>
-      <TableCell
-        align='left'
-        className='tableCell'
-        style={{ color: getPaymentTypeColor() }}
-      >
+      <TableCell align="left" className="tableCell" style={{ color: getPaymentTypeColor() }}>
         {data.paymentType}
       </TableCell>
-      <TableCell align='left' className='tableCell'>
+      <TableCell align="left" className="tableCell">
         <Box
           sx={{
             color: getPaymentStatusColor(),
@@ -87,7 +83,7 @@ const TableItem = ({ data }) => {
           {data.status}
         </Box>
       </TableCell>
-      <TableCell align='right' className='tableCell'>
+      <TableCell align="right" className="tableCell">
         <MoreHorizIcon />
       </TableCell>
     </TableRow>

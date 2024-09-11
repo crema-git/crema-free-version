@@ -25,7 +25,7 @@ export default function VerticalDividersWithText() {
       <Grid item xs>
         {content}
       </Grid>
-      <Divider orientation='vertical' flexItem>
+      <Divider orientation="vertical" flexItem>
         VERTICAL
       </Divider>
       <Grid item xs>

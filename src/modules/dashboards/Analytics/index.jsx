@@ -1,8 +1,8 @@
 import React from 'react';
-import {Grid} from '@mui/material';
+import { Grid } from '@mui/material';
 import AppGridContainer from '@crema/components/AppGridContainer';
 import AppAnimate from '@crema/components/AppAnimate';
-import {useGetDataApi} from '@crema/hooks/APIHooks';
+import { useGetDataApi } from '@crema/hooks/APIHooks';
 import TicketsSupport from './TicketsSupport';
 import InfoWidget from './InfoWidget';
 import PageVisits from './PageVisits';
@@ -17,16 +17,14 @@ import ActiveVisitors from './ActiveVisitors';
 import AppLoader from '@crema/components/AppLoader';
 
 const Analytics = () => {
-  const [{ apiData: analyticsData, loading }] = useGetDataApi(
-    '/dashboard/analytics',
-  );
+  const [{ apiData: analyticsData, loading }] = useGetDataApi('/dashboard/analytics');
 
   return (
     <>
       {loading ? (
         <AppLoader />
       ) : (
-        <AppAnimate animation='transition.slideUpIn' delay={200}>
+        <AppAnimate animation="transition.slideUpIn" delay={200}>
           <AppGridContainer>
             <Grid item xs={12} lg={6}>
               <WelcomeCard data={analyticsData.welcomeCard} />
@@ -41,10 +39,7 @@ const Analytics = () => {
               </AppGridContainer>
             </Grid>
             <Grid item xs={12} lg={6}>
-              <SalesState
-                salesState={analyticsData.salesState}
-                chartData={analyticsData.salesChartData}
-              />
+              <SalesState salesState={analyticsData.salesState} chartData={analyticsData.salesChartData} />
             </Grid>
             <Grid item xs={12} md={8} xl={9}>
               <VisitorPageView data={analyticsData.visitorsPageView} />
@@ -68,9 +63,7 @@ const Analytics = () => {
               <PageVisits pageVisits={analyticsData.pageVisits} />
             </Grid>
             <Grid item xs={12} md={9}>
-              <OrderNTransaction
-                transactionData={analyticsData.transactionData}
-              />
+              <OrderNTransaction transactionData={analyticsData.transactionData} />
             </Grid>
             <Grid item xs={12} md={3}>
               <TrafficSource trafficData={analyticsData.trafficData} />

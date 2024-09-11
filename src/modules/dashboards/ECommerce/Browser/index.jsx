@@ -15,18 +15,14 @@ const BrowserCell = ({ item }) => {
         py: 2,
         px: 5,
       }}
-      className='item-hover'
+      className="item-hover"
     >
       <Box
         sx={{
           mr: 3.5,
         }}
       >
-        <img
-          alt=''
-          style={{ maxWidth: 40, display: 'block' }}
-          src={item.icon}
-        />
+        <img alt="" style={{ maxWidth: 40, display: 'block' }} src={item.icon} />
       </Box>
 
       <Box
@@ -35,7 +31,7 @@ const BrowserCell = ({ item }) => {
         }}
       >
         <Box
-          component='h3'
+          component="h3"
           sx={{
             fontWeight: Fonts.MEDIUM,
             mb: 0.5,
@@ -45,7 +41,7 @@ const BrowserCell = ({ item }) => {
           {item.name}
         </Box>
         <Box
-          component='p'
+          component="p"
           sx={{
             color: 'text.secondary',
             fontSize: 14,
@@ -66,10 +62,7 @@ const Browser = ({ browserData }) => {
   const { messages } = useIntl();
   return (
     <AppCard title={messages['eCommerce.browser']} contentStyle={{ px: 0 }}>
-      <AppList
-        data={browserData}
-        renderRow={(item, index) => <BrowserCell item={item} key={index} />}
-      />
+      <AppList data={browserData} renderRow={(item, index) => <BrowserCell item={item} key={index} />} />
     </AppCard>
   );
 };

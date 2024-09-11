@@ -4,8 +4,7 @@ import PropTypes from 'prop-types';
 import AppCard from '@crema/components/AppCard';
 import { useIntl } from 'react-intl';
 
-const TicketSupport = (props) => {
-  const { ticketSupportData } = props;
+const TicketSupport = ({ ticketSupportData = [] }) => {
   const { messages } = useIntl();
 
   return (
@@ -20,10 +19,6 @@ const TicketSupport = (props) => {
 };
 
 export default TicketSupport;
-
-TicketSupport.defaultProps = {
-  ticketSupportData: [],
-};
 
 TicketSupport.propTypes = {
   ticketSupportData: PropTypes.array,

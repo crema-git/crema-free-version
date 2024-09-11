@@ -20,28 +20,22 @@ const FusionCharts = () => {
   return (
     <>
       <AppComponentHeader
-        title='FusionCharts'
-        description='Build beautiful web & mobile dashboards'
-        refUrl='https://www.fusioncharts.com/react-charts?framework=react/'
+        title="FusionCharts"
+        description="Build beautiful web & mobile dashboards"
+        refUrl="https://www.fusioncharts.com/react-charts?framework=react/"
       />
 
       <AppGridContainer>
         <Grid item xs={12}>
-          <strong>
-            Code Commented due to some issue with Froala Editor at compile time.
-          </strong>
+          <strong>Code Commented due to some issue with Froala Editor at compile time.</strong>
           <pre>
-            eslint-disable-next-line react/no-unescaped-entities Module not
-            found: Error: Can&apos;t resolve &apos;crypto&apos; in
-            eslint-disable-next-line react/no-unescaped-entities
-            &apos;...\node_modules\froala-editor\js&apos; BREAKING CHANGE:
-            webpack &#60; 5 used to include polyfills for node.js core modules
-            by default
+            eslint-disable-next-line react/no-unescaped-entities Module not found: Error: Can&apos;t resolve
+            &apos;crypto&apos; in eslint-disable-next-line react/no-unescaped-entities
+            &apos;...\node_modules\froala-editor\js&apos; BREAKING CHANGE: webpack &#60; 5 used to include polyfills for
+            node.js core modules by default
           </pre>
 
-          <strong>
-            If you want to use this just uncomment the code and go ahead.
-          </strong>
+          <strong>If you want to use this just uncomment the code and go ahead.</strong>
         </Grid>
       </AppGridContainer>
     </>

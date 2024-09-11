@@ -14,8 +14,7 @@ const NotificationBar = () => {
     <Collapse in={open}>
       <Box
         sx={{
-          borderBottom: (theme) =>
-            `solid 1px ${alpha(theme.palette.common.black, 0.15)}`,
+          borderBottom: (theme) => `solid 1px ${alpha(theme.palette.common.black, 0.15)}`,
           padding: '2px 0',
           backgroundColor: sidebarBgColor,
           color: sidebarTextColor,
@@ -45,14 +44,14 @@ const NotificationBar = () => {
             icon={false}
             action={
               <IconButton
-                aria-label='close'
-                color='inherit'
-                size='small'
+                aria-label="close"
+                color="inherit"
+                size="small"
                 onClick={() => {
                   setOpen(false);
                 }}
               >
-                <CloseIcon fontSize='inherit' />
+                <CloseIcon fontSize="inherit" />
               </IconButton>
             }
           >

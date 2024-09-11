@@ -2,15 +2,10 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import { DataGrid, GridCellModes } from '@mui/x-data-grid';
-import {
-  randomCreatedDate,
-  randomTraderName,
-  randomUpdatedDate,
-} from '@mui/x-data-grid-generator';
+import { randomCreatedDate, randomTraderName, randomUpdatedDate } from '@mui/x-data-grid-generator';
 
 function EditToolbar(props) {
-  const { selectedCellParams, cellMode, cellModesModel, setCellModesModel } =
-    props;
+  const { selectedCellParams, cellMode, cellModesModel, setCellModesModel } = props;
 
   const handleSaveOrEdit = () => {
     if (!selectedCellParams) {
@@ -61,7 +56,7 @@ function EditToolbar(props) {
         onClick={handleSaveOrEdit}
         onMouseDown={handleMouseDown}
         disabled={!selectedCellParams}
-        variant='outlined'
+        variant="outlined"
       >
         {cellMode === 'edit' ? 'Save' : 'Edit'}
       </Button>
@@ -69,7 +64,7 @@ function EditToolbar(props) {
         onClick={handleCancel}
         onMouseDown={handleMouseDown}
         disabled={cellMode === 'view'}
-        variant='outlined'
+        variant="outlined"
         sx={{ ml: 1 }}
       >
         Cancel

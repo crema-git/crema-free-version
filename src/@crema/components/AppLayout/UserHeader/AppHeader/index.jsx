@@ -1,23 +1,23 @@
-import React from "react";
-import PropTypes from "prop-types";
-import AppBar from "@mui/material/AppBar";
-import Toolbar from "@mui/material/Toolbar";
-import AppLngSwitcher from "../../../AppLngSwitcher";
-import Box from "@mui/material/Box";
-import AppSearchBar from "../../../AppSearchBar";
-import Hidden from "@mui/material/Hidden";
-import IconButton from "@mui/material/IconButton";
-import MenuIcon from "@mui/icons-material/Menu";
-import AppMessages from "../../../AppMessages";
-import AppNotifications from "../../../AppNotifications";
-import Menu from "@mui/material/Menu";
-import MenuItem from "@mui/material/MenuItem";
-import MoreVertIcon from "@mui/icons-material/MoreVert";
-import AppTooltip from "../../../AppTooltip";
-import { alpha } from "@mui/material/styles";
-import AppLogo from "../../components/AppLogo";
-import UserInfo from "../../components/UserInfo";
-import { allowMultiLanguage } from "@crema/constants/AppConst.jsx";
+import React from 'react';
+import PropTypes from 'prop-types';
+import AppBar from '@mui/material/AppBar';
+import Toolbar from '@mui/material/Toolbar';
+import AppLngSwitcher from '../../../AppLngSwitcher';
+import Box from '@mui/material/Box';
+import AppSearchBar from '../../../AppSearchBar';
+import Hidden from '@mui/material/Hidden';
+import IconButton from '@mui/material/IconButton';
+import MenuIcon from '@mui/icons-material/Menu';
+import AppMessages from '../../../AppMessages';
+import AppNotifications from '../../../AppNotifications';
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
+import MoreVertIcon from '@mui/icons-material/MoreVert';
+import AppTooltip from '../../../AppTooltip';
+import { alpha } from '@mui/material/styles';
+import AppLogo from '../../components/AppLogo';
+import UserInfo from '../../components/UserInfo';
+import { allowMultiLanguage } from '@crema/constants/AppConst.jsx';
 
 const AppHeader = ({ toggleNavCollapsed }) => {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -34,17 +34,17 @@ const AppHeader = ({ toggleNavCollapsed }) => {
     <AppBar
       color="inherit"
       sx={{
-        boxShadow: "none",
+        boxShadow: 'none',
         borderBottom: (theme) => `1px solid ${theme.palette.divider}`,
-        backgroundColor: "background.paper",
-        transition: "width 0.5s ease",
-        width: "100%",
+        backgroundColor: 'background.paper',
+        transition: 'width 0.5s ease',
+        width: '100%',
       }}
       className="app-bar"
     >
       <Toolbar
         sx={{
-          boxSizing: "border-box",
+          boxSizing: 'border-box',
           minHeight: { xs: 56, sm: 70 },
           paddingLeft: { xs: 2.5, md: 5 },
           paddingRight: { xs: 2.5, md: 5 },
@@ -52,7 +52,7 @@ const AppHeader = ({ toggleNavCollapsed }) => {
       >
         <Hidden lgUp>
           <IconButton
-            sx={{ color: "text.secondary" }}
+            sx={{ color: 'text.secondary' }}
             edge="start"
             className="menu-btn"
             color="inherit"
@@ -70,8 +70,8 @@ const AppHeader = ({ toggleNavCollapsed }) => {
         </Hidden>
         <Box
           sx={{
-            "& .logo-text": {
-              display: { xs: "none", sm: "block" },
+            '& .logo-text': {
+              display: { xs: 'none', sm: 'block' },
             },
           }}
         >
@@ -81,12 +81,12 @@ const AppHeader = ({ toggleNavCollapsed }) => {
         <Box
           sx={{
             minHeight: 40,
-            position: "relative",
-            display: { xs: "none", sm: "block" },
-            "& .searchRoot": {
-              position: { xs: "absolute", sm: "relative" },
-              right: { xs: 0, sm: "auto" },
-              top: { xs: 0, sm: "auto" },
+            position: 'relative',
+            display: { xs: 'none', sm: 'block' },
+            '& .searchRoot': {
+              position: { xs: 'absolute', sm: 'relative' },
+              right: { xs: 0, sm: 'auto' },
+              top: { xs: 0, sm: 'auto' },
             },
           }}
         >
@@ -106,16 +106,16 @@ const AppHeader = ({ toggleNavCollapsed }) => {
         <Box
           sx={{
             ml: 4,
-            display: "flex",
-            alignItems: "center",
+            display: 'flex',
+            alignItems: 'center',
           }}
         >
           <Hidden smDown>
             <Box
               sx={{
-                position: "relative",
-                display: "flex",
-                alignItems: "center",
+                position: 'relative',
+                display: 'flex',
+                alignItems: 'center',
                 marginLeft: -2,
                 marginRight: -2,
               }}
@@ -142,11 +142,11 @@ const AppHeader = ({ toggleNavCollapsed }) => {
               ml: { sm: 4 },
               mr: { xs: 4, sm: 0 },
               minWidth: { md: 220 },
-              "& .user-info-view": {
+              '& .user-info-view': {
                 p: 0,
               },
-              "& .user-info": {
-                display: { xs: "none", md: "block" },
+              '& .user-info': {
+                display: { xs: 'none', md: 'block' },
               },
             }}
           >
@@ -156,9 +156,9 @@ const AppHeader = ({ toggleNavCollapsed }) => {
           <Hidden smUp>
             <Box
               sx={{
-                position: "relative",
-                display: "flex",
-                alignItems: "center",
+                position: 'relative',
+                display: 'flex',
+                alignItems: 'center',
                 marginLeft: -2,
                 marginRight: -2,
               }}
@@ -171,20 +171,17 @@ const AppHeader = ({ toggleNavCollapsed }) => {
                 <AppTooltip title="More">
                   <IconButton
                     sx={{
-                      borderRadius: "50%",
+                      borderRadius: '50%',
                       width: 40,
                       height: 40,
                       color: (theme) => theme.palette.text.secondary,
-                      backgroundColor: (theme) =>
-                        theme.palette.background.default,
+                      backgroundColor: (theme) => theme.palette.background.default,
                       border: 1,
-                      borderColor: "transparent",
-                      "&:hover, &:focus": {
+                      borderColor: 'transparent',
+                      '&:hover, &:focus': {
                         color: (theme) => theme.palette.text.primary,
-                        backgroundColor: (theme) =>
-                          alpha(theme.palette.background.default, 0.9),
-                        borderColor: (theme) =>
-                          alpha(theme.palette.text.secondary, 0.25),
+                        backgroundColor: (theme) => alpha(theme.palette.background.default, 0.9),
+                        borderColor: (theme) => alpha(theme.palette.text.secondary, 0.25),
                       },
                     }}
                     onClick={handleClick}
@@ -196,13 +193,7 @@ const AppHeader = ({ toggleNavCollapsed }) => {
               </Box>
             </Box>
           </Hidden>
-          <Menu
-            id="simple-menu"
-            anchorEl={anchorEl}
-            keepMounted
-            open={Boolean(anchorEl)}
-            onClose={handleClose}
-          >
+          <Menu id="simple-menu" anchorEl={anchorEl} keepMounted open={Boolean(anchorEl)} onClose={handleClose}>
             <MenuItem>
               <AppNotifications isMenu />
             </MenuItem>

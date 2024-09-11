@@ -153,8 +153,7 @@ export const stackChartData = {
     subcaption: ' Top 5 Developed Countries',
     numbersuffix: ' TWh',
     showsum: '1',
-    plottooltext:
-      '$label produces <b>$dataValue</b> of energy from $seriesName',
+    plottooltext: '$label produces <b>$dataValue</b> of energy from $seriesName',
     theme: 'fusion',
     drawcrossline: '1',
   },
@@ -309,8 +308,7 @@ export const stackNegChartData = {
     numberprefix: '$',
     yaxisminvalue: '-2000',
     showsum: '1',
-    plottooltext:
-      '$seriesName in $label was <b>$dataValue</b>  ($percentValue of monthly total)',
+    plottooltext: '$seriesName in $label was <b>$dataValue</b>  ($percentValue of monthly total)',
     decimals: '1',
     theme: 'fusion',
   },
@@ -784,8 +782,7 @@ export const stackAreaData = {
 export const chordDataSource = {
   chart: {
     caption: 'Largest International migrations (In Millions)',
-    subcaption:
-      'A No-Node Sankey where the entities are just represented by the labels.',
+    subcaption: 'A No-Node Sankey where the entities are just represented by the labels.',
     theme: 'fusion',
     numbersuffix: ' Million',
     nodewidth: 0,

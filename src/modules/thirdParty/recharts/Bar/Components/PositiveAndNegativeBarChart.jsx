@@ -25,19 +25,16 @@ const data = [
 const PositiveAndNegativeBarChart = () => {
   const { theme } = useThemeContext();
   return (
-    <ResponsiveContainer width='100%' height={200}>
-      <BarChart
-        data={data}
-        margin={{ top: 10, right: 0, left: -25, bottom: 0 }}
-      >
-        <XAxis dataKey='name' />
+    <ResponsiveContainer width="100%" height={200}>
+      <BarChart data={data} margin={{ top: 10, right: 0, left: -25, bottom: 0 }}>
+        <XAxis dataKey="name" />
         <YAxis />
-        <CartesianGrid strokeDasharray='3 3' />
+        <CartesianGrid strokeDasharray="3 3" />
         <Tooltip />
         <Legend />
-        <ReferenceLine y={0} stroke='#000' />
-        <Bar dataKey='pv' fill={theme.palette.primary.main} />
-        <Bar dataKey='uv' fill={theme.palette.secondary.main} />
+        <ReferenceLine y={0} stroke="#000" />
+        <Bar dataKey="pv" fill={theme.palette.primary.main} />
+        <Bar dataKey="uv" fill={theme.palette.secondary.main} />
       </BarChart>
     </ResponsiveContainer>
   );

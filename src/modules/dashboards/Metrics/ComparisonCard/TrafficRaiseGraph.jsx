@@ -3,7 +3,7 @@ import { Line, LineChart, ResponsiveContainer } from 'recharts';
 import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
 
-const TrafficRaiseGraph = ({ data }) => {
+const TrafficRaiseGraph = ({ data = [] }) => {
   return (
     <Box
       sx={{
@@ -13,15 +13,9 @@ const TrafficRaiseGraph = ({ data }) => {
         },
       }}
     >
-      <ResponsiveContainer height={200} className='containerGraph'>
+      <ResponsiveContainer height={200} className="containerGraph">
         <LineChart data={data}>
-          <Line
-            type='monotone'
-            dataKey='traffic'
-            stroke='#4299E1'
-            strokeWidth={2}
-            dot={{ r: 0 }}
-          />
+          <Line type="monotone" dataKey="traffic" stroke="#4299E1" strokeWidth={2} dot={{ r: 0 }} />
         </LineChart>
       </ResponsiveContainer>
     </Box>
@@ -29,10 +23,6 @@ const TrafficRaiseGraph = ({ data }) => {
 };
 
 export default TrafficRaiseGraph;
-
-TrafficRaiseGraph.defaultProps = {
-  data: [],
-};
 
 TrafficRaiseGraph.propTypes = {
   data: PropTypes.array,

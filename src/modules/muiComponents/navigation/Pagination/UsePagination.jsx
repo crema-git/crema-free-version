@@ -25,7 +25,7 @@ export default function UsePagination() {
           } else if (type === 'page') {
             children = (
               <button
-                type='button'
+                type="button"
                 style={{
                   fontWeight: selected ? 'bold' : undefined,
                 }}
@@ -36,7 +36,7 @@ export default function UsePagination() {
             );
           } else {
             children = (
-              <button type='button' {...item}>
+              <button type="button" {...item}>
                 {type}
               </button>
             );

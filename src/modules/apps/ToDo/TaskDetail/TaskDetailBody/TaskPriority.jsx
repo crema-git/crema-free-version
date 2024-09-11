@@ -18,9 +18,7 @@ const TaskPriority = ({ selectedTask, onUpdateSelectedTask }) => {
 
   const onChangePriority = (event) => {
     setPriority(event.target.value);
-    const priority = priorityList.find(
-      (data) => data.type.toString() === event.target.value.toString(),
-    );
+    const priority = priorityList.find((data) => data.type.toString() === event.target.value.toString());
     console.log('priority: ', priority, event.target.value);
     const task = selectedTask;
     task.priority = priority;
@@ -37,14 +35,14 @@ const TaskPriority = ({ selectedTask, onUpdateSelectedTask }) => {
   };
 
   return (
-    <FormControl variant='outlined'>
-      <InputLabel id='priority-select-outlined-label'>
-        <IntlMessages id='common.priority' />
+    <FormControl variant="outlined">
+      <InputLabel id="priority-select-outlined-label">
+        <IntlMessages id="common.priority" />
       </InputLabel>
       <Select
-        labelId='priority-select-outlined-label'
-        label={<IntlMessages id='common.priority' />}
-        name='priority'
+        labelId="priority-select-outlined-label"
+        label={<IntlMessages id="common.priority" />}
+        name="priority"
         value={priority}
         onChange={(event) => onChangePriority(event)}
         sx={{

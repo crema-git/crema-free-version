@@ -1,4 +1,3 @@
-
 import SimpleLineChart from './Components/SimpleLineChart';
 import SimpleLineChartSource from './Components/SimpleLineChart?raw';
 import VerticalLineChart from './Components/VerticalLineChart';
@@ -24,64 +23,56 @@ const LineChart = () => {
   return (
     <>
       <AppComponentHeader
-        title='Line Chart'
-        description='All svg elements can be added into the LineChart component, such as defs.'
-        refUrl='http://recharts.org/en-US/api/LineChart'
+        title="Line Chart"
+        description="All svg elements can be added into the LineChart component, such as defs."
+        refUrl="http://recharts.org/en-US/api/LineChart"
       />
 
       <AppGridContainer>
         <Grid item xs={12} lg={6}>
-          <AppComponentCard
-            title='Simple Line Chart'
-            component={SimpleLineChart}
-            source={SimpleLineChartSource}
-          />
+          <AppComponentCard title="Simple Line Chart" component={SimpleLineChart} source={SimpleLineChartSource} />
         </Grid>
         <Grid item xs={12} lg={6}>
           <AppComponentCard
-            title='Vertical Line Chart'
+            title="Vertical Line Chart"
             component={VerticalLineChart}
             source={VerticalLineChartSource}
           />
         </Grid>
         <Grid item xs={12} lg={6}>
           <AppComponentCard
-            title='Customized Dot Line Chart'
+            title="Customized Dot Line Chart"
             component={CustomizedDotLineChart}
             source={CustomizedDotLineChartSource}
           />
         </Grid>
         <Grid item xs={12} lg={6}>
           <AppComponentCard
-            title='Line Chart With Reference Lines'
+            title="Line Chart With Reference Lines"
             component={LineChartWithReferenceLines}
             source={LineChartWithReferenceLinesSource}
           />
         </Grid>
         <Grid item xs={12} lg={6}>
-          <AppComponentCard
-            title='Dashed Line Chart'
-            component={DashedLineChart}
-            source={DashedLineChartSource}
-          />
+          <AppComponentCard title="Dashed Line Chart" component={DashedLineChart} source={DashedLineChartSource} />
         </Grid>
         <Grid item xs={12} lg={6}>
           <AppComponentCard
-            title='Line Chart With X-Axis Padding'
+            title="Line Chart With X-Axis Padding"
             component={LineChartWithXAxisPading}
             source={LineChartWithXAxisPadingSource}
           />
         </Grid>
         <Grid item xs={12} lg={6}>
           <AppComponentCard
-            title='Synchronized Line Chart'
+            title="Synchronized Line Chart"
             component={SynchronizedLineChart}
             source={SynchronizedLineChartSource}
           />
         </Grid>
         <Grid item xs={12} lg={6}>
           <AppComponentCard
-            title='Line Chart Connect Nulls'
+            title="Line Chart Connect Nulls"
             component={LineChartConnectNulls}
             source={LineChartConnectNullsSource}
           />

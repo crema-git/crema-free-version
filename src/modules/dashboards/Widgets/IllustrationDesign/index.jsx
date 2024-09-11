@@ -29,11 +29,7 @@ const IllustrationDesign = () => {
           },
         }}
       >
-        <img
-          className='widthFull'
-          src={'/assets/images/illustration.png'}
-          alt='illustration'
-        />
+        <img className="widthFull" src={'/assets/images/illustration.png'} alt="illustration" />
         <Box
           sx={{
             color: 'primary.contrastText',
@@ -51,7 +47,7 @@ const IllustrationDesign = () => {
               textTransform: 'capitalize',
               fontSize: { xs: 16, sm: 18 },
             }}
-            label={<IntlMessages id='dashboard.designs' />}
+            label={<IntlMessages id="dashboard.designs" />}
           />
         </Box>
       </Box>
@@ -63,14 +59,14 @@ const IllustrationDesign = () => {
         }}
       >
         <Box
-          component='h4'
+          component="h4"
           sx={{
             mb: 4,
             fontSize: 16,
             fontWeight: Fonts.BOLD,
           }}
         >
-          <IntlMessages id='dashboard.illustrationDesign' />
+          <IntlMessages id="dashboard.illustrationDesign" />
         </Box>
         <Divider
           sx={{
@@ -88,14 +84,14 @@ const IllustrationDesign = () => {
           }}
         >
           <Box
-            component='span'
+            component="span"
             sx={{
               px: 3,
               textAlign: 'center',
             }}
           >
             <Box
-              component='span'
+              component="span"
               sx={{
                 mr: 2,
                 verticalAlign: 'middle',
@@ -107,13 +103,13 @@ const IllustrationDesign = () => {
             11.7 K
           </Box>
           <Box
-            component='span'
+            component="span"
             sx={{
               px: 3,
             }}
           >
             <Box
-              component='span'
+              component="span"
               sx={{
                 mr: 2,
                 verticalAlign: 'middle',
@@ -125,13 +121,13 @@ const IllustrationDesign = () => {
             2.6 K
           </Box>
           <Box
-            component='span'
+            component="span"
             sx={{
               px: 3,
             }}
           >
             <Box
-              component='span'
+              component="span"
               sx={{
                 mr: 2,
                 verticalAlign: 'middle',

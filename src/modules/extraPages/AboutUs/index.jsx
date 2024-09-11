@@ -11,7 +11,7 @@ import { aboutUsData } from '@crema/mockapi/fakedb/extraPages';
 
 const AboutUs = () => {
   return (
-    <AppAnimate animation='transition.slideUpIn' delay={200}>
+    <AppAnimate animation="transition.slideUpIn" delay={200}>
       <AppGridContainer>
         <Grid item xs={12} md={6} lg={9}>
           <Introduction introduction={aboutUsData.introduction} />

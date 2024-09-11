@@ -16,16 +16,11 @@ const settings = {
   slidesToScroll: 1,
 };
 
-const CityInfo = (props) => {
-  const { cityData } = props;
-
+const CityInfo = ({ cityData = [] }) => {
   return (
-    <AppCard
-      sxStyle={{ height: 1 }}
-      contentStyle={{ p: 0, pb: '0 !important' }}
-    >
+    <AppCard sxStyle={{ height: 1 }} contentStyle={{ p: 0, pb: '0 !important' }}>
       <ImageCardSlideWrapper>
-        <Slider className='imageCardSlide' {...settings}>
+        <Slider className="imageCardSlide" {...settings}>
           {cityData.map((city) => {
             return (
               <Box
@@ -50,15 +45,11 @@ const CityInfo = (props) => {
                     },
                   }}
                 >
-                  <img
-                    className='imageSlideFull'
-                    src={city.image}
-                    alt='building'
-                  />
+                  <img className="imageSlideFull" src={city.image} alt="building" />
                 </Box>
                 <SlideContentWrapper>
                   <Box
-                    component='h3'
+                    component="h3"
                     sx={{
                       mb: 4,
                       fontWeight: Fonts.BOLD,
@@ -73,7 +64,7 @@ const CityInfo = (props) => {
                       mt: 'auto',
                     }}
                   >
-                    <Typography component='p'>{city.desc}</Typography>
+                    <Typography component="p">{city.desc}</Typography>
                   </Box>
                 </SlideContentWrapper>
               </Box>
@@ -86,10 +77,6 @@ const CityInfo = (props) => {
 };
 
 export default CityInfo;
-
-CityInfo.defaultProps = {
-  cityData: [],
-};
 
 CityInfo.propTypes = {
   cityData: PropTypes.array,

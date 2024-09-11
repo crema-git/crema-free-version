@@ -1,7 +1,6 @@
 import React from 'react';
 import { RoutePermittedRole } from '@crema/constants/AppEnums';
 
-import Overview from '../../../../modules/muiComponents/datagrid/Overview';
 import Layout from '../../../../modules/muiComponents/datagrid/Layout';
 import Columns from '../../../../modules/muiComponents/datagrid/Columns';
 import Rows from '../../../../modules/muiComponents/datagrid/Rows';
@@ -20,11 +19,6 @@ import Virtualization from '../../../../modules/muiComponents/datagrid/Virtualiz
 import Accessibility from '../../../../modules/muiComponents/datagrid/Accessibility';
 
 export const dataGridConfigs = [
-  {
-    permittedRole: RoutePermittedRole.User,
-    path: '/mui/data-grid/overview',
-    element: <Overview />,
-  },
   {
     permittedRole: RoutePermittedRole.User,
     path: '/mui/data-grid/layout',

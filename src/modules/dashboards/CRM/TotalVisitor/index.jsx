@@ -57,20 +57,16 @@ const EarningGraphWrapper = styled('div')(({ theme }) => {
   };
 });
 
-export const TotalVisitor = ({ totalVisitors }) => {
+export const TotalVisitor = ({ totalVisitors = [] }) => {
   const { messages } = useIntl();
 
   return (
-    <AppCard
-      sxStyle={{ height: 1 }}
-      title={messages['dashboard.crm.totalVisitor']}
-      action={messages['common.viewAll']}
-    >
+    <AppCard sxStyle={{ height: 1 }} title={messages['dashboard.crm.totalVisitor']} action={messages['common.viewAll']}>
       <EarningGraphWrapper>
-        <div className='earning-item earning-graph-item'>
+        <div className="earning-item earning-graph-item">
           <VisitorGraph totalVisitors={totalVisitors} />
         </div>
-        <div className='earning-item'>
+        <div className="earning-item">
           <List>
             {totalVisitors.map((category) => {
               if (category.name !== '') {
@@ -86,10 +82,6 @@ export const TotalVisitor = ({ totalVisitors }) => {
 };
 
 export default TotalVisitor;
-
-TotalVisitor.defaultProps = {
-  totalVisitors: [],
-};
 
 TotalVisitor.propTypes = {
   totalVisitors: PropTypes.array,

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Button, Checkbox,lighten } from '@mui/material';
+import { Button, Checkbox, lighten } from '@mui/material';
 import Box from '@mui/material/Box';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import FavoriteOutlinedIcon from '@mui/icons-material/FavoriteOutlined';
@@ -64,8 +64,7 @@ const MediaSlider = ({ children }) => {
             },
             '& button:before': {
               fontSize: 0,
-              backgroundColor: (theme) =>
-                lighten(theme.palette.common.black, 0.5),
+              backgroundColor: (theme) => lighten(theme.palette.common.black, 0.5),
               width: 10,
               height: 10,
               borderRadius: '50%',
@@ -93,9 +92,7 @@ const ProductImageSlide = ({ product }) => {
       product,
     })
       .then(() => {
-        infoViewActionsContext.showMessage(
-          `${product.title} added to cart successfully`,
-        );
+        infoViewActionsContext.showMessage(`${product.title} added to cart successfully`);
       })
       .catch((error) => {
         infoViewActionsContext.fetchError(error.message);
@@ -138,7 +135,7 @@ const ProductImageSlide = ({ product }) => {
                 <Box key={index} sx={{ px: 3, py: 3, height: '100%' }}>
                   <img
                     src={item.src}
-                    alt='watch'
+                    alt="watch"
                     // width={191}
                     // height={259}
                     // sizes='100vh'
@@ -180,20 +177,10 @@ const ProductImageSlide = ({ product }) => {
           mt: 5,
         }}
       >
-        <Button
-          variant='contained'
-          color='primary'
-          onClick={onAddToCard}
-          style={{ marginRight: 20, width: 140 }}
-        >
+        <Button variant="contained" color="primary" onClick={onAddToCard} style={{ marginRight: 20, width: 140 }}>
           Add to cart
         </Button>
-        <Button
-          style={{ width: 140 }}
-          variant='contained'
-          color='secondary'
-          onClick={onButNowToCard}
-        >
+        <Button style={{ width: 140 }} variant="contained" color="secondary" onClick={onButNowToCard}>
           Buy now
         </Button>
       </Box>

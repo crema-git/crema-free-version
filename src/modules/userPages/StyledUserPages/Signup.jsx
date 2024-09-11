@@ -1,34 +1,30 @@
 import React from 'react';
 import Card from '@mui/material/Card';
 import Button from '@mui/material/Button';
-import {Checkbox} from '@mui/material';
-import {Form, Formik} from 'formik';
+import { Checkbox } from '@mui/material';
+import { Form, Formik } from 'formik';
 import * as yup from 'yup';
 import Grid from '@mui/material/Grid';
 import IntlMessages from '@crema/helpers/IntlMessages';
 import Box from '@mui/material/Box';
-import {Fonts} from '@crema/constants/AppEnums';
+import { Fonts } from '@crema/constants/AppEnums';
 import AppAnimate from '@crema/components/AppAnimate';
 import AppTextField from '@crema/components/AppFormComponents/AppTextField';
 import Logo from '../../../assets/user/signup.svg';
 
 const validationSchema = yup.object({
-  name: yup.string().required(<IntlMessages id='validation.nameRequired' />),
+  name: yup.string().required(<IntlMessages id="validation.nameRequired" />),
   email: yup
     .string()
-    .email(<IntlMessages id='validation.emailFormat' />)
-    .required(<IntlMessages id='validation.emailRequired' />),
-  password: yup
-    .string()
-    .required(<IntlMessages id='validation.passwordRequired' />),
-  confirmPassword: yup
-    .string()
-    .required(<IntlMessages id='validation.reTypePassword' />),
+    .email(<IntlMessages id="validation.emailFormat" />)
+    .required(<IntlMessages id="validation.emailRequired" />),
+  password: yup.string().required(<IntlMessages id="validation.passwordRequired" />),
+  confirmPassword: yup.string().required(<IntlMessages id="validation.reTypePassword" />),
 });
 
 const Signup = () => {
   return (
-    <AppAnimate animation='transition.slideUpIn' delay={200}>
+    <AppAnimate animation="transition.slideUpIn" delay={200}>
       <Box
         sx={{
           pb: 6,
@@ -47,8 +43,7 @@ const Signup = () => {
             padding: 8,
             paddingLeft: { xs: 8, md: 2 },
             overflow: 'hidden',
-            boxShadow:
-              '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
+            boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
           }}
         >
           <Grid
@@ -70,7 +65,7 @@ const Signup = () => {
                 },
               }}
             >
-                <img src={Logo} alt={Logo}/>
+              <img src={Logo} alt={Logo} />
             </Grid>
 
             <Grid
@@ -88,7 +83,7 @@ const Signup = () => {
                   fontSize: 20,
                 }}
               >
-                <IntlMessages id='common.signup' />
+                <IntlMessages id="common.signup" />
               </Box>
 
               <Formik
@@ -103,9 +98,7 @@ const Signup = () => {
                 onSubmit={(data, { setErrors, resetForm }) => {
                   if (data.password !== data.confirmPassword) {
                     setErrors({
-                      confirmPassword: (
-                        <IntlMessages id='validation.passwordMisMatch' />
-                      ),
+                      confirmPassword: <IntlMessages id="validation.passwordMisMatch" />,
                     });
                   } else {
                     resetForm();
@@ -113,12 +106,12 @@ const Signup = () => {
                 }}
               >
                 {({ isSubmitting }) => (
-                  <Form noValidate autoComplete='off'>
+                  <Form noValidate autoComplete="off">
                     <Box sx={{ mb: { xs: 3, xl: 4 } }}>
                       <AppTextField
-                        label={<IntlMessages id='common.name' />}
-                        name='name'
-                        variant='outlined'
+                        label={<IntlMessages id="common.name" />}
+                        name="name"
+                        variant="outlined"
                         sx={{
                           width: '100%',
                         }}
@@ -127,9 +120,9 @@ const Signup = () => {
 
                     <Box sx={{ mb: { xs: 3, xl: 4 } }}>
                       <AppTextField
-                        label={<IntlMessages id='common.email' />}
-                        name='email'
-                        variant='outlined'
+                        label={<IntlMessages id="common.email" />}
+                        name="email"
+                        variant="outlined"
                         sx={{
                           width: '100%',
                         }}
@@ -138,10 +131,10 @@ const Signup = () => {
 
                     <Box sx={{ mb: { xs: 3, xl: 4 } }}>
                       <AppTextField
-                        label={<IntlMessages id='common.password' />}
-                        name='password'
-                        type='password'
-                        variant='outlined'
+                        label={<IntlMessages id="common.password" />}
+                        name="password"
+                        type="password"
+                        variant="outlined"
                         sx={{
                           width: '100%',
                         }}
@@ -150,10 +143,10 @@ const Signup = () => {
 
                     <Box sx={{ mb: { xs: 3, xl: 4 } }}>
                       <AppTextField
-                        label={<IntlMessages id='common.retypePassword' />}
-                        name='confirmPassword'
-                        type='password'
-                        variant='outlined'
+                        label={<IntlMessages id="common.retypePassword" />}
+                        name="confirmPassword"
+                        type="password"
+                        variant="outlined"
                         sx={{
                           width: '100%',
                         }}
@@ -172,13 +165,13 @@ const Signup = () => {
                         <Checkbox />
                       </Box>
                       <Box
-                        component='span'
+                        component="span"
                         sx={{
                           mr: 2,
                           fontSize: 14,
                         }}
                       >
-                        <IntlMessages id='common.iAgreeTo' />
+                        <IntlMessages id="common.iAgreeTo" />
                       </Box>
                       <Box
                         sx={{
@@ -189,20 +182,20 @@ const Signup = () => {
                           fontSize: 14,
                         }}
                       >
-                        <IntlMessages id='common.termConditions' />
+                        <IntlMessages id="common.termConditions" />
                       </Box>
                     </Box>
                     <Button
-                      variant='contained'
-                      color='primary'
+                      variant="contained"
+                      color="primary"
                       disabled={isSubmitting}
                       sx={{
                         width: '100%',
                         height: 44,
                       }}
-                      type='submit'
+                      type="submit"
                     >
-                      <IntlMessages id='common.signup' />
+                      <IntlMessages id="common.signup" />
                     </Button>
                   </Form>
                 )}
@@ -217,18 +210,18 @@ const Signup = () => {
                   mt: { xs: 3, xl: 4 },
                 }}
               >
-                <Box component='span' sx={{ mr: 1 }}>
-                  <IntlMessages id='common.alreadyHaveAccount' />
+                <Box component="span" sx={{ mr: 1 }}>
+                  <IntlMessages id="common.alreadyHaveAccount" />
                 </Box>
                 <Box
-                  component='span'
+                  component="span"
                   sx={{
                     color: 'primary.main',
                     fontWeight: Fonts.MEDIUM,
                     cursor: 'pointer',
                   }}
                 >
-                  <IntlMessages id='common.signInHere' />
+                  <IntlMessages id="common.signInHere" />
                 </Box>
               </Box>
             </Grid>

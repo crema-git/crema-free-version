@@ -32,8 +32,8 @@ const TableItem = ({ data }) => {
   };
 
   return (
-    <TableRow key={data.name} className='item-hover'>
-      <StyledTableCell component='th' scope='row'>
+    <TableRow key={data.name} className="item-hover">
+      <StyledTableCell component="th" scope="row">
         <Box
           sx={{
             color: 'primary.main',
@@ -44,12 +44,12 @@ const TableItem = ({ data }) => {
           {data.id}
         </Box>
       </StyledTableCell>
-      <StyledTableCell align='left'>{data.product}</StyledTableCell>
-      <StyledTableCell align='left'>{data.customer}</StyledTableCell>
-      <StyledTableCell align='left'>{data.date}</StyledTableCell>
-      <StyledTableCell align='left'>{data.price}</StyledTableCell>
-      <StyledTableCell align='left'>{data.paymentType}</StyledTableCell>
-      <StyledTableCell align='left'>
+      <StyledTableCell align="left">{data.product}</StyledTableCell>
+      <StyledTableCell align="left">{data.customer}</StyledTableCell>
+      <StyledTableCell align="left">{data.date}</StyledTableCell>
+      <StyledTableCell align="left">{data.price}</StyledTableCell>
+      <StyledTableCell align="left">{data.paymentType}</StyledTableCell>
+      <StyledTableCell align="left">
         <Box
           sx={{
             color: getPaymentStatusColor(),
@@ -63,7 +63,7 @@ const TableItem = ({ data }) => {
           {data.status}
         </Box>
       </StyledTableCell>
-      <TableCell align='right'>
+      <TableCell align="right">
         <OrderActions />
       </TableCell>
     </TableRow>

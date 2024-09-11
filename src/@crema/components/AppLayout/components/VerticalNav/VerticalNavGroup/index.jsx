@@ -13,10 +13,7 @@ import { allowMultiLanguage } from '@crema/constants/AppConst';
 const VerticalNavGroup = ({ item, level }) => {
   const { sidebarTextColor } = useSidebarContext();
   const { user } = useAuthUser();
-  const hasPermission = useMemo(
-    () => checkPermission(item.permittedRole, user.role),
-    [item.permittedRole, user.role],
-  );
+  const hasPermission = useMemo(() => checkPermission(item.permittedRole, user.role), [item.permittedRole, user.role]);
 
   if (!hasPermission) {
     return null;
@@ -26,7 +23,7 @@ const VerticalNavGroup = ({ item, level }) => {
       <VerticalNavGroupItem
         level={level}
         sidebarTextColor={sidebarTextColor}
-        component='div'
+        component="div"
         className={clsx('nav-item nav-item-header')}
       >
         {allowMultiLanguage ? <IntlMessages id={item.messageId} /> : item.title}
@@ -36,17 +33,11 @@ const VerticalNavGroup = ({ item, level }) => {
         <>
           {item.children.map((item) => (
             <React.Fragment key={item.id}>
-              {item.type === 'group' && (
-                <NavVerticalGroup item={item} level={level} />
-              )}
+              {item.type === 'group' && <NavVerticalGroup item={item} level={level} />}
 
-              {item.type === 'collapse' && (
-                <VerticalCollapse item={item} level={level} />
-              )}
+              {item.type === 'collapse' && <VerticalCollapse item={item} level={level} />}
 
-              {item.type === 'item' && (
-                <VerticalItem item={item} level={level} />
-              )}
+              {item.type === 'item' && <VerticalItem item={item} level={level} />}
             </React.Fragment>
           ))}
         </>
@@ -67,8 +58,6 @@ VerticalNavGroup.propTypes = {
   }),
   level: PropTypes.number,
 };
-
-VerticalNavGroup.defaultProps = {};
 
 const NavVerticalGroup = VerticalNavGroup;
 

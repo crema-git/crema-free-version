@@ -8,7 +8,7 @@ import TableItem from './TableItem';
 import AppTableContainer from '@crema/components/AppTableContainer';
 import AppScrollbar from '@crema/components/AppScrollbar';
 
-const PatientsTable = ({ recentPatients }) => {
+const PatientsTable = ({ recentPatients = [[]] }) => {
   return (
     <AppTableContainer>
       <AppScrollbar>
@@ -28,10 +28,6 @@ const PatientsTable = ({ recentPatients }) => {
 };
 
 export default PatientsTable;
-
-PatientsTable.defaultProps = {
-  recentPatients: [],
-};
 
 PatientsTable.propTypes = {
   recentPatients: PropTypes.array,

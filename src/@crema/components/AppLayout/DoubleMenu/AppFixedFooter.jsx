@@ -36,16 +36,11 @@ const AppFixedFooter = (props) => {
     <>
       {footer && footerType === 'fixed' ? (
         <Box className={clsx(classes.footer, 'footer fixed-footer')}>
-          <Box
-            className='footerContainer'
-            alignItems='center'
-            flexDirection='row'
-            display='flex'
-          >
+          <Box className="footerContainer" alignItems="center" flexDirection="row" display="flex">
             <Box>Copy right @crema 2021</Box>
-            <Box ml='auto'>
+            <Box ml="auto">
               <Box sx={{ px: 5 }}>
-                <Button color='primary'>Buy Now</Button>
+                <Button color="primary">Buy Now</Button>
               </Box>
             </Box>
           </Box>

@@ -53,7 +53,7 @@ export default function ServerPaginationGrid() {
         pageSize={5}
         rowsPerPageOptions={[5]}
         rowCount={100}
-        paginationMode='server'
+        paginationMode="server"
         onPageChange={(newPage) => setPage(newPage)}
         loading={loading}
       />

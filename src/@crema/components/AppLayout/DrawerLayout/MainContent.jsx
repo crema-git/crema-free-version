@@ -13,7 +13,7 @@ const MainContent = ({ children, ...rest }) => {
         position: 'relative',
         transition: 'all 0.5s ease',
       }}
-      className='mainContent'
+      className="mainContent"
       {...rest}
     >
       {children}

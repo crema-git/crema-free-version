@@ -11,15 +11,10 @@ export default function AccessibleTabs1() {
 
   return (
     <Box sx={{ width: '100%' }}>
-      <Tabs
-        onChange={handleChange}
-        value={value}
-        aria-label='Tabs where selection follows focus'
-        selectionFollowsFocus
-      >
-        <Tab label='Item One' />
-        <Tab label='Item Two' />
-        <Tab label='Item Three' />
+      <Tabs onChange={handleChange} value={value} aria-label="Tabs where selection follows focus" selectionFollowsFocus>
+        <Tab label="Item One" />
+        <Tab label="Item Two" />
+        <Tab label="Item Three" />
       </Tabs>
     </Box>
   );

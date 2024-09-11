@@ -26,9 +26,7 @@ mock.onPost('/pages/blogs').reply((request) => {
 mock.onPut('/pages/blogs').reply((request) => {
   const { blog } = JSON.parse(request.data);
 
-  blogContentData = blogContentData.map((item) =>
-    item.id === blog.id ? blog : item,
-  );
+  blogContentData = blogContentData.map((item) => (item.id === blog.id ? blog : item));
 
   return [200, blogContentData];
 });

@@ -1,10 +1,7 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
 import defaultConfig from '@crema/constants/defaultConfig';
 import PropTypes from 'prop-types';
-import {
-  useThemeActionsContext,
-  useThemeContext,
-} from './ThemeContextProvider';
+import { useThemeActionsContext, useThemeContext } from './ThemeContextProvider';
 import { LayoutDirection } from '@crema/constants/AppEnums';
 
 const LocaleContext = createContext();
@@ -20,18 +17,12 @@ const LocaleContextProvider = ({ children }) => {
   const { updateTheme } = useThemeActionsContext();
 
   const updateLangDir = () => {
-    if (
-      defaultConfig.rtlLocale.includes(locale.locale) &&
-      theme.direction === LayoutDirection.LTR
-    ) {
+    if (defaultConfig.rtlLocale.includes(locale.locale) && theme.direction === LayoutDirection.LTR) {
       updateTheme({
         ...theme,
         direction: LayoutDirection.RTL,
       });
-    } else if (
-      !defaultConfig.rtlLocale.includes(locale.locale) &&
-      theme.direction === LayoutDirection.RTL
-    ) {
+    } else if (!defaultConfig.rtlLocale.includes(locale.locale) && theme.direction === LayoutDirection.RTL) {
       updateTheme({
         ...theme,
         direction: LayoutDirection.LTR,

@@ -12,12 +12,7 @@ import OrderTable from './OrderTable';
 
 const Orders = () => {
   const { messages } = useIntl();
-  const [{ apiData, loading }, { setQueryParams }] = useGetDataApi(
-    '/api/ecommerce/orders',
-    {},
-    {},
-    false,
-  );
+  const [{ apiData, loading }, { setQueryParams }] = useGetDataApi('/api/ecommerce/orders', {}, {}, false);
   const [page, setPage] = useState(0);
   const [search, setSearchQuery] = useState('');
 
@@ -35,31 +30,20 @@ const Orders = () => {
   return (
     <AppsContainer title={messages['eCommerce.recentOrders']} fullView>
       <AppsHeader>
-        <Box
-          display='flex'
-          flexDirection='row'
-          alignItems='center'
-          width={1}
-          justifyContent='space-between'
-        >
+        <Box display="flex" flexDirection="row" alignItems="center" width={1} justifyContent="space-between">
           <AppSearchBar
-            iconPosition='right'
+            iconPosition="right"
             overlap={false}
             onChange={(event) => onSearchOrder(event.target.value)}
             placeholder={messages['common.searchHere']}
           />
-          <Box display='flex' flexDirection='row' alignItems='center'>
-            <Button variant='contained' color='primary'>
+          <Box display="flex" flexDirection="row" alignItems="center">
+            <Button variant="contained" color="primary">
               Add Order
             </Button>
 
             <Hidden smDown>
-              <AppsPagination
-                rowsPerPage={10}
-                count={apiData?.count}
-                page={page}
-                onPageChange={onPageChange}
-              />
+              <AppsPagination rowsPerPage={10} count={apiData?.count} page={page} onPageChange={onPageChange} />
             </Hidden>
           </Box>
         </Box>
@@ -75,12 +59,7 @@ const Orders = () => {
       </AppsContent>
 
       <Hidden smUp>
-        <AppsPagination
-          rowsPerPage={10}
-          count={apiData?.count}
-          page={page}
-          onPageChange={onPageChange}
-        />
+        <AppsPagination rowsPerPage={10} count={apiData?.count} page={page} onPageChange={onPageChange} />
       </Hidden>
     </AppsContainer>
   );

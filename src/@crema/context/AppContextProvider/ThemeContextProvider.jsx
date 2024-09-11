@@ -1,13 +1,7 @@
-import {
-  createContext,
-  useCallback,
-  useContext,
-  useEffect,
-  useState,
-} from "react";
-import defaultConfig, { defaultTheme } from "@crema/constants/defaultConfig";
-import PropTypes from "prop-types";
-import { LayoutDirection } from "@crema/constants/AppEnums";
+import { createContext, useCallback, useContext, useEffect, useState } from 'react';
+import defaultConfig, { defaultTheme } from '@crema/constants/defaultConfig';
+import PropTypes from 'prop-types';
+import { LayoutDirection } from '@crema/constants/AppEnums';
 
 const ThemeContext = createContext({
   theme: defaultTheme.theme,
@@ -30,21 +24,21 @@ const ThemeContextProvider = ({ children }) => {
   }, []);
 
   /*  useEffect(() => {
-    if (theme.palette.mode !== themeMode) {
-      theme.palette.mode =
-        themeMode === ThemeMode.DARK ? ThemeMode.DARK : ThemeMode.LIGHT;
-      theme.palette.background =
-        themeMode === ThemeMode.DARK ? backgroundDark : backgroundLight;
-      theme.palette.text = themeMode === ThemeMode.DARK ? textDark : textLight;
-      updateTheme({ ...theme });
-    }
-  }, [themeMode, theme, updateTheme]);*/
+      if (theme.palette.mode !== themeMode) {
+        theme.palette.mode =
+          themeMode === ThemeMode.DARK ? ThemeMode.DARK : ThemeMode.LIGHT;
+        theme.palette.background =
+          themeMode === ThemeMode.DARK ? backgroundDark : backgroundLight;
+        theme.palette.text = themeMode === ThemeMode.DARK ? textDark : textLight;
+        updateTheme({ ...theme });
+      }
+    }, [themeMode, theme, updateTheme]);*/
 
   useEffect(() => {
     if (theme.direction === LayoutDirection.RTL) {
-      document.body.setAttribute("dir", LayoutDirection.RTL);
+      document.body.setAttribute('dir', LayoutDirection.RTL);
     } else {
-      document.body.setAttribute("dir", LayoutDirection.LTR);
+      document.body.setAttribute('dir', LayoutDirection.LTR);
     }
   }, [theme]);
 

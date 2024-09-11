@@ -8,11 +8,5 @@ export default function ControlledCheckbox() {
     setChecked(event.target.checked);
   };
 
-  return (
-    <Checkbox
-      checked={checked}
-      onChange={handleChange}
-      inputProps={{ 'aria-label': 'controlled' }}
-    />
-  );
+  return <Checkbox checked={checked} onChange={handleChange} inputProps={{ 'aria-label': 'controlled' }} />;
 }

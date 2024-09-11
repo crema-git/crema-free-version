@@ -14,14 +14,12 @@ import { Link } from 'react-router-dom';
 import AuthWrapper from '../AuthWrapper';
 
 const validationSchema = yup.object({
-  name: yup.string().required(<IntlMessages id='validation.nameRequired' />),
+  name: yup.string().required(<IntlMessages id="validation.nameRequired" />),
   email: yup
     .string()
-    .email(<IntlMessages id='validation.emailFormat' />)
-    .required(<IntlMessages id='validation.emailRequired' />),
-  password: yup
-    .string()
-    .required(<IntlMessages id='validation.passwordRequired' />),
+    .email(<IntlMessages id="validation.emailFormat" />)
+    .required(<IntlMessages id="validation.emailRequired" />),
+  password: yup.string().required(<IntlMessages id="validation.passwordRequired" />),
 });
 
 const SignupJwtAuth = () => {
@@ -51,12 +49,12 @@ const SignupJwtAuth = () => {
             }}
           >
             {({ isSubmitting }) => (
-              <Form style={{ textAlign: 'left' }} noValidate autoComplete='off'>
+              <Form style={{ textAlign: 'left' }} noValidate autoComplete="off">
                 <Box sx={{ mb: { xs: 4, xl: 5 } }}>
                   <AppTextField
-                    label={<IntlMessages id='common.name' />}
-                    name='name'
-                    variant='outlined'
+                    label={<IntlMessages id="common.name" />}
+                    name="name"
+                    variant="outlined"
                     sx={{
                       width: '100%',
                       '& .MuiInputBase-input': {
@@ -68,9 +66,9 @@ const SignupJwtAuth = () => {
 
                 <Box sx={{ mb: { xs: 4, xl: 5 } }}>
                   <AppTextField
-                    label={<IntlMessages id='common.email' />}
-                    name='email'
-                    variant='outlined'
+                    label={<IntlMessages id="common.email" />}
+                    name="email"
+                    variant="outlined"
                     sx={{
                       width: '100%',
                       '& .MuiInputBase-input': {
@@ -82,10 +80,10 @@ const SignupJwtAuth = () => {
 
                 <Box sx={{ mb: { xs: 4, xl: 5 } }}>
                   <AppTextField
-                    label={<IntlMessages id='common.password' />}
-                    name='password'
-                    type='password'
-                    variant='outlined'
+                    label={<IntlMessages id="common.password" />}
+                    name="password"
+                    type="password"
+                    variant="outlined"
                     sx={{
                       width: '100%',
                       '& .MuiInputBase-input': {
@@ -115,30 +113,30 @@ const SignupJwtAuth = () => {
                       }}
                     />
                     <Box
-                      component='span'
+                      component="span"
                       sx={{
                         mr: 2,
                         color: 'grey.700',
                       }}
                     >
-                      <IntlMessages id='common.iAgreeTo' />
+                      <IntlMessages id="common.iAgreeTo" />
                     </Box>
                   </Box>
                   <Box
-                    component='span'
+                    component="span"
                     sx={{
                       color: (theme) => theme.palette.primary.main,
                       cursor: 'pointer',
                     }}
                   >
-                    <IntlMessages id='common.termConditions' />
+                    <IntlMessages id="common.termConditions" />
                   </Box>
                 </Box>
 
                 <div>
                   <Button
-                    variant='contained'
-                    color='primary'
+                    variant="contained"
+                    color="primary"
                     disabled={isSubmitting}
                     sx={{
                       minWidth: 160,
@@ -147,9 +145,9 @@ const SignupJwtAuth = () => {
                       textTransform: 'capitalize',
                       padding: '4px 16px 8px',
                     }}
-                    type='submit'
+                    type="submit"
                   >
-                    <IntlMessages id='common.signup' />
+                    <IntlMessages id="common.signup" />
                   </Button>
                 </div>
               </Form>
@@ -163,10 +161,10 @@ const SignupJwtAuth = () => {
           }}
         >
           <span style={{ marginRight: 4 }}>
-            <IntlMessages id='common.alreadyHaveAccount' />
+            <IntlMessages id="common.alreadyHaveAccount" />
           </span>
           <Box
-            component='span'
+            component="span"
             sx={{
               fontWeight: Fonts.MEDIUM,
               '& a': {
@@ -175,8 +173,8 @@ const SignupJwtAuth = () => {
               },
             }}
           >
-            <Link to='/signIn'>
-              <IntlMessages id='common.signIn' />
+            <Link to="/signIn">
+              <IntlMessages id="common.signIn" />
             </Link>
           </Box>
         </Box>

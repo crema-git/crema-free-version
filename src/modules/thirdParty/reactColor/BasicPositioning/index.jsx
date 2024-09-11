@@ -18,7 +18,7 @@ export const BasicPosition = () => {
           marginTop: 15,
         }}
       >
-        <BlockPicker color='#333' onChangeComplete={handleColorChange} />
+        <BlockPicker color="#333" onChangeComplete={handleColorChange} />
       </div>
     </div>
   );

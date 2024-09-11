@@ -27,13 +27,11 @@ const useStyles = makeStyles((theme) => {
       '&.open, &:hover, &:focus': {
         '& .nav-item-text': {
           fontWeight: Fonts.SEMI_BOLD,
-          color: (props) =>
-            props.themeMode === ThemeMode.LIGHT ? '#313541' : '#fff',
+          color: (props) => (props.themeMode === ThemeMode.LIGHT ? '#313541' : '#fff'),
         },
 
         '& .nav-item-icon': {
-          color: (props) =>
-            props.themeMode === ThemeMode.LIGHT ? '#313541' : '#fff',
+          color: (props) => (props.themeMode === ThemeMode.LIGHT ? '#313541' : '#fff'),
         },
       },
       '&:hover': {

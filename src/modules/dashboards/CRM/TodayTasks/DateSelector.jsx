@@ -9,8 +9,8 @@ const DateSelector = () => {
   return (
     <DatePickerWrapper>
       <StaticDatePicker
-        orientation='landscape'
-        openTo='day'
+        orientation="landscape"
+        openTo="day"
         value={value}
         onChange={(newValue) => {
           setValue(newValue);

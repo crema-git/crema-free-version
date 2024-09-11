@@ -7,9 +7,7 @@ import TableHeading from './TableHeading';
 import TableItem from './TableItem';
 import AppTableContainer from '@crema/components/AppTableContainer';
 
-const PopularCoinsTable = (props) => {
-  const { popularCoins } = props;
-
+const PopularCoinsTable = ({ popularCoins = [] }) => {
   return (
     <AppTableContainer>
       <Table>
@@ -31,10 +29,6 @@ const PopularCoinsTable = (props) => {
 };
 
 export default PopularCoinsTable;
-
-PopularCoinsTable.defaultProps = {
-  popularCoins: [],
-};
 
 PopularCoinsTable.propTypes = {
   popularCoins: PropTypes.array,

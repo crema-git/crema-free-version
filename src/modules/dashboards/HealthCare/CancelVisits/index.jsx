@@ -10,24 +10,14 @@ const CancelVisits = ({ data }) => {
   const { messages } = useIntl();
 
   return (
-    <AppCard
-      title={messages['healthCare.cancelledVisits']}
-      action={messages['common.viewAll']}
-    >
+    <AppCard title={messages['healthCare.cancelledVisits']} action={messages['common.viewAll']}>
       <Box>
         <Box sx={{ mb: 6, display: 'flex', alignItems: 'center' }}>
-          <Box
-            component='span'
-            sx={{ mr: 2, fontSize: 20, fontWeight: Fonts.BOLD }}
-          >
+          <Box component="span" sx={{ mr: 2, fontSize: 20, fontWeight: Fonts.BOLD }}>
             32
           </Box>
           <Box>
-            <img
-              src={'/assets/images/dashboard/decries_icon.svg'}
-              alt='down'
-              style={{ height: 12 }}
-            />
+            <img src={'/assets/images/dashboard/decries_icon.svg'} alt="down" style={{ height: 12 }} />
           </Box>
         </Box>
         <Box sx={{ mx: -6, mb: -6 }}>

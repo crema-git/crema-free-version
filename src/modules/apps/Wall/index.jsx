@@ -55,10 +55,7 @@ const ContentWrapper = styled(Grid)(() => ({
 
 const Wall = () => {
   const [{ apiData: wallData }] = useGetDataApi('/wall', undefined);
-  const [{ apiData: postList }, { setData: setPostList }] = useGetDataApi(
-    '/wall/posts',
-    [],
-  );
+  const [{ apiData: postList }, { setData: setPostList }] = useGetDataApi('/wall/posts', []);
   const { messages } = useIntl();
 
   return (
@@ -81,11 +78,7 @@ const Wall = () => {
           <ContentWrapper item xs={12} sm={6} md={6} style={{ height: '100%' }}>
             <AppScrollbar style={{ height: '100%' }}>
               <CreatePost wallData={wallData} setPostList={setPostList} />
-              <PostsList
-                wallData={wallData}
-                postList={postList}
-                setPostList={setPostList}
-              />
+              <PostsList wallData={wallData} postList={postList} setPostList={setPostList} />
             </AppScrollbar>
           </ContentWrapper>
           <RightSidebar item xs={12} sm={6} md={3} style={{ height: '100%' }}>

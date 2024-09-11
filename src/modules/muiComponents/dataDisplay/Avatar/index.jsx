@@ -1,27 +1,27 @@
-import React from "react";
-import AppComponentHeader from "@crema/components/AppComponentHeader";
-import AppGridContainer from "@crema/components/AppGridContainer";
-import Grid from "@mui/material/Grid";
-import AppComponentCard from "@crema/components/AppComponentCard";
+import React from 'react';
+import AppComponentHeader from '@crema/components/AppComponentHeader';
+import AppGridContainer from '@crema/components/AppGridContainer';
+import Grid from '@mui/material/Grid';
+import AppComponentCard from '@crema/components/AppComponentCard';
 
-import ImageAvatars from "./ImageAvatars";
-import ImageAvatarsSource from "./ImageAvatars?raw";
-import LetterAvatars from "./LetterAvatars";
-import LetterAvatarsSource from "./LetterAvatars?raw";
-import SizesImageAvatars from "./Sizes";
-import SizesImageAvatarsSource from "./Sizes?raw";
-import IconAvatars from "./IconAvatars";
-import IconAvatarsSource from "./IconAvatars?raw";
-import VariantAvatars from "./Variants";
-import VariantAvatarsSource from "./Variants?raw";
-import FallbackAvatars from "./Fallbacks";
-import FallbackAvatarsSource from "./Fallbacks?raw";
-import GroupAvatars from "./Grouped";
-import GroupAvatarsSource from "./Grouped?raw";
-import TotalAvatars from "./TotalAvatars";
-import TotalAvatarsSource from "./TotalAvatars?raw";
-import BadgeAvatars from "./WithBadge";
-import BadgeAvatarsSource from "./WithBadge?raw";
+import ImageAvatars from './ImageAvatars';
+import ImageAvatarsSource from './ImageAvatars?raw';
+import LetterAvatars from './LetterAvatars';
+import LetterAvatarsSource from './LetterAvatars?raw';
+import SizesImageAvatars from './Sizes';
+import SizesImageAvatarsSource from './Sizes?raw';
+import IconAvatars from './IconAvatars';
+import IconAvatarsSource from './IconAvatars?raw';
+import VariantAvatars from './Variants';
+import VariantAvatarsSource from './Variants?raw';
+import FallbackAvatars from './Fallbacks';
+import FallbackAvatarsSource from './Fallbacks?raw';
+import GroupAvatars from './Grouped';
+import GroupAvatarsSource from './Grouped?raw';
+import TotalAvatars from './TotalAvatars';
+import TotalAvatarsSource from './TotalAvatars?raw';
+import BadgeAvatars from './WithBadge';
+import BadgeAvatarsSource from './WithBadge?raw';
 
 const Avatar = () => {
   return (
@@ -106,12 +106,7 @@ const Avatar = () => {
           />
         </Grid>
         <Grid item xs={12} md={6}>
-          <AppComponentCard
-            title="With badge"
-            component={BadgeAvatars}
-            source={BadgeAvatarsSource}
-            noScrollbar
-          />
+          <AppComponentCard title="With badge" component={BadgeAvatars} source={BadgeAvatarsSource} noScrollbar />
         </Grid>
       </AppGridContainer>
     </>

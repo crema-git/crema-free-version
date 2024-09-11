@@ -33,16 +33,14 @@ const BootstrapInput = styled(InputBase)(({ theme }) => ({
   '& .MuiInputBase-input': {
     borderRadius: 4,
     position: 'relative',
-    backgroundColor: theme.palette.mode === 'light' ? '#fcfcfb' : '#2b2b2b',
+    backgroundColor: '#2b2b2b',
     border: '1px solid #ced4da',
     fontSize: 16,
     width: 'auto',
     padding: '10px 12px',
-    transition: theme.transitions.create([
-      'border-color',
-      'background-color',
-      'box-shadow',
-    ]),
+
+    transition: theme.transitions.create(['border-color', 'background-color', 'box-shadow']),
+
     // Use the system font instead of the default Roboto font.
     fontFamily: [
       '-apple-system',
@@ -56,34 +54,47 @@ const BootstrapInput = styled(InputBase)(({ theme }) => ({
       '"Segoe UI Emoji"',
       '"Segoe UI Symbol"',
     ].join(','),
+
     '&:focus': {
       boxShadow: `${alpha(theme.palette.primary.main, 0.25)} 0 0 0 0.2rem`,
       borderColor: theme.palette.primary.main,
     },
+
+    ...theme.applyStyles('light', {
+      backgroundColor: '#fcfcfb',
+    }),
   },
 }));
 
 const RedditTextField = styled((props) => (
-  <TextField InputProps={{ disableUnderline: true }} {...props} />
+  <TextField
+    {...props}
+    slotProps={{
+      input: { disableUnderline: true },
+    }}
+  />
 ))(({ theme }) => ({
   '& .MuiFilledInput-root': {
     border: '1px solid #e2e2e1',
     overflow: 'hidden',
     borderRadius: 4,
-    backgroundColor: theme.palette.mode === 'light' ? '#fcfcfb' : '#2b2b2b',
-    transition: theme.transitions.create([
-      'border-color',
-      'background-color',
-      'box-shadow',
-    ]),
+    backgroundColor: '#2b2b2b',
+
+    transition: theme.transitions.create(['border-color', 'background-color', 'box-shadow']),
+
     '&:hover': {
       backgroundColor: 'transparent',
     },
+
     '&.Mui-focused': {
       backgroundColor: 'transparent',
       boxShadow: `${alpha(theme.palette.primary.main, 0.25)} 0 0 0 2px`,
       borderColor: theme.palette.primary.main,
     },
+
+    ...theme.applyStyles('light', {
+      backgroundColor: '#fcfcfb',
+    }),
   },
 }));
 
@@ -105,7 +116,7 @@ const ValidationTextField = styled(TextField)({
 export default function CustomizedInputs() {
   return (
     <Box
-      component='form'
+      component="form"
       noValidate
       sx={{
         display: 'grid',
@@ -113,26 +124,26 @@ export default function CustomizedInputs() {
         gap: 2,
       }}
     >
-      <FormControl variant='standard'>
-        <InputLabel shrink htmlFor='bootstrap-input'>
+      <FormControl variant="standard">
+        <InputLabel shrink htmlFor="bootstrap-input">
           Bootstrap
         </InputLabel>
-        <BootstrapInput defaultValue='react-bootstrap' id='bootstrap-input' />
+        <BootstrapInput defaultValue="react-bootstrap" id="bootstrap-input" />
       </FormControl>
       <RedditTextField
-        label='Reddit'
-        defaultValue='react-reddit'
-        id='reddit-input'
-        variant='filled'
+        label="Reddit"
+        defaultValue="react-reddit"
+        id="reddit-input"
+        variant="filled"
         style={{ marginTop: 11 }}
       />
-      <CssTextField label='Custom CSS' id='custom-css-outlined-input' />
+      <CssTextField label="Custom CSS" id="custom-css-outlined-input" />
       <ValidationTextField
-        label='CSS validation style'
+        label="CSS validation style"
         required
-        variant='outlined'
-        defaultValue='Success'
-        id='validation-outlined-input'
+        variant="outlined"
+        defaultValue="Success"
+        id="validation-outlined-input"
       />
     </Box>
   );

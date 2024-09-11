@@ -7,7 +7,7 @@ const ProductInfo = ({ productInfo }) => {
   return (
     <>
       <Box
-        component='h3'
+        component="h3"
         sx={{
           color: 'text.primary',
           fontSize: 16,

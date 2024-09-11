@@ -12,34 +12,25 @@ import { useAuthUser } from '@crema/hooks/AuthHooks';
 const GroupItem = ({ item, setSelectedMenu, selectedMenu }) => {
   const { themeMode } = useThemeContext();
   const classes = useStyles({ themeMode });
-  const {user} = useAuthUser();
-  const hasPermission = useMemo(
-    () => checkPermission(item.auth, user.role),
-    [item.auth, user.role],
-  );
+  const { user } = useAuthUser();
+  const hasPermission = useMemo(() => checkPermission(item.auth, user.role), [item.auth, user.role]);
   if (!hasPermission) {
     return null;
   }
   return (
     <ListItem
-      component='div'
+      component="div"
       onClick={() => setSelectedMenu(item)}
       className={clsx(classes.navItem, 'nav-item', {
         open: selectedMenu.id === item.id,
       })}
     >
       {item.icon && (
-        <Icon
-          className={clsx(classes.listIcon, 'nav-item-icon')}
-          color='action'
-        >
+        <Icon className={clsx(classes.listIcon, 'nav-item-icon')} color="action">
           {item.icon}
         </Icon>
       )}
-      <Box
-        component='span'
-        className={clsx(classes.navItemText, 'nav-item-text')}
-      >
+      <Box component="span" className={clsx(classes.navItemText, 'nav-item-text')}>
         <IntlMessages id={item.messageId} />
       </Box>
     </ListItem>
@@ -60,7 +51,5 @@ GroupItem.propTypes = {
   selectedMenu: PropTypes.object,
   setSelectedMenu: PropTypes.func,
 };
-
-GroupItem.defaultProps = {};
 
 export default GroupItem;

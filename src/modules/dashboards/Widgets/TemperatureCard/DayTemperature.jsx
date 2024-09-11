@@ -14,7 +14,7 @@ const DayTemperature = (props) => {
       }}
     >
       <Box
-        component='span'
+        component="span"
         sx={{
           mb: 3,
           display: 'block',
@@ -30,7 +30,7 @@ const DayTemperature = (props) => {
           display: 'inline-block',
         }}
       >
-        <img src={day.image} alt='weather' />
+        <img src={day.image} alt="weather" />
       </Box>
     </Box>
   );

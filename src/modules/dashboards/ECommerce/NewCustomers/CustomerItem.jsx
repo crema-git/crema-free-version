@@ -25,7 +25,7 @@ const CustomerItem = ({ item }) => {
           borderBottom: '1px solid #ECEDF1',
         },
       }}
-      className='item-hover'
+      className="item-hover"
     >
       <Avatar
         sx={{
@@ -85,12 +85,7 @@ const CustomerItem = ({ item }) => {
           >
             {item.orders} orders
           </Box>
-          <IconButton
-            aria-label='more'
-            aria-controls='long-menu'
-            aria-haspopup='true'
-            onClick={null}
-          >
+          <IconButton aria-label="more" aria-controls="long-menu" aria-haspopup="true" onClick={null}>
             <MoreVertIcon />
           </IconButton>
         </Box>

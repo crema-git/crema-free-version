@@ -20,19 +20,12 @@ const Basic = () => {
 
   return (
     <Box sx={{ position: 'relative' }}>
-      <UploadModern
-        uploadText='Drag n drop some files here, or click to select files'
-        dropzone={dropzone}
-      />
+      <UploadModern uploadText="Drag n drop some files here, or click to select files" dropzone={dropzone} />
       <aside>
         <AppList
           data={uploadedFiles}
           renderRow={(file, index) => (
-            <FileRow
-              key={index + file.path}
-              file={file}
-              onDeleteUploadFile={onDeleteUploadFile}
-            />
+            <FileRow key={index + file.path} file={file} onDeleteUploadFile={onDeleteUploadFile} />
           )}
         />
       </aside>

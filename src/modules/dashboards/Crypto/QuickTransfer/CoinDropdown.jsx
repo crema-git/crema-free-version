@@ -7,14 +7,14 @@ import CurrencyCell from './CurrencyCell';
 const CoinDropdown = ({ handleCoinChange, coinList, selectedCoinId }) => {
   return (
     <FormControl
-      variant='outlined'
+      variant="outlined"
       sx={{
         minWidth: 100,
         width: '100%',
       }}
     >
       <Select
-        labelId='selected-coin-select-outlined-label'
+        labelId="selected-coin-select-outlined-label"
         sx={{
           cursor: 'pointer',
           '& .MuiSelect-select': {

@@ -5,7 +5,7 @@ import AppCard from '@crema/components/AppCard';
 import { useIntl } from 'react-intl';
 import Box from '@mui/material/Box';
 
-const YourAccount = ({ data }) => {
+const YourAccount = ({ data = [] }) => {
   const { messages } = useIntl();
   return (
     <AppCard
@@ -25,10 +25,6 @@ const YourAccount = ({ data }) => {
 };
 
 export default YourAccount;
-
-YourAccount.defaultProps = {
-  data: [],
-};
 
 YourAccount.propTypes = {
   data: PropTypes.array,

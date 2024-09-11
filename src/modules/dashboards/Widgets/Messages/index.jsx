@@ -7,13 +7,7 @@ import { useIntl } from 'react-intl';
 import AppScrollbar from '@crema/components/AppScrollbar';
 import MessageItem from '@crema/components/AppMessages/MessageItem';
 
-const getData = (data) => {
-  return data;
-};
-
-const Messages = (props) => {
-  const data = getData(props.data);
-
+const Messages = ({ data = [] }) => {
   const { messages } = useIntl();
   return (
     <AppCard
@@ -45,10 +39,6 @@ const Messages = (props) => {
 };
 
 export default Messages;
-
-Messages.defaultProps = {
-  data: [],
-};
 
 Messages.propTypes = {
   data: PropTypes.array,

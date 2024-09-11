@@ -43,11 +43,7 @@ export default function RowContextMenu() {
   const handleContextMenu = (event) => {
     event.preventDefault();
     setSelectedRow(Number(event.currentTarget.getAttribute('data-id')));
-    setContextMenu(
-      contextMenu === null
-        ? { mouseX: event.clientX - 2, mouseY: event.clientY - 4 }
-        : null,
-    );
+    setContextMenu(contextMenu === null ? { mouseX: event.clientX - 2, mouseY: event.clientY - 4 } : null);
   };
 
   const handleClose = () => {
@@ -99,12 +95,8 @@ export default function RowContextMenu() {
       <Menu
         open={contextMenu !== null}
         onClose={handleClose}
-        anchorReference='anchorPosition'
-        anchorPosition={
-          contextMenu !== null
-            ? { top: contextMenu.mouseY, left: contextMenu.mouseX }
-            : undefined
-        }
+        anchorReference="anchorPosition"
+        anchorPosition={contextMenu !== null ? { top: contextMenu.mouseY, left: contextMenu.mouseX } : undefined}
         componentsProps={{
           root: {
             onContextMenu: (e) => {

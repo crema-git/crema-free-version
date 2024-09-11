@@ -1,33 +1,33 @@
-import React from "react";
-import AppComponentHeader from "@crema/components/AppComponentHeader";
-import Grid from "@mui/material/Grid";
-import AppComponentCard from "@crema/components/AppComponentCard";
-import AppGridContainer from "@crema/components/AppGridContainer";
+import React from 'react';
+import AppComponentHeader from '@crema/components/AppComponentHeader';
+import Grid from '@mui/material/Grid';
+import AppComponentCard from '@crema/components/AppComponentCard';
+import AppGridContainer from '@crema/components/AppGridContainer';
 
-import BasicButtons from "./BasicButtons";
-import BasicButtonsSource from "./BasicButtons?raw";
-import TextButtons from "./TextButtons";
-import TextButtonsSource from "./TextButtons?raw";
-import ContainedButtons from "./ContainedButtons";
-import ContainedButtonsSource from "./ContainedButtons?raw";
-import OutlinedButtons from "./OutlinedButtons";
-import OutlinedButtonsSource from "./OutlinedButtons?raw";
-import ColorButtons from "./ColorButtons";
-import ColorButtonsSource from "./ColorButtons?raw";
-import ButtonSizes from "./ButtonSizes";
-import ButtonSizesSource from "./ButtonSizes?raw";
-import UploadButtons from "./UploadButtons";
-import UploadButtonsSource from "./UploadButtons?raw";
-import IconLabelButtons from "./IconLabelButtons";
-import IconLabelButtonsSource from "./IconLabelButtons?raw";
-import IconButtons from "./IconButtons";
-import IconButtonsSource from "./IconButtons?raw";
-import CustomizedButtons from "./CustomizedButtons";
-import CustomizedButtonsSource from "./CustomizedButtons?raw";
-import LoadingButtons from "./LoadingButtons";
-import LoadingButtonsSource from "./LoadingButtons?raw";
-import ButtonBases from "./ComplexButton";
-import ButtonBasesSource from "./ComplexButton?raw";
+import BasicButtons from './BasicButtons';
+import BasicButtonsSource from './BasicButtons?raw';
+import TextButtons from './TextButtons';
+import TextButtonsSource from './TextButtons?raw';
+import ContainedButtons from './ContainedButtons';
+import ContainedButtonsSource from './ContainedButtons?raw';
+import OutlinedButtons from './OutlinedButtons';
+import OutlinedButtonsSource from './OutlinedButtons?raw';
+import ColorButtons from './ColorButtons';
+import ColorButtonsSource from './ColorButtons?raw';
+import ButtonSizes from './ButtonSizes';
+import ButtonSizesSource from './ButtonSizes?raw';
+import UploadButtons from './UploadButtons';
+import UploadButtonsSource from './UploadButtons?raw';
+import IconLabelButtons from './IconLabelButtons';
+import IconLabelButtonsSource from './IconLabelButtons?raw';
+import IconButtons from './IconButtons';
+import IconButtonsSource from './IconButtons?raw';
+import CustomizedButtons from './CustomizedButtons';
+import CustomizedButtonsSource from './CustomizedButtons?raw';
+import LoadingButtons from './LoadingButtons';
+import LoadingButtonsSource from './LoadingButtons?raw';
+import ButtonBases from './ComplexButton';
+import ButtonBasesSource from './ComplexButton?raw';
 
 const Buttons = () => {
   return (
@@ -85,12 +85,7 @@ const Buttons = () => {
           />
         </Grid>
         <Grid item xs={12} md={6}>
-          <AppComponentCard
-            title="Upload Buttons"
-            component={UploadButtons}
-            source={UploadButtonsSource}
-            noScrollbar
-          />
+          <AppComponentCard title="Upload Buttons" component={UploadButtons} source={UploadButtonsSource} noScrollbar />
         </Grid>
         <Grid item xs={12} md={6}>
           <AppComponentCard

@@ -21,9 +21,7 @@ const Blogs = ({ blogs }) => {
         xl: 3,
       }}
       data={blogs}
-      renderRow={(blog, index) => (
-        <BlogCard key={index} blog={blog} onViewBlogDetail={onViewBlogDetail} />
-      )}
+      renderRow={(blog, index) => <BlogCard key={index} blog={blog} onViewBlogDetail={onViewBlogDetail} />}
     />
   );
 };

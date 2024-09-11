@@ -33,9 +33,7 @@ const names = [
 function getStyles(name, personName, theme) {
   return {
     fontWeight:
-      personName.indexOf(name) === -1
-        ? theme.typography.fontWeightRegular
-        : theme.typography.fontWeightMedium,
+      personName.indexOf(name) === -1 ? theme.typography.fontWeightRegular : theme.typography.fontWeightMedium,
   };
 }
 
@@ -56,22 +54,18 @@ export default function MultipleSelect() {
   return (
     <div>
       <FormControl sx={{ m: 1, width: 300 }}>
-        <InputLabel id='demo-multiple-name-label'>Name</InputLabel>
+        <InputLabel id="demo-multiple-name-label">Name</InputLabel>
         <Select
-          labelId='demo-multiple-name-label'
-          id='demo-multiple-name'
+          labelId="demo-multiple-name-label"
+          id="demo-multiple-name"
           multiple
           value={personName}
           onChange={handleChange}
-          input={<OutlinedInput label='Name' />}
+          input={<OutlinedInput label="Name" />}
           MenuProps={MenuProps}
         >
           {names.map((name) => (
-            <MenuItem
-              key={name}
-              value={name}
-              style={getStyles(name, personName, theme)}
-            >
+            <MenuItem key={name} value={name} style={getStyles(name, personName, theme)}>
               {name}
             </MenuItem>
           ))}

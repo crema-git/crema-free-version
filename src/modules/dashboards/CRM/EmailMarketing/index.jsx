@@ -7,7 +7,7 @@ import { useIntl } from 'react-intl';
 import ChartView from './ChartView';
 import { Box } from '@mui/material';
 
-export const EmailMarking = ({ emailMarketing }) => {
+export const EmailMarking = ({ emailMarketing = [] }) => {
   const { messages } = useIntl();
   return (
     <AppCard
@@ -47,10 +47,6 @@ export const EmailMarking = ({ emailMarketing }) => {
 };
 
 export default EmailMarking;
-
-EmailMarking.defaultProps = {
-  emailMarketing: [],
-};
 
 EmailMarking.propTypes = {
   emailMarketing: PropTypes.array,

@@ -39,18 +39,13 @@ mock.onGet('/api/invoice/list').reply((config) => {
     folderinvList = invoiceData;
   }
   const index = params.page * 15;
-  const data =
-    folderinvList.length > 15
-      ? folderinvList.slice(index, index + 15)
-      : folderinvList;
+  const data = folderinvList.length > 15 ? folderinvList.slice(index, index + 15) : folderinvList;
   return [200, data];
 });
 
 mock.onGet('/api/invoice/detail').reply((config) => {
   const params = config.params;
-  const response = invoiceData.find(
-    (invoice) => invoice.id === parseInt(params.id),
-  );
+  const response = invoiceData.find((invoice) => invoice.id === parseInt(params.id));
   return [200, response];
 });
 

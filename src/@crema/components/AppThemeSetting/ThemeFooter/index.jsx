@@ -6,10 +6,7 @@ import InputLabel from '@mui/material/InputLabel';
 import Select from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
 import { FooterType } from '@crema/constants/AppEnums';
-import {
-  useLayoutActionsContext,
-  useLayoutContext,
-} from '@crema/context/AppContextProvider/LayoutContextProvider';
+import { useLayoutActionsContext, useLayoutContext } from '@crema/context/AppContextProvider/LayoutContextProvider';
 import Switch from '@mui/material/Switch';
 
 const ThemeFooter = () => {
@@ -21,31 +18,31 @@ const ThemeFooter = () => {
   return (
     <CustomizerItemWrapper>
       <Box sx={{ display: 'flex', alignItems: 'center', mb: 4 }}>
-        <Box component='h4'>Footer</Box>
-        <Box component='span' ml='auto'>
+        <Box component="h4">Footer</Box>
+        <Box component="span" ml="auto">
           <Switch
             checked={footer}
             onChange={() => setFooter(!footer)}
-            value='checkedA'
+            value="checkedA"
             inputProps={{ 'aria-label': 'secondary checkbox' }}
           />
         </Box>
       </Box>
       <FormControl
-        variant='outlined'
+        variant="outlined"
         sx={{
           width: '100%',
         }}
       >
-        <InputLabel id='select-footer'>Footer Type</InputLabel>
+        <InputLabel id="select-footer">Footer Type</InputLabel>
         <Select
           sx={{
             '& .MuiOutlinedInput-input': {
               padding: '12px 32px 12px 14px',
             },
           }}
-          labelId='select-footer'
-          label='Footer Type'
+          labelId="select-footer"
+          label="Footer Type"
           value={footerType}
           onChange={(e) => setFooterType(e.target.value)}
         >

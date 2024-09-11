@@ -1,5 +1,5 @@
 import React from 'react';
-import ListItem from '@mui/material/ListItem';
+import ListItemButton from '@mui/material/ListItemButton';
 import { useNavigate, useParams } from 'react-router-dom';
 import Box from '@mui/material/Box';
 import clsx from 'clsx';
@@ -12,7 +12,7 @@ import { alpha } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import { getFormattedDate } from '@crema/helpers/DateHelper';
 
-const StyledListItem = styled(ListItem)(({ theme }) => ({
+const StyledListItem = styled(ListItemButton)(({ theme }) => ({
   padding: '8px 20px 4px 20px',
   overflow: 'hidden',
   display: 'flex',
@@ -56,7 +56,7 @@ const TaskActionView = styled(Box)(({ theme }) => ({
   },
 }));
 
-const TaskListItemMobile = ({ task, checkedTasks, onChangeStarred }) => {
+const TaskListItemMobile = ({ task, checkedTasks = [], onChangeStarred }) => {
   const navigate = useNavigate();
   const { folder, label } = useParams();
 
@@ -68,7 +68,6 @@ const TaskListItemMobile = ({ task, checkedTasks, onChangeStarred }) => {
   return (
     <StyledListItem
       dense
-      button
       key={task.id}
       className={clsx('item-hover', {
         checked: checkedTasks.includes(task.id),
@@ -102,7 +101,7 @@ const TaskListItemMobile = ({ task, checkedTasks, onChangeStarred }) => {
                 textOverflow: 'ellipsis',
                 whiteSpace: 'nowrap',
               }}
-              component='p'
+              component="p"
             >
               {task.title}
             </Box>
@@ -125,7 +124,7 @@ const TaskListItemMobile = ({ task, checkedTasks, onChangeStarred }) => {
 
       <TaskActionView>
         <Box
-          component='span'
+          component="span"
           sx={{
             color: 'text.secondary',
             fontSize: 12,
@@ -137,11 +136,7 @@ const TaskListItemMobile = ({ task, checkedTasks, onChangeStarred }) => {
         >
           {getFormattedDate(task.startDate, 'DD MMM, YY')}
         </Box>
-        <Box
-          mt='auto'
-          component='span'
-          onClick={(event) => event.stopPropagation()}
-        >
+        <Box mt="auto" component="span" onClick={(event) => event.stopPropagation()}>
           <AppsStarredIcon item={task} onChange={onChangeStarred} />
         </Box>
       </TaskActionView>
@@ -150,10 +145,6 @@ const TaskListItemMobile = ({ task, checkedTasks, onChangeStarred }) => {
 };
 
 export default TaskListItemMobile;
-
-TaskListItemMobile.defaultProps = {
-  checkedTasks: [],
-};
 
 TaskListItemMobile.propTypes = {
   task: PropTypes.object.isRequired,

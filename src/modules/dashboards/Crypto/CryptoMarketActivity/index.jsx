@@ -8,9 +8,7 @@ import { Fonts } from '@crema/constants/AppEnums';
 import AppCard from '@crema/components/AppCard';
 import { useIntl } from 'react-intl';
 
-const CryptoMarketActivity = (props) => {
-  const { marketGraphData } = props;
-
+const CryptoMarketActivity = ({ marketGraphData = [] }) => {
   const { messages } = useIntl();
   return (
     <AppCard
@@ -50,7 +48,7 @@ const CryptoMarketActivity = (props) => {
               }}
             >
               <Box
-                component='span'
+                component="span"
                 sx={{
                   height: { xs: 12, xl: 16 },
                   width: { xs: 12, xl: 16 },
@@ -61,13 +59,13 @@ const CryptoMarketActivity = (props) => {
                 }}
               />
               <Box
-                component='span'
+                component="span"
                 sx={{
                   mr: 2,
                   fontSize: 14,
                 }}
               >
-                <IntlMessages id='common.low' />
+                <IntlMessages id="common.low" />
               </Box>
             </Box>
             <Box
@@ -78,7 +76,7 @@ const CryptoMarketActivity = (props) => {
               }}
             >
               <Box
-                component='span'
+                component="span"
                 sx={{
                   height: { xs: 12, xl: 16 },
                   width: { xs: 12, xl: 16 },
@@ -89,13 +87,13 @@ const CryptoMarketActivity = (props) => {
                 }}
               />
               <Box
-                component='span'
+                component="span"
                 sx={{
                   mr: 2,
                   fontSize: 14,
                 }}
               >
-                <IntlMessages id='common.medium' />
+                <IntlMessages id="common.medium" />
               </Box>
             </Box>
             <Box
@@ -105,7 +103,7 @@ const CryptoMarketActivity = (props) => {
               }}
             >
               <Box
-                component='span'
+                component="span"
                 sx={{
                   height: { xs: 12, xl: 16 },
                   width: { xs: 12, xl: 16 },
@@ -116,12 +114,12 @@ const CryptoMarketActivity = (props) => {
                 }}
               />
               <Box
-                component='span'
+                component="span"
                 sx={{
                   fontSize: 14,
                 }}
               >
-                <IntlMessages id='common.high' />
+                <IntlMessages id="common.high" />
               </Box>
             </Box>
           </Box>
@@ -142,7 +140,7 @@ const CryptoMarketActivity = (props) => {
               }}
             >
               <Box
-                component='h3'
+                component="h3"
                 sx={{
                   fontWeight: Fonts.MEDIUM,
                   color: 'text.primary',
@@ -151,8 +149,8 @@ const CryptoMarketActivity = (props) => {
               >
                 1356
               </Box>
-              <Box component='span'>
-                <IntlMessages id='dashboard.openDeals' />
+              <Box component="span">
+                <IntlMessages id="dashboard.openDeals" />
               </Box>
             </Box>
 
@@ -162,7 +160,7 @@ const CryptoMarketActivity = (props) => {
               }}
             >
               <Box
-                component='h3'
+                component="h3"
                 sx={{
                   fontWeight: Fonts.MEDIUM,
                   color: 'text.primary',
@@ -171,8 +169,8 @@ const CryptoMarketActivity = (props) => {
               >
                 $5.9B
               </Box>
-              <Box component='span'>
-                <IntlMessages id='dashboard.dealsVolume' />
+              <Box component="span">
+                <IntlMessages id="dashboard.dealsVolume" />
               </Box>
             </Box>
           </Box>
@@ -185,10 +183,6 @@ const CryptoMarketActivity = (props) => {
 };
 
 export default CryptoMarketActivity;
-
-CryptoMarketActivity.defaultProps = {
-  marketGraphData: [],
-};
 
 CryptoMarketActivity.propTypes = {
   marketGraphData: PropTypes.array,

@@ -14,17 +14,9 @@ const Chat = () => {
     <ChatContextProvider>
       <AppsContainer
         title={messages['chatApp.chat'].toString()}
-        sidebarContent={
-          <ChatSideBar
-            selectedUser={selectedUser}
-            setSelectedUser={setSelectedUser}
-          />
-        }
+        sidebarContent={<ChatSideBar selectedUser={selectedUser} setSelectedUser={setSelectedUser} />}
       >
-        <ChatContent
-          selectedUser={selectedUser}
-          setSelectedUser={setSelectedUser}
-        />
+        <ChatContent selectedUser={selectedUser} setSelectedUser={setSelectedUser} />
       </AppsContainer>
     </ChatContextProvider>
   );

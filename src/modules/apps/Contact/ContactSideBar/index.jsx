@@ -39,8 +39,8 @@ const SideBarContent = () => {
       >
         <Zoom in style={{ transitionDelay: '300ms' }}>
           <Button
-            variant='outlined'
-            color='primary'
+            variant="outlined"
+            color="primary"
             sx={{
               padding: '8px 28px',
               borderRadius: 8,
@@ -51,12 +51,12 @@ const SideBarContent = () => {
             startIcon={<AddIcon />}
             onClick={handleAddContactOpen}
           >
-            <IntlMessages id='contactApp.createContact' />
+            <IntlMessages id="contactApp.createContact" />
           </Button>
         </Zoom>
       </Box>
 
-      <AppScrollbar className='scroll-app-sidebar'>
+      <AppScrollbar className="scroll-app-sidebar">
         <Box
           sx={{
             pr: 4,
@@ -67,11 +67,11 @@ const SideBarContent = () => {
             sx={{
               mb: { xs: 2, xl: 5 },
             }}
-            component='nav'
-            aria-label='main task folders'
+            component="nav"
+            aria-label="main task folders"
           >
             <AppList
-              animation='transition.slideLeftIn'
+              animation="transition.slideLeftIn"
               data={folderList}
               ListEmptyComponent={
                 <ListEmptyResult
@@ -88,29 +88,25 @@ const SideBarContent = () => {
                 />
               }
               renderRow={(item) => (
-                <AppsSideBarFolderItem
-                  key={item.id}
-                  item={item}
-                  path={`/apps/contact/folder/${item.alias}`}
-                />
+                <AppsSideBarFolderItem key={item.id} item={item} path={`/apps/contact/folder/${item.alias}`} />
               )}
             />
           </List>
 
           <Box
-            component='h4'
+            component="h4"
             sx={{
               mt: { xs: 4, xl: 5 },
               px: { xs: 4, md: 5, lg: 6.2 },
               fontWeight: Fonts.SEMI_BOLD,
             }}
           >
-            <IntlMessages id='common.labels' />
+            <IntlMessages id="common.labels" />
           </Box>
 
-          <List component='nav' aria-label='main mailbox folders'>
+          <List component="nav" aria-label="main mailbox folders">
             <AppList
-              animation='transition.slideLeftIn'
+              animation="transition.slideLeftIn"
               data={labelList}
               ListEmptyComponent={
                 <ListEmptyResult
@@ -126,16 +122,11 @@ const SideBarContent = () => {
                   }
                 />
               }
-              renderRow={(label) => (
-                <ContactListLabelItem key={label.id} label={label} />
-              )}
+              renderRow={(label) => <ContactListLabelItem key={label.id} label={label} />}
             />
           </List>
 
-          <CreateContact
-            isAddContact={isAddContact}
-            handleAddContactClose={handleAddContactClose}
-          />
+          <CreateContact isAddContact={isAddContact} handleAddContactClose={handleAddContactClose} />
         </Box>
       </AppScrollbar>
     </>

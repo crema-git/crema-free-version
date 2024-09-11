@@ -8,7 +8,7 @@ const Address = () => {
   return (
     <Box sx={{ position: 'relative', ml: { lg: 5 } }}>
       <AddressWrapper>
-        <Box className='avatar-icon'>
+        <Box className="avatar-icon">
           <HiOutlineLocationMarker />
         </Box>
         <Typography>
@@ -16,13 +16,13 @@ const Address = () => {
         </Typography>
       </AddressWrapper>
       <AddressWrapper>
-        <Box className='avatar-icon'>
+        <Box className="avatar-icon">
           <FiPhone />
         </Box>
         <Typography>(120) 456-789-123</Typography>
       </AddressWrapper>
       <AddressWrapper>
-        <Box className='avatar-icon'>
+        <Box className="avatar-icon">
           <FiMail />
         </Box>
         <Typography>support@yourmail.com</Typography>

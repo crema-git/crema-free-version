@@ -19,46 +19,26 @@ const Calendar = () => {
   return (
     <>
       <AppComponentHeader
-        title='React Big Calendar'
-        refUrl='http://intljusticemission.github.io/react-big-calendar/examples/index.html#basic'
+        title="React Big Calendar"
+        refUrl="http://intljusticemission.github.io/react-big-calendar/examples/index.html#basic"
       />
 
       <AppGridContainer>
         <Grid item xs={12}>
-          <AppComponentCard
-            title='Basic Calendar'
-            component={Basic}
-            source={BasicSource}
-          />
+          <AppComponentCard title="Basic Calendar" component={Basic} source={BasicSource} />
         </Grid>
         <Grid item xs={12}>
-          <AppComponentCard
-            title='Dnd Calendar'
-            component={Dnd}
-            source={DndSource}
-          />
+          <AppComponentCard title="Dnd Calendar" component={Dnd} source={DndSource} />
         </Grid>
 
         <Grid item xs={12}>
-          <AppComponentCard
-            title='Timeslots Calendar'
-            component={Timeslots}
-            source={TimeslotsSource}
-          />
+          <AppComponentCard title="Timeslots Calendar" component={Timeslots} source={TimeslotsSource} />
         </Grid>
         <Grid item xs={12}>
-          <AppComponentCard
-            title='Popup Calendar'
-            component={Popup}
-            source={PopupSource}
-          />
+          <AppComponentCard title="Popup Calendar" component={Popup} source={PopupSource} />
         </Grid>
         <Grid item xs={12}>
-          <AppComponentCard
-            title='Selectable Calendar'
-            component={Selectable}
-            source={SelectableSource}
-          />
+          <AppComponentCard title="Selectable Calendar" component={Selectable} source={SelectableSource} />
         </Grid>
       </AppGridContainer>
     </>

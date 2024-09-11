@@ -9,7 +9,7 @@ const columns = [
     renderHeader: () => (
       <strong>
         {'Birthday '}
-        <span role='img' aria-label='enjoy'>
+        <span role="img" aria-label="enjoy">
           🎂
         </span>
       </strong>

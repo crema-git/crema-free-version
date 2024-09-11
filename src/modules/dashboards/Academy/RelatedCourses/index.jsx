@@ -51,7 +51,7 @@ const RelatedCourses = ({ relatedCourses }) => {
   return (
     <AppCard sxStyle={{ height: 1 }} title={messages['academy.relatedCourses']}>
       <CourseSlider>
-        <Slider className='slideRoot' {...settings}>
+        <Slider className="slideRoot" {...settings}>
           {relatedCourses.map((data, index) => (
             <CourseItem key={index} data={data} />
           ))}

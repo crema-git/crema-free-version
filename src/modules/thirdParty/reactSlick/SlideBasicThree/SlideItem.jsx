@@ -44,7 +44,7 @@ const SlideItem = ({ slide }) => {
         }}
       >
         <Typography
-          component='h3'
+          component="h3"
           sx={{
             fontSize: 16,
             fontWeight: Fonts.SEMI_BOLD,

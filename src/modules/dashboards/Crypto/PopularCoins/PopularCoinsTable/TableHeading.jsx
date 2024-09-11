@@ -23,20 +23,20 @@ const TableHeading = () => {
         },
       }}
     >
-      <TableCell className='tableCell'>
-        <IntlMessages id='common.num' />
+      <TableCell className="tableCell">
+        <IntlMessages id="common.num" />
       </TableCell>
-      <TableCell align='left' className='tableCell'>
-        <IntlMessages id='common.name' />
+      <TableCell align="left" className="tableCell">
+        <IntlMessages id="common.name" />
       </TableCell>
-      <TableCell align='left' className='tableCell'>
-        <IntlMessages id='dashboard.marketCap' />
+      <TableCell align="left" className="tableCell">
+        <IntlMessages id="dashboard.marketCap" />
       </TableCell>
-      <TableCell align='left' className='tableCell'>
-        <IntlMessages id='dashboard.volume24h' />
+      <TableCell align="left" className="tableCell">
+        <IntlMessages id="dashboard.volume24h" />
       </TableCell>
-      <TableCell align='right' className='tableCell'>
-        <IntlMessages id='dashboard.24h' /> %
+      <TableCell align="right" className="tableCell">
+        <IntlMessages id="dashboard.24h" /> %
       </TableCell>
     </TableRow>
   );

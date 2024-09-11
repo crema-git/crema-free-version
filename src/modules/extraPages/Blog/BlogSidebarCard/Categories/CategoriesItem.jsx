@@ -20,7 +20,7 @@ const CategoriesItem = ({ categories }) => {
           fontWeight: Fonts.MEDIUM,
           ml: 2,
         }}
-        component='span'
+        component="span"
       >
         {categories.number}
       </Box>

@@ -29,16 +29,16 @@ const AddNewTag = (props) => {
             alignItems: 'center',
           }}
         >
-          <Box component='span'>
+          <Box component="span">
             <TextField
-              label={<IntlMessages id='common.tag' />}
-              variant='outlined'
+              label={<IntlMessages id="common.tag" />}
+              variant="outlined"
               value={newTag}
               onChange={(e) => setNewTag(e.target.value)}
             />
           </Box>
           <Box
-            component='span'
+            component="span"
             sx={{
               mx: 3,
             }}
@@ -59,7 +59,7 @@ const AddNewTag = (props) => {
         </Box>
       ) : (
         <Box
-          component='p'
+          component="p"
           sx={{
             m: 2,
             ml: 3,
@@ -70,7 +70,7 @@ const AddNewTag = (props) => {
           }}
           onClick={() => setAddNewTag(true)}
         >
-          <IntlMessages id='dashboard.addNewTag' />
+          <IntlMessages id="dashboard.addNewTag" />
         </Box>
       )}
     </>

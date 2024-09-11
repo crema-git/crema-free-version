@@ -61,33 +61,25 @@ export default function ScrollPlayground() {
   };
 
   const handleCellClick = (params) => {
-    const rowIndex = gridExpandedSortedRowIdsSelector(apiRef).findIndex(
-      (id) => id === params.id,
-    );
-    const colIndex = gridVisibleColumnDefinitionsSelector(apiRef).findIndex(
-      (column) => column.field === params.field,
-    );
+    const rowIndex = gridExpandedSortedRowIdsSelector(apiRef).findIndex((id) => id === params.id);
+    const colIndex = gridVisibleColumnDefinitionsSelector(apiRef).findIndex((column) => column.field === params.field);
     setCoordinates({ rowIndex, colIndex });
   };
 
   return (
     <Box sx={{ width: '100%' }}>
       <Box sx={{ width: 300, margin: '0 auto 16px' }}>
-        <Grid container justifyContent='center'>
+        <Grid container justifyContent="center">
           <Grid item>
             <Button onClick={handleClick('top')}>top</Button>
           </Grid>
         </Grid>
-        <Grid container textAlign='center'>
+        <Grid container textAlign="center">
           <Grid item xs={4}>
             <Button onClick={handleClick('left')}>left</Button>
           </Grid>
           <Grid item xs={4}>
-            <IconButton
-              color='primary'
-              aria-label='home'
-              onClick={handleClick('home')}
-            >
+            <IconButton color="primary" aria-label="home" onClick={handleClick('home')}>
               <HomeIcon />
             </IconButton>
           </Grid>
@@ -95,19 +87,14 @@ export default function ScrollPlayground() {
             <Button onClick={handleClick('right')}>right</Button>
           </Grid>
         </Grid>
-        <Grid container justifyContent='center'>
+        <Grid container justifyContent="center">
           <Grid item>
             <Button onClick={handleClick('bottom')}>bottom</Button>
           </Grid>
         </Grid>
       </Box>
       <Box sx={{ height: 400 }}>
-        <DataGridPro
-          apiRef={apiRef}
-          onCellClick={handleCellClick}
-          hideFooter
-          {...data}
-        />
+        <DataGridPro apiRef={apiRef} onCellClick={handleCellClick} hideFooter {...data} />
       </Box>
     </Box>
   );

@@ -5,13 +5,7 @@ import SenderMessageItem from './SenderMessageItem';
 import ReceiverMessageItem from './ReceiverMessageItem';
 import AppList from '@crema/components/AppList';
 
-const MessageList = ({
-  userMessages,
-  authUser,
-  selectedUser,
-  onClickEditMessage,
-  deleteMessage,
-}) => {
+const MessageList = ({ userMessages, authUser, selectedUser, onClickEditMessage, deleteMessage }) => {
   return (
     <Box
       sx={{
@@ -20,7 +14,7 @@ const MessageList = ({
       }}
     >
       <AppList
-        animation='transition.slideUpIn'
+        animation="transition.slideUpIn"
         data={userMessages.messageData}
         renderRow={(item, index) => {
           if (item.sender === authUser.id) {
@@ -31,14 +25,10 @@ const MessageList = ({
                 key={item.id}
                 onClickEditMessage={onClickEditMessage}
                 deleteMessage={deleteMessage}
-                isPreviousSender={
-                  index > 0 &&
-                  item.sender === userMessages.messageData[index - 1].sender
-                }
+                isPreviousSender={index > 0 && item.sender === userMessages.messageData[index - 1].sender}
                 isLast={
                   (index + 1 < userMessages.messageData.length &&
-                    item.sender !==
-                      userMessages.messageData[index + 1].sender) ||
+                    item.sender !== userMessages.messageData[index + 1].sender) ||
                   index + 1 === userMessages.messageData.length
                 }
               />
@@ -49,14 +39,10 @@ const MessageList = ({
                 selectedUser={selectedUser}
                 item={item}
                 key={item.id}
-                isPreviousSender={
-                  index > 0 &&
-                  item.sender === userMessages.messageData[index - 1].sender
-                }
+                isPreviousSender={index > 0 && item.sender === userMessages.messageData[index - 1].sender}
                 isLast={
                   (index + 1 < userMessages.messageData.length &&
-                    item.sender !==
-                      userMessages.messageData[index + 1].sender) ||
+                    item.sender !== userMessages.messageData[index + 1].sender) ||
                   index + 1 === userMessages.messageData.length
                 }
               />
